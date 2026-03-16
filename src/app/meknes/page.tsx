@@ -106,7 +106,7 @@ export const metadata: Metadata = {
     type: 'article',
     images: [
       {
-        url: '/images/hero-morocco-medina.webp',
+        url: '/images/hero-meknes-gate.webp',
         width: 1200,
         height: 630,
         alt: 'Panoramic view of the Bab Mansour gate in Meknes at golden hour',
@@ -118,7 +118,7 @@ export const metadata: Metadata = {
     title: 'Meknes Travel Guide 2025-2026 | Morocco\'s Imperial City',
     description:
       'Complete guide to Meknes: Bab Mansour, Royal Stables, Moulay Ismail\'s Mausoleum, Heri es-Souani, Volubilis ruins, medina, food, history, and practical tips.',
-    images: ['/images/hero-morocco-medina.webp'],
+    images: ['/images/hero-meknes-gate.webp'],
   },
   alternates: {
     canonical: 'https://moroccoguide.com/meknes',
@@ -186,7 +186,7 @@ const attractions = [
     name: 'Bab Mansour el-Aleuj',
     description:
       'The most impressive gateway in all of Morocco and arguably the finest in North Africa. Completed in 1732 under Sultan Moulay Ismail, Bab Mansour is a monumental triumph of Islamic architecture standing over 16 meters tall. The gate is adorned with elaborate zellige tilework in green and white geometric patterns, intricate carved stucco arabesques, and marble columns repurposed from the Roman ruins of Volubilis. The gate\'s name, "el-Aleuj" (the Renegade), refers to its architect, a Christian convert to Islam named Mansour. According to legend, when Moulay Ismail asked the architect if he could have done better, Mansour said yes, and the sultan had him executed. The gate was never meant to be functional; it was a declaration of imperial power, designed to awe ambassadors and envoys before they entered the sultan\'s domain.',
-    image: '/images/hero-morocco-medina.webp',
+    image: '/images/hero-meknes-gate.webp',
     type: 'UNESCO Heritage',
     rating: 4.9,
     hours: 'Exterior viewable 24 hours; interior gallery 9:00 AM - 6:00 PM',
@@ -197,7 +197,7 @@ const attractions = [
     name: 'Royal Stables & Granary (Heri es-Souani)',
     description:
       'One of the most extraordinary engineering achievements of the pre-modern Islamic world. Moulay Ismail built these massive subterranean granaries and stables to house and feed his legendary cavalry of 12,000 horses. The Heri es-Souani stretches for hundreds of meters, with thick walls over two meters deep designed to maintain a constant cool temperature year-round, preserving grain for decades without spoilage. An ingenious hydraulic system of underground channels drew water from the Middle Atlas Mountains 25 kilometers away to fill cisterns and drinking troughs. The adjacent royal stables featured individual stalls for each horse, a groom for every three animals, and a sophistication of equine care that astonished European visitors. The ruins today, with their massive arched ceilings, crumbling pillars, and sheer scale, evoke the ambition of a ruler who dreamed on a scale that rivaled ancient Rome.',
-    image: '/images/hero-morocco-medina.webp',
+    image: '/images/hero-meknes-gate.webp',
     type: 'Historic Monument',
     rating: 4.7,
     hours: '9:00 AM - 6:00 PM daily',
@@ -208,7 +208,7 @@ const attractions = [
     name: 'Mausoleum of Moulay Ismail',
     description:
       'The final resting place of Morocco\'s most powerful and feared sultan, and one of the very few Islamic shrines in Morocco open to non-Muslim visitors. Moulay Ismail ruled for 55 years (1672-1727) and transformed Meknes from a provincial town into an imperial capital to rival Versailles. The mausoleum was restored by Mohammed V in the 1950s and features serene courtyards with central fountains, rooms with soaring zellige-tiled walls, carved stucco ceilings, and elaborate muqarnas honeycomb vaulting. The tomb chamber itself, draped in rich fabrics and flanked by two grandfather clocks (gifts from Louis XIV of France), exudes a hushed reverence. Moroccans still visit to pray and pay respects to the man they consider one of the greatest rulers in the nation\'s history, despite his ruthless reputation.',
-    image: '/images/hero-morocco-medina.webp',
+    image: '/images/hero-meknes-gate.webp',
     type: 'Royal Mausoleum',
     rating: 4.8,
     hours: '9:00 AM - 12:00 PM, 3:00 PM - 6:00 PM daily (closed during Friday prayers)',
@@ -219,7 +219,7 @@ const attractions = [
     name: 'Place el-Hedim',
     description:
       'The grand public square of Meknes, created by Moulay Ismail in the late 17th century by demolishing an entire neighborhood of the old medina. The name means "Place of Demolition," a blunt acknowledgment of how the sultan cleared the space. Originally designed as a staging ground for royal processions and military reviews, Place el-Hedim today serves as the beating heart of Meknes social life. Locals gather here in the evening, children play, food vendors sell grilled corn and freshly squeezed orange juice, and the monumental Bab Mansour gate anchors the southern edge like a theatrical backdrop. The square has been compared to a smaller, calmer, more authentic version of Marrakech\'s Jemaa el-Fnaa, without the overwhelming tourist pressure.',
-    image: '/images/hero-morocco-medina.webp',
+    image: '/images/hero-meknes-gate.webp',
     type: 'Historic Square',
     rating: 4.5,
     hours: 'Open 24 hours (most lively 5:00 PM - 10:00 PM)',
@@ -230,7 +230,7 @@ const attractions = [
     name: 'The Medina of Meknes',
     description:
       'The UNESCO-listed medina of Meknes is a delightful contrast to the overwhelming labyrinths of Fes and Marrakech. Smaller, calmer, and almost entirely devoid of tourist touts, the Meknes medina offers an authentic experience of daily Moroccan life. The main artery runs from Place el-Hedim through a series of covered souks selling everything from spices and leather to household goods and traditional clothing. Side alleys lead to quiet residential quarters with ornate doorways, neighborhood mosques, and communal bread ovens where locals bring their dough each morning. The Bou Inania Madrasa, built by the Marinid dynasty in the 14th century, is a smaller but exquisitely decorated theological college open to visitors. The absence of tourist pressure means you can browse the souks, drink tea with shopkeepers, and explore freely without persistent hassle.',
-    image: '/images/hero-morocco-medina.webp',
+    image: '/images/hero-meknes-gate.webp',
     type: 'UNESCO Heritage',
     rating: 4.6,
     hours: 'Open 24 hours (shops 9:00 AM - 7:00 PM)',
@@ -241,7 +241,7 @@ const attractions = [
     name: 'Dar Jamai Museum',
     description:
       'Housed in a magnificent 19th-century palace built by the powerful Jamai family (two brothers who served as grand viziers to Sultan Moulay Hassan I), this museum showcases the finest traditional arts and crafts of the Meknes region. The palace itself, with its painted cedarwood ceilings, zellige-tiled courtyards, carved stucco walls, and an exquisite Andalusian garden with towering cypress trees and fountains, is as much a treasure as the collections it houses. Exhibits include Fassi and Meknassi ceramics, traditional Berber jewelry, embroidered textiles, carved cedarwood furniture, antique weaponry, and beautifully illuminated Qurans. The Jamai brothers fell from power after the sultan\'s death and were imprisoned; the palace was later converted into a military hospital before becoming a museum in 1920.',
-    image: '/images/hero-morocco-medina.webp',
+    image: '/images/hero-meknes-gate.webp',
     type: 'Museum & Palace',
     rating: 4.5,
     hours: '9:00 AM - 5:00 PM (closed Tuesdays)',
@@ -252,7 +252,7 @@ const attractions = [
     name: 'Heri es-Souani (Underground Granary)',
     description:
       'The vast underground storage complex that sustained Moulay Ismail\'s imperial ambitions is one of the most awe-inspiring ruins in Morocco. Stretching beneath the earth for an estimated area equivalent to several football fields, these granaries used walls up to five meters thick to create natural insulation that kept grain cool and dry for years. A network of underground water channels, fed by an aqueduct from the Middle Atlas, maintained humidity levels and supplied water to the entire imperial complex. The engineering sophistication was so advanced that European ambassadors compared it favorably to contemporary European engineering. Today, the partially collapsed vaulted ceilings create a hauntingly beautiful space where shafts of light penetrate through gaps in the stonework, illuminating the massive scale of Moulay Ismail\'s vision.',
-    image: '/images/hero-morocco-medina.webp',
+    image: '/images/hero-meknes-gate.webp',
     type: 'Historic Monument',
     rating: 4.6,
     hours: '9:00 AM - 6:00 PM daily',
@@ -263,7 +263,7 @@ const attractions = [
     name: 'Volubilis Roman Ruins',
     description:
       'Located just 30 kilometers north of Meknes, Volubilis is the best-preserved Roman archaeological site in North Africa and a UNESCO World Heritage Site. Founded as a Berber settlement in the 3rd century BC, it became a major Roman outpost and the capital of the province of Mauretania Tingitana. At its peak, 20,000 people lived here, cultivating olives and grain for export to Rome. The ruins include a triumphal arch built for Emperor Caracalla in 217 AD, a Capitol temple, a basilica, public baths, and dozens of elite townhouses containing remarkably intact floor mosaics depicting Orpheus, Bacchus, Diana, and other mythological scenes. The mosaics are the highlight: vivid, intricate, and still in their original positions after nearly two millennia. After the Romans withdrew in the 3rd century, the city continued to be inhabited by Christians, then Muslims, until an earthquake in 1755 (the same one that destroyed Lisbon) finally emptied it. Moulay Ismail later quarried its marble columns for his palaces in Meknes.',
-    image: '/images/hero-morocco-medina.webp',
+    image: '/images/hero-meknes-gate.webp',
     type: 'UNESCO Heritage',
     rating: 4.8,
     hours: '8:30 AM - sunset daily',
@@ -860,7 +860,7 @@ export default function MeknesGuidePage() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(/images/hero-morocco-medina.webp)',
+            backgroundImage: 'url(/images/hero-meknes-gate.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />
@@ -1752,7 +1752,7 @@ export default function MeknesGuidePage() {
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/hero-morocco-medina.webp"
+            src="/images/hero-meknes-gate.webp"
             alt="Bab Mansour gate in Meknes at golden hour"
             className="w-full h-full object-cover"
           />

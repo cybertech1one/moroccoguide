@@ -41,7 +41,6 @@ import {
   GlassWater,
   Home as HomeIcon,
   Wheat,
-  PalmTree,
 } from 'lucide-react';
 
 export const metadata: Metadata = {
