@@ -73,8 +73,8 @@ const navigationItems: NavItem[] = [
       {
         title: 'Imperial Cities',
         items: [
-          { label: 'Marrakech', href: '/cities/marrakech', description: 'The Red City' },
-          { label: 'Fes', href: '/cities/fes', description: 'Spiritual Capital' },
+          { label: 'Marrakech', href: '/marrakech', description: 'The Red City' },
+          { label: 'Fes', href: '/fes-guide', description: 'Spiritual Capital' },
           { label: 'Rabat', href: '/cities/rabat', description: 'The Capital' },
           { label: 'Meknes', href: '/cities/meknes', description: 'Ismaili Capital' },
         ],
@@ -82,32 +82,32 @@ const navigationItems: NavItem[] = [
       {
         title: 'Coastal',
         items: [
-          { label: 'Essaouira', href: '/cities/essaouira', description: 'Wind City' },
-          { label: 'Agadir', href: '/cities/agadir', description: 'Beach Resort' },
-          { label: 'Tangier', href: '/cities/tangier', description: 'Gateway to Africa' },
+          { label: 'Essaouira', href: '/essaouira', description: 'Wind City' },
+          { label: 'Agadir', href: '/agadir', description: 'Beach Resort' },
+          { label: 'Tangier', href: '/tangier', description: 'Gateway to Africa' },
           { label: 'Asilah', href: '/cities/asilah', description: 'Art Town' },
         ],
       },
       {
         title: 'Desert & Mountains',
         items: [
-          { label: 'Merzouga', href: '/cities/merzouga', description: 'Sahara Gateway' },
+          { label: 'Chefchaouen', href: '/chefchaouen', description: 'Blue Pearl' },
+          { label: 'Sahara Desert', href: '/sahara', description: 'Dunes & Stars' },
+          { label: 'Atlas Mountains', href: '/atlas-mountains', description: 'Trekking & Villages' },
           { label: 'Ouarzazate', href: '/cities/ouarzazate', description: 'Hollywood of Africa' },
-          { label: 'Chefchaouen', href: '/cities/chefchaouen', description: 'Blue Pearl' },
-          { label: 'Ifrane', href: '/cities/ifrane', description: 'Little Switzerland' },
         ],
       },
     ],
     featured: [
       {
         title: 'Marrakech: Complete City Guide',
-        href: '/cities/marrakech',
+        href: '/marrakech',
         image: '/images/hero-marrakech-koutoubia.webp',
         tag: 'Most Popular',
       },
       {
         title: 'Chefchaouen: The Blue Pearl',
-        href: '/cities/chefchaouen',
+        href: '/chefchaouen',
         image: '/images/hero-chefchaouen-drone.webp',
         tag: 'Trending',
       },
@@ -196,19 +196,19 @@ const navigationItems: NavItem[] = [
       {
         title: 'Accommodation',
         items: [
-          { label: 'Riads', href: '/accommodations' },
-          { label: 'Hotels', href: '/accommodations' },
-          { label: 'Luxury Resorts', href: '/accommodations' },
-          { label: 'Desert Camps', href: '/accommodations' },
+          { label: 'Riad Guide', href: '/riad-guide' },
+          { label: 'Hotels & Resorts', href: '/accommodations' },
+          { label: 'Desert Camps', href: '/desert-adventures' },
+          { label: 'All Accommodations', href: '/accommodations' },
         ],
       },
       {
-        title: 'By Budget',
+        title: 'By City',
         items: [
-          { label: 'Budget Friendly', href: '/accommodations' },
-          { label: 'Mid-Range', href: '/accommodations' },
-          { label: 'Luxury', href: '/accommodations' },
-          { label: 'All-Inclusive', href: '/accommodations' },
+          { label: 'Marrakech Riads', href: '/marrakech' },
+          { label: 'Fes Riads', href: '/fes-guide' },
+          { label: 'Essaouira Stays', href: '/essaouira' },
+          { label: 'Chefchaouen', href: '/chefchaouen' },
         ],
       },
     ],
@@ -230,18 +230,18 @@ const navigationItems: NavItem[] = [
         title: 'Dining',
         items: [
           { label: 'Restaurants', href: '/restaurants' },
-          { label: 'Food & Cuisine Guide', href: '/food' },
-          { label: 'Shopping & Souvenirs', href: '/shopping' },
+          { label: 'Cuisine Encyclopedia', href: '/cuisine' },
           { label: 'Cooking Classes', href: '/cooking-classes' },
+          { label: 'All Food & Drink', href: '/food' },
         ],
       },
       {
-        title: 'Moroccan Cuisine',
+        title: 'Discover',
         items: [
-          { label: 'Must-Try Dishes', href: '/food' },
-          { label: 'Street Food Guide', href: '/food' },
-          { label: 'Spice Guide', href: '/food' },
-          { label: 'Regional Specialties', href: '/food' },
+          { label: 'Souks & Markets', href: '/souks' },
+          { label: 'Shopping Guide', href: '/shopping' },
+          { label: 'Spa & Hammam', href: '/spa' },
+          { label: 'Wine & Vineyards', href: '/wine' },
         ],
       },
     ],
@@ -262,25 +262,25 @@ const navigationItems: NavItem[] = [
       {
         title: 'Adventure',
         items: [
-          { label: 'Desert Safari', href: '/desert' },
-          { label: 'Trekking', href: '/trekking' },
-          { label: 'Surfing & Water Sports', href: '/water-sports' },
-          { label: 'Camping', href: '/camping' },
+          { label: 'Desert Adventures', href: '/desert-adventures' },
+          { label: 'Hot Air Balloon', href: '/hot-air-balloon' },
+          { label: 'Trekking & Hiking', href: '/trekking' },
+          { label: 'Skiing & Snow', href: '/skiing' },
         ],
       },
       {
-        title: 'Outdoor',
+        title: 'Water & Outdoor',
         items: [
+          { label: 'Surfing & Water Sports', href: '/water-sports' },
+          { label: 'Water Parks & Fun', href: '/water-fun' },
+          { label: 'Camping', href: '/camping' },
           { label: 'Stargazing', href: '/stargazing' },
-          { label: 'Horse Riding', href: '/horse-riding' },
-          { label: 'Climbing', href: '/climbing' },
-          { label: 'Overlanding', href: '/overlanding' },
         ],
       },
       {
         title: 'Culture & Leisure',
         items: [
-          { label: 'Hammam & Wellness', href: '/hammam' },
+          { label: 'Hammam & Spa', href: '/spa' },
           { label: 'Photography', href: '/photography' },
           { label: 'Wine & Vineyards', href: '/wine' },
           { label: 'Festivals & Events', href: '/festivals' },
@@ -313,9 +313,9 @@ const navigationItems: NavItem[] = [
       {
         title: 'Resources',
         items: [
-          { label: 'Local Guides', href: '/guides' },
-          { label: 'Blog', href: '/blog' },
-          { label: 'Photo Gallery', href: '/gallery' },
+          { label: 'Trains & Transport', href: '/trains' },
+          { label: 'Berber Culture', href: '/berber-culture' },
+          { label: 'Ramadan Guide', href: '/ramadan' },
           { label: 'World Cup 2030', href: '/worldcup-2030' },
         ],
       },
@@ -340,7 +340,7 @@ const navigationItems: NavItem[] = [
         items: [
           { label: 'Safety & Scams', href: '/scams' },
           { label: 'Culture & Etiquette', href: '/etiquette' },
-          { label: 'Getting Around', href: '/transport' },
+          { label: 'Trains & Transport', href: '/trains' },
           { label: 'Weather & Climate', href: '/weather' },
         ],
       },

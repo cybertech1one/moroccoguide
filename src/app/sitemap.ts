@@ -150,6 +150,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/fes-guide',
     '/hot-air-balloon',
     '/water-fun',
+    '/essaouira',
+    '/chefchaouen',
+    '/tangier',
+    '/agadir',
+    '/skiing',
+    '/desert-adventures',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

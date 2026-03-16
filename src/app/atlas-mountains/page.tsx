@@ -676,6 +676,49 @@ const typicalCosts = [
 ];
 
 /* ===================================================================
+   DATA: PRACTICAL TIPS
+   =================================================================== */
+
+const practicalTips = [
+  {
+    title: 'Getting to the Trailheads',
+    icon: Navigation,
+    content:
+      'Most trekking starts from Imlil, 60 km south of Marrakech. Grand taxis depart from near Bab er-Rob in Marrakech to Asni (25 MAD, 1 hour) where you transfer to another taxi to Imlil (15 MAD, 30 min). Alternatively, arrange a private transfer (300-500 MAD direct to Imlil). For the Ait Bouguemez Valley, take a bus or grand taxi to Azilal (3 hours) then another taxi to Tabant (2 hours). For Jebel Saghro, the gateway towns are N\'Kob and Boumalne Dades, both accessible from Ouarzazate.',
+  },
+  {
+    title: 'Water and Hydration',
+    icon: Flame,
+    content:
+      'Mountain streams in the Atlas are not reliably clean due to livestock grazing. Always purify water using tablets (Micropur or Aquatabs, available in Marrakech pharmacies), a SteriPen, or a filter. Carry at least 2 liters at all times and drink 3-4 liters per day at altitude. In summer, streams above 3,000m may dry up. Your guide will know current water source conditions. Electrolyte sachets help prevent dehydration and cramping.',
+  },
+  {
+    title: 'Money and Supplies',
+    icon: DollarSign,
+    content:
+      'Carry sufficient cash in Moroccan dirhams. There are no ATMs in the mountains; the last reliable ATMs are in Imlil, Asni, Azilal, and Boumalne Dades. Gites and guides accept cash only. Stock up on snacks, batteries, and any specialty items in Marrakech. Imlil has basic shops selling water, biscuits, and canned goods, but choice is limited. Pharmacies in Imlil sell basic first aid supplies and Diamox.',
+  },
+  {
+    title: 'Mobile Phone Coverage',
+    icon: Phone,
+    content:
+      'Maroc Telecom has the best mountain coverage among Moroccan operators. You will have signal in most villages and on some ridgelines, but expect no coverage in deep valleys, gorges, and above 3,000m on many routes. Download offline maps before you leave (Maps.me and Gaia GPS are the best for Atlas trails). WhatsApp is the standard communication method in Morocco and works wherever you have data. Consider a satellite communicator (Garmin InReach) for remote multi-day treks.',
+  },
+  {
+    title: 'Travel Insurance',
+    icon: Shield,
+    content:
+      'Standard travel insurance may not cover trekking above certain altitudes or in remote areas. Ensure your policy explicitly covers trekking up to 4,200m, helicopter evacuation, and mountain rescue. World Nomads and Global Rescue are popular choices among trekkers. Keep your policy details accessible at all times. Note that mountain rescue in Morocco is not as developed as in European countries; evacuation by mule to the nearest road may be the first step.',
+  },
+  {
+    title: 'Responsible Trekking',
+    icon: Heart,
+    content:
+      'The Atlas Mountains are under increasing environmental pressure from tourism. Carry out all rubbish, including biodegradable waste. Use established toilet areas at refuges and gites. If camping wild, dig a cat-hole at least 30 cm deep and 100m from water sources. Do not pick wildflowers or disturb wildlife. Support the local economy by using licensed guides, staying in village gites, and buying supplies locally. Respect the pace and customs of mountain life.',
+  },
+];
+
+/* ===================================================================
    DATA: RELATED PAGES
    =================================================================== */
 
@@ -1481,6 +1524,36 @@ export default function AtlasMountainsTrekkingPage() {
                 </tbody>
               </table>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================
+          PRACTICAL TIPS
+          ============================================================ */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Info className="w-8 h-8 inline text-[var(--color-primary)] mr-2" />
+            Practical Tips
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Essential logistics and practical advice that will make your Atlas trekking experience smoother and more enjoyable.
+          </p>
+          <div className="space-y-4">
+            {practicalTips.map((tip) => (
+              <div key={tip.title} className="card-moroccan p-6">
+                <div className="flex items-start gap-4">
+                  <div className="inline-flex p-2 rounded-lg bg-[var(--color-primary)]/10 shrink-0 mt-0.5">
+                    <tip.icon className="w-5 h-5 text-[var(--color-primary)]" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-[var(--text-primary)] mb-2">{tip.title}</h3>
+                    <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{tip.content}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

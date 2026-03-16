@@ -121,6 +121,58 @@ export const metadata: Metadata = {
 };
 
 /* =====================================================================
+   DATA: QUICK FACTS
+   ===================================================================== */
+
+const quickFacts = [
+  { label: 'Population', value: '1.3 million', icon: Users },
+  { label: 'Founded', value: '1070 AD', icon: BookOpen },
+  { label: 'Elevation', value: '466 meters', icon: Mountain },
+  { label: 'Airport', value: 'RAK (Menara)', icon: Globe },
+  { label: 'Language', value: 'Arabic, French, Berber', icon: MessageSquare },
+  { label: 'Currency', value: 'Moroccan Dirham (MAD)', icon: DollarSign },
+  { label: 'Time Zone', value: 'GMT+1', icon: Clock },
+  { label: 'Best Months', value: 'March-May, Oct-Nov', icon: Calendar },
+];
+
+/* =====================================================================
+   DATA: MARRAKECH ESSENTIALS
+   ===================================================================== */
+
+const essentialTips = [
+  {
+    icon: Info,
+    title: 'Dress Code',
+    description: 'Marrakech is more liberal than rural Morocco but modesty is appreciated, especially in the medina. Shoulders and knees covered is the safest approach. Swimwear is fine at hotel pools only.',
+  },
+  {
+    icon: HandCoins,
+    title: 'Tipping Culture',
+    description: 'Tipping is expected and appreciated. Restaurant waiters: 10-15%. Riad staff: 20-50 MAD/day. Tour guides: 100-200 MAD. Porters: 10-20 MAD. Small tips for helpfulness are part of daily life.',
+  },
+  {
+    icon: Globe,
+    title: 'Connectivity',
+    description: 'Buy a local SIM card at the airport (Maroc Telecom or Orange) for about 30 MAD with data. Wi-Fi is available in most riads and restaurants. Signal in the deep medina can be patchy.',
+  },
+  {
+    icon: Sun,
+    title: 'Sun Protection',
+    description: 'Marrakech receives over 300 days of sunshine. SPF 50 sunscreen, a hat, and sunglasses are essential year-round. The UV index regularly exceeds 10 in summer.',
+  },
+  {
+    icon: Coffee,
+    title: 'Mint Tea Etiquette',
+    description: 'Moroccan mint tea is served everywhere and refusing it can be seen as rude. It is extremely sweet. Holding the glass by the rim signals you would like a refill; placing your hand over the glass means you are done.',
+  },
+  {
+    icon: Calendar,
+    title: 'Ramadan Awareness',
+    description: 'During Ramadan, many restaurants close during daylight hours. Eating, drinking, or smoking in public during fasting hours is considered disrespectful. Evenings become festive with special foods and late-night activity.',
+  },
+];
+
+/* =====================================================================
    DATA: TOP ATTRACTIONS
    ===================================================================== */
 
@@ -905,6 +957,62 @@ export default function MarrakechPage() {
               patterns on ancient walls. This guide covers everything you need to make the most of
               every moment in Morocco&apos;s Red City.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* =================================================================
+          QUICK FACTS
+          ================================================================= */}
+      <section className="py-12 md:py-16 bg-[var(--surface-muted)]">
+        <div className="container-morocco">
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4">
+            {quickFacts.map((fact) => {
+              const FactIcon = fact.icon;
+              return (
+                <div key={fact.label} className="card-moroccan p-4 text-center">
+                  <FactIcon className="w-5 h-5 text-[var(--color-accent)] mx-auto mb-2" />
+                  <p className="text-xs text-[var(--text-muted)] mb-1">{fact.label}</p>
+                  <p className="text-sm font-semibold text-[var(--text-primary)]">{fact.value}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* =================================================================
+          ESSENTIAL TIPS
+          ================================================================= */}
+      <section className="py-12 md:py-16">
+        <div className="container-morocco">
+          <div className="flex items-center gap-3 mb-3">
+            <Lightbulb className="w-6 h-6 text-[var(--color-accent)]" />
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+              Marrakech Essentials: Know Before You Go
+            </h2>
+          </div>
+          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">
+            These practical tips will help you navigate Marrakech like an experienced traveler
+            from your very first day.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {essentialTips.map((tip) => {
+              const TipIcon = tip.icon;
+              return (
+                <div key={tip.title} className="card-moroccan p-6 group">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-2xl bg-[var(--color-primary-50)] text-[var(--color-primary)] mb-4 group-hover:bg-[var(--color-primary)] group-hover:text-white transition-colors">
+                    <TipIcon className="w-6 h-6" />
+                  </div>
+                  <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-2">
+                    {tip.title}
+                  </h3>
+                  <p className="text-sm text-[var(--text-muted)] leading-relaxed">
+                    {tip.description}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
