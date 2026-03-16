@@ -801,7 +801,7 @@ export default function BudgetCalculatorPage() {
                         ))}
                       </Pie>
                       <Tooltip
-                        formatter={(value: number) => [`${currencySymbol}${convertFromMAD(value).toLocaleString()} ${currencyLabel}`, '']}
+                        formatter={(value) => [`${currencySymbol}${convertFromMAD(Number(value)).toLocaleString()} ${currencyLabel}`, '']}
                         contentStyle={{
                           borderRadius: '12px',
                           border: '1px solid rgba(26,24,20,0.1)',
@@ -844,7 +844,7 @@ export default function BudgetCalculatorPage() {
                         tick={{ fill: '#1A1814', opacity: 0.6 }}
                       />
                       <Tooltip
-                        formatter={(value: number) => [`${value.toLocaleString()} MAD`, '']}
+                        formatter={(value) => [`${Number(value).toLocaleString()} MAD`, '']}
                         contentStyle={{
                           borderRadius: '12px',
                           border: '1px solid rgba(26,24,20,0.1)',
