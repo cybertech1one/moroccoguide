@@ -11,7 +11,6 @@ import {
   Mountain,
   Sun,
   Waves,
-  ChefHat,
   Landmark,
   Heart,
   Route,
@@ -24,10 +23,6 @@ import {
   BadgeCheck,
   Trophy,
   Award,
-  Flame,
-  Wind,
-  Droplets,
-  Footprints,
   Newspaper,
   BookOpen,
   CheckCircle,
@@ -309,7 +304,7 @@ const featuredExperiences = [
     reviews: 847,
     href: '/tours/desert-safari',
     badge: 'Most Popular',
-    Icon: Flame,
+    iconName: 'flame',
   },
   {
     title: 'Marrakech Cooking Class',
@@ -319,7 +314,7 @@ const featuredExperiences = [
     rating: 4.8,
     reviews: 632,
     href: '/cooking-classes',
-    Icon: ChefHat,
+    iconName: 'chef-hat',
   },
   {
     title: 'Fes Medina Walking Tour',
@@ -330,7 +325,7 @@ const featuredExperiences = [
     reviews: 521,
     href: '/tours',
     badge: 'Best Value',
-    Icon: Footprints,
+    iconName: 'footprints',
   },
   {
     title: 'Essaouira Surf Lesson',
@@ -340,7 +335,7 @@ const featuredExperiences = [
     rating: 4.8,
     reviews: 394,
     href: '/activities',
-    Icon: Wind,
+    iconName: 'wind',
   },
   {
     title: 'Atlas Mountain Trek',
@@ -351,7 +346,7 @@ const featuredExperiences = [
     reviews: 289,
     href: '/trekking',
     badge: 'Top Rated',
-    Icon: Mountain,
+    iconName: 'mountain',
   },
   {
     title: 'Traditional Hammam Ritual',
@@ -361,7 +356,7 @@ const featuredExperiences = [
     rating: 4.7,
     reviews: 456,
     href: '/hammam',
-    Icon: Droplets,
+    iconName: 'droplets',
   },
   {
     title: 'Hot Air Balloon Marrakech',
@@ -371,7 +366,7 @@ const featuredExperiences = [
     rating: 4.9,
     reviews: 198,
     href: '/tours',
-    Icon: Sun,
+    iconName: 'sun',
   },
 ];
 

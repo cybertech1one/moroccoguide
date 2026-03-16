@@ -1,8 +1,30 @@
 'use client';
 
 import { useRef } from 'react';
-import { ChevronLeft, ChevronRight, Star, Clock, ArrowRight } from 'lucide-react';
-import type { LucideIcon } from 'lucide-react';
+import {
+  ChevronLeft,
+  ChevronRight,
+  Star,
+  Clock,
+  Flame,
+  ChefHat,
+  Footprints,
+  Wind,
+  Mountain,
+  Droplets,
+  Sun,
+  type LucideIcon,
+} from 'lucide-react';
+
+const iconMap: Record<string, LucideIcon> = {
+  flame: Flame,
+  'chef-hat': ChefHat,
+  footprints: Footprints,
+  wind: Wind,
+  mountain: Mountain,
+  droplets: Droplets,
+  sun: Sun,
+};
 
 interface Experience {
   title: string;
@@ -13,7 +35,7 @@ interface Experience {
   reviews: number;
   href: string;
   badge?: string;
-  Icon: LucideIcon;
+  iconName: string;
 }
 
 export default function FeaturedExperiencesScroll({ experiences }: { experiences: Experience[] }) {
@@ -64,7 +86,7 @@ export default function FeaturedExperiencesScroll({ experiences }: { experiences
         style={{ scrollPaddingLeft: '1rem' }}
       >
         {experiences.map((exp) => {
-          const IconComp = exp.Icon;
+          const IconComp = iconMap[exp.iconName] || Flame;
           return (
             <a
               key={exp.title}

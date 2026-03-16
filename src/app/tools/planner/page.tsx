@@ -183,9 +183,9 @@ const CITIES: City[] = [
 
 /* ─── Travel Style Data ─── */
 const TRAVEL_STYLES = [
-  { id: 'budget', label: 'Budget', description: 'Hostels, street food, public transport', dailyBudget: '300-500 MAD' },
-  { id: 'mid-range', label: 'Mid-Range', description: 'Riads, local restaurants, mixed transport', dailyBudget: '800-1500 MAD' },
-  { id: 'luxury', label: 'Luxury', description: 'Premium hotels, fine dining, private drivers', dailyBudget: '2500+ MAD' },
+  { id: 'budget', label: 'Budget', icon: '\u{1F3D5}', description: 'Hostels, street food, public transport', dailyBudget: '300-500 MAD' },
+  { id: 'mid-range', label: 'Mid-Range', icon: '\u{2B50}', description: 'Riads, local restaurants, mixed transport', dailyBudget: '800-1500 MAD' },
+  { id: 'luxury', label: 'Luxury', icon: '\u{1F451}', description: 'Premium hotels, fine dining, private drivers', dailyBudget: '2500+ MAD' },
 ] as const
 
 /* ─── Months ─── */
