@@ -784,7 +784,7 @@ export default function CampingPage() {
       <section className="relative min-h-[75vh] flex items-end overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1517824806704-9040b037703b?q=80&w=2800"
+            src="/images/hero-camping.webp"
             alt="Luxury desert camp under starry skies in the Moroccan Sahara"
             className="w-full h-full object-cover"
           />

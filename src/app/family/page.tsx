@@ -459,7 +459,7 @@ export default function FamilyPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1596422846543-75c6fc197f07?q=80&w=2800)',
+              'url(/images/hero-family.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

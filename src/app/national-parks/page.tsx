@@ -549,7 +549,7 @@ export default function NationalParksPage() {
       <section className="relative overflow-hidden bg-[#1A1814] text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=2800"
+            src="/images/hero-national-parks.webp"
             alt="Panoramic view of Toubkal National Park in the High Atlas Mountains of Morocco"
             className="absolute inset-0 w-full h-full object-cover"
           />

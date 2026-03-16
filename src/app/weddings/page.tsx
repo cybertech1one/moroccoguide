@@ -527,7 +527,7 @@ export default function WeddingsPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2800)',
+              'url(/images/hero-weddings.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

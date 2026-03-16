@@ -422,7 +422,7 @@ export default function DigitalNomadPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2800)',
+              'url(/images/hero-digital-nomad.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

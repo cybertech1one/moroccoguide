@@ -645,7 +645,7 @@ export default function TrekkingPage() {
       <section className="relative overflow-hidden bg-[var(--color-primary-900)] text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1600&q=80"
+            src="/images/hero-trekking.webp"
             alt="Trekkers on the trail to Mount Toubkal summit in the High Atlas Mountains"
             className="absolute inset-0 w-full h-full object-cover"
           />

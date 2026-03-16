@@ -530,7 +530,7 @@ export default function HammamPage() {
       <section className="relative overflow-hidden bg-[var(--color-primary-900)] text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1540555700478-4be289fbec6d?w=1600&q=80"
+            src="/images/hero-hammam.webp"
             alt="Traditional Moroccan hammam interior with ornate zellige tiles and warm steam"
             className="absolute inset-0 w-full h-full object-cover"
           />

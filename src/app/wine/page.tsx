@@ -694,7 +694,7 @@ export default function MoroccoWineTourismPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1920&h=1080&fit=crop&q=80"
+            src="/images/hero-wine.webp"
             alt="Vineyard landscape at golden hour with rows of grapevines stretching toward distant mountains"
             className="w-full h-full object-cover"
           />

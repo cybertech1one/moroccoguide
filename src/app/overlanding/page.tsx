@@ -643,7 +643,7 @@ export default function OverlandingPage() {
           ============================================================ */}
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?q=80&w=1920"
+          src="/images/hero-overlanding.webp"
           alt="4x4 vehicle driving through the Moroccan Sahara desert"
           className="absolute inset-0 w-full h-full object-cover"
         />

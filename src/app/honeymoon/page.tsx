@@ -611,7 +611,7 @@ export default function HoneymoonPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1548018560-c7196e91a1e2?q=80&w=2800)',
+              'url(/images/hero-honeymoon.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

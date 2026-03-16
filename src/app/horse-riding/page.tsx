@@ -590,7 +590,7 @@ export default function HorseRidingPage() {
           ============================================================ */}
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?q=80&w=1920"
+          src="/images/hero-horse-riding.webp"
           alt="Horse riding on the beach in Essaouira, Morocco at sunset"
           className="absolute inset-0 w-full h-full object-cover"
         />

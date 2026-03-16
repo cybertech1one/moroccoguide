@@ -753,7 +753,7 @@ export default function StargazingPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1515825838458-f2a94b20105a?q=80&w=1920"
+            src="/images/hero-stargazing.webp"
             alt="The Milky Way rising over the Sahara desert dunes near Merzouga, Morocco"
             className="w-full h-full object-cover"
           />

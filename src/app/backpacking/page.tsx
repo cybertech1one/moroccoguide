@@ -496,7 +496,7 @@ export default function BackpackingPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?q=80&w=2800)',
+              'url(/images/hero-backpacking.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

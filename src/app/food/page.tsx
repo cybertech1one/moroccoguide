@@ -1039,7 +1039,7 @@ export default function FoodPage() {
       <section className="relative overflow-hidden bg-[var(--color-primary-900)] text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=1600&q=80"
+            src="/images/hero-food.webp"
             alt="Traditional Moroccan tagine with spices and vegetables"
             className="absolute inset-0 w-full h-full object-cover"
           />

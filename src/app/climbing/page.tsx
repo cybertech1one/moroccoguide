@@ -397,7 +397,7 @@ export default function ClimbingPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1522163182402-834f871fd851?q=80&w=2800)',
+              'url(/images/hero-climbing.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

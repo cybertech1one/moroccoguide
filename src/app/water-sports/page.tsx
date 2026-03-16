@@ -583,7 +583,7 @@ export default function WaterSportsPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1502680390548-bdbac40cee81?q=80&w=2800)',
+              'url(/images/hero-water-sports.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />
