@@ -1126,3 +1126,665 @@ export default function DesertAdventuresPage() {
           </div>
         </div>
       </section>
+
+      {/* ============================================================== */}
+      {/*  SECTION 4: 4x4 DESERT TOURS                                  */}
+      {/* ============================================================== */}
+      <section id="desert-4x4" className="py-16 md:py-20 bg-[#FAF8F5]">
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-[#A0522D] mb-4">
+              <Route className="w-4 h-4" />
+              <span>Multi-Day Expeditions</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[#1A1814] mb-4">
+              4x4 Desert Tours &amp; Expeditions
+            </h2>
+            <p className="text-[#1A1814]/70 max-w-3xl mx-auto leading-relaxed">
+              The classic way to experience Morocco&apos;s desert. Multi-day 4x4 tours combine mountain passes,
+              ancient kasbahs, dramatic gorges, and vast sand seas into unforgettable road journeys. Prices
+              range from 2,000 to 5,000 MAD per day including vehicle, driver-guide, accommodation, and meals.
+            </p>
+          </div>
+
+          <div className="space-y-10">
+            {desertRoutes.map((route) => (
+              <div key={route.name} className="card-moroccan overflow-hidden">
+                <div className="p-6 md:p-8">
+                  <div className="flex items-start gap-3 mb-4">
+                    <div className="inline-flex p-2 rounded-lg bg-[#A0522D]/10 shrink-0">
+                      <Flag className="w-5 h-5 text-[#A0522D]" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-[family-name:var(--font-display)] font-bold text-[#1A1814] mb-1">
+                        {route.name}
+                      </h3>
+                      <p className="text-[#1A1814]/70 leading-relaxed">{route.description}</p>
+                    </div>
+                  </div>
+
+                  <div className="mb-5">
+                    <h4 className="text-sm font-bold text-[#1A1814] mb-3">Route Itinerary</h4>
+                    <div className="space-y-2">
+                      {route.itinerary.map((day, idx) => (
+                        <div key={idx} className="flex items-start gap-3">
+                          <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#A0522D]/10 flex items-center justify-center">
+                            <span className="text-[#A0522D] font-bold text-xs">{idx + 1}</span>
+                          </div>
+                          <p className="text-sm text-[#1A1814]/70 leading-relaxed pt-1">{day}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
+                    <div className="p-4 rounded-lg bg-[#FAF8F5]">
+                      <div className="flex items-center gap-1.5 text-xs font-bold text-[#C4960C] uppercase tracking-wider mb-2">
+                        <DollarSign className="w-3 h-3" /> Price Guide
+                      </div>
+                      <p className="text-sm text-[#1A1814]/70">{route.price}</p>
+                    </div>
+                    <div className="p-4 rounded-lg bg-[#FAF8F5]">
+                      <div className="flex items-center gap-1.5 text-xs font-bold text-[#A0522D] uppercase tracking-wider mb-2">
+                        <Star className="w-3 h-3" /> Highlights
+                      </div>
+                      <p className="text-sm text-[#1A1814]/70">{route.highlights}</p>
+                    </div>
+                  </div>
+
+                  <h4 className="text-sm font-bold text-[#1A1814] mb-3">Recommended Operators</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
+                    {route.operators.map((op) => (
+                      <div key={op} className="flex items-start gap-2 border-l-2 border-[#A0522D]/30 pl-3">
+                        <BadgeCheck className="w-4 h-4 text-[#A0522D] shrink-0 mt-0.5" />
+                        <p className="text-sm text-[#1A1814]/70">{op}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================== */}
+      {/*  SECTION 5: CAMEL TREKKING                                    */}
+      {/* ============================================================== */}
+      <section id="camel-trekking" className="py-16 md:py-20">
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-[#A0522D] mb-4">
+              <Footprints className="w-4 h-4" />
+              <span>The Classic Desert Experience</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[#1A1814] mb-4">
+              Camel Trekking: From Sunset Rides to Multi-Day Expeditions
+            </h2>
+            <p className="text-[#1A1814]/70 max-w-3xl mx-auto leading-relaxed">
+              The camel trek is Morocco&apos;s most iconic desert experience. Whether you want a gentle
+              1-hour sunset ride for 200 MAD or a life-changing multi-day expedition across the sand sea
+              for 1,500-3,000 MAD per day, here is exactly what to expect.
+            </p>
+          </div>
+
+          <div className="space-y-6 mb-12">
+            {camelExperiences.map((exp) => (
+              <div key={exp.type} className="card-moroccan overflow-hidden">
+                <div className="p-6 md:p-8">
+                  <h3 className="text-xl font-[family-name:var(--font-display)] font-bold text-[#1A1814] mb-3">
+                    {exp.type}
+                  </h3>
+                  <p className="text-[#1A1814]/70 leading-relaxed mb-5">{exp.description}</p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-4">
+                    <div className="p-3 rounded-lg bg-[#FAF8F5]">
+                      <p className="text-xs font-bold text-[#A0522D] uppercase tracking-wider mb-1">Locations</p>
+                      <p className="text-sm text-[#1A1814]/70">{exp.locations}</p>
+                    </div>
+                    <div className="p-3 rounded-lg bg-[#FAF8F5]">
+                      <p className="text-xs font-bold text-[#C4960C] uppercase tracking-wider mb-1">Price</p>
+                      <p className="text-sm text-[#1A1814]/70">{exp.price}</p>
+                    </div>
+                    <div className="p-3 rounded-lg bg-[#FAF8F5]">
+                      <p className="text-xs font-bold text-green-700 uppercase tracking-wider mb-1">Includes</p>
+                      <p className="text-sm text-[#1A1814]/70">{exp.includes}</p>
+                    </div>
+                    <div className="p-3 rounded-lg bg-[#FAF8F5]">
+                      <p className="text-xs font-bold text-[#1A1814]/60 uppercase tracking-wider mb-1">Reality Check</p>
+                      <p className="text-sm text-[#1A1814]/70">{exp.reality}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mb-8">
+            <h3 className="text-2xl font-[family-name:var(--font-display)] font-bold text-[#1A1814] mb-6 text-center">
+              What You Need to Know About Camels
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {camelFacts.map((fact) => (
+                <div key={fact.question} className="card-moroccan p-6">
+                  <div className="flex items-start gap-3">
+                    <div className="inline-flex p-2 rounded-lg bg-[#A0522D]/10 shrink-0">
+                      <HelpCircle className="w-5 h-5 text-[#A0522D]" />
+                    </div>
+                    <div>
+                      <h4 className="font-[family-name:var(--font-heading)] font-bold text-[#1A1814] mb-2">
+                        {fact.question}
+                      </h4>
+                      <p className="text-sm text-[#1A1814]/70 leading-relaxed">{fact.answer}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================== */}
+      {/*  SECTION 6: DESERT GLAMPING                                   */}
+      {/* ============================================================== */}
+      <section id="glamping" className="py-16 md:py-20 bg-[#FAF8F5]">
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-[#A0522D] mb-4">
+              <Tent className="w-4 h-4" />
+              <span>Luxury Under the Stars</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[#1A1814] mb-4">
+              Desert Glamping: Luxury Camps in the Sahara
+            </h2>
+            <p className="text-[#1A1814]/70 max-w-3xl mx-auto leading-relaxed">
+              Morocco&apos;s luxury desert camps have redefined what it means to sleep in the Sahara.
+              Expect king-sized beds, hot showers, gourmet dinners, and swimming pools surrounded by
+              nothing but sand dunes. Prices range from 1,500 to 5,000 MAD per night, and the experience
+              is worth every dirham.
+            </p>
+          </div>
+
+          <div className="space-y-8">
+            {glampingCamps.map((camp) => (
+              <div key={camp.name} className="card-moroccan overflow-hidden">
+                <div className="p-6 md:p-8">
+                  <div className="flex flex-wrap items-center gap-3 mb-3">
+                    <h3 className="text-xl font-[family-name:var(--font-display)] font-bold text-[#1A1814]">
+                      {camp.name}
+                    </h3>
+                    <span className="px-3 py-1 rounded-full bg-[#C4960C]/10 text-[#C4960C] text-xs font-bold">
+                      {camp.category}
+                    </span>
+                  </div>
+                  <p className="text-sm text-[#A0522D] font-medium mb-3 flex items-center gap-1.5">
+                    <MapPin className="w-3.5 h-3.5" /> {camp.location}
+                  </p>
+                  <p className="text-[#1A1814]/70 leading-relaxed mb-5">{camp.description}</p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
+                    <div className="p-4 rounded-lg bg-[#FAF8F5]">
+                      <div className="flex items-center gap-1.5 text-xs font-bold text-[#C4960C] uppercase tracking-wider mb-2">
+                        <DollarSign className="w-3 h-3" /> Price Range
+                      </div>
+                      <p className="text-sm text-[#1A1814]/70">{camp.priceRange}</p>
+                    </div>
+                    <div className="p-4 rounded-lg bg-[#FAF8F5]">
+                      <div className="flex items-center gap-1.5 text-xs font-bold text-[#A0522D] uppercase tracking-wider mb-2">
+                        <Package className="w-3 h-3" /> Included
+                      </div>
+                      <p className="text-sm text-[#1A1814]/70">{camp.includes}</p>
+                    </div>
+                  </div>
+                  <h4 className="text-sm font-bold text-[#1A1814] mb-3">Highlights</h4>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    {camp.highlights.map((h) => (
+                      <div key={h} className="flex items-start gap-2">
+                        <Star className="w-4 h-4 text-[#C4960C] shrink-0 mt-0.5" />
+                        <p className="text-sm text-[#1A1814]/70">{h}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================== */}
+      {/*  SECTION 7: STARGAZING                                        */}
+      {/* ============================================================== */}
+      <section id="stargazing" className="py-16 md:py-20 bg-[#1A1814]">
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-[#C4960C] mb-4">
+              <Moon className="w-4 h-4" />
+              <span>After Dark</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-white mb-4">
+              Stargazing Safaris in the Sahara
+            </h2>
+            <p className="text-white/70 max-w-3xl mx-auto leading-relaxed">
+              The Sahara Desert offers some of the darkest skies on Earth. With near-zero light pollution,
+              dry air, and over 300 clear nights per year, the desert transforms into a natural planetarium
+              after sunset. The Milky Way stretches overhead in breathtaking clarity.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {stargazingInfo.map((info) => (
+              <div key={info.title} className="bg-white/5 border border-white/10 rounded-2xl p-6">
+                <div className="inline-flex p-2 rounded-lg bg-[#C4960C]/20 mb-3">
+                  <Star className="w-5 h-5 text-[#C4960C]" />
+                </div>
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-white mb-2">
+                  {info.title}
+                </h3>
+                <p className="text-sm text-white/60 leading-relaxed">{info.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================== */}
+      {/*  SECTION 8: MOTORCYCLE & RALLY                                */}
+      {/* ============================================================== */}
+      <section id="motorcycle" className="py-16 md:py-20">
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-[#A0522D] mb-4">
+              <Bike className="w-4 h-4" />
+              <span>Two-Wheeled Desert</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[#1A1814] mb-4">
+              Motorcycle &amp; Rally Experiences
+            </h2>
+            <p className="text-[#1A1814]/70 max-w-3xl mx-auto leading-relaxed">
+              Morocco is a world-class motorcycle adventure destination. The combination of paved mountain
+              passes, gravel tracks, and desert pistes makes it an enduro paradise. From guided tours on
+              rented Africa Twins to amateur rally experiences, the options are exhilarating.
+            </p>
+          </div>
+
+          <div className="space-y-8">
+            {motorcycleInfo.map((info) => (
+              <div key={info.title} className="card-moroccan overflow-hidden">
+                <div className="p-6 md:p-8">
+                  <h3 className="text-xl font-[family-name:var(--font-display)] font-bold text-[#1A1814] mb-3">
+                    {info.title}
+                  </h3>
+                  <p className="text-[#1A1814]/70 leading-relaxed mb-5">{info.description}</p>
+                  <div className="space-y-2">
+                    {info.details.map((detail, idx) => (
+                      <div key={idx} className="flex items-start gap-2 border-l-2 border-[#A0522D]/30 pl-3">
+                        <CheckCircle className="w-4 h-4 text-[#A0522D] shrink-0 mt-0.5" />
+                        <p className="text-sm text-[#1A1814]/70">{detail}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================== */}
+      {/*  SECTION 9: AGAFAY DESERT                                     */}
+      {/* ============================================================== */}
+      <section id="agafay" className="py-16 md:py-20 bg-[#FAF8F5]">
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-[#A0522D] mb-4">
+              <Compass className="w-4 h-4" />
+              <span>The Desert Near Marrakech</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[#1A1814] mb-4">
+              Agafay Desert: Desert Experience Without the Drive
+            </h2>
+            <p className="text-[#1A1814]/70 max-w-3xl mx-auto leading-relaxed">
+              Not everyone has 3 days to reach the Sahara. The Agafay Desert, just 45 minutes south of
+              Marrakech, offers a genuine desert experience in a rocky, lunar landscape with stunning
+              Atlas Mountain views. It is not sand dunes, but it is beautiful, accessible, and packed
+              with activities.
+            </p>
+          </div>
+
+          <div className="card-moroccan p-6 md:p-8 border-l-4 border-l-[#A0522D] mb-10">
+            <div className="flex items-start gap-4">
+              <div className="inline-flex p-2 rounded-lg bg-[#A0522D]/10 shrink-0">
+                <MapPin className="w-5 h-5 text-[#A0522D]" />
+              </div>
+              <div>
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-[#1A1814] mb-2">
+                  Agafay at a Glance
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm text-[#1A1814]/70">
+                  <div>
+                    <span className="font-bold text-[#1A1814]">Distance:</span> 40km south of Marrakech (45 min drive)
+                  </div>
+                  <div>
+                    <span className="font-bold text-[#1A1814]">Terrain:</span> Rocky stone desert, dried lake beds, low hills
+                  </div>
+                  <div>
+                    <span className="font-bold text-[#1A1814]">Best For:</span> Short on time, couples, photography, glamping
+                  </div>
+                  <div>
+                    <span className="font-bold text-[#1A1814]">Season:</span> Year-round except peak summer (June-August)
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+            {agafayActivities.map((activity) => (
+              <div key={activity.name} className="card-moroccan p-5">
+                <div className="flex items-center justify-between mb-3">
+                  <h4 className="font-[family-name:var(--font-heading)] font-bold text-[#1A1814]">
+                    {activity.name}
+                  </h4>
+                  <span className="text-sm font-bold text-[#C4960C]">{activity.price}</span>
+                </div>
+                <p className="text-sm text-[#1A1814]/70 leading-relaxed mb-3">{activity.description}</p>
+                <div className="flex items-center gap-1.5 text-xs text-[#1A1814]/50">
+                  <Timer className="w-3 h-3" />
+                  <span>{activity.duration}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Agafay vs Sahara Comparison */}
+          <div className="card-moroccan overflow-hidden">
+            <div className="p-6 md:p-8">
+              <h3 className="text-xl font-[family-name:var(--font-display)] font-bold text-[#1A1814] mb-6 text-center">
+                Agafay Desert vs Sahara Desert: Which Should You Choose?
+              </h3>
+              <div className="overflow-x-auto">
+                <table className="w-full text-left min-w-[600px]">
+                  <thead>
+                    <tr className="bg-[#FAF8F5]">
+                      <th className="px-4 py-3 text-sm font-semibold text-[#1A1814]">Factor</th>
+                      <th className="px-4 py-3 text-sm font-semibold text-[#A0522D]">Agafay Desert</th>
+                      <th className="px-4 py-3 text-sm font-semibold text-[#C4960C]">Sahara (Erg Chebbi)</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-[#EDE8E0]">
+                    {[
+                      ['Distance from Marrakech', '45 minutes', '9-10 hours (or 1h flight to Errachidia)'],
+                      ['Landscape', 'Rocky stone desert, lunar terrain', 'Golden sand dunes up to 150m'],
+                      ['Time Required', 'Half day or overnight', 'Minimum 2 nights (3-day tour)'],
+                      ['Glamping Quality', 'Excellent (Scarabeo, Inara)', 'Excellent (Kam Kam, Sahara Stars)'],
+                      ['Activities', 'Quad, buggy, camel, balloon, dinner', 'Quad, sandboarding, camel, 4x4, stargazing'],
+                      ['Crowds', 'Moderate (growing rapidly)', 'Moderate at camps, empty between them'],
+                      ['Authenticity', 'Good but curated', 'Genuine Sahara experience'],
+                      ['Budget (per night)', '1,500-4,000 MAD', '500-5,000 MAD (wider range)'],
+                      ['Best For', 'Limited time, couples, convenience', 'Bucket list, photographers, adventurers'],
+                    ].map(([factor, agafay, sahara]) => (
+                      <tr key={factor} className="hover:bg-[#FAF8F5]/50 transition-colors">
+                        <td className="px-4 py-3 text-sm font-medium text-[#1A1814]">{factor}</td>
+                        <td className="px-4 py-3 text-sm text-[#1A1814]/70">{agafay}</td>
+                        <td className="px-4 py-3 text-sm text-[#1A1814]/70">{sahara}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================== */}
+      {/*  SECTION 10: SEASON MATRIX                                    */}
+      {/* ============================================================== */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-[#A0522D] mb-4">
+              <Calendar className="w-4 h-4" />
+              <span>Plan by Season</span>
+            </div>
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[#1A1814] mb-4">
+              Best Months for Each Desert Activity
+            </h2>
+            <p className="text-[#1A1814]/70 max-w-2xl mx-auto">
+              Green indicates the recommended season. Plan your trip around the activities that matter
+              most to you. October through April is ideal for nearly everything.
+            </p>
+          </div>
+
+          <div className="card-moroccan overflow-hidden">
+            <div className="overflow-x-auto">
+              <table className="w-full text-left min-w-[800px]">
+                <thead>
+                  <tr className="bg-[#FAF8F5]">
+                    <th className="px-4 py-3 text-sm font-semibold text-[#1A1814] sticky left-0 bg-[#FAF8F5] z-10">Activity</th>
+                    {monthLabels.map((m) => (
+                      <th key={m} className="px-2 py-3 text-xs font-semibold text-[#1A1814]/60 text-center w-12">{m}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-[#EDE8E0]">
+                  {seasonData.map((row) => (
+                    <tr key={row.activity} className="hover:bg-[#FAF8F5]/50 transition-colors">
+                      <td className="px-4 py-2 text-sm font-medium text-[#1A1814] sticky left-0 bg-white z-10">{row.activity}</td>
+                      {row.months.map((active, i) => (
+                        <td key={i} className="px-2 py-2 text-center">
+                          <div className={`w-6 h-6 rounded-full mx-auto flex items-center justify-center ${active ? 'bg-green-500/20' : 'bg-[#FAF8F5]'}`}>
+                            {active === 1 && <CheckCircle className="w-3.5 h-3.5 text-green-600" />}
+                          </div>
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================== */}
+      {/*  SECTION 11: SAFETY & PRACTICAL                               */}
+      {/* ============================================================== */}
+      <section id="safety" className="py-16 md:py-20 bg-[#FAF8F5]">
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-[#A0522D] mb-4">
+              <Shield className="w-4 h-4" />
+              <span>Stay Safe</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[#1A1814] mb-4">
+              Safety &amp; Practical Information
+            </h2>
+            <p className="text-[#1A1814]/70 max-w-3xl mx-auto leading-relaxed">
+              The desert is beautiful but unforgiving. Dehydration, sunburn, and heat exhaustion are real
+              risks. Proper preparation is not optional. The best season for desert adventures is October
+              through April when temperatures are manageable.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {safetyTips.map((tip) => (
+              <div key={tip.title} className="card-moroccan p-6">
+                <div className="inline-flex p-2 rounded-lg bg-[#A0522D]/10 mb-3">
+                  <tip.icon className="w-5 h-5 text-[#A0522D]" />
+                </div>
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-[#1A1814] mb-2">{tip.title}</h3>
+                <p className="text-sm text-[#1A1814]/70 leading-relaxed">{tip.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10 card-moroccan p-6 border-l-4 border-l-[#C4960C]">
+            <div className="flex items-start gap-4">
+              <div className="inline-flex p-2 rounded-lg bg-[#C4960C]/10 shrink-0">
+                <CloudSun className="w-5 h-5 text-[#C4960C]" />
+              </div>
+              <div>
+                <h4 className="font-[family-name:var(--font-heading)] font-bold text-[#1A1814] mb-2">
+                  The Best Season: October through April
+                </h4>
+                <p className="text-sm text-[#1A1814]/70 leading-relaxed mb-3">
+                  Desert temperatures during peak season (October-April) range from 15-30 degrees Celsius
+                  during the day and 0-15 degrees at night. Summer temperatures regularly exceed 45 degrees
+                  Celsius, making most outdoor activities dangerous. The shoulder months of October and April
+                  offer the best combination of pleasant weather, clear skies, and manageable crowds.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  <div className="p-3 rounded-lg bg-green-50">
+                    <p className="text-xs font-bold text-green-700 mb-1">Peak Season</p>
+                    <p className="text-sm text-[#1A1814]/70">November - March. Best weather, most crowds, book ahead.</p>
+                  </div>
+                  <div className="p-3 rounded-lg bg-[#C4960C]/5">
+                    <p className="text-xs font-bold text-[#C4960C] mb-1">Shoulder Season</p>
+                    <p className="text-sm text-[#1A1814]/70">October &amp; April. Warm but comfortable. Fewer tourists.</p>
+                  </div>
+                  <div className="p-3 rounded-lg bg-red-50">
+                    <p className="text-xs font-bold text-red-700 mb-1">Off Season</p>
+                    <p className="text-sm text-[#1A1814]/70">May - September. Dangerously hot. Avoid unless experienced.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================== */}
+      {/*  SECTION 12: BOOKING GUIDE                                    */}
+      {/* ============================================================== */}
+      <section id="booking-guide" className="py-16 md:py-20">
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-[#A0522D] mb-4">
+              <BookOpen className="w-4 h-4" />
+              <span>Smart Booking</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[#1A1814] mb-4">
+              How to Book Desert Adventures
+            </h2>
+            <p className="text-[#1A1814]/70 max-w-3xl mx-auto leading-relaxed">
+              Booking desert activities in Morocco requires some savvy. The difference between a great
+              experience and a disappointing one often comes down to choosing the right operator and
+              knowing what to look for. Here is your complete booking guide.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {bookingTips.map((tip) => (
+              <div key={tip.title} className="card-moroccan p-6">
+                <div className="inline-flex p-2 rounded-lg bg-[#A0522D]/10 mb-3">
+                  <CheckCircle className="w-5 h-5 text-[#A0522D]" />
+                </div>
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-[#1A1814] mb-2">{tip.title}</h3>
+                <p className="text-sm text-[#1A1814]/70 leading-relaxed">{tip.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10 card-moroccan p-6 border-l-4 border-l-red-500">
+            <div className="flex items-start gap-4">
+              <div className="inline-flex p-2 rounded-lg bg-red-500/10 shrink-0">
+                <CircleAlert className="w-5 h-5 text-red-500" />
+              </div>
+              <div>
+                <h4 className="font-[family-name:var(--font-heading)] font-bold text-[#1A1814] mb-2">
+                  Red Flags: When to Walk Away
+                </h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {[
+                    'No safety briefing or helmets provided',
+                    'Vehicles with visible damage or bald tires',
+                    'Guide cannot show a license or ID',
+                    'Pressure to pay before seeing equipment',
+                    'Price changes after initial agreement',
+                    'No written confirmation or receipt given',
+                    'Guide is aggressive about additional upsells during the activity',
+                    'Other customers online report safety issues in reviews',
+                  ].map((flag) => (
+                    <div key={flag} className="flex items-start gap-2">
+                      <AlertTriangle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
+                      <p className="text-sm text-[#1A1814]/70">{flag}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================== */}
+      {/*  SECTION 13: FAQ                                              */}
+      {/* ============================================================== */}
+      <section id="faq" className="py-16 md:py-20 bg-[#FAF8F5]">
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-[#A0522D] mb-4">
+              <HelpCircle className="w-4 h-4" />
+              <span>Common Questions</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[#1A1814] mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-[#1A1814]/70 max-w-2xl mx-auto">
+              Everything you need to know about desert adventures in Morocco, answered honestly.
+            </p>
+          </div>
+
+          <div className="max-w-3xl mx-auto space-y-4">
+            {faqs.map((faq) => (
+              <div key={faq.question} className="card-moroccan p-6">
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-[#1A1814] mb-3 flex items-start gap-2">
+                  <HelpCircle className="w-5 h-5 text-[#A0522D] shrink-0 mt-0.5" />
+                  {faq.question}
+                </h3>
+                <p className="text-sm text-[#1A1814]/70 leading-relaxed pl-7">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================== */}
+      {/*  CTA SECTION                                                  */}
+      {/* ============================================================== */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco text-center">
+          <Compass className="w-10 h-10 text-[#A0522D] mx-auto mb-4" />
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[#1A1814] mb-4">
+            Ready for the Desert?
+          </h2>
+          <p className="text-lg text-[#1A1814]/70 max-w-xl mx-auto mb-8">
+            From the golden dunes of Erg Chebbi to the rocky moonscape of Agafay, Morocco&apos;s deserts
+            are waiting. Your adventure starts with choosing the right experience.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/adventure"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-xl bg-[#A0522D] text-white font-semibold hover:bg-[#8B4726] transition-colors"
+            >
+              <Compass className="w-4 h-4" /> All Adventure Activities
+            </Link>
+            <Link
+              href="/desert"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-xl border-2 border-[#A0522D] text-[#A0522D] font-semibold hover:bg-[#A0522D] hover:text-white transition-colors"
+            >
+              <MapPin className="w-4 h-4" /> Desert Destinations
+            </Link>
+            <Link
+              href="/tools/planner"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-xl border-2 border-[#1A1814]/20 text-[#1A1814] font-semibold hover:bg-[#1A1814] hover:text-white transition-colors"
+            >
+              <Clock className="w-4 h-4" /> Plan Your Trip
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}

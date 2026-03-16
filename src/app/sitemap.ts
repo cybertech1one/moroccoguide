@@ -162,6 +162,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/dakhla',
     '/street-food',
     '/budget-travel',
+    '/meknes',
+    '/eco-tourism',
+    '/festivals-calendar',
+    '/food-tours',
+    '/romantic',
+    '/photo-spots',
+    '/darija',
+    '/street-food',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

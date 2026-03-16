@@ -3,622 +3,908 @@ import Link from 'next/link';
 import {
   ChevronRight,
   Home,
-  Waves,
-  Sun,
-  MapPin,
   Star,
+  MapPin,
   Clock,
-  ShoppingBag,
-  Compass,
-  Camera,
-  ArrowRight,
-  Utensils,
-  Hotel,
-  Plane,
-  Users,
-  Shield,
   DollarSign,
-  Gem,
-  Droplets,
-  Mountain,
-  Fish,
-  Music,
-  Baby,
-  Car,
-  Binoculars,
-  Trophy,
-  Sparkles,
-  Navigation,
   CheckCircle,
   AlertTriangle,
+  Car,
+  Camera,
+  Compass,
+  Heart,
+  Eye,
+  Sparkles,
+  Mountain,
+  Info,
+  Lightbulb,
+  Users,
+  Globe,
+  BookOpen,
+  Leaf,
+  Shield,
+  Sun,
+  Moon,
+  Sunrise,
+  Sunset,
   Calendar,
-  Anchor,
-  Wind,
+  ArrowRight,
+  Utensils,
+  Bed,
+  ShoppingBag,
+  Landmark,
+  Building,
+  TreePine,
+  Navigation,
+  Wine,
+  Music,
+  Palette,
+  Coffee,
+  Footprints,
+  Ticket,
+  HandCoins,
+  ThermometerSun,
+  CloudSun,
+  Umbrella,
+  BadgeCheck,
+  CircleDot,
+  Map,
+  Phone,
+  MessageSquare,
+  Waves,
+  Plane,
+  Bus,
+  Droplets,
+  Binoculars,
+  Trophy,
+  HelpCircle,
 } from 'lucide-react';
 
-/* ═══════════════════════════════════════════════════════════════
+/* =====================================================================
    SEO METADATA
-   ═══════════════════════════════════════════════════════════════ */
+   ===================================================================== */
 
 export const metadata: Metadata = {
-  title: 'Agadir & Souss Region Guide | Beach Resort, Surfing & Argan Country | Morocco',
+  title: 'Agadir Travel Guide 2025-2026 | Beaches, Surfing, Resorts & Day Trips',
   description:
-    'Complete guide to Agadir and the Souss-Massa region. Discover Morocco\'s premier beach resort with 300+ sunny days, world-class surfing at Taghazout, Souk El Had, argan oil cooperatives, Paradise Valley, and family-friendly attractions. Beaches, nightlife, food, and accommodation guide.',
+    'The ultimate Agadir travel guide. Discover Morocco\'s premier beach resort city with 10km of golden sand, world-class surfing in Taghazout, argan oil cooperatives, Paradise Valley, golf courses, family activities, and the best restaurants along the Atlantic coast.',
   keywords: [
-    'Agadir Morocco guide',
+    'Agadir travel guide',
+    'Agadir Morocco',
     'Agadir beach',
     'Taghazout surfing',
-    'Souss-Massa region',
+    'Agadir resorts',
     'Souk El Had Agadir',
-    'argan oil Morocco',
-    'Paradise Valley Agadir',
-    'Agadir nightlife',
+    'Agadir Oufella',
+    'Paradise Valley Morocco',
     'Agadir restaurants',
-    'Agadir all-inclusive resorts',
+    'Agadir golf',
     'Crocoparc Agadir',
-    'Taroudant Morocco',
-    'Tiznit silver Morocco',
+    'argan oil Morocco',
+    'Agadir day trips',
+    'Taroudant day trip',
+    'Tiznit silver',
+    'Tafraoute painted rocks',
+    'Souss Massa National Park',
     'Legzira beach',
-    'Imsouane surfing',
     'Agadir family holiday',
+    'Agadir surfing lessons',
+    'best time to visit Agadir',
+    'Agadir airport',
     'Morocco beach holiday',
-    'Agadir Oufella kasbah',
+    'Agadir budget guide',
+    'Agadir weather',
   ],
   openGraph: {
-    title: 'Agadir & Souss Region Guide - Morocco\'s Premier Beach Resort',
+    title: 'Agadir Travel Guide 2025-2026 | Morocco\'s Beach & Resort Capital',
     description:
-      'Your complete guide to Agadir and the Souss-Massa region. Beaches, surfing, argan oil, day trips, nightlife, food, and where to stay.',
-    url: 'https://citytoursmorocco.com/agadir-guide',
+      'Everything you need for Agadir: 10km beach, Taghazout surfing, argan oil tours, Paradise Valley, golf, family activities, and the best coastal dining in Morocco.',
+    url: 'https://moroccoguide.com/agadir',
+    type: 'article',
     images: [
       {
-        url: '/images/card-beach.webp',
+        url: '/images/hero-agadir.webp',
         width: 1200,
         height: 630,
-        alt: 'Agadir beach promenade with golden sand and palm trees along the Atlantic coast',
+        alt: 'Panoramic view of Agadir bay with golden beach and Atlantic Ocean',
       },
     ],
   },
-  alternates: { canonical: 'https://citytoursmorocco.com/agadir-guide' },
-};
-
-/* ═══════════════════════════════════════════════════════════════
-   JSON-LD STRUCTURED DATA
-   ═══════════════════════════════════════════════════════════════ */
-
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'WebPage',
-  '@id': 'https://citytoursmorocco.com/agadir-guide',
-  name: 'Agadir & Souss Region Guide - Morocco\'s Premier Beach Resort',
-  description:
-    'Comprehensive guide to Agadir and the Souss-Massa region including beaches, surfing, argan oil cooperatives, day trips, nightlife, restaurants, and accommodation options.',
-  url: 'https://citytoursmorocco.com/agadir-guide',
-  isPartOf: {
-    '@type': 'WebSite',
-    name: 'CityGuide Morocco',
-    url: 'https://citytoursmorocco.com',
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Agadir Travel Guide 2025-2026 | Beach & Resort Capital',
+    description:
+      'Complete guide to Agadir: beaches, Taghazout surfing, argan oil, Paradise Valley, golf, resorts, family activities, day trips, and coastal dining.',
+    images: ['/images/hero-agadir.webp'],
   },
-  about: {
-    '@type': 'City',
-    name: 'Agadir',
-    containedInPlace: {
-      '@type': 'Country',
-      name: 'Morocco',
-    },
-  },
-  breadcrumb: {
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://citytoursmorocco.com' },
-      { '@type': 'ListItem', position: 2, name: 'Guides', item: 'https://citytoursmorocco.com/guides' },
-      { '@type': 'ListItem', position: 3, name: 'Agadir & Souss Region', item: 'https://citytoursmorocco.com/agadir-guide' },
-    ],
+  alternates: {
+    canonical: 'https://moroccoguide.com/agadir',
   },
 };
 
-/* ═══════════════════════════════════════════════════════════════
-   BEACH DATA
-   ═══════════════════════════════════════════════════════════════ */
+/* =====================================================================
+   DATA: QUICK FACTS
+   ===================================================================== */
+
+const quickFacts = [
+  { label: 'Population', value: '600,000+', icon: Users },
+  { label: 'Rebuilt', value: '1960 onward', icon: BookOpen },
+  { label: 'Beach Length', value: '10 km', icon: Waves },
+  { label: 'Airport', value: 'AGA (Al Massira)', icon: Globe },
+  { label: 'Language', value: 'Arabic, French, Tashelhit', icon: MessageSquare },
+  { label: 'Currency', value: 'Moroccan Dirham (MAD)', icon: DollarSign },
+  { label: 'Time Zone', value: 'GMT+1', icon: Clock },
+  { label: 'Sunshine', value: '300+ days/year', icon: Sun },
+];
+
+/* =====================================================================
+   DATA: AGADIR ESSENTIALS
+   ===================================================================== */
+
+const essentialTips = [
+  {
+    icon: Sun,
+    title: 'Year-Round Sunshine',
+    description: 'Agadir enjoys over 300 days of sunshine per year with average temperatures of 20-26 degrees Celsius. Even in winter, daytime highs regularly reach 22 degrees. SPF 50 sunscreen is essential year-round as the UV index is consistently high.',
+  },
+  {
+    icon: Info,
+    title: 'Modern City Layout',
+    description: 'Unlike Marrakech or Fes, Agadir has no ancient medina. The city was rebuilt after the devastating 1960 earthquake on a modern grid. Streets are wide, navigation is easy, and the atmosphere is relaxed and resort-oriented. Think Miami Beach meets North Africa.',
+  },
+  {
+    icon: HandCoins,
+    title: 'Tipping Culture',
+    description: 'Tipping is appreciated but more relaxed than in Marrakech. Restaurant waiters: 10-15%. Hotel porters: 10-20 MAD. Tour guides: 50-100 MAD. Beach umbrella attendants: 10-20 MAD. Taxi drivers do not expect tips but rounding up is appreciated.',
+  },
+  {
+    icon: Globe,
+    title: 'Connectivity',
+    description: 'Buy a local SIM card at Al Massira Airport (Maroc Telecom or Orange) for about 30 MAD with data. Wi-Fi is available in all resorts and most restaurants. Coverage along the coast and in Taghazout is excellent.',
+  },
+  {
+    icon: Coffee,
+    title: 'Relaxed Atmosphere',
+    description: 'Agadir is one of Morocco\'s most liberal cities. Beach culture is accepted, alcohol is widely available in hotels and many restaurants, and dress codes are relaxed along the promenade. The Souk El Had area is more traditional, so modest dress is appreciated there.',
+  },
+  {
+    icon: Calendar,
+    title: 'Best Time to Visit',
+    description: 'Agadir is a year-round destination. Peak season is July-August (European holidays) and December-January (winter sun seekers). The best months for surfing are September-April. Spring (March-May) offers perfect weather with fewer crowds and lower prices.',
+  },
+];
+
+/* =====================================================================
+   DATA: BEACHES
+   ===================================================================== */
 
 const beaches = [
   {
-    name: 'Agadir Main Beach',
-    distance: 'City center',
-    length: '10 km',
-    bestFor: 'Swimming, sunbathing, families',
+    name: 'Agadir Bay (Main Beach)',
     description:
-      'The crown jewel of Agadir stretches for a magnificent 10 kilometers of wide, golden sand along a gently curving bay. The beach is backed by a palm-lined promenade (the Corniche) with restaurants, cafes, and resort hotels. The water is relatively calm compared to other Atlantic beaches in Morocco, making it ideal for families. Lifeguards patrol during peak season, and sun loungers with parasols are available for rent (20-40 MAD per day). The southern end near the marina is the most developed, while the northern stretch toward Taghazout becomes progressively quieter and more natural.',
-    image: '/images/card-beach.webp',
-    highlights: ['10 km of uninterrupted golden sand', 'Calm swimming conditions year-round', 'Palm-lined Corniche promenade', 'Lifeguards and sun lounger rental'],
+      'The crown jewel of Moroccan beach tourism: a sweeping 10-kilometer crescent of fine golden sand stretching from the port to the cliffs of the Oued Souss estuary. The beach is wide, gently sloping, and perfect for families with children. Sunbeds and parasols are available for 30-50 MAD per day from beachfront operators. The promenade running the full length is lined with cafes, restaurants, and palm trees. Swimming is safe in the designated areas, with lifeguards on duty during summer months. The water temperature ranges from 17 degrees in winter to 22 degrees in summer.',
+    type: 'City Beach',
+    bestFor: 'Families, sunbathing, promenade walks',
+    distance: 'City center',
+    tip: 'The southern end near the marina is quieter and cleaner. Sunsets from the north end near the kasbah hill are spectacular. Beach vendors sell everything from corn on the cob to fresh fruit.',
   },
   {
     name: 'Taghazout Beach',
-    distance: '19 km north',
-    length: '1.5 km',
-    bestFor: 'Surfing, backpacker scene, yoga',
     description:
-      'The bohemian surf village of Taghazout has transformed from a sleepy fishing hamlet into Morocco\'s premier surf destination. The main beach sits beneath the village and offers consistent right-hand point breaks that attract surfers from around the world. The village itself is a charming labyrinth of blue-and-white painted houses, rooftop cafes overlooking the ocean, surf shops, and yoga studios. The vibe is relaxed, international, and unmistakably surf-culture. While the main beach gets busy, walking five minutes north or south reveals quieter spots.',
-    image: '/images/card-beach.webp',
-    highlights: ['World-class point break surf', 'Bohemian village atmosphere', 'Rooftop cafes with ocean views', 'Yoga retreats and surf camps'],
+      'The legendary surf village 19 kilometers north of Agadir that put Moroccan surfing on the world map. Once a sleepy fishing village, Taghazout has evolved into an internationally recognized surf destination while retaining its laid-back bohemian character. The main beach offers consistent right-hand point breaks that work on almost any swell direction. The village itself is a charming maze of blue-and-white buildings, rooftop cafes, surf shops, and yoga studios clinging to the hillside above the Atlantic.',
+    type: 'Surf Beach',
+    bestFor: 'Surfing, surf culture, digital nomads',
+    distance: '19 km north (30 min drive)',
+    tip: 'Hash Point and Anchor Point are the famous breaks, but beginners should start at Panoramas beach. The village has excellent accommodation ranging from 80 MAD hostels to 2,000 MAD boutique riads.',
   },
   {
     name: 'Tamraght Beach',
-    distance: '15 km north',
-    length: '2 km',
-    bestFor: 'Surfing, budget surf camps',
     description:
-      'Just south of Taghazout, Tamraght (also spelled Tamraght or Tamraght) is the slightly less polished, more affordable cousin. The beach here is wider and less protected than Taghazout, producing excellent surf conditions particularly at the Banana Point and Devil\'s Rock breaks. The village is home to dozens of surf camps offering accommodation and lessons at prices well below Taghazout. The banana plantations behind the village give the area its distinctive character, and the overall atmosphere is more Moroccan and less international than its famous neighbor.',
-    image: '/images/card-beach.webp',
-    highlights: ['Banana Point and Devil\'s Rock surf breaks', 'Budget-friendly surf camps', 'Banana plantation backdrop', 'More local atmosphere than Taghazout'],
+      'Located between Agadir and Taghazout, Tamraght is a quieter alternative with excellent surf breaks and a growing reputation among intermediate surfers. The village sits above Banana Point, a reliable right-hand reef break that offers long rides on medium swells. The atmosphere is more authentically Moroccan than Taghazout, with fewer tourists, lower prices, and a genuine Amazigh village feel. Several surf camps and yoga retreats operate from converted traditional houses.',
+    type: 'Surf Beach',
+    bestFor: 'Intermediate surfing, yoga retreats, budget travelers',
+    distance: '14 km north (20 min drive)',
+    tip: 'Banana Point works best at mid-to-high tide. The village has some of the best-value surf camp accommodation on the coast, with packages including lessons, board hire, and meals from 350 MAD per day.',
   },
   {
-    name: 'Imsouane Beach',
-    distance: '90 km north',
-    length: '3 km',
-    bestFor: 'Longboarding, intermediate surfers',
+    name: 'Aourir (Banana Beach)',
     description:
-      'Imsouane is a tiny fishing village perched on a dramatic headland that shelters what many consider the longest wave in Morocco, and possibly all of Africa. The bay produces rides of up to 300 meters on a good day, making it a paradise for longboarders. The village itself is extremely laid-back with a handful of guesthouses, fish restaurants, and not much else. The bay side (La Baie) offers the famous long wave, while the exposed side (La Cathedrale) produces powerful barrels for advanced surfers. Get here before it becomes the next Taghazout.',
-    image: '/images/card-beach.webp',
-    highlights: ['Longest wave in Morocco (up to 300m rides)', 'Pristine fishing village atmosphere', 'Two distinct surf breaks', 'Fresh fish restaurants on the harbor'],
-  },
-  {
-    name: 'Aglou Beach',
-    distance: '130 km south',
-    length: '5 km',
-    bestFor: 'Solitude, local atmosphere, bodyboarding',
-    description:
-      'A wild, windswept beach south of Tiznit that remains almost entirely off the tourist radar. The village of Aglou Plage consists of a scattering of concrete houses and a few basic restaurants serving grilled fish. The beach is broad, flat, and pounded by powerful Atlantic swells that make it better for bodyboarding and walks than swimming. The real draw is the dramatic landscape: red-brown cliffs, crashing surf, and the feeling of being at the edge of the world. The cave dwellings carved into the cliffs south of the village are a fascinating curiosity.',
-    image: '/images/card-beach.webp',
-    highlights: ['Off-the-beaten-path destination', 'Dramatic cliff scenery', 'Cave dwellings in the cliffs', 'Powerful waves for bodyboarding'],
+      'Named for the banana plantations that once surrounded the village, Aourir sits 12 kilometers north of Agadir and offers a long sandy beach with mellow waves ideal for beginners and bodyboarders. The Tuesday souk in Aourir is famous throughout the region and far more authentic than tourist markets. The banana village market sells fresh produce, spices, argan products, and household goods at genuine local prices.',
+    type: 'Beach & Market Village',
+    bestFor: 'Beginners, bodyboarding, authentic markets',
+    distance: '12 km north (15 min drive)',
+    tip: 'Visit on Tuesday for the weekly souk, one of the best in the Souss region. Combine with a morning at the beach. The banana fritters from street vendors are legendary.',
   },
   {
     name: 'Legzira Beach',
-    distance: '150 km south',
-    length: '4 km',
-    bestFor: 'Photography, dramatic scenery, sunset',
     description:
-      'Famous worldwide for its extraordinary natural stone arches carved by the Atlantic into russet-red cliffs, Legzira is one of Morocco\'s most photographed beaches. One of the two original arches collapsed in 2016, but the remaining arch is still a staggering sight, particularly at sunset when the red rock glows against the deepening sky. The beach itself is expansive and wild, with strong currents that make swimming inadvisable, but the scenery alone justifies the journey. Visit at low tide for the best views and to walk beneath the arch.',
-    image: '/images/card-beach.webp',
-    highlights: ['Iconic natural stone arch', 'Stunning red cliff landscape', 'World-famous sunset photography', 'Best visited at low tide'],
+      'One of Morocco\'s most photographed beaches, famous for its dramatic red stone arches carved by millennia of Atlantic waves. Located 150 kilometers south of Agadir near Sidi Ifni, Legzira\'s towering natural rock formations create cathedral-like spaces on the beach. One of the two famous arches collapsed in 2016, but the remaining arch and the surrounding cliff formations remain breathtaking. The beach is wild, relatively empty, and backed by terracotta cliffs that glow crimson at sunset.',
+    type: 'Natural Wonder',
+    bestFor: 'Photography, nature lovers, adventurous day trips',
+    distance: '150 km south (2 hours drive)',
+    tip: 'Time your visit with low tide to walk under and around the arches. The light is most dramatic in the last two hours before sunset. Bring water and snacks as facilities are minimal.',
+  },
+  {
+    name: 'Sidi Ifni Beach',
+    description:
+      'A charming former Spanish colonial town 165 kilometers south of Agadir with a wild Atlantic beach, art deco architecture, and a beautifully melancholic atmosphere. The town was the last territory Spain returned to Morocco in 1969, and the Spanish influence is visible in the pastel-colored buildings, plaza layout, and even the occasional Spanish conversation. The beach is dramatic with big waves and strong currents, better for walks and photography than swimming.',
+    type: 'Colonial Coastal Town',
+    bestFor: 'History, architecture, atmosphere, photography',
+    distance: '165 km south (2.5 hours drive)',
+    tip: 'Stay overnight to experience the town\'s tranquil evening atmosphere. The Sunday fish market on the old airstrip is extraordinary. Combine with Legzira for a two-day southern coast adventure.',
+  },
+  {
+    name: 'Imouzzer & Paradise Valley',
+    description:
+      'While not technically a beach, this lush palm-filled valley 60 kilometers northeast of Agadir offers natural rock pools and small waterfalls fed by mountain springs. The contrast with the arid coast is startling: you drive through argan forest into a green valley with cascading pools of turquoise water surrounded by palm trees and red rocks. The main waterfall flows best in spring after winter rains. Local guides (50-100 MAD) know the best swimming spots.',
+    type: 'Natural Pools & Waterfalls',
+    bestFor: 'Swimming, hiking, escaping the heat',
+    distance: '60 km northeast (1.5 hours drive)',
+    tip: 'Visit in spring (March-May) when the waterfalls are fullest. Wear sturdy shoes for the rocky paths. The roadside honey sellers along the route offer genuine wild thyme honey for 80-150 MAD per jar.',
   },
 ];
 
-/* ═══════════════════════════════════════════════════════════════
-   SURF BREAKS DATA
-   ═══════════════════════════════════════════════════════════════ */
+/* =====================================================================
+   DATA: SURFING
+   ===================================================================== */
 
-const surfBreaks = [
+const surfSpots = [
   {
     name: 'Anchor Point',
-    location: 'Taghazout',
-    type: 'Right-hand point break',
-    level: 'Intermediate to Advanced',
-    bestSeason: 'October - April',
-    description: 'Morocco\'s most famous wave. A long, powerful right-hander that wraps around the point, producing rides of 200+ meters on big swells. Works best on medium to large northwest swells with light east winds. Can get very crowded.',
-  },
-  {
-    name: 'Killer Point',
-    location: 'North of Taghazout',
-    type: 'Right-hand point break',
     level: 'Advanced',
-    bestSeason: 'November - March',
-    description: 'A heavy, fast right-hander that breaks over shallow reef. Named for the orcas once spotted offshore. Requires a scramble down the cliff to access. Not for beginners. Produces some of the best barrels in the region.',
+    type: 'Right-hand point break',
+    description: 'Morocco\'s most famous wave and one of the best right-hand point breaks in the world. Long, powerful walls that can hold swells up to 15 feet. When it fires on a solid northwest swell, rides of 300 meters or more are possible. Not for beginners under any circumstances.',
+    bestSeason: 'October - March',
+    bestTide: 'Mid to high tide',
   },
   {
     name: 'Hash Point',
-    location: 'Taghazout village',
+    level: 'Intermediate-Advanced',
     type: 'Right-hand point break',
-    level: 'Intermediate',
-    bestSeason: 'September - May',
-    description: 'A more forgiving right-hand point break directly in front of Taghazout village. Smaller and slower than Anchor Point, making it perfect for improving intermediates. Easy paddle out from the rocks.',
+    description: 'Named after the headland in Taghazout village, this is a long, walling right-hander that breaks over a boulder-strewn seabed. More forgiving than Anchor Point and an excellent step up for intermediate surfers looking to progress. Consistent and rideable on most swells.',
+    bestSeason: 'September - April',
+    bestTide: 'All tides',
   },
   {
-    name: 'Panoramas',
-    location: 'Taghazout',
+    name: 'Panoramas (Panoramicas)',
+    level: 'Beginner-Intermediate',
     type: 'Beach break',
-    level: 'Beginner to Intermediate',
+    description: 'A forgiving beach break south of Taghazout village with sandy bottom and mellow waves. This is where most surf schools bring beginners for their first sessions. The waves are gentle, the water is relatively warm, and the wipeouts are soft. Perfect for learning to stand up and catch your first green waves.',
     bestSeason: 'Year-round',
-    description: 'A sandy-bottom beach break just south of Taghazout village. Offers mellow, peeling waves that are ideal for beginners and longboarders. Multiple peaks spread the crowd. Surf schools operate here daily.',
+    bestTide: 'Low to mid tide',
   },
   {
-    name: 'Banana Point',
-    location: 'Tamraght',
-    type: 'Right-hand point break',
+    name: 'Banana Point (Tamraght)',
     level: 'Intermediate',
-    bestSeason: 'October - April',
-    description: 'A fun, playful right-hander that breaks in front of the banana plantations. Less powerful than Anchor Point but more consistent and forgiving. Very popular with the surf camp crowd from Tamraght.',
+    type: 'Right-hand reef break',
+    description: 'A fun, reliable right-hander breaking over a rocky reef in front of Tamraght village. Offers long, workable walls with the occasional barrel section on bigger swells. The paddle out is straightforward and the lineup is usually less crowded than Taghazout spots.',
+    bestSeason: 'September - April',
+    bestTide: 'Mid to high tide',
   },
   {
-    name: 'La Baie (Imsouane)',
-    location: 'Imsouane',
-    type: 'Right-hand point break',
-    level: 'All levels',
-    bestSeason: 'September - May',
-    description: 'The legendary long wave of Imsouane. Breaks into a sheltered bay, producing incredibly long, mellow rides that can exceed 300 meters. Perfect for longboarding. One of the most magical waves in Morocco.',
-  },
-  {
-    name: 'La Cathedrale (Imsouane)',
-    location: 'Imsouane',
-    type: 'Reef break',
+    name: 'Killer Point',
     level: 'Advanced',
-    bestSeason: 'November - March',
-    description: 'The exposed, ocean-facing side of the Imsouane headland. Produces powerful, hollow waves that are a completely different character from the gentle bay. For experienced surfers only.',
+    type: 'Right-hand point break',
+    description: 'A heavy, powerful wave breaking over shallow reef north of Taghazout. Named (perhaps ominously) for the orca whales once spotted here, not for any danger to surfers, though it demands respect. Produces thick, hollow barrels on solid swells. Access requires a scramble down the cliff.',
+    bestSeason: 'November - February',
+    bestTide: 'Mid tide',
   },
   {
     name: 'Devil\'s Rock',
+    level: 'Intermediate-Advanced',
+    type: 'Right-hand reef break',
+    description: 'A quality right-hander breaking in front of a distinctive offshore rock formation between Tamraght and Taghazout. Offers fast, hollow sections with a reliable takeoff zone. Works on medium to large swells and can produce excellent barrels at low tide.',
+    bestSeason: 'October - March',
+    bestTide: 'Low to mid tide',
+  },
+];
+
+const surfSchools = [
+  {
+    name: 'Surf Maroc',
+    location: 'Taghazout',
+    price: '450-600 MAD/lesson',
+    description: 'The original Taghazout surf operation, running since 2003. Professional ISA-certified instructors, excellent equipment, and stylish accommodation in converted traditional houses. Their week-long packages include accommodation, daily lessons, video analysis, and meals.',
+  },
+  {
+    name: 'Hash Point Surf Camp',
+    location: 'Taghazout',
+    price: '350-500 MAD/lesson',
+    description: 'A popular mid-range option with a prime location overlooking Hash Point. Good quality boards, experienced local instructors, and a social rooftop with ocean views. Group lessons are excellent value at 350 MAD including equipment.',
+  },
+  {
+    name: 'Amouage Surf & Yoga',
     location: 'Tamraght',
-    type: 'Reef break',
-    level: 'Intermediate to Advanced',
-    bestSeason: 'October - April',
-    description: 'A rocky reef break between Tamraght and Taghazout producing fast, hollow waves. Best on a mid to high tide. The paddle out through the rocks requires experience.',
+    price: '300-450 MAD/lesson',
+    description: 'Combining surfing and yoga in a beautifully designed retreat in Tamraght village. The surf lessons are professional and the post-surf yoga sessions on the rooftop terrace are the perfect recovery. Week-long packages from 3,500 MAD all-inclusive.',
+  },
+  {
+    name: 'Dynamite Surf School',
+    location: 'Taghazout',
+    price: '350-550 MAD/lesson',
+    description: 'Run by local Moroccan surfers who grew up on these waves. Authentic experience with deep knowledge of local conditions. Individual attention with small group sizes (maximum 4 students per instructor). Board rental from 150 MAD per day.',
   },
 ];
 
-/* ═══════════════════════════════════════════════════════════════
-   WATER SPORTS DATA
-   ═══════════════════════════════════════════════════════════════ */
+/* =====================================================================
+   DATA: ATTRACTIONS
+   ===================================================================== */
 
-const waterSports = [
+const attractions = [
   {
-    name: 'Jet Ski',
-    price: '400-600 MAD / 30 min',
-    location: 'Agadir Marina & main beach',
-    season: 'Year-round',
-    description: 'Jet ski rental is available along the main beach and at the marina. Operators provide life jackets and a brief orientation. Popular during summer when the sea is calmest. No license required for rental with an operator on board.',
+    name: 'Agadir Oufella (Kasbah Ruins)',
+    description:
+      'The hilltop ruins of the old kasbah perched 236 meters above the city offer the most spectacular panoramic views of Agadir Bay, the port, and the Atlas Mountains fading into the distance. The original fortress was built in 1540 by the Saadian sultan Mohammed ash-Sheikh to defend against Portuguese attacks. The 1960 earthquake destroyed the kasbah and buried most of the old city beneath it. Today, only the restored outer walls and the famous Arabic inscription "God, Country, King" remain, but the sunset views are unforgettable. A winding road leads to the top, and the site is free to visit.',
+    image: '/images/hero-agadir.webp',
+    type: 'Historic Ruins',
+    rating: 4.5,
+    hours: 'Open daily, sunrise to sunset',
+    price: 'Free',
+    tip: 'Visit at sunset when the bay turns gold and the city lights begin to twinkle. A taxi to the top costs 30-40 MAD. The inscription on the wall is illuminated at night and visible from the entire city.',
   },
   {
-    name: 'Parasailing',
-    price: '300-500 MAD / 15 min',
-    location: 'Agadir main beach',
-    season: 'May - October',
-    description: 'Soar above Agadir\'s coastline with tandem parasailing flights launched from the beach. The views of the entire bay, the Kasbah hill, and the Atlas Mountains in the distance are spectacular. Wind conditions are most stable in the morning.',
+    name: 'Souk El Had',
+    description:
+      'The largest souk in the Souss region, covering over 13 hectares with more than 3,000 shops arranged in clearly labeled sections. Unlike the labyrinthine souks of Marrakech and Fes, Souk El Had is organized on a grid system with numbered gates and sectioned areas for spices, textiles, leather, electronics, produce, meat, fish, ceramics, and household goods. This is where Agadir locals shop, and prices are significantly lower than in tourist-oriented markets. The fresh produce section is a riot of color with stacked pyramids of oranges, dates, olives, and seasonal vegetables.',
+    image: '/images/hero-agadir.webp',
+    type: 'Market',
+    rating: 4.6,
+    hours: 'Saturday - Thursday: 6:00 AM - 8:00 PM, closed Friday',
+    price: 'Free entry',
+    tip: 'Enter through Gate 1 (Bab 1) for the main entrance. The argan oil and spice sections are near Gate 5. Prices are already reasonable but light haggling (10-20% off) is still expected. Bring cash as most vendors do not accept cards.',
   },
   {
-    name: 'Sea Kayaking',
-    price: '150-250 MAD / hour',
-    location: 'Agadir beach, Taghazout',
-    season: 'Year-round',
-    description: 'Single and tandem kayaks are available for rental along the beach. Paddle north from Agadir toward the cliffs for the most scenic route. In Taghazout, guided kayak tours explore sea caves and secluded coves inaccessible by land.',
+    name: 'Crocoparc',
+    description:
+      'A beautifully designed zoological garden dedicated to Nile crocodiles, set within a lush botanical garden of cacti, tropical plants, and medicinal herbs. Home to over 300 crocodiles of various sizes, from tiny hatchlings to four-meter adults basking on the banks of landscaped pools. The park also features an impressive cactus garden with over 400 species, a snake house, a giant tortoise enclosure, and well-maintained walking paths through themed gardens. Interactive feeding demonstrations happen twice daily.',
+    image: '/images/hero-agadir.webp',
+    type: 'Zoo & Botanical Garden',
+    rating: 4.4,
+    hours: '9:30 AM - 6:00 PM daily',
+    price: '70 MAD (adult), 40 MAD (children 3-12)',
+    tip: 'Arrive for the 11 AM or 3 PM feeding session when the crocodiles are most active. The cactus garden is underrated and genuinely impressive. Allow 2 hours for a full visit. There is a good on-site cafe.',
   },
   {
-    name: 'Banana Boat',
-    price: '100-150 MAD / ride',
-    location: 'Agadir main beach',
-    season: 'June - September',
-    description: 'A classic beach resort activity. Inflatable banana boats are towed behind a speedboat while riders attempt to hold on through sharp turns. Great fun for groups and families with older children. Available at multiple points along the beach.',
+    name: 'Valley of the Birds (Vallee des Oiseaux)',
+    description:
+      'A narrow, shaded park running through the center of the city between the beach and the main boulevard. Despite the name, it is more of a small urban zoo and botanical garden than a bird sanctuary. Flamingos, macaws, monkeys, Barbary sheep, and gazelles inhabit landscaped enclosures connected by pathways shaded by eucalyptus and palm trees. Children love the playground, the small waterfall, and the animal encounters. It is a pleasant green escape from the beach and boulevard.',
+    image: '/images/hero-agadir.webp',
+    type: 'Urban Park & Mini Zoo',
+    rating: 4.1,
+    hours: '9:00 AM - 6:30 PM daily',
+    price: 'Free',
+    tip: 'A perfect mid-morning break if you have young children. The park connects the promenade to Avenue Hassan II, making it a convenient shortcut as well as a destination.',
   },
   {
-    name: 'Stand-Up Paddleboarding',
-    price: '150-200 MAD / hour',
-    location: 'Agadir beach, Taghazout bay',
-    season: 'Year-round',
-    description: 'SUP has exploded in popularity and is perfect for the calm morning waters of Agadir bay. Boards are available for rent along the beach, and guided SUP tours operate from Taghazout. The calm bay at Imsouane is also exceptional for SUP.',
+    name: 'Marina d\'Agadir',
+    description:
+      'A modern waterfront development at the northern end of the beach where luxury yachts bob alongside traditional fishing boats. The marina complex includes upscale restaurants, cafes, boutique shops, and an attractive pedestrian boardwalk. It is the most polished and contemporary part of Agadir, with a Mediterranean feel that contrasts with the rest of the city. Evening strolls along the marina are popular with both tourists and locals. Several restaurants here serve excellent fresh seafood with marina views.',
+    image: '/images/hero-agadir.webp',
+    type: 'Waterfront',
+    rating: 4.3,
+    hours: 'Open 24 hours (restaurants until late)',
+    price: 'Free',
+    tip: 'The marina restaurants are pricier than city center options but the setting is unbeatable for a sunset dinner. The fish restaurants near the port end offer better value than those at the boutique end.',
   },
   {
-    name: 'Scuba Diving',
-    price: '500-800 MAD / dive',
-    location: 'Agadir, Taghazout',
-    season: 'May - November',
-    description: 'While not Morocco\'s premier dive destination, the waters off Agadir offer interesting reef diving with visibility of 10-20 meters. Marine life includes octopus, moray eels, sea bass, and occasional rays. Several PADI-certified operators offer courses and guided dives.',
+    name: 'Amazigh Heritage Museum (Musee du Patrimoine Amazigh)',
+    description:
+      'A small but thoughtfully curated museum dedicated to the Amazigh (Berber) heritage of the Souss region. The collection includes traditional Amazigh jewelry, carpets, pottery, musical instruments, weapons, clothing, and domestic objects spanning several centuries. The silver jewelry collection is particularly impressive, showcasing the intricate craftsmanship of Tiznit and Anti-Atlas silversmiths. The museum provides essential context for understanding the predominantly Amazigh culture of the Agadir region.',
+    image: '/images/hero-agadir.webp',
+    type: 'Museum',
+    rating: 4.2,
+    hours: '9:30 AM - 5:30 PM, closed Sunday',
+    price: '20 MAD',
+    tip: 'Visit before going to Souk El Had or the argan cooperatives to better appreciate the Amazigh culture you will encounter. The museum is small and can be covered in 45 minutes.',
   },
   {
-    name: 'Kitesurfing',
-    price: '1,500-2,500 MAD / lesson',
-    location: 'Agadir bay (north end)',
-    season: 'April - September',
-    description: 'The north end of Agadir bay and the beaches north toward Tamraght catch consistent afternoon thermal winds. Conditions are less consistent than Essaouira or Dakhla, but lessons and rental are available and the flat-water bay is excellent for beginners.',
-  },
-  {
-    name: 'Fishing Trips',
-    price: '300-800 MAD / half day',
-    location: 'Agadir port',
-    season: 'Year-round',
-    description: 'Charter a traditional fishing boat from the port for a half-day of line fishing. Species include sea bream, sea bass, and mackerel. Some operators offer a full experience where your catch is grilled on the beach afterward.',
+    name: 'The Promenade (Corniche)',
+    description:
+      'Agadir\'s famous beachfront promenade stretches for nearly 7 kilometers along the bay, lined with palm trees, restaurants, cafes, and hotels. This is the social heart of the city, especially in the early evening when families, joggers, and couples stroll along the wide pedestrian walkway as the sun sets over the Atlantic. Bicycle and electric scooter rentals are available along the route. The promenade connects the marina in the north to the Oued Souss estuary in the south, passing virtually every major beachfront hotel.',
+    image: '/images/hero-agadir.webp',
+    type: 'Promenade',
+    rating: 4.4,
+    hours: 'Open 24 hours',
+    price: 'Free',
+    tip: 'Walk the full length at sunset for the quintessential Agadir experience. Rent a bicycle (30-50 MAD per hour) if you want to cover the full distance. The cafes near Sector Touristique have the best people-watching.',
   },
 ];
 
-/* ═══════════════════════════════════════════════════════════════
-   DAY TRIPS DATA
-   ═══════════════════════════════════════════════════════════════ */
+/* =====================================================================
+   DATA: RESTAURANTS
+   ===================================================================== */
+
+const restaurants = [
+  {
+    name: 'Ocean Vagabond',
+    cuisine: 'Mediterranean-Moroccan',
+    price: '$$',
+    location: 'Beachfront (Secteur Balneaire)',
+    description: 'A stylish beachfront restaurant and lounge with direct sand access, excellent seafood, creative cocktails, and a laid-back California-meets-Morocco vibe. The grilled sea bass, prawn tagine, and fresh salads are superb. Weekend brunch is very popular with expats and well-heeled locals.',
+    priceRange: '80-200 MAD per person',
+  },
+  {
+    name: 'Pure Passion Restaurant',
+    cuisine: 'International-Moroccan Fusion',
+    price: '$$$',
+    location: 'Marina d\'Agadir',
+    description: 'One of Agadir\'s finest dining experiences, set in the marina with beautiful terrace views over the yachts. The menu blends Moroccan flavors with French and Italian technique. The seafood pastilla, lamb shank tagine, and chocolate fondant are standouts. Excellent wine list featuring Moroccan and French bottles.',
+    priceRange: '150-350 MAD per person',
+  },
+  {
+    name: 'Le Jardin d\'Eau',
+    cuisine: 'Moroccan-French',
+    price: '$$$',
+    location: 'City Center',
+    description: 'An elegant garden restaurant known for its refined take on Moroccan classics. The setting is a beautifully landscaped courtyard with water features and lantern lighting. Specialties include pigeon pastilla, saffron monkfish, and an exceptional seven-vegetable couscous served only on Fridays. Reservations recommended.',
+    priceRange: '120-280 MAD per person',
+  },
+  {
+    name: 'Fish Market Grills (Port d\'Agadir)',
+    cuisine: 'Fresh Seafood',
+    price: '$',
+    location: 'Agadir Port',
+    description: 'The most authentic seafood experience in Agadir. Choose your fish, prawns, calamari, or lobster from the market stalls, negotiate the price per kilogram, then hand it to one of the adjacent grill operators who will cook it with chermoula marinade, salad, and bread for a small cooking fee of 20-30 MAD. A full seafood feast can cost as little as 60-120 MAD per person. The sardines (8-15 MAD per portion) are the best value in Morocco.',
+    priceRange: '30-120 MAD per person',
+  },
+  {
+    name: 'Chez Tonton',
+    cuisine: 'French Bistro',
+    price: '$$',
+    location: 'Nouveau Talborjt',
+    description: 'A beloved French-style bistro run by the same family for decades. Known for generous portions, honest cooking, and a warm atmosphere. The steak frites, moules mariniere, and tarte tatin are consistently excellent. One of the few restaurants in Agadir where the French expat community gathers, which tells you everything about the quality.',
+    priceRange: '80-180 MAD per person',
+  },
+  {
+    name: 'La Scala',
+    cuisine: 'Italian-Mediterranean',
+    price: '$$',
+    location: 'Secteur Touristique',
+    description: 'An Italian restaurant that has earned a loyal following for its wood-fired pizzas, fresh pasta, and generous antipasti platters. The terrace is pleasant in the evening, and the portions are large. Good for families and groups. The seafood linguine and quattro formaggi pizza are local favorites.',
+    priceRange: '70-160 MAD per person',
+  },
+  {
+    name: 'Mezzo Mezzo',
+    cuisine: 'Mediterranean',
+    price: '$$',
+    location: 'Sonaba district',
+    description: 'A modern, sleek restaurant that draws a younger crowd with its creative Mediterranean menu, craft cocktails, and stylish interior. The tuna tataki, grilled octopus, and risotto are beautifully presented and genuinely delicious. One of the newer additions to Agadir\'s dining scene and rapidly becoming a local favorite.',
+    priceRange: '90-200 MAD per person',
+  },
+  {
+    name: 'Jour et Nuit',
+    cuisine: 'Moroccan-International',
+    price: '$',
+    location: 'Avenue Hassan II',
+    description: 'A popular all-day cafe and restaurant on Agadir\'s main boulevard. Excellent for breakfast (fresh juice, msemen, eggs, and coffee from 25 MAD), casual lunches, and affordable dinners. The mixed grill plate and chicken tagine with preserved lemons offer excellent value. Locals and tourists mix here in equal measure.',
+    priceRange: '25-100 MAD per person',
+  },
+];
+
+/* =====================================================================
+   DATA: ACCOMMODATION
+   ===================================================================== */
+
+const accommodation = [
+  {
+    name: 'Sofitel Agadir Royal Bay Resort',
+    category: 'Luxury',
+    price: '2,000-5,000 MAD/night',
+    description: 'The crown jewel of Agadir hotels. A five-star resort set in sprawling gardens with direct beach access, multiple pools, a world-class spa, and impeccable service. The rooms blend Moroccan design with contemporary luxury. The beachfront restaurant serves exceptional seafood, and the bar terrace is the best sunset spot in Agadir. Half-board packages offer excellent value.',
+    features: ['Private beach', 'Spa & hammam', 'Multiple pools', '3 restaurants', 'Golf access'],
+  },
+  {
+    name: 'Tikida Golf Palace',
+    category: 'Luxury',
+    price: '1,500-3,500 MAD/night',
+    description: 'An elegant resort adjacent to the Golf du Soleil course, perfect for golf enthusiasts. Spacious rooms with balconies overlooking manicured gardens and the golf course. The resort features a large pool complex, full spa, tennis courts, and direct beach shuttle. The architecture is beautifully Moorish-inspired with zellige-tiled courtyards and carved stucco.',
+    features: ['Golf course access', 'Spa & wellness center', 'Tennis courts', 'Beach shuttle', 'Kids club'],
+  },
+  {
+    name: 'Iberostar Founty Beach',
+    category: 'Mid-Range All-Inclusive',
+    price: '800-1,800 MAD/night',
+    description: 'A solid all-inclusive option directly on the beach with reliable quality, extensive buffet restaurants, multiple bars, entertainment programs, and a large pool area. The rooms are modern and well-maintained. The all-inclusive package represents good value for families who want everything included. The beach access is among the best of any Agadir hotel.',
+    features: ['All-inclusive', 'Beachfront', 'Animation team', 'Multiple pools', 'Buffet restaurants'],
+  },
+  {
+    name: 'Riad Villa Blanche',
+    category: 'Boutique',
+    price: '900-2,200 MAD/night',
+    description: 'An intimate boutique hotel styled as a traditional riad but with modern comforts and a swimming pool. Located in the city center rather than the tourist strip, it offers a more authentic experience with personalized service, a beautiful courtyard restaurant, and individually decorated rooms. The staff arranges excellent day trips and can organize private dining experiences.',
+    features: ['Boutique atmosphere', 'Pool & garden', 'Restaurant', 'Personalized service', 'Central location'],
+  },
+  {
+    name: 'Atlantic Hotel Agadir',
+    category: 'Mid-Range',
+    price: '500-1,000 MAD/night',
+    description: 'A reliable mid-range hotel on the promenade with clean, comfortable rooms, a rooftop pool with ocean views, and an excellent location for exploring the beach and city center on foot. The breakfast buffet is generous and the staff are helpful. Good value for money with a prime beachfront position.',
+    features: ['Beachfront location', 'Rooftop pool', 'Restaurant', 'Ocean view rooms', 'Tour desk'],
+  },
+  {
+    name: 'Hostel Agadir Surf (Various)',
+    category: 'Budget',
+    price: '80-200 MAD/night',
+    description: 'Agadir and Taghazout have numerous budget hostels and surf camps offering dormitory beds from 80 MAD and private rooms from 150 MAD. The surf hostels in Taghazout and Tamraght generally offer better atmosphere and value than city center budget options. Many include communal kitchens, rooftop terraces, and surfboard storage. Weekly rates offer significant discounts.',
+    features: ['Dormitory & private rooms', 'Communal kitchen', 'Surf storage', 'Social atmosphere', 'Rooftop terrace'],
+  },
+];
+
+/* =====================================================================
+   DATA: DAY TRIPS
+   ===================================================================== */
 
 const dayTrips = [
   {
     name: 'Paradise Valley',
-    distance: '30 km northeast',
-    duration: 'Half day',
+    icon: Droplets,
+    distance: '60 km (1.5 hours)',
     description:
-      'A stunning natural gorge in the foothills of the Anti-Atlas where a series of crystal-clear turquoise rock pools are connected by a seasonal river. The palm-lined valley was a hippie hangout in the 1960s and 1970s, reportedly visited by Jimi Hendrix. Today it is a popular escape from the beach, offering swimming in natural pools, cliff jumping (with caution), and a scenic hike along the valley floor. The access road winds through argan tree forests where goats famously climb the branches. Best visited in spring when water levels are highest.',
-    highlights: ['Turquoise natural rock pools', 'Swimming and cliff jumping', 'Argan trees with climbing goats', 'Palm-lined valley hike'],
-    bestTime: 'March - June (highest water levels)',
-    cost: 'Free (10 MAD parking fee)',
-    image: '/images/card-beach.webp',
-  },
-  {
-    name: 'Tiznit',
-    distance: '90 km south',
-    duration: 'Half day to full day',
-    description:
-      'Known as the silver capital of Morocco, Tiznit is a walled town with an atmospheric medina that specializes in Berber silver jewelry. The town\'s jewelers produce intricate brooches, necklaces, fibulae, and rings using techniques passed down through generations. The medina is small enough to explore without getting lost, and the shopping is superb if you appreciate handcrafted metalwork. The Source Bleue (Blue Spring) in the center of the medina is a small oasis pool with an interesting local legend. Tiznit is also the gateway to Aglou and Legzira beaches.',
-    highlights: ['Berber silver jewelry workshops', 'Compact, walkable medina', 'Source Bleue oasis pool', 'Gateway to Aglou and Legzira beaches'],
-    bestTime: 'Year-round (Thursday souk day)',
-    cost: 'Transport + shopping budget',
-    image: '/images/card-beach.webp',
+      'A stunning natural oasis hidden in the foothills of the Anti-Atlas mountains. The valley features a series of natural rock pools connected by small waterfalls, surrounded by palm trees, oleander bushes, and dramatic rock formations. The turquoise pools are deep enough for swimming and cliff jumping in designated spots. The drive through argan forest is scenic, passing goats climbing argan trees. Local guides (50-100 MAD) lead you to the best pools and ensure safety.',
+    highlights: ['Natural rock pools', 'Swimming & cliff jumping', 'Palm-filled valley', 'Argan forest drive', 'Local guides available'],
+    bestTime: 'March - June (water levels highest)',
+    cost: 'Free entry; guide 50-100 MAD; taxi day trip 400-600 MAD round trip',
   },
   {
     name: 'Taroudant',
-    distance: '80 km east',
-    duration: 'Full day',
+    icon: Landmark,
+    distance: '85 km (1.5 hours)',
     description:
-      'Often called "little Marrakech" for its impressive circuit of tawny-red ramparts, Taroudant delivers much of the red city\'s atmosphere at a fraction of the crowds and prices. The town has two distinct souks: the Arab Souk (Souk Arabe) specializing in clothing, spices, and household goods, and the Berber Souk (Souk Amazigh) focused on produce, pottery, and livestock. The 7.5 km circuit of crenellated walls is beautifully preserved and can be explored by calèche (horse-drawn carriage). The surrounding Souss Valley is intensively farmed with citrus groves, olive orchards, and argan forests.',
-    highlights: ['Impressive 7.5 km circuit of red ramparts', 'Two distinct souks (Arab and Berber)', 'Calèche rides along the walls', 'Fraction of Marrakech\'s crowds and prices'],
-    bestTime: 'Year-round (Sunday and Thursday souk days)',
-    cost: '100-200 MAD for calèche tour',
-    image: '/images/card-beach.webp',
+      'Often called "Little Marrakech," this walled city in the fertile Souss Valley offers an authentic Moroccan medina experience without the tourist intensity of Marrakech. The impressive red-ochre ramparts stretch for 7.5 kilometers around a working medina where artisans craft leather goods, metal lanterns, and Amazigh jewelry. Two distinct souks serve different functions: the Arab souk for spices, textiles, and household goods, and the Amazigh souk for local produce and handcrafts. The tanneries here are smaller and less overwhelming than those in Fes.',
+    highlights: ['7.5 km city walls', 'Two authentic souks', 'Working tanneries', 'Amazigh jewelry', 'Riad lunch options'],
+    bestTime: 'Year-round; cooler in winter',
+    cost: 'Grand taxi 200-300 MAD round trip; organized tour 400-700 MAD',
   },
   {
-    name: 'Crocoparc',
-    distance: '14 km east',
-    duration: 'Half day',
+    name: 'Tiznit',
+    icon: Sparkles,
+    distance: '95 km (1.5 hours)',
     description:
-      'A modern, well-designed crocodile park and botanical garden set in a beautifully landscaped 4-hectare site. Home to over 300 Nile crocodiles, the park features walking paths through cactus gardens, a serpentarium, and informative displays about reptile ecology. There is a shaded playground, a good restaurant, and an overall level of design quality that feels more European than Moroccan. Particularly excellent for families with children, who are mesmerized by the crocodile feeding demonstrations. One of the best-maintained attractions in the Agadir region.',
-    highlights: ['Over 300 Nile crocodiles', 'Beautiful botanical gardens', 'Excellent for families', 'Crocodile feeding demonstrations'],
-    bestTime: 'Year-round',
-    cost: '70 MAD adult / 40 MAD child',
-    image: '/images/card-beach.webp',
+      'The silver capital of Morocco, where the Amazigh tradition of silver jewelry-making has thrived for centuries. The small walled medina houses dozens of silver workshops where you can watch artisans hammer, engrave, and enamel intricate pieces by hand. Tiznit silver jewelry is characterized by bold geometric Amazigh designs, amber and coral inlays, and fibula brooches that have been worn by Berber women for millennia. The quality is far superior to tourist jewelry sold in Marrakech, and prices are 30-50% lower.',
+    highlights: ['Silver jewelry workshops', 'Amazigh designs', 'Walled medina', 'Artisan demonstrations', 'Authentic prices'],
+    bestTime: 'Thursday (main souk day)',
+    cost: 'Grand taxi 150-250 MAD round trip; silver pieces from 100 MAD',
   },
   {
-    name: 'Souss-Massa National Park',
-    distance: '40 km south',
-    duration: 'Half day to full day',
+    name: 'Tafraoute & Painted Rocks',
+    icon: Palette,
+    distance: '170 km (3 hours)',
     description:
-      'A 33,800-hectare national park protecting the estuary of the Oued Souss and Oued Massa rivers, renowned as one of the most important birdwatching sites in Morocco. The park is the last refuge of the critically endangered northern bald ibis, with a population of around 100 breeding pairs. The landscape encompasses beaches, sand dunes, farmland, and steppe, supporting over 250 bird species. Flamingos, spoonbills, marbled ducks, and various raptors are regular sightings. The Oued Massa section is the most accessible and rewarding for casual visitors.',
-    highlights: ['Critically endangered northern bald ibis', 'Over 250 bird species', 'Flamingos and spoonbills', 'Beautiful estuary landscape'],
-    bestTime: 'October - March (migratory birds present)',
-    cost: '20 MAD entry fee',
-    image: '/images/card-beach.webp',
+      'A remote and spectacularly beautiful town nestled in a valley of pink granite boulders in the Anti-Atlas mountains. The surrounding landscape is otherworldly: massive smooth granite formations in shades of pink, red, and orange tower above almond orchards and traditional Amazigh villages. The famous Painted Rocks, created by Belgian artist Jean Verame in 1984, are a collection of massive boulders painted in vivid blues, reds, and purples scattered across the desert landscape. Tafraoute is also known for its February almond blossom festival.',
+    highlights: ['Painted Rocks installation', 'Pink granite valley', 'Almond blossoms (February)', 'Amazigh villages', 'Napoleon\'s Hat rock formation'],
+    bestTime: 'February (almond blossoms), October - April (pleasant temperatures)',
+    cost: 'Rental car recommended; organized tour 600-900 MAD; allow full day',
+  },
+  {
+    name: 'Souss Massa National Park',
+    icon: Binoculars,
+    distance: '65 km (1 hour)',
+    description:
+      'A coastal national park stretching 33,000 hectares along the Atlantic between Agadir and Tiznit. The park protects critical habitat for the endangered Northern Bald Ibis, one of the world\'s rarest birds with fewer than 700 individuals remaining. The park encompasses dramatic cliff-lined coastline, sand dunes, freshwater marshes, and argan forest. Over 250 bird species have been recorded, including flamingos, spoonbills, marbled teal, and Eleonora\'s falcon. Guided birdwatching tours are the best way to see the ibis colonies.',
+    highlights: ['Northern Bald Ibis colony', '250+ bird species', 'Coastal cliffs & dunes', 'Argan forest', 'Flamingo wetlands'],
+    bestTime: 'March - May and September - November (migration seasons)',
+    cost: 'Park entry 20 MAD; guided birdwatching tour 300-500 MAD',
   },
   {
     name: 'Immouzzer des Ida Outanane',
-    distance: '60 km northeast',
-    duration: 'Full day',
+    icon: Mountain,
+    distance: '60 km (1 hour)',
     description:
-      'A mountain village in the Western Anti-Atlas known for its seasonal waterfall (Cascade du Voile de la Mariee, or Bride\'s Veil Falls), its honey festival held each August, and the stunning drive through the argan forests and Berber villages to reach it. The road climbs from the coast through increasingly dramatic landscapes of terraced hillsides and granite outcrops. The village itself is small and peaceful, with a handful of cafes serving local honey and almond amlou. The waterfall is best in late winter and spring; by summer it may be a trickle.',
-    highlights: ['Bride\'s Veil waterfall', 'Scenic mountain drive', 'Local honey and amlou', 'Annual honey festival in August'],
-    bestTime: 'February - May (waterfall at its best)',
-    cost: 'Free (transport costs only)',
-    image: '/images/card-beach.webp',
+      'A mountain village at 1,200 meters elevation known for its weekly Thursday souk, cascading waterfall, and honey production. The drive from Agadir climbs through spectacular mountain scenery with argan forests and Amazigh villages clinging to hillsides. The waterfall is most impressive in spring but the mountain air and panoramic views are rewarding year-round. The village is the center of Morocco\'s wild thyme honey production, and the Thursday market is an excellent place to buy genuine honey, argan oil, and mountain herbs.',
+    highlights: ['Mountain waterfall', 'Thursday honey market', 'Argan forest drive', 'Mountain villages', 'Panoramic views'],
+    bestTime: 'Thursday (market day); spring for waterfall',
+    cost: 'Grand taxi 200-300 MAD round trip; honey from 80 MAD per jar',
   },
 ];
 
-/* ═══════════════════════════════════════════════════════════════
-   RESTAURANTS DATA
-   ═══════════════════════════════════════════════════════════════ */
+/* =====================================================================
+   DATA: ARGAN OIL
+   ===================================================================== */
 
-const restaurants = [
+const arganInfo = {
+  overview: 'The argan tree (Argania spinosa) is endemic to southwestern Morocco, and the Souss-Massa region around Agadir is the heartland of argan production. UNESCO designated the argan forest as a Biosphere Reserve in 1998. The oil is extracted from the kernels of the argan fruit through a labor-intensive process traditionally performed by Amazigh women in cooperatives. Culinary argan oil is made from roasted kernels and has a rich, nutty flavor used in Moroccan cuisine. Cosmetic argan oil is cold-pressed from raw kernels and prized worldwide for its moisturizing and anti-aging properties.',
+  cooperatives: [
+    {
+      name: 'Cooperative Marjana',
+      location: '30 km east of Agadir on the road to Taroudant',
+      description: 'One of the most established women\'s cooperatives in the region with over 60 members. Visitors can observe the full production process from cracking the incredibly hard argan nuts by hand to grinding the roasted kernels on a traditional stone mill. The cooperative produces both culinary and cosmetic oils, amlou (argan-almond-honey spread), and argan-based soaps and creams.',
+      prices: 'Culinary oil: 200-280 MAD/liter; Cosmetic oil: 250-350 MAD/liter; Amlou: 80-120 MAD/jar',
+    },
+    {
+      name: 'Cooperative Tafyoucht',
+      location: 'Essaouira road, 45 km north of Agadir',
+      description: 'A smaller, more intimate cooperative where you can sit with the women as they work and learn about the process in detail. Less touristic than roadside cooperatives, with genuinely fair-trade practices that ensure the majority of the revenue goes directly to the women workers. Their cosmetic oil is particularly high quality.',
+      prices: 'Culinary oil: 180-250 MAD/liter; Cosmetic oil: 220-320 MAD/liter; Soap: 30-60 MAD',
+    },
+  ],
+  goatsInTrees: 'The famous image of goats perched in argan trees is real, though increasingly staged for tourists along the Essaouira road. Goats naturally climb argan trees to eat the fruit, and their digestive process was once part of the oil production chain (the goats would eat the fruit and excrete the hard inner nut). Modern cooperatives crack the nuts by hand, making the goat-digested method obsolete, but the sight of goats balancing in tree branches remains one of Morocco\'s most iconic and surreal images. If you see goats placed in trees by the roadside with handlers expecting tips, that is the staged version. Genuine goat-in-tree sightings happen naturally throughout the argan forest.',
+  buyingTips: [
+    'Buy directly from cooperatives, not from roadside vendors or tourist shops where diluted oil is common.',
+    'Culinary argan oil should be dark amber with a strong nutty aroma. If it smells faint or looks pale, it is likely diluted with cheaper oils.',
+    'Cosmetic argan oil should be light gold and nearly odorless. Avoid any with added fragrance.',
+    'A liter of genuine argan oil requires 30-50 kilograms of argan fruit and 15-20 hours of manual labor. If the price seems too cheap, the oil is not pure.',
+    'Look for the cooperative seal and ask about their production process. Legitimate cooperatives are happy to explain and demonstrate.',
+    'Prices range from 150 MAD per liter for basic culinary oil to 350 MAD per liter for premium cosmetic oil. Prices below 100 MAD per liter are almost certainly diluted.',
+  ],
+};
+
+/* =====================================================================
+   DATA: GOLF COURSES
+   ===================================================================== */
+
+const golfCourses = [
   {
-    name: 'Port Fish Stalls',
-    type: 'Seafood / Street food',
-    price: '40-80 MAD',
-    description: 'The row of open-air fish grills at Agadir\'s commercial port is a quintessential experience. Choose your fish from the display (sardines, sea bream, sole, prawns, calamari), have it weighed and priced, then it is grilled on the spot and served with bread, salad, and chermoula sauce. Unbeatable freshness at rock-bottom prices.',
-    mustTry: 'Grilled sardines with chermoula (40-50 MAD for a generous plate)',
+    name: 'Golf du Soleil',
+    holes: '36 holes (2 courses)',
+    designer: 'Championship & 9-hole courses',
+    greenFee: '500-800 MAD',
+    description: 'The premier golf destination in Agadir with two 18-hole courses (the Championship and the 27-hole combination) set among eucalyptus trees and flowering gardens. The Championship course is the most challenging in the region with well-bunkered greens and water hazards. Excellent practice facilities including a driving range, putting green, and short game area. The clubhouse restaurant is surprisingly good.',
   },
   {
-    name: 'Corniche Restaurants',
-    type: 'International / Seafood',
-    price: '120-300 MAD',
-    description: 'The beachfront promenade is lined with restaurants offering everything from Moroccan tagines to Italian pasta and French bistro fare. Quality varies, but the ocean views are consistent. Popular spots include Le Jardin d\'Eau for upscale Moroccan cuisine and Pure Passion for its beachside terrace.',
-    mustTry: 'Fresh fish tagine with preserved lemons and olives',
+    name: 'Golf de l\'Ocean',
+    holes: '27 holes',
+    designer: 'Belt Collins',
+    greenFee: '450-700 MAD',
+    description: 'A stunning oceanside course with holes playing along the Atlantic coastline. The sea views from several holes are distractingly beautiful. Three 9-hole loops offer varied challenges: the Links, the Dunes, and the Garden. Wind is the defining feature, particularly on the coastal holes where Atlantic breezes can add two clubs to your shot selection. The most scenic course in the Agadir area.',
   },
   {
-    name: 'Marina Restaurants',
-    type: 'Upscale dining',
-    price: '200-500 MAD',
-    description: 'The modern Agadir Marina development houses the city\'s most upscale restaurants, with terraces overlooking the yachts and fishing boats. The setting is distinctly Mediterranean in character. Options range from sushi and tapas to grilled lobster and steak.',
-    mustTry: 'Grilled lobster with garlic butter at one of the marina-front terraces',
+    name: 'Tazegzout Golf Course',
+    holes: '18 holes',
+    designer: 'Kyle Phillips',
+    greenFee: '600-1,000 MAD',
+    description: 'A spectacular clifftop course north of Agadir near Taghazout, designed by Kyle Phillips (who also designed Kingsbarns in Scotland). Dramatic ocean views from nearly every hole, with several tee boxes perched on cliff edges above the Atlantic. The course weaves through argan trees and native landscape. This is the newest and most architecturally ambitious course in the region. Part of the Tazegzout Bay resort development.',
   },
   {
-    name: 'Souk El Had Food Stalls',
-    type: 'Street food / Moroccan',
-    price: '15-40 MAD',
-    description: 'Inside the souk, dozens of food stalls serve fresh-squeezed orange juice (4-5 MAD), msemen (Moroccan crepes), harira soup, brochettes (skewered meat), and tajine pots bubbling over charcoal. This is where locals eat, and the prices reflect it. Head to the food section near the center of the souk for the best selection.',
-    mustTry: 'Fresh orange juice and msemen with honey for breakfast',
-  },
-  {
-    name: 'Taghazout Rooftop Cafes',
-    type: 'Cafe / Light meals',
-    price: '50-120 MAD',
-    description: 'The rooftop cafes of Taghazout village offer some of the best sunset views on the Moroccan coast. Menu staples include avocado toast, smoothie bowls, fresh juices, fish tacos, and Moroccan salads. The international surf crowd has influenced the food scene, resulting in a health-conscious, globally inspired menu.',
-    mustTry: 'Fresh juice while watching the sunset over the surf',
-  },
-  {
-    name: 'Traditional Moroccan Restaurants',
-    type: 'Moroccan',
-    price: '80-200 MAD',
-    description: 'Several restaurants in the new city center (Nouveau Talborjt area) serve authentic Moroccan home cooking at local prices. Look for places busy with Moroccan families, which is always the best indicator of quality. Dishes include slow-cooked tagines, tangia, couscous (traditionally served on Fridays), and pastilla.',
-    mustTry: 'Friday couscous with seven vegetables and tfaya (sweet onion and raisin topping)',
+    name: 'Golf Les Dunes',
+    holes: '27 holes',
+    designer: 'Cabell Robinson',
+    greenFee: '400-650 MAD',
+    description: 'A well-maintained course located inland with three distinct 9-hole loops named the Dunes, the Eucalyptus, and the Garden. More sheltered from wind than the coastal courses, making it a good choice on blustery days. The Eucalyptus loop runs through mature eucalyptus forest and is particularly pleasant. Good value for money and less crowded than Golf du Soleil.',
   },
 ];
 
-/* ═══════════════════════════════════════════════════════════════
-   ACCOMMODATION DATA
-   ═══════════════════════════════════════════════════════════════ */
-
-const accommodations = [
-  {
-    category: 'All-Inclusive Resorts',
-    priceRange: '1,200-3,500 MAD / night',
-    description: 'Agadir is Morocco\'s all-inclusive resort capital, with large beachfront complexes offering pools, buffet dining, entertainment, and direct beach access. Most are clustered along the Secteur Balneaire (beach tourism zone) south of the city center. The convenience factor is high, particularly for families, though the resort experience can feel disconnected from authentic Morocco.',
-    examples: ['Sofitel Agadir Royal Bay Resort', 'Riu Palace Tikida Agadir', 'Robinson Club Agadir', 'Iberostar Founty Beach'],
-    bestFor: 'Families, couples seeking convenience, first-time visitors to Morocco',
-  },
-  {
-    category: 'Boutique Hotels & Riads',
-    priceRange: '600-2,000 MAD / night',
-    description: 'Unlike Marrakech or Fes, Agadir lacks a traditional medina and therefore has few classic riads. However, several boutique hotels in the city and surrounding area offer a more characterful experience. The best options tend to be outside the city center, in the hills above Taghazout or in renovated properties along the coast road.',
-    examples: ['Hotel Timoulay & Spa', 'Riad Villa Blanche', 'Sol House Taghazout Bay', 'Hyatt Place Taghazout Bay'],
-    bestFor: 'Couples, design-conscious travelers, those seeking character',
-  },
-  {
-    category: 'Surf Camps',
-    priceRange: '200-600 MAD / night',
-    description: 'Taghazout and Tamraght are packed with surf camps offering accommodation, daily surf lessons or guiding, equipment rental, and often yoga sessions as part of weekly packages. Accommodation ranges from shared dorms to private rooms, and the social atmosphere is a major part of the appeal. Most include breakfast and some include all meals.',
-    examples: ['Surf Maroc Taghazout', 'Amouage Surf House', 'Tamraght Surf Hostel', 'Surf Berbere Taghazout'],
-    bestFor: 'Solo travelers, surfers, backpackers, social travelers',
-  },
-  {
-    category: 'Budget Hotels & Hostels',
-    priceRange: '100-300 MAD / night',
-    description: 'Agadir\'s Nouveau Talborjt district and the streets behind the beach strip offer numerous budget options. Quality is inconsistent, but clean, air-conditioned rooms with private bathrooms are available at the higher end of this range. In Taghazout and Tamraght, budget options include guesthouses and homestays with families.',
-    examples: ['Hotel Kamal', 'Residence Yasmina', 'Atlantic Hotel Agadir', 'Guest houses in Taghazout village'],
-    bestFor: 'Budget travelers, backpackers, longer stays',
-  },
-  {
-    category: 'Apartment Rentals',
-    priceRange: '300-1,000 MAD / night',
-    description: 'Self-catering apartments are increasingly popular, particularly for longer stays of a week or more. The Cite Founty and Secteur Balneaire areas have the most options, many with pool access and sea views. In Taghazout Bay, the new development has modern apartments available on short-term rental platforms. A kitchen allows you to shop at Souk El Had and cook your own tagines with market-fresh ingredients.',
-    examples: ['Cite Founty apartments', 'Marina Agadir residences', 'Taghazout Bay apartments', 'Private rentals via platforms'],
-    bestFor: 'Families, longer stays, self-caterers, digital nomads',
-  },
-];
-
-/* ═══════════════════════════════════════════════════════════════
-   NIGHTLIFE DATA
-   ═══════════════════════════════════════════════════════════════ */
-
-const nightlifeSpots = [
-  {
-    name: 'Beach Clubs',
-    description: 'Several beach clubs along the Corniche offer daytime lounging that transitions into evening cocktail bars with music. The atmosphere is relaxed and Mediterranean in feel, with sunset being the prime hour. Some operate seasonal pop-up bars directly on the sand.',
-    hours: 'Noon - midnight',
-    vibe: 'Relaxed, daytime-to-evening',
-  },
-  {
-    name: 'Agadir Marina',
-    description: 'The modern marina development is the center of Agadir\'s evening scene, with a string of restaurants, cocktail bars, and lounges overlooking the boats. The atmosphere is cosmopolitan and the dress code is smart-casual. This is where Agadir feels most like a European resort.',
-    hours: '6 PM - 1 AM',
-    vibe: 'Cosmopolitan, upscale casual',
-  },
-  {
-    name: 'Casino Agadir',
-    description: 'The Atlantic Palace Casino is one of the few casinos in Morocco, offering roulette, blackjack, poker, and slot machines. Dress code is enforced (no shorts or flip-flops), and you will need your passport for entry. Minimum bets are modest by international standards.',
-    hours: '8 PM - 4 AM',
-    vibe: 'Formal, entertainment',
-  },
-  {
-    name: 'Hotel Bars & Clubs',
-    description: 'Several of the large resort hotels operate nightclubs that are open to non-guests and attract a mix of tourists and locals. These tend to get busy after midnight and play a mix of Arabic pop, Western club music, and reggaeton. The Sofitel and Tikida Palace have popular venues.',
-    hours: '10 PM - 4 AM',
-    vibe: 'Energetic, mixed crowd',
-  },
-  {
-    name: 'Rooftop Bars',
-    description: 'A handful of hotels and restaurants offer rooftop terraces with panoramic views over the bay, the Kasbah hill, and the city lights. These are the most atmospheric spots for a sunset drink. The altitude adds a cooling breeze that makes evening rooftop sessions very pleasant.',
-    hours: '5 PM - midnight',
-    vibe: 'Scenic, romantic',
-  },
-];
-
-/* ═══════════════════════════════════════════════════════════════
-   FAMILY ACTIVITIES DATA
-   ═══════════════════════════════════════════════════════════════ */
+/* =====================================================================
+   DATA: FAMILY ACTIVITIES
+   ===================================================================== */
 
 const familyActivities = [
   {
     name: 'Crocoparc',
+    icon: Eye,
     ageRange: 'All ages',
-    duration: '2-3 hours',
-    cost: '70 MAD adult / 40 MAD child',
-    description: 'Over 300 Nile crocodiles in a beautifully designed botanical garden. Children are fascinated by the crocodile feeding demonstrations. The cactus garden and serpentarium add variety, and there is a good on-site restaurant and shaded playground.',
+    price: '70 MAD adult, 40 MAD child (3-12)',
+    description: 'Over 300 Nile crocodiles in beautifully landscaped enclosures, plus a superb cactus garden with 400+ species, giant tortoises, and a snake house. Feeding sessions at 11 AM and 3 PM are the highlight. Children are fascinated by the baby crocodile nursery. Allow 2 hours.',
   },
   {
-    name: 'Souss-Massa National Park',
-    ageRange: '6+',
-    duration: 'Half day',
-    cost: '20 MAD entry',
-    description: 'Morocco\'s most important birdwatching reserve. Children enjoy spotting flamingos, storks, and the rare northern bald ibis. The landscape is varied and the walking trails are gentle. Bring binoculars and a bird identification guide.',
+    name: 'Atlantica Parc',
+    icon: Waves,
+    ageRange: 'All ages',
+    price: '200-280 MAD per person',
+    description: 'Agadir\'s main water park with slides, wave pools, lazy rivers, and dedicated toddler areas. The park is well-maintained by Moroccan standards with clean water and functioning rides. Food and drink are available on-site but bringing your own snacks is permitted. Expect to spend a full day.',
   },
   {
     name: 'Camel Rides on the Beach',
-    ageRange: 'All ages',
-    duration: '30 min - 2 hours',
-    cost: '100-300 MAD',
-    description: 'Camel rides along Agadir\'s main beach are available year-round and are a highlight for children and adults alike. Shorter rides stick to the beach while longer excursions head into the dunes and argan forest behind the coast. Sunset rides are particularly popular.',
+    icon: Sunrise,
+    ageRange: '4+',
+    price: '100-200 MAD per person (30-60 minutes)',
+    description: 'Several operators offer camel and dromedary rides along Agadir beach, typically departing from the southern end near the Oued Souss. Sunset rides are the most popular and photogenic. The camels are generally well-cared for. Negotiate the price before mounting and clarify the duration.',
   },
   {
-    name: 'Aquapark',
-    ageRange: 'All ages',
-    duration: 'Full day',
-    cost: '200-300 MAD',
-    description: 'Atlantica Parc is a water park located between Agadir and the airport, offering slides, wave pools, and splash zones. It is not on the scale of European water parks, but for a hot day with restless children, it provides solid entertainment and welcome relief from the heat.',
+    name: 'Quad Biking (Buggy Tours)',
+    icon: Navigation,
+    ageRange: '8+ (passengers), 16+ (drivers)',
+    price: '350-600 MAD per person (2-3 hours)',
+    description: 'Guided quad bike excursions through the argan forest and Amazigh villages surrounding Agadir. Most tours include stops at an argan cooperative and a traditional village for mint tea. Some tours reach the sand dunes near the Souss River estuary. Helmets and goggles are provided. Half-day tours are also available.',
   },
   {
-    name: 'Horse and Pony Rides',
-    ageRange: 'All ages',
-    duration: '1-2 hours',
-    cost: '200-500 MAD',
-    description: 'Several stables in the Agadir area offer beach rides, forest rides through argan woodlands, and gentle pony rides for young children. The beach rides at sunset are magical. Ranch de Diabat and other operators can arrange rides suitable for all experience levels.',
+    name: 'Horseback Riding on Beach',
+    icon: Heart,
+    ageRange: '6+',
+    price: '250-500 MAD per person (1-2 hours)',
+    description: 'Several stables offer guided horseback rides along the beach, through argan forests, or along the Oued Souss riverbank. Ranch de Diabat and Atlas Equestrian are the most reputable operators with well-maintained horses. Sunset beach rides are magical. No experience necessary for the guided walk rides.',
   },
   {
-    name: 'Glass-Bottom Boat Trips',
+    name: 'Banana Boat & Jet Ski',
+    icon: Waves,
+    ageRange: 'Banana boat: 4+; Jet ski: 16+',
+    price: 'Banana boat: 50-100 MAD; Jet ski: 300-500 MAD (30 min)',
+    description: 'Water sports operators set up along the main beach during summer months (June-September). Banana boats, jet skis, parasailing, and pedal boats are all available. Prices are negotiable, especially for multiple activities. Check that operators have life jackets and valid insurance.',
+  },
+  {
+    name: 'Souss Massa National Park (Family Visit)',
+    icon: Binoculars,
     ageRange: 'All ages',
-    duration: '1-2 hours',
-    cost: '150-250 MAD',
-    description: 'Small glass-bottom boats depart from the marina and cruise along the coastline, allowing passengers to observe fish and marine life through the transparent hull. A gentle, accessible activity that works for all ages and does not require getting wet.',
+    price: 'Entry 20 MAD; guided tour 300-500 MAD',
+    description: 'An excellent educational excursion for nature-loving families. The park\'s flamingo wetlands and Northern Bald Ibis colonies are accessible via easy walking trails. Guides make the experience come alive for children by spotting and identifying birds. Binoculars can be rented. Pack a picnic and plenty of water.',
   },
 ];
 
-/* ═══════════════════════════════════════════════════════════════
-   BUDGET VS LUXURY DATA
-   ═══════════════════════════════════════════════════════════════ */
+/* =====================================================================
+   DATA: GETTING THERE
+   ===================================================================== */
 
-const budgetVsLuxury = [
+const gettingThere = [
   {
-    category: 'Accommodation',
-    budget: 'Surf camp dorm in Tamraght (150-250 MAD/night)',
-    luxury: 'Sofitel Royal Bay beachfront suite (3,000-5,000 MAD/night)',
+    mode: 'By Air',
+    icon: Plane,
+    details: [
+      'Al Massira Airport (AGA) is located 33 km southeast of Agadir city center, approximately 30-40 minutes by taxi.',
+      'Direct flights from major European cities including London (Gatwick, Stansted), Paris (Orly, CDG), Brussels, Amsterdam, Frankfurt, Manchester, and many Scandinavian capitals.',
+      'Ryanair, easyJet, TUI, Transavia, and Royal Air Maroc operate regular scheduled and charter services.',
+      'Airport taxi to city center: fixed rate 200-250 MAD (posted at the airport). Do not accept higher prices.',
+      'The airport has ATMs, currency exchange, car rental desks, and SIM card vendors in the arrivals hall.',
+      'Domestic flights connect to Casablanca (1 hour) and Marrakech (35 minutes) via Royal Air Maroc.',
+    ],
   },
   {
-    category: 'Breakfast',
-    budget: 'Msemen and orange juice at Souk El Had (10-20 MAD)',
-    luxury: 'Buffet breakfast at resort hotel (150-250 MAD)',
+    mode: 'By Bus',
+    icon: Bus,
+    details: [
+      'CTM and Supratours operate comfortable coach services from Marrakech (3-3.5 hours, 100-130 MAD), Essaouira (3 hours, 80-100 MAD), and Casablanca (9 hours, 200-250 MAD).',
+      'CTM buses depart from the Gare Routiere on Avenue Al Mouquawama. Supratours depart from their own terminal near the port.',
+      'Book CTM tickets online at ctm.ma for guaranteed seats, especially during holidays and weekends.',
+      'The Marrakech-Agadir road crosses the High Atlas via the Tizi n\'Test pass (spectacular scenery) or the faster Tizi n\'Tleta route via the A7 motorway.',
+      'Long-distance buses from Fes (10 hours), Tangier (12 hours), and the Western Sahara also serve Agadir.',
+    ],
   },
   {
-    category: 'Lunch',
-    budget: 'Grilled fish at the port stalls (40-60 MAD)',
-    luxury: 'Seafood platter at the marina (250-400 MAD)',
-  },
-  {
-    category: 'Dinner',
-    budget: 'Tajine in Nouveau Talborjt (50-80 MAD)',
-    luxury: 'Multi-course meal at a Corniche restaurant (300-600 MAD)',
-  },
-  {
-    category: 'Surfing',
-    budget: 'Board rental and self-guide (100-150 MAD/day)',
-    luxury: 'Private lesson with premium equipment (500-800 MAD/session)',
-  },
-  {
-    category: 'Day Trip',
-    budget: 'Grand taxi to Paradise Valley (30-50 MAD shared)',
-    luxury: 'Private driver with guide for a full day (800-1,500 MAD)',
-  },
-  {
-    category: 'Evening',
-    budget: 'Sunset walk on the promenade (free)',
-    luxury: 'Cocktails at a marina rooftop bar (80-150 MAD per drink)',
-  },
-  {
-    category: 'Daily Total',
-    budget: '300-500 MAD / day (roughly 30-50 USD)',
-    luxury: '3,000-6,000 MAD / day (roughly 300-600 USD)',
+    mode: 'By Car',
+    icon: Car,
+    details: [
+      'From Marrakech: 270 km via the A7 motorway (Autoroute), approximately 3 hours. Toll cost approximately 80 MAD.',
+      'From Essaouira: 170 km via the N1 coastal road, approximately 2.5-3 hours. The road passes through Tamaloukt and the argan country.',
+      'From Casablanca: 460 km via the A2 motorway to Marrakech, then A7 to Agadir, approximately 5 hours. Tolls approximately 200 MAD total.',
+      'Car rental is available at the airport from international (Europcar, Hertz, Avis) and local companies. Daily rates from 250 MAD for a small car.',
+      'Driving in Agadir city is straightforward with wide streets and clear signage. Parking is available at most hotels and in the city center.',
+      'A rental car is highly recommended for day trips to Paradise Valley, Taroudant, Tiznit, and Tafraoute.',
+    ],
   },
 ];
 
-/* ═══════════════════════════════════════════════════════════════
-   PAGE COMPONENT (Server)
-   ═══════════════════════════════════════════════════════════════ */
+/* =====================================================================
+   DATA: PRACTICAL INFO
+   ===================================================================== */
 
-export default function AgadirGuidePage() {
+const practicalInfo = [
+  {
+    icon: Shield,
+    title: 'Safety',
+    tips: [
+      'Agadir is one of the safest cities in Morocco for tourists. Violent crime against visitors is extremely rare.',
+      'The beach and promenade are safe for evening walks. Standard precautions apply: avoid deserted areas at night and keep valuables secure.',
+      'Beach vendors can be persistent but are not aggressive. A firm "la shukran" (no thank you) is sufficient.',
+      'Swimming: pay attention to the flag system on the beach. Red flag means dangerous currents. Always swim in lifeguard-supervised areas.',
+      'The surf spots north of Agadir have strong currents and rocky seabeds. Never surf alone and always check conditions with locals.',
+    ],
+  },
+  {
+    icon: ThermometerSun,
+    title: 'Weather & When to Go',
+    tips: [
+      'Average temperatures: Winter (Dec-Feb) 18-22 C; Spring (Mar-May) 20-25 C; Summer (Jun-Aug) 25-30 C; Autumn (Sep-Nov) 22-28 C.',
+      'Water temperature: ranges from 17 C in winter to 22 C in summer. Wetsuits (3/2mm) recommended for surfing year-round.',
+      'Rain is rare: fewer than 30 days of rain per year, mostly concentrated in November-February.',
+      'The "Chergui" wind from the Sahara can occasionally bring hot, dusty conditions in summer, pushing temperatures above 40 C.',
+      'Peak tourist season: July-August and Christmas-New Year. Best value: March-May and October-November.',
+    ],
+  },
+  {
+    icon: AlertTriangle,
+    title: 'Common Scams & Annoyances',
+    tips: [
+      'Fake argan oil: diluted or non-argan oil sold at tourist prices. Buy only from established cooperatives.',
+      'Beach vendors with overpriced sunglasses, watches, and souvenirs. Ignore or firmly decline.',
+      'Taxi drivers not using the meter: always insist on the meter (compteur) or agree on price before departing.',
+      'Restaurant touts on the promenade trying to lure you into mediocre restaurants. Choose your own based on reviews.',
+      'Unofficial "guides" in Souk El Had. The souk is easy to navigate on your own and does not require a guide.',
+    ],
+  },
+  {
+    icon: Phone,
+    title: 'Emergency Information',
+    tips: [
+      'Tourist police: 19 (French and Arabic speaking)',
+      'Ambulance: 15',
+      'Fire: 15',
+      'Hassan II Hospital is the main public hospital. Clinique Al Hayat and Clinique Atlas are private clinics with English-speaking doctors.',
+      'Pharmacies are marked with a green cross. Several along Avenue Hassan II operate late-night rotation schedules.',
+      'Your hotel reception is your best resource for any problem. Resort staff are experienced in handling tourist issues.',
+    ],
+  },
+];
+
+/* =====================================================================
+   DATA: FAQ
+   ===================================================================== */
+
+const faqs = [
+  {
+    question: 'Is Agadir worth visiting, or should I just go to Marrakech?',
+    answer: 'Agadir and Marrakech are completely different experiences and not interchangeable. Agadir is for beach lovers, surfers, golfers, and families wanting a relaxed resort holiday with sunshine. Marrakech is for culture, history, souks, and sensory overload. Many travelers combine both: fly into one, spend a few days, then transfer to the other (3 hours by road). If you only want beaches and relaxation, Agadir is the better choice. If you want medina exploration and cultural immersion, choose Marrakech.',
+  },
+  {
+    question: 'How many days do I need in Agadir?',
+    answer: 'For a beach holiday with day trips, 5-7 days is ideal. This gives you 2-3 days on the beach and promenade, a day surfing in Taghazout, a day trip to Paradise Valley or Taroudant, and time for the souk, argan cooperatives, and golf. If you are primarily here for surfing, many visitors stay 1-2 weeks in Taghazout. A minimum of 3 days covers the essentials.',
+  },
+  {
+    question: 'When is the best time to surf in Agadir and Taghazout?',
+    answer: 'The prime surf season runs from September to April, with the biggest and most consistent swells arriving November through February. The water temperature is 17-19 C in winter, so a 3/2mm wetsuit is essential. Summer (June-August) is generally flat with occasional small swells suitable for beginners. September and October offer the best combination of warm weather and consistent waves.',
+  },
+  {
+    question: 'Is Agadir safe for solo female travelers?',
+    answer: 'Agadir is one of the safest cities in Morocco for solo female travelers. The resort areas, promenade, and beach are comfortable and well-patrolled. Dress standards are more relaxed than inland cities, though modest clothing is still appreciated in the souk and residential neighborhoods. The surf scene in Taghazout is very international and welcoming. Standard solo travel precautions apply: avoid walking alone in poorly lit areas at night.',
+  },
+  {
+    question: 'Can I drink alcohol in Agadir?',
+    answer: 'Yes. Agadir is one of the most liberal cities in Morocco regarding alcohol. Most hotels, resort restaurants, and many independent restaurants serve beer, wine, and cocktails. The marina restaurants all serve alcohol. There are several bars and nightclubs in the tourist zone. Alcohol is not available in the souk area or in traditional Moroccan restaurants. Carrefour and the Uniprix supermarkets sell alcohol for self-catering.',
+  },
+  {
+    question: 'How do I get from the airport to the city center?',
+    answer: 'The official airport taxi fare to the city center and beach hotels is 200-250 MAD (fixed rate posted at the airport). The journey takes 30-40 minutes. Agree on the price before getting in the taxi and do not accept offers above the posted rate. Some hotels offer airport transfers that can be arranged in advance. There is no regular public bus service from the airport. Car rental desks are available in the arrivals hall.',
+  },
+  {
+    question: 'What is the best way to get to Taghazout from Agadir?',
+    answer: 'The cheapest option is a shared grand taxi from Agadir (near the Souk El Had) to Taghazout for 15-20 MAD per person. A private taxi costs 150-200 MAD each way. Local bus number 32 runs the coastal route but is slow and infrequent. If staying for multiple days of surfing, consider renting a car (from 250 MAD per day) for the flexibility to explore multiple breaks and beaches.',
+  },
+  {
+    question: 'Is the food safe to eat in Agadir?',
+    answer: 'Yes, with normal precautions. The resort restaurants and established city restaurants maintain good hygiene standards. The fish market grills at the port are cooked at high temperatures and are safe and delicious. Street food in Souk El Had is generally safe if it is freshly cooked and served hot. Drink bottled water rather than tap water. Wash fruit before eating. Agadir has fewer stomach issues reported than Marrakech, likely due to its modern infrastructure.',
+  },
+  {
+    question: 'Do I need a rental car in Agadir?',
+    answer: 'Not for the city itself, where taxis are cheap and the main attractions are walkable along the promenade. However, a rental car is highly recommended for day trips to Paradise Valley, Taroudant, Tiznit, Tafraoute, and Souss Massa National Park. Driving in the Agadir region is straightforward with good roads and clear signage. Book in advance during peak season as availability can be limited.',
+  },
+  {
+    question: 'What should I buy in Agadir?',
+    answer: 'Argan oil (culinary and cosmetic) is the signature purchase - buy from cooperatives for guaranteed quality. Souk El Had offers excellent prices on spices (saffron, ras el hanout, cumin), Amazigh silver jewelry from Tiznit, leather goods, ceramics, and textiles. Amlou (argan, almond, and honey spread) is a unique local delicacy. Saffron from Taliouine, sold in the souk, is among the best in the world at a fraction of European prices.',
+  },
+];
+
+/* =====================================================================
+   DATA: RELATED PAGES
+   ===================================================================== */
+
+const relatedPages = [
+  { href: '/marrakech', title: 'Marrakech City Guide', description: 'Morocco\'s most iconic city: souks, palaces, Jemaa el-Fnaa, and the Red City magic.', icon: Landmark },
+  { href: '/essaouira', title: 'Essaouira Guide', description: 'Bohemian coastal charm, fresh seafood, and Atlantic breezes just 3 hours north.', icon: Globe },
+  { href: '/beaches', title: 'Morocco Beaches Guide', description: 'The complete guide to Morocco\'s Atlantic and Mediterranean coastline.', icon: Waves },
+  { href: '/water-sports', title: 'Water Sports Guide', description: 'Surfing, kitesurfing, diving, and water adventures across Morocco.', icon: Waves },
+  { href: '/argan-oil', title: 'Argan Oil Guide', description: 'Everything about Morocco\'s liquid gold: production, buying, and cooperatives.', icon: Leaf },
+  { href: '/golf', title: 'Morocco Golf Guide', description: 'World-class golf courses from Agadir to Marrakech to Rabat.', icon: Trophy },
+  { href: '/family', title: 'Family Travel Guide', description: 'Planning the perfect family holiday in Morocco with children.', icon: Users },
+  { href: '/day-trips', title: 'Day Trips from Agadir', description: 'Paradise Valley, Taroudant, Tiznit, Tafraoute, and more.', icon: Compass },
+];
+
+/* =====================================================================
+   PAGE COMPONENT
+   ===================================================================== */
+
+export default function AgadirPage() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'TouristDestination',
+    name: 'Agadir',
+    alternateName: 'Morocco\'s Beach Capital',
+    description:
+      'Agadir is Morocco\'s premier beach and resort city, offering 10km of golden sand, world-class surfing in Taghazout, argan oil country, championship golf, and a gateway to the Anti-Atlas mountains and Souss-Massa region.',
+    url: 'https://moroccoguide.com/agadir',
+    touristType: ['Beach Lovers', 'Surfers', 'Golfers', 'Families', 'Nature Enthusiasts', 'Water Sports'],
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 30.4278,
+      longitude: -9.5981,
+    },
+    includesAttraction: [
+      { '@type': 'TouristAttraction', name: 'Agadir Beach' },
+      { '@type': 'TouristAttraction', name: 'Taghazout Surf Village' },
+      { '@type': 'TouristAttraction', name: 'Souk El Had' },
+      { '@type': 'TouristAttraction', name: 'Agadir Oufella' },
+      { '@type': 'TouristAttraction', name: 'Paradise Valley' },
+      { '@type': 'TouristAttraction', name: 'Crocoparc' },
+      { '@type': 'TouristAttraction', name: 'Marina d\'Agadir' },
+    ],
+  };
+
   return (
     <>
       <script
@@ -626,745 +912,357 @@ export default function AgadirGuidePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* ── Hero ── */}
-      <section className="relative overflow-hidden bg-[var(--color-primary-900)] text-white">
-        <div className="absolute inset-0">
-          <img
-            src="/images/card-beach.webp"
-            alt="Agadir beach with golden sand, blue Atlantic waters, and palm-lined promenade"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-          <div className="hero-overlay absolute inset-0" />
-        </div>
-        <div className="relative container-morocco py-20 md:py-28 lg:py-36">
-          <nav
-            className="flex items-center gap-2 text-sm text-white/60 mb-8"
-            aria-label="Breadcrumb"
-          >
-            <Link href="/" className="hover:text-white transition-colors inline-flex items-center gap-1">
-              <Home className="w-3.5 h-3.5" /> Home
-            </Link>
+      {/* =================================================================
+          HERO SECTION
+          ================================================================= */}
+      <section className="relative py-24 md:py-36 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: 'url(/images/hero-agadir.webp)',
+          }}
+        />
+        <div className="absolute inset-0 hero-overlay" />
+        <div className="container-morocco relative z-10">
+          <nav className="flex items-center gap-2 text-sm text-white/60 mb-8" aria-label="Breadcrumb">
+            <Link href="/" className="hover:text-white transition-colors"><Home className="w-3.5 h-3.5" /></Link>
             <ChevronRight className="w-3.5 h-3.5" />
-            <Link href="/guides" className="hover:text-white transition-colors">
-              Guides
-            </Link>
+            <Link href="/cities" className="hover:text-white transition-colors">Cities</Link>
             <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-white">Agadir &amp; Souss Region</span>
+            <span className="text-white">Agadir</span>
           </nav>
 
-          <div className="max-w-3xl">
-            <p className="text-[var(--color-accent)] font-semibold text-sm uppercase tracking-widest mb-4">
-              Morocco&apos;s Premier Beach Resort
-            </p>
-            <h1 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Agadir &amp; the Souss Region
+          <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-white/10 backdrop-blur-sm">
+              <Sun className="w-6 h-6 text-white" />
+            </div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-display)] font-bold text-white">
+              Agadir
             </h1>
-            <p className="text-lg md:text-xl text-white/85 max-w-2xl leading-relaxed">
-              Sun-drenched beaches, world-class surf, ancient argan forests, and the gateway to
-              southern Morocco. With over 300 days of sunshine a year, Agadir is the beach capital
-              of the kingdom.
-            </p>
           </div>
-        </div>
-        <div className="zellige-border" />
-      </section>
-
-      {/* ── Introduction ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco max-w-4xl">
-          <div className="text-center mb-12">
-            <div className="inline-flex p-3 rounded-xl bg-[var(--color-primary)]/10 mb-4">
-              <Sun className="w-6 h-6 text-[var(--color-primary)]" />
-            </div>
-            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
-              Morocco&apos;s Sun-Kissed Atlantic Paradise
-            </h2>
-            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
-              Rebuilt from the ground up after a devastating earthquake, Agadir has emerged as
-              Morocco&apos;s most modern and relaxed coastal city.
-            </p>
-          </div>
-
-          <div className="space-y-4 text-lg text-[var(--text-secondary)] leading-relaxed">
-            <p>
-              On February 29, 1960, a catastrophic earthquake measuring 5.7 on the Richter scale struck Agadir,
-              leveling the city in just 15 seconds and killing an estimated 15,000 people &mdash; nearly a third
-              of the population. The destruction was so complete that authorities considered abandoning the site
-              entirely. Instead, King Mohammed V declared &ldquo;If destiny decided the destruction of Agadir,
-              its rebuilding depends on our faith and our will,&rdquo; and the city was rebuilt from scratch two
-              kilometers south of the original site.
-            </p>
-            <p>
-              This tragic history explains why Agadir looks and feels so different from every other Moroccan city.
-              There is no ancient medina, no labyrinthine alleyways, no centuries-old riads. Instead, you find
-              wide boulevards, modern architecture, a purpose-built beachfront promenade, and an atmosphere
-              that has more in common with a Mediterranean resort than with the Morocco of Fes or Marrakech. For
-              some travelers, this is a disappointment; for others, it is precisely the appeal.
-            </p>
-            <p>
-              What Agadir does offer is something no other Moroccan city can match: a combination of over 300
-              days of sunshine per year, a magnificent 10-kilometer crescent of golden sand, warm winter
-              temperatures that rarely drop below 20&deg;C even in January, and a relaxed, cosmopolitan
-              atmosphere where European beach culture meets Moroccan hospitality. The Souss-Massa region
-              surrounding the city adds depth to any visit, from the surf mecca of Taghazout to the argan
-              forests of the foothills, the silver souks of Tiznit, and the mini-Marrakech ambiance of Taroudant.
-            </p>
-            <p>
-              Agadir is also the economic engine of southern Morocco, serving as the country&apos;s largest
-              fishing port and the center of its citrus and argan oil industries. The city welcomes over
-              a million tourists annually, with particularly strong visitor numbers from Northern Europe
-              during the winter months. For Moroccans, it is the domestic beach holiday destination of
-              choice, and the summer months (July and August) see the city swell with vacationing families
-              from across the kingdom.
-            </p>
-          </div>
-
-          {/* Quick Facts */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
-            {[
-              { icon: Sun, label: 'Sunny Days', value: '300+ per year' },
-              { icon: Waves, label: 'Beach Length', value: '10 km' },
-              { icon: Users, label: 'Population', value: '600,000+' },
-              { icon: Plane, label: 'Airport', value: 'Al-Massira (AGA)' },
-            ].map((fact) => (
-              <div key={fact.label} className="card-moroccan p-4 text-center">
-                <fact.icon className="w-6 h-6 text-[var(--color-primary)] mx-auto mb-2" />
-                <p className="text-sm font-semibold text-[var(--text-primary)]">{fact.value}</p>
-                <p className="text-xs text-[var(--text-secondary)]">{fact.label}</p>
-              </div>
-            ))}
+          <p className="text-xl md:text-2xl text-white/90 font-[family-name:var(--font-display)] italic mb-4">
+            Morocco&apos;s Premier Beach &amp; Resort Destination
+          </p>
+          <p className="text-lg text-white/80 max-w-2xl mb-8">
+            Ten kilometers of golden sand, year-round sunshine, world-class surfing in Taghazout,
+            argan oil country, and a gateway to the dramatic Anti-Atlas mountains. Agadir is where
+            Morocco meets the Atlantic &mdash; and the living is effortlessly good.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <span className="tag bg-white/15 text-white backdrop-blur-sm"><Waves className="w-3.5 h-3.5 mr-1.5" /> 10km Beach</span>
+            <span className="tag bg-white/15 text-white backdrop-blur-sm"><Sun className="w-3.5 h-3.5 mr-1.5" /> 300+ Sunny Days</span>
+            <span className="tag bg-white/15 text-white backdrop-blur-sm"><Compass className="w-3.5 h-3.5 mr-1.5" /> Surf Capital</span>
+            <span className="tag bg-white/15 text-white backdrop-blur-sm"><Leaf className="w-3.5 h-3.5 mr-1.5" /> Argan Country</span>
           </div>
         </div>
       </section>
 
-      {/* ── Beach Guide ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+      <div className="zellige-border" />
+
+      {/* =================================================================
+          INTRODUCTION / OVERVIEW
+          ================================================================= */}
+      <section className="py-12 md:py-16">
         <div className="container-morocco">
-          <div className="text-center mb-12">
-            <div className="inline-flex p-3 rounded-xl bg-[var(--color-primary)]/10 mb-4">
-              <Waves className="w-6 h-6 text-[var(--color-primary)]" />
-            </div>
-            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
-              Beach Guide: From City Sand to Hidden Coves
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
+              Reborn from the Rubble: Morocco&apos;s Sunshine City
             </h2>
-            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
-              The Souss-Massa coast offers beaches for every taste &mdash; from the wide, serviced sands
-              of Agadir to the wild, dramatic shores of Legzira.
+            <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-4">
+              On February 29, 1960, a devastating earthquake measuring 5.7 on the Richter scale struck
+              Agadir, destroying over 90% of the city and claiming an estimated 15,000 lives in just
+              15 seconds. It remains one of the deadliest earthquakes in African history. The old city,
+              including the historic kasbah and medina perched on the hillside, was obliterated beyond
+              repair. King Mohammed V declared that Agadir would be rebuilt, and from the rubble rose
+              an entirely new city &mdash; modern, planned, and forward-looking.
+            </p>
+            <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-4">
+              Today, Agadir is Morocco&apos;s largest seaside resort and the capital of the Souss-Massa
+              region. With over 300 days of sunshine per year and a 10-kilometer crescent of golden
+              sand lapped by the Atlantic, it draws millions of visitors seeking sun, surf, and
+              relaxation. The city feels unlike anywhere else in Morocco: wide boulevards, modern
+              architecture, beachfront promenades, and an atmosphere more reminiscent of a
+              Mediterranean resort than a North African medina town.
+            </p>
+            <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-4">
+              But Agadir is far more than just a beach. To the north, the legendary surf village of
+              Taghazout attracts wave riders from around the world. Inland, argan forests shelter
+              the cooperatives where Amazigh women produce Morocco&apos;s liquid gold. Paradise Valley
+              offers natural swimming pools in a palm-filled canyon. And the Anti-Atlas mountains
+              harbor hidden valleys, ancient villages, and landscapes that look like they belong
+              on another planet.
+            </p>
+            <p className="text-lg text-[var(--text-secondary)] leading-relaxed">
+              Whether you are here for a week of surfing, a family beach holiday, a golf getaway,
+              or as a base for exploring Morocco&apos;s stunning southwest, Agadir delivers sunshine,
+              warmth, and a pace of life that makes the rest of the world feel very far away. This
+              guide covers everything you need to plan the perfect Agadir trip.
             </p>
           </div>
+        </div>
+      </section>
 
-          <div className="space-y-8">
-            {beaches.map((beach, index) => (
-              <article
-                key={beach.name}
-                className={`card-moroccan overflow-hidden flex flex-col ${
-                  index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                }`}
-              >
-                <div className="relative w-full md:w-2/5 h-64 md:h-auto shrink-0">
-                  <img
-                    src={beach.image}
-                    alt={`${beach.name} on the Moroccan Atlantic coast`}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                  <div className="absolute top-4 left-4 flex items-center gap-2">
-                    <span className="inline-flex items-center justify-center px-3 py-1 rounded-full text-xs font-semibold bg-white/90 text-[var(--color-primary)]">
-                      {beach.distance}
-                    </span>
-                    <span className="inline-flex items-center justify-center px-3 py-1 rounded-full text-xs font-semibold bg-[var(--color-primary)] text-white">
-                      {beach.length}
-                    </span>
-                  </div>
+      {/* =================================================================
+          QUICK FACTS
+          ================================================================= */}
+      <section className="py-12 md:py-16 bg-[var(--surface-muted)]">
+        <div className="container-morocco">
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4">
+            {quickFacts.map((fact) => {
+              const FactIcon = fact.icon;
+              return (
+                <div key={fact.label} className="card-moroccan p-4 text-center">
+                  <FactIcon className="w-5 h-5 text-[var(--color-accent)] mx-auto mb-2" />
+                  <p className="text-xs text-[var(--text-muted)] mb-1">{fact.label}</p>
+                  <p className="text-sm font-semibold text-[var(--text-primary)]">{fact.value}</p>
                 </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
 
-                <div className="p-6 md:p-8 flex flex-col justify-center">
-                  <span className="text-sm font-semibold text-[var(--color-primary)] uppercase tracking-wide mb-1">
-                    Best for: {beach.bestFor}
-                  </span>
-                  <h3 className="text-2xl md:text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-3">
-                    {beach.name}
+      {/* =================================================================
+          ESSENTIAL TIPS
+          ================================================================= */}
+      <section className="py-12 md:py-16">
+        <div className="container-morocco">
+          <div className="flex items-center gap-3 mb-3">
+            <Lightbulb className="w-6 h-6 text-[var(--color-accent)]" />
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+              Agadir Essentials: Know Before You Go
+            </h2>
+          </div>
+          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">
+            Practical tips to help you make the most of Morocco&apos;s sunshine city from
+            the moment you arrive.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {essentialTips.map((tip) => {
+              const TipIcon = tip.icon;
+              return (
+                <div key={tip.title} className="card-moroccan p-6 group">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-2xl bg-[var(--color-primary-50)] text-[var(--color-primary)] mb-4 group-hover:bg-[var(--color-primary)] group-hover:text-white transition-colors">
+                    <TipIcon className="w-6 h-6" />
+                  </div>
+                  <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-2">
+                    {tip.title}
                   </h3>
-                  <p className="text-[var(--text-secondary)] leading-relaxed text-[15px] mb-4">
-                    {beach.description}
+                  <p className="text-sm text-[var(--text-muted)] leading-relaxed">
+                    {tip.description}
                   </p>
-                  <div className="pt-4 border-t border-[var(--border-light)]">
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
-                      {beach.highlights.map((highlight) => (
-                        <li key={highlight} className="flex items-start gap-2 text-xs text-[var(--text-secondary)]">
-                          <Star className="w-3 h-3 text-[var(--color-primary)] shrink-0 mt-0.5" />
-                          <span>{highlight}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
                 </div>
-              </article>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* ── Surfing Hub ── */}
-      <section className="py-16 md:py-20">
+      {/* =================================================================
+          BEACHES
+          ================================================================= */}
+      <section className="py-12 md:py-16 bg-[var(--surface-muted)]">
         <div className="container-morocco">
-          <div className="text-center mb-12">
-            <div className="inline-flex p-3 rounded-xl bg-[var(--color-primary)]/10 mb-4">
-              <Wind className="w-6 h-6 text-[var(--color-primary)]" />
-            </div>
-            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
-              Surfing Hub: Taghazout &amp; Beyond
+          <div className="flex items-center gap-3 mb-3">
+            <Waves className="w-6 h-6 text-[var(--color-primary)]" />
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+              Beaches &amp; Coastal Escapes
             </h2>
-            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
-              The stretch of coast from Agadir to Imsouane is one of the world&apos;s great surfing corridors,
-              with consistent swells, warm water, and breaks for every level.
-            </p>
           </div>
+          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">
+            From the golden crescent of Agadir Bay to wild surf breaks and dramatic
+            rock arches, the Souss coast has a beach for every mood.
+          </p>
 
-          {/* Surf intro text */}
-          <div className="max-w-4xl mx-auto mb-10">
-            <div className="space-y-4 text-[var(--text-secondary)] leading-relaxed">
-              <p>
-                Morocco&apos;s surf scene has exploded over the past two decades, and the Agadir-Taghazout
-                corridor sits at the epicenter. The combination of powerful Atlantic swells generated by
-                North Atlantic storms, a coastline that faces northwest (ideal for catching swell), warm water
-                temperatures (16-22&deg;C year-round), and a cost of living a fraction of European surf
-                destinations has made this stretch of coast one of the most popular surf destinations on Earth.
-              </p>
-              <p>
-                The prime surf season runs from October to April, when consistent northwest swells produce
-                the best waves at the point breaks. Summer (June to September) is smaller but still offers
-                fun waves at beach breaks, and the warmer water and calmer conditions make it ideal for
-                beginners. A 3/2mm wetsuit is recommended from November to March; a shorty or boardshorts
-                suffice from June to October.
-              </p>
-            </div>
-          </div>
-
-          {/* Surf Schools Box */}
-          <div className="card-moroccan p-6 md:p-8 mb-10 max-w-4xl mx-auto">
-            <h3 className="text-xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4 flex items-center gap-2">
-              <Trophy className="w-5 h-5 text-[var(--color-primary)]" />
-              Choosing a Surf School
-            </h3>
-            <div className="space-y-3 text-[var(--text-secondary)] text-sm leading-relaxed">
-              <p>
-                Taghazout and Tamraght are home to dozens of surf schools and camps. Prices for a
-                two-hour group lesson (including board and wetsuit) range from 200-400 MAD. A private
-                lesson costs 400-800 MAD. Week-long packages (accommodation + daily lessons) start at
-                around 2,500 MAD and represent the best value.
-              </p>
-              <p>
-                When choosing a school, verify that instructors hold recognized qualifications (ISA or
-                equivalent), that equipment is in good condition, and that the student-to-instructor
-                ratio does not exceed 6:1 for beginners. Reputable schools include Surf Maroc, Surf
-                Berbere, HashPoint Surf Camp, and Dynamic Loisirs. Board rental without a lesson
-                typically costs 100-150 MAD per day for a softboard and 150-200 MAD for a hardboard.
-              </p>
-            </div>
-          </div>
-
-          {/* Surf Breaks Table */}
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse">
-              <thead>
-                <tr className="bg-[var(--color-primary)] text-white">
-                  <th className="text-left p-3 text-sm font-semibold rounded-tl-lg">Break</th>
-                  <th className="text-left p-3 text-sm font-semibold">Location</th>
-                  <th className="text-left p-3 text-sm font-semibold">Type</th>
-                  <th className="text-left p-3 text-sm font-semibold">Level</th>
-                  <th className="text-left p-3 text-sm font-semibold">Season</th>
-                  <th className="text-left p-3 text-sm font-semibold rounded-tr-lg">Description</th>
-                </tr>
-              </thead>
-              <tbody>
-                {surfBreaks.map((sb, i) => (
-                  <tr
-                    key={sb.name}
-                    className={`border-b border-[var(--border-light)] ${
-                      i % 2 === 0 ? 'bg-white' : 'bg-[var(--surface-muted)]'
-                    }`}
-                  >
-                    <td className="p-3 text-sm font-semibold text-[var(--text-primary)]">{sb.name}</td>
-                    <td className="p-3 text-sm text-[var(--text-secondary)]">{sb.location}</td>
-                    <td className="p-3 text-sm text-[var(--text-secondary)]">{sb.type}</td>
-                    <td className="p-3 text-sm text-[var(--text-secondary)]">{sb.level}</td>
-                    <td className="p-3 text-sm text-[var(--text-secondary)]">{sb.bestSeason}</td>
-                    <td className="p-3 text-sm text-[var(--text-secondary)]">{sb.description}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Water Sports ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
-        <div className="container-morocco">
-          <div className="text-center mb-12">
-            <div className="inline-flex p-3 rounded-xl bg-[var(--color-primary)]/10 mb-4">
-              <Droplets className="w-6 h-6 text-[var(--color-primary)]" />
-            </div>
-            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
-              Water Sports Beyond Surfing
-            </h2>
-            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
-              Agadir&apos;s calm bay and long beach make it the water sports capital of Morocco,
-              with activities ranging from gentle kayaking to adrenaline-pumping jet skiing.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {waterSports.map((sport) => (
-              <div key={sport.name} className="card-moroccan p-6">
-                <div className="flex items-start justify-between mb-3">
-                  <h3 className="text-lg font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)]">
-                    {sport.name}
-                  </h3>
-                  <span className="inline-flex px-3 py-1 rounded-full text-xs font-semibold bg-[var(--color-primary)]/10 text-[var(--color-primary)]">
-                    {sport.price}
-                  </span>
-                </div>
-                <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-3">
-                  {sport.description}
-                </p>
-                <div className="flex items-center gap-4 text-xs text-[var(--text-secondary)]">
-                  <span className="flex items-center gap-1">
-                    <MapPin className="w-3 h-3 text-[var(--color-primary)]" />
-                    {sport.location}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Calendar className="w-3 h-3 text-[var(--color-primary)]" />
-                    {sport.season}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Agadir Oufella (Kasbah) ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco max-w-4xl">
-          <div className="text-center mb-12">
-            <div className="inline-flex p-3 rounded-xl bg-[var(--color-primary)]/10 mb-4">
-              <Mountain className="w-6 h-6 text-[var(--color-primary)]" />
-            </div>
-            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
-              Agadir Oufella: The Hilltop Kasbah
-            </h2>
-            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
-              The ruins of the old Kasbah perched 236 meters above the city offer the most spectacular
-              panoramic views in the entire region.
-            </p>
-          </div>
-
-          <div className="card-moroccan overflow-hidden">
-            <div className="relative h-72 md:h-96">
-              <img
-                src="/images/card-beach.webp"
-                alt="Panoramic view from Agadir Oufella Kasbah ruins overlooking the bay and city"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
-                <p className="text-white text-sm">
-                  The famous inscription on the Kasbah wall reads: &ldquo;God, Country, King&rdquo; &mdash;
-                  visible from the city below, illuminated at night in Arabic script.
-                </p>
-              </div>
-            </div>
-            <div className="p-6 md:p-8">
-              <div className="space-y-4 text-[var(--text-secondary)] leading-relaxed">
-                <p>
-                  Agadir Oufella (meaning &ldquo;the granary on the hill&rdquo; in Amazigh) was the original
-                  fortified settlement above the bay, built in 1540 by the Saadian sultan Mohammed ash-Sheikh to
-                  repel Portuguese incursions along the coast. The Kasbah once contained a mosque, a riad,
-                  a synagogue, and granaries within its walls, and served as a strategic defensive position for
-                  centuries.
-                </p>
-                <p>
-                  The 1960 earthquake devastated the Kasbah along with the rest of old Agadir, and today only
-                  fragments of the outer walls remain. The site was recently renovated with improved pathways,
-                  lighting, and viewing platforms as part of a major restoration project. The inscribed wall
-                  bearing the words &ldquo;God, Country, King&rdquo; in Arabic is the most iconic visual
-                  symbol of Agadir, illuminated at night and visible from across the city.
-                </p>
-                <p>
-                  The primary reason to visit Agadir Oufella is the view. From the summit, you can see the
-                  entire sweep of the bay from the port in the south to the beginnings of Taghazout in the
-                  north, the modern city spread beneath you, and on clear days, the snow-capped peaks of the
-                  High Atlas Mountains to the east. Sunset is the most popular time to visit, when the light
-                  turns the city and ocean golden. The site is accessible by road (taxi or rental car) or
-                  by a steep 30-minute walk from the city below.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6 pt-6 border-t border-[var(--border-light)]">
-                {[
-                  { icon: Clock, label: 'Best Time', value: 'Sunset (1 hour before)' },
-                  { icon: MapPin, label: 'Access', value: 'Taxi (20 MAD) or 30-min walk' },
-                  { icon: Camera, label: 'Photo Tip', value: 'Wide-angle lens for the full bay panorama' },
-                ].map((item) => (
-                  <div key={item.label} className="flex items-start gap-3">
-                    <item.icon className="w-5 h-5 text-[var(--color-primary)] shrink-0 mt-0.5" />
-                    <div>
-                      <p className="text-sm font-semibold text-[var(--text-primary)]">{item.label}</p>
-                      <p className="text-xs text-[var(--text-secondary)]">{item.value}</p>
+          <div className="space-y-6">
+            {beaches.map((beach, index) => (
+              <div
+                key={beach.name}
+                className="card-moroccan p-6 hover:shadow-xl transition-all duration-300"
+              >
+                <div className="flex flex-col lg:flex-row lg:items-start gap-6">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-[var(--color-primary)] text-white text-sm font-bold">
+                        {index + 1}
+                      </span>
+                      <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+                        {beach.name}
+                      </h3>
+                    </div>
+                    <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4">
+                      {beach.description}
+                    </p>
+                    <div className="flex flex-wrap gap-4 text-sm mb-3">
+                      <span className="flex items-center gap-1.5 text-[var(--text-muted)]">
+                        <MapPin className="w-3.5 h-3.5 text-[var(--color-accent)]" />
+                        {beach.distance}
+                      </span>
+                      <span className="flex items-center gap-1.5 text-[var(--text-muted)]">
+                        <Star className="w-3.5 h-3.5 text-[var(--color-accent)]" />
+                        {beach.type}
+                      </span>
+                      <span className="flex items-center gap-1.5 text-[var(--text-muted)]">
+                        <Heart className="w-3.5 h-3.5 text-[var(--color-accent)]" />
+                        {beach.bestFor}
+                      </span>
+                    </div>
+                    <div className="flex items-start gap-2 p-3 bg-[var(--surface-muted)] rounded-lg">
+                      <Lightbulb className="w-4 h-4 text-[var(--color-gold)] mt-0.5 flex-shrink-0" />
+                      <p className="text-xs text-[var(--text-muted)]">{beach.tip}</p>
                     </div>
                   </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Souk El Had ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco">
-          <div className="text-center mb-12">
-            <div className="inline-flex p-3 rounded-xl bg-[var(--color-primary)]/10 mb-4">
-              <ShoppingBag className="w-6 h-6 text-[var(--color-primary)]" />
-            </div>
-            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
-              Souk El Had: Morocco&apos;s Largest Market
-            </h2>
-            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
-              Sprawling across 11 hectares with over 6,000 shops and stalls, Souk El Had is a vast,
-              labyrinthine marketplace that compensates for Agadir&apos;s lack of a historic medina.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Main description */}
-            <div className="lg:col-span-2 space-y-6">
-              <div className="card-moroccan p-6 md:p-8">
-                <div className="space-y-4 text-[var(--text-secondary)] leading-relaxed">
-                  <p>
-                    Souk El Had (the Sunday Souk) is not a picturesque medieval marketplace like the souks of
-                    Fes or Marrakech. It is an enormous, utilitarian, concrete-walled enclosure that is
-                    nonetheless one of the most authentic shopping experiences in Morocco. This is where
-                    the people of Agadir and the surrounding Souss region do their actual shopping, and
-                    the sheer scale is staggering: over 6,000 shops and stalls arranged in a maze of
-                    covered and open-air sections spanning 11 hectares.
-                  </p>
-                  <p>
-                    Despite the name, the souk operates every day except Monday. It opens early (around
-                    6:00 AM) and closes by late afternoon (6:00-7:00 PM). The souk is divided into
-                    loosely organized sections: produce and spices, meat and fish, clothing and textiles,
-                    household goods, electronics, cosmetics (including argan oil), and a dedicated area
-                    for traditional crafts and souvenirs. The produce section is particularly impressive,
-                    overflowing with the fruits of the Souss Valley: oranges, clementines, tomatoes,
-                    avocados, dates, and saffron.
-                  </p>
-                  <p>
-                    Prices at Souk El Had are significantly lower than in touristy souks elsewhere in
-                    Morocco, but haggling is still expected for non-food items. A reasonable starting
-                    point for your counter-offer is around 50-60% of the initial asking price (as
-                    opposed to the 25-30% starting point recommended for Marrakech). The atmosphere
-                    is busy, noisy, and intensely local &mdash; do not expect anyone to speak English
-                    outside of the tourist craft sections.
-                  </p>
                 </div>
               </div>
-            </div>
-
-            {/* Practical sidebar */}
-            <div className="space-y-4">
-              <div className="card-moroccan p-6">
-                <h3 className="text-lg font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)] mb-4 flex items-center gap-2">
-                  <Compass className="w-5 h-5 text-[var(--color-primary)]" />
-                  Practical Information
-                </h3>
-                <ul className="space-y-3">
-                  {[
-                    { label: 'Open', value: 'Daily except Monday, 6:00 AM - 7:00 PM' },
-                    { label: 'Best time', value: 'Early morning (6-9 AM) for freshest produce' },
-                    { label: 'Gates', value: '13 entrances around the perimeter' },
-                    { label: 'Location', value: 'Rue Chaht Mohammed, Nouveau Talborjt' },
-                    { label: 'Taxi cost', value: '10-15 MAD from the beachfront' },
-                  ].map((item) => (
-                    <li key={item.label} className="flex items-start gap-2 text-sm">
-                      <CheckCircle className="w-4 h-4 text-[var(--color-primary)] shrink-0 mt-0.5" />
-                      <span>
-                        <span className="font-semibold text-[var(--text-primary)]">{item.label}:</span>{' '}
-                        <span className="text-[var(--text-secondary)]">{item.value}</span>
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="card-moroccan p-6">
-                <h3 className="text-lg font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)] mb-4 flex items-center gap-2">
-                  <ShoppingBag className="w-5 h-5 text-[var(--color-primary)]" />
-                  What to Buy
-                </h3>
-                <ul className="space-y-2">
-                  {[
-                    'Argan oil (cosmetic and culinary)',
-                    'Amlou (argan, almond, and honey spread)',
-                    'Saffron from Taliouine',
-                    'Local honey (thyme, euphorbia, carob)',
-                    'Berber silver jewelry',
-                    'Handwoven baskets and bags',
-                    'Spices (cumin, ras el hanout, paprika)',
-                    'Dried fruits and nuts',
-                    'Leather goods (babouches, bags)',
-                    'Traditional textiles and carpets',
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-[var(--text-secondary)]">
-                      <Star className="w-3 h-3 text-[var(--color-primary)] shrink-0 mt-0.5" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="card-moroccan p-6 bg-yellow-50 border-yellow-200">
-                <h3 className="text-lg font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)] mb-3 flex items-center gap-2">
-                  <AlertTriangle className="w-5 h-5 text-yellow-600" />
-                  Tips
-                </h3>
-                <ul className="space-y-2 text-sm text-[var(--text-secondary)]">
-                  <li>Bring cash (MAD) &mdash; no card facilities</li>
-                  <li>Watch your belongings in crowded areas</li>
-                  <li>The souk is huge &mdash; enter from Gate 1 to orient yourself</li>
-                  <li>Carry a small bag for purchases</li>
-                  <li>Photography of people requires permission</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Argan Oil Experience ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco max-w-4xl">
-          <div className="text-center mb-12">
-            <div className="inline-flex p-3 rounded-xl bg-[var(--color-primary)]/10 mb-4">
-              <Sparkles className="w-6 h-6 text-[var(--color-primary)]" />
-            </div>
-            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
-              The Argan Oil Experience
-            </h2>
-            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
-              The Souss-Massa region is the heartland of the argan tree, a species found nowhere else on
-              Earth, and visiting a cooperative is one of the defining experiences of the region.
-            </p>
-          </div>
-
-          <div className="space-y-4 text-[var(--text-secondary)] leading-relaxed">
-            <p>
-              The argan tree (Argania spinosa) is endemic to Morocco, with the vast majority of the
-              world&apos;s argan forests concentrated in the Souss-Massa region around Agadir. UNESCO
-              declared the argan forest a Biosphere Reserve in 1998, recognizing both its ecological
-              importance and its cultural significance to the Amazigh (Berber) communities who have
-              harvested its fruit for centuries.
-            </p>
-            <p>
-              Argan oil is produced from the kernels found inside the fruit of the argan tree. The
-              traditional production process is labor-intensive: the fruit is collected, sun-dried, the
-              outer flesh removed, the extremely hard nut cracked by hand between two stones to extract
-              the tiny kernels, the kernels are then roasted (for culinary oil) or left raw (for cosmetic
-              oil), ground in a stone mill, and the resulting paste hand-kneaded to extract the oil. It
-              takes approximately 30 kg of fruit to produce just one liter of oil, which explains the
-              high price.
-            </p>
-            <p>
-              The best way to experience argan oil production is to visit one of the women&apos;s
-              cooperatives located along the road between Agadir and Essaouira (the N1 highway) or in
-              the foothills around the road to Immouzzer des Ida Outanane. These cooperatives provide
-              employment to Berber women in rural areas and allow visitors to observe the traditional
-              cracking and grinding process firsthand. You can taste the difference between culinary
-              argan oil (darker, nutty, roasted) and cosmetic argan oil (lighter, odorless, raw), and
-              purchase directly from the producers at fair prices.
-            </p>
-          </div>
-
-          {/* Argan products and prices */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-            {[
-              {
-                title: 'Culinary Argan Oil',
-                description: 'Dark amber, with a rich, nutty, toasted flavor. Used for drizzling on couscous, salads, tagines, and for dipping with bread. Also the key ingredient in amlou.',
-                price: '200-350 MAD / liter',
-                tip: 'Look for oil from roasted kernels only. If it tastes bland, it is diluted with other oils.',
-              },
-              {
-                title: 'Cosmetic Argan Oil',
-                description: 'Light golden, nearly odorless. Used for skin moisturizing, hair treatment, and nail care. Rich in vitamin E and essential fatty acids. Should absorb quickly without a greasy residue.',
-                price: '250-400 MAD / liter',
-                tip: 'True cosmetic argan oil is made from unroasted kernels. It should have little to no scent.',
-              },
-              {
-                title: 'Amlou',
-                description: 'A thick, addictive spread made from argan oil, ground almonds, and honey. Often called "Berber Nutella." Eaten with bread for breakfast or as a snack. Varies from smooth to chunky.',
-                price: '50-100 MAD / jar',
-                tip: 'The best amlou is freshly made at cooperatives. Commercial versions often use cheaper oils.',
-              },
-            ].map((product) => (
-              <div key={product.title} className="card-moroccan p-6">
-                <h3 className="text-lg font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)] mb-2">
-                  {product.title}
-                </h3>
-                <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-3">
-                  {product.description}
-                </p>
-                <p className="text-sm font-semibold text-[var(--color-primary)] mb-2">
-                  {product.price}
-                </p>
-                <p className="text-xs text-[var(--text-secondary)] italic">
-                  Tip: {product.tip}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          {/* Goats in trees note */}
-          <div className="card-moroccan p-6 mt-8 flex gap-4 items-start">
-            <Camera className="w-6 h-6 text-[var(--color-primary)] shrink-0 mt-1" />
-            <div>
-              <h3 className="text-base font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)] mb-2">
-                The Famous Goats in Argan Trees
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                Along the road between Agadir and Essaouira, you will encounter the famous sight of goats
-                climbing argan trees to eat the fruit. While this is a genuine natural behavior (goats are
-                remarkably agile climbers and argan fruit is a prized food source), be aware that some
-                roadside displays are staged by locals who place goats in the trees for tourist photos
-                and then request a tip. The genuinely wild goat-climbing tends to happen in more remote
-                areas and during fruit season (June to September). If you stop for a photo at a roadside
-                display, a tip of 10-20 MAD is expected and fair.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Day Trips ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco">
-          <div className="text-center mb-12">
-            <div className="inline-flex p-3 rounded-xl bg-[var(--color-primary)]/10 mb-4">
-              <Car className="w-6 h-6 text-[var(--color-primary)]" />
-            </div>
-            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
-              Day Trips from Agadir
-            </h2>
-            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
-              The Souss-Massa region surrounding Agadir offers extraordinary diversity, from mountain
-              gorges and waterfalls to walled towns and wildlife reserves.
-            </p>
-          </div>
-
-          <div className="space-y-8">
-            {dayTrips.map((trip, index) => (
-              <article
-                key={trip.name}
-                className={`card-moroccan overflow-hidden flex flex-col ${
-                  index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                }`}
-              >
-                <div className="relative w-full md:w-2/5 h-64 md:h-auto shrink-0">
-                  <img
-                    src={trip.image}
-                    alt={`${trip.name} day trip from Agadir`}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                  <div className="absolute top-4 left-4 flex items-center gap-2">
-                    <span className="inline-flex items-center justify-center px-3 py-1 rounded-full text-xs font-semibold bg-white/90 text-[var(--color-primary)]">
-                      {trip.distance}
-                    </span>
-                    <span className="inline-flex items-center justify-center px-3 py-1 rounded-full text-xs font-semibold bg-[var(--color-primary)] text-white">
-                      {trip.duration}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="p-6 md:p-8 flex flex-col justify-center">
-                  <div className="flex items-center gap-3 mb-1 text-sm text-[var(--text-secondary)]">
-                    <span className="flex items-center gap-1">
-                      <Calendar className="w-3.5 h-3.5 text-[var(--color-primary)]" />
-                      {trip.bestTime}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <DollarSign className="w-3.5 h-3.5 text-[var(--color-primary)]" />
-                      {trip.cost}
-                    </span>
-                  </div>
-                  <h3 className="text-2xl md:text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-3">
-                    {trip.name}
-                  </h3>
-                  <p className="text-[var(--text-secondary)] leading-relaxed text-[15px] mb-4">
-                    {trip.description}
-                  </p>
-                  <div className="pt-4 border-t border-[var(--border-light)]">
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
-                      {trip.highlights.map((highlight) => (
-                        <li key={highlight} className="flex items-start gap-2 text-xs text-[var(--text-secondary)]">
-                          <Star className="w-3 h-3 text-[var(--color-primary)] shrink-0 mt-0.5" />
-                          <span>{highlight}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </article>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── Nightlife & Entertainment ── */}
-      <section className="py-16 md:py-20">
+      {/* =================================================================
+          SURFING CAPITAL
+          ================================================================= */}
+      <section className="py-12 md:py-16">
         <div className="container-morocco">
-          <div className="text-center mb-12">
-            <div className="inline-flex p-3 rounded-xl bg-[var(--color-primary)]/10 mb-4">
-              <Music className="w-6 h-6 text-[var(--color-primary)]" />
-            </div>
-            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
-              Nightlife &amp; Entertainment
+          <div className="flex items-center gap-3 mb-3">
+            <Compass className="w-6 h-6 text-[var(--color-accent)]" />
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+              Surfing Capital of Morocco
             </h2>
-            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
-              Agadir has the most liberal nightlife scene in Morocco outside of Casablanca, with beach clubs,
-              marina bars, hotel nightclubs, and even a casino.
-            </p>
           </div>
+          <p className="text-[var(--text-secondary)] mb-4 max-w-2xl">
+            The Agadir-Taghazout coastline is one of the world&apos;s premier surf destinations,
+            with consistent Atlantic swells, warm water by European standards, and breaks
+            for every level from first-time beginners to charging professionals.
+          </p>
+          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">
+            The surf season runs from September to April, with the biggest swells arriving
+            November through February. Summer offers smaller, gentler waves ideal for learning.
+            Water temperature ranges from 17 to 22 degrees Celsius; a 3/2mm wetsuit is standard
+            for winter sessions. Board rental costs 100-200 MAD per day at most surf shops.
+          </p>
 
-          <div className="max-w-4xl mx-auto mb-8">
-            <p className="text-[var(--text-secondary)] leading-relaxed">
-              Morocco is a Muslim-majority country where alcohol consumption is not universal, but Agadir&apos;s
-              tourism-oriented character means that bars, clubs, and licensed restaurants are more numerous
-              and more visible here than in most Moroccan cities. Alcohol is widely available at hotels,
-              the marina, and licensed restaurants. Local beer (Flag Speciale, Casablanca) costs 25-40 MAD,
-              wine 40-80 MAD per glass, and cocktails 60-120 MAD. The nightlife scene is concentrated
-              around the marina, the hotel zone, and the Corniche.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {nightlifeSpots.map((spot) => (
-              <div key={spot.name} className="card-moroccan p-6">
-                <h3 className="text-lg font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)] mb-2">
-                  {spot.name}
-                </h3>
-                <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-3">
+          <h3 className="text-2xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-6">
+            Top Surf Spots
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {surfSpots.map((spot) => (
+              <div key={spot.name} className="card-moroccan p-6 group">
+                <div className="flex items-center justify-between mb-3">
+                  <h4 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+                    {spot.name}
+                  </h4>
+                  <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${
+                    spot.level === 'Advanced' ? 'bg-red-100 text-red-700' :
+                    spot.level === 'Intermediate-Advanced' ? 'bg-orange-100 text-orange-700' :
+                    spot.level === 'Intermediate' ? 'bg-yellow-100 text-yellow-700' :
+                    'bg-green-100 text-green-700'
+                  }`}>
+                    {spot.level}
+                  </span>
+                </div>
+                <p className="text-xs text-[var(--color-accent)] font-medium mb-2">{spot.type}</p>
+                <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-3">
                   {spot.description}
                 </p>
-                <div className="flex items-center justify-between pt-3 border-t border-[var(--border-light)]">
-                  <span className="text-xs text-[var(--text-secondary)] flex items-center gap-1">
-                    <Clock className="w-3 h-3 text-[var(--color-primary)]" />
-                    {spot.hours}
+                <div className="flex flex-wrap gap-3 text-xs text-[var(--text-muted)]">
+                  <span className="flex items-center gap-1">
+                    <Calendar className="w-3 h-3" /> {spot.bestSeason}
                   </span>
-                  <span className="text-xs font-semibold text-[var(--color-primary)]">
-                    {spot.vibe}
+                  <span className="flex items-center gap-1">
+                    <Waves className="w-3 h-3" /> {spot.bestTide}
                   </span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <h3 className="text-2xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-6">
+            Surf Schools &amp; Camps
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {surfSchools.map((school) => (
+              <div key={school.name} className="card-moroccan p-6">
+                <div className="flex items-center justify-between mb-2">
+                  <h4 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+                    {school.name}
+                  </h4>
+                  <span className="text-sm font-semibold text-[var(--color-accent)]">{school.price}</span>
+                </div>
+                <p className="text-xs text-[var(--text-muted)] mb-2">
+                  <MapPin className="w-3 h-3 inline mr-1" />{school.location}
+                </p>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                  {school.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* =================================================================
+          ATTRACTIONS
+          ================================================================= */}
+      <section className="py-12 md:py-16 bg-[var(--surface-muted)]">
+        <div className="container-morocco">
+          <div className="flex items-center gap-3 mb-3">
+            <Camera className="w-6 h-6 text-[var(--color-primary)]" />
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+              Top Attractions in Agadir
+            </h2>
+          </div>
+          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">
+            Beyond the beach, Agadir offers ancient ruins, vibrant markets, a crocodile park,
+            and a beautiful marina and promenade.
+          </p>
+
+          <div className="space-y-8">
+            {attractions.map((attraction, index) => (
+              <div
+                key={attraction.name}
+                className="card-moroccan overflow-hidden group hover:shadow-xl transition-all duration-300"
+              >
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                  <div className="relative aspect-[16/10] lg:aspect-auto overflow-hidden">
+                    <img
+                      src={attraction.image}
+                      alt={attraction.name}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading={index < 2 ? 'eager' : 'lazy'}
+                    />
+                    <div className="absolute top-4 left-4">
+                      <span className="tag bg-white/90 text-[var(--text-primary)] text-xs font-semibold backdrop-blur-sm">
+                        {attraction.type}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="p-6 lg:p-8 flex flex-col justify-center">
+                    <h3 className="text-2xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                      {attraction.name}
+                    </h3>
+                    <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4">
+                      {attraction.description}
+                    </p>
+                    <div className="grid grid-cols-2 gap-3 mb-4">
+                      <div className="flex items-center gap-2 text-sm text-[var(--text-muted)]">
+                        <Clock className="w-4 h-4 text-[var(--color-accent)]" />
+                        <span>{attraction.hours}</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm text-[var(--text-muted)]">
+                        <Ticket className="w-4 h-4 text-[var(--color-accent)]" />
+                        <span>{attraction.price}</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm text-[var(--text-muted)]">
+                        <Star className="w-4 h-4 text-[var(--color-gold)]" />
+                        <span>{attraction.rating} / 5</span>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-2 p-3 bg-[var(--surface-muted)] rounded-lg">
+                      <Lightbulb className="w-4 h-4 text-[var(--color-gold)] mt-0.5 flex-shrink-0" />
+                      <p className="text-xs text-[var(--text-muted)]">{attraction.tip}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
@@ -1372,496 +1270,456 @@ export default function AgadirGuidePage() {
         </div>
       </section>
 
-      {/* ── Food Guide ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+      {/* =================================================================
+          WHERE TO EAT
+          ================================================================= */}
+      <section className="py-12 md:py-16">
         <div className="container-morocco">
-          <div className="text-center mb-12">
-            <div className="inline-flex p-3 rounded-xl bg-[var(--color-primary)]/10 mb-4">
-              <Utensils className="w-6 h-6 text-[var(--color-primary)]" />
-            </div>
-            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
-              Food Guide: From Port Grills to Fine Dining
+          <div className="flex items-center gap-3 mb-3">
+            <Utensils className="w-6 h-6 text-[var(--color-accent)]" />
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+              Where to Eat in Agadir
             </h2>
-            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
-              Agadir&apos;s position as Morocco&apos;s largest fishing port means seafood dominates
-              the dining scene, with the freshest catch going directly from boat to grill.
-            </p>
           </div>
+          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">
+            From port-fresh seafood grilled over charcoal to refined marina dining, Agadir&apos;s
+            food scene is driven by the ocean and the abundance of the Souss Valley.
+          </p>
 
-          <div className="max-w-4xl mx-auto mb-8">
-            <div className="card-moroccan p-6 md:p-8 border-l-4 border-l-[var(--color-primary)]">
-              <h3 className="text-lg font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)] mb-3 flex items-center gap-2">
-                <Fish className="w-5 h-5 text-[var(--color-primary)]" />
-                The Port Fish Experience
-              </h3>
-              <p className="text-[var(--text-secondary)] leading-relaxed text-sm">
-                The single must-do food experience in Agadir is eating freshly grilled fish at the port.
-                The process is simple and immensely satisfying: walk along the row of open-air stalls,
-                choose your fish from the iced displays (sardines, sole, sea bream, prawns, calamari,
-                lobster), have it weighed and priced, then sit at a shared table while it is grilled over
-                charcoal and served with bread, tomato and onion salad, olives, and chermoula (a pungent
-                herb and garlic sauce). A generous plate of sardines costs around 40-50 MAD. A whole
-                sea bream with sides might be 80-120 MAD. It is, quite simply, the freshest and best-value
-                seafood meal you will find anywhere in Morocco.
-              </p>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {restaurants.map((restaurant) => (
-              <div key={restaurant.name} className="card-moroccan p-6">
+              <div key={restaurant.name} className="card-moroccan p-6 group hover:shadow-lg transition-all duration-300">
                 <div className="flex items-start justify-between mb-2">
-                  <h3 className="text-lg font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)]">
-                    {restaurant.name}
-                  </h3>
-                  <span className="inline-flex px-3 py-1 rounded-full text-xs font-semibold bg-[var(--color-primary)]/10 text-[var(--color-primary)] shrink-0">
-                    {restaurant.price}
-                  </span>
+                  <div>
+                    <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] group-hover:text-[var(--color-accent)] transition-colors">
+                      {restaurant.name}
+                    </h3>
+                    <p className="text-xs text-[var(--color-accent)]">{restaurant.cuisine}</p>
+                  </div>
+                  <span className="text-sm font-bold text-[var(--text-primary)]">{restaurant.price}</span>
                 </div>
-                <p className="text-xs font-semibold text-[var(--color-primary)] uppercase tracking-wide mb-2">
-                  {restaurant.type}
+                <p className="text-xs text-[var(--text-muted)] mb-3">
+                  <MapPin className="w-3 h-3 inline mr-1" />{restaurant.location}
                 </p>
                 <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-3">
                   {restaurant.description}
                 </p>
-                <div className="pt-3 border-t border-[var(--border-light)]">
-                  <p className="text-xs text-[var(--text-secondary)]">
-                    <span className="font-semibold text-[var(--text-primary)]">Must try:</span>{' '}
-                    {restaurant.mustTry}
-                  </p>
-                </div>
+                <p className="text-xs font-semibold text-[var(--color-accent)]">
+                  <DollarSign className="w-3 h-3 inline mr-1" />{restaurant.priceRange}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── Where to Stay ── */}
-      <section className="py-16 md:py-20">
+      {/* =================================================================
+          WHERE TO STAY
+          ================================================================= */}
+      <section className="py-12 md:py-16 bg-[var(--surface-muted)]">
         <div className="container-morocco">
-          <div className="text-center mb-12">
-            <div className="inline-flex p-3 rounded-xl bg-[var(--color-primary)]/10 mb-4">
-              <Hotel className="w-6 h-6 text-[var(--color-primary)]" />
-            </div>
-            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
+          <div className="flex items-center gap-3 mb-3">
+            <Bed className="w-6 h-6 text-[var(--color-primary)]" />
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
               Where to Stay in Agadir
             </h2>
-            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
-              From all-inclusive beachfront resorts to bohemian surf camps, Agadir offers accommodation
-              for every style and budget.
-            </p>
           </div>
+          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">
+            From five-star beachfront resorts to budget surf hostels in Taghazout, Agadir
+            has accommodation for every style and budget.
+          </p>
 
-          <div className="space-y-6 max-w-5xl mx-auto">
-            {accommodations.map((acc) => (
-              <div key={acc.category} className="card-moroccan p-6 md:p-8">
-                <div className="flex items-start justify-between mb-3 flex-wrap gap-2">
-                  <h3 className="text-xl font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)]">
-                    {acc.category}
-                  </h3>
-                  <span className="inline-flex px-4 py-1.5 rounded-full text-sm font-semibold bg-[var(--color-primary)]/10 text-[var(--color-primary)]">
-                    {acc.priceRange}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {accommodation.map((hotel) => (
+              <div key={hotel.name} className="card-moroccan p-6 group hover:shadow-lg transition-all duration-300">
+                <div className="flex items-center justify-between mb-3">
+                  <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${
+                    hotel.category === 'Luxury' ? 'bg-amber-100 text-amber-700' :
+                    hotel.category === 'Boutique' ? 'bg-purple-100 text-purple-700' :
+                    hotel.category === 'Mid-Range All-Inclusive' ? 'bg-blue-100 text-blue-700' :
+                    hotel.category === 'Mid-Range' ? 'bg-sky-100 text-sky-700' :
+                    'bg-green-100 text-green-700'
+                  }`}>
+                    {hotel.category}
                   </span>
+                  <span className="text-sm font-bold text-[var(--color-accent)]">{hotel.price}</span>
                 </div>
-                <p className="text-[var(--text-secondary)] leading-relaxed text-sm mb-4">
-                  {acc.description}
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3 group-hover:text-[var(--color-accent)] transition-colors">
+                  {hotel.name}
+                </h3>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4">
+                  {hotel.description}
                 </p>
-                <div className="flex flex-wrap gap-2 mb-3">
-                  {acc.examples.map((example) => (
-                    <span
-                      key={example}
-                      className="inline-flex px-3 py-1 rounded-full text-xs bg-[var(--surface-muted)] text-[var(--text-secondary)] border border-[var(--border-light)]"
-                    >
-                      {example}
+                <div className="flex flex-wrap gap-2">
+                  {hotel.features.map((feature) => (
+                    <span key={feature} className="text-xs bg-[var(--surface-muted)] text-[var(--text-muted)] px-2 py-1 rounded-md">
+                      <CheckCircle className="w-3 h-3 inline mr-1 text-green-600" />{feature}
                     </span>
                   ))}
                 </div>
-                <p className="text-xs text-[var(--text-secondary)]">
-                  <span className="font-semibold text-[var(--text-primary)]">Best for:</span>{' '}
-                  {acc.bestFor}
-                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── Getting There ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
-        <div className="container-morocco max-w-4xl">
-          <div className="text-center mb-12">
-            <div className="inline-flex p-3 rounded-xl bg-[var(--color-primary)]/10 mb-4">
-              <Plane className="w-6 h-6 text-[var(--color-primary)]" />
-            </div>
-            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
-              Getting to Agadir
+      {/* =================================================================
+          DAY TRIPS
+          ================================================================= */}
+      <section className="py-12 md:py-16">
+        <div className="container-morocco">
+          <div className="flex items-center gap-3 mb-3">
+            <Car className="w-6 h-6 text-[var(--color-accent)]" />
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+              Day Trips from Agadir
             </h2>
-            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
-              Agadir is well-connected by air and road, with direct flights from Europe
-              and comfortable bus connections from major Moroccan cities.
+          </div>
+          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">
+            Agadir is the perfect base for exploring the Souss-Massa region: natural swimming pools,
+            walled cities, silver workshops, painted rocks, and world-class birdwatching.
+          </p>
+
+          <div className="space-y-6">
+            {dayTrips.map((trip) => {
+              const TripIcon = trip.icon;
+              return (
+                <div key={trip.name} className="card-moroccan p-6 hover:shadow-lg transition-all duration-300">
+                  <div className="flex flex-col lg:flex-row gap-6">
+                    <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-[var(--color-primary-50)] text-[var(--color-primary)] flex-shrink-0">
+                      <TripIcon className="w-8 h-8" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                        <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+                          {trip.name}
+                        </h3>
+                        <span className="text-sm text-[var(--text-muted)] flex items-center gap-1">
+                          <Navigation className="w-3.5 h-3.5" /> {trip.distance}
+                        </span>
+                      </div>
+                      <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4">
+                        {trip.description}
+                      </p>
+                      <div className="flex flex-wrap gap-2 mb-3">
+                        {trip.highlights.map((highlight) => (
+                          <span key={highlight} className="text-xs bg-[var(--surface-muted)] text-[var(--text-muted)] px-2.5 py-1 rounded-md">
+                            <CheckCircle className="w-3 h-3 inline mr-1 text-green-600" />{highlight}
+                          </span>
+                        ))}
+                      </div>
+                      <div className="flex flex-wrap gap-4 text-xs text-[var(--text-muted)]">
+                        <span className="flex items-center gap-1"><Calendar className="w-3 h-3 text-[var(--color-accent)]" /> {trip.bestTime}</span>
+                        <span className="flex items-center gap-1"><DollarSign className="w-3 h-3 text-[var(--color-accent)]" /> {trip.cost}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* =================================================================
+          ARGAN OIL EXPERIENCE
+          ================================================================= */}
+      <section className="py-12 md:py-16 bg-[var(--surface-muted)]">
+        <div className="container-morocco">
+          <div className="flex items-center gap-3 mb-3">
+            <Leaf className="w-6 h-6 text-[var(--color-primary)]" />
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+              The Argan Oil Experience
+            </h2>
+          </div>
+          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">
+            The Souss-Massa region around Agadir is the global heartland of argan oil production.
+            Visiting a women&apos;s cooperative is one of the most meaningful experiences in Morocco.
+          </p>
+
+          <div className="card-moroccan p-6 lg:p-8 mb-8">
+            <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4">
+              Understanding Argan Oil
+            </h3>
+            <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+              {arganInfo.overview}
             </p>
           </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            {arganInfo.cooperatives.map((coop) => (
+              <div key={coop.name} className="card-moroccan p-6">
+                <h4 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                  {coop.name}
+                </h4>
+                <p className="text-xs text-[var(--text-muted)] mb-3">
+                  <MapPin className="w-3 h-3 inline mr-1" />{coop.location}
+                </p>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-3">
+                  {coop.description}
+                </p>
+                <p className="text-xs font-semibold text-[var(--color-accent)]">
+                  <DollarSign className="w-3 h-3 inline mr-1" />{coop.prices}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="card-moroccan p-6 lg:p-8 mb-8">
+            <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4">
+              Goats in Argan Trees
+            </h3>
+            <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+              {arganInfo.goatsInTrees}
+            </p>
+          </div>
+
+          <div className="card-moroccan p-6 lg:p-8">
+            <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4">
+              Buying Tips: How to Spot Genuine Argan Oil
+            </h3>
+            <ul className="space-y-3">
+              {arganInfo.buyingTips.map((tip, index) => (
+                <li key={index} className="flex items-start gap-3 text-sm text-[var(--text-secondary)]">
+                  <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                  <span>{tip}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* =================================================================
+          GOLF
+          ================================================================= */}
+      <section className="py-12 md:py-16">
+        <div className="container-morocco">
+          <div className="flex items-center gap-3 mb-3">
+            <Trophy className="w-6 h-6 text-[var(--color-accent)]" />
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+              Golf in Agadir
+            </h2>
+          </div>
+          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">
+            With year-round sunshine, ocean views, and green fees a fraction of European prices,
+            Agadir is one of North Africa&apos;s premier golf destinations. Four quality courses
+            are within easy reach of the city.
+          </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* By Air */}
-            <div className="card-moroccan p-6">
-              <h3 className="text-lg font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)] mb-4 flex items-center gap-2">
-                <Plane className="w-5 h-5 text-[var(--color-primary)]" />
-                By Air
-              </h3>
-              <div className="space-y-3 text-sm text-[var(--text-secondary)] leading-relaxed">
-                <p>
-                  <span className="font-semibold text-[var(--text-primary)]">Agadir Al-Massira Airport (AGA)</span> is
-                  located 22 km southeast of the city center. It is Morocco&apos;s third-busiest airport
-                  after Casablanca and Marrakech, serving primarily charter and low-cost flights from Europe.
-                </p>
-                <p>
-                  <span className="font-semibold text-[var(--text-primary)]">Airlines:</span> Ryanair, EasyJet,
-                  TUI, Transavia, Royal Air Maroc, and various charter operators serve Agadir from UK,
-                  France, Germany, Netherlands, Belgium, Scandinavia, and other European cities.
-                </p>
-                <p>
-                  <span className="font-semibold text-[var(--text-primary)]">Airport transfer:</span> Grand taxi
-                  to the city center costs 200-250 MAD (fixed rate, negotiate before departure). Some hotels
-                  offer shuttle services. The airport bus (line 22) costs 15 MAD but runs infrequently.
+            {golfCourses.map((course) => (
+              <div key={course.name} className="card-moroccan p-6 group hover:shadow-lg transition-all duration-300">
+                <div className="flex items-center justify-between mb-3">
+                  <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] group-hover:text-[var(--color-accent)] transition-colors">
+                    {course.name}
+                  </h3>
+                  <span className="text-sm font-bold text-[var(--color-accent)]">{course.greenFee}</span>
+                </div>
+                <div className="flex flex-wrap gap-3 mb-3 text-xs text-[var(--text-muted)]">
+                  <span className="flex items-center gap-1">
+                    <CircleDot className="w-3 h-3" /> {course.holes}
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <Palette className="w-3 h-3" /> {course.designer}
+                  </span>
+                </div>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                  {course.description}
                 </p>
               </div>
-            </div>
-
-            {/* By Bus */}
-            <div className="card-moroccan p-6">
-              <h3 className="text-lg font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)] mb-4 flex items-center gap-2">
-                <Navigation className="w-5 h-5 text-[var(--color-primary)]" />
-                By Bus
-              </h3>
-              <div className="space-y-3 text-sm text-[var(--text-secondary)] leading-relaxed">
-                <p>
-                  <span className="font-semibold text-[var(--text-primary)]">From Marrakech:</span> CTM and Supratours
-                  operate comfortable coaches taking approximately 3 to 3.5 hours via the Tizi n&apos;Test or the
-                  newer autoroute. Departures every 1-2 hours. Tickets cost 100-140 MAD one way.
-                </p>
-                <p>
-                  <span className="font-semibold text-[var(--text-primary)]">From Casablanca:</span> Direct buses take
-                  approximately 8-9 hours. An overnight service is available. Tickets cost 200-250 MAD.
-                </p>
-                <p>
-                  <span className="font-semibold text-[var(--text-primary)]">From Essaouira:</span> Approximately 3 hours
-                  by bus, with regular departures. Tickets cost 80-100 MAD. The route along the coastal N1
-                  passes through argan forests and is scenic.
-                </p>
-                <p>
-                  <span className="font-semibold text-[var(--text-primary)]">Bus stations:</span> The main Gare Routiere
-                  is in Inezgane (13 km south). CTM has a more central terminal in Nouveau Talborjt.
-                </p>
-              </div>
-            </div>
-
-            {/* By Car */}
-            <div className="card-moroccan p-6">
-              <h3 className="text-lg font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)] mb-4 flex items-center gap-2">
-                <Car className="w-5 h-5 text-[var(--color-primary)]" />
-                By Car
-              </h3>
-              <div className="space-y-3 text-sm text-[var(--text-secondary)] leading-relaxed">
-                <p>
-                  <span className="font-semibold text-[var(--text-primary)]">From Marrakech:</span> 270 km via the
-                  A7 autoroute (3 hours) or the scenic N8/R203 mountain road via Tizi n&apos;Test pass (5 hours
-                  but spectacular). The autoroute is modern and well-maintained.
-                </p>
-                <p>
-                  <span className="font-semibold text-[var(--text-primary)]">Car rental:</span> Available at the
-                  airport and in the city. International brands (Hertz, Avis, Europcar) and local companies
-                  (Medcar, Afrique Car) are represented. A compact car costs from 250-400 MAD per day.
-                  Highly recommended for exploring the region (Taghazout, Paradise Valley, Tiznit, Taroudant).
-                </p>
-                <p>
-                  <span className="font-semibold text-[var(--text-primary)]">Driving tips:</span> Roads in the Agadir
-                  area are generally good. Watch for speed cameras on the autoroute. Parking in Agadir city
-                  center is pay-and-display (2 MAD/hour).
-                </p>
-              </div>
-            </div>
-
-            {/* Getting Around */}
-            <div className="card-moroccan p-6">
-              <h3 className="text-lg font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)] mb-4 flex items-center gap-2">
-                <Compass className="w-5 h-5 text-[var(--color-primary)]" />
-                Getting Around Agadir
-              </h3>
-              <div className="space-y-3 text-sm text-[var(--text-secondary)] leading-relaxed">
-                <p>
-                  <span className="font-semibold text-[var(--text-primary)]">Petit taxis:</span> Orange petit taxis
-                  circulate throughout the city. Insist on the meter (compteur). A typical ride within
-                  the city costs 10-20 MAD. Available on every main street.
-                </p>
-                <p>
-                  <span className="font-semibold text-[var(--text-primary)]">Grand taxis:</span> Shared Mercedes grand
-                  taxis run fixed routes to Taghazout (15-20 MAD), Inezgane (5-10 MAD), and other regional
-                  destinations. Depart when full (6 passengers).
-                </p>
-                <p>
-                  <span className="font-semibold text-[var(--text-primary)]">Local buses:</span> Alsa operates city
-                  buses (4 MAD per trip). Routes cover most of the city and beach zone but service is
-                  infrequent. Useful for the airport line.
-                </p>
-                <p>
-                  <span className="font-semibold text-[var(--text-primary)]">Walking:</span> The beachfront Corniche
-                  is very walkable and pleasant. The city center is flat and easy to navigate on foot.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ── Family Activities ── */}
-      <section className="py-16 md:py-20">
+      {/* =================================================================
+          FAMILY ACTIVITIES
+          ================================================================= */}
+      <section className="py-12 md:py-16 bg-[var(--surface-muted)]">
         <div className="container-morocco">
-          <div className="text-center mb-12">
-            <div className="inline-flex p-3 rounded-xl bg-[var(--color-primary)]/10 mb-4">
-              <Baby className="w-6 h-6 text-[var(--color-primary)]" />
-            </div>
-            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
+          <div className="flex items-center gap-3 mb-3">
+            <Users className="w-6 h-6 text-[var(--color-primary)]" />
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
               Family Activities
             </h2>
-            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
-              Agadir is one of the most family-friendly destinations in Morocco, with beach activities,
-              wildlife parks, and gentle adventures suitable for all ages.
-            </p>
           </div>
+          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">
+            Agadir is one of Morocco&apos;s most family-friendly destinations, with activities
+            ranging from crocodile parks to camel rides on the beach.
+          </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            {familyActivities.map((activity) => (
-              <div key={activity.name} className="card-moroccan p-6">
-                <div className="flex items-start justify-between mb-2">
-                  <h3 className="text-lg font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {familyActivities.map((activity) => {
+              const ActivityIcon = activity.icon;
+              return (
+                <div key={activity.name} className="card-moroccan p-6 group">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-2xl bg-[var(--color-primary-50)] text-[var(--color-primary)] mb-4 group-hover:bg-[var(--color-primary)] group-hover:text-white transition-colors">
+                    <ActivityIcon className="w-6 h-6" />
+                  </div>
+                  <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
                     {activity.name}
                   </h3>
-                  <span className="inline-flex px-3 py-1 rounded-full text-xs font-semibold bg-[var(--color-primary)]/10 text-[var(--color-primary)] shrink-0">
-                    {activity.cost}
-                  </span>
+                  <div className="flex flex-wrap gap-3 mb-3 text-xs text-[var(--text-muted)]">
+                    <span><Users className="w-3 h-3 inline mr-1" />Ages: {activity.ageRange}</span>
+                    <span><DollarSign className="w-3 h-3 inline mr-1" />{activity.price}</span>
+                  </div>
+                  <p className="text-sm text-[var(--text-muted)] leading-relaxed">
+                    {activity.description}
+                  </p>
                 </div>
-                <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-3">
-                  {activity.description}
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* =================================================================
+          GETTING THERE
+          ================================================================= */}
+      <section className="py-12 md:py-16">
+        <div className="container-morocco">
+          <div className="flex items-center gap-3 mb-3">
+            <Plane className="w-6 h-6 text-[var(--color-accent)]" />
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+              Getting to Agadir
+            </h2>
+          </div>
+          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">
+            Agadir is well-connected by air from Europe and domestically by bus and road
+            from major Moroccan cities.
+          </p>
+
+          <div className="space-y-6">
+            {gettingThere.map((mode) => {
+              const ModeIcon = mode.icon;
+              return (
+                <div key={mode.mode} className="card-moroccan p-6 lg:p-8">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-[var(--color-primary-50)] text-[var(--color-primary)]">
+                      <ModeIcon className="w-5 h-5" />
+                    </div>
+                    <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+                      {mode.mode}
+                    </h3>
+                  </div>
+                  <ul className="space-y-3">
+                    {mode.details.map((detail, index) => (
+                      <li key={index} className="flex items-start gap-3 text-sm text-[var(--text-secondary)]">
+                        <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                        <span>{detail}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* =================================================================
+          PRACTICAL INFO & SAFETY
+          ================================================================= */}
+      <section className="py-12 md:py-16 bg-[var(--surface-muted)]">
+        <div className="container-morocco">
+          <div className="flex items-center gap-3 mb-3">
+            <Shield className="w-6 h-6 text-[var(--color-primary)]" />
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+              Practical Information &amp; Safety
+            </h2>
+          </div>
+          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">
+            Essential practical information for a smooth and safe visit to Agadir.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {practicalInfo.map((section) => {
+              const SectionIcon = section.icon;
+              return (
+                <div key={section.title} className="card-moroccan p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-[var(--color-primary-50)] text-[var(--color-primary)]">
+                      <SectionIcon className="w-5 h-5" />
+                    </div>
+                    <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+                      {section.title}
+                    </h3>
+                  </div>
+                  <ul className="space-y-3">
+                    {section.tips.map((tip, index) => (
+                      <li key={index} className="flex items-start gap-2 text-sm text-[var(--text-secondary)]">
+                        <CircleDot className="w-3 h-3 text-[var(--color-accent)] mt-1 flex-shrink-0" />
+                        <span>{tip}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* =================================================================
+          FAQ
+          ================================================================= */}
+      <section className="py-12 md:py-16">
+        <div className="container-morocco">
+          <div className="flex items-center gap-3 mb-3">
+            <HelpCircle className="w-6 h-6 text-[var(--color-accent)]" />
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+              Frequently Asked Questions
+            </h2>
+          </div>
+          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">
+            Answers to the most common questions travelers ask about visiting Agadir.
+          </p>
+
+          <div className="space-y-4 max-w-3xl">
+            {faqs.map((faq, index) => (
+              <div key={index} className="card-moroccan p-6">
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                  {faq.question}
+                </h3>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                  {faq.answer}
                 </p>
-                <div className="flex items-center gap-4 text-xs text-[var(--text-secondary)] pt-3 border-t border-[var(--border-light)]">
-                  <span className="flex items-center gap-1">
-                    <Users className="w-3 h-3 text-[var(--color-primary)]" />
-                    Ages: {activity.ageRange}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Clock className="w-3 h-3 text-[var(--color-primary)]" />
-                    {activity.duration}
-                  </span>
-                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── Budget vs Luxury ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco max-w-4xl">
-          <div className="text-center mb-12">
-            <div className="inline-flex p-3 rounded-xl bg-[var(--color-primary)]/10 mb-4">
-              <DollarSign className="w-6 h-6 text-[var(--color-primary)]" />
-            </div>
-            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
-              Budget vs Luxury: How Much Does Agadir Cost?
-            </h2>
-            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
-              Agadir caters to both backpackers on a shoestring and luxury travelers seeking five-star
-              comfort. Here is a realistic comparison of daily costs.
-            </p>
-          </div>
-
-          <div className="card-moroccan overflow-hidden">
-            <div className="overflow-x-auto">
-              <table className="w-full border-collapse">
-                <thead>
-                  <tr className="bg-[var(--color-primary)] text-white">
-                    <th className="text-left p-4 text-sm font-semibold">Category</th>
-                    <th className="text-left p-4 text-sm font-semibold">
-                      <span className="flex items-center gap-1">
-                        <Shield className="w-4 h-4" /> Budget
-                      </span>
-                    </th>
-                    <th className="text-left p-4 text-sm font-semibold">
-                      <span className="flex items-center gap-1">
-                        <Gem className="w-4 h-4" /> Luxury
-                      </span>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {budgetVsLuxury.map((row, i) => (
-                    <tr
-                      key={row.category}
-                      className={`border-b border-[var(--border-light)] ${
-                        i % 2 === 0 ? 'bg-white' : 'bg-[var(--surface-muted)]'
-                      } ${row.category === 'Daily Total' ? 'font-bold' : ''}`}
-                    >
-                      <td className="p-4 text-sm text-[var(--text-primary)] font-semibold">{row.category}</td>
-                      <td className="p-4 text-sm text-[var(--text-secondary)]">{row.budget}</td>
-                      <td className="p-4 text-sm text-[var(--text-secondary)]">{row.luxury}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <div className="mt-6 card-moroccan p-6 flex gap-4 items-start">
-            <AlertTriangle className="w-6 h-6 text-yellow-600 shrink-0 mt-0.5" />
-            <div>
-              <h3 className="text-base font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)] mb-2">
-                Money-Saving Tips
-              </h3>
-              <ul className="space-y-1 text-sm text-[var(--text-secondary)]">
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-3.5 h-3.5 text-[var(--color-primary)] shrink-0 mt-0.5" />
-                  <span>Stay in Tamraght instead of Taghazout for 30-40% lower accommodation costs</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-3.5 h-3.5 text-[var(--color-primary)] shrink-0 mt-0.5" />
-                  <span>Eat at the port fish stalls and Souk El Had for a fraction of restaurant prices</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-3.5 h-3.5 text-[var(--color-primary)] shrink-0 mt-0.5" />
-                  <span>Use shared grand taxis (15-20 MAD to Taghazout) instead of private transfers</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-3.5 h-3.5 text-[var(--color-primary)] shrink-0 mt-0.5" />
-                  <span>Buy argan oil at cooperatives, not tourist shops (50% cheaper for better quality)</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-3.5 h-3.5 text-[var(--color-primary)] shrink-0 mt-0.5" />
-                  <span>Visit in shoulder season (October or April) for lower hotel rates and fewer crowds</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Related Pages ── */}
-      <section className="py-16 md:py-20">
+      {/* =================================================================
+          RELATED PAGES
+          ================================================================= */}
+      <section className="py-12 md:py-16 bg-[var(--surface-muted)]">
         <div className="container-morocco">
-          <div className="text-center mb-12">
-            <div className="inline-flex p-3 rounded-xl bg-[var(--color-primary)]/10 mb-4">
-              <Compass className="w-6 h-6 text-[var(--color-primary)]" />
-            </div>
-            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
-              Continue Exploring Morocco
-            </h2>
-            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
-              Discover more destinations, activities, and travel planning resources for your
-              Moroccan adventure.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                title: 'Beach Guide',
-                description: 'Explore all 20 of Morocco\'s best beaches along the Atlantic and Mediterranean coasts.',
-                href: '/beaches',
-                icon: Waves,
-              },
-              {
-                title: 'Water Sports',
-                description: 'Surfing, kitesurfing, diving, and more across Morocco\'s 3,500 km coastline.',
-                href: '/water-sports',
-                icon: Anchor,
-              },
-              {
-                title: 'Argan Oil',
-                description: 'Everything about Morocco\'s liquid gold, from production to purchasing authentic oil.',
-                href: '/argan-oil',
-                icon: Sparkles,
-              },
-              {
-                title: 'Essaouira Guide',
-                description: 'The artistic, windswept port city just 3 hours north of Agadir.',
-                href: '/essaouira-guide',
-                icon: Wind,
-              },
-              {
-                title: 'Road Trips',
-                description: 'Coastal and mountain road trip itineraries featuring the Souss region.',
-                href: '/road-trips',
-                icon: Car,
-              },
-              {
-                title: 'Family Travel',
-                description: 'Complete guide to visiting Morocco with children of all ages.',
-                href: '/family-guide',
-                icon: Users,
-              },
-              {
-                title: 'National Parks',
-                description: 'Wildlife reserves and protected areas including Souss-Massa.',
-                href: '/national-parks',
-                icon: Binoculars,
-              },
-              {
-                title: 'Accommodation',
-                description: 'Find the perfect stay from riads to resorts across Morocco.',
-                href: '/accommodations',
-                icon: Hotel,
-              },
-            ].map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="card-moroccan p-6 group hover:shadow-lg transition-shadow"
-              >
-                <link.icon className="w-8 h-8 text-[var(--color-primary)] mb-3" />
-                <h3 className="text-base font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)] mb-1 group-hover:text-[var(--color-primary)] transition-colors">
-                  {link.title}
-                </h3>
-                <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-3">
-                  {link.description}
-                </p>
-                <span className="text-sm font-semibold text-[var(--color-primary)] inline-flex items-center gap-1 group-hover:gap-2 transition-all">
-                  Explore <ArrowRight className="w-4 h-4" />
-                </span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── CTA ── */}
-      <section className="py-16 md:py-20 gradient-moroccan">
-        <div className="container-morocco text-center">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-white mb-4">
-            Ready to Experience Agadir?
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-8 text-center">
+            Continue Exploring Morocco
           </h2>
-          <p className="text-lg text-white/80 max-w-xl mx-auto mb-8">
-            Whether you come for the surf, the sunshine, the seafood, or simply to unwind on 10 kilometers
-            of golden sand, Agadir and the Souss region promise a Moroccan experience unlike any other.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/tours"
-              className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-xl bg-white text-[var(--color-primary)] font-semibold hover:bg-white/90 transition-colors"
-            >
-              <MapPin className="w-4 h-4" /> Book Agadir Tours
-            </Link>
-            <Link
-              href="/accommodations"
-              className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-xl border-2 border-white text-white font-semibold hover:bg-white/10 transition-colors"
-            >
-              <Hotel className="w-4 h-4" /> Find Accommodation
-            </Link>
-            <Link
-              href="/itineraries"
-              className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-xl border-2 border-white text-white font-semibold hover:bg-white/10 transition-colors"
-            >
-              <ArrowRight className="w-4 h-4" /> Plan Your Trip
-            </Link>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {relatedPages.map((page) => {
+              const PageIcon = page.icon;
+              return (
+                <Link
+                  key={page.href}
+                  href={page.href}
+                  className="card-moroccan p-6 group hover:shadow-lg transition-all duration-300"
+                >
+                  <div className="flex items-center justify-center w-12 h-12 rounded-2xl bg-[var(--color-primary-50)] text-[var(--color-primary)] mb-4 group-hover:bg-[var(--color-primary)] group-hover:text-white transition-colors">
+                    <PageIcon className="w-6 h-6" />
+                  </div>
+                  <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] group-hover:text-[var(--color-accent)] transition-colors mb-2">
+                    {page.title}
+                  </h3>
+                  <p className="text-sm text-[var(--text-muted)]">{page.description}</p>
+                  <span className="inline-flex items-center gap-1 text-sm text-[var(--color-accent)] mt-3 font-medium">
+                    Read guide <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
