@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     title: 'Traditional Hammam Ritual Experience - CityGuide',
     description:
       'Everything you need to know about the Moroccan hammam. Step-by-step guide, etiquette, public vs luxury, recommended hammams, and pricing.',
-    url: 'https://cityguide.ma/experiences/hammam-ritual',
+    url: 'https://citytoursmorocco.com/experiences/hammam-ritual',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200&h=630&fit=crop',
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/experiences/hammam-ritual' },
+  alternates: { canonical: 'https://citytoursmorocco.com/experiences/hammam-ritual' },
 };
 
 /* =====================================================================
@@ -75,7 +75,7 @@ const jsonLd = {
       '@type': 'TouristAttraction',
       name: 'Traditional Moroccan Hammam Ritual Experience',
       description: 'The centuries-old Moroccan bathing ritual featuring steam rooms, black soap scrubbing, rhassoul clay masks, and argan oil massage.',
-      url: 'https://cityguide.ma/experiences/hammam-ritual',
+      url: 'https://citytoursmorocco.com/experiences/hammam-ritual',
       offers: {
         '@type': 'AggregateOffer',
         priceCurrency: 'USD',

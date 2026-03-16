@@ -227,7 +227,7 @@ export default function HeroSection() {
       {/* ── Background Image with Parallax ── */}
       <motion.div className="absolute inset-0 z-0" style={{ y: bgY }}>
         <img
-          src="/images/hero-morocco.png"
+          src="/images/hero-morocco.webp"
           alt="Sweeping view of Morocco at golden hour"
           className="h-[120%] w-full object-cover"
           fetchPriority="high"

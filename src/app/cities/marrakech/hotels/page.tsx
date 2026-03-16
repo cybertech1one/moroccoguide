@@ -20,11 +20,11 @@ export const metadata: Metadata = {
     title: 'Best 12 Hotels & Riads in Marrakech | CityGuide',
     description:
       'Discover Marrakech\'s finest accommodations from luxury palace hotels to traditional riads and budget-friendly hostels.',
-    url: 'https://cityguide.ma/cities/marrakech/hotels',
+    url: 'https://citytoursmorocco.com/cities/marrakech/hotels',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://cityguide.ma/cities/marrakech/hotels',
+    canonical: 'https://citytoursmorocco.com/cities/marrakech/hotels',
   },
 };
 

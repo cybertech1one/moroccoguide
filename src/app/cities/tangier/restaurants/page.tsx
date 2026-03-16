@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: 'Best 8 Restaurants in Tangier',
     description:
       'The ultimate guide to dining in Tangier, from fine dining to authentic street-side fish.',
-    url: 'https://cityguide.ma/cities/tangier/restaurants',
+    url: 'https://citytoursmorocco.com/cities/tangier/restaurants',
   },
 };
 

@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     title: 'Weddings & Celebrations in Morocco | Your Complete Guide',
     description:
       'Stunning venues, traditional customs, legal requirements, budget guides, and expert planners for your dream Moroccan wedding.',
-    url: 'https://cityguide.ma/weddings',
+    url: 'https://citytoursmorocco.com/weddings',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&h=630&fit=crop',
@@ -72,7 +72,7 @@ const jsonLd = {
   name: 'Wedding Venues and Services in Morocco',
   description:
     'Comprehensive guide to planning a wedding in Morocco, including top venues, traditional customs, legal requirements, and expert planners.',
-  url: 'https://cityguide.ma/weddings',
+  url: 'https://citytoursmorocco.com/weddings',
   numberOfItems: 15,
   itemListElement: [
     { '@type': 'ListItem', position: 1, item: { '@type': 'LocalBusiness', name: 'Royal Mansour Marrakech', address: { '@type': 'PostalAddress', streetAddress: 'Rue Abou Abbas El Sebti', addressLocality: 'Marrakech', addressCountry: 'MA' } } },

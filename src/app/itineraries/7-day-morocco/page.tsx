@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     title: '7 Days: Best of Morocco Itinerary | CityGuide',
     description:
       'The perfect week in Morocco: Marrakech, Atlas Mountains, Sahara Desert, Fes, and Chefchaouen. Complete day-by-day guide.',
-    url: 'https://cityguide.ma/itineraries/7-day-morocco',
+    url: 'https://citytoursmorocco.com/itineraries/7-day-morocco',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&h=630&fit=crop',
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/itineraries/7-day-morocco' },
+  alternates: { canonical: 'https://citytoursmorocco.com/itineraries/7-day-morocco' },
 };
 
 /* ================================================================
@@ -73,7 +73,7 @@ function JsonLd() {
     name: '7 Days: Best of Morocco',
     description:
       'The ultimate 7-day Morocco itinerary covering Marrakech, Atlas Mountains, Sahara Desert, Fes, and Chefchaouen.',
-    url: 'https://cityguide.ma/itineraries/7-day-morocco',
+    url: 'https://citytoursmorocco.com/itineraries/7-day-morocco',
     touristType: 'Cultural',
     itinerary: {
       '@type': 'ItemList',
@@ -1012,7 +1012,7 @@ export default function SevenDayMoroccoPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:bookings@cityguide.ma?subject=7-Day Morocco Itinerary Inquiry"
+              href="mailto:bookings@citytoursmorocco.com?subject=7-Day Morocco Itinerary Inquiry"
               className="btn-accent btn-lg"
             >
               <Mail className="w-5 h-5" />

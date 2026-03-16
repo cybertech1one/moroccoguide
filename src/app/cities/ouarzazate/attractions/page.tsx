@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: 'Top 8 Attractions in Ouarzazate',
     description:
       'Explore kasbahs, film studios, and desert landscapes in Ouarzazate, the door to the Sahara.',
-    url: 'https://cityguide.ma/cities/ouarzazate/attractions',
+    url: 'https://citytoursmorocco.com/cities/ouarzazate/attractions',
   },
 };
 

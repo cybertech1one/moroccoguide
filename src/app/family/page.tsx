@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     title: 'Family Travel Morocco | Kid-Friendly Activities & Itineraries',
     description:
       'Plan the perfect family vacation in Morocco with kid-friendly activities, accommodations, and expert tips.',
-    url: 'https://cityguide.ma/family',
+    url: 'https://citytoursmorocco.com/family',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=1200&h=630&fit=crop',
@@ -63,7 +63,7 @@ const jsonLd = {
   name: 'Family Travel in Morocco',
   description:
     'A comprehensive guide to family travel in Morocco, including kid-friendly activities, accommodations, safety tips, and itineraries.',
-  url: 'https://cityguide.ma/family',
+  url: 'https://citytoursmorocco.com/family',
   location: {
     '@type': 'Country',
     name: 'Morocco',

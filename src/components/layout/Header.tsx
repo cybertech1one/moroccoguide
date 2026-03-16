@@ -726,7 +726,7 @@ export default function Header() {
               transition={{ duration: 0.3, ease: [0.23, 1, 0.32, 1] }}
               className="overflow-hidden"
               style={{
-                background: 'linear-gradient(135deg, #1A1814 0%, #2C2A26 50%, #0F0E0C 100%)',
+                background: 'linear-gradient(135deg, #3D2B1F 0%, #4A3728 50%, #2E1F15 100%)',
               }}
             >
               <div className="container-morocco flex items-center justify-between py-2 text-xs">
@@ -743,14 +743,14 @@ export default function Header() {
                   </a>
                   <span className="h-3 w-px bg-white/20" />
                   <a
-                    href="mailto:hello@cityguide.ma"
+                    href="mailto:hello@citytoursmorocco.com"
                     className="group flex items-center gap-2 text-white/70 hover:text-white transition-colors"
                     aria-label="Email us"
                   >
                     <span className="flex items-center justify-center h-5 w-5 rounded-full bg-white/10 group-hover:bg-white/20 transition-colors">
                       <Mail className="h-2.5 w-2.5" />
                     </span>
-                    <span className="font-medium">hello@cityguide.ma</span>
+                    <span className="font-medium">hello@citytoursmorocco.com</span>
                   </a>
                 </div>
 
@@ -985,7 +985,7 @@ export default function Header() {
                   href="/tools/planner"
                   className="hidden lg:inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-[13px] font-bold text-white shadow-md hover:shadow-lg transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
                   style={{
-                    background: 'linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 50%, var(--color-accent) 100%)',
+                    background: 'linear-gradient(135deg, var(--color-secondary) 0%, var(--color-secondary-dark) 50%, var(--color-accent) 100%)',
                     backgroundSize: '200% 100%',
                   }}
                   onMouseEnter={(e) => {

@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title: 'Honeymoon in Morocco | Romantic Getaways & Luxury Experiences',
     description:
       'Plan the perfect honeymoon in Morocco. Romantic riads, desert camps, coastal escapes, and mountain hideaways.',
-    url: 'https://cityguide.ma/honeymoon',
+    url: 'https://citytoursmorocco.com/honeymoon',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1548018560-c7196e91a1e2?w=1200&h=630&fit=crop',
@@ -64,7 +64,7 @@ const jsonLd = {
   name: 'Honeymoon in Morocco',
   description:
     'A comprehensive guide to planning a romantic honeymoon in Morocco, covering luxury riads, desert camps, and unforgettable experiences.',
-  url: 'https://cityguide.ma/honeymoon',
+  url: 'https://citytoursmorocco.com/honeymoon',
   location: {
     '@type': 'Country',
     name: 'Morocco',

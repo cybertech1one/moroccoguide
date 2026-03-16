@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     title: 'Taste Morocco - Restaurant & Food Guide - CityGuide',
     description:
       'The ultimate guide to dining in Morocco. 25+ curated restaurants from street food to fine dining.',
-    url: 'https://cityguide.ma/restaurants',
+    url: 'https://citytoursmorocco.com/restaurants',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=1200&h=630&fit=crop',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/restaurants' },
+  alternates: { canonical: 'https://citytoursmorocco.com/restaurants' },
 };
 
 /* ═══════════════════════════════════════════════════════════════
@@ -82,7 +82,7 @@ function JsonLd() {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     name: 'Taste Morocco - Restaurant & Food Guide',
-    url: 'https://cityguide.ma/restaurants',
+    url: 'https://citytoursmorocco.com/restaurants',
     numberOfItems: restaurants.length,
     itemListElement: restaurants.map((r, i) => ({
       '@type': 'ListItem',
@@ -91,7 +91,7 @@ function JsonLd() {
         '@type': 'Restaurant',
         name: r.name,
         description: r.description,
-        url: `https://cityguide.ma/restaurants/${r.slug}`,
+        url: `https://citytoursmorocco.com/restaurants/${r.slug}`,
         image: r.image,
         servesCuisine: r.cuisineType,
         priceRange: '$'.repeat(r.priceRange),

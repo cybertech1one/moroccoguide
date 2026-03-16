@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     title: 'Moroccan Hammam & Spa Guide - CityGuide',
     description:
       'Everything you need to know about the Moroccan hammam experience. Traditional rituals, top hammams, etiquette, products, and spa recommendations.',
-    url: 'https://cityguide.ma/hammam',
+    url: 'https://citytoursmorocco.com/hammam',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1540555700478-4be289fbec6d?w=1200&h=630&fit=crop',
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/hammam' },
+  alternates: { canonical: 'https://citytoursmorocco.com/hammam' },
 };
 
 /* =====================================================================
@@ -73,15 +73,15 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'Article',
-      '@id': 'https://cityguide.ma/hammam#guide',
+      '@id': 'https://citytoursmorocco.com/hammam#guide',
       headline: 'Complete Guide to Moroccan Hammams & Spas',
       description:
         'Comprehensive guide covering the traditional Moroccan hammam experience, top hammams across Morocco, etiquette, products, and spa recommendations.',
-      url: 'https://cityguide.ma/hammam',
+      url: 'https://citytoursmorocco.com/hammam',
       publisher: {
         '@type': 'Organization',
         name: 'CityGuide Morocco',
-        url: 'https://cityguide.ma',
+        url: 'https://citytoursmorocco.com',
       },
     },
     {

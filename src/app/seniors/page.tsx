@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     title: 'Morocco for Seniors & Over 50s | Comfortable Travel Guide | CityGuide.ma',
     description:
       'Discover Morocco at your own pace. The complete guide for mature travelers: accessible destinations, gentle activities, health tips, luxury accommodation, and private tours.',
-    url: 'https://cityguide.ma/seniors',
+    url: 'https://citytoursmorocco.com/seniors',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=1200&h=630&fit=crop',
@@ -77,7 +77,7 @@ const jsonLd = {
   name: 'Morocco for Seniors & Over 50s Travel Guide',
   description:
     'A comprehensive travel guide for seniors and mature travelers visiting Morocco, covering accessibility, health, comfortable accommodation, gentle activities, and private tour options.',
-  url: 'https://cityguide.ma/seniors',
+  url: 'https://citytoursmorocco.com/seniors',
   location: {
     '@type': 'Country',
     name: 'Morocco',

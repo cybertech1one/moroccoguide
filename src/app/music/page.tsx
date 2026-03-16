@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     title: 'Moroccan Music & Dance - CityGuide',
     description:
       'Discover the soul of Morocco through its music and dance. Gnaoua trance ceremonies, Andalusian orchestras, Amazigh mountain rhythms, Malhun poetry, the vibrant modern scene, festivals, instruments, shopping, and music-themed itineraries.',
-    url: 'https://cityguide.ma/music',
+    url: 'https://citytoursmorocco.com/music',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=1200&h=630&fit=crop',
@@ -86,7 +86,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/music' },
+  alternates: { canonical: 'https://citytoursmorocco.com/music' },
 };
 
 /* ═══════════════════════════════════════════════════════════════
@@ -96,15 +96,15 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  '@id': 'https://cityguide.ma/music',
+  '@id': 'https://citytoursmorocco.com/music',
   name: 'Moroccan Music & Dance Guide',
   description:
     'Comprehensive guide to Moroccan music traditions, instruments, festivals, live music venues, shopping, workshops, famous artists, and music-themed itineraries covering Gnaoua, Andalusian, Chaabi, Amazigh, Malhun, Rai, Sufi, and modern genres.',
-  url: 'https://cityguide.ma/music',
+  url: 'https://citytoursmorocco.com/music',
   isPartOf: {
     '@type': 'WebSite',
     name: 'CityGuide Morocco',
-    url: 'https://cityguide.ma',
+    url: 'https://citytoursmorocco.com',
   },
   about: [
     { '@type': 'Thing', name: 'Moroccan Music' },
@@ -115,8 +115,8 @@ const jsonLd = {
   breadcrumb: {
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cityguide.ma' },
-      { '@type': 'ListItem', position: 2, name: 'Music & Dance', item: 'https://cityguide.ma/music' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://citytoursmorocco.com' },
+      { '@type': 'ListItem', position: 2, name: 'Music & Dance', item: 'https://citytoursmorocco.com/music' },
     ],
   },
   mainEntity: {

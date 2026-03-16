@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     title: 'Digital Nomad Morocco | Co-Working, Cost of Living & Remote Work Guide',
     description:
       'The complete remote work guide to Morocco. Co-working spaces, internet, costs, visa info, coliving, and nomad communities.',
-    url: 'https://cityguide.ma/digital-nomad',
+    url: 'https://citytoursmorocco.com/digital-nomad',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&h=630&fit=crop',
@@ -67,7 +67,7 @@ const jsonLd = {
   name: 'Digital Nomad Guide to Morocco',
   description:
     'A comprehensive guide for digital nomads and remote workers considering Morocco, covering co-working spaces, internet, costs, visas, coliving, and lifestyle.',
-  url: 'https://cityguide.ma/digital-nomad',
+  url: 'https://citytoursmorocco.com/digital-nomad',
   location: {
     '@type': 'Country',
     name: 'Morocco',

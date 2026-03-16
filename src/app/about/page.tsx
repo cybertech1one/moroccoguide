@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'About CityGuide',
     description: 'The story behind Morocco\'s most comprehensive travel guide.',
-    url: 'https://cityguide.ma/about',
+    url: 'https://citytoursmorocco.com/about',
   },
 };
 

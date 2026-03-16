@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     title: 'Best Time to Visit Morocco - Month-by-Month Guide - CityGuide',
     description:
       'Complete guide to the best time to visit Morocco by month, activity, and region. Weather, festivals, crowd levels, and packing tips.',
-    url: 'https://cityguide.ma/best-time',
+    url: 'https://citytoursmorocco.com/best-time',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&h=630&fit=crop',
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/best-time' },
+  alternates: { canonical: 'https://citytoursmorocco.com/best-time' },
 };
 
 /* ═══════════════════════════════════════════════════════════════
@@ -71,15 +71,15 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  '@id': 'https://cityguide.ma/best-time',
+  '@id': 'https://citytoursmorocco.com/best-time',
   name: 'Best Time to Visit Morocco',
   description:
     'Comprehensive month-by-month guide to the best time to visit Morocco, covering weather, festivals, crowd levels, prices, and activity recommendations.',
-  url: 'https://cityguide.ma/best-time',
+  url: 'https://citytoursmorocco.com/best-time',
   isPartOf: {
     '@type': 'WebSite',
     name: 'CityGuide Morocco',
-    url: 'https://cityguide.ma',
+    url: 'https://citytoursmorocco.com',
   },
   about: {
     '@type': 'Country',
@@ -88,8 +88,8 @@ const jsonLd = {
   breadcrumb: {
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cityguide.ma' },
-      { '@type': 'ListItem', position: 2, name: 'Best Time to Visit', item: 'https://cityguide.ma/best-time' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://citytoursmorocco.com' },
+      { '@type': 'ListItem', position: 2, name: 'Best Time to Visit', item: 'https://citytoursmorocco.com/best-time' },
     ],
   },
 };

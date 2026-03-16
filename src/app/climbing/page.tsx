@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     title: 'Rock Climbing & Canyoning in Morocco',
     description:
       'The definitive guide to climbing and canyoning in Morocco. Todra Gorge, Taghia Canyon, Tafraoute bouldering, and more across the Atlas and Anti-Atlas mountains.',
-    url: 'https://cityguide.ma/climbing',
+    url: 'https://citytoursmorocco.com/climbing',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1522163182402-834f871fd851?w=1200&h=630&fit=crop',
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/climbing' },
+  alternates: { canonical: 'https://citytoursmorocco.com/climbing' },
 };
 
 /* ═══════════════════════════════════════════════════════════════
@@ -83,11 +83,11 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'TouristAttraction',
-      '@id': 'https://cityguide.ma/climbing#guide',
+      '@id': 'https://citytoursmorocco.com/climbing#guide',
       name: 'Rock Climbing & Canyoning in Morocco',
       description:
         'Complete guide to rock climbing, bouldering, canyoning, and via ferrata in Morocco, covering Todra Gorge, Taghia Canyon, Tafraoute, Oukaimeden, and more.',
-      url: 'https://cityguide.ma/climbing',
+      url: 'https://citytoursmorocco.com/climbing',
       touristType: ['Rock climbing', 'Canyoning', 'Bouldering', 'Adventure sports', 'Multi-pitch climbing'],
       image: 'https://images.unsplash.com/photo-1522163182402-834f871fd851?w=1200',
       address: {

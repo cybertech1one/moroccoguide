@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     title: 'Medina Guide - How to Navigate Morocco\'s Ancient Cities',
     description:
       'Your complete guide to exploring Morocco\'s historic medinas. Navigation tips, souk shopping, safety advice, and ranked reviews of the 8 best medinas.',
-    url: 'https://cityguide.ma/medina-guide',
+    url: 'https://citytoursmorocco.com/medina-guide',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1200&h=630&fit=crop',
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/medina-guide' },
+  alternates: { canonical: 'https://citytoursmorocco.com/medina-guide' },
 };
 
 /* ═══════════════════════════════════════════════════════════════
@@ -70,15 +70,15 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  '@id': 'https://cityguide.ma/medina-guide',
+  '@id': 'https://citytoursmorocco.com/medina-guide',
   name: 'Medina Guide - How to Navigate Morocco\'s Ancient Cities',
   description:
     'Comprehensive guide to navigating Moroccan medinas, including ranked reviews of the best medinas, souk shopping tips, safety advice, and practical visitor information.',
-  url: 'https://cityguide.ma/medina-guide',
+  url: 'https://citytoursmorocco.com/medina-guide',
   isPartOf: {
     '@type': 'WebSite',
     name: 'CityGuide Morocco',
-    url: 'https://cityguide.ma',
+    url: 'https://citytoursmorocco.com',
   },
   about: {
     '@type': 'Country',
@@ -87,8 +87,8 @@ const jsonLd = {
   breadcrumb: {
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cityguide.ma' },
-      { '@type': 'ListItem', position: 2, name: 'Medina Guide', item: 'https://cityguide.ma/medina-guide' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://citytoursmorocco.com' },
+      { '@type': 'ListItem', position: 2, name: 'Medina Guide', item: 'https://citytoursmorocco.com/medina-guide' },
     ],
   },
 };

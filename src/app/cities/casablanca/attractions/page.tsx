@@ -21,11 +21,11 @@ export const metadata: Metadata = {
     title: 'Top 10 Attractions in Casablanca | CityGuide',
     description:
       'Explore Casablanca\'s most iconic attractions including the Hassan II Mosque, Rick\'s Cafe, and the Corniche.',
-    url: 'https://cityguide.ma/cities/casablanca/attractions',
+    url: 'https://citytoursmorocco.com/cities/casablanca/attractions',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://cityguide.ma/cities/casablanca/attractions',
+    canonical: 'https://citytoursmorocco.com/cities/casablanca/attractions',
   },
 };
 

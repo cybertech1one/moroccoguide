@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: 'Best 6 Restaurants in Ouarzazate',
     description:
       'The top restaurants and dining experiences in Ouarzazate, the gateway to the Sahara.',
-    url: 'https://cityguide.ma/cities/ouarzazate/restaurants',
+    url: 'https://citytoursmorocco.com/cities/ouarzazate/restaurants',
   },
 };
 

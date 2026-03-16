@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     title: 'Trekking & Hiking in Morocco 2025-2026 | Complete Guide | CityGuide',
     description:
       'Everything you need to know about trekking in Morocco. Mount Toubkal, top trails, guide hiring, mountain refuges, packing lists, and expert tips.',
-    url: 'https://cityguide.ma/trekking',
+    url: 'https://citytoursmorocco.com/trekking',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&h=630&fit=crop',
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/trekking' },
+  alternates: { canonical: 'https://citytoursmorocco.com/trekking' },
 };
 
 /* ===================================================================
@@ -92,8 +92,8 @@ const jsonLd = {
   name: 'Trekking & Hiking in Morocco',
   description:
     'Complete guide to trekking and hiking in the Atlas Mountains and beyond, including Mount Toubkal, top trails, guides, and practical logistics.',
-  url: 'https://cityguide.ma/trekking',
-  isPartOf: { '@type': 'WebSite', name: 'CityGuide Morocco', url: 'https://cityguide.ma' },
+  url: 'https://citytoursmorocco.com/trekking',
+  isPartOf: { '@type': 'WebSite', name: 'CityGuide Morocco', url: 'https://citytoursmorocco.com' },
   geo: {
     '@type': 'GeoCoordinates',
     latitude: 31.0596,

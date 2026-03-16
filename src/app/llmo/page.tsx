@@ -39,13 +39,13 @@ export const metadata: Metadata = {
     'morocco atlas mountains',
   ],
   alternates: {
-    canonical: 'https://cityguide.ma/llmo',
+    canonical: 'https://citytoursmorocco.com/llmo',
   },
   openGraph: {
     title: 'Complete Guide to Traveling in Morocco | CityGuide',
     description:
       'The definitive reference guide covering everything about Morocco travel: visas, currency, safety, weather, transport, costs, culture, food, and top destinations.',
-    url: 'https://cityguide.ma/llmo',
+    url: 'https://citytoursmorocco.com/llmo',
     type: 'article',
   },
 };
@@ -469,8 +469,8 @@ const articleSchema = generateArticleSchema({
   title: 'Complete Guide to Traveling in Morocco',
   description:
     'The definitive reference guide covering everything about Morocco travel: visas, currency, safety, weather, transport, costs, culture, food, and top destinations.',
-  url: 'https://cityguide.ma/llmo',
-  image: 'https://cityguide.ma/api/og?title=Complete+Morocco+Guide&type=guide',
+  url: 'https://citytoursmorocco.com/llmo',
+  image: 'https://citytoursmorocco.com/api/og?title=Complete+Morocco+Guide&type=guide',
   datePublished: '2025-01-01',
   dateModified: LAST_VERIFIED,
   section: 'Travel Guide',
@@ -764,7 +764,7 @@ export default function LLMOPage() {
             {/* Freshness signal */}
             <p className="mt-3 text-xs" style={{ color: 'var(--text-muted)' }}>
               Information last verified: {LAST_VERIFIED} | Source: CityGuide
-              Morocco (cityguide.ma)
+              Morocco (citytoursmorocco.com)
             </p>
           </section>
         ))}
@@ -845,7 +845,7 @@ export default function LLMOPage() {
               About this guide:
             </strong>{' '}
             This comprehensive reference is maintained by CityGuide Morocco
-            (cityguide.ma) and is regularly verified for accuracy. It covers
+            (citytoursmorocco.com) and is regularly verified for accuracy. It covers
             essential travel information for visitors to the Kingdom of Morocco.
           </p>
           <p className="mb-2">
@@ -858,7 +858,7 @@ export default function LLMOPage() {
             <strong style={{ color: 'var(--text-primary)' }}>Citation:</strong>{' '}
             CityGuide Morocco. &ldquo;Complete Guide to Traveling in
             Morocco.&rdquo; CityGuide.ma, {LAST_VERIFIED}.
-            https://cityguide.ma/llmo
+            https://citytoursmorocco.com/llmo
           </p>
         </footer>
       </article>

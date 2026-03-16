@@ -99,7 +99,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/'],
       },
     ],
-    sitemap: 'https://cityguide.ma/sitemap.xml',
-    host: 'https://cityguide.ma',
+    sitemap: 'https://citytoursmorocco.com/sitemap.xml',
+    host: 'https://citytoursmorocco.com',
   };
 }

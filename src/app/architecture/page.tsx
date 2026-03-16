@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     title: 'Moroccan Architecture Guide - 1000 Years of Design | CityGuide',
     description:
       'From Berber kasbahs to the world\'s largest mosque, discover Morocco\'s extraordinary architectural heritage spanning a millennium of innovation and beauty.',
-    url: 'https://cityguide.ma/architecture',
+    url: 'https://citytoursmorocco.com/architecture',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1548017544-09dbc9fb99f6?w=1200&h=630&fit=crop',
@@ -76,7 +76,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/architecture' },
+  alternates: { canonical: 'https://citytoursmorocco.com/architecture' },
 };
 
 /* ═══════════════════════════════════════════════════════════════
@@ -88,15 +88,15 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'Article',
-      '@id': 'https://cityguide.ma/architecture#guide',
+      '@id': 'https://citytoursmorocco.com/architecture#guide',
       headline: 'Complete Guide to Moroccan Architecture - 1000 Years of Design',
       description:
         'Comprehensive guide covering Berber, Moorish, Almohad, Marinid, Saadian, Alaouite, Art Deco, and Modern Moroccan architecture with key elements, 15+ must-see masterpieces, mosque architecture, riad design, walking tours, and a full glossary.',
-      url: 'https://cityguide.ma/architecture',
+      url: 'https://citytoursmorocco.com/architecture',
       publisher: {
         '@type': 'Organization',
         name: 'CityGuide Morocco',
-        url: 'https://cityguide.ma',
+        url: 'https://citytoursmorocco.com',
       },
     },
     {

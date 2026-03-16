@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: 'Top 10 Attractions in Rabat',
     description:
       'Discover the best landmarks, museums, and historic sites in Morocco\'s capital city.',
-    url: 'https://cityguide.ma/cities/rabat/attractions',
+    url: 'https://citytoursmorocco.com/cities/rabat/attractions',
   },
 };
 

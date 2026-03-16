@@ -443,7 +443,7 @@ function DefaultLayout({
               letterSpacing: '0.5px',
             }}
           >
-            cityguide.ma
+            citytoursmorocco.com
           </span>
           <div style={{ display: 'flex', gap: '5px', opacity: 0.35 }}>
             {[14, 10, 7, 10, 14].map((size, i) => (
@@ -548,7 +548,7 @@ function CityLayout({
             position: 'relative',
           }}
         >
-          cityguide.ma
+          citytoursmorocco.com
         </span>
       </div>
 
@@ -757,7 +757,7 @@ function TourLayout({
               fontWeight: 600,
             }}
           >
-            cityguide.ma
+            citytoursmorocco.com
           </span>
           {/* Tour compass decoration */}
           <div
@@ -971,7 +971,7 @@ function RestaurantLayout({
               fontWeight: 600,
             }}
           >
-            cityguide.ma
+            citytoursmorocco.com
           </span>
           <div style={{ display: 'flex', gap: '5px', opacity: 0.3 }}>
             {[14, 10, 7, 10, 14].map((size, i) => (
@@ -1161,7 +1161,7 @@ function AttractionLayout({
               fontWeight: 600,
             }}
           >
-            cityguide.ma
+            citytoursmorocco.com
           </span>
           {/* Star decoration */}
           <div style={{ display: 'flex', gap: '12px', opacity: 0.3 }}>

@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     title: 'Complete Guide to Moroccan Riads',
     description:
       'Everything you need to know about staying in a traditional Moroccan riad. Best riads by city, price guide, and booking tips.',
-    url: 'https://cityguide.ma/riads',
+    url: 'https://citytoursmorocco.com/riads',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1548018560-c7196e5f96c2?w=1200&h=630&fit=crop',
@@ -522,7 +522,7 @@ const jsonLd = {
   '@type': 'TouristAttraction',
   name: 'Moroccan Riads - Traditional Guesthouses',
   description: 'Complete guide to staying in traditional Moroccan riads across Morocco.',
-  url: 'https://cityguide.ma/riads',
+  url: 'https://citytoursmorocco.com/riads',
   touristType: ['Cultural tourism', 'Accommodation'],
   isAccessibleForFree: true,
   image: 'https://images.unsplash.com/photo-1548018560-c7196e5f96c2?w=1200',

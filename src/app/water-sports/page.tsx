@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     title: 'Water Sports in Morocco - Surfing, Kitesurfing, Diving & More',
     description:
       'The definitive guide to water sports across Morocco\'s Atlantic and Mediterranean coasts. Surf breaks, kite lagoons, dive sites, and coastal adventures.',
-    url: 'https://cityguide.ma/water-sports',
+    url: 'https://citytoursmorocco.com/water-sports',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1502680390548-bdbac40cee81?w=1200&h=630&fit=crop',
@@ -76,7 +76,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/water-sports' },
+  alternates: { canonical: 'https://citytoursmorocco.com/water-sports' },
 };
 
 /* ═══════════════════════════════════════════════════════════════
@@ -88,11 +88,11 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'TouristAttraction',
-      '@id': 'https://cityguide.ma/water-sports#guide',
+      '@id': 'https://citytoursmorocco.com/water-sports#guide',
       name: 'Water Sports in Morocco',
       description:
         'Complete guide to water sports along Morocco\'s 3,500 km coastline, including surfing, kitesurfing, diving, snorkeling, SUP, kayaking, sailing, and white water rafting.',
-      url: 'https://cityguide.ma/water-sports',
+      url: 'https://citytoursmorocco.com/water-sports',
       touristType: ['Water sports', 'Surfing', 'Kitesurfing', 'Diving', 'Adventure sports'],
       image: 'https://images.unsplash.com/photo-1502680390548-bdbac40cee81?w=1200',
       address: {

@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: 'Top 6 Attractions in Merzouga',
     description:
       'Explore the Sahara\'s most spectacular dunes, Gnaoua villages, and desert wonders in Merzouga.',
-    url: 'https://cityguide.ma/cities/merzouga/attractions',
+    url: 'https://citytoursmorocco.com/cities/merzouga/attractions',
   },
 };
 

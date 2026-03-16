@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     title: 'Essential Morocco Travel Tips - CityGuide',
     description:
       'Your complete practical guide to visiting Morocco. Visa, currency, safety, health, etiquette, transport, and more.',
-    url: 'https://cityguide.ma/tips',
+    url: 'https://citytoursmorocco.com/tips',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?w=1200&h=630&fit=crop',
@@ -82,7 +82,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/tips' },
+  alternates: { canonical: 'https://citytoursmorocco.com/tips' },
 };
 
 /* ═══════════════════════════════════════════════════════════════

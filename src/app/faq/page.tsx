@@ -37,13 +37,13 @@ export const metadata: Metadata = {
     'morocco riad',
   ],
   alternates: {
-    canonical: 'https://cityguide.ma/faq',
+    canonical: 'https://citytoursmorocco.com/faq',
   },
   openGraph: {
     title: 'Morocco Travel FAQ - Your Questions Answered | CityGuide',
     description:
       'Comprehensive FAQ covering 55+ questions about Morocco travel: visas, safety, costs, culture, food, transport, and more.',
-    url: 'https://cityguide.ma/faq',
+    url: 'https://citytoursmorocco.com/faq',
     type: 'website',
   },
 };

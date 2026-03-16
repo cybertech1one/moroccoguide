@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title: 'Contact CityGuide Morocco',
     description:
       'Get in touch with the CityGuide team for travel advice, partnerships, or support.',
-    url: 'https://cityguide.ma/contact',
+    url: 'https://citytoursmorocco.com/contact',
   },
 };
 
@@ -32,9 +32,9 @@ const contactInfo = [
   {
     icon: Mail,
     title: 'Email Us',
-    value: 'hello@cityguide.ma',
+    value: 'hello@citytoursmorocco.com',
     description: 'We typically respond within 24 hours on business days.',
-    href: 'mailto:hello@cityguide.ma',
+    href: 'mailto:hello@citytoursmorocco.com',
   },
   {
     icon: Phone,
@@ -59,10 +59,10 @@ const officeHours = [
 ];
 
 const socialLinks = [
-  { icon: Facebook, label: 'Facebook', href: 'https://facebook.com/cityguide.ma' },
-  { icon: Instagram, label: 'Instagram', href: 'https://instagram.com/cityguide.ma' },
+  { icon: Facebook, label: 'Facebook', href: 'https://facebook.com/citytoursmorocco.com' },
+  { icon: Instagram, label: 'Instagram', href: 'https://instagram.com/citytoursmorocco.com' },
   { icon: Twitter, label: 'Twitter / X', href: 'https://x.com/cityguidema' },
-  { icon: Globe, label: 'Blog', href: 'https://cityguide.ma/blog' },
+  { icon: Globe, label: 'Blog', href: 'https://citytoursmorocco.com/blog' },
 ];
 
 const faqs = [
@@ -74,7 +74,7 @@ const faqs = [
   {
     question: 'How can I list my business on CityGuide?',
     answer:
-      'We welcome Moroccan tourism businesses to join our directory. Send us an email at hello@cityguide.ma with your business name, location, category, and a brief description. Our partnerships team will review your submission within 5 business days.',
+      'We welcome Moroccan tourism businesses to join our directory. Send us an email at hello@citytoursmorocco.com with your business name, location, category, and a brief description. Our partnerships team will review your submission within 5 business days.',
   },
   {
     question: 'I found incorrect information on a listing. How do I report it?',
@@ -84,7 +84,7 @@ const faqs = [
   {
     question: 'Do you offer sponsored content or advertising?',
     answer:
-      'We offer several partnership opportunities including featured listings, sponsored content, and display advertising. Contact our partnerships team at hello@cityguide.ma for our media kit and rate card.',
+      'We offer several partnership opportunities including featured listings, sponsored content, and display advertising. Contact our partnerships team at hello@citytoursmorocco.com for our media kit and rate card.',
   },
   {
     question: 'Can I contribute content or become a local guide?',
@@ -111,12 +111,12 @@ export default function ContactPage() {
     name: 'Contact CityGuide Morocco',
     description:
       'Get in touch with the CityGuide team for travel advice, partnerships, or support.',
-    url: 'https://cityguide.ma/contact',
+    url: 'https://citytoursmorocco.com/contact',
     mainEntity: {
       '@type': 'Organization',
       name: 'CityGuide',
-      url: 'https://cityguide.ma',
-      email: 'hello@cityguide.ma',
+      url: 'https://citytoursmorocco.com',
+      email: 'hello@citytoursmorocco.com',
       telephone: '+212 5XX-XXXXXX',
       address: {
         '@type': 'PostalAddress',

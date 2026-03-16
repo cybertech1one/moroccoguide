@@ -19,11 +19,11 @@ export const metadata: Metadata = {
     title: 'Best 8 Restaurants in Essaouira | CityGuide',
     description:
       'Explore Essaouira\'s top dining spots including Ocean Vagabond, Taros, La Table by Madada, and more.',
-    url: 'https://cityguide.ma/cities/essaouira/restaurants',
+    url: 'https://citytoursmorocco.com/cities/essaouira/restaurants',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://cityguide.ma/cities/essaouira/restaurants',
+    canonical: 'https://citytoursmorocco.com/cities/essaouira/restaurants',
   },
 };
 

@@ -6,7 +6,7 @@
 
 import type { Metadata } from 'next';
 
-const BASE_URL = 'https://cityguide.ma';
+const BASE_URL = 'https://citytoursmorocco.com';
 const SITE_NAME = 'CityGuide';
 const DEFAULT_OG_IMAGE = `${BASE_URL}/api/og?title=CityGuide&description=Your+Complete+Morocco+Travel+Companion&type=default`;
 
@@ -76,8 +76,8 @@ export function generateCityMeta(city: CityMetaInput): Metadata {
       title: `${city.name} Travel Guide | ${SITE_NAME}`,
       description,
       images: [ogImage],
-      site: '@cityguide_ma',
-      creator: '@cityguide_ma',
+      site: '@citytoursmorocco',
+      creator: '@citytoursmorocco',
     },
   };
 }
@@ -142,7 +142,7 @@ export function generateAttractionMeta(attraction: AttractionMetaInput): Metadat
       title: `${attraction.name} | ${SITE_NAME}`,
       description,
       images: [ogImage],
-      site: '@cityguide_ma',
+      site: '@citytoursmorocco',
     },
   };
 }
@@ -425,7 +425,7 @@ export function generateLLMOContent(
   schemaData: Record<string, unknown>;
 } {
   const lastVerified = options?.lastVerified ?? new Date().toISOString().split('T')[0];
-  const source = options?.source ?? 'CityGuide Morocco (cityguide.ma)';
+  const source = options?.source ?? 'CityGuide Morocco (citytoursmorocco.com)';
   const category = options?.category ?? 'Travel & Tourism';
 
   // Create a concise summary paragraph optimized for AI extraction

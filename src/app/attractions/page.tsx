@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title: "Morocco's Must-See Attractions - CityGuide",
     description:
       'Discover 30+ top-rated attractions across Morocco. UNESCO sites, ancient medinas, Sahara dunes, and more.',
-    url: 'https://cityguide.ma/attractions',
+    url: 'https://citytoursmorocco.com/attractions',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=1200&h=630&fit=crop',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/attractions' },
+  alternates: { canonical: 'https://citytoursmorocco.com/attractions' },
 };
 
 /* ═══════════════════════════════════════════════════════════════
@@ -489,7 +489,7 @@ function JsonLd() {
     name: "Morocco's Must-See Attractions",
     description:
       'A curated directory of the top attractions across Morocco including UNESCO World Heritage Sites, ancient medinas, palaces, and natural wonders.',
-    url: 'https://cityguide.ma/attractions',
+    url: 'https://citytoursmorocco.com/attractions',
     numberOfItems: attractions.length,
     itemListElement: attractions.map((a, i) => ({
       '@type': 'ListItem',
@@ -498,7 +498,7 @@ function JsonLd() {
         '@type': 'TouristAttraction',
         name: a.name,
         description: a.description,
-        url: `https://cityguide.ma/attractions/${a.slug}`,
+        url: `https://citytoursmorocco.com/attractions/${a.slug}`,
         image: a.image,
         address: {
           '@type': 'PostalAddress',

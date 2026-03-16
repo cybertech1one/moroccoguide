@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: 'Sahara Desert Complete Guide - Morocco',
     description:
       'Everything you need for the ultimate Sahara experience: desert camps, camel treks, sandboarding, stargazing, and photography under the clearest skies on Earth.',
-    url: 'https://cityguide.ma/desert',
+    url: 'https://citytoursmorocco.com/desert',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&h=630&fit=crop',
@@ -313,7 +313,7 @@ const jsonLd = {
   '@type': 'TouristAttraction',
   name: 'Sahara Desert Morocco',
   description: 'Complete guide to Sahara Desert experiences in Morocco including Merzouga, Zagora, Erg Chigaga, and the Draa Valley.',
-  url: 'https://cityguide.ma/desert',
+  url: 'https://citytoursmorocco.com/desert',
   touristType: ['Adventure tourism', 'Nature tourism', 'Photography tourism'],
   geo: { '@type': 'GeoCoordinates', latitude: 31.0977, longitude: -4.0085 },
   image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200',

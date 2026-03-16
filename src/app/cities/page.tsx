@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://cityguide.ma/cities',
+    canonical: 'https://citytoursmorocco.com/cities',
   },
 }
 
@@ -41,7 +41,7 @@ const itemListSchema = generateStructuredData('ItemList', {
     item: {
       '@type': 'City',
       name: city.name,
-      url: `https://cityguide.ma/cities/${city.slug}`,
+      url: `https://citytoursmorocco.com/cities/${city.slug}`,
       description: city.description,
     },
   })),
@@ -49,8 +49,8 @@ const itemListSchema = generateStructuredData('ItemList', {
 
 const breadcrumbSchema = generateStructuredData('BreadcrumbList', {
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cityguide.ma' },
-    { '@type': 'ListItem', position: 2, name: 'Cities', item: 'https://cityguide.ma/cities' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://citytoursmorocco.com' },
+    { '@type': 'ListItem', position: 2, name: 'Cities', item: 'https://citytoursmorocco.com/cities' },
   ],
 })
 

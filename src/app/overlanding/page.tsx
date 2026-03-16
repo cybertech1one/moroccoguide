@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     title: '4x4 Overlanding & Vanlife in Morocco | Complete Guide',
     description:
       'Everything you need for overlanding Morocco: 5 epic routes, 30+ campsites, vehicle rental, wild camping rules, fuel guide, GPS waypoints, and budget breakdown.',
-    url: 'https://cityguide.ma/overlanding',
+    url: 'https://citytoursmorocco.com/overlanding',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?w=1200&h=630&fit=crop',
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/overlanding' },
+  alternates: { canonical: 'https://citytoursmorocco.com/overlanding' },
 };
 
 const jsonLd = {
@@ -78,7 +78,7 @@ const jsonLd = {
   name: '4x4 Overlanding & Vanlife in Morocco',
   description:
     'Complete guide to overlanding, 4x4 adventures, and vanlife in Morocco including routes, campsites, vehicle rental, and practical advice.',
-  url: 'https://cityguide.ma/overlanding',
+  url: 'https://citytoursmorocco.com/overlanding',
   location: { '@type': 'Country', name: 'Morocco' },
 };
 

@@ -642,7 +642,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       images: [tour.images[0]],
     },
     alternates: {
-      canonical: `https://cityguide.ma/tours/${tour.slug}`,
+      canonical: `https://citytoursmorocco.com/tours/${tour.slug}`,
     },
   }
 }
@@ -714,19 +714,19 @@ export default async function TourDetailPage({ params }: PageProps) {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://cityguide.ma',
+        item: 'https://citytoursmorocco.com',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Tours',
-        item: 'https://cityguide.ma/tours',
+        item: 'https://citytoursmorocco.com/tours',
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: tour.name,
-        item: `https://cityguide.ma/tours/${tour.slug}`,
+        item: `https://citytoursmorocco.com/tours/${tour.slug}`,
       },
     ],
   })

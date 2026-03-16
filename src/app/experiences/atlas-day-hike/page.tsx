@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     title: 'Atlas Mountains Day Hike from Marrakech - CityGuide',
     description:
       'Trek through Berber villages, walnut groves, and dramatic valleys in the High Atlas. Routes from Marrakech with guides, pricing, and seasonal advice.',
-    url: 'https://cityguide.ma/experiences/atlas-day-hike',
+    url: 'https://citytoursmorocco.com/experiences/atlas-day-hike',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=1200&h=630&fit=crop',
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/experiences/atlas-day-hike' },
+  alternates: { canonical: 'https://citytoursmorocco.com/experiences/atlas-day-hike' },
 };
 
 /* =====================================================================
@@ -72,7 +72,7 @@ const jsonLd = {
   name: 'Atlas Mountains Day Hike from Marrakech',
   description:
     'Day hiking excursions from Marrakech into the High Atlas Mountains, featuring routes through Imlil, Toubkal base camp, and the Ourika Valley with Berber village visits.',
-  url: 'https://cityguide.ma/experiences/atlas-day-hike',
+  url: 'https://citytoursmorocco.com/experiences/atlas-day-hike',
   image: 'https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=1200',
   address: {
     '@type': 'PostalAddress',

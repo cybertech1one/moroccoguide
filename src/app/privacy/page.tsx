@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: 'Privacy Policy - CityGuide Morocco',
     description:
       'How CityGuide collects, uses, and protects your personal information.',
-    url: 'https://cityguide.ma/privacy',
+    url: 'https://citytoursmorocco.com/privacy',
   },
 };
 
@@ -129,7 +129,7 @@ const sections = [
       },
       {
         subtitle: null,
-        text: 'To exercise any of these rights, please contact us at hello@cityguide.ma. We will respond to your request within 30 days. You may also have the right to lodge a complaint with a data protection authority in your jurisdiction.',
+        text: 'To exercise any of these rights, please contact us at hello@citytoursmorocco.com. We will respond to your request within 30 days. You may also have the right to lodge a complaint with a data protection authority in your jurisdiction.',
       },
     ],
   },
@@ -140,7 +140,7 @@ const sections = [
     content: [
       {
         subtitle: null,
-        text: 'CityGuide is not directed at children under the age of 16. We do not knowingly collect personal information from children under 16. If you are a parent or guardian and believe that your child has provided us with personal information, please contact us immediately at hello@cityguide.ma. If we discover that a child under 16 has provided us with personal data, we will take steps to delete that information from our servers promptly.',
+        text: 'CityGuide is not directed at children under the age of 16. We do not knowingly collect personal information from children under 16. If you are a parent or guardian and believe that your child has provided us with personal information, please contact us immediately at hello@citytoursmorocco.com. If we discover that a child under 16 has provided us with personal data, we will take steps to delete that information from our servers promptly.',
       },
     ],
   },
@@ -166,7 +166,7 @@ const sections = [
       },
       {
         subtitle: null,
-        text: '\u2022 Email: hello@cityguide.ma\n\u2022 Phone: +212 5XX-XXXXXX\n\u2022 Address: Gueliz District, Avenue Mohammed V, Marrakech 40000, Morocco',
+        text: '\u2022 Email: hello@citytoursmorocco.com\n\u2022 Phone: +212 5XX-XXXXXX\n\u2022 Address: Gueliz District, Avenue Mohammed V, Marrakech 40000, Morocco',
       },
       {
         subtitle: null,
@@ -183,11 +183,11 @@ export default function PrivacyPage() {
     name: 'Privacy Policy - CityGuide Morocco',
     description:
       'Learn how CityGuide collects, uses, and protects your personal information.',
-    url: 'https://cityguide.ma/privacy',
+    url: 'https://citytoursmorocco.com/privacy',
     publisher: {
       '@type': 'Organization',
       name: 'CityGuide',
-      url: 'https://cityguide.ma',
+      url: 'https://citytoursmorocco.com',
     },
     dateModified: '2026-01-15',
     inLanguage: 'en',
@@ -239,7 +239,7 @@ export default function PrivacyPage() {
             </div>
             <p className="text-[var(--text-secondary)] leading-relaxed">
               This Privacy Policy describes how CityGuide (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;), operated through the website
-              cityguide.ma, collects, uses, and shares information about you when you use our website, mobile applications,
+              citytoursmorocco.com, collects, uses, and shares information about you when you use our website, mobile applications,
               and other online products and services (collectively, the &ldquo;Services&rdquo;). By using our Services, you agree to the
               collection and use of information in accordance with this policy.
             </p>

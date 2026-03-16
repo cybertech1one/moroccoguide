@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     title: 'Moroccan Gardens Guide - Top 15 Gardens to Visit | CityGuide',
     description:
       'Explore Morocco\'s most enchanting gardens. A comprehensive guide to 15 must-visit gardens across Marrakech, Rabat, Fes, Meknes, Essaouira, and Ouarzazate.',
-    url: 'https://cityguide.ma/gardens',
+    url: 'https://citytoursmorocco.com/gardens',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1585247226801-bc613c441316?w=1200&h=630&fit=crop',
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/gardens' },
+  alternates: { canonical: 'https://citytoursmorocco.com/gardens' },
 };
 
 /* ═══════════════════════════════════════════════════════════════
@@ -73,15 +73,15 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'Article',
-      '@id': 'https://cityguide.ma/gardens#guide',
+      '@id': 'https://citytoursmorocco.com/gardens#guide',
       headline: 'Complete Guide to Moroccan Gardens - 15 Must-Visit Gardens',
       description:
         'Comprehensive guide to the most beautiful gardens in Morocco, covering Islamic garden tradition, garden design elements, best seasons, and photography tips.',
-      url: 'https://cityguide.ma/gardens',
+      url: 'https://citytoursmorocco.com/gardens',
       publisher: {
         '@type': 'Organization',
         name: 'CityGuide Morocco',
-        url: 'https://cityguide.ma',
+        url: 'https://citytoursmorocco.com',
       },
     },
     {

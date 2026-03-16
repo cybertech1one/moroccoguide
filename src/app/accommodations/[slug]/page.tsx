@@ -681,7 +681,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       images: [accommodation.images[0]],
     },
     alternates: {
-      canonical: `https://cityguide.ma/accommodations/${accommodation.slug}`,
+      canonical: `https://citytoursmorocco.com/accommodations/${accommodation.slug}`,
     },
   }
 }
@@ -702,7 +702,7 @@ export default async function AccommodationDetailPage({ params }: PageProps) {
   const accommodationSchema = generateStructuredData('LodgingBusiness', {
     name: accommodation.name,
     description: truncate(accommodation.description, 300),
-    url: `https://cityguide.ma/accommodations/${accommodation.slug}`,
+    url: `https://citytoursmorocco.com/accommodations/${accommodation.slug}`,
     image: accommodation.images,
     address: {
       '@type': 'PostalAddress',
@@ -739,19 +739,19 @@ export default async function AccommodationDetailPage({ params }: PageProps) {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://cityguide.ma',
+        item: 'https://citytoursmorocco.com',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Accommodations',
-        item: 'https://cityguide.ma/accommodations',
+        item: 'https://citytoursmorocco.com/accommodations',
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: accommodation.name,
-        item: `https://cityguide.ma/accommodations/${accommodation.slug}`,
+        item: `https://citytoursmorocco.com/accommodations/${accommodation.slug}`,
       },
     ],
   })

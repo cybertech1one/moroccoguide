@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     title: 'Morocco Wellness & Spa Guide - CityGuide',
     description:
       'Discover the healing traditions of Morocco. From centuries-old hammam rituals to yoga retreats in the mountains and mindfulness in the Sahara.',
-    url: 'https://cityguide.ma/wellness',
+    url: 'https://citytoursmorocco.com/wellness',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200&h=630&fit=crop',
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/wellness' },
+  alternates: { canonical: 'https://citytoursmorocco.com/wellness' },
 };
 
 /* ═══════════════════════════════════════════════════════════════
@@ -332,11 +332,11 @@ function JsonLd() {
     name: 'Morocco Wellness & Spa Guide',
     description:
       'Comprehensive guide to wellness experiences in Morocco including traditional hammams, yoga retreats, spa treatments, natural hot springs, and holistic healing.',
-    url: 'https://cityguide.ma/wellness',
+    url: 'https://citytoursmorocco.com/wellness',
     publisher: {
       '@type': 'Organization',
       name: 'CityGuide',
-      url: 'https://cityguide.ma',
+      url: 'https://citytoursmorocco.com',
     },
     mainEntity: {
       '@type': 'ItemList',

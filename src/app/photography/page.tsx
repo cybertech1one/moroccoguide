@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     title: 'Morocco Photography Guide - Top 20 Photo Spots',
     description:
       'From the blue streets of Chefchaouen to Sahara sunsets, discover the most photogenic locations in Morocco with expert tips on gear, timing, and etiquette.',
-    url: 'https://cityguide.ma/photography',
+    url: 'https://citytoursmorocco.com/photography',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?w=1200&h=630&fit=crop',
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/photography' },
+  alternates: { canonical: 'https://citytoursmorocco.com/photography' },
 };
 
 /* =====================================================================
@@ -659,14 +659,14 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'Article',
-      '@id': 'https://cityguide.ma/photography#guide',
+      '@id': 'https://citytoursmorocco.com/photography#guide',
       headline: 'Morocco Photography Guide - Top 20 Photo Spots & Expert Tips',
       description: 'Complete guide to photographing Morocco with top locations, golden hour timing, gear tips, drone rules, photography genres, and post-processing advice.',
-      url: 'https://cityguide.ma/photography',
+      url: 'https://citytoursmorocco.com/photography',
       publisher: {
         '@type': 'Organization',
         name: 'CityGuide Morocco',
-        url: 'https://cityguide.ma',
+        url: 'https://citytoursmorocco.com',
       },
       image: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?w=1200',
     },

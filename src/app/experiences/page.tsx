@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: 'Unique Moroccan Experiences - CityGuide',
     description:
       'Explore 25+ authentic and unique experiences across Morocco. Adventures, cultural encounters, culinary journeys, wellness rituals, nature escapes, and artisan workshops.',
-    url: 'https://cityguide.ma/experiences',
+    url: 'https://citytoursmorocco.com/experiences',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&h=630&fit=crop',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/experiences' },
+  alternates: { canonical: 'https://citytoursmorocco.com/experiences' },
 };
 
 /* ═══════════════════════════════════════════════════════════════
@@ -477,7 +477,7 @@ function JsonLd() {
     name: 'Unique Moroccan Experiences',
     description:
       'Curated directory of 25+ unique and authentic experiences across Morocco, from desert adventures to cultural immersions and wellness rituals.',
-    url: 'https://cityguide.ma/experiences',
+    url: 'https://citytoursmorocco.com/experiences',
     numberOfItems: experiences.length,
     itemListElement: experiences.map((exp, i) => ({
       '@type': 'ListItem',
@@ -487,8 +487,8 @@ function JsonLd() {
         name: exp.name,
         description: exp.description,
         url: exp.slug
-          ? `https://cityguide.ma/experiences/${exp.slug}`
-          : `https://cityguide.ma/experiences#${exp.name.toLowerCase().replace(/\s+/g, '-')}`,
+          ? `https://citytoursmorocco.com/experiences/${exp.slug}`
+          : `https://citytoursmorocco.com/experiences#${exp.name.toLowerCase().replace(/\s+/g, '-')}`,
         image: exp.image,
         address: {
           '@type': 'PostalAddress',

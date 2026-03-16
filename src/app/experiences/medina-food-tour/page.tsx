@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     title: 'Medina Food Tour - Authentic Moroccan Street Food & Culinary Walks',
     description:
       'Taste your way through Morocco\'s ancient medinas. A complete guide to the best street food, food tour operators, spice markets, and culinary traditions from Marrakech to Fes.',
-    url: 'https://cityguide.ma/experiences/medina-food-tour',
+    url: 'https://citytoursmorocco.com/experiences/medina-food-tour',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1541518763-42d16cdaafd6?w=1200&h=630&fit=crop',
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/experiences/medina-food-tour' },
+  alternates: { canonical: 'https://citytoursmorocco.com/experiences/medina-food-tour' },
 };
 
 /* =====================================================================
@@ -87,7 +87,7 @@ const jsonLd = {
   name: 'Medina Food Tour Experience',
   description:
     'Guided culinary walking tours through Morocco\'s historic medinas, featuring authentic street food tastings, spice market visits, and hands-on cooking experiences in Marrakech, Fes, and Casablanca.',
-  url: 'https://cityguide.ma/experiences/medina-food-tour',
+  url: 'https://citytoursmorocco.com/experiences/medina-food-tour',
   image: 'https://images.unsplash.com/photo-1541518763-42d16cdaafd6?w=1200&h=630&fit=crop',
   address: {
     '@type': 'PostalAddress',

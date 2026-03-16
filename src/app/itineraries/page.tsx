@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: 'Morocco Itineraries - Suggested Routes & Travel Plans | CityGuide',
     description:
       'Expert travel itineraries for Morocco. From weekend breaks to month-long adventures, find your perfect route through the Kingdom.',
-    url: 'https://cityguide.ma/itineraries',
+    url: 'https://citytoursmorocco.com/itineraries',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&h=630&fit=crop',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/itineraries' },
+  alternates: { canonical: 'https://citytoursmorocco.com/itineraries' },
 };
 
 /* ═══════════════════════════════════════════════════════════════
@@ -460,7 +460,7 @@ function JsonLd() {
     name: 'Morocco Itineraries - Suggested Routes & Travel Plans',
     description:
       'Expert-crafted travel itineraries for Morocco, covering diverse routes from weekend breaks to multi-week adventures across the Kingdom.',
-    url: 'https://cityguide.ma/itineraries',
+    url: 'https://citytoursmorocco.com/itineraries',
     numberOfItems: itineraries.length,
     itemListElement: itineraries.map((it, i) => ({
       '@type': 'ListItem',
@@ -469,7 +469,7 @@ function JsonLd() {
         '@type': 'TouristTrip',
         name: it.name,
         description: it.description,
-        url: `https://cityguide.ma/itineraries/${it.slug}`,
+        url: `https://citytoursmorocco.com/itineraries/${it.slug}`,
         image: it.image,
         touristType: STYLE_LABELS[it.travelStyle],
         itinerary: {

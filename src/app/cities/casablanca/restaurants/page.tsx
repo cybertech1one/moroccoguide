@@ -19,11 +19,11 @@ export const metadata: Metadata = {
     title: 'Best 10 Restaurants in Casablanca | CityGuide',
     description:
       'Explore Casablanca\'s top dining spots including Rick\'s Cafe, La Sqala, Le Cabestan, and more.',
-    url: 'https://cityguide.ma/cities/casablanca/restaurants',
+    url: 'https://citytoursmorocco.com/cities/casablanca/restaurants',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://cityguide.ma/cities/casablanca/restaurants',
+    canonical: 'https://citytoursmorocco.com/cities/casablanca/restaurants',
   },
 };
 

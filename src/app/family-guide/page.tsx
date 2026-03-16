@@ -55,7 +55,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: 'Family Guide to Morocco | The Ultimate Family Travel Resource',
       description:
         'Everything families need to plan the perfect Morocco adventure. Destinations by age group, real hotel recommendations, kid-friendly food, and detailed itineraries.',
-      url: 'https://cityguide.ma/family-guide',
+      url: 'https://citytoursmorocco.com/family-guide',
       images: [
         {
           url: 'https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=1200&h=630&fit=crop',
@@ -66,7 +66,7 @@ export async function generateMetadata(): Promise<Metadata> {
       ],
     },
     alternates: {
-      canonical: 'https://cityguide.ma/family-guide',
+      canonical: 'https://citytoursmorocco.com/family-guide',
     },
   };
 }
@@ -77,7 +77,7 @@ const jsonLd = {
   name: 'Family Guide to Morocco',
   description:
     'A comprehensive family travel guide covering destinations, accommodations, food, safety, itineraries, and budgets for families visiting Morocco.',
-  url: 'https://cityguide.ma/family-guide',
+  url: 'https://citytoursmorocco.com/family-guide',
   about: {
     '@type': 'Country',
     name: 'Morocco',
@@ -90,7 +90,7 @@ const jsonLd = {
   publisher: {
     '@type': 'Organization',
     name: 'Morocco City Guide',
-    url: 'https://cityguide.ma',
+    url: 'https://citytoursmorocco.com',
   },
 };
 

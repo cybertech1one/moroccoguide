@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     title: 'Moroccan Culture & Traditions - CityGuide',
     description:
       'Discover the vibrant tapestry of Moroccan culture, from ancient Berber traditions and Islamic art to Gnaoua music, traditional clothing, literature, and living craftsmanship.',
-    url: 'https://cityguide.ma/culture',
+    url: 'https://citytoursmorocco.com/culture',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=1200&h=630&fit=crop',
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/culture' },
+  alternates: { canonical: 'https://citytoursmorocco.com/culture' },
 };
 
 /* ===================================================================
@@ -84,15 +84,15 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  '@id': 'https://cityguide.ma/culture',
+  '@id': 'https://citytoursmorocco.com/culture',
   name: 'Moroccan Culture & Traditions',
   description:
     'Comprehensive guide to Moroccan culture covering Islamic heritage, Berber traditions, arts and crafts, music, traditional clothing, literature, cinema, festivals, and cultural experiences for visitors.',
-  url: 'https://cityguide.ma/culture',
+  url: 'https://citytoursmorocco.com/culture',
   isPartOf: {
     '@type': 'WebSite',
     name: 'CityGuide Morocco',
-    url: 'https://cityguide.ma',
+    url: 'https://citytoursmorocco.com',
   },
   about: {
     '@type': 'Country',
@@ -101,8 +101,8 @@ const jsonLd = {
   breadcrumb: {
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cityguide.ma' },
-      { '@type': 'ListItem', position: 2, name: 'Culture & Traditions', item: 'https://cityguide.ma/culture' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://citytoursmorocco.com' },
+      { '@type': 'ListItem', position: 2, name: 'Culture & Traditions', item: 'https://citytoursmorocco.com/culture' },
     ],
   },
 };

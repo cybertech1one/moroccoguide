@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     title: 'Oases & Palm Groves of Morocco | Complete Guide',
     description:
       'Explore Morocco\'s spectacular oases: Draa Valley, Ziz Gorges, Skoura, Figuig, Tinghir, and more. Ancient irrigation, date harvests, kasbah stays, and oasis-to-desert adventures.',
-    url: 'https://cityguide.ma/oases',
+    url: 'https://citytoursmorocco.com/oases',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1548018560-c7196e4f82e7?w=1200&h=630&fit=crop',
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/oases' },
+  alternates: { canonical: 'https://citytoursmorocco.com/oases' },
 };
 
 /* ================================================================
@@ -93,7 +93,7 @@ const jsonLd = {
       name: 'Morocco Oases & Palm Groves Guide',
       description:
         'Comprehensive guide to Morocco\'s oases and palm groves including the Draa Valley, Ziz Gorges, Skoura, Figuig, ancient khettara irrigation, date harvesting, and oasis-to-desert experiences.',
-      url: 'https://cityguide.ma/oases',
+      url: 'https://citytoursmorocco.com/oases',
       touristType: ['Cultural tourism', 'Ecotourism', 'Adventure travel', 'Photography'],
       image: 'https://images.unsplash.com/photo-1548018560-c7196e4f82e7?w=1200',
       geo: {

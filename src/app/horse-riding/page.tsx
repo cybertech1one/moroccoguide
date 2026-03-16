@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     title: 'Horse Riding & Equestrian Tourism in Morocco | Complete Guide',
     description:
       'From Atlantic beach gallops to Saharan desert treks, Morocco offers world-class riding experiences. 15+ riding centers, Tbourida shows, multi-day treks, and practical booking guide.',
-    url: 'https://cityguide.ma/horse-riding',
+    url: 'https://citytoursmorocco.com/horse-riding',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=1200&h=630&fit=crop',
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/horse-riding' },
+  alternates: { canonical: 'https://citytoursmorocco.com/horse-riding' },
 };
 
 const jsonLd = {
@@ -70,7 +70,7 @@ const jsonLd = {
   name: 'Horse Riding & Equestrian Tourism in Morocco',
   description:
     'Complete guide to horse riding and equestrian tourism in Morocco, including beach rides, desert treks, mountain trails, Tbourida shows, and top riding operators.',
-  url: 'https://cityguide.ma/horse-riding',
+  url: 'https://citytoursmorocco.com/horse-riding',
   touristType: ['Adventure tourists', 'Equestrian enthusiasts', 'Cultural tourists'],
   geo: { '@type': 'GeoCoordinates', latitude: 31.7917, longitude: -7.0926 },
 };

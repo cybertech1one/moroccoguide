@@ -78,7 +78,7 @@ export const metadata: Metadata = {
     title: 'Morocco Airports & Ground Transport - Complete Guide 2025',
     description:
       'Everything you need to know about flying into Morocco and getting around. 12 airports, 15+ airlines, ground transport, car rental, customs tips, duty-free guide, and practical arrival tips.',
-    url: 'https://cityguide.ma/airports',
+    url: 'https://citytoursmorocco.com/airports',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1583862490786-85ea1a1e85a6?w=1200&h=630&fit=crop',
@@ -88,7 +88,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/airports' },
+  alternates: { canonical: 'https://citytoursmorocco.com/airports' },
 };
 
 /* ===================================================================
@@ -101,11 +101,11 @@ const jsonLd = {
   name: 'Morocco Airports & Ground Transport Guide',
   description:
     'Comprehensive guide to Morocco\'s airports, airlines serving the country, VIP airport services, ground transportation companies, customs and immigration procedures, duty-free shopping, inter-city transport, and practical tips for airport arrivals.',
-  url: 'https://cityguide.ma/airports',
+  url: 'https://citytoursmorocco.com/airports',
   isPartOf: {
     '@type': 'WebSite',
     name: 'CityGuide Morocco',
-    url: 'https://cityguide.ma',
+    url: 'https://citytoursmorocco.com',
   },
   mainEntity: {
     '@type': 'ItemList',

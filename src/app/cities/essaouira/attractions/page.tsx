@@ -21,11 +21,11 @@ export const metadata: Metadata = {
     title: 'Top 8 Attractions in Essaouira | CityGuide',
     description:
       'Explore Essaouira\'s most iconic attractions including the Skala, UNESCO medina, port, and stunning Atlantic beach.',
-    url: 'https://cityguide.ma/cities/essaouira/attractions',
+    url: 'https://citytoursmorocco.com/cities/essaouira/attractions',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://cityguide.ma/cities/essaouira/attractions',
+    canonical: 'https://citytoursmorocco.com/cities/essaouira/attractions',
   },
 };
 

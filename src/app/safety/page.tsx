@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     title: 'Safety in Morocco 2025-2026 - Complete Travel Safety Guide | CityGuide',
     description:
       'Everything you need to know about staying safe in Morocco. Scams, health, emergencies, laws, and practical advice for all travelers.',
-    url: 'https://cityguide.ma/safety',
+    url: 'https://citytoursmorocco.com/safety',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=1200&h=630&fit=crop',
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/safety' },
+  alternates: { canonical: 'https://citytoursmorocco.com/safety' },
 };
 
 /* ===================================================================
@@ -85,8 +85,8 @@ const jsonLd = {
   name: 'Safety in Morocco 2025-2026 | Travel Safety Guide',
   description:
     'Complete safety guide for traveling in Morocco including scam awareness, health tips, emergency contacts, laws, and advice for all travelers.',
-  url: 'https://cityguide.ma/safety',
-  isPartOf: { '@type': 'WebSite', name: 'CityGuide Morocco', url: 'https://cityguide.ma' },
+  url: 'https://citytoursmorocco.com/safety',
+  isPartOf: { '@type': 'WebSite', name: 'CityGuide Morocco', url: 'https://citytoursmorocco.com' },
 };
 
 /* ===================================================================

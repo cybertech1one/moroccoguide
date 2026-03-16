@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title: 'Terms of Service - CityGuide Morocco',
     description:
       'Terms and conditions governing the use of CityGuide, Morocco\'s comprehensive tourism platform.',
-    url: 'https://cityguide.ma/terms',
+    url: 'https://citytoursmorocco.com/terms',
   },
 };
 
@@ -36,7 +36,7 @@ const sections = [
     content: [
       {
         subtitle: null,
-        text: 'By accessing or using the CityGuide website (cityguide.ma), mobile applications, or any related services (collectively, the "Services"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, you must not access or use our Services.',
+        text: 'By accessing or using the CityGuide website (citytoursmorocco.com), mobile applications, or any related services (collectively, the "Services"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, you must not access or use our Services.',
       },
       {
         subtitle: null,
@@ -78,7 +78,7 @@ const sections = [
       },
       {
         subtitle: 'Account Termination',
-        text: 'We reserve the right to suspend or terminate your account at our sole discretion, without notice, for conduct that we determine violates these Terms, is harmful to other users or the Services, or for any other reason we deem appropriate. You may also delete your account at any time by contacting us at hello@cityguide.ma.',
+        text: 'We reserve the right to suspend or terminate your account at our sole discretion, without notice, for conduct that we determine violates these Terms, is harmful to other users or the Services, or for any other reason we deem appropriate. You may also delete your account at any time by contacting us at hello@citytoursmorocco.com.',
       },
     ],
   },
@@ -199,7 +199,7 @@ const sections = [
       },
       {
         subtitle: null,
-        text: '\u2022 Email: hello@cityguide.ma\n\u2022 Phone: +212 5XX-XXXXXX\n\u2022 Address: Gueliz District, Avenue Mohammed V, Marrakech 40000, Morocco',
+        text: '\u2022 Email: hello@citytoursmorocco.com\n\u2022 Phone: +212 5XX-XXXXXX\n\u2022 Address: Gueliz District, Avenue Mohammed V, Marrakech 40000, Morocco',
       },
       {
         subtitle: null,
@@ -216,11 +216,11 @@ export default function TermsPage() {
     name: 'Terms of Service - CityGuide Morocco',
     description:
       'Terms and conditions governing the use of CityGuide, Morocco\'s comprehensive tourism platform.',
-    url: 'https://cityguide.ma/terms',
+    url: 'https://citytoursmorocco.com/terms',
     publisher: {
       '@type': 'Organization',
       name: 'CityGuide',
-      url: 'https://cityguide.ma',
+      url: 'https://citytoursmorocco.com',
     },
     dateModified: '2026-01-15',
     inLanguage: 'en',

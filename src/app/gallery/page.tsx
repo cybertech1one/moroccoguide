@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title: 'Photo Gallery - CityGuide Morocco',
     description:
       'Discover Morocco through stunning photography. Cities, deserts, mountains, coast, architecture, food, and more.',
-    url: 'https://cityguide.ma/gallery',
+    url: 'https://citytoursmorocco.com/gallery',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&h=630&fit=crop',
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/gallery' },
+  alternates: { canonical: 'https://citytoursmorocco.com/gallery' },
 };
 
 /* ═══════════════════════════════════════════════════════════════
@@ -565,7 +565,7 @@ const jsonLd = {
   name: 'Morocco Photo Gallery - CityGuide',
   description:
     'A curated collection of over 40 stunning photographs showcasing the beauty, culture, landscapes, and culinary traditions of Morocco.',
-  url: 'https://cityguide.ma/gallery',
+  url: 'https://citytoursmorocco.com/gallery',
   image: photos
     .filter((p) => p.featured)
     .map((p) => ({
@@ -582,7 +582,7 @@ const jsonLd = {
   provider: {
     '@type': 'Organization',
     name: 'CityGuide Morocco',
-    url: 'https://cityguide.ma',
+    url: 'https://citytoursmorocco.com',
   },
 };
 

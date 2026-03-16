@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     title: 'Complete Guide to Morocco\'s 15 Best Festivals - CityGuide',
     description:
       'In-depth profiles of Morocco\'s greatest festivals. Music, film, culture, religious celebrations, and traditional moussems with practical advice for attending each one.',
-    url: 'https://cityguide.ma/festivals',
+    url: 'https://citytoursmorocco.com/festivals',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1200&h=630&fit=crop',
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/festivals' },
+  alternates: { canonical: 'https://citytoursmorocco.com/festivals' },
 };
 
 /* ═══════════════════════════════════════════════════════════════
@@ -629,7 +629,7 @@ const jsonLd = {
   '@type': 'ItemList',
   name: 'Complete Guide to Morocco\'s Best Festivals',
   description: 'In-depth profiles of Morocco\'s top 15 festivals with practical information for attending.',
-  url: 'https://cityguide.ma/festivals',
+  url: 'https://citytoursmorocco.com/festivals',
   numberOfItems: festivals.length,
   itemListElement: festivals.map((f, i) => ({
     '@type': 'ListItem',

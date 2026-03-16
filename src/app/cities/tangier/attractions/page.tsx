@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: 'Top 8 Attractions in Tangier',
     description:
       'Explore the best landmarks, museums, and historic sites in Tangier, Morocco.',
-    url: 'https://cityguide.ma/cities/tangier/attractions',
+    url: 'https://citytoursmorocco.com/cities/tangier/attractions',
   },
 };
 

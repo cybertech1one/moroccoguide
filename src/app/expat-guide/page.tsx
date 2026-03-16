@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     title: 'Living in Morocco: Expat & Long-Term Stay Guide | CityGuide.ma',
     description:
       'Everything you need to know about relocating to Morocco. Cost of living, residency permits, housing, healthcare, schools, banking, taxes, and community for expats and long-term residents.',
-    url: 'https://cityguide.ma/expat-guide',
+    url: 'https://citytoursmorocco.com/expat-guide',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1545041028-4e0b97fba9ee?w=1200&h=630&fit=crop',
@@ -84,11 +84,11 @@ const jsonLd = {
   name: 'Living in Morocco: Expat & Long-Term Stay Guide',
   description:
     'A comprehensive guide for expats and long-term residents considering Morocco, covering cost of living, residency permits, housing, healthcare, education, banking, taxes, and lifestyle.',
-  url: 'https://cityguide.ma/expat-guide',
+  url: 'https://citytoursmorocco.com/expat-guide',
   publisher: {
     '@type': 'Organization',
     name: 'CityGuide.ma',
-    url: 'https://cityguide.ma',
+    url: 'https://citytoursmorocco.com',
   },
   about: {
     '@type': 'Country',

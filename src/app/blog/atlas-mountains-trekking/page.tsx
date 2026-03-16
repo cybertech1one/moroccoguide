@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: 'Atlas Mountains Trekking: The Complete Guide',
     description:
       'From day hikes to Toubkal summit. Everything you need for trekking in Morocco\'s High Atlas Mountains.',
-    url: 'https://cityguide.ma/blog/atlas-mountains-trekking',
+    url: 'https://citytoursmorocco.com/blog/atlas-mountains-trekking',
     type: 'article',
     images: [
       {
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/blog/atlas-mountains-trekking' },
+  alternates: { canonical: 'https://citytoursmorocco.com/blog/atlas-mountains-trekking' },
 };
 
 /* ================================================================
@@ -118,8 +118,8 @@ function JsonLd() {
     datePublished: '2026-03-08',
     dateModified: '2026-03-08',
     author: { '@type': 'Person', name: 'Driss Tazi' },
-    publisher: { '@type': 'Organization', name: 'CityGuide', url: 'https://cityguide.ma' },
-    url: 'https://cityguide.ma/blog/atlas-mountains-trekking',
+    publisher: { '@type': 'Organization', name: 'CityGuide', url: 'https://citytoursmorocco.com' },
+    url: 'https://citytoursmorocco.com/blog/atlas-mountains-trekking',
     articleSection: 'Adventure',
     keywords: 'Atlas Mountains, trekking, Jebel Toubkal, Morocco hiking',
     wordCount: 2500,

@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     title: 'Morocco Road Trips Guide | 8 Epic Driving Routes',
     description:
       'Drive Morocco your way. 8 incredible road trip routes with detailed day-by-day itineraries, car rental advice, driving tips, and everything you need for the open road.',
-    url: 'https://cityguide.ma/road-trips',
+    url: 'https://citytoursmorocco.com/road-trips',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1548018560-c7196e66aca2?w=1200&h=630&fit=crop',
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/road-trips' },
+  alternates: { canonical: 'https://citytoursmorocco.com/road-trips' },
 };
 
 const jsonLd = {
@@ -74,7 +74,7 @@ const jsonLd = {
   name: 'Morocco Road Trips Guide',
   description:
     'Complete guide to road trips in Morocco including 8 epic routes, driving tips, car rental information, and road safety advice.',
-  url: 'https://cityguide.ma/road-trips',
+  url: 'https://citytoursmorocco.com/road-trips',
   location: { '@type': 'Country', name: 'Morocco' },
 };
 

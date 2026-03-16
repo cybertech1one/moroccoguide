@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     title: 'Moroccan Food & Cuisine Guide - CityGuide',
     description:
       'Your complete guide to Moroccan cuisine. Traditional dishes, street food, spices, regional specialties, vegetarian guide, food markets, and dining etiquette.',
-    url: 'https://cityguide.ma/food',
+    url: 'https://citytoursmorocco.com/food',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=1200&h=630&fit=crop',
@@ -84,7 +84,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/food' },
+  alternates: { canonical: 'https://citytoursmorocco.com/food' },
 };
 
 /* ═══════════════════════════════════════════════════════════════
@@ -96,11 +96,11 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'FoodEstablishment',
-      '@id': 'https://cityguide.ma/food#guide',
+      '@id': 'https://citytoursmorocco.com/food#guide',
       name: 'Moroccan Food & Cuisine Guide',
       description:
         'The definitive guide to Moroccan cuisine covering traditional dishes, street food, spices, regional specialties, vegetarian options, food markets, and dining etiquette.',
-      url: 'https://cityguide.ma/food',
+      url: 'https://citytoursmorocco.com/food',
       servesCuisine: 'Moroccan',
       address: {
         '@type': 'PostalAddress',

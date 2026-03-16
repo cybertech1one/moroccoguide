@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     title: '10-Day Morocco Grand Tour | CityGuide',
     description:
       'The complete Morocco experience in 10 days: eight cities, the Sahara Desert, Atlas Mountains, and the Atlantic coast.',
-    url: 'https://cityguide.ma/itineraries/10-day-grand-tour',
+    url: 'https://citytoursmorocco.com/itineraries/10-day-grand-tour',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?w=1200&h=630&fit=crop',
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/itineraries/10-day-grand-tour' },
+  alternates: { canonical: 'https://citytoursmorocco.com/itineraries/10-day-grand-tour' },
 };
 
 /* ================================================================
@@ -75,7 +75,7 @@ function JsonLd() {
     name: '10-Day Morocco Grand Tour',
     description:
       'The complete Morocco experience: Casablanca, Rabat, Chefchaouen, Fes, Sahara Desert, Ouarzazate, Marrakech, and Essaouira.',
-    url: 'https://cityguide.ma/itineraries/10-day-grand-tour',
+    url: 'https://citytoursmorocco.com/itineraries/10-day-grand-tour',
     touristType: 'Cultural',
     itinerary: {
       '@type': 'ItemList',
@@ -788,7 +788,7 @@ export default function TenDayGrandTourPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:bookings@cityguide.ma?subject=10-Day Grand Tour Inquiry"
+              href="mailto:bookings@citytoursmorocco.com?subject=10-Day Grand Tour Inquiry"
               className="btn-accent btn-lg"
             >
               <Mail className="w-5 h-5" />

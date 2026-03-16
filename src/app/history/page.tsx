@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     title: 'History of Morocco - CityGuide',
     description:
       'A journey through Morocco\'s history, from Stone Age cave paintings to the vibrant modern kingdom.',
-    url: 'https://cityguide.ma/history',
+    url: 'https://citytoursmorocco.com/history',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1548017544-09dbc9fb99f6?w=1200&h=630&fit=crop',
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/history' },
+  alternates: { canonical: 'https://citytoursmorocco.com/history' },
 };
 
 /* ================================================================
@@ -77,15 +77,15 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  '@id': 'https://cityguide.ma/history',
+  '@id': 'https://citytoursmorocco.com/history',
   name: 'History of Morocco',
   description:
     'Comprehensive guide to Moroccan history covering prehistoric times, Phoenician and Roman periods, Islamic dynasties, colonial era, and modern Morocco.',
-  url: 'https://cityguide.ma/history',
+  url: 'https://citytoursmorocco.com/history',
   isPartOf: {
     '@type': 'WebSite',
     name: 'CityGuide Morocco',
-    url: 'https://cityguide.ma',
+    url: 'https://citytoursmorocco.com',
   },
   about: {
     '@type': 'Country',
@@ -94,8 +94,8 @@ const jsonLd = {
   breadcrumb: {
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cityguide.ma' },
-      { '@type': 'ListItem', position: 2, name: 'History', item: 'https://cityguide.ma/history' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://citytoursmorocco.com' },
+      { '@type': 'ListItem', position: 2, name: 'History', item: 'https://citytoursmorocco.com/history' },
     ],
   },
 };

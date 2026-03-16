@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     title: 'Moroccan Etiquette & Culture Guide - Travel With Respect',
     description:
       'Everything you need to know about Moroccan customs, etiquette, and cultural norms. Dress code, dining, tipping, bargaining, Ramadan, and more.',
-    url: 'https://cityguide.ma/etiquette',
+    url: 'https://citytoursmorocco.com/etiquette',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&h=630&fit=crop',
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/etiquette' },
+  alternates: { canonical: 'https://citytoursmorocco.com/etiquette' },
 };
 
 /* ===================================================================
@@ -81,15 +81,15 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  '@id': 'https://cityguide.ma/etiquette',
+  '@id': 'https://citytoursmorocco.com/etiquette',
   name: 'Moroccan Etiquette & Culture Guide',
   description:
     'Comprehensive guide to Moroccan etiquette covering greetings, dress code, dining customs, mosque protocol, tipping, photography rules, bargaining, and cultural norms for respectful travel.',
-  url: 'https://cityguide.ma/etiquette',
+  url: 'https://citytoursmorocco.com/etiquette',
   isPartOf: {
     '@type': 'WebSite',
     name: 'CityGuide Morocco',
-    url: 'https://cityguide.ma',
+    url: 'https://citytoursmorocco.com',
   },
   about: {
     '@type': 'Country',
@@ -98,8 +98,8 @@ const jsonLd = {
   breadcrumb: {
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cityguide.ma' },
-      { '@type': 'ListItem', position: 2, name: 'Etiquette & Culture', item: 'https://cityguide.ma/etiquette' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://citytoursmorocco.com' },
+      { '@type': 'ListItem', position: 2, name: 'Etiquette & Culture', item: 'https://citytoursmorocco.com/etiquette' },
     ],
   },
 };

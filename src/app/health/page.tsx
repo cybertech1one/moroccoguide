@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     title: 'Travel Health & Medical Guide Morocco 2025-2026 | CityGuide',
     description:
       'Everything you need to know about staying healthy in Morocco. Vaccinations, pharmacies, hospitals, emergency contacts, and practical medical advice for travelers.',
-    url: 'https://cityguide.ma/health',
+    url: 'https://citytoursmorocco.com/health',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=1200&h=630&fit=crop',
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/health' },
+  alternates: { canonical: 'https://citytoursmorocco.com/health' },
 };
 
 /* ===================================================================
@@ -94,8 +94,8 @@ const jsonLd = {
   name: 'Travel Health & Medical Guide Morocco 2025-2026',
   description:
     'Complete travel health guide for Morocco including vaccinations, pharmacies, hospitals, emergency numbers, water safety, and medical advice for travelers.',
-  url: 'https://cityguide.ma/health',
-  isPartOf: { '@type': 'WebSite', name: 'CityGuide Morocco', url: 'https://cityguide.ma' },
+  url: 'https://citytoursmorocco.com/health',
+  isPartOf: { '@type': 'WebSite', name: 'CityGuide Morocco', url: 'https://citytoursmorocco.com' },
   about: {
     '@type': 'MedicalCondition',
     name: 'Travel Health',

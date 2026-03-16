@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     title: 'UNESCO World Heritage Sites in Morocco - CityGuide',
     description:
       'Complete guide to all 9 UNESCO World Heritage Sites in Morocco with visiting tips, fees, hours, and a 14-day itinerary covering every site.',
-    url: 'https://cityguide.ma/unesco',
+    url: 'https://citytoursmorocco.com/unesco',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=1200&h=630&fit=crop',
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/unesco' },
+  alternates: { canonical: 'https://citytoursmorocco.com/unesco' },
 };
 
 /* ═══════════════════════════════════════════════════════════════
@@ -70,15 +70,15 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  '@id': 'https://cityguide.ma/unesco',
+  '@id': 'https://citytoursmorocco.com/unesco',
   name: 'UNESCO World Heritage Sites in Morocco',
   description:
     'Complete guide to all 9 UNESCO World Heritage Sites in Morocco including visiting information, tentative list sites, intangible heritage, and suggested tour itineraries.',
-  url: 'https://cityguide.ma/unesco',
+  url: 'https://citytoursmorocco.com/unesco',
   isPartOf: {
     '@type': 'WebSite',
     name: 'CityGuide Morocco',
-    url: 'https://cityguide.ma',
+    url: 'https://citytoursmorocco.com',
   },
   about: {
     '@type': 'Country',
@@ -87,8 +87,8 @@ const jsonLd = {
   breadcrumb: {
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cityguide.ma' },
-      { '@type': 'ListItem', position: 2, name: 'UNESCO World Heritage Sites', item: 'https://cityguide.ma/unesco' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://citytoursmorocco.com' },
+      { '@type': 'ListItem', position: 2, name: 'UNESCO World Heritage Sites', item: 'https://citytoursmorocco.com/unesco' },
     ],
   },
 };

@@ -8,7 +8,7 @@ import type {
   TouristDestination,
 } from 'schema-dts';
 
-const BASE_URL = 'https://cityguide.ma';
+const BASE_URL = 'https://citytoursmorocco.com';
 
 /* ─── Organization Schema ─── */
 const organizationSchema: WithContext<Organization> = {
@@ -39,7 +39,7 @@ const organizationSchema: WithContext<Organization> = {
   sameAs: [
     'https://facebook.com/cityguide',
     'https://instagram.com/cityguide',
-    'https://twitter.com/cityguide_ma',
+    'https://twitter.com/citytoursmorocco',
     'https://youtube.com/cityguide',
     'https://pinterest.com/cityguide',
     'https://linkedin.com/company/cityguide',
@@ -88,7 +88,7 @@ const travelAgencySchema: WithContext<TravelAgency> = {
     'Morocco travel planning platform offering comprehensive guides to 50+ cities, curated tours, accommodation bookings, restaurant recommendations, and expert travel advice for the Kingdom of Morocco.',
   image: `${BASE_URL}/logo.png`,
   telephone: '+212-5-00-000-000',
-  email: 'info@cityguide.ma',
+  email: 'info@citytoursmorocco.com',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Medina',
@@ -125,7 +125,7 @@ const travelAgencySchema: WithContext<TravelAgency> = {
   sameAs: [
     'https://facebook.com/cityguide',
     'https://instagram.com/cityguide',
-    'https://twitter.com/cityguide_ma',
+    'https://twitter.com/citytoursmorocco',
   ],
 } as WithContext<TravelAgency>;
 

@@ -21,11 +21,11 @@ export const metadata: Metadata = {
     title: 'Top 15 Attractions in Marrakech | CityGuide',
     description:
       'Explore Marrakech\'s most iconic attractions including Jemaa el-Fnaa, Bahia Palace, Jardin Majorelle, and more.',
-    url: 'https://cityguide.ma/cities/marrakech/attractions',
+    url: 'https://citytoursmorocco.com/cities/marrakech/attractions',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://cityguide.ma/cities/marrakech/attractions',
+    canonical: 'https://citytoursmorocco.com/cities/marrakech/attractions',
   },
 };
 

@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     title: '8 Unique Desert Experiences in Merzouga',
     description:
       'The ultimate guide to Sahara adventures in Merzouga, from camel treks to stargazing.',
-    url: 'https://cityguide.ma/cities/merzouga/experiences',
+    url: 'https://citytoursmorocco.com/cities/merzouga/experiences',
   },
 };
 

@@ -21,11 +21,11 @@ export const metadata: Metadata = {
     title: 'Top 12 Attractions in Fes | CityGuide',
     description:
       'Explore Fes\'s most iconic attractions including Chouara Tannery, Bou Inania Madrasa, and the ancient medina.',
-    url: 'https://cityguide.ma/cities/fes/attractions',
+    url: 'https://citytoursmorocco.com/cities/fes/attractions',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://cityguide.ma/cities/fes/attractions',
+    canonical: 'https://citytoursmorocco.com/cities/fes/attractions',
   },
 };
 

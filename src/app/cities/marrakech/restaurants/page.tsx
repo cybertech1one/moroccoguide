@@ -19,11 +19,11 @@ export const metadata: Metadata = {
     title: 'Best 12 Restaurants in Marrakech | CityGuide',
     description:
       'Explore Marrakech\'s top dining spots including Nomad, Le Jardin, Dar Yacout, and more.',
-    url: 'https://cityguide.ma/cities/marrakech/restaurants',
+    url: 'https://citytoursmorocco.com/cities/marrakech/restaurants',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://cityguide.ma/cities/marrakech/restaurants',
+    canonical: 'https://citytoursmorocco.com/cities/marrakech/restaurants',
   },
 };
 

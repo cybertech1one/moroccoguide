@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     title: 'Shopping in Morocco - CityGuide',
     description:
       'Discover what to buy, where to find it, and how to haggle like a pro in Morocco\'s legendary souks and markets.',
-    url: 'https://cityguide.ma/shopping',
+    url: 'https://citytoursmorocco.com/shopping',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1531501410720-c8d437636169?w=1200&h=630&fit=crop',
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/shopping' },
+  alternates: { canonical: 'https://citytoursmorocco.com/shopping' },
 };
 
 /* ═══════════════════════════════════════════════════════════════
@@ -69,11 +69,11 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'ShoppingCenter',
-  '@id': 'https://cityguide.ma/shopping',
+  '@id': 'https://citytoursmorocco.com/shopping',
   name: 'Shopping in Morocco Guide',
   description:
     'Comprehensive guide to shopping in Morocco covering 20 must-buy items, haggling tips, best markets, authenticity verification, and shipping advice.',
-  url: 'https://cityguide.ma/shopping',
+  url: 'https://citytoursmorocco.com/shopping',
   address: {
     '@type': 'PostalAddress',
     addressCountry: 'MA',

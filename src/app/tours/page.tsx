@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title: 'Morocco Tours & Experiences - CityGuide',
     description:
       'Discover 20+ curated tours across Morocco. Desert expeditions, cultural immersions, adventure treks, and culinary journeys.',
-    url: 'https://cityguide.ma/tours',
+    url: 'https://citytoursmorocco.com/tours',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&h=630&fit=crop',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/tours' },
+  alternates: { canonical: 'https://citytoursmorocco.com/tours' },
 };
 
 /* ═══════════════════════════════════════════════════════════════
@@ -379,7 +379,7 @@ function JsonLd() {
     '@type': 'ItemList',
     name: 'Morocco Tours & Experiences',
     description: 'Curated tours and experiences across Morocco.',
-    url: 'https://cityguide.ma/tours',
+    url: 'https://citytoursmorocco.com/tours',
     numberOfItems: tours.length,
     itemListElement: tours.map((t, i) => ({
       '@type': 'ListItem',
@@ -388,7 +388,7 @@ function JsonLd() {
         '@type': 'TouristTrip',
         name: t.name,
         description: t.description,
-        url: `https://cityguide.ma/tours/${t.slug}`,
+        url: `https://citytoursmorocco.com/tours/${t.slug}`,
         image: t.image,
         touristType: t.category,
         offers: {

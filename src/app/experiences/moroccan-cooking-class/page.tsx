@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     title: 'Moroccan Cooking Class Experience - CityGuide',
     description:
       'Learn to cook authentic Moroccan dishes in a hands-on class. Market tours, expert chefs, and signature recipes from $30/person.',
-    url: 'https://cityguide.ma/experiences/moroccan-cooking-class',
+    url: 'https://citytoursmorocco.com/experiences/moroccan-cooking-class',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1541518763-42d16cdaafd6?w=1200&h=630&fit=crop',
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/experiences/moroccan-cooking-class' },
+  alternates: { canonical: 'https://citytoursmorocco.com/experiences/moroccan-cooking-class' },
 };
 
 /* =====================================================================
@@ -72,11 +72,11 @@ const jsonLd = {
   name: 'Moroccan Cooking Class Experience',
   description:
     'Hands-on Moroccan cooking class featuring a guided market tour and cooking session to learn tagine, couscous, pastilla, msemmen, and traditional spice blends.',
-  url: 'https://cityguide.ma/experiences/moroccan-cooking-class',
+  url: 'https://citytoursmorocco.com/experiences/moroccan-cooking-class',
   provider: {
     '@type': 'Organization',
     name: 'CityGuide Morocco',
-    url: 'https://cityguide.ma',
+    url: 'https://citytoursmorocco.com',
   },
   offers: {
     '@type': 'AggregateOffer',

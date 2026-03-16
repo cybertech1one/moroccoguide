@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     title: 'Accessible Morocco Travel Guide | Wheelchair Access & Adapted Hotels',
     description:
       'Practical, honest guide to traveling Morocco with a disability. Ranked destinations, adapted hotels, accessible attractions, and specialized tour operators.',
-    url: 'https://cityguide.ma/accessible-travel',
+    url: 'https://citytoursmorocco.com/accessible-travel',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=1200&h=630&fit=crop',
@@ -72,7 +72,7 @@ const jsonLd = {
   name: 'Accessible Travel in Morocco',
   description:
     'A comprehensive guide for travelers with disabilities visiting Morocco, covering accessible destinations, adapted accommodations, transport, and specialized tour operators.',
-  url: 'https://cityguide.ma/accessible-travel',
+  url: 'https://citytoursmorocco.com/accessible-travel',
   location: {
     '@type': 'Country',
     name: 'Morocco',

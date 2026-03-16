@@ -19,11 +19,11 @@ export const metadata: Metadata = {
     title: 'Best 10 Restaurants in Fes | CityGuide',
     description:
       'Explore Fes\'s top dining spots including Cafe Clock, The Ruined Garden, Dar Roumana, and more.',
-    url: 'https://cityguide.ma/cities/fes/restaurants',
+    url: 'https://citytoursmorocco.com/cities/fes/restaurants',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://cityguide.ma/cities/fes/restaurants',
+    canonical: 'https://citytoursmorocco.com/cities/fes/restaurants',
   },
 };
 

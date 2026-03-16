@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     title: 'Wildlife & Nature Guide Morocco | Animals, Parks & Birdwatching',
     description:
       'Discover Morocco\'s diverse ecosystems, iconic wildlife, national parks, birdwatching spots, and nature tours.',
-    url: 'https://cityguide.ma/wildlife',
+    url: 'https://citytoursmorocco.com/wildlife',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?w=1200&h=630&fit=crop',
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/wildlife' },
+  alternates: { canonical: 'https://citytoursmorocco.com/wildlife' },
 };
 
 /* ================================================================
@@ -87,7 +87,7 @@ const jsonLd = {
       name: 'Morocco Wildlife & Nature Guide',
       description:
         'Comprehensive guide to Morocco\'s wildlife, national parks, birdwatching, marine life, and nature experiences across diverse ecosystems from the Sahara to the Atlas Mountains.',
-      url: 'https://cityguide.ma/wildlife',
+      url: 'https://citytoursmorocco.com/wildlife',
       touristType: ['Wildlife tourism', 'Birdwatching', 'Ecotourism', 'Nature photography'],
       image: 'https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?w=1200',
       geo: {

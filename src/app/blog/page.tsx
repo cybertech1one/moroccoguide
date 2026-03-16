@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     title: 'Morocco Travel Blog - CityGuide',
     description:
       'Expert travel tips, destination guides, and cultural insights from Morocco. Your go-to resource for planning the perfect Moroccan adventure.',
-    url: 'https://cityguide.ma/blog',
+    url: 'https://citytoursmorocco.com/blog',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&h=630&fit=crop',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/blog' },
+  alternates: { canonical: 'https://citytoursmorocco.com/blog' },
 };
 
 /* ================================================================
@@ -369,17 +369,17 @@ function JsonLd() {
     name: 'CityGuide Morocco Travel Blog',
     description:
       'Expert travel tips, destination guides, and cultural insights for exploring Morocco.',
-    url: 'https://cityguide.ma/blog',
+    url: 'https://citytoursmorocco.com/blog',
     publisher: {
       '@type': 'Organization',
       name: 'CityGuide',
-      url: 'https://cityguide.ma',
+      url: 'https://citytoursmorocco.com',
     },
     blogPost: blogPosts.map((post) => ({
       '@type': 'BlogPosting',
       headline: post.title,
       description: post.excerpt,
-      url: `https://cityguide.ma/blog/${post.slug}`,
+      url: `https://citytoursmorocco.com/blog/${post.slug}`,
       image: post.image,
       datePublished: post.date,
       author: {

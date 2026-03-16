@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: 'Atlas Mountains Complete Guide - Morocco',
     description:
       'From the summit of Toubkal to the gorges of Todra. Trekking routes, mountain villages, ski resorts, and practical tips for every level.',
-    url: 'https://cityguide.ma/mountains',
+    url: 'https://citytoursmorocco.com/mountains',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1548820513-f632723d10b4?w=1200&h=630&fit=crop',
@@ -380,7 +380,7 @@ const jsonLd = {
   '@type': 'TouristAttraction',
   name: 'Atlas Mountains Morocco',
   description: 'Complete guide to the Atlas Mountains including trekking routes, gorges, mountain villages, ski resorts, and day trips.',
-  url: 'https://cityguide.ma/mountains',
+  url: 'https://citytoursmorocco.com/mountains',
   touristType: ['Adventure tourism', 'Hiking', 'Nature tourism', 'Rock climbing'],
   geo: { '@type': 'GeoCoordinates', latitude: 31.0601, longitude: -7.9118 },
   image: 'https://images.unsplash.com/photo-1548820513-f632723d10b4?w=1200',

@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     title: 'Best Moroccan Cooking Classes | Top 10 Schools & Complete Guide',
     description:
       'Learn to cook authentic Moroccan dishes in traditional kitchens. Top 10 cooking schools with real names and prices, signature dishes, market tours, step-by-step guide, booking tips, and recipes to try at home.',
-    url: 'https://cityguide.ma/cooking-classes',
+    url: 'https://citytoursmorocco.com/cooking-classes',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=1200&h=630&fit=crop',
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/cooking-classes' },
+  alternates: { canonical: 'https://citytoursmorocco.com/cooking-classes' },
 };
 
 /* ═══════════════════════════════════════════════════════════════
@@ -84,7 +84,7 @@ const jsonLd = {
   name: 'Top 10 Moroccan Cooking Classes',
   description:
     'Comprehensive guide to the best cooking classes across Morocco, featuring top schools, signature dishes, market tours, and essential spice knowledge.',
-  url: 'https://cityguide.ma/cooking-classes',
+  url: 'https://citytoursmorocco.com/cooking-classes',
   numberOfItems: 10,
   itemListElement: [
     { '@type': 'ListItem', position: 1, item: { '@type': 'LocalBusiness', name: 'La Maison Arabe', address: { '@type': 'PostalAddress', streetAddress: '1 Derb Assehbe, Bab Doukkala', addressLocality: 'Marrakech', addressCountry: 'MA' } } },

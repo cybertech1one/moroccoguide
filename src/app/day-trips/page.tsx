@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     title: 'Best Day Trips in Morocco | 25+ Excursions from Every Major City',
     description:
       'From Saharan kasbahs to Atlantic surf villages. The ultimate guide to Morocco day trips with insider tips, costs, and transport options.',
-    url: 'https://cityguide.ma/day-trips',
+    url: 'https://citytoursmorocco.com/day-trips',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&h=630&fit=crop',
@@ -85,7 +85,7 @@ export const metadata: Metadata = {
     description:
       'Waterfalls, kasbahs, Roman ruins, blue cities, and surf villages. Expert guide to day trips from every major Moroccan city.',
   },
-  alternates: { canonical: 'https://cityguide.ma/day-trips' },
+  alternates: { canonical: 'https://citytoursmorocco.com/day-trips' },
 };
 
 /* ======================================================================
@@ -98,11 +98,11 @@ const jsonLd = {
   name: 'Best Day Trips in Morocco',
   description:
     'A comprehensive guide to 25+ day trips and excursions from major Moroccan cities including Marrakech, Fes, Casablanca, Tangier, and Agadir.',
-  url: 'https://cityguide.ma/day-trips',
+  url: 'https://citytoursmorocco.com/day-trips',
   isPartOf: {
     '@type': 'WebSite',
     name: 'CityGuide',
-    url: 'https://cityguide.ma',
+    url: 'https://citytoursmorocco.com',
   },
   about: {
     '@type': 'Country',

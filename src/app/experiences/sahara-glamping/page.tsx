@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     title: 'Sahara Desert Glamping - Luxury Camping in Morocco',
     description:
       'Sleep under a billion stars in a luxury desert camp. Complete guide to Sahara glamping at Erg Chebbi and Erg Chigaga with pricing, tips, and booking advice.',
-    url: 'https://cityguide.ma/experiences/sahara-glamping',
+    url: 'https://citytoursmorocco.com/experiences/sahara-glamping',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1548017267-5765e9b2ccfb?w=1200&h=630&fit=crop',
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/experiences/sahara-glamping' },
+  alternates: { canonical: 'https://citytoursmorocco.com/experiences/sahara-glamping' },
 };
 
 /* =====================================================================
@@ -73,7 +73,7 @@ const jsonLd = {
   name: 'Sahara Desert Glamping Experience',
   description:
     'Luxury desert camping under the stars in Morocco\'s Sahara Desert at Erg Chebbi and Erg Chigaga, featuring premium tented accommodation, camel treks, traditional Berber music, and stargazing.',
-  url: 'https://cityguide.ma/experiences/sahara-glamping',
+  url: 'https://citytoursmorocco.com/experiences/sahara-glamping',
   image: 'https://images.unsplash.com/photo-1548017267-5765e9b2ccfb?w=1200&h=630&fit=crop',
   address: {
     '@type': 'PostalAddress',

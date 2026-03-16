@@ -19,11 +19,11 @@ export const metadata: Metadata = {
     title: 'Best 8 Restaurants in Chefchaouen | CityGuide',
     description:
       'Explore Chefchaouen\'s top dining spots including Casa Aladdin, Bab Ssour, Cafe Clock, and more.',
-    url: 'https://cityguide.ma/cities/chefchaouen/restaurants',
+    url: 'https://citytoursmorocco.com/cities/chefchaouen/restaurants',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://cityguide.ma/cities/chefchaouen/restaurants',
+    canonical: 'https://citytoursmorocco.com/cities/chefchaouen/restaurants',
   },
 };
 

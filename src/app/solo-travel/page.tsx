@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     title: 'Solo Travel Morocco 2025-2026 | Safety Tips, Itineraries & Budget Guide',
     description:
       'Everything you need to travel Morocco alone. Safety tips, itineraries, budget guide, digital nomad info, and how to meet people.',
-    url: 'https://cityguide.ma/solo-travel',
+    url: 'https://citytoursmorocco.com/solo-travel',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&h=630&fit=crop',
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/solo-travel' },
+  alternates: { canonical: 'https://citytoursmorocco.com/solo-travel' },
 };
 
 const jsonLd = {
@@ -75,7 +75,7 @@ const jsonLd = {
   name: 'Solo Travel in Morocco',
   description:
     'A comprehensive guide for solo travelers visiting Morocco, covering safety, destinations, budgets, digital nomad life, and itineraries.',
-  url: 'https://cityguide.ma/solo-travel',
+  url: 'https://citytoursmorocco.com/solo-travel',
   location: {
     '@type': 'Country',
     name: 'Morocco',

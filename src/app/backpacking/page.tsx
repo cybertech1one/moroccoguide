@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     title: 'Backpacking Morocco | Budget Travel Guide, Hostels & Routes',
     description:
       'The ultimate budget backpacking guide to Morocco with hostel tips, transport advice, and a 14-day route.',
-    url: 'https://cityguide.ma/backpacking',
+    url: 'https://citytoursmorocco.com/backpacking',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?w=1200&h=630&fit=crop',
@@ -62,7 +62,7 @@ const jsonLd = {
   name: 'Backpacking Morocco',
   description:
     'A comprehensive budget travel guide for backpackers visiting Morocco, covering accommodation, transport, safety, and routes.',
-  url: 'https://cityguide.ma/backpacking',
+  url: 'https://citytoursmorocco.com/backpacking',
   location: {
     '@type': 'Country',
     name: 'Morocco',

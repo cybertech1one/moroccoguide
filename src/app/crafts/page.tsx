@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     title: 'Moroccan Crafts & Artisans Guide - CityGuide',
     description:
       'Explore Morocco living heritage of 16 traditional crafts. From zellige tilework to Berber carpets, discover master artisans, workshops, museums, UNESCO heritage crafts, and expert shopping tips.',
-    url: 'https://cityguide.ma/crafts',
+    url: 'https://citytoursmorocco.com/crafts',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1531501410720-c8d437636169?w=1200&h=630&fit=crop',
@@ -84,7 +84,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/crafts' },
+  alternates: { canonical: 'https://citytoursmorocco.com/crafts' },
 };
 
 /* =====================================================================
@@ -96,15 +96,15 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'Article',
-      '@id': 'https://cityguide.ma/crafts#guide',
+      '@id': 'https://citytoursmorocco.com/crafts#guide',
       headline: 'Complete Guide to Moroccan Traditional Crafts & Artisans',
       description:
         'Comprehensive guide covering 16 traditional Moroccan crafts, master artisan profiles, craft workshops, museums, UNESCO heritage, best souks, bargaining techniques, and shipping logistics.',
-      url: 'https://cityguide.ma/crafts',
+      url: 'https://citytoursmorocco.com/crafts',
       publisher: {
         '@type': 'Organization',
         name: 'CityGuide Morocco',
-        url: 'https://cityguide.ma',
+        url: 'https://citytoursmorocco.com',
       },
     },
     {

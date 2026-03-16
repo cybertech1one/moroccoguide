@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: 'Football in Morocco | Watch Live Matches',
     description:
       'Morocco is a rising football powerhouse. Explore the Atlas Lions legacy, Botola Pro league, stadiums, and the 2030 FIFA World Cup.',
-    url: 'https://cityguide.ma/football',
+    url: 'https://citytoursmorocco.com/football',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1200&h=630&fit=crop',
@@ -72,11 +72,11 @@ const jsonLdWebPage = {
   name: 'Football in Morocco | Watch Live Matches | CityGuide',
   description:
     'Discover Moroccan football culture, watch Botola Pro matches, explore world-class stadiums, and plan for the 2030 FIFA World Cup.',
-  url: 'https://cityguide.ma/football',
+  url: 'https://citytoursmorocco.com/football',
   isPartOf: {
     '@type': 'WebSite',
     name: 'CityGuide',
-    url: 'https://cityguide.ma',
+    url: 'https://citytoursmorocco.com',
   },
   about: {
     '@type': 'Thing',
@@ -86,8 +86,8 @@ const jsonLdWebPage = {
   breadcrumb: {
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cityguide.ma' },
-      { '@type': 'ListItem', position: 2, name: 'Football', item: 'https://cityguide.ma/football' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://citytoursmorocco.com' },
+      { '@type': 'ListItem', position: 2, name: 'Football', item: 'https://citytoursmorocco.com/football' },
     ],
   },
 };

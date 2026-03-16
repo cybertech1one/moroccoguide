@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: 'Moroccan Tea Culture: The Art of Mint Tea',
     description:
       'A deep dive into the history, rituals, and social significance of Moroccan mint tea. Learn why every glass tells a story.',
-    url: 'https://cityguide.ma/blog/moroccan-tea-culture',
+    url: 'https://citytoursmorocco.com/blog/moroccan-tea-culture',
     type: 'article',
     images: [
       {
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/blog/moroccan-tea-culture' },
+  alternates: { canonical: 'https://citytoursmorocco.com/blog/moroccan-tea-culture' },
 };
 
 /* ================================================================
@@ -118,9 +118,9 @@ function JsonLd() {
     publisher: {
       '@type': 'Organization',
       name: 'CityGuide',
-      url: 'https://cityguide.ma',
+      url: 'https://citytoursmorocco.com',
     },
-    url: 'https://cityguide.ma/blog/moroccan-tea-culture',
+    url: 'https://citytoursmorocco.com/blog/moroccan-tea-culture',
     articleSection: 'Culture',
     keywords: 'Moroccan mint tea, tea ceremony, Morocco culture, atay nana',
     wordCount: 2200,

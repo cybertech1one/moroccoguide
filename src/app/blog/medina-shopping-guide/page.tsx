@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     title: 'How to Shop in Moroccan Medinas Like a Local',
     description:
       'Master haggling, know what to buy, and discover hidden artisan workshops in Morocco\'s legendary souks.',
-    url: 'https://cityguide.ma/blog/medina-shopping-guide',
+    url: 'https://citytoursmorocco.com/blog/medina-shopping-guide',
     type: 'article',
     images: [
       {
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/blog/medina-shopping-guide' },
+  alternates: { canonical: 'https://citytoursmorocco.com/blog/medina-shopping-guide' },
 };
 
 /* ================================================================
@@ -116,8 +116,8 @@ function JsonLd() {
     datePublished: '2026-03-04',
     dateModified: '2026-03-04',
     author: { '@type': 'Person', name: 'Youssef Amrani' },
-    publisher: { '@type': 'Organization', name: 'CityGuide', url: 'https://cityguide.ma' },
-    url: 'https://cityguide.ma/blog/medina-shopping-guide',
+    publisher: { '@type': 'Organization', name: 'CityGuide', url: 'https://citytoursmorocco.com' },
+    url: 'https://citytoursmorocco.com/blog/medina-shopping-guide',
     articleSection: 'Practical',
     keywords: 'Moroccan souks, haggling, medina shopping, Moroccan crafts',
     wordCount: 2400,

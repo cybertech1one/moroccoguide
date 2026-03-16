@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     title: 'Morocco Activities & Things to Do - CityGuide',
     description:
       'Explore 30+ incredible activities across Morocco. Adventure, culture, wellness, nature, and more.',
-    url: 'https://cityguide.ma/activities',
+    url: 'https://citytoursmorocco.com/activities',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&h=630&fit=crop',
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/activities' },
+  alternates: { canonical: 'https://citytoursmorocco.com/activities' },
 };
 
 /* ================================================================
@@ -643,7 +643,7 @@ function JsonLd() {
     name: 'Morocco Activities & Things to Do',
     description:
       'A curated directory of the best activities and experiences across Morocco including adventure, culture, wellness, nature, and sports.',
-    url: 'https://cityguide.ma/activities',
+    url: 'https://citytoursmorocco.com/activities',
     numberOfItems: activities.length,
     itemListElement: activities.map((a, i) => ({
       '@type': 'ListItem',
@@ -652,7 +652,7 @@ function JsonLd() {
         '@type': 'TouristAttraction',
         name: a.name,
         description: a.description,
-        url: `https://cityguide.ma/activities/${a.slug}`,
+        url: `https://citytoursmorocco.com/activities/${a.slug}`,
         image: a.image,
         address: {
           '@type': 'PostalAddress',

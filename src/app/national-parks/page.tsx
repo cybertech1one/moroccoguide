@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     title: 'National Parks & Nature Reserves Morocco | Complete Protected Areas Guide',
     description:
       'Comprehensive guide to Morocco\'s 11 national parks, nature reserves, endemic species, trails, permits, and conservation programs.',
-    url: 'https://cityguide.ma/national-parks',
+    url: 'https://citytoursmorocco.com/national-parks',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&h=630&fit=crop',
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/national-parks' },
+  alternates: { canonical: 'https://citytoursmorocco.com/national-parks' },
 };
 
 /* ================================================================
@@ -93,7 +93,7 @@ const jsonLd = {
       name: 'Morocco National Parks & Nature Reserves Guide',
       description:
         'Complete guide to Morocco\'s 11 national parks and numerous nature reserves, covering trails, endemic species, permits, conservation, and responsible tourism.',
-      url: 'https://cityguide.ma/national-parks',
+      url: 'https://citytoursmorocco.com/national-parks',
       touristType: ['Ecotourism', 'Hiking', 'Wildlife tourism', 'Nature photography'],
       image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200',
       geo: {

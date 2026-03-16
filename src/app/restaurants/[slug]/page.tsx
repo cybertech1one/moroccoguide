@@ -493,7 +493,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       images: [restaurant.images[0]],
     },
     alternates: {
-      canonical: `https://cityguide.ma/restaurants/${restaurant.slug}`,
+      canonical: `https://citytoursmorocco.com/restaurants/${restaurant.slug}`,
     },
   }
 }
@@ -514,7 +514,7 @@ export default async function RestaurantDetailPage({ params }: PageProps) {
   const restaurantSchema = generateStructuredData('Restaurant', {
     name: restaurant.name,
     description: truncate(restaurant.description, 300),
-    url: `https://cityguide.ma/restaurants/${restaurant.slug}`,
+    url: `https://citytoursmorocco.com/restaurants/${restaurant.slug}`,
     image: restaurant.images,
     servesCuisine: restaurant.cuisine,
     address: {
@@ -546,19 +546,19 @@ export default async function RestaurantDetailPage({ params }: PageProps) {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://cityguide.ma',
+        item: 'https://citytoursmorocco.com',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Restaurants',
-        item: 'https://cityguide.ma/restaurants',
+        item: 'https://citytoursmorocco.com/restaurants',
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: restaurant.name,
-        item: `https://cityguide.ma/restaurants/${restaurant.slug}`,
+        item: `https://citytoursmorocco.com/restaurants/${restaurant.slug}`,
       },
     ],
   })

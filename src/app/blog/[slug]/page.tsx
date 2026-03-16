@@ -470,7 +470,7 @@ export function generateMetadata({
     openGraph: {
       title: post.title,
       description: post.excerpt,
-      url: `https://cityguide.ma/blog/${post.slug}`,
+      url: `https://citytoursmorocco.com/blog/${post.slug}`,
       type: 'article',
       publishedTime: post.date,
       authors: [post.author.name],
@@ -484,7 +484,7 @@ export function generateMetadata({
         },
       ],
     },
-    alternates: { canonical: `https://cityguide.ma/blog/${post.slug}` },
+    alternates: { canonical: `https://citytoursmorocco.com/blog/${post.slug}` },
   };
 }
 
@@ -498,7 +498,7 @@ function JsonLd({ post }: { post: BlogPost }) {
     '@type': 'BlogPosting',
     headline: post.title,
     description: post.excerpt,
-    url: `https://cityguide.ma/blog/${post.slug}`,
+    url: `https://citytoursmorocco.com/blog/${post.slug}`,
     image: post.image,
     datePublished: post.date,
     dateModified: post.date,
@@ -509,15 +509,15 @@ function JsonLd({ post }: { post: BlogPost }) {
     publisher: {
       '@type': 'Organization',
       name: 'CityGuide',
-      url: 'https://cityguide.ma',
+      url: 'https://citytoursmorocco.com',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://cityguide.ma/logo.png',
+        url: 'https://citytoursmorocco.com/logo.png',
       },
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://cityguide.ma/blog/${post.slug}`,
+      '@id': `https://citytoursmorocco.com/blog/${post.slug}`,
     },
     articleSection: post.category,
     keywords: post.tags.join(', '),

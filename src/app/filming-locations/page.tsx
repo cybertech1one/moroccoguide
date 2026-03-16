@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     title: 'Morocco Filming Locations | Hollywood of Africa',
     description:
       'Visit the real-world locations of Gladiator, Game of Thrones, James Bond, The Mummy, John Wick, and more. Morocco is the Hollywood of Africa.',
-    url: 'https://cityguide.ma/filming-locations',
+    url: 'https://citytoursmorocco.com/filming-locations',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=1200&h=630&fit=crop',
@@ -91,7 +91,7 @@ const jsonLd = {
   name: 'Morocco Filming Locations',
   description:
     'Guide to famous filming locations across Morocco, known as the Hollywood of Africa. Home to Atlas Studios and locations from Gladiator, Game of Thrones, and many more.',
-  url: 'https://cityguide.ma/filming-locations',
+  url: 'https://citytoursmorocco.com/filming-locations',
   touristType: ['Cultural tourism', 'Film tourism'],
   image: 'https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=1200',
 };

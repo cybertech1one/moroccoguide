@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     title: 'Getting Around Morocco - Complete Transport Guide | CityGuide',
     description:
       'Everything you need to know about trains, buses, taxis, flights, ride-hailing apps, and car rental in Morocco with real costs in MAD.',
-    url: 'https://cityguide.ma/transport',
+    url: 'https://citytoursmorocco.com/transport',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1200&h=630&fit=crop',
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/transport' },
+  alternates: { canonical: 'https://citytoursmorocco.com/transport' },
 };
 
 /* ===================================================================
@@ -77,8 +77,8 @@ const jsonLd = {
   name: 'Getting Around Morocco | Transport Guide',
   description:
     'Comprehensive guide to transportation in Morocco including trains, buses, taxis, car rental, domestic flights, and ride-hailing apps with full pricing.',
-  url: 'https://cityguide.ma/transport',
-  isPartOf: { '@type': 'WebSite', name: 'CityGuide Morocco', url: 'https://cityguide.ma' },
+  url: 'https://citytoursmorocco.com/transport',
+  isPartOf: { '@type': 'WebSite', name: 'CityGuide Morocco', url: 'https://citytoursmorocco.com' },
 };
 
 /* ===================================================================

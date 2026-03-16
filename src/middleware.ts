@@ -7,7 +7,7 @@ import type { NextRequest } from 'next/server';
 // slash redirect, canonical URL handling, and rate limiting
 // ═══════════════════════════════════════════════════════════════
 
-const CANONICAL_HOST = 'cityguide.ma';
+const CANONICAL_HOST = 'citytoursmorocco.com';
 const CANONICAL_PROTOCOL = 'https';
 
 // ── Simple In-Memory Rate Limiter ──
@@ -135,7 +135,7 @@ export function middleware(request: NextRequest) {
   }
 
   // ── Canonical Host Enforcement (www -> non-www) ──
-  // Redirect www.cityguide.ma -> cityguide.ma for canonical URL consistency
+  // Redirect www.citytoursmorocco.com -> citytoursmorocco.com for canonical URL consistency
   if (host.startsWith('www.')) {
     const canonicalUrl = `${CANONICAL_PROTOCOL}://${CANONICAL_HOST}${pathname}${search}`;
     return NextResponse.redirect(canonicalUrl, 301);

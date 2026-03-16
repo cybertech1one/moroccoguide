@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: 'Best 8 Restaurants in Rabat',
     description:
       'The ultimate guide to dining in Rabat, Morocco\'s elegant capital city.',
-    url: 'https://cityguide.ma/cities/rabat/restaurants',
+    url: 'https://citytoursmorocco.com/cities/rabat/restaurants',
   },
 };
 

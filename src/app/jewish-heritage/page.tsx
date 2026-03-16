@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     title: 'Jewish Heritage in Morocco - CityGuide',
     description:
       'Discover 2,000 years of Jewish-Moroccan coexistence. Explore synagogues, mellahs, cemeteries, and the only Jewish museum in the Arab world.',
-    url: 'https://cityguide.ma/jewish-heritage',
+    url: 'https://citytoursmorocco.com/jewish-heritage',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=1200&h=630&fit=crop',
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/jewish-heritage' },
+  alternates: { canonical: 'https://citytoursmorocco.com/jewish-heritage' },
 };
 
 /* ═══════════════════════════════════════════════════════════════
@@ -81,15 +81,15 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  '@id': 'https://cityguide.ma/jewish-heritage',
+  '@id': 'https://citytoursmorocco.com/jewish-heritage',
   name: 'Jewish Heritage in Morocco',
   description:
     'Comprehensive guide to Jewish heritage in Morocco covering synagogues, mellah districts, cemeteries, museums, festivals, cuisine, heritage tours, and practical visiting information.',
-  url: 'https://cityguide.ma/jewish-heritage',
+  url: 'https://citytoursmorocco.com/jewish-heritage',
   isPartOf: {
     '@type': 'WebSite',
     name: 'CityGuide Morocco',
-    url: 'https://cityguide.ma',
+    url: 'https://citytoursmorocco.com',
   },
   about: {
     '@type': 'Country',
@@ -98,8 +98,8 @@ const jsonLd = {
   breadcrumb: {
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cityguide.ma' },
-      { '@type': 'ListItem', position: 2, name: 'Jewish Heritage', item: 'https://cityguide.ma/jewish-heritage' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://citytoursmorocco.com' },
+      { '@type': 'ListItem', position: 2, name: 'Jewish Heritage', item: 'https://citytoursmorocco.com/jewish-heritage' },
     ],
   },
 };

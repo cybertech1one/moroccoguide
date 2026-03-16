@@ -19,11 +19,11 @@ export const metadata: Metadata = {
     title: 'Best 8 Hotels in Casablanca | CityGuide',
     description:
       'Discover Casablanca\'s finest accommodations from Five-star luxury to stylish boutique hotels.',
-    url: 'https://cityguide.ma/cities/casablanca/hotels',
+    url: 'https://citytoursmorocco.com/cities/casablanca/hotels',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://cityguide.ma/cities/casablanca/hotels',
+    canonical: 'https://citytoursmorocco.com/cities/casablanca/hotels',
   },
 };
 

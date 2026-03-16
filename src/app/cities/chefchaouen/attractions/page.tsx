@@ -21,11 +21,11 @@ export const metadata: Metadata = {
     title: 'Top 8 Attractions in Chefchaouen | CityGuide',
     description:
       'Explore Chefchaouen\'s most iconic attractions including the Blue Medina, Spanish Mosque viewpoint, and Akchour Waterfalls.',
-    url: 'https://cityguide.ma/cities/chefchaouen/attractions',
+    url: 'https://citytoursmorocco.com/cities/chefchaouen/attractions',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://cityguide.ma/cities/chefchaouen/attractions',
+    canonical: 'https://citytoursmorocco.com/cities/chefchaouen/attractions',
   },
 };
 

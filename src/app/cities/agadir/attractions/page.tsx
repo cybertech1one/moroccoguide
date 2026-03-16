@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: 'Top 8 Attractions in Agadir',
     description:
       'Explore the best beaches, nature parks, and cultural sites in Agadir, Morocco.',
-    url: 'https://cityguide.ma/cities/agadir/attractions',
+    url: 'https://citytoursmorocco.com/cities/agadir/attractions',
   },
 };
 

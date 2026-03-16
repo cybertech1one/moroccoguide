@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     title: 'Morocco Events & Festivals Calendar 2025-2026 - CityGuide',
     description:
       'Explore 45+ festivals and events across Morocco. Music, film, culture, food, and traditional celebrations throughout the year.',
-    url: 'https://cityguide.ma/events',
+    url: 'https://citytoursmorocco.com/events',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=1200&h=630&fit=crop',
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/events' },
+  alternates: { canonical: 'https://citytoursmorocco.com/events' },
 };
 
 /* ═══════════════════════════════════════════════════════════════
@@ -983,7 +983,7 @@ function JsonLd() {
     name: 'Morocco Events & Festivals Calendar 2025-2026',
     description:
       'A comprehensive calendar of festivals, celebrations, and cultural events across Morocco throughout the year.',
-    url: 'https://cityguide.ma/events',
+    url: 'https://citytoursmorocco.com/events',
     numberOfItems: events.length,
     itemListElement: events.map((e, i) => ({
       '@type': 'ListItem',
@@ -992,7 +992,7 @@ function JsonLd() {
         '@type': 'Event',
         name: e.name,
         description: e.description,
-        url: `https://cityguide.ma/events/${e.slug}`,
+        url: `https://citytoursmorocco.com/events/${e.slug}`,
         image: e.image,
         location: {
           '@type': 'Place',

@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     title: 'Adventure Morocco | Surfing, Trekking, Rock Climbing, Desert Sports & More',
     description:
       'Morocco\'s ultimate adventure guide. 20 activities from Atlantic surf to Saharan sandboarding, with seasons, costs, and difficulty ratings.',
-    url: 'https://cityguide.ma/adventure',
+    url: 'https://citytoursmorocco.com/adventure',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=1200&h=630&fit=crop',
@@ -68,7 +68,7 @@ const jsonLd = {
   name: 'Adventure Travel in Morocco',
   description:
     'A comprehensive guide to 20+ adventure sports and outdoor activities in Morocco, including surfing, trekking, rock climbing, desert sports, skiing, and hot air ballooning.',
-  url: 'https://cityguide.ma/adventure',
+  url: 'https://citytoursmorocco.com/adventure',
   location: {
     '@type': 'Country',
     name: 'Morocco',

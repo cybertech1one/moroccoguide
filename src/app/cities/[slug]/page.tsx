@@ -101,7 +101,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       images: [city.heroImage],
     },
     alternates: {
-      canonical: `https://cityguide.ma/cities/${city.slug}`,
+      canonical: `https://citytoursmorocco.com/cities/${city.slug}`,
     },
   }
 }
@@ -936,19 +936,19 @@ export default async function CityDetailPage({ params }: PageProps) {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://cityguide.ma',
+        item: 'https://citytoursmorocco.com',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Cities',
-        item: 'https://cityguide.ma/cities',
+        item: 'https://citytoursmorocco.com/cities',
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: city.name,
-        item: `https://cityguide.ma/cities/${city.slug}`,
+        item: `https://citytoursmorocco.com/cities/${city.slug}`,
       },
     ],
   })

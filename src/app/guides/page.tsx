@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     title: 'Local Guides in Morocco - CityGuide',
     description:
       'Connect with 20+ certified local guides across Morocco for personalized tours and authentic experiences.',
-    url: 'https://cityguide.ma/guides',
+    url: 'https://citytoursmorocco.com/guides',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=1200&h=630&fit=crop',
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/guides' },
+  alternates: { canonical: 'https://citytoursmorocco.com/guides' },
 };
 
 /* ================================================================
@@ -404,7 +404,7 @@ function JsonLd() {
     name: 'Local Guides in Morocco',
     description:
       'A curated directory of certified local tour guides across Morocco offering personalized tours and authentic cultural experiences.',
-    url: 'https://cityguide.ma/guides',
+    url: 'https://citytoursmorocco.com/guides',
     numberOfItems: guides.length,
     itemListElement: guides.map((g, i) => ({
       '@type': 'ListItem',
@@ -413,7 +413,7 @@ function JsonLd() {
         '@type': 'TouristInformationCenter',
         name: g.name,
         description: g.bio,
-        url: `https://cityguide.ma/guides/${g.slug}`,
+        url: `https://citytoursmorocco.com/guides/${g.slug}`,
         image: g.image,
         address: {
           '@type': 'PostalAddress',

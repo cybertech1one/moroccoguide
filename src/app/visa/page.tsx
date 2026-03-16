@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     title: 'Visa & Entry Requirements for Morocco 2025-2026 | CityGuide',
     description:
       'Do you need a visa for Morocco? Check visa-free countries, visa-on-arrival, e-visa info, entry requirements, customs rules, embassy directory, and practical immigration advice.',
-    url: 'https://cityguide.ma/visa',
+    url: 'https://citytoursmorocco.com/visa',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=1200&h=630&fit=crop',
@@ -83,7 +83,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/visa' },
+  alternates: { canonical: 'https://citytoursmorocco.com/visa' },
 };
 
 /* ===================================================================
@@ -96,8 +96,8 @@ const jsonLd = {
   name: 'Visa & Entry Requirements for Morocco 2025-2026',
   description:
     'Complete guide to visa and entry requirements for visiting Morocco, including visa-free countries, visa-on-arrival, e-visa, passport rules, customs, embassy directory, business travel, and immigration procedures.',
-  url: 'https://cityguide.ma/visa',
-  isPartOf: { '@type': 'WebSite', name: 'CityGuide Morocco', url: 'https://cityguide.ma' },
+  url: 'https://citytoursmorocco.com/visa',
+  isPartOf: { '@type': 'WebSite', name: 'CityGuide Morocco', url: 'https://citytoursmorocco.com' },
 };
 
 /* ===================================================================

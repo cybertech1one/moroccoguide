@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     title: 'Where to Stay in Morocco - CityGuide',
     description:
       'Browse 25+ hand-picked accommodations across Morocco. From luxury palaces to authentic riads and desert camps.',
-    url: 'https://cityguide.ma/accommodations',
+    url: 'https://citytoursmorocco.com/accommodations',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1200&h=630&fit=crop',
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/accommodations' },
+  alternates: { canonical: 'https://citytoursmorocco.com/accommodations' },
 };
 
 /* ═══════════════════════════════════════════════════════════════
@@ -374,7 +374,7 @@ function JsonLd() {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     name: 'Where to Stay in Morocco',
-    url: 'https://cityguide.ma/accommodations',
+    url: 'https://citytoursmorocco.com/accommodations',
     numberOfItems: accommodations.length,
     itemListElement: accommodations.map((a, i) => ({
       '@type': 'ListItem',
@@ -383,7 +383,7 @@ function JsonLd() {
         '@type': 'LodgingBusiness',
         name: a.name,
         description: a.description,
-        url: `https://cityguide.ma/accommodations/${a.slug}`,
+        url: `https://citytoursmorocco.com/accommodations/${a.slug}`,
         image: a.image,
         starRating: { '@type': 'Rating', ratingValue: a.starRating },
         priceRange: a.priceFromMad < 500 ? '$' : a.priceFromMad < 2000 ? '$$' : a.priceFromMad < 5000 ? '$$$' : '$$$$',

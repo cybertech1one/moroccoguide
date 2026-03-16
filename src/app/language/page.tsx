@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     title: 'Moroccan Arabic & Language Guide - Essential Darija Phrases',
     description:
       'Master 60+ essential Moroccan Arabic (Darija) phrases for travel. Greetings, haggling, dining, directions, food vocabulary, and more.',
-    url: 'https://cityguide.ma/language',
+    url: 'https://citytoursmorocco.com/language',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1577741314755-048d8525d31e?w=1200&h=630&fit=crop',
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/language' },
+  alternates: { canonical: 'https://citytoursmorocco.com/language' },
 };
 
 /* ===================================================================
@@ -75,15 +75,15 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  '@id': 'https://cityguide.ma/language',
+  '@id': 'https://citytoursmorocco.com/language',
   name: 'Moroccan Arabic & Language Guide',
   description:
     'Comprehensive guide to languages spoken in Morocco with 60+ essential Darija phrases, food vocabulary, pronunciation tips, and regional dialect differences.',
-  url: 'https://cityguide.ma/language',
+  url: 'https://citytoursmorocco.com/language',
   isPartOf: {
     '@type': 'WebSite',
     name: 'CityGuide Morocco',
-    url: 'https://cityguide.ma',
+    url: 'https://citytoursmorocco.com',
   },
   about: {
     '@type': 'Country',
@@ -92,8 +92,8 @@ const jsonLd = {
   breadcrumb: {
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cityguide.ma' },
-      { '@type': 'ListItem', position: 2, name: 'Language Guide', item: 'https://cityguide.ma/language' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://citytoursmorocco.com' },
+      { '@type': 'ListItem', position: 2, name: 'Language Guide', item: 'https://citytoursmorocco.com/language' },
     ],
   },
 };

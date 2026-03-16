@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: 'Best 6 Restaurants in Agadir',
     description:
       'The ultimate guide to dining in Agadir, from fresh ocean catches to international cuisine.',
-    url: 'https://cityguide.ma/cities/agadir/restaurants',
+    url: 'https://citytoursmorocco.com/cities/agadir/restaurants',
   },
 };
 

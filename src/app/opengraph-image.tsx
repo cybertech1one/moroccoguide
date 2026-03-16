@@ -124,7 +124,7 @@ export default function OpenGraphImage() {
         {/* Bottom: URL */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
           <span style={{ fontSize: '18px', color: '#C4960C', fontWeight: 600 }}>
-            cityguide.ma
+            citytoursmorocco.com
           </span>
           <div
             style={{

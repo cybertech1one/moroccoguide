@@ -19,11 +19,11 @@ export const metadata: Metadata = {
     title: 'Best 10 Hotels & Riads in Fes | CityGuide',
     description:
       'Discover Fes\'s finest accommodations from luxury medina riads to contemporary boutique hotels.',
-    url: 'https://cityguide.ma/cities/fes/hotels',
+    url: 'https://citytoursmorocco.com/cities/fes/hotels',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://cityguide.ma/cities/fes/hotels',
+    canonical: 'https://citytoursmorocco.com/cities/fes/hotels',
   },
 };
 

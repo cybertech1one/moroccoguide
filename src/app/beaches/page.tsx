@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     title: 'Morocco Beach Guide - 20 Best Beaches',
     description:
       'The ultimate guide to Morocco\'s beaches. Atlantic surf, Mediterranean coves, and hidden gems along 3,500 km of coastline.',
-    url: 'https://cityguide.ma/beaches',
+    url: 'https://citytoursmorocco.com/beaches',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&h=630&fit=crop',
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/beaches' },
+  alternates: { canonical: 'https://citytoursmorocco.com/beaches' },
 };
 
 /* ═══════════════════════════════════════════════════════════════
@@ -80,11 +80,11 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'TouristAttraction',
-      '@id': 'https://cityguide.ma/beaches#guide',
+      '@id': 'https://citytoursmorocco.com/beaches#guide',
       name: 'Morocco Beaches Guide',
       description:
         'Complete guide to the 20 best beaches in Morocco along the Atlantic and Mediterranean coasts, covering surfing, kitesurfing, swimming, safety, and coastal road trips.',
-      url: 'https://cityguide.ma/beaches',
+      url: 'https://citytoursmorocco.com/beaches',
       touristType: ['Beach tourism', 'Water sports', 'Surfing', 'Kitesurfing'],
       image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200',
       address: {

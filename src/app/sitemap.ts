@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { cities } from '@/lib/data/cities';
 
-const BASE_URL = 'https://cityguide.ma';
+const BASE_URL = 'https://citytoursmorocco.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -32,28 +32,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // ── Directory Pages (category index pages) ──
-  const directoryRoutes = [
+  // ── Major Section Index Pages (high priority directory/category pages) ──
+  const majorSectionRoutes = [
     '/cities',
-    '/attractions',
     '/tours',
+    '/food',
+    '/culture',
+    '/attractions',
     '/accommodations',
     '/restaurants',
+    '/experiences',
+    '/itineraries',
     '/activities',
     '/guides',
     '/events',
-    '/itineraries',
-    '/experiences',
-    '/blog',
     '/festivals',
+    '/blog',
   ];
 
-  const directoryPages: MetadataRoute.Sitemap = directoryRoutes.map(
+  const majorSectionPages: MetadataRoute.Sitemap = majorSectionRoutes.map(
     (route) => ({
       url: `${BASE_URL}${route}`,
       lastModified: now,
       changeFrequency: 'weekly' as const,
-      priority: 0.8,
+      priority: 0.9,
     })
   );
 
@@ -69,15 +71,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const contentRoutes = [
     '/tips',
     '/gallery',
-    '/food',
-    '/culture',
     '/history',
     '/shopping',
     '/regions',
     '/transport',
     '/safety',
     '/visa',
-    '/search',
     '/football',
     '/day-trips',
     '/family-guide',
@@ -113,14 +112,102 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/unesco',
     '/best-time',
     '/airports',
+    '/trekking',
+    '/climbing',
+    '/water-sports',
+    '/national-parks',
+    '/oases',
+    '/overlanding',
+    '/horse-riding',
+    '/health',
+    '/expat-guide',
+    '/seniors',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
     url: `${BASE_URL}${route}`,
     lastModified: now,
     changeFrequency: 'monthly' as const,
-    priority: 0.7,
+    priority: 0.8,
   }));
+
+  // ── Itinerary Detail Pages ──
+  const itinerarySlugs = [
+    '7-day-morocco',
+    '3-day-marrakech',
+    '10-day-grand-tour',
+    '5-day-desert',
+  ];
+  const itineraryPages: MetadataRoute.Sitemap = itinerarySlugs.map((slug) => ({
+    url: `${BASE_URL}/itineraries/${slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }));
+
+  // ── Experience Detail Pages ──
+  const experienceSlugs = [
+    'sahara-glamping',
+    'moroccan-cooking-class',
+    'hammam-ritual',
+    'atlas-day-hike',
+    'medina-food-tour',
+  ];
+  const experiencePages: MetadataRoute.Sitemap = experienceSlugs.map(
+    (slug) => ({
+      url: `${BASE_URL}/experiences/${slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    })
+  );
+
+  // ── City Subpages (attractions, restaurants, hotels, experiences per city) ──
+  const citySubpageRoutes = [
+    // Marrakech
+    '/cities/marrakech/attractions',
+    '/cities/marrakech/restaurants',
+    '/cities/marrakech/hotels',
+    // Fes
+    '/cities/fes/attractions',
+    '/cities/fes/restaurants',
+    '/cities/fes/hotels',
+    // Casablanca
+    '/cities/casablanca/attractions',
+    '/cities/casablanca/restaurants',
+    '/cities/casablanca/hotels',
+    // Chefchaouen
+    '/cities/chefchaouen/attractions',
+    '/cities/chefchaouen/restaurants',
+    // Essaouira
+    '/cities/essaouira/attractions',
+    '/cities/essaouira/restaurants',
+    // Tangier
+    '/cities/tangier/attractions',
+    '/cities/tangier/restaurants',
+    // Rabat
+    '/cities/rabat/attractions',
+    '/cities/rabat/restaurants',
+    // Agadir
+    '/cities/agadir/attractions',
+    '/cities/agadir/restaurants',
+    // Ouarzazate
+    '/cities/ouarzazate/attractions',
+    '/cities/ouarzazate/restaurants',
+    // Merzouga
+    '/cities/merzouga/attractions',
+    '/cities/merzouga/experiences',
+    // Note: standalone city pages (dakhla, ifrane, tetouan, el-jadida, asilah)
+    // are already generated dynamically via cityPages from the cities data array.
+  ];
+  const citySubPages: MetadataRoute.Sitemap = citySubpageRoutes.map(
+    (route) => ({
+      url: `${BASE_URL}${route}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    })
+  );
 
   // ── Blog Articles ──
   const blogArticleSlugs = [
@@ -138,37 +225,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   );
 
-  // ── Tool Pages ──
-  const toolRoutes = [
-    '/tools',
-    '/tools/planner',
-    '/tools/budget',
-    '/tools/currency',
-    '/tools/flights',
-    '/tools/map',
-    '/tools/packing',
-    '/tools/weather',
-    '/tools/distance',
-  ];
-
-  const toolPages: MetadataRoute.Sitemap = toolRoutes.map((route) => ({
-    url: `${BASE_URL}${route}`,
-    lastModified: now,
-    changeFrequency: 'monthly' as const,
-    priority: 0.6,
-  }));
-
-  // ── Info Pages (low change frequency) ──
-  const infoRoutes = ['/about', '/contact', '/privacy', '/terms'];
-
-  const infoPages: MetadataRoute.Sitemap = infoRoutes.map((route) => ({
-    url: `${BASE_URL}${route}`,
-    lastModified: now,
-    changeFrequency: 'yearly' as const,
-    priority: 0.4,
-  }));
-
-  // ── Detail Pages (attractions, tours, accommodations, restaurants) ──
+  // ── Detail Pages (attractions, tours, accommodations, restaurants — dynamic [slug]) ──
   const attractionSlugs = [
     'jemaa-el-fnaa',
     'hassan-ii-mosque',
@@ -265,96 +322,62 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   );
 
-  // ── City Subpages (attractions, restaurants, hotels per city) ──
-  const citySubpageRoutes = [
-    // Marrakech
-    '/cities/marrakech/attractions',
-    '/cities/marrakech/restaurants',
-    '/cities/marrakech/hotels',
-    // Fes
-    '/cities/fes/attractions',
-    '/cities/fes/restaurants',
-    '/cities/fes/hotels',
-    // Casablanca
-    '/cities/casablanca/attractions',
-    '/cities/casablanca/restaurants',
-    '/cities/casablanca/hotels',
-    // Chefchaouen
-    '/cities/chefchaouen/attractions',
-    '/cities/chefchaouen/restaurants',
-    // Essaouira
-    '/cities/essaouira/attractions',
-    '/cities/essaouira/restaurants',
-    // Tangier
-    '/cities/tangier/attractions',
-    '/cities/tangier/restaurants',
-    // Rabat
-    '/cities/rabat/attractions',
-    '/cities/rabat/restaurants',
-    // Agadir
-    '/cities/agadir/attractions',
-    '/cities/agadir/restaurants',
-    // Ouarzazate
-    '/cities/ouarzazate/attractions',
-    '/cities/ouarzazate/restaurants',
-    // Merzouga
-    '/cities/merzouga/attractions',
-    '/cities/merzouga/experiences',
-    // Note: standalone city pages (dakhla, ifrane, tetouan, el-jadida, asilah)
-    // are already generated dynamically via cityPages from the cities data array.
+  // ── Tool Pages ──
+  const toolRoutes = [
+    '/tools',
+    '/tools/planner',
+    '/tools/budget',
+    '/tools/currency',
+    '/tools/flights',
+    '/tools/map',
+    '/tools/packing',
+    '/tools/weather',
+    '/tools/distance',
   ];
-  const citySubPages: MetadataRoute.Sitemap = citySubpageRoutes.map(
-    (route) => ({
-      url: `${BASE_URL}${route}`,
-      lastModified: now,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    })
-  );
 
-  // ── Itinerary Detail Pages ──
-  const itinerarySlugs = [
-    '7-day-morocco',
-    '3-day-marrakech',
-    '10-day-grand-tour',
-    '5-day-desert',
-  ];
-  const itineraryPages: MetadataRoute.Sitemap = itinerarySlugs.map((slug) => ({
-    url: `${BASE_URL}/itineraries/${slug}`,
+  const toolPages: MetadataRoute.Sitemap = toolRoutes.map((route) => ({
+    url: `${BASE_URL}${route}`,
     lastModified: now,
     changeFrequency: 'monthly' as const,
-    priority: 0.8,
+    priority: 0.6,
   }));
 
-  // ── Experience Detail Pages ──
-  const experienceSlugs = [
-    'sahara-glamping',
-    'moroccan-cooking-class',
-    'hammam-ritual',
-    'atlas-day-hike',
+  // ── Utility Pages ──
+  const utilityPages: MetadataRoute.Sitemap = [
+    {
+      url: `${BASE_URL}/search`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.5,
+    },
   ];
-  const experiencePages: MetadataRoute.Sitemap = experienceSlugs.map((slug) => ({
-    url: `${BASE_URL}/experiences/${slug}`,
+
+  // ── Info Pages (low change frequency) ──
+  const infoRoutes = ['/about', '/contact', '/privacy', '/terms'];
+
+  const infoPages: MetadataRoute.Sitemap = infoRoutes.map((route) => ({
+    url: `${BASE_URL}${route}`,
     lastModified: now,
-    changeFrequency: 'monthly' as const,
-    priority: 0.8,
+    changeFrequency: 'yearly' as const,
+    priority: 0.4,
   }));
 
   return [
     ...homepage,
     ...seoPages,
-    ...directoryPages,
+    ...majorSectionPages,
     ...cityPages,
     ...contentPages,
-    ...blogArticlePages,
     ...itineraryPages,
     ...experiencePages,
-    ...toolPages,
-    ...infoPages,
+    ...citySubPages,
+    ...blogArticlePages,
     ...attractionPages,
     ...tourPages,
     ...accommodationPages,
     ...restaurantPages,
-    ...citySubPages,
+    ...toolPages,
+    ...utilityPages,
+    ...infoPages,
   ];
 }

@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: 'Morocco Nightlife & Entertainment - CityGuide',
     description:
       'Explore 30+ of the best nightlife venues across Morocco. Clubs, bars, lounges, rooftop terraces, live music venues, and legendary cafes in 7 cities.',
-    url: 'https://cityguide.ma/nightlife',
+    url: 'https://citytoursmorocco.com/nightlife',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=1200&h=630&fit=crop',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  alternates: { canonical: 'https://cityguide.ma/nightlife' },
+  alternates: { canonical: 'https://citytoursmorocco.com/nightlife' },
 };
 
 /* ═══════════════════════════════════════════════════════════════
@@ -700,7 +700,7 @@ function JsonLd() {
     name: 'Morocco Nightlife & Entertainment',
     description:
       'A curated directory of the best nightlife venues across Morocco including clubs, bars, lounges, rooftop terraces, live music venues, and cafes.',
-    url: 'https://cityguide.ma/nightlife',
+    url: 'https://citytoursmorocco.com/nightlife',
     numberOfItems: venues.length,
     itemListElement: venues.map((v, i) => ({
       '@type': 'ListItem',
@@ -709,7 +709,7 @@ function JsonLd() {
         '@type': 'BarOrPub',
         name: v.name,
         description: v.description,
-        url: `https://cityguide.ma/nightlife#${v.name.toLowerCase().replace(/\s+/g, '-')}`,
+        url: `https://citytoursmorocco.com/nightlife#${v.name.toLowerCase().replace(/\s+/g, '-')}`,
         image: v.image,
         address: {
           '@type': 'PostalAddress',

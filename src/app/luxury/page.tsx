@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     title: 'Luxury Morocco | 5-Star Hotels, Private Tours & Exclusive Experiences',
     description:
       'Experience the finest Morocco has to offer. Palace hotels, private tours, and bespoke luxury experiences.',
-    url: 'https://cityguide.ma/luxury',
+    url: 'https://citytoursmorocco.com/luxury',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1200&h=630&fit=crop',
@@ -66,7 +66,7 @@ const jsonLd = {
   name: 'Luxury Travel in Morocco',
   description:
     'A guide to the finest luxury travel experiences in Morocco, including palace hotels, private tours, and exclusive experiences.',
-  url: 'https://cityguide.ma/luxury',
+  url: 'https://citytoursmorocco.com/luxury',
   location: {
     '@type': 'Country',
     name: 'Morocco',
