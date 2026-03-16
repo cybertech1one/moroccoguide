@@ -4,826 +4,799 @@ import {
   ChevronRight,
   Home,
   Wind,
-  Mountain,
-  Sun,
-  Calendar,
   MapPin,
+  Star,
+  Clock,
   DollarSign,
+  Calendar,
   CheckCircle,
+  Camera,
   AlertTriangle,
   Shield,
-  Compass,
-  Users,
-  Clock,
-  Camera,
-  Eye,
-  Star,
-  Info,
-  Lightbulb,
+  Sun,
   ArrowRight,
-  Sparkles,
   CloudSun,
   Sunrise,
+  Eye,
+  Mountain,
+  Plane,
+  Users,
+  ThumbsUp,
+  Info,
   CircleDot,
   Gauge,
-  Plane,
-  Zap,
-  Target,
-  TreePine,
-  Glasses,
-  BookOpen,
+  HelpCircle,
+  Phone,
+  Globe,
+  Shirt,
+  Weight,
+  ChevronDown,
 } from 'lucide-react';
 
-/* ===================================================================
-   SEO METADATA
-   =================================================================== */
-
 export const metadata: Metadata = {
-  title: 'Hot Air Balloon & Aerial Activities in Morocco 2025-2026 | Marrakech Balloon Rides, Paragliding, Zip Lining',
+  title: 'Hot Air Balloon & Aerial Adventures Morocco | Balloon Rides, Paragliding, Helicopter Tours',
   description:
-    'Complete guide to hot air balloon rides and aerial activities in Morocco. Marrakech balloon flights over the Palmeraie and Atlas foothills, paragliding in Aguergour and Ifrane, zip lining at Terres d\'Amanar, helicopter tours, skydiving, aerial photography tips, prices, and booking advice for 2025-2026.',
+    'Soar above Morocco with hot air balloon rides over Marrakech and the Atlas Mountains, paragliding in Aguergour, helicopter tours, zip lining at Terres d\'Amanar, and more aerial adventures. Prices from 800 MAD.',
   keywords: [
-    'hot air balloon Morocco',
-    'Marrakech balloon ride',
-    'Morocco aerial activities',
-    'paragliding Morocco',
-    'Aguergour paragliding',
-    'Ifrane paragliding',
-    'zip lining Morocco',
-    'Terres d\'Amanar adventure park',
-    'helicopter tour Marrakech',
-    'Atlas Mountains helicopter',
-    'skydiving Morocco',
-    'Morocco balloon flight',
-    'Palmeraie balloon ride',
-    'Marrakech sunrise balloon',
-    'Morocco adventure activities',
-    'aerial photography Morocco',
-    'tandem paragliding Morocco',
-    'canyon zip line Morocco',
-    'Morocco balloon price',
-    'Morocco flight experience',
-    'Berber breakfast balloon',
-    'Morocco adventure sports',
-    'Marrakech excursions',
-    'Morocco outdoor activities',
+    'hot air balloon marrakech',
+    'hot air balloon morocco',
+    'ciel d afrique marrakech',
+    'marrakech by air',
+    'paragliding morocco',
+    'paragliding aguergour',
+    'helicopter tour marrakech',
+    'zip lining morocco',
+    'terres d amanar',
+    'aerial adventures morocco',
+    'balloon ride atlas mountains',
+    'skydiving morocco',
+    'ultralight morocco',
+    'microlight marrakech',
+    'morocco from above',
+    'balloon flight marrakech price',
   ],
   openGraph: {
-    title: 'Hot Air Balloon & Aerial Activities in Morocco 2025-2026 | Complete Guide | CityGuide',
+    title: 'Hot Air Balloon & Aerial Adventures Morocco | Balloon Rides, Paragliding & More',
     description:
-      'Everything you need to know about hot air balloon rides and aerial activities in Morocco. Sunrise flights over Marrakech, paragliding, zip lining, helicopter tours, and aerial photography tips.',
+      'Complete guide to Morocco\'s aerial experiences. Hot air balloon flights from 1,500 MAD, paragliding from 800 MAD, helicopter tours, zip lining, and more.',
     url: 'https://citytoursmorocco.com/hot-air-balloon',
     images: [
       {
-        url: '/images/hero-marrakech.webp',
+        url: '/images/hero-hot-air-balloon.webp',
         width: 1200,
         height: 630,
-        alt: 'Hot air balloon floating above the Palmeraie at sunrise near Marrakech, Morocco',
+        alt: 'Hot air balloon floating over Marrakech at sunrise with Atlas Mountains in the background',
       },
     ],
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Hot Air Balloon & Aerial Activities in Morocco | Complete Guide',
-    description:
-      'Marrakech balloon flights, paragliding, zip lining, helicopter tours, and aerial photography tips for Morocco.',
-    images: [
-      '/images/hero-marrakech.webp',
-    ],
-  },
-  alternates: { canonical: 'https://citytoursmorocco.com/hot-air-balloon' },
 };
-
-/* ===================================================================
-   JSON-LD STRUCTURED DATA
-   =================================================================== */
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'TouristAttraction',
-  name: 'Hot Air Balloon & Aerial Activities in Morocco',
+  name: 'Hot Air Balloon & Aerial Adventures in Morocco',
   description:
-    'Complete guide to hot air balloon rides, paragliding, zip lining, helicopter tours, and aerial activities across Morocco.',
+    'A comprehensive guide to aerial experiences in Morocco including hot air balloon flights over Marrakech, paragliding, helicopter tours, zip lining, and ultralight flights.',
   url: 'https://citytoursmorocco.com/hot-air-balloon',
-  isPartOf: {
-    '@type': 'WebSite',
-    name: 'CityGuide Morocco',
-    url: 'https://citytoursmorocco.com',
+  location: {
+    '@type': 'Country',
+    name: 'Morocco',
   },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 31.6295,
-    longitude: -7.9811,
-    name: 'Marrakech, Morocco',
-  },
-  touristType: [
-    'Adventure Travelers',
-    'Aerial Sports Enthusiasts',
-    'Photography Lovers',
-    'Couples & Honeymooners',
-    'Family Travelers',
-  ],
+  touristType: ['Adventure travelers', 'Couples', 'Photographers', 'Families'],
 };
 
-/* ===================================================================
-   HOT AIR BALLOON DATA
-   =================================================================== */
+/* ─── Hot Air Balloon Operators ─── */
 
-interface BalloonExperience {
-  name: string;
-  location: string;
-  description: string;
-  departureTime: string;
-  flightDuration: string;
-  totalDuration: string;
-  price: string;
-  includes: string[];
-  highlights: string[];
-  bestSeason: string;
-  image: string;
-}
-
-const balloonExperiences: BalloonExperience[] = [
+const balloonOperators = [
   {
-    name: 'Classic Sunrise Balloon Over Marrakech',
-    location: 'Palmeraie & Atlas Foothills',
+    name: 'Ciel d\'Afrique',
+    established: 1990,
     description:
-      'The signature Moroccan balloon experience begins with a pre-dawn pickup from your riad or hotel near Jemaa el-Fnaa, departing around 5:30 AM. You drive 20-30 minutes to the launch site on the edge of the Palmeraie, a vast palm grove that stretches north of the city. As the balloon inflates against the first light of dawn, the Atlas Mountains materialize on the southern horizon in shades of purple and gold. The one-hour flight drifts silently over thousands of date palms, traditional Berber villages with their flat-roofed earthen homes, patchwork farmland irrigated by ancient khettara channels, and the foothills of the High Atlas. On clear mornings, you can see from the minarets of Marrakech to the snow-capped peak of Jebel Toubkal. After landing, a traditional Berber breakfast is served on carpets in a palm grove or at a nearby farmstead, featuring fresh mint tea, msemen flatbread, amlou dip, local honey, seasonal fruit, and freshly baked bread from a wood-fired oven.',
-    departureTime: '5:30 AM pickup (earlier in summer)',
-    flightDuration: 'Approximately 1 hour',
-    totalDuration: '4-5 hours (including transfers and breakfast)',
-    price: '1,500-2,500 MAD per person',
+      'Morocco\'s oldest and most respected balloon operator. Founded by French aeronaut Maurice Parisot, Ciel d\'Afrique has completed over 10,000 flights since 1990 with a perfect safety record. They operate a fleet of Cameron and Ultramagic balloons and employ some of the most experienced pilots in North Africa. Their flagship sunrise flight takes off from the Jbilet Hills north of Marrakech and drifts over the Haouz Plain toward the Atlas Mountains.',
+    priceRange: '1,800 - 2,500 MAD per person',
+    flightDuration: 'Approximately 1 hour airborne',
+    capacity: '8-16 passengers per basket',
     includes: [
-      'Hotel/riad pickup and return in Marrakech',
-      'Pre-flight mint tea and pastries at launch site',
-      'One-hour balloon flight with certified pilot',
-      'Traditional Berber breakfast after landing',
-      'Flight certificate and commemorative photo',
-      'Insurance coverage for the flight',
+      'Hotel pickup from Marrakech (4:30-5:30 AM depending on season)',
+      'Transfer to launch site in the Jbilet Hills',
+      'Pre-flight briefing and inflation observation',
+      'Approximately 60-minute balloon flight',
+      'Traditional Berber breakfast with mint tea upon landing',
+      'Flight certificate signed by the pilot',
+      'Return transfer to your hotel by 10:00 AM',
     ],
     highlights: [
-      'Sunrise over the Atlas Mountains',
-      'Aerial view of the vast Palmeraie palm grove',
-      'Berber villages and ancient irrigation channels',
-      'Snow-capped Toubkal on clear mornings',
-      'Traditional Berber breakfast on carpets',
-      'Total silence at 1,000+ meters altitude',
+      'Atlas Mountain panorama stretching across the entire southern horizon',
+      'Sunrise over the Jbilet Hills and Haouz Plain',
+      'Aerial views of Berber villages, olive groves, and palm groves',
+      'Possible sighting of nomadic camps and seasonal rivers',
+      'Snow-capped peaks of Toubkal and the High Atlas on clear days',
     ],
-    bestSeason: 'October-April (calm winds, clear skies)',
-    image: '/images/hero-marrakech.webp',
+    website: 'cieldafrique.com',
+    phone: '+212 524 43 28 43',
   },
   {
-    name: 'Premium Private Balloon Experience',
-    location: 'Palmeraie & Agafay Desert',
+    name: 'Marrakech By Air',
+    established: 2005,
     description:
-      'For couples, proposals, or special celebrations, several operators offer exclusive private balloon flights with just you and the pilot in a smaller basket. The route is customizable and often extends further south toward the Agafay stone desert, where the lunar landscape of grey rock and dry riverbeds contrasts dramatically with the green Palmeraie. The premium experience includes champagne at altitude, a dedicated photographer who captures the entire experience from the ground with telephoto lenses and a drone (where permitted), and a gourmet Moroccan breakfast served in a private tent with silver service. Some operators also offer engagement packages with rose petals, custom banners visible from the air, and coordination with your travel party on the ground.',
-    departureTime: '5:00 AM pickup (private timing available)',
-    flightDuration: '1-1.5 hours',
-    totalDuration: '5-6 hours (including luxury breakfast)',
-    price: '8,000-15,000 MAD for exclusive basket (2 passengers)',
+      'A well-established operator offering both standard group flights and exclusive private balloon experiences. Marrakech By Air distinguishes itself with smaller basket sizes for a more intimate experience and flexible routing that can include flights over the Agafay Desert or the palm groves of the Palmeraie. Their pilots are FAA and DGAC certified with thousands of hours of flight time.',
+    priceRange: '1,500 - 2,200 MAD per person (private flights from 8,000 MAD)',
+    flightDuration: 'Approximately 1 hour airborne',
+    capacity: '4-12 passengers per basket (private flights available)',
     includes: [
-      'Private luxury vehicle transfer',
-      'Exclusive balloon basket (pilot + 2 passengers only)',
-      'Champagne service at altitude',
-      'Professional photographer (ground and drone)',
-      'Gourmet Moroccan breakfast in private tent',
-      'High-resolution digital photo album delivered same day',
-      'Personalized flight certificate with calligraphy',
+      'Hotel pickup from Marrakech or nearby hotels',
+      'Transfer to launch site (varies by wind conditions)',
+      'Safety briefing and balloon inflation viewing',
+      'Approximately 60-minute balloon flight',
+      'Moroccan breakfast with fresh pastries, fruit, and mint tea',
+      'Commemorative flight certificate',
+      'Return to hotel by mid-morning',
     ],
     highlights: [
-      'Complete privacy in the basket',
-      'Extended flight route toward Agafay Desert',
-      'Champagne at sunrise above the clouds',
-      'Professional photography package included',
-      'Proposal and celebration packages available',
-      'Gourmet breakfast with silver service',
+      'Smaller baskets for a more personal experience',
+      'Private flight option for couples and special occasions',
+      'Flexible launch sites depending on wind patterns',
+      'Views across the Haouz Plain, olive orchards, and Atlas foothills',
+      'Photographers can request optimal positioning in the basket',
     ],
-    bestSeason: 'October-April (premium dates book 2-4 weeks ahead)',
-    image: '/images/hero-marrakech.webp',
+    website: 'marrakechbyair.com',
+    phone: '+212 661 24 66 24',
   },
   {
-    name: 'Atlas Mountain Balloon Flight',
-    location: 'Northern Atlas Foothills',
+    name: 'Royal Balloon Marrakech',
+    established: 2012,
     description:
-      'A less common but increasingly popular option that launches from the northern foothills of the High Atlas, south of Marrakech toward the Ourika Valley direction. This flight offers a more dramatic mountainous landscape, drifting over terraced Berber villages clinging to hillsides, deep river valleys carved through red rock, and almond and olive groves that carpet the lower slopes. In spring, the ground is a tapestry of wildflowers. The flight path and altitude depend entirely on wind conditions, but on ideal days, you may drift to altitudes of 2,000 meters or more with the Atlas peaks at eye level. This experience is offered by fewer operators and has a higher cancellation rate due to mountain wind patterns, but on the days it flies, it is considered one of the finest balloon experiences in North Africa.',
-    departureTime: '5:00-5:30 AM pickup',
-    flightDuration: '45 minutes-1.5 hours (wind dependent)',
-    totalDuration: '5-6 hours (longer transfer time)',
-    price: '2,000-3,500 MAD per person',
+      'A newer operator that has quickly built a strong reputation for premium balloon experiences. Royal Balloon focuses on luxury touches including champagne toasts, gourmet breakfasts, and professional in-flight photography. They operate the newest fleet of balloons in Morocco with state-of-the-art Cameron A-210 and A-250 envelopes.',
+    priceRange: '2,000 - 2,500 MAD per person',
+    flightDuration: 'Approximately 1 hour airborne',
+    capacity: '8-20 passengers per basket',
     includes: [
-      'Transfer from Marrakech (longer drive to mountain launch)',
-      'Mountain sunrise balloon flight',
-      'Berber breakfast at a hillside village',
-      'Guided walk through a traditional village',
-      'Flight certificate',
+      'Luxury 4x4 transfer from your Marrakech accommodation',
+      'Welcome coffee and dates at the launch field',
+      'Watch the full balloon inflation process',
+      'Approximately 60-minute flight with experienced pilot commentary',
+      'Champagne toast upon landing',
+      'Full Moroccan breakfast with panoramic views',
+      'Professional photos emailed within 24 hours',
+      'Return to hotel',
     ],
     highlights: [
-      'Terraced Berber villages from above',
-      'Atlas peaks at eye level on good days',
-      'Spring wildflower carpets visible from altitude',
-      'Far fewer tourists than Palmeraie flights',
-      'Authentic mountain village breakfast',
-      'Deep river valley overflights',
+      'Premium experience with champagne and professional photography',
+      'Newest balloon fleet in Morocco',
+      'Pilot commentary about geography and local culture during flight',
+      'Ideal for proposals, anniversaries, and special celebrations',
+      'Complimentary professional photo package',
     ],
-    bestSeason: 'March-May, October-November (narrow wind window)',
-    image: '/images/hero-atlas.webp',
+    website: 'royalballoonmarrakech.com',
+    phone: '+212 524 43 72 94',
   },
 ];
 
-/* ===================================================================
-   PARAGLIDING DATA
-   =================================================================== */
+/* ─── Minute-by-Minute Flight Experience ─── */
 
-interface ParaglidingSite {
-  name: string;
-  location: string;
-  description: string;
-  altitude: string;
-  flightDuration: string;
-  price: string;
-  difficulty: string;
-  highlights: string[];
-  bestSeason: string;
-  requirements: string[];
-}
+const flightTimeline = [
+  {
+    time: '4:30 - 5:30 AM',
+    title: 'Hotel Pickup',
+    description:
+      'A 4x4 vehicle collects you from your riad or hotel in the Marrakech medina or Gueliz. The pre-dawn streets are quiet and the city is still sleeping. The early start is essential because balloon flights require the calm, cool air of early morning.',
+  },
+  {
+    time: '5:30 - 6:00 AM',
+    title: 'Arrival at Launch Site',
+    description:
+      'After a 30-40 minute drive north through the Jbilet Hills, you arrive at the launch field. The crew is already preparing the balloon. Hot coffee, mint tea, and Moroccan pastries welcome you as you watch the massive envelope being laid out on the ground.',
+  },
+  {
+    time: '6:00 - 6:20 AM',
+    title: 'Balloon Inflation',
+    description:
+      'Powerful fans inflate the balloon envelope while it lies on its side. Once partially inflated, the pilot fires the burners for the first time, sending roaring jets of flame into the opening. The balloon slowly rises from horizontal to vertical as hot air fills the 2,800 cubic meter envelope. This is a spectacular sight and excellent photo opportunity.',
+  },
+  {
+    time: '6:20 - 6:30 AM',
+    title: 'Safety Briefing & Boarding',
+    description:
+      'The pilot gives a clear safety briefing covering landing positions, basket etiquette, and what to expect. Passengers board the basket by stepping onto the foothold and swinging over the edge. The basket is surprisingly spacious, divided into compartments for stability.',
+  },
+  {
+    time: '6:30 AM',
+    title: 'Liftoff',
+    description:
+      'With a sustained blast of the burners, the balloon gently lifts off the ground. There is no jolt or sudden movement, just a smooth, silent ascent. The ground falls away and the landscape opens up below you. Within minutes, you are floating 300-500 meters above the earth in near-complete silence.',
+  },
+  {
+    time: '6:30 - 6:45 AM',
+    title: 'Sunrise Over the Atlas',
+    description:
+      'As the balloon drifts with the breeze, the sun rises over the eastern horizon. The Atlas Mountains are bathed in golden light, and the shadows across the plain create a dramatic contrast of light and dark. This is the magical moment that makes the early wake-up worthwhile. The silence is extraordinary, broken only by occasional burner blasts.',
+  },
+  {
+    time: '6:45 - 7:15 AM',
+    title: 'Cruising Over the Landscape',
+    description:
+      'The pilot controls altitude by managing burner output, taking you from treetop level over palm groves to soaring heights with panoramic views. You drift over Berber villages where farmers tend their fields, past olive orchards and seasonal rivers, with the full Atlas range stretching across the southern horizon. The pilot points out landmarks and shares stories about the landscape below.',
+  },
+  {
+    time: '7:15 - 7:30 AM',
+    title: 'Descent & Landing',
+    description:
+      'The pilot selects a landing site based on wind conditions. You may skim the treetops or touch down in an open field. The ground crew has been following the balloon by 4x4 and is ready at the landing site. You are instructed to adopt the landing position: knees bent, holding the rope handles, facing the direction of travel.',
+  },
+  {
+    time: '7:30 - 8:30 AM',
+    title: 'Breakfast & Celebration',
+    description:
+      'After landing, the crew sets up a traditional Moroccan breakfast on rugs laid out in the field. Fresh bread, honey, amlou (argan and almond paste), jams, fruit, boiled eggs, Moroccan pancakes (msemen and baghrir), and endless mint tea. You receive your flight certificate while the crew packs the balloon into its bag.',
+  },
+  {
+    time: '8:30 - 9:30 AM',
+    title: 'Return to Hotel',
+    description:
+      'The 4x4 returns you to your hotel in Marrakech by mid-morning, leaving the rest of the day free to explore the city. You will be back before most tourists have finished their breakfast.',
+  },
+];
 
-const paraglidingSites: ParaglidingSite[] = [
+/* ─── Atlas Mountain Balloon Flights ─── */
+
+const atlasBalloonDetails = [
+  {
+    area: 'Ourika Valley Flights',
+    description:
+      'Some operators offer specialized flights that launch closer to the Atlas foothills, providing closer views of the Ourika Valley and its terraced hillsides. These flights are seasonal and depend heavily on mountain wind patterns. The Ourika Valley is one of the most scenic areas near Marrakech, with traditional Berber villages clinging to the hillsides and the river winding through the valley floor below.',
+    season: 'October to April (best conditions: November to March)',
+    note: 'Mountain flights are more weather-dependent than plain flights. Cancellation rates are higher, particularly in winter when mountain winds can be unpredictable.',
+  },
+  {
+    area: 'Imlil Area Views',
+    description:
+      'While balloon flights do not launch from Imlil itself due to the narrow valley terrain, flights from the Haouz Plain on clear days offer spectacular views toward Imlil and the Toubkal massif. On the clearest mornings, you can see the summit of Jebel Toubkal (4,167m), the highest peak in North Africa, glistening with snow. The contrast between the flat agricultural plain below and the towering Atlas peaks on the horizon is breathtaking.',
+    season: 'Year-round on clear days (best visibility: October to May)',
+    note: 'Ask your operator about routing toward the mountains. Wind conditions on the day determine the flight path, so mountain views cannot be guaranteed, but most flights offer at least partial Atlas panoramas.',
+  },
+  {
+    area: 'Agafay Desert Launches',
+    description:
+      'The rocky desert landscape of Agafay, just 30 kilometers southwest of Marrakech, provides a more dramatic launch setting than the northern plains. Some operators offer flights from this area, floating over the barren, moon-like terrain with the Atlas Mountains as a dramatic backdrop. The stark beauty of the Agafay contrasts with the lush palm groves visible in the distance toward Marrakech.',
+    season: 'Year-round (summer dawn flights avoid the extreme heat)',
+    note: 'Agafay launches are less common and typically require private booking. Check with individual operators for availability.',
+  },
+];
+
+/* ─── Paragliding Sites ─── */
+
+const paraglidingSites = [
   {
     name: 'Aguergour',
-    location: 'Near Marrakech (45 minutes south)',
+    location: '30 minutes south of Marrakech in the Atlas foothills',
     description:
-      'The most accessible paragliding site from Marrakech, situated on a ridge in the foothills of the High Atlas at around 1,200 meters. Aguergour is the primary tandem site for tourists visiting Marrakech who want to experience paragliding without prior training. The launch site overlooks a wide valley with terraced farmland, scattered Berber villages, and the Haouz plain stretching north toward Marrakech. On clear days, the city is visible in the distance with the minaret of the Koutoubia Mosque catching the light. Tandem flights with a certified instructor are the norm here, and no previous experience is required. The thermal conditions are generally reliable from mid-morning onward, with gentle valley breezes creating smooth lift that even nervous first-timers find comfortable. The flight descends to a landing zone in the valley floor, where a vehicle meets you for the drive back.',
-    altitude: '1,200m launch, 600m landing (600m altitude difference)',
-    flightDuration: '15-30 minutes (thermal dependent)',
-    price: '1,000-1,500 MAD per person (tandem)',
-    difficulty: 'Beginner-friendly (tandem with instructor)',
-    highlights: [
-      'Closest paragliding to Marrakech (45-min transfer)',
-      'Atlas Mountain panorama during flight',
-      'View of Marrakech and the Haouz plain',
-      'Smooth thermals suitable for first-timers',
-      'Professional tandem instructors with GoPro footage',
-      'Berber village overflights during descent',
+      'The premier paragliding site near Marrakech and the most popular in Morocco for tandem flights. The launch site sits at approximately 1,200 meters on a ridge above the village of Aguergour, offering panoramic views across the Haouz Plain toward Marrakech in one direction and the Atlas peaks in the other. Reliable thermals develop throughout the day, particularly from mid-morning onward. Several professional operators offer tandem flights here year-round.',
+    flightDuration: '15-30 minutes (tandem), 1-3 hours (experienced pilots)',
+    priceRange: '800 - 1,200 MAD for tandem flight',
+    difficulty: 'No experience required for tandem flights',
+    bestTime: 'Year-round. Best thermals: March to October. Calmest: September to November.',
+    operators: ['Marrakech Tandem', 'Atlas Parapente', 'Morocco Paragliding'],
+    includes: [
+      'Transport from Marrakech (30-minute drive)',
+      'Safety briefing and equipment check',
+      'Tandem flight with certified instructor',
+      'GoPro video of your flight (most operators)',
+      'Return transport to Marrakech',
     ],
-    bestSeason: 'Year-round (best October-May)',
-    requirements: [
-      'No experience needed for tandem flights',
-      'Weight limit: typically 30-110 kg',
-      'Closed sturdy shoes required (no sandals)',
-      'Minimum age: 12 years (with parental consent)',
+  },
+  {
+    name: 'Dunes d\'Essaouira',
+    location: 'Coastal cliffs and dunes near Essaouira',
+    description:
+      'Coastal soaring along the Atlantic cliffs south of Essaouira. The persistent trade winds that make Essaouira famous for windsurfing also create excellent ridge lift for paragliding. Flights here offer a unique perspective of the Atlantic coastline, with views of the medina walls, the port, and the Iles Purpuraires from the air. The sandy dune area south of the city provides gentler launch and landing conditions for less experienced pilots.',
+    flightDuration: '15-25 minutes (tandem)',
+    priceRange: '900 - 1,500 MAD for tandem flight',
+    difficulty: 'No experience required for tandem flights. Wind can be strong.',
+    bestTime: 'September to November and March to May. Summer winds can be too strong.',
+    operators: ['Essaouira Paragliding', 'Ocean Parapente'],
+    includes: [
+      'Meeting point near Essaouira',
+      'Briefing and equipment fitting',
+      'Tandem coastal flight',
+      'Video recording (most operators)',
     ],
   },
   {
     name: 'Ifrane & Middle Atlas',
-    location: 'Middle Atlas Mountains (near Fes)',
+    location: 'Near Ifrane in the Middle Atlas Mountains',
     description:
-      'The cedar forests and lakes of the Middle Atlas around Ifrane and Azrou provide a dramatically different paragliding landscape compared to the arid foothills near Marrakech. Known as the "Switzerland of Morocco" for its alpine meadows, ski chalets, and dense cedar forests, this region offers scenic paragliding flights over a green landscape that many visitors do not associate with Morocco. Launch sites are typically on the ridges above Ifrane at around 1,800-2,000 meters, providing long flight times as the thermals carry you over Lake Dayet Aoua, ancient cedar groves (home to Barbary macaques), and the pastoral valleys where Amazigh shepherds tend their flocks. This area is less developed for tourism than Marrakech, and flights here often feel like a genuine discovery. Several local clubs and instructors offer tandem flights, though advance booking is essential as this is not a daily operation.',
-    altitude: '1,800-2,000m launch, 1,200m landing',
-    flightDuration: '20-45 minutes (excellent thermals in spring/summer)',
-    price: '800-1,200 MAD per person (tandem)',
-    difficulty: 'Beginner-friendly (tandem) to intermediate (solo)',
-    highlights: [
-      'Flights over cedar forests and alpine lakes',
-      'Barbary macaque habitat visible from the air',
-      'Green pastoral landscape unlike typical Morocco',
-      'Longer flight times due to strong thermals',
-      'Less crowded than Marrakech-area sites',
-      'Combination possible with Fes day trip',
-    ],
-    bestSeason: 'April-October (best thermals June-September)',
-    requirements: [
-      'No experience needed for tandem flights',
-      'Weight limit: typically 30-110 kg',
-      'Warm layers recommended (higher altitude)',
-      'Advance booking essential (not daily flights)',
+      'The cedar forests and rolling hills of the Middle Atlas near Ifrane provide excellent conditions for cross-country paragliding. The area is less commercially developed than Aguergour, attracting experienced pilots with their own equipment rather than tandem tourists. However, a growing number of operators are beginning to offer tandem flights here, particularly during the excellent thermal season from March to October. The landscape of cedar forests, lakes, and green valleys is dramatically different from the arid south.',
+    flightDuration: '20-40 minutes (tandem), 2-5 hours (cross-country)',
+    priceRange: '1,000 - 1,500 MAD for tandem flight',
+    difficulty: 'Tandem: No experience needed. Solo: Intermediate to Advanced.',
+    bestTime: 'March to October for thermals. Avoid winter snow and wind.',
+    operators: ['Middle Atlas Paragliding', 'Ifrane Air Sports'],
+    includes: [
+      'Transfer from Ifrane or Fes (1-hour drive)',
+      'Full safety briefing',
+      'Tandem flight over cedar forests',
+      'Video and photos',
+      'Return transport',
     ],
   },
   {
-    name: 'Dakhla (Atlantic Coast)',
-    location: 'Southern Morocco / Western Sahara coast',
+    name: 'Imi n\'Ifri (Demnate)',
+    location: 'Near Demnate, 100km east of Marrakech',
     description:
-      'Dakhla, the remote kitesurfing capital on Morocco\'s southern Atlantic coast, has emerged as an unexpected paragliding destination thanks to its consistent coastal winds and stunning lagoon landscapes. Flights here launch from the cliffs above the peninsula and drift along the coastline with views of the turquoise lagoon on one side and the open Atlantic on the other. The contrast between the golden desert sand, the azure water, and the white salt flats creates an aerial palette unlike anywhere else in Morocco. This is a more adventurous option requiring a flight or long drive to reach Dakhla, but for paragliding enthusiasts, the unique coastal desert flying conditions are worth the journey.',
-    altitude: '100-200m coastal cliffs',
-    flightDuration: '10-25 minutes (wind dependent)',
-    price: '700-1,000 MAD per person (tandem)',
-    difficulty: 'Intermediate (coastal wind conditions require experience for solo)',
-    highlights: [
-      'Coastal flying over turquoise lagoon',
-      'Desert-meets-ocean aerial scenery',
-      'Consistent Atlantic wind conditions',
-      'Combine with kitesurfing and water sports',
-      'Remote and uncrowded flying site',
-      'Spectacular sunset flights available',
-    ],
-    bestSeason: 'Year-round (strongest winds February-August)',
-    requirements: [
-      'Tandem available for beginners',
-      'Solo pilots need coastal flying experience',
-      'Wind can be strong; prepare for dynamic conditions',
-      'Advance arrangements required (limited operators)',
+      'The natural rock bridge of Imi n\'Ifri creates unique thermal conditions that attract experienced paragliders. The surrounding hills and gorges provide dramatic scenery and reliable lift. While less accessible than Aguergour, the flying here is considered more interesting by experienced pilots. The area is developing as a paragliding destination, and some operators offer tandem flights for visitors.',
+    flightDuration: '20-30 minutes (tandem)',
+    priceRange: '1,000 - 1,400 MAD for tandem flight',
+    difficulty: 'Tandem: Beginner-friendly. Solo: Intermediate.',
+    bestTime: 'March to November. Strong thermals in summer.',
+    operators: ['Demnate Parapente'],
+    includes: [
+      'Transport from Marrakech (90-minute drive)',
+      'Pre-flight briefing',
+      'Tandem flight over gorge landscape',
+      'Return transport',
     ],
   },
 ];
 
-/* ===================================================================
-   ZIP LINE & ADVENTURE PARK DATA
-   =================================================================== */
+/* ─── Zip Lining ─── */
 
-interface ZipLineVenue {
-  name: string;
-  location: string;
-  description: string;
-  courses: {
-    name: string;
-    description: string;
-    duration: string;
-    price: string;
-    minAge: string;
-    difficulty: string;
-  }[];
-  facilities: string[];
-  gettingThere: string;
-  bestFor: string;
-}
-
-const zipLineVenues: ZipLineVenue[] = [
+const zipLiningVenues = [
   {
     name: 'Terres d\'Amanar',
-    location: 'Route de l\'Ourika Km 27, Atlas Foothills',
+    location: 'Tahanaoute, 35km south of Marrakech in the Atlas foothills',
     description:
-      'The premier adventure park in Morocco, set within a 12-hectare forest of pine, olive, and carob trees in the Atlas foothills, just one hour from Marrakech. Terres d\'Amanar combines genuine adventure activities with environmental responsibility and cultural authenticity. The park was designed to work with the natural terrain rather than against it, threading zip lines between ancient trees, building climbing routes up natural rock faces, and creating rope courses that follow the contours of the hillside. Beyond the adventure activities, the park offers Berber cooking workshops, traditional bread baking, horseback riding, mountain biking trails, and archery. Accommodation is available in treehouse cabins and Berber tents for those who want an overnight adventure. The park is a popular day trip from Marrakech and works well for families, corporate groups, school trips, and anyone who wants to combine physical adventure with a taste of Atlas Mountain culture.',
-    courses: [
+      'Morocco\'s premier outdoor adventure park, set in a beautiful 30-hectare forest of olive, carob, and almond trees with panoramic Atlas Mountain views. Terres d\'Amanar offers a comprehensive adventure experience that goes well beyond simple zip lining. The park features multiple aerial courses at different difficulty levels, suspension bridges, Tarzan swings, and one of the longest zip lines in Morocco stretching over 300 meters across a valley. It is professionally run with European-standard safety equipment and trained staff.',
+    activities: [
       {
-        name: 'Discovery Course (Parcours Decouverte)',
-        description: 'An introductory tree-top adventure course with low-height platforms, short zip lines, rope bridges, and balance beams. Designed for children and first-timers to build confidence in a safe environment with continuous safety lines.',
-        duration: '1-1.5 hours',
-        price: '250-350 MAD per person',
-        minAge: '5 years',
-        difficulty: 'Easy',
+        name: 'Zip Line Circuit',
+        price: '350 - 500 MAD per person',
+        duration: '1.5 - 2 hours',
+        description: 'Multiple zip lines including the signature 300-meter valley crossing. Varying heights from 5 to 25 meters above ground.',
       },
       {
-        name: 'Adventure Course (Parcours Aventure)',
-        description: 'The intermediate course takes you higher into the tree canopy with longer zip lines spanning between platforms, Tarzan swings, hanging bridges, cargo nets, and a Via Ferrata-style rock traverse. The longest zip line on this course crosses a small canyon.',
-        duration: '2-2.5 hours',
-        price: '400-500 MAD per person',
-        minAge: '10 years',
-        difficulty: 'Moderate',
+        name: 'Adventure Parcours (Accrobranche)',
+        price: '250 - 400 MAD per person',
+        duration: '1.5 - 2 hours',
+        description: 'Tree-to-tree aerial obstacle courses with rope bridges, cargo nets, balance beams, and Tarzan swings. Three difficulty levels from children\'s course to expert.',
       },
       {
-        name: 'Extreme Course (Parcours Extreme)',
-        description: 'The most challenging course features the park\'s longest and highest zip lines, including a 200-meter canyon crossing at significant height. Elements include a free-fall jump, a giant swing, and technical traverses that require upper body strength and a head for heights. This course is genuinely thrilling and not for the faint-hearted.',
-        duration: '2.5-3 hours',
-        price: '500-600 MAD per person',
-        minAge: '14 years',
-        difficulty: 'Challenging',
-      },
-      {
-        name: 'Canyon Zip Line Experience',
-        description: 'A standalone experience focused purely on the park\'s signature canyon zip lines. You complete a series of progressively longer and higher zip lines that cross back and forth across a forested canyon, culminating in the park\'s longest line. This is the best option for visitors short on time who want the maximum zip line thrill.',
-        duration: '1-1.5 hours',
-        price: '300-400 MAD per person',
-        minAge: '10 years',
-        difficulty: 'Moderate',
+        name: 'Full Day Adventure Package',
+        price: '600 - 900 MAD per person',
+        duration: 'Full day (9:00 AM - 4:00 PM)',
+        description: 'Combines zip lining, accrobranche, rock climbing wall, archery, mountain biking, and a traditional Berber lunch. The complete Terres d\'Amanar experience.',
       },
     ],
-    facilities: [
-      'On-site restaurant serving traditional Berber cuisine',
-      'Equipment rental included in all course prices',
-      'Certified instructors and continuous safety systems',
-      'Changing rooms and lockers',
-      'Parking for cars and tour buses',
-      'Overnight accommodation in treehouses and Berber tents',
-      'Mountain bike rental and guided trail rides',
-      'Horseback riding and pony rides for children',
-    ],
-    gettingThere: 'Located on the Route de l\'Ourika, 27 km south of Marrakech. The drive takes approximately 45 minutes. Most Marrakech hotels can arrange transport. Grand taxis from Marrakech to the park cost around 150-200 MAD each way. Tour operators include transfer in day-trip packages.',
-    bestFor: 'Families, adventure seekers, corporate team-building, half-day excursion from Marrakech',
+    practicalInfo: {
+      minAge: '6 years for children\'s course, 10 years for intermediate, 14 years for expert',
+      maxWeight: '120 kg',
+      openingHours: '9:00 AM - 5:00 PM, daily except Monday',
+      bookingAdvice: 'Book 1-2 days ahead in peak season (October-April). Walk-ins accepted on quieter days.',
+    },
   },
   {
-    name: 'Zip Line at Ouzoud Waterfalls',
-    location: 'Ouzoud, Middle Atlas (150 km from Marrakech)',
+    name: 'Atlas Adventure Park',
+    location: 'Ouirgane Valley, 60km south of Marrakech',
     description:
-      'A zip line experience set against the backdrop of the magnificent Ouzoud Waterfalls, the highest waterfalls in North Africa at 110 meters. The zip line course runs across the gorge near the falls, offering riders a unique vantage point with the spray of the cascade and the rainbow it creates on sunny mornings. This is not a full adventure park but rather a single zip line attraction operated by local guides near the waterfall. The experience is more raw and less polished than Terres d\'Amanar, but the setting is incomparable. Combine it with the waterfall walk, boat ride at the base, and the Barbary macaques that inhabit the surrounding olive groves for a full day trip from Marrakech.',
-    courses: [
+      'A smaller but scenic adventure course in the Ouirgane Valley, deeper in the Atlas Mountains than Terres d\'Amanar. The park combines zip lines with hiking trails through walnut and olive groves, with views of the surrounding mountain peaks. Less crowded than Terres d\'Amanar and ideal for those who want a more remote mountain experience.',
+    activities: [
       {
-        name: 'Gorge Crossing Zip Line',
-        description: 'A single zip line that crosses the gorge near Ouzoud Waterfalls, offering spectacular views of the cascading water and the lush valley below. The ride is short but the setting makes it memorable.',
-        duration: '15-20 minutes (including setup)',
-        price: '100-200 MAD per person',
-        minAge: '8 years',
-        difficulty: 'Easy',
+        name: 'Zip Line Course',
+        price: '300 - 450 MAD per person',
+        duration: '1 - 1.5 hours',
+        description: 'Series of zip lines through the valley with mountain scenery. Suitable for ages 8 and up.',
+      },
+      {
+        name: 'Combined Zip Line & Hike',
+        price: '450 - 650 MAD per person',
+        duration: '3 - 4 hours',
+        description: 'Zip lines combined with a guided hike through Berber villages and walnut groves. Includes mint tea with a local family.',
       },
     ],
-    facilities: [
-      'Basic safety equipment provided',
-      'Local guides at the launch point',
-      'Restaurants and cafes at Ouzoud village',
-      'Natural swimming pool at the base of the falls',
-    ],
-    gettingThere: 'Ouzoud is approximately 150 km northeast of Marrakech (2.5-hour drive). Day trips from Marrakech are widely available for 200-400 MAD per person including transport. Grand taxis from Azilal serve the village.',
-    bestFor: 'Day-trippers from Marrakech, waterfall enthusiasts, families',
+    practicalInfo: {
+      minAge: '8 years',
+      maxWeight: '110 kg',
+      openingHours: '9:00 AM - 4:00 PM, weekends and holidays. Weekday by reservation.',
+      bookingAdvice: 'Advance booking required. Contact through Marrakech tour agencies.',
+    },
   },
 ];
 
-/* ===================================================================
-   SKYDIVING DATA
-   =================================================================== */
+/* ─── Helicopter Tours ─── */
 
-interface SkydivingInfo {
-  name: string;
-  location: string;
-  description: string;
-  altitude: string;
-  freefallTime: string;
-  totalFlightTime: string;
-  price: string;
-  includes: string[];
-  requirements: string[];
-  availability: string;
-}
-
-const skydivingOptions: SkydivingInfo[] = [
-  {
-    name: 'Tandem Skydive Over Marrakech',
-    location: 'Marrakech (airfield near Ben Guerir or Beni Mellal)',
-    description:
-      'Tandem skydiving is available near Marrakech through operators who typically use small airfields in the region around Ben Guerir (about 70 km north) or Beni Mellal (about 200 km east). The experience involves a brief ground training session, a scenic aircraft ascent to 3,000-4,000 meters, and a tandem freefall strapped to a certified instructor. During the freefall, which lasts approximately 30-60 seconds at speeds reaching 200 km/h, you may be able to glimpse the red city of Marrakech to the south and the Atlas Mountains on the horizon. After the parachute deploys, the 5-7 minute canopy ride offers serene panoramic views of the Moroccan countryside. Skydiving in Morocco is not as established as in Europe, and operations can be seasonal or weather-dependent. It is essential to verify that the operator uses certified equipment, licensed instructors with recognized international qualifications (USPA, BPA, or equivalent), and proper aircraft. Some European operators run seasonal pop-up skydiving operations in Morocco during the winter months when European weather is poor.',
-    altitude: '3,000-4,000 meters',
-    freefallTime: '30-60 seconds',
-    totalFlightTime: '6-8 minutes (freefall + canopy)',
-    price: '3,000-5,000 MAD per person (tandem)',
-    includes: [
-      'Ground training and safety briefing',
-      'All equipment (harness, goggles, jumpsuit)',
-      'Aircraft ascent to jump altitude',
-      'Tandem freefall with certified instructor',
-      'Parachute canopy ride and landing',
-      'Video/photo package (optional, additional 500-1,000 MAD)',
-    ],
-    requirements: [
-      'No experience needed for tandem jumps',
-      'Weight limit: typically 90-100 kg',
-      'Minimum age: 16-18 years (varies by operator)',
-      'Good general health (no heart conditions, recent surgeries)',
-      'Closed sturdy shoes required',
-      'Sign liability waiver',
-    ],
-    availability: 'Seasonal (typically October-April). Not all operators run year-round. Book well in advance and confirm dates before travel.',
-  },
-];
-
-/* ===================================================================
-   HELICOPTER TOUR DATA
-   =================================================================== */
-
-interface HelicopterTour {
-  name: string;
-  location: string;
-  route: string;
-  description: string;
-  duration: string;
-  price: string;
-  capacity: string;
-  highlights: string[];
-  departsFrom: string;
-}
-
-const helicopterTours: HelicopterTour[] = [
+const helicopterTours = [
   {
     name: 'Marrakech City Aerial Tour',
-    location: 'Marrakech',
-    route: 'Marrakech Medina, Koutoubia Mosque, Royal Palace, Menara Gardens, Majorelle Quarter',
+    duration: '20 - 30 minutes',
+    priceRange: '3,500 - 5,000 MAD per person (minimum 2 passengers)',
     description:
-      'A scenic helicopter flight over the Red City, providing a unique bird\'s-eye perspective of Morocco\'s most famous city. The flight follows a circuit over the ancient medina, where the labyrinthine streets and riads are revealed in their full geometric complexity from above. You will see the Koutoubia Mosque minaret, the vast open square of Jemaa el-Fnaa, the green oasis of the Menara Gardens with their reflective basin, and the Royal Palace compound. The route extends over the modern Gueliz district and the blue oasis of the Majorelle Garden before circling back. This is one of the most exclusive ways to experience Marrakech and the aerial perspective reveals the city\'s layout and beauty in ways impossible from the ground.',
-    duration: '15-20 minutes',
-    price: '3,500-5,000 MAD per person (minimum 2 passengers)',
-    capacity: '2-5 passengers depending on helicopter type',
+      'A bird\'s-eye tour of Marrakech revealing perspectives impossible from the ground. Fly over the ancient medina walls, the geometric precision of the Koutoubia Mosque and minaret, the vast green expanse of the Agdal and Menara Gardens, the royal palace compound, and the Jemaa el-Fnaa square. The route typically extends over the Palmeraie palm groves and the modern Gueliz district before returning to the helipad.',
     highlights: [
-      'Koutoubia Mosque minaret from directly above',
-      'Medina\'s geometric labyrinth revealed',
-      'Menara Gardens reflective pool',
-      'Royal Palace compound',
-      'Jemaa el-Fnaa from a perspective no one on the ground has',
+      'Koutoubia Mosque and minaret from above',
+      'The winding lanes of the medina seen in their full geometric complexity',
+      'Royal Palace and Agdal Gardens',
+      'Palmeraie palm groves stretching to the horizon',
+      'Panoramic view of Marrakech with Atlas Mountains as backdrop',
     ],
-    departsFrom: 'Marrakech Menara Airport or private helipad',
   },
   {
-    name: 'Atlas Mountains Scenic Flight',
-    location: 'High Atlas Mountains',
-    route: 'Marrakech to Ourika Valley, Toubkal Massif, Imlil, Asni, return to Marrakech',
+    name: 'Atlas Mountains Helicopter Flight',
+    duration: '45 - 90 minutes',
+    priceRange: '8,000 - 18,000 MAD per person (varies by route and duration)',
     description:
-      'The premier helicopter experience in Morocco takes you from the flatlands of Marrakech deep into the heart of the High Atlas. Within minutes of takeoff, the landscape transforms from urban sprawl to terraced Berber villages perched on impossibly steep mountainsides. The flight passes over the lush Ourika Valley, ascends toward the snow-capped Toubkal Massif (4,167 meters, the highest peak in North Africa), and provides aerial views of the trekking villages of Imlil and Aroumd that would take hours to reach on foot. The scale of the Atlas Mountains is difficult to appreciate from the ground, but from a helicopter, the vast network of ridges, gorges, and valleys unfolds in a panorama that is genuinely awe-inspiring. Some operators offer a landing in a remote mountain meadow for a private picnic or champagne stop before returning to Marrakech.',
-    duration: '45 minutes-1.5 hours (route dependent)',
-    price: '12,000-25,000 MAD per helicopter (up to 5 passengers)',
-    capacity: '3-5 passengers',
+      'An extraordinary flight deep into the High Atlas Mountains, revealing dramatic valleys, remote Berber villages, and the snow-capped summit of Jebel Toubkal. Routes can include the Ourika Valley, the Imlil Valley, the Toubkal massif, and the dramatic Tizi n\'Test pass. On longer flights, you can reach the M\'Goun massif and the Valley of Roses. This is the fastest way to see the best of the Atlas and a unique perspective that even experienced trekkers rarely achieve.',
     highlights: [
-      'Snow-capped Toubkal from eye level',
-      'Terraced Berber villages on steep mountainsides',
-      'Ourika Valley\'s green ribbon through red rock',
-      'Optional mountain meadow landing for picnic',
-      'Scale of the Atlas revealed from above',
-      'Imlil and trekking trails visible below',
+      'Jebel Toubkal summit (4,167m) from helicopter altitude',
+      'Ourika Valley terraced villages from above',
+      'Dramatic high mountain passes including Tizi n\'Test',
+      'Remote Berber settlements accessible only on foot',
+      'Snow fields and glacial lakes in winter and spring',
+      'Valley of Roses (seasonal: April-May)',
     ],
-    departsFrom: 'Marrakech Menara Airport',
   },
   {
-    name: 'Agafay Desert & Lalla Takerkoust Lake Flight',
-    location: 'Agafay Desert and Lake Lalla Takerkoust',
-    route: 'Marrakech to Agafay stone desert, Lalla Takerkoust lake, Atlas foothills, return',
+    name: 'Luxury Desert Transfer',
+    duration: '1.5 - 3 hours (one way)',
+    priceRange: '25,000 - 60,000 MAD per helicopter (not per person, 2-6 passengers)',
     description:
-      'A shorter scenic flight that covers the striking terrain between Marrakech and the Atlas Mountains. The Agafay stone desert, a lunar landscape of grey rock and dry riverbeds just 30 minutes from the city, looks even more otherworldly from the air. The flight continues to Lake Lalla Takerkoust, a large reservoir surrounded by red-earth hills and dotted with small boats and waterside restaurants. The contrast between the barren Agafay, the blue lake, and the green foothills beyond creates a visual journey through three distinct landscapes in under an hour. This is an excellent option for those who want a helicopter experience without the higher cost of the full Atlas mountain tour.',
-    duration: '25-35 minutes',
-    price: '6,000-10,000 MAD per helicopter (up to 4 passengers)',
-    capacity: '2-4 passengers',
+      'For travelers who want to experience the Sahara without the long overland drive, helicopter transfers from Marrakech to luxury desert camps near Merzouga or M\'Hamid are available. The flight itself is spectacular, crossing the entire Atlas range, the Draa Valley, and arriving at the edge of the Erg Chebbi or Erg Chigaga dunes. What takes 8-10 hours by road takes 1.5-3 hours by air, with incomparably better views.',
     highlights: [
-      'Agafay stone desert\'s lunar landscape from above',
-      'Lake Lalla Takerkoust\'s vivid blue waters',
-      'Contrast of desert, lake, and mountain in one flight',
-      'Excellent photography opportunities',
-      'More affordable than full Atlas tour',
-    ],
-    departsFrom: 'Marrakech helipad or Menara Airport',
-  },
-];
-
-/* ===================================================================
-   BOOKING TIPS & SAFETY DATA
-   =================================================================== */
-
-const bookingTips = [
-  {
-    category: 'Balloon Booking Essentials',
-    icon: Wind,
-    tips: [
-      'Book at least 3-5 days in advance during peak season (October-April). Operators fill up quickly, especially around Christmas, New Year, and Moroccan school holidays.',
-      'Confirm the cancellation and rebooking policy before paying. Weather-related cancellations should always be free of charge with a full refund or rebooking option.',
-      'Ask specifically about basket capacity. Standard shared flights carry 12-20 passengers. Smaller baskets (6-8 passengers) cost more but provide a far better experience with more space to move and photograph.',
-      'Check whether the price includes hotel transfer. Most operators include pickup and return to central Marrakech hotels, but riads deep in the medina may require you to walk to a nearby meeting point.',
-      'Morning flights only. Hot air balloons require calm, cool air to fly safely. All flights depart at dawn and no reputable operator offers afternoon or evening flights in Marrakech.',
-    ],
-  },
-  {
-    category: 'Paragliding & Adventure Booking',
-    icon: Compass,
-    tips: [
-      'For tandem paragliding, verify that the pilot holds a current certification from a recognized federation (USHPA, BHPA, FFVL, or equivalent). Ask to see the certificate if in doubt.',
-      'Book zip line and adventure park activities directly through the venue website or at the park entrance. Third-party booking platforms often add 20-30% markup for the same experience.',
-      'For skydiving, research the operator thoroughly. Check for international certifications, read recent reviews on multiple platforms, and verify that they use well-maintained equipment and aircraft.',
-      'Group discounts are common for adventure parks and zip line courses. Ask about reduced rates for 4+ people when booking Terres d\'Amanar or similar venues.',
-      'If you have a medical condition (heart problems, recent surgery, pregnancy, back injuries), disclose this before booking any aerial activity. Operators have medical restrictions that vary by activity.',
-    ],
-  },
-  {
-    category: 'Helicopter Tour Considerations',
-    icon: Plane,
-    tips: [
-      'Helicopter tours are priced per aircraft, not per person. Fill all available seats to reduce the per-person cost. A 4-passenger helicopter at 12,000 MAD is 3,000 MAD per person when full.',
-      'Weight distribution matters in helicopters. The operator may ask for passenger weights in advance to ensure safe loading. Be honest, as this is a safety requirement.',
-      'Front seat next to the pilot offers the best views and photography angles. Some operators charge extra for this seat or assign it by lottery.',
-      'Helicopter flights are more weather-resistant than balloons but can still be cancelled for high winds, low visibility, or thunderstorms. Confirm 24 hours before your scheduled flight.',
-      'Request a flight path that includes your specific interests. Most operators can customize routes within reason, and mentioning photography priorities helps them plan the best angles.',
+      'Cross the entire Atlas range in under an hour',
+      'Aerial views of the Draa Valley and its kasbahs',
+      'Approach the Sahara dunes from the air',
+      'Direct landing at luxury desert camps',
+      'Saves 8-10 hours of road travel each way',
     ],
   },
 ];
 
-/* ===================================================================
-   SAFETY GUIDELINES
-   =================================================================== */
+/* ─── Microlight/Ultralight ─── */
 
-const safetyGuidelines = [
+const microlightOptions = [
   {
-    category: 'General Aerial Safety',
-    icon: Shield,
-    tips: [
-      'Always use licensed and insured operators. In Morocco, the aviation authority (Direction Generale de l\'Aviation Civile) oversees balloon and helicopter operations. Verify that your operator holds valid permits.',
-      'Listen carefully to all safety briefings and follow pilot/instructor instructions at all times. This applies to balloon landing positions, paragliding launch and landing techniques, and zip line body positioning.',
-      'Weather conditions determine whether flights proceed. If an operator is willing to fly in conditions that other operators have cancelled for, this is a major red flag. Safety-conscious operators cancel proactively.',
-      'Ensure your travel insurance covers adventure sports and aerial activities. Many standard travel insurance policies exclude these activities unless you purchase an add-on or select a comprehensive plan.',
-    ],
+    name: 'Marrakech Ultralight Flights',
+    location: 'Small airfields near Marrakech',
+    description:
+      'Experience the thrill of open-cockpit flying in a weight-shift microlight (ULM in French) over the Marrakech region. Unlike balloons, microlights offer the pilot control over direction and altitude, making for a more dynamic flight experience. You sit behind the pilot in an open or semi-enclosed cockpit, with unobstructed views in all directions. Flights typically cover the Palmeraie, Agafay Desert, and the approaches to the Atlas Mountains.',
+    priceRange: '1,200 - 2,500 MAD per person',
+    duration: '20 - 60 minutes',
+    note: 'Microlight flights are weather-dependent and operate in calm morning conditions. Book several days ahead and expect possible rescheduling.',
   },
   {
-    category: 'Hot Air Balloon Safety',
-    icon: Sunrise,
-    tips: [
-      'Wear long pants and closed shoes for balloon flights. The burners produce intense heat above your head, and the landing can involve dragging the basket across rough ground.',
-      'Hold on firmly to the basket handles during takeoff and landing. The pilot will give specific instructions, typically asking you to face in the direction of travel and bend your knees for landing.',
-      'If the basket tips on landing (which can happen in windier conditions), do not jump out. Stay inside and hold on. The basket will right itself or the ground crew will stabilize it.',
-      'People with severe fear of heights generally do well in balloons because there is no fixed reference point and the basket feels stable. However, if you have vertigo triggered by looking straight down, be aware that the basket has gaps.',
-    ],
+    name: 'Essaouira Coastal Flights',
+    location: 'Airfield near Essaouira',
+    description:
+      'Coastal microlight flights offer a unique perspective of the Atlantic shoreline, the Essaouira medina and port, and the dramatic argan forest landscape inland. The combination of ocean views, ancient fortifications, and the contrast of green argan trees against sandy terrain is visually stunning. Some operators fly south toward the dramatic cliffs of Sidi Kaouki.',
+    priceRange: '1,500 - 3,000 MAD per person',
+    duration: '20 - 45 minutes',
+    note: 'Wind conditions in Essaouira are more challenging than Marrakech. Flights are typically only available in the early morning when winds are calmest.',
   },
   {
-    category: 'Paragliding & Zip Line Safety',
-    icon: AlertTriangle,
-    tips: [
-      'For tandem paragliding, the instructor controls everything. Your job is to run during launch (2-3 steps down the slope) and lift your legs for landing. Do exactly as instructed without hesitation.',
-      'Zip line harnesses should be double-checked by staff before every line. If you are not satisfied with how a harness fits or a carabiner is attached, speak up immediately.',
-      'Do not attempt solo paragliding in Morocco without significant experience and local knowledge. Thermal and wind patterns in the Atlas Mountains can change rapidly and conditions are not always as benign as they appear.',
-      'For adventure parks, wear sunscreen and drink water between courses. The Atlas foothills can be hot and dehydration affects your coordination and judgment on high elements.',
-    ],
+    name: 'Ouarzazate Desert Flights',
+    location: 'Ouarzazate airfield',
+    description:
+      'Ouarzazate, the gateway to the Sahara and home to Morocco\'s famous film studios, offers microlight flights over the dramatic desert landscape. Fly over the Ait Benhaddou kasbah (UNESCO World Heritage Site), the Ouarzazate dam, and the stark desert terrain that has served as a backdrop for countless films including Gladiator and Game of Thrones.',
+    priceRange: '1,800 - 3,500 MAD per person',
+    duration: '30 - 60 minutes',
+    note: 'Limited operators. Book well in advance and confirm availability. Best conditions: October to April.',
   },
 ];
 
-/* ===================================================================
-   PHOTOGRAPHY FROM THE AIR
-   =================================================================== */
+/* ─── Skydiving ─── */
+
+const skydivingInfo = {
+  overview:
+    'Skydiving in Morocco is not as developed as in Europe or North America, but tandem jumps are occasionally available through visiting operators and organized events. The sport is growing, with occasional dropzones established near Marrakech, Beni Mellal, and the coastal cities. The Royal Moroccan Aero Club (Aeroclub Royal du Maroc) oversees aerial sports and can provide current information about registered skydiving operators.',
+  options: [
+    {
+      name: 'Tandem Skydiving near Marrakech',
+      description:
+        'When available, tandem skydiving jumps are offered from small airfields near Marrakech at altitudes of 3,000-4,000 meters. The freefall lasts approximately 45-60 seconds, followed by a 5-7 minute parachute ride with views of the Atlas Mountains and the Haouz Plain. Availability is inconsistent, so plan well ahead and have alternative activities ready.',
+      priceRange: '3,000 - 4,500 MAD per person',
+      availability: 'Seasonal and operator-dependent. Most active: March to June and September to November.',
+    },
+    {
+      name: 'Beni Mellal Dropzone',
+      description:
+        'The Beni Mellal area, between Marrakech and Fes at the base of the Middle Atlas, has hosted organized skydiving events. The flat terrain and generally clear skies make it suitable for parachute operations. Check with the Royal Moroccan Aero Club for upcoming events and registered operators.',
+      priceRange: '3,500 - 5,000 MAD per person',
+      availability: 'Event-based. Not consistently available year-round.',
+    },
+  ],
+  tips: [
+    'Verify that the operator is registered with the Royal Moroccan Aero Club',
+    'Ensure the tandem instructor holds an internationally recognized rating (USPA, BPA, or FFP)',
+    'Check that equipment is maintained and inspected to international standards',
+    'Book well in advance as spots are limited when operators are active',
+    'Have a backup plan in case the jump is cancelled due to weather or operational issues',
+  ],
+};
+
+/* ─── Photography Tips ─── */
 
 const photographyTips = [
   {
-    category: 'Camera Equipment',
+    title: 'Camera Settings for Balloon Flights',
     icon: Camera,
     tips: [
-      'A smartphone with a good camera is sufficient for most aerial experiences. The latest flagship phones produce excellent results in the golden light of sunrise. No need to bring heavy DSLR equipment unless you are a serious photographer.',
-      'If using a camera, a wide-angle lens (16-35mm equivalent) captures the sweeping landscape, while a short telephoto (70-200mm) is useful for isolating details like Berber villages or the Koutoubia minaret from a balloon.',
-      'Bring a lens cloth. Balloon burners create heat haze, paragliding at altitude is cold (condensation), and helicopter windows can fog. A microfiber cloth ensures clean shots when moments matter.',
-      'GoPro or action cameras are ideal for paragliding and zip lining, where you cannot hold a camera. Most tandem paragliding instructors offer GoPro footage of your flight included in the price or for an additional fee.',
+      'Use aperture priority mode (A/Av) with f/5.6-f/8 for landscape sharpness',
+      'Set ISO to auto with a maximum of 800-1600 for dawn light conditions',
+      'Shutter speed of at least 1/250s to compensate for basket movement',
+      'Shoot in RAW format for maximum flexibility in post-processing the variable dawn light',
+      'Use a wide-angle lens (16-35mm or equivalent) for sweeping landscapes',
+      'Bring a medium zoom (24-70mm or 70-200mm) for village details and the balloon itself',
+      'Disable image stabilization if resting the camera on the basket rim (it can cause blur)',
     ],
   },
   {
-    category: 'Shooting Techniques',
+    title: 'GoPro vs Smartphone',
     icon: Eye,
     tips: [
-      'In a balloon, the basket sways gently and the light is sublime at sunrise. Shoot in burst mode for landscapes to account for subtle basket movement. The warm golden light lasts for about 30-40 minutes after takeoff.',
-      'For aerial photos, shoot at a slightly downward angle rather than straight down. This provides depth and scale to the landscape. Include the balloon edge, basket ropes, or other passengers for context.',
-      'Use the rule of thirds actively. The horizon line, the edge of the Palmeraie, or a village nestled in a valley should sit on a composition line rather than dead center.',
-      'In helicopters, shoot through the open door (if permitted) or press the lens flat against the window to reduce reflections. Remove any polarizing filters, which create banding patterns on aircraft windows.',
-      'Shoot video as well as stills. The gentle drift of a balloon and the speed of a zip line are dynamic experiences that photographs alone cannot capture. Short 15-30 second clips are ideal for social media.',
+      'GoPro Hero series: Excellent for wide-angle video, mount on the basket or chest harness. Use linear mode to reduce fisheye distortion. 4K at 30fps recommended.',
+      'Smartphone: Modern phones (iPhone 14+, Samsung S23+) produce excellent aerial photos. Use the 0.5x ultrawide for landscapes, 1x for villages, and 3-5x telephoto for details.',
+      'Smartphone Pro mode: Set to RAW capture for best quality. Manual white balance for golden hour.',
+      'GoPro advantage: Hands-free video capture while you enjoy the experience. Set and forget.',
+      'Smartphone advantage: Instant sharing, better computational photography, and portrait mode for basket selfies.',
+      'Bring both if you have them. GoPro for continuous video, phone for curated stills.',
     ],
   },
   {
-    category: 'Best Conditions & Timing',
+    title: 'Golden Hour Timing',
     icon: Sunrise,
     tips: [
-      'Sunrise balloon flights offer the best photography light. The first 20 minutes after takeoff, when the sun is low and the Atlas Mountains are side-lit, produce the most dramatic images.',
-      'Clear mornings after rain produce the best visibility. The Atlas Mountains appear razor-sharp and the air has a crystalline quality that enhances color saturation naturally.',
-      'For helicopter photography, request a morning flight (before 10 AM) when the light is warm and the air is calm. Afternoon heat creates turbulence and haze that degrades image quality.',
-      'Overcast days are not ideal for aerial photography but can produce moody, atmospheric shots. If your balloon flight proceeds on a cloudy morning, focus on the landscape details rather than panoramas.',
+      'Balloon flights are timed for golden hour, the 30-60 minutes after sunrise when light is warm and soft',
+      'The best light occurs during the first 20 minutes of the flight, immediately after sunrise',
+      'Shoot toward the sun for dramatic silhouettes of the balloon and landscape',
+      'Shoot away from the sun for evenly lit, warm-toned landscape photos',
+      'The balloon envelope itself glows beautifully when lit from behind by the rising sun',
+      'As the sun climbs, shadows shorten and contrast increases; adjust exposure compensation accordingly',
+      'For paragliding and helicopter flights later in the day, a polarizing filter reduces haze and deepens sky color',
+    ],
+  },
+  {
+    title: 'Practical Photo Tips',
+    icon: CheckCircle,
+    tips: [
+      'Secure all equipment with neck straps and wrist straps. Dropped cameras from balloons are gone forever.',
+      'Bring a lens cloth; early morning dew can form on lenses at altitude',
+      'Charge all batteries the night before; cold morning air drains batteries faster',
+      'Bring a spare memory card; you will take more photos than you expect',
+      'For video, bring a small gimbal or stabilizer for smooth aerial footage',
+      'Do NOT fly drones near balloons, paragliders, or helicopters. It is illegal and extremely dangerous.',
+      'The best photo from a balloon is often straight down. Look for patterns, shadows, and the balloon\'s shadow on the ground.',
     ],
   },
 ];
 
-/* ===================================================================
-   WHAT TO WEAR & BRING DATA
-   =================================================================== */
+/* ─── Booking & Practical Guide ─── */
 
-const whatToWear = [
+const bookingAdvice = [
+  {
+    title: 'When to Book',
+    icon: Calendar,
+    content: [
+      'Balloon flights: Book 2-5 days in advance during October to April (peak season). In summer, 1-2 days is usually sufficient.',
+      'Paragliding: Book 1-3 days ahead. Same-day booking is sometimes possible outside peak season.',
+      'Helicopter tours: Book 1-2 weeks in advance, especially for Atlas Mountain flights.',
+      'Zip lining: Book 1-2 days ahead for weekends, walk-ins possible on weekdays.',
+      'Peak season for all aerial activities: October to April, with highest demand December to February.',
+    ],
+  },
+  {
+    title: 'Dawn Flights & Wind Conditions',
+    icon: CloudSun,
+    content: [
+      'Balloon flights only operate at dawn when winds are calmest (typically below 10 knots).',
+      'Wind speeds above 15 knots will result in flight cancellation for balloons.',
+      'Paragliding requires different wind conditions: some wind is needed for launch, but too much causes cancellation.',
+      'Helicopter tours operate in a wider range of conditions but may be cancelled in storms or very high winds.',
+      'Morning is almost always calmer than afternoon for all aerial activities in Morocco.',
+      'The calmest months overall: September to November. Most cancellations: January to March (winter storms).',
+    ],
+  },
+  {
+    title: 'Cancellation Policies',
+    icon: Info,
+    content: [
+      'Weather cancellations: Most operators offer a full refund or free reschedule for weather cancellations.',
+      'Client cancellations: Typically free cancellation up to 24-48 hours before the flight.',
+      'No-shows: Usually non-refundable. Always contact the operator if you cannot make it.',
+      'Partial conditions: If the flight is shortened due to changing winds, most operators offer a partial refund or discount on a future flight.',
+      'Get cancellation policies in writing before booking. Reputable operators have clear, fair policies.',
+    ],
+  },
+  {
+    title: 'What to Wear',
+    icon: Shirt,
+    content: [
+      'Balloon flights: Dress warmly in layers. It is cold at 4:30 AM and cooler at altitude. Bring a jacket even in summer.',
+      'Flat, closed-toe shoes are essential for balloon flights (no sandals, heels, or flip-flops).',
+      'Paragliding: Comfortable, non-restrictive clothing. Sneakers or hiking boots. Sunglasses with a strap.',
+      'Helicopter: No loose clothing or scarves that could blow in the rotor wash. Tie back long hair.',
+      'Zip lining: Athletic clothing that allows free movement. Closed-toe shoes mandatory.',
+      'All activities: Sunscreen, sunglasses, and a hat (secured with a chin strap for paragliding and zip lining).',
+    ],
+  },
+  {
+    title: 'Weight Limits',
+    icon: Weight,
+    content: [
+      'Hot air balloons: Generally no strict individual weight limit, but total basket weight is managed by the operator. Passengers over 120 kg should inform the operator when booking.',
+      'Paragliding tandem: Maximum passenger weight typically 90-100 kg. Some operators accommodate up to 110 kg with larger wings.',
+      'Zip lining: Maximum 110-120 kg depending on the course and equipment.',
+      'Helicopter: Weight limits vary by aircraft. Inform the operator of passenger weights at booking for proper fuel and balance calculations.',
+      'Microlight/ultralight: Maximum passenger weight typically 90-100 kg due to aircraft limitations.',
+      'Always declare your weight accurately. It is a safety issue, not a judgment.',
+    ],
+  },
+  {
+    title: 'Safety Standards',
+    icon: Shield,
+    content: [
+      'Morocco\'s civil aviation authority (Direction Generale de l\'Aviation Civile, DGAC) regulates commercial balloon operations.',
+      'Reputable balloon operators use Cameron or Ultramagic balloons with regular maintenance and inspection.',
+      'Balloon pilots should hold a commercial balloon pilot license with current medical certification.',
+      'Paragliding operators should be affiliated with the Federation Royale Marocaine des Sports Aeriens.',
+      'Ask about safety records, pilot experience, and equipment maintenance schedules before booking.',
+      'Travel insurance that covers aerial activities is strongly recommended. Check your policy before flying.',
+    ],
+  },
+  {
+    title: 'Best Season Overall',
+    icon: Sun,
+    content: [
+      'October to April is the best overall season for aerial activities in Morocco.',
+      'October-November: Warm, clear, calm. Excellent for all activities. Lower tourist numbers.',
+      'December-February: Cooler mornings, snow on the Atlas. Dramatic photography. Peak tourist season.',
+      'March-April: Warming up, wildflowers in bloom, longer days. Occasional spring storms.',
+      'May-September: Hot, especially inland. Balloon flights operate but haze can reduce visibility. Fewer tourists, lower prices.',
+      'The single best month: November. Perfect weather, clear skies, calm winds, manageable tourist numbers.',
+    ],
+  },
+];
+
+/* ─── Comparison Table Data ─── */
+
+const comparisonData = [
   {
     activity: 'Hot Air Balloon',
-    icon: Wind,
-    clothing: [
-      'Warm layers for pre-dawn pickup (temperatures can be 5-10C at launch time, even in October)',
-      'Long pants (mandatory, not shorts, due to burner heat and rough landing terrain)',
-      'Closed-toe flat shoes with good grip (no heels, sandals, or flip-flops)',
-      'Hat or cap for sun protection after sunrise',
-      'Light jacket or fleece that can be removed as the day warms',
-    ],
-    bring: [
-      'Fully charged smartphone or camera',
-      'Sunglasses',
-      'Sunscreen (the morning sun intensifies at altitude)',
-      'Small backpack (no large bags in the basket)',
-      'Motion sickness medication if sensitive (rare but possible)',
-      'Cash for tips (50-100 MAD for the pilot and ground crew is appreciated)',
-    ],
-  },
-  {
-    activity: 'Paragliding',
-    icon: Compass,
-    clothing: [
-      'Long pants and long sleeves (protection for launch and landing)',
-      'Closed sturdy shoes with ankle support (hiking boots ideal)',
-      'Warm layer for altitude (it is significantly colder at launch elevation)',
-      'Nothing loose that can flap or catch on lines (scarves, dangling jewelry)',
-      'Hair tied back securely',
-    ],
-    bring: [
-      'GoPro or action camera with chest/wrist mount (optional)',
-      'Sunglasses with a secure strap (mandatory at altitude)',
-      'Sunscreen applied before the flight',
-      'Small water bottle for post-flight',
-      'Gloves in winter months (hands get very cold)',
-    ],
-  },
-  {
-    activity: 'Zip Line / Adventure Park',
-    icon: Zap,
-    clothing: [
-      'Comfortable athletic clothing that allows full range of motion',
-      'Closed-toe shoes with grip (athletic shoes or hiking boots)',
-      'No loose clothing, dangling straps, or untucked shirts',
-      'Long hair tied back and secured under helmet',
-      'Gloves provided by park (or bring cycling gloves for grip)',
-    ],
-    bring: [
-      'Water bottle (essential between courses)',
-      'Sunscreen and insect repellent',
-      'Small snack for energy between courses',
-      'Change of clothes if doing multiple courses',
-      'Secure pocket or leave valuables in locker',
-    ],
-  },
-];
-
-/* ===================================================================
-   COMPARISON TABLE DATA
-   =================================================================== */
-
-interface ActivityComparison {
-  activity: string;
-  priceRange: string;
-  duration: string;
-  difficulty: string;
-  bestLocation: string;
-  bestSeason: string;
-  minAge: string;
-  physicalDemand: string;
-}
-
-const activityComparison: ActivityComparison[] = [
-  {
-    activity: 'Hot Air Balloon (Shared)',
-    priceRange: '1,500-2,500 MAD',
-    duration: '1 hour flight (4-5 hrs total)',
-    difficulty: 'Easy (no fitness required)',
-    bestLocation: 'Marrakech Palmeraie',
-    bestSeason: 'October-April',
-    minAge: '6 years',
-    physicalDemand: 'Low',
-  },
-  {
-    activity: 'Hot Air Balloon (Private)',
-    priceRange: '8,000-15,000 MAD',
-    duration: '1-1.5 hr flight (5-6 hrs total)',
+    price: '1,500 - 2,500 MAD',
+    duration: '3-4 hours (total)',
+    airTime: '~60 minutes',
     difficulty: 'Easy',
-    bestLocation: 'Marrakech / Agafay',
-    bestSeason: 'October-April',
     minAge: '6 years',
-    physicalDemand: 'Low',
+    bestLocation: 'Marrakech / Jbilet Hills',
+    bestSeason: 'Oct - Apr',
+    thrill: 'Low (gentle, serene)',
+    photoOpportunity: 'Exceptional',
   },
   {
-    activity: 'Tandem Paragliding',
-    priceRange: '800-1,500 MAD',
-    duration: '15-45 min flight',
+    activity: 'Paragliding (Tandem)',
+    price: '800 - 1,500 MAD',
+    duration: '2-3 hours (total)',
+    airTime: '15-30 minutes',
     difficulty: 'Easy (tandem)',
-    bestLocation: 'Aguergour (Marrakech)',
-    bestSeason: 'Year-round',
     minAge: '12 years',
-    physicalDemand: 'Low-Medium',
+    bestLocation: 'Aguergour',
+    bestSeason: 'Mar - Nov',
+    thrill: 'Medium-High',
+    photoOpportunity: 'Good (GoPro)',
   },
   {
-    activity: 'Zip Lining (Discovery)',
-    priceRange: '250-350 MAD',
-    duration: '1-1.5 hours',
-    difficulty: 'Easy',
+    activity: 'Zip Lining',
+    price: '350 - 900 MAD',
+    duration: '1.5-6 hours',
+    airTime: 'Minutes (per line)',
+    difficulty: 'Easy-Moderate',
+    minAge: '6-14 years',
     bestLocation: 'Terres d\'Amanar',
     bestSeason: 'Year-round',
-    minAge: '5 years',
-    physicalDemand: 'Low',
+    thrill: 'Medium',
+    photoOpportunity: 'Good',
   },
   {
-    activity: 'Zip Lining (Extreme)',
-    priceRange: '500-600 MAD',
-    duration: '2.5-3 hours',
-    difficulty: 'Challenging',
-    bestLocation: 'Terres d\'Amanar',
-    bestSeason: 'Year-round',
-    minAge: '14 years',
-    physicalDemand: 'High',
-  },
-  {
-    activity: 'Tandem Skydiving',
-    priceRange: '3,000-5,000 MAD',
-    duration: '6-8 min flight',
-    difficulty: 'Moderate (adrenaline)',
-    bestLocation: 'Near Marrakech',
-    bestSeason: 'October-April',
-    minAge: '16-18 years',
-    physicalDemand: 'Low-Medium',
-  },
-  {
-    activity: 'Helicopter City Tour',
-    priceRange: '3,500-5,000 MAD/person',
-    duration: '15-20 minutes',
+    activity: 'Helicopter Tour',
+    price: '3,500 - 18,000 MAD',
+    duration: '20 min - 3 hours',
+    airTime: 'Full duration',
     difficulty: 'Easy',
+    minAge: '2 years',
+    bestLocation: 'Marrakech / Atlas',
+    bestSeason: 'Year-round',
+    thrill: 'Medium',
+    photoOpportunity: 'Outstanding',
+  },
+  {
+    activity: 'Microlight/Ultralight',
+    price: '1,200 - 3,500 MAD',
+    duration: '1-2 hours (total)',
+    airTime: '20-60 minutes',
+    difficulty: 'Easy',
+    minAge: '16 years',
     bestLocation: 'Marrakech',
-    bestSeason: 'Year-round',
-    minAge: 'No minimum',
-    physicalDemand: 'None',
+    bestSeason: 'Oct - May',
+    thrill: 'Medium-High',
+    photoOpportunity: 'Good',
   },
   {
-    activity: 'Helicopter Atlas Tour',
-    priceRange: '12,000-25,000 MAD/heli',
-    duration: '45 min-1.5 hours',
-    difficulty: 'Easy',
-    bestLocation: 'Marrakech to Toubkal',
-    bestSeason: 'Year-round',
-    minAge: 'No minimum',
-    physicalDemand: 'None',
+    activity: 'Skydiving (Tandem)',
+    price: '3,000 - 5,000 MAD',
+    duration: '3-4 hours (total)',
+    airTime: '~7 minutes',
+    difficulty: 'Easy (tandem)',
+    minAge: '18 years',
+    bestLocation: 'Near Marrakech',
+    bestSeason: 'Mar - Nov',
+    thrill: 'Extreme',
+    photoOpportunity: 'Good (GoPro)',
   },
 ];
 
-/* ===================================================================
-   COMPONENT: PAGE
-   =================================================================== */
+/* ─── FAQ ─── */
+
+const faqs = [
+  {
+    question: 'Is hot air ballooning safe in Morocco?',
+    answer:
+      'Yes. Morocco\'s established balloon operators such as Ciel d\'Afrique have flown for over 30 years with excellent safety records. Commercial balloon flights are regulated by Morocco\'s DGAC (civil aviation authority). The main operators use Cameron and Ultramagic balloons, which are internationally certified, and employ pilots with thousands of hours of flight time. Weather-related cancellations are a sign of good safety culture; never pressure an operator to fly in marginal conditions.',
+  },
+  {
+    question: 'What happens if my balloon flight is cancelled due to weather?',
+    answer:
+      'Reputable operators will either reschedule your flight for the next available morning or offer a full refund. Weather cancellations are common (approximately 10-20% of flights are cancelled, rising to 30% in winter). Most operators make the cancellation decision by 5:00 AM and will contact you or your hotel. If you have limited days in Marrakech, book the balloon for your first morning so you have backup days available.',
+  },
+  {
+    question: 'Can children fly in hot air balloons?',
+    answer:
+      'Yes. Most operators accept children from age 6, provided they can stand for the duration of the flight (approximately 1 hour). Children under 6 are generally not permitted for safety reasons. There is no reduced price for children on most balloon flights. For paragliding, the minimum age is typically 12 for tandem flights, and for zip lining it varies from 6-14 depending on the course difficulty.',
+  },
+  {
+    question: 'Do I need to be physically fit for a balloon flight?',
+    answer:
+      'No special fitness is required. You need to be able to stand for approximately one hour in the basket and step over the basket edge (about 1.2 meters high) during boarding and disembarkation. The landing can involve a minor bump, so passengers with serious back or knee problems should consult their doctor. Pregnant women in the third trimester are typically advised not to fly.',
+  },
+  {
+    question: 'How high do the balloons fly?',
+    answer:
+      'Typical flight altitude ranges from 100 meters (close enough to see individual people and animals on the ground) to 500-600 meters (panoramic landscape views). The pilot varies altitude throughout the flight to provide different perspectives. At lower altitudes, you can hear roosters crowing and donkeys braying in the villages below. At higher altitudes, the entire Haouz Plain and Atlas Mountain range come into view.',
+  },
+  {
+    question: 'Is paragliding scary for beginners?',
+    answer:
+      'Tandem paragliding is surprisingly gentle. The launch involves a short run down a slope, and once airborne, the sensation is more like floating than falling. Your instructor controls everything; you simply enjoy the view. Unlike skydiving, there is no freefall or stomach-dropping sensation. Most first-time flyers describe it as peaceful and exhilarating rather than frightening. If you are comfortable with heights, you will likely enjoy it.',
+  },
+  {
+    question: 'Can I propose during a balloon flight?',
+    answer:
+      'Absolutely, and operators love helping arrange proposals. Private balloon flights can be booked specifically for this purpose (expect to pay 8,000-12,000 MAD for a private balloon). Operators can arrange champagne, flowers, and even a photographer in a second balloon or at the landing site. Let them know your plans when booking so they can help make the moment perfect. The sunrise, the silence, and the Atlas Mountains as your backdrop make for an unforgettable setting.',
+  },
+  {
+    question: 'Should I tip the balloon crew?',
+    answer:
+      'Tipping is appreciated but not mandatory. A typical tip is 50-100 MAD per person for the crew. The pilot and ground crew work very early hours and physically demanding shifts. For exceptional service, 100-200 MAD is generous. For private flights or special arrangements (proposals, celebrations), a larger tip of 200-500 MAD is appropriate.',
+  },
+  {
+    question: 'What is the best time of year for aerial photography?',
+    answer:
+      'November and March offer the best combination of clear skies, dramatic light, and snow on the Atlas peaks. The air is clearest in autumn (October-November) before winter dust storms begin. Winter (December-February) can offer stunning snow-capped Atlas views but occasional haze. Spring (March-April) brings green valleys and wildflowers. Summer has the earliest sunrise times but heat haze can reduce distant visibility.',
+  },
+  {
+    question: 'Are helicopter tours worth the high price?',
+    answer:
+      'For those who can afford it, helicopter tours offer an unmatched perspective of Morocco\'s landscapes. The Atlas Mountain flights in particular reveal terrain that is impossible to see any other way, including remote valleys, dramatic passes, and close-up views of the Toubkal massif. For couples and small groups, the per-person cost becomes more reasonable. The luxury desert transfer also saves an entire day of driving, which may justify the cost on a tight schedule.',
+  },
+  {
+    question: 'Can I fly my drone during a balloon or paragliding flight?',
+    answer:
+      'Absolutely not. Flying drones near balloons, paragliders, helicopters, or any manned aircraft is illegal and extremely dangerous. A drone collision with a balloon envelope could cause a catastrophic deflation. A drone strike on a paraglider could cause a collapse. Moroccan authorities take unauthorized drone flights near aircraft very seriously. Leave your drone at the hotel and use a camera or GoPro instead.',
+  },
+  {
+    question: 'What if I have a fear of heights?',
+    answer:
+      'Interestingly, many people with a fear of heights find balloon flights comfortable because there is no physical connection to the ground to trigger vertigo. You are in an enclosed basket, and the gentle floating sensation is very different from standing on a cliff edge. Paragliding is more exposed and may be challenging for those with severe acrophobia. If your fear is mild, a balloon flight is an excellent way to experience altitude in a gentle, controlled way.',
+  },
+];
+
+/* ═══════════════════════════════════ RENDER ═══════════════════════════════════ */
 
 export default function HotAirBalloonPage() {
   return (
@@ -834,315 +807,278 @@ export default function HotAirBalloonPage() {
       />
 
       {/* ─── Hero Section ─── */}
-      <section className="relative min-h-[75vh] flex items-end overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src="/images/hero-marrakech.webp"
-            alt="Hot air balloon floating above the Palmeraie at sunrise near Marrakech, Morocco"
-            className="w-full h-full object-cover"
-          />
-        </div>
+      <section className="relative py-20 md:py-28 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: 'url(/images/hero-hot-air-balloon.webp)' }}
+        />
         <div className="absolute inset-0 hero-overlay" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary)] via-[var(--color-primary)]/40 to-transparent" />
-
-        <div className="container-morocco relative z-10 pb-16 pt-32">
+        <div className="container-morocco relative z-10">
           <nav className="flex items-center gap-2 text-sm text-white/60 mb-8" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-white transition-colors flex items-center">
+            <Link href="/" className="hover:text-white transition-colors">
               <Home className="w-3.5 h-3.5" />
             </Link>
             <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-white font-medium">Hot Air Balloon & Aerial Activities</span>
+            <Link href="/adventure" className="hover:text-white transition-colors">
+              Adventure
+            </Link>
+            <ChevronRight className="w-3.5 h-3.5" />
+            <span className="text-white">Hot Air Balloon &amp; Aerial</span>
           </nav>
-
-          <div className="max-w-3xl">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm text-white/90 font-medium">
-                <Wind className="w-4 h-4 text-[var(--color-accent)]" />
-                Aerial Adventures
-              </span>
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm text-white/90 font-medium">
-                <Sparkles className="w-4 h-4 text-[var(--color-accent)]" />
-                Updated 2026
-              </span>
-            </div>
-
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-[family-name:var(--font-display)] font-bold text-white mb-6 leading-[1.1]">
-              Hot Air Balloon
-              <span className="block text-[var(--color-accent)]">& Aerial Activities</span>
-            </h1>
-
-            <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl font-[family-name:var(--font-body)]">
-              Rise above the ochre landscapes of Morocco at dawn, drifting silently over the vast
-              Palmeraie as the Atlas Mountains catch the first golden light. From sunrise balloon
-              flights and Atlas paragliding to canyon zip lines and helicopter tours, discover
-              Morocco from an extraordinary perspective.
-            </p>
-
-            <div className="flex flex-wrap gap-4 mt-8">
-              <a href="#balloon-rides" className="btn-primary btn-lg">
-                Balloon Rides
-                <Wind className="w-5 h-5" />
-              </a>
-              <a href="#comparison" className="btn-ghost btn-lg text-white border-white/30 hover:bg-white/10">
-                Compare Activities
-                <ArrowRight className="w-5 h-5" />
-              </a>
-            </div>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm text-white/90 text-sm mb-6">
+            <Wind className="w-4 h-4 text-orange-400" />
+            7 Aerial Activities
           </div>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-display)] font-bold text-white mb-4">
+            Soar Above Morocco
+          </h1>
+          <p className="text-xl md:text-2xl font-[family-name:var(--font-heading)] text-white/90 mb-3">
+            Hot Air Balloon &amp; Aerial Adventures
+          </p>
+          <p className="text-lg text-white/80 max-w-2xl">
+            Float silently over the Atlas Mountains at sunrise, paraglide above ancient villages,
+            soar by helicopter over hidden valleys, and see Morocco from perspectives
+            that few travelers ever experience.
+          </p>
         </div>
       </section>
 
-      {/* ─── Quick Stats Bar ─── */}
-      <section className="relative z-10 -mt-8">
+      <div className="zellige-border" />
+
+      {/* ─── Quick Stats ─── */}
+      <section className="py-10 gradient-moroccan">
         <div className="container-morocco">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[
-              { icon: Wind, label: 'Balloon Flights', value: 'From 1,500 MAD' },
-              { icon: Compass, label: 'Paragliding', value: 'From 800 MAD' },
-              { icon: Zap, label: 'Zip Lining', value: 'From 250 MAD' },
-              { icon: Plane, label: 'Helicopter Tours', value: 'From 3,500 MAD' },
-            ].map((stat) => (
-              <div key={stat.label} className="glass rounded-xl p-4 text-center">
-                <stat.icon className="w-6 h-6 text-[var(--color-accent)] mx-auto mb-2" />
-                <p className="text-xs text-[var(--text-muted)] uppercase tracking-wider">{stat.label}</p>
-                <p className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                  {stat.value}
-                </p>
-              </div>
-            ))}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div>
+              <div className="text-3xl md:text-4xl font-bold text-white">7</div>
+              <div className="text-sm text-white/70 mt-1">Aerial Activities</div>
+            </div>
+            <div>
+              <div className="text-3xl md:text-4xl font-bold text-white">1990</div>
+              <div className="text-sm text-white/70 mt-1">Ballooning Since</div>
+            </div>
+            <div>
+              <div className="text-3xl md:text-4xl font-bold text-white">800+</div>
+              <div className="text-sm text-white/70 mt-1">MAD Lowest Price</div>
+            </div>
+            <div>
+              <div className="text-3xl md:text-4xl font-bold text-white">4,167m</div>
+              <div className="text-sm text-white/70 mt-1">Atlas Views from Air</div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* ─── Introduction ─── */}
-      <section className="py-16 md:py-24 section-light">
-        <div className="container-morocco">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--color-accent-50)] border border-[var(--color-accent-200)] text-sm text-[var(--color-accent)] font-medium mb-4">
-                <Sunrise className="w-4 h-4" />
-                See Morocco from Above
-              </span>
-              <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
-                Why Morocco is Perfect for Aerial Adventures
-              </h2>
-            </div>
-
-            <div className="prose prose-lg max-w-none">
-              <p className="text-[var(--text-secondary)] leading-relaxed mb-6">
-                Morocco&apos;s extraordinary landscape diversity, from the rolling dunes of the Sahara and
-                the snow-capped peaks of the High Atlas to the vast palm groves around Marrakech and
-                the turquoise Atlantic coastline, makes it one of the most visually stunning countries
-                in the world to experience from the air. The warm, stable air of the Moroccan dawn
-                creates ideal conditions for hot air ballooning, while the Atlas Mountains generate
-                reliable thermal currents for paragliding. The year-round sunshine and dramatic terrain
-                provide a backdrop for aerial activities that rivals the best in the world.
+      <section className="py-16 md:py-20">
+        <div className="container-morocco max-w-4xl">
+          <div className="prose-moroccan">
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
+              Morocco from Above: A Perspective That Changes Everything
+            </h2>
+            <div className="space-y-4 text-lg text-[var(--text-secondary)] leading-relaxed">
+              <p>
+                There is a moment during a hot air balloon flight over Marrakech when the burner
+                falls silent, the basket stops swaying, and you find yourself floating in absolute
+                stillness 400 meters above the earth. Below, the Haouz Plain stretches in every
+                direction, divided into patchwork fields of wheat and olive groves. To the south,
+                the entire High Atlas range fills the horizon, its snow-capped peaks glowing pink
+                and gold in the first light of dawn. It is, without exaggeration, one of the most
+                magical experiences Morocco has to offer.
               </p>
-              <p className="text-[var(--text-secondary)] leading-relaxed mb-6">
-                The most popular aerial experience is the sunrise hot air balloon flight from Marrakech,
-                where you drift over the Palmeraie, a vast palm grove of over 100,000 date palms, with
-                the entire Atlas Mountain chain as your backdrop. But Morocco&apos;s aerial adventure scene
-                extends far beyond balloons. Tandem paragliding in the Atlas foothills, zip lining through
-                canyon forests at Terres d&apos;Amanar, helicopter tours over Jebel Toubkal, and even
-                tandem skydiving are all available to visitors with varying levels of adventure appetite.
+              <p>
+                Morocco&apos;s aerial adventures extend far beyond balloon flights. The diverse
+                geography that makes this country exceptional on the ground &mdash; Atlantic
+                coastline, mountain ranges, deserts, gorges, and ancient cities &mdash; becomes
+                even more extraordinary from the air. Paraglide from the Atlas foothills above
+                Aguergour and watch Marrakech shimmer on the horizon. Take a helicopter deep into
+                valleys that would require days of trekking to reach on foot. Zip line across
+                Atlas gorges at Terres d&apos;Amanar. Or feel the open-cockpit rush of a
+                microlight flight over the Sahara gateway at Ouarzazate.
               </p>
-              <p className="text-[var(--text-secondary)] leading-relaxed">
-                This guide covers every aerial activity available in Morocco, with detailed information
-                on prices, operators, what to expect, safety considerations, booking advice, and
-                photography tips to help you capture the experience. Whether you are looking for a
-                romantic sunrise balloon flight with your partner, a family-friendly zip line adventure,
-                or an adrenaline-pumping tandem skydive, Morocco has an aerial experience to match.
+              <p>
+                This guide covers every aerial experience available in Morocco, from the serene
+                to the adrenaline-pumping. Whether you want a peaceful sunrise float or the
+                ultimate skydiving thrill, you will find detailed information on operators,
+                prices in Moroccan Dirhams, locations, what to expect minute by minute, and
+                practical booking advice.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ─── Hot Air Balloon Rides ─── */}
-      <section id="balloon-rides" className="py-16 md:py-24 section-cream">
+      {/* ─── Quick Navigation ─── */}
+      <section className="py-8 bg-[var(--surface-muted)]">
         <div className="container-morocco">
-          <div className="text-center mb-16">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--color-accent-50)] border border-[var(--color-accent-200)] text-sm text-[var(--color-accent)] font-medium mb-4">
-              <Wind className="w-4 h-4" />
-              Signature Experience
-            </span>
-            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
-              Hot Air Balloon Rides in Marrakech
+          <h3 className="text-sm font-bold text-[var(--text-muted)] uppercase tracking-wider mb-4 text-center">
+            Jump to Activity
+          </h3>
+          <div className="flex flex-wrap justify-center gap-2">
+            {[
+              { label: 'Hot Air Balloons', id: 'hot-air-balloons' },
+              { label: 'Atlas Balloon Flights', id: 'atlas-balloon-flights' },
+              { label: 'Paragliding', id: 'paragliding' },
+              { label: 'Zip Lining', id: 'zip-lining' },
+              { label: 'Helicopter Tours', id: 'helicopter-tours' },
+              { label: 'Microlight Flights', id: 'microlight-flights' },
+              { label: 'Skydiving', id: 'skydiving' },
+              { label: 'Photography Tips', id: 'photography-tips' },
+              { label: 'Booking Guide', id: 'booking-guide' },
+              { label: 'Comparison Table', id: 'comparison-table' },
+              { label: 'FAQ', id: 'faq' },
+            ].map((item) => (
+              <a
+                key={item.id}
+                href={`#${item.id}`}
+                className="text-xs px-3 py-1.5 rounded-full bg-[var(--surface)] border border-[var(--border-light)] text-[var(--text-secondary)] hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] transition-colors"
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Hot Air Balloon Marrakech ─── */}
+      <section id="hot-air-balloons" className="py-16 md:py-20 scroll-mt-24">
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-primary)] mb-4">
+              <Sun className="w-4 h-4" />
+              <span>Morocco&apos;s Signature Aerial Experience</span>
+            </div>
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
+              Hot Air Balloon Flights &mdash; Marrakech
             </h2>
-            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
-              The most iconic aerial experience in Morocco. Rise with the sun over the Palmeraie
-              and Atlas Mountains for an unforgettable morning above the Red City.
+            <p className="text-[var(--text-secondary)] max-w-2xl mx-auto">
+              Sunrise flights over the Jbilet Hills and Haouz Plain with the Atlas Mountains as
+              your backdrop. Operating since 1990, Marrakech is Morocco&apos;s hot air balloon capital.
             </p>
           </div>
 
-          {/* Balloon Experience Cards */}
-          <div className="space-y-12">
-            {balloonExperiences.map((balloon, index) => (
-              <div
-                key={balloon.name}
-                className="glass rounded-2xl overflow-hidden"
-              >
-                <div className="grid grid-cols-1 lg:grid-cols-5 gap-0">
-                  <div className="lg:col-span-2 relative min-h-[300px]">
-                    <img
-                      src={balloon.image}
-                      alt={balloon.name}
-                      className="w-full h-full object-cover absolute inset-0"
-                    />
-                    <div className="absolute top-4 left-4">
-                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--color-accent)] text-white text-xs font-bold uppercase tracking-wider">
-                        <Star className="w-3 h-3" />
-                        {index === 0 ? 'Most Popular' : index === 1 ? 'Premium' : 'Adventurous'}
+          <div className="space-y-8">
+            {balloonOperators.map((operator, index) => (
+              <div key={operator.name} className="card-moroccan overflow-hidden">
+                <div className="p-6 md:p-8">
+                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
+                    <div>
+                      <div className="flex items-center gap-3 mb-2">
+                        <span className="w-8 h-8 rounded-full bg-[var(--color-primary)]/10 flex items-center justify-center text-sm font-bold text-[var(--color-primary)]">
+                          {index + 1}
+                        </span>
+                        <h3 className="text-2xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+                          {operator.name}
+                        </h3>
+                      </div>
+                      <p className="text-sm text-[var(--text-muted)]">
+                        Established {operator.established} &middot; {operator.capacity}
+                      </p>
+                    </div>
+                    <div className="flex flex-wrap gap-3">
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[var(--color-primary)]/10 text-[var(--color-primary)] text-sm font-medium">
+                        <DollarSign className="w-3.5 h-3.5" />
+                        {operator.priceRange}
+                      </span>
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[var(--color-secondary)]/10 text-[var(--color-secondary)] text-sm font-medium">
+                        <Clock className="w-3.5 h-3.5" />
+                        {operator.flightDuration}
                       </span>
                     </div>
                   </div>
 
-                  <div className="lg:col-span-3 p-6 md:p-8">
-                    <h3 className="text-2xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                      {balloon.name}
-                    </h3>
-                    <div className="flex items-center gap-2 text-sm text-[var(--text-muted)] mb-4">
-                      <MapPin className="w-4 h-4 text-[var(--color-accent)]" />
-                      {balloon.location}
-                    </div>
+                  <p className="text-[var(--text-secondary)] leading-relaxed mb-6">
+                    {operator.description}
+                  </p>
 
-                    <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-6">
-                      {balloon.description}
-                    </p>
-
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-6">
-                      <div className="p-3 rounded-lg bg-[var(--color-surface)]">
-                        <Clock className="w-4 h-4 text-[var(--color-accent)] mb-1" />
-                        <p className="text-xs text-[var(--text-muted)]">Flight Time</p>
-                        <p className="text-sm font-semibold text-[var(--text-primary)]">{balloon.flightDuration}</p>
-                      </div>
-                      <div className="p-3 rounded-lg bg-[var(--color-surface)]">
-                        <DollarSign className="w-4 h-4 text-[var(--color-green)] mb-1" />
-                        <p className="text-xs text-[var(--text-muted)]">Price</p>
-                        <p className="text-sm font-semibold text-[var(--text-primary)]">{balloon.price}</p>
-                      </div>
-                      <div className="p-3 rounded-lg bg-[var(--color-surface)]">
-                        <Calendar className="w-4 h-4 text-[var(--color-accent)] mb-1" />
-                        <p className="text-xs text-[var(--text-muted)]">Best Season</p>
-                        <p className="text-sm font-semibold text-[var(--text-primary)]">{balloon.bestSeason}</p>
-                      </div>
-                    </div>
-
-                    <div className="mb-6">
-                      <h4 className="text-sm font-bold text-[var(--text-primary)] uppercase tracking-wider mb-3">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <h4 className="font-bold text-[var(--text-primary)] mb-3 flex items-center gap-2">
+                        <CheckCircle className="w-4 h-4 text-green-600" />
                         What&apos;s Included
                       </h4>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                        {balloon.includes.map((item) => (
-                          <div key={item} className="flex items-start gap-2">
-                            <CheckCircle className="w-4 h-4 text-[var(--color-green)] shrink-0 mt-0.5" />
-                            <span className="text-sm text-[var(--text-secondary)]">{item}</span>
-                          </div>
+                      <ul className="space-y-2">
+                        {operator.includes.map((item, i) => (
+                          <li key={i} className="text-sm text-[var(--text-secondary)] flex items-start gap-2">
+                            <ArrowRight className="w-3 h-3 text-[var(--color-primary)] mt-1 shrink-0" />
+                            {item}
+                          </li>
                         ))}
-                      </div>
+                      </ul>
                     </div>
 
                     <div>
-                      <h4 className="text-sm font-bold text-[var(--text-primary)] uppercase tracking-wider mb-3">
-                        Highlights
+                      <h4 className="font-bold text-[var(--text-primary)] mb-3 flex items-center gap-2">
+                        <Star className="w-4 h-4 text-[var(--color-secondary)]" />
+                        Flight Highlights
                       </h4>
-                      <div className="flex flex-wrap gap-2">
-                        {balloon.highlights.map((highlight) => (
-                          <span
-                            key={highlight}
-                            className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[var(--color-accent-50)] text-xs text-[var(--color-accent)] font-medium"
-                          >
-                            <Sparkles className="w-3 h-3" />
-                            {highlight}
-                          </span>
+                      <ul className="space-y-2">
+                        {operator.highlights.map((item, i) => (
+                          <li key={i} className="text-sm text-[var(--text-secondary)] flex items-start gap-2">
+                            <Eye className="w-3 h-3 text-[var(--color-secondary)] mt-1 shrink-0" />
+                            {item}
+                          </li>
                         ))}
-                      </div>
+                      </ul>
                     </div>
+                  </div>
+
+                  <div className="mt-6 pt-4 border-t border-[var(--border-light)] flex flex-wrap gap-4 text-sm text-[var(--text-muted)]">
+                    <span className="inline-flex items-center gap-1.5">
+                      <Globe className="w-3.5 h-3.5" />
+                      {operator.website}
+                    </span>
+                    <span className="inline-flex items-center gap-1.5">
+                      <Phone className="w-3.5 h-3.5" />
+                      {operator.phone}
+                    </span>
                   </div>
                 </div>
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
-          {/* Balloon Practical Details */}
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="glass rounded-2xl p-6 md:p-8">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-lg bg-[var(--color-accent-50)] flex items-center justify-center">
-                  <Clock className="w-5 h-5 text-[var(--color-accent)]" />
-                </div>
-                <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                  Typical Balloon Morning Timeline
-                </h3>
-              </div>
-              <div className="space-y-4">
-                {[
-                  { time: '5:00-5:30 AM', event: 'Hotel/riad pickup in Marrakech', detail: 'Dress warmly; pre-dawn temperatures can be surprisingly cold' },
-                  { time: '5:45-6:00 AM', event: 'Arrive at launch site', detail: 'Mint tea and pastries while the balloon inflates' },
-                  { time: '6:15-6:30 AM', event: 'Balloon launch', detail: 'The balloon lifts off as the sky turns gold and pink' },
-                  { time: '6:30-7:30 AM', event: 'One-hour flight', detail: 'Drift over the Palmeraie, villages, and Atlas foothills' },
-                  { time: '7:30-7:45 AM', event: 'Landing', detail: 'Ground crew meets you; hold on during the final descent' },
-                  { time: '8:00-9:00 AM', event: 'Berber breakfast', detail: 'Traditional spread served on carpets in a palm grove' },
-                  { time: '9:00-9:30 AM', event: 'Return to hotel', detail: 'Back in Marrakech by late morning with the whole day ahead' },
-                ].map((step) => (
-                  <div key={step.time} className="flex gap-4">
-                    <div className="text-sm font-bold text-[var(--color-accent)] whitespace-nowrap min-w-[100px]">
-                      {step.time}
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold text-[var(--text-primary)]">{step.event}</p>
-                      <p className="text-xs text-[var(--text-muted)]">{step.detail}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
+      {/* ─── Minute-by-Minute Experience ─── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-primary)] mb-4">
+              <Clock className="w-4 h-4" />
+              <span>Your Flight Experience</span>
             </div>
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
+              Minute-by-Minute: What to Expect
+            </h2>
+            <p className="text-[var(--text-secondary)] max-w-2xl mx-auto">
+              A detailed walkthrough of the entire balloon flight experience, from the pre-dawn
+              hotel pickup to the traditional Berber breakfast after landing.
+            </p>
+          </div>
 
-            <div className="glass rounded-2xl p-6 md:p-8">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-lg bg-[var(--color-accent-50)] flex items-center justify-center">
-                  <CloudSun className="w-5 h-5 text-[var(--color-accent)]" />
-                </div>
-                <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                  Best Season & Weather
-                </h3>
-              </div>
-              <div className="space-y-4">
-                {[
-                  {
-                    season: 'October-December',
-                    rating: 5,
-                    detail: 'Peak balloon season. Calm winds, clear skies, cool mornings. The Atlas is often snow-capped, creating dramatic backdrops. Book 1-2 weeks ahead.',
-                  },
-                  {
-                    season: 'January-March',
-                    rating: 4,
-                    detail: 'Excellent conditions with lower tourist numbers. January mornings can be quite cold (5-8C at altitude). Some rain days cause cancellations but clear mornings are superb.',
-                  },
-                  {
-                    season: 'April-May',
-                    rating: 4,
-                    detail: 'Warming temperatures and occasional spring haze. Wildflowers visible on the ground. Wind picks up toward May, increasing cancellation rates slightly.',
-                  },
-                  {
-                    season: 'June-September',
-                    rating: 2,
-                    detail: 'Summer heat creates thermal turbulence that makes ballooning difficult. Most operators reduce schedules or pause entirely. Early June and late September are borderline.',
-                  },
-                ].map((s) => (
-                  <div key={s.season} className="p-4 rounded-lg bg-[var(--color-surface)]">
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-sm font-bold text-[var(--text-primary)]">{s.season}</span>
-                      <div className="flex gap-0.5">
-                        {Array.from({ length: 5 }).map((_, i) => (
-                          <Star
-                            key={i}
-                            className={`w-3.5 h-3.5 ${i < s.rating ? 'text-[var(--color-gold)] fill-[var(--color-gold)]' : 'text-gray-300'}`}
-                          />
-                        ))}
-                      </div>
+          <div className="max-w-3xl mx-auto">
+            <div className="relative">
+              <div className="absolute left-4 md:left-6 top-0 bottom-0 w-0.5 bg-[var(--color-primary)]/20" />
+
+              <div className="space-y-8">
+                {flightTimeline.map((step, index) => (
+                  <div key={index} className="relative pl-12 md:pl-16">
+                    <div className="absolute left-2 md:left-4 top-1 w-5 h-5 rounded-full bg-[var(--color-primary)] flex items-center justify-center">
+                      <div className="w-2 h-2 rounded-full bg-white" />
                     </div>
-                    <p className="text-xs text-[var(--text-muted)] leading-relaxed">{s.detail}</p>
+
+                    <div className="card-moroccan p-5">
+                      <div className="flex items-center gap-3 mb-2">
+                        <span className="text-xs font-bold text-[var(--color-primary)] bg-[var(--color-primary)]/10 px-2 py-0.5 rounded">
+                          {step.time}
+                        </span>
+                        <h3 className="font-bold text-[var(--text-primary)]">{step.title}</h3>
+                      </div>
+                      <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                        {step.description}
+                      </p>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -1151,81 +1087,139 @@ export default function HotAirBalloonPage() {
         </div>
       </section>
 
-      {/* ─── Paragliding Section ─── */}
-      <section id="paragliding" className="py-16 md:py-24 section-light">
+      {/* ─── Atlas Mountain Balloon Flights ─── */}
+      <section id="atlas-balloon-flights" className="py-16 md:py-20 scroll-mt-24">
         <div className="container-morocco">
-          <div className="text-center mb-16">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--color-accent-50)] border border-[var(--color-accent-200)] text-sm text-[var(--color-accent)] font-medium mb-4">
-              <Compass className="w-4 h-4" />
-              Soaring Adventures
-            </span>
-            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
-              Paragliding in Morocco
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-primary)] mb-4">
+              <Mountain className="w-4 h-4" />
+              <span>Mountain Flights</span>
+            </div>
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
+              Hot Air Balloon &mdash; Atlas Mountains
             </h2>
-            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
-              Soar over the Atlas foothills, cedar forests, and coastal cliffs with tandem
-              paragliding flights that require zero prior experience.
+            <p className="text-[var(--text-secondary)] max-w-2xl mx-auto">
+              Specialized flights offering closer views of the High Atlas, Ourika Valley,
+              and the Agafay Desert landscape.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {paraglidingSites.map((site) => (
-              <div key={site.name} className="glass rounded-2xl p-6 md:p-8 flex flex-col">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-[var(--color-accent-50)] flex items-center justify-center">
-                    <Compass className="w-5 h-5 text-[var(--color-accent)]" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                      {site.name}
-                    </h3>
-                    <p className="text-xs text-[var(--text-muted)]">{site.location}</p>
-                  </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {atlasBalloonDetails.map((item) => (
+              <div key={item.area} className="card-moroccan p-6">
+                <div className="inline-flex p-2 rounded-lg bg-[var(--color-primary)]/10 mb-3">
+                  <Mountain className="w-5 h-5 text-[var(--color-primary)]" />
                 </div>
-
-                <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-6 flex-grow">
-                  {site.description}
+                <h3 className="text-lg font-bold text-[var(--text-primary)] mb-3">{item.area}</h3>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4">
+                  {item.description}
                 </p>
-
-                <div className="grid grid-cols-2 gap-3 mb-6">
-                  <div className="p-3 rounded-lg bg-[var(--color-surface)]">
-                    <Mountain className="w-4 h-4 text-[var(--color-accent)] mb-1" />
-                    <p className="text-xs text-[var(--text-muted)]">Altitude</p>
-                    <p className="text-xs font-semibold text-[var(--text-primary)]">{site.altitude}</p>
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2 text-sm">
+                    <Calendar className="w-3.5 h-3.5 text-[var(--color-secondary)]" />
+                    <span className="text-[var(--text-secondary)]">{item.season}</span>
                   </div>
-                  <div className="p-3 rounded-lg bg-[var(--color-surface)]">
-                    <Clock className="w-4 h-4 text-[var(--color-accent)] mb-1" />
-                    <p className="text-xs text-[var(--text-muted)]">Flight Time</p>
-                    <p className="text-xs font-semibold text-[var(--text-primary)]">{site.flightDuration}</p>
-                  </div>
-                  <div className="p-3 rounded-lg bg-[var(--color-surface)]">
-                    <DollarSign className="w-4 h-4 text-[var(--color-green)] mb-1" />
-                    <p className="text-xs text-[var(--text-muted)]">Price</p>
-                    <p className="text-xs font-semibold text-[var(--text-primary)]">{site.price}</p>
-                  </div>
-                  <div className="p-3 rounded-lg bg-[var(--color-surface)]">
-                    <Gauge className="w-4 h-4 text-[var(--color-accent)] mb-1" />
-                    <p className="text-xs text-[var(--text-muted)]">Difficulty</p>
-                    <p className="text-xs font-semibold text-[var(--text-primary)]">{site.difficulty}</p>
+                  <div className="flex items-start gap-2 text-sm">
+                    <Info className="w-3.5 h-3.5 text-[var(--color-primary)] mt-0.5 shrink-0" />
+                    <span className="text-[var(--text-muted)] italic">{item.note}</span>
                   </div>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-                <div className="mb-4">
-                  <h4 className="text-xs font-bold text-[var(--text-primary)] uppercase tracking-wider mb-2">Highlights</h4>
-                  <div className="space-y-1.5">
-                    {site.highlights.map((h) => (
-                      <div key={h} className="flex items-start gap-2">
-                        <CheckCircle className="w-3.5 h-3.5 text-[var(--color-green)] shrink-0 mt-0.5" />
-                        <span className="text-xs text-[var(--text-secondary)]">{h}</span>
+      {/* ─── Paragliding ─── */}
+      <section id="paragliding" className="py-16 md:py-20 bg-[var(--surface-muted)] scroll-mt-24">
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-primary)] mb-4">
+              <Wind className="w-4 h-4" />
+              <span>Soar Like a Bird</span>
+            </div>
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
+              Paragliding in Morocco
+            </h2>
+            <p className="text-[var(--text-secondary)] max-w-2xl mx-auto">
+              From the Atlas foothills to the Atlantic coast, Morocco offers exceptional paragliding
+              conditions with tandem flights from 800 MAD. No experience required.
+            </p>
+          </div>
+
+          <div className="space-y-8">
+            {paraglidingSites.map((site, index) => (
+              <div key={site.name} className="card-moroccan overflow-hidden">
+                <div className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+                  <div className="md:w-2/5 p-6 md:p-8 bg-[var(--surface-muted)]">
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="w-8 h-8 rounded-full bg-[var(--color-primary)] flex items-center justify-center text-white text-sm font-bold">
+                        {index + 1}
+                      </span>
+                      <div>
+                        <h3 className="text-xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+                          {site.name}
+                        </h3>
+                        <p className="text-xs text-[var(--text-muted)]">{site.location}</p>
                       </div>
-                    ))}
-                  </div>
-                </div>
+                    </div>
 
-                <div className="pt-4 border-t border-[var(--color-border)]">
-                  <div className="flex items-center gap-2 text-xs text-[var(--text-muted)]">
-                    <Calendar className="w-3.5 h-3.5" />
-                    <span>Best season: {site.bestSeason}</span>
+                    <div className="space-y-3 mb-4">
+                      <div className="p-3 rounded-lg bg-[var(--surface)]">
+                        <div className="flex items-center gap-1.5 text-xs font-bold text-[var(--color-primary)] uppercase tracking-wider mb-1">
+                          <DollarSign className="w-3 h-3" /> Price
+                        </div>
+                        <p className="text-sm text-[var(--text-secondary)]">{site.priceRange}</p>
+                      </div>
+                      <div className="p-3 rounded-lg bg-[var(--surface)]">
+                        <div className="flex items-center gap-1.5 text-xs font-bold text-[var(--color-secondary)] uppercase tracking-wider mb-1">
+                          <Clock className="w-3 h-3" /> Flight Time
+                        </div>
+                        <p className="text-sm text-[var(--text-secondary)]">{site.flightDuration}</p>
+                      </div>
+                      <div className="p-3 rounded-lg bg-[var(--surface)]">
+                        <div className="flex items-center gap-1.5 text-xs font-bold text-green-700 uppercase tracking-wider mb-1">
+                          <Gauge className="w-3 h-3" /> Difficulty
+                        </div>
+                        <p className="text-sm text-[var(--text-secondary)]">{site.difficulty}</p>
+                      </div>
+                      <div className="p-3 rounded-lg bg-[var(--surface)]">
+                        <div className="flex items-center gap-1.5 text-xs font-bold text-[var(--text-muted)] uppercase tracking-wider mb-1">
+                          <Calendar className="w-3 h-3" /> Best Time
+                        </div>
+                        <p className="text-sm text-[var(--text-secondary)]">{site.bestTime}</p>
+                      </div>
+                    </div>
+
+                    <div>
+                      <h4 className="text-xs font-bold text-[var(--text-muted)] uppercase tracking-wider mb-2">Operators</h4>
+                      <div className="flex flex-wrap gap-1">
+                        {site.operators.map((op) => (
+                          <span key={op} className="text-xs px-2 py-1 rounded bg-[var(--surface)] text-[var(--text-secondary)]">
+                            {op}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="md:w-3/5 p-6 md:p-8">
+                    <p className="text-[var(--text-secondary)] leading-relaxed mb-6">
+                      {site.description}
+                    </p>
+
+                    <h4 className="font-bold text-[var(--text-primary)] mb-3 flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4 text-green-600" />
+                      What&apos;s Included
+                    </h4>
+                    <ul className="space-y-2">
+                      {site.includes.map((item, i) => (
+                        <li key={i} className="text-sm text-[var(--text-secondary)] flex items-start gap-2">
+                          <ArrowRight className="w-3 h-3 text-[var(--color-primary)] mt-1 shrink-0" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -1235,304 +1229,216 @@ export default function HotAirBalloonPage() {
       </section>
 
       {/* ─── Zip Lining & Adventure Parks ─── */}
-      <section id="zip-lining" className="py-16 md:py-24 section-cream">
+      <section id="zip-lining" className="py-16 md:py-20 scroll-mt-24">
         <div className="container-morocco">
-          <div className="text-center mb-16">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--color-accent-50)] border border-[var(--color-accent-200)] text-sm text-[var(--color-accent)] font-medium mb-4">
-              <Zap className="w-4 h-4" />
-              Adrenaline Adventures
-            </span>
-            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
-              Zip Lining & Adventure Parks
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-primary)] mb-4">
+              <Wind className="w-4 h-4" />
+              <span>Fly Through the Atlas</span>
+            </div>
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
+              Zip Lining &amp; Adventure Parks
             </h2>
-            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
-              Fly through the tree canopy and cross canyons on zip lines in the Atlas foothills,
-              from beginner-friendly discovery courses to extreme aerial challenges.
+            <p className="text-[var(--text-secondary)] max-w-2xl mx-auto">
+              Soar across Atlas Mountain valleys on zip lines up to 300 meters long at
+              Morocco&apos;s purpose-built adventure parks.
             </p>
           </div>
 
-          {zipLineVenues.map((venue) => (
-            <div key={venue.name} className="glass rounded-2xl overflow-hidden mb-12 last:mb-0">
-              <div className="p-6 md:p-8 border-b border-[var(--color-border)]">
-                <div className="flex items-start justify-between flex-wrap gap-4">
-                  <div>
-                    <h3 className="text-2xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                      {venue.name}
-                    </h3>
-                    <div className="flex items-center gap-2 text-sm text-[var(--text-muted)]">
-                      <MapPin className="w-4 h-4 text-[var(--color-accent)]" />
-                      {venue.location}
-                    </div>
-                  </div>
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--color-accent)] text-white text-xs font-bold uppercase tracking-wider">
-                    <TreePine className="w-3 h-3" />
-                    Adventure Park
-                  </span>
-                </div>
-                <p className="text-sm text-[var(--text-secondary)] leading-relaxed mt-4">
-                  {venue.description}
-                </p>
-              </div>
-
-              {/* Course Cards */}
-              <div className="p-6 md:p-8">
-                <h4 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-6">
-                  Available Courses
-                </h4>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                  {venue.courses.map((course) => (
-                    <div key={course.name} className="p-5 rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)]">
-                      <div className="flex items-center justify-between mb-3">
-                        <h5 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                          {course.name}
-                        </h5>
-                        <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold ${
-                          course.difficulty === 'Easy'
-                            ? 'bg-green-100 text-green-700'
-                            : course.difficulty === 'Moderate'
-                            ? 'bg-yellow-100 text-yellow-700'
-                            : 'bg-red-100 text-red-700'
-                        }`}>
-                          {course.difficulty}
-                        </span>
-                      </div>
-                      <p className="text-xs text-[var(--text-secondary)] leading-relaxed mb-4">
-                        {course.description}
+          <div className="space-y-10">
+            {zipLiningVenues.map((venue) => (
+              <div key={venue.name} className="card-moroccan overflow-hidden">
+                <div className="p-6 md:p-8">
+                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-4">
+                    <div>
+                      <h3 className="text-2xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+                        {venue.name}
+                      </h3>
+                      <p className="text-sm text-[var(--text-muted)] flex items-center gap-1.5 mt-1">
+                        <MapPin className="w-3.5 h-3.5" />
+                        {venue.location}
                       </p>
-                      <div className="grid grid-cols-3 gap-2 text-center">
-                        <div className="p-2 rounded-lg bg-white/60">
-                          <p className="text-xs text-[var(--text-muted)]">Duration</p>
-                          <p className="text-xs font-bold text-[var(--text-primary)]">{course.duration}</p>
-                        </div>
-                        <div className="p-2 rounded-lg bg-white/60">
-                          <p className="text-xs text-[var(--text-muted)]">Price</p>
-                          <p className="text-xs font-bold text-[var(--color-green)]">{course.price}</p>
-                        </div>
-                        <div className="p-2 rounded-lg bg-white/60">
-                          <p className="text-xs text-[var(--text-muted)]">Min Age</p>
-                          <p className="text-xs font-bold text-[var(--text-primary)]">{course.minAge}</p>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Facilities & Getting There */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="text-sm font-bold text-[var(--text-primary)] uppercase tracking-wider mb-3">
-                      Facilities
-                    </h4>
-                    <div className="space-y-2">
-                      {venue.facilities.map((facility) => (
-                        <div key={facility} className="flex items-start gap-2">
-                          <CheckCircle className="w-4 h-4 text-[var(--color-green)] shrink-0 mt-0.5" />
-                          <span className="text-sm text-[var(--text-secondary)]">{facility}</span>
-                        </div>
-                      ))}
                     </div>
                   </div>
-                  <div>
-                    <h4 className="text-sm font-bold text-[var(--text-primary)] uppercase tracking-wider mb-3">
-                      Getting There
-                    </h4>
-                    <div className="p-4 rounded-lg bg-[var(--color-accent-50)] border border-[var(--color-accent-200)]">
-                      <div className="flex items-start gap-3">
-                        <MapPin className="w-5 h-5 text-[var(--color-accent)] shrink-0 mt-0.5" />
-                        <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                          {venue.gettingThere}
-                        </p>
+
+                  <p className="text-[var(--text-secondary)] leading-relaxed mb-6">
+                    {venue.description}
+                  </p>
+
+                  <h4 className="font-bold text-[var(--text-primary)] mb-4">Activities &amp; Prices</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                    {venue.activities.map((act) => (
+                      <div key={act.name} className="p-4 rounded-lg bg-[var(--surface-muted)] border border-[var(--border-light)]">
+                        <h5 className="font-bold text-sm text-[var(--text-primary)] mb-1">{act.name}</h5>
+                        <div className="flex items-center gap-3 mb-2">
+                          <span className="text-xs text-[var(--color-primary)] font-medium flex items-center gap-1">
+                            <DollarSign className="w-3 h-3" /> {act.price}
+                          </span>
+                          <span className="text-xs text-[var(--text-muted)] flex items-center gap-1">
+                            <Clock className="w-3 h-3" /> {act.duration}
+                          </span>
+                        </div>
+                        <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{act.description}</p>
                       </div>
-                    </div>
-                    <div className="mt-4 flex items-center gap-2 text-sm text-[var(--text-muted)]">
-                      <Users className="w-4 h-4" />
-                      <span>Best for: {venue.bestFor}</span>
+                    ))}
+                  </div>
+
+                  <div className="p-4 rounded-lg bg-[var(--color-primary)]/5 border border-[var(--color-primary)]/10">
+                    <h4 className="text-sm font-bold text-[var(--text-primary)] mb-3 flex items-center gap-2">
+                      <Info className="w-4 h-4 text-[var(--color-primary)]" />
+                      Practical Information
+                    </h4>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      <div className="text-sm">
+                        <span className="font-bold text-[var(--text-primary)]">Minimum age: </span>
+                        <span className="text-[var(--text-secondary)]">{venue.practicalInfo.minAge}</span>
+                      </div>
+                      <div className="text-sm">
+                        <span className="font-bold text-[var(--text-primary)]">Weight limit: </span>
+                        <span className="text-[var(--text-secondary)]">{venue.practicalInfo.maxWeight}</span>
+                      </div>
+                      <div className="text-sm">
+                        <span className="font-bold text-[var(--text-primary)]">Hours: </span>
+                        <span className="text-[var(--text-secondary)]">{venue.practicalInfo.openingHours}</span>
+                      </div>
+                      <div className="text-sm">
+                        <span className="font-bold text-[var(--text-primary)]">Booking: </span>
+                        <span className="text-[var(--text-secondary)]">{venue.practicalInfo.bookingAdvice}</span>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ─── Skydiving Section ─── */}
-      <section id="skydiving" className="py-16 md:py-24 section-light">
-        <div className="container-morocco">
-          <div className="text-center mb-16">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--color-accent-50)] border border-[var(--color-accent-200)] text-sm text-[var(--color-accent)] font-medium mb-4">
-              <CircleDot className="w-4 h-4" />
-              Ultimate Adrenaline
-            </span>
-            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
-              Skydiving in Morocco
-            </h2>
-            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
-              For the ultimate aerial thrill, tandem skydiving offers freefall speeds of
-              200 km/h with panoramic views of the Moroccan countryside.
-            </p>
+            ))}
           </div>
-
-          {skydivingOptions.map((sky) => (
-            <div key={sky.name} className="max-w-4xl mx-auto glass rounded-2xl p-6 md:p-8">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-[var(--color-accent-50)] flex items-center justify-center shrink-0">
-                  <CircleDot className="w-6 h-6 text-[var(--color-accent)]" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
-                    {sky.name}
-                  </h3>
-                  <div className="flex items-center gap-2 text-sm text-[var(--text-muted)]">
-                    <MapPin className="w-4 h-4 text-[var(--color-accent)]" />
-                    {sky.location}
-                  </div>
-                </div>
-              </div>
-
-              <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-6">
-                {sky.description}
-              </p>
-
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
-                <div className="p-3 rounded-lg bg-[var(--color-surface)] text-center">
-                  <Mountain className="w-4 h-4 text-[var(--color-accent)] mx-auto mb-1" />
-                  <p className="text-xs text-[var(--text-muted)]">Jump Altitude</p>
-                  <p className="text-sm font-bold text-[var(--text-primary)]">{sky.altitude}</p>
-                </div>
-                <div className="p-3 rounded-lg bg-[var(--color-surface)] text-center">
-                  <Zap className="w-4 h-4 text-[var(--color-accent)] mx-auto mb-1" />
-                  <p className="text-xs text-[var(--text-muted)]">Freefall</p>
-                  <p className="text-sm font-bold text-[var(--text-primary)]">{sky.freefallTime}</p>
-                </div>
-                <div className="p-3 rounded-lg bg-[var(--color-surface)] text-center">
-                  <Clock className="w-4 h-4 text-[var(--color-accent)] mx-auto mb-1" />
-                  <p className="text-xs text-[var(--text-muted)]">Total Flight</p>
-                  <p className="text-sm font-bold text-[var(--text-primary)]">{sky.totalFlightTime}</p>
-                </div>
-                <div className="p-3 rounded-lg bg-[var(--color-surface)] text-center">
-                  <DollarSign className="w-4 h-4 text-[var(--color-green)] mx-auto mb-1" />
-                  <p className="text-xs text-[var(--text-muted)]">Price</p>
-                  <p className="text-sm font-bold text-[var(--text-primary)]">{sky.price}</p>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <h4 className="text-sm font-bold text-[var(--text-primary)] uppercase tracking-wider mb-3">Includes</h4>
-                  <div className="space-y-2">
-                    {sky.includes.map((item) => (
-                      <div key={item} className="flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-[var(--color-green)] shrink-0 mt-0.5" />
-                        <span className="text-sm text-[var(--text-secondary)]">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <div>
-                  <h4 className="text-sm font-bold text-[var(--text-primary)] uppercase tracking-wider mb-3">Requirements</h4>
-                  <div className="space-y-2">
-                    {sky.requirements.map((req) => (
-                      <div key={req} className="flex items-start gap-2">
-                        <Info className="w-4 h-4 text-[var(--color-accent)] shrink-0 mt-0.5" />
-                        <span className="text-sm text-[var(--text-secondary)]">{req}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              <div className="p-4 rounded-lg bg-amber-50 border border-amber-200">
-                <div className="flex items-start gap-3">
-                  <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
-                  <div>
-                    <p className="text-sm font-bold text-amber-800 mb-1">Availability Notice</p>
-                    <p className="text-sm text-amber-700 leading-relaxed">{sky.availability}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
         </div>
       </section>
 
       {/* ─── Helicopter Tours ─── */}
-      <section id="helicopter" className="py-16 md:py-24 section-cream">
+      <section id="helicopter-tours" className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern scroll-mt-24">
         <div className="container-morocco">
-          <div className="text-center mb-16">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--color-accent-50)] border border-[var(--color-accent-200)] text-sm text-[var(--color-accent)] font-medium mb-4">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-primary)] mb-4">
               <Plane className="w-4 h-4" />
-              Premium Aerial Experience
-            </span>
-            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
+              <span>Luxury Aerial Experiences</span>
+            </div>
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
               Helicopter Tours
             </h2>
-            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
-              The most exclusive way to see Morocco. Soar over Marrakech&apos;s ancient medina,
-              the snow-capped Atlas, and the dramatic terrain that defines this country.
+            <p className="text-[var(--text-secondary)] max-w-2xl mx-auto">
+              From city overflights to deep Atlas explorations and luxury desert transfers,
+              helicopter tours offer the ultimate aerial perspective of Morocco.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-8">
+          <div className="space-y-6">
             {helicopterTours.map((tour) => (
-              <div key={tour.name} className="glass rounded-2xl overflow-hidden">
+              <div key={tour.name} className="card-moroccan overflow-hidden">
                 <div className="p-6 md:p-8">
-                  <div className="flex items-start justify-between flex-wrap gap-4 mb-4">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-[var(--color-accent-50)] flex items-center justify-center shrink-0">
-                        <Plane className="w-6 h-6 text-[var(--color-accent)]" />
-                      </div>
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
+                    <div className="flex items-center gap-3">
+                      <span className="w-10 h-10 rounded-full bg-[var(--color-secondary)]/10 flex items-center justify-center">
+                        <Plane className="w-5 h-5 text-[var(--color-secondary)]" />
+                      </span>
                       <div>
-                        <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
+                        <h3 className="text-xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
                           {tour.name}
                         </h3>
-                        <p className="text-xs text-[var(--text-muted)]">Route: {tour.route}</p>
+                        <p className="text-xs text-[var(--text-muted)]">{tour.duration}</p>
                       </div>
                     </div>
-                    <div className="text-right">
-                      <p className="text-lg font-bold text-[var(--color-accent)]">{tour.price}</p>
-                      <p className="text-xs text-[var(--text-muted)]">{tour.capacity}</p>
-                    </div>
+                    <span className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[var(--color-secondary)]/10 text-[var(--color-secondary)] text-sm font-medium">
+                      <DollarSign className="w-3.5 h-3.5" />
+                      {tour.priceRange}
+                    </span>
                   </div>
 
-                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-6">
+                  <p className="text-[var(--text-secondary)] leading-relaxed mb-5">
                     {tour.description}
                   </p>
 
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-6">
-                    <div className="p-3 rounded-lg bg-[var(--color-surface)]">
-                      <Clock className="w-4 h-4 text-[var(--color-accent)] mb-1" />
-                      <p className="text-xs text-[var(--text-muted)]">Duration</p>
-                      <p className="text-sm font-semibold text-[var(--text-primary)]">{tour.duration}</p>
-                    </div>
-                    <div className="p-3 rounded-lg bg-[var(--color-surface)]">
-                      <Users className="w-4 h-4 text-[var(--color-accent)] mb-1" />
-                      <p className="text-xs text-[var(--text-muted)]">Capacity</p>
-                      <p className="text-sm font-semibold text-[var(--text-primary)]">{tour.capacity}</p>
-                    </div>
-                    <div className="p-3 rounded-lg bg-[var(--color-surface)]">
-                      <MapPin className="w-4 h-4 text-[var(--color-accent)] mb-1" />
-                      <p className="text-xs text-[var(--text-muted)]">Departs</p>
-                      <p className="text-sm font-semibold text-[var(--text-primary)]">{tour.departsFrom}</p>
-                    </div>
+                  <h4 className="font-bold text-[var(--text-primary)] mb-3 flex items-center gap-2 text-sm">
+                    <Star className="w-4 h-4 text-[var(--color-secondary)]" />
+                    What You&apos;ll See
+                  </h4>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    {tour.highlights.map((highlight, i) => (
+                      <div key={i} className="flex items-start gap-2 text-sm text-[var(--text-secondary)]">
+                        <Eye className="w-3.5 h-3.5 text-[var(--color-secondary)] mt-0.5 shrink-0" />
+                        {highlight}
+                      </div>
+                    ))}
                   </div>
+                </div>
+              </div>
+            ))}
+          </div>
 
-                  <div>
-                    <h4 className="text-sm font-bold text-[var(--text-primary)] uppercase tracking-wider mb-3">
-                      Flight Highlights
-                    </h4>
-                    <div className="flex flex-wrap gap-2">
-                      {tour.highlights.map((highlight) => (
-                        <span
-                          key={highlight}
-                          className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[var(--color-accent-50)] text-xs text-[var(--color-accent)] font-medium"
-                        >
-                          <Eye className="w-3 h-3" />
-                          {highlight}
-                        </span>
-                      ))}
-                    </div>
+          <div className="mt-8 card-moroccan p-6 border-l-4 border-l-[var(--color-secondary)]">
+            <div className="flex items-start gap-4">
+              <div className="inline-flex p-2 rounded-lg bg-[var(--color-secondary)]/10 shrink-0">
+                <Info className="w-5 h-5 text-[var(--color-secondary)]" />
+              </div>
+              <div>
+                <h4 className="font-bold text-[var(--text-primary)] mb-1">Booking Helicopter Tours</h4>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                  Helicopter tours in Morocco are typically arranged through luxury hotels, high-end
+                  travel agencies, or directly with charter operators in Marrakech. Prices are
+                  per-aircraft for transfers and per-person for sightseeing tours (with minimum
+                  passenger requirements). Book 1-2 weeks in advance. Your riad or hotel concierge
+                  can usually arrange helicopter tours through their network of operators.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Microlight & Ultralight Flights ─── */}
+      <section id="microlight-flights" className="py-16 md:py-20 scroll-mt-24">
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-primary)] mb-4">
+              <Wind className="w-4 h-4" />
+              <span>Open-Cockpit Adventure</span>
+            </div>
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
+              Microlight &amp; Ultralight Flights
+            </h2>
+            <p className="text-[var(--text-secondary)] max-w-2xl mx-auto">
+              Experience the thrill of open-cockpit flying in a weight-shift microlight.
+              More dynamic than a balloon, more intimate than a helicopter.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {microlightOptions.map((option) => (
+              <div key={option.name} className="card-moroccan p-6">
+                <div className="inline-flex p-2 rounded-lg bg-[var(--color-primary)]/10 mb-3">
+                  <Plane className="w-5 h-5 text-[var(--color-primary)]" />
+                </div>
+                <h3 className="text-lg font-bold text-[var(--text-primary)] mb-1">{option.name}</h3>
+                <p className="text-xs text-[var(--text-muted)] mb-3 flex items-center gap-1">
+                  <MapPin className="w-3 h-3" /> {option.location}
+                </p>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4">
+                  {option.description}
+                </p>
+
+                <div className="space-y-2 mb-4">
+                  <div className="p-2 rounded bg-[var(--surface-muted)]">
+                    <span className="text-xs font-bold text-[var(--color-primary)]">Price: </span>
+                    <span className="text-xs text-[var(--text-secondary)]">{option.priceRange}</span>
                   </div>
+                  <div className="p-2 rounded bg-[var(--surface-muted)]">
+                    <span className="text-xs font-bold text-[var(--color-secondary)]">Duration: </span>
+                    <span className="text-xs text-[var(--text-secondary)]">{option.duration}</span>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-2 text-xs text-[var(--text-muted)] italic">
+                  <AlertTriangle className="w-3.5 h-3.5 mt-0.5 shrink-0" />
+                  {option.note}
                 </div>
               </div>
             ))}
@@ -1540,244 +1446,214 @@ export default function HotAirBalloonPage() {
         </div>
       </section>
 
-      {/* ─── Booking Tips & Safety ─── */}
-      <section id="booking-safety" className="py-16 md:py-24 section-light">
+      {/* ─── Skydiving ─── */}
+      <section id="skydiving" className="py-16 md:py-20 bg-[var(--surface-muted)] scroll-mt-24">
         <div className="container-morocco">
-          <div className="text-center mb-16">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--color-accent-50)] border border-[var(--color-accent-200)] text-sm text-[var(--color-accent)] font-medium mb-4">
-              <Shield className="w-4 h-4" />
-              Essential Information
-            </span>
-            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
-              Booking Tips & Safety Guidelines
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-primary)] mb-4">
+              <Wind className="w-4 h-4" />
+              <span>Extreme Aerial</span>
+            </div>
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
+              Skydiving in Morocco
             </h2>
-            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
-              Everything you need to know to book with confidence and stay safe during
-              aerial activities in Morocco.
+            <p className="text-[var(--text-secondary)] max-w-2xl mx-auto">
+              Limited but growing options for tandem skydiving, with occasional operations
+              near Marrakech and Beni Mellal.
             </p>
           </div>
 
-          {/* Booking Tips */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-8 text-center">
-              Booking Tips
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {bookingTips.map((category) => (
-                <div key={category.category} className="glass rounded-2xl p-6">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="w-10 h-10 rounded-lg bg-[var(--color-accent-50)] flex items-center justify-center">
-                      <category.icon className="w-5 h-5 text-[var(--color-accent)]" />
-                    </div>
-                    <h4 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                      {category.category}
-                    </h4>
-                  </div>
-                  <div className="space-y-4">
-                    {category.tips.map((tip, index) => (
-                      <div key={index} className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-[var(--color-accent-50)] flex items-center justify-center shrink-0 mt-0.5">
-                          <span className="text-xs font-bold text-[var(--color-accent)]">{index + 1}</span>
-                        </div>
-                        <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{tip}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+          <div className="max-w-3xl mx-auto">
+            <div className="card-moroccan p-6 md:p-8 mb-6">
+              <p className="text-[var(--text-secondary)] leading-relaxed mb-6">
+                {skydivingInfo.overview}
+              </p>
 
-          {/* Safety Guidelines */}
-          <div>
-            <h3 className="text-2xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-8 text-center">
-              Safety Guidelines
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {safetyGuidelines.map((category) => (
-                <div key={category.category} className="glass rounded-2xl p-6">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="w-10 h-10 rounded-lg bg-amber-50 flex items-center justify-center">
-                      <category.icon className="w-5 h-5 text-amber-600" />
+              <div className="space-y-4">
+                {skydivingInfo.options.map((option) => (
+                  <div key={option.name} className="p-4 rounded-lg bg-[var(--surface-muted)] border border-[var(--border-light)]">
+                    <h4 className="font-bold text-[var(--text-primary)] mb-2">{option.name}</h4>
+                    <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-3">
+                      {option.description}
+                    </p>
+                    <div className="flex flex-wrap gap-3">
+                      <span className="text-xs inline-flex items-center gap-1 text-[var(--color-primary)]">
+                        <DollarSign className="w-3 h-3" /> {option.priceRange}
+                      </span>
+                      <span className="text-xs inline-flex items-center gap-1 text-[var(--text-muted)]">
+                        <Calendar className="w-3 h-3" /> {option.availability}
+                      </span>
                     </div>
-                    <h4 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                      {category.category}
-                    </h4>
                   </div>
-                  <div className="space-y-4">
-                    {category.tips.map((tip, index) => (
-                      <div key={index} className="flex items-start gap-3">
-                        <AlertTriangle className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
-                        <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{tip}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
+            </div>
+
+            <div className="card-moroccan p-6 border-l-4 border-l-[var(--color-primary)]">
+              <h4 className="font-bold text-[var(--text-primary)] mb-3 flex items-center gap-2">
+                <Shield className="w-4 h-4 text-[var(--color-primary)]" />
+                Skydiving Safety Checklist
+              </h4>
+              <ul className="space-y-2">
+                {skydivingInfo.tips.map((tip, i) => (
+                  <li key={i} className="text-sm text-[var(--text-secondary)] flex items-start gap-2">
+                    <CheckCircle className="w-3.5 h-3.5 text-green-600 mt-0.5 shrink-0" />
+                    {tip}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ─── Photography from the Air ─── */}
-      <section id="photography" className="py-16 md:py-24 section-cream">
+      {/* ─── Photography Tips ─── */}
+      <section id="photography-tips" className="py-16 md:py-20 scroll-mt-24">
         <div className="container-morocco">
-          <div className="text-center mb-16">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--color-accent-50)] border border-[var(--color-accent-200)] text-sm text-[var(--color-accent)] font-medium mb-4">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-primary)] mb-4">
               <Camera className="w-4 h-4" />
-              Capture the Moment
-            </span>
-            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
-              Photography from the Air
+              <span>Capture the Moment</span>
+            </div>
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
+              Aerial Photography Tips
             </h2>
-            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
-              Tips for capturing stunning aerial photographs and videos during your
-              balloon flight, paragliding experience, or helicopter tour.
+            <p className="text-[var(--text-secondary)] max-w-2xl mx-auto">
+              Expert advice on camera settings, equipment choices, and timing to capture
+              stunning aerial photographs of Morocco.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {photographyTips.map((category) => (
-              <div key={category.category} className="glass rounded-2xl p-6">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 rounded-lg bg-[var(--color-accent-50)] flex items-center justify-center">
-                    <category.icon className="w-5 h-5 text-[var(--color-accent)]" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {photographyTips.map((section) => (
+              <div key={section.title} className="card-moroccan p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="inline-flex p-2 rounded-lg bg-[var(--color-primary)]/10">
+                    <section.icon className="w-5 h-5 text-[var(--color-primary)]" />
                   </div>
-                  <h4 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                    {category.category}
-                  </h4>
+                  <h3 className="font-bold text-[var(--text-primary)]">{section.title}</h3>
                 </div>
-                <div className="space-y-4">
-                  {category.tips.map((tip, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <Lightbulb className="w-4 h-4 text-[var(--color-gold)] shrink-0 mt-0.5" />
-                      <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{tip}</p>
-                    </div>
+                <ul className="space-y-3">
+                  {section.tips.map((tip, i) => (
+                    <li key={i} className="text-sm text-[var(--text-secondary)] flex items-start gap-2 leading-relaxed">
+                      <CircleDot className="w-3 h-3 text-[var(--color-primary)] mt-1.5 shrink-0" />
+                      {tip}
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ─── What to Wear & Bring ─── */}
-      <section id="what-to-wear" className="py-16 md:py-24 section-light">
+      {/* ─── Practical Booking Guide ─── */}
+      <section id="booking-guide" className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern scroll-mt-24">
         <div className="container-morocco">
-          <div className="text-center mb-16">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--color-accent-50)] border border-[var(--color-accent-200)] text-sm text-[var(--color-accent)] font-medium mb-4">
-              <Glasses className="w-4 h-4" />
-              Be Prepared
-            </span>
-            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
-              What to Wear & What to Bring
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-primary)] mb-4">
+              <CheckCircle className="w-4 h-4" />
+              <span>Plan Your Flight</span>
+            </div>
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
+              Practical Booking Guide
             </h2>
-            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
-              Detailed packing lists for each aerial activity to ensure comfort, safety,
-              and the best possible experience.
+            <p className="text-[var(--text-secondary)] max-w-2xl mx-auto">
+              Everything you need to know before booking an aerial experience in Morocco,
+              from timing and clothing to safety standards and weight limits.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {whatToWear.map((item) => (
-              <div key={item.activity} className="glass rounded-2xl p-6">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 rounded-lg bg-[var(--color-accent-50)] flex items-center justify-center">
-                    <item.icon className="w-5 h-5 text-[var(--color-accent)]" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {bookingAdvice.map((section) => (
+              <div key={section.title} className="card-moroccan p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="inline-flex p-2 rounded-lg bg-[var(--color-primary)]/10">
+                    <section.icon className="w-5 h-5 text-[var(--color-primary)]" />
                   </div>
-                  <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                    {item.activity}
-                  </h3>
+                  <h3 className="font-bold text-[var(--text-primary)]">{section.title}</h3>
                 </div>
-
-                <div className="mb-6">
-                  <h4 className="text-xs font-bold text-[var(--text-primary)] uppercase tracking-wider mb-3">
-                    Clothing
-                  </h4>
-                  <div className="space-y-2">
-                    {item.clothing.map((c) => (
-                      <div key={c} className="flex items-start gap-2">
-                        <CheckCircle className="w-3.5 h-3.5 text-[var(--color-accent)] shrink-0 mt-0.5" />
-                        <span className="text-xs text-[var(--text-secondary)] leading-relaxed">{c}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <h4 className="text-xs font-bold text-[var(--text-primary)] uppercase tracking-wider mb-3">
-                    What to Bring
-                  </h4>
-                  <div className="space-y-2">
-                    {item.bring.map((b) => (
-                      <div key={b} className="flex items-start gap-2">
-                        <Target className="w-3.5 h-3.5 text-[var(--color-green)] shrink-0 mt-0.5" />
-                        <span className="text-xs text-[var(--text-secondary)] leading-relaxed">{b}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+                <ul className="space-y-2.5">
+                  {section.content.map((item, i) => (
+                    <li key={i} className="text-sm text-[var(--text-secondary)] flex items-start gap-2 leading-relaxed">
+                      <ArrowRight className="w-3 h-3 text-[var(--color-primary)] mt-1 shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
+          </div>
+
+          <div className="mt-8 card-moroccan p-6 border-l-4 border-l-[var(--color-secondary)]">
+            <div className="flex items-start gap-4">
+              <div className="inline-flex p-2 rounded-lg bg-[var(--color-secondary)]/10 shrink-0">
+                <ThumbsUp className="w-5 h-5 text-[var(--color-secondary)]" />
+              </div>
+              <div>
+                <h4 className="font-bold text-[var(--text-primary)] mb-1">Pro Tip: Book Balloon Flights First</h4>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                  If a balloon flight is on your Morocco bucket list, schedule it for the first
+                  morning of your stay in Marrakech. This gives you backup days in case of weather
+                  cancellation. The flight is over by 9:30 AM, leaving the rest of the day free
+                  for other activities. Many travelers pair a morning balloon flight with an
+                  afternoon cooking class or hammam visit for a perfect first day.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* ─── Comparison Table ─── */}
-      <section id="comparison" className="py-16 md:py-24 section-cream">
+      <section id="comparison-table" className="py-16 md:py-20 scroll-mt-24">
         <div className="container-morocco">
-          <div className="text-center mb-16">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--color-accent-50)] border border-[var(--color-accent-200)] text-sm text-[var(--color-accent)] font-medium mb-4">
-              <BookOpen className="w-4 h-4" />
-              At a Glance
-            </span>
-            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
-              Activity Comparison
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-primary)] mb-4">
+              <Gauge className="w-4 h-4" />
+              <span>Compare All Activities</span>
+            </div>
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
+              Aerial Activities Comparison
             </h2>
-            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
-              Compare all aerial activities in Morocco side by side to find the perfect
-              experience for your budget, fitness level, and interests.
+            <p className="text-[var(--text-secondary)] max-w-2xl mx-auto">
+              Side-by-side comparison of every aerial experience available in Morocco.
+              Find the perfect activity for your budget, schedule, and thrill tolerance.
             </p>
           </div>
 
-          {/* Desktop Table */}
-          <div className="hidden md:block glass rounded-2xl overflow-hidden">
+          <div className="card-moroccan overflow-hidden">
             <div className="overflow-x-auto">
-              <table className="w-full text-sm">
+              <table className="w-full text-left min-w-[900px]">
                 <thead>
-                  <tr className="bg-[var(--color-primary)]">
-                    <th className="text-left p-4 text-white font-[family-name:var(--font-heading)] font-bold">Activity</th>
-                    <th className="text-left p-4 text-white font-[family-name:var(--font-heading)] font-bold">Price Range</th>
-                    <th className="text-left p-4 text-white font-[family-name:var(--font-heading)] font-bold">Duration</th>
-                    <th className="text-left p-4 text-white font-[family-name:var(--font-heading)] font-bold">Difficulty</th>
-                    <th className="text-left p-4 text-white font-[family-name:var(--font-heading)] font-bold">Best Location</th>
-                    <th className="text-left p-4 text-white font-[family-name:var(--font-heading)] font-bold">Best Season</th>
-                    <th className="text-left p-4 text-white font-[family-name:var(--font-heading)] font-bold">Min Age</th>
+                  <tr className="bg-[var(--surface-muted)]">
+                    <th className="px-4 py-3 text-sm font-semibold text-[var(--text-primary)] sticky left-0 bg-[var(--surface-muted)] z-10">Activity</th>
+                    <th className="px-3 py-3 text-xs font-semibold text-[var(--text-secondary)]">Price (MAD)</th>
+                    <th className="px-3 py-3 text-xs font-semibold text-[var(--text-secondary)]">Total Duration</th>
+                    <th className="px-3 py-3 text-xs font-semibold text-[var(--text-secondary)]">Air Time</th>
+                    <th className="px-3 py-3 text-xs font-semibold text-[var(--text-secondary)]">Difficulty</th>
+                    <th className="px-3 py-3 text-xs font-semibold text-[var(--text-secondary)]">Min Age</th>
+                    <th className="px-3 py-3 text-xs font-semibold text-[var(--text-secondary)]">Best Location</th>
+                    <th className="px-3 py-3 text-xs font-semibold text-[var(--text-secondary)]">Season</th>
+                    <th className="px-3 py-3 text-xs font-semibold text-[var(--text-secondary)]">Thrill Level</th>
+                    <th className="px-3 py-3 text-xs font-semibold text-[var(--text-secondary)]">Photo Quality</th>
                   </tr>
                 </thead>
-                <tbody>
-                  {activityComparison.map((row, index) => (
-                    <tr
-                      key={row.activity}
-                      className={index % 2 === 0 ? 'bg-white/60' : 'bg-[var(--color-surface)]'}
-                    >
-                      <td className="p-4 font-semibold text-[var(--text-primary)]">{row.activity}</td>
-                      <td className="p-4 text-[var(--color-green)] font-semibold">{row.priceRange}</td>
-                      <td className="p-4 text-[var(--text-secondary)]">{row.duration}</td>
-                      <td className="p-4">
-                        <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold ${
-                          row.difficulty.includes('Easy')
-                            ? 'bg-green-100 text-green-700'
-                            : row.difficulty.includes('Moderate')
-                            ? 'bg-yellow-100 text-yellow-700'
-                            : 'bg-red-100 text-red-700'
-                        }`}>
-                          {row.difficulty}
-                        </span>
+                <tbody className="divide-y divide-[var(--border-light)]">
+                  {comparisonData.map((row) => (
+                    <tr key={row.activity} className="hover:bg-[var(--surface-muted)]/50 transition-colors">
+                      <td className="px-4 py-3 text-sm font-medium text-[var(--text-primary)] sticky left-0 bg-[var(--surface)] z-10">
+                        {row.activity}
                       </td>
-                      <td className="p-4 text-[var(--text-secondary)]">{row.bestLocation}</td>
-                      <td className="p-4 text-[var(--text-secondary)]">{row.bestSeason}</td>
-                      <td className="p-4 text-[var(--text-secondary)]">{row.minAge}</td>
+                      <td className="px-3 py-3 text-xs text-[var(--text-secondary)]">{row.price}</td>
+                      <td className="px-3 py-3 text-xs text-[var(--text-secondary)]">{row.duration}</td>
+                      <td className="px-3 py-3 text-xs text-[var(--text-secondary)]">{row.airTime}</td>
+                      <td className="px-3 py-3 text-xs text-[var(--text-secondary)]">{row.difficulty}</td>
+                      <td className="px-3 py-3 text-xs text-[var(--text-secondary)]">{row.minAge}</td>
+                      <td className="px-3 py-3 text-xs text-[var(--text-secondary)]">{row.bestLocation}</td>
+                      <td className="px-3 py-3 text-xs text-[var(--text-secondary)]">{row.bestSeason}</td>
+                      <td className="px-3 py-3 text-xs text-[var(--text-secondary)]">{row.thrill}</td>
+                      <td className="px-3 py-3 text-xs text-[var(--text-secondary)]">{row.photoOpportunity}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -1785,159 +1661,131 @@ export default function HotAirBalloonPage() {
             </div>
           </div>
 
-          {/* Mobile Cards */}
-          <div className="md:hidden space-y-4">
-            {activityComparison.map((row) => (
-              <div key={row.activity} className="glass rounded-xl p-5">
-                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                  {row.activity}
-                </h3>
-                <div className="grid grid-cols-2 gap-3">
-                  <div>
-                    <p className="text-xs text-[var(--text-muted)]">Price</p>
-                    <p className="text-sm font-bold text-[var(--color-green)]">{row.priceRange}</p>
-                  </div>
-                  <div>
-                    <p className="text-xs text-[var(--text-muted)]">Duration</p>
-                    <p className="text-sm font-semibold text-[var(--text-primary)]">{row.duration}</p>
-                  </div>
-                  <div>
-                    <p className="text-xs text-[var(--text-muted)]">Difficulty</p>
-                    <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-bold ${
-                      row.difficulty.includes('Easy')
-                        ? 'bg-green-100 text-green-700'
-                        : row.difficulty.includes('Moderate')
-                        ? 'bg-yellow-100 text-yellow-700'
-                        : 'bg-red-100 text-red-700'
-                    }`}>
-                      {row.difficulty}
-                    </span>
-                  </div>
-                  <div>
-                    <p className="text-xs text-[var(--text-muted)]">Min Age</p>
-                    <p className="text-sm font-semibold text-[var(--text-primary)]">{row.minAge}</p>
-                  </div>
-                  <div>
-                    <p className="text-xs text-[var(--text-muted)]">Best Location</p>
-                    <p className="text-sm text-[var(--text-secondary)]">{row.bestLocation}</p>
-                  </div>
-                  <div>
-                    <p className="text-xs text-[var(--text-muted)]">Best Season</p>
-                    <p className="text-sm text-[var(--text-secondary)]">{row.bestSeason}</p>
-                  </div>
+          <p className="text-xs text-[var(--text-muted)] mt-4 text-center">
+            Prices are approximate and may vary by operator, season, and group size. All prices in Moroccan Dirhams (MAD).
+            1 MAD is approximately 0.10 USD / 0.09 EUR.
+          </p>
+        </div>
+      </section>
+
+      {/* ─── FAQ ─── */}
+      <section id="faq" className="py-16 md:py-20 bg-[var(--surface-muted)] scroll-mt-24">
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-primary)] mb-4">
+              <HelpCircle className="w-4 h-4" />
+              <span>Common Questions</span>
+            </div>
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-[var(--text-secondary)] max-w-2xl mx-auto">
+              Answers to the most common questions about aerial experiences in Morocco.
+            </p>
+          </div>
+
+          <div className="max-w-3xl mx-auto space-y-4">
+            {faqs.map((faq, index) => (
+              <details key={index} className="card-moroccan group">
+                <summary className="flex items-start gap-3 p-5 cursor-pointer list-none">
+                  <ChevronDown className="w-5 h-5 text-[var(--color-primary)] mt-0.5 shrink-0 transition-transform group-open:rotate-180" />
+                  <h3 className="font-bold text-[var(--text-primary)] text-sm md:text-base">
+                    {faq.question}
+                  </h3>
+                </summary>
+                <div className="px-5 pb-5 ml-8">
+                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                    {faq.answer}
+                  </p>
                 </div>
-              </div>
+              </details>
             ))}
           </div>
+        </div>
+      </section>
 
-          {/* Pro Tip */}
-          <div className="mt-8 p-6 rounded-xl bg-[var(--color-accent-50)] border border-[var(--color-accent-200)]">
-            <div className="flex items-start gap-4">
-              <Lightbulb className="w-6 h-6 text-[var(--color-accent)] shrink-0 mt-0.5" />
-              <div>
-                <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                  Best Value Combination
-                </h3>
-                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                  For the ultimate aerial day in Morocco, combine a sunrise hot air balloon flight
-                  (1,500-2,500 MAD) with an afternoon at Terres d&apos;Amanar adventure park (250-600 MAD).
-                  You will be back from the balloon by 9:30 AM, leaving plenty of time to drive to
-                  the park for zip lining and tree-top courses. The two experiences complement each
-                  other perfectly: the peaceful, panoramic beauty of a balloon at dawn followed by the
-                  adrenaline rush of flying through the forest canopy. Total cost for both: approximately
-                  1,750-3,100 MAD per person, which represents extraordinary value for a full day of
-                  aerial adventure.
-                </p>
-              </div>
-            </div>
+      {/* ─── CTA ─── */}
+      <section className="py-16 md:py-20 gradient-moroccan">
+        <div className="container-morocco text-center">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-white mb-4">
+            Ready to See Morocco from Above?
+          </h2>
+          <p className="text-lg text-white/80 max-w-2xl mx-auto mb-8">
+            Whether you choose the serene silence of a sunrise balloon flight or the
+            adrenaline rush of paragliding over the Atlas, Morocco&apos;s aerial experiences
+            will give you memories and photographs that last a lifetime.
+          </p>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Link
+              href="/activities"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white text-[var(--color-primary)] font-medium hover:bg-white/90 transition-colors"
+            >
+              Explore All Activities
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link
+              href="/adventure"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-white/30 text-white font-medium hover:bg-white/10 transition-colors"
+            >
+              Adventure Sports Guide
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link
+              href="/best-time"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-white/30 text-white font-medium hover:bg-white/10 transition-colors"
+            >
+              Best Time to Visit
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* ─── Related Pages / CTA ─── */}
-      <section className="py-16 md:py-24 section-dark moroccan-pattern-dark">
-        <div className="container-morocco">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-white mb-6">
-              Ready to Take Flight in Morocco?
-            </h2>
-            <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
-              Whether you choose a serene sunrise balloon drift over the Palmeraie or an
-              adrenaline-fueled zip line through an Atlas canyon, Morocco&apos;s aerial adventures
-              will give you a perspective on this extraordinary country that no ground-level
-              experience can match.
-            </p>
-
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
-              {[
-                {
-                  icon: Wind,
-                  title: 'Choose Your Adventure',
-                  text: 'Peaceful balloon, thrilling paraglide, or scenic helicopter. Morocco has aerial activities for every style and budget.',
-                },
-                {
-                  icon: Calendar,
-                  title: 'Pick Your Season',
-                  text: 'October to April is ideal for balloons. Paragliding and zip lining work year-round. Check weather windows for the best experience.',
-                },
-                {
-                  icon: Camera,
-                  title: 'Capture the Views',
-                  text: 'Charge your camera, bring a secure strap, and prepare for landscapes that will be the highlight of your Morocco photos.',
-                },
-              ].map((item) => (
-                <div key={item.title} className="glass-dark rounded-xl p-6 text-center">
-                  <item.icon className="w-8 h-8 text-[var(--color-accent)] mx-auto mb-3" />
-                  <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-white mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm text-white/60 leading-relaxed">{item.text}</p>
-                </div>
-              ))}
-            </div>
-
-            <div className="flex flex-wrap items-center justify-center gap-4">
-              <Link href="/marrakech" className="btn-accent btn-lg">
-                Marrakech Guide
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link href="/trekking" className="btn-ghost btn-lg text-white border-white/30 hover:bg-white/10">
-                Trekking Guide
-                <Mountain className="w-5 h-5" />
-              </Link>
-              <Link href="/camping" className="btn-ghost btn-lg text-white border-white/30 hover:bg-white/10">
-                Camping Guide
-                <TreePine className="w-5 h-5" />
-              </Link>
-            </div>
-
-            {/* Related Pages Grid */}
-            <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
-              {[
-                { href: '/day-trips', label: 'Day Trips from Marrakech' },
-                { href: '/atlas-mountains', label: 'Atlas Mountains' },
-                { href: '/photography', label: 'Photography Guide' },
-                { href: '/adventure', label: 'Adventure Activities' },
-                { href: '/best-time', label: 'Best Time to Visit' },
-                { href: '/safety', label: 'Safety Tips' },
-                { href: '/tours', label: 'Guided Tours' },
-                { href: '/tips', label: 'Travel Tips' },
-              ].map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="glass-dark rounded-lg p-3 text-sm text-white/70 hover:text-white hover:bg-white/10 transition-colors text-center"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── Zellige Divider ─── */}
       <div className="zellige-border" />
+
+      {/* ─── Related Guides ─── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco">
+          <h2 className="text-2xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-8">
+            Related Guides
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Link href="/adventure" className="card-moroccan p-6 group hover:border-[var(--color-primary)] transition-colors">
+              <div className="inline-flex p-2 rounded-lg bg-[var(--color-primary)]/10 mb-3">
+                <Mountain className="w-5 h-5 text-[var(--color-primary)]" />
+              </div>
+              <h3 className="font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                Adventure Sports Guide
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                20+ adventure activities including surfing, trekking, rock climbing, and desert sports across Morocco.
+              </p>
+            </Link>
+            <Link href="/atlas-mountains" className="card-moroccan p-6 group hover:border-[var(--color-primary)] transition-colors">
+              <div className="inline-flex p-2 rounded-lg bg-[var(--color-primary)]/10 mb-3">
+                <Mountain className="w-5 h-5 text-[var(--color-primary)]" />
+              </div>
+              <h3 className="font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                Atlas Mountains Guide
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                Trekking, day trips, and outdoor adventures in the High Atlas, including Toubkal and the Ourika Valley.
+              </p>
+            </Link>
+            <Link href="/activities" className="card-moroccan p-6 group hover:border-[var(--color-primary)] transition-colors">
+              <div className="inline-flex p-2 rounded-lg bg-[var(--color-primary)]/10 mb-3">
+                <Users className="w-5 h-5 text-[var(--color-primary)]" />
+              </div>
+              <h3 className="font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                All Activities
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                Browse the complete collection of things to do in Morocco, from cultural experiences to outdoor adventures.
+              </p>
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
