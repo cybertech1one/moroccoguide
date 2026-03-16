@@ -1613,6 +1613,163 @@ export default function ChefchaouenPage() {
         </div>
       </section>
 
+      {/* ── History & Culture ── */}
+      <section className="py-12 md:py-16">
+        <div className="container-morocco">
+          <div className="flex items-center gap-3 mb-3">
+            <Landmark className="w-6 h-6 text-[var(--color-secondary)]" />
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+              History &amp; Culture
+            </h2>
+          </div>
+          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">
+            Chefchaouen&apos;s history stretches back over five centuries, shaped by Berber tribes,
+            Andalusian refugees, Spanish colonizers, and Sufi saints.
+          </p>
+
+          <div className="max-w-3xl mx-auto space-y-6">
+            <div className="card-moroccan p-6">
+              <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                Founding &amp; Early History (1471-1920)
+              </h3>
+              <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-3">
+                In 1471, Moulay Ali Ben Rachid, a descendant of the Prophet Muhammad, established
+                Chefchaouen as a small kasbah fortress to rally Rif Berber tribes against Portuguese
+                and Spanish incursions along the northern Moroccan coast. The town grew rapidly as
+                Andalusian Muslim and Jewish refugees fleeing the Spanish Reconquista settled within
+                its walls, bringing their architecture, crafts, and cultural traditions.
+              </p>
+              <p className="text-sm text-[var(--text-muted)] leading-relaxed">
+                For centuries, Chefchaouen was considered a holy city, off-limits to Christians.
+                Its isolation in the Rif Mountains reinforced this seclusion. Until the early 20th
+                century, only three Europeans had ever visited: the French explorer Charles de Foucauld
+                (disguised as a rabbi in 1883), the British journalist Walter Harris (1889), and the
+                American William Summers (1892). The city remained a place of mystery to the outside
+                world.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                The Spanish Protectorate (1920-1956)
+              </h3>
+              <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-3">
+                In 1920, Spanish troops occupied Chefchaouen as part of the Spanish Protectorate of
+                northern Morocco. The occupation brought roads, electricity, and the construction of
+                the Spanish Mosque on the hill above town (never completed due to the Rif War). The
+                Spanish influence is still visible in the architecture, the prevalence of Spanish
+                language among older residents, and certain cultural customs.
+              </p>
+              <p className="text-sm text-[var(--text-muted)] leading-relaxed">
+                The Rif War (1921-1926) saw fierce resistance to colonial rule under Abd el-Krim,
+                a Rif Berber leader who briefly established the Republic of the Rif. This legacy of
+                resistance remains a source of pride in the region. Morocco gained independence in
+                1956, and Chefchaouen returned to Moroccan sovereignty.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                Jewish Heritage
+              </h3>
+              <p className="text-sm text-[var(--text-muted)] leading-relaxed">
+                The Jewish community played a formative role in Chefchaouen&apos;s identity. Arriving
+                in waves from Spain following the 1492 expulsion and later persecutions, Jewish families
+                settled in the mellah (Jewish quarter) near the Kasbah. They brought artisanal skills,
+                trade connections, and, most visibly, the tradition of blue-washed buildings. At its
+                peak, the Jewish community numbered several hundred families. After the creation of
+                Israel in 1948 and Moroccan independence in 1956, most Jewish residents emigrated.
+                Today, the mellah streets remain, and the blue paint that the community introduced
+                defines the entire city. A small synagogue in the mellah can sometimes be visited with
+                a local guide.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                Sufi Traditions &amp; Saints
+              </h3>
+              <p className="text-sm text-[var(--text-muted)] leading-relaxed">
+                Chefchaouen has always been a city of saints and scholars. The founder himself was a
+                Sufi leader, and the city is dotted with zaouias (Sufi lodges) and the tombs of
+                revered holy men. The spiritual atmosphere is palpable, especially during religious
+                festivals when Sufi brotherhoods perform their devotional music and rituals. The
+                nearby shrine of Moulay Abdeslam Ben Mchich is one of the most important pilgrimage
+                sites in Moroccan Sufism, attracting devotees from across the country.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Local Etiquette ── */}
+      <section className="py-12 md:py-16 bg-[var(--surface-muted)]">
+        <div className="container-morocco">
+          <div className="flex items-center gap-3 mb-3">
+            <Users className="w-6 h-6 text-[var(--color-primary)]" />
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+              Local Etiquette &amp; Cultural Respect
+            </h2>
+          </div>
+          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">
+            Chefchaouen is a conservative mountain town with deep religious traditions. Showing
+            respect for local customs will enrich your experience and earn genuine warmth from
+            residents.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <div className="card-moroccan p-6">
+              <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                Dress Modestly
+              </h3>
+              <p className="text-sm text-[var(--text-muted)] leading-relaxed">
+                Both men and women should dress modestly, especially in the medina. Shoulders and
+                knees should be covered. Tank tops, short shorts, and revealing clothing draw
+                uncomfortable attention and are considered disrespectful in this traditional community.
+                Lightweight, loose-fitting clothes work well in the heat and show cultural awareness.
+              </p>
+            </div>
+            <div className="card-moroccan p-6">
+              <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                Greetings Matter
+              </h3>
+              <p className="text-sm text-[var(--text-muted)] leading-relaxed">
+                A warm &quot;salam alaikum&quot; (peace be upon you) when entering a shop, meeting
+                someone, or passing a local goes a long way. The response is &quot;wa alaikum
+                salam.&quot; Handshakes between the same gender are common. Between opposite genders,
+                wait for the local person to initiate a handshake. In the Rif, some men place their
+                hand over their heart after a handshake as a sign of sincerity.
+              </p>
+            </div>
+            <div className="card-moroccan p-6">
+              <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                Ramadan Awareness
+              </h3>
+              <p className="text-sm text-[var(--text-muted)] leading-relaxed">
+                During Ramadan, most locals fast from dawn to sunset. Eating, drinking, or smoking
+                in public during fasting hours is considered very disrespectful. Some restaurants
+                close during the day or serve only tourists discreetly. Evenings come alive after
+                iftar (the breaking of the fast), making it a magical time to visit if you are
+                prepared for the altered schedule. The Kasbah and attractions may have reduced hours.
+              </p>
+            </div>
+            <div className="card-moroccan p-6">
+              <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                Bargaining Etiquette
+              </h3>
+              <p className="text-sm text-[var(--text-muted)] leading-relaxed">
+                Bargaining is expected in the souks but should be done respectfully and with good
+                humor. Start at around 60-70% of the asking price (Chefchaouen is less inflated
+                than Marrakech, so extreme lowballing is rude here). If you name a price and it is
+                accepted, you are morally committed to buying. Walking away is a negotiating tactic,
+                but do not do it repeatedly with the same vendor. Fixed prices are common at food
+                stalls and some modern shops.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── CTA ── */}
       <section className="py-12 md:py-16">
         <div className="container-morocco text-center">
