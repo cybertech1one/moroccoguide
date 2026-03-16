@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/accessible-travel',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=1200&h=630&fit=crop',
+        url: '/images/hero-marrakech.webp',
         width: 1200,
         height: 630,
         alt: 'Accessible travel in modern Morocco cityscape',
@@ -87,7 +87,7 @@ const accessibleDestinations = [
     color: 'bg-emerald-500',
     description: 'Morocco\'s most accessible city by far. Rebuilt after a 1960 earthquake, Agadir has modern, flat infrastructure designed with wide boulevards and accessible beach promenades. Most resort hotels have full wheelchair access, adapted rooms, and pool lifts. The long, flat beachfront corniche is fully paved and barrier-free.',
     highlights: ['Flat terrain throughout the city', 'Modern resort hotels with adapted rooms', 'Accessible beach promenade (6 km)', 'Ramp access at most restaurants and malls', 'Accessible taxis available'],
-    image: 'https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=600',
+    image: '/images/card-beach.webp',
   },
   {
     city: 'Casablanca',
@@ -96,7 +96,7 @@ const accessibleDestinations = [
     color: 'bg-blue-500',
     description: 'Morocco\'s largest and most modern city has improving accessibility. The tramway system is fully wheelchair-accessible, major malls (Morocco Mall, Anfa Place) have elevators and adapted facilities, and international hotel chains offer full accessibility. The Hassan II Mosque has ramp access to the ground floor.',
     highlights: ['Wheelchair-accessible tram system', 'Modern malls with elevators', 'International hotel chains with adapted rooms', 'Hassan II Mosque ground floor accessible', 'Flat coastal corniche'],
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?q=80&w=600',
+    image: '/images/hero-coastal.webp',
   },
   {
     city: 'Rabat',
@@ -105,7 +105,7 @@ const accessibleDestinations = [
     color: 'bg-blue-500',
     description: 'Morocco\'s capital has invested significantly in accessibility. The tram system is fully accessible, and modern attractions like the Mohammed VI Museum of Modern Art are designed with universal access. The Kasbah of the Udayas has some accessible routes, and the new town (Ville Nouvelle) is largely flat with dropped curbs.',
     highlights: ['Fully accessible tram network', 'Mohammed VI Museum fully accessible', 'Modern Ville Nouvelle with dropped curbs', 'Accessible government buildings', 'Flat terrain in main areas'],
-    image: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?q=80&w=600',
+    image: '/images/hero-souk-lamps.webp',
   },
   {
     city: 'Marrakech',
@@ -114,7 +114,7 @@ const accessibleDestinations = [
     color: 'bg-yellow-500',
     description: 'A tale of two cities. The Ville Nouvelle (Gueliz) is relatively accessible with flat streets, modern hotels, and accessible restaurants. The Medina, however, is extremely challenging: narrow alleys, uneven cobblestones, steps, and no ramps. Jemaa el-Fna square is flat but crowded. Some riads have ground-floor rooms, but most have stairs.',
     highlights: ['Gueliz (new town) relatively flat', 'Major hotels fully adapted', 'Jemaa el-Fna accessible but crowded', 'Majorelle Garden has paved paths', 'Medina very challenging for wheelchairs'],
-    image: 'https://images.unsplash.com/photo-1597212618440-806262de4f6b?q=80&w=600',
+    image: '/images/hero-marrakech.webp',
   },
   {
     city: 'Tangier',
@@ -123,7 +123,7 @@ const accessibleDestinations = [
     color: 'bg-yellow-500',
     description: 'Tangier has a flat, accessible coastal promenade and a modern Ville Nouvelle, but the historic Kasbah and medina are built on a steep hillside and are essentially inaccessible for wheelchair users. The new TGV train station is fully accessible, and major hotels near the seafront meet international standards.',
     highlights: ['Flat coastal promenade', 'TGV station fully accessible', 'Modern seafront hotels adapted', 'Grand Socco area manageable', 'Medina and Kasbah very steep'],
-    image: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?q=80&w=600',
+    image: '/images/hero-chefchaouen-drone.webp',
   },
   {
     city: 'Meknes',
@@ -132,7 +132,7 @@ const accessibleDestinations = [
     color: 'bg-yellow-500',
     description: 'The Ville Nouvelle is flat and manageable, with the main boulevard (Avenue Mohammed V) having dropped curbs. The Imperial City monuments (Bab Mansour, Royal Stables) have flat ground-level access. The medina has some wider streets than Fes but still presents challenges with uneven surfaces.',
     highlights: ['Flat Ville Nouvelle', 'Bab Mansour area accessible', 'Royal Stables ground-level access', 'Volubilis ruins partially accessible', 'Medina has some wider streets'],
-    image: 'https://images.unsplash.com/photo-1560095633-437d3ae4c284?q=80&w=600',
+    image: '/images/hero-marrakech.webp',
   },
   {
     city: 'Essaouira',
@@ -141,7 +141,7 @@ const accessibleDestinations = [
     color: 'bg-orange-500',
     description: 'The fortified medina is compact and characterful but has cobblestone streets, narrow passages, and steps at many buildings. The beach is accessible along the northern section near the harbour, and the main street (Avenue de l\'Istiqlal) is wider and flatter. Some hotels outside the medina have better accessibility. Strong winds can be an additional challenge.',
     highlights: ['Beach accessible near harbour', 'Main avenue wider and flatter', 'Some outside-medina hotels adapted', 'Ramparts have some ramp access', 'Cobblestones throughout medina'],
-    image: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=600',
+    image: '/images/hero-coastal.webp',
   },
   {
     city: 'Ouarzazate',
@@ -150,7 +150,7 @@ const accessibleDestinations = [
     color: 'bg-orange-500',
     description: 'The modern town center is flat and relatively navigable, and some desert resort hotels have adapted rooms. However, the main attractions (Ait Benhaddou kasbah, Atlas Film Studios) involve rough terrain, steep paths, and stairs. Desert excursions require specialized vehicles and planning.',
     highlights: ['Flat town center', 'Some resort hotels adapted', 'Ait Benhaddou very steep and rough', 'Atlas Studios partially accessible', 'Desert excursions need planning'],
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=600',
+    image: '/images/hero-desert.webp',
   },
   {
     city: 'Fes',
@@ -159,7 +159,7 @@ const accessibleDestinations = [
     color: 'bg-red-500',
     description: 'The world\'s largest car-free urban area is one of the most difficult destinations for wheelchair users anywhere. The Fes el-Bali medina has steep, narrow alleys, uneven steps, and no ramps. Even able-bodied visitors find it physically demanding. The Ville Nouvelle is more manageable but still has limited infrastructure. A private guide and strong companion are essential.',
     highlights: ['Ville Nouvelle somewhat flat', 'Some luxury hotels adapted', 'Medina essentially inaccessible by wheelchair', 'Very steep narrow alleys', 'Private guide strongly recommended'],
-    image: 'https://images.unsplash.com/photo-1549880338-65ddcdfd017b?q=80&w=600',
+    image: '/images/hero-fes-tanneries.webp',
   },
   {
     city: 'Chefchaouen',
@@ -168,7 +168,7 @@ const accessibleDestinations = [
     color: 'bg-red-500',
     description: 'The Blue City is built on a hillside in the Rif Mountains. Virtually every street involves steps or steep inclines. The blue-washed medina, while beautiful, is one of the least accessible destinations in Morocco. The main square (Place Outa el-Hammam) is relatively flat but reaching it requires navigating slopes. Not recommended for wheelchair users without very strong assistance.',
     highlights: ['Main square relatively flat', 'A few hotels with ground-floor rooms', 'Built entirely on steep hillside', 'Steps on virtually every street', 'Not wheelchair accessible overall'],
-    image: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?q=80&w=600',
+    image: '/images/hero-chefchaouen-drone.webp',
   },
 ];
 
@@ -451,7 +451,7 @@ export default function AccessibleTravelPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1573497620053-ea5300f94f21?q=80&w=2800)',
+              'url(/images/hero-marrakech.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

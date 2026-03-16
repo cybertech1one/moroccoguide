@@ -33,7 +33,7 @@ const hotels = [
     type: 'Luxury Riad',
     priceRange: '$$$$',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1590073242678-70ee3fc28e8e?w=800&q=80',
+    image: '/images/card-riad.webp',
     description:
       'A sumptuous Relais & Chateaux property in the heart of the medina, blending Andalusian and Fassi design across multiple courtyards. The rooftop restaurant offers medina views, and the spa features a traditional hammam with orange blossom treatments.',
     amenities: ['Rooftop Restaurant', 'Spa & Hammam', 'Pool', 'Library', 'Wifi', 'Concierge'],
@@ -43,7 +43,7 @@ const hotels = [
     type: 'Heritage Palace',
     priceRange: '$$$',
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80',
+    image: '/images/card-riad.webp',
     description:
       'A meticulously restored early 20th-century palace built around a magnificent Andalusian garden with citrus and olive trees. The 15 rooms each tell a story of Fassi craftsmanship, and the cooking school is one of the best in Morocco.',
     amenities: ['Garden', 'Cooking School', 'Spa', 'Restaurant', 'Wifi', 'Airport Transfer'],
@@ -53,7 +53,7 @@ const hotels = [
     type: 'Boutique Riad',
     priceRange: '$$$',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80',
+    image: '/images/card-riad.webp',
     description:
       'A five-room boutique guesthouse renowned for its exceptional restaurant and intimate atmosphere. The beautifully restored riad features a pomegranate tree courtyard, personalized service, and culinary experiences that draw food lovers from around the world.',
     amenities: ['Gourmet Restaurant', 'Terrace', 'Breakfast Included', 'Wifi', 'Cooking Classes'],
@@ -63,7 +63,7 @@ const hotels = [
     type: 'Luxury Riad',
     priceRange: '$$$',
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1590073242678-70ee3fc28e8e?w=800&q=80',
+    image: '/images/card-riad.webp',
     description:
       'One of the largest riads in the Fes medina, this 17th-century palace offers spacious suites arranged around a vast courtyard with a heated pool. The hammam, garden, and exceptional breakfast make it a serene retreat after exploring the labyrinthine streets.',
     amenities: ['Heated Pool', 'Hammam', 'Garden', 'Breakfast Included', 'Wifi', 'Parking'],
@@ -73,7 +73,7 @@ const hotels = [
     type: 'Heritage Riad',
     priceRange: '$$$',
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80',
+    image: '/images/card-riad.webp',
     description:
       'Once the home of renowned Fassi scholar Sidi Ahmed el Alami, this elegant riad has been restored with museum-quality attention to detail. The restaurant serves some of the finest traditional Fassi cuisine in the city, and the rooftop offers medina panoramas.',
     amenities: ['Rooftop Terrace', 'Restaurant', 'Hammam', 'Wifi', 'Concierge', 'Library'],
@@ -83,7 +83,7 @@ const hotels = [
     type: 'Budget Riad',
     priceRange: '$',
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80',
+    image: '/images/card-riad.webp',
     description:
       'A charmingly simple and affordable riad overlooking the famous Seffarine copper-beating square. Run by a welcoming Moroccan-German couple, it offers authentic medina living without the luxury price tag, with hearty home-cooked breakfasts and genuine hospitality.',
     amenities: ['Terrace', 'Breakfast Included', 'Wifi', 'Home Cooking', 'Medina Location'],
@@ -93,7 +93,7 @@ const hotels = [
     type: 'Luxury Palace Hotel',
     priceRange: '$$$$',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80',
+    image: '/images/card-riad.webp',
     description:
       'A grand palace hotel perched on the edge of the medina with commanding views over Fes el-Bali. The rooftop infinity pool offers what may be the best panoramic view of any hotel in Morocco, and the spa and dining are equally exceptional.',
     amenities: ['Infinity Pool', 'Spa', 'Panoramic Restaurant', 'Bar', 'Wifi', 'Valet Parking'],
@@ -103,7 +103,7 @@ const hotels = [
     type: 'Boutique Riad',
     priceRange: '$$',
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80',
+    image: '/images/card-riad.webp',
     description:
       'A hip, design-conscious riad that brings a contemporary sensibility to traditional Fassi architecture. The rooftop is a social hub with medina views, and the well-traveled British-Moroccan owners curate a program of music nights and cultural events.',
     amenities: ['Rooftop Bar', 'Cultural Events', 'Breakfast Included', 'Wifi', 'Air Conditioning'],
@@ -113,7 +113,7 @@ const hotels = [
     type: 'Mid-Range Riad',
     priceRange: '$$',
     rating: 4.4,
-    image: 'https://images.unsplash.com/photo-1590073242678-70ee3fc28e8e?w=800&q=80',
+    image: '/images/card-riad.webp',
     description:
       'A beautifully maintained riad in the Ziat quarter offering excellent value for money. The seven rooms are individually decorated with traditional touches, and the warm Moroccan family who runs it provides insider knowledge and home-cooked meals on request.',
     amenities: ['Courtyard', 'Terrace', 'Breakfast Included', 'Wifi', 'Airport Transfer'],
@@ -123,7 +123,7 @@ const hotels = [
     type: 'Modern Luxury Hotel',
     priceRange: '$$$',
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80',
+    image: '/images/card-riad.webp',
     description:
       'A contemporary five-star hotel on the hills above the medina, designed by Christophe Pillet with a sleek aesthetic that contrasts beautifully with the ancient city views. The infinity pool, Givenchy Spa, and modern Moroccan restaurant are standout features.',
     amenities: ['Infinity Pool', 'Givenchy Spa', 'Restaurant', 'Bar', 'Wifi', 'Fitness Center'],
@@ -194,7 +194,7 @@ export default function FesHotelsPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1590073242678-70ee3fc28e8e?w=2800&q=80)',
+              'url(/images/hero-riad-interior.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

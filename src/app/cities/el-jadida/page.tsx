@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=2800&q=80',
+        url: '/images/hero-morocco.webp',
         width: 2800,
         height: 1600,
         alt: 'El Jadida Portuguese Cistern with reflections, Morocco',
@@ -90,7 +90,7 @@ export default function ElJadidaPage() {
       name: 'Portuguese Cistern',
       description:
         'The crown jewel of El Jadida. This underground Gothic cistern, built in 1514, is a breathtaking chamber of stone columns reflected in a thin sheet of water on the floor. The light streaming through the oculus above creates an otherworldly atmosphere that has captivated photographers and filmmakers for decades.',
-      image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=800&q=80',
+      image: '/images/hero-morocco.webp',
       type: 'UNESCO Heritage',
       rating: 4.9,
     },
@@ -98,7 +98,7 @@ export default function ElJadidaPage() {
       name: 'Cite Portugaise (Mazagan)',
       description:
         'A massive 16th-century Portuguese fortification enclosing an entire walled city within El Jadida. Walk along the ramparts for panoramic ocean views, explore the narrow streets lined with Portuguese and Moroccan architecture, and feel history in every stone.',
-      image: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&q=80',
+      image: '/images/hero-morocco.webp',
       type: 'Fortress',
       rating: 4.8,
     },
@@ -106,7 +106,7 @@ export default function ElJadidaPage() {
       name: 'Sidi Bouzid Beach',
       description:
         'A beautiful crescent of golden sand backed by dramatic cliffs, just south of the city. Crystal-clear Atlantic waters, seafood restaurants perched on the rocks, and a relaxed local atmosphere make this the perfect beach escape.',
-      image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80',
+      image: '/images/hero-morocco.webp',
       type: 'Beach',
       rating: 4.6,
     },
@@ -114,7 +114,7 @@ export default function ElJadidaPage() {
       name: 'Mazagan Beach & Golf Resort',
       description:
         'A world-class resort complex with an 18-hole golf course designed by Gary Player, a casino, luxury spa, and private beach. Even non-guests can enjoy its restaurants and the stunning oceanfront grounds.',
-      image: 'https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80',
+      image: '/images/hero-morocco.webp',
       type: 'Resort',
       rating: 4.5,
     },
@@ -122,7 +122,7 @@ export default function ElJadidaPage() {
       name: 'Church of the Assumption',
       description:
         'One of the few remaining churches from the Portuguese era, this Manueline-style church within the citadel features distinctive stonework and a quiet interior that speaks to centuries of multicultural coexistence.',
-      image: 'https://images.unsplash.com/photo-1585155770913-5f63ce1c5d78?w=800&q=80',
+      image: '/images/hero-morocco.webp',
       type: 'Religious',
       rating: 4.4,
     },
@@ -159,7 +159,7 @@ export default function ElJadidaPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=2800&q=80)',
+              'url(/images/hero-morocco.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

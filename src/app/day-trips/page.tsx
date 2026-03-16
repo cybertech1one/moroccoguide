@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/day-trips',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&h=630&fit=crop',
+        url: '/images/hero-morocco.webp',
         width: 1200,
         height: 630,
         alt: 'Ouzoud Waterfalls cascading into emerald pools in Morocco',
@@ -206,7 +206,7 @@ const dayTrips: DayTrip[] = [
     duration: '1 hour',
     effort: 'Moderate',
     bestTime: 'March - June, September - November',
-    image: 'https://images.unsplash.com/photo-1570197571499-166b36435e9f?q=80&w=800',
+    image: '/images/hero-todra-gorge.webp',
     highlights: [
       'Seven-tiered Setti Fatma waterfalls hidden in a rocky gorge',
       'Traditional Berber villages with terraced gardens along the river',
@@ -230,7 +230,7 @@ const dayTrips: DayTrip[] = [
     duration: '2.5 hours',
     effort: 'Moderate',
     bestTime: 'March - June (peak water flow)',
-    image: 'https://images.unsplash.com/photo-1547037579-f0fc020ac3be?q=80&w=800',
+    image: '/images/hero-national-parks.webp',
     highlights: [
       'Tallest waterfalls in North Africa at 110 meters with rainbow mist',
       'Wild Barbary macaques playing in the olive groves near the falls',
@@ -254,7 +254,7 @@ const dayTrips: DayTrip[] = [
     duration: '2.5 hours',
     effort: 'Easy',
     bestTime: 'Year-round (windiest June - August)',
-    image: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=800',
+    image: '/images/hero-essaouira.webp',
     highlights: [
       'UNESCO-listed medina with blue-shuttered whitewashed buildings',
       'Fresh grilled sardines and seafood at the bustling port market',
@@ -278,7 +278,7 @@ const dayTrips: DayTrip[] = [
     duration: '3.5 hours',
     effort: 'Moderate',
     bestTime: 'October - April (avoid summer heat)',
-    image: 'https://images.unsplash.com/photo-1548017544-13e612e42a90?q=80&w=800',
+    image: '/images/hero-ait-benhaddou.webp',
     highlights: [
       'UNESCO World Heritage fortified village dating to the 11th century',
       'Filming location for Gladiator, Game of Thrones, and Lawrence of Arabia',
@@ -302,7 +302,7 @@ const dayTrips: DayTrip[] = [
     duration: '1.5 hours',
     effort: 'Challenging',
     bestTime: 'April - June, September - October',
-    image: 'https://images.unsplash.com/photo-1493246507139-91e8fad9978e?q=80&w=800',
+    image: '/images/hero-atlas.webp',
     highlights: [
       'Gateway village to North Africa\'s highest peak, Jebel Toubkal (4,167m)',
       'Day hike to Armed Refuge or Tizi Mzik pass with stunning panoramas',
@@ -326,7 +326,7 @@ const dayTrips: DayTrip[] = [
     duration: '4 hours',
     effort: 'Easy',
     bestTime: 'October - April',
-    image: 'https://images.unsplash.com/photo-1597212618440-806262de4f6b?q=80&w=800',
+    image: '/images/hero-marrakech-koutoubia.webp',
     highlights: [
       'Atlas Film Studios where blockbusters from The Mummy to Inception were shot',
       'Taourirt Kasbah, a sprawling 19th-century fortress in the town center',
@@ -352,7 +352,7 @@ const dayTrips: DayTrip[] = [
     duration: '1 hour',
     effort: 'Easy',
     bestTime: 'March - May, September - November',
-    image: 'https://images.unsplash.com/photo-1580922531613-c4e19e0e2e56?q=80&w=800',
+    image: '/images/hero-kasbahs.webp',
     highlights: [
       'UNESCO World Heritage Roman city with intact mosaics and archways',
       'Triumphal Arch of Caracalla and the Basilica dominating the skyline',
@@ -376,7 +376,7 @@ const dayTrips: DayTrip[] = [
     duration: '1 hour',
     effort: 'Easy',
     bestTime: 'Year-round',
-    image: 'https://images.unsplash.com/photo-1560614861-4bdb77ade040?q=80&w=800',
+    image: '/images/hero-asilah-aerial.webp',
     highlights: [
       'Bab Mansour, one of the grandest gates in all of North Africa',
       'Heri es-Souani royal granaries with their vast underground chambers',
@@ -400,7 +400,7 @@ const dayTrips: DayTrip[] = [
     duration: '1 hour',
     effort: 'Easy',
     bestTime: 'Year-round (Moussem festival in August)',
-    image: 'https://images.unsplash.com/photo-1545042679-2a5c9fa45a38?q=80&w=800',
+    image: '/images/hero-fes.webp',
     highlights: [
       'Sacred town built around the tomb of Morocco\'s founding saint, Moulay Idriss I',
       'Whitewashed hillside architecture cascading down twin green peaks',
@@ -424,7 +424,7 @@ const dayTrips: DayTrip[] = [
     duration: '1 hour',
     effort: 'Easy',
     bestTime: 'December - March (snow), May - October (hiking)',
-    image: 'https://images.unsplash.com/photo-1580746738099-78d6833b3f84?q=80&w=800',
+    image: '/images/hero-atlas.webp',
     highlights: [
       'Alpine-style town with red-roofed chalets and manicured gardens',
       'Snow-capped peaks in winter, making it Morocco\'s ski destination',
@@ -448,7 +448,7 @@ const dayTrips: DayTrip[] = [
     duration: '1.5 hours',
     effort: 'Easy',
     bestTime: 'April - November',
-    image: 'https://images.unsplash.com/photo-1501854140801-50d01698950b?q=80&w=800',
+    image: '/images/hero-national-parks.webp',
     highlights: [
       'Centuries-old Atlas cedar forest with towering ancient trees',
       'Wild Barbary macaque colonies that approach visitors for food',
@@ -474,7 +474,7 @@ const dayTrips: DayTrip[] = [
     duration: '1.5 hours',
     effort: 'Easy',
     bestTime: 'Year-round',
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?q=80&w=800',
+    image: '/images/hero-essaouira-ramparts.webp',
     highlights: [
       'UNESCO-listed Portuguese Cistern with its ethereal reflections on the water',
       'Fortified Cite Portugaise with thick rampart walls and sea views',
@@ -498,7 +498,7 @@ const dayTrips: DayTrip[] = [
     duration: '1 hour',
     effort: 'Easy',
     bestTime: 'Year-round',
-    image: 'https://images.unsplash.com/photo-1569587112025-0d460e81a126?q=80&w=800',
+    image: '/images/hero-tangier-kasbah.webp',
     highlights: [
       'Kasbah des Oudayas with its blue-and-white painted streets and Atlantic views',
       'Hassan Tower and the ornate Mohammed V Mausoleum',
@@ -522,7 +522,7 @@ const dayTrips: DayTrip[] = [
     duration: '1.5 hours',
     effort: 'Easy',
     bestTime: 'March - November',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?q=80&w=800',
+    image: '/images/hero-souk-lamps.webp',
     highlights: [
       'Medina walls covered in vibrant street art and murals by international artists',
       'Portuguese-era ramparts overlooking the Oum Er-Rbia river mouth',
@@ -546,7 +546,7 @@ const dayTrips: DayTrip[] = [
     duration: '30 minutes',
     effort: 'Easy',
     bestTime: 'May - October',
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800',
+    image: '/images/card-beach.webp',
     highlights: [
       'Sandy beaches with calmer water than central Casablanca',
       'Royal Golf de Mohammedia, one of Morocco\'s oldest courses',
@@ -572,7 +572,7 @@ const dayTrips: DayTrip[] = [
     duration: '2 hours',
     effort: 'Easy',
     bestTime: 'March - June, September - November',
-    image: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?q=80&w=800',
+    image: '/images/hero-chefchaouen.webp',
     highlights: [
       'Entire medina painted in mesmerizing shades of blue and indigo',
       'Ras El Maa waterfall at the edge of the medina where locals gather',
@@ -596,7 +596,7 @@ const dayTrips: DayTrip[] = [
     duration: '45 minutes',
     effort: 'Easy',
     bestTime: 'June - September (Asilah Festival in July)',
-    image: 'https://images.unsplash.com/photo-1560614861-4bdb77ade040?q=80&w=800',
+    image: '/images/hero-asilah-aerial.webp',
     highlights: [
       'Medina walls adorned with colorful murals refreshed annually at the arts festival',
       'Portuguese ramparts and sea walls with crashing Atlantic waves below',
@@ -620,7 +620,7 @@ const dayTrips: DayTrip[] = [
     duration: '20 minutes',
     effort: 'Easy',
     bestTime: 'Year-round',
-    image: 'https://images.unsplash.com/photo-1568454537842-d933259bb258?q=80&w=800',
+    image: '/images/hero-morocco.webp',
     highlights: [
       'Lighthouse marking where the Atlantic Ocean meets the Mediterranean Sea',
       'Hercules Cave with its Africa-shaped opening to the sea',
@@ -644,7 +644,7 @@ const dayTrips: DayTrip[] = [
     duration: '1 hour',
     effort: 'Easy',
     bestTime: 'March - November',
-    image: 'https://images.unsplash.com/photo-1571401835393-8c5f40381b4f?q=80&w=800',
+    image: '/images/hero-morocco.webp',
     highlights: [
       'UNESCO-listed medina showcasing rare Andalusian-Moroccan architecture',
       'Royal Palace square (Feddan) with its ornate facades and gardens',
@@ -670,7 +670,7 @@ const dayTrips: DayTrip[] = [
     duration: '30 minutes',
     effort: 'Easy',
     bestTime: 'September - April (surf), Year-round (village)',
-    image: 'https://images.unsplash.com/photo-1502680390548-bdbac40f0100?q=80&w=800',
+    image: '/images/hero-surfing.webp',
     highlights: [
       'Legendary surf breaks including Anchor Point and Killer Point',
       'Bohemian fishing village with rooftop cafes and ocean views',
@@ -694,7 +694,7 @@ const dayTrips: DayTrip[] = [
     duration: '1 hour',
     effort: 'Moderate',
     bestTime: 'April - October (pools fill with spring melt)',
-    image: 'https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=800',
+    image: '/images/hero-camping.webp',
     highlights: [
       'Crystal-clear natural swimming pools carved into canyon rock',
       'Palm tree-lined gorge with dramatic cliff walls towering above',
@@ -718,7 +718,7 @@ const dayTrips: DayTrip[] = [
     duration: '1.5 hours',
     effort: 'Easy',
     bestTime: 'Year-round',
-    image: 'https://images.unsplash.com/photo-1590501006614-e53ad7753e3f?q=80&w=800',
+    image: '/images/hero-wine.webp',
     highlights: [
       'Centuries-old silver jewelry souk with Amazigh artisans at work',
       'Pink-walled medina enclosed by 5 km of crenellated ramparts',
@@ -742,7 +742,7 @@ const dayTrips: DayTrip[] = [
     duration: '1.5 hours',
     effort: 'Easy',
     bestTime: 'October - May (cooler months)',
-    image: 'https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?q=80&w=800',
+    image: '/images/hero-desert.webp',
     highlights: [
       'Complete circuit of Saadian-era red mud ramparts encircling the town',
       'Two distinct souks: Arab souk for spices and Berber souk for crafts',
@@ -766,7 +766,7 @@ const dayTrips: DayTrip[] = [
     duration: '2.5 hours',
     effort: 'Easy',
     bestTime: 'September - November',
-    image: 'https://images.unsplash.com/photo-1509233725247-49e657c54213?q=80&w=800',
+    image: '/images/hero-coastal.webp',
     highlights: [
       'Towering natural red stone arches sculpted by centuries of Atlantic waves',
       'Miles of deserted golden-red sand backed by dramatic cliffs',
@@ -790,7 +790,7 @@ const dayTrips: DayTrip[] = [
     duration: '1 hour',
     effort: 'Moderate',
     bestTime: 'October - March (migratory birds)',
-    image: 'https://images.unsplash.com/photo-1472396961693-142e6e269027?q=80&w=800',
+    image: '/images/hero-birdwatching.webp',
     highlights: [
       'Home to the critically endangered Northern Bald Ibis colony',
       'Diverse habitats from sand dunes to estuary wetlands and argan forests',
@@ -818,35 +818,35 @@ const cityConfig: Record<DepartureCity, { color: string; icon: typeof MapPin; co
     icon: Compass,
     count: dayTrips.filter((t) => t.departureCity === 'Marrakech').length,
     tagline: 'Imperial red city at the foot of the Atlas Mountains',
-    image: 'https://images.unsplash.com/photo-1597212618440-806262de4fe6?q=80&w=400',
+    image: '/images/hero-marrakech.webp',
   },
   Fes: {
     color: 'var(--color-secondary)',
     icon: Landmark,
     count: dayTrips.filter((t) => t.departureCity === 'Fes').length,
     tagline: 'Medieval medina and spiritual capital of Morocco',
-    image: 'https://images.unsplash.com/photo-1553531889-e6cf4d692b1b?q=80&w=400',
+    image: '/images/hero-fes.webp',
   },
   Casablanca: {
     color: 'var(--color-accent)',
     icon: Waves,
     count: dayTrips.filter((t) => t.departureCity === 'Casablanca').length,
     tagline: 'Economic powerhouse and Atlantic coast metropolis',
-    image: 'https://images.unsplash.com/photo-1577147443647-81856d5151af?q=80&w=400',
+    image: '/images/hero-hassan-mosque.webp',
   },
   Tangier: {
     color: 'var(--color-primary)',
     icon: Route,
     count: dayTrips.filter((t) => t.departureCity === 'Tangier').length,
     tagline: 'Gateway to Africa where two seas meet',
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?q=80&w=400',
+    image: '/images/hero-tangier-kasbah.webp',
   },
   Agadir: {
     color: 'var(--color-secondary)',
     icon: Sun,
     count: dayTrips.filter((t) => t.departureCity === 'Agadir').length,
     tagline: 'Sun-drenched beach capital and surf hub',
-    image: 'https://images.unsplash.com/photo-1560703650-ef3e0f254ae0?q=80&w=400',
+    image: '/images/card-beach.webp',
   },
 };
 
@@ -915,7 +915,7 @@ export default function DayTripsPage() {
       {/* ── Hero Section ── */}
       <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1600&h=900&fit=crop"
+          src="/images/hero-morocco.webp"
           alt="Ouzoud Waterfalls cascading through lush Moroccan landscape"
           className="absolute inset-0 w-full h-full object-cover"
         />

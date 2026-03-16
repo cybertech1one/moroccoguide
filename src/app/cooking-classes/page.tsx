@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/cooking-classes',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=1200&h=630&fit=crop',
+        url: '/images/photo-tagine-closeup.webp',
         width: 1200,
         height: 630,
         alt: 'Moroccan cooking class with traditional tagine pots and fresh spices',
@@ -327,7 +327,7 @@ const signatureDishes = [
     arabicName: 'طاجين',
     description:
       'The iconic slow-cooked stew named after the conical clay pot it is cooked in. You will learn to prepare lamb with prunes and almonds, chicken with preserved lemons and olives, and seasonal vegetable varieties. The secret is in the layering of spices and the patient, low-temperature cooking that melds flavors into something extraordinary. Most classes teach at least two tagine variations.',
-    image: 'https://images.unsplash.com/photo-1541518763669-27fef04b14ea?q=80&w=600',
+    image: '/images/photo-tagine-closeup.webp',
     highlight: 'Learn 2-3 varieties in one class',
   },
   {
@@ -335,7 +335,7 @@ const signatureDishes = [
     arabicName: 'كسكس',
     description:
       'Morocco\'s Friday dish, traditionally served after midday prayers. You will learn the art of hand-rolling semolina into perfect tiny grains, then steaming them three times over a fragrant vegetable or meat broth in a couscoussier. The process is meditative and the result is incomparably lighter and fluffier than any packaged couscous. The hand-rolling technique alone takes 30-45 minutes to learn properly.',
-    image: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=600',
+    image: '/images/hero-food.webp',
     highlight: 'Hand-rolled, steamed 3 times',
   },
   {
@@ -343,7 +343,7 @@ const signatureDishes = [
     arabicName: 'بسطيلة',
     description:
       'A masterpiece of Moroccan cuisine that perfectly balances sweet and savory. Layers of warqa pastry are filled with shredded pigeon or chicken cooked with saffron and ginger, almonds, cinnamon, and a dusting of powdered sugar. Originally from Fes, it is one of the most complex and rewarding dishes to learn. Making warqa pastry from scratch is the most impressive skill you will take home.',
-    image: 'https://images.unsplash.com/photo-1511690743698-d9d18f7e20f1?q=80&w=600',
+    image: '/images/hero-food.webp',
     highlight: 'Sweet-savory masterpiece',
   },
   {
@@ -351,7 +351,7 @@ const signatureDishes = [
     arabicName: 'حريرة',
     description:
       'The beloved Ramadan soup that every Moroccan family prepares to break the fast each evening. A hearty, tomato-based soup with lentils, chickpeas, vermicelli, fresh herbs, and a complex spice blend. You will learn to achieve the perfect velvety texture using the traditional tedouira (flour and water thickener) and to balance the soup\'s signature harmony of warming spices.',
-    image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?q=80&w=600',
+    image: '/images/hero-food.webp',
     highlight: 'Traditional Ramadan recipe',
   },
   {
@@ -359,7 +359,7 @@ const signatureDishes = [
     arabicName: 'مسمن وخبز',
     description:
       'Master the art of Moroccan bread-making. Msemen (square, layered flatbread) requires learning to stretch dough paper-thin and fold it with oil and semolina. Khobz (round bread) is kneaded and baked. Baghrir (thousand-hole pancakes) involves a thin semolina batter. These are the foundations of Moroccan home cooking -- bread appears at every single meal.',
-    image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=600',
+    image: '/images/photo-moroccan-bread.webp',
     highlight: 'Msemen, khobz, baghrir techniques',
   },
   {
@@ -367,7 +367,7 @@ const signatureDishes = [
     arabicName: 'سلطات مغربية',
     description:
       'Learn to prepare zaalouk (smoky eggplant and tomato), taktouka (roasted pepper and tomato), and the vibrant carrot salad with cumin and orange blossom water. Moroccan meals begin with an array of cooked salads (khlii) that showcase the freshness of seasonal produce and the subtlety of the spice cabinet. These are the easiest dishes to master and the most likely to become part of your regular cooking.',
-    image: 'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=600',
+    image: '/images/hero-food.webp',
     highlight: 'Zaalouk, taktouka, and more',
   },
   {
@@ -375,7 +375,7 @@ const signatureDishes = [
     arabicName: 'أتاي',
     description:
       'Far more than a drink, Moroccan mint tea (atay) is a ritual of hospitality and friendship. You will learn the precise proportions of Chinese gunpowder green tea, fresh spearmint (nana), and sugar. The art of pouring from height to create a foam. The etiquette of serving: always offer with the right hand, always serve three rounds. This is often the final lesson in a cooking class and the most memorable.',
-    image: 'https://images.unsplash.com/photo-1571934811356-5cc061b6821f?q=80&w=600',
+    image: '/images/photo-mint-tea-pouring.webp',
     highlight: 'The art of pouring from height',
   },
   {
@@ -383,7 +383,7 @@ const signatureDishes = [
     arabicName: 'حلويات مغربية',
     description:
       'Master the art of chebakia (sesame-coated rose water cookies shaped into intricate flowers), kaab el ghazal (gazelle horns filled with almond paste and orange blossom water), briouat bil louz (crispy phyllo triangles with almond filling dipped in honey), and the rich, no-bake sellou. These are the jewels of Moroccan patisserie and the traditional accompaniments to mint tea.',
-    image: 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?q=80&w=600',
+    image: '/images/hero-food.webp',
     highlight: 'Chebakia, gazelle horns, briouat',
   },
 ];
@@ -742,7 +742,7 @@ export default function CookingClassesPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1541518763669-27fef04b14ea?q=80&w=2800)',
+              'url(/images/photo-tagine-closeup.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

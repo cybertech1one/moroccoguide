@@ -77,12 +77,18 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/food',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=1200&h=630&fit=crop',
+        url: '/images/hero-food.webp',
         width: 1200,
         height: 630,
         alt: 'Traditional Moroccan tagine with vegetables and spices',
       },
     ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Moroccan Food & Cuisine Guide | CityGuide',
+    description:
+      'Discover tagine, couscous, pastilla, street food, spices, and regional specialties. Your complete Moroccan food guide.',
   },
   alternates: { canonical: 'https://citytoursmorocco.com/food' },
 };
@@ -224,7 +230,7 @@ const dishes: Dish[] = [
     arabicName: 'طاجين دجاج بالحامض والزيتون',
     description:
       'The most iconic of all Moroccan tagines: chicken slow-cooked with saffron, ginger, and turmeric, finished with cracked green olives and wedges of salt-cured preserved lemon. The interplay of briny olives and tart preserved lemon against the gentle warmth of saffron-infused chicken is the quintessential flavor of Morocco. Every riad, restaurant, and family kitchen has its own version.',
-    image: 'https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=600&q=80',
+    image: '/images/card-tagine.webp',
     category: 'Main Course',
     region: 'Nationwide',
     spiceLevel: 'Medium',
@@ -235,7 +241,7 @@ const dishes: Dish[] = [
     arabicName: 'طاجين لحم بالبرقوق',
     description:
       'A lavish tagine of lamb shoulder slow-braised with caramelized onions, honey, cinnamon, and plump prunes, crowned with a shower of toasted almonds and sesame seeds. This sweet-and-savory masterpiece exemplifies the Andalusian influence on Moroccan cooking. The lamb becomes fork-tender after hours of gentle simmering, and the prunes dissolve into the sauce, creating an intoxicating sweetness balanced by the warmth of cinnamon and ras el hanout.',
-    image: 'https://images.unsplash.com/photo-1511690743698-d9d18f7e20f1?w=600&q=80',
+    image: '/images/photo-tagine-closeup.webp',
     category: 'Main Course',
     region: 'Fes',
     spiceLevel: 'Mild',
@@ -246,7 +252,7 @@ const dishes: Dish[] = [
     arabicName: 'طاجين كفتة بالبيض',
     description:
       'Seasoned ground beef or lamb meatballs simmered in a spiced tomato-onion sauce until rich and concentrated, then eggs are cracked directly into the bubbling sauce and gently poached. Served straight from the tagine pot with crusty khobz bread for dipping, this is Moroccan comfort food at its finest. The kefta is typically seasoned with cumin, paprika, parsley, and a pinch of cinnamon.',
-    image: 'https://images.unsplash.com/photo-1529042410759-befb1204b468?w=600&q=80',
+    image: '/images/photo-food-flatlay.webp',
     category: 'Main Course',
     region: 'Nationwide',
     spiceLevel: 'Medium',
@@ -257,7 +263,7 @@ const dishes: Dish[] = [
     arabicName: 'طاجين حوت',
     description:
       'A coastal specialty featuring firm white fish (often sea bass, monkfish, or John Dory) nestled on a bed of sliced potatoes, tomatoes, bell peppers, and olives, marinated in chermoula (a vibrant paste of cilantro, parsley, garlic, cumin, paprika, and lemon juice). The tagine is baked until the fish is flaky and infused with the chermoula. Particularly beloved in Essaouira, Tangier, and all Atlantic coastal towns.',
-    image: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80',
+    image: '/images/hero-essaouira.webp',
     category: 'Main Course',
     region: 'Essaouira',
     spiceLevel: 'Medium',
@@ -268,7 +274,7 @@ const dishes: Dish[] = [
     arabicName: 'طاجين خضرة',
     description:
       'A vibrant garden of seasonal vegetables -- carrots, zucchini, turnips, potatoes, artichoke hearts, and tomatoes -- slow-cooked with a generous amount of olive oil, saffron, ginger, and a bouquet of fresh herbs. Topped with preserved lemons and olives, this entirely plant-based tagine proves that Moroccan cuisine offers deeply satisfying vegetarian dishes. The key is the slow-cooking process that caramelizes the vegetables into silky perfection.',
-    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80',
+    image: '/images/photo-food-flatlay.webp',
     category: 'Main Course',
     region: 'Nationwide',
     spiceLevel: 'Mild',
@@ -281,7 +287,7 @@ const dishes: Dish[] = [
     arabicName: 'كسكس',
     description:
       'The undisputed national dish of Morocco, hand-rolled semolina granules are steamed three times over a fragrant broth of lamb or chicken, seven vegetables (carrots, turnips, zucchini, cabbage, tomatoes, onions, and chickpeas), and a complex spice blend. Traditionally served on Fridays after Dhuhr prayers as a communal family meal eaten from a shared platter. Each region has its own variation: with tfaya (caramelized onions and raisins) in Fes, with dried meat (gueddid) in rural areas, or with buttermilk (lben) in the south.',
-    image: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=600&q=80',
+    image: '/images/photo-moroccan-feast.webp',
     category: 'Main Course',
     region: 'Nationwide',
     spiceLevel: 'Mild',
@@ -292,7 +298,7 @@ const dishes: Dish[] = [
     arabicName: 'بسطيلة',
     description:
       'The crown jewel of Moroccan celebratory cuisine. This exquisite pie from Fes layers crispy, paper-thin warqa pastry with shredded pigeon (or chicken in modern versions), a fragrant filling of eggs scrambled with saffron and onions, and toasted almonds sweetened with cinnamon and sugar. The finished pie is dusted with powdered sugar and traced with cinnamon in decorative patterns. The combination of flaky pastry, savory-sweet filling, and aromatic spices makes pastilla one of the world&apos;s great dishes. Seafood pastilla with shrimp and vermicelli is a popular coastal variation.',
-    image: 'https://images.unsplash.com/photo-1577906096429-f73c2c312435?w=600&q=80',
+    image: '/images/photo-pastilla.webp',
     category: 'Main Course',
     region: 'Fes',
     spiceLevel: 'Mild',
@@ -303,7 +309,7 @@ const dishes: Dish[] = [
     arabicName: 'حريرة',
     description:
       'Morocco&apos;s most beloved soup and the traditional dish served at sunset during Ramadan to break the fast (iftar). A hearty, nourishing bowl brimming with lentils, chickpeas, diced lamb or beef, crushed tomatoes, vermicelli noodles, and a bouquet of fresh cilantro and parsley. The signature velvety texture comes from tedouira, a flour-and-water slurry stirred in at the end. Seasoned with ginger, turmeric, cinnamon, pepper, and saffron. Harira is always accompanied by dates, hard-boiled eggs, and chebakia pastries during Ramadan.',
-    image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600&q=80',
+    image: '/images/photo-tagine-closeup.webp',
     category: 'Main Course',
     region: 'Nationwide',
     spiceLevel: 'Medium',
@@ -314,7 +320,7 @@ const dishes: Dish[] = [
     arabicName: 'طنجية مراكشية',
     description:
       'A slow-cooked meat dish unique to Marrakech, so emblematic of the city that it bears its name. Beef or lamb shanks are placed in an amphora-shaped clay urn (the tanjia) with preserved lemons, saffron threads, cumin, smen (aged fermented butter), garlic, and olive oil. The sealed urn is then delivered to the local hammam (bathhouse), where the furnace keeper (fernatchi) buries it in the wood-ash embers to cook overnight. The result is impossibly tender meat that falls off the bone. Traditionally a dish made by men, particularly bachelors and groups of friends for weekend gatherings.',
-    image: 'https://images.unsplash.com/photo-1511690743698-d9d18f7e20f1?w=600&q=80',
+    image: '/images/photo-tagine-closeup.webp',
     category: 'Main Course',
     region: 'Marrakech',
     spiceLevel: 'Medium',
@@ -325,7 +331,7 @@ const dishes: Dish[] = [
     arabicName: 'رفيسة',
     description:
       'A deeply comforting ceremonial dish of shredded msemen flatbread layered with lentils and tender chicken, all drenched in a rich, aromatic broth infused with fenugreek (helba), ras el hanout, saffron, and pepper. Rfissa holds deep cultural significance: it is traditionally prepared for women who have just given birth, as fenugreek is believed to promote lactation and restore strength. It is also served at celebrations, religious holidays, and important family gatherings.',
-    image: 'https://images.unsplash.com/photo-1606491956689-2ea866880049?w=600&q=80',
+    image: '/images/photo-moroccan-feast.webp',
     category: 'Main Course',
     region: 'Nationwide',
     spiceLevel: 'Mild',
@@ -336,7 +342,7 @@ const dishes: Dish[] = [
     arabicName: 'مشوي',
     description:
       'Whole lamb slow-roasted for five to six hours in an underground clay pit oven (tandir) or on a spit over charcoal until the meat is fall-off-the-bone tender with a crispy, golden-brown exterior. Seasoned simply with salt, cumin, and melted butter basted repeatedly during cooking. Mechoui is the centerpiece of Moroccan feasts (diffa), weddings, and the Eid al-Adha celebration. Served by pulling tender meat directly from the carcass with your hands, accompanied only by ground cumin and coarse salt for dipping.',
-    image: 'https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=600&q=80',
+    image: '/images/hero-spices.webp',
     category: 'Main Course',
     region: 'Marrakech',
     spiceLevel: 'Mild',
@@ -347,7 +353,7 @@ const dishes: Dish[] = [
     arabicName: 'مروزية',
     description:
       'An ancient Marrakchi tagine of lamb cooked with ras el hanout, honey, raisins, toasted almonds, and a generous amount of smen (aged butter). The dish has its roots in the medieval Berber-Andalusian culinary tradition and is specifically associated with the Eid al-Adha festival. Mrouzia is one of the sweetest tagines, with the honey and raisins creating a rich, almost jam-like glaze on the lamb. The use of ras el hanout is particularly generous here, often calling for the most complex blend a spice merchant offers.',
-    image: 'https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?w=600&q=80',
+    image: '/images/photo-mint-tea-pouring.webp',
     category: 'Main Course',
     region: 'Marrakech',
     spiceLevel: 'Mild',
@@ -358,7 +364,7 @@ const dishes: Dish[] = [
     arabicName: 'بيصارة',
     description:
       'A thick, nourishing soup-stew of dried split fava beans (ful) simmered until they dissolve into a creamy puree, seasoned with garlic, cumin, paprika, and finished with a generous drizzle of olive oil. Bissara is northern Morocco&apos;s answer to comfort food, especially popular in Chefchaouen, Tangier, Tetouan, and the Rif mountain region. Served for breakfast or as a warming street food snack for just 3-5 MAD a bowl, it is wholesome, entirely vegan, and deeply satisfying.',
-    image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600&q=80',
+    image: '/images/photo-tagine-closeup.webp',
     category: 'Main Course',
     region: 'Chefchaouen',
     spiceLevel: 'Mild',
@@ -371,7 +377,7 @@ const dishes: Dish[] = [
     arabicName: 'زعلوك',
     description:
       'A silky, smoky cooked salad of fire-roasted eggplant and ripe tomatoes mashed together with garlic, olive oil, cumin, paprika, and a touch of chili. Served warm or at room temperature as a dip with crusty khobz bread, zaalouk appears on every Moroccan dining table as part of the traditional salad spread. The eggplant is charred over an open flame or baked until collapsed, giving the dish its distinctive smokiness.',
-    image: 'https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?w=600&q=80',
+    image: '/images/photo-food-flatlay.webp',
     category: 'Side',
     region: 'Nationwide',
     spiceLevel: 'Mild',
@@ -382,7 +388,7 @@ const dishes: Dish[] = [
     arabicName: 'تكتوكة',
     description:
       'A vibrant cooked salad of roasted green peppers and tomatoes, slow-cooked down with garlic, paprika, and cumin, then finished with a generous drizzle of olive oil and a squeeze of lemon. Often served alongside zaalouk as part of the traditional Moroccan salad spread (khlii) that begins every meal. The peppers are first blistered over a flame, peeled, and then combined with tomatoes for a long, gentle simmer.',
-    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80',
+    image: '/images/photo-food-flatlay.webp',
     category: 'Side',
     region: 'Nationwide',
     spiceLevel: 'Medium',
@@ -395,7 +401,7 @@ const dishes: Dish[] = [
     arabicName: 'مسمن',
     description:
       'Square-shaped, multi-layered flatbread that is folded and pan-fried to achieve a flaky, buttery, slightly chewy texture. The dough of flour, semolina, salt, and water is stretched paper-thin by hand, brushed with oil and softened butter, then folded into a square and cooked on a flat griddle (maqla) until golden and crispy. Msemen is enjoyed at breakfast drizzled with honey and melted butter, as a street snack stuffed with spiced ground beef, kefta, or vegetables, or torn alongside tagines to soak up sauce. Women prepare it fresh in the souks all morning.',
-    image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=80',
+    image: '/images/hero-food.webp',
     category: 'Street Food',
     region: 'Nationwide',
     spiceLevel: 'Mild',
@@ -406,7 +412,7 @@ const dishes: Dish[] = [
     arabicName: 'بغرير',
     description:
       'Known as "thousand-hole pancakes" (crepes aux mille trous), these spongy semolina-based crepes are a marvel of Moroccan baking. A thin batter of fine semolina, flour, yeast, baking powder, and warm water is poured onto a hot skillet and cooked on one side only. As the batter heats, hundreds of tiny bubbles form and burst, creating the distinctive honeycomb surface. This porous texture perfectly absorbs the traditional topping: a warm mixture of melted butter and honey (known as raib). A beloved breakfast and tea-time treat, particularly during Ramadan.',
-    image: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&q=80',
+    image: '/images/photo-moroccan-feast.webp',
     category: 'Street Food',
     region: 'Nationwide',
     spiceLevel: 'Mild',
@@ -417,7 +423,7 @@ const dishes: Dish[] = [
     arabicName: 'الببوش',
     description:
       'One of Morocco&apos;s most distinctive street foods: small garden snails simmered in a fragrant, peppery broth infused with a dozen herbs and spices including thyme, licorice root, mint, caraway, anise, and black pepper. The broth is believed to have medicinal properties, particularly for digestion and immunity. Sold from steaming cauldrons at street stalls, particularly at Jemaa el-Fnaa in Marrakech, vendors ladle snails and broth into small bowls, and you extract each snail with a toothpick. A small bowl costs just 5-10 MAD.',
-    image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600&q=80',
+    image: '/images/photo-tagine-closeup.webp',
     category: 'Street Food',
     region: 'Marrakech',
     spiceLevel: 'Spicy',
@@ -428,7 +434,7 @@ const dishes: Dish[] = [
     arabicName: 'سردين مشوي',
     description:
       'Morocco is the world&apos;s largest exporter of sardines, and nowhere are they better than grilled fresh at the port. Whole sardines are gutted, marinated briefly in chermoula (a zesty mix of cilantro, garlic, cumin, paprika, and lemon), threaded onto a metal grill rack, and charred over blazing hot coals. Served with just bread, olives, and sliced tomatoes. The best places to eat them are the fishing port stalls of Essaouira, Casablanca&apos;s port market, and the fish stalls of Tangier. Six to eight grilled sardines cost 15-25 MAD.',
-    image: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80',
+    image: '/images/hero-essaouira.webp',
     category: 'Street Food',
     region: 'Essaouira',
     spiceLevel: 'Medium',
@@ -439,7 +445,7 @@ const dishes: Dish[] = [
     arabicName: 'مرقاز',
     description:
       'Fiery, thin lamb sausages colored vivid red with harissa and paprika, seasoned with cumin, coriander, fennel seeds, and garlic, then grilled over charcoal until charred and smoky. Merguez is a staple of Moroccan street food stalls, typically served in a crusty baguette (bocadillo) with harissa sauce, diced tomato, and hot chili peppers, or alongside grilled brochettes of lamb and beef. The sausages are made fresh daily by butchers throughout the medinas.',
-    image: 'https://images.unsplash.com/photo-1529042410759-befb1204b468?w=600&q=80',
+    image: '/images/photo-food-flatlay.webp',
     category: 'Street Food',
     region: 'Nationwide',
     spiceLevel: 'Spicy',
@@ -450,7 +456,7 @@ const dishes: Dish[] = [
     arabicName: 'معقودة',
     description:
       'Golden, crispy potato fritters seasoned with garlic, cumin, parsley, turmeric, and a touch of chili, deep-fried in bubbling oil until perfectly crunchy outside and fluffy within. Maakouda is the king of Moroccan sandwich fillings, tucked into crusty khobz with harissa sauce, olives, and sometimes a fried egg for a meal that costs under 15 MAD. Every medina has vendors frying these to order, and the irresistible aroma draws customers from streets away.',
-    image: 'https://images.unsplash.com/photo-1585672840563-f2af2ced55c9?w=600&q=80',
+    image: '/images/photo-food-flatlay.webp',
     category: 'Street Food',
     region: 'Nationwide',
     spiceLevel: 'Medium',
@@ -461,7 +467,7 @@ const dishes: Dish[] = [
     arabicName: 'سفنج',
     description:
       'Moroccan doughnuts made from a simple yeast dough of flour, salt, water, and a pinch of sugar, shaped into rings by hand with an expert flick of the wrist, and deep-fried in oil until golden and puffed. Light, airy, and slightly chewy with a delicate crust, sfenj are best eaten piping hot from the vendor, dusted with sugar or dipped in warm honey. A classic morning ritual paired with mint tea or coffee, each sfenj costs just 1-2 MAD. The best sfenj stalls attract long queues at dawn.',
-    image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=80',
+    image: '/images/hero-food.webp',
     category: 'Street Food',
     region: 'Nationwide',
     spiceLevel: 'Mild',
@@ -472,7 +478,7 @@ const dishes: Dish[] = [
     arabicName: 'بريوات',
     description:
       'Crispy triangular or cylindrical pastries made from warqa (paper-thin pastry sheets), folded around savory or sweet fillings and deep-fried or baked until shatteringly crisp. Savory briouats are filled with spiced minced lamb and onions, herbed fresh cheese, shrimp with vermicelli, or chicken with olives. Sweet versions contain almond paste scented with orange blossom water and are dipped in warm honey after frying. A fixture at festive gatherings, weddings, and Ramadan iftars.',
-    image: 'https://images.unsplash.com/photo-1519676867240-f03562e64571?w=600&q=80',
+    image: '/images/photo-pastilla.webp',
     category: 'Street Food',
     region: 'Nationwide',
     spiceLevel: 'Mild',
@@ -483,7 +489,7 @@ const dishes: Dish[] = [
     arabicName: 'راس الخروف',
     description:
       'One of Morocco&apos;s most adventurous street foods: a whole sheep&apos;s head, slow-steamed for hours until the meat is meltingly tender, then chopped and served with cumin and salt on a plate or in a sandwich. Vendors display rows of steamed heads at their stalls in the medinas and souks. The most prized parts are the cheeks, tongue, and brain. Most popular in Marrakech&apos;s Jemaa el-Fnaa and Fes&apos;s Rcif square. A plate costs 20-30 MAD. Not for the faint of heart, but deeply loved by locals.',
-    image: 'https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=600&q=80',
+    image: '/images/hero-spices.webp',
     category: 'Street Food',
     region: 'Marrakech',
     spiceLevel: 'Mild',
@@ -496,7 +502,7 @@ const dishes: Dish[] = [
     arabicName: 'شباكية',
     description:
       'Intricately shaped flower-like pastries that are one of Morocco&apos;s most iconic sweets. The sesame-studded dough is flavored with anise, cinnamon, saffron, and orange blossom water, hand-shaped into a distinctive rosette pattern, deep-fried until golden, then plunged into warm honey and finished with a shower of sesame seeds. Chebakia is the indispensable sweet of Ramadan, always served alongside harira soup to break the fast. Each family guards their shaping technique, and skilled women can produce hundreds in a single day.',
-    image: 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=600&q=80',
+    image: '/images/hero-spices.webp',
     category: 'Dessert',
     region: 'Nationwide',
     spiceLevel: 'Mild',
@@ -507,7 +513,7 @@ const dishes: Dish[] = [
     arabicName: 'سلو / سفوف',
     description:
       'A rich, no-bake confection made from toasted flour, ground almonds, toasted sesame seeds, melted butter, honey, and a warm blend of cinnamon, anise, and mastic. The ingredients are mixed into a dense, crumbly mass and shaped into mounds, balls, or pressed into molds. Sellou is a high-energy treat traditionally prepared in large batches during Ramadan, for Eid celebrations, and for new mothers (believed to aid recovery and milk production). The depth of toasting the flour determines the richness of flavor.',
-    image: 'https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?w=600&q=80',
+    image: '/images/photo-mint-tea-pouring.webp',
     category: 'Dessert',
     region: 'Fes',
     spiceLevel: 'Mild',
@@ -518,7 +524,7 @@ const dishes: Dish[] = [
     arabicName: 'كعب الغزال',
     description:
       'Perhaps the most elegant of all Moroccan pastries. Crescent-shaped cookies with a thin, smooth pastry shell encasing a filling of ground almonds, sugar, and orange blossom water. The dough must be rolled paper-thin yet hold together perfectly around the fragrant almond paste. Kaab el ghazal are a fixture at every Moroccan celebration, served with mint tea, and are considered a mark of a skilled pastry cook. The best come from Fes and Meknes.',
-    image: 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=600&q=80',
+    image: '/images/hero-spices.webp',
     category: 'Dessert',
     region: 'Fes',
     spiceLevel: 'Mild',
@@ -531,7 +537,7 @@ const dishes: Dish[] = [
     arabicName: 'أتاي',
     description:
       'Morocco&apos;s national drink and the cornerstone of social life. A sweet infusion of Chinese gunpowder green tea, generous bunches of fresh spearmint (nana), and ample sugar, brewed in a silver-plated teapot and poured from a height into ornate glasses to create a light foam. The tea ceremony is a ritual of hospitality offered to every guest. Refusing tea is considered impolite. Moroccans say the first glass is as gentle as life, the second as strong as love, and the third as bitter as death. In summer, fresh wormwood (shiba) or lemon verbena (louiza) may replace mint.',
-    image: 'https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=600&q=80',
+    image: '/images/photo-mint-tea-pouring.webp',
     category: 'Drink',
     region: 'Nationwide',
     spiceLevel: 'Mild',
@@ -542,7 +548,7 @@ const dishes: Dish[] = [
     arabicName: 'عصير البرتقال',
     description:
       'Freshly squeezed orange juice is ubiquitous across Morocco, sold from vibrant juice stalls and handcarts in every city. Moroccan oranges are renowned for their sweetness, particularly the navel oranges from the Berkane and Souss-Massa regions. A glass of fresh juice costs just 5-10 MAD (less than one dollar). The legendary orange juice stalls lining Jemaa el-Fnaa in Marrakech are one of the city&apos;s most photographed scenes.',
-    image: 'https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?w=600&q=80',
+    image: '/images/hero-food.webp',
     category: 'Drink',
     region: 'Nationwide',
     spiceLevel: 'Mild',
@@ -553,7 +559,7 @@ const dishes: Dish[] = [
     arabicName: 'عصير الأفوكادو',
     description:
       'A thick, creamy blend of ripe avocado, milk, sugar, and sometimes almonds, dates, or a drizzle of argan oil, served in tall glasses at juice bars across Morocco. This unexpectedly popular Moroccan staple is a filling snack or breakfast drink, especially in the south around Agadir and Taroudant where avocados grow abundantly. Some juice bars layer it with banana, strawberry, or almond milk in striped "cocktail" glasses.',
-    image: 'https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?w=600&q=80',
+    image: '/images/hero-food.webp',
     category: 'Drink',
     region: 'Agadir',
     spiceLevel: 'Mild',
@@ -568,56 +574,56 @@ const dishes: Dish[] = [
 const foodRegions = [
   {
     city: 'Marrakech',
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=600&q=80',
+    image: '/images/hero-jemaa-elfna-night.webp',
     description:
       'Known as the street food capital of Morocco, Marrakech offers an unparalleled open-air dining experience at Jemaa el-Fnaa square, where hundreds of food stalls come alive each evening. From slow-cooked tanjia (the city&apos;s signature dish, cooked overnight in hammam ashes) to snail soup, steamed sheep heads, merguez sandwiches, and skewered brochettes, the Red City is a food lover&apos;s paradise. The Mellah spice market and the Rahba Kedima are essential stops for food explorers.',
     specialties: ['Tanjia Marrakchia', 'Mechoui', 'Mrouzia', 'Snail Soup (Babbouche)', 'Jemaa el-Fnaa Street Food'],
   },
   {
     city: 'Fes',
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=600&q=80',
+    image: '/images/hero-fes.webp',
     description:
       'The spiritual capital of Moroccan gastronomy and home to the most refined, complex dishes in the kingdom. Centuries-old palace cuisine traditions survive here, with recipes guarded by dadas (traditional home cooks) and passed down through generations. Pastilla originated in Fes and remains at its finest here. The city is also renowned for its sellou, kaab el ghazal pastries, and the elaborate diffa (feast) tradition. The spice and olive souks of the Fes el-Bali medina are among Morocco&apos;s best.',
     specialties: ['Pastilla', 'Rfissa', 'Sellou', 'Kaab el Ghazal', 'Palace Cuisine', 'Tagine Lham bil Barkouk'],
   },
   {
     city: 'Casablanca',
-    image: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=600&q=80',
+    image: '/images/hero-essaouira.webp',
     description:
       'Morocco&apos;s cosmopolitan economic capital blends traditional Moroccan flavors with French bistro culture, Spanish tapas influences, and modern international fusion. The Atlantic coast location means exceptional seafood, from grilled sardines at the Central Market to sophisticated fish restaurants along the Corniche. The Habous Quarter is famous for its traditional pastry shops (patisseries) selling cornes de gazelle and msemen. Casablanca&apos;s restaurant scene ranges from hole-in-the-wall rotisseries to Michelin-level fine dining.',
     specialties: ['Fresh Seafood', 'French-Moroccan Fusion', 'Grilled Sardines', 'Habous Pastries', 'Modern Bistros'],
   },
   {
     city: 'Essaouira',
-    image: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80',
+    image: '/images/hero-essaouira.webp',
     description:
       'This charming Atlantic port town is Morocco&apos;s seafood capital, renowned for its ocean-to-table dining experience. The fishing port (Port de Peche) sells the freshest catch daily, grilled to order at open-air stalls -- you choose your fish, negotiate the price, and it is charcoal-grilled in minutes. Essaouira is also the center of Morocco&apos;s argan oil production, and culinary argan oil adds a distinctive nutty finish to salads, couscous, and amlou (an argan-almond-honey dip). Fish tagine with chermoula is the local specialty.',
     specialties: ['Grilled Fish & Seafood', 'Sardine Tagine', 'Fish Chermoula', 'Argan Oil Cuisine', 'Amlou'],
   },
   {
     city: 'Meknes',
-    image: 'https://images.unsplash.com/photo-1548017544-09dbc9fb99f6?w=600&q=80',
+    image: '/images/hero-kasbahs.webp',
     description:
       'Surrounded by Morocco&apos;s most fertile agricultural land, Meknes is the heart of the country&apos;s olive oil production and its only significant wine region. The local cuisine emphasizes fresh produce, artisanal olive oil, and rich, earthy flavors that reflect the bounty of the Saiss plain. Meknes is particularly known for its khliaa (dried preserved meat cured in spiced fat), its excellent olives, and its regional bread varieties. The Chateau Roslane and Les Celliers de Meknes wineries produce Morocco&apos;s best wines.',
     specialties: ['Olive Oil Dishes', 'Moroccan Wine', 'Khliaa (Preserved Meat)', 'Fresh Produce', 'Regional Breads'],
   },
   {
     city: 'Tangier',
-    image: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=600&q=80',
+    image: '/images/hero-essaouira.webp',
     description:
       'Sitting at the crossroads of Africa and Europe, Tangier&apos;s cuisine reflects its international history with Spanish, Portuguese, and French influences layered over a Moroccan base. The city excels at seafood, particularly fried fish (hout meqli), grilled sardines, and prawn tagine. The Grand Socco and Petit Socco squares are the heart of the food scene. Tangier&apos;s bocadillo (stuffed baguette sandwich) culture is among Morocco&apos;s best, and the karantika (chickpea flour cake, inherited from the Spanish) is a unique local specialty.',
     specialties: ['Karantika', 'Fried Fish', 'Bocadillo Sandwiches', 'Seafood Tagine', 'Spanish-Moroccan Fusion'],
   },
   {
     city: 'Chefchaouen',
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=600&q=80',
+    image: '/images/hero-fes.webp',
     description:
       'The Blue City&apos;s cuisine reflects its Rif mountain setting with hearty, rustic dishes designed for the cooler highland climate. Bissara (thick fava bean soup) is the signature dish, served for breakfast from street vendors for just 3-5 MAD. The town is also known for fresh local goat cheese (jben), made from milk of goats that graze on the surrounding hillsides, and for fried pastries. The Ras el-Maa waterfall area has riverside restaurants serving trout tagine. Chefchaouen&apos;s local honey and cannabis-infused cuisine (mahjoun) are distinctive local traditions.',
     specialties: ['Bissara', 'Fresh Goat Cheese (Jben)', 'Rif Mountain Tagines', 'Local Honey', 'Trout Dishes'],
   },
   {
     city: 'Agadir & Souss Region',
-    image: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80',
+    image: '/images/hero-essaouira.webp',
     description:
       'The Souss-Massa region around Agadir is the breadbasket of Morocco, producing the country&apos;s finest argan oil, saffron (from nearby Taliouine), almonds, and citrus fruits. The cuisine is distinctly Amazigh (Berber), featuring tafarnout (Berber flatbread baked in hot sand), amlou (a delicious dip of argan oil, almonds, and honey), and tagines with local almonds and saffron. The fish market in Agadir offers some of the freshest and cheapest seafood in the country.',
     specialties: ['Argan Oil & Amlou', 'Taliouine Saffron Dishes', 'Amazigh Cuisine', 'Fresh Seafood', 'Tafarnout Bread'],

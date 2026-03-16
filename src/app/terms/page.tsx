@@ -239,7 +239,7 @@ export default function TermsPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1590073242678-70ee3fc28e8e?q=80&w=2800)',
+              'url(/images/hero-surfing.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

@@ -35,7 +35,7 @@ const experiences = [
     slug: 'sunrise-camel-trek',
     description:
       'Rise before dawn and mount a gentle dromedary camel for the iconic journey into the heart of Erg Chebbi. As you sway gently through the dune valleys in a caravan, the sky transforms from star-filled darkness to a palette of pinks, oranges, and golds. The trek culminates at a high dune summit where you dismount and watch the sun break over an endless horizon of sand. The silence is profound, broken only by the soft breathing of the camels. Most treks last 1-1.5 hours and include mint tea at a viewpoint.',
-    image: 'https://images.unsplash.com/photo-1548018560-c7196e5010a0?q=80&w=800',
+    image: '/images/hero-sahara-sunrise.webp',
     rating: 4.9,
     price: '200-400 MAD per person',
     duration: '1.5 hours (departs ~5:00 AM)',
@@ -47,7 +47,7 @@ const experiences = [
     slug: 'sandboarding',
     description:
       'Ride the dunes on a board in one of the most exhilarating desert activities available in Merzouga. Standing or sitting on a specially designed sandboard, you slide down the steep faces of Erg Chebbi\'s towering dunes at surprising speeds. No prior experience is necessary, and guides provide boards and basic instruction. The climb back up through soft sand is a workout, but the rush of gliding down a 150-meter dune is well worth the effort. Best in the cooler morning or late afternoon hours.',
-    image: 'https://images.unsplash.com/photo-1509023464722-18d996393ca8?q=80&w=800',
+    image: '/images/hero-sahara-sunrise.webp',
     rating: 4.4,
     price: '150-300 MAD per person',
     duration: '2-3 hours',
@@ -59,7 +59,7 @@ const experiences = [
     slug: 'desert-camping',
     description:
       'Spend a night in the Sahara at a luxury or traditional Berber desert camp nestled among the dunes. After a sunset camel ride to camp, settle into your tent, from simple nomad-style shelters to lavish glamping suites with proper beds and private bathrooms. Evening brings a traditional Berber dinner cooked over an open fire, followed by drumming, storytelling, and stargazing. Falling asleep to absolute silence beneath a sky blazing with stars is a life-defining experience that stays with you forever.',
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=800',
+    image: '/images/hero-sahara-sunrise.webp',
     rating: 4.8,
     price: '400-2,500 MAD per person (budget to luxury)',
     duration: 'Overnight (check-in 4:00 PM, checkout 9:00 AM)',
@@ -71,7 +71,7 @@ const experiences = [
     slug: 'quad-biking',
     description:
       'Explore the vast desert terrain around Merzouga on a powerful quad bike (ATV), covering far more ground than you could on foot or camelback. Guided excursions take you through a variety of landscapes, from rolling dunes to rocky hamada desert, passing through nomadic encampments and dry river beds. The adrenaline of racing across open desert with the dunes as your backdrop is addictive. Tours typically include safety briefing, equipment, and stops at scenic viewpoints and local villages.',
-    image: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?q=80&w=800',
+    image: '/images/hero-sahara-sunrise.webp',
     rating: 4.3,
     price: '350-600 MAD per person (1-2 hours)',
     duration: '1-2 hours',
@@ -83,7 +83,7 @@ const experiences = [
     slug: 'berber-drumming',
     description:
       'Join local Amazigh and Gnaoua musicians around a campfire for an unforgettable evening of rhythm and song. Participants are given traditional drums (bendir or taarija) and taught basic rhythms that form the foundation of Saharan music. As the night progresses, the music builds in intensity, with call-and-response singing, hand clapping, and the hypnotic metallic rhythm of the qraqeb (iron castanets). Many desert camps include this as part of the overnight experience, but dedicated music sessions can also be arranged.',
-    image: 'https://images.unsplash.com/photo-1545071677-8e71b0d2c3c7?q=80&w=800',
+    image: '/images/hero-sahara-sunrise.webp',
     rating: 4.6,
     price: '100-200 MAD per person',
     duration: '2-3 hours (typically 8:00 PM - 11:00 PM)',
@@ -95,7 +95,7 @@ const experiences = [
     slug: '4x4-desert-tour',
     description:
       'Embark on a full-day 4x4 expedition that takes you deep into the Saharan landscape beyond the Erg Chebbi dunes. The route passes through dramatic black desert (hammada), dried lake beds, hidden oases, and remote nomadic settlements. Stops include the Gnaoua village of Khamlia for a music performance, an ancient kohl mine, fossil deposits, and panoramic viewpoints. The tour provides a comprehensive overview of the diverse Saharan ecosystem and the communities that call it home.',
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?q=80&w=800',
+    image: '/images/hero-sahara-sunrise.webp',
     rating: 4.5,
     price: '600-1,200 MAD per vehicle (up to 4 people)',
     duration: 'Full day (8:00 AM - 5:00 PM)',
@@ -107,7 +107,7 @@ const experiences = [
     slug: 'sand-bathing',
     description:
       'An ancient Saharan healing practice that locals have used for centuries, sand bathing involves being buried up to the neck in hot desert sand during the summer months (June through September). Believed to relieve rheumatism, joint pain, and skin conditions, the therapy takes advantage of the mineral-rich sand heated to therapeutic temperatures by the Saharan sun. Sessions are supervised by experienced local practitioners and typically last 15-30 minutes, followed by rest in a shaded tent with herbal tea.',
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800',
+    image: '/images/hero-sahara-sunrise.webp',
     rating: 4.0,
     price: '100-200 MAD per session',
     duration: '15-30 minutes (available June-September only)',
@@ -119,7 +119,7 @@ const experiences = [
     slug: 'stargazing',
     description:
       'The Sahara around Merzouga has virtually zero light pollution, making it one of the finest stargazing locations on Earth. Dedicated astronomical observation sessions are led by knowledgeable guides equipped with telescopes and laser pointers who reveal the wonders of the desert night sky. You will see the Milky Way in breathtaking clarity, identify constellations used by Saharan nomads for navigation, and observe planets, nebulae, and meteor showers in stunning detail. Some luxury camps offer permanent observatory setups.',
-    image: 'https://images.unsplash.com/photo-1553522991-71439aa1ccaf?q=80&w=800',
+    image: '/images/hero-sahara-sunrise.webp',
     rating: 4.7,
     price: '150-400 MAD per person',
     duration: '2-3 hours (begins after dark, ~9:00 PM)',
@@ -160,7 +160,7 @@ export default function MerzougaExperiencesPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1509023464722-18d996393ca8?q=80&w=2800)',
+              'url(/images/hero-sahara-sunrise.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

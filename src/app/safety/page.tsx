@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/safety',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=1200&h=630&fit=crop',
+        url: '/images/hero-marrakech.webp',
         width: 1200,
         height: 630,
         alt: 'Moroccan medina street scene',
@@ -233,7 +233,7 @@ export default function SafetyPage() {
       <section className="relative overflow-hidden bg-[var(--color-primary-900)] text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=1600&q=80"
+            src="/images/hero-marrakech.webp"
             alt="Moroccan medina street"
             className="absolute inset-0 w-full h-full object-cover"
           />

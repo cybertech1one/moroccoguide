@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/experiences/medina-food-tour',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1541518763-42d16cdaafd6?w=1200&h=630&fit=crop',
+        url: '/images/photo-cooking-class.webp',
         width: 1200,
         height: 630,
         alt: 'Colorful Moroccan street food display in a medina market stall',
@@ -88,7 +88,7 @@ const jsonLd = {
   description:
     'Guided culinary walking tours through Morocco\'s historic medinas, featuring authentic street food tastings, spice market visits, and hands-on cooking experiences in Marrakech, Fes, and Casablanca.',
   url: 'https://citytoursmorocco.com/experiences/medina-food-tour',
-  image: 'https://images.unsplash.com/photo-1541518763-42d16cdaafd6?w=1200&h=630&fit=crop',
+  image: '/images/photo-cooking-class.webp',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Marrakech',
@@ -625,32 +625,32 @@ const ramadanTraditions = {
 
 const galleryImages = [
   {
-    src: 'https://images.unsplash.com/photo-1541518763-42d16cdaafd6?w=600&q=80',
+    src: '/images/photo-cooking-class.webp',
     alt: 'Colorful Moroccan tagine dishes at a medina food stall',
     span: 'col-span-2 row-span-2',
   },
   {
-    src: 'https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?w=400&q=80',
+    src: '/images/hero-marrakech-koutoubia.webp',
     alt: 'Pyramids of colorful spices in a Moroccan souk',
     span: 'col-span-1',
   },
   {
-    src: 'https://images.unsplash.com/photo-1567364816519-cbc9c4a1b8c6?w=400&q=80',
+    src: '/images/hero-dades-gorge.webp',
     alt: 'Fresh Moroccan mint tea being poured from height',
     span: 'col-span-1',
   },
   {
-    src: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80',
+    src: '/images/photo-tagine-closeup.webp',
     alt: 'Grilled kefta brochettes over charcoal flames',
     span: 'col-span-1',
   },
   {
-    src: 'https://images.unsplash.com/photo-1606471191009-63994c53433b?w=400&q=80',
+    src: '/images/hero-essaouira-ramparts.webp',
     alt: 'Fresh orange juice stalls at Jemaa el-Fna',
     span: 'col-span-1',
   },
   {
-    src: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=600&q=80',
+    src: '/images/photo-moroccan-feast.webp',
     alt: 'Traditional Moroccan bread at a medina bakery',
     span: 'col-span-2',
   },
@@ -660,21 +660,21 @@ const relatedExperiences = [
   {
     title: 'Moroccan Cooking Class',
     slug: '/experiences/moroccan-cooking-class',
-    image: 'https://images.unsplash.com/photo-1541518763-42d16cdaafd6?w=400&q=80',
+    image: '/images/photo-cooking-class.webp',
     duration: '4-5 hours',
     price: 'From 300 MAD',
   },
   {
     title: 'Traditional Hammam Ritual',
     slug: '/experiences/hammam-ritual',
-    image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&q=80',
+    image: '/images/hero-hammam-interior.webp',
     duration: '1.5-2 hours',
     price: 'From 100 MAD',
   },
   {
     title: 'Sahara Desert Glamping',
     slug: '/experiences/sahara-glamping',
-    image: 'https://images.unsplash.com/photo-1548017267-5765e9b2ccfb?w=400&q=80',
+    image: '/images/hero-sahara-sunrise.webp',
     duration: '1-3 nights',
     price: 'From $150/night',
   },
@@ -743,7 +743,7 @@ export default function MedinaFoodTourPage() {
       <section className="relative overflow-hidden bg-[#1A1814] text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1541518763-42d16cdaafd6?w=1800&q=80"
+            src="/images/photo-cooking-class.webp"
             alt="Vibrant Moroccan food stalls in a medina with colorful tagines and spices"
             className="absolute inset-0 w-full h-full object-cover"
           />

@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/attractions',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=1200&h=630&fit=crop',
+        url: '/images/hero-essaouira.webp',
         width: 1200,
         height: 630,
         alt: 'Hassan II Mosque, Casablanca, Morocco',
@@ -83,7 +83,7 @@ const attractions: Attraction[] = [
     isUnesco: true,
     rating: 4.7,
     entranceFeeMad: null,
-    image: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=800&q=80',
+    image: '/images/hero-marrakech.webp',
     durationHours: 3,
   },
   {
@@ -96,7 +96,7 @@ const attractions: Attraction[] = [
     isUnesco: false,
     rating: 4.8,
     entranceFeeMad: 130,
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=800&q=80',
+    image: '/images/hero-essaouira.webp',
     durationHours: 1.5,
   },
   {
@@ -109,7 +109,7 @@ const attractions: Attraction[] = [
     isUnesco: false,
     rating: 4.6,
     entranceFeeMad: 150,
-    image: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=800&q=80',
+    image: '/images/hero-souk-lamps.webp',
     durationHours: 2,
   },
   {
@@ -122,7 +122,7 @@ const attractions: Attraction[] = [
     isUnesco: true,
     rating: 4.8,
     entranceFeeMad: null,
-    image: 'https://images.unsplash.com/photo-1549140600-78c9b8275e9d?w=800&q=80',
+    image: '/images/hero-fes.webp',
     durationHours: 5,
   },
   {
@@ -135,7 +135,7 @@ const attractions: Attraction[] = [
     isUnesco: true,
     rating: 4.7,
     entranceFeeMad: null,
-    image: 'https://images.unsplash.com/photo-1548017267-5765e9b2ccfb?w=800&q=80',
+    image: '/images/hero-sahara-sunrise.webp',
     durationHours: 2.5,
   },
   {
@@ -148,7 +148,7 @@ const attractions: Attraction[] = [
     isUnesco: false,
     rating: 4.7,
     entranceFeeMad: null,
-    image: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?w=800&q=80',
+    image: '/images/hero-chefchaouen.webp',
     durationHours: 4,
   },
   {
@@ -161,7 +161,7 @@ const attractions: Attraction[] = [
     isUnesco: false,
     rating: 4.9,
     entranceFeeMad: null,
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=800&q=80',
+    image: '/images/hero-desert.webp',
     durationHours: 6,
   },
   {
@@ -174,7 +174,7 @@ const attractions: Attraction[] = [
     isUnesco: true,
     rating: 4.5,
     entranceFeeMad: 70,
-    image: 'https://images.unsplash.com/photo-1570804485046-99ca21dbdc43?w=800&q=80',
+    image: '/images/hero-hassan-mosque.webp',
     durationHours: 2,
   },
   {
@@ -187,7 +187,7 @@ const attractions: Attraction[] = [
     isUnesco: false,
     rating: 4.6,
     entranceFeeMad: null,
-    image: 'https://images.unsplash.com/photo-1548017267-5765e9b2ccfb?w=800&q=80',
+    image: '/images/hero-sahara-sunrise.webp',
     durationHours: 3,
   },
   {
@@ -200,7 +200,7 @@ const attractions: Attraction[] = [
     isUnesco: false,
     rating: 4.5,
     entranceFeeMad: 70,
-    image: 'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=800&q=80',
+    image: '/images/hero-kasbahs.webp',
     durationHours: 1.5,
   },
   {
@@ -213,7 +213,7 @@ const attractions: Attraction[] = [
     isUnesco: false,
     rating: 4.6,
     entranceFeeMad: null,
-    image: 'https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=800&q=80',
+    image: '/images/hero-morocco.webp',
     durationHours: 0.5,
   },
   {
@@ -226,7 +226,7 @@ const attractions: Attraction[] = [
     isUnesco: false,
     rating: 4.7,
     entranceFeeMad: 50,
-    image: 'https://images.unsplash.com/photo-1509310228460-e0266a1e0d7c?w=800&q=80',
+    image: '/images/hero-hammam.webp',
     durationHours: 1,
   },
   {
@@ -239,7 +239,7 @@ const attractions: Attraction[] = [
     isUnesco: false,
     rating: 4.2,
     entranceFeeMad: null,
-    image: 'https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=800&q=80',
+    image: '/images/hero-morocco.webp',
     durationHours: 1,
   },
   {
@@ -252,7 +252,7 @@ const attractions: Attraction[] = [
     isUnesco: false,
     rating: 4.3,
     entranceFeeMad: 70,
-    image: 'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=800&q=80',
+    image: '/images/hero-kasbahs.webp',
     durationHours: 1.5,
   },
   {
@@ -265,7 +265,7 @@ const attractions: Attraction[] = [
     isUnesco: false,
     rating: 4.4,
     entranceFeeMad: null,
-    image: 'https://images.unsplash.com/photo-1549140600-78c9b8275e9d?w=800&q=80',
+    image: '/images/hero-fes.webp',
     durationHours: 1,
   },
   {
@@ -278,7 +278,7 @@ const attractions: Attraction[] = [
     isUnesco: false,
     rating: 4.6,
     entranceFeeMad: 30,
-    image: 'https://images.unsplash.com/photo-1549140600-78c9b8275e9d?w=800&q=80',
+    image: '/images/hero-fes.webp',
     durationHours: 1,
   },
   {
@@ -291,7 +291,7 @@ const attractions: Attraction[] = [
     isUnesco: true,
     rating: 4.5,
     entranceFeeMad: null,
-    image: 'https://images.unsplash.com/photo-1570804485046-99ca21dbdc43?w=800&q=80',
+    image: '/images/hero-hassan-mosque.webp',
     durationHours: 1,
   },
   {
@@ -304,7 +304,7 @@ const attractions: Attraction[] = [
     isUnesco: true,
     rating: 4.6,
     entranceFeeMad: null,
-    image: 'https://images.unsplash.com/photo-1570804485046-99ca21dbdc43?w=800&q=80',
+    image: '/images/hero-hassan-mosque.webp',
     durationHours: 1.5,
   },
   {
@@ -317,7 +317,7 @@ const attractions: Attraction[] = [
     isUnesco: false,
     rating: 4.5,
     entranceFeeMad: null,
-    image: 'https://images.unsplash.com/photo-1570804485046-99ca21dbdc43?w=800&q=80',
+    image: '/images/hero-hassan-mosque.webp',
     durationHours: 0.5,
   },
   {
@@ -330,7 +330,7 @@ const attractions: Attraction[] = [
     isUnesco: false,
     rating: 4.3,
     entranceFeeMad: 10,
-    image: 'https://images.unsplash.com/photo-1553522991-71439aa3bf8c?w=800&q=80',
+    image: '/images/hero-tangier-kasbah.webp',
     durationHours: 1,
   },
   {
@@ -343,7 +343,7 @@ const attractions: Attraction[] = [
     isUnesco: false,
     rating: 4.4,
     entranceFeeMad: null,
-    image: 'https://images.unsplash.com/photo-1553522991-71439aa3bf8c?w=800&q=80',
+    image: '/images/hero-tangier-kasbah.webp',
     durationHours: 1,
   },
   {
@@ -356,7 +356,7 @@ const attractions: Attraction[] = [
     isUnesco: false,
     rating: 4.5,
     entranceFeeMad: 70,
-    image: 'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=800&q=80',
+    image: '/images/hero-kasbahs.webp',
     durationHours: 1,
   },
   {
@@ -369,7 +369,7 @@ const attractions: Attraction[] = [
     isUnesco: false,
     rating: 4.3,
     entranceFeeMad: 30,
-    image: 'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=800&q=80',
+    image: '/images/hero-kasbahs.webp',
     durationHours: 1.5,
   },
   {
@@ -382,7 +382,7 @@ const attractions: Attraction[] = [
     isUnesco: true,
     rating: 4.5,
     entranceFeeMad: null,
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=800&q=80',
+    image: '/images/hero-essaouira.webp',
     durationHours: 1.5,
   },
   {
@@ -395,7 +395,7 @@ const attractions: Attraction[] = [
     isUnesco: false,
     rating: 4.4,
     entranceFeeMad: null,
-    image: 'https://images.unsplash.com/photo-1502680390548-bdbac40b3981?w=800&q=80',
+    image: '/images/hero-surfing.webp',
     durationHours: 3,
   },
   {
@@ -408,7 +408,7 @@ const attractions: Attraction[] = [
     isUnesco: false,
     rating: 4.4,
     entranceFeeMad: null,
-    image: 'https://images.unsplash.com/photo-1570804485046-99ca21dbdc43?w=800&q=80',
+    image: '/images/hero-hassan-mosque.webp',
     durationHours: 2,
   },
   {
@@ -421,7 +421,7 @@ const attractions: Attraction[] = [
     isUnesco: false,
     rating: 4.6,
     entranceFeeMad: null,
-    image: 'https://images.unsplash.com/photo-1502680390548-bdbac40b3981?w=800&q=80',
+    image: '/images/hero-surfing.webp',
     durationHours: 3,
   },
   {
@@ -434,7 +434,7 @@ const attractions: Attraction[] = [
     isUnesco: false,
     rating: 4.2,
     entranceFeeMad: 50,
-    image: 'https://images.unsplash.com/photo-1548017267-5765e9b2ccfb?w=800&q=80',
+    image: '/images/hero-sahara-sunrise.webp',
     durationHours: 2,
   },
   {
@@ -447,7 +447,7 @@ const attractions: Attraction[] = [
     isUnesco: false,
     rating: 4.7,
     entranceFeeMad: null,
-    image: 'https://images.unsplash.com/photo-1548017267-5765e9b2ccfb?w=800&q=80',
+    image: '/images/hero-sahara-sunrise.webp',
     durationHours: 4,
   },
   {
@@ -460,7 +460,7 @@ const attractions: Attraction[] = [
     isUnesco: false,
     rating: 4.5,
     entranceFeeMad: 20,
-    image: 'https://images.unsplash.com/photo-1502680390548-bdbac40b3981?w=800&q=80',
+    image: '/images/hero-surfing.webp',
     durationHours: 4,
   },
 ];
@@ -569,7 +569,7 @@ export default function AttractionsPage() {
       <section className="relative overflow-hidden bg-[var(--color-primary-900)] text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=1600&q=80"
+            src="/images/hero-essaouira.webp"
             alt="Hassan II Mosque at sunset"
             className="absolute inset-0 w-full h-full object-cover"
           />

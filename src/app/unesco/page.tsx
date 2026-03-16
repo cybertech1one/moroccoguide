@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/unesco',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=1200&h=630&fit=crop',
+        url: '/images/hero-coastal.webp',
         width: 1200,
         height: 630,
         alt: 'Ait-Ben-Haddou kasbah UNESCO World Heritage Site in Morocco',
@@ -102,7 +102,7 @@ const heritageSites = [
     name: 'Medina of Fes',
     year: 1981,
     criteria: 'Cultural (ii)(v)',
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=800&q=80',
+    image: '/images/hero-coastal.webp',
     description:
       'Founded in the 9th century, the Medina of Fes is the world&apos;s largest car-free urban area and home to the oldest continuously operating university on Earth, al-Qarawiyyin (859 CE). With over 9,000 labyrinthine alleyways, 300 mosques, and some of the finest examples of Marinid architecture anywhere, Fes represents the living heart of Moroccan civilization. The leather tanneries, dating back nearly a millennium, still operate using medieval techniques.',
     whyItMatters:
@@ -116,7 +116,7 @@ const heritageSites = [
     name: 'Medina of Marrakech',
     year: 1985,
     criteria: 'Cultural (i)(ii)(iv)(v)',
-    image: 'https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=800&q=80',
+    image: '/images/hero-marrakech.webp',
     description:
       'The Red City&apos;s medina is a sensory masterpiece centered on Jemaa el-Fnaa, the world&apos;s most famous public square and a UNESCO-recognized space of intangible cultural heritage in its own right. Within the rose-tinted walls lie the Koutoubia Mosque, Bahia Palace, Saadian Tombs, and Ben Youssef Madrasa, alongside miles of bustling souks selling everything from spices to handcrafted lanterns.',
     whyItMatters:
@@ -130,7 +130,7 @@ const heritageSites = [
     name: 'Ksar of Ait-Ben-Haddou',
     year: 1987,
     criteria: 'Cultural (iv)(v)',
-    image: 'https://images.unsplash.com/photo-1560095633-6858e1e1e682?w=800&q=80',
+    image: '/images/hero-ait-benhaddou.webp',
     description:
       'This spectacular fortified village (ksar) along the former caravan route between the Sahara and Marrakech is a stunning example of southern Moroccan earthen architecture. Rising dramatically from the banks of the Ounila River, the collection of kasbahs, towers, and granaries built from pise (rammed earth) has served as a backdrop for dozens of Hollywood films including Gladiator, Game of Thrones, and Lawrence of Arabia.',
     whyItMatters:
@@ -144,7 +144,7 @@ const heritageSites = [
     name: 'Historic City of Meknes',
     year: 1996,
     criteria: 'Cultural (iv)',
-    image: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&q=80',
+    image: '/images/hero-coastal.webp',
     description:
       'Sultan Moulay Ismail&apos;s imperial capital is a monument to 17th-century ambition. Often called "the Versailles of Morocco," Meknes features monumental gates like Bab Mansour (one of the finest in North Africa), vast royal granaries and stables designed to provision 12,000 horses, underground prisons, and extensive palace ruins. The medina retains an authenticity less touched by tourism than Fes or Marrakech.',
     whyItMatters:
@@ -158,7 +158,7 @@ const heritageSites = [
     name: 'Archaeological Site of Volubilis',
     year: 1997,
     criteria: 'Cultural (ii)(iii)(iv)(vi)',
-    image: 'https://images.unsplash.com/photo-1548017544-09dbc9fb99f6?w=800&q=80',
+    image: '/images/hero-marrakech.webp',
     description:
       'The best-preserved Roman ruins in North Africa, Volubilis was the capital of the Roman province of Mauretania Tingitana. Founded in the 3rd century BCE, the site features remarkably intact mosaics, a triumphal arch, a basilica, and the remains of olive presses that speak to the city&apos;s agricultural wealth. The ruins are set against a dramatic backdrop of rolling hills and farmland near the holy town of Moulay Idriss Zerhoun.',
     whyItMatters:
@@ -172,7 +172,7 @@ const heritageSites = [
     name: 'Medina of Tetouan',
     year: 2000,
     criteria: 'Cultural (ii)(iv)(v)',
-    image: 'https://images.unsplash.com/photo-1553522991-71439aa58e57?w=800&q=80',
+    image: '/images/hero-marrakech.webp',
     description:
       'Tetouan&apos;s medina is the most Andalusian of Morocco&apos;s old cities, built largely by Moorish refugees expelled from Spain in the 15th and 16th centuries. The whitewashed houses, wrought-iron balconies, and intimate plazas are distinctly Spanish in character, while the layout follows classic Islamic urban planning. The Royal Palace, artisan workshops, and the mellah (Jewish quarter) add further layers of cultural richness.',
     whyItMatters:
@@ -186,7 +186,7 @@ const heritageSites = [
     name: 'Medina of Essaouira (formerly Mogador)',
     year: 2001,
     criteria: 'Cultural (ii)(iv)',
-    image: 'https://images.unsplash.com/photo-1558383817-e5a90240c671?w=800&q=80',
+    image: '/images/hero-coastal.webp',
     description:
       'Essaouira is a masterpiece of 18th-century military architecture and urban planning. Designed by French architect Theodore Cornut for Sultan Mohammed III, the fortified port town blends European military engineering with North African urban traditions. The blue fishing boats bobbing in the harbor, the Portuguese-era ramparts (skala), the whitewashed houses with blue shutters, and the lively arts scene make it one of Morocco&apos;s most photogenic and relaxed cities.',
     whyItMatters:
@@ -200,7 +200,7 @@ const heritageSites = [
     name: 'Portuguese City of Mazagan (El Jadida)',
     year: 2004,
     criteria: 'Cultural (ii)(iv)',
-    image: 'https://images.unsplash.com/photo-1580418827493-f2b22c0a76cb?w=800&q=80',
+    image: '/images/hero-coastal.webp',
     description:
       'The Portuguese fortification of Mazagan, now part of the city of El Jadida, was built as a colonial trading post in the early 16th century. The standout attraction is the hauntingly beautiful Gothic cistern, a vast underground chamber with vaulted ceilings reflected in a shallow mirror of water on the floor, famously used as a filming location for Orson Welles&apos; Othello. The star-shaped bastions, sea gate, and Church of the Assumption further illustrate the cultural exchange between Portuguese and Moroccan traditions.',
     whyItMatters:
@@ -214,7 +214,7 @@ const heritageSites = [
     name: 'Rabat, Modern Capital and Historic City',
     year: 2012,
     criteria: 'Cultural (ii)(iv)',
-    image: 'https://images.unsplash.com/photo-1577147443647-81856d5151af?w=800&q=80',
+    image: '/images/hero-hassan-mosque.webp',
     description:
       'Morocco&apos;s capital earned its UNESCO designation for the remarkable way it blends historic Islamic heritage with 20th-century French colonial urban planning. The inscription encompasses the Hassan Tower and its unfinished 12th-century mosque, the Almohad walls, the Chellah necropolis built on Roman ruins, the medina, the kasbah of the Udayas with its Andalusian garden, and the modern Art Deco ville nouvelle designed during the French Protectorate.',
     whyItMatters:
@@ -322,7 +322,7 @@ export default function UnescoPage() {
       <section className="relative overflow-hidden bg-[var(--color-primary-900)] text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=1600&q=80"
+            src="/images/hero-coastal.webp"
             alt="Ait-Ben-Haddou UNESCO World Heritage Site at sunset"
             className="absolute inset-0 w-full h-full object-cover"
           />

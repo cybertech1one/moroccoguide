@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1568890413587-1f85e2e61460?w=2800&q=80',
+        url: '/images/hero-morocco.webp',
         width: 2800,
         height: 1600,
         alt: 'Tetouan white medina with Rif Mountains, Morocco',
@@ -90,7 +90,7 @@ export default function TetouanPage() {
       name: 'Tetouan Medina (UNESCO)',
       description:
         'One of the smallest but most authentic medinas in Morocco, inscribed as a UNESCO World Heritage Site. Its whitewashed walls, Andalusian courtyards, and narrow alleyways tell the story of the Moors who fled Spain and rebuilt their homeland here.',
-      image: 'https://images.unsplash.com/photo-1568890413587-1f85e2e61460?w=800&q=80',
+      image: '/images/hero-morocco.webp',
       type: 'UNESCO Heritage',
       rating: 4.8,
     },
@@ -98,7 +98,7 @@ export default function TetouanPage() {
       name: 'Royal Palace (Mechouar)',
       description:
         'An imposing 17th-century palace complex with grand gates, beautiful gardens, and intricate Islamic geometric decoration. While the interior is closed to visitors, the ornate exterior and surrounding square are magnificent to behold.',
-      image: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&q=80',
+      image: '/images/hero-morocco.webp',
       type: 'Palace',
       rating: 4.6,
     },
@@ -106,7 +106,7 @@ export default function TetouanPage() {
       name: 'School of Arts and Crafts',
       description:
         'Founded in 1919, this living museum preserves traditional Moroccan artisan skills: zellige tilework, leather tooling, woodcarving, and embroidery. Watch master craftsmen teach the next generation and admire extraordinary finished works.',
-      image: 'https://images.unsplash.com/photo-1548018560-c7196e5c3689?w=800&q=80',
+      image: '/images/hero-morocco.webp',
       type: 'Arts & Culture',
       rating: 4.7,
     },
@@ -114,7 +114,7 @@ export default function TetouanPage() {
       name: 'Sidi el Mandri Mosque',
       description:
         'The oldest and most beautiful mosque in Tetouan, dating from the 15th century when Andalusian refugees founded the city. Its elegant minaret combines Moorish and Moroccan architectural styles in perfect harmony.',
-      image: 'https://images.unsplash.com/photo-1585155770913-5f63ce1c5d78?w=800&q=80',
+      image: '/images/hero-morocco.webp',
       type: 'Religious',
       rating: 4.5,
     },
@@ -122,7 +122,7 @@ export default function TetouanPage() {
       name: 'Martil Beach',
       description:
         'Just 10 minutes from the medina, this beloved Mediterranean beach stretches along a sweeping bay with calm turquoise water. In summer, it comes alive with families, seafood restaurants, and a festive promenade atmosphere.',
-      image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80',
+      image: '/images/hero-morocco.webp',
       type: 'Beach',
       rating: 4.5,
     },
@@ -159,7 +159,7 @@ export default function TetouanPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1568890413587-1f85e2e61460?w=2800&q=80)',
+              'url(/images/hero-morocco.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

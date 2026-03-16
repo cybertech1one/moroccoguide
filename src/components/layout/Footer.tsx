@@ -52,6 +52,8 @@ const footerColumns = [
       { label: 'Local Guides', href: '/guides' },
       { label: 'Photo Gallery', href: '/gallery' },
       { label: 'Travel Blog', href: '/blog' },
+      { label: 'Filming Locations', href: '/filming-locations' },
+      { label: 'Road Trips', href: '/road-trips' },
     ],
   },
   {
@@ -64,34 +66,54 @@ const footerColumns = [
       { label: 'Cooking Classes', href: '/cooking-classes' },
       { label: 'Shopping & Souks', href: '/shopping' },
       { label: 'Nightlife', href: '/nightlife' },
-      { label: 'Regions', href: '/regions' },
+      { label: 'Hammam Guide', href: '/hammam' },
+      { label: 'Wellness & Spa', href: '/wellness' },
+      { label: 'Wine & Vineyards', href: '/wine' },
     ],
   },
   {
-    title: 'Tools',
+    title: 'Activities',
     links: [
-      { label: 'Trip Planner', href: '/tools/planner' },
-      { label: 'Budget Calculator', href: '/tools/budget' },
-      { label: 'Flight Finder', href: '/tools/flights' },
-      { label: 'Map Explorer', href: '/tools/map' },
-      { label: 'Currency Converter', href: '/tools/currency' },
-      { label: 'Packing Checklist', href: '/tools/packing' },
-      { label: 'Weather Forecast', href: '/tools/weather' },
+      { label: 'Desert Safari', href: '/desert' },
+      { label: 'Trekking', href: '/trekking' },
+      { label: 'Surfing', href: '/water-sports' },
+      { label: 'Camping', href: '/camping' },
+      { label: 'Stargazing', href: '/stargazing' },
+      { label: 'Horse Riding', href: '/horse-riding' },
+      { label: 'Golf', href: '/golf' },
+      { label: 'Photography', href: '/photography' },
+      { label: 'Overlanding', href: '/overlanding' },
+      { label: 'Climbing', href: '/climbing' },
     ],
   },
   {
     title: 'Plan Your Trip',
     links: [
+      { label: 'First Time Guide', href: '/first-time' },
       { label: 'Travel Tips', href: '/tips' },
       { label: 'Visa & Entry', href: '/visa' },
       { label: 'Safety Guide', href: '/safety' },
+      { label: 'Money & Currency', href: '/money' },
+      { label: 'Weather & Climate', href: '/weather' },
+      { label: 'Packing List', href: '/packing' },
       { label: 'Transport', href: '/transport' },
-      { label: 'Airports', href: '/airports' },
       { label: 'Best Time to Visit', href: '/best-time' },
       { label: 'Culture & Etiquette', href: '/etiquette' },
-      { label: 'Language Guide', href: '/language' },
-      { label: 'About Us', href: '/about' },
-      { label: 'Contact', href: '/contact' },
+    ],
+  },
+  {
+    title: 'Travel Styles',
+    links: [
+      { label: 'Solo Travel', href: '/solo-travel' },
+      { label: 'Women Travel', href: '/women-travel' },
+      { label: 'Family Travel', href: '/family-guide' },
+      { label: 'Backpacking', href: '/backpacking' },
+      { label: 'Luxury Travel', href: '/luxury' },
+      { label: 'Honeymoon', href: '/honeymoon' },
+      { label: 'Digital Nomads', href: '/digital-nomad' },
+      { label: 'Senior Travel', href: '/seniors' },
+      { label: 'Accessible Travel', href: '/accessible-travel' },
+      { label: 'Expat Guide', href: '/expat-guide' },
     ],
   },
 ];
@@ -224,7 +246,7 @@ export default function Footer() {
 
         {/* Footer Columns */}
         <div className="container-morocco pb-14">
-          <div className="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-3 lg:grid-cols-5">
+          <div className="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-3 lg:grid-cols-6">
             {footerColumns.map((column) => (
               <div key={column.title}>
                 <h3 className="mb-5 text-[11px] font-bold uppercase tracking-[0.2em] text-white font-heading flex items-center gap-2">
@@ -358,6 +380,27 @@ export default function Footer() {
                 className="text-xs text-white/35 hover:text-white/65 transition-colors font-medium"
               >
                 Terms
+              </Link>
+              <span className="h-3 w-px bg-white/15" />
+              <Link
+                href="/about"
+                className="text-xs text-white/35 hover:text-white/65 transition-colors font-medium"
+              >
+                About
+              </Link>
+              <span className="h-3 w-px bg-white/15" />
+              <Link
+                href="/contact"
+                className="text-xs text-white/35 hover:text-white/65 transition-colors font-medium"
+              >
+                Contact
+              </Link>
+              <span className="h-3 w-px bg-white/15" />
+              <Link
+                href="/sitemap.xml"
+                className="text-xs text-white/35 hover:text-white/65 transition-colors font-medium"
+              >
+                Sitemap
               </Link>
             </div>
           </div>

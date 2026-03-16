@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/filming-locations',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=1200&h=630&fit=crop',
+        url: '/images/hero-ait-benhaddou.webp',
         width: 1200,
         height: 630,
         alt: 'Ait Benhaddou kasbah - famous filming location in Morocco',
@@ -93,7 +93,7 @@ const jsonLd = {
     'Guide to famous filming locations across Morocco, known as the Hollywood of Africa. Home to Atlas Studios and locations from Gladiator, Game of Thrones, and many more.',
   url: 'https://citytoursmorocco.com/filming-locations',
   touristType: ['Cultural tourism', 'Film tourism'],
-  image: 'https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=1200',
+  image: '/images/hero-ait-benhaddou.webp',
 };
 
 /* ================================================================
@@ -159,7 +159,7 @@ const filmingLocations = [
   {
     name: 'Ait Benhaddou',
     region: 'Ouarzazate Province',
-    image: 'https://images.unsplash.com/photo-1597212618440-806262de4f6b?q=80&w=800',
+    image: '/images/hero-ait-benhaddou.webp',
     films: ['Gladiator (2000)', 'Game of Thrones (Yunkai)', 'Lawrence of Arabia (1962)', 'The Mummy (1999)', 'Kingdom of Heaven (2005)', 'Prince of Persia (2010)', 'Alexander (2004)', 'Babel (2006)'],
     description:
       'This UNESCO World Heritage kasbah is the single most-filmed location in Morocco and arguably in all of Africa. Its tiered mud-brick architecture has doubled for ancient cities across decades of cinema. In Gladiator, it served as the setting for the slave market where Maximus is sold. In Game of Thrones, it became the slave city of Yunkai, the "Yellow City." The village opposite the kasbah is still inhabited by a handful of families, and you can explore freely. Oliver Stone used it for Alexander, and Ridley Scott returned to it for Kingdom of Heaven. The kasbah\'s honey-colored walls change dramatically with the light, appearing golden at sunrise, stark white at midday, and deep amber at sunset, which is why cinematographers consistently return here.',
@@ -168,7 +168,7 @@ const filmingLocations = [
   {
     name: 'Atlas Studios, Ouarzazate',
     region: 'Ouarzazate',
-    image: 'https://images.unsplash.com/photo-1548018560-c7196e66aca2?q=80&w=800',
+    image: '/images/hero-kasbahs.webp',
     films: ['Gladiator set pieces', 'Kingdom of Heaven sets', 'Ben-Hur (2016)', 'The Jewel of the Nile (1985)', 'Asterix & Obelix: Mission Cleopatra', 'Prison Break (Season 5)', 'The Hills Have Eyes (2006)'],
     description:
       'The largest film studio in Africa and one of the biggest in the world. Founded in 1983 by Italian producer Mohamed Belghmi, Atlas Studios covers over 30 hectares with permanent outdoor sets including an Egyptian temple, a Tibetan monastery, and a Jerusalem street. Prison Break filmed its entire fifth season here, using the studio to recreate a Yemeni prison. The studio has hosted over 200 international productions and continues to attract major film crews year-round. Guided tours walk you through standing film sets where you can pose with props and explore elaborate recreations of ancient civilizations. The scale of the standing sets is genuinely impressive even for visitors who are not film enthusiasts.',
@@ -177,7 +177,7 @@ const filmingLocations = [
   {
     name: 'Essaouira',
     region: 'Atlantic Coast',
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?q=80&w=800',
+    image: '/images/hero-essaouira-ramparts.webp',
     films: ['Game of Thrones (Astapor / Slaver\'s Bay)', 'Othello (1952, Orson Welles)', 'Alexander (2004)', 'Kingdom of Heaven (2005)', 'John Wick: Chapter 3 (2019)'],
     description:
       'Essaouira\'s 18th-century Portuguese ramparts and fortified harbor became the slave city of Astapor in Game of Thrones Season 3, where Daenerys acquired her Unsullied army in one of the show\'s most iconic scenes -- the "Dracarys" moment that changed the course of the series. The Skala du Port and the medina walls are instantly recognizable to fans. Orson Welles spent months here filming his acclaimed adaptation of Othello in the early 1950s, using the ramparts and narrow streets as his backdrop. Oliver Stone filmed key battle sequences for Alexander here as well. The city\'s windswept beauty and dramatic fortifications require virtually no set dressing to look cinematic, which is why it keeps drawing productions back.',
@@ -186,7 +186,7 @@ const filmingLocations = [
   {
     name: 'Casablanca',
     region: 'Atlantic Coast',
-    image: 'https://images.unsplash.com/photo-1545071677-2df608f54e72?q=80&w=800',
+    image: '/images/hero-hassan-mosque.webp',
     films: ['Casablanca (1942) - inspired, not filmed here', 'Mission: Impossible - Rogue Nation (2015)', 'The Man Who Knew Too Much (1956)', 'Black Hawk Down (2001, port scenes)'],
     description:
       'While the 1942 classic "Casablanca" was entirely filmed on a Warner Bros. soundstage in Hollywood, the city has embraced its cinematic namesake. Rick\'s Cafe, a real restaurant inspired by the film, was opened in 2004 by a former American diplomat. Decorated in 1940s style with a piano bar, it is a pilgrimage site for film lovers. Parts of Ridley Scott\'s Black Hawk Down used the port area of Casablanca to recreate Mogadishu scenes, and the city\'s Art Deco downtown has featured in numerous international productions. The Hassan II Mosque and the old medina provide striking backdrops that are increasingly popular with streaming productions seeking a modern North African aesthetic.',
@@ -195,7 +195,7 @@ const filmingLocations = [
   {
     name: 'Marrakech',
     region: 'Central Morocco',
-    image: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?q=80&w=800',
+    image: '/images/hero-marrakech.webp',
     films: ['Mission: Impossible - Rogue Nation (2015)', 'Spectre (James Bond, 2015)', 'Inception (2010)', 'Sex and the City 2 (2010)', 'Babel (2006)', 'John Wick: Chapter 3 - Parabellum (2019)', 'The Night Manager (TV, 2016)'],
     description:
       'Marrakech\'s chaotic, photogenic medina and surrounding palm groves have featured in countless productions. The rooftop chase in Mission: Impossible was filmed in the medina. In Inception, Christopher Nolan used the narrow streets and rooftops to create the dreamscape fortress sequence where Cobb and Ariadne explore layered architecture. John Wick 3 filmed a memorable fight scene set in the desert outside Marrakech, and the Hivernage district doubled for Middle Eastern locations in The Night Manager. Sex and the City 2 controversially used Marrakech as a stand-in for Abu Dhabi. The city\'s Marrakech International Film Festival, held each November, draws A-list stars and directors to the Palais des Congres, making it a year-round hub for cinema culture.',
@@ -204,7 +204,7 @@ const filmingLocations = [
   {
     name: 'Merzouga / Erg Chebbi (Sahara)',
     region: 'Eastern Morocco',
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=800',
+    image: '/images/hero-desert.webp',
     films: ['The Mummy (1999)', 'Prince of Persia (2010)', 'Babel (2006)', 'Sahara (2005)', 'The Hills Have Eyes (2006)', 'Spectre (2015, desert chase)', 'Star Wars references'],
     description:
       'The towering Erg Chebbi dunes, reaching heights of 150 meters, have served as stand-ins for the Egyptian Sahara, alien deserts, and biblical landscapes. The Mummy used these dunes extensively for its ancient Egypt sequences, with the production spending weeks filming elaborate chase and action scenes across the sand sea. The James Bond film Spectre filmed car chase scenes in the desert south of Erfoud. The vast, undulating golden sand is endlessly versatile on screen, and the nearby Rissani oasis and Berber villages add to the location options. The desert landscape changes dramatically with the light, from fiery orange at dawn to blinding white at midday to deep purple at dusk.',
@@ -213,7 +213,7 @@ const filmingLocations = [
   {
     name: 'Fes',
     region: 'Northern Morocco',
-    image: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?q=80&w=800',
+    image: '/images/hero-fes.webp',
     films: ['The Bourne Ultimatum (2007)', 'John Wick: Chapter 3 (2019)', 'Spectre (2015, interiors)', 'Babel (2006)', 'Jack Ryan (TV, Season 1)'],
     description:
       'The labyrinthine medina of Fes el-Bali is the world\'s largest car-free urban area, with 9,000+ narrow alleys that create perfect chase-scene settings. The Bourne Ultimatum\'s climactic rooftop chase was filmed across the tannery quarter and narrow passages of the medina. While officially set in Tangier in the film, most of the chase was actually shot in Fes because the rooftop geography was more suitable for the action sequences. The Amazon series Jack Ryan also filmed sequences here, using the medina\'s atmospheric alleys for its Moroccan episodes. The medieval atmosphere requires zero set dressing, which is what makes Fes the go-to location for productions needing an authentic ancient city feel.',
@@ -222,7 +222,7 @@ const filmingLocations = [
   {
     name: 'Tangier',
     region: 'Northern Morocco',
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?q=80&w=800',
+    image: '/images/hero-essaouira-ramparts.webp',
     films: ['The Bourne Ultimatum (2007)', 'Spectre (2015)', 'Only Lovers Left Alive (2013)', 'The Sheltering Sky (1990)', 'Inception (2010, Tangier cafe)', 'Homeland (TV, Season 5 interiors)'],
     description:
       'Tangier\'s dramatic position at the Strait of Gibraltar has attracted filmmakers for decades. The Bourne Ultimatum\'s intense chase sequences were filmed through the Kasbah and Grand Socco. Jim Jarmusch\'s vampire film Only Lovers Left Alive used the atmospheric decay of Tangier\'s old town to stunning effect, with Tilda Swinton wandering the atmospheric streets at night. Paul Bowles\' novel The Sheltering Sky was adapted into a film by Bernardo Bertolucci, who shot key sequences in and around the city. Tangier\'s literary and artistic history -- home to the Beats, to Paul Bowles, to Henri Matisse -- adds layers of cultural depth to any visit. The city\'s position between two continents gives it a liminal quality that filmmakers find irresistible.',
@@ -231,7 +231,7 @@ const filmingLocations = [
   {
     name: 'Ouarzazate (Town Center)',
     region: 'Draa-Tafilalet',
-    image: 'https://images.unsplash.com/photo-1548018560-c7196e66aca2?q=80&w=800',
+    image: '/images/hero-kasbahs.webp',
     films: ['Lawrence of Arabia (1962)', 'Game of Thrones (exterior shots)', 'The Living Daylights (James Bond, 1987)', 'Kundun (1997)', 'Babel (2006)'],
     description:
       'Known as the "Hollywood of Africa" or "Ouallywood," this small desert city at the foot of the High Atlas has been a film production hub since the 1960s. Beyond Atlas Studios and CLA Studios, the Taourirt Kasbah in the town center has appeared in numerous films. Martin Scorsese filmed his Dalai Lama biopic Kundun here. The Kasbah\'s elaborate interiors and its setting against the dry mountains have made it one of the most versatile filming locations in Morocco. CLA Studios (Centre de Loisirs et d\'Activites) is where interior Game of Thrones scenes were filmed, and it hosts its own impressive collection of standing sets and production facilities. The town itself has a relaxed, almost surreal atmosphere, as you might encounter film crews setting up for a production on any given day.',
@@ -240,7 +240,7 @@ const filmingLocations = [
   {
     name: 'Todra Gorge',
     region: 'High Atlas',
-    image: 'https://images.unsplash.com/photo-1522163182402-834f871fd851?q=80&w=800',
+    image: '/images/hero-todra-gorge.webp',
     films: ['Various adventure and historical films', 'TV commercials', 'Automotive advertisements', 'Homeland (TV, driving sequences)'],
     description:
       'This dramatic limestone gorge with 300-meter vertical walls creates an awe-inspiring natural set. The narrow canyon road winding between towering cliffs has been used in adventure films, car commercials, and historical dramas. The gorge is a popular rock climbing destination with over 150 bolted routes. The scale of the canyon walls gives any footage filmed here an epic, larger-than-life quality that is difficult to replicate with CGI. The deep red and orange tones of the limestone catch the light beautifully, and the narrow canyon floor creates natural shadow play that cinematographers prize.',
@@ -249,7 +249,7 @@ const filmingLocations = [
   {
     name: 'Skoura Oasis',
     region: 'Ouarzazate Province',
-    image: 'https://images.unsplash.com/photo-1542401886-65d6c61db217?q=80&w=800',
+    image: '/images/hero-kasbahs.webp',
     films: ['Kingdom of Heaven (2005)', 'Various historical productions', 'Prince of Persia (2010)'],
     description:
       'The lush palm oasis of Skoura, with its dozens of crumbling kasbahs scattered among date palms, provided key locations for Ridley Scott\'s Kingdom of Heaven, serving as the approach to Jerusalem. The Amridil Kasbah, one of Morocco\'s most photogenic, is featured on the 50-dirham banknote and has appeared in several productions. The contrast between the verdant palm groves and the arid mountains beyond creates a visually stunning backdrop that cinematographers prize. The oasis stretches for several kilometers and contains dozens of kasbahs in various states of preservation, from fully restored to romantically ruined.',
@@ -258,7 +258,7 @@ const filmingLocations = [
   {
     name: 'Tit Mellil & Sale (near Rabat)',
     region: 'Rabat-Sale Region',
-    image: 'https://images.unsplash.com/photo-1577147443647-81856d5151af?q=80&w=800',
+    image: '/images/hero-morocco.webp',
     films: ['Black Hawk Down (2001)', 'Body of Lies (2008)', 'American Sniper (2014)'],
     description:
       'Ridley Scott\'s Black Hawk Down, depicting the 1993 Battle of Mogadishu, was primarily filmed in the town of Sale, across the river from Rabat. The narrow streets and flat-roofed buildings of Sale\'s medina were used to recreate the Bakara Market area of Mogadishu. The film crew spent months constructing sets and modifying buildings to match the Somali capital. Ridley Scott later returned to Morocco for Body of Lies, using locations around Rabat and the surrounding region. Clint Eastwood\'s American Sniper also used locations near Rabat and Kenitra to recreate Iraqi urban environments, demonstrating how convincingly Morocco can stand in for Middle Eastern cities.',
@@ -267,7 +267,7 @@ const filmingLocations = [
   {
     name: 'Erfoud & Rissani',
     region: 'Draa-Tafilalet',
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=800',
+    image: '/images/hero-desert.webp',
     films: ['The Mummy (1999)', 'The Mummy Returns (2001)', 'Spectre (2015)', 'Sahara (2005)', 'Salmon Fishing in the Yemen (2011)'],
     description:
       'The desert flatlands and fossil-rich terrain around Erfoud and Rissani have served as the backdrop for some of Hollywood\'s most ambitious desert sequences. The Mummy franchise used this region extensively, with the ancient ruins at nearby Rissani providing authenticity for the Egyptian temple scenes. Spectre\'s thrilling car chase between Bond and Hinx was filmed on the desert roads south of Erfoud, with the dry lakebeds providing perfect flat terrain for high-speed pursuit sequences. Salmon Fishing in the Yemen used the striking desert landscapes as a stand-in for the Arabian Peninsula. The area\'s proximity to Merzouga and the Erg Chebbi dunes makes it part of a larger filming corridor.',
@@ -286,7 +286,7 @@ const tvSeriesLocations = [
     locations: 'Ait Benhaddou (Yunkai), Essaouira (Astapor), Ouarzazate/CLA Studios (interiors)',
     description:
       'Morocco provided some of the most memorable locations in Game of Thrones. Ait Benhaddou became Yunkai, the "Yellow City" that Daenerys liberates. Essaouira\'s Portuguese ramparts became Astapor, where Daenerys acquires the Unsullied in the iconic "Dracarys" scene. CLA Studios in Ouarzazate was used for extensive interior filming of Slaver\'s Bay sequences.',
-    image: 'https://images.unsplash.com/photo-1597212618440-806262de4f6b?q=80&w=600',
+    image: '/images/hero-ait-benhaddou.webp',
   },
   {
     title: 'Jack Ryan',
@@ -294,7 +294,7 @@ const tvSeriesLocations = [
     locations: 'Fes, Marrakech, Errachidia region',
     description:
       'The Amazon Prime series used Morocco extensively for its first season, with the Fes medina standing in for various Middle Eastern locations. The show\'s production team praised Morocco\'s combination of authentic architecture and professional local crews. Several chase and action sequences were filmed in the narrow alleys of Fes el-Bali.',
-    image: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?q=80&w=600',
+    image: '/images/hero-fes.webp',
   },
   {
     title: 'The Night Manager',
@@ -302,7 +302,7 @@ const tvSeriesLocations = [
     locations: 'Marrakech, the High Atlas, desert locations',
     description:
       'The BBC/AMC adaptation of John le Carre\'s novel used Morocco for its lavish Middle Eastern sequences. The luxury riads and palatial estates around Marrakech doubled for the world of arms dealers and spies. The High Atlas Mountains provided dramatic backdrops for key scenes featuring Tom Hiddleston and Hugh Laurie.',
-    image: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?q=80&w=600',
+    image: '/images/hero-marrakech.webp',
   },
   {
     title: 'Homeland',
@@ -310,7 +310,7 @@ const tvSeriesLocations = [
     locations: 'Rabat, Casablanca, Essaouira, rural Morocco',
     description:
       'The Showtime series used Morocco as a stand-in for various Middle Eastern and North African settings throughout its run. The production team valued Morocco\'s ability to convincingly portray multiple different countries within short driving distances. Interior and exterior shots were filmed across several Moroccan cities.',
-    image: 'https://images.unsplash.com/photo-1577147443647-81856d5151af?q=80&w=600',
+    image: '/images/hero-morocco.webp',
   },
   {
     title: 'Prison Break',
@@ -318,7 +318,7 @@ const tvSeriesLocations = [
     locations: 'Ouarzazate, Atlas Studios, surrounding desert',
     description:
       'The revival season of Prison Break was set largely in Yemen, but filmed almost entirely in and around Ouarzazate. Atlas Studios was used to build the elaborate prison sets, while the surrounding desert and kasbahs provided the exterior shots. The production brought significant economic activity to the Ouarzazate region.',
-    image: 'https://images.unsplash.com/photo-1548018560-c7196e66aca2?q=80&w=600',
+    image: '/images/hero-kasbahs.webp',
   },
   {
     title: 'The Old Guard',
@@ -326,7 +326,7 @@ const tvSeriesLocations = [
     locations: 'Marrakech, Essaouira, desert locations',
     description:
       'This Netflix action film starring Charlize Theron filmed extensively in Morocco. The Marrakech medina and Essaouira\'s streets were used for key action sequences, while the surrounding desert provided the backdrop for the film\'s more epic moments. It was one of the first major Netflix originals to film in Morocco.',
-    image: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?q=80&w=600',
+    image: '/images/hero-marrakech.webp',
   },
   {
     title: 'Tyrant',
@@ -334,7 +334,7 @@ const tvSeriesLocations = [
     locations: 'Ouarzazate, Marrakech, Atlas region',
     description:
       'This FX political drama about a fictional Middle Eastern dictatorship filmed extensively in Morocco across all three seasons. Ouarzazate and the surrounding region doubled convincingly for the show\'s fictional nation of Abbudin, with Atlas Studios providing interior sets and the kasbahs serving as government buildings.',
-    image: 'https://images.unsplash.com/photo-1548018560-c7196e66aca2?q=80&w=600',
+    image: '/images/hero-kasbahs.webp',
   },
   {
     title: 'Raised by Wolves',
@@ -342,7 +342,7 @@ const tvSeriesLocations = [
     locations: 'Atlas Studios, Ouarzazate desert, volcanic landscapes',
     description:
       'Ridley Scott\'s ambitious HBO Max sci-fi series used the alien-looking landscapes around Ouarzazate and Atlas Studios to create the planet Kepler-22b. The barren, otherworldly desert terrain proved perfect for depicting a hostile extraterrestrial world, demonstrating Morocco\'s versatility beyond historical and political dramas.',
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=600',
+    image: '/images/hero-desert.webp',
   },
 ];
 
@@ -700,7 +700,7 @@ export default function FilmingLocationsPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1597212618440-806262de4f6b?q=80&w=2800)',
+              'url(/images/hero-ait-benhaddou.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />
@@ -1139,7 +1139,7 @@ export default function FilmingLocationsPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2">
               <div className="relative h-64 lg:h-auto overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1548018560-c7196e66aca2?q=80&w=800"
+                  src="/images/hero-kasbahs.webp"
                   alt="CLA Studios Ouarzazate - film production complex"
                   className="w-full h-full object-cover"
                   loading="lazy"

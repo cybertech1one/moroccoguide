@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1596394723269-e8e5b2020eb4?w=2800&q=80',
+        url: '/images/card-beach.webp',
         width: 2800,
         height: 1600,
         alt: 'Dakhla Bay at sunset with kitesurfers, Morocco',
@@ -89,7 +89,7 @@ export default function DakhlaPage() {
       name: 'Dakhla Bay Lagoon',
       description:
         'A 40-kilometer-long natural lagoon with flat, warm water and constant trade winds — widely regarded as one of the best kitesurfing spots on the planet. Even non-kiters are captivated by the sheer turquoise expanse.',
-      image: 'https://images.unsplash.com/photo-1596394723269-e8e5b2020eb4?w=800&q=80',
+      image: '/images/card-beach.webp',
       type: 'Natural Wonder',
       rating: 4.9,
     },
@@ -97,7 +97,7 @@ export default function DakhlaPage() {
       name: 'Dragon Island',
       description:
         'A mystical sand peninsula that emerges from the lagoon at low tide, shaped like a sleeping dragon. Accessible by boat or kite, it offers otherworldly photo opportunities and a sense of total isolation.',
-      image: 'https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=800&q=80',
+      image: '/images/hero-desert.webp',
       type: 'Island',
       rating: 4.8,
     },
@@ -105,7 +105,7 @@ export default function DakhlaPage() {
       name: 'PK25 Kite Spot',
       description:
         'Located 25 kilometers south of town, this legendary flat-water spot delivers waist-deep water stretching hundreds of meters from shore. Perfect for beginners and freestyle riders alike, with 300+ wind days per year.',
-      image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80',
+      image: '/images/card-beach.webp',
       type: 'Sports',
       rating: 4.9,
     },
@@ -113,7 +113,7 @@ export default function DakhlaPage() {
       name: 'White Dune (Dune Blanche)',
       description:
         'A towering white sand dune that drops dramatically into the crystal-clear Atlantic. Sandboarding down its face and swimming in the turquoise waters below is a once-in-a-lifetime experience.',
-      image: 'https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=800&q=80',
+      image: '/images/hero-desert.webp',
       type: 'Natural Wonder',
       rating: 4.7,
     },
@@ -121,7 +121,7 @@ export default function DakhlaPage() {
       name: 'Dakhla Oyster Farms',
       description:
         'Morocco\'s only oyster-producing region, where nutrient-rich Atlantic waters feed thousands of oysters in floating baskets. Visit the farms, taste fresh oysters right from the water, and learn about sustainable aquaculture.',
-      image: 'https://images.unsplash.com/photo-1606850246029-0c56e2a13d35?w=800&q=80',
+      image: '/images/hero-desert.webp',
       type: 'Food & Culture',
       rating: 4.6,
     },
@@ -158,7 +158,7 @@ export default function DakhlaPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1596394723269-e8e5b2020eb4?w=2800&q=80)',
+              'url(/images/card-beach.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

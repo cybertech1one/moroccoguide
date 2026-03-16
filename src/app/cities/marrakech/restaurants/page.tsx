@@ -34,7 +34,7 @@ const restaurants = [
     priceRange: '$$',
     address: '1 Derb Aarjane, Rahba Lakdima, Medina',
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80',
+    image: '/images/photo-food-flatlay.webp',
     description:
       'A stylish rooftop restaurant overlooking the medina spice square, serving contemporary Moroccan cuisine with creative twists on traditional dishes. The camel burger and lamb tagine with prunes are standout favorites.',
   },
@@ -44,7 +44,7 @@ const restaurants = [
     priceRange: '$$',
     address: '32 Souk Sidi Abdelaziz, Medina',
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80',
+    image: '/images/photo-food-flatlay.webp',
     description:
       'A lush garden restaurant hidden within the medina, offering a tranquil escape among banana trees and bougainvillea. The menu blends Moroccan and Mediterranean flavors with a focus on fresh, seasonal ingredients.',
   },
@@ -54,7 +54,7 @@ const restaurants = [
     priceRange: '$$$',
     address: '55 Boulevard Zerktouni, Gueliz',
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80',
+    image: '/images/photo-food-flatlay.webp',
     description:
       'An award-winning restaurant run entirely by women, renowned for its authentic Moroccan cuisine prepared with generations-old family recipes. The lamb tagine with caramelized pear and the pastilla are legendary.',
   },
@@ -64,7 +64,7 @@ const restaurants = [
     priceRange: '$',
     address: '75 Rahba Lakdima, Medina',
     rating: 4.4,
-    image: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80',
+    image: '/images/photo-food-flatlay.webp',
     description:
       'A charming multi-level cafe overlooking the spice market square, perfect for people-watching with a mint tea. The simple menu of salads, sandwiches, and Moroccan soups is fresh, affordable, and consistently excellent.',
   },
@@ -74,7 +74,7 @@ const restaurants = [
     priceRange: '$$$$',
     address: 'Avenue Bab Jdid, La Mamounia Hotel',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80',
+    image: '/images/photo-food-flatlay.webp',
     description:
       'The legendary hotel\'s flagship restaurant offers an opulent dining experience in palatial surroundings. Expect impeccable Moroccan-French haute cuisine, candlelit gardens, and service that has impressed royalty and celebrities for nearly a century.',
   },
@@ -84,7 +84,7 @@ const restaurants = [
     priceRange: '$$',
     address: '21 Derb Moulay Abdel Kader, Medina',
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&q=80',
+    image: '/images/photo-food-flatlay.webp',
     description:
       'A cozy riad restaurant in the medina known for its authentic Marrakchi cuisine and intimate atmosphere. The tangia slow-cooked in underground embers and the trid (shredded pastry with pigeon) are standout traditional dishes.',
   },
@@ -94,7 +94,7 @@ const restaurants = [
     priceRange: '$',
     address: 'Rue Allal Ben Ahmed, Gueliz',
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80',
+    image: '/images/photo-food-flatlay.webp',
     description:
       'A nonprofit training restaurant empowering disadvantaged women through culinary education. The daily-changing set menu of home-style Moroccan cooking is authentic, generous, and served with genuine warmth at remarkable prices.',
   },
@@ -104,7 +104,7 @@ const restaurants = [
     priceRange: '$$$$',
     address: '79 Sidi Ahmed Soussi, Medina',
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80',
+    image: '/images/photo-food-flatlay.webp',
     description:
       'An unforgettable multi-course Moroccan feast served in a sumptuous palace setting with rose-petal-strewn fountains, candlelit terraces, and live Gnawa music. The experience begins with cocktails on the rooftop overlooking the Koutoubia.',
   },
@@ -114,7 +114,7 @@ const restaurants = [
     priceRange: '$$',
     address: '184 Rue El Mouassine, Medina',
     rating: 4.4,
-    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80',
+    image: '/images/photo-food-flatlay.webp',
     description:
       'Set in a beautifully restored three-story riad, this restaurant offers a unique Moroccan-Italian menu alongside one of the medina\'s best rooftop terraces. The pasta and tagine dishes are equally well-executed.',
   },
@@ -124,7 +124,7 @@ const restaurants = [
     priceRange: '$$',
     address: '15 Souk Cherifia, Sidi Abdelaziz, Medina',
     rating: 4.4,
-    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80',
+    image: '/images/photo-food-flatlay.webp',
     description:
       'A spacious rooftop restaurant and lounge above the medina souks, offering panoramic views of the old city and Atlas Mountains. The menu features modern takes on Moroccan classics alongside inventive cocktails.',
   },
@@ -134,7 +134,7 @@ const restaurants = [
     priceRange: '$$$',
     address: '17 Derb Cherkaoui, Douar Graoua, Medina',
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80',
+    image: '/images/photo-food-flatlay.webp',
     description:
       'A dramatic palace restaurant where Italian flair meets Moroccan opulence. Live music, belly dancing, and elaborately presented dishes make for a theatrical dining experience in one of the medina\'s most stunning riads.',
   },
@@ -144,7 +144,7 @@ const restaurants = [
     priceRange: '$$$$',
     address: 'Royal Mansour, Rue Abou Abbas el Sebti',
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80',
+    image: '/images/photo-food-flatlay.webp',
     description:
       'The Royal Mansour\'s celebrated Moroccan restaurant, led by a Michelin-starred chef, elevates traditional cuisine to extraordinary heights. Each dish is a masterwork of presentation and flavor, served in a breathtaking palatial dining room.',
   },
@@ -229,7 +229,7 @@ export default function MarrakechRestaurantsPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=2800&q=80)',
+              'url(/images/photo-tagine-closeup.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

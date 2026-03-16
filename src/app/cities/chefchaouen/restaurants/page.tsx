@@ -34,7 +34,7 @@ const restaurants = [
     priceRange: '$$',
     address: 'Place Outa el Hammam, Medina',
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80',
+    image: '/images/photo-mint-tea-pouring.webp',
     description:
       'A multi-level restaurant and guesthouse right on the main square with one of the best rooftop terraces in town. The Moroccan and international menu is solid, but the real draw is the panoramic view over the blue medina and surrounding mountains at sunset.',
   },
@@ -44,7 +44,7 @@ const restaurants = [
     priceRange: '$$',
     address: 'Near Bab Ssour gate, Medina',
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80',
+    image: '/images/photo-mint-tea-pouring.webp',
     description:
       'A charming restaurant near one of the medina gates, known for its excellent tagines and warm atmosphere. The cozy interior features traditional Moroccan decor, and the menu focuses on hearty mountain dishes made with locally sourced ingredients.',
   },
@@ -54,7 +54,7 @@ const restaurants = [
     priceRange: '$$',
     address: 'Rue Targhi, Medina',
     rating: 4.4,
-    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80',
+    image: '/images/photo-mint-tea-pouring.webp',
     description:
       'An eclectic cafe-restaurant with a bohemian atmosphere, serving Moroccan dishes alongside Asian-inspired options like noodles and stir-fries. The relaxed vibe, colorful decor, and peaceful courtyard make it a favorite hangout for travelers.',
   },
@@ -64,7 +64,7 @@ const restaurants = [
     priceRange: '$',
     address: 'Rue Moulay Ali Ben Rachid, Medina',
     rating: 4.3,
-    image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80',
+    image: '/images/photo-mint-tea-pouring.webp',
     description:
       'A small, family-run restaurant beloved by budget travelers for its generous portions and authentic home-style cooking. The daily tagine specials are the star, and the warm hospitality of the owners makes every meal feel like dining with a Moroccan family.',
   },
@@ -74,7 +74,7 @@ const restaurants = [
     priceRange: '$$',
     address: 'Place Outa el Hammam, Medina',
     rating: 4.4,
-    image: 'https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&q=80',
+    image: '/images/photo-mint-tea-pouring.webp',
     description:
       'Another popular square-front restaurant with a beautiful terrace overlooking the kasbah. The menu offers a good mix of Moroccan classics and Mediterranean dishes, and the fresh orange juice and mint tea are the perfect accompaniment to afternoon people-watching.',
   },
@@ -84,7 +84,7 @@ const restaurants = [
     priceRange: '$$',
     address: 'Rue Ras El Maa, Medina',
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80',
+    image: '/images/photo-mint-tea-pouring.webp',
     description:
       'The Chefchaouen branch of the famous Fes cultural cafe, perched near the Ras El Maa spring with a lovely terrace. Known for its signature camel burger, creative fusion menu, and regular cultural events including storytelling, live music, and Arabic calligraphy workshops.',
   },
@@ -94,7 +94,7 @@ const restaurants = [
     priceRange: '$',
     address: 'Rue Ahmed el Ouahab, Medina',
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80',
+    image: '/images/photo-mint-tea-pouring.webp',
     description:
       'A hidden gem serving authentic Riffian cuisine from the northern Moroccan mountains. The menu features dishes rarely found in tourist restaurants, including rfissa, berkoukes, and traditional bread baked in a wood-fired oven. Intimate, genuine, and delicious.',
   },
@@ -104,7 +104,7 @@ const restaurants = [
     priceRange: '$',
     address: 'Rue Hassan II, Medina',
     rating: 4.3,
-    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80',
+    image: '/images/photo-mint-tea-pouring.webp',
     description:
       'A reliable local restaurant serving well-prepared Moroccan standards at fair prices. The rooftop terrace has partial views over the medina rooftops, and the couscous Friday lunch special draws a loyal crowd of both locals and returning visitors.',
   },
@@ -189,7 +189,7 @@ export default function ChefchaouenRestaurantsPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1553522991-71439aa3bf8c?w=2800&q=80)',
+              'url(/images/photo-mint-tea-pouring.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

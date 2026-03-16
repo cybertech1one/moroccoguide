@@ -54,12 +54,18 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/photography',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?w=1200&h=630&fit=crop',
+        url: '/images/hero-chefchaouen.webp',
         width: 1200,
         height: 630,
         alt: 'Blue streets of Chefchaouen Morocco - top photography destination',
       },
     ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Morocco Photography Guide | Top 20 Spots',
+    description:
+      'Top 20 photo locations, golden hour timing, gear tips, drone rules, and etiquette for Morocco photography.',
   },
   alternates: { canonical: 'https://citytoursmorocco.com/photography' },
 };
@@ -75,7 +81,7 @@ const photoSpots = [
     description: 'The most dynamic square in Africa. From the rooftop cafes, capture snake charmers, storytellers, acrobats, and an ocean of orange juice vendors. At dusk, hundreds of food stalls light up with smoke and flame. The energy is unparalleled.',
     bestTime: 'Sunset from Cafe de France or Nomad rooftop. Golden hour paints the Koutoubia minaret. Blue hour captures the food stall smoke.',
     tips: 'Shoot from rooftop cafes for aerial views. At street level, a wide-angle captures the chaos. At night, high ISO and fast lenses are essential. Budget 20-50 MAD for a mint tea "table fee" at rooftop cafes.',
-    image: 'https://images.unsplash.com/photo-1597212618440-806262de4f6b?q=80&w=800',
+    image: '/images/hero-jemaa-elfna-night.webp',
     timeOfDay: 'Sunset & Blue Hour',
   },
   {
@@ -84,7 +90,7 @@ const photoSpots = [
     description: 'The most photographed town in Morocco. Every wall, step, door, and alleyway is painted in shades of blue, creating an otherworldly monochromatic canvas. The light changes the blue from powder to cobalt to indigo throughout the day.',
     bestTime: 'Early morning (7-9am) before day-trippers arrive. The soft morning light on blue walls is magical. Overcast days actually enhance the blue saturation.',
     tips: 'Visit on a weekday for fewer crowds. The narrowest alleys near the kasbah are the most photogenic. Shoot in portrait mode for the tall, narrow streets. A polarizer reduces glare and deepens the blue.',
-    image: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?q=80&w=800',
+    image: '/images/hero-chefchaouen-drone.webp',
     timeOfDay: 'Early Morning',
   },
   {
@@ -93,7 +99,7 @@ const photoSpots = [
     description: 'Towering 150-meter sand dunes that change color with every hour of the day. The interplay of light and shadow on the dune ridges creates abstract patterns that look like paintings. Camel caravans silhouetted against the sunset are the iconic Morocco shot.',
     bestTime: 'Sunrise is the absolute best: golden light hits the dunes while shadows fill the troughs. Sunset silhouettes are dramatic. Night: Milky Way shots require a tripod and clear moonless night.',
     tips: 'Bring a rocket blower and cleaning cloth for sand. Protect gear in a dry bag. Climb a dune at 5am for sunrise. Use a telephoto to compress camel caravan perspectives. The blue hour after sunset is extraordinary.',
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=800',
+    image: '/images/hero-sahara-sunrise.webp',
     timeOfDay: 'Sunrise & Night',
   },
   {
@@ -102,7 +108,7 @@ const photoSpots = [
     description: 'A UNESCO-listed fortified village (ksar) built of red earth and straw, rising like a sandcastle from the desert. Featured in Game of Thrones, Gladiator, and Lawrence of Arabia. The mud-brick architecture against the barren landscape is timelessly photogenic.',
     bestTime: 'Golden hour (sunrise or sunset) when the warm light turns the red earth to gold. Morning light hits the front face. Cross the river for the classic full-ksar view with the river reflecting the walls.',
     tips: 'The view from across the river is the classic shot. Climb to the top for panoramic views of the surrounding desert. Interior details (doors, windows, passages) are best shot midday when light penetrates the narrow alleys.',
-    image: 'https://images.unsplash.com/photo-1531501410720-c8d437636169?q=80&w=800',
+    image: '/images/hero-ait-benhaddou.webp',
     timeOfDay: 'Golden Hour',
   },
   {
@@ -111,7 +117,7 @@ const photoSpots = [
     description: 'The medieval tanneries of Fes are one of the most visually striking scenes in Morocco. Hundreds of stone vats filled with natural dyes in every color create a mosaic visible from surrounding terraces. Workers dye leather using methods unchanged since the 11th century.',
     bestTime: 'Late morning (10am-12pm) when the sun is high and illuminates all the vats. Earlier is too shadowed, later the light becomes harsh. Weekdays are better as workers are active.',
     tips: 'Shoot from the surrounding leather shops (free but expect pressure to buy). A sprig of mint helps with the smell. A telephoto lens compresses the vat patterns beautifully. Wide-angle from above captures the full scope.',
-    image: 'https://images.unsplash.com/photo-1545041420-3c8cb7d74e42?q=80&w=800',
+    image: '/images/hero-fes-tanneries.webp',
     timeOfDay: 'Late Morning',
   },
   {
@@ -120,7 +126,7 @@ const photoSpots = [
     description: 'The third-largest mosque in the world, built on the Atlantic Ocean with waves crashing against its foundations. The 210-meter minaret is the tallest religious structure on Earth. The mosque\'s combination of traditional craftsmanship and monumental scale is staggering.',
     bestTime: 'Sunset from the esplanade, when the sky turns orange behind the minaret. Blue hour with the mosque illuminated is equally stunning. Interior photography is only possible during guided tours.',
     tips: 'The esplanade offers unobstructed views. Shoot from the breakwater for a unique perspective with ocean spray. Tours (120 MAD) allow interior shots of the extraordinary zellige and cedar craftsmanship. No tripods inside.',
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?q=80&w=800',
+    image: '/images/hero-hassan-mosque.webp',
     timeOfDay: 'Sunset & Blue Hour',
   },
   {
@@ -129,7 +135,7 @@ const photoSpots = [
     description: 'An 18th-century fortified port city with Portuguese ramparts, a working fishing harbor, and dramatic Atlantic light. The combination of blue fishing boats, white buildings, and golden light through sea spray creates a painterly atmosphere.',
     bestTime: 'Late afternoon when golden light streams through the port. Sunset from the ramparts (Skala de la Ville) is iconic. The early morning fish market is wonderful for documentary photography.',
     tips: 'The port is free to enter and full of character. Skala cannons make a dramatic foreground for sunset shots. Use the sea spray and mist creatively. The medina streets have stunning blue-and-white compositions.',
-    image: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=800',
+    image: '/images/hero-essaouira-ramparts.webp',
     timeOfDay: 'Late Afternoon',
   },
   {
@@ -138,7 +144,7 @@ const photoSpots = [
     description: 'A dramatic canyon in the eastern High Atlas where 300-meter sheer rock walls narrow to just 10 meters at the base. The towering orange and pink limestone walls catch light in extraordinary ways, especially in the mornings.',
     bestTime: 'Morning (9-11am) when sunlight reaches the canyon floor and illuminates the rock walls. Afternoon puts the lower canyon in shadow. The light play between sunlit and shadowed rock is dramatic.',
     tips: 'Walk beyond the tourist area into the narrower upper canyon for fewer people. Use a wide-angle to emphasize the wall height. A figure in the frame provides essential scale. The river bed reflections add another dimension.',
-    image: 'https://images.unsplash.com/photo-1504019347908-b45f9b0b8dd5?q=80&w=800',
+    image: '/images/hero-todra-gorge.webp',
     timeOfDay: 'Morning',
   },
   {
@@ -147,7 +153,7 @@ const photoSpots = [
     description: 'A 14th-century Islamic college with the finest architectural decoration in Morocco. Every surface is covered in carved stucco, zellige tilework, and cedar wood carving. The central courtyard with its reflecting pool is perfection.',
     bestTime: 'Opening time (9am) before crowds arrive. The courtyard light is best mid-morning. Interior rooms require good high-ISO capability due to limited light.',
     tips: 'The reflecting pool shot requires patience for a moment without ripples. Look up for extraordinary carved plaster ceilings. The student cells on the upper floor have beautiful light and shadow play. Entry fee: 70 MAD.',
-    image: 'https://images.unsplash.com/photo-1577493340887-b7bfff550145?q=80&w=800',
+    image: '/images/detail-zellige-mosaic.webp',
     timeOfDay: 'Early Morning',
   },
   {
@@ -156,7 +162,7 @@ const photoSpots = [
     description: 'The longest river valley in Morocco, lined with date palm oases and crumbling kasbahs of red earth. The contrast of green palms against red-brown kasbahs and blue sky is quintessentially Moroccan.',
     bestTime: 'Golden hour in either direction. The Agdz to Zagora stretch is best in the afternoon when the kasbahs catch warm side light.',
     tips: 'Stop at the viewpoint above Agdz for a panoramic overview. Timiderte Kasbah and Tamnougalt are the most photogenic. A telephoto isolates individual kasbahs against palm groves. The road itself makes for beautiful leading-line compositions.',
-    image: 'https://images.unsplash.com/photo-1542401886-65d6c61db217?q=80&w=800',
+    image: '/images/hero-dades-gorge.webp',
     timeOfDay: 'Golden Hour',
   },
   {
@@ -165,7 +171,7 @@ const photoSpots = [
     description: 'A labyrinth of covered markets selling everything from spices to metalwork. Shafts of light piercing through latticed roofs, colorful spice pyramids, and artisans at work create endless photographic opportunities.',
     bestTime: 'Mid-morning (10am-12pm) when light shafts penetrate the souk roofs. Early morning for artisans starting work. Avoid Friday when many shops close.',
     tips: 'Fast lenses (f/1.4-2.8) are essential for the dark interiors. Ask spice sellers before shooting and buy something in return. The dyers\' souk with hanging colorful yarn is spectacular. Shoot candid rather than posed.',
-    image: 'https://images.unsplash.com/photo-1517821362941-f7f753200fef?q=80&w=800',
+    image: '/images/hero-fes-tanneries.webp',
     timeOfDay: 'Mid-Morning',
   },
   {
@@ -174,7 +180,7 @@ const photoSpots = [
     description: 'North Africa\'s highest falls at 110 meters, cascading through red rock and olive trees. Rainbows form in the mist, and wild Barbary macaques add wildlife interest.',
     bestTime: 'Midday when the sun creates rainbows in the mist. Morning light is softer for the overall scene. Overcast days reduce harsh shadows in the gorge.',
     tips: 'Bring a waterproof bag for the mist at the base. A slow shutter speed (1/4 to 1 sec) with a tripod creates silky water. The view from the boat at the base is the most dramatic.',
-    image: 'https://images.unsplash.com/photo-1433838552652-f9a46b332c40?q=80&w=800',
+    image: '/images/hero-national-parks.webp',
     timeOfDay: 'Midday',
   },
   {
@@ -183,7 +189,7 @@ const photoSpots = [
     description: 'A botanical garden designed by Jacques Majorelle and later owned by Yves Saint Laurent. The cobalt blue buildings against cactus gardens and bougainvillea create bold, graphic compositions.',
     bestTime: 'Opening time (8am) to avoid the enormous crowds. The blue buildings photograph well at any time. Overcast light actually reduces harsh shadows and enhances color saturation.',
     tips: 'Budget 1-2 hours. The blue buildings against yellow pots and green cacti create striking color contrasts. Macro lens for botanical details. The YSL Museum next door is also photogenic. Entry: 70 MAD.',
-    image: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?q=80&w=800',
+    image: '/images/hero-majorelle-garden.webp',
     timeOfDay: 'Early Morning',
   },
   {
@@ -192,7 +198,7 @@ const photoSpots = [
     description: 'Dramatic natural stone arches carved into red cliffs by the Atlantic. The scale and color of the remaining arch against the ocean and sky create one of Morocco\'s most stunning natural compositions.',
     bestTime: 'Sunset when the red rock glows against the darkening ocean. Low tide is essential to access and photograph the arch. Check tide times before visiting.',
     tips: 'Low tide timing is critical. The arch is best framed with a wide-angle. Use people for scale. The cliff-top viewpoint offers an alternative perspective. The red rock photographs best in warm light.',
-    image: 'https://images.unsplash.com/photo-1509233725247-49e657c54213?q=80&w=800',
+    image: '/images/hero-coastal.webp',
     timeOfDay: 'Sunset',
   },
   {
@@ -201,7 +207,7 @@ const photoSpots = [
     description: 'Morocco\'s holiest town, draped across two hills with a sacred mosque at its heart. The white town against green hills is beautiful, and the nearby Roman ruins of Volubilis add archaeological interest.',
     bestTime: 'Late afternoon light on the town from the viewpoint opposite. Morning light at Volubilis when the mosaics are illuminated and the site is quiet.',
     tips: 'Non-Muslims cannot enter the mosque area but can photograph the town from surrounding viewpoints. Volubilis (10 minutes away) is best in early morning light. A telephoto compresses the town beautifully.',
-    image: 'https://images.unsplash.com/photo-1564769625905-50e93615e769?q=80&w=800',
+    image: '/images/hero-fes.webp',
     timeOfDay: 'Late Afternoon',
   },
   {
@@ -210,7 +216,7 @@ const photoSpots = [
     description: 'A photogenic surf village where colorful fishing boats, surfers, and Moroccan village life intersect. The golden light on the coast is extraordinary.',
     bestTime: 'Golden hour for the coastline. Early morning for surfers at Anchor Point. The village market on the main street has character at midday.',
     tips: 'A telephoto from the cliff captures surfers on the wave. The painted fishing boats at Taghazout port make vibrant foregrounds. The village rooftops offer panoramic sunset views.',
-    image: 'https://images.unsplash.com/photo-1455729552457-5c322b47ff7e?q=80&w=800',
+    image: '/images/hero-surfing.webp',
     timeOfDay: 'Golden Hour',
   },
   {
@@ -219,7 +225,7 @@ const photoSpots = [
     description: 'Berber villages of stone and earth nestled in the High Atlas, surrounded by terraced fields and walnut groves with Toubkal as a backdrop.',
     bestTime: 'Morning light for the mountain backdrop. Spring (April-May) when almond and cherry trees bloom. Autumn colors in October-November.',
     tips: 'Respect village privacy; ask before photographing homes or people. The walk from Imlil to Aremd offers continuous photo opportunities. Hire a local guide for access to the best viewpoints.',
-    image: 'https://images.unsplash.com/photo-1493246507139-91e8fad9978e?q=80&w=800',
+    image: '/images/hero-atlas.webp',
     timeOfDay: 'Morning',
   },
   {
@@ -228,7 +234,7 @@ const photoSpots = [
     description: 'A beautifully preserved kasbah with blue-and-white streets reminiscent of Chefchaouen, overlooking the Atlantic and the mouth of the Bou Regreg river. Fewer tourists make it a more relaxed photography experience.',
     bestTime: 'Late afternoon when golden light fills the narrow streets. Sunset from the platform overlooking the ocean and river mouth.',
     tips: 'Far less crowded than Chefchaouen. The Andalusian Gardens inside are a green oasis. The contrast of blue streets with the ocean view is unique. Combine with the nearby Hassan Tower for another iconic shot.',
-    image: 'https://images.unsplash.com/photo-1564227901-6b1d20bebe9d?q=80&w=800',
+    image: '/images/hero-morocco.webp',
     timeOfDay: 'Late Afternoon',
   },
   {
@@ -237,7 +243,7 @@ const photoSpots = [
     description: 'A river valley flanked by dramatic rock formations, winding roads, and kasbahs. The "Monkey Fingers" rock formations are unique, and the hairpin bends of the Dades road are a photographer\'s dream.',
     bestTime: 'Morning or late afternoon for the rock formations. The famous hairpin bends are best shot from the viewpoint above in warm directional light.',
     tips: 'The road above the gorge has multiple viewpoints. The "Monkey Fingers" formations are best in side light. Stay at a guesthouse in the gorge for dawn access. The Dades River reflects the red rock walls.',
-    image: 'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?q=80&w=800',
+    image: '/images/hero-dades-gorge.webp',
     timeOfDay: 'Morning',
   },
   {
@@ -246,7 +252,7 @@ const photoSpots = [
     description: 'The crossroads of Africa and Europe. The Tangier medina has a bohemian, international character unlike any other Moroccan city. Cafe Hafa, perched on a cliff overlooking the Strait of Gibraltar, has hosted writers and artists for a century.',
     bestTime: 'Afternoon at Cafe Hafa when the light on the strait is magical. Morning in the medina for quiet streets and artisan workshops. Sunset from the terrace of Cafe Hafa.',
     tips: 'Cafe Hafa\'s terraced seating with views to Spain is iconic. The Grand Socco is a vibrant street scene. The medina combines Moroccan, Spanish, and international architectural styles. Use the ferry port as a foreground for the old city.',
-    image: 'https://images.unsplash.com/photo-1519817650390-64a93db51571?q=80&w=800',
+    image: '/images/hero-tangier-kasbah.webp',
     timeOfDay: 'Afternoon',
   },
 ];
@@ -668,7 +674,7 @@ const jsonLd = {
         name: 'CityGuide Morocco',
         url: 'https://citytoursmorocco.com',
       },
-      image: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?w=1200',
+      image: '/images/hero-chefchaouen.webp',
     },
     {
       '@type': 'ItemList',
@@ -702,7 +708,7 @@ export default function PhotographyPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?q=80&w=2800)',
+              'url(/images/hero-chefchaouen.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

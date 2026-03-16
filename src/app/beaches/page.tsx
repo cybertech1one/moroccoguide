@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/beaches',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&h=630&fit=crop',
+        url: '/images/card-beach.webp',
         width: 1200,
         height: 630,
         alt: 'Beautiful Moroccan beach with golden sand and turquoise water',
@@ -86,7 +86,7 @@ const jsonLd = {
         'Complete guide to the 20 best beaches in Morocco along the Atlantic and Mediterranean coasts, covering surfing, kitesurfing, swimming, safety, and coastal road trips.',
       url: 'https://citytoursmorocco.com/beaches',
       touristType: ['Beach tourism', 'Water sports', 'Surfing', 'Kitesurfing'],
-      image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200',
+      image: '/images/card-beach.webp',
       address: {
         '@type': 'PostalAddress',
         addressCountry: 'MA',
@@ -154,7 +154,7 @@ const beaches: Beach[] = [
     region: 'Souss-Massa',
     description:
       'Morocco\'s surf capital and one of Africa\'s best surf destinations. The village has transformed from a sleepy fishing hamlet into a world-class surf hub with camps, yoga retreats, and board rentals. Anchor Point, just north of town, is a legendary right-hand point break. The vibe is relaxed, international, and endlessly sun-kissed.',
-    image: 'https://images.unsplash.com/photo-1455729552457-5c322b47ff7e?q=80&w=800',
+    image: '/images/hero-surfing.webp',
     bestSeason: 'October - March (surf), Year-round (village)',
     facilities: ['Surf schools', 'Board rental', 'Restaurants', 'Yoga studios', 'Accommodation'],
     rating: 4.7,
@@ -171,7 +171,7 @@ const beaches: Beach[] = [
     region: 'Marrakech-Safi',
     description:
       'A sweeping crescent of golden sand stretching south from the historic fortified city. Known as the "Wind City of Africa," Essaouira is a world-class destination for kitesurfing and windsurfing, especially from April to September. The northern end near the medina is sheltered and good for swimming; the southern end catches the famous trade winds.',
-    image: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=800',
+    image: '/images/hero-essaouira.webp',
     bestSeason: 'June - September (wind sports), Year-round',
     facilities: ['Water sports schools', 'Restaurants', 'Changing rooms', 'Horse/camel rides', 'Lifeguards in summer'],
     rating: 4.6,
@@ -188,7 +188,7 @@ const beaches: Beach[] = [
     region: 'Souss-Massa',
     description:
       'Famous for its dramatic natural stone arches carved into red cliffs by centuries of Atlantic waves. One arch collapsed in 2016, but the remaining formation is still breathtaking. The beach stretches for miles with golden-red sand and powerful waves. Best visited at low tide when you can walk to the arches.',
-    image: 'https://images.unsplash.com/photo-1509233725247-49e657c54213?q=80&w=800',
+    image: '/images/hero-coastal.webp',
     bestSeason: 'September - November',
     facilities: ['Parking', 'Small cafes', 'No lifeguard'],
     rating: 4.8,
@@ -205,7 +205,7 @@ const beaches: Beach[] = [
     region: 'Casablanca-Settat',
     description:
       'A sheltered turquoise lagoon on the Atlantic coast, Oualidia is Morocco\'s hidden gem. The calm, warm waters are perfect for swimming and safe for children. Famous for its oyster farms (the best in Morocco), you can eat freshly shucked oysters at waterside shacks for a fraction of European prices. King Mohammed VI has a palace here, which tells you about the quality.',
-    image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=800',
+    image: '/images/card-beach.webp',
     bestSeason: 'June - September',
     facilities: ['Oyster restaurants', 'Boat tours', 'Hotels', 'Parking', 'Calm water for kids'],
     rating: 4.6,
@@ -222,7 +222,7 @@ const beaches: Beach[] = [
     region: 'Rabat-Sale-Kenitra',
     description:
       'A charming coastal village built around a lagoon that is home to Merja Zerga, one of Morocco\'s most important bird sanctuaries. The lagoon is calm and perfect for swimming, while the ocean beach on the other side offers waves. Boat trips through the wetlands to see flamingos, herons, and migrating birds are a highlight. A favorite weekend escape for Moroccans.',
-    image: 'https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?q=80&w=800',
+    image: '/images/hero-birdwatching.webp',
     bestSeason: 'June - September',
     facilities: ['Boat tours', 'Fish restaurants', 'Small hotels', 'Bird watching'],
     rating: 4.3,
@@ -239,7 +239,7 @@ const beaches: Beach[] = [
     region: 'Souss-Massa',
     description:
       'Morocco\'s premier resort beach with 10 km of wide, golden sand and over 300 days of sunshine per year. The city was rebuilt after a devastating 1960 earthquake, resulting in a modern, purpose-built beach resort. The water is warmer here than further north, and the beach has every facility imaginable. Perfect for families and those who prefer comfort.',
-    image: 'https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=800',
+    image: '/images/card-beach.webp',
     bestSeason: 'Year-round (warmest June - September)',
     facilities: ['Full resort amenities', 'Lifeguards', 'Beach clubs', 'Water sports', 'Restaurants', 'Parking'],
     rating: 4.3,
@@ -256,7 +256,7 @@ const beaches: Beach[] = [
     region: 'Dakhla-Oued Ed-Dahab',
     description:
       'A remote paradise on a narrow peninsula in the deep south of Morocco. Dakhla is one of the world\'s top kitesurfing destinations, with a vast lagoon offering flat water and consistent winds. The setting is otherworldly: desert dunes meet turquoise waters, flamingos wade in the shallows, and the light is extraordinary. A long journey but worth every kilometer.',
-    image: 'https://images.unsplash.com/photo-1502680390548-bdbac40cee81?q=80&w=800',
+    image: '/images/hero-water-sports.webp',
     bestSeason: 'March - November (kitesurf), Year-round',
     facilities: ['Kitesurf centers', 'Eco-lodges', 'Restaurants', 'Yoga'],
     rating: 4.8,
@@ -273,7 +273,7 @@ const beaches: Beach[] = [
     region: 'Souss-Massa',
     description:
       'A series of stunning cove beaches below a clifftop village between Tiznit and Sidi Ifni. Each beach has its own character: some have surf, others have calm swimming. The village of Mirleft is a growing surf destination with a laid-back atmosphere, colorful houses, and a growing number of surf camps and guesthouses. Still relatively undiscovered.',
-    image: 'https://images.unsplash.com/photo-1468413253725-0d5181091126?q=80&w=800',
+    image: '/images/hero-surfing.webp',
     bestSeason: 'September - May',
     facilities: ['Surf camps', 'Guesthouses', 'Small restaurants', 'Board rental'],
     rating: 4.5,
@@ -290,7 +290,7 @@ const beaches: Beach[] = [
     region: 'Marrakech-Safi',
     description:
       'A wild, windswept beach 25 km south of Essaouira with a mystical atmosphere centered on the whitewashed marabout (saint\'s tomb) on the bluff. Less developed than Taghazout, it attracts surfers, windsurfers, and those seeking solitude. The village has a handful of guesthouses, surf camps, and a legendary sunset. Camel rides along the beach are popular.',
-    image: 'https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?q=80&w=800',
+    image: '/images/hero-coastal.webp',
     bestSeason: 'September - April (surf), Year-round',
     facilities: ['Surf camps', 'Small guesthouses', 'Camel rides', 'Basic cafes'],
     rating: 4.5,
@@ -307,7 +307,7 @@ const beaches: Beach[] = [
     region: 'Tanger-Tetouan-Al Hoceima',
     description:
       'The crown jewel of the Rif Mediterranean, Al Hoceima sits on a stunning bay surrounded by the national park that bears its name. Plage Quemado is the main town beach, but the real treasures are the secluded coves of the national park: Cala Iris, Badis, and Torres are accessible by boat or rough track. Crystal-clear turquoise water rivaling anything in Greece.',
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800',
+    image: '/images/card-beach.webp',
     bestSeason: 'June - September',
     facilities: ['Town beach amenities', 'Boat excursions', 'Fish restaurants', 'National park access'],
     rating: 4.5,
@@ -324,7 +324,7 @@ const beaches: Beach[] = [
     region: 'Tanger-Tetouan-Al Hoceima',
     description:
       'An upscale residential beach resort between Tetouan and M\'diq. The beach is well-maintained with fine sand and calm Mediterranean waters. The area is popular with wealthy Moroccan families and has a golf course, yacht club, and high-end restaurants. It feels like a different Morocco here, closer to the Spanish Costa del Sol vibe.',
-    image: 'https://images.unsplash.com/photo-1520942702018-0862200e6873?q=80&w=800',
+    image: '/images/card-beach.webp',
     bestSeason: 'June - September',
     facilities: ['Golf course', 'Yacht club', 'Restaurants', 'Beach clubs', 'Parking'],
     rating: 4.1,
@@ -341,7 +341,7 @@ const beaches: Beach[] = [
     region: 'Tanger-Tetouan-Al Hoceima',
     description:
       'One of the most popular Mediterranean beaches in northern Morocco. M\'diq has calm, warm waters, a lively promenade, and a modern marina. The beach fills with Moroccan families in July and August. Less visited by international tourists, it offers an authentic Moroccan beach holiday experience with excellent seafood restaurants.',
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800',
+    image: '/images/card-beach.webp',
     bestSeason: 'June - September',
     facilities: ['Marina', 'Restaurants', 'Beach clubs', 'Parking', 'Lifeguards'],
     rating: 4.2,
@@ -358,7 +358,7 @@ const beaches: Beach[] = [
     region: 'Oriental',
     description:
       'Known as the "Blue Pearl," Saidia boasts 14 km of fine sandy beach on the Mediterranean near the Algerian border. The water is warm and calm, and a massive resort complex (Mediterrania Saidia) has brought international-standard facilities including an 18-hole golf course, marina, and aquapark. The best Mediterranean beach infrastructure in Morocco.',
-    image: 'https://images.unsplash.com/photo-1471922694854-ff1b63b20054?q=80&w=800',
+    image: '/images/card-beach.webp',
     bestSeason: 'June - September',
     facilities: ['Golf course', 'Aquapark', 'Marina', 'Resort hotels', 'Restaurants', 'Water sports'],
     rating: 4.3,
@@ -375,7 +375,7 @@ const beaches: Beach[] = [
     region: 'Tanger-Tetouan-Al Hoceima',
     description:
       'A bustling Mediterranean beach town just south of the Ceuta border crossing. Fnideq (formerly Castillejos) has a long, wide sandy beach with calm, warm water. The town is a major shopping destination for Moroccans crossing from Ceuta. The beach is lively and authentically Moroccan, with family picnics, grilled fish vendors, and a festive summer atmosphere.',
-    image: 'https://images.unsplash.com/photo-1473116763249-2faaef81ccda?q=80&w=800',
+    image: '/images/hero-coastal.webp',
     bestSeason: 'June - September',
     facilities: ['Restaurants', 'Beach vendors', 'Parking', 'Promenade'],
     rating: 3.9,
@@ -392,7 +392,7 @@ const beaches: Beach[] = [
     region: 'Tanger-Tetouan-Al Hoceima',
     description:
       'The beach at this art-filled coastal town stretches south from the whitewashed medina in a wide arc of golden sand. Asilah is known for its annual mural festival and beautifully painted old town. The beach is popular with Moroccan families in summer and wonderfully quiet in the shoulder seasons. The sunsets over the Atlantic are legendary.',
-    image: 'https://images.unsplash.com/photo-1473116763249-2faaef81ccda?q=80&w=800',
+    image: '/images/hero-coastal.webp',
     bestSeason: 'June - September',
     facilities: ['Restaurants', 'Beach vendors', 'Changing facilities', 'Parking'],
     rating: 4.4,
@@ -409,7 +409,7 @@ const beaches: Beach[] = [
     region: 'Souss-Massa',
     description:
       'A former Spanish colony with Art Deco architecture and a long, wide beach that catches excellent swell. Sidi Ifni has a melancholic charm with its crumbling colonial buildings and misty climate (the "Blue Town" of the south). The beach is vast and often empty, with good surf at the southern end. Sunday market draws people from surrounding villages.',
-    image: 'https://images.unsplash.com/photo-1490750967868-88aa4f44baee?q=80&w=800',
+    image: '/images/hero-asilah-aerial.webp',
     bestSeason: 'September - April',
     facilities: ['Basic cafes', 'Accommodation in town', 'Sunday market'],
     rating: 4.2,
@@ -426,7 +426,7 @@ const beaches: Beach[] = [
     region: 'Dakhla-Oued Ed-Dahab',
     description:
       'A surreal spot on Dakhla\'s lagoon where a sand spit creates the shape of a dragon when seen from above. This is where kiteboarders come for the flattest water and most consistent winds in Morocco. The setting is utterly unique: desert on both sides, turquoise water, and virtually no one around. One of the top 5 kitesurfing spots on Earth.',
-    image: 'https://images.unsplash.com/photo-1505142468610-359e7d316be0?q=80&w=800',
+    image: '/images/hero-water-sports.webp',
     bestSeason: 'March - November',
     facilities: ['Kitesurf camps', 'Basic facilities', 'Transfers from Dakhla town'],
     rating: 4.9,
@@ -443,7 +443,7 @@ const beaches: Beach[] = [
     region: 'Guelmim-Oued Noun',
     description:
       'An immense, virtually untouched white sand beach stretching 40 km along the Atlantic coast. Accessible only by 4x4, Plage Blanche is one of the most pristine beaches in all of Africa. No buildings, no people, no sound except the waves. Endangered monk seals have been spotted here. This is the ultimate remote beach experience for those willing to make the journey.',
-    image: 'https://images.unsplash.com/photo-1414609245224-afa02bfb3fda?q=80&w=800',
+    image: '/images/hero-coastal.webp',
     bestSeason: 'Year-round (best October - April)',
     facilities: ['None - bring everything', '4x4 required'],
     rating: 4.7,
@@ -460,7 +460,7 @@ const beaches: Beach[] = [
     region: 'Souss-Massa',
     description:
       'Not a beach but a series of natural freshwater pools and waterfalls in a palm-lined valley 30 minutes from Agadir. Locals and travelers swim in the emerald pools, jump from rocks, and picnic under palm trees. The water is refreshingly cold compared to the coast. A perfect half-day escape from the beach. Go early to avoid crowds.',
-    image: 'https://images.unsplash.com/photo-1433838552652-f9a46b332c40?q=80&w=800',
+    image: '/images/hero-national-parks.webp',
     bestSeason: 'April - October',
     facilities: ['Local guides', 'Basic cafes', 'Parking'],
     rating: 4.4,
@@ -477,7 +477,7 @@ const beaches: Beach[] = [
     region: 'Souss-Massa',
     description:
       'A tiny fishing village perched above a sheltered bay that produces one of the longest rideable waves in Africa. The Bay offers a gentle, incredibly long right-hander perfect for longboarding and beginners, while the Cathedral break outside the bay delivers powerful reef waves for advanced surfers. The village has a raw, pre-tourism charm with fresh seafood shacks and a tight-knit surf community.',
-    image: 'https://images.unsplash.com/photo-1505142468610-359e7d316be0?q=80&w=800',
+    image: '/images/hero-water-sports.webp',
     bestSeason: 'October - April (surf), Year-round',
     facilities: ['Surf camps', 'Fish shacks', 'Board rental', 'Basic guesthouses'],
     rating: 4.6,
@@ -810,7 +810,7 @@ export default function BeachesPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2800)',
+              'url(/images/card-beach.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />
@@ -1088,7 +1088,7 @@ export default function BeachesPage() {
             <div className="card-moroccan overflow-hidden">
               <div className="relative h-64">
                 <img
-                  src="https://images.unsplash.com/photo-1502680390548-bdbac40cee81?q=80&w=800"
+                  src="/images/hero-water-sports.webp"
                   alt="Kitesurfing on the Dakhla lagoon, Morocco"
                   className="w-full h-full object-cover"
                   loading="lazy"
@@ -1134,7 +1134,7 @@ export default function BeachesPage() {
             <div className="card-moroccan overflow-hidden">
               <div className="relative h-64">
                 <img
-                  src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=800"
+                  src="/images/hero-essaouira.webp"
                   alt="Windsurfing on Essaouira beach, Morocco"
                   className="w-full h-full object-cover"
                   loading="lazy"

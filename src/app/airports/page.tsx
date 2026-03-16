@@ -81,7 +81,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/airports',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1583862490786-85ea1a1e85a6?w=1200&h=630&fit=crop',
+        url: '/images/hero-marrakech.webp',
         width: 1200,
         height: 630,
         alt: 'Aerial view of a Moroccan airport terminal',
@@ -158,7 +158,7 @@ const majorAirports = [
     facilities: ['Free WiFi', 'VIP Lounges (Pearl Lounge T1 & T2)', 'ATMs and currency exchange', 'Car rental desks (Hertz, Avis, Europcar, Budget)', 'Restaurants and duty-free shops', 'Pharmacy', 'Prayer rooms', 'SIM card kiosks (Maroc Telecom, Inwi, Orange)'],
     vip: true,
     featured: true,
-    image: 'https://images.unsplash.com/photo-1436491865332-7a61a109db05?w=600&h=400&fit=crop',
+    image: '/images/hero-marrakech.webp',
   },
   {
     code: 'RAK',
@@ -175,7 +175,7 @@ const majorAirports = [
     facilities: ['Free WiFi', 'VIP Lounge', 'ATMs and currency exchange', 'Car rental desks', 'Cafes and shops', 'Tourist information desk', 'Prayer rooms', 'SIM card vendors'],
     vip: true,
     featured: true,
-    image: 'https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?w=600&h=400&fit=crop',
+    image: '/images/hero-marrakech.webp',
   },
   {
     code: 'FEZ',
@@ -937,7 +937,7 @@ export default function AirportsPage() {
       <section className="relative overflow-hidden bg-[var(--color-primary-900)] text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1583862490786-85ea1a1e85a6?w=1600&q=80"
+            src="/images/hero-marrakech.webp"
             alt="Aerial view of a modern airport terminal at sunset"
             className="absolute inset-0 w-full h-full object-cover"
           />
@@ -2148,7 +2148,7 @@ export default function AirportsPage() {
           =============================================================== */}
       <section className="relative h-64 md:h-80 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1600&q=80"
+          src="/images/hero-desert.webp"
           alt="Moroccan highway stretching through desert landscape with Atlas Mountains"
           className="absolute inset-0 w-full h-full object-cover"
         />

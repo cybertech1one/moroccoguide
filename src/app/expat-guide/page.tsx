@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/expat-guide',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1545041028-4e0b97fba9ee?w=1200&h=630&fit=crop',
+        url: '/images/hero-wine.webp',
         width: 1200,
         height: 630,
         alt: 'Expat life in Morocco - a sunlit riad courtyard in Marrakech',
@@ -230,7 +230,7 @@ const expatCities = [
       'Medina / Riad District (traditional living, tourists, character)',
       'Targa (residential, quiet, local feel, good value)',
     ],
-    image: 'https://images.unsplash.com/photo-1597212618440-806262de4f6b?q=80&w=800',
+    image: '/images/hero-morocco.webp',
   },
   {
     name: 'Rabat',
@@ -247,7 +247,7 @@ const expatCities = [
       'Souissi (diplomatic quarter, luxury villas, quiet)',
       'Kasbah des Oudaias (charming, historic, near ocean)',
     ],
-    image: 'https://images.unsplash.com/photo-1570698473651-b2de99bae12f?q=80&w=800',
+    image: '/images/hero-marrakech.webp',
   },
   {
     name: 'Casablanca',
@@ -264,7 +264,7 @@ const expatCities = [
       'Ain Diab (beachfront, luxury, resort feel)',
       'Bouskoura (suburban, green, family villas, golf)',
     ],
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?q=80&w=800',
+    image: '/images/hero-essaouira.webp',
   },
   {
     name: 'Essaouira',
@@ -280,7 +280,7 @@ const expatCities = [
       'Ghazoua (newer area, modern apartments, local feel)',
       'Route de Marrakech (new developments, spacious)',
     ],
-    image: 'https://images.unsplash.com/photo-1560437091-4383266ac31b?q=80&w=800',
+    image: '/images/hero-fes-tanneries.webp',
   },
   {
     name: 'Tangier',
@@ -297,7 +297,7 @@ const expatCities = [
       'Medina / Petit Socco (historic, atmospheric, bohemian)',
       'Boubana (suburban, family, green, good schools)',
     ],
-    image: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?q=80&w=800',
+    image: '/images/hero-chefchaouen.webp',
   },
 ];
 
@@ -685,7 +685,7 @@ export default function ExpatGuidePage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1545041028-4e0b97fba9ee?q=80&w=2800)',
+              'url(/images/hero-wine.webp',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

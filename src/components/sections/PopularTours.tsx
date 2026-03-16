@@ -52,7 +52,7 @@ const TOURS: Tour[] = [
     rating: 4.9,
     reviewCount: 847,
     highlights: ['Camel Trek', 'Desert Camp', 'Stargazing', 'Erg Chebbi'],
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=600',
+    image: '/images/hero-desert.webp',
     filters: ['all', 'desert', 'adventure'],
   },
   {
@@ -65,7 +65,7 @@ const TOURS: Tour[] = [
     rating: 4.8,
     reviewCount: 623,
     highlights: ['Marrakech', 'Fes', 'Meknes', 'Rabat'],
-    image: 'https://images.unsplash.com/photo-1549140600-78c9b8275e9d?q=80&w=600',
+    image: '/images/hero-fes-tanneries.webp',
     filters: ['all', 'cultural'],
   },
   {
@@ -78,7 +78,7 @@ const TOURS: Tour[] = [
     rating: 4.8,
     reviewCount: 412,
     highlights: ['Toubkal Peak', 'Berber Villages', 'Mountain Lodges', 'Panoramic Views'],
-    image: 'https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?q=80&w=600',
+    image: '/images/hero-atlas.webp',
     filters: ['all', 'adventure'],
   },
   {
@@ -91,7 +91,7 @@ const TOURS: Tour[] = [
     rating: 4.7,
     reviewCount: 1204,
     highlights: ['Street Food', 'Spice Markets', 'Cooking Class', 'Local Cafes'],
-    image: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=600',
+    image: '/images/hero-spices.webp',
     filters: ['all', 'food', 'cultural'],
   },
   {
@@ -104,7 +104,7 @@ const TOURS: Tour[] = [
     rating: 4.6,
     reviewCount: 389,
     highlights: ['Tanneries', 'Pottery', 'Zellige Tiles', 'Metalwork'],
-    image: 'https://images.unsplash.com/photo-1590073242678-70ee3fc28e8e?q=80&w=600',
+    image: '/images/hero-riad-interior.webp',
     filters: ['all', 'cultural'],
   },
   {
@@ -117,7 +117,7 @@ const TOURS: Tour[] = [
     rating: 4.8,
     reviewCount: 567,
     highlights: ['Blue Streets', 'Ras El Maa', 'Medina Walk', 'Photography'],
-    image: 'https://images.unsplash.com/photo-1553244006-20e9b0aadec7?q=80&w=600',
+    image: '/images/hero-chefchaouen-drone.webp',
     filters: ['all', 'cultural'],
   },
   {
@@ -130,7 +130,7 @@ const TOURS: Tour[] = [
     rating: 4.7,
     reviewCount: 298,
     highlights: ['Surf Lessons', 'Medina Walks', 'Seafood', 'Ramparts'],
-    image: 'https://images.unsplash.com/photo-1565689157206-0fddef7589a2?q=80&w=600',
+    image: '/images/hero-coastal.webp',
     filters: ['all', 'adventure', 'wellness'],
   },
   {
@@ -143,7 +143,7 @@ const TOURS: Tour[] = [
     rating: 4.9,
     reviewCount: 186,
     highlights: ['All Imperial Cities', 'Sahara', 'Coast', 'Mountains'],
-    image: 'https://images.unsplash.com/photo-1597212618440-806262de4fe6?q=80&w=600',
+    image: '/images/hero-marrakech.webp',
     filters: ['all', 'cultural', 'desert', 'adventure'],
   },
 ];

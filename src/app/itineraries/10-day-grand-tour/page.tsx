@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/itineraries/10-day-grand-tour',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?w=1200&h=630&fit=crop',
+        url: '/images/hero-chefchaouen.webp',
         width: 1200,
         height: 630,
         alt: 'Chefchaouen blue city streets in Morocco',
@@ -214,7 +214,7 @@ export default function TenDayGrandTourPage() {
       <section className="relative overflow-hidden bg-[var(--color-secondary-900)] text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?w=1600&q=80"
+            src="/images/hero-chefchaouen.webp"
             alt="Scenic view of Chefchaouen blue streets in the Rif Mountains"
             className="absolute inset-0 w-full h-full object-cover"
           />
@@ -772,7 +772,7 @@ export default function TenDayGrandTourPage() {
       <section className="relative overflow-hidden bg-[var(--color-primary)] text-white py-16 md:py-20">
         <div className="absolute inset-0 opacity-10">
           <img
-            src="https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?w=1600&q=80"
+            src="/images/hero-chefchaouen.webp"
             alt=""
             className="absolute inset-0 w-full h-full object-cover"
             aria-hidden="true"
@@ -815,8 +815,8 @@ export default function TenDayGrandTourPage() {
             <Link href="/itineraries/7-day-morocco" className="card-moroccan group overflow-hidden">
               <div className="relative h-40 overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=600&q=80"
-                  alt="Morocco desert landscape"
+                  src="/images/hero-desert.webp"
+                  alt="Vast golden Sahara Desert landscape with rolling dunes on a Morocco road trip"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
                 />
@@ -834,8 +834,8 @@ export default function TenDayGrandTourPage() {
             <Link href="/itineraries/3-day-marrakech" className="card-moroccan group overflow-hidden">
               <div className="relative h-40 overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=600&q=80"
-                  alt="Marrakech rooftop view"
+                  src="/images/hero-marrakech.webp"
+                  alt="Aerial rooftop view of Marrakech medina with traditional riads and the Atlas Mountains beyond"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
                 />
@@ -853,8 +853,8 @@ export default function TenDayGrandTourPage() {
             <Link href="/itineraries/5-day-desert" className="card-moroccan group overflow-hidden">
               <div className="relative h-40 overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1548017267-5765e9b2ccfb?w=600&q=80"
-                  alt="Sahara desert dunes"
+                  src="/images/hero-sahara-sunrise.webp"
+                  alt="Windswept golden sand dunes of the Sahara Desert at sunset, Erg Chebbi, Morocco"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
                 />

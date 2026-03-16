@@ -81,9 +81,9 @@ const accommodations: Accommodation[] = [
     description:
       'Riad Yasmine is one of the most photographed riads in Marrakech, nestled deep within the winding alleyways of the ancient medina. Its iconic turquoise plunge pool, surrounded by lush tropical plants and intricate zellige tilework, has graced the pages of countless travel magazines and Instagram feeds worldwide.\n\nBeyond its visual splendor, this intimate guesthouse offers a genuinely warm Moroccan hospitality experience. Each of the beautifully appointed rooms features hand-carved cedar furniture, traditional tadelakt walls, and soft Berber textiles. The rooftop terrace provides sweeping views over the medina rooftops to the Atlas Mountains beyond.\n\nGuests can enjoy a lavish Moroccan breakfast served in the courtyard each morning, complete with fresh msemen flatbreads, amlou dip, seasonal fruits, and freshly squeezed orange juice. The riad also arranges private cooking classes, hammam experiences, and guided medina tours.',
     images: [
-      'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=1200&q=80',
-      'https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1200&q=80',
-      'https://images.unsplash.com/photo-1549140600-78c9b8275e9d?w=1200&q=80',
+      '/images/hero-kasbahs.webp',
+      '/images/hero-riad-interior.webp',
+      '/images/hero-fes.webp',
     ],
     rating: 4.7,
     reviewCount: 1243,
@@ -112,9 +112,9 @@ const accommodations: Accommodation[] = [
     description:
       'La Mamounia is a legendary palace hotel that has been the crown jewel of Moroccan hospitality since it first opened its doors in 1923. Set within eight hectares of breathtaking gardens originally planted in the 18th century for Prince Moulay Mamoun, the hotel seamlessly blends Art Deco grandeur with traditional Moroccan artistry.\n\nWinston Churchill famously called La Mamounia "the most beautiful place in the world," and the property has hosted royalty, heads of state, and Hollywood icons throughout its storied history. The interiors are a masterclass in Moroccan craftsmanship, with soaring zellige-clad archways, hand-painted ceilings, and acres of Italian marble.\n\nThe hotel features four world-class restaurants, a 27,000 square foot spa, three heated swimming pools, and impeccably maintained grounds that include citrus orchards, olive groves, and rose gardens. Every detail is designed to transport guests into a realm of timeless luxury.',
     images: [
-      'https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1200&q=80',
-      'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=1200&q=80',
-      'https://images.unsplash.com/photo-1580746738099-0cf2b4063740?w=1200&q=80',
+      '/images/hero-riad-interior.webp',
+      '/images/hero-kasbahs.webp',
+      '/images/hero-atlas.webp',
     ],
     rating: 4.9,
     reviewCount: 3876,
@@ -143,9 +143,9 @@ const accommodations: Accommodation[] = [
     description:
       'Riad Fes is an award-winning luxury riad tucked into the heart of the ancient Fes medina, widely regarded as one of the finest boutique properties in all of Morocco. The riad masterfully combines centuries-old Moroccan architecture with contemporary luxury, creating an atmosphere of refined elegance within the labyrinthine streets of the world\'s largest car-free urban area.\n\nThe interiors are a showcase of Morocco\'s finest artisanal traditions: exquisite zellige mosaic tilework in geometric patterns, intricately carved plaster arabesques, and painted cedar ceilings that took master craftsmen years to complete. The central courtyard features a serene pool surrounded by orange trees and jasmine.\n\nThe rooftop restaurant offers one of the most spectacular dining experiences in Fes, with panoramic views over the medina\'s sea of minarets and rooftops while guests savor refined Fassi cuisine. The on-site spa features a traditional hammam and a range of treatments using locally sourced argan oil and rose water.',
     images: [
-      'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=1200&q=80',
-      'https://images.unsplash.com/photo-1549140600-78c9b8275e9d?w=1200&q=80',
-      'https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1200&q=80',
+      '/images/hero-kasbahs.webp',
+      '/images/hero-fes.webp',
+      '/images/hero-riad-interior.webp',
     ],
     rating: 4.8,
     reviewCount: 2156,
@@ -174,9 +174,9 @@ const accommodations: Accommodation[] = [
     description:
       'Kasbah Tamadot is Sir Richard Branson\'s extraordinary mountain retreat, perched high in the Atlas Mountains near the village of Asni, just an hour from Marrakech. Originally purchased by Branson\'s mother Eve during a balloon expedition, the property has been transformed into one of Morocco\'s most exclusive and enchanting boutique hotels.\n\nThe kasbah blends traditional Berber architecture with Branson\'s signature eclectic style. Each of the 28 rooms and suites is individually designed, featuring antiques collected from around the world alongside local Moroccan craftsmanship. The infinity pool appears to float above the dramatic valley below, framed by snow-capped peaks and terraced orchards.\n\nGuests can embark on guided treks through Berber villages, ride mules to remote mountain hamlets, take cooking classes in traditional Berber cuisine, or simply relax in the world-class spa while gazing at the ever-changing mountain panorama. The hotel also supports the local community through the Eve Branson Foundation.',
     images: [
-      'https://images.unsplash.com/photo-1580746738099-0cf2b4063740?w=1200&q=80',
-      'https://images.unsplash.com/photo-1548017267-5765e9b2ccfb?w=1200&q=80',
-      'https://images.unsplash.com/photo-1568454537842-d933259bb258?w=1200&q=80',
+      '/images/hero-atlas.webp',
+      '/images/hero-sahara-sunrise.webp',
+      '/images/hero-climbing.webp',
     ],
     rating: 4.9,
     reviewCount: 1567,
@@ -205,9 +205,9 @@ const accommodations: Accommodation[] = [
     description:
       'Dar Ahlam, meaning "House of Dreams" in Arabic, is one of the world\'s most extraordinary boutique hotels, hidden within the ancient Skoura palm oasis outside Ouarzazate. This meticulously restored 19th-century kasbah offers an experience that transcends conventional hospitality, where every moment is choreographed as a bespoke surprise.\n\nThere are no menus, no set dining times, and no reception desk. Instead, each stay is an immersive journey guided by an intuitive staff who anticipate your desires before you express them. Meals appear in unexpected locations: a candlelit dinner atop the kasbah towers, a picnic in a hidden rose garden, breakfast served in a palmerie grove as the morning light filters through the fronds.\n\nThe property features just 14 suites, each a masterpiece of Moroccan design with museum-quality antiques, hand-loomed textiles, and walls finished in luminous tadelakt. The gardens are an oasis within an oasis, with ancient olive trees, a heated pool, and secret courtyards fragrant with jasmine and orange blossom.',
     images: [
-      'https://images.unsplash.com/photo-1548017267-5765e9b2ccfb?w=1200&q=80',
-      'https://images.unsplash.com/photo-1580746738099-0cf2b4063740?w=1200&q=80',
-      'https://images.unsplash.com/photo-1568454537842-d933259bb258?w=1200&q=80',
+      '/images/hero-sahara-sunrise.webp',
+      '/images/hero-atlas.webp',
+      '/images/hero-climbing.webp',
     ],
     rating: 4.9,
     reviewCount: 876,
@@ -236,9 +236,9 @@ const accommodations: Accommodation[] = [
     description:
       'The Sahara Luxury Camp offers an unforgettable glamping experience deep within the golden dunes of Erg Chebbi, Morocco\'s most spectacular sand sea near the village of Merzouga. Far from any light pollution, the camp sits beneath some of the clearest and most star-filled skies on the African continent.\n\nEach of the twelve luxury tents is spaciously appointed with handwoven Berber carpets, traditional lanterns, comfortable beds with premium linens, and a private en-suite bathroom with hot running water. The communal lounge tent features plush cushions and a central fire pit where guests gather for Gnawa music performances under the stars.\n\nThe experience begins with a sunset camel trek across the towering dunes, followed by a gourmet dinner of traditional Berber cuisine cooked in underground sand ovens. After dinner, guests stargaze with a guide who shares Berber astronomical traditions. Dawn brings the most magical moment: watching the first light paint the Saharan dunes in shades of amber, gold, and rose.',
     images: [
-      'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80',
-      'https://images.unsplash.com/photo-1548017267-5765e9b2ccfb?w=1200&q=80',
-      'https://images.unsplash.com/photo-1568454537842-d933259bb258?w=1200&q=80',
+      '/images/hero-desert.webp',
+      '/images/hero-sahara-sunrise.webp',
+      '/images/hero-climbing.webp',
     ],
     rating: 4.8,
     reviewCount: 2034,
@@ -267,9 +267,9 @@ const accommodations: Accommodation[] = [
     description:
       'Hotel Nord-Pinus Tangier occupies a commanding position on the Grand Socco, the vibrant gateway between Tangier\'s ancient medina and the modern ville nouvelle. This bohemian boutique hotel channels the artistic spirit of Tangier\'s legendary literary golden age, when writers like Paul Bowles, William Burroughs, and Jack Kerouac roamed its streets.\n\nThe hotel is a visual feast of eclectic vintage decor: each room is uniquely styled with Moroccan antiques, global curiosities, tribal textiles, and contemporary photography. The aesthetic captures the cosmopolitan soul of Tangier, a city that has always existed at the crossroads of Africa and Europe, tradition and modernity.\n\nThe rooftop bar and restaurant offer one of Tangier\'s most coveted views, spanning from the medina rooftops to the port, the Strait of Gibraltar, and on clear days, the coast of Spain. It is the perfect perch to sip a cocktail while watching the sun set over two continents.',
     images: [
-      'https://images.unsplash.com/photo-1553522991-71439aa3bf8c?w=1200&q=80',
-      'https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1200&q=80',
-      'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=1200&q=80',
+      '/images/hero-tangier-kasbah.webp',
+      '/images/hero-riad-interior.webp',
+      '/images/hero-kasbahs.webp',
     ],
     rating: 4.5,
     reviewCount: 987,
@@ -298,9 +298,9 @@ const accommodations: Accommodation[] = [
     description:
       "L'Heure Bleue Palais is an elegant boutique palace hotel nestled within the UNESCO-listed medina walls of Essaouira, the enchanting wind-swept coastal town on Morocco's Atlantic coast. Named after the magical \"blue hour\" light that bathes the town at dusk, this refined property is a haven of art, culture, and coastal sophistication.\n\nOriginally a grand private residence, the palais has been lovingly restored to showcase both its architectural heritage and a curated collection of Moroccan contemporary art. The interiors blend French colonial elegance with traditional Moroccan craftsmanship: soaring ceilings, ornate plasterwork, and beautiful zellige floors. A rooftop pool offers sweeping views over the medina and the Atlantic beyond.\n\nThe hotel also features a private cinema, a well-stocked library, and a refined restaurant serving fresh Atlantic seafood alongside classic Moroccan dishes. The spa incorporates local argan oil and ocean-inspired treatments that reflect Essaouira's unique maritime character.",
     images: [
-      'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=1200&q=80',
-      'https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1200&q=80',
-      'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=1200&q=80',
+      '/images/hero-essaouira.webp',
+      '/images/hero-riad-interior.webp',
+      '/images/hero-kasbahs.webp',
     ],
     rating: 4.7,
     reviewCount: 1432,
@@ -329,9 +329,9 @@ const accommodations: Accommodation[] = [
     description:
       "Equity Point Marrakech is a vibrant backpacker hostel housed in a beautifully restored traditional riad, just steps from the legendary Jemaa el-Fnaa square. The property proves that budget travel in Morocco doesn't mean sacrificing atmosphere or location, offering an unbeatable base for exploring the Red City.\n\nThe hostel centers around a classic riad courtyard with a refreshing plunge pool, surrounded by ornate archways and orange trees. The rooftop terrace is the social hub, with panoramic views over the medina and the Koutoubia Mosque minaret. It's where travelers from around the world gather to share stories over mint tea and plan adventures together.\n\nBoth private rooms and shared dormitories are available, all clean and well-maintained with Moroccan decorative touches. A generous breakfast buffet is included, and the hostel organizes daily walking tours, desert excursions, and pub crawls, making it easy to connect with fellow travelers.",
     images: [
-      'https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=1200&q=80',
-      'https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1200&q=80',
-      'https://images.unsplash.com/photo-1549140600-78c9b8275e9d?w=1200&q=80',
+      '/images/hero-morocco.webp',
+      '/images/hero-riad-interior.webp',
+      '/images/hero-fes.webp',
     ],
     rating: 4.3,
     reviewCount: 4521,
@@ -360,9 +360,9 @@ const accommodations: Accommodation[] = [
     description:
       "Riad Kniza is an intimate eleven-room jewel in the heart of the Marrakech medina, owned by one of Morocco's most distinguished collectors of traditional arts and antiques. Every corner of this remarkable property tells a story, with museum-quality Berber textiles, antique silver jewelry, rare ceramics, and vintage Moroccan photography creating an atmosphere that is equal parts gallery and guesthouse.\n\nEach room is uniquely decorated to reflect a different facet of Morocco's rich artistic heritage. Hand-carved cedar doors open onto spaces adorned with centuries-old kilim rugs, vintage brass lanterns, and original artworks. The courtyard, with its tinkling fountain and fragrant jasmine, provides a peaceful retreat from the vibrant souks just outside the door.\n\nThe riad's restaurant is renowned among food lovers for its exceptional traditional Moroccan cuisine, prepared by a team of talented local women cooks. Weekly cooking classes offer guests the chance to learn the secrets of dishes like pastilla, tagine, and preserved lemon chicken. The traditional hammam provides an authentic bathing experience with black soap and ghassoul clay.",
     images: [
-      'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=1200&q=80',
-      'https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1200&q=80',
-      'https://images.unsplash.com/photo-1549140600-78c9b8275e9d?w=1200&q=80',
+      '/images/hero-kasbahs.webp',
+      '/images/hero-riad-interior.webp',
+      '/images/hero-fes.webp',
     ],
     rating: 4.7,
     reviewCount: 1654,
@@ -391,9 +391,9 @@ const accommodations: Accommodation[] = [
     description:
       "The Four Seasons Hotel Casablanca is an urban oasis situated on the famous Corniche promenade, offering the perfect blend of oceanfront luxury and cosmopolitan sophistication in Morocco's largest and most dynamic city. The hotel's Moorish-inspired architecture creates a striking silhouette against the Atlantic Ocean backdrop.\n\nWith 186 rooms and suites, the property features extensive gardens, multiple swimming pools, and direct access to the beach promenade. The interiors marry international luxury standards with subtle Moroccan touches: marble floors, warm wood accents, and carefully chosen local artworks. Floor-to-ceiling windows in every room frame either ocean vistas or the manicured gardens below.\n\nDining options include a sophisticated French-Moroccan restaurant, a casual poolside grill, and an elegant lobby lounge serving afternoon tea. The spa is one of Casablanca's finest, with a comprehensive menu of treatments, a fully equipped fitness center, and a stunning indoor pool. The hotel also offers an exceptional kids' club, making it ideal for families.",
     images: [
-      'https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1200&q=80',
-      'https://images.unsplash.com/photo-1580746738099-0cf2b4063740?w=1200&q=80',
-      'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=1200&q=80',
+      '/images/hero-riad-interior.webp',
+      '/images/hero-atlas.webp',
+      '/images/hero-essaouira.webp',
     ],
     rating: 4.8,
     reviewCount: 2987,
@@ -422,9 +422,9 @@ const accommodations: Accommodation[] = [
     description:
       "Dar Zerhoune is a charming boutique guesthouse perched on the hillside of the holy town of Moulay Idriss Zerhoun, overlooking the ancient Roman ruins of Volubilis and the rolling green hills of the Meknes region. For centuries, non-Muslims were forbidden from spending the night in this sacred town, and Dar Zerhoune was among the first guesthouses to welcome international travelers when the restriction was lifted.\n\nThe property is run by a passionate British-Moroccan couple who have lovingly restored this traditional house into a warm and stylish retreat. The rooms are simple but beautifully appointed, with whitewashed walls, colorful Moroccan textiles, and personal touches that give the space a genuine homey atmosphere.\n\nThe rooftop terrace is the crown jewel, offering one of the most spectacular views in Morocco: a sweeping panorama of the Roman ruins, the hilltop town below, and olive groves stretching to the horizon. The home-cooked meals, prepared with ingredients from the local souk, are consistently praised as some of the best food guests have eaten in Morocco.",
     images: [
-      'https://images.unsplash.com/photo-1570804485046-99ca21dbdc43?w=1200&q=80',
-      'https://images.unsplash.com/photo-1549140600-78c9b8275e9d?w=1200&q=80',
-      'https://images.unsplash.com/photo-1568454537842-d933259bb258?w=1200&q=80',
+      '/images/hero-hassan-mosque.webp',
+      '/images/hero-fes.webp',
+      '/images/hero-climbing.webp',
     ],
     rating: 4.8,
     reviewCount: 765,
@@ -453,9 +453,9 @@ const accommodations: Accommodation[] = [
     description:
       "Lina Ryad & Spa is a stylish boutique riad nestled in the heart of Chefchaouen, Morocco's famous Blue Pearl. The property perfectly captures the ethereal blue-washed aesthetic that has made this small mountain town one of the most photographed destinations in North Africa, while adding a layer of modern comfort and design sophistication.\n\nThe riad features elegantly appointed rooms decorated in a palette of blues, whites, and natural woods, each with quality mattresses and linens that ensure a restful night's sleep. The indoor spa offers a traditional hammam, massage treatments using local essential oils, and a relaxation area where the stresses of travel simply melt away.\n\nThe crowning glory is the panoramic terrace, which offers breathtaking views over Chefchaouen's blue-washed buildings, the dramatic Rif Mountains rising behind, and the valley below. It is the perfect spot for a leisurely breakfast or sunset drink, watching the changing light transform the Blue Pearl's palette from azure to indigo.",
     images: [
-      'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?w=1200&q=80',
-      'https://images.unsplash.com/photo-1553522991-71439aa3bf8c?w=1200&q=80',
-      'https://images.unsplash.com/photo-1549140600-78c9b8275e9d?w=1200&q=80',
+      '/images/hero-chefchaouen.webp',
+      '/images/hero-tangier-kasbah.webp',
+      '/images/hero-fes.webp',
     ],
     rating: 4.6,
     reviewCount: 1876,
@@ -484,9 +484,9 @@ const accommodations: Accommodation[] = [
     description:
       "Sofitel Royal Bay Resort Agadir is a grand beachfront luxury hotel stretching along Agadir's famous golden sand beach on Morocco's southern Atlantic coast. The resort embodies the French art de vivre lifestyle combined with Moroccan warmth, offering a comprehensive beach holiday experience in one of the country's sunniest destinations with over 300 days of sunshine per year.\n\nThe property features extensive landscaped gardens with towering palm trees, multiple swimming pools including an impressive lagoon-style pool, and direct access to the wide, pristine beach. Rooms and suites are decorated in a contemporary Moroccan style with natural materials, warm tones, and private balconies or terraces overlooking the ocean or gardens.\n\nDining options span from a refined Moroccan restaurant to a beachside grill and an international buffet, all emphasizing fresh, locally sourced ingredients. The So SPA is a sanctuary of relaxation, featuring an indoor pool, traditional hammam, and a comprehensive menu of treatments. The resort also offers a nine-hole golf course, tennis courts, and a kids' club, making it ideal for both couples and families.",
     images: [
-      'https://images.unsplash.com/photo-1502680390548-bdbac40b3981?w=1200&q=80',
-      'https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1200&q=80',
-      'https://images.unsplash.com/photo-1580746738099-0cf2b4063740?w=1200&q=80',
+      '/images/hero-surfing.webp',
+      '/images/hero-riad-interior.webp',
+      '/images/hero-atlas.webp',
     ],
     rating: 4.6,
     reviewCount: 3245,
@@ -515,9 +515,9 @@ const accommodations: Accommodation[] = [
     description:
       "Dar Roumana, meaning \"House of the Pomegranate\" in Arabic, is a beautifully restored riad in the heart of the Fes medina that has earned a devoted following among food-loving travelers from around the world. Named after the ancient pomegranate tree that still grows in its courtyard, this six-room guesthouse elevates the Moroccan riad experience through its exceptional culinary program.\n\nThe property was lovingly restored by a Canadian-Moroccan couple who brought both international design sensibility and deep respect for traditional Fassi architecture. The result is a harmonious blend of contemporary comfort and centuries-old craftsmanship: smooth tadelakt walls in jewel tones, original hand-carved plaster, and modern bathrooms that incorporate traditional materials.\n\nThe cooking classes at Dar Roumana are legendary, led by expert chefs who guide guests through the souks to select ingredients before teaching the secrets of dishes that have been perfected over generations. The rooftop terrace offers one of the finest views in Fes, a 360-degree panorama of minarets, satellite dishes, and the distant Rif Mountains, best enjoyed with a glass of Moroccan wine at sunset.",
     images: [
-      'https://images.unsplash.com/photo-1549140600-78c9b8275e9d?w=1200&q=80',
-      'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=1200&q=80',
-      'https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1200&q=80',
+      '/images/hero-fes.webp',
+      '/images/hero-kasbahs.webp',
+      '/images/hero-riad-interior.webp',
     ],
     rating: 4.7,
     reviewCount: 1123,

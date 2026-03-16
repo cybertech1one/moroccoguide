@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/itineraries/3-day-marrakech',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=1200&h=630&fit=crop',
+        url: '/images/hero-marrakech.webp',
         width: 1200,
         height: 630,
         alt: 'Marrakech medina rooftops with Koutoubia Mosque minaret',
@@ -137,7 +137,7 @@ export default function ThreeDayMarrakechPage() {
       <section className="relative overflow-hidden bg-[var(--color-secondary-900)] text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=1600&q=80"
+            src="/images/hero-marrakech.webp"
             alt="Aerial view of Marrakech medina with terracotta rooftops and the Koutoubia Mosque"
             className="absolute inset-0 w-full h-full object-cover"
           />
@@ -743,7 +743,7 @@ export default function ThreeDayMarrakechPage() {
       <section className="relative overflow-hidden bg-[var(--color-primary)] text-white py-16 md:py-20">
         <div className="absolute inset-0 opacity-10">
           <img
-            src="https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=1600&q=80"
+            src="/images/hero-marrakech.webp"
             alt=""
             className="absolute inset-0 w-full h-full object-cover"
             aria-hidden="true"
@@ -786,8 +786,8 @@ export default function ThreeDayMarrakechPage() {
             <Link href="/itineraries/7-day-morocco" className="card-moroccan group overflow-hidden">
               <div className="relative h-40 overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=600&q=80"
-                  alt="Morocco desert and mountain landscape"
+                  src="/images/hero-desert.webp"
+                  alt="Golden Sahara Desert dunes and Atlas Mountains landscape on a 7-day Morocco itinerary"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
                 />
@@ -805,8 +805,8 @@ export default function ThreeDayMarrakechPage() {
             <Link href="/itineraries/5-day-desert" className="card-moroccan group overflow-hidden">
               <div className="relative h-40 overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1548017267-5765e9b2ccfb?w=600&q=80"
-                  alt="Sahara desert golden dunes"
+                  src="/images/hero-sahara-sunrise.webp"
+                  alt="Golden sand dunes of the Sahara Desert at sunrise near Merzouga, Morocco"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
                 />
@@ -824,8 +824,8 @@ export default function ThreeDayMarrakechPage() {
             <Link href="/itineraries/10-day-grand-tour" className="card-moroccan group overflow-hidden">
               <div className="relative h-40 overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?w=600&q=80"
-                  alt="Chefchaouen blue streets"
+                  src="/images/hero-chefchaouen.webp"
+                  alt="Blue-washed streets and doorways of Chefchaouen in the Rif Mountains, Morocco"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
                 />

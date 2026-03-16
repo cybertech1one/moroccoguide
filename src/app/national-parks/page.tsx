@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/national-parks',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&h=630&fit=crop',
+        url: '/images/hero-desert.webp',
         width: 1200,
         height: 630,
         alt: 'Panoramic view of Toubkal National Park in the High Atlas Mountains of Morocco',
@@ -95,7 +95,7 @@ const jsonLd = {
         'Complete guide to Morocco\'s 11 national parks and numerous nature reserves, covering trails, endemic species, permits, conservation, and responsible tourism.',
       url: 'https://citytoursmorocco.com/national-parks',
       touristType: ['Ecotourism', 'Hiking', 'Wildlife tourism', 'Nature photography'],
-      image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200',
+      image: '/images/hero-desert.webp',
       geo: {
         '@type': 'GeoCoordinates',
         latitude: 31.0600,
@@ -189,7 +189,7 @@ const nationalParks: NationalPark[] = [
     bestTrails: ['Toubkal Summit via Imlil (2 days)', 'Azzaden Valley Circuit (3-4 days)', 'Lac d\'Ifni Trek (2 days)', 'Tizi n\'Ouanoums Pass', 'Around Toubkal Circuit (5-6 days)'],
     permits: 'Small entry fee at Imlil trailhead. Licensed guide required for summit in winter. Mountain refuge reservations recommended.',
     bestSeason: 'April to June, September to November. Summit accessible June to October without technical gear.',
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=800',
+    image: '/images/hero-desert.webp',
     coordinates: { lat: 31.0600, lng: -7.9100 },
   },
   {
@@ -206,7 +206,7 @@ const nationalParks: NationalPark[] = [
     bestTrails: ['Azrou Cedar Forest Walk (2-3 hours)', 'Dayet Aoua Lake Circuit (half day)', 'Ras el Ma Spring Trail', 'Tizi n\'Tretten Ridge', 'Michliffen Forest Loop'],
     permits: 'No entry fee. Local guides available at Azrou and Ifrane. Vehicles restricted on some forest roads.',
     bestSeason: 'March to June for macaque babies and wildflowers. October to November for autumn colors. Snow possible December to February.',
-    image: 'https://images.unsplash.com/photo-1542273917363-1f3e5ce68a2c?q=80&w=800',
+    image: '/images/hero-atlas.webp',
     coordinates: { lat: 33.4000, lng: -5.1500 },
   },
   {
@@ -223,7 +223,7 @@ const nationalParks: NationalPark[] = [
     bestTrails: ['Oued Massa Estuary Walk (half day)', 'Northern Bald Ibis Cliff Trail (2-3 hours)', 'Coastal Dune Path to Sidi Rbat (full day)', 'Argan Forest Circuit (3 hours)', 'Tifnit Beach to Massa (full day)'],
     permits: 'Small entry fee at main gates. Guide strongly recommended for ibis viewing sites. 4WD useful for remote sections.',
     bestSeason: 'Year-round. October to March for peak waterbird numbers. Northern bald ibis visible year-round, best at dawn.',
-    image: 'https://images.unsplash.com/photo-1555224371-e29aa23e4440?q=80&w=800',
+    image: '/images/hero-coastal.webp',
     coordinates: { lat: 30.0500, lng: -9.6500 },
   },
   {
@@ -240,7 +240,7 @@ const nationalParks: NationalPark[] = [
     bestTrails: ['Akchour Waterfalls Trail (half day)', 'God\'s Bridge Natural Arch (3 hours)', 'Moroccan Fir Ridge Walk (full day)', 'Jebel Lakraa Summit (2 days)', 'Chefchaouen to Akchour (full day)'],
     permits: 'No formal entry fee. Small parking fee at Akchour trailhead. Licensed guide recommended for remote trails.',
     bestSeason: 'March to June for wildflowers. September to November for clear weather. Waterfalls best after winter rains (February to April).',
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?q=80&w=800',
+    image: '/images/hero-coastal.webp',
     coordinates: { lat: 35.1400, lng: -5.1600 },
   },
   {
@@ -257,7 +257,7 @@ const nationalParks: NationalPark[] = [
     bestTrails: ['Cala Iris Coastal Path (half day)', 'Bades Peninsula Circuit (3 hours)', 'Torres de Alcala Trail (full day)', 'Jebel Tidiquin Approach (2 days)', 'Marine Snorkeling Route (boat required)'],
     permits: 'No entry fee for terrestrial areas. Boat permits required for marine zones. Diving requires authorization from park authority.',
     bestSeason: 'May to October for marine activities and diving. April to June for osprey nesting. Year-round for coastal walks.',
-    image: 'https://images.unsplash.com/photo-1505142468610-359e7d316be0?q=80&w=800',
+    image: '/images/hero-coastal.webp',
     coordinates: { lat: 35.2500, lng: -3.9300 },
   },
   {
@@ -274,7 +274,7 @@ const nationalParks: NationalPark[] = [
     bestTrails: ['Lagoon Shoreline Walk (half day)', 'Dune Ridge to Ocean (3 hours)', 'Flamingo Observation Points (varies)', 'Coastal Cliff Path South (full day)', 'Desert Interior Drive Circuit (4WD, full day)'],
     permits: 'Registration required at park entrance. 4WD essential. No facilities within the park. Self-sufficient equipment necessary.',
     bestSeason: 'October to March for peak bird numbers. Year-round for desert landscapes. Avoid June to August due to extreme heat.',
-    image: 'https://images.unsplash.com/photo-1509023464722-18d996393ca8?q=80&w=800',
+    image: '/images/hero-sahara-sunrise.webp',
     coordinates: { lat: 28.0500, lng: -12.2500 },
   },
   {
@@ -291,7 +291,7 @@ const nationalParks: NationalPark[] = [
     bestTrails: ['M\'Goun Summit Trek (3-4 days)', 'Ait Bouguemez to Zawyat Ahansal (4 days)', 'Cathedral Rocks Circuit (full day)', 'Agouti Valley Walk (half day)', 'Tessaout Gorge Trek (2-3 days)'],
     permits: 'No entry fee. Licensed mountain guide strongly recommended for multi-day treks. Mule hire available in villages.',
     bestSeason: 'May to October for trekking. June for wildflowers. September to November for clearest skies and raptor migration.',
-    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=800',
+    image: '/images/hero-atlas.webp',
     coordinates: { lat: 31.5000, lng: -6.4500 },
   },
   {
@@ -308,7 +308,7 @@ const nationalParks: NationalPark[] = [
     bestTrails: ['Friouato Cave Descent (half day, guided)', 'Jebel Tazekka Summit Trail (full day)', 'Cascades de Ras el Oued Walk (2 hours)', 'Scenic Loop Road (driving, 3 hours)', 'Dayat Chiker Lake Circuit (2 hours)'],
     permits: 'Small fee for Friouato Cave entry. Guide required for cave descent. No fee for park trails.',
     bestSeason: 'March to June for waterfalls and wildflowers. October to November for autumn colors. Cave accessible year-round.',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800',
+    image: '/images/hero-todra-gorge.webp',
     coordinates: { lat: 34.0800, lng: -4.0100 },
   },
   {
@@ -325,7 +325,7 @@ const nationalParks: NationalPark[] = [
     bestTrails: ['Lake Bed Walk (varies with water levels)', 'Eastern Hammada Drive (4WD, full day)', 'Nomad Route Ouarzazate-Zagora (2 days)', 'Desert Dawn Wildlife Circuit (early morning)', 'Clay Pan Photography Walk (2-3 hours)'],
     permits: 'No formal entry system. 4WD essential. Self-sufficient travel required. GPS navigation recommended.',
     bestSeason: 'November to March for cooler temperatures. Lake most likely to fill December to February. Avoid June to August.',
-    image: 'https://images.unsplash.com/photo-1509023464722-18d996393ca8?q=80&w=800',
+    image: '/images/hero-sahara-sunrise.webp',
     coordinates: { lat: 30.2500, lng: -6.3500 },
   },
   {
@@ -342,7 +342,7 @@ const nationalParks: NationalPark[] = [
     bestTrails: ['Ourika Valley to Setti Fatma Waterfalls (half day)', 'Oukaimeden Plateau Circuit (full day)', 'Nfis Valley Trek (3-4 days)', 'Tizi n\'Test Pass Drive (scenic drive)', 'Rock Art Trail at Oukaimeden (2 hours)'],
     permits: 'No specific permits for buffer zones. Local guide cooperatives offer services in most valleys. Trekking permits may be required for certain corridors.',
     bestSeason: 'Year-round, varying by altitude. Oukaimeden: June to September for walking, December to March for skiing. Ourika: March to November.',
-    image: 'https://images.unsplash.com/photo-1496374200594-218d93021c8c?q=80&w=800',
+    image: '/images/hero-atlas.webp',
     coordinates: { lat: 31.2000, lng: -7.8600 },
   },
 ];

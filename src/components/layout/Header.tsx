@@ -102,13 +102,13 @@ const navigationItems: NavItem[] = [
       {
         title: 'Marrakech: Complete City Guide',
         href: '/cities/marrakech',
-        image: 'https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=400&h=250&fit=crop',
+        image: '/images/hero-marrakech-koutoubia.webp',
         tag: 'Most Popular',
       },
       {
         title: 'Chefchaouen: The Blue Pearl',
         href: '/cities/chefchaouen',
-        image: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?w=400&h=250&fit=crop',
+        image: '/images/hero-chefchaouen-drone.webp',
         tag: 'Trending',
       },
     ],
@@ -150,7 +150,7 @@ const navigationItems: NavItem[] = [
       {
         title: 'Top Attractions in Morocco',
         href: '/attractions',
-        image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=400&h=250&fit=crop',
+        image: '/images/hero-ait-benhaddou.webp',
         tag: 'Editor\'s Pick',
       },
     ],
@@ -183,7 +183,7 @@ const navigationItems: NavItem[] = [
       {
         title: '3-Day Sahara Desert Safari',
         href: '/tours/desert-safari',
-        image: 'https://images.unsplash.com/photo-1531219432768-9f540ce91ef3?w=400&h=250&fit=crop',
+        image: '/images/hero-camel-caravan.webp',
         tag: 'Best Seller',
       },
     ],
@@ -216,7 +216,7 @@ const navigationItems: NavItem[] = [
       {
         title: 'Best Riads in Morocco',
         href: '/accommodations',
-        image: 'https://images.unsplash.com/photo-1548018560-c7196e66ab53?w=400&h=250&fit=crop',
+        image: '/images/hero-riad-interior.webp',
         tag: 'Top Rated',
       },
     ],
@@ -249,7 +249,7 @@ const navigationItems: NavItem[] = [
       {
         title: 'Complete Guide to Moroccan Food',
         href: '/food',
-        image: 'https://images.unsplash.com/photo-1541518763-a2d81b93ddc4?w=400&h=250&fit=crop',
+        image: '/images/photo-tagine-closeup.webp',
         tag: 'Must Try',
       },
     ],
@@ -262,51 +262,61 @@ const navigationItems: NavItem[] = [
       {
         title: 'Adventure',
         items: [
-          { label: 'All Activities', href: '/activities' },
-          { label: 'Itineraries', href: '/itineraries' },
-          { label: 'Photo Gallery', href: '/gallery' },
-          { label: 'Travel Blog', href: '/blog' },
+          { label: 'Desert Safari', href: '/desert' },
+          { label: 'Trekking', href: '/trekking' },
+          { label: 'Surfing & Water Sports', href: '/water-sports' },
+          { label: 'Camping', href: '/camping' },
         ],
       },
       {
-        title: 'Explore More',
+        title: 'Outdoor',
         items: [
-          { label: 'Culture & Traditions', href: '/culture' },
-          { label: 'History of Morocco', href: '/history' },
-          { label: 'Regions of Morocco', href: '/regions' },
-          { label: 'Shopping Guide', href: '/shopping' },
+          { label: 'Stargazing', href: '/stargazing' },
+          { label: 'Horse Riding', href: '/horse-riding' },
+          { label: 'Climbing', href: '/climbing' },
+          { label: 'Overlanding', href: '/overlanding' },
         ],
+      },
+      {
+        title: 'Culture & Leisure',
+        items: [
+          { label: 'Hammam & Wellness', href: '/hammam' },
+          { label: 'Photography', href: '/photography' },
+          { label: 'Wine & Vineyards', href: '/wine' },
+          { label: 'Festivals & Events', href: '/festivals' },
+        ],
+      },
+    ],
+    featured: [
+      {
+        title: 'Sahara Desert: Ultimate Guide',
+        href: '/desert',
+        image: '/images/hero-sahara-sunrise.webp',
+        tag: 'Top Adventure',
       },
     ],
   },
   {
-    label: 'Local Guides',
-    href: '/guides',
+    label: 'Plan',
+    href: '/itineraries',
     icon: Users,
     columns: [
       {
-        title: 'Find a Guide',
+        title: 'Itineraries',
         items: [
-          { label: 'All Local Guides', href: '/guides' },
-          { label: 'Transport Guide', href: '/transport' },
-          { label: 'Safety Guide', href: '/safety' },
-          { label: 'Visa & Entry', href: '/visa' },
+          { label: '3 Days in Marrakech', href: '/itineraries/3-day-marrakech' },
+          { label: '5-Day Desert Tour', href: '/itineraries/5-day-desert' },
+          { label: '7-Day Morocco', href: '/itineraries/7-day-morocco' },
+          { label: '10-Day Grand Tour', href: '/itineraries/10-day-grand-tour' },
         ],
       },
-    ],
-  },
-  {
-    label: 'Events',
-    href: '/events',
-    icon: Calendar,
-    columns: [
       {
-        title: 'Festivals & Events',
+        title: 'Resources',
         items: [
-          { label: 'All Events', href: '/events' },
-          { label: 'Itineraries', href: '/itineraries' },
+          { label: 'Local Guides', href: '/guides' },
+          { label: 'Blog', href: '/blog' },
           { label: 'Photo Gallery', href: '/gallery' },
-          { label: 'Travel Blog', href: '/blog' },
+          { label: 'World Cup 2030', href: '/worldcup-2030' },
         ],
       },
     ],
@@ -319,19 +329,28 @@ const navigationItems: NavItem[] = [
       {
         title: 'Before You Go',
         items: [
+          { label: 'First Time Guide', href: '/first-time' },
           { label: 'Visa & Entry', href: '/visa' },
-          { label: 'Travel Tips', href: '/tips' },
-          { label: 'Packing Guide', href: '/tools/packing' },
-          { label: 'Safety Guide', href: '/safety' },
+          { label: 'Packing List', href: '/packing' },
+          { label: 'Money & Currency', href: '/money' },
         ],
       },
       {
         title: 'On the Ground',
         items: [
+          { label: 'Safety & Scams', href: '/scams' },
+          { label: 'Culture & Etiquette', href: '/etiquette' },
           { label: 'Getting Around', href: '/transport' },
-          { label: 'Culture & Etiquette', href: '/culture' },
-          { label: 'Weather Guide', href: '/tools/weather' },
-          { label: 'Distance Calculator', href: '/tools/distance' },
+          { label: 'Weather & Climate', href: '/weather' },
+        ],
+      },
+      {
+        title: 'Travel Styles',
+        items: [
+          { label: 'Solo Travel', href: '/solo-travel' },
+          { label: 'Women Travelers', href: '/women-travel' },
+          { label: 'Family Travel', href: '/family-guide' },
+          { label: 'Backpacking', href: '/backpacking' },
         ],
       },
     ],

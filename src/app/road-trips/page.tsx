@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/road-trips',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1548018560-c7196e66aca2?w=1200&h=630&fit=crop',
+        url: '/images/hero-desert.webp',
         width: 1200,
         height: 630,
         alt: 'Winding mountain road through the Atlas Mountains in Morocco',
@@ -122,7 +122,7 @@ const roadTripRoutes = [
     distance: '560 km one-way',
     difficulty: 'Moderate',
     difficultyColor: '#C4960C',
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=800',
+    image: '/images/hero-desert.webp',
     description:
       'Morocco\'s most iconic road trip. Cross the High Atlas via the legendary Tizi n\'Tichka pass at 2,260m, stop at the UNESCO-listed Ait Benhaddou kasbah, then drive through the rose-scented Dades Valley and on to the towering Erg Chebbi dunes of Merzouga. This is the route that defines Moroccan adventure travel.',
     highlights: [
@@ -149,7 +149,7 @@ const roadTripRoutes = [
     distance: '400 km',
     difficulty: 'Moderate',
     difficultyColor: '#C4960C',
-    image: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?q=80&w=800',
+    image: '/images/hero-chefchaouen.webp',
     description:
       'Wind through Morocco\'s dramatic northern mountains from the cosmopolitan port city of Tangier to the famous blue-painted medina of Chefchaouen and onward through the Rif to the ancient imperial city of Fes. Mountain roads are narrow and winding but the scenery of pine forests, hidden waterfalls, and terraced hillsides is spectacular.',
     highlights: [
@@ -176,7 +176,7 @@ const roadTripRoutes = [
     distance: '630 km',
     difficulty: 'Easy',
     difficultyColor: '#2d8a4e',
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?q=80&w=800',
+    image: '/images/hero-essaouira.webp',
     description:
       'Morocco\'s easiest and most relaxing road trip follows the Atlantic seaboard south from Casablanca. Pass through the Portuguese fortress town of El Jadida, the oyster village of Oualidia, the wind-swept ramparts of Essaouira, and the surf paradise of Taghazout before ending at the beach resort of Agadir. Flat, well-maintained highways with ocean views throughout.',
     highlights: [
@@ -204,7 +204,7 @@ const roadTripRoutes = [
     distance: '320 km',
     difficulty: 'Easy',
     difficultyColor: '#2d8a4e',
-    image: 'https://images.unsplash.com/photo-1545071677-2df608f54e72?q=80&w=800',
+    image: '/images/hero-yoga.webp',
     description:
       'A refreshing escape into Morocco\'s green heart. The Middle Atlas is a world away from the desert and medinas, with cedar forests sheltering Barbary macaques, alpine lakes, ski resorts, and the Swiss-style town of Ifrane. This short route is perfect as a 2-day side trip from Fes, combining mountain scenery, wildlife encounters, and Amazigh highland culture.',
     highlights: [
@@ -230,7 +230,7 @@ const roadTripRoutes = [
     distance: '480 km',
     difficulty: 'Moderate',
     difficultyColor: '#C4960C',
-    image: 'https://images.unsplash.com/photo-1542401886-65d6c61db217?q=80&w=800',
+    image: '/images/hero-horse-riding.webp',
     description:
       'The definitive kasbahs and gorges route, taking the most spectacular section of southern Morocco at a leisurely pace. Unlike the Sahara Route which rushes through, this itinerary gives you time to hike into the gorges, explore crumbling kasbahs, walk through rose fields, and truly absorb the dramatic landscapes of the Draa-Tafilalet region.',
     highlights: [
@@ -258,7 +258,7 @@ const roadTripRoutes = [
     distance: '370 km',
     difficulty: 'Easy-Moderate',
     difficultyColor: '#C4960C',
-    image: 'https://images.unsplash.com/photo-1548018560-c7196e66aca2?q=80&w=800',
+    image: '/images/hero-desert.webp',
     description:
       'Morocco\'s undiscovered south coast is a revelation. Leave the tourist trail behind and explore wild Atlantic beaches, Art Deco towns built by the Spanish, silver-working artisan villages, and dramatic cliffs plunging into the ocean. This route gets quieter and more dramatic the further south you go, ending at the frontier-feel town of Tan-Tan, gateway to the Saharan coast.',
     highlights: [
@@ -285,7 +285,7 @@ const roadTripRoutes = [
     distance: '750 km',
     difficulty: 'Easy',
     difficultyColor: '#2d8a4e',
-    image: 'https://images.unsplash.com/photo-1545071677-2df608f54e72?q=80&w=800',
+    image: '/images/hero-yoga.webp',
     description:
       'Visit all four of Morocco\'s imperial cities on well-maintained autoroutes. This cultural circuit connects Rabat\'s refined capital charm, Meknes\'s grandiose Moulay Ismail legacy, the unrivaled medieval medina of Fes, and the vibrant energy of Marrakech. The easiest road trip in Morocco with excellent signage and fast toll highways throughout.',
     highlights: [
@@ -314,7 +314,7 @@ const roadTripRoutes = [
     distance: '3,200 km',
     difficulty: 'Moderate-Challenging',
     difficultyColor: '#A0522D',
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=800',
+    image: '/images/hero-desert.webp',
     description:
       'The ultimate Moroccan road trip. Two weeks covering the country from Mediterranean to Sahara, Atlantic to mountains. This grand loop combines the best of every region: imperial cities, blue mountain villages, ancient kasbahs, towering sand dunes, dramatic gorges, wild coastline, and everything in between. This is the trip of a lifetime for those with the time to do Morocco justice.',
     highlights: [
@@ -535,7 +535,7 @@ export default function RoadTripsPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1548018560-c7196e66aca2?q=80&w=2800)',
+              'url(/images/hero-desert.webp',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

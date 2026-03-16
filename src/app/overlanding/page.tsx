@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/overlanding',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?w=1200&h=630&fit=crop',
+        url: '/images/hero-desert.webp',
         width: 1200,
         height: 630,
         alt: '4x4 vehicle driving through the Moroccan desert with sand dunes in the background',
@@ -140,7 +140,7 @@ const overlandRoutes = [
     difficultyColor: '#2d8a4e',
     terrain: 'Paved roads, coastal tracks, beach access',
     bestSeason: 'October - April',
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?q=80&w=800',
+    image: '/images/hero-coastal.webp',
     description:
       'The most popular overlanding route in Morocco follows the Atlantic coastline from Tangier south to Agadir and beyond. This is the classic winter-sun route for European vanlifers escaping the cold. Mostly paved with easy beach detours, it suits all vehicle types including standard camper vans. The coast offers endless wild camping on beaches, world-class surfing, fresh seafood markets, and the gorgeous fortress towns of El Jadida, Essaouira, and Sidi Ifni.',
     highlights: [
@@ -172,7 +172,7 @@ const overlandRoutes = [
     difficultyColor: '#C4960C',
     terrain: 'Mountain passes, gravel tracks, some pistes',
     bestSeason: 'April - June, September - November',
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=800',
+    image: '/images/hero-desert.webp',
     description:
       'Cross the backbone of Morocco via its legendary mountain passes. The Tizi n\'Tichka (2,260m) on the N9 is fully paved but spectacular, connecting Marrakech to the Saharan side. The Tizi n\'Test (2,092m) on the R203 is narrower, wilder, and far less trafficked, a genuine mountain adventure. For experienced overlanders, the dirt pistes through the High Atlas between Demnate and Imilchil offer some of the most remote and stunning driving in North Africa.',
     highlights: [
@@ -204,7 +204,7 @@ const overlandRoutes = [
     difficultyColor: '#C4960C',
     terrain: 'Paved, gravel pistes, soft sand sections',
     bestSeason: 'October - April (avoid summer heat)',
-    image: 'https://images.unsplash.com/photo-1548018560-c7196e66aca2?q=80&w=800',
+    image: '/images/photo-fantasia-tbourida.webp',
     description:
       'The crown jewel of Moroccan overlanding. This circuit takes you through the full spectrum of desert landscapes: the dramatic Dades and Todra gorges, the vast hamada (stone desert) plateaus, the towering Erg Chebbi dunes at Merzouga, and the endless Draa Valley palm groves leading to M\'hamid and the edge of the true Sahara. 4x4 recommended for the desert pistes between Merzouga and Zagora, though the main roads are paved.',
     highlights: [
@@ -236,7 +236,7 @@ const overlandRoutes = [
     difficultyColor: '#dc3545',
     terrain: 'Remote pistes, rocky tracks, some sand',
     bestSeason: 'November - March',
-    image: 'https://images.unsplash.com/photo-1512632578888-169bbbc64f33?q=80&w=800',
+    image: '/images/photo-fantasia-tbourida.webp',
     description:
       'The Anti-Atlas is Morocco\'s most underrated overlanding region. South of the High Atlas, this ancient granite landscape offers surreal rock formations, painted villages, prehistoric rock carvings, vast empty valleys, and some of the most spectacular free camping in the country. The loop through Tafraoute (with its famous painted rocks), Tata (date palm oasis), and Foum Zguid (gateway to Lac Iriqui) rewards those who seek emptiness and geological drama. 4x4 essential for many sections.',
     highlights: [
@@ -268,7 +268,7 @@ const overlandRoutes = [
     difficultyColor: '#2d8a4e',
     terrain: 'Paved roads, mountain roads, some forest tracks',
     bestSeason: 'March - June, September - November',
-    image: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?q=80&w=800',
+    image: '/images/hero-chefchaouen-drone.webp',
     description:
       'The green, mountainous north of Morocco is a world apart from the desert south. This circuit connects the Mediterranean port of Tangier, the legendary blue-washed medina of Chefchaouen, the ancient imperial cities of Fes and Meknes, and the cedar forests of the Middle Atlas with their Barbary macaques. The Rif mountains offer beautiful forest camping, and the well-paved roads suit all vehicle types. Combine this with the coast or desert route for the ultimate grand tour.',
     highlights: [

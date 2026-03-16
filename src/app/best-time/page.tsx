@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/best-time',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&h=630&fit=crop',
+        url: '/images/hero-desert.webp',
         width: 1200,
         height: 630,
         alt: 'Panoramic view of Morocco at golden hour with Atlas Mountains in the distance',
@@ -452,7 +452,7 @@ export default function BestTimePage() {
       <section className="relative overflow-hidden bg-[var(--color-primary-900)] text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1600&q=80"
+            src="/images/hero-desert.webp"
             alt="Sunset over Morocco with Atlas Mountains in the background"
             className="absolute inset-0 w-full h-full object-cover"
           />

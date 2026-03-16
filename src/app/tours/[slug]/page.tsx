@@ -65,9 +65,9 @@ const tours: Tour[] = [
     description:
       'Embark on the ultimate Moroccan adventure with this three-day Sahara Desert Safari departing from Marrakech. Cross the dramatic High Atlas Mountains via the Tizi n\'Tichka pass, stopping at the UNESCO World Heritage Site of Ait Ben Haddou before continuing through the Dades Valley and the towering Todra Gorge. The journey takes you through some of Morocco\'s most spectacular and varied landscapes, from lush palm oases to barren moonscapes.\n\nThe highlight of the trip is the camel trek into the Erg Chebbi dunes at sunset, where towering golden sand dunes rise up to 150 meters from the desert floor. You will ride dromedary camels along ancient caravan routes as the Sahara transforms into an extraordinary canvas of amber, crimson, and violet. Your Berber guides will lead you to a traditional desert camp where a tagine dinner is prepared over open fire, followed by Gnawa drumming under a sky blazing with stars.\n\nThe second night is spent in a comfortable desert camp in the heart of the dunes, where the silence and immensity of the Sahara create a profoundly peaceful atmosphere. Wake before dawn to climb a dune and watch the sunrise paint the desert in warm golden tones. The return journey follows a different route through the Valley of Roses, famous for its annual rose harvest, and the dramatic Dades Gorge with its twisted rock formations.\n\nThis safari is suitable for all fitness levels and ages, with comfortable private transport between destinations, experienced English-speaking guides, and well-equipped desert camps with private tents and proper bedding. It is the most popular tour in Morocco for good reason: no other experience captures the diversity and magic of the country in just three days.',
     images: [
-      'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80',
-      'https://images.unsplash.com/photo-1509023464722-18d996393ca8?w=1200&q=80',
-      'https://images.unsplash.com/photo-1504233529578-6d46baba6d34?w=1200&q=80',
+      '/images/hero-desert.webp',
+      '/images/hero-desert.webp',
+      '/images/hero-marrakech-koutoubia.webp',
     ],
     rating: 4.7,
     reviewCount: 3421,
@@ -110,9 +110,9 @@ const tours: Tour[] = [
     description:
       'Discover the grand sweep of Moroccan history and culture on this comprehensive seven-day circuit of the four Imperial Cities: Rabat, Meknes, Fes, and Marrakech. Each city served as the capital of a different Moroccan dynasty, and each preserves extraordinary monuments, medinas, and artistic traditions that reflect its period of greatest glory. This tour provides the most complete immersion in Morocco\'s imperial heritage available.\n\nBeginning in Casablanca, you will visit the magnificent Hassan II Mosque before traveling to Rabat, Morocco\'s current capital, to explore the Kasbah of the Udayas and the Hassan Tower. From Rabat, the route leads to Meknes, the "Versailles of Morocco," where Sultan Moulay Ismail built a vast palace complex, and to the nearby Roman ruins of Volubilis with their extraordinary mosaic floors.\n\nThe heart of the tour is two full days in Fes, Morocco\'s spiritual and intellectual capital. With a local guide, you will navigate the world\'s largest car-free urban area, visiting the al-Qarawiyyin University, the Bou Inania Madrasa, the Chouara Tannery, and the hidden workshops of master artisans. A detour to the blue-washed mountain town of Chefchaouen provides a stunning contrast to the intensity of Fes.\n\nThe final leg crosses the Middle Atlas Mountains, where cedar forests shelter Barbary macaques, before descending to Marrakech. Here, you will explore the Jardin Majorelle, the Bahia Palace, the Saadian Tombs, and the incomparable spectacle of Jemaa el-Fnaa. Throughout the journey, you will stay in carefully selected riads and boutique hotels that reflect the architectural character of each city.',
     images: [
-      'https://images.unsplash.com/photo-1549180030-48bf079c5993?w=1200&q=80',
-      'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=1200&q=80',
-      'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=1200&q=80',
+      '/images/hero-golf.webp',
+      '/images/hero-essaouira.webp',
+      '/images/hero-marrakech.webp',
     ],
     rating: 4.8,
     reviewCount: 1876,
@@ -159,9 +159,9 @@ const tours: Tour[] = [
     description:
       'Challenge yourself with this three-day trekking adventure through the spectacular High Atlas Mountains, culminating in a summit attempt of Mount Toubkal, the highest peak in North Africa at 4,167 meters. Starting from the traditional Berber village of Imlil, the trek follows ancient mule paths through terraced valleys, across high mountain passes, and past remote shepherding camps to the Toubkal Refuge, a mountain hut at 3,207 meters.\n\nThe first day of trekking takes you through the Azzaden Valley, one of the most beautiful and least visited valleys in the High Atlas. The trail winds through walnut groves and cherry orchards, past waterfalls and traditional stone houses, with each turn revealing new mountain vistas. Berber shepherds greet you along the way, and your muleteers transport the heavy gear while you walk unencumbered with just a daypack.\n\nDay two is the highlight: the summit push begins before dawn with headlamps illuminating the rocky trail. The final ascent involves some scrambling over loose scree, but the reward at the top is extraordinary -- a 360-degree panorama stretching from the Sahara Desert in the south to the Atlantic coast in the west and the rolling Haouz Plain surrounding Marrakech in the north. The descent to the Neltner Refuge provides well-earned rest.\n\nThis trek is suitable for reasonably fit hikers with some mountain experience, though no technical climbing skills are required. All equipment, experienced mountain guides, and hearty traditional meals are included. The combination of physical challenge, stunning scenery, authentic cultural encounters, and the accomplishment of standing on North Africa\'s rooftop makes this one of Morocco\'s most rewarding experiences.',
     images: [
-      'https://images.unsplash.com/photo-1504233529578-6d46baba6d34?w=1200&q=80',
-      'https://images.unsplash.com/photo-1545041117-2f58be4c4584?w=1200&q=80',
-      'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80',
+      '/images/hero-marrakech-koutoubia.webp',
+      '/images/hero-water-sports.webp',
+      '/images/hero-desert.webp',
     ],
     rating: 4.6,
     reviewCount: 2134,
@@ -204,9 +204,9 @@ const tours: Tour[] = [
     description:
       'Experience the best of Marrakech in a single, action-packed day with this comprehensive guided tour covering all the major landmarks, hidden gems, and cultural highlights of Morocco\'s most vibrant city. Led by a licensed local guide with deep knowledge of the city\'s 900-year history, this tour provides the perfect orientation for first-time visitors and new discoveries for returning travelers.\n\nThe morning begins with a visit to the serene Jardin Majorelle and its stunning Berber Museum before the heat of the day sets in. From there, you will explore the ornate interiors of the Bahia Palace, with its extraordinary painted ceilings and zellige floors, and the atmospheric ruins of the El Badi Palace. The morning continues with a visit to the beautifully preserved Saadian Tombs, hidden for centuries behind a wall and only rediscovered in 1917.\n\nAfter a traditional Moroccan lunch at a carefully chosen restaurant in the medina, the afternoon is devoted to the souks and artisan quarters. Your guide will navigate the labyrinthine market streets, stopping at workshops where craftsmen practice generations-old techniques of metalwork, leatherwork, woodcarving, and textile dyeing. You will visit spice merchants, carpet sellers, and the iconic Chouara Tannery.\n\nAs the afternoon fades into evening, you will be positioned perfectly to experience the magical transformation of Jemaa el-Fnaa square, watching the food stalls being assembled and the entertainers taking their positions as the sun sets over the Koutoubia Mosque. The tour concludes with a rooftop mint tea overlooking the square, leaving you with a deep appreciation for this extraordinary city.',
     images: [
-      'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=1200&q=80',
-      'https://images.unsplash.com/photo-1585232004423-244e0e6904e3?w=1200&q=80',
-      'https://images.unsplash.com/photo-1560448204-603b3fc33ddc?w=1200&q=80',
+      '/images/hero-marrakech.webp',
+      '/images/hero-majorelle-garden.webp',
+      '/images/hero-riad-interior.webp',
     ],
     rating: 4.8,
     reviewCount: 4567,
@@ -247,9 +247,9 @@ const tours: Tour[] = [
     description:
       'Navigate the world\'s largest car-free urban area with an expert local guide on this immersive walking tour of Fes el-Bali, the ancient medina that has been the spiritual and intellectual heart of Morocco for over a thousand years. With more than 9,000 alleyways, getting lost is almost inevitable without a guide, and this tour ensures you discover the most significant sites while also stumbling upon hidden treasures.\n\nYour guide will lead you through the labyrinthine streets to the iconic Chouara Tannery, where leather has been produced using traditional methods for nearly a millennium. From the elevated terraces of surrounding shops, you will gaze down on the honeycomb of stone vats filled with vivid natural dyes. The tour continues to the Bou Inania Madrasa, one of the finest examples of Marinid architecture, with its intricate carved stucco, zellige tilework, and towering cedar screens.\n\nThe walk passes through the different artisan quarters of the medina, each dedicated to a specific craft: the coppersmiths who hammer intricate designs into brass trays, the woodworkers who carve elaborate moucharabieh screens, and the weavers who produce silk brocades on hand looms. Your guide will introduce you to master artisans and explain the techniques that have been passed down through families for generations.\n\nThe tour includes a visit to the al-Qarawiyyin University complex, founded in 859 AD and recognized as the oldest existing educational institution in the world. A traditional lunch in a hidden riad restaurant provides a welcome break and a taste of authentic Fassi cuisine. The tour concludes at the iconic Bab Bou Jeloud, the ornate blue gate that serves as the main entrance to the medina.',
     images: [
-      'https://images.unsplash.com/photo-1549180030-48bf079c5993?w=1200&q=80',
-      'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=1200&q=80',
-      'https://images.unsplash.com/photo-1577828739793-698c09a53b24?w=1200&q=80',
+      '/images/hero-golf.webp',
+      '/images/hero-souk-lamps.webp',
+      '/images/hero-ait-benhaddou.webp',
     ],
     rating: 4.7,
     reviewCount: 2987,
@@ -290,9 +290,9 @@ const tours: Tour[] = [
     description:
       'Discover the wild beauty of Morocco\'s Atlantic coastline on this five-day road trip from Casablanca to Essaouira, with stops at charming fishing villages, ancient fortified ports, world-class surf breaks, and some of the most spectacular coastal scenery in North Africa. This tour reveals a side of Morocco that many visitors miss, trading the desert and mountains for crashing waves, ocean breezes, and fresh seafood.\n\nFrom Casablanca, the route heads south to the historic Portuguese fortified port of El Jadida, a UNESCO World Heritage Site with a remarkable underground cistern and rampart walks overlooking the ocean. Continue to Oualidia, a tranquil lagoon town famous for having the finest oysters in Morocco, where you will enjoy a seafood lunch by the water before continuing to the artistic port city of Safi, known for its distinctive pottery tradition.\n\nThe coastal road from Safi to Essaouira is one of the most scenic drives in Morocco, with dramatic cliff-top views, hidden beaches, and traditional argan oil cooperatives where Berber women crack the nuts and press the oil using ancient stone tools. The route passes through areas where goats famously climb argan trees, creating one of Morocco\'s most photographed scenes.\n\nThe tour culminates with two days in Essaouira, the "Wind City of Africa," a bohemian fortified port that has inspired artists and musicians from Jimi Hendrix to Orson Welles. The UNESCO-listed medina is a delight to explore, with its whitewashed buildings, blue shutters, and gallery-lined streets. The wide sandy beach stretches for miles, perfect for walking, horseback riding, or trying your hand at windsurfing or kitesurfing.',
     images: [
-      'https://images.unsplash.com/photo-1553244886-a796b2e8e01f?w=1200&q=80',
-      'https://images.unsplash.com/photo-1570698473651-b2de99bae12f?w=1200&q=80',
-      'https://images.unsplash.com/photo-1549180030-48bf079c5993?w=1200&q=80',
+      '/images/hero-fes.webp',
+      '/images/hero-marrakech.webp',
+      '/images/hero-golf.webp',
     ],
     rating: 4.5,
     reviewCount: 1543,
@@ -337,9 +337,9 @@ const tours: Tour[] = [
     description:
       'Unlock the secrets of Moroccan cuisine in this hands-on cooking class set in a beautiful traditional riad in the heart of the Marrakech Medina. Led by a professional Moroccan chef, you will learn to prepare an authentic multi-course Moroccan meal from scratch, starting with a guided tour of the local souk to select the freshest ingredients and rarest spices.\n\nThe experience begins with an immersive walk through the spice souk, where your chef guide explains the uses and origins of the dozens of spices that form the backbone of Moroccan cooking: saffron from Taliouine, ras el hanout blends unique to each spice merchant, preserved lemons, cumin, turmeric, and aromatic herbs. You will select your own ingredients and learn the art of haggling along the way.\n\nBack in the riad kitchen, the cooking begins. You will prepare a traditional Moroccan salad course, a main tagine (choosing from lamb, chicken, or vegetable options), handmade couscous rolled by hand in the traditional manner, and a sweet pastilla or Moroccan pastry for dessert. The chef demonstrates each technique while sharing family recipes passed down through generations, and you practice each step yourself.\n\nThe class culminates in a communal meal where you sit down to enjoy the fruits of your labor in the beautiful riad courtyard, accompanied by mint tea prepared the traditional way. You will leave with a recipe booklet and the confidence to recreate these dishes at home. This experience is as much a cultural immersion as a cooking lesson, offering insights into Moroccan family traditions, hospitality customs, and the central role of food in Moroccan social life.',
     images: [
-      'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=1200&q=80',
-      'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=1200&q=80',
-      'https://images.unsplash.com/photo-1549180030-48bf079c5993?w=1200&q=80',
+      '/images/hero-souk-lamps.webp',
+      '/images/hero-marrakech.webp',
+      '/images/hero-golf.webp',
     ],
     rating: 4.9,
     reviewCount: 3876,
@@ -380,9 +380,9 @@ const tours: Tour[] = [
     description:
       'Soar above the Moroccan landscape in a magnificent hot air balloon as the sun rises over the Atlas Mountains and the palm-dotted plains surrounding Marrakech. This unforgettable aerial experience offers a perspective of Morocco that few travelers ever see, with the entire High Atlas mountain range stretched across the horizon, traditional Berber villages dotting the countryside below, and the red walls of Marrakech glowing in the first light of day.\n\nThe adventure begins with a pre-dawn pickup from your hotel in Marrakech and a short drive to the launch site in the peaceful countryside. As the balloon is inflated and the burners roar to life, you will watch the massive envelope rise against the lightening sky. The gentle lift-off is smooth and surprisingly serene, and within moments you are floating silently above the Moroccan landscape at altitudes of up to 1,000 meters.\n\nThe flight lasts approximately one hour, during which the pilot navigates the balloon using thermal currents and wind layers. Below, you may see farmers tending their fields, camels being led along dusty tracks, and the distinctive pattern of traditional Moroccan villages with their rammed-earth walls and green courtyards. The Atlas Mountains provide a constant dramatic backdrop, their snow-capped peaks gleaming in the morning sun.\n\nAfter landing, a traditional Berber breakfast awaits in a tent set up in the countryside, featuring freshly baked msemen bread, honey, Moroccan preserves, fresh orange juice, and mint tea. A certificate of flight is presented, and you are transferred back to your hotel in Marrakech with the rest of the day free. The entire experience, from the otherworldly silence of the flight to the communal breakfast in the field, creates memories that last a lifetime.',
     images: [
-      'https://images.unsplash.com/photo-1585232004423-244e0e6904e3?w=1200&q=80',
-      'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=1200&q=80',
-      'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80',
+      '/images/hero-majorelle-garden.webp',
+      '/images/hero-marrakech.webp',
+      '/images/hero-desert.webp',
     ],
     rating: 4.7,
     reviewCount: 1654,
@@ -423,9 +423,9 @@ const tours: Tour[] = [
     description:
       'Escape the intensity of Fes for a day and discover the enchanting blue-washed mountain town of Chefchaouen, one of Morocco\'s most photogenic destinations. This full-day excursion takes you through the dramatic Rif Mountains on a scenic drive that is itself worth the trip, with panoramic viewpoints, lush valleys, and traditional Berber villages along the way.\n\nThe drive from Fes to Chefchaouen takes approximately four hours and passes through some of Morocco\'s most verdant countryside. The Rif Mountains are greener and more heavily forested than the Atlas ranges further south, with rolling hills covered in pine and cedar forests. Your driver will stop at several viewpoints along the way, offering spectacular vistas of the mountain landscape.\n\nUpon arrival in Chefchaouen, a local guide will lead you through the magical blue medina. Every surface is painted in varying shades of blue, from powder blue to deep cobalt, creating a dreamlike atmosphere that has made this small town world-famous. You will visit the central Place Outa el-Hammam with its 15th-century Grand Mosque, explore the small kasbah museum, and wander through the distinctive shops selling woven blankets, goat cheese, and Rif Mountain herbs.\n\nAfter a traditional lunch in a blue-walled restaurant with mountain views, you will have free time to explore on your own, photograph the iconic blue streets, and browse the artisan shops. The return drive offers different views as the late afternoon light transforms the mountain landscape. You will arrive back in Fes by evening, with a memory card full of blue-hued photographs and a renewed appreciation for Morocco\'s incredible diversity.',
     images: [
-      'https://images.unsplash.com/photo-1553244886-a796b2e8e01f?w=1200&q=80',
-      'https://images.unsplash.com/photo-1577828739793-698c09a53b24?w=1200&q=80',
-      'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=1200&q=80',
+      '/images/hero-fes.webp',
+      '/images/hero-ait-benhaddou.webp',
+      '/images/hero-souk-lamps.webp',
     ],
     rating: 4.6,
     reviewCount: 2345,
@@ -466,9 +466,9 @@ const tours: Tour[] = [
     description:
       'Experience the quintessential Sahara adventure with this overnight camel trek into the towering Erg Chebbi dunes from the desert village of Merzouga. This intimate desert experience strips away the modern world and immerses you in the timeless rhythm of the Sahara, from the gentle sway of a dromedary camel to the infinite silence of a starlit night in the dunes.\n\nThe trek begins in the late afternoon as the harsh midday heat subsides and the desert light begins to soften. Your Berber guide will help you mount your camel and lead the small caravan along the same routes used by trans-Saharan traders for centuries. As you penetrate deeper into the dune field, the modern world disappears behind walls of sand, and the only sounds are the soft padding of camel feet and the whisper of wind across the dune crests.\n\nYour desert camp is set in a dramatic location among the high dunes, with traditional Berber tents arranged around a central campfire. As the sun sets, the dunes transform through an incredible spectrum of colors. Dinner is a traditional tagine cooked over the campfire, followed by Berber drumming and singing. When the music fades, you will experience a night sky of almost supernatural clarity, with the Milky Way blazing overhead and shooting stars a regular occurrence.\n\nThe predawn wake-up call comes in time to climb a nearby dune for the sunrise, which paints the sand sea in shades of pink, gold, and amber. After a breakfast of Moroccan crepes, honey, and coffee, the return camel trek takes you back to Merzouga through the morning stillness. This overnight experience in the Sahara is consistently rated as one of the most memorable experiences in all of Morocco.',
     images: [
-      'https://images.unsplash.com/photo-1509023464722-18d996393ca8?w=1200&q=80',
-      'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80',
-      'https://images.unsplash.com/photo-1504233529578-6d46baba6d34?w=1200&q=80',
+      '/images/hero-desert.webp',
+      '/images/hero-desert.webp',
+      '/images/hero-marrakech-koutoubia.webp',
     ],
     rating: 4.8,
     reviewCount: 4123,
@@ -510,9 +510,9 @@ const tours: Tour[] = [
     description:
       'Capture the extraordinary visual diversity of Morocco on this five-day photography tour designed for enthusiast and advanced photographers. Led by a professional travel photographer with extensive Morocco experience, this small-group tour is timed to maximize golden hour shooting opportunities at Morocco\'s most photogenic locations, from the blue streets of Chefchaouen to the golden dunes of the Sahara.\n\nThe tour begins in Marrakech, where an evening session in the Jemaa el-Fnaa square provides the perfect introduction to street photography in Morocco\'s most visually intense environment. Your photography guide will share techniques for capturing candid portraits, managing challenging light conditions, and composing compelling images in chaotic environments. Early morning sessions in the quiet medina streets capture a different mood entirely.\n\nFrom Marrakech, the route takes you through the Atlas Mountains to the Sahara, with multiple stops at locations chosen specifically for their photographic potential: the kasbah of Ait Ben Haddou in late afternoon light, the towering walls of Todra Gorge, and the Erg Chebbi dunes at sunrise and sunset. The desert camp overnight provides opportunities for astrophotography and long-exposure night sky work under some of the darkest and clearest skies in North Africa.\n\nThe tour concludes with two days shooting in Fes and Chefchaouen, two of the most photogenic cities in the world. In Fes, your guide navigates you to hidden viewpoints, artisan workshops with perfect natural light, and the iconic Chouara Tannery. In Chefchaouen, pre-dawn sessions capture the blue streets without tourists, and your guide knows every angle that makes this blue city so captivating. Post-processing workshops are included each evening.',
     images: [
-      'https://images.unsplash.com/photo-1553244886-a796b2e8e01f?w=1200&q=80',
-      'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=1200&q=80',
-      'https://images.unsplash.com/photo-1509023464722-18d996393ca8?w=1200&q=80',
+      '/images/hero-fes.webp',
+      '/images/hero-marrakech.webp',
+      '/images/hero-desert.webp',
     ],
     rating: 4.9,
     reviewCount: 876,
@@ -557,9 +557,9 @@ const tours: Tour[] = [
     description:
       'Ride the legendary waves of Morocco\'s Atlantic coast at this week-long surf camp in Taghazout, a laid-back fishing village that has become one of the world\'s premier surf destinations. Whether you are a complete beginner or an experienced surfer looking to improve your technique, this camp combines daily surf sessions with a relaxed beach lifestyle, yoga, and authentic Moroccan hospitality.\n\nTaghazout sits at the center of a stretch of coastline blessed with an extraordinary concentration of world-class surf breaks. Anchor Point, just north of the village, is a legendary right-hand point break that produces long, perfectly formed waves. Hash Point, Panoramas, Killer Point, and Devil\'s Rock offer alternatives for different ability levels and swell conditions. Your experienced surf instructors know every break intimately and select the best spot each day based on conditions.\n\nThe camp is based in a comfortable surf house with ocean views, rooftop terrace, communal areas, and a relaxed social atmosphere. Each day includes a morning surf session with coaching, followed by video analysis over lunch. Afternoons offer optional yoga sessions, free surfing, exploring the village, or simply relaxing on the beach. The evenings feature communal dinners of fresh Moroccan food, often including the day\'s catch grilled on the rooftop terrace.\n\nBeyond the waves, Taghazout offers a unique cultural experience. The village retains its traditional fishing character, with colorful boats pulled up on the beach and fishermen mending nets alongside surfers waxing boards. Day trips to the nearby Paradise Valley, a stunning mountain oasis with natural swimming pools, and to the city of Agadir provide variety. The combination of consistent waves, warm water, affordable living, and Moroccan hospitality makes Taghazout the perfect surf destination.',
     images: [
-      'https://images.unsplash.com/photo-1570698473651-b2de99bae12f?w=1200&q=80',
-      'https://images.unsplash.com/photo-1553244886-a796b2e8e01f?w=1200&q=80',
-      'https://images.unsplash.com/photo-1504233529578-6d46baba6d34?w=1200&q=80',
+      '/images/hero-marrakech.webp',
+      '/images/hero-fes.webp',
+      '/images/hero-marrakech-koutoubia.webp',
     ],
     rating: 4.7,
     reviewCount: 2345,

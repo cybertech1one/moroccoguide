@@ -33,7 +33,7 @@ const attractions = [
     slug: 'erg-chebbi-dunes',
     description:
       'The crown jewel of the Moroccan Sahara, Erg Chebbi is a vast sea of golden-orange sand dunes stretching 22 kilometers long and 5 kilometers wide, with peaks reaching up to 150 meters in height. These are the tallest dunes in Morocco and among the most photogenic in all of the Sahara. The dunes change color throughout the day, from soft pink at dawn to deep orange at midday to fiery red at sunset. Walking barefoot on the warm sand as the dunes stretch endlessly before you is a transcendent experience.',
-    image: 'https://images.unsplash.com/photo-1509023464722-18d996393ca8?q=80&w=800',
+    image: '/images/hero-camel-caravan.webp',
     rating: 4.9,
     price: 'Free (guided excursions from 300 MAD)',
     hours: 'Accessible 24 hours',
@@ -45,7 +45,7 @@ const attractions = [
     slug: 'sunrise-camel-trek',
     description:
       'The quintessential Merzouga experience begins before dawn as you mount a dromedary camel and ride into the Erg Chebbi dunes to witness the sunrise over the Sahara. The one-hour trek weaves through the dune valleys as the sky transitions from deep indigo to blazing orange. At the summit, you dismount and watch the sun emerge over an ocean of sand in complete silence, broken only by the soft padding of camel hooves. Most desert camps and hotels arrange this daily excursion.',
-    image: 'https://images.unsplash.com/photo-1548018560-c7196e5010a0?q=80&w=800',
+    image: '/images/hero-camel-caravan.webp',
     rating: 4.8,
     price: '200-400 MAD per person',
     hours: 'Departure 5:00 AM (varies by season)',
@@ -57,7 +57,7 @@ const attractions = [
     slug: 'gnaoua-village',
     description:
       'Located about 7 kilometers south of Merzouga, the village of Khamlia is home to a community descended from sub-Saharan African people who were brought to Morocco centuries ago via trans-Saharan trade routes. The village is famous for its Gnaoua musicians, who perform hypnotic spiritual music using metal castanets (qraqeb), bass drums, and call-and-response chanting. Visitors can attend informal performances in the village, learn about Gnaoua traditions, and purchase locally made crafts.',
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=800',
+    image: '/images/hero-camel-caravan.webp',
     rating: 4.5,
     price: 'Free (donations appreciated, 50-100 MAD customary)',
     hours: 'Performances typically 10:00 AM - 5:00 PM',
@@ -69,7 +69,7 @@ const attractions = [
     slug: 'dayet-srji',
     description:
       'A remarkable seasonal lake that appears in the desert after winter and spring rains, creating a surreal landscape of water surrounded by Saharan dunes. When filled, the lake attracts an astonishing array of birdlife, including flamingos, which create a pink-and-orange spectacle against the golden sand. The sight of flamingos in the Sahara Desert is one of Morocco\'s most unexpected natural wonders. Even when dry, the salt flats create beautiful geometric patterns. Best visited between February and April.',
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800',
+    image: '/images/hero-camel-caravan.webp',
     rating: 4.3,
     price: 'Free',
     hours: 'Accessible during daylight hours',
@@ -81,7 +81,7 @@ const attractions = [
     slug: 'khamlia-village',
     description:
       'Beyond the Gnaoua music performances, Khamlia village itself is a fascinating destination that offers insight into the diverse ethnic heritage of the Saharan region. The village maintains traditions distinct from the surrounding Amazigh communities, including unique cuisine, textile designs, and oral histories tracing back to the ancient kingdoms of West Africa. Community-led tours take visitors through the village, where you can see traditional mud-brick architecture and learn about daily life at the edge of the desert.',
-    image: 'https://images.unsplash.com/photo-1545071677-8e71b0d2c3c7?q=80&w=800',
+    image: '/images/hero-camel-caravan.webp',
     rating: 4.2,
     price: 'Free (guided village tour 100 MAD)',
     hours: 'Daylight hours',
@@ -93,7 +93,7 @@ const attractions = [
     slug: 'fossil-mines',
     description:
       'The region around Merzouga was once covered by a prehistoric ocean, and the desert floor is rich with fossils dating back 350 to 500 million years. Several open fossil mines near the village of Taouz allow visitors to see trilobites, ammonites, and orthoceras embedded in the rock. Local artisans polish and shape the fossil-bearing stone into decorative items, tables, and jewelry. A visit to the mines offers a perspective-shifting reminder that this vast desert was once beneath the sea.',
-    image: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?q=80&w=800',
+    image: '/images/hero-camel-caravan.webp',
     rating: 4.1,
     price: '50-100 MAD (guided tour)',
     hours: '8:00 AM - 5:00 PM daily',
@@ -134,7 +134,7 @@ export default function MerzougaAttractionsPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1509023464722-18d996393ca8?q=80&w=2800)',
+              'url(/images/hero-desert.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

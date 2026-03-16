@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/adventure',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=1200&h=630&fit=crop',
+        url: '/images/hero-trekking.webp',
         width: 1200,
         height: 630,
         alt: 'Adventure trekking in the Atlas Mountains Morocco',
@@ -104,7 +104,7 @@ const adventureActivities = [
     bestSeason: 'September - April (peak: November - February)',
     cost: 'Surf lessons: $25-40/session. Board rental: $10-15/day. Surf camp packages: $300-600/week all-inclusive.',
     difficulty: 'All levels. Beginners welcome at beach breaks; advanced surfers at point breaks.',
-    image: 'https://images.unsplash.com/photo-1502680390548-bdbac40f0100?q=80&w=800',
+    image: '/images/hero-surfing.webp',
   },
   {
     title: 'Trekking - High Atlas',
@@ -132,7 +132,7 @@ const adventureActivities = [
     bestSeason: 'April - June, September - November. Toubkal summer only (June-September). Winter requires crampons and ice axes.',
     cost: 'Day hike with guide: $30-60. Multi-day trek: $50-100/day (guide, mule, food). Toubkal summit: $150-300 for 2-day package.',
     difficulty: 'Day hikes: Easy-Moderate. Toubkal/M\'Goun: Strenuous. No technical climbing required for standard routes.',
-    image: 'https://images.unsplash.com/photo-1493246507139-91e8fad9978e?q=80&w=800',
+    image: '/images/hero-trekking.webp',
   },
   {
     title: 'Trekking - Rif Mountains',
@@ -156,7 +156,7 @@ const adventureActivities = [
     bestSeason: 'March - June, September - November. Can be rainy in winter. Summer is warm but manageable at altitude.',
     cost: 'Day hike with guide: $25-50. Multi-day trek: $40-80/day. Chefchaouen-based treks are very affordable.',
     difficulty: 'Easy to Moderate. Akchour: Easy. Jebel Lakraa: Moderate-Strenuous.',
-    image: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?q=80&w=800',
+    image: '/images/hero-chefchaouen.webp',
   },
   {
     title: 'Trekking - Anti-Atlas',
@@ -180,7 +180,7 @@ const adventureActivities = [
     bestSeason: 'October - April. Too hot in summer. February for almond blossom in Tafraoute.',
     cost: 'Day hike with local guide: $20-40. Multi-day: $40-70/day. Very affordable region.',
     difficulty: 'Moderate. Navigation can be challenging; a local guide is recommended.',
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=800',
+    image: '/images/hero-desert.webp',
   },
   {
     title: 'Rock Climbing',
@@ -208,7 +208,7 @@ const adventureActivities = [
     bestSeason: 'October - April (hot in summer). Todra Gorge: October - May. Tafraoute: November - March.',
     cost: 'Guide: $40-80/day. Gear rental: $15-25/day. Climbing course: $60-120/day.',
     difficulty: 'Routes from 4a to 8c. Beginner-friendly with a guide; advanced climbers find world-class challenges.',
-    image: 'https://images.unsplash.com/photo-1522163182402-834f871fd851?q=80&w=800',
+    image: '/images/hero-climbing.webp',
   },
   {
     title: 'Kitesurfing',
@@ -232,7 +232,7 @@ const adventureActivities = [
     bestSeason: 'Dakhla: Year-round (peak April-October). Essaouira: April - September.',
     cost: 'Lessons: $60-100/session. Week-long kite camp (Dakhla): $500-1,200 (accommodation + lessons). Gear rental: $50-80/day.',
     difficulty: 'Requires lessons. Dakhla lagoon is excellent for beginners (flat water, consistent wind).',
-    image: 'https://images.unsplash.com/photo-1559288804-5e1e33d33fb8?q=80&w=800',
+    image: '/images/hero-water-sports.webp',
   },
   {
     title: 'Desert Adventures - 4x4 & Camel Trekking',
@@ -256,7 +256,7 @@ const adventureActivities = [
     bestSeason: 'October - April (summer is extremely hot: 50+ degrees C). Best conditions: November - March.',
     cost: 'Sunset camel ride: $25-50. Overnight desert camp: $50-150. Multi-day 4x4 expedition: $150-300/day. Luxury camp: $200-500/night.',
     difficulty: 'Camel rides: Easy (anyone can do it). 4x4 expeditions: Easy (you ride). Multi-day camel treks: Moderate (physical endurance needed).',
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=800',
+    image: '/images/hero-desert.webp',
   },
   {
     title: 'Sandboarding',
@@ -276,7 +276,7 @@ const adventureActivities = [
     bestSeason: 'October - April (summer is too hot). Best conditions early morning or late afternoon when sand is cooler and firmer.',
     cost: 'Usually included with desert tours ($50-150). Standalone: $15-30 with board rental.',
     difficulty: 'Easy to learn. Similar to snowboarding but slower. No experience needed. Walking back up the dune is the hard part.',
-    image: 'https://images.unsplash.com/photo-1494849417654-3d376cd13c22?q=80&w=800',
+    image: '/images/hero-sahara-sunrise.webp',
   },
   {
     title: 'Paragliding',
@@ -304,7 +304,7 @@ const adventureActivities = [
     bestSeason: 'Year-round. Best thermals: March - October. Calmest conditions: September - November.',
     cost: 'Tandem flight (20-30 min): $80-150. Full day course: $150-250. Multi-day pilot course: $500-1,000.',
     difficulty: 'Tandem flights require no experience. Solo flying requires certification.',
-    image: 'https://images.unsplash.com/photo-1494849417654-3d376cd13c22?q=80&w=800',
+    image: '/images/hero-sahara-sunrise.webp',
   },
   {
     title: 'Mountain Biking',
@@ -332,7 +332,7 @@ const adventureActivities = [
     bestSeason: 'October - May. Avoid summer heat in lower elevations. Higher altitude trails are rideable June-September.',
     cost: 'Guided day ride: $50-100. Multi-day tour: $80-150/day (guide, accommodation, meals). Bike rental: $25-50/day for a quality hardtail.',
     difficulty: 'Moderate to Advanced. Some trails suitable for fit beginners with guide.',
-    image: 'https://images.unsplash.com/photo-1544191696-102dbdaeeaa0?q=80&w=800',
+    image: '/images/hero-trekking.webp',
   },
   {
     title: 'Canyoning',
@@ -360,7 +360,7 @@ const adventureActivities = [
     bestSeason: 'April - October (water levels are best). Paradise Valley: Year-round (best May-September).',
     cost: 'Guided canyoning trip: $40-80/person. Half-day Paradise Valley tour from Agadir: $30-50.',
     difficulty: 'Beginner to Intermediate. Swimming ability required. Some routes involve rappelling and 5-10 meter cliff jumps.',
-    image: 'https://images.unsplash.com/photo-1470770841497-7b3200fa8a64?q=80&w=800',
+    image: '/images/hero-todra-gorge.webp',
   },
   {
     title: 'Quad Biking',
@@ -384,7 +384,7 @@ const adventureActivities = [
     bestSeason: 'Year-round. Cooler months (October-April) are more comfortable. Avoid midday in summer.',
     cost: '2-hour tour: $30-60. Half-day Agafay: $60-100. Full-day desert quad expedition: $100-200.',
     difficulty: 'No experience needed. Tours accommodate all levels. Minimum age typically 16.',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?q=80&w=800',
+    image: '/images/hero-overlanding.webp',
   },
   {
     title: 'Via Ferrata',
@@ -404,7 +404,7 @@ const adventureActivities = [
     bestSeason: 'October - April. Avoid summer heat on exposed rock faces.',
     cost: '$50-100/person with guide and equipment. Half-day activity.',
     difficulty: 'Moderate. No climbing experience needed but a reasonable head for heights is required. Harness and helmet provided.',
-    image: 'https://images.unsplash.com/photo-1522163182402-834f871fd851?q=80&w=800',
+    image: '/images/hero-climbing.webp',
   },
   {
     title: 'Hot Air Ballooning',
@@ -424,7 +424,7 @@ const adventureActivities = [
     bestSeason: 'Year-round (weather permitting). Best conditions: October - May with clear skies and calm winds.',
     cost: '$150-250 per person. Includes hotel pickup, flight (approx. 1 hour), and breakfast. Book 2-3 days ahead in peak season.',
     difficulty: 'Easy. No physical fitness required. Suitable for all ages including children.',
-    image: 'https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?q=80&w=800',
+    image: '/images/hero-marrakech-koutoubia.webp',
   },
   {
     title: 'Skiing & Snowboarding',
@@ -444,7 +444,7 @@ const adventureActivities = [
     bestSeason: 'January - March (dependent on snowfall). Snow is not guaranteed; check local reports.',
     cost: 'Lift pass: $10-20/day. Ski rental: $15-25/day. A fraction of European ski resort prices.',
     difficulty: 'Beginner to Intermediate runs. No challenging terrain. The experience is more about novelty than serious skiing.',
-    image: 'https://images.unsplash.com/photo-1551524559-8af4e6624178?q=80&w=800',
+    image: '/images/hero-atlas.webp',
   },
   {
     title: 'White Water Rafting',
@@ -468,7 +468,7 @@ const adventureActivities = [
     bestSeason: 'March - May (spring snowmelt). Water levels are too low in summer and autumn for most rivers.',
     cost: 'Half-day rafting: $40-80. Full-day with transport from Marrakech: $80-150.',
     difficulty: 'Beginner to Intermediate. Grade II-III rapids. Swimming ability required.',
-    image: 'https://images.unsplash.com/photo-1470770841497-7b3200fa8a64?q=80&w=800',
+    image: '/images/hero-todra-gorge.webp',
   },
   {
     title: 'Horseback Riding',
@@ -492,7 +492,7 @@ const adventureActivities = [
     bestSeason: 'Year-round. Autumn and spring are most comfortable. Beach rides are beautiful at any time.',
     cost: '1-hour ride: $20-40. Half-day with lunch: $60-100. Multi-day trek: $100-200/day.',
     difficulty: 'Beginner to Advanced. Most operators offer gentle horses for novices. Multi-day treks require basic riding ability.',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?q=80&w=800',
+    image: '/images/hero-overlanding.webp',
   },
   {
     title: 'Windsurfing',
@@ -512,7 +512,7 @@ const adventureActivities = [
     bestSeason: 'Essaouira: April - September (strongest winds June-August). Dakhla: Year-round.',
     cost: 'Equipment rental: $40-60/day. Lessons: $50-80/session. Week course: $250-400.',
     difficulty: 'Intermediate to Advanced in Essaouira (strong winds). Dakhla is more forgiving for beginners.',
-    image: 'https://images.unsplash.com/photo-1559288804-5e1e33d33fb8?q=80&w=800',
+    image: '/images/hero-water-sports.webp',
   },
   {
     title: 'Coasteering & Cliff Jumping',
@@ -532,7 +532,7 @@ const adventureActivities = [
     bestSeason: 'May - October (warm water). Paradise Valley is best June - September.',
     cost: 'Guided coasteering: $40-70/person. Paradise Valley is free (transport extra).',
     difficulty: 'Moderate. Swimming ability essential. Heights from 3-10 meters.',
-    image: 'https://images.unsplash.com/photo-1470770841497-7b3200fa8a64?q=80&w=800',
+    image: '/images/hero-todra-gorge.webp',
   },
   {
     title: 'Stargazing & Astro-Tourism',
@@ -556,7 +556,7 @@ const adventureActivities = [
     bestSeason: 'Year-round (clear skies most nights). New moon periods are best. October - March for cooler nights.',
     cost: 'Desert camp with stargazing: $50-200/night (budget to luxury). Telescope sessions: Often included.',
     difficulty: 'Easy. No physical activity required. Just look up.',
-    image: 'https://images.unsplash.com/photo-1507400492013-162706c8c05e?q=80&w=800',
+    image: '/images/hero-stargazing.webp',
   },
 ];
 
@@ -656,7 +656,7 @@ export default function AdventurePage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1493246507139-91e8fad9978e?q=80&w=2800)',
+              'url(/images/hero-trekking.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     type: 'article',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&h=630&fit=crop',
+        url: '/images/hero-desert.webp',
         width: 1200,
         height: 630,
         alt: 'Panoramic view of the High Atlas Mountains in Morocco',
@@ -81,7 +81,7 @@ const relatedArticles = [
     slug: 'moroccan-tea-culture',
     title: 'Moroccan Tea Culture: The Art of Mint Tea',
     excerpt: 'The ritual of Moroccan mint tea is a cornerstone of daily life and hospitality.',
-    image: 'https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=600&q=80',
+    image: '/images/photo-mint-tea-pouring.webp',
     category: 'Culture',
     readTime: '15 min read',
   },
@@ -89,7 +89,7 @@ const relatedArticles = [
     slug: 'medina-shopping-guide',
     title: 'How to Shop in Moroccan Medinas Like a Local',
     excerpt: 'Master the art of haggling and discover hidden artisan workshops.',
-    image: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80',
+    image: '/images/hero-souk-lamps.webp',
     category: 'Practical',
     readTime: '16 min read',
   },
@@ -97,7 +97,7 @@ const relatedArticles = [
     slug: 'sahara-desert-experiences',
     title: 'The Best Sahara Desert Experiences Beyond Camel Rides',
     excerpt: 'Discover sandboarding, stargazing camps, and luxury bivouacs in the dunes.',
-    image: 'https://images.unsplash.com/photo-1548017267-5765e9b2ccfb?w=600&q=80',
+    image: '/images/hero-sahara-sunrise.webp',
     category: 'Adventure',
     readTime: '10 min read',
   },
@@ -114,7 +114,7 @@ function JsonLd() {
     headline: 'Atlas Mountains Trekking: The Complete Guide',
     description:
       'Everything you need for trekking in Morocco\'s High Atlas Mountains, from Toubkal summit to gentle valley walks.',
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&q=80',
+    image: '/images/hero-desert.webp',
     datePublished: '2026-03-08',
     dateModified: '2026-03-08',
     author: { '@type': 'Person', name: 'Driss Tazi' },
@@ -146,7 +146,7 @@ export default function AtlasMountainsTrekkingPage() {
       <section className="relative overflow-hidden bg-[var(--color-primary-900)] text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1600&q=80"
+            src="/images/hero-desert.webp"
             alt="Panoramic view of the High Atlas Mountains with snow-capped peaks and green valleys"
             className="absolute inset-0 w-full h-full object-cover"
           />
@@ -180,7 +180,7 @@ export default function AtlasMountainsTrekkingPage() {
             <div className="flex flex-wrap items-center gap-6">
               <div className="flex items-center gap-3">
                 <img
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=150"
+                  src="/images/hero-morocco.webp"
                   alt="Driss Tazi"
                   className="w-12 h-12 rounded-full object-cover ring-2 ring-white/30"
                 />
@@ -381,7 +381,7 @@ export default function AtlasMountainsTrekkingPage() {
 
                   <div className="relative my-8 rounded-xl overflow-hidden">
                     <img
-                      src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=900&q=80"
+                      src="/images/hero-trekking.webp"
                       alt="Trekkers walking along a mountain trail with dramatic High Atlas peaks in the background"
                       className="w-full h-64 md:h-80 object-cover"
                     />
@@ -591,7 +591,7 @@ export default function AtlasMountainsTrekkingPage() {
                 <div className="card-featured p-6 md:p-8 mt-12">
                   <div className="flex items-start gap-4">
                     <img
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=150"
+                      src="/images/hero-morocco.webp"
                       alt="Driss Tazi"
                       className="w-16 h-16 rounded-full object-cover ring-2 ring-[var(--color-accent-200)]"
                     />

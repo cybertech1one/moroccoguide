@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/water-sports',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1502680390548-bdbac40cee81?w=1200&h=630&fit=crop',
+        url: '/images/hero-coastal.webp',
         width: 1200,
         height: 630,
         alt: 'Surfer riding a wave on the Moroccan Atlantic coast',
@@ -94,7 +94,7 @@ const jsonLd = {
         'Complete guide to water sports along Morocco\'s 3,500 km coastline, including surfing, kitesurfing, diving, snorkeling, SUP, kayaking, sailing, and white water rafting.',
       url: 'https://citytoursmorocco.com/water-sports',
       touristType: ['Water sports', 'Surfing', 'Kitesurfing', 'Diving', 'Adventure sports'],
-      image: 'https://images.unsplash.com/photo-1502680390548-bdbac40cee81?w=1200',
+      image: '/images/hero-coastal.webp',
       address: {
         '@type': 'PostalAddress',
         addressCountry: 'MA',
@@ -687,7 +687,7 @@ export default function WaterSportsPage() {
           <div className="card-moroccan overflow-hidden mb-10">
             <div className="relative h-72 md:h-96">
               <img
-                src="https://images.unsplash.com/photo-1455729552457-5c322b47ff7e?q=80&w=1200"
+                src="/images/hero-surfing.webp"
                 alt="Surfer riding a wave at Taghazout, Morocco's surf capital"
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -748,7 +748,7 @@ export default function WaterSportsPage() {
             <div className="grid md:grid-cols-2">
               <div className="relative h-64 md:h-auto">
                 <img
-                  src="https://images.unsplash.com/photo-1502933691298-84fc14542831?q=80&w=800"
+                  src="/images/hero-surfing.webp"
                   alt="Long wave at Imsouane bay, longest right-hand wave in Africa"
                   className="w-full h-full object-cover"
                   loading="lazy"

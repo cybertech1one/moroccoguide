@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/jewish-heritage',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=1200&h=630&fit=crop',
+        url: '/images/hero-fes.webp',
         width: 1200,
         height: 630,
         alt: 'Historic synagogue interior in Morocco with ornate tilework and chandeliers',
@@ -170,7 +170,7 @@ const heritageSites = [
     sites: [
       {
         name: 'Ibn Danan Synagogue',
-        image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80',
+        image: '/images/hero-fes.webp',
         description:
           'Built in the 17th century and beautifully restored in 1999, the Ibn Danan Synagogue is one of the most important Jewish heritage sites in Morocco. Located in the heart of the Fes mellah, it features a subterranean mikveh (ritual bath) fed by a natural spring, an ornate Torah ark, and balconies where women once prayed. The synagogue is named after the prominent Danan rabbinical family who served the community for centuries.',
         hours: 'Daily 9:00-17:00 (closed Saturdays and Jewish holidays)',
@@ -178,7 +178,7 @@ const heritageSites = [
       },
       {
         name: 'Fes Mellah',
-        image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=600&q=80',
+        image: '/images/hero-fes.webp',
         description:
           'Established in 1438, the Fes mellah is the oldest Jewish quarter in Morocco and gave the word "mellah" to all subsequent Jewish districts across the country. Located adjacent to the Royal Palace (a deliberate placement that signified royal protection), the quarter once housed 250,000 Jewish residents. Its distinctive balconied architecture, with outward-facing windows unlike the inward-looking Muslim medina houses, remains a defining feature.',
         hours: 'Accessible at all times (public streets)',
@@ -186,7 +186,7 @@ const heritageSites = [
       },
       {
         name: 'Jewish Cemetery of Fes',
-        image: 'https://images.unsplash.com/photo-1548017544-09dbc9fb99f6?w=600&q=80',
+        image: '/images/hero-kasbahs.webp',
         description:
           'The vast Jewish cemetery of Fes, with its rows of stark white tombs stretching across the hillside near the mellah, is one of the largest Jewish cemeteries in Morocco. Containing graves dating back centuries, it is a profoundly moving testament to the depth and longevity of Jewish life in the city. The tombs of several revered rabbis attract pilgrims to this day.',
         hours: 'Daily 8:00-18:00',
@@ -199,7 +199,7 @@ const heritageSites = [
     sites: [
       {
         name: 'Slat al-Azama Synagogue (Lazama)',
-        image: 'https://images.unsplash.com/photo-1560095633-6858e1e1e682?w=600&q=80',
+        image: '/images/hero-marrakech.webp',
         description:
           'Hidden behind an unassuming door in the Marrakech mellah, the Slat al-Azama Synagogue (also known as the Lazama Synagogue) is the most important and best-preserved synagogue in the city. Dating to the 16th century, it features a stunning cobalt-blue interior courtyard, intricate zellige tilework, and carved stucco that rivals the finest Islamic architecture in the city. The name "Lazama" refers to the "Megurashim" &mdash; Jews expelled from the Iberian Peninsula who founded the congregation.',
         hours: 'Sunday-Friday 9:00-18:00 (closed Saturdays)',
@@ -207,7 +207,7 @@ const heritageSites = [
       },
       {
         name: 'Marrakech Mellah',
-        image: 'https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=600&q=80',
+        image: '/images/hero-marrakech.webp',
         description:
           'The Marrakech mellah, established in 1558 under the Saadian dynasty, was once home to a thriving community of over 35,000 Jews. Located near the Bahia Palace and the Royal Palace, the quarter is characterized by its distinctive architecture with wooden balconies and open-fronted shops. Today, the mellah has been largely repopulated by Muslim residents, but its unique character and several synagogues survive as reminders of its heritage.',
         hours: 'Accessible at all times',
@@ -215,7 +215,7 @@ const heritageSites = [
       },
       {
         name: 'Miara Cemetery',
-        image: 'https://images.unsplash.com/photo-1504898770365-14faca6a7320?w=600&q=80',
+        image: '/images/hero-marrakech.webp',
         description:
           'The Miara Cemetery is the principal Jewish burial ground of Marrakech, dating to at least the 16th century. Its whitewashed tombs, arranged in long rows within high walls, contain the remains of generations of Marrakech&apos;s Jewish community, including many revered rabbinical scholars. Certain tombs are believed to possess healing powers and are visited during annual Hiloula pilgrimages.',
         hours: 'Daily 7:00-18:00',
@@ -228,7 +228,7 @@ const heritageSites = [
     sites: [
       {
         name: 'Slat al-Azama Synagogue',
-        image: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=600&q=80',
+        image: '/images/hero-essaouira.webp',
         description:
           'Essaouira&apos;s beautifully restored Slat al-Azama Synagogue, located in the heart of the medina, stands as a testament to the city&apos;s once-thriving Jewish community, which at its peak in the 19th century comprised nearly 40% of the city&apos;s population. The synagogue features traditional Moroccan architectural elements including carved wood, brass chandeliers, and painted tile floors.',
         hours: 'Sunday-Friday 10:00-18:00',
@@ -236,7 +236,7 @@ const heritageSites = [
       },
       {
         name: 'Bayt Dakira (House of Memory)',
-        image: 'https://images.unsplash.com/photo-1577147443647-81856d5151af?w=600&q=80',
+        image: '/images/hero-morocco.webp',
         description:
           'Opened in 2020, Bayt Dakira is a museum and cultural center dedicated to preserving the memory of Essaouira&apos;s Jewish heritage. Housed in a beautifully renovated riad adjacent to the Slat al-Azama Synagogue, the museum features exhibits on Jewish-Muslim coexistence, historical photographs, religious artifacts, and the stories of prominent Jewish families from Essaouira (formerly known as Mogador). King Mohammed VI inaugurated the museum as a symbol of Morocco&apos;s commitment to pluralism.',
         hours: 'Sunday-Friday 10:00-18:00',
@@ -249,7 +249,7 @@ const heritageSites = [
     sites: [
       {
         name: 'Museum of Moroccan Judaism',
-        image: 'https://images.unsplash.com/photo-1569336415962-a4bd9f69c07a?w=600&q=80',
+        image: '/images/hero-morocco.webp',
         description:
           'The Museum of Moroccan Judaism in Casablanca is the only Jewish museum in the Arab world, a distinction that speaks volumes about Morocco&apos;s unique tradition of religious tolerance. Founded in 1997 in the Oasis neighborhood, the museum houses a remarkable collection of Torah scrolls, Hanukkah menorahs, traditional clothing, wedding dresses, and photographs documenting Jewish life across Morocco. The collection of antique kaftans, jewelry, and ceremonial objects is particularly striking.',
         hours: 'Monday-Friday 10:00-17:00, Sunday 11:00-15:00',
@@ -257,7 +257,7 @@ const heritageSites = [
       },
       {
         name: 'Beth-El Synagogue',
-        image: 'https://images.unsplash.com/photo-1545071677-2df608f54e72?w=600&q=80',
+        image: '/images/hero-hassan-mosque.webp',
         description:
           'The Beth-El Synagogue in the Lusitania district of Casablanca is the principal active synagogue serving the city&apos;s remaining Jewish community. Built in the 1940s, it hosts regular Shabbat services and community events. The synagogue&apos;s Art Deco-influenced architecture reflects Casablanca&apos;s mid-century cosmopolitan character. Visitors are welcome by prior arrangement with the community.',
         hours: 'By arrangement (contact Jewish community)',
@@ -270,7 +270,7 @@ const heritageSites = [
     sites: [
       {
         name: 'Jewish Cemetery of Rabat',
-        image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=600&q=80',
+        image: '/images/hero-morocco.webp',
         description:
           'The Jewish cemetery of Rabat, located near the mellah in the old city, is a well-maintained burial ground with graves dating back several centuries. Recently restored with support from the Moroccan government, the cemetery is a quiet, reflective space that honors the Jewish community&apos;s long presence in the capital city. Several notable rabbis and community leaders are buried here.',
         hours: 'Daily 8:00-17:00',
@@ -283,7 +283,7 @@ const heritageSites = [
     sites: [
       {
         name: 'Jewish Cemetery of Ifrane',
-        image: 'https://images.unsplash.com/photo-1504870712536-2d1d2d50be00?w=600&q=80',
+        image: '/images/hero-atlas.webp',
         description:
           'Not to be confused with the modern Alpine-style city of Ifrane in the Middle Atlas, the ancient Ifrane of the Anti-Atlas (Ifrane de l&apos;Anti-Atlas) is home to one of the oldest Jewish cemeteries in Morocco. Jewish tradition holds that a community has existed here since the destruction of the First Temple in Jerusalem in 586 BCE, making it potentially one of the oldest Jewish sites in the world. The cemetery contains ancient tombstones with Hebrew inscriptions that have attracted scholarly interest.',
         hours: 'Daylight hours (ask locally for access)',
@@ -296,7 +296,7 @@ const heritageSites = [
     sites: [
       {
         name: 'Historic Jewish Quarter of Demnate',
-        image: 'https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=600&q=80',
+        image: '/images/hero-berber-culture.webp',
         description:
           'The small town of Demnate, nestled at the foot of the High Atlas southeast of Marrakech, was home to one of Morocco&apos;s most significant Jewish communities until the mid-20th century. The Jewish quarter, with its narrow streets and traditional houses, still bears the marks of its former inhabitants. A historic synagogue has been restored, and the Jewish cemetery overlooking the town contains hundreds of graves. Demnate is also famous for the natural Imi n&apos;Ifri rock bridge nearby.',
         hours: 'Accessible at all times (synagogue hours vary)',
@@ -309,7 +309,7 @@ const heritageSites = [
     sites: [
       {
         name: 'Meknes Mellah & Synagogues',
-        image: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=600&q=80',
+        image: '/images/hero-essaouira.webp',
         description:
           'The mellah of Meknes, established during the reign of Sultan Moulay Ismail in the late 17th century, was once home to a substantial Jewish community that served the imperial court. Several synagogues survive in varying states of preservation, and the Jewish cemetery contains the tomb of Rabbi David HaMizrachi, a pilgrimage site. The mellah&apos;s proximity to the Imperial Palace reflects the pattern of royal protection found in all Moroccan Jewish quarters.',
         hours: 'Accessible at all times (synagogues by arrangement)',
@@ -468,7 +468,7 @@ export default function JewishHeritagePage() {
       <section className="relative overflow-hidden bg-[var(--color-primary-900)] text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=1600&q=80"
+            src="/images/hero-fes.webp"
             alt="Historic synagogue in Morocco with ornate Moorish architecture"
             className="absolute inset-0 w-full h-full object-cover"
           />
@@ -628,7 +628,7 @@ export default function JewishHeritagePage() {
           <div className="card-moroccan overflow-hidden flex flex-col md:flex-row max-w-5xl mx-auto">
             <div className="relative w-full md:w-2/5 h-72 md:h-auto shrink-0">
               <img
-                src="https://images.unsplash.com/photo-1577147443647-81856d5151af?w=800&q=80"
+                src="/images/hero-essaouira.webp"
                 alt="Historic view of Rabat, Morocco where King Mohammed V protected Jewish citizens"
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -772,7 +772,7 @@ export default function JewishHeritagePage() {
           <div className="card-moroccan overflow-hidden flex flex-col md:flex-row max-w-5xl mx-auto">
             <div className="relative w-full md:w-2/5 h-64 md:h-auto shrink-0">
               <img
-                src="https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=800&q=80"
+                src="/images/hero-fes.webp"
                 alt="Narrow street in a historic Moroccan mellah district"
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -835,7 +835,7 @@ export default function JewishHeritagePage() {
           <div className="card-moroccan overflow-hidden flex flex-col md:flex-row-reverse max-w-5xl mx-auto">
             <div className="relative w-full md:w-2/5 h-64 md:h-auto shrink-0">
               <img
-                src="https://images.unsplash.com/photo-1569336415962-a4bd9f69c07a?w=800&q=80"
+                src="/images/hero-morocco.webp"
                 alt="Museum of Moroccan Judaism exterior in Casablanca"
                 className="w-full h-full object-cover"
                 loading="lazy"

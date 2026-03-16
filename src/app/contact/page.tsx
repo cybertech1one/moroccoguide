@@ -139,7 +139,7 @@ export default function ContactPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?q=80&w=2800)',
+              'url(/images/hero-souk-lamps.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

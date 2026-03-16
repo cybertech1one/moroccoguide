@@ -56,7 +56,7 @@ export const metadata: Metadata = {
       'Discover Morocco through its 12 diverse regions. Interactive map, imperial cities, Sahara desert, Atlas mountains, Mediterranean coast, climate guides, and more.',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=2800',
+        url: '/images/hero-desert.webp',
         width: 2800,
         height: 1600,
         alt: "Morocco's diverse regions and landscapes",
@@ -131,7 +131,7 @@ const regionDetails: RegionCardData[] = [
     description: 'Where Africa meets Europe at the Strait of Gibraltar',
     capital: 'Tangier',
     cityCount: 5,
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?q=80&w=1200',
+    image: '/images/hero-essaouira.webp',
     longDescription:
       'The gateway to Africa where the Mediterranean meets the Atlantic, this region offers a dazzling mix of cosmopolitan port cities, blue-washed mountain villages, and pristine Rif Mountain landscapes. Tangier buzzes with artistic energy, Chefchaouen glows in shades of blue, and Al Hoceima offers unspoiled Mediterranean beaches.',
     highlights: ['Chefchaouen Blue City', 'Tangier Kasbah', 'Rif Mountains', 'Cap Spartel'],
@@ -156,7 +156,7 @@ const regionDetails: RegionCardData[] = [
     description: 'Eastern frontier with Mediterranean charm',
     capital: 'Oujda',
     cityCount: 3,
-    image: 'https://images.unsplash.com/photo-1519451241324-20b4ea2c4220?q=80&w=1200',
+    image: '/images/hero-morocco.webp',
     longDescription:
       "Morocco's easternmost region blends Mediterranean and Saharan influences in a captivating cultural mosaic. The border city of Oujda pulses with Rai music heritage, while the pristine beaches of Saidia -- Morocco's \"Blue Pearl of the Mediterranean\" -- stretch for 14 kilometers. The Beni Snassen mountains and Zegzel gorges offer rewarding exploration off the beaten path.",
     highlights: ['Saidia Beaches', 'Oujda Medina', 'Beni Snassen Mountains', 'Berkane Citrus Groves'],
@@ -183,7 +183,7 @@ const regionDetails: RegionCardData[] = [
     description: 'Imperial cities and spiritual heartland',
     capital: 'Fes',
     cityCount: 6,
-    image: 'https://images.unsplash.com/photo-1553531889-e6cf4d692b1b?q=80&w=1200',
+    image: '/images/art-zellige-pattern.webp',
     longDescription:
       "Home to two of Morocco's four imperial cities, this region is the spiritual and intellectual soul of the kingdom. Fes boasts the world's oldest university and its medieval medina is a UNESCO treasure, while Meknes dazzles with its grand Ismaili architecture. Nearby, the Roman ruins of Volubilis whisper of ancient empires.",
     highlights: ['Fes el-Bali Medina', 'Volubilis Ruins', 'Meknes Royal Stables', 'Ifrane Cedar Forests'],
@@ -208,7 +208,7 @@ const regionDetails: RegionCardData[] = [
     description: 'The political capital and coastal modernity',
     capital: 'Rabat',
     cityCount: 4,
-    image: 'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?q=80&w=1200',
+    image: '/images/hero-morocco.webp',
     longDescription:
       "Morocco's political and administrative capital region combines royal grandeur with contemporary culture. Rabat's UNESCO-listed sites, world-class museums, and oceanfront Kasbah des Oudayas make it one of the most refined cities in North Africa. The twin city of Sale preserves centuries of maritime history, while Kenitra anchors the fertile Gharb plain.",
     highlights: ['Hassan Tower', 'Kasbah des Oudayas', 'Mohammed VI Museum', 'Chellah Necropolis'],
@@ -233,7 +233,7 @@ const regionDetails: RegionCardData[] = [
     description: 'Economic powerhouse and cosmopolitan hub',
     capital: 'Casablanca',
     cityCount: 4,
-    image: 'https://images.unsplash.com/photo-1577147443647-81856d5151af?q=80&w=1200',
+    image: '/images/hero-ait-benhaddou.webp',
     longDescription:
       "Morocco's economic engine and largest metropolitan area, Casablanca is a city of contrasts where Art Deco boulevards meet ancient medina lanes. The awe-inspiring Hassan II Mosque, one of the largest in the world, rises majestically over the Atlantic. The wider region includes the Portuguese-influenced El Jadida and the oyster lagoons of Oualidia.",
     highlights: ['Hassan II Mosque', 'Art Deco District', 'El Jadida Cistern', 'Oualidia Lagoon'],
@@ -258,7 +258,7 @@ const regionDetails: RegionCardData[] = [
     description: 'Home to the Red City and Atlantic coast gems',
     capital: 'Marrakech',
     cityCount: 7,
-    image: 'https://images.unsplash.com/photo-1597212618440-806262de4fe6?q=80&w=1200',
+    image: '/images/hero-morocco.webp',
     longDescription:
       'The heart of Morocco, where the legendary Red City of Marrakech enchants millions with its labyrinthine souks, majestic palaces, and the unforgettable Jemaa el-Fnaa square. Beyond the city, the region stretches to the Atlantic coast with the windswept charm of Essaouira and the ceramic traditions of Safi.',
     highlights: ['Jemaa el-Fnaa', 'Majorelle Garden', 'Essaouira Medina', 'Atlas Mountains'],
@@ -283,7 +283,7 @@ const regionDetails: RegionCardData[] = [
     description: 'Fertile plains and Middle Atlas foothills',
     capital: 'Beni Mellal',
     cityCount: 3,
-    image: 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?q=80&w=1200',
+    image: '/images/hero-morocco.webp',
     longDescription:
       "Tucked between the fertile Tadla Plain and the Middle Atlas Mountains, this region is a paradise for nature lovers. The spectacular Ouzoud Falls cascade 110 meters into a canyon filled with Barbary macaques, while Bin El Ouidane Lake offers peaceful retreats. It is Morocco's agricultural heartland with a rugged mountain soul.",
     highlights: ['Ouzoud Falls', 'Bin El Ouidane Lake', 'Kasbah Tadla', 'Middle Atlas Trails'],
@@ -310,7 +310,7 @@ const regionDetails: RegionCardData[] = [
     description: 'Gateway to the Sahara with ancient kasbahs',
     capital: 'Errachidia',
     cityCount: 6,
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200',
+    image: '/images/hero-coastal.webp',
     longDescription:
       'The largest region in Morocco and the gateway to the Sahara Desert, Draa-Tafilalet is a land of epic landscapes. From the towering dunes of Erg Chebbi at Merzouga to the dramatic Todra and Dades Gorges, from the Hollywood backdrop of Ouarzazate to the lush Draa Valley oases -- this region is pure adventure.',
     highlights: ['Erg Chebbi Dunes', 'Todra Gorge', 'Ait Benhaddou Kasbah', 'Zagora Desert Camps'],
@@ -335,7 +335,7 @@ const regionDetails: RegionCardData[] = [
     description: 'Sun-soaked beaches and Amazigh heritage',
     capital: 'Agadir',
     cityCount: 4,
-    image: 'https://images.unsplash.com/photo-1560703650-ef3e0f254ae0?q=80&w=1200',
+    image: '/images/art-moroccan-doorway.webp',
     longDescription:
       "Sun-drenched Souss-Massa is Morocco's premier beach destination, anchored by Agadir's golden sands and surf-friendly Taghazout. The region is the heart of argan country, where ancient Amazigh traditions thrive in the Anti-Atlas foothills. The walled city of Taroudant, often called \"Little Marrakech,\" offers authentic souks without the crowds.",
     highlights: ['Agadir Beach', 'Taghazout Surfing', 'Taroudant Walls', 'Souss-Massa National Park'],
@@ -360,7 +360,7 @@ const regionDetails: RegionCardData[] = [
     description: 'Desert edge oasis towns and camel markets',
     capital: 'Guelmim',
     cityCount: 2,
-    image: 'https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?q=80&w=1200',
+    image: '/images/hero-sahara-night.webp',
     longDescription:
       "Known as the \"Gateway to the Sahara,\" Guelmim-Oued Noun marks the transition from settled Morocco to the vast desert south. Guelmim's famous camel market (souk of camels) has drawn traders for centuries. The coastal town of Sidi Ifni, a former Spanish enclave, offers dramatic cliffs and Art Deco architecture perched above the Atlantic.",
     highlights: ['Guelmim Camel Market', 'Sidi Ifni Coast', 'Plage Blanche', 'Amtoudi Granary'],
@@ -387,7 +387,7 @@ const regionDetails: RegionCardData[] = [
     description: 'Southern gateway to the Saharan provinces',
     capital: 'Laayoune',
     cityCount: 1,
-    image: 'https://images.unsplash.com/photo-1509023464722-18d996393ca8?q=80&w=1200',
+    image: '/images/hero-desert.webp',
     longDescription:
       "The gateway to Morocco's southern provinces, where the Sahara meets the Atlantic in a landscape of austere beauty. Laayoune, the regional capital, is a modern city with wide boulevards and a growing cultural scene. The Atlantic coastline here is wild and untouched, offering extraordinary birdwatching and some of the best fishing in Africa.",
     highlights: ['Naila Lagoon', 'Atlantic Coast Fishing', 'Laayoune Cathedral', 'Desert Landscapes'],
@@ -412,7 +412,7 @@ const regionDetails: RegionCardData[] = [
     description: 'World-class kitesurfing and desert-meets-ocean',
     capital: 'Dakhla',
     cityCount: 1,
-    image: 'https://images.unsplash.com/photo-1502003148287-a82ef80a6abc?q=80&w=1200',
+    image: '/images/hero-morocco.webp',
     longDescription:
       "At Morocco's southern tip, where the Sahara Desert plunges into the Atlantic Ocean, Dakhla is an emerging paradise for kitesurfers, windsurfers, and adventure seekers. The peninsula juts into a vast lagoon of turquoise waters perfect for watersports, while the surrounding desert offers unforgettable overnight camping under star-filled skies.",
     highlights: ['Dakhla Lagoon', 'Kitesurfing', 'White Dune', 'Desert-Ocean Camps'],
@@ -732,7 +732,7 @@ export default function RegionsPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=2800)',
+              'url(/images/hero-desert.webp',
           }}
         />
         <div className="hero-overlay absolute inset-0" />

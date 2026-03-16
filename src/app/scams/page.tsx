@@ -90,7 +90,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/scams',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&h=630&fit=crop',
+        url: '/images/hero-desert.webp',
         width: 1200,
         height: 630,
         alt: 'Moroccan medina marketplace with colorful goods',
@@ -106,7 +106,7 @@ export const metadata: Metadata = {
       'Comprehensive, balanced guide to avoiding tourist scams in Morocco while appreciating the incredible hospitality of Moroccan people.',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&h=630&fit=crop',
+        url: '/images/hero-desert.webp',
         alt: 'Moroccan medina marketplace',
       },
     ],
@@ -643,7 +643,7 @@ export default function ScamsPage() {
       <section className="relative overflow-hidden bg-[var(--color-primary-900)] text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1600&q=80"
+            src="/images/hero-desert.webp"
             alt="Bustling Moroccan medina marketplace with colorful goods and warm lantern light"
             className="absolute inset-0 w-full h-full object-cover"
           />
@@ -861,7 +861,7 @@ export default function ScamsPage() {
             <div className="space-y-6">
               <div className="rounded-xl overflow-hidden shadow-lg">
                 <img
-                  src="https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?w=800&q=80"
+                  src="/images/hero-chefchaouen-drone.webp"
                   alt="Narrow alleyway in a Moroccan medina with blue walls and warm sunlight"
                   className="w-full h-64 md:h-80 object-cover"
                 />
@@ -1011,7 +1011,7 @@ export default function ScamsPage() {
             <div className="space-y-6">
               <div className="rounded-xl overflow-hidden shadow-lg">
                 <img
-                  src="https://images.unsplash.com/photo-1531501410720-c8d437636169?w=800&q=80"
+                  src="/images/hero-souk-lamps.webp"
                   alt="Colorful Moroccan souk with handmade goods and lanterns on display"
                   className="w-full h-52 md:h-64 object-cover"
                 />

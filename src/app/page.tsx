@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     siteName: 'CityGuide',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1597212618440-806262de4fe6?q=80&w=1200',
+        url: '/images/hero-marrakech.webp',
         width: 1200,
         height: 630,
         alt: 'Panoramic view of Marrakech, Morocco at sunset',
@@ -86,7 +86,7 @@ export const metadata: Metadata = {
     description:
       'Discover Morocco: 50+ cities, 1,000+ attractions, 500+ hotels, curated tours, local food, and expert travel tips.',
     images: [
-      'https://images.unsplash.com/photo-1597212618440-806262de4fe6?q=80&w=1200',
+      '/images/hero-marrakech.webp',
     ],
   },
   alternates: {
@@ -183,7 +183,7 @@ const destinations = [
     slug: 'marrakech',
     tagline: 'The Red City of Endless Wonder',
     description: 'Ancient medinas, vibrant souks, and rooftop terraces',
-    image: 'https://images.unsplash.com/photo-1597212618440-806262de4fe6?q=80&w=800',
+    image: '/images/hero-marrakech.webp',
     color: '#C07B52',
   },
   {
@@ -191,7 +191,7 @@ const destinations = [
     slug: 'fes',
     tagline: 'The Spiritual Heart of Morocco',
     description: 'World heritage medina, tanneries, and artisan workshops',
-    image: 'https://images.unsplash.com/photo-1579283142820-e1f0bdf21de0?q=80&w=800',
+    image: '/images/hero-fes-tanneries.webp',
     color: '#A0522D',
   },
   {
@@ -199,7 +199,7 @@ const destinations = [
     slug: 'chefchaouen',
     tagline: 'The Blue Pearl of the Rif',
     description: 'Iconic blue-washed streets and mountain charm',
-    image: 'https://images.unsplash.com/photo-1553244885-7e75700a0688?q=80&w=600',
+    image: '/images/hero-fes-tanneries.webp',
     color: '#4A6274',
   },
   {
@@ -207,7 +207,7 @@ const destinations = [
     slug: 'essaouira',
     tagline: 'Wind, Waves & Timeless Ramparts',
     description: 'Atlantic charm, fresh seafood, and bohemian vibes',
-    image: 'https://images.unsplash.com/photo-1560095633-6858b0185572?q=80&w=600',
+    image: '/images/hero-chefchaouen-drone.webp',
     color: '#34495E',
   },
   {
@@ -215,7 +215,7 @@ const destinations = [
     slug: 'casablanca',
     tagline: 'Where Tradition Meets Modernity',
     description: 'Hassan II Mosque, Art Deco architecture, and cosmopolitan energy',
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?q=80&w=600',
+    image: '/images/hero-coastal.webp',
     color: '#2C3E50',
   },
   {
@@ -223,7 +223,7 @@ const destinations = [
     slug: 'tangier',
     tagline: 'Gateway Between Two Worlds',
     description: 'Where the Mediterranean meets the Atlantic',
-    image: 'https://images.unsplash.com/photo-1553603227-2358aabe821e?q=80&w=600',
+    image: '/images/hero-todra-gorge.webp',
     color: '#5C6F7E',
   },
   {
@@ -231,7 +231,7 @@ const destinations = [
     slug: 'merzouga',
     tagline: 'Gateway to the Golden Sahara',
     description: 'Camel treks, luxury desert camps, and starlit nights',
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=600',
+    image: '/images/hero-desert.webp',
     color: '#C4960C',
   },
   {
@@ -239,7 +239,7 @@ const destinations = [
     slug: 'ouarzazate',
     tagline: 'Hollywood of the Desert',
     description: 'Kasbahs, film studios, and the door to the Sahara',
-    image: 'https://images.unsplash.com/photo-1548820488-e85faf1df02c?q=80&w=600',
+    image: '/images/hero-ait-benhaddou.webp',
     color: '#9E8D72',
   },
 ];
@@ -249,7 +249,7 @@ const experienceCategories = [
     title: 'Desert Adventures',
     description: 'Camel treks, dune surfing, and starlit camps in the Sahara',
     href: '/desert',
-    image: 'https://images.unsplash.com/photo-1509023464722-18d996393ca8?q=80&w=600',
+    image: '/images/hero-sahara-sunrise.webp',
     icon: Sun,
     color: '#C4960C',
   },
@@ -257,7 +257,7 @@ const experienceCategories = [
     title: 'Culinary Tours',
     description: 'Cooking classes, street food walks, and tagine masterclasses',
     href: '/food',
-    image: 'https://images.unsplash.com/photo-1511690743698-d9d18f7e20f1?q=80&w=600',
+    image: '/images/hero-food.webp',
     icon: ChefHat,
     color: '#A0522D',
   },
@@ -265,7 +265,7 @@ const experienceCategories = [
     title: 'Cultural Heritage',
     description: 'Medinas, mosques, museums, and centuries of living history',
     href: '/culture',
-    image: 'https://images.unsplash.com/photo-1545071568-3e1e3b4aab64?q=80&w=600',
+    image: '/images/hero-marrakech.webp',
     icon: Landmark,
     color: '#7A3E22',
   },
@@ -273,7 +273,7 @@ const experienceCategories = [
     title: 'Mountain Treks',
     description: 'Atlas peaks, Berber villages, and dramatic gorge walks',
     href: '/trekking',
-    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=600',
+    image: '/images/hero-atlas.webp',
     icon: Mountain,
     color: '#1E6B4E',
   },
@@ -281,7 +281,7 @@ const experienceCategories = [
     title: 'Beach Escapes',
     description: 'Surf towns, hidden coves, and Atlantic sunsets',
     href: '/beaches',
-    image: 'https://images.unsplash.com/photo-1502680390548-bdbac40a1e4a?q=80&w=600',
+    image: '/images/card-beach.webp',
     icon: Waves,
     color: '#34495E',
   },
@@ -289,7 +289,7 @@ const experienceCategories = [
     title: 'City Life',
     description: 'Rooftop bars, boutique riads, and vibrant nightlife',
     href: '/cities',
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?q=80&w=600',
+    image: '/images/hero-coastal.webp',
     icon: Sparkles,
     color: '#C07B52',
   },
@@ -298,7 +298,7 @@ const experienceCategories = [
 const featuredExperiences = [
   {
     title: 'Sahara Desert Safari',
-    image: 'https://images.unsplash.com/photo-1548820488-e85faf1df02c?q=80&w=600',
+    image: '/images/hero-ait-benhaddou.webp',
     price: 'From $120',
     duration: '2-3 days',
     rating: 4.9,
@@ -309,7 +309,7 @@ const featuredExperiences = [
   },
   {
     title: 'Marrakech Cooking Class',
-    image: 'https://images.unsplash.com/photo-1511690743698-d9d18f7e20f1?q=80&w=600',
+    image: '/images/hero-food.webp',
     price: 'From $45',
     duration: '3-4 hours',
     rating: 4.8,
@@ -319,7 +319,7 @@ const featuredExperiences = [
   },
   {
     title: 'Fes Medina Walking Tour',
-    image: 'https://images.unsplash.com/photo-1545071568-3e1e3b4aab64?q=80&w=600',
+    image: '/images/hero-marrakech.webp',
     price: 'From $25',
     duration: '2-3 hours',
     rating: 4.7,
@@ -330,7 +330,7 @@ const featuredExperiences = [
   },
   {
     title: 'Essaouira Surf Lesson',
-    image: 'https://images.unsplash.com/photo-1502680390548-bdbac40a1e4a?q=80&w=600',
+    image: '/images/card-beach.webp',
     price: 'From $35',
     duration: '2 hours',
     rating: 4.8,
@@ -340,7 +340,7 @@ const featuredExperiences = [
   },
   {
     title: 'Atlas Mountain Trek',
-    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=600',
+    image: '/images/hero-atlas.webp',
     price: 'From $65',
     duration: 'Full day',
     rating: 4.9,
@@ -351,7 +351,7 @@ const featuredExperiences = [
   },
   {
     title: 'Traditional Hammam Ritual',
-    image: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=600',
+    image: '/images/hero-hammam-interior.webp',
     price: 'From $30',
     duration: '1.5 hours',
     rating: 4.7,
@@ -361,7 +361,7 @@ const featuredExperiences = [
   },
   {
     title: 'Hot Air Balloon Marrakech',
-    image: 'https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?q=80&w=600',
+    image: '/images/hero-marrakech.webp',
     price: 'From $180',
     duration: '1 hour',
     rating: 4.9,
@@ -402,7 +402,7 @@ const blogPosts = [
   {
     title: 'The Ultimate First-Timer\'s Guide to Marrakech',
     excerpt: 'Everything you need to know before your first visit to the Red City, from navigating the medina to finding the best riads.',
-    image: 'https://images.unsplash.com/photo-1597212618440-806262de4fe6?q=80&w=600',
+    image: '/images/hero-marrakech.webp',
     date: 'March 10, 2026',
     readTime: '8 min read',
     category: 'City Guides',
@@ -411,7 +411,7 @@ const blogPosts = [
   {
     title: '10 Hidden Gems in the Atlas Mountains',
     excerpt: 'Beyond Toubkal: discover secluded valleys, ancient Berber villages, and waterfalls that most tourists never see.',
-    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=600',
+    image: '/images/hero-atlas.webp',
     date: 'March 5, 2026',
     readTime: '6 min read',
     category: 'Adventure',
@@ -420,7 +420,7 @@ const blogPosts = [
   {
     title: 'A Food Lover\'s Journey Through Fes',
     excerpt: 'From street-side msemen to Michelin-worthy pastilla, this is the definitive guide to eating your way through Morocco\'s culinary capital.',
-    image: 'https://images.unsplash.com/photo-1511690743698-d9d18f7e20f1?q=80&w=600',
+    image: '/images/hero-food.webp',
     date: 'February 28, 2026',
     readTime: '10 min read',
     category: 'Food & Drink',
@@ -506,7 +506,7 @@ export default function HomePage() {
         >
           {/* Background image */}
           <img
-            src="https://images.unsplash.com/photo-1597212618440-806262de4fe6?q=80&w=1920"
+            src="/images/hero-marrakech.webp"
             alt="Sunset over the rooftops of Marrakech, Morocco"
             className="absolute inset-0 w-full h-full object-cover"
             style={{ objectPosition: '50% 30%' }}
@@ -1184,7 +1184,7 @@ export default function HomePage() {
                   }}
                 >
                   <img
-                    src="https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=800"
+                    src="/images/hero-desert.webp"
                     alt="Camel caravan crossing the Sahara at sunset"
                     loading="lazy"
                     className="w-full h-[300px] md:h-[400px] object-cover"

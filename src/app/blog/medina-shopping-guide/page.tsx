@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     type: 'article',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=1200&h=630&fit=crop',
+        url: '/images/hero-souk-lamps.webp',
         width: 1200,
         height: 630,
         alt: 'Colorful Moroccan souk with spices, textiles, and traditional crafts',
@@ -79,7 +79,7 @@ const relatedArticles = [
     slug: 'moroccan-tea-culture',
     title: 'Moroccan Tea Culture: The Art of Mint Tea',
     excerpt: 'The ritual of Moroccan mint tea is a cornerstone of daily life and hospitality.',
-    image: 'https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=600&q=80',
+    image: '/images/photo-mint-tea-pouring.webp',
     category: 'Culture',
     readTime: '15 min read',
   },
@@ -87,7 +87,7 @@ const relatedArticles = [
     slug: 'atlas-mountains-trekking',
     title: 'Atlas Mountains Trekking: The Complete Guide',
     excerpt: 'Everything you need for an unforgettable trek through the High Atlas.',
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=600&q=80',
+    image: '/images/hero-desert.webp',
     category: 'Adventure',
     readTime: '18 min read',
   },
@@ -95,7 +95,7 @@ const relatedArticles = [
     slug: 'complete-guide-to-moroccan-street-food',
     title: 'A Complete Guide to Moroccan Street Food',
     excerpt: 'From sizzling msemen at dawn to steaming bowls of harira at dusk.',
-    image: 'https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=600&q=80',
+    image: '/images/hero-food.webp',
     category: 'Food',
     readTime: '10 min read',
   },
@@ -112,7 +112,7 @@ function JsonLd() {
     headline: 'How to Shop in Moroccan Medinas Like a Local',
     description:
       'A comprehensive guide to shopping in Moroccan souks, covering haggling, crafts, fair prices, and artisan workshops.',
-    image: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=1200&q=80',
+    image: '/images/hero-souk-lamps.webp',
     datePublished: '2026-03-04',
     dateModified: '2026-03-04',
     author: { '@type': 'Person', name: 'Youssef Amrani' },
@@ -144,7 +144,7 @@ export default function MedinaShoppingGuidePage() {
       <section className="relative overflow-hidden bg-[var(--color-primary-900)] text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=1600&q=80"
+            src="/images/hero-souk-lamps.webp"
             alt="Vibrant Moroccan souk with colorful spices, textiles, and handcrafted goods"
             className="absolute inset-0 w-full h-full object-cover"
           />
@@ -178,7 +178,7 @@ export default function MedinaShoppingGuidePage() {
             <div className="flex flex-wrap items-center gap-6">
               <div className="flex items-center gap-3">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150"
+                  src="/images/hero-morocco.webp"
                   alt="Youssef Amrani"
                   className="w-12 h-12 rounded-full object-cover ring-2 ring-white/30"
                 />
@@ -369,7 +369,7 @@ export default function MedinaShoppingGuidePage() {
 
                 <div className="relative my-8 rounded-xl overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1531501410720-c8d437636169?w=900&q=80"
+                    src="/images/photo-souvenirs-flatlay.webp"
                     alt="Stacks of colorful handwoven Berber carpets in a Moroccan medina shop"
                     className="w-full h-64 md:h-80 object-cover"
                   />
@@ -563,7 +563,7 @@ export default function MedinaShoppingGuidePage() {
                 <div className="card-featured p-6 md:p-8 mt-12">
                   <div className="flex items-start gap-4">
                     <img
-                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150"
+                      src="/images/hero-morocco.webp"
                       alt="Youssef Amrani"
                       className="w-16 h-16 rounded-full object-cover ring-2 ring-[var(--color-accent-200)]"
                     />

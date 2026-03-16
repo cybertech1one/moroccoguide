@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/luxury',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1200&h=630&fit=crop',
+        url: '/images/cover-morocco-luxury.webp',
         width: 1200,
         height: 630,
         alt: 'Luxury Moroccan palace hotel courtyard',
@@ -81,7 +81,7 @@ const luxuryHotels = [
       'Commissioned by King Mohammed VI, the Royal Mansour is Morocco\'s ultimate luxury hotel. Instead of rooms, guests stay in private three-story riads, each with a plunge pool, rooftop solarium, and personal butler. The underground spa is a subterranean palace of marble and gold. Service is telepathic -- staff move through hidden tunnels beneath the property.',
     highlights: ['Private 3-story riad suites', 'Michelin-level restaurants', 'Personal butler service', 'Underground luxury spa'],
     priceRange: 'From $1,200/night',
-    image: 'https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=800',
+    image: '/images/cover-morocco-luxury.webp',
     stars: 5,
   },
   {
@@ -91,7 +91,7 @@ const luxuryHotels = [
       'Winston Churchill\'s favorite hotel, La Mamounia has defined Moroccan luxury since 1929. Set within eight acres of century-old gardens, it blends Art Deco elegance with traditional Moroccan craftsmanship. The pool pavilion and gardens are legendary. Recently renovated suites feature hand-laid zellige tilework and original artwork.',
     highlights: ['Historic 1929 palace', 'Eight acres of gardens', 'Four restaurants including Italian', 'Iconic swimming pool'],
     priceRange: 'From $700/night',
-    image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800',
+    image: '/images/hero-riad-interior.webp',
     stars: 5,
   },
   {
@@ -101,7 +101,7 @@ const luxuryHotels = [
       'Sir Richard Branson\'s Moroccan retreat, perched in the foothills of the High Atlas with panoramic mountain views. Each room is individually designed with antiques collected from around the world. The infinity pool seems to float above the valley. Branson bought the property after a balloon trip over the Atlas.',
     highlights: ['Richard Branson\'s private retreat', 'Infinity pool with Atlas views', 'Berber tent spa', 'Mountain excursions'],
     priceRange: 'From $600/night',
-    image: 'https://images.unsplash.com/photo-1493246507139-91e8fad9978e?q=80&w=800',
+    image: '/images/hero-atlas.webp',
     stars: 5,
   },
   {
@@ -111,7 +111,7 @@ const luxuryHotels = [
       'Aman Resorts\' Moroccan property is a serene oasis of rose-pink pavilions surrounding an ancient basin (or "jena" in Arabic). Minimalist luxury meets Moroccan architecture in spacious pavilions with private gardens, fireplaces, and outdoor dining areas. The silence and space here is remarkable for a property so close to the medina.',
     highlights: ['Aman-level service', 'Rose-pink pavilion suites', 'Ancient irrigation basin pool', 'Private garden dining'],
     priceRange: 'From $800/night',
-    image: 'https://images.unsplash.com/photo-1548018560-c7196e91a1e2?q=80&w=800',
+    image: '/images/hero-riad-interior.webp',
     stars: 5,
   },
   {
@@ -121,7 +121,7 @@ const luxuryHotels = [
       'Twenty hectares of gardens surround this contemporary take on Moroccan luxury. Freestanding villas each have their own private pool, garden, and outdoor living area. The spa, spread across 1,800 square meters, is one of Africa\'s finest. The property feels more like a private estate than a hotel.',
     highlights: ['Private-pool villas', '20 hectares of gardens', '1,800 sqm luxury spa', 'Atlas Mountain views'],
     priceRange: 'From $500/night',
-    image: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=800',
+    image: '/images/card-riad.webp',
     stars: 5,
   },
   {
@@ -131,7 +131,7 @@ const luxuryHotels = [
       'Five interconnected riads forming a labyrinthine palace in the heart of the medina, steps from the Saadian Tombs. Twenty-eight unique rooms, each with its own personality. The rooftop pool overlooks the Koutoubia Mosque, and the hammam features heated marble beds beneath Moorish arches.',
     highlights: ['Five-riad medina palace', 'Rooftop pool with Koutoubia views', 'Private heated hammam', 'Steps from Saadian Tombs'],
     priceRange: 'From $400/night',
-    image: 'https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=800',
+    image: '/images/hero-riad-interior.webp',
     stars: 5,
   },
   {
@@ -141,7 +141,7 @@ const luxuryHotels = [
       'The only Relais & Chateaux property in Fes, set in a restored 19th-century palace in the heart of the medina. Original zellige, carved stucco, and cedar ceilings have been meticulously preserved. The restaurant serves refined Fassi cuisine, and the rooftop terrace offers sweeping medina views.',
     highlights: ['Relais & Chateaux member', 'Restored 19th-century palace', 'Exceptional Fassi cuisine', 'Medina panoramic terrace'],
     priceRange: 'From $250/night',
-    image: 'https://images.unsplash.com/photo-1545041552-c7bf3e2daaee?q=80&w=800',
+    image: '/images/hero-fes.webp',
     stars: 5,
   },
   {
@@ -151,7 +151,7 @@ const luxuryHotels = [
       'Perched on the edge of the Fes medina, Palais Faraj was built on the ruins of a historic citadel. The panoramic views from the infinity pool and restaurant are the finest in the city. Spacious suites feature traditional craftsmanship with modern comforts, and the spa uses local argan and rose products.',
     highlights: ['Best views in Fes', 'Infinity pool overlooking medina', 'Citadel history', 'Full-service spa'],
     priceRange: 'From $200/night',
-    image: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=800',
+    image: '/images/hero-fes.webp',
     stars: 5,
   },
   {
@@ -161,7 +161,7 @@ const luxuryHotels = [
       'An ultra-exclusive maison d\'hotes in a restored kasbah surrounded by a 12-acre palm grove. With only a handful of suites, it operates more like a private house. There are no menus, no schedules, and no set dining locations -- every meal is a surprise, served wherever you wish. Named "House of Dreams" in Arabic.',
     highlights: ['Ultra-exclusive (limited suites)', 'No menus -- surprise dining', 'Restored kasbah in palm grove', 'Bespoke everything'],
     priceRange: 'From $500/night (all-inclusive)',
-    image: 'https://images.unsplash.com/photo-1539635278303-d4002c07eae3?q=80&w=800',
+    image: '/images/hero-desert.webp',
     stars: 5,
   },
   {
@@ -171,7 +171,7 @@ const luxuryHotels = [
       'A sprawling five-star beachfront resort on the Atlantic coast, designed around an 18-hole Gary Player golf course. The resort includes a casino, multiple pools, a kids\' club, and a spa. It is the closest Morocco comes to a Caribbean-style beach resort, with Moroccan flair.',
     highlights: ['Gary Player golf course', 'Beachfront Atlantic setting', 'Casino and nightlife', 'Full family resort'],
     priceRange: 'From $300/night',
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800',
+    image: '/images/card-beach.webp',
     stars: 5,
   },
   {
@@ -181,7 +181,7 @@ const luxuryHotels = [
       'Set on 16 acres of manicured gardens, the Four Seasons Marrakech offers the brand\'s signature consistency alongside genuine Moroccan character. Two pools, a Jean-Claude Biguine spa, and restaurants serving Moroccan and Mediterranean cuisine. Family-friendly but equally suited to couples.',
     highlights: ['16 acres of gardens', 'Two swimming pools', 'Jean-Claude Biguine spa', 'Four Seasons service standard'],
     priceRange: 'From $600/night',
-    image: 'https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=800',
+    image: '/images/card-riad.webp',
     stars: 5,
   },
   {
@@ -191,7 +191,7 @@ const luxuryHotels = [
       'Overlooking the tranquil Oualidia lagoon, this boutique gem offers suites with private terraces above turquoise waters. The restaurant serves what may be Morocco\'s freshest oysters, harvested from the lagoon below. A hidden paradise between Casablanca and Essaouira.',
     highlights: ['Lagoon-front suites', 'Fresh oyster restaurant', 'Remote Atlantic setting', 'Kayaking and boat trips'],
     priceRange: 'From $300/night',
-    image: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=800',
+    image: '/images/hero-coastal.webp',
     stars: 5,
   },
   {
@@ -201,7 +201,7 @@ const luxuryHotels = [
       'A palatial resort on 231 hectares of olive and palm groves with views of the Atlas Mountains. Features an 18-hole golf course, a 3,500 sqm spa, and both villa and suite accommodation with private pools. The scale and grandeur are unmatched in Morocco.',
     highlights: ['231-hectare estate', '18-hole golf course', '3,500 sqm spa', 'Private pool villas'],
     priceRange: 'From $400/night',
-    image: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=800',
+    image: '/images/hero-golf.webp',
     stars: 5,
   },
   {
@@ -211,7 +211,7 @@ const luxuryHotels = [
       'Essaouira\'s finest address, this Relais & Chateaux hotel occupies a restored 18th-century mansion overlooking the ocean. A rooftop pool and terrace provide stunning Atlantic views. The cinema, library, and art gallery add layers of character. Rooms blend classic Mogador style with contemporary comfort.',
     highlights: ['Relais & Chateaux', 'Ocean-view rooftop pool', 'Private cinema', 'Art gallery on-site'],
     priceRange: 'From $200/night',
-    image: 'https://images.unsplash.com/photo-1560437091-4383266ac31b?q=80&w=800',
+    image: '/images/hero-essaouira-ramparts.webp',
     stars: 5,
   },
   {
@@ -221,7 +221,7 @@ const luxuryHotels = [
       'Tangier\'s grand dame, El Minzah has hosted writers, diplomats, and dignitaries since 1930. Recently restored to its former glory, the hotel blends Moorish elegance with Art Deco accents. The garden courtyard, Moroccan restaurant, and rooftop views of the Strait of Gibraltar are legendary.',
     highlights: ['1930s heritage hotel', 'Strait of Gibraltar views', 'Moorish-Art Deco style', 'Legendary guest history'],
     priceRange: 'From $180/night',
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?q=80&w=800',
+    image: '/images/hero-tangier-kasbah.webp',
     stars: 5,
   },
 ];
@@ -540,7 +540,7 @@ export default function LuxuryPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=2800)',
+              'url(/images/cover-morocco-luxury.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

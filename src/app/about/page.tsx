@@ -14,14 +14,62 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'About CityGuide | Our Mission to Share Morocco with the World',
+  title: 'About CityGuide Morocco | Our Mission & Team',
   description:
-    'Learn about CityGuide, the most comprehensive Morocco tourism directory. Our mission, team, and commitment to authentic travel experiences.',
+    'Meet the team behind CityGuide, Morocco\'s most trusted travel resource. Discover our mission, values, and commitment to authentic Moroccan tourism.',
+  keywords: [
+    'about CityGuide Morocco',
+    'Morocco travel guide team',
+    'Morocco tourism website',
+    'Moroccan travel experts',
+    'authentic Morocco travel',
+    'responsible tourism Morocco',
+    'Morocco travel resource',
+    'Moroccan tourism directory',
+    'Morocco trip planning',
+    'local Morocco guides',
+    'Morocco travel community',
+    'verified Morocco listings',
+  ],
   openGraph: {
-    title: 'About CityGuide',
-    description: 'The story behind Morocco\'s most comprehensive travel guide.',
+    title: 'About CityGuide Morocco | Our Mission & Team',
+    description:
+      'Meet the team behind Morocco\'s most trusted travel resource. Our mission, values, and commitment to authentic experiences.',
     url: 'https://citytoursmorocco.com/about',
+    type: 'website',
+    images: [
+      {
+        url: '/images/hero-desert.webp',
+        width: 1200,
+        height: 630,
+        alt: 'CityGuide Morocco team and Moroccan landscape',
+      },
+    ],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About CityGuide Morocco | Our Mission & Team',
+    description:
+      'Meet the team behind Morocco\'s most trusted travel resource. Authentic guides, verified listings, and responsible tourism.',
+  },
+  alternates: {
+    canonical: 'https://citytoursmorocco.com/about',
+  },
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'CityGuide Morocco',
+  url: 'https://citytoursmorocco.com',
+  description:
+    'The most comprehensive, authentic, and beautiful guide to the Kingdom of Morocco.',
+  foundingDate: '2023',
+  areaServed: {
+    '@type': 'Country',
+    name: 'Morocco',
+  },
+  sameAs: ['https://citytoursmorocco.com'],
 };
 
 const values = [
@@ -63,38 +111,42 @@ const teamMembers = [
     name: 'Youssef Amrani',
     role: 'Founder & Editor-in-Chief',
     bio: 'Born in Fes, educated in Paris. 15 years in travel journalism covering North Africa and the Mediterranean.',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400',
+    image: '/images/portrait-artisan.webp',
   },
   {
     name: 'Leila Benani',
     role: 'Head of Content',
     bio: 'Marrakech native and former Lonely Planet contributor. Speaks Arabic, French, English, and Amazigh.',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400',
+    image: '/images/art-berber-portrait.webp',
   },
   {
     name: 'Driss Tazi',
     role: 'Lead Developer',
     bio: 'Full-stack engineer from Casablanca. Built tourism platforms for 3 African countries before joining CityGuide.',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=400',
+    image: '/images/art-tea-ceremony.webp',
   },
   {
     name: 'Amina El-Ouafi',
     role: 'Partnerships Manager',
     bio: 'Former hotel manager turned tourism advocate. Connects CityGuide with Morocco\'s best local businesses.',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=400',
+    image: '/images/art-moroccan-doorway.webp',
   },
 ];
 
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Hero */}
       <section className="relative py-20 md:py-28 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=2800)',
+              'url(/images/hero-morocco.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

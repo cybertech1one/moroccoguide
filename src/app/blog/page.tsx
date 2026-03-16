@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/blog',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&h=630&fit=crop',
+        url: '/images/hero-desert.webp',
         width: 1200,
         height: 630,
         alt: 'Morocco travel landscape with golden sand dunes at sunset',
@@ -58,13 +58,13 @@ const blogPosts: BlogPost[] = [
       'The ritual of Moroccan mint tea is a cornerstone of daily life and hospitality. Discover the deep history, preparation methods, regional variations, and the unwritten social codes that surround every glass poured from a height.',
     author: {
       name: 'Amina El-Ouafi',
-      avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=150',
+      avatar: '/images/hero-morocco.webp',
     },
     date: 'March 12, 2026',
     readTime: '15 min read',
     category: 'Culture',
     tags: ['Tea', 'Culture', 'Traditions', 'Hospitality'],
-    image: 'https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=800&q=80',
+    image: '/images/photo-mint-tea-pouring.webp',
     featured: true,
   },
   {
@@ -75,13 +75,13 @@ const blogPosts: BlogPost[] = [
       'From choosing the right season to packing essentials and hiring local guides, everything you need for an unforgettable trek through the High Atlas, including the ascent of Jebel Toubkal.',
     author: {
       name: 'Driss Tazi',
-      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=150',
+      avatar: '/images/hero-morocco.webp',
     },
     date: 'March 8, 2026',
     readTime: '18 min read',
     category: 'Adventure',
     tags: ['Atlas Mountains', 'Trekking', 'Jebel Toubkal', 'Hiking'],
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=800&q=80',
+    image: '/images/hero-desert.webp',
     featured: false,
   },
   {
@@ -92,13 +92,13 @@ const blogPosts: BlogPost[] = [
       'Master the art of haggling, know what to buy where, learn fair price ranges, and discover the hidden artisan workshops that produce the finest Moroccan craftsmanship.',
     author: {
       name: 'Youssef Amrani',
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150',
+      avatar: '/images/hero-morocco.webp',
     },
     date: 'March 4, 2026',
     readTime: '16 min read',
     category: 'Practical',
     tags: ['Shopping', 'Souks', 'Haggling', 'Crafts'],
-    image: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=800&q=80',
+    image: '/images/hero-souk-lamps.webp',
     featured: false,
   },
   {
@@ -109,13 +109,13 @@ const blogPosts: BlogPost[] = [
       'Everything you need to know before stepping into the Red City for the first time, from navigating the medina to finding the best riads and avoiding common tourist traps.',
     author: {
       name: 'Leila Benani',
-      avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150',
+      avatar: '/images/hero-morocco.webp',
     },
     date: 'February 28, 2026',
     readTime: '12 min read',
     category: 'Cities',
     tags: ['Marrakech', 'First-Time Visitors', 'City Guide'],
-    image: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=800&q=80',
+    image: '/images/hero-marrakech.webp',
     featured: false,
   },
   {
@@ -126,13 +126,13 @@ const blogPosts: BlogPost[] = [
       'Beyond the tanneries and main thoroughfares lies a secret Fes that most visitors never see. Discover artisan workshops, hidden gardens, and ancient fondouks off the beaten path.',
     author: {
       name: 'Youssef Amrani',
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150',
+      avatar: '/images/hero-morocco.webp',
     },
     date: 'February 22, 2026',
     readTime: '9 min read',
     category: 'Cities',
     tags: ['Fes', 'Hidden Gems', 'Medina'],
-    image: 'https://images.unsplash.com/photo-1549140600-78c9b8275e9d?w=800&q=80',
+    image: '/images/hero-fes.webp',
     featured: false,
   },
   {
@@ -143,13 +143,13 @@ const blogPosts: BlogPost[] = [
       'From sizzling msemen at dawn to steaming bowls of harira at dusk, Moroccan street food is a culinary adventure unlike any other in the world.',
     author: {
       name: 'Amina El-Ouafi',
-      avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=150',
+      avatar: '/images/hero-morocco.webp',
     },
     date: 'February 16, 2026',
     readTime: '10 min read',
     category: 'Food',
     tags: ['Street Food', 'Moroccan Cuisine', 'Food Guide'],
-    image: 'https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=800&q=80',
+    image: '/images/hero-food.webp',
     featured: false,
   },
   {
@@ -160,13 +160,13 @@ const blogPosts: BlogPost[] = [
       'Yes, the blue walls are stunning, but Chefchaouen offers so much more: Rif Mountain hikes, local goat cheese, traditional weavers, and a laid-back vibe that keeps travelers coming back.',
     author: {
       name: 'Leila Benani',
-      avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150',
+      avatar: '/images/hero-morocco.webp',
     },
     date: 'February 10, 2026',
     readTime: '8 min read',
     category: 'Cities',
     tags: ['Chefchaouen', 'Blue City', 'Rif Mountains'],
-    image: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?w=800&q=80',
+    image: '/images/hero-chefchaouen.webp',
     featured: false,
   },
   {
@@ -177,13 +177,13 @@ const blogPosts: BlogPost[] = [
       'The Sahara offers far more than the classic camel trek. Discover sandboarding, stargazing camps, nomad encounters, fossil hunting, and luxury bivouacs deep in the dunes.',
     author: {
       name: 'Driss Tazi',
-      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=150',
+      avatar: '/images/hero-morocco.webp',
     },
     date: 'February 3, 2026',
     readTime: '10 min read',
     category: 'Adventure',
     tags: ['Sahara', 'Desert', 'Adventure', 'Merzouga'],
-    image: 'https://images.unsplash.com/photo-1548017267-5765e9b2ccfb?w=800&q=80',
+    image: '/images/hero-sahara-sunrise.webp',
     featured: false,
   },
   {
@@ -194,13 +194,13 @@ const blogPosts: BlogPost[] = [
       'Wind-swept ramparts, fresh seafood, a thriving arts scene, and world-class windsurfing make Essaouira the perfect antidote to the intensity of Marrakech.',
     author: {
       name: 'Leila Benani',
-      avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150',
+      avatar: '/images/hero-morocco.webp',
     },
     date: 'January 28, 2026',
     readTime: '9 min read',
     category: 'Cities',
     tags: ['Essaouira', 'Beach', 'Coastal', 'Arts'],
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=800&q=80',
+    image: '/images/hero-essaouira.webp',
     featured: false,
   },
   {
@@ -211,13 +211,13 @@ const blogPosts: BlogPost[] = [
       'Zellige tilework, carved stucco, cedar wood ceilings, and hidden courtyards: a deep dive into the architectural traditions that make Moroccan buildings some of the most beautiful in the world.',
     author: {
       name: 'Youssef Amrani',
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150',
+      avatar: '/images/hero-morocco.webp',
     },
     date: 'January 21, 2026',
     readTime: '13 min read',
     category: 'Culture',
     tags: ['Architecture', 'Riads', 'Kasbahs', 'Design'],
-    image: 'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=800&q=80',
+    image: '/images/hero-kasbahs.webp',
     featured: false,
   },
   {
@@ -228,13 +228,13 @@ const blogPosts: BlogPost[] = [
       'Traveling during Ramadan can be one of the most rewarding cultural experiences in Morocco. Learn what to expect, how to be respectful, and why Iftar is the meal of a lifetime.',
     author: {
       name: 'Amina El-Ouafi',
-      avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=150',
+      avatar: '/images/hero-morocco.webp',
     },
     date: 'January 14, 2026',
     readTime: '8 min read',
     category: 'Practical',
     tags: ['Ramadan', 'Culture', 'Travel Tips'],
-    image: 'https://images.unsplash.com/photo-1570804485046-99ca21dbdc43?w=800&q=80',
+    image: '/images/hero-hassan-mosque.webp',
     featured: false,
   },
   {
@@ -245,13 +245,13 @@ const blogPosts: BlogPost[] = [
       'From the Mediterranean coast to the Sahara and back, this 2-week road trip itinerary covers Morocco\'s greatest hits with detours to secret spots only locals know about.',
     author: {
       name: 'Driss Tazi',
-      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=150',
+      avatar: '/images/hero-morocco.webp',
     },
     date: 'January 7, 2026',
     readTime: '15 min read',
     category: 'Adventure',
     tags: ['Road Trip', 'Itinerary', 'Driving', 'Route'],
-    image: 'https://images.unsplash.com/photo-1502680390548-bdbac40b3981?w=800&q=80',
+    image: '/images/hero-surfing.webp',
     featured: false,
   },
   {
@@ -262,13 +262,13 @@ const blogPosts: BlogPost[] = [
       'The tagine is more than a cooking vessel; it is a philosophy of slow cooking perfected over centuries. Learn the history, master home recipes, and find where locals eat the finest tagines.',
     author: {
       name: 'Amina El-Ouafi',
-      avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=150',
+      avatar: '/images/hero-morocco.webp',
     },
     date: 'December 30, 2025',
     readTime: '11 min read',
     category: 'Food',
     tags: ['Tagine', 'Recipes', 'Moroccan Cuisine'],
-    image: 'https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=800&q=80',
+    image: '/images/hero-food.webp',
     featured: false,
   },
   {
@@ -279,13 +279,13 @@ const blogPosts: BlogPost[] = [
       'Morocco is one of the best-value destinations in the world. Learn how to travel the country on 30-50 USD per day without missing any of the highlights.',
     author: {
       name: 'Youssef Amrani',
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150',
+      avatar: '/images/hero-morocco.webp',
     },
     date: 'December 22, 2025',
     readTime: '11 min read',
     category: 'Practical',
     tags: ['Budget', 'Money', 'Backpacking', 'Tips'],
-    image: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=800&q=80',
+    image: '/images/hero-marrakech.webp',
     featured: false,
   },
   {
@@ -296,13 +296,13 @@ const blogPosts: BlogPost[] = [
       'The Amazigh people have inhabited North Africa for thousands of years. Learn about their language, customs, hospitality traditions, and how to visit Berber villages respectfully.',
     author: {
       name: 'Leila Benani',
-      avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150',
+      avatar: '/images/hero-morocco.webp',
     },
     date: 'December 15, 2025',
     readTime: '11 min read',
     category: 'Culture',
     tags: ['Berber', 'Amazigh', 'Culture', 'Villages'],
-    image: 'https://images.unsplash.com/photo-1548017267-5765e9b2ccfb?w=800&q=80',
+    image: '/images/hero-sahara-sunrise.webp',
     featured: false,
   },
   {
@@ -313,13 +313,13 @@ const blogPosts: BlogPost[] = [
       'The hammam is central to Moroccan life, but stepping into one for the first time can be daunting. Here is your complete guide to what to bring, what to expect, and how to relax.',
     author: {
       name: 'Leila Benani',
-      avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150',
+      avatar: '/images/hero-morocco.webp',
     },
     date: 'December 8, 2025',
     readTime: '7 min read',
     category: 'Culture',
     tags: ['Hammam', 'Wellness', 'Etiquette', 'Spa'],
-    image: 'https://images.unsplash.com/photo-1509310228460-e0266a1e0d7c?w=800&q=80',
+    image: '/images/hero-hammam.webp',
     featured: false,
   },
   {
@@ -330,13 +330,13 @@ const blogPosts: BlogPost[] = [
       'With consistent Atlantic swells, warm water, and affordable surf camps, Morocco has become one of the world\'s top surfing destinations. Here are the best breaks for every level.',
     author: {
       name: 'Driss Tazi',
-      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=150',
+      avatar: '/images/hero-morocco.webp',
     },
     date: 'November 30, 2025',
     readTime: '10 min read',
     category: 'Adventure',
     tags: ['Surfing', 'Taghazout', 'Dakhla', 'Beach'],
-    image: 'https://images.unsplash.com/photo-1502680390548-bdbac40b3981?w=800&q=80',
+    image: '/images/hero-surfing.webp',
     featured: false,
   },
   {
@@ -347,13 +347,13 @@ const blogPosts: BlogPost[] = [
       'Golden hour in the Sahara, blue alleyways in Chefchaouen, and the chaos of Jemaa el-Fnaa at night: the best locations, timing, and tips for capturing Morocco at its most beautiful.',
     author: {
       name: 'Leila Benani',
-      avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150',
+      avatar: '/images/hero-morocco.webp',
     },
     date: 'November 22, 2025',
     readTime: '12 min read',
     category: 'Practical',
     tags: ['Photography', 'Tips', 'Visual Guide'],
-    image: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?w=800&q=80',
+    image: '/images/hero-chefchaouen.webp',
     featured: false,
   },
 ];
@@ -412,7 +412,7 @@ export default function BlogPage() {
       <section className="relative overflow-hidden bg-[var(--color-primary-900)] text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1600&q=80"
+            src="/images/hero-desert.webp"
             alt="Moroccan landscape with golden sand dunes stretching to the horizon"
             className="absolute inset-0 w-full h-full object-cover"
           />

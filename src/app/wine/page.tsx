@@ -91,7 +91,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/wine',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1200&h=630&fit=crop',
+        url: '/images/hero-marrakech.webp',
         width: 1200,
         height: 630,
         alt: 'Vineyard rows with grapevines stretching toward mountains in Morocco',
@@ -104,7 +104,7 @@ export const metadata: Metadata = {
     description:
       'Explore Morocco\'s wine regions, visit top wineries, and taste award-winning Moroccan wines. Your complete wine tourism guide.',
     images: [
-      'https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1200&h=630&fit=crop',
+      '/images/hero-marrakech.webp',
     ],
   },
   alternates: { canonical: 'https://citytoursmorocco.com/wine' },
@@ -156,7 +156,7 @@ const wineRegions = [
       grapes: 'Syrah, Cabernet Sauvignon, Merlot, Grenache',
       production: '60% of national output',
     },
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&h=500&fit=crop',
+    image: '/images/hero-marrakech.webp',
     notableWineries: ['Les Celliers de Meknes', 'Chateau Roslane', 'Domaine de la Zouina', 'Volubilia'],
   },
   {
@@ -171,7 +171,7 @@ const wineRegions = [
       grapes: 'Cinsault, Carignan, Grenache, Cabernet Sauvignon',
       production: 'First AOG designation in Morocco',
     },
-    image: 'https://images.unsplash.com/photo-1560493676-04071c5f467b?w=800&h=500&fit=crop',
+    image: '/images/hero-atlas.webp',
     notableWineries: ['Domaine Brahim Zniber', 'Vignobles de Guerrouane'],
   },
   {
@@ -186,7 +186,7 @@ const wineRegions = [
       grapes: 'Cinsault, Grenache, Carignan',
       production: 'Famous for gris (rose) wines',
     },
-    image: 'https://images.unsplash.com/photo-1504279577054-acfeccf8fc52?w=800&h=500&fit=crop',
+    image: '/images/hero-riad-interior.webp',
     notableWineries: ['Boulaouane Estate'],
   },
   {
@@ -201,7 +201,7 @@ const wineRegions = [
       grapes: 'Syrah, Tempranillo, Viognier, Chardonnay',
       production: 'Premium boutique wines',
     },
-    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&h=500&fit=crop',
+    image: '/images/hero-atlas.webp',
     notableWineries: ['Domaine de la Zouina', 'Volubilia'],
   },
   {
@@ -216,7 +216,7 @@ const wineRegions = [
       grapes: 'Cabernet Sauvignon, Merlot, Syrah, Sauvignon Blanc',
       production: 'Accessible from Casablanca and Rabat',
     },
-    image: 'https://images.unsplash.com/photo-1559738116-2e8e7b023db4?w=800&h=500&fit=crop',
+    image: '/images/hero-coastal.webp',
     notableWineries: ['Thalvin', 'Les Deux Domaines'],
   },
 ];
@@ -246,7 +246,7 @@ const topWineries = [
       restaurant: 'On-site restaurant with wine pairing menu',
     },
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&h=500&fit=crop',
+    image: '/images/hero-food.webp',
   },
   {
     rank: 2,
@@ -268,7 +268,7 @@ const topWineries = [
       restaurant: 'Fine dining restaurant with seasonal Moroccan-French menu',
     },
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1597916829826-02e5bb4a54e0?w=800&h=500&fit=crop',
+    image: '/images/hero-riad-interior.webp',
   },
   {
     rank: 3,
@@ -290,7 +290,7 @@ const topWineries = [
       restaurant: 'Terrace bistro with seafood and wine pairings',
     },
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1474722883778-792e7990302f?w=800&h=500&fit=crop',
+    image: '/images/hero-food.webp',
   },
   {
     rank: 4,
@@ -312,7 +312,7 @@ const topWineries = [
       restaurant: 'Tasting room with charcuterie and cheese boards',
     },
     rating: 4,
-    image: 'https://images.unsplash.com/photo-1566903451935-7e8835ed3e97?w=800&h=500&fit=crop',
+    image: '/images/hero-riad-interior.webp',
   },
   {
     rank: 5,
@@ -334,7 +334,7 @@ const topWineries = [
       restaurant: 'Garden terrace with Roman-inspired Moroccan menu',
     },
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=500&fit=crop',
+    image: '/images/hero-todra-gorge.webp',
   },
 ];
 
@@ -828,14 +828,14 @@ export default function MoroccoWineTourismPage() {
               <div className="space-y-4">
                 <div className="rounded-2xl overflow-hidden shadow-lg">
                   <img
-                    src="https://images.unsplash.com/photo-1474722883778-792e7990302f?w=400&h=350&fit=crop"
+                    src="/images/hero-food.webp"
                     alt="Red wine being poured into a glass at a Moroccan winery tasting room"
                     className="w-full h-44 object-cover hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-lg">
                   <img
-                    src="https://images.unsplash.com/photo-1560493676-04071c5f467b?w=400&h=350&fit=crop"
+                    src="/images/hero-atlas.webp"
                     alt="Vineyard rows stretching across the Moroccan landscape"
                     className="w-full h-56 object-cover hover:scale-105 transition-transform duration-500"
                   />
@@ -844,7 +844,7 @@ export default function MoroccoWineTourismPage() {
               <div className="space-y-4 pt-8">
                 <div className="rounded-2xl overflow-hidden shadow-lg">
                   <img
-                    src="https://images.unsplash.com/photo-1566903451935-7e8835ed3e97?w=400&h=350&fit=crop"
+                    src="/images/hero-riad-interior.webp"
                     alt="Wine barrels aging in a cool cellar at a Moroccan estate"
                     className="w-full h-56 object-cover hover:scale-105 transition-transform duration-500"
                   />
@@ -1717,14 +1717,14 @@ export default function MoroccoWineTourismPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { src: 'https://images.unsplash.com/photo-1560493676-04071c5f467b?w=600&h=400&fit=crop', alt: 'Rolling vineyards under the Moroccan sun with Atlas Mountains in the distance' },
-              { src: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop', alt: 'Grapevines heavy with ripe purple grapes ready for harvest' },
-              { src: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=600&h=400&fit=crop', alt: 'Wine tasting flight with multiple glasses of red and white wine' },
-              { src: 'https://images.unsplash.com/photo-1566903451935-7e8835ed3e97?w=600&h=400&fit=crop', alt: 'Oak barrels in a dimly lit wine cellar' },
-              { src: 'https://images.unsplash.com/photo-1474722883778-792e7990302f?w=600&h=400&fit=crop', alt: 'Pouring red wine into a glass with warm sunset lighting' },
-              { src: 'https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=600&h=400&fit=crop', alt: 'Panoramic vineyard view at golden hour' },
-              { src: 'https://images.unsplash.com/photo-1504279577054-acfeccf8fc52?w=600&h=400&fit=crop', alt: 'Traditional Moroccan courtyard with wine service' },
-              { src: 'https://images.unsplash.com/photo-1597916829826-02e5bb4a54e0?w=600&h=400&fit=crop', alt: 'Estate chateau architecture with vineyard in foreground' },
+              { src: '/images/hero-atlas.webp', alt: 'Rolling vineyards under the Moroccan sun with Atlas Mountains in the distance' },
+              { src: '/images/hero-marrakech.webp', alt: 'Grapevines heavy with ripe purple grapes ready for harvest' },
+              { src: '/images/hero-food.webp', alt: 'Wine tasting flight with multiple glasses of red and white wine' },
+              { src: '/images/hero-riad-interior.webp', alt: 'Oak barrels in a dimly lit wine cellar' },
+              { src: '/images/hero-food.webp', alt: 'Pouring red wine into a glass with warm sunset lighting' },
+              { src: '/images/hero-marrakech.webp', alt: 'Panoramic vineyard view at golden hour' },
+              { src: '/images/hero-riad-interior.webp', alt: 'Traditional Moroccan courtyard with wine service' },
+              { src: '/images/hero-riad-interior.webp', alt: 'Estate chateau architecture with vineyard in foreground' },
             ].map((photo, index) => (
               <div
                 key={index}

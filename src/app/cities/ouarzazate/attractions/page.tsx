@@ -33,7 +33,7 @@ const attractions = [
     slug: 'ait-ben-haddou',
     description:
       'A UNESCO World Heritage Site and one of the most iconic sights in all of Morocco, this ancient fortified village (ksar) rises dramatically from the banks of the Ounila River. Built entirely of red clay and straw, its tightly packed houses, granaries, and towers represent a masterpiece of pre-Saharan earthen architecture. The ksar has served as a backdrop for numerous Hollywood films including Gladiator, Game of Thrones, and Lawrence of Arabia. A handful of families still inhabit the upper levels.',
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=800',
+    image: '/images/hero-ait-benhaddou.webp',
     rating: 4.9,
     price: 'Free (local guide 100-150 MAD)',
     hours: 'Sunrise to sunset daily',
@@ -45,7 +45,7 @@ const attractions = [
     slug: 'taourirt-kasbah',
     description:
       'An imposing 19th-century fortress in the center of Ouarzazate that was once home to the powerful Glaoui family who ruled the region. The labyrinthine interior features ornately decorated rooms with carved stucco, painted wooden ceilings, and colored glass windows. The upper terraces provide panoramic views over the town to the Atlas Mountains beyond. Partially restored by UNESCO, the kasbah gives visitors a sense of the opulent lifestyle of Morocco\'s former feudal lords.',
-    image: 'https://images.unsplash.com/photo-1548018560-c7196e5010a0?q=80&w=800',
+    image: '/images/hero-ait-benhaddou.webp',
     rating: 4.3,
     price: '20 MAD',
     hours: '8:00 AM - 6:30 PM daily',
@@ -57,7 +57,7 @@ const attractions = [
     slug: 'atlas-studios',
     description:
       'The largest film studio in the world by area, spanning over 30 hectares on the outskirts of Ouarzazate. Since its founding in 1983, Atlas Studios has hosted the production of blockbusters including The Mummy, Kingdom of Heaven, Babel, and portions of Game of Thrones. Guided tours take you through standing sets including an Egyptian temple, a Tibetan monastery, and a medieval Jerusalem street. The studio\'s success earned Ouarzazate its nickname as the "Hollywood of Africa."',
-    image: 'https://images.unsplash.com/photo-1553522991-71439aa1ccaf?q=80&w=800',
+    image: '/images/hero-ait-benhaddou.webp',
     rating: 4.2,
     price: '60 MAD (adults), 30 MAD (children)',
     hours: '8:15 AM - 5:45 PM daily',
@@ -69,7 +69,7 @@ const attractions = [
     slug: 'fint-oasis',
     description:
       'A hidden paradise just 15 kilometers south of Ouarzazate, this lush palm oasis sits in a dramatic red-rock canyon that feels like stepping into another world. The fertile valley is home to a small Berber village where families tend date palms, olive groves, and vegetable gardens using traditional irrigation channels (khettaras). The contrast between the green oasis floor and the barren desert cliffs above is extraordinary. Few tourists find their way here, making it a peaceful escape.',
-    image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=80&w=800',
+    image: '/images/hero-ait-benhaddou.webp',
     rating: 4.5,
     price: 'Free',
     hours: 'Accessible during daylight hours',
@@ -81,7 +81,7 @@ const attractions = [
     slug: 'tifoultoute-kasbah',
     description:
       'A dramatic hilltop kasbah located 8 kilometers west of Ouarzazate, also once belonging to the Glaoui family. The fortress was used as a filming location for Lawrence of Arabia in 1962, putting Ouarzazate on Hollywood\'s map. Now partially converted into a restaurant and hotel, the kasbah offers magnificent views of the surrounding palm groves and the snow-capped Atlas Mountains. The rooftop terrace at sunset is one of the most photographed spots in the region.',
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?q=80&w=800',
+    image: '/images/hero-ait-benhaddou.webp',
     rating: 4.1,
     price: '10 MAD',
     hours: '8:00 AM - 6:00 PM daily',
@@ -93,7 +93,7 @@ const attractions = [
     slug: 'cinema-museum',
     description:
       'Located in the former Atlas Corporation Studios, this small but fascinating museum celebrates Ouarzazate\'s rich film heritage. Exhibits include original props, costumes, and set pieces from movies filmed in the region, alongside vintage cameras, projectors, and posters. A timeline chronicles every major production shot in and around Ouarzazate, from the 1960s to the present. Film buffs will enjoy identifying props from their favorite movies among the eclectic collection.',
-    image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800',
+    image: '/images/hero-ait-benhaddou.webp',
     rating: 4.0,
     price: '30 MAD',
     hours: '8:30 AM - 6:00 PM daily',
@@ -105,7 +105,7 @@ const attractions = [
     slug: 'skoura-palm-grove',
     description:
       'An enormous oasis of over 700,000 palm trees stretching along the Dadès Valley about 40 kilometers east of Ouarzazate. The palm grove shelters dozens of ancient kasbahs, the most famous being the 17th-century Amridil Kasbah, featured on the Moroccan 50-dirham note. Cycling or walking through the shaded paths between the palm groves, past rose gardens and almond orchards, is one of the most peaceful experiences in southern Morocco. Best visited in spring when roses bloom.',
-    image: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?q=80&w=800',
+    image: '/images/hero-ait-benhaddou.webp',
     rating: 4.6,
     price: 'Free (Amridil Kasbah 20 MAD)',
     hours: 'Accessible during daylight hours',
@@ -117,7 +117,7 @@ const attractions = [
     slug: 'draa-valley',
     description:
       'Morocco\'s longest river valley stretches over 200 kilometers southeast from Ouarzazate to Zagora, creating one of the most scenic drives in the country. The road passes through dramatic gorges, ancient kasbahs, and a seemingly endless corridor of date palms. Key stops include the town of Agdz, the ruined kasbah of Tamnougalt, and the oasis villages where Berber, Arab, and Haratin communities maintain traditional ways of life. The journey itself is the attraction.',
-    image: 'https://images.unsplash.com/photo-1545071677-8e71b0d2c3c7?q=80&w=800',
+    image: '/images/hero-ait-benhaddou.webp',
     rating: 4.7,
     price: 'Free (guided day tours from 500 MAD)',
     hours: 'Accessible during daylight hours',
@@ -158,7 +158,7 @@ export default function OuarzazateAttractionsPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=2800)',
+              'url(/images/hero-ait-benhaddou.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

@@ -61,7 +61,7 @@ const ACCOMMODATIONS: Accommodation[] = [
     priceFrom: 5200,
     rating: 4.9,
     amenities: ['WiFi', 'Pool', 'A/C', 'Breakfast'],
-    image: 'https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=600',
+    image: '/images/hero-riad-interior.webp',
   },
   {
     name: 'Riad Fes',
@@ -73,7 +73,7 @@ const ACCOMMODATIONS: Accommodation[] = [
     priceFrom: 2800,
     rating: 4.8,
     amenities: ['WiFi', 'Pool', 'Breakfast'],
-    image: 'https://images.unsplash.com/photo-1590073242678-70ee3fc28e8e?q=80&w=600',
+    image: '/images/hero-riad-interior.webp',
   },
   {
     name: 'Sahara Luxury Desert Camp',
@@ -85,7 +85,7 @@ const ACCOMMODATIONS: Accommodation[] = [
     priceFrom: 3500,
     rating: 4.8,
     amenities: ['Breakfast', 'A/C'],
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=600',
+    image: '/images/hero-desert.webp',
   },
   {
     name: 'Kasbah Tamadot',
@@ -97,7 +97,7 @@ const ACCOMMODATIONS: Accommodation[] = [
     priceFrom: 6000,
     rating: 4.9,
     amenities: ['WiFi', 'Pool', 'A/C', 'Breakfast'],
-    image: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=600',
+    image: '/images/hero-riad-interior.webp',
   },
   {
     name: 'Heure Bleue Palais',
@@ -109,7 +109,7 @@ const ACCOMMODATIONS: Accommodation[] = [
     priceFrom: 2200,
     rating: 4.7,
     amenities: ['WiFi', 'Pool', 'Breakfast'],
-    image: 'https://images.unsplash.com/photo-1565689157206-0fddef7589a2?q=80&w=600',
+    image: '/images/hero-coastal.webp',
   },
   {
     name: 'Hostel Waka Waka',
@@ -121,7 +121,7 @@ const ACCOMMODATIONS: Accommodation[] = [
     priceFrom: 120,
     rating: 4.4,
     amenities: ['WiFi', 'Breakfast'],
-    image: 'https://images.unsplash.com/photo-1591383553821-46cfbdbf5d3f?q=80&w=600',
+    image: '/images/hero-marrakech.webp',
   },
 ];
 

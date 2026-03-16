@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/women-travel',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?w=1200&h=630&fit=crop',
+        url: '/images/hero-chefchaouen-drone.webp',
         width: 1200,
         height: 630,
         alt: 'Woman traveler exploring the blue streets of Chefchaouen, Morocco',
@@ -89,7 +89,7 @@ export const metadata: Metadata = {
       'The complete, empowering guide for women traveling Morocco. Safety tips, best cities, cooperatives, packing lists, and real stories.',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?w=1200&h=630&fit=crop',
+        url: '/images/hero-chefchaouen-drone.webp',
         alt: 'Woman in Chefchaouen Morocco blue city',
       },
     ],
@@ -179,7 +179,7 @@ const bestCities = [
     description:
       'Widely considered the most comfortable city in Morocco for solo women travelers. The compact, walkable medina is impossible to get truly lost in. The laid-back Atlantic coast vibe, thriving art scene, and friendly locals create a welcoming atmosphere. The surf community is inclusive and the seafood is outstanding.',
     highlights: ['Compact, safe medina', 'Thriving art and surf scene', 'Relaxed atmosphere', 'Friendly, non-pushy locals'],
-    image: 'https://images.unsplash.com/photo-1560437091-4383266ac31b?w=800&q=80',
+    image: '/images/hero-coastal.webp',
   },
   {
     name: 'Chefchaouen',
@@ -188,7 +188,7 @@ const bestCities = [
     description:
       'The famous blue city nestled in the Rif Mountains is a haven for women travelers. Small, safe, and incredibly photogenic, Chefchaouen moves at a gentle pace. The hiking trails, rooftop cafes, and artisan shops make it easy to spend several relaxing days here. Locals are accustomed to tourists and very welcoming.',
     highlights: ['Extremely safe and walkable', 'Stunning photography everywhere', 'Great hiking trails', 'Calm, peaceful energy'],
-    image: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?w=800&q=80',
+    image: '/images/hero-chefchaouen-drone.webp',
   },
   {
     name: 'Rabat',
@@ -197,7 +197,7 @@ const bestCities = [
     description:
       'Morocco\'s capital is clean, orderly, and cosmopolitan. As a government city with a large diplomatic community, Rabat feels modern and progressive. The medina is well-maintained and calm, the Kasbah of the Udayas is stunning, and the tramway makes getting around effortless. Street hassle is virtually nonexistent.',
     highlights: ['Modern and organized', 'Minimal tourist hassle', 'Excellent museums', 'Beautiful coastline'],
-    image: 'https://images.unsplash.com/photo-1570698473651-b2de99bae12f?w=800&q=80',
+    image: '/images/hero-marrakech.webp',
   },
   {
     name: 'Marrakech',
@@ -206,7 +206,7 @@ const bestCities = [
     description:
       'Morocco\'s most famous city is an unforgettable experience. Yes, the medina is intense and the energy is high, but that is precisely the magic. With a well-reviewed riad as your base, a good map on your phone, and confident body language, Marrakech rewards you with extraordinary food, architecture, and culture. Millions of women visit every year.',
     highlights: ['World-class food and culture', 'Stunning riads and gardens', 'Vibrant arts scene', 'Excellent women-led tours available'],
-    image: 'https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=800&q=80',
+    image: '/images/hero-marrakech.webp',
   },
   {
     name: 'Fes',
@@ -215,7 +215,7 @@ const bestCities = [
     description:
       'The spiritual and cultural capital of Morocco offers the most authentic medina experience in the country. The Fes el-Bali medina is a UNESCO World Heritage site and the world\'s largest car-free urban area. Hiring a guide for your first day is recommended, and once you find your bearings, the cultural richness is unmatched.',
     highlights: ['Deepest cultural experience', 'Incredible artisan traditions', 'Outstanding food scene', 'Less crowded than Marrakech'],
-    image: 'https://images.unsplash.com/photo-1545041552-c7bf3e2daaee?w=800&q=80',
+    image: '/images/hero-fes-tanneries.webp',
   },
   {
     name: 'Taghazout',
@@ -224,7 +224,7 @@ const bestCities = [
     description:
       'This small coastal village north of Agadir has become a magnet for women surfers, yoga practitioners, and digital nomads. The surf-and-yoga lifestyle creates an instant welcoming community. Surf camps with female instructors are easy to find, and the village feels safe and friendly at any hour.',
     highlights: ['Instant surf community', 'Women-friendly surf camps', 'Yoga and wellness scene', 'Beautiful coastline'],
-    image: 'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=800&q=80',
+    image: '/images/hero-surfing.webp',
   },
 ];
 
@@ -419,7 +419,7 @@ const cooperatives = [
     description:
       'The Essaouira-Agadir corridor is home to dozens of women\'s argan oil cooperatives. Women crack, roast, and press argan nuts by hand using traditional methods passed down through generations. Visiting a cooperative lets you see the labor-intensive process, taste fresh argan oil, and purchase products that directly support the women\'s livelihoods.',
     impact: 'Employs over 6,000 women across the region, providing financial independence and education access',
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=800&q=80',
+    image: '/images/hero-desert.webp',
   },
   {
     name: 'Carpet Weaving Cooperatives (Middle Atlas)',
@@ -427,7 +427,7 @@ const cooperatives = [
     description:
       'Berber women in the Middle Atlas Mountains have been weaving carpets for centuries. Each rug tells a story through its patterns and colors. Cooperatives in Azrou, Ifrane, and the villages around the Middle Atlas offer visitors the chance to watch weavers at work and purchase rugs at fair prices without middleman markups.',
     impact: 'Preserves ancient Amazigh weaving traditions while providing sustainable income for rural women',
-    image: 'https://images.unsplash.com/photo-1590422749897-47036da0b0ff?w=800&q=80',
+    image: '/images/art-berber-carpet-weaving.webp',
   },
   {
     name: 'Saffron Cooperatives (Taliouine)',
@@ -435,7 +435,7 @@ const cooperatives = [
     description:
       'Taliouine in the Anti-Atlas is Morocco\'s saffron capital. Women\'s cooperatives here harvest and process the delicate saffron crocus flowers by hand each November. The saffron produced here rivals the finest in the world. Visits include learning about the harvest process and tasting saffron tea.',
     impact: 'Supports families in one of Morocco\'s most remote regions and promotes sustainable agriculture',
-    image: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800&q=80',
+    image: '/images/hero-spices.webp',
   },
   {
     name: 'Pottery Cooperatives (Safi & Fes)',
@@ -443,7 +443,7 @@ const cooperatives = [
     description:
       'While pottery in Fes and Safi has traditionally been a male craft, women\'s cooperatives have emerged that train women in the art of ceramic painting and glazing. These cooperatives produce beautiful hand-painted tagine pots, bowls, and tiles using traditional Moroccan motifs.',
     impact: 'Opens traditionally male industries to women and provides artisan training for younger generations',
-    image: 'https://images.unsplash.com/photo-1590422749897-47036da0b0ff?w=800&q=80',
+    image: '/images/art-berber-carpet-weaving.webp',
   },
   {
     name: 'Embroidery and Textile Cooperatives (Fes)',
@@ -451,7 +451,7 @@ const cooperatives = [
     description:
       'Fes has a long tradition of fine embroidery. Women\'s cooperatives in the medina produce exquisite hand-embroidered caftans, tablecloths, and cushion covers. The intricate needlework can take weeks or months to complete. Visitors can watch artisans at work and commission custom pieces.',
     impact: 'Provides income and social connection for women, many of whom work from home to balance family responsibilities',
-    image: 'https://images.unsplash.com/photo-1590422749897-47036da0b0ff?w=800&q=80',
+    image: '/images/art-berber-carpet-weaving.webp',
   },
 ];
 
@@ -720,7 +720,7 @@ export default function WomenTravelPage() {
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?w=1920&q=80"
+            src="/images/hero-chefchaouen-drone.webp"
             alt="Woman exploring the blue streets of Chefchaouen, Morocco"
             className="w-full h-full object-cover"
           />

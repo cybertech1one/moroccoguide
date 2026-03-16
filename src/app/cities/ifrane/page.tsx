@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1580746738099-78d6833aabc3?w=2800&q=80',
+        url: '/images/hero-atlas.webp',
         width: 2800,
         height: 1600,
         alt: 'Ifrane city with alpine architecture and cedar trees, Morocco',
@@ -89,7 +89,7 @@ export default function IfranePage() {
       name: 'Azrou Cedar Forest',
       description:
         'An ancient forest of towering Atlas cedars, some over 800 years old, home to the famous Barbary macaques. Walking among these giants while playful monkeys swing overhead is pure Middle Atlas magic.',
-      image: 'https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=800&q=80',
+      image: '/images/hero-atlas.webp',
       type: 'Nature',
       rating: 4.8,
     },
@@ -97,7 +97,7 @@ export default function IfranePage() {
       name: 'Ifrane National Park',
       description:
         'Over 50,000 hectares of protected cedar and oak forest teeming with wildlife. Hiking trails wind through valleys dotted with natural springs, wildflower meadows, and the occasional Barbary macaque family.',
-      image: 'https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=80',
+      image: '/images/hero-atlas.webp',
       type: 'National Park',
       rating: 4.7,
     },
@@ -105,7 +105,7 @@ export default function IfranePage() {
       name: 'Lake Dayet Aoua',
       description:
         'A serene natural lake surrounded by cedar and oak forests, popular with birdwatchers for its migratory species. In spring, the shores burst with wildflowers, making it a photographer\'s dream.',
-      image: 'https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=800&q=80',
+      image: '/images/hero-atlas.webp',
       type: 'Lake',
       rating: 4.6,
     },
@@ -113,7 +113,7 @@ export default function IfranePage() {
       name: 'Ain Vitale Spring',
       description:
         'A natural mineral spring surrounded by lush parkland and walking paths. Locals and visitors alike come to fill bottles with its pure mountain water and enjoy peaceful picnics under the trees.',
-      image: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&q=80',
+      image: '/images/hero-atlas.webp',
       type: 'Spring',
       rating: 4.5,
     },
@@ -121,7 +121,7 @@ export default function IfranePage() {
       name: 'Michlifen Ski Resort',
       description:
         'Morocco\'s most accessible ski resort, offering downhill runs, cross-country trails, and a charming alpine atmosphere. When the snow melts, the crater-shaped landscape becomes a stunning hiking destination.',
-      image: 'https://images.unsplash.com/photo-1551524559-8af4e6624178?w=800&q=80',
+      image: '/images/hero-atlas.webp',
       type: 'Ski Resort',
       rating: 4.4,
     },
@@ -158,7 +158,7 @@ export default function IfranePage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1580746738099-78d6833aabc3?w=2800&q=80)',
+              'url(/images/hero-atlas.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

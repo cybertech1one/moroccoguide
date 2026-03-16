@@ -34,7 +34,7 @@ const restaurants = [
     priceRange: '$$$',
     address: '248 Boulevard Sour Jdid, Place du Jardin Public',
     rating: 4.4,
-    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80',
+    image: '/images/photo-food-flatlay.webp',
     description:
       'Inspired by the 1942 Humphrey Bogart film, this elegant restaurant recreates the movie\'s famous nightclub with Art Deco arches, a white grand piano, and a curved mahogany bar. The Moroccan-French menu is excellent, and live jazz adds to the cinematic atmosphere.',
   },
@@ -44,7 +44,7 @@ const restaurants = [
     priceRange: '$$',
     address: 'Boulevard des Almohades, Old Medina',
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80',
+    image: '/images/photo-food-flatlay.webp',
     description:
       'Set in a beautifully converted 18th-century Portuguese fortification with a flower-filled garden courtyard, La Sqala is Casablanca\'s most charming restaurant. Famous for its generous Moroccan breakfasts, tagines, and pastilla in a truly atmospheric setting.',
   },
@@ -54,7 +54,7 @@ const restaurants = [
     priceRange: '$$',
     address: 'Rue El Oraibi Jilali, Maarif',
     rating: 4.3,
-    image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80',
+    image: '/images/photo-food-flatlay.webp',
     description:
       'A wildly popular gourmet burger joint in the trendy Maarif district, using premium local ingredients to create creative burgers, loaded fries, and indulgent milkshakes. The industrial-chic decor and buzzing atmosphere attract a young, fashionable crowd.',
   },
@@ -64,7 +64,7 @@ const restaurants = [
     priceRange: '$$$',
     address: 'Rue Jean Jaures, Maarif',
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&q=80',
+    image: '/images/photo-food-flatlay.webp',
     description:
       'An innovative restaurant blending Moroccan spices with Asian cooking techniques, set in a stylish modern space. The sushi with Moroccan spice twists and wok-fried dishes with argan oil are unexpected delights that showcase Casa\'s cosmopolitan culinary scene.',
   },
@@ -74,7 +74,7 @@ const restaurants = [
     priceRange: '$$',
     address: 'Boulevard de la Corniche, Ain Diab',
     rating: 4.4,
-    image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80',
+    image: '/images/photo-food-flatlay.webp',
     description:
       'A beloved seafood restaurant perched on the rocks of the Corniche with waves crashing below. The daily catch is simply prepared and impeccably fresh, from grilled sole and sea bass to platters of shellfish served with Atlantic views.',
   },
@@ -84,7 +84,7 @@ const restaurants = [
     priceRange: '$$',
     address: '129 Rue Allal Ben Abdellah',
     rating: 4.3,
-    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80',
+    image: '/images/photo-food-flatlay.webp',
     description:
       'A lively tapas bar combining Spanish and Moroccan flavors in a warm, festive atmosphere. Sangria flows freely, the charcuterie is excellent, and weekend nights feature live flamenco music that keeps tables packed until late.',
   },
@@ -94,7 +94,7 @@ const restaurants = [
     priceRange: '$$$$',
     address: 'Kenzi Tower Hotel, Boulevard Zerktouni',
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80',
+    image: '/images/photo-food-flatlay.webp',
     description:
       'Casablanca\'s highest restaurant, perched on the 28th floor of the Kenzi Tower with 360-degree views of the city and ocean. The sophisticated international menu and craft cocktail program make it the city\'s premier special-occasion destination.',
   },
@@ -104,7 +104,7 @@ const restaurants = [
     priceRange: '$$$',
     address: '90 Boulevard de la Corniche, Phare El Hank',
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80',
+    image: '/images/photo-food-flatlay.webp',
     description:
       'An elegant oceanfront restaurant near the El Hank lighthouse, offering refined French-Moroccan cuisine with dramatic Atlantic views. The terrace at sunset is spectacular, and the wine list features excellent Moroccan and French selections.',
   },
@@ -114,7 +114,7 @@ const restaurants = [
     priceRange: '$$',
     address: 'Port de Casablanca',
     rating: 4.2,
-    image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80',
+    image: '/images/photo-food-flatlay.webp',
     description:
       'A popular portside restaurant (unrelated to Rick\'s Cafe) serving freshly caught seafood and grilled meats in a casual, nautical setting. The fish of the day and mixed seafood platters are generous and excellent value for money.',
   },
@@ -124,7 +124,7 @@ const restaurants = [
     priceRange: '$$',
     address: 'Port de Peche, Boulevard des Almohades',
     rating: 4.3,
-    image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80',
+    image: '/images/photo-food-flatlay.webp',
     description:
       'Located right in the fishing port, this no-frills restaurant serves some of the freshest and most affordable seafood in the city. Choose your fish from the day\'s catch, have it grilled or fried, and enjoy it with views of the working harbor.',
   },
@@ -209,7 +209,7 @@ export default function CasablancaRestaurantsPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1544025162-d76694265947?w=2800&q=80)',
+              'url(/images/photo-tagine-closeup.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

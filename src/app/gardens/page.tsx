@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/gardens',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1585247226801-bc613c441316?w=1200&h=630&fit=crop',
+        url: '/images/hero-majorelle-garden.webp',
         width: 1200,
         height: 630,
         alt: 'Jardin Majorelle cobalt blue walls with tropical plants in Marrakech Morocco',
@@ -136,7 +136,7 @@ const gardens: Garden[] = [
     bestTime: 'Early morning (9-10 AM) to avoid crowds; March-May for blooming',
     special: 'Created by French painter Jacques Majorelle in 1923 and later restored by Yves Saint Laurent and Pierre Berge. Famous for its electric cobalt blue walls (Majorelle Blue), over 300 plant species from five continents, towering bamboo groves, lotus ponds, and the Berber Museum housed in a stunning Art Deco studio.',
     description: 'Morocco\'s most iconic garden and one of the most visited attractions in all of Africa. The twelve-acre botanical paradise combines vivid cobalt blue architecture with exotic plantings from around the world, creating an otherworldly sensory experience.',
-    image: 'https://images.unsplash.com/photo-1585247226801-bc613c441316?w=800&q=80',
+    image: '/images/hero-majorelle-garden.webp',
   },
   {
     name: 'Menara Gardens',
@@ -147,7 +147,7 @@ const gardens: Garden[] = [
     bestTime: 'Late afternoon for golden light on the Atlas Mountains backdrop',
     special: 'A 12th-century Almohad garden centered around a massive reflecting pool (the Menara basin) with the snowcapped Atlas Mountains as a backdrop. The green-tiled pavilion reflected in the still water is one of Morocco most photographed scenes. Surrounded by ancient olive groves planted over 700 years ago.',
     description: 'One of the oldest gardens in Morocco, built by the Almohad dynasty in the 12th century. The vast reflecting pool was originally designed as an irrigation reservoir, surrounded by a peaceful olive grove that stretches for hundreds of acres.',
-    image: 'https://images.unsplash.com/photo-1572204097183-e1ab140342ed?w=800&q=80',
+    image: '/images/hero-majorelle-garden.webp',
   },
   {
     name: 'Agdal Gardens',
@@ -158,7 +158,7 @@ const gardens: Garden[] = [
     bestTime: 'Friday mornings for peaceful walks among the orchards',
     special: 'A vast 400-hectare royal garden founded in 1157 by the Almohad Caliph Abd al-Mu\'min. Contains ancient orange, fig, pomegranate, apricot, and olive groves irrigated by an ingenious underground channel system (khettara) that carries snowmelt from the Atlas Mountains over 30 kilometers. The Dar al-Hana pavilion overlooks a massive ornamental basin.',
     description: 'The largest historic garden in Marrakech and one of the oldest surviving royal gardens in the Islamic world. This walled paradise of fruit orchards and reflecting pools has been in continuous cultivation for nearly nine centuries.',
-    image: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=800&q=80',
+    image: '/images/hero-marrakech.webp',
   },
   {
     name: 'Le Jardin Secret',
@@ -169,7 +169,7 @@ const gardens: Garden[] = [
     bestTime: 'Midday as a cool retreat from the medina heat; spring for jasmine blooms',
     special: 'A beautifully restored 16th-century palace garden in the heart of the medina, featuring two distinct gardens: an exotic garden with tropical plants from around the world and an Islamic garden with traditional geometric water channels representing the four rivers of paradise. The climbable tower offers panoramic views over the medina rooftops to the Atlas Mountains.',
     description: 'Hidden behind unassuming medina walls, this meticulously restored riad garden combines 400 years of Saadian-era architecture with a living showcase of Islamic garden philosophy. One of the best examples of traditional courtyard garden design in Morocco.',
-    image: 'https://images.unsplash.com/photo-1570526904826-6690e3b98efa?w=800&q=80',
+    image: '/images/hero-riad-interior.webp',
   },
   {
     name: 'Anima Garden',
@@ -180,7 +180,7 @@ const gardens: Garden[] = [
     bestTime: 'Morning for cool mountain air; April-June for peak flowering',
     special: 'A spectacular contemporary art garden in the foothills of the Atlas Mountains, created by Austrian artist Andre Heller. Features monumental sculptures, theatrical plantings, and immersive art installations woven through exotic gardens. The juxtaposition of massive cacti, tropical palms, and contemporary art against the Atlas backdrop is utterly unique. A free shuttle runs from a meeting point in Marrakech.',
     description: 'A two-hectare open-air museum and botanical garden located 27 km outside Marrakech in the Ourika Valley. Unlike traditional Moroccan gardens, Anima is a bold contemporary vision that blends botanical diversity with large-scale art installations.',
-    image: 'https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?w=800&q=80',
+    image: '/images/hero-majorelle-garden.webp',
   },
   {
     name: 'Exotic Gardens of Bouknadel',
@@ -191,7 +191,7 @@ const gardens: Garden[] = [
     bestTime: 'Spring (March-May) for the most lush vegetation',
     special: 'Created by French horticulturist Marcel Francois in 1951, these lush tropical gardens contain over 1,500 plant species from five continents, organized by geographic origin: Polynesia, South America, the Caribbean, China, Japan, and sub-Saharan Africa. Bamboo forests, giant ferns, water lily ponds, and rare orchids create an astonishing diversity. A hidden gem rarely visited by tourists despite being one of Morocco finest botanical collections.',
     description: 'A remarkable tropical botanical garden on the road between Rabat and Kenitra. This hidden treasure houses one of the most diverse plant collections in North Africa, spread across themed gardens representing ecosystems from around the world.',
-    image: 'https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=800&q=80',
+    image: '/images/hero-national-parks.webp',
   },
   {
     name: 'Andalusian Gardens',
@@ -202,7 +202,7 @@ const gardens: Garden[] = [
     bestTime: 'Late afternoon for warm light on the whitewashed kasbah walls',
     special: 'A serene walled garden within the 12th-century Kasbah of the Udayas, built in the Andalusian style during the French Protectorate using traditional Moorish design principles. Orange and lemon trees, purple bougainvillea, fragrant jasmine, and cypress hedges surround geometric pathways and a central marble fountain. The views over the Bou Regreg River to Sale are magnificent.',
     description: 'A tranquil Andalusian-style garden perched within the ancient Kasbah of the Udayas overlooking the Atlantic. Though created in the early 20th century, the garden perfectly captures the spirit of the Moorish gardens of Al-Andalus.',
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=800&q=80',
+    image: '/images/hero-morocco.webp',
   },
   {
     name: 'Jnan Sbil',
@@ -213,7 +213,7 @@ const gardens: Garden[] = [
     bestTime: 'Morning for birdsong; spring for roses and iris blooms',
     special: 'The most beautiful public park in Fes, originally a royal garden created in the 18th century by Sultan Moulay Abdallah. Recently restored to its original glory with over 3,000 trees, formal flower beds, intricate water channels, ornamental lakes, and bamboo groves. The garden sits just outside the famous Bab Boujeloud (Blue Gate), making it the perfect retreat after exploring the intense Fes medina.',
     description: 'A seven-and-a-half-hectare historic royal garden that has been lovingly restored as a public park. Jnan Sbil is an oasis of calm next to the ancient medina, offering shaded walkways, flowering gardens, and the gentle sound of flowing water.',
-    image: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=800&q=80',
+    image: '/images/hero-fes.webp',
   },
   {
     name: 'Riad Gardens of Fes',
@@ -224,7 +224,7 @@ const gardens: Garden[] = [
     bestTime: 'Midday, when sunlight floods the courtyard from directly above',
     special: 'The courtyard gardens of Fes riads are among the most intimate and exquisite gardens in Morocco. Enclosed by ornate zellige-tiled walls, carved stucco, and painted cedar balconies, these miniature paradise gardens typically feature a central marble fountain surrounded by citrus trees, jasmine vines, and potted geraniums. The interplay of water, tile, light, and greenery within these walled courtyards perfectly embodies Islamic garden philosophy.',
     description: 'Not a single garden but a living tradition of courtyard garden design found throughout the ancient medina. Each riad (traditional townhouse) contains a private garden courtyard that follows centuries-old Islamic principles of enclosed paradise.',
-    image: 'https://images.unsplash.com/photo-1548018560-c7196e5f96c2?w=800&q=80',
+    image: '/images/hero-riad-interior.webp',
   },
   {
     name: 'Royal Stables Gardens',
@@ -235,7 +235,7 @@ const gardens: Garden[] = [
     bestTime: 'Morning for the best light on the monumental arches',
     special: 'The gardens and grounds surrounding Sultan Moulay Ismail\'s legendary Royal Stables (Heri es-Souani), once home to 12,000 horses. The massive granary building with its forest of arches and vaults opens onto landscaped gardens, ornamental basins, and the vast Agdal reservoir. The scale of the 17th-century engineering is breathtaking, combining monumental architecture with sophisticated hydraulic garden design.',
     description: 'The gardens surrounding the colossal granary and stables complex built by Sultan Moulay Ismail in the 17th century. This UNESCO World Heritage site combines monumental Alaouite architecture with royal garden landscapes.',
-    image: 'https://images.unsplash.com/photo-1570197571499-166b36435b75?w=800&q=80',
+    image: '/images/hero-kasbahs.webp',
   },
   {
     name: 'Agdal Basin',
@@ -246,7 +246,7 @@ const gardens: Garden[] = [
     bestTime: 'Sunset for reflections on the water and views of the old city',
     special: 'A monumental artificial lake built by Sultan Moulay Ismail as a reservoir for the royal palace grounds and surrounding gardens. The four-hectare basin is bordered by olive trees and garden promenades, offering panoramic views over Meknes. Originally fed by a 25-kilometer canal, the basin was a masterpiece of 17th-century hydraulic engineering. Today it serves as a peaceful public park popular with locals.',
     description: 'A vast ornamental reservoir and garden complex built as part of Sultan Moulay Ismail\'s grand vision for his imperial capital. The basin demonstrates the centrality of water engineering to Moroccan royal garden traditions.',
-    image: 'https://images.unsplash.com/photo-1562501748-ac39c3b0fb8f?w=800&q=80',
+    image: '/images/hero-kasbahs.webp',
   },
   {
     name: 'Argan Groves',
@@ -257,7 +257,7 @@ const gardens: Garden[] = [
     bestTime: 'Spring (April-May) when wildflowers bloom among the trees',
     special: 'The UNESCO-protected argan biosphere reserve surrounding Essaouira is a unique living landscape where endemic argan trees (found nowhere else on earth) create a distinctive open woodland. Famous for the sight of goats climbing the gnarled argan branches to eat the fruit. Women\'s cooperatives in the groves produce argan oil using centuries-old stone-grinding methods. The twisted, ancient trees against the Atlantic breeze create an ethereal landscape.',
     description: 'A UNESCO Biosphere Reserve of endemic argan woodland surrounding Essaouira. These ancient groves are not formal gardens but a living cultural landscape where traditional agriculture, biodiversity, and women\'s cooperatives intersect.',
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=800&q=80',
+    image: '/images/photo-argan-cooperative.webp',
   },
   {
     name: 'Diabat Gardens',
@@ -268,7 +268,7 @@ const gardens: Garden[] = [
     bestTime: 'Late afternoon when the Atlantic light is golden and soft',
     special: 'The windswept village of Diabat, famously visited by Jimi Hendrix in 1969, sits among sand dunes, ruined 18th-century palace gardens, and small irrigated plots where locals grow vegetables and herbs using traditional methods. The ruins of the Dar Sultan palace and its once-magnificent gardens overlook the Atlantic, with wild fig trees and bougainvillea reclaiming the crumbling walls. The surrounding landscape of dune gardens and ocean views is hauntingly beautiful.',
     description: 'A village of wild beauty south of Essaouira where ruined palace gardens, sand dunes, and traditional small-scale agriculture create a landscape that blurs the line between cultivated garden and untamed nature.',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80',
+    image: '/images/hero-essaouira.webp',
   },
   {
     name: 'Fint Oasis',
@@ -279,7 +279,7 @@ const gardens: Garden[] = [
     bestTime: 'Morning before the midday heat; October-April for comfortable temperatures',
     special: 'A stunning hidden oasis in a narrow red-rock canyon just outside Ouarzazate. Lush palm groves, irrigated terraced gardens, and a meandering river create an impossibly green paradise surrounded by the barren desert landscape. The contrast between the verdant oasis and the stark red cliffs is extraordinary. Used as a filming location for numerous Hollywood productions including Lawrence of Arabia. The traditional Berber village within the oasis maintains an ancient irrigation system.',
     description: 'A dramatic desert oasis hidden in a red-rock canyon, where traditional Berber irrigation creates a pocket of lush greenery in the midst of arid pre-Saharan landscape. One of the most photogenic spots in southern Morocco.',
-    image: 'https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=800&q=80',
+    image: '/images/poster-oasis.webp',
   },
   {
     name: 'Skoura Palm Grove',
@@ -290,7 +290,7 @@ const gardens: Garden[] = [
     bestTime: 'Early morning or late afternoon; spring for rose blooms',
     special: 'One of Morocco\'s largest and most beautiful palm groves (palmeries), containing over 700,000 date palms along with ancient kasbahs, rose gardens, olive groves, and irrigated vegetable plots. The 17th-century Kasbah Amridil, one of the best-preserved kasbahs in Morocco, sits within the grove. The combination of towering palms, crumbling earthen kasbahs, rose hedges, and snow-capped Atlas peaks in the distance creates a landscape of extraordinary beauty.',
     description: 'A vast and ancient palm oasis stretching along the Valley of Roses. Skoura\'s palmery combines date palm agriculture, rose cultivation, and historic kasbah architecture in a landscape that has remained essentially unchanged for centuries.',
-    image: 'https://images.unsplash.com/photo-1548017544-09dbc9fb99f6?w=800&q=80',
+    image: '/images/hero-kasbahs.webp',
   },
 ];
 
@@ -425,7 +425,7 @@ export default function GardensPage() {
       <section className="relative overflow-hidden bg-[var(--color-primary-900)] text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1585247226801-bc613c441316?w=1600&q=80"
+            src="/images/hero-majorelle-garden.webp"
             alt="Jardin Majorelle vibrant cobalt blue walls surrounded by lush tropical plants in Marrakech"
             className="absolute inset-0 w-full h-full object-cover"
           />

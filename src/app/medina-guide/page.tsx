@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/medina-guide',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1200&h=630&fit=crop',
+        url: '/images/hero-spa.webp',
         width: 1200,
         height: 630,
         alt: 'Narrow alleyway in a Moroccan medina with colorful textiles and dappled light',
@@ -102,7 +102,7 @@ const medinasRanked = [
     rank: 1,
     name: 'Fes el-Bali',
     city: 'Fes',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80',
+    image: '/images/hero-spa.webp',
     tagline: 'The world\'s largest car-free urban zone',
     unesco: true,
     difficulty: 'Challenging',
@@ -119,7 +119,7 @@ const medinasRanked = [
     rank: 2,
     name: 'Marrakech Medina',
     city: 'Marrakech',
-    image: 'https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=600&q=80',
+    image: '/images/hero-morocco.webp',
     tagline: 'The spectacle of Jemaa el-Fnaa',
     unesco: true,
     difficulty: 'Moderate',
@@ -136,7 +136,7 @@ const medinasRanked = [
     rank: 3,
     name: 'Tetouan Medina',
     city: 'Tetouan',
-    image: 'https://images.unsplash.com/photo-1560095633-6858e1e1e682?w=600&q=80',
+    image: '/images/hero-overlanding.webp',
     tagline: 'Andalusian charm meets Riffian culture',
     unesco: true,
     difficulty: 'Moderate',
@@ -153,7 +153,7 @@ const medinasRanked = [
     rank: 4,
     name: 'Essaouira Medina',
     city: 'Essaouira',
-    image: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=600&q=80',
+    image: '/images/hero-todra-gorge.webp',
     tagline: 'Manageable, coastal, and laid-back',
     unesco: true,
     difficulty: 'Easy',
@@ -170,7 +170,7 @@ const medinasRanked = [
     rank: 5,
     name: 'Chefchaouen Medina',
     city: 'Chefchaouen',
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=600&q=80',
+    image: '/images/hero-essaouira.webp',
     tagline: 'The blue wonder of the Rif Mountains',
     unesco: false,
     difficulty: 'Easy',
@@ -187,7 +187,7 @@ const medinasRanked = [
     rank: 6,
     name: 'Meknes Medina',
     city: 'Meknes',
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=600&q=80',
+    image: '/images/hero-desert.webp',
     tagline: 'Imperial grandeur, fewer crowds',
     unesco: true,
     difficulty: 'Moderate',
@@ -204,7 +204,7 @@ const medinasRanked = [
     rank: 7,
     name: 'Rabat Medina &amp; Kasbah Udayas',
     city: 'Rabat',
-    image: 'https://images.unsplash.com/photo-1577147443647-81856d5151af?w=600&q=80',
+    image: '/images/hero-ait-benhaddou.webp',
     tagline: 'The capital\'s polished gem',
     unesco: true,
     difficulty: 'Easy',
@@ -221,7 +221,7 @@ const medinasRanked = [
     rank: 8,
     name: 'Sale Medina',
     city: 'Sale',
-    image: 'https://images.unsplash.com/photo-1548017544-09dbc9fb99f6?w=600&q=80',
+    image: '/images/hero-camel-caravan.webp',
     tagline: 'Authentic and untouristy',
     unesco: false,
     difficulty: 'Moderate',
@@ -389,7 +389,7 @@ export default function MedinaGuidePage() {
       <section className="relative overflow-hidden bg-[var(--color-primary-900)] text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1600&q=80"
+            src="/images/hero-spa.webp"
             alt="Narrow alleyway in a Moroccan medina with colorful textiles and sunlight"
             className="absolute inset-0 w-full h-full object-cover"
           />

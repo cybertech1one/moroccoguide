@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/connectivity',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=630&fit=crop',
+        url: '/images/hero-marrakech.webp',
         width: 1200,
         height: 630,
         alt: 'Traveler using smartphone in Morocco with traditional architecture in background',
@@ -88,7 +88,7 @@ export const metadata: Metadata = {
     title: 'Morocco Internet & Connectivity Guide 2025-2026',
     description:
       'SIM cards, eSIM, WiFi, carrier plans, VPN tips, and essential apps for staying connected in Morocco.',
-    images: ['https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=630&fit=crop'],
+    images: ['/images/hero-marrakech.webp'],
   },
   alternates: { canonical: 'https://citytoursmorocco.com/connectivity' },
 };
@@ -526,7 +526,7 @@ export default function ConnectivityPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2800)',
+              'url(/images/hero-marrakech.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />
@@ -1481,7 +1481,7 @@ export default function ConnectivityPage() {
             <div className="card-moroccan overflow-hidden">
               <div className="relative h-48">
                 <img
-                  src="https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=800"
+                  src="/images/hero-desert.webp"
                   alt="Sahara desert dunes in Morocco"
                   className="w-full h-full object-cover"
                   loading="lazy"
@@ -1532,7 +1532,7 @@ export default function ConnectivityPage() {
             <div className="card-moroccan overflow-hidden">
               <div className="relative h-48">
                 <img
-                  src="https://images.unsplash.com/photo-1548018560-c7196e4f5bba?q=80&w=800"
+                  src="/images/hero-marrakech.webp"
                   alt="Atlas Mountains in Morocco"
                   className="w-full h-full object-cover"
                   loading="lazy"
@@ -1584,7 +1584,7 @@ export default function ConnectivityPage() {
             <div className="card-moroccan overflow-hidden">
               <div className="relative h-48">
                 <img
-                  src="https://images.unsplash.com/photo-1545071677-7eb667c2f0c1?q=80&w=800"
+                  src="/images/hero-marrakech.webp"
                   alt="Rural village in southern Morocco with kasbahs"
                   className="w-full h-full object-cover"
                   loading="lazy"
@@ -1617,7 +1617,7 @@ export default function ConnectivityPage() {
             <div className="card-moroccan overflow-hidden">
               <div className="relative h-48">
                 <img
-                  src="https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?q=80&w=800"
+                  src="/images/hero-coastal.webp"
                   alt="Moroccan coastal town"
                   className="w-full h-full object-cover"
                   loading="lazy"

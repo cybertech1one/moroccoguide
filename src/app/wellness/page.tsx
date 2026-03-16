@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/wellness',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200&h=630&fit=crop',
+        url: '/images/hero-wellness-spa.webp',
         width: 1200,
         height: 630,
         alt: 'Moroccan spa wellness experience with traditional hammam tiles',
@@ -73,7 +73,7 @@ const topHammams = [
       'A luxury hammam in the heart of the medina offering the full traditional experience with premium products. Black soap scrub, rhassoul clay mask, and argan oil massage in stunning tiled rooms.',
     price: 'From 600 MAD',
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80',
+    image: '/images/hero-spa.webp',
   },
   {
     name: 'Hammam de la Rose',
@@ -83,7 +83,7 @@ const topHammams = [
       'Set in a beautifully restored riad, this hammam combines traditional techniques with rose-infused products from the Dades Valley. The rose steam room is an unforgettable sensory experience.',
     price: 'From 500 MAD',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80',
+    image: '/images/hero-spa.webp',
   },
   {
     name: 'Hammam Mouassine',
@@ -93,7 +93,7 @@ const topHammams = [
       'A restored 16th-century public hammam that balances authenticity with comfort. The architecture alone is worth the visit, with original zellige tiles and star-shaped skylights.',
     price: 'From 200 MAD',
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1509310228460-e0266a1e0d7c?w=800&q=80',
+    image: '/images/hero-hammam.webp',
   },
   {
     name: 'Les Bains de Marrakech',
@@ -103,7 +103,7 @@ const topHammams = [
       'A premium day spa offering traditional hammam alongside modern treatments. The 2-hour Royal Hammam package includes eucalyptus steam, black soap scrub, ghassoul wrap, and full-body argan oil massage.',
     price: 'From 800 MAD',
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80',
+    image: '/images/hero-spa.webp',
   },
   {
     name: 'Hammam Sidi Ali Benharazem',
@@ -113,7 +113,7 @@ const topHammams = [
       'A neighborhood hammam near the famous shrine, offering the most authentic local experience. Separate sessions for men and women. Bring your own kiis and savon beldi, or buy them at the entrance.',
     price: 'From 15 MAD',
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1509310228460-e0266a1e0d7c?w=800&q=80',
+    image: '/images/hero-hammam.webp',
   },
   {
     name: 'Le Bain Bleu',
@@ -123,7 +123,7 @@ const topHammams = [
       'A beautifully designed private hammam in the Fes medina offering a curated experience with local beauty products. The blue-tiled rooms reference the famous Fes blue pottery tradition. Couples treatments available.',
     price: 'From 400 MAD',
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80',
+    image: '/images/hero-spa.webp',
   },
   {
     name: 'Hammam Bab el-Amer',
@@ -133,7 +133,7 @@ const topHammams = [
       'One of the oldest functioning hammams in Fes, located near the pottery quarter. The domed ceiling with star-shaped openings creates shafts of light through the steam. A raw, authentic experience with no tourist frills.',
     price: 'From 12 MAD',
     rating: 4.4,
-    image: 'https://images.unsplash.com/photo-1509310228460-e0266a1e0d7c?w=800&q=80',
+    image: '/images/hero-hammam.webp',
   },
   {
     name: 'Sofitel Spa Casablanca',
@@ -143,7 +143,7 @@ const topHammams = [
       'A world-class spa in the Sofitel Casablanca Tour Blanche hotel. The hammam experience here blends traditional Moroccan ritual with French spa luxury. Extensive treatment menu including argan oil wraps, rose petal baths, and Moroccan mint body scrubs.',
     price: 'From 700 MAD',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80',
+    image: '/images/hero-spa.webp',
   },
 ];
 
@@ -156,7 +156,7 @@ const yogaRetreats = [
     duration: '7 days',
     price: 'From 5,500 MAD',
     highlights: ['Daily yoga', 'Surf lessons', 'Organic meals', 'Ocean views'],
-    image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80',
+    image: '/images/hero-yoga.webp',
   },
   {
     name: 'Atlas Mountain Yoga Escape',
@@ -166,7 +166,7 @@ const yogaRetreats = [
     duration: '5 days',
     price: 'From 4,200 MAD',
     highlights: ['Mountain yoga', 'Guided hikes', 'Berber cuisine', 'Meditation'],
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=800&q=80',
+    image: '/images/hero-atlas.webp',
   },
   {
     name: 'Essaouira Mindfulness Retreat',
@@ -176,7 +176,7 @@ const yogaRetreats = [
     duration: '4 days',
     price: 'From 3,800 MAD',
     highlights: ['Mindfulness', 'Gentle yoga', 'Art workshops', 'Sea views'],
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=800&q=80',
+    image: '/images/hero-essaouira.webp',
   },
   {
     name: 'Sahara Desert Retreat',
@@ -186,7 +186,7 @@ const yogaRetreats = [
     duration: '3 days',
     price: 'From 3,500 MAD',
     highlights: ['Desert yoga', 'Stargazing', 'Camel trek', 'Sound healing'],
-    image: 'https://images.unsplash.com/photo-1548017267-5765e9b2ccfb?w=800&q=80',
+    image: '/images/hero-desert.webp',
   },
   {
     name: 'Riad Retreat Marrakech',
@@ -196,7 +196,7 @@ const yogaRetreats = [
     duration: '4 days',
     price: 'From 4,500 MAD',
     highlights: ['Riad yoga', 'Hammam included', 'Cooking class', 'Medina tour'],
-    image: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=800&q=80',
+    image: '/images/hero-marrakech.webp',
   },
   {
     name: 'Dades Valley Yoga & Hiking',
@@ -206,7 +206,7 @@ const yogaRetreats = [
     duration: '5 days',
     price: 'From 3,900 MAD',
     highlights: ['Canyon views', 'Valley hikes', 'Rose valley', 'Stargazing'],
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=800&q=80',
+    image: '/images/hero-atlas.webp',
   },
   {
     name: 'Paradise Valley Wellness Retreat',
@@ -216,7 +216,7 @@ const yogaRetreats = [
     duration: '4 days',
     price: 'From 4,000 MAD',
     highlights: ['Natural pools', 'Waterfall hikes', 'Plant-based food', 'Breathwork'],
-    image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80',
+    image: '/images/hero-yoga.webp',
   },
 ];
 
@@ -234,7 +234,7 @@ const hotSprings = [
     minerals: 'Sulfur, calcium, magnesium, sodium chloride',
     facilities: 'Modern spa complex, public baths, hotel, medical consultations',
     price: 'Public baths: 10-20 MAD / Spa treatments: 200-600 MAD',
-    image: 'https://images.unsplash.com/photo-1509310228460-e0266a1e0d7c?w=800&q=80',
+    image: '/images/hero-hammam.webp',
   },
   {
     name: 'Sidi Harazem Thermal Baths',
@@ -245,7 +245,7 @@ const hotSprings = [
     minerals: 'Calcium, magnesium, bicarbonate',
     facilities: 'Public pools, picnic areas, basic accommodation',
     price: '5-15 MAD entry',
-    image: 'https://images.unsplash.com/photo-1509310228460-e0266a1e0d7c?w=800&q=80',
+    image: '/images/hero-hammam.webp',
   },
   {
     name: 'Abaynou Hot Springs',
@@ -256,7 +256,7 @@ const hotSprings = [
     minerals: 'Sulfur, calcium, iron',
     facilities: 'Basic public pools, changing rooms',
     price: '10 MAD entry',
-    image: 'https://images.unsplash.com/photo-1509310228460-e0266a1e0d7c?w=800&q=80',
+    image: '/images/hero-hammam.webp',
   },
   {
     name: 'Fezouane Hot Springs',
@@ -267,7 +267,7 @@ const hotSprings = [
     minerals: 'Sulfur, sodium, potassium',
     facilities: 'Natural pools, minimal infrastructure',
     price: 'Free / small donation',
-    image: 'https://images.unsplash.com/photo-1509310228460-e0266a1e0d7c?w=800&q=80',
+    image: '/images/hero-hammam.webp',
   },
   {
     name: 'Lalla Takerkoust',
@@ -278,7 +278,7 @@ const hotSprings = [
     minerals: 'Mountain mineral water',
     facilities: 'Eco-lodges, spa resorts, restaurants, water sports',
     price: 'Lodge-dependent (from 500 MAD/night)',
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=800&q=80',
+    image: '/images/hero-atlas.webp',
   },
 ];
 
@@ -395,7 +395,7 @@ export default function WellnessPage() {
       <section className="relative overflow-hidden bg-[var(--color-primary-900)] text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1600&q=80"
+            src="/images/hero-wellness-spa.webp"
             alt="Moroccan spa wellness treatment with traditional tiles"
             className="absolute inset-0 w-full h-full object-cover"
           />
@@ -1067,7 +1067,7 @@ export default function WellnessPage() {
             </div>
             <div className="relative h-96 rounded-2xl overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1548017267-5765e9b2ccfb?w=800&q=80"
+                src="/images/hero-desert.webp"
                 alt="Sahara Desert at sunset with golden dunes stretching to the horizon"
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -1085,7 +1085,7 @@ export default function WellnessPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative h-96 rounded-2xl overflow-hidden order-2 lg:order-1">
               <img
-                src="https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=800&q=80"
+                src="/images/hero-atlas.webp"
                 alt="Atlas Mountains landscape with traditional Berber village"
                 className="w-full h-full object-cover"
                 loading="lazy"

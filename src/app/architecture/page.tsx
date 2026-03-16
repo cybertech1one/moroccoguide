@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/architecture',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1548017544-09dbc9fb99f6?w=1200&h=630&fit=crop',
+        url: '/images/hero-kasbahs.webp',
         width: 1200,
         height: 630,
         alt: 'Ornate Moroccan architecture with intricate zellige tilework and carved stucco',
@@ -138,7 +138,7 @@ const architecturalStyles: ArchStyle[] = [
     description: 'The indigenous architecture of Morocco\'s original inhabitants, the Amazigh (Berber) people. This tradition produced the dramatic kasbahs and ksour (fortified villages) of the Draa and Dades Valleys, built from pise (rammed earth) that blends seamlessly with the desert landscape. Berber architecture is defined by its harmony with terrain, using locally sourced materials and responding to extreme climate conditions. The multi-story kasbahs with their crenellated towers and geometric pise decoration are among the most visually striking buildings in all of Africa.',
     keyFeatures: ['Pise (rammed earth) construction', 'Crenellated watchtowers', 'Geometric earth decorations', 'Fortified granaries (agadirs)', 'Climate-responsive thick walls'],
     examples: ['Ait Benhaddou (UNESCO)', 'Kasbah Taourirt, Ouarzazate', 'Tamnougalt Kasbah, Draa Valley', 'Tizourgane Agadir, Anti-Atlas'],
-    image: 'https://images.unsplash.com/photo-1548017544-09dbc9fb99f6?w=800&q=80',
+    image: '/images/hero-ait-benhaddou.webp',
   },
   {
     name: 'Moorish / Andalusian',
@@ -146,7 +146,7 @@ const architecturalStyles: ArchStyle[] = [
     description: 'When the Moors were expelled from Al-Andalus (Spain and Portugal), they brought with them a refined architectural tradition that profoundly shaped Moroccan building. Moorish architecture is characterized by horseshoe arches, intricate stucco carving (gebs), zellige tilework, lush courtyard gardens with central fountains, and an emphasis on interior beauty over exterior display. The medinas of Fes, Tetouan, and Chefchaouen are living museums of Andalusian architectural influence, where every door, fountain, and courtyard echoes the lost splendor of Cordoba and Granada.',
     keyFeatures: ['Horseshoe and multifoil arches', 'Central courtyard with fountain', 'Zellige geometric tilework', 'Carved stucco (gebs)', 'Whitewashed exterior, ornate interior'],
     examples: ['Chefchaouen Medina', 'Tetouan Medina (UNESCO)', 'Qarawiyyin Mosque, Fes', 'Andalusian Mosque, Fes'],
-    image: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?w=800&q=80',
+    image: '/images/hero-chefchaouen.webp',
   },
   {
     name: 'Almohad Dynasty',
@@ -154,7 +154,7 @@ const architecturalStyles: ArchStyle[] = [
     description: 'The Almohad dynasty produced some of Morocco\'s most monumental architecture, characterized by massive scale, austere grandeur, and sophisticated geometric decoration. The Almohads built the great minarets that define the Moroccan skyline: the Koutoubia in Marrakech, the Hassan Tower in Rabat, and (their influence extending to Spain) the Giralda in Seville. All three share a distinctive square plan and ascending decorative registers that move from simple arches to elaborate interlacing patterns. Almohad architecture established the template that would influence all subsequent Moroccan building.',
     keyFeatures: ['Monumental square minarets', 'Ascending decorative registers', 'Sebka (diamond lattice) patterns', 'Massive defensive walls and gates', 'Austere grandeur and scale'],
     examples: ['Koutoubia Mosque, Marrakech', 'Hassan Tower, Rabat', 'Bab Oudaia gate, Rabat', 'Tin Mal Mosque, High Atlas'],
-    image: 'https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=800&q=80',
+    image: '/images/hero-marrakech-koutoubia.webp',
   },
   {
     name: 'Marinid Dynasty',
@@ -162,7 +162,7 @@ const architecturalStyles: ArchStyle[] = [
     description: 'The Marinids elevated decorative arts to their absolute zenith in Morocco. While politically weaker than the Almohads, they were unrivaled patrons of architecture, founding a series of madrasas (theological colleges) in Fes, Meknes, and Sale that rank among the finest buildings in the Islamic world. Marinid architecture is defined by astonishing intricacy: every surface is covered with zellige tilework, carved stucco, and painted cedar wood in layers of mathematical complexity that can take years of study to fully appreciate. The Bou Inania Madrasa in Fes represents the peak of this decorative genius.',
     keyFeatures: ['Extraordinary surface decoration', 'Three-layer ornament (zellige, stucco, cedar)', 'Madrasa architecture perfected', 'Muqarnas (honeycomb) vaulting', 'Marble courtyard floors'],
     examples: ['Bou Inania Madrasa, Fes', 'Al-Attarine Madrasa, Fes', 'Madrasa Abu al-Hassan, Sale', 'Chellah Necropolis, Rabat'],
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=800&q=80',
+    image: '/images/detail-zellige-mosaic.webp',
   },
   {
     name: 'Saadian Dynasty',
@@ -170,7 +170,7 @@ const architecturalStyles: ArchStyle[] = [
     description: 'The Saadians brought a new opulence to Moroccan architecture, drawing on Marinid decorative traditions while adding influences from Ottoman Turkey and Renaissance Europe. Their greatest surviving works are the Saadian Tombs and the ruins of El Badi Palace in Marrakech. The Saadian Tombs, rediscovered in 1917, contain some of the most lavish interior spaces in Morocco, with Italian Carrara marble columns, exquisite muqarnas ceilings, and zellige of extraordinary refinement. El Badi Palace, though now in ruins, was once described as the eighth wonder of the world.',
     keyFeatures: ['Lavish use of imported marble', 'Gold and onyx ornamentation', 'Refined muqarnas ceilings', 'Grand palace complexes', 'Synthesis of Moroccan and Ottoman elements'],
     examples: ['Saadian Tombs, Marrakech', 'El Badi Palace ruins, Marrakech', 'Ben Youssef Madrasa, Marrakech', 'Moulay Ismail\'s early works'],
-    image: 'https://images.unsplash.com/photo-1570197571499-166b36435b75?w=800&q=80',
+    image: '/images/art-moroccan-doorway.webp',
   },
   {
     name: 'Alaouite Dynasty',
@@ -178,7 +178,7 @@ const architecturalStyles: ArchStyle[] = [
     description: 'The ruling Alaouite dynasty has shaped Moroccan architecture for nearly four centuries, beginning with the colossal building projects of Sultan Moulay Ismail in Meknes. Alaouite architecture is characterized by grand scale, the integration of traditional Moroccan decorative arts with new influences, and during the 20th-century French Protectorate period, a deliberate blend of Moroccan and European elements. Royal palaces, grand mosques, and monumental gates (babs) demonstrate the dynasty\'s commitment to architectural splendor as an expression of political power.',
     keyFeatures: ['Monumental royal complexes', 'Integration of gardens and architecture', 'Grand processional gates (babs)', 'Franco-Moroccan colonial fusion', 'Continued patronage of traditional crafts'],
     examples: ['Dar el-Makhzen, Meknes', 'Royal Palace, Fes', 'Bab Mansour, Meknes', 'Mohammed V Mausoleum, Rabat'],
-    image: 'https://images.unsplash.com/photo-1560448070-1de02e61b64e?w=800&q=80',
+    image: '/images/hero-hassan-mosque.webp',
   },
   {
     name: 'Art Deco',
@@ -186,7 +186,7 @@ const architecturalStyles: ArchStyle[] = [
     description: 'During the French Protectorate, Casablanca became one of the world\'s great Art Deco cities. French architects, given a blank canvas in the rapidly growing commercial capital, designed hundreds of buildings that blended European Art Deco geometry with Moroccan decorative motifs: zellige-inspired facade patterns, Moorish arches rendered in concrete, and balconies with Islamic geometric railings. The result is a unique architectural style found nowhere else in the world. The Ville Nouvelle of Casablanca contains one of the largest and most coherent collections of Art Deco architecture outside of Miami and Mumbai.',
     keyFeatures: ['Geometric facades blending Deco and Islamic motifs', 'Reinforced concrete construction', 'Moorish arches in modern materials', 'Ornamental balconies with iron railings', 'Cinema palaces and commercial buildings'],
     examples: ['Cinema Rialto, Casablanca', 'Sacre-Coeur Cathedral (now cultural center), Casablanca', 'Hotel Lincoln, Casablanca', 'Quartier Habous (New Medina), Casablanca'],
-    image: 'https://images.unsplash.com/photo-1569955082555-2da6684c15a9?w=800&q=80',
+    image: '/images/hero-hassan-mosque.webp',
   },
   {
     name: 'Modern',
@@ -194,7 +194,7 @@ const architecturalStyles: ArchStyle[] = [
     description: 'Contemporary Moroccan architecture seeks to honor the country\'s extraordinary heritage while embracing global modernism. The Hassan II Mosque in Casablanca (completed 1993) is the defining work: the world\'s tallest minaret at 210 meters, a retractable roof over an ocean-facing prayer hall, and the finest traditional craftsmanship applied at unprecedented scale. More recent projects like the Mohammed VI Theatre in Rabat by Zaha Hadid Architects and the Yves Saint Laurent Museum in Marrakech by Studio KO demonstrate a new generation of architecture that is confidently Moroccan and unapologetically modern.',
     keyFeatures: ['Traditional craftsmanship at modern scale', 'Retractable and innovative structures', 'International architects with local sensitivity', 'Sustainable desert-adapted design', 'Cultural institutions as architectural statements'],
     examples: ['Hassan II Mosque, Casablanca', 'Mohammed VI Theatre, Rabat', 'Yves Saint Laurent Museum, Marrakech', 'ONCF Kenitra Station'],
-    image: 'https://images.unsplash.com/photo-1572204097183-e1ab140342ed?w=800&q=80',
+    image: '/images/hero-hassan-mosque.webp',
   },
 ];
 
@@ -273,7 +273,7 @@ const masterpieces: Masterpiece[] = [
     period: 'Modern (1993)',
     description: 'The largest mosque in Africa and the third-largest in the world. Its 210-meter minaret is the tallest religious structure on earth. Built over the Atlantic Ocean with a glass floor revealing the sea below and a retractable roof that opens to the sky, it combines cutting-edge engineering with 10,000 master artisans\' traditional craftsmanship.',
     whyVisit: 'The only mosque in Morocco open to non-Muslim visitors. Guided tours reveal 53,000 square meters of hand-carved marble, zellige, and painted cedar.',
-    image: 'https://images.unsplash.com/photo-1569955082555-2da6684c15a9?w=800&q=80',
+    image: '/images/hero-hassan-mosque.webp',
   },
   {
     name: 'Koutoubia Mosque',
@@ -281,7 +281,7 @@ const masterpieces: Masterpiece[] = [
     period: 'Almohad (1147-1199)',
     description: 'The defining symbol of Marrakech and the masterwork of Almohad architecture. The 77-meter square minaret, visible from across the city, established the template for Moroccan minarets including the Hassan Tower in Rabat and the Giralda in Seville. The ascending decorative registers on each face are a textbook of Almohad geometric art.',
     whyVisit: 'While the interior is closed to non-Muslims, the minaret and surrounding gardens are essential viewing, especially at sunset when the warm light illuminates the stone.',
-    image: 'https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=800&q=80',
+    image: '/images/hero-marrakech-koutoubia.webp',
   },
   {
     name: 'Qarawiyyin Mosque & University',
@@ -289,7 +289,7 @@ const masterpieces: Masterpiece[] = [
     period: 'Founded 859, rebuilt multiple dynasties',
     description: 'Founded by Fatima al-Fihri in 859 CE, the Qarawiyyin is recognized by UNESCO and Guinness World Records as the oldest continuously operating university in the world. The mosque complex has been expanded and embellished by every dynasty since the Idrisids, creating a layered architectural palimpsest that spans over a thousand years of Moroccan building. The prayer hall can accommodate 20,000 worshippers and features an extraordinary forest of horseshoe arches.',
     whyVisit: 'While the interior is closed to non-Muslims, the exterior, doorways, and courtyard glimpses through open doors are extraordinary. The surrounding medina streets offer multiple vantage points.',
-    image: 'https://images.unsplash.com/photo-1577493340887-b7bfff550145?w=800&q=80',
+    image: '/images/hero-fes-tanneries.webp',
   },
   {
     name: 'Bou Inania Madrasa',
@@ -297,7 +297,7 @@ const masterpieces: Masterpiece[] = [
     period: 'Marinid (1351-1356)',
     description: 'The pinnacle of Marinid decorative art and arguably the most beautiful building in Morocco. Every surface is covered with three layers of ornament: zellige tilework below, carved stucco in the middle, and painted cedar above. The marble courtyard with its central ablutions fountain and water clock mechanism is a masterpiece of medieval Islamic architecture.',
     whyVisit: 'Open to non-Muslims (rare for a functioning mosque-madrasa). The level of decorative detail is staggering and rewards extended, careful observation.',
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=800&q=80',
+    image: '/images/detail-zellige-mosaic.webp',
   },
   {
     name: 'Ait Benhaddou',
@@ -305,7 +305,7 @@ const masterpieces: Masterpiece[] = [
     period: 'Berber (17th century, on ancient foundations)',
     description: 'A UNESCO World Heritage fortified village (ksar) of dramatic pise kasbahs rising above the Ounila River. The cluster of earthen towers and buildings against the barren landscape is one of the most photographed scenes in Morocco and has served as a backdrop for dozens of films including Gladiator, Game of Thrones, and Lawrence of Arabia.',
     whyVisit: 'The most accessible and photogenic example of traditional Berber earthen architecture. Climbing to the summit provides panoramic views of the surrounding desert landscape.',
-    image: 'https://images.unsplash.com/photo-1548017544-09dbc9fb99f6?w=800&q=80',
+    image: '/images/hero-ait-benhaddou.webp',
   },
   {
     name: 'Saadian Tombs',
@@ -313,7 +313,7 @@ const masterpieces: Masterpiece[] = [
     period: 'Saadian (16th century)',
     description: 'Rediscovered in 1917 after being sealed by the Alaouite dynasty, these royal mausolea contain some of the most exquisite interior spaces in Morocco. The Hall of Twelve Columns features Italian Carrara marble pillars, a breathtaking muqarnas cedar ceiling, and zellige tilework of supreme refinement. The intimate garden courtyards are tranquil and beautiful.',
     whyVisit: 'One of the few Saadian structures to survive intact, offering a glimpse into the extraordinary opulence of the dynasty. Go early to avoid crowds in the small chambers.',
-    image: 'https://images.unsplash.com/photo-1570197571499-166b36435b75?w=800&q=80',
+    image: '/images/art-moroccan-doorway.webp',
   },
   {
     name: 'Hassan Tower',
@@ -321,7 +321,7 @@ const masterpieces: Masterpiece[] = [
     period: 'Almohad (begun 1195, unfinished)',
     description: 'The unfinished minaret of what was intended to be the largest mosque in the world. Sultan Yacoub al-Mansour\'s death halted construction, leaving the 44-meter tower surrounded by 200 stone columns that mark the prayer hall\'s planned footprint. Adjacent stands the exquisite Mohammed V Mausoleum (1971), a masterpiece of Alaouite architecture.',
     whyVisit: 'The juxtaposition of the medieval unfinished tower and the modern mausoleum tells 800 years of Moroccan architectural history in a single site.',
-    image: 'https://images.unsplash.com/photo-1560448070-1de02e61b64e?w=800&q=80',
+    image: '/images/hero-hassan-mosque.webp',
   },
   {
     name: 'Bab Mansour',
@@ -329,7 +329,7 @@ const masterpieces: Masterpiece[] = [
     period: 'Alaouite (1732)',
     description: 'Widely considered the finest monumental gate in North Africa, Bab Mansour was built by Sultan Moulay Ismail using marble columns recycled from the Roman ruins of Volubilis and the Saadian El Badi Palace. The massive horseshoe arch is framed by elaborate zellige panels and carved green tile decorations of extraordinary scale and refinement.',
     whyVisit: 'The sheer scale and decorative ambition of the gate is best appreciated in person. The Place el-Hedim square in front provides excellent viewing angles.',
-    image: 'https://images.unsplash.com/photo-1562501748-ac39c3b0fb8f?w=800&q=80',
+    image: '/images/detail-moroccan-door.webp',
   },
   {
     name: 'Ben Youssef Madrasa',
@@ -337,7 +337,7 @@ const masterpieces: Masterpiece[] = [
     period: 'Saadian (rebuilt 1564-1570)',
     description: 'The largest madrasa in Morocco, once housing 900 students. The central courtyard is a symphony of zellige, carved stucco, and cedar, with a large marble ablutions basin reflecting the decorated walls. The 132 student dormitory cells surrounding the courtyard offer a rare glimpse into the daily life of medieval Islamic scholarship.',
     whyVisit: 'Recently reopened after extensive restoration, the madrasa offers one of Morocco\'s most immersive architectural experiences. The interplay of light, water, and decoration changes throughout the day.',
-    image: 'https://images.unsplash.com/photo-1570526904826-6690e3b98efa?w=800&q=80',
+    image: '/images/detail-zellige-pattern.webp',
   },
   {
     name: 'Volubilis Roman Ruins',
@@ -345,7 +345,7 @@ const masterpieces: Masterpiece[] = [
     period: 'Roman (3rd century BCE - 3rd century CE)',
     description: 'The best-preserved Roman ruins in North Africa, featuring remarkably intact mosaic floors, a triumphal arch, the Basilica, and the Capitol Temple. Volubilis demonstrates that Morocco\'s architectural heritage predates the Islamic period by many centuries. The site sits on a fertile plain with views to the holy city of Moulay Idriss.',
     whyVisit: 'The mosaics alone justify the visit. The Labours of Hercules and Orpheus mosaics are among the finest Roman floor mosaics surviving anywhere in the former empire.',
-    image: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=800&q=80',
+    image: '/images/hero-kasbahs.webp',
   },
   {
     name: 'Tin Mal Mosque',
@@ -353,7 +353,7 @@ const masterpieces: Masterpiece[] = [
     period: 'Almohad (1156)',
     description: 'Perched at 1,200 meters in a remote High Atlas valley, the Tin Mal Mosque is the birthplace of the Almohad movement and one of only two mosques in Morocco open to non-Muslims. Though partially ruined, the soaring nave, massive horseshoe arches, and the remnants of exquisite stucco decoration convey the austere power that characterized early Almohad architecture. The dramatic mountain setting is unforgettable.',
     whyVisit: 'One of only two mosques in Morocco open to non-Muslims. The remote mountain journey along the Tizi n\'Test pass is an adventure in itself, and the isolation heightens the spiritual atmosphere.',
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=800&q=80',
+    image: '/images/hero-atlas.webp',
   },
   {
     name: 'Bahia Palace',
@@ -361,7 +361,7 @@ const masterpieces: Masterpiece[] = [
     period: 'Alaouite (1860s-1900)',
     description: 'A sprawling 19th-century palace built by Grand Vizier Si Moussa and his son Ba Ahmed. The name means "Palace of the Beautiful" and the interior lives up to it: a sequence of painted reception rooms, intimate riads, and grand courtyards decorated with the finest zellige, carved cedar, and stucco work that the best artisans of the period could produce. The gardens, including an immense central courtyard paved in marble, are among the most serene spaces in Marrakech.',
     whyVisit: 'The most accessible and photogenic palace in Marrakech. The interplay of indoor and outdoor rooms illustrates how Moroccan architecture dissolves the boundary between building and garden.',
-    image: 'https://images.unsplash.com/photo-1590080876067-b76e7b46d75c?w=800&q=80',
+    image: '/images/hero-marrakech.webp',
   },
   {
     name: 'Chellah Necropolis',
@@ -369,7 +369,7 @@ const masterpieces: Masterpiece[] = [
     period: 'Marinid over Roman (14th century on ancient foundations)',
     description: 'A hauntingly beautiful site where Marinid royal tombs were built atop the ruins of the Roman city of Sala Colonia. The monumental Marinid gateway opens onto a garden of ruins where crumbling minarets, carved marble tombs, and Roman columns are overgrown with fig trees and inhabited by nesting storks. It is one of the most atmospheric places in Morocco.',
     whyVisit: 'The layering of Roman, Islamic, and natural elements in a single garden-ruin creates a timeless, contemplative atmosphere found nowhere else. Visit at sunset when the golden light transforms the ruins.',
-    image: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&q=80',
+    image: '/images/hero-essaouira-ramparts.webp',
   },
   {
     name: 'Yves Saint Laurent Museum',
@@ -377,7 +377,7 @@ const masterpieces: Masterpiece[] = [
     period: 'Modern (2017)',
     description: 'Designed by Studio KO, this terracotta-clad museum is a masterclass in contemporary Moroccan architecture. The exterior is composed of interlocking cubes sheathed in a lace-like terracotta pattern that references zellige tilework, while the interior galleries are cool, minimal, and bathed in natural light. The building demonstrates how Moroccan architectural DNA can be reinterpreted for the 21st century.',
     whyVisit: 'Beyond the fashion exhibitions, the architecture itself is the attraction. The building is a conversation between Moroccan tradition and global contemporary design, set within a garden that connects to the nearby Jardin Majorelle.',
-    image: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=800&q=80',
+    image: '/images/hero-majorelle-garden.webp',
   },
   {
     name: 'El Badi Palace Ruins',
@@ -385,7 +385,7 @@ const masterpieces: Masterpiece[] = [
     period: 'Saadian (1578-1603)',
     description: 'Once the most lavish palace in the Islamic world, El Badi ("The Incomparable") was built by Sultan Ahmad al-Mansur to celebrate his victory at the Battle of the Three Kings. Italian marble, Sudanese gold, Irish granite, and Indian onyx were used in its construction. Though stripped of all decoration by Moulay Ismail a century later, the vast sunken gardens, massive walls, and sheer scale of the ruins still convey the staggering ambition of the Saadian golden age.',
     whyVisit: 'The immense scale of the ruins and the annual Marrakech Popular Arts Festival held within the walls create an experience that connects past grandeur to living culture.',
-    image: 'https://images.unsplash.com/photo-1565689157206-0fddef7589a2?w=800&q=80',
+    image: '/images/hero-marrakech.webp',
   },
   {
     name: 'Kasbah of the Udayas',
@@ -393,7 +393,7 @@ const masterpieces: Masterpiece[] = [
     period: 'Almohad (12th century)',
     description: 'Perched on a cliff above the mouth of the Bou Regreg River, this fortified kasbah is one of the most perfectly preserved Almohad structures in Morocco. The grand Almohad gateway, the narrow blue-and-white streets of the residential quarter (added later by Andalusian refugees), and the serene Andalusian garden overlooking the Atlantic create a layered architectural experience spanning eight centuries.',
     whyVisit: 'The combination of Almohad fortifications, Andalusian domestic architecture, formal gardens, and ocean views makes this one of the most rewarding short visits in Morocco.',
-    image: 'https://images.unsplash.com/photo-1577147443647-81856d5151af?w=800&q=80',
+    image: '/images/hero-morocco.webp',
   },
 ];
 
@@ -753,7 +753,7 @@ export default function ArchitecturePage() {
       <section className="relative overflow-hidden bg-[var(--color-primary-900)] text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1548017544-09dbc9fb99f6?w=1600&q=80"
+            src="/images/hero-kasbahs.webp"
             alt="Ornate Moroccan architecture with intricate zellige tilework and carved stucco arches"
             className="absolute inset-0 w-full h-full object-cover"
           />
@@ -928,7 +928,7 @@ export default function ArchitecturePage() {
 
           <div className="relative mb-8">
             <img
-              src="https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=1200&q=80"
+              src="/images/detail-zellige-mosaic.webp"
               alt="Detail of zellige tilework, carved stucco, and cedar woodwork in a Moroccan madrasa"
               className="w-full h-72 md:h-96 object-cover rounded-2xl"
               loading="lazy"
@@ -1019,7 +1019,7 @@ export default function ArchitecturePage() {
           <div className="max-w-4xl mx-auto mb-10">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <img
-                src="https://images.unsplash.com/photo-1548017544-09dbc9fb99f6?w=800&q=80"
+                src="/images/hero-ait-benhaddou.webp"
                 alt="Ait Benhaddou ksar with dramatic rammed earth towers"
                 className="w-full h-64 object-cover rounded-xl"
                 loading="lazy"

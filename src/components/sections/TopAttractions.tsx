@@ -25,7 +25,7 @@ const FEATURED_ATTRACTION: Attraction & { fullDescription: string } = {
     'The heartbeat of Marrakech -- a UNESCO-recognized masterpiece of intangible cultural heritage. By day, it is a sprawling open-air market of orange juice vendors, snake charmers, and henna artists. By night, it transforms into the largest open-air restaurant in the world.',
   fullDescription:
     'Jemaa el-Fnaa is the cultural epicenter of Morocco and a UNESCO Masterpiece of the Oral and Intangible Heritage of Humanity. This vast, irregular square at the entrance to the Marrakech medina has been the city\'s main gathering place since its founding in 1070 AD. During the day, it fills with storytellers, acrobats, musicians, herbalists, and snake charmers. As the sun sets, dozens of food stalls spring up, and the entire square becomes a mesmerizing spectacle of smoke, music, and conversation. It is one of the most vibrant public spaces on Earth.',
-  image: 'https://images.unsplash.com/photo-1591383553821-46cfbdbf5d3f?q=80&w=1200',
+  image: '/images/hero-marrakech.webp',
   unesco: true,
 };
 
@@ -37,7 +37,7 @@ const ATTRACTIONS: Attraction[] = [
     rating: 4.9,
     snippet:
       'The largest mosque in Africa with the tallest minaret in the world at 210m. Built partially over the Atlantic Ocean.',
-    image: 'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?q=80&w=600',
+    image: '/images/hero-hassan-mosque.webp',
     unesco: false,
   },
   {
@@ -47,7 +47,7 @@ const ATTRACTIONS: Attraction[] = [
     rating: 4.7,
     snippet:
       'A two-and-a-half-acre botanical garden designed by French painter Jacques Majorelle in 1923, later restored by Yves Saint Laurent.',
-    image: 'https://images.unsplash.com/photo-1590003504444-71404792acd8?q=80&w=600',
+    image: '/images/hero-majorelle-garden.webp',
   },
   {
     name: 'Fes Medina',
@@ -56,7 +56,7 @@ const ATTRACTIONS: Attraction[] = [
     rating: 4.8,
     snippet:
       'The world\'s largest car-free urban area and home to Al Quaraouiyine, the oldest continuously operating university (founded 859 AD).',
-    image: 'https://images.unsplash.com/photo-1549140600-78c9b8275e9d?q=80&w=600',
+    image: '/images/hero-fes-tanneries.webp',
     unesco: true,
   },
   {
@@ -66,7 +66,7 @@ const ATTRACTIONS: Attraction[] = [
     rating: 4.8,
     snippet:
       'A stunning ksar along the former caravan route between the Sahara and Marrakech. Featured in Game of Thrones and Gladiator.',
-    image: 'https://images.unsplash.com/photo-1548017306-3a97b3b43040?q=80&w=600',
+    image: '/images/hero-ait-benhaddou.webp',
     unesco: true,
   },
   {
@@ -76,7 +76,7 @@ const ATTRACTIONS: Attraction[] = [
     rating: 4.9,
     snippet:
       'The famous blue-washed mountain town of northern Morocco. Every alley and stairway is painted in shades of blue.',
-    image: 'https://images.unsplash.com/photo-1553244006-20e9b0aadec7?q=80&w=600',
+    image: '/images/hero-chefchaouen-drone.webp',
   },
   {
     name: 'Erg Chebbi Dunes',
@@ -85,7 +85,7 @@ const ATTRACTIONS: Attraction[] = [
     rating: 4.9,
     snippet:
       'Towering sand dunes reaching 150 meters high at the edge of the Sahara. The ultimate desert experience with camel treks and stargazing.',
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=600',
+    image: '/images/hero-desert.webp',
   },
   {
     name: 'Volubilis Roman Ruins',
@@ -94,7 +94,7 @@ const ATTRACTIONS: Attraction[] = [
     rating: 4.6,
     snippet:
       'The best-preserved Roman ruins in North Africa, dating to the 3rd century BC. Remarkable mosaics and triumphal arch.',
-    image: 'https://images.unsplash.com/photo-1575377222312-dd1a63a51638?q=80&w=600',
+    image: '/images/hero-marrakech.webp',
     unesco: true,
   },
   {
@@ -104,7 +104,7 @@ const ATTRACTIONS: Attraction[] = [
     rating: 4.7,
     snippet:
       'A spectacular canyon with 300m-high vertical walls narrowing to a passage just 10 meters wide. A rock climbing paradise.',
-    image: 'https://images.unsplash.com/photo-1548017306-3a97b3b43040?q=80&w=600',
+    image: '/images/hero-ait-benhaddou.webp',
   },
   {
     name: 'Essaouira Ramparts',
@@ -113,7 +113,7 @@ const ATTRACTIONS: Attraction[] = [
     rating: 4.6,
     snippet:
       'The 18th-century Portuguese-built fortifications overlooking the Atlantic. Walk the sea-battered ramparts for sweeping ocean views.',
-    image: 'https://images.unsplash.com/photo-1565689157206-0fddef7589a2?q=80&w=600',
+    image: '/images/hero-coastal.webp',
     unesco: true,
   },
 ];

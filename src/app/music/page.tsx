@@ -79,7 +79,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/music',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=1200&h=630&fit=crop',
+        url: '/images/art-gnawa-music.webp',
         width: 1200,
         height: 630,
         alt: 'Gnaoua musicians performing with traditional instruments in Morocco',
@@ -147,7 +147,7 @@ const musicGenres = [
     tagline: 'Trance, Healing & Sub-Saharan Roots',
     tags: ['Spiritual', 'Trance', 'Essaouira'],
     tagStyles: ['tag-primary', 'tag-accent', 'tag-secondary'],
-    image: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=700&q=80',
+    image: '/images/art-gnawa-music.webp',
     description:
       'Gnaoua is the heartbeat of spiritual Morocco, a music born from the memories of enslaved West Africans who were brought to the Maghreb centuries ago. Far more than entertainment, Gnaoua is a healing tradition. The deep, hypnotic pulse of the guembri (a three-stringed bass lute covered in camel skin) anchors the sound, while the metallic shimmer of qraqeb (iron castanets) and the resonant thud of the tbel (drum) build layers of rhythm that can induce trance states.',
     details:
@@ -160,7 +160,7 @@ const musicGenres = [
     tagline: 'The Refined Legacy of Moorish Spain',
     tags: ['Classical', 'Orchestral', 'Fes & Tetouan'],
     tagStyles: ['tag-secondary', 'tag-primary', 'tag-accent'],
-    image: 'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=700&q=80',
+    image: '/images/art-gnawa-music.webp',
     description:
       'When the Moors were expelled from Al-Andalus (Muslim Spain) in the 15th century, they carried with them one of the most sophisticated musical traditions the Islamic world had ever produced. Andalusian classical music, known in Morocco as al-Ala, found a new home in the imperial cities of Fes, Tetouan, Tangier, and Rabat, where conservatories have lovingly preserved it for over five centuries.',
     details:
@@ -173,7 +173,7 @@ const musicGenres = [
     tagline: 'The People\'s Music - Joy, Love & Celebration',
     tags: ['Folk', 'Weddings', 'Nationwide'],
     tagStyles: ['tag-accent', 'tag-primary', 'tag-secondary'],
-    image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=700&q=80',
+    image: '/images/hero-jemaa-elfna-night.webp',
     description:
       'If Gnaoua is Morocco\'s soul and al-Ala its intellect, then Chaabi ("of the people" in Darija) is its joyful, beating heart. This is the music you hear at every Moroccan wedding, pouring out of taxis in Casablanca, and filling the streets during national celebrations. Chaabi is democratic, exuberant, and impossible to sit still to.',
     details:
@@ -186,7 +186,7 @@ const musicGenres = [
     tagline: 'Mountain Rhythms & Ancient Traditions',
     tags: ['Traditional', 'Atlas Mountains', 'Communal'],
     tagStyles: ['tag-primary', 'tag-secondary', 'tag-accent'],
-    image: 'https://images.unsplash.com/photo-1504898770365-14faca6a7320?w=700&q=80',
+    image: '/images/hero-berber-culture.webp',
     description:
       'The Amazigh (Berber) peoples of Morocco possess musical traditions that predate the arrival of both Arab and European cultures by millennia. Music is not a spectator sport in Amazigh culture; it is communal, participatory, and deeply woven into the rhythms of daily life, seasonal change, and spiritual practice.',
     details:
@@ -199,7 +199,7 @@ const musicGenres = [
     tagline: 'The Poetic Art of the Artisan Guilds',
     tags: ['Poetry', 'Heritage', 'Meknes & Fes'],
     tagStyles: ['tag-secondary', 'tag-accent', 'tag-primary'],
-    image: 'https://images.unsplash.com/photo-1511192336575-5a79af67a629?w=700&q=80',
+    image: '/images/art-gnawa-music.webp',
     description:
       'Malhun is Morocco\'s great poetic-musical tradition, born in the workshops and guilds of the imperial cities. Unlike the courtly refinement of Andalusian al-Ala, Malhun grew from the creative energies of craftsmen, tanners, weavers, and merchants who composed elaborate poems in Moroccan Darija and set them to music during long working days.',
     details:
@@ -212,7 +212,7 @@ const musicGenres = [
     tagline: 'Eastern Morocco\'s Cross-Border Sound',
     tags: ['Modern Folk', 'Oujda', 'Cross-border'],
     tagStyles: ['tag-secondary', 'tag-accent', 'tag-primary'],
-    image: 'https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=700&q=80',
+    image: '/images/hero-jemaa-elfna-night.webp',
     description:
       'Rai, meaning "opinion" or "point of view" in Arabic, is the rebellious soundtrack of Eastern Morocco. Born in the port city of Oran, Algeria, Rai crossed the border into the Moroccan city of Oujda and the surrounding Oriental region, where it has become an essential part of the local musical identity.',
     details:
@@ -225,7 +225,7 @@ const musicGenres = [
     tagline: 'Rock, Rap, Fusion & the New Generation',
     tags: ['Rock', 'Hip-Hop', 'Fusion'],
     tagStyles: ['tag-accent', 'tag-secondary', 'tag-primary'],
-    image: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=700&q=80',
+    image: '/images/hero-jemaa-elfna-night.webp',
     description:
       'Morocco\'s contemporary music scene is one of the most dynamic and creative in the Arab world. A new generation of artists is forging sounds that are unapologetically Moroccan and unmistakably global, blending traditional influences with rock, hip-hop, electronic, and pop in ways that reflect the complexity of modern Moroccan identity.',
     details:
@@ -238,7 +238,7 @@ const musicGenres = [
     tagline: 'The Spiritual Dimension of Sound',
     tags: ['Devotional', 'Mystical', 'Brotherhood'],
     tagStyles: ['tag-primary', 'tag-accent', 'tag-secondary'],
-    image: 'https://images.unsplash.com/photo-1511192336575-5a79af67a629?w=700&q=80',
+    image: '/images/art-gnawa-music.webp',
     description:
       'Sufism, the mystical dimension of Islam, has deep roots in Morocco, and music is one of its primary vehicles for approaching the Divine. Unlike the more formal structures of Andalusian classical music or the communal energy of Amazigh traditions, Sufi music is explicitly devotional: its purpose is to dissolve the boundary between the worshipper and God.',
     details:
@@ -572,42 +572,42 @@ const dances = [
   {
     name: 'Guedra',
     region: 'Southern Morocco & Sahara',
-    image: 'https://images.unsplash.com/photo-1528164344705-47542687000d?w=600&q=80',
+    image: '/images/hero-berber-culture.webp',
     description:
       'A mesmerizing trance dance of the Tuareg and Sahrawi peoples. A woman kneels at the center of a circle of musicians and singers, her hands performing intricate, fluid movements that gradually build in intensity as the drumming accelerates. The guedra is a dance of blessing and spiritual connection.',
   },
   {
     name: 'Ahwash',
     region: 'High Atlas & Souss Valley',
-    image: 'https://images.unsplash.com/photo-1504898770365-14faca6a7320?w=600&q=80',
+    image: '/images/hero-berber-culture.webp',
     description:
       'The great communal dance of the Tashelhit-speaking Amazigh people. Men and women form facing lines or large circles, swaying, clapping, and singing in call-and-response patterns accompanied by a chorus of bendirs. The dance builds from gentle sway to joyful crescendo.',
   },
   {
     name: 'Gnaoua Dance',
     region: 'Essaouira, Marrakech & nationwide',
-    image: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&q=80',
+    image: '/images/art-gnawa-music.webp',
     description:
       'Performers in elaborate, colorful costumes topped with cowrie-shell headdresses spin, leap, and whirl while playing the qraqeb. During lila ceremonies, dancers may enter trance states, their movements becoming increasingly ecstatic.',
   },
   {
     name: 'Shikhat',
     region: 'Nationwide (urban)',
-    image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&q=80',
+    image: '/images/hero-jemaa-elfna-night.webp',
     description:
       'Professional female dancers and musicians who perform at weddings and celebrations. Their dance is characterized by sinuous hip and shoulder movements, vibrant costumes, and an infectious energy.',
   },
   {
     name: 'Reggada',
     region: 'Rif Mountains (Northern Morocco)',
-    image: 'https://images.unsplash.com/photo-1564227901-6b1d20bebe9d?w=600&q=80',
+    image: '/images/hero-berber-culture.webp',
     description:
       'A fierce, warrior-like dance of the Rif Mountains. Male dancers perform rapid, stamping footwork while brandishing sticks or muskets, their movements aggressive and highly synchronized.',
   },
   {
     name: 'Ahidous',
     region: 'Middle Atlas Mountains',
-    image: 'https://images.unsplash.com/photo-1528164344705-47542687000d?w=600&q=80',
+    image: '/images/hero-berber-culture.webp',
     description:
       'The signature dance of Middle Atlas Tamazight-speaking communities. Men and women stand shoulder to shoulder in long lines, swaying in unison while singing and stamping their feet to the rhythm of bendirs.',
   },
@@ -855,7 +855,7 @@ export default function MusicPage() {
       <section className="relative overflow-hidden bg-[var(--color-primary-900)] text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=1600&q=80"
+            src="/images/art-gnawa-music.webp"
             alt="Gnaoua musicians performing in traditional colorful costumes in Morocco"
             className="absolute inset-0 w-full h-full object-cover"
           />
@@ -1055,7 +1055,7 @@ export default function MusicPage() {
           <div className="mt-8 card-moroccan overflow-hidden">
             <div className="relative h-64 md:h-80">
               <img
-                src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=1200&q=80"
+                src="/images/art-gnawa-music.webp"
                 alt="Gnaoua musicians at the Essaouira Gnaoua World Music Festival"
                 className="w-full h-full object-cover"
               />

@@ -34,7 +34,7 @@ const restaurants = [
     priceRange: '$$',
     address: '7 Derb el Magana, Talaa Kbira, Fes el-Bali',
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80',
+    image: '/images/photo-food-flatlay.webp',
     description:
       'A beloved cultural cafe in a restored medina house, famous for its camel burger and live Gnawa music performances. The rooftop terrace is the perfect spot for sundowners, and the weekly cultural events attract both locals and travelers.',
   },
@@ -44,7 +44,7 @@ const restaurants = [
     priceRange: '$',
     address: '19 Derb Guebbas, Ziat, Fes el-Bali',
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80',
+    image: '/images/photo-food-flatlay.webp',
     description:
       'An authentic family-run restaurant where Madame Hatim prepares traditional Fassi dishes from recipes passed down through generations. The set menu changes daily and offers some of the most genuine home-cooked Moroccan food in the medina.',
   },
@@ -54,7 +54,7 @@ const restaurants = [
     priceRange: '$$$',
     address: '12 Derb el Miter, Oued Zhoune, Fes el-Bali',
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80',
+    image: '/images/photo-food-flatlay.webp',
     description:
       'An elegant restaurant in a beautifully restored palace, surrounded by an Andalusian garden of fruit trees, herbs, and roses. The menu features refined Moroccan and Mediterranean cuisine, with many ingredients picked fresh from the on-site garden.',
   },
@@ -64,7 +64,7 @@ const restaurants = [
     priceRange: '$$',
     address: '15 Derb Idrissy, Sidi Ahmed Chaoui, Fes el-Bali',
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80',
+    image: '/images/photo-food-flatlay.webp',
     description:
       'Set in the romantic open-air ruins of a grand riad, this garden restaurant serves inventive Moroccan-British dishes amid crumbling mosaic walls and fruit trees. The atmosphere is magical, especially on warm evenings under the stars.',
   },
@@ -74,7 +74,7 @@ const restaurants = [
     priceRange: '$$$',
     address: '30 Derb el Amer, Zkak Roumane, Fes el-Bali',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80',
+    image: '/images/photo-food-flatlay.webp',
     description:
       'One of Fes\'s most celebrated dining experiences, offering a sophisticated multi-course Moroccan tasting menu in an intimate riad setting. The chef creates artful presentations of traditional flavors using local seasonal ingredients.',
   },
@@ -84,7 +84,7 @@ const restaurants = [
     priceRange: '$$',
     address: 'Place Rcif, Fes el-Bali',
     rating: 4.3,
-    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80',
+    image: '/images/photo-food-flatlay.webp',
     description:
       'A welcoming multi-level restaurant near Bab Rcif offering Moroccan and international dishes with a large terrace overlooking the bustling square below. A reliable choice for both quick lunches and leisurely dinners.',
   },
@@ -94,7 +94,7 @@ const restaurants = [
     priceRange: '$$$$',
     address: 'Quartier Ziat, Bab Ziat, Fes el-Bali',
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80',
+    image: '/images/photo-food-flatlay.webp',
     description:
       'The rooftop restaurant of the Palais Faraj hotel offering arguably the best panoramic views of the Fes medina. The refined menu blends Moroccan and French gastronomy, and dining here at sunset is an unforgettable experience.',
   },
@@ -104,7 +104,7 @@ const restaurants = [
     priceRange: '$$$',
     address: '7 Derb Zerbtana, Zkak Lbghel, Fes el-Bali',
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&q=80',
+    image: '/images/photo-food-flatlay.webp',
     description:
       'A sleek, contemporary restaurant offering creative reinterpretations of Moroccan cuisine in a candlelit riad. The tasting menu is a journey through Morocco\'s culinary traditions presented with modern technique and artistic plating.',
   },
@@ -114,7 +114,7 @@ const restaurants = [
     priceRange: '$',
     address: 'Talaa Sghira, Fes el-Bali',
     rating: 4.4,
-    image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80',
+    image: '/images/photo-food-flatlay.webp',
     description:
       'A no-frills local favorite on one of the medina\'s main arteries, serving generous portions of tagine, couscous, and harira soup at remarkably fair prices. Come for lunch when the daily specials are freshly prepared.',
   },
@@ -124,7 +124,7 @@ const restaurants = [
     priceRange: '$$',
     address: 'Angle Rue Abdelkrim El Khattabi, Ville Nouvelle',
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80',
+    image: '/images/photo-food-flatlay.webp',
     description:
       'A hip restaurant in the new town offering Moroccan-inspired small plates and tapas in a contemporary setting. Popular with young Fassis for its creative cocktails, lively atmosphere, and Instagram-worthy plating.',
   },
@@ -209,7 +209,7 @@ export default function FesRestaurantsPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1544025162-d76694265947?w=2800&q=80)',
+              'url(/images/photo-moroccan-feast.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

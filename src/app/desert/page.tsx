@@ -28,22 +28,49 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Sahara Desert Guide Morocco | Merzouga, Zagora, Erg Chigaga & Desert Camps',
+  title: 'Sahara Desert Guide Morocco | Camps & Treks',
   description:
-    'Plan your Sahara Desert adventure in Morocco. Complete guide to Merzouga, Erg Chebbi, Erg Chigaga, Zagora, Draa Valley with camel trekking, sandboarding, luxury camps, photography tips, and what to pack.',
+    'Plan your Sahara Desert adventure in Morocco. Guide to Merzouga, Erg Chebbi, Erg Chigaga, Zagora with camel treks, luxury camps, and tips. Book now!',
+  keywords: [
+    'Sahara Desert Morocco',
+    'Merzouga desert camp',
+    'Erg Chebbi sand dunes',
+    'Erg Chigaga Morocco',
+    'Zagora desert tour',
+    'Morocco camel trekking',
+    'luxury desert camp Morocco',
+    'Sahara sandboarding',
+    'Morocco desert photography',
+    'Draa Valley Morocco',
+    'desert camping Morocco',
+    'Morocco desert stargazing',
+    'what to pack Sahara',
+    'best time Sahara Morocco',
+    'Morocco desert adventure',
+  ],
   openGraph: {
-    title: 'Sahara Desert Complete Guide - Morocco',
+    title: 'Sahara Desert Guide Morocco | Camps & Treks',
     description:
-      'Everything you need for the ultimate Sahara experience: desert camps, camel treks, sandboarding, stargazing, and photography under the clearest skies on Earth.',
+      'Everything you need for the ultimate Sahara experience: desert camps, camel treks, sandboarding, stargazing, and photography.',
     url: 'https://citytoursmorocco.com/desert',
+    type: 'article',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&h=630&fit=crop',
+        url: '/images/hero-desert.webp',
         width: 1200,
         height: 630,
         alt: 'Camel caravan crossing Sahara sand dunes at sunset in Morocco',
       },
     ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Sahara Desert Guide Morocco | Camps & Treks',
+    description:
+      'Complete guide to Merzouga, Erg Chebbi, Erg Chigaga, and Zagora. Camel treks, luxury camps, and desert photography.',
+  },
+  alternates: {
+    canonical: 'https://citytoursmorocco.com/desert',
   },
 };
 
@@ -61,7 +88,7 @@ const desertDestinations = [
     },
     highlights: ['Tallest dunes in Morocco (150m)', 'Widest camp selection', 'Gnaoua music culture', 'Khamlia village visit', 'Best for first-time visitors'],
     bestFor: 'First-time desert visitors, photographers, luxury seekers',
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=800',
+    image: '/images/hero-desert.webp',
   },
   {
     name: 'Erg Chigaga (M\'Hamid)',
@@ -76,7 +103,7 @@ const desertDestinations = [
     },
     highlights: ['Largest dune field in Morocco', 'Only 4x4 access (50 km off-road)', 'True wilderness solitude', 'Nomad encounters', 'Taragalte Music Festival (October)'],
     bestFor: 'Adventurers, those seeking solitude, experienced desert travelers',
-    image: 'https://images.unsplash.com/photo-1509023464722-18d996393ca8?q=80&w=800',
+    image: '/images/hero-sahara-sunrise.webp',
   },
   {
     name: 'Draa Valley',
@@ -91,7 +118,7 @@ const desertDestinations = [
     },
     highlights: ['200 km of palm oases', 'Ancient kasbahs (Tamnougalt)', 'Tamegroute pottery & library', 'Date harvest season', 'Scenic N9 highway'],
     bestFor: 'Culture lovers, photographers, road trippers, those combining desert and valley',
-    image: 'https://images.unsplash.com/photo-1542401886-65d6c61db217?q=80&w=800',
+    image: '/images/hero-camping.webp',
   },
   {
     name: 'Zagora',
@@ -106,7 +133,7 @@ const desertDestinations = [
     },
     highlights: ['Closest to Marrakech (6-7 hrs)', '"52 Days to Timbuktu" sign', 'Jebel Zagora fortress hike', 'Wednesday market', 'Budget-friendly'],
     bestFor: 'Short trips, budget travelers, those wanting fewer crowds',
-    image: 'https://images.unsplash.com/photo-1507363524160-a7c57878847f?q=80&w=800',
+    image: '/images/hero-camel-caravan.webp',
   },
 ];
 
@@ -277,14 +304,14 @@ const campComparison = [
     price: '400-1,200 MAD/night',
     features: ['Shared tents (2-4 people)', 'Foam mattresses and heavy blankets', 'Communal toilets (pit or portable)', 'Simple tagine dinner and basic breakfast', 'Group campfire with drumming', 'Basic but clean and functional'],
     considerations: 'Best for backpackers and those who want the experience without the price. The stars and sunrise are identical regardless of camp level. Main drawbacks are shared sleeping quarters and minimal bathroom facilities.',
-    image: 'https://images.unsplash.com/photo-1517824806704-9040b037703b?q=80&w=600',
+    image: '/images/hero-camping.webp',
   },
   {
     type: 'Luxury Desert Camp',
     price: '2,500-8,000+ MAD/night',
     features: ['Private tent with en-suite bathroom', 'Real beds with premium linens and heating', 'Hot showers and flushing toilets', 'Gourmet multi-course dinner with wine', 'Private campfire, music, and stargazing', 'Some with pool, spa, electricity, and A/C'],
     considerations: 'Worth the splurge for honeymooners and special occasions. Top camps include Kam Kam Dunes (Erg Chebbi), Azalai Desert Lodge (Merzouga), Erg Chigaga Luxury Desert Camp (M\'Hamid), and Desert Luxury Camp (Merzouga). Book 2-4 weeks in advance for peak season.',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?q=80&w=600',
+    image: '/images/hero-marrakech.webp',
   },
 ];
 
@@ -316,7 +343,7 @@ const jsonLd = {
   url: 'https://citytoursmorocco.com/desert',
   touristType: ['Adventure tourism', 'Nature tourism', 'Photography tourism'],
   geo: { '@type': 'GeoCoordinates', latitude: 31.0977, longitude: -4.0085 },
-  image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200',
+  image: '/images/hero-desert.webp',
 };
 
 export default function DesertPage() {
@@ -333,7 +360,7 @@ export default function DesertPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=2800)',
+              'url(/images/hero-desert.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

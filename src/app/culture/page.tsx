@@ -67,12 +67,18 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/culture',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=1200&h=630&fit=crop',
+        url: '/images/hero-berber-culture.webp',
         width: 1200,
         height: 630,
         alt: 'Intricate Moroccan zellige tilework in vivid geometric patterns',
       },
     ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Moroccan Culture & Traditions | CityGuide',
+    description:
+      'Berber heritage, Islamic art, Gnaoua music, zellige tilework, traditional clothing, and cultural experiences in Morocco.',
   },
   alternates: { canonical: 'https://citytoursmorocco.com/culture' },
 };
@@ -227,49 +233,49 @@ const familySocial = [
 const artsCrafts = [
   {
     name: 'Zellige (Tilework)',
-    image: 'https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=600&q=80',
+    image: '/images/detail-zellige-mosaic.webp',
     description:
       'Hand-cut geometric mosaic tiles assembled into dazzling patterns that adorn mosques, palaces, fountains, and homes. Each tiny piece is individually chiseled from glazed terracotta, then fitted together like a jigsaw puzzle. The art originated in 10th-century Fes and remains a hallmark of Moroccan architecture. A single square meter of zellige can contain over 1,000 individual pieces.',
   },
   {
     name: 'Tadelakt (Plasterwork)',
-    image: 'https://images.unsplash.com/photo-1580418827493-f2b22c0a76cb?w=600&q=80',
+    image: '/images/hero-hammam-interior.webp',
     description:
       'A waterproof lime plaster technique unique to Morocco, used for centuries in hammams, riads, and palaces. Polished with river stones and treated with olive oil soap, tadelakt produces a luminous, marble-like finish in rich earth tones. Marrakech is the historic center of this craft.',
   },
   {
     name: 'Carpet Weaving',
-    image: 'https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?w=600&q=80',
+    image: '/images/art-berber-carpet-weaving.webp',
     description:
       'Moroccan carpets are world-renowned, ranging from the thick, plush pile rugs of the Middle Atlas to the flat-woven kilims of the High Atlas. Each tribal group has distinctive motifs and color palettes. Berber women weave stories, blessings, and protective symbols into every knot, making each carpet a unique work of art.',
   },
   {
     name: 'Leather Work',
-    image: 'https://images.unsplash.com/photo-1517646287270-a5a0a6e11d26?w=600&q=80',
+    image: '/images/card-leather.webp',
     description:
       'The tanneries of Fes, dating back to the 9th century, are among the oldest in the world. Using traditional methods with natural dyes derived from saffron, poppy, indigo, and mint, artisans produce the supple leather used for babouches (slippers), bags, poufs, and bookbinding that Morocco is famous for.',
   },
   {
     name: 'Pottery & Ceramics',
-    image: 'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=600&q=80',
+    image: '/images/photo-ceramics-pottery.webp',
     description:
       'Each Moroccan city has its own pottery tradition. Fes is known for its blue-and-white ceramics, Safi for its multicolored glazed ware, and Tamegroute for its distinctive green pottery. From ornate tagine pots to intricately painted plates, Moroccan ceramics blend function with breathtaking artistry.',
   },
   {
     name: 'Metalwork',
-    image: 'https://images.unsplash.com/photo-1590073242678-70ee3fc28e8e?w=600&q=80',
+    image: '/images/hero-souk-lamps.webp',
     description:
       'Moroccan metalworkers hammer, engrave, and pierce brass, copper, and silver into lanterns, tea sets, trays, and door knockers. The rhythmic clanging of hammers fills the metalworking souks of Marrakech and Fes, where artisans create the iconic pierced metal lanterns that cast mesmerizing shadow patterns.',
   },
   {
     name: 'Wood Carving',
-    image: 'https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=600&q=80',
+    image: '/images/art-berber-carpet-weaving.webp',
     description:
       'Cedarwood and thuya burl wood are the prized materials for Moroccan woodworkers. Essaouira is the center for aromatic thuya marquetry, while Fes artisans carve elaborate cedar screens, doors, and furniture. The muqarnas (honeycomb vaulting) and mashrabiya (lattice screens) in mosques and palaces represent the pinnacle of the craft.',
   },
   {
     name: 'Calligraphy',
-    image: 'https://images.unsplash.com/photo-1609599006353-e629aaabfeae?w=600&q=80',
+    image: '/images/art-moroccan-calligraphy.webp',
     description:
       'Arabic calligraphy is revered in Morocco as the highest art form, inseparable from the spiritual beauty of the Quran. The Maghrebi script style is uniquely Moroccan, with sweeping curves and distinctive letter forms. Calligraphy adorns mosque walls, madrasa interiors, coins, and official documents, and modern artists continue to push its boundaries.',
   },
@@ -319,31 +325,31 @@ const traditionalClothing = [
 const musicStyles = [
   {
     name: 'Gnawa',
-    image: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&q=80',
+    image: '/images/art-gnawa-music.webp',
     description:
       'A hypnotic fusion of Sub-Saharan African, Berber, and Sufi spiritual traditions, Gnawa music features the deep, resonant tones of the guembri (three-stringed bass lute), metal castanets called qraqeb, and call-and-response chanting. Originating from the descendants of enslaved West Africans, Gnawa music was historically used in spiritual healing ceremonies called lilas that could last all night. Recognized by UNESCO as Intangible Cultural Heritage in 2019, the annual Gnaoua World Music Festival in Essaouira has brought global recognition to this profound art form.',
   },
   {
     name: 'Andalusian Classical (Al-Ala)',
-    image: 'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600&q=80',
+    image: '/images/art-gnawa-music.webp',
     description:
       'Also known as al-Ala, this refined musical tradition traces its roots to the courts of Moorish Spain. Performed by orchestras using traditional instruments including the oud, rabab, nay, and violin, Andalusian music follows complex modal systems called nubat. Fes and Tetouan are the principal centers of this tradition, where conservatories preserve the eleven surviving nubat that represent one of the great classical music traditions of the Islamic world. A complete nuba performance can last up to seven hours and moves through distinct rhythmic phases from meditative to ecstatic.',
   },
   {
     name: 'Chaabi',
-    image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&q=80',
+    image: '/images/hero-jemaa-elfna-night.webp',
     description:
       'The popular music of Morocco, Chaabi (meaning "of the people") is the soundtrack to celebrations, weddings, and festivals across the country. Characterized by driving rhythms, accordion, banjo, and passionate vocals, Chaabi draws on the Moroccan dialect of Arabic (Darija) to tell stories of love, joy, and everyday life. The late Nass El Ghiwane, often called "the Rolling Stones of Africa," pioneered a socially conscious form of Chaabi that became the voice of a generation. Today, Chaabi remains the most accessible and widely loved musical form in Morocco.',
   },
   {
     name: 'Amazigh Music (Ahidous & Ahwash)',
-    image: 'https://images.unsplash.com/photo-1504898770365-14faca6a7320?w=600&q=80',
+    image: '/images/hero-berber-culture.webp',
     description:
       'Amazigh musical traditions are among the oldest in North Africa. Ahidous, from the Middle Atlas, features men and women standing shoulder to shoulder in rows, swaying and stamping in unison to the driving rhythms of bendirs (frame drums) and communal chanting. Ahwash, its southern counterpart from the High Atlas and Souss Valley, involves intricate call-and-response poetry, clapping, and group movement under moonlight. These communal performances are both artistic expression and social bonding ritual, reinforcing tribal identity and community ties during festivals, harvests, and celebrations.',
   },
   {
     name: 'Rai',
-    image: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&q=80',
+    image: '/images/art-gnawa-music.webp',
     description:
       'Though rai originated in Algeria, it has a passionate following in northeastern Morocco, particularly in Oujda and the Oriental region. This genre blends traditional North African melodies with Western pop, rock, and electronic elements. Rai lyrics often address love, freedom, and social issues in the language of everyday life. The genre crossed borders and gained international fame through artists like Cheb Khaled, and Moroccan rai musicians continue to innovate, fusing the genre with hip-hop, reggae, and electronic dance music.',
   },
@@ -351,7 +357,7 @@ const musicStyles = [
     name: 'Malhoun',
     description:
       'Malhoun is a poetic and musical art form that blends sophisticated Arabic verse with melodic compositions. Born in the artisan guilds of Meknes, Fes, and Marrakech, Malhoun poems address everything from divine love and moral philosophy to the beauty of craftsmanship and the joys of tea. Traditionally performed by small ensembles with oud, violin, and percussion, Malhoun is considered Morocco\'s literary music, bridging the worlds of poetry and song. UNESCO recognized it as part of Morocco\'s intangible cultural heritage.',
-    image: 'https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=600&q=80',
+    image: '/images/photo-mint-tea-pouring.webp',
   },
 ];
 
@@ -501,7 +507,7 @@ export default function CulturePage() {
       <section className="relative overflow-hidden bg-[var(--color-primary-900)] text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=1600&q=80"
+            src="/images/hero-berber-culture.webp"
             alt="Intricate Moroccan zellige tilework in vivid geometric patterns"
             className="absolute inset-0 w-full h-full object-cover"
           />

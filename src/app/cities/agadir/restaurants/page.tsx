@@ -31,7 +31,7 @@ const restaurants = [
     slug: 'pure-passion',
     description:
       'One of Agadir\'s most celebrated fine dining restaurants, Pure Passion is located in a sleek modern space near the marina. The menu blends French culinary techniques with the finest Moroccan ingredients, featuring dishes like saffron-poached lobster, argan oil-drizzled sea bass, and lamb confit with ras el hanout. The presentation is artful, and the wine list includes an excellent selection of Moroccan wines from the Meknes and Essaouira regions. Reservations strongly recommended.',
-    image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=800',
+    image: '/images/hero-food.webp',
     rating: 4.6,
     priceRange: '250-500 MAD',
     hours: '7:00 PM - 11:00 PM (Closed Sundays)',
@@ -43,7 +43,7 @@ const restaurants = [
     slug: 'le-jardin-deau',
     description:
       'Set in a lush tropical garden with koi ponds, fountains, and candlelit pathways, Le Jardin d\'Eau offers one of Agadir\'s most romantic dining settings. The menu features Moroccan and Mediterranean cuisine with an emphasis on fresh seafood and grilled meats. The mixed seafood grill for two and the lamb tagine with artichokes are signature dishes. Live Gnaoua music on weekend evenings adds to the enchanting atmosphere. Perfect for special occasions.',
-    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800',
+    image: '/images/hero-riad-interior.webp',
     rating: 4.4,
     priceRange: '150-350 MAD',
     hours: '12:00 PM - 3:00 PM, 7:00 PM - 11:00 PM daily',
@@ -55,7 +55,7 @@ const restaurants = [
     slug: 'patisserie-tafarnout',
     description:
       'A beloved local institution famous for producing some of the best Moroccan pastries in the Souss region. The display cases overflow with cornes de gazelle (almond-filled crescent pastries), chebakia (sesame cookies), msemen (layered flatbread), and briouats (filled pastry triangles). Also popular for hearty Moroccan breakfasts with fresh-baked bread, amlou (argan oil and almond butter), local honey, and freshly squeezed orange juice. Cash only.',
-    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800',
+    image: '/images/hero-food.webp',
     rating: 4.5,
     priceRange: '20-60 MAD',
     hours: '6:30 AM - 9:00 PM daily',
@@ -67,7 +67,7 @@ const restaurants = [
     slug: 'english-pub',
     description:
       'Despite its name, this popular restaurant on the beachfront promenade serves excellent Moroccan and international food in a casual, friendly atmosphere. Known for generous portions and reliable quality, the menu ranges from classic tagines and couscous to burgers, steaks, and fresh fish. The terrace overlooks the beach and is perfect for a sunset meal. A long-standing favorite among resident expats and returning tourists, it offers one of the best value-for-money dining experiences on the strip.',
-    image: 'https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?q=80&w=800',
+    image: '/images/hero-food.webp',
     rating: 4.2,
     priceRange: '80-180 MAD',
     hours: '10:00 AM - 11:00 PM daily',
@@ -79,7 +79,7 @@ const restaurants = [
     slug: 'mezzo-mezzo',
     description:
       'A vibrant Italian restaurant in the marina district that has quickly become one of Agadir\'s most popular dining spots. The open kitchen lets you watch chefs toss fresh pasta and pull wood-fired pizzas from a traditional oven imported from Naples. The seafood risotto with local prawns and the truffle pizza are standouts. The contemporary interior with maritime-themed decor and the terrace overlooking the yacht harbor create an upbeat Mediterranean atmosphere.',
-    image: 'https://images.unsplash.com/photo-1600891964599-f61ba0e24092?q=80&w=800',
+    image: '/images/hero-food.webp',
     rating: 4.3,
     priceRange: '100-250 MAD',
     hours: '12:00 PM - 3:00 PM, 7:00 PM - 11:00 PM daily',
@@ -91,7 +91,7 @@ const restaurants = [
     slug: 'little-norway',
     description:
       'A unique Scandinavian-Moroccan restaurant reflecting Agadir\'s surprising connection with Norway, which helped rebuild the city after the 1960 earthquake. The menu features Nordic-inspired seafood dishes with Moroccan twists, such as gravlax with chermoula, smoked fish tagine, and Norwegian salmon with argan oil dressing. The minimalist Scandinavian decor incorporates Moroccan design elements, creating a distinctive fusion. A piece of Agadir\'s post-earthquake history on a plate.',
-    image: 'https://images.unsplash.com/photo-1534604973900-c43ab4c2e0ab?q=80&w=800',
+    image: '/images/hero-food.webp',
     rating: 4.1,
     priceRange: '120-280 MAD',
     hours: '12:00 PM - 10:00 PM (Closed Tuesdays)',
@@ -133,7 +133,7 @@ export default function AgadirRestaurantsPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2800)',
+              'url(/images/card-beach.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

@@ -30,9 +30,9 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Weddings & Celebrations in Morocco | Venues, Planning & Legal Guide',
+  title: 'Morocco Wedding Guide | Venues & Planning',
   description:
-    'Plan your dream wedding in Morocco. Discover stunning palace venues, traditional Moroccan wedding customs, legal requirements, top planners, and photography spots in Marrakech, Fes, and the Sahara.',
+    'Plan your dream wedding in Morocco. Stunning palace venues, traditional customs, legal requirements, and top planners in Marrakech and Fes. Get started!',
   keywords: [
     'morocco wedding',
     'marrakech wedding venue',
@@ -51,18 +51,28 @@ export const metadata: Metadata = {
     'morocco honeymoon',
   ],
   openGraph: {
-    title: 'Weddings & Celebrations in Morocco | Your Complete Guide',
+    title: 'Morocco Wedding Guide | Venues & Planning',
     description:
       'Stunning venues, traditional customs, legal requirements, budget guides, and expert planners for your dream Moroccan wedding.',
     url: 'https://citytoursmorocco.com/weddings',
+    type: 'article',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&h=630&fit=crop',
+        url: '/images/photo-moroccan-wedding.webp',
         width: 1200,
         height: 630,
         alt: 'Stunning Moroccan palace venue set up for a wedding celebration',
       },
     ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Morocco Wedding Guide | Venues & Planning',
+    description:
+      'Palace venues, traditional customs, legal requirements, and expert planners for your dream Moroccan wedding.',
+  },
+  alternates: {
+    canonical: 'https://citytoursmorocco.com/weddings',
   },
 };
 
@@ -130,7 +140,7 @@ const weddingVenues = [
       'The ultimate luxury venue, owned by King Mohammed VI himself. Three ornate riads surround a vast courtyard with hand-carved stucco, zellige tilework, and fountains. The level of craftsmanship is unmatched anywhere in the world. Weddings here are legendary affairs of breathtaking opulence.',
     capacity: 'Up to 500 guests',
     priceRange: 'From 800,000 MAD',
-    image: 'https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600',
+    image: '/images/photo-moroccan-wedding.webp',
   },
   {
     name: 'La Mamounia',
@@ -140,7 +150,7 @@ const weddingVenues = [
       'A legendary grand palace hotel since 1929, set in 17 acres of stunning gardens designed by the same landscape architect who designed Versailles\' gardens. Winston Churchill called it "the most beautiful place in the world." Weddings take place in the gardens, by the pool, or in the lavish ballroom.',
     capacity: 'Up to 600 guests',
     priceRange: 'From 600,000 MAD',
-    image: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=600',
+    image: '/images/hero-weddings.webp',
   },
   {
     name: 'Amanjena',
@@ -150,7 +160,7 @@ const weddingVenues = [
       'The first Aman resort in Africa, inspired by the ancient Al-Badi palace. Rose-pink pavilions surround a serene central basin reflecting the Atlas Mountains. The minimalist Moorish architecture and lush olive groves create an atmosphere of refined tranquility. Perfect for intimate, ultra-luxury celebrations.',
     capacity: 'Up to 200 guests',
     priceRange: 'From 500,000 MAD',
-    image: 'https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?q=80&w=600',
+    image: '/images/hero-riad-interior.webp',
   },
   {
     name: 'Selman Marrakech',
@@ -160,7 +170,7 @@ const weddingVenues = [
       'A palatial estate famous for its purebred Arabian horses that roam the grounds. The 100-meter infinity pool with Atlas Mountain views, grand ballroom, and manicured gardens provide a cinematic backdrop. Combine your ceremony with a sunset horse parade for an unforgettable entrance.',
     capacity: 'Up to 400 guests',
     priceRange: 'From 450,000 MAD',
-    image: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=600',
+    image: '/images/hero-riad-interior.webp',
   },
   {
     name: 'Kasbah Tamadot',
@@ -170,7 +180,7 @@ const weddingVenues = [
       'Sir Richard Branson\'s stunning retreat in the Atlas Mountains, perched above the Berber village of Asni. Panoramic mountain views, terraced gardens bursting with roses, and Berber-inspired luxury suites create a magical mountain wedding. The helicopter arrival over snow-capped peaks is extraordinary.',
     capacity: 'Up to 150 guests',
     priceRange: 'From 350,000 MAD',
-    image: 'https://images.unsplash.com/photo-1493246507139-91e8fad9978e?q=80&w=600',
+    image: '/images/hero-atlas.webp',
   },
   {
     name: 'Kasbah Bab Ourika',
@@ -180,7 +190,7 @@ const weddingVenues = [
       'A boutique kasbah perched on a hilltop overlooking the Ourika Valley with 360-degree views of the Atlas Mountains. Olive groves, herb gardens, and multiple terraces offer endless ceremony and reception settings. The mountain air and peaceful atmosphere are deeply romantic.',
     capacity: 'Up to 120 guests',
     priceRange: 'From 200,000 MAD',
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=600',
+    image: '/images/hero-desert.webp',
   },
   {
     name: 'Riad Fes',
@@ -190,7 +200,7 @@ const weddingVenues = [
       'The finest luxury riad in Fes, a masterpiece of Moroccan craftsmanship with three levels of galleries overlooking a marble courtyard. The rooftop terrace offers panoramic views of the Fes medina. Host your ceremony among centuries of artistry in the spiritual capital of Morocco.',
     capacity: 'Up to 100 guests',
     priceRange: 'From 250,000 MAD',
-    image: 'https://images.unsplash.com/photo-1545041552-c7bf3e2daaee?q=80&w=600',
+    image: '/images/hero-fes-tanneries.webp',
   },
   {
     name: 'El Fenn',
@@ -200,7 +210,7 @@ const weddingVenues = [
       'A design-forward riad owned by Vanessa Branson, combining contemporary art with traditional Moroccan architecture. Three pools, multiple courtyards, and a spectacular rooftop with Koutoubia Mosque views. Ideal for creative, style-conscious couples who want a wedding with personality.',
     capacity: 'Up to 80 guests',
     priceRange: 'From 180,000 MAD',
-    image: 'https://images.unsplash.com/photo-1548018560-c7196e91a1e2?q=80&w=600',
+    image: '/images/hero-riad-interior.webp',
   },
   {
     name: 'Dar Ahlam',
@@ -210,7 +220,7 @@ const weddingVenues = [
       'A fairy-tale kasbah in the palm oasis of Skoura, operated as a "maison d\'hotes" with no fixed menus, schedules, or public spaces. Every experience is bespoke. Your wedding is designed entirely around your vision, from desert ceremonies to palmerie banquets. The most exclusive venue in Morocco.',
     capacity: 'Up to 60 guests',
     priceRange: 'From 400,000 MAD',
-    image: 'https://images.unsplash.com/photo-1564769625905-50e93615e769?q=80&w=600',
+    image: '/images/hero-camping.webp',
   },
   {
     name: 'Scarabeo Camp',
@@ -220,7 +230,7 @@ const weddingVenues = [
       'A stunning glamping site in the rocky Agafay Desert, just 40 minutes from Marrakech. White canvas tents dot the dramatic desert landscape with Atlas Mountain views. Exchange vows as the sun sets over the stone desert, then celebrate under a canopy of stars. Accessible yet wildly exotic.',
     capacity: 'Up to 100 guests',
     priceRange: 'From 150,000 MAD',
-    image: 'https://images.unsplash.com/photo-1542401886-65d6c61db217?q=80&w=600',
+    image: '/images/hero-camping.webp',
   },
   {
     name: 'Merzouga Luxury Camp',
@@ -230,7 +240,7 @@ const weddingVenues = [
       'For the truly adventurous, a wedding atop the golden sand dunes of the Sahara. Luxury camps in Erg Chebbi offer private tented suites, gourmet dining under the stars, and a camel caravan arrival. The otherworldly setting of the dunes at sunset is the most dramatic wedding backdrop imaginable.',
     capacity: 'Up to 80 guests',
     priceRange: 'From 200,000 MAD',
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=600',
+    image: '/images/card-beach.webp',
   },
   {
     name: 'Mazagan Beach Resort',
@@ -240,7 +250,7 @@ const weddingVenues = [
       'A five-star beachfront resort on the Atlantic coast with a vast beach, championship golf course, and multiple event spaces. The Moroccan-inspired architecture, ocean views, and professional event team make it ideal for larger celebrations. The beach ceremony at sunset is spectacular.',
     capacity: 'Up to 800 guests',
     priceRange: 'From 300,000 MAD',
-    image: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=600',
+    image: '/images/hero-weddings.webp',
   },
   {
     name: 'Sofitel Essaouira Mogador',
@@ -250,7 +260,7 @@ const weddingVenues = [
       'A luxurious beachfront property where Atlantic waves meet Moorish architecture. The sprawling grounds include gardens, a thalassotherapy spa, golf course, and multiple terraces overlooking the ocean. The Essaouira wind adds drama to veils and fabrics. Ideal for bohemian beach weddings.',
     capacity: 'Up to 300 guests',
     priceRange: 'From 250,000 MAD',
-    image: 'https://images.unsplash.com/photo-1560437091-4383266ac31b?q=80&w=600',
+    image: '/images/hero-coastal.webp',
   },
   {
     name: 'Le Jardin Secret',
@@ -260,7 +270,7 @@ const weddingVenues = [
       'A historic Islamic garden in the heart of the Marrakech medina, recently restored to its original splendor. Two distinct gardens (exotic and Islamic) with water channels, pavilions, and a tower with panoramic medina views. A hidden oasis for intimate garden ceremonies steeped in centuries of history.',
     capacity: 'Up to 120 guests',
     priceRange: 'From 200,000 MAD',
-    image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=80&w=600',
+    image: '/images/hero-majorelle-garden.webp',
   },
   {
     name: 'Beldi Country Club',
@@ -270,7 +280,7 @@ const weddingVenues = [
       'A sprawling 17-acre garden estate on the outskirts of Marrakech with rose gardens, olive groves, multiple pools, and a traditional Berber tent. The organic farm-to-table kitchen produces exceptional wedding feasts. The lush, bohemian atmosphere attracts fashion-industry and creative couples from around the world.',
     capacity: 'Up to 250 guests',
     priceRange: 'From 200,000 MAD',
-    image: 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?q=80&w=600',
+    image: '/images/hero-weddings.webp',
   },
 ];
 

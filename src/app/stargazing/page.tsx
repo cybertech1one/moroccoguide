@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     type: 'article',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1515825838458-f2a94b20105a?w=1200&h=630&fit=crop',
+        url: '/images/hero-stargazing.webp',
         width: 1200,
         height: 630,
         alt: 'Milky Way rising over the Sahara desert dunes in Morocco',
@@ -87,7 +87,7 @@ export const metadata: Metadata = {
     description:
       'Bortle Class 1-2 dark skies, Sahara desert camps, Atlas observatories, astrophotography tips, and Berber star lore.',
     images: [
-      'https://images.unsplash.com/photo-1515825838458-f2a94b20105a?w=1200&h=630&fit=crop',
+      '/images/hero-stargazing.webp',
     ],
   },
   alternates: { canonical: 'https://citytoursmorocco.com/stargazing' },
@@ -115,7 +115,7 @@ const stargazingLocations = [
     ],
     bestMonths: 'March-May, September-November',
     access: 'Fly to Errachidia or drive 8 hours from Marrakech via the N10',
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=800',
+    image: '/images/hero-desert.webp',
     coordinates: '31.1500 N, 4.0167 W',
   },
   {
@@ -135,7 +135,7 @@ const stargazingLocations = [
     ],
     bestMonths: 'Year-round, best March-May and September-November',
     access: 'Drive 6.5 hours from Marrakech via the Tizi n\'Tichka pass',
-    image: 'https://images.unsplash.com/photo-1507400492013-162706c8c05e?q=80&w=800',
+    image: '/images/hero-stargazing.webp',
     coordinates: '30.3289 N, 5.8381 W',
   },
   {
@@ -155,7 +155,7 @@ const stargazingLocations = [
     ],
     bestMonths: 'May-October (clear mountain skies, accessible passes)',
     access: 'Imlil is 90 minutes from Marrakech; deeper valleys require 4x4',
-    image: 'https://images.unsplash.com/photo-1493807742375-fbc1f7d45e70?q=80&w=800',
+    image: '/images/hero-stargazing.webp',
     coordinates: '31.0600 N, 7.9150 W',
   },
   {
@@ -175,7 +175,7 @@ const stargazingLocations = [
     ],
     bestMonths: 'June-September (best transparency, lowest humidity)',
     access: '75 km south of Marrakech, paved road, 1.5-hour drive',
-    image: 'https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?q=80&w=800',
+    image: '/images/hero-stargazing.webp',
     coordinates: '31.2064 N, 7.8664 W',
   },
   {
@@ -195,7 +195,7 @@ const stargazingLocations = [
     ],
     bestMonths: 'October-April (mild temperatures, clear skies)',
     access: 'Drive 4 hours south of Agadir via the R106',
-    image: 'https://images.unsplash.com/photo-1502899576159-f224dc2349fa?q=80&w=800',
+    image: '/images/hero-stargazing.webp',
     coordinates: '29.7214 N, 8.9758 W',
   },
   {
@@ -215,7 +215,7 @@ const stargazingLocations = [
     ],
     bestMonths: 'Year-round, peak season October-April',
     access: 'Drive 7.5 hours from Marrakech; Erg Chigaga requires 4x4 from M\'hamid',
-    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800',
+    image: '/images/hero-stargazing.webp',
     coordinates: '29.8283 N, 5.7231 W',
   },
 ];
@@ -589,7 +589,7 @@ const combinedExperiences = [
       'Ride a camel caravan into the dunes at sunset, dine under the stars at a desert camp, and stargaze from the top of a dune with a guide. The quintessential Morocco experience.',
     duration: '1-3 nights',
     location: 'Merzouga or M\'hamid',
-    image: 'https://images.unsplash.com/photo-1548017544-ef74e767f131?q=80&w=600',
+    image: '/images/hero-camel-caravan.webp',
   },
   {
     title: 'Stargazing + Atlas Trekking',
@@ -597,7 +597,7 @@ const combinedExperiences = [
       'Hike through the High Atlas during the day and observe the stars from mountain camps at night. The altitude provides both physical challenge and astronomical rewards.',
     duration: '3-5 days',
     location: 'Toubkal National Park',
-    image: 'https://images.unsplash.com/photo-1493807742375-fbc1f7d45e70?q=80&w=600',
+    image: '/images/hero-stargazing.webp',
   },
   {
     title: 'Stargazing + Desert Luxury Camp',
@@ -605,7 +605,7 @@ const combinedExperiences = [
       'Experience the stars from a luxury desert camp with king-size beds, private terraces, hot showers, and gourmet dining. Combines comfort with pristine dark skies.',
     duration: '1-2 nights',
     location: 'Erg Chebbi or Erg Chigaga',
-    image: 'https://images.unsplash.com/photo-1542401886-65d6c61db217?q=80&w=600',
+    image: '/images/hero-camping.webp',
   },
   {
     title: 'Stargazing + Photography Workshop',
@@ -613,7 +613,7 @@ const combinedExperiences = [
       'Join a professional astrophotographer for hands-on instruction in capturing the Milky Way, star trails, and desert landscapes under the stars. All skill levels welcome.',
     duration: '2-4 nights',
     location: 'Merzouga or Zagora',
-    image: 'https://images.unsplash.com/photo-1515825838458-f2a94b20105a?q=80&w=600',
+    image: '/images/hero-stargazing.webp',
   },
   {
     title: 'Stargazing + Cultural Immersion',
@@ -621,7 +621,7 @@ const combinedExperiences = [
       'Stay with a Berber family, learn traditional star navigation techniques, hear ancient star myths, and experience Saharan hospitality with mint tea, tagine, and music under the cosmos.',
     duration: '2-3 nights',
     location: 'Draa Valley or Anti-Atlas',
-    image: 'https://images.unsplash.com/photo-1507400492013-162706c8c05e?q=80&w=600',
+    image: '/images/hero-stargazing.webp',
   },
   {
     title: 'Stargazing + Yoga & Wellness Retreat',
@@ -629,7 +629,7 @@ const combinedExperiences = [
       'Combine predawn yoga sessions, meditation under the stars, sound healing in the desert silence, and guided stargazing for a holistic mind-body-cosmos experience.',
     duration: '3-5 nights',
     location: 'Zagora or Tafraout',
-    image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=600',
+    image: '/images/hero-hammam-interior.webp',
   },
 ];
 
@@ -733,7 +733,7 @@ export default function StargazingPage() {
             description:
               'Morocco offers world-class stargazing with Bortle Class 1-2 dark skies in the Sahara desert and Atlas Mountains. Experience the Milky Way, meteor showers, and ancient Berber star lore.',
             url: 'https://citytoursmorocco.com/stargazing',
-            image: 'https://images.unsplash.com/photo-1515825838458-f2a94b20105a?w=1200&h=630&fit=crop',
+            image: '/images/hero-stargazing.webp',
             touristType: ['Astronomy enthusiast', 'Astrophotographer', 'Nature lover', 'Adventure traveler'],
             geo: {
               '@type': 'GeoCoordinates',
@@ -1635,7 +1635,7 @@ export default function StargazingPage() {
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1542401886-65d6c61db217?q=80&w=1920"
+            src="/images/hero-camping.webp"
             alt="Luxury desert camp under the stars in the Moroccan Sahara"
             className="w-full h-full object-cover"
           />
@@ -1801,35 +1801,35 @@ export default function StargazingPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {[
               {
-                src: 'https://images.unsplash.com/photo-1515825838458-f2a94b20105a?q=80&w=600',
+                src: '/images/hero-stargazing.webp',
                 alt: 'Milky Way over Sahara dunes',
               },
               {
-                src: 'https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?q=80&w=600',
+                src: '/images/hero-stargazing.webp',
                 alt: 'Star-filled sky over the Atlas Mountains',
               },
               {
-                src: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=600',
+                src: '/images/hero-stargazing.webp',
                 alt: 'Deep space stars visible from the Sahara',
               },
               {
-                src: 'https://images.unsplash.com/photo-1507400492013-162706c8c05e?q=80&w=600',
+                src: '/images/hero-stargazing.webp',
                 alt: 'Desert camp under the night sky',
               },
               {
-                src: 'https://images.unsplash.com/photo-1502899576159-f224dc2349fa?q=80&w=600',
+                src: '/images/hero-stargazing.webp',
                 alt: 'Star trails over Moroccan landscape',
               },
               {
-                src: 'https://images.unsplash.com/photo-1542401886-65d6c61db217?q=80&w=600',
+                src: '/images/hero-camping.webp',
                 alt: 'Luxury tent under the Milky Way',
               },
               {
-                src: 'https://images.unsplash.com/photo-1548017544-ef74e767f131?q=80&w=600',
+                src: '/images/hero-camel-caravan.webp',
                 alt: 'Camel caravan silhouetted against the twilight sky',
               },
               {
-                src: 'https://images.unsplash.com/photo-1493807742375-fbc1f7d45e70?q=80&w=600',
+                src: '/images/hero-stargazing.webp',
                 alt: 'Atlas Mountain peaks under starlight',
               },
             ].map((photo, index) => (
@@ -2062,7 +2062,7 @@ export default function StargazingPage() {
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?q=80&w=1920"
+            src="/images/hero-stargazing.webp"
             alt="Brilliant star field above the Moroccan landscape"
             className="w-full h-full object-cover"
           />

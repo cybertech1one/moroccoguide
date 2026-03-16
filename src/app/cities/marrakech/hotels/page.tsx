@@ -34,7 +34,7 @@ const hotels = [
     type: 'Luxury Palace Hotel',
     priceRange: '$$$$',
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80',
+    image: '/images/card-riad.webp',
     description:
       'An iconic palace hotel set in centuries-old gardens, La Mamounia has hosted royalty and celebrities since 1923. Churchill called it "the most lovely spot in the whole world." Expect Moorish opulence, world-class dining, and impeccable service.',
     amenities: ['Spa & Hammam', 'Pool', 'Fine Dining', 'Gardens', 'Wifi', 'Concierge'],
@@ -44,7 +44,7 @@ const hotels = [
     type: 'Luxury Palace Hotel',
     priceRange: '$$$$',
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80',
+    image: '/images/card-riad.webp',
     description:
       'Commissioned by King Mohammed VI, this extraordinary property features private riads rather than rooms, each a three-story palace with its own plunge pool and rooftop terrace. Underground tunnels allow staff to appear and vanish invisibly.',
     amenities: ['Private Riads', 'Spa', 'Pool', 'Michelin Dining', 'Butler Service', 'Wifi'],
@@ -54,7 +54,7 @@ const hotels = [
     type: 'Boutique Riad',
     priceRange: '$$',
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1590073242678-70ee3fc28e8e?w=800&q=80',
+    image: '/images/card-riad.webp',
     description:
       'An Instagram-famous riad in the heart of the medina with a stunning green-tiled plunge pool, lush courtyard garden, and beautifully designed rooms blending Moroccan craft with boho-chic style. The rooftop offers panoramic medina views.',
     amenities: ['Plunge Pool', 'Rooftop Terrace', 'Breakfast Included', 'Wifi', 'Air Conditioning'],
@@ -64,7 +64,7 @@ const hotels = [
     type: 'Boutique Hotel',
     priceRange: '$$$',
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80',
+    image: '/images/card-riad.webp',
     description:
       'Co-founded by Vanessa Branson, El Fenn is a stylish medina retreat combining contemporary art with traditional Moroccan architecture. Three pools, an excellent restaurant, a rooftop bar, and a curated art collection make it a destination in itself.',
     amenities: ['3 Pools', 'Restaurant & Bar', 'Art Gallery', 'Spa', 'Wifi', 'Library'],
@@ -74,7 +74,7 @@ const hotels = [
     type: 'Heritage Riad',
     priceRange: '$$$',
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1590073242678-70ee3fc28e8e?w=800&q=80',
+    image: '/images/card-riad.webp',
     description:
       'A lovingly restored 18th-century riad filled with antiques, hand-painted ceilings, and museum-quality Moroccan artifacts. Owner Mohammed Bouskri is a renowned collector whose personal touches make every stay feel like visiting a private palace.',
     amenities: ['Antique Collection', 'Hammam', 'Courtyard Pool', 'Restaurant', 'Wifi', 'Airport Transfer'],
@@ -84,7 +84,7 @@ const hotels = [
     type: 'Luxury Hotel',
     priceRange: '$$$',
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80',
+    image: '/images/card-riad.webp',
     description:
       'A refined hotel just steps from the Koutoubia Mosque and Jemaa el-Fnaa, set in lush gardens with a large outdoor pool. The rooms blend Moroccan decor with modern comfort, and the location is unbeatable for exploring the medina.',
     amenities: ['Large Pool', 'Spa', 'Restaurant', 'Garden', 'Wifi', 'Fitness Center'],
@@ -94,7 +94,7 @@ const hotels = [
     type: 'Design Riad',
     priceRange: '$$',
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80',
+    image: '/images/card-riad.webp',
     description:
       'A minimalist design riad that strips back ornate Moroccan decor in favor of clean lines, natural materials, and curated simplicity. The result is a peaceful, modern retreat in the heart of the medina with an excellent breakfast.',
     amenities: ['Plunge Pool', 'Rooftop Terrace', 'Breakfast Included', 'Wifi', 'Air Conditioning'],
@@ -104,7 +104,7 @@ const hotels = [
     type: 'Boutique Riad',
     priceRange: '$$',
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80',
+    image: '/images/card-riad.webp',
     description:
       'A charming five-suite riad run by a British-Moroccan couple, offering warm hospitality and insider tips. The rooftop terrace with Koutoubia views, home-cooked Moroccan dinners, and thoughtfully decorated rooms create a home-away-from-home feel.',
     amenities: ['Rooftop Terrace', 'Home Cooking', 'Wifi', 'Air Conditioning', 'Airport Transfer'],
@@ -114,7 +114,7 @@ const hotels = [
     type: 'Hostel',
     priceRange: '$',
     rating: 4.2,
-    image: 'https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80',
+    image: '/images/card-riad.webp',
     description:
       'One of Marrakech\'s best-rated hostels, housed in a converted riad with a courtyard pool, rooftop terrace, and social common areas. Dorm beds and private rooms are available, making it a great budget option with a fantastic medina location.',
     amenities: ['Pool', 'Rooftop Terrace', 'Shared Kitchen', 'Wifi', 'Lockers', 'Tours Desk'],
@@ -124,7 +124,7 @@ const hotels = [
     type: 'Luxury Riad',
     priceRange: '$$$',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1590073242678-70ee3fc28e8e?w=800&q=80',
+    image: '/images/card-riad.webp',
     description:
       'A seven-room luxury riad that blends traditional Moroccan craftsmanship with sophisticated European design. The Italian owners have created an intimate retreat with a beautiful courtyard, hammam, and exceptional personalized service.',
     amenities: ['Hammam', 'Courtyard', 'Breakfast Included', 'Wifi', 'Concierge', 'Airport Transfer'],
@@ -134,7 +134,7 @@ const hotels = [
     type: 'Luxury Riad Hotel',
     priceRange: '$$$$',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80',
+    image: '/images/card-riad.webp',
     description:
       'Five interconnected riads creating a luxurious 28-room hotel near the Saadian Tombs. Each room is uniquely decorated with antiques and artifacts. The rooftop infinity pool offers spectacular views, and the 2,500-square-meter spa is among the city\'s best.',
     amenities: ['Infinity Pool', 'Luxury Spa', 'Restaurant', 'Rooftop Bar', 'Wifi', 'Helipad'],
@@ -144,7 +144,7 @@ const hotels = [
     type: 'Luxury Resort',
     priceRange: '$$$$',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80',
+    image: '/images/card-riad.webp',
     description:
       'A sprawling resort in the new town with pavilion-style rooms set among 16 acres of gardens with Atlas Mountain views. Three restaurants, a world-class spa, and multiple pools make it ideal for families and those seeking a full resort experience.',
     amenities: ['Multiple Pools', 'Spa', '3 Restaurants', 'Kids Club', 'Tennis', 'Wifi'],
@@ -215,7 +215,7 @@ export default function MarrakechHotelsPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=2800&q=80)',
+              'url(/images/hero-riad-interior.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

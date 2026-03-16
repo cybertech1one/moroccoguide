@@ -35,9 +35,9 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Complete Guide to Moroccan Riads | Stay in Authentic Riads',
+  title: 'Moroccan Riads Guide | Best Riads to Stay In',
   description:
-    'Discover the magic of Moroccan riads. Our comprehensive guide covers the best riads in Marrakech, Fes, Essaouira, and Chefchaouen, with pricing, booking tips, and what to expect from your stay.',
+    'Discover the best Moroccan riads in Marrakech, Fes, Essaouira, and Chefchaouen. Pricing, booking tips, and what to expect. Start planning your stay!',
   keywords: [
     'Moroccan riad',
     'riad Marrakech',
@@ -47,23 +47,37 @@ export const metadata: Metadata = {
     'riad vs hotel',
     'riad vs dar',
     'riad booking tips',
-    'Riad Yasmine',
-    'El Fenn',
-    'Riad Fes',
+    'Riad Yasmine Marrakech',
+    'El Fenn Marrakech',
+    'Riad Fes hotel',
+    'riad Essaouira',
+    'riad Chefchaouen',
+    'luxury riad Morocco',
+    'budget riad Morocco',
   ],
   openGraph: {
-    title: 'Complete Guide to Moroccan Riads',
+    title: 'Moroccan Riads Guide | Best Riads to Stay In',
     description:
       'Everything you need to know about staying in a traditional Moroccan riad. Best riads by city, price guide, and booking tips.',
     url: 'https://citytoursmorocco.com/riads',
+    type: 'article',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1548018560-c7196e5f96c2?w=1200&h=630&fit=crop',
+        url: '/images/hero-riad-interior.webp',
         width: 1200,
         height: 630,
         alt: 'Beautiful Moroccan riad courtyard with fountain and zellige tiles',
       },
     ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Moroccan Riads Guide | Best Riads to Stay In',
+    description:
+      'Top 20 riads in Marrakech, Fes, Essaouira, and Chefchaouen with pricing and booking tips.',
+  },
+  alternates: {
+    canonical: 'https://citytoursmorocco.com/riads',
   },
 };
 
@@ -81,7 +95,7 @@ const riadsByCity = {
       priceUSD: '$120-280',
       tier: 'Luxury',
       highlights: ['Iconic turquoise pool', 'Rooftop Atlas views', 'Central medina', 'Moroccan breakfast'],
-      image: 'https://images.unsplash.com/photo-1548018560-c7196e5f96c2?q=80&w=800',
+      image: '/images/hero-riad-interior.webp',
       rating: 4.8,
       rooms: 7,
     },
@@ -93,7 +107,7 @@ const riadsByCity = {
       priceUSD: '$250-550',
       tier: 'Luxury',
       highlights: ['3 swimming pools', 'Contemporary art gallery', 'Rooftop cocktail bar', 'Library lounge'],
-      image: 'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?q=80&w=800',
+      image: '/images/card-riad.webp',
       rating: 4.8,
       rooms: 28,
     },
@@ -105,7 +119,7 @@ const riadsByCity = {
       priceUSD: '$80-160',
       tier: 'Mid-range',
       highlights: ['Blue courtyard', 'Home-cooked dinners', 'Near Bahia Palace', 'Intimate 5 rooms'],
-      image: 'https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?q=80&w=800',
+      image: '/images/hero-riad-interior.webp',
       rating: 4.7,
       rooms: 5,
     },
@@ -117,7 +131,7 @@ const riadsByCity = {
       priceUSD: '$60-120',
       tier: 'Mid-range',
       highlights: ['Outstanding breakfast', 'Cooking classes', 'Spacious rooms', 'Panoramic rooftop'],
-      image: 'https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=800',
+      image: '/images/card-riad.webp',
       rating: 4.6,
       rooms: 8,
     },
@@ -129,7 +143,7 @@ const riadsByCity = {
       priceUSD: '$200-450',
       tier: 'Luxury',
       highlights: ['Antique collection', 'Heated pool', 'Fine Moroccan dining', 'Hammam & spa'],
-      image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=800',
+      image: '/images/hero-riad-interior.webp',
       rating: 4.7,
       rooms: 11,
     },
@@ -143,7 +157,7 @@ const riadsByCity = {
       priceUSD: '$250-600',
       tier: 'Luxury',
       highlights: ['Relais & Chateaux', 'Award-winning restaurant', 'Rooftop bar', '17th-century palace'],
-      image: 'https://images.unsplash.com/photo-1577493340887-b7bfff550145?q=80&w=800',
+      image: '/images/detail-moroccan-door.webp',
       rating: 4.9,
       rooms: 16,
     },
@@ -155,7 +169,7 @@ const riadsByCity = {
       priceUSD: '$200-500',
       tier: 'Luxury',
       highlights: ['Largest courtyard in Fes', 'Heated pool', 'Private hammam', 'Art collection'],
-      image: 'https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=800',
+      image: '/images/detail-zellige-mosaic.webp',
       rating: 4.8,
       rooms: 8,
     },
@@ -167,7 +181,7 @@ const riadsByCity = {
       priceUSD: '$180-400',
       tier: 'Luxury',
       highlights: ['Andalusian garden', 'Cooking school', 'Full spa', '2,500+ plants'],
-      image: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=800',
+      image: '/images/card-riad.webp',
       rating: 4.8,
       rooms: 14,
     },
@@ -179,7 +193,7 @@ const riadsByCity = {
       priceUSD: '$120-250',
       tier: 'Mid-range',
       highlights: ['Cordon Bleu dining', 'Panoramic medina views', 'Wine cellar', 'Cooking classes'],
-      image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800',
+      image: '/images/hero-riad-interior.webp',
       rating: 4.7,
       rooms: 5,
     },
@@ -193,7 +207,7 @@ const riadsByCity = {
       priceUSD: '$90-180',
       tier: 'Mid-range',
       highlights: ['Near ramparts', 'Ocean breeze courtyard', 'Rooftop sea views', 'Coastal design'],
-      image: 'https://images.unsplash.com/photo-1568495248636-6432b97bd949?q=80&w=800',
+      image: '/images/hero-essaouira.webp',
       rating: 4.7,
       rooms: 8,
     },
@@ -205,7 +219,7 @@ const riadsByCity = {
       priceUSD: '$220-550',
       tier: 'Luxury',
       highlights: ['Rooftop pool', 'Atlantic views', 'Private cinema', 'Relais & Chateaux'],
-      image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=800',
+      image: '/images/hero-essaouira-ramparts.webp',
       rating: 4.8,
       rooms: 33,
     },
@@ -219,7 +233,7 @@ const riadsByCity = {
       priceUSD: '$50-120',
       tier: 'Mid-range',
       highlights: ['Since 1985', 'Rooftop restaurant', 'Trekking expertise', 'Riffian cuisine'],
-      image: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?q=80&w=800',
+      image: '/images/hero-chefchaouen.webp',
       rating: 4.6,
       rooms: 10,
     },
@@ -231,7 +245,7 @@ const riadsByCity = {
       priceUSD: '$140-300',
       tier: 'Luxury',
       highlights: ['Full spa & hammam', 'Jacuzzi', 'Mountain panorama', 'Terrace restaurant'],
-      image: 'https://images.unsplash.com/photo-1539437829697-1b4ed5aebd19?q=80&w=800',
+      image: '/images/hero-atlas.webp',
       rating: 4.7,
       rooms: 12,
     },
@@ -525,7 +539,7 @@ const jsonLd = {
   url: 'https://citytoursmorocco.com/riads',
   touristType: ['Cultural tourism', 'Accommodation'],
   isAccessibleForFree: true,
-  image: 'https://images.unsplash.com/photo-1548018560-c7196e5f96c2?w=1200',
+  image: '/images/hero-riad-interior.webp',
 };
 
 /* ═══════════════════════════════════════════════════════════════
@@ -549,7 +563,7 @@ export default function RiadsPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1548018560-c7196e5f96c2?q=80&w=2800)',
+              'url(/images/hero-riad-interior.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />
@@ -1053,14 +1067,14 @@ export default function RiadsPage() {
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { src: 'https://images.unsplash.com/photo-1548018560-c7196e5f96c2?q=80&w=600', alt: 'Riad courtyard with traditional zellige fountain and green plants' },
-              { src: 'https://images.unsplash.com/photo-1590073242678-70ee3fc28e8e?q=80&w=600', alt: 'Ornate carved plaster archway in a Moroccan riad' },
-              { src: 'https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?q=80&w=600', alt: 'Luxurious riad bedroom with tadelakt walls and traditional textiles' },
-              { src: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=600', alt: 'Riad plunge pool with intricate mosaic tilework' },
-              { src: 'https://images.unsplash.com/photo-1577493340887-b7bfff550145?q=80&w=600', alt: 'Traditional Moroccan door with brass knocker in the medina' },
-              { src: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=600', alt: 'Rooftop terrace breakfast setting with Atlas Mountain views' },
-              { src: 'https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=600', alt: 'Detailed zellige tilework in blue and white geometric patterns' },
-              { src: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=600', alt: 'Cedar wood carved ceiling in a traditional Fes riad' },
+              { src: '/images/hero-riad-interior.webp', alt: 'Riad courtyard with traditional zellige fountain and green plants' },
+              { src: '/images/detail-zellige-pattern.webp', alt: 'Ornate carved plaster archway in a Moroccan riad' },
+              { src: '/images/hero-riad-interior.webp', alt: 'Luxurious riad bedroom with tadelakt walls and traditional textiles' },
+              { src: '/images/hero-riad-interior.webp', alt: 'Riad plunge pool with intricate mosaic tilework' },
+              { src: '/images/detail-moroccan-door.webp', alt: 'Traditional Moroccan door with brass knocker in the medina' },
+              { src: '/images/card-riad.webp', alt: 'Rooftop terrace breakfast setting with Atlas Mountain views' },
+              { src: '/images/detail-zellige-mosaic.webp', alt: 'Detailed zellige tilework in blue and white geometric patterns' },
+              { src: '/images/hero-riad-interior.webp', alt: 'Cedar wood carved ceiling in a traditional Fes riad' },
             ].map((photo) => (
               <div key={photo.alt} className="relative aspect-square overflow-hidden rounded-xl">
                 <img

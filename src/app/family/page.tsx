@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/family',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=1200&h=630&fit=crop',
+        url: '/images/hero-marrakech.webp',
         width: 1200,
         height: 630,
         alt: 'Family enjoying camel ride in Morocco',
@@ -77,7 +77,7 @@ const familyCities = [
       'The vibrant Red City is endlessly exciting for kids. The Jemaa el-Fnaa square is a sensory playground of snake charmers, acrobats, and fresh orange juice stalls. The medina souks feel like an adventure treasure hunt, and the numerous gardens provide peaceful breaks.',
     highlights: ['Jemaa el-Fnaa entertainment', 'Majorelle Garden', 'Horse carriage rides', 'Medina treasure hunts'],
     ageRange: 'All ages',
-    image: 'https://images.unsplash.com/photo-1597212618440-806262de4f6b?q=80&w=800',
+    image: '/images/hero-marrakech.webp',
   },
   {
     name: 'Agadir',
@@ -85,7 +85,7 @@ const familyCities = [
       'Morocco\'s premier beach resort city is purpose-built for family holidays. The long sandy beach has gentle waves, the promenade is stroller-friendly, and the modern infrastructure means familiar comforts are readily available. Nearby attractions include Crocoparc and Paradise Valley.',
     highlights: ['Safe sandy beaches', 'Crocoparc Agadir', 'Paradise Valley', 'Modern resort infrastructure'],
     ageRange: 'All ages',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?q=80&w=800',
+    image: '/images/hero-marrakech.webp',
   },
   {
     name: 'Essaouira',
@@ -93,7 +93,7 @@ const familyCities = [
       'The laid-back coastal town is a fantastic family destination. Kids love the fishing harbor, the beach is wide and walkable, the medina is compact and safe, and the overall pace is relaxed. Perfect for families who prefer a slower tempo.',
     highlights: ['Wide sandy beach', 'Compact safe medina', 'Fishing harbor', 'Windsurfing for teens'],
     ageRange: 'All ages',
-    image: 'https://images.unsplash.com/photo-1560437091-4383266ac31b?q=80&w=800',
+    image: '/images/hero-coastal.webp',
   },
 ];
 

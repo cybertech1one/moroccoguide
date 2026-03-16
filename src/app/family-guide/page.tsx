@@ -58,7 +58,7 @@ export async function generateMetadata(): Promise<Metadata> {
       url: 'https://citytoursmorocco.com/family-guide',
       images: [
         {
-          url: 'https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=1200&h=630&fit=crop',
+          url: '/images/hero-berber-culture.webp',
           width: 1200,
           height: 630,
           alt: 'Family enjoying a camel ride in the Moroccan desert at golden hour',
@@ -131,7 +131,7 @@ const destinations = [
   {
     name: 'Marrakech',
     tagline: 'The Sensory Playground',
-    image: 'https://images.unsplash.com/photo-1597212618440-806262de4f6b?q=80&w=800',
+    image: '/images/hero-morocco.webp',
     activities: ['Jemaa el-Fna storytellers and acrobats', 'Camel rides in the Palmeraie', 'Majorelle Garden and its cobalt-blue magic'],
     bestAge: 'All ages',
     tip: 'Visit the main square at dusk when performers are in full swing but the heat has broken.',
@@ -139,7 +139,7 @@ const destinations = [
   {
     name: 'Essaouira',
     tagline: 'The Breezy Beach Town',
-    image: 'https://images.unsplash.com/photo-1560437091-4383266ac31b?q=80&w=800',
+    image: '/images/hero-fes-tanneries.webp',
     activities: ['Wide sandy beach with gentle waves', 'Beginner windsurfing lessons for teens', 'Compact and friendly car-free medina'],
     bestAge: 'All ages',
     tip: 'The wind picks up after noon. Morning is best for beach time with younger children.',
@@ -147,7 +147,7 @@ const destinations = [
   {
     name: 'Agadir',
     tagline: 'The Family Resort Hub',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?q=80&w=800',
+    image: '/images/hero-spa.webp',
     activities: ['Long calm beach with lifeguards', 'Crocoparc with 300+ Nile crocodiles', 'Souss Massa National Park bird-watching'],
     bestAge: 'All ages',
     tip: 'Agadir has the most familiar resort infrastructure in Morocco. Ideal for first-time visitors with toddlers.',
@@ -155,7 +155,7 @@ const destinations = [
   {
     name: 'Ouarzazate',
     tagline: 'The Hollywood of Africa',
-    image: 'https://images.unsplash.com/photo-1548017643-6c7a3f1e95e4?q=80&w=800',
+    image: '/images/hero-desert.webp',
     activities: ['Atlas Film Studios where Gladiator was filmed', 'Ait Benhaddou kasbah UNESCO site', 'Fint Oasis palm grove picnic'],
     bestAge: '6+ years',
     tip: 'Tell the kids they are walking through real movie sets. The studios keep original props from blockbuster films.',
@@ -163,7 +163,7 @@ const destinations = [
   {
     name: 'Merzouga',
     tagline: 'The Desert Dreamscape',
-    image: 'https://images.unsplash.com/photo-1509879022285-00f3da62efb7?q=80&w=800',
+    image: '/images/hero-digital-nomad.webp',
     activities: ['Sunset camel trek into Erg Chebbi dunes', 'Stargazing from a luxury desert camp', 'Sandboarding on golden dunes'],
     bestAge: '4+ years',
     tip: 'Book a family tent with en-suite bathroom. Children under 4 may find the camel ride too long.',
@@ -171,7 +171,7 @@ const destinations = [
   {
     name: 'Chefchaouen',
     tagline: 'The Blue Pearl',
-    image: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?q=80&w=800',
+    image: '/images/hero-chefchaouen.webp',
     activities: ['Gentle walks through blue-painted streets', 'Counting cats in every alleyway', 'Ras el-Maa waterfall and riverside play'],
     bestAge: 'All ages',
     tip: 'The medina is small, flat, and safe. One of the easiest cities in Morocco for strollers and small legs.',
@@ -179,7 +179,7 @@ const destinations = [
   {
     name: 'Rabat',
     tagline: 'The Polished Capital',
-    image: 'https://images.unsplash.com/photo-1570698473651-b2de99bae12f?q=80&w=800',
+    image: '/images/hero-marrakech.webp',
     activities: ['National Zoo with African wildlife', 'Kasbah of the Udayas ocean views', 'Hassan Tower and its forest of columns'],
     bestAge: 'All ages',
     tip: 'Rabat is clean, organized, and hassle-free. The zoo alone is worth a half-day visit.',
@@ -187,7 +187,7 @@ const destinations = [
   {
     name: 'Ifrane',
     tagline: 'The Little Switzerland',
-    image: 'https://images.unsplash.com/photo-1580746738099-78d7c625a018?q=80&w=800',
+    image: '/images/hero-atlas.webp',
     activities: ['Michlifen ski resort in winter', 'Cedar forests with wild Barbary macaques', 'Lake Dayet Aoua kayaking and picnics'],
     bestAge: 'All ages',
     tip: 'Visit in winter for snow or spring for wildflowers. The macaques are year-round residents of the cedar forest.',
@@ -434,7 +434,7 @@ export default function FamilyGuidePage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1596422846543-75c6fc197f07?q=80&w=2800)',
+              'url(/images/hero-berber-culture.webp',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

@@ -33,7 +33,7 @@ const attractions = [
     slug: 'agadir-beach',
     description:
       'Stretching for nearly 10 kilometers along the Atlantic coast, Agadir Beach is one of Morocco\'s finest and the city\'s main draw. The wide golden sand beach benefits from over 300 days of sunshine per year, with water temperatures comfortable for swimming from May to November. The promenade behind the beach is lined with cafes, restaurants, and hotels. Surfing, jet skiing, and camel rides along the shore are popular activities. Sunbeds and umbrellas can be rented from beach clubs.',
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800',
+    image: '/images/card-beach.webp',
     rating: 4.5,
     price: 'Free (sunbed rental 30-50 MAD)',
     hours: 'Open 24 hours',
@@ -45,7 +45,7 @@ const attractions = [
     slug: 'kasbah-agadir-oufella',
     description:
       'The ruins of a 16th-century fortress perched on a hilltop 236 meters above the city, offering the most spectacular panoramic views of Agadir. The original kasbah was destroyed in the devastating 1960 earthquake that leveled the city. The remaining walls bear the inscription "God, Country, King" in Arabic, visible from the beach below. The site is particularly magical at sunset, when the entire bay is bathed in golden light. A winding road leads to the top.',
-    image: 'https://images.unsplash.com/photo-1548018560-c7196e5010a0?q=80&w=800',
+    image: '/images/hero-kasbahs.webp',
     rating: 4.4,
     price: 'Free',
     hours: '8:00 AM - 5:30 PM daily',
@@ -57,7 +57,7 @@ const attractions = [
     slug: 'souk-el-had',
     description:
       'One of the largest markets in North Africa, Souk El Had covers over 13 hectares and contains more than 6,000 shops. Unlike the tourist-oriented souks of Marrakech or Fes, this market primarily serves locals, making it an authentic and affordable shopping experience. Organized by sections for spices, vegetables, clothing, electronics, and handicrafts, the market is a feast for the senses. The argan oil section is particularly notable, as Agadir is the heart of argan production.',
-    image: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?q=80&w=800',
+    image: '/images/hero-souk-lamps.webp',
     rating: 4.3,
     price: 'Free entry',
     hours: '6:00 AM - 6:30 PM (Closed Mondays)',
@@ -69,7 +69,7 @@ const attractions = [
     slug: 'valley-of-birds',
     description:
       'A charming small zoo and botanical garden nestled in a natural ravine in the heart of Agadir. Home to flamingos, parrots, macaws, and other exotic birds alongside Barbary macaques, gazelles, and llamas. The lush gardens feature waterfalls, walking bridges, and shaded paths lined with tropical plants. It is a wonderful family-friendly attraction and a peaceful retreat from the beach. The park has been recently renovated with improved animal enclosures and landscaping.',
-    image: 'https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?q=80&w=800',
+    image: '/images/hero-atlas.webp',
     rating: 4.0,
     price: '6 MAD (adults), 3 MAD (children)',
     hours: '9:30 AM - 12:30 PM, 2:30 PM - 6:00 PM daily',
@@ -81,7 +81,7 @@ const attractions = [
     slug: 'crocoparc',
     description:
       'A unique botanical garden and crocodile park located 14 kilometers from Agadir city center. Home to over 300 Nile crocodiles in naturalistic enclosures, the park also features a stunning cactus garden with over 400 species, an orchid greenhouse, and educational exhibits about reptile conservation. Feeding times are a highlight, and the well-designed walkways allow close-up views of the crocodiles. A great half-day excursion for families with an on-site cafe and gift shop.',
-    image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=80&w=800',
+    image: '/images/hero-majorelle-garden.webp',
     rating: 4.2,
     price: '70 MAD (adults), 40 MAD (children)',
     hours: '10:00 AM - 5:00 PM daily',
@@ -93,7 +93,7 @@ const attractions = [
     slug: 'amazigh-heritage-museum',
     description:
       'Dedicated to the rich culture and history of the Amazigh (Berber) people, this well-curated museum in the city center showcases traditional jewelry, textiles, pottery, weapons, and musical instruments from the Souss region and beyond. The collection includes intricate silver jewelry worn by Amazigh women, hand-woven carpets with tribal symbols, and carved wooden doors from village homes. Informative panels explain the significance of each artifact in Amazigh culture.',
-    image: 'https://images.unsplash.com/photo-1553522991-71439aa1ccaf?q=80&w=800',
+    image: '/images/hero-marrakech.webp',
     rating: 4.1,
     price: '20 MAD',
     hours: '9:30 AM - 5:30 PM (Closed Sundays)',
@@ -105,7 +105,7 @@ const attractions = [
     slug: 'agadir-marina',
     description:
       'A modern waterfront development offering a pleasant contrast to Agadir\'s traditional attractions. The marina accommodates luxury yachts and fishing boats alike, with a promenade lined with upscale restaurants, ice cream parlors, and boutique shops. Boat trips depart from here for dolphin watching, deep-sea fishing, and coastal cruises. In the evening, the marina lights up and becomes one of the city\'s most popular spots for an evening stroll and dinner.',
-    image: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=800',
+    image: '/images/hero-coastal.webp',
     rating: 4.0,
     price: 'Free (boat trips from 200 MAD)',
     hours: 'Open 24 hours',
@@ -117,7 +117,7 @@ const attractions = [
     slug: 'paradise-valley',
     description:
       'A stunning series of natural rock pools, waterfalls, and palm-filled gorges located about 30 kilometers north of Agadir in the foothills of the Anti-Atlas mountains. Fed by crystal-clear mountain streams, the turquoise pools are perfect for swimming during summer. The surrounding landscape of red rocks, argan trees, and Berber villages is breathtaking. Local guides can take you to hidden pools and cliff-jumping spots. Bring sturdy shoes for the rocky trails.',
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=800',
+    image: '/images/hero-desert.webp',
     rating: 4.7,
     price: 'Free (guided tours from 150 MAD)',
     hours: 'Sunrise to sunset',
@@ -158,7 +158,7 @@ export default function AgadirAttractionsPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2800)',
+              'url(/images/card-beach.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

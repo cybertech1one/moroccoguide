@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/guides',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=1200&h=630&fit=crop',
+        url: '/images/hero-morocco.webp',
         width: 1200,
         height: 630,
         alt: 'Local guide in the Marrakech medina, Morocco',
@@ -111,7 +111,7 @@ const guides: Guide[] = [
     rating: 4.9,
     reviewCount: 342,
     pricePerDayMad: 800,
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80',
+    image: '/images/portrait-artisan.webp',
     isCertified: true,
   },
   {
@@ -125,7 +125,7 @@ const guides: Guide[] = [
     rating: 4.9,
     reviewCount: 278,
     pricePerDayMad: 700,
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80',
+    image: '/images/art-berber-portrait.webp',
     isCertified: true,
   },
   {
@@ -139,7 +139,7 @@ const guides: Guide[] = [
     rating: 4.8,
     reviewCount: 195,
     pricePerDayMad: 900,
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80',
+    image: '/images/portrait-artisan.webp',
     isCertified: true,
   },
   {
@@ -153,7 +153,7 @@ const guides: Guide[] = [
     rating: 4.8,
     reviewCount: 156,
     pricePerDayMad: 650,
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80',
+    image: '/images/art-berber-portrait.webp',
     isCertified: true,
   },
   {
@@ -167,7 +167,7 @@ const guides: Guide[] = [
     rating: 4.9,
     reviewCount: 410,
     pricePerDayMad: 950,
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80',
+    image: '/images/portrait-artisan.webp',
     isCertified: true,
   },
   {
@@ -181,7 +181,7 @@ const guides: Guide[] = [
     rating: 4.7,
     reviewCount: 134,
     pricePerDayMad: 600,
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80',
+    image: '/images/art-berber-portrait.webp',
     isCertified: true,
   },
   {
@@ -195,7 +195,7 @@ const guides: Guide[] = [
     rating: 4.9,
     reviewCount: 267,
     pricePerDayMad: 850,
-    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80',
+    image: '/images/portrait-artisan.webp',
     isCertified: true,
   },
   {
@@ -209,7 +209,7 @@ const guides: Guide[] = [
     rating: 4.7,
     reviewCount: 98,
     pricePerDayMad: 650,
-    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&q=80',
+    image: '/images/art-berber-portrait.webp',
     isCertified: true,
   },
   {
@@ -223,7 +223,7 @@ const guides: Guide[] = [
     rating: 4.8,
     reviewCount: 189,
     pricePerDayMad: 800,
-    image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80',
+    image: '/images/portrait-artisan.webp',
     isCertified: true,
   },
   {
@@ -237,7 +237,7 @@ const guides: Guide[] = [
     rating: 4.8,
     reviewCount: 221,
     pricePerDayMad: 750,
-    image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80',
+    image: '/images/art-berber-portrait.webp',
     isCertified: true,
   },
   {
@@ -251,7 +251,7 @@ const guides: Guide[] = [
     rating: 4.7,
     reviewCount: 175,
     pricePerDayMad: 700,
-    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80',
+    image: '/images/portrait-artisan.webp',
     isCertified: true,
   },
   {
@@ -265,7 +265,7 @@ const guides: Guide[] = [
     rating: 4.6,
     reviewCount: 89,
     pricePerDayMad: 600,
-    image: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&q=80',
+    image: '/images/art-berber-portrait.webp',
     isCertified: false,
   },
   {
@@ -279,7 +279,7 @@ const guides: Guide[] = [
     rating: 4.8,
     reviewCount: 167,
     pricePerDayMad: 750,
-    image: 'https://images.unsplash.com/photo-1463453091185-61582044d556?w=400&q=80',
+    image: '/images/portrait-artisan.webp',
     isCertified: true,
   },
   {
@@ -293,7 +293,7 @@ const guides: Guide[] = [
     rating: 4.7,
     reviewCount: 142,
     pricePerDayMad: 700,
-    image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&q=80',
+    image: '/images/art-berber-portrait.webp',
     isCertified: true,
   },
   {
@@ -307,7 +307,7 @@ const guides: Guide[] = [
     rating: 4.6,
     reviewCount: 113,
     pricePerDayMad: 650,
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80',
+    image: '/images/portrait-artisan.webp',
     isCertified: true,
   },
   {
@@ -321,7 +321,7 @@ const guides: Guide[] = [
     rating: 4.7,
     reviewCount: 108,
     pricePerDayMad: 550,
-    image: 'https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=400&q=80',
+    image: '/images/art-berber-portrait.webp',
     isCertified: false,
   },
   {
@@ -335,7 +335,7 @@ const guides: Guide[] = [
     rating: 4.9,
     reviewCount: 198,
     pricePerDayMad: 1000,
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80',
+    image: '/images/portrait-artisan.webp',
     isCertified: true,
   },
   {
@@ -349,7 +349,7 @@ const guides: Guide[] = [
     rating: 4.8,
     reviewCount: 154,
     pricePerDayMad: 800,
-    image: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=400&q=80',
+    image: '/images/art-berber-portrait.webp',
     isCertified: true,
   },
   {
@@ -363,7 +363,7 @@ const guides: Guide[] = [
     rating: 4.8,
     reviewCount: 176,
     pricePerDayMad: 850,
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80',
+    image: '/images/portrait-artisan.webp',
     isCertified: true,
   },
   {
@@ -377,7 +377,7 @@ const guides: Guide[] = [
     rating: 4.9,
     reviewCount: 203,
     pricePerDayMad: 850,
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80',
+    image: '/images/art-berber-portrait.webp',
     isCertified: true,
   },
 ];
@@ -713,7 +713,7 @@ export default function GuidesPage() {
       <section className="relative overflow-hidden bg-[var(--color-primary-900)] text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=1600&q=80"
+            src="/images/hero-morocco.webp"
             alt="Local guide leading a tour through the Marrakech medina"
             className="absolute inset-0 w-full h-full object-cover"
           />
@@ -1109,7 +1109,7 @@ export default function GuidesPage() {
       <section className="relative overflow-hidden bg-[var(--color-primary-900)] text-white py-16 md:py-20">
         <div className="absolute inset-0 opacity-10">
           <img
-            src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=1600&q=80"
+            src="/images/hero-berber-culture.webp"
             alt=""
             className="absolute inset-0 w-full h-full object-cover"
             aria-hidden="true"

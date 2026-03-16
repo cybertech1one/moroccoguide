@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/digital-nomad',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&h=630&fit=crop',
+        url: '/images/hero-marrakech.webp',
         width: 1200,
         height: 630,
         alt: 'Digital nomad working from a Moroccan cafe',
@@ -99,7 +99,7 @@ const nomadCities = [
       'KECHMARA (Gueliz, hip atmosphere, power outlets)',
     ],
     dayInLife: 'Wake at 7am in your Gueliz apartment (4,000 MAD/month). Walk to Kech Cowork by 8am. Deep work until noon. Lunch at a local spot: chicken tagine with fries for 35 MAD ($3.50). Afternoon calls from the coworking Skype booth. 5pm stroll through Jemaa el-Fnaa as the square comes alive. Dinner on a rooftop riad terrace: 80 MAD ($8). Evening walk through the illuminated medina.',
-    image: 'https://images.unsplash.com/photo-1597212618440-806262de4f6b?q=80&w=800',
+    image: '/images/hero-marrakech.webp',
   },
   {
     name: 'Essaouira',
@@ -121,7 +121,7 @@ const nomadCities = [
       'Mogador Coffee (central, reliable internet, outdoor terrace)',
     ],
     dayInLife: 'Wake at 7:30am in your medina apartment (2,500 MAD/month). Surf check from the ramparts. Morning work session at Taros with harbor views. Break for a fresh fish lunch at the port: 40 MAD ($4). Afternoon deep work at L\'Heure Bleue. 5pm surf session at Moulay Bouzerktoune. Sunset from the ramparts. Dinner at a medina restaurant: 60 MAD ($6). Evening reading in the peaceful riad courtyard.',
-    image: 'https://images.unsplash.com/photo-1560437091-4383266ac31b?q=80&w=800',
+    image: '/images/hero-coastal.webp',
   },
   {
     name: 'Tangier',
@@ -143,7 +143,7 @@ const nomadCities = [
       'Cafe Tingis (modern, fast internet, quiet workspace area)',
     ],
     dayInLife: 'Wake at 8am in your Ville Nouvelle apartment (3,500 MAD/month). Coffee at Gran Cafe de Paris: 15 MAD. Walk to The Loft Coworking by 9am. Focused work until 1pm. Lunch at a seafood grill in the port: 50 MAD ($5). Afternoon calls and admin from the coworking space. 6pm walk along the Corniche with views of Spain across the strait. Dinner in the medina: 70 MAD ($7). Weekend day trip to Tarifa, Spain (35 min ferry, 250 MAD round trip).',
-    image: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?q=80&w=800',
+    image: '/images/hero-chefchaouen-drone.webp',
   },
   {
     name: 'Casablanca',
@@ -167,7 +167,7 @@ const nomadCities = [
       'Cafe de la Sqala (atmospheric medina cafe, decent WiFi)',
     ],
     dayInLife: 'Wake at 7:30am in your Maarif apartment (5,000 MAD/month, modern and well-equipped). Walk to Cowurk by 8:30am. Deep work on fiber internet. Lunch at a business restaurant: 80 MAD ($8). Afternoon video calls in a soundproof booth. 6pm run along the Corniche. Dinner at a Casa restaurant in the Habous quarter: 100 MAD ($10). Weekend: explore the Hassan II Mosque or take the train to Rabat (1 hour, 80 MAD).',
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?q=80&w=800',
+    image: '/images/hero-coastal.webp',
   },
   {
     name: 'Rabat',
@@ -190,7 +190,7 @@ const nomadCities = [
       'Chez Paul (ocean views in Kasbah des Oudaias, relaxing)',
     ],
     dayInLife: 'Wake at 7:30am in your Agdal apartment (4,000 MAD/month). Tram to Technopark (10 min, 6 MAD). Morning work on fiber internet. Walk to Yamal Alsham for lunch: 45 MAD ($4.50). Afternoon focused work. 5pm explore the Kasbah des Oudaias and watch sunset over the Atlantic. Dinner in Agdal: 60 MAD ($6). Evening walk along the Bouregreg river promenade. Weekend: day trip to the Roman ruins of Volubilis or the blue city of Chefchaouen.',
-    image: 'https://images.unsplash.com/photo-1570698473651-b2de99bae12f?q=80&w=800',
+    image: '/images/hero-marrakech.webp',
   },
 ];
 
@@ -645,7 +645,7 @@ export default function DigitalNomadPage() {
               <div className="flex flex-col md:flex-row">
                 <div className="md:w-1/3 relative h-56 md:h-auto min-h-[280px]">
                   <img
-                    src="https://images.unsplash.com/photo-1502680390548-bdbac40f0100?q=80&w=800"
+                    src="/images/hero-riad-interior.webp"
                     alt="Taghazout surf village"
                     className="w-full h-full object-cover"
                     loading="lazy"

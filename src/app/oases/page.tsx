@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/oases',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1548018560-c7196e4f82e7?w=1200&h=630&fit=crop',
+        url: '/images/poster-oasis.webp',
         width: 1200,
         height: 630,
         alt: 'Lush palm grove oasis in the Draa Valley of southern Morocco',
@@ -95,7 +95,7 @@ const jsonLd = {
         'Comprehensive guide to Morocco\'s oases and palm groves including the Draa Valley, Ziz Gorges, Skoura, Figuig, ancient khettara irrigation, date harvesting, and oasis-to-desert experiences.',
       url: 'https://citytoursmorocco.com/oases',
       touristType: ['Cultural tourism', 'Ecotourism', 'Adventure travel', 'Photography'],
-      image: 'https://images.unsplash.com/photo-1548018560-c7196e4f82e7?w=1200',
+      image: '/images/poster-oasis.webp',
       geo: {
         '@type': 'GeoCoordinates',
         latitude: 30.3200,
@@ -179,7 +179,7 @@ const majorOases: Oasis[] = [
     highlights: ['200 km continuous palm grove', 'Dozens of historic kasbahs and ksour', 'Tamnougalt heritage kasbah', 'Tamegrout library and pottery', 'Gateway to M\'hamid dunes', 'Trans-Saharan caravan heritage'],
     bestTime: 'October to April. October for date harvest. Avoid June to August (extreme heat exceeding 45 degrees Celsius).',
     accommodation: 'Kasbahs and guesthouses in Agdz, Zagora, and throughout the valley. Luxury options at Dar Ahlam near Skoura. Desert camps beyond M\'hamid.',
-    image: 'https://images.unsplash.com/photo-1548018560-c7196e4f82e7?q=80&w=800',
+    image: '/images/poster-oasis.webp',
   },
   {
     name: 'Ziz Valley and Gorges',
@@ -191,7 +191,7 @@ const majorOases: Oasis[] = [
     highlights: ['Ziz Gorges dramatic canyon drive', 'Blue Springs of Meski', 'Hassan Addakhil Dam viewpoint', 'Majhoul date production', 'Gateway to Erg Chebbi dunes', 'Ancient fortified villages'],
     bestTime: 'October to April. The gorges are spectacular year-round but most comfortable in cooler months. October for harvest festivals.',
     accommodation: 'Hotels and guesthouses in Errachidia and Erfoud. Oasis camps near Meski. Luxury desert camps at Merzouga (Erg Chebbi).',
-    image: 'https://images.unsplash.com/photo-1531218150217-54595bc2b934?q=80&w=800',
+    image: '/images/hero-desert.webp',
   },
   {
     name: 'Skoura Palm Grove',
@@ -203,7 +203,7 @@ const majorOases: Oasis[] = [
     highlights: ['Kasbah Amridil (17th century)', 'UNESCO tentative list nomination', 'Three-tier oasis agriculture', 'Over 100 bird species', 'Traditional khettara channels', 'Sunrise photography paradise'],
     bestTime: 'Year-round, but October to April is most comfortable. March for almond blossoms. October for date harvest. Dawn and dusk for photography.',
     accommodation: 'Several restored kasbahs offer luxury accommodation. Dar Ahlam is one of Morocco\'s finest boutique hotels. Family-run guesthouses available.',
-    image: 'https://images.unsplash.com/photo-1545157933-2a6788aa2724?q=80&w=800',
+    image: '/images/hero-kasbahs.webp',
   },
   {
     name: 'Figuig Oasis',
@@ -215,7 +215,7 @@ const majorOases: Oasis[] = [
     highlights: ['Seven historic ksour', 'Ancient spring water system', 'Extraordinary pisé architecture', 'Among Morocco\'s finest dates', 'Genuine off-the-beaten-path destination', 'Complex traditional water rights'],
     bestTime: 'October to April. Spring is ideal for pleasant temperatures. Avoid summer when temperatures regularly exceed 45 degrees Celsius.',
     accommodation: 'A handful of simple but welcoming guesthouses within the ksour. No luxury options. This is authentic, community-level tourism.',
-    image: 'https://images.unsplash.com/photo-1517309230475-6736d926b979?q=80&w=800',
+    image: '/images/hero-desert.webp',
   },
   {
     name: 'Tinghir Oasis',
@@ -227,7 +227,7 @@ const majorOases: Oasis[] = [
     highlights: ['Panoramic oasis viewpoint', 'Gateway to Todra Gorge', 'Rock climbing world destination', 'Traditional Jewish mellah', 'Three-tier palm garden agriculture', 'Spectacular photography location'],
     bestTime: 'October to May. March to April for wildflowers in the gorge. Rock climbing best in spring and autumn. October for dates.',
     accommodation: 'Range from budget to mid-range in Tinghir town. Guesthouses with terrace views over the oasis. Hotels at the entrance to Todra Gorge.',
-    image: 'https://images.unsplash.com/photo-1534430480872-3498386e7856?q=80&w=800',
+    image: '/images/hero-todra-gorge.webp',
   },
   {
     name: 'Tata Palm Grove',
@@ -239,7 +239,7 @@ const majorOases: Oasis[] = [
     highlights: ['Prehistoric rock carvings (5,000+ years)', 'Ait Ouabelli hot springs', 'Traditional Berber silver crafts', 'Igherm to Tata mountain road', 'Virtually no tourists', 'Ancient henna cultivation'],
     bestTime: 'October to April. November to March for mildest temperatures. The surrounding desert is dangerously hot in summer.',
     accommodation: 'Simple guesthouses in Tata town and a few in surrounding villages. No luxury options. Basic but authentic hospitality.',
-    image: 'https://images.unsplash.com/photo-1504195505-7427ddbaab63?q=80&w=800',
+    image: '/images/hero-desert.webp',
   },
   {
     name: 'Zagora and Beyond',
@@ -251,7 +251,7 @@ const majorOases: Oasis[] = [
     highlights: ['Famous Timbuktu 52 days sign', 'Jebel Zagora sunrise hike', 'Gateway to Erg Chigaga', 'Boufeggous date variety', 'Wednesday and Sunday souks', 'Oasis-to-desert transition'],
     bestTime: 'October to April for comfortable temperatures. October for date festival. Full moon nights for desert atmosphere.',
     accommodation: 'Hotels and kasbahs in Zagora town. Luxury tented camps in Erg Chigaga (3 hours south). Desert bivouacs near M\'hamid.',
-    image: 'https://images.unsplash.com/photo-1507820284832-de tried?q=80&w=800',
+    image: '/images/hero-desert.webp',
   },
   {
     name: 'Alnif Oasis',
@@ -263,7 +263,7 @@ const majorOases: Oasis[] = [
     highlights: ['World-class fossil deposits', 'Trilobite specimens 500 million years old', 'Authentic oasis community', 'Fossil preparation workshops', 'Strategic road-trip stop', 'Dramatic desert plateau scenery'],
     bestTime: 'October to April for comfortable temperatures. The oasis is small enough to explore in a few hours as part of a longer journey.',
     accommodation: 'A handful of simple guesthouses. Alnif is best experienced as a day stop rather than a multi-night destination.',
-    image: 'https://images.unsplash.com/photo-1504195505-7427ddbaab63?q=80&w=800',
+    image: '/images/hero-desert.webp',
   },
   {
     name: 'Rissani Palm Grove',
@@ -275,7 +275,7 @@ const majorOases: Oasis[] = [
     highlights: ['Ruins of medieval Sijilmasa', 'Cradle of the Alaouite dynasty', 'Morocco\'s most atmospheric souk', 'Gateway to Erg Chebbi dunes', 'Majhoul date production', 'Royal mausoleums'],
     bestTime: 'October to April. Tuesday, Thursday, and Sunday for souk days. October for the date harvest festival in the Tafilalet.',
     accommodation: 'Basic hotels and guesthouses in Rissani. Most visitors stay in desert camps and hotels in nearby Merzouga (35 km).',
-    image: 'https://images.unsplash.com/photo-1517309230475-6736d926b979?q=80&w=800',
+    image: '/images/hero-desert.webp',
   },
 ];
 
@@ -428,7 +428,7 @@ export default function OasesPage() {
       <section className="relative overflow-hidden bg-[#1A1814] text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1548018560-c7196e4f82e7?q=80&w=2800"
+            src="/images/poster-oasis.webp"
             alt="Lush palm grove oasis stretching through the Draa Valley in southern Morocco"
             className="absolute inset-0 w-full h-full object-cover"
           />

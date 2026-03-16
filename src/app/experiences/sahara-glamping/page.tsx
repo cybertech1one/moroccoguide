@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/experiences/sahara-glamping',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1548017267-5765e9b2ccfb?w=1200&h=630&fit=crop',
+        url: '/images/hero-sahara-sunrise.webp',
         width: 1200,
         height: 630,
         alt: 'Luxury desert camp with tents in the Sahara dunes at sunset',
@@ -74,7 +74,7 @@ const jsonLd = {
   description:
     'Luxury desert camping under the stars in Morocco\'s Sahara Desert at Erg Chebbi and Erg Chigaga, featuring premium tented accommodation, camel treks, traditional Berber music, and stargazing.',
   url: 'https://citytoursmorocco.com/experiences/sahara-glamping',
-  image: 'https://images.unsplash.com/photo-1548017267-5765e9b2ccfb?w=1200&h=630&fit=crop',
+  image: '/images/hero-sahara-sunrise.webp',
   address: {
     '@type': 'PostalAddress',
     addressRegion: 'Draa-Tafilalet',
@@ -239,21 +239,21 @@ const relatedExperiences = [
   {
     title: 'Moroccan Cooking Class',
     slug: '/experiences/moroccan-cooking-class',
-    image: 'https://images.unsplash.com/photo-1541518763-42d16cdaafd6?w=400&q=80',
+    image: '/images/photo-cooking-class.webp',
     duration: '4-5 hours',
     price: 'From $30',
   },
   {
     title: 'Traditional Hammam Ritual',
     slug: '/experiences/hammam-ritual',
-    image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&q=80',
+    image: '/images/hero-hammam-interior.webp',
     duration: '1.5-2 hours',
     price: 'From $10',
   },
   {
     title: 'Atlas Mountains Day Hike',
     slug: '/experiences/atlas-day-hike',
-    image: 'https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=400&q=80',
+    image: '/images/hero-trekking.webp',
     duration: 'Full day',
     price: 'From $40',
   },
@@ -275,7 +275,7 @@ export default function SaharaGlampingPage() {
       <section className="relative overflow-hidden bg-[var(--color-primary-900)] text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1548017267-5765e9b2ccfb?w=1800&q=80"
+            src="/images/hero-sahara-sunrise.webp"
             alt="Luxury desert glamping tents beneath the starry Sahara sky"
             className="absolute inset-0 w-full h-full object-cover"
           />

@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/history',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1548017544-09dbc9fb99f6?w=1200&h=630&fit=crop',
+        url: '/images/hero-kasbahs.webp',
         width: 1200,
         height: 630,
         alt: 'Ancient Roman ruins of Volubilis in Morocco with columns and arches',
@@ -111,7 +111,7 @@ const timelinePeriods = [
     dateRange: '700,000 BCE - 1,100 BCE',
     icon: Clock,
     color: '#8B7355',
-    image: 'https://images.unsplash.com/photo-1504870712536-2d1d2d50be00?w=600&q=80',
+    image: '/images/hero-kasbahs.webp',
     description: [
       'Morocco is one of the oldest inhabited territories on Earth. Archaeological evidence reveals that early hominids, including Homo erectus, roamed the region over 700,000 years ago. In 2017, the discovery of 300,000-year-old Homo sapiens fossils at Jebel Irhoud, near Safi, rewrote the story of human evolution, pushing back the origin of our species by 100,000 years and placing Morocco at the very cradle of humanity.',
       'The prehistoric inhabitants left a remarkable artistic legacy. Rock engravings and cave paintings in the High Atlas, the Anti-Atlas, and the Draa Valley depict animals, hunting scenes, and geometric symbols dating back thousands of years. The Tazina style of rock art, found across southern Morocco, features elegant, stylized animal figures that rank among the finest prehistoric art in Africa.',
@@ -126,7 +126,7 @@ const timelinePeriods = [
     dateRange: '1,100 BCE - 429 CE',
     icon: Landmark,
     color: '#CD853F',
-    image: 'https://images.unsplash.com/photo-1548017544-09dbc9fb99f6?w=600&q=80',
+    image: '/images/hero-ait-benhaddou.webp',
     description: [
       'Phoenician traders from present-day Lebanon established the first trading posts along Morocco&apos;s coast around 1,100 BCE, founding settlements at Lixus (near Larache), Tingis (Tangier), and Mogador (Essaouira). These outposts became thriving centers of Mediterranean commerce, trading in gold, ivory, and the precious purple dye extracted from murex shells that made Phoenician textiles legendary.',
       'After the fall of Carthage in 146 BCE, Rome gradually extended its influence over northern Morocco, incorporating the region into the province of Mauretania Tingitana. The Romans built cities, roads, aqueducts, and monumental public buildings. Volubilis, near Meknes, became the provincial capital and one of the most important Roman cities in Africa, with grand basilicas, triumphal arches, and exquisite mosaic floors that survive to this day.',
@@ -141,7 +141,7 @@ const timelinePeriods = [
     dateRange: '7th - 10th Century',
     icon: BookOpen,
     color: '#2E8B57',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80',
+    image: '/images/hero-souk-lamps.webp',
     description: [
       'The arrival of Islam in the 7th century transformed Morocco forever. Arab armies under Uqba ibn Nafi reached Morocco&apos;s Atlantic coast in 683 CE, bringing with them a new faith, language, and way of life. While the initial Arab conquest met fierce resistance from Berber leaders &mdash; most famously the legendary queen Kahina &mdash; Islam gradually took root and became inseparable from Moroccan identity.',
       'The founding of the Idrisid dynasty in 789 CE by Idris I, a descendant of the Prophet Muhammad who fled political persecution in the Arabian Peninsula, marks the beginning of Morocco as a distinct nation. His son, Idris II, founded the city of Fes in 809 CE, which rapidly became one of the most important intellectual and spiritual centers of the Islamic world. The establishment of the University of al-Qarawiyyin in Fes in 859 CE &mdash; recognized by UNESCO and the Guinness World Records as the oldest existing, continually operating university in the world &mdash; cemented Morocco&apos;s place as a beacon of learning.',
@@ -156,7 +156,7 @@ const timelinePeriods = [
     dateRange: '11th - 13th Century',
     icon: Swords,
     color: '#B22222',
-    image: 'https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=600&q=80',
+    image: '/images/hero-marrakech-koutoubia.webp',
     description: [
       'The Almoravids, a Berber dynasty from the Sahara driven by religious reform and military prowess, founded Marrakech in 1070 CE and rapidly built an empire stretching from Senegal to central Spain. Under leaders like Yusuf ibn Tashfin, the Almoravids unified Morocco, revived Andalusian Islam, and established Marrakech as a dazzling capital of art, architecture, and commerce. The Koubba Almoravid in Marrakech, the only surviving Almoravid structure in the city, gives a glimpse of their refined architectural style.',
       'The Almohads, another Berber movement founded by the religious reformer Ibn Tumart in the High Atlas Mountains, overthrew the Almoravids in the mid-12th century. The Almohad Empire became one of the largest in the medieval world, stretching from Libya to the Iberian Peninsula. Their architectural legacy is monumental: the Koutoubia Mosque in Marrakech, the Hassan Tower in Rabat, and the Giralda in Seville were all built to the same grand design, symbolizing the unity of the empire.',
@@ -172,7 +172,7 @@ const timelinePeriods = [
     dateRange: '13th - 15th Century',
     icon: Crown,
     color: '#4169E1',
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=600&q=80',
+    image: '/images/detail-zellige-mosaic.webp',
     description: [
       'The Marinid dynasty, a Zenata Berber clan from eastern Morocco, rose to power in the 13th century and chose Fes as their capital, ushering in a golden age for the city. Unable to match the Almohads&apos; vast empire, the Marinids channeled their energy into architectural patronage and religious scholarship, leaving behind some of Morocco&apos;s most exquisite buildings.',
       'The Marinid madrasas of Fes are masterpieces of Islamic architecture. The Bou Inania Madrasa and the Attarine Madrasa feature breathtaking combinations of carved stucco, cedarwood, zellige tilework, and marble that represent the absolute zenith of Moroccan decorative arts. These theological colleges attracted scholars from across the Islamic world, solidifying Fes as a center of learning rivaling Cairo and Baghdad.',
@@ -188,7 +188,7 @@ const timelinePeriods = [
     dateRange: '15th - 16th Century',
     icon: Shield,
     color: '#556B2F',
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=600&q=80',
+    image: '/images/detail-zellige-mosaic.webp',
     description: [
       'The Wattasid dynasty, a branch of the Marinid family, took power in 1472 but presided over a weakened and fragmented Morocco. The Portuguese had established a string of fortified trading posts along the Atlantic coast &mdash; Ceuta (1415), Ksar es-Seghir (1458), Arzila (1471), Tangier (1471), and Agadir (1505) &mdash; while Spain occupied Melilla (1497) and other northern enclaves. For the first time in centuries, foreign powers controlled significant portions of Moroccan territory.',
       'This era of foreign occupation deeply scarred the national psyche and became a rallying point for religious and political resistance. Sufi brotherhoods and local marabouts (holy men) emerged as centers of opposition, mobilizing the population with the dual call of Islam and patriotism. The Battle of the Three Kings at Ksar el-Kebir in 1578 &mdash; one of the most consequential battles in world history &mdash; saw the death of the Portuguese king Sebastian I and effectively ended Portuguese ambitions in Morocco.',
@@ -203,7 +203,7 @@ const timelinePeriods = [
     dateRange: '16th - 17th Century',
     icon: Crown,
     color: '#DAA520',
-    image: 'https://images.unsplash.com/photo-1560095633-6858e1e1e682?w=600&q=80',
+    image: '/images/hero-hassan-mosque.webp',
     description: [
       'The Saadian dynasty emerged from the Draa Valley in the 16th century, rallying Moroccans against the Portuguese occupation of coastal cities. By unifying the country and driving out the European powers, the Saadians restored Moroccan sovereignty and chose Marrakech as their capital, inaugurating a second golden age for the Red City.',
       'The Saadian sultan Ahmad al-Mansur, whose epithet "the Golden" reflected the staggering wealth that flowed from his conquest of the Songhai Empire and control of the trans-Saharan gold trade, transformed Marrakech into one of the most opulent courts in the world. The El Badi Palace, now a romantic ruin but once rivaling the Alhambra in splendor, was built with Italian marble, Sudanese gold, and Irish granite. The exquisite Saadian Tombs, rediscovered in 1917 after being sealed for centuries, remain one of Marrakech&apos;s most visited monuments.',
@@ -219,7 +219,7 @@ const timelinePeriods = [
     dateRange: '17th Century - Present',
     icon: Crown,
     color: '#8B0000',
-    image: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=600&q=80',
+    image: '/images/hero-essaouira-ramparts.webp',
     description: [
       'The Alaouite dynasty, which claims descent from the Prophet Muhammad through his grandson Hassan, rose to power in the 17th century from the Tafilalet oasis in southeastern Morocco. They have ruled the country ever since, making them one of the longest-reigning dynasties in the world. The current monarch, King Mohammed VI, is the 23rd Alaouite ruler.',
       'The most formidable early Alaouite sultan was Moulay Ismail (1672-1727), who built the imperial city of Meknes as his capital with a ruthless ambition often compared to Louis XIV of France. Moulay Ismail constructed massive palaces, granaries, stables for 12,000 horses, and formidable walls that still stand today. He unified Morocco, expelled the Europeans from most coastal cities, and maintained the largest standing army in Moroccan history &mdash; an elite force of 150,000 soldiers known as the Black Guard.',
@@ -235,7 +235,7 @@ const timelinePeriods = [
     dateRange: '1912 - 1956',
     icon: Building2,
     color: '#4682B4',
-    image: 'https://images.unsplash.com/photo-1569336415962-a4bd9f69c07a?w=600&q=80',
+    image: '/images/hero-morocco.webp',
     description: [
       'The Treaty of Fes in 1912 divided Morocco between French and Spanish protectorates, ending centuries of full sovereignty. France controlled the majority of the country from Rabat, while Spain administered the northern Rif region and the southern Saharan zones. The sultan remained as a figurehead, but real power lay with the French Resident-General, most notably Marshal Lyautey, who pursued a policy of preserving Morocco&apos;s traditional cities while building modern European-style villes nouvelles alongside them.',
       'The colonial period transformed Morocco&apos;s urban landscape. Casablanca mushroomed from a small port town into a major metropolis, its skyline defined by Art Deco masterpieces designed by architects like Henri Prost and Marius Boyer. Rabat was developed as the administrative capital with grand boulevards and government buildings. Modern infrastructure &mdash; railways, ports, hospitals, and schools &mdash; was built, though primarily to serve colonial economic interests.',
@@ -251,7 +251,7 @@ const timelinePeriods = [
     dateRange: '1956 - 1999',
     icon: Flag,
     color: '#228B22',
-    image: 'https://images.unsplash.com/photo-1577147443647-81856d5151af?w=600&q=80',
+    image: '/images/hero-morocco.webp',
     description: [
       'Morocco regained its independence on March 2, 1956, and Sultan Mohammed V returned from exile to a hero&apos;s welcome, becoming the symbol of the new nation. He took the title of King in 1957 and began the process of building a modern state while preserving Morocco&apos;s rich cultural heritage. His untimely death in 1961 passed the crown to his son, Hassan II.',
       'King Hassan II ruled Morocco for 38 years (1961-1999), a complex era of nation-building, political repression, and economic development. His greatest achievement was the construction of the Hassan II Mosque in Casablanca (completed 1993), the largest mosque in Africa and one of the few open to non-Muslim visitors, featuring a retractable roof and a laser beam pointing toward Mecca. The "Green March" of 1975, when 350,000 unarmed Moroccans marched into the Spanish-controlled Western Sahara, was another defining moment of his reign.',
@@ -267,7 +267,7 @@ const timelinePeriods = [
     dateRange: '1999 - Present',
     icon: TrendingUp,
     color: '#C4960C',
-    image: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=600&q=80',
+    image: '/images/hero-essaouira-ramparts.webp',
     description: [
       'Since ascending the throne in 1999, King Mohammed VI has pursued an ambitious agenda of modernization, social reform, and economic development that has transformed Morocco into one of Africa&apos;s most dynamic nations. The new family code (Moudawana) of 2004 significantly expanded women&apos;s rights, while the Truth and Reconciliation Commission addressed human rights abuses of the past. Major infrastructure projects &mdash; the Tanger-Med port, the Al Boraq high-speed rail line, and vast solar energy plants &mdash; have positioned Morocco as a regional leader.',
       'Tourism has become a cornerstone of Morocco&apos;s economy, with the country welcoming over 14 million visitors annually before the global pandemic. The "Vision 2030" tourism strategy aims to make Morocco one of the world&apos;s top 20 tourism destinations, with investments in infrastructure, cultural heritage preservation, and sustainable tourism. Morocco&apos;s successful bid to co-host the 2030 FIFA World Cup alongside Spain and Portugal promises to further accelerate this trajectory.',
@@ -289,7 +289,7 @@ const historyByCities = [
     era: 'Idrisid / Marinid',
     founded: '809 CE',
     famousFor: 'World\'s oldest university, medieval madrasas, and the largest car-free urban area on Earth',
-    image: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?w=400&q=80',
+    image: '/images/hero-fes.webp',
     highlights: ['Al-Qarawiyyin University (859 CE)', 'Bou Inania Madrasa', 'Chouara Tanneries', 'Fes el-Bali Medina'],
   },
   {
@@ -297,7 +297,7 @@ const historyByCities = [
     era: 'Almoravid / Saadian',
     founded: '1070 CE',
     famousFor: 'Imperial capital of empires, the Red City of merchants, scholars, and sultans',
-    image: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=400&q=80',
+    image: '/images/hero-marrakech.webp',
     highlights: ['Koutoubia Mosque (1162)', 'Saadian Tombs', 'El Badi Palace ruins', 'Jemaa el-Fna square'],
   },
   {
@@ -305,7 +305,7 @@ const historyByCities = [
     era: 'Alaouite',
     founded: '11th century',
     famousFor: 'Moulay Ismail\'s imperial capital, the "Versailles of Morocco"',
-    image: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=400&q=80',
+    image: '/images/hero-essaouira-ramparts.webp',
     highlights: ['Bab Mansour gate', 'Royal Granaries', 'Moulay Ismail Mausoleum', 'Heri es-Souani'],
   },
   {
@@ -313,7 +313,7 @@ const historyByCities = [
     era: 'Almohad / Modern',
     founded: '12th century',
     famousFor: 'Almohad fortress-city turned modern capital, blending medieval walls with Art Deco',
-    image: 'https://images.unsplash.com/photo-1577147443647-81856d5151af?w=400&q=80',
+    image: '/images/hero-morocco.webp',
     highlights: ['Hassan Tower (1195)', 'Chellah Necropolis', 'Mohammed V Mausoleum', 'Kasbah of the Udayas'],
   },
   {
@@ -321,7 +321,7 @@ const historyByCities = [
     era: 'Protectorate / Modern',
     founded: 'Ancient (modern city from 1907)',
     famousFor: 'Art Deco metropolis, economic capital, and home to Africa\'s tallest religious structure',
-    image: 'https://images.unsplash.com/photo-1545071677-2df608f54e72?w=400&q=80',
+    image: '/images/hero-hassan-mosque.webp',
     highlights: ['Hassan II Mosque', 'Art Deco downtown', 'Habous Quarter', 'Rick\'s Cafe'],
   },
   {
@@ -329,7 +329,7 @@ const historyByCities = [
     era: 'Phoenician / International',
     founded: 'c. 1,100 BCE (as Tingis)',
     famousFor: 'Gateway between Africa and Europe, international zone (1923-1956), literary bohemia',
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=400&q=80',
+    image: '/images/hero-essaouira.webp',
     highlights: ['Kasbah Museum', 'Cap Spartel', 'Caves of Hercules', 'Grand Socco'],
   },
   {
@@ -337,7 +337,7 @@ const historyByCities = [
     era: 'Alaouite / Portuguese',
     founded: '18th century (modern city)',
     famousFor: 'Wind-swept fortified port designed by a French architect for a Moroccan sultan',
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=400&q=80',
+    image: '/images/hero-essaouira.webp',
     highlights: ['Skala de la Ville', 'Portuguese ramparts', 'Mellah quarter', 'Mogador island'],
   },
   {
@@ -345,7 +345,7 @@ const historyByCities = [
     era: 'Roman',
     founded: '3rd century BCE',
     famousFor: 'Best-preserved Roman ruins in North Africa, with stunning mosaics and triumphal arch',
-    image: 'https://images.unsplash.com/photo-1548017544-09dbc9fb99f6?w=400&q=80',
+    image: '/images/hero-ait-benhaddou.webp',
     highlights: ['Triumphal Arch of Caracalla', 'House of Orpheus mosaics', 'Capitol temple', 'Basilica'],
   },
 ];
@@ -405,7 +405,7 @@ export default function HistoryPage() {
       <section className="relative overflow-hidden bg-[var(--color-primary-900)] text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1548017544-09dbc9fb99f6?w=1600&q=80"
+            src="/images/hero-kasbahs.webp"
             alt="Ancient Roman ruins of Volubilis in Morocco"
             className="absolute inset-0 w-full h-full object-cover"
           />
@@ -819,25 +819,25 @@ export default function HistoryPage() {
                 title: 'UNESCO World Heritage Sites',
                 count: '9 sites',
                 description: 'Including the medinas of Fes, Marrakech, Essaouira, Tetouan, and Meknes, the archaeological site of Volubilis, the Portuguese city of El Jadida, Rabat, and the ksar of Ait Benhaddou.',
-                image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=400&q=80',
+                image: '/images/hero-essaouira.webp',
               },
               {
                 title: 'Imperial Cities',
                 count: '4 cities',
                 description: 'Fes, Marrakech, Meknes, and Rabat &mdash; each served as Morocco&apos;s capital under different dynasties, and each preserves the monumental architecture of its golden age.',
-                image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=400&q=80',
+                image: '/images/hero-marrakech.webp',
               },
               {
                 title: 'Ancient Ruins',
                 count: '10+ sites',
                 description: 'Roman Volubilis, Phoenician Lixus, Banasa, Sala Colonia, and Chellah offer windows into Morocco&apos;s ancient past spanning over 2,000 years of pre-Islamic history.',
-                image: 'https://images.unsplash.com/photo-1548017544-09dbc9fb99f6?w=400&q=80',
+                image: '/images/hero-ait-benhaddou.webp',
               },
               {
                 title: 'Kasbahs & Ksour',
                 count: '100+ sites',
                 description: 'Fortified villages and citadels along the ancient caravan routes of southern Morocco, including UNESCO-listed Ait Benhaddou and the Draa Valley kasbahs.',
-                image: 'https://images.unsplash.com/photo-1560095633-6858e1e1e682?w=400&q=80',
+                image: '/images/hero-kasbahs.webp',
               },
             ].map((card) => (
               <div key={card.title} className="card-moroccan overflow-hidden group">

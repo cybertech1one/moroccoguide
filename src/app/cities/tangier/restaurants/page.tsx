@@ -31,7 +31,7 @@ const restaurants = [
     slug: 'el-morocco-club',
     description:
       'An elegant restaurant and piano bar set in a beautifully restored 1930s mansion in the heart of the medina. The menu blends Moroccan and French cuisine with dishes like lamb tagine with prunes and almonds alongside foie gras and duck confit. The rooftop terrace offers sweeping views of the Strait of Gibraltar, while the dimly lit interior evokes the glamour of Tangier\'s golden age. Live jazz on weekend evenings.',
-    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800',
+    image: '/images/photo-food-flatlay.webp',
     rating: 4.6,
     priceRange: '250-500 MAD',
     hours: '12:00 PM - 11:00 PM daily',
@@ -43,7 +43,7 @@ const restaurants = [
     slug: 'cafe-hafa',
     description:
       'Perched on a cliff overlooking the Strait of Gibraltar, this legendary terraced cafe has been serving mint tea since 1921. The Rolling Stones, Paul Bowles, and the Beatles have all sat on its simple wooden benches, gazing across the water to Spain. Cafe Hafa serves only tea and simple pastries, but the experience of watching the sunset from its cascading terraces is unforgettable. Come early for the best seats.',
-    image: 'https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=800',
+    image: '/images/photo-food-flatlay.webp',
     rating: 4.5,
     priceRange: '15-40 MAD',
     hours: '8:00 AM - 10:00 PM daily',
@@ -55,7 +55,7 @@ const restaurants = [
     slug: 'le-saveur-du-poisson',
     description:
       'A legendary no-choice fish restaurant hidden in the medina where the chef serves a multi-course feast of the freshest catch. There is no menu; you simply sit down and course after course of exquisitely prepared fish arrives, from marinated sardines to grilled whole sea bream. The intimate dining room is adorned with traditional Moroccan decor. Cash only and reservations are essential during peak season.',
-    image: 'https://images.unsplash.com/photo-1534604973900-c43ab4c2e0ab?q=80&w=800',
+    image: '/images/photo-food-flatlay.webp',
     rating: 4.7,
     priceRange: '150-200 MAD (fixed menu)',
     hours: '1:00 PM - 3:00 PM, 8:00 PM - 10:00 PM (Closed Sundays)',
@@ -67,7 +67,7 @@ const restaurants = [
     slug: 'populaire-saveur-de-poisson',
     description:
       'Run by the same family as Le Saveur du Poisson, this is the more casual and affordable sibling. Located deeper in the medina, it offers a similar set-menu seafood experience with slightly simpler preparations but equally fresh fish. The colorful tiled interior and warm hospitality make it a favorite among budget-conscious travelers who still want an authentic Tangier seafood feast.',
-    image: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=800',
+    image: '/images/photo-food-flatlay.webp',
     rating: 4.4,
     priceRange: '80-120 MAD (fixed menu)',
     hours: '12:00 PM - 3:00 PM, 7:00 PM - 10:00 PM daily',
@@ -79,7 +79,7 @@ const restaurants = [
     slug: 'anna-e-paolo',
     description:
       'A slice of Italy in Tangier, this charming restaurant is run by an Italian couple who source fresh pasta and Mediterranean ingredients daily. The menu features handmade ravioli, wood-fired pizzas, and fresh seafood pastas. The intimate courtyard setting with bougainvillea-draped walls creates a romantic atmosphere. Their tiramisu, made with Moroccan coffee, is a perfect East-meets-West dessert.',
-    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800',
+    image: '/images/photo-food-flatlay.webp',
     rating: 4.3,
     priceRange: '120-250 MAD',
     hours: '12:30 PM - 3:00 PM, 7:30 PM - 10:30 PM (Closed Mondays)',
@@ -91,7 +91,7 @@ const restaurants = [
     slug: 'nord-pinus',
     description:
       'Located in the iconic Nord-Pinus hotel in the Kasbah, this restaurant offers refined Moroccan cuisine in a stunning setting decorated with vintage photographs and art. The rooftop terrace provides panoramic views of the port and the Mediterranean. Signature dishes include pastilla au pigeon, couscous with seven vegetables, and slow-cooked lamb shoulder. The cocktail bar is one of Tangier\'s most sophisticated.',
-    image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=800',
+    image: '/images/photo-food-flatlay.webp',
     rating: 4.5,
     priceRange: '300-600 MAD',
     hours: '12:00 PM - 3:00 PM, 7:00 PM - 11:00 PM daily',
@@ -103,7 +103,7 @@ const restaurants = [
     slug: 'salon-bleu',
     description:
       'A rooftop restaurant with arguably the best terrace views in Tangier, overlooking the medina rooftops to the sea beyond. The decor is a dreamy palette of blues and whites inspired by the Mediterranean. The menu combines Moroccan and Mediterranean dishes with excellent fresh juices and cocktails. Popular for both lunch and sunset dining, it is a favorite spot for photographers and Instagram enthusiasts.',
-    image: 'https://images.unsplash.com/photo-1600891964599-f61ba0e24092?q=80&w=800',
+    image: '/images/photo-food-flatlay.webp',
     rating: 4.2,
     priceRange: '100-250 MAD',
     hours: '10:00 AM - 11:00 PM daily',
@@ -115,7 +115,7 @@ const restaurants = [
     slug: 'la-fabrique',
     description:
       'A trendy bistro-style restaurant in the ville nouvelle that has become a meeting point for Tangier\'s creative community. The menu is French-inspired with a Moroccan twist, featuring excellent brunch options, gourmet burgers, and daily specials based on market-fresh ingredients. The industrial-chic interior with exposed brick and local art creates a relaxed yet stylish vibe. Great wine list featuring Moroccan and French selections.',
-    image: 'https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?q=80&w=800',
+    image: '/images/photo-food-flatlay.webp',
     rating: 4.3,
     priceRange: '80-200 MAD',
     hours: '9:00 AM - 11:00 PM (Closed Sundays)',
@@ -157,7 +157,7 @@ export default function TangierRestaurantsPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1534604973900-c43ab4c2e0ab?q=80&w=2800)',
+              'url(/images/photo-food-flatlay.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

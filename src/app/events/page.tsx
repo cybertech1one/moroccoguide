@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/events',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=1200&h=630&fit=crop',
+        url: '/images/hero-jemaa-elfna-night.webp',
         width: 1200,
         height: 630,
         alt: 'Festival celebration in Morocco',
@@ -127,7 +127,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: true,
     type: 'sports',
     isAnnual: false,
-    image: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=800&q=80',
+    image: '/images/hero-morocco.webp',
     featured: true,
   },
   {
@@ -141,7 +141,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: true,
     type: 'cultural',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1548017267-5765e9b2ccfb?w=800&q=80',
+    image: '/images/hero-desert.webp',
   },
   {
     name: 'Marrakech International Marathon',
@@ -154,7 +154,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: false,
     type: 'sports',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=800&q=80',
+    image: '/images/hero-morocco.webp',
   },
 
   /* ══════════════════════════════════════════════════════════════
@@ -171,7 +171,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: false,
     type: 'nature',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1548017267-5765e9b2ccfb?w=800&q=80',
+    image: '/images/hero-desert.webp',
   },
   {
     name: '1-54 Contemporary African Art Fair',
@@ -184,7 +184,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: true,
     type: 'arts',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=800&q=80',
+    image: '/images/hero-morocco.webp',
   },
   {
     name: 'Casablanca Fashion Week',
@@ -197,7 +197,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: false,
     type: 'arts',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=800&q=80',
+    image: '/images/photo-fantasia-tbourida.webp',
   },
   {
     name: 'Ramadan Begins',
@@ -210,7 +210,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: true,
     type: 'religious',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1564769625905-50e93615e769?w=800&q=80',
+    image: '/images/hero-fes.webp',
     featured: true,
   },
 
@@ -228,7 +228,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: true,
     type: 'religious',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=800&q=80',
+    image: '/images/photo-fantasia-tbourida.webp',
   },
   {
     name: 'International Nomads Festival',
@@ -241,7 +241,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: false,
     type: 'cultural',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=800&q=80',
+    image: '/images/hero-marrakech.webp',
   },
   {
     name: 'Printemps Musical des Alizees',
@@ -254,7 +254,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: false,
     type: 'music',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=800&q=80',
+    image: '/images/photo-fantasia-tbourida.webp',
   },
 
   /* ══════════════════════════════════════════════════════════════
@@ -271,7 +271,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: true,
     type: 'cultural',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1570804485046-99ca21dbdc43?w=800&q=80',
+    image: '/images/hero-morocco.webp',
   },
   {
     name: 'GITEX Africa Morocco',
@@ -284,7 +284,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: true,
     type: 'cultural',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=800&q=80',
+    image: '/images/hero-morocco.webp',
   },
   {
     name: 'Marathon des Sables',
@@ -297,7 +297,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: false,
     type: 'sports',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=800&q=80',
+    image: '/images/hero-marrakech.webp',
   },
   {
     name: 'Fes Festival of Sufi Culture',
@@ -310,7 +310,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: false,
     type: 'religious',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1549140600-78c9b8275e9d?w=800&q=80',
+    image: '/images/hero-berber-culture.webp',
   },
 
   /* ══════════════════════════════════════════════════════════════
@@ -327,7 +327,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: false,
     type: 'cultural',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1490750967868-88aa4f44baee?w=800&q=80',
+    image: '/images/hero-asilah-aerial.webp',
     featured: true,
   },
   {
@@ -341,7 +341,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: false,
     type: 'music',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1511192336575-5a79af67a629?w=800&q=80',
+    image: '/images/art-gnawa-music.webp',
     featured: true,
   },
   {
@@ -355,7 +355,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: true,
     type: 'religious',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1570804485046-99ca21dbdc43?w=800&q=80',
+    image: '/images/hero-morocco.webp',
   },
   {
     name: 'Rabat Diamond League',
@@ -368,7 +368,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: true,
     type: 'sports',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1570804485046-99ca21dbdc43?w=800&q=80',
+    image: '/images/hero-morocco.webp',
   },
   {
     name: 'Botola Pro Season Finale',
@@ -381,7 +381,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: true,
     type: 'sports',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=800&q=80',
+    image: '/images/hero-morocco.webp',
   },
 
   /* ══════════════════════════════════════════════════════════════
@@ -398,7 +398,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: true,
     type: 'music',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=800&q=80',
+    image: '/images/art-gnawa-music.webp',
     featured: true,
   },
   {
@@ -412,7 +412,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: true,
     type: 'music',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80',
+    image: '/images/hero-jemaa-elfna-night.webp',
     featured: true,
   },
   {
@@ -426,7 +426,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: false,
     type: 'cultural',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1564227901-6b1d20bebe9d?w=800&q=80',
+    image: '/images/hero-asilah-aerial.webp',
   },
   {
     name: 'Cherry Festival',
@@ -439,7 +439,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: false,
     type: 'food',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1549140600-78c9b8275e9d?w=800&q=80',
+    image: '/images/hero-berber-culture.webp',
   },
   {
     name: 'FIFA World Cup 2026 (Morocco Matches)',
@@ -452,7 +452,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: true,
     type: 'sports',
     isAnnual: false,
-    image: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=800&q=80',
+    image: '/images/hero-morocco.webp',
   },
 
   /* ══════════════════════════════════════════════════════════════
@@ -469,7 +469,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: false,
     type: 'music',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1502680390548-bdbac40b3981?w=800&q=80',
+    image: '/images/hero-surfing.webp',
     featured: true,
   },
   {
@@ -483,7 +483,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: false,
     type: 'cultural',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=800&q=80',
+    image: '/images/hero-morocco.webp',
   },
   {
     name: 'Throne Day',
@@ -496,7 +496,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: true,
     type: 'cultural',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1570804485046-99ca21dbdc43?w=800&q=80',
+    image: '/images/hero-morocco.webp',
   },
   {
     name: 'Rabat Summer Festival',
@@ -509,7 +509,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: false,
     type: 'music',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1570804485046-99ca21dbdc43?w=800&q=80',
+    image: '/images/hero-morocco.webp',
   },
   {
     name: 'Oasis Festival',
@@ -522,7 +522,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: false,
     type: 'music',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80',
+    image: '/images/art-gnawa-music.webp',
   },
 
   /* ══════════════════════════════════════════════════════════════
@@ -539,7 +539,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: true,
     type: 'cultural',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1570804485046-99ca21dbdc43?w=800&q=80',
+    image: '/images/hero-morocco.webp',
   },
   {
     name: 'Asilah Arts Festival',
@@ -552,7 +552,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: false,
     type: 'arts',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1553522991-71439aa3bf8c?w=800&q=80',
+    image: '/images/art-street-art.webp',
   },
   {
     name: 'Moulay Idriss Moussem',
@@ -565,7 +565,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: false,
     type: 'religious',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1570804485046-99ca21dbdc43?w=800&q=80',
+    image: '/images/hero-morocco.webp',
   },
   {
     name: 'Honey Festival',
@@ -578,7 +578,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: false,
     type: 'food',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1502680390548-bdbac40b3981?w=800&q=80',
+    image: '/images/hero-surfing.webp',
   },
   {
     name: 'Setti Fatma Moussem',
@@ -591,7 +591,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: false,
     type: 'religious',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1548017267-5765e9b2ccfb?w=800&q=80',
+    image: '/images/hero-desert.webp',
   },
 
   /* ══════════════════════════════════════════════════════════════
@@ -608,7 +608,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: true,
     type: 'music',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1553522991-71439aa3bf8c?w=800&q=80',
+    image: '/images/art-street-art.webp',
   },
   {
     name: 'Imilchil Marriage Festival',
@@ -621,7 +621,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: true,
     type: 'cultural',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1528164344705-47542687000d?w=800&q=80',
+    image: '/images/hero-berber-culture.webp',
     featured: true,
   },
   {
@@ -635,7 +635,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: false,
     type: 'cultural',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1570804485046-99ca21dbdc43?w=800&q=80',
+    image: '/images/hero-morocco.webp',
   },
   {
     name: 'Alegria Festival',
@@ -648,7 +648,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: false,
     type: 'cultural',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1553522991-71439aa3bf8c?w=800&q=80',
+    image: '/images/art-street-art.webp',
   },
 
   /* ══════════════════════════════════════════════════════════════
@@ -665,7 +665,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: false,
     type: 'food',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=800&q=80',
+    image: '/images/hero-marrakech.webp',
   },
   {
     name: 'Saffron Festival',
@@ -678,7 +678,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: false,
     type: 'food',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1548017267-5765e9b2ccfb?w=800&q=80',
+    image: '/images/hero-desert.webp',
   },
   {
     name: 'Olive Festival',
@@ -691,7 +691,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: false,
     type: 'food',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1570804485046-99ca21dbdc43?w=800&q=80',
+    image: '/images/hero-morocco.webp',
   },
   {
     name: 'Salon du Cheval (Horse Show)',
@@ -704,7 +704,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: false,
     type: 'cultural',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=800&q=80',
+    image: '/images/photo-fantasia-tbourida.webp',
   },
 
   /* ══════════════════════════════════════════════════════════════
@@ -721,7 +721,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: true,
     type: 'cultural',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1570804485046-99ca21dbdc43?w=800&q=80',
+    image: '/images/hero-morocco.webp',
   },
   {
     name: 'Taragalte Festival',
@@ -734,7 +734,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: false,
     type: 'music',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1506157786151-b8491531f063?w=800&q=80',
+    image: '/images/art-gnawa-music.webp',
   },
   {
     name: 'Independence Day',
@@ -747,7 +747,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: true,
     type: 'cultural',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1570804485046-99ca21dbdc43?w=800&q=80',
+    image: '/images/hero-morocco.webp',
   },
   {
     name: 'Marrakech International Film Festival',
@@ -760,7 +760,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: true,
     type: 'film',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800&q=80',
+    image: '/images/hero-ait-benhaddou.webp',
     featured: true,
   },
   {
@@ -774,7 +774,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: true,
     type: 'food',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=800&q=80',
+    image: '/images/hero-morocco.webp',
   },
 
   /* ══════════════════════════════════════════════════════════════
@@ -791,7 +791,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: true,
     type: 'music',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=800&q=80',
+    image: '/images/hero-marrakech.webp',
   },
   {
     name: 'Trans-Saharan Music Festival',
@@ -804,7 +804,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: false,
     type: 'music',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=800&q=80',
+    image: '/images/hero-marrakech.webp',
   },
   {
     name: 'New Year Celebrations',
@@ -817,7 +817,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: true,
     type: 'cultural',
     isAnnual: true,
-    image: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=800&q=80',
+    image: '/images/hero-morocco.webp',
   },
 
   /* ══════════════════════════════════════════════════════════════
@@ -834,7 +834,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: true,
     type: 'sports',
     isAnnual: false,
-    image: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=800&q=80',
+    image: '/images/hero-morocco.webp',
   },
   {
     name: 'Weekly Souks',
@@ -847,7 +847,7 @@ const events: MoroccoEvent[] = [
     confirmed2026: true,
     type: 'cultural',
     isAnnual: false,
-    image: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=800&q=80',
+    image: '/images/hero-morocco.webp',
   },
 ];
 
@@ -1057,7 +1057,7 @@ export default function EventsPage() {
       <section className="relative overflow-hidden bg-[var(--color-primary-900)] text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=1600&q=80"
+            src="/images/hero-jemaa-elfna-night.webp"
             alt="Moroccan festival celebration with traditional lanterns and decorations"
             className="absolute inset-0 w-full h-full object-cover"
           />

@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/camping',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1517824806704-9040b037703b?w=1200&h=630&fit=crop',
+        url: '/images/hero-camping.webp',
         width: 1200,
         height: 630,
         alt: 'Luxury desert camp under starry skies in the Moroccan Sahara',
@@ -88,7 +88,7 @@ export const metadata: Metadata = {
     description:
       'Sahara luxury camps, Atlas Mountain bivouacs, wild camping, beach camping, and Berber nomadic experiences in Morocco.',
     images: [
-      'https://images.unsplash.com/photo-1517824806704-9040b037703b?w=1200&h=630&fit=crop',
+      '/images/hero-camping.webp',
     ],
   },
   alternates: { canonical: 'https://citytoursmorocco.com/camping' },
@@ -160,7 +160,7 @@ const campingSpots: CampingSpot[] = [
     priceRange: '400-8,000+ MAD/night',
     nearestTown: 'Merzouga (0 km) / Rissani (35 km)',
     altitude: '700m',
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=800',
+    image: '/images/hero-desert.webp',
   },
   {
     name: 'Jebel Toubkal Base Camp',
@@ -179,7 +179,7 @@ const campingSpots: CampingSpot[] = [
     priceRange: '150-500 MAD/night (refuge), Free (wild camping)',
     nearestTown: 'Imlil (9 km trail)',
     altitude: '3,207m (refuge)',
-    image: 'https://images.unsplash.com/photo-1486915309615-1d46aca89a0c?q=80&w=800',
+    image: '/images/hero-atlas.webp',
   },
   {
     name: 'Todra Gorge',
@@ -198,7 +198,7 @@ const campingSpots: CampingSpot[] = [
     priceRange: '50-300 MAD/night',
     nearestTown: 'Tinghir (14 km)',
     altitude: '1,400m',
-    image: 'https://images.unsplash.com/photo-1548820488-e413b5bac862?q=80&w=800',
+    image: '/images/hero-camping.webp',
   },
   {
     name: 'Dades Valley & Gorge',
@@ -217,7 +217,7 @@ const campingSpots: CampingSpot[] = [
     priceRange: '50-400 MAD/night',
     nearestTown: 'Boumalne Dades (25 km to gorge)',
     altitude: '1,500-1,800m',
-    image: 'https://images.unsplash.com/photo-1569839333583-7375336cde4b?q=80&w=800',
+    image: '/images/hero-atlas.webp',
   },
   {
     name: 'Paradise Valley',
@@ -236,7 +236,7 @@ const campingSpots: CampingSpot[] = [
     priceRange: 'Free (wild camping) / 50-100 MAD (local sites)',
     nearestTown: 'Agadir (30 km) / Taghazout (20 km)',
     altitude: '300-500m',
-    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=800',
+    image: '/images/hero-atlas.webp',
   },
   {
     name: 'Ouzoud Falls',
@@ -255,7 +255,7 @@ const campingSpots: CampingSpot[] = [
     priceRange: '30-200 MAD/night',
     nearestTown: 'Azilal (32 km)',
     altitude: '900m',
-    image: 'https://images.unsplash.com/photo-1570698473651-b2de99bae12f?q=80&w=800',
+    image: '/images/hero-marrakech.webp',
   },
   {
     name: 'Erg Chigaga',
@@ -274,7 +274,7 @@ const campingSpots: CampingSpot[] = [
     priceRange: '600-6,000 MAD/night',
     nearestTown: 'M\'Hamid El Ghizlane (50 km off-road)',
     altitude: '450m',
-    image: 'https://images.unsplash.com/photo-1509023464722-18d996393ca8?q=80&w=800',
+    image: '/images/hero-sahara-sunrise.webp',
   },
   {
     name: 'Legzira & Sidi Ifni Coast',
@@ -293,7 +293,7 @@ const campingSpots: CampingSpot[] = [
     priceRange: 'Free (wild camping)',
     nearestTown: 'Sidi Ifni (10 km)',
     altitude: '0-50m',
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800',
+    image: '/images/card-beach.webp',
   },
 ];
 
@@ -329,7 +329,7 @@ const glampingSites: GlampingSite[] = [
     ],
     bestFor: 'Couples, luxury seekers, short trips from Marrakech',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?q=80&w=800',
+    image: '/images/hero-marrakech.webp',
   },
   {
     name: 'Desert Luxury Camp Merzouga',
@@ -347,7 +347,7 @@ const glampingSites: GlampingSite[] = [
     ],
     bestFor: 'Honeymooners, photographers, bucket-list travelers',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1517824806704-9040b037703b?q=80&w=800',
+    image: '/images/hero-camping.webp',
   },
   {
     name: 'Kam Kam Dunes',
@@ -365,7 +365,7 @@ const glampingSites: GlampingSite[] = [
     ],
     bestFor: 'Ultra-luxury travelers, special celebrations, proposals',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1542401886-65d6c61db217?q=80&w=800',
+    image: '/images/hero-camping.webp',
   },
   {
     name: 'Terres d\'Amanar',
@@ -383,7 +383,7 @@ const glampingSites: GlampingSite[] = [
     ],
     bestFor: 'Families, adventure seekers, eco-conscious travelers',
     rating: 4,
-    image: 'https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=800',
+    image: '/images/hero-camping.webp',
   },
   {
     name: 'Erg Chigaga Luxury Desert Camp',
@@ -401,7 +401,7 @@ const glampingSites: GlampingSite[] = [
     ],
     bestFor: 'Adventurers seeking luxury, solitude lovers, photographers',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1561131668-f63504fc549d?q=80&w=800',
+    image: '/images/hero-atlas.webp',
   },
   {
     name: 'Bab El Oued Eco Lodge',
@@ -419,7 +419,7 @@ const glampingSites: GlampingSite[] = [
     ],
     bestFor: 'Surfers, yoga practitioners, digital nomads',
     rating: 4,
-    image: 'https://images.unsplash.com/photo-1499363536502-87642509e31b?q=80&w=800',
+    image: '/images/hero-trekking.webp',
   },
 ];
 

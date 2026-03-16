@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/itineraries',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&h=630&fit=crop',
+        url: '/images/hero-desert.webp',
         width: 1200,
         height: 630,
         alt: 'Scenic Morocco travel route through the desert and mountains',
@@ -92,7 +92,7 @@ const itineraries: Itinerary[] = [
     ],
     budgetLevel: 'mid-range',
     travelStyle: 'cultural',
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=800&q=80',
+    image: '/images/hero-desert.webp',
   },
   {
     name: 'Imperial Cities Circuit',
@@ -111,7 +111,7 @@ const itineraries: Itinerary[] = [
     ],
     budgetLevel: 'mid-range',
     travelStyle: 'cultural',
-    image: 'https://images.unsplash.com/photo-1549140600-78c9b8275e9d?w=800&q=80',
+    image: '/images/hero-fes.webp',
   },
   {
     name: 'Sahara & Kasbahs',
@@ -130,7 +130,7 @@ const itineraries: Itinerary[] = [
     ],
     budgetLevel: 'mid-range',
     travelStyle: 'adventure',
-    image: 'https://images.unsplash.com/photo-1548017267-5765e9b2ccfb?w=800&q=80',
+    image: '/images/hero-sahara-sunrise.webp',
   },
   {
     name: 'Surf & Chill Atlantic',
@@ -149,7 +149,7 @@ const itineraries: Itinerary[] = [
     ],
     budgetLevel: 'budget',
     travelStyle: 'relaxation',
-    image: 'https://images.unsplash.com/photo-1502680390548-bdbac40b3981?w=800&q=80',
+    image: '/images/hero-surfing.webp',
   },
   {
     name: 'Luxury Morocco',
@@ -168,7 +168,7 @@ const itineraries: Itinerary[] = [
     ],
     budgetLevel: 'luxury',
     travelStyle: 'cultural',
-    image: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=800&q=80',
+    image: '/images/hero-marrakech.webp',
   },
   {
     name: 'Morocco in a Week',
@@ -187,7 +187,7 @@ const itineraries: Itinerary[] = [
     ],
     budgetLevel: 'mid-range',
     travelStyle: 'cultural',
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=800&q=80',
+    image: '/images/hero-essaouira.webp',
   },
   {
     name: "Foodie's Morocco",
@@ -207,7 +207,7 @@ const itineraries: Itinerary[] = [
     ],
     budgetLevel: 'mid-range',
     travelStyle: 'food',
-    image: 'https://images.unsplash.com/photo-1570804485046-99ca21dbdc43?w=800&q=80',
+    image: '/images/hero-hassan-mosque.webp',
   },
   {
     name: 'Off the Beaten Path',
@@ -227,7 +227,7 @@ const itineraries: Itinerary[] = [
     ],
     budgetLevel: 'mid-range',
     travelStyle: 'adventure',
-    image: 'https://images.unsplash.com/photo-1553522991-71439aa3bf8c?w=800&q=80',
+    image: '/images/hero-tangier-kasbah.webp',
   },
   {
     name: 'Weekend in Marrakech',
@@ -246,7 +246,7 @@ const itineraries: Itinerary[] = [
     ],
     budgetLevel: 'mid-range',
     travelStyle: 'cultural',
-    image: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=800&q=80',
+    image: '/images/hero-marrakech.webp',
   },
   {
     name: 'Atlas Mountains Trek',
@@ -265,7 +265,7 @@ const itineraries: Itinerary[] = [
     ],
     budgetLevel: 'mid-range',
     travelStyle: 'adventure',
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=800&q=80',
+    image: '/images/hero-desert.webp',
   },
   {
     name: 'Photography Tour',
@@ -284,7 +284,7 @@ const itineraries: Itinerary[] = [
     ],
     budgetLevel: 'mid-range',
     travelStyle: 'photography',
-    image: 'https://images.unsplash.com/photo-1549140600-78c9b8275e9d?w=800&q=80',
+    image: '/images/hero-fes.webp',
   },
   {
     name: 'Family Morocco',
@@ -303,7 +303,7 @@ const itineraries: Itinerary[] = [
     ],
     budgetLevel: 'mid-range',
     travelStyle: 'family',
-    image: 'https://images.unsplash.com/photo-1502680390548-bdbac40b3981?w=800&q=80',
+    image: '/images/hero-surfing.webp',
   },
   {
     name: 'Romantic Getaway',
@@ -322,7 +322,7 @@ const itineraries: Itinerary[] = [
     ],
     budgetLevel: 'luxury',
     travelStyle: 'romance',
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=800&q=80',
+    image: '/images/hero-essaouira.webp',
   },
   {
     name: 'Cultural Deep Dive',
@@ -342,7 +342,7 @@ const itineraries: Itinerary[] = [
     ],
     budgetLevel: 'mid-range',
     travelStyle: 'cultural',
-    image: 'https://images.unsplash.com/photo-1570804485046-99ca21dbdc43?w=800&q=80',
+    image: '/images/hero-hassan-mosque.webp',
   },
   {
     name: 'Budget Backpacker',
@@ -372,7 +372,7 @@ const itineraries: Itinerary[] = [
     ],
     budgetLevel: 'budget',
     travelStyle: 'adventure',
-    image: 'https://images.unsplash.com/photo-1553522991-71439aa3bf8c?w=800&q=80',
+    image: '/images/hero-tangier-kasbah.webp',
   },
   {
     name: 'Wellness & Yoga Retreat',
@@ -391,7 +391,7 @@ const itineraries: Itinerary[] = [
     ],
     budgetLevel: 'luxury',
     travelStyle: 'relaxation',
-    image: 'https://images.unsplash.com/photo-1502680390548-bdbac40b3981?w=800&q=80',
+    image: '/images/hero-surfing.webp',
   },
   {
     name: 'Saharan Stargazing Expedition',
@@ -410,7 +410,7 @@ const itineraries: Itinerary[] = [
     ],
     budgetLevel: 'mid-range',
     travelStyle: 'adventure',
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=800&q=80',
+    image: '/images/hero-desert.webp',
   },
   {
     name: 'Artisan Craft Trail',
@@ -429,7 +429,7 @@ const itineraries: Itinerary[] = [
     ],
     budgetLevel: 'mid-range',
     travelStyle: 'cultural',
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=800&q=80',
+    image: '/images/hero-essaouira.webp',
   },
 ];
 
@@ -542,7 +542,7 @@ export default function ItinerariesPage() {
       <section className="relative overflow-hidden bg-[var(--color-secondary-900)] text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1600&q=80"
+            src="/images/hero-desert.webp"
             alt="Scenic route through Morocco with mountains and desert landscape"
             className="absolute inset-0 w-full h-full object-cover"
           />

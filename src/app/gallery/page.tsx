@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/gallery',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&h=630&fit=crop',
+        url: '/images/hero-morocco.webp',
         width: 1200,
         height: 630,
         alt: 'Sahara Desert sand dunes at golden hour',
@@ -78,7 +78,7 @@ const photos: Photo[] = [
   /* ─── CITIES ─── */
   {
     id: 1,
-    src: 'https://images.unsplash.com/photo-1597212618440-806a846b4208?w=800',
+    src: '/images/hero-marrakech-koutoubia.webp',
     alt: 'Jemaa el-Fnaa square in Marrakech at sunset with crowds and food stalls',
     category: 'Cities',
     city: 'Marrakech',
@@ -87,7 +87,7 @@ const photos: Photo[] = [
   },
   {
     id: 2,
-    src: 'https://images.unsplash.com/photo-1548018560-c7196e91a0d5?w=800',
+    src: '/images/detail-zellige-mosaic.webp',
     alt: 'Blue-washed streets of Chefchaouen medina with potted plants',
     category: 'Cities',
     city: 'Chefchaouen',
@@ -96,7 +96,7 @@ const photos: Photo[] = [
   },
   {
     id: 3,
-    src: 'https://images.unsplash.com/photo-1560095633-6858b0185572?w=800',
+    src: '/images/hero-desert.webp',
     alt: 'Fes tanneries with colorful dye vats viewed from above',
     category: 'Cities',
     city: 'Fes',
@@ -105,7 +105,7 @@ const photos: Photo[] = [
   },
   {
     id: 4,
-    src: 'https://images.unsplash.com/photo-1553522991-71439aa4e0c0?w=800',
+    src: '/images/hero-chefchaouen.webp',
     alt: 'Essaouira harbor with traditional blue fishing boats at dock',
     category: 'Cities',
     city: 'Essaouira',
@@ -114,7 +114,7 @@ const photos: Photo[] = [
   },
   {
     id: 5,
-    src: 'https://images.unsplash.com/photo-1572204097183-e1ab140342ed?w=800',
+    src: '/images/hero-hassan-mosque.webp',
     alt: 'Rabat Kasbah of the Udayas blue and white painted streets',
     category: 'Cities',
     city: 'Rabat',
@@ -123,7 +123,7 @@ const photos: Photo[] = [
   },
   {
     id: 6,
-    src: 'https://images.unsplash.com/photo-1542816417-0983c9c9ad53?w=800',
+    src: '/images/hero-souk-lamps.webp',
     alt: 'Tangier medina overlooking the Strait of Gibraltar at golden hour',
     category: 'Cities',
     city: 'Tangier',
@@ -132,7 +132,7 @@ const photos: Photo[] = [
   },
   {
     id: 7,
-    src: 'https://images.unsplash.com/photo-1528821128474-27f963b062bf?w=800',
+    src: '/images/hero-camel-caravan.webp',
     alt: 'Chefchaouen blue alleyway with overhanging lanterns and potted flowers',
     category: 'Cities',
     city: 'Chefchaouen',
@@ -143,7 +143,7 @@ const photos: Photo[] = [
   /* ─── DESERT ─── */
   {
     id: 8,
-    src: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=800',
+    src: '/images/hero-sahara-sunrise.webp',
     alt: 'Sahara Desert Erg Chebbi sand dunes glowing at golden hour',
     category: 'Desert',
     city: 'Merzouga',
@@ -152,7 +152,7 @@ const photos: Photo[] = [
   },
   {
     id: 9,
-    src: 'https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?w=800',
+    src: '/images/art-sahara-painting.webp',
     alt: 'Camel caravan crossing vast Sahara dunes at sunset',
     category: 'Desert',
     city: 'Merzouga',
@@ -161,7 +161,7 @@ const photos: Photo[] = [
   },
   {
     id: 10,
-    src: 'https://images.unsplash.com/photo-1548025148-7d9e6e1b7e2d?w=800',
+    src: '/images/hero-fes-tanneries.webp',
     alt: 'Erg Chebbi dunes under brilliant starry night sky with Milky Way',
     category: 'Desert',
     city: 'Merzouga',
@@ -170,7 +170,7 @@ const photos: Photo[] = [
   },
   {
     id: 11,
-    src: 'https://images.unsplash.com/photo-1509638524746-b2ba9be42342?w=800',
+    src: '/images/art-moroccan-doorway.webp',
     alt: 'Sunset over a palm grove oasis with golden light in the Draa Valley',
     category: 'Desert',
     city: 'Zagora',
@@ -179,7 +179,7 @@ const photos: Photo[] = [
   },
   {
     id: 12,
-    src: 'https://images.unsplash.com/photo-1549880338-65ddcdfd017b?w=800',
+    src: '/images/hero-atlas.webp',
     alt: 'Lone figure walking across rippled sand patterns in the Sahara',
     category: 'Desert',
     city: 'M\'Hamid',
@@ -190,7 +190,7 @@ const photos: Photo[] = [
   /* ─── MOUNTAINS ─── */
   {
     id: 13,
-    src: 'https://images.unsplash.com/photo-1545041117-7c08d7389082?w=800',
+    src: '/images/hero-ait-benhaddou.webp',
     alt: 'High Atlas Mountains panoramic view with terraced Berber villages',
     category: 'Mountains',
     city: 'Imlil',
@@ -199,7 +199,7 @@ const photos: Photo[] = [
   },
   {
     id: 14,
-    src: 'https://images.unsplash.com/photo-1517137800032-a5e7e68ef345?w=800',
+    src: '/images/photo-mint-tea-pouring.webp',
     alt: 'Traditional Berber village nestled in the High Atlas mountain valley',
     category: 'Mountains',
     city: 'Imlil',
@@ -208,7 +208,7 @@ const photos: Photo[] = [
   },
   {
     id: 15,
-    src: 'https://images.unsplash.com/photo-1502786129293-79981df4e689?w=800',
+    src: '/images/hero-essaouira-ramparts.webp',
     alt: 'Dades Valley with dramatic winding mountain road through red gorge',
     category: 'Mountains',
     city: 'Dades',
@@ -217,7 +217,7 @@ const photos: Photo[] = [
   },
   {
     id: 16,
-    src: 'https://images.unsplash.com/photo-1548690812-e7b5e0f1a5f8?w=800',
+    src: '/images/hero-dades-gorge.webp',
     alt: 'Snow-capped Mount Toubkal peak rising above cloud layer',
     category: 'Mountains',
     city: 'Imlil',
@@ -228,7 +228,7 @@ const photos: Photo[] = [
   /* ─── COAST ─── */
   {
     id: 17,
-    src: 'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=800',
+    src: '/images/hero-coastal.webp',
     alt: 'Atlantic Ocean waves crashing against rocky Moroccan coastline',
     category: 'Coast',
     city: 'Essaouira',
@@ -237,7 +237,7 @@ const photos: Photo[] = [
   },
   {
     id: 18,
-    src: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800',
+    src: '/images/card-beach.webp',
     alt: 'Golden sand beach with turquoise water at Legzira near Sidi Ifni',
     category: 'Coast',
     city: 'Sidi Ifni',
@@ -246,7 +246,7 @@ const photos: Photo[] = [
   },
   {
     id: 19,
-    src: 'https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800',
+    src: '/images/card-beach.webp',
     alt: 'Surfers riding Atlantic waves at Taghazout beach at sunset',
     category: 'Coast',
     city: 'Taghazout',
@@ -255,7 +255,7 @@ const photos: Photo[] = [
   },
   {
     id: 20,
-    src: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800',
+    src: '/images/hero-coastal.webp',
     alt: 'Dramatic natural stone arch on the Moroccan Atlantic coast',
     category: 'Coast',
     city: 'Legzira',
@@ -266,7 +266,7 @@ const photos: Photo[] = [
   /* ─── ARCHITECTURE ─── */
   {
     id: 21,
-    src: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=800',
+    src: '/images/detail-zellige-pattern.webp',
     alt: 'Hassan II Mosque rising above the Atlantic Ocean in Casablanca at dusk',
     category: 'Architecture',
     city: 'Casablanca',
@@ -275,7 +275,7 @@ const photos: Photo[] = [
   },
   {
     id: 22,
-    src: 'https://images.unsplash.com/photo-1531501410720-c8d437636169?w=800',
+    src: '/images/detail-zellige-mosaic.webp',
     alt: 'Ait Ben Haddou fortified kasbah glowing in warm sunrise light',
     category: 'Architecture',
     city: 'Ouarzazate',
@@ -284,7 +284,7 @@ const photos: Photo[] = [
   },
   {
     id: 23,
-    src: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800',
+    src: '/images/hero-souk-lamps.webp',
     alt: 'Ornate Moroccan door with intricate zellige tilework and carved cedar',
     category: 'Architecture',
     city: 'Fes',
@@ -293,7 +293,7 @@ const photos: Photo[] = [
   },
   {
     id: 24,
-    src: 'https://images.unsplash.com/photo-1541589384534-51e2fc5e0a4f?w=800',
+    src: '/images/hero-riad-interior.webp',
     alt: 'Traditional Moroccan riad courtyard with mosaic fountain and orange trees',
     category: 'Architecture',
     city: 'Marrakech',
@@ -302,7 +302,7 @@ const photos: Photo[] = [
   },
   {
     id: 25,
-    src: 'https://images.unsplash.com/photo-1567599672391-17b31f4e6fe1?w=800',
+    src: '/images/card-tagine.webp',
     alt: 'Bahia Palace ornate painted ceiling with geometric patterns',
     category: 'Architecture',
     city: 'Marrakech',
@@ -311,7 +311,7 @@ const photos: Photo[] = [
   },
   {
     id: 26,
-    src: 'https://images.unsplash.com/photo-1543321269-9d86d3680e1c?w=800',
+    src: '/images/hero-majorelle-garden.webp',
     alt: 'Intricate zellige mosaic tilework pattern in vivid geometric colors',
     category: 'Architecture',
     city: 'Meknes',
@@ -322,7 +322,7 @@ const photos: Photo[] = [
   /* ─── PEOPLE ─── */
   {
     id: 27,
-    src: 'https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=800',
+    src: '/images/hero-marrakech.webp',
     alt: 'Moroccan artisan weaving a traditional Berber carpet on a wooden loom',
     category: 'People',
     city: 'Marrakech',
@@ -331,7 +331,7 @@ const photos: Photo[] = [
   },
   {
     id: 28,
-    src: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800',
+    src: '/images/card-riad.webp',
     alt: 'Moroccan woman with intricate henna designs in traditional attire',
     category: 'People',
     city: 'Marrakech',
@@ -340,7 +340,7 @@ const photos: Photo[] = [
   },
   {
     id: 29,
-    src: 'https://images.unsplash.com/photo-1555545124-89d18c1be024?w=800',
+    src: '/images/hero-tangier-kasbah.webp',
     alt: 'Gnawa musician playing traditional sintir instrument in Essaouira',
     category: 'People',
     city: 'Essaouira',
@@ -349,7 +349,7 @@ const photos: Photo[] = [
   },
   {
     id: 30,
-    src: 'https://images.unsplash.com/photo-1557927212-0d2bc1e24e45?w=800',
+    src: '/images/art-jemaa-elfnaa.webp',
     alt: 'Berber traders at a weekly rural market in the High Atlas foothills',
     category: 'People',
     city: 'Ouarzazate',
@@ -360,7 +360,7 @@ const photos: Photo[] = [
   /* ─── FOOD ─── */
   {
     id: 31,
-    src: 'https://images.unsplash.com/photo-1528657249085-393b5afc498c?w=800',
+    src: '/images/hero-surfing.webp',
     alt: 'Colorful Moroccan tagine dishes served with fresh bread and olives',
     category: 'Food',
     city: 'Marrakech',
@@ -369,7 +369,7 @@ const photos: Photo[] = [
   },
   {
     id: 32,
-    src: 'https://images.unsplash.com/photo-1517821362941-f7f753200fef?w=800',
+    src: '/images/hero-fes-tanneries.webp',
     alt: 'Traditional Moroccan mint tea ceremony with ornate silver teapot',
     category: 'Food',
     city: 'Fes',
@@ -378,7 +378,7 @@ const photos: Photo[] = [
   },
   {
     id: 33,
-    src: 'https://images.unsplash.com/photo-1596627116790-af6f46dddbaf?w=800',
+    src: '/images/hero-spices.webp',
     alt: 'Traditional Friday couscous with seven vegetables and tender lamb',
     category: 'Food',
     city: 'Rabat',
@@ -387,7 +387,7 @@ const photos: Photo[] = [
   },
   {
     id: 34,
-    src: 'https://images.unsplash.com/photo-1562512048-e68b36c5e0cc?w=800',
+    src: '/images/art-gnawa-music.webp',
     alt: 'Moroccan pastries and honey-soaked sweets in bakery display',
     category: 'Food',
     city: 'Casablanca',
@@ -396,7 +396,7 @@ const photos: Photo[] = [
   },
   {
     id: 35,
-    src: 'https://images.unsplash.com/photo-1590166337645-ef06a69d9f2d?w=800',
+    src: '/images/photo-henna-art.webp',
     alt: 'Steaming bowl of harira soup with dates and bread for iftar',
     category: 'Food',
     city: 'Fes',
@@ -407,7 +407,7 @@ const photos: Photo[] = [
   /* ─── MARKETS ─── */
   {
     id: 36,
-    src: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=800',
+    src: '/images/hero-kasbahs.webp',
     alt: 'Marrakech souk with hanging brass lanterns and colorful spice displays',
     category: 'Markets',
     city: 'Marrakech',
@@ -416,7 +416,7 @@ const photos: Photo[] = [
   },
   {
     id: 37,
-    src: 'https://images.unsplash.com/photo-1580502298820-2049e4de1ece?w=800',
+    src: '/images/hero-chefchaouen-aerial.webp',
     alt: 'Colorful spice market stall with pyramids of cumin, turmeric, and saffron',
     category: 'Markets',
     city: 'Marrakech',
@@ -425,7 +425,7 @@ const photos: Photo[] = [
   },
   {
     id: 38,
-    src: 'https://images.unsplash.com/photo-1548994483-2a8be8e5b98c?w=800',
+    src: '/images/hero-fashion.webp',
     alt: 'Hand-dyed leather bags and babouche slippers in Fes medina souk',
     category: 'Markets',
     city: 'Fes',
@@ -434,7 +434,7 @@ const photos: Photo[] = [
   },
   {
     id: 39,
-    src: 'https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=800',
+    src: '/images/hero-berber-culture.webp',
     alt: 'Colorful handwoven Moroccan Berber rugs hanging on display wall',
     category: 'Markets',
     city: 'Marrakech',
@@ -443,7 +443,7 @@ const photos: Photo[] = [
   },
   {
     id: 40,
-    src: 'https://images.unsplash.com/photo-1577246750671-219c62bff268?w=800',
+    src: '/images/photo-fantasia-tbourida.webp',
     alt: 'Handcrafted Moroccan lanterns and intricate metalwork in lamp souk',
     category: 'Markets',
     city: 'Marrakech',
@@ -454,7 +454,7 @@ const photos: Photo[] = [
   /* ─── EXTRA NATURE / CITIES / ARCHITECTURE ─── */
   {
     id: 41,
-    src: 'https://images.unsplash.com/photo-1570197571499-166b36435e9f?w=800',
+    src: '/images/hero-todra-gorge.webp',
     alt: 'Todra Gorge towering canyon walls with river flowing through base',
     category: 'Mountains',
     city: 'Tinghir',
@@ -463,7 +463,7 @@ const photos: Photo[] = [
   },
   {
     id: 42,
-    src: 'https://images.unsplash.com/photo-1565108959315-92ea023703bb?w=800',
+    src: '/images/art-berber-carpet-weaving.webp',
     alt: 'Jardin Majorelle vibrant cobalt blue garden with cacti in Marrakech',
     category: 'Cities',
     city: 'Marrakech',
@@ -472,7 +472,7 @@ const photos: Photo[] = [
   },
   {
     id: 43,
-    src: 'https://images.unsplash.com/photo-1535530992057-1533fabb2b65?w=800',
+    src: '/images/hero-sahara-night.webp',
     alt: 'Ancient cedar forest in the Middle Atlas Mountains near Azrou',
     category: 'Mountains',
     city: 'Azrou',
@@ -481,7 +481,7 @@ const photos: Photo[] = [
   },
   {
     id: 44,
-    src: 'https://images.unsplash.com/photo-1538991383142-36c4edeaffde?w=800',
+    src: '/images/art-street-art.webp',
     alt: 'Paradise Valley waterfall cascading into turquoise natural pools',
     category: 'Coast',
     city: 'Agadir',
@@ -611,7 +611,7 @@ export default function GalleryPage() {
       <section className="relative py-24 md:py-32 lg:py-40 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=2800"
+            src="/images/hero-morocco.webp"
             alt="Sahara Desert sand dunes at golden hour, Morocco"
             className="absolute inset-0 w-full h-full object-cover"
           />
@@ -665,7 +665,7 @@ export default function GalleryPage() {
       <section className="container-morocco mb-12">
         <div className="relative rounded-2xl overflow-hidden aspect-[21/9]">
           <img
-            src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?w=1600&q=80"
+            src="/images/art-sahara-painting.webp"
             alt="Camel caravan crossing vast Sahara dunes at sunset, Morocco"
             className="absolute inset-0 w-full h-full object-cover"
           />

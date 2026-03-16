@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/backpacking',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?w=1200&h=630&fit=crop',
+        url: '/images/hero-chefchaouen-drone.webp',
         width: 1200,
         height: 630,
         alt: 'Backpacker in Chefchaouen blue medina Morocco',

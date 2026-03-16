@@ -31,7 +31,7 @@ const restaurants = [
     slug: 'chez-dimitri',
     description:
       'The oldest restaurant in Ouarzazate, opened in 1928 by a Greek immigrant during the French Protectorate era. Chez Dimitri has served everyone from Foreign Legion soldiers to Hollywood film crews. The walls are covered with autographed photos of movie stars who dined here while filming in the region. The menu is an eclectic mix of Moroccan tagines, French bistro classics, and Greek dishes. The mixed grill and fish tagine are reliable choices. A genuine piece of Ouarzazate history.',
-    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800',
+    image: '/images/photo-tagine-closeup.webp',
     rating: 4.3,
     priceRange: '80-200 MAD',
     hours: '11:00 AM - 3:00 PM, 6:30 PM - 10:00 PM daily',
@@ -43,7 +43,7 @@ const restaurants = [
     slug: 'restaurant-douyria',
     description:
       'Tucked inside a restored riad in the old part of Ouarzazate, Douyria offers an intimate and authentic Moroccan dining experience. The courtyard setting with a central fountain and lantern light creates a magical atmosphere at dinner. The kitchen excels at traditional dishes from the Draa-Tafilalet region, including lamb mechoui slow-roasted for eight hours, tanjia (a clay pot stew unique to southern Morocco), and vegetable couscous with preserved lemons. The almond pastilla is an excellent dessert.',
-    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800',
+    image: '/images/photo-tagine-closeup.webp',
     rating: 4.5,
     priceRange: '100-220 MAD',
     hours: '12:00 PM - 3:00 PM, 7:00 PM - 10:00 PM (Closed Wednesdays)',
@@ -55,7 +55,7 @@ const restaurants = [
     slug: 'la-kasbah-des-sables',
     description:
       'Located within a beautifully converted kasbah, this restaurant offers refined Moroccan cuisine with stunning views of the surrounding desert landscape and palm groves from its rooftop terrace. The chef specializes in modern interpretations of traditional Saharan dishes, using local ingredients like dates, almonds, and desert herbs. The lamb tagine with dates and walnuts is exceptional, and the dessert of warm date cake with argan ice cream is unique to this region.',
-    image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=800',
+    image: '/images/photo-tagine-closeup.webp',
     rating: 4.4,
     priceRange: '150-300 MAD',
     hours: '12:00 PM - 3:00 PM, 7:00 PM - 10:30 PM daily',
@@ -67,7 +67,7 @@ const restaurants = [
     slug: 'habous',
     description:
       'A popular local restaurant on the main avenue that serves generous portions of everyday Moroccan food at honest prices. The lunch menu is a revolving selection of tagines, brochettes, kefta, and salads that pack the dining room with locals and in-the-know travelers. The harira soup is some of the best in the region, thick with lentils, chickpeas, and fresh herbs. The simple grilled chicken with cumin and lemon is perfectly executed. No frills, just excellent food.',
-    image: 'https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?q=80&w=800',
+    image: '/images/photo-tagine-closeup.webp',
     rating: 4.1,
     priceRange: '40-100 MAD',
     hours: '11:00 AM - 10:00 PM daily',
@@ -79,7 +79,7 @@ const restaurants = [
     slug: 'le-petit-riad',
     description:
       'A charming French-Moroccan restaurant set in a small riad with a courtyard garden, offering a more intimate alternative to the larger tourist restaurants. The French owner-chef has lived in Ouarzazate for over a decade and combines classic French technique with the rich flavors of Moroccan cuisine. Highlights include duck breast with fig and ras el hanout sauce, and a delicate pastilla with pigeon and cinnamon. The three-course set menu is excellent value.',
-    image: 'https://images.unsplash.com/photo-1600891964599-f61ba0e24092?q=80&w=800',
+    image: '/images/photo-tagine-closeup.webp',
     rating: 4.3,
     priceRange: '120-250 MAD',
     hours: '12:00 PM - 2:30 PM, 7:00 PM - 9:30 PM (Closed Sundays)',
@@ -91,7 +91,7 @@ const restaurants = [
     slug: 'accord-majeur',
     description:
       'A lively restaurant and lounge bar that has become the social hub of Ouarzazate\'s evening scene. The menu offers a wide range of international and Moroccan dishes, from wood-fired pizzas and pasta to traditional tagines and grills. The spacious terrace is perfect for warm evenings, and the interior features live music on Thursday and Saturday nights, often with local Gnaoua or Amazigh musicians. A great spot for a relaxed dinner followed by drinks and entertainment.',
-    image: 'https://images.unsplash.com/photo-1534604973900-c43ab4c2e0ab?q=80&w=800',
+    image: '/images/photo-tagine-closeup.webp',
     rating: 4.0,
     priceRange: '80-200 MAD',
     hours: '11:00 AM - 12:00 AM daily',
@@ -133,7 +133,7 @@ export default function OuarzazateRestaurantsPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1548018560-c7196e5010a0?q=80&w=2800)',
+              'url(/images/photo-tagine-closeup.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

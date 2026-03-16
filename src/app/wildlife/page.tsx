@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/wildlife',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?w=1200&h=630&fit=crop',
+        url: '/images/hero-national-parks.webp',
         width: 1200,
         height: 630,
         alt: 'Barbary macaque in the Atlas Mountains of Morocco',
@@ -89,7 +89,7 @@ const jsonLd = {
         'Comprehensive guide to Morocco\'s wildlife, national parks, birdwatching, marine life, and nature experiences across diverse ecosystems from the Sahara to the Atlas Mountains.',
       url: 'https://citytoursmorocco.com/wildlife',
       touristType: ['Wildlife tourism', 'Birdwatching', 'Ecotourism', 'Nature photography'],
-      image: 'https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?w=1200',
+      image: '/images/hero-national-parks.webp',
       geo: {
         '@type': 'GeoCoordinates',
         latitude: 31.7917,
@@ -145,7 +145,7 @@ const wildlifeSpecies: WildlifeSpecies[] = [
     status: 'Endangered',
     bestViewing: 'Year-round, best in spring and autumn mornings',
     description: 'The only macaque species found outside of Asia and the only primate north of the Sahara besides humans. Around 8,000 remain in Morocco, primarily in the cedar forests of the Middle Atlas near Azrou and Ifrane. These charismatic monkeys live in troops of 10-30 and are remarkably tolerant of human observers. Males are notably involved in infant care, a behavior rare among primates.',
-    image: 'https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?q=80&w=600',
+    image: '/images/hero-national-parks.webp',
   },
   {
     name: 'Fennec Fox',
@@ -154,7 +154,7 @@ const wildlifeSpecies: WildlifeSpecies[] = [
     status: 'Least Concern',
     bestViewing: 'Dawn and dusk, November to March in cooler months',
     description: 'The world\'s smallest fox, weighing just 1-1.5 kg, with enormous ears that dissipate heat and detect underground prey. Nocturnal and elusive, fennec foxes inhabit the sandy deserts of southeastern Morocco. Their oversized ears can hear insects moving beneath the sand. Spotting one in the wild is rare and unforgettable.',
-    image: 'https://images.unsplash.com/photo-1516728778615-2d590ea1855e?q=80&w=600',
+    image: '/images/hero-desert.webp',
   },
   {
     name: 'Barbary Sheep (Aoudad)',
@@ -163,7 +163,7 @@ const wildlifeSpecies: WildlifeSpecies[] = [
     status: 'Vulnerable',
     bestViewing: 'Early morning on rocky cliff faces, spring through autumn',
     description: 'A powerful, agile mountain ungulate with distinctive shaggy hair on its throat and forelegs. Found in the rocky terrain of the High Atlas and Anti-Atlas mountains. These sure-footed animals can navigate near-vertical cliff faces. Once widespread across North Africa, their population has declined significantly due to hunting and habitat loss.',
-    image: 'https://images.unsplash.com/photo-1564760055775-d63b17a55c44?q=80&w=600',
+    image: '/images/hero-national-parks.webp',
   },
   {
     name: 'Dromedary Camel',
@@ -172,7 +172,7 @@ const wildlifeSpecies: WildlifeSpecies[] = [
     status: 'Domesticated',
     bestViewing: 'Year-round in Merzouga and Zagora desert regions',
     description: 'The single-humped camel has been the lifeline of Saharan communities for millennia. While no longer truly wild in Morocco, semi-feral populations roam the desert edges near Merzouga and Zagora. Camels can go 7-10 days without water and survive temperatures exceeding 50 degrees Celsius. Camel treks remain one of Morocco\'s most iconic experiences.',
-    image: 'https://images.unsplash.com/photo-1549880338-65ddcdfd017b?q=80&w=600',
+    image: '/images/hero-camel-caravan.webp',
   },
   {
     name: 'North African Hedgehog',
@@ -181,7 +181,7 @@ const wildlifeSpecies: WildlifeSpecies[] = [
     status: 'Least Concern',
     bestViewing: 'After dark in gardens, riads, and oasis edges',
     description: 'A nocturnal insectivore found throughout Morocco, from coastal gardens to mountain foothills. Smaller and lighter-colored than European hedgehogs, they have a distinctive white face and forehead. Commonly encountered in riads, gardens, and at the edges of oases. They feast on insects, snails, and fallen fruit.',
-    image: 'https://images.unsplash.com/photo-1497752531616-c3afd9760a11?q=80&w=600',
+    image: '/images/hero-national-parks.webp',
   },
   {
     name: 'Moroccan Spiny-Tailed Lizard',
@@ -190,7 +190,7 @@ const wildlifeSpecies: WildlifeSpecies[] = [
     status: 'Near Threatened',
     bestViewing: 'Late morning when basking on rocks, March to October',
     description: 'A striking, herbivorous lizard that can grow up to 40 cm long. Their armored, spiny tails are used for defense, whipping potential predators. They inhabit rocky, arid terrain in the Anti-Atlas and pre-Saharan regions. Excellent thermoregulators, they bask on rocks at temperatures that would be lethal to most animals.',
-    image: 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?q=80&w=600',
+    image: '/images/hero-desert.webp',
   },
   {
     name: 'Houbara Bustard',
@@ -199,7 +199,7 @@ const wildlifeSpecies: WildlifeSpecies[] = [
     status: 'Vulnerable',
     bestViewing: 'Spring courtship displays, early morning on open steppes',
     description: 'A large, ground-dwelling bird of the eastern Moroccan steppes and semi-arid plains. Known for the male\'s spectacular courtship display, raising white neck feathers into a dramatic ruff while performing a strutting dance. Conservation breeding programs in Morocco have been crucial to preventing extinction in the wild.',
-    image: 'https://images.unsplash.com/photo-1555224371-e29aa23e4440?q=80&w=600',
+    image: '/images/hero-birdwatching.webp',
   },
   {
     name: 'Northern Bald Ibis',
@@ -208,7 +208,7 @@ const wildlifeSpecies: WildlifeSpecies[] = [
     status: 'Critically Endangered',
     bestViewing: 'Year-round at Souss Massa coastal cliffs, best at dawn',
     description: 'One of the world\'s rarest birds, with Morocco hosting the last significant wild population of around 700 individuals. The Souss Massa coast south of Agadir is their stronghold. These glossy-black birds with their distinctive bare red faces nest on coastal cliffs and forage in nearby agricultural fields. A conservation success story as numbers have slowly recovered from fewer than 100 in the 1990s.',
-    image: 'https://images.unsplash.com/photo-1555224371-e29aa23e4440?q=80&w=600',
+    image: '/images/hero-birdwatching.webp',
   },
   {
     name: 'Greater Flamingo',
@@ -217,7 +217,7 @@ const wildlifeSpecies: WildlifeSpecies[] = [
     status: 'Least Concern',
     bestViewing: 'October to March at coastal lagoons, golden hour',
     description: 'Thousands of greater flamingos winter in Morocco\'s coastal lagoons, creating one of the country\'s most spectacular wildlife sights. The lagoons of Oualidia, Moulay Bousselham (Merja Zerga), and Khnifiss are prime viewing spots. From October to March, flocks of hundreds can be seen wading through the shallows, filtering brine shrimp with their specialized bills.',
-    image: 'https://images.unsplash.com/photo-1497206365907-f5e630693df0?q=80&w=600',
+    image: '/images/hero-birdwatching.webp',
   },
   {
     name: 'Eleonora\'s Falcon',
@@ -226,7 +226,7 @@ const wildlifeSpecies: WildlifeSpecies[] = [
     status: 'Least Concern',
     bestViewing: 'July to October, dusk hunting flights over Essaouira',
     description: 'A graceful, dark falcon that breeds on Morocco\'s Atlantic islands, particularly the Mogador islands off Essaouira. Uniquely, they time their breeding to coincide with autumn bird migration, catching small passerines to feed their chicks. Watching them hunt at dusk over the Essaouira ramparts is one of Morocco\'s great birding experiences.',
-    image: 'https://images.unsplash.com/photo-1590608897006-f82fbbf4ad64?q=80&w=600',
+    image: '/images/hero-birdwatching.webp',
   },
   {
     name: 'Striped Hyena',
@@ -235,7 +235,7 @@ const wildlifeSpecies: WildlifeSpecies[] = [
     status: 'Near Threatened',
     bestViewing: 'Nocturnal; camera traps in remote Atlas foothills',
     description: 'Morocco\'s most elusive large predator. The striped hyena inhabits the foothills of the Atlas Mountains and remote rural areas. Strictly nocturnal and solitary, they are rarely seen but leave unmistakable tracks and scat. Their powerful jaws can crush bones. Camera trap studies suggest a small but stable population persists in the High Atlas and Rif regions.',
-    image: 'https://images.unsplash.com/photo-1474511320723-9a56873867b5?q=80&w=600',
+    image: '/images/hero-national-parks.webp',
   },
   {
     name: 'Wild Boar',
@@ -244,7 +244,7 @@ const wildlifeSpecies: WildlifeSpecies[] = [
     status: 'Least Concern',
     bestViewing: 'Dawn and dusk at forest edges and water sources',
     description: 'Morocco\'s forests harbor significant populations of wild boar, particularly in the Rif Mountains, Middle Atlas cedar forests, and cork oak woodlands. As the only wild pig in North Africa, they play an important ecological role in forest regeneration. Primarily nocturnal, they are best spotted at dawn or dusk along forest edges and near water sources.',
-    image: 'https://images.unsplash.com/photo-1574068468668-a05a11f871da?q=80&w=600',
+    image: '/images/hero-national-parks.webp',
   },
   {
     name: 'Loggerhead Sea Turtle',
@@ -253,7 +253,7 @@ const wildlifeSpecies: WildlifeSpecies[] = [
     status: 'Vulnerable',
     bestViewing: 'Summer nesting season on remote southern beaches',
     description: 'Morocco\'s Atlantic coast is an important foraging ground for loggerhead sea turtles, and some nesting still occurs on remote southern beaches. These ancient mariners can weigh up to 200 kg and dive to depths of 230 meters. Conservation efforts along the coast work to protect nesting sites and reduce bycatch in fishing nets.',
-    image: 'https://images.unsplash.com/photo-1591025207163-942350e47db2?q=80&w=600',
+    image: '/images/hero-coastal.webp',
   },
   {
     name: 'Mediterranean Monk Seal',
@@ -262,7 +262,7 @@ const wildlifeSpecies: WildlifeSpecies[] = [
     status: 'Endangered',
     bestViewing: 'Restricted access; conservation-focused boat trips available',
     description: 'One of the world\'s rarest marine mammals, with a colony of approximately 300 individuals at Cap Blanc on the Morocco-Mauritania border, the largest remaining population globally. These seals rest in sea caves and feed in the nutrient-rich Atlantic waters. Direct viewing is restricted to protect the colony, but their conservation is a major success story.',
-    image: 'https://images.unsplash.com/photo-1505142468610-359e7d316be0?q=80&w=600',
+    image: '/images/hero-coastal.webp',
   },
   {
     name: 'Atlas Cedar',
@@ -271,7 +271,7 @@ const wildlifeSpecies: WildlifeSpecies[] = [
     status: 'Endangered',
     bestViewing: 'Year-round; autumn colors spectacular in October',
     description: 'Morocco\'s most majestic tree species, forming ancient forests in the Middle Atlas and Rif Mountains between 1,300-2,600 meters elevation. Some specimens are over 900 years old and reach 40 meters tall. The Gouraud Cedar near Azrou, estimated at 800 years old, is a landmark. These forests are critical habitat for Barbary macaques and countless other species. Climate change poses a growing threat.',
-    image: 'https://images.unsplash.com/photo-1542273917363-1f3e5ce68a2c?q=80&w=600',
+    image: '/images/hero-national-parks.webp',
   },
   {
     name: 'Dorcas Gazelle',
@@ -280,7 +280,7 @@ const wildlifeSpecies: WildlifeSpecies[] = [
     status: 'Vulnerable',
     bestViewing: 'Early morning on open plains, October to April',
     description: 'The smallest gazelle species in North Africa, perfectly adapted to survive in arid and semi-arid conditions. Dorcas gazelles can go their entire lives without drinking water, obtaining all moisture from the plants they eat. Small herds persist in the eastern Moroccan steppes and in Souss Massa National Park, where reintroduction efforts have been underway since the 1990s. Their graceful, bounding flight across desert terrain is mesmerizing.',
-    image: 'https://images.unsplash.com/photo-1564760055775-d63b17a55c44?q=80&w=600',
+    image: '/images/hero-national-parks.webp',
   },
 ];
 
@@ -684,7 +684,7 @@ export default function WildlifePage() {
       <section className="relative overflow-hidden bg-[#1A1814] text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?q=80&w=2800"
+            src="/images/hero-national-parks.webp"
             alt="Barbary macaque in the ancient cedar forests of Morocco's Middle Atlas Mountains"
             className="absolute inset-0 w-full h-full object-cover"
           />

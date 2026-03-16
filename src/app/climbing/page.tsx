@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/climbing',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1522163182402-834f871fd851?w=1200&h=630&fit=crop',
+        url: '/images/hero-todra-gorge.webp',
         width: 1200,
         height: 630,
         alt: 'Rock climber on the limestone walls of Todra Gorge, Morocco',
@@ -89,7 +89,7 @@ const jsonLd = {
         'Complete guide to rock climbing, bouldering, canyoning, and via ferrata in Morocco, covering Todra Gorge, Taghia Canyon, Tafraoute, Oukaimeden, and more.',
       url: 'https://citytoursmorocco.com/climbing',
       touristType: ['Rock climbing', 'Canyoning', 'Bouldering', 'Adventure sports', 'Multi-pitch climbing'],
-      image: 'https://images.unsplash.com/photo-1522163182402-834f871fd851?w=1200',
+      image: '/images/hero-todra-gorge.webp',
       address: {
         '@type': 'PostalAddress',
         addressCountry: 'MA',

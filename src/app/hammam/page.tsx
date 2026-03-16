@@ -54,12 +54,18 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/hammam',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1540555700478-4be289fbec6d?w=1200&h=630&fit=crop',
+        url: '/images/hero-hammam.webp',
         width: 1200,
         height: 630,
         alt: 'Traditional Moroccan hammam interior with steam and zellige tiles',
       },
     ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Moroccan Hammam & Spa Guide | CityGuide',
+    description:
+      'Traditional hammam rituals, top 12 hammams, etiquette, black soap, ghassoul clay, and luxury spa experiences in Morocco.',
   },
   alternates: { canonical: 'https://citytoursmorocco.com/hammam' },
 };
@@ -249,7 +255,7 @@ const topHammams: Hammam[] = [
     description:
       'A stunning boutique spa housed in a beautifully restored riad in the heart of the medina. Le Bain Bleu offers an intimate, refined hammam experience with exceptional attention to detail. The traditional hammam ritual is followed by optional argan oil massages and beauty treatments in candlelit treatment rooms.',
     highlights: ['Intimate boutique setting', 'Traditional ritual with modern luxury', 'Argan oil massage packages', 'Candlelit relaxation rooms'],
-    image: 'https://images.unsplash.com/photo-1540555700478-4be289fbec6d?w=600&q=80',
+    image: '/images/hero-hammam.webp',
   },
   {
     name: 'Hammam de la Rose',
@@ -260,7 +266,7 @@ const topHammams: Hammam[] = [
     description:
       'One of the most celebrated hammams in Marrakech, Hammam de la Rose combines centuries-old bathing traditions with contemporary wellness design. The space features a succession of beautifully tiled rooms, a hot plunge pool, and a rose-petal-strewn relaxation lounge. Their signature rose-infused treatments are legendary.',
     highlights: ['Signature rose treatments', 'Hot plunge pool', 'Multiple treatment rooms', 'Award-winning spa'],
-    image: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=600&q=80',
+    image: '/images/hero-hammam-interior.webp',
   },
   {
     name: 'Les Bains de Marrakech',
@@ -271,7 +277,7 @@ const topHammams: Hammam[] = [
     description:
       'A palatial spa near the Saadian Tombs offering the most comprehensive hammam and wellness experience in Marrakech. Spread across multiple levels of a grand riad, Les Bains de Marrakech features a traditional hammam circuit, private treatment suites, a swimming pool, and a rooftop terrace. Half-day and full-day packages are available.',
     highlights: ['Palatial multi-level venue', 'Swimming pool', 'Full-day spa packages', 'Couples treatments available'],
-    image: 'https://images.unsplash.com/photo-1583416750470-965b2707b355?w=600&q=80',
+    image: '/images/hero-hammam.webp',
   },
   {
     name: 'Heritage Spa',
@@ -282,7 +288,7 @@ const topHammams: Hammam[] = [
     description:
       'A beautifully designed spa in the medina that masterfully blends Moroccan architectural heritage with world-class spa services. Heritage Spa is known for its exceptional gommage technique and its use of premium, locally sourced products including argan oil from Essaouira and rose water from the Dades Valley.',
     highlights: ['Locally sourced products', 'Expert gommage technique', 'Beautiful architecture', 'Central medina location'],
-    image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80',
+    image: '/images/hero-spa.webp',
   },
   {
     name: 'Hammam Moulay Yacoub',
@@ -293,7 +299,7 @@ const topHammams: Hammam[] = [
     description:
       'A legendary thermal spa 22 kilometers from Fes, renowned for its naturally heated sulfurous spring water that emerges at 54 degrees Celsius. Moroccans have visited these therapeutic springs for centuries to treat skin conditions, rheumatism, and respiratory ailments. The recently renovated complex includes public and private bathing areas.',
     highlights: ['Natural thermal springs', 'Therapeutic sulfur waters', 'Both public & private areas', 'Centuries-old healing tradition'],
-    image: 'https://images.unsplash.com/photo-1515362655824-9a74989e13cc?w=600&q=80',
+    image: '/images/hero-wellness-spa.webp',
   },
   {
     name: 'Spa Laaroussa',
@@ -304,7 +310,7 @@ const topHammams: Hammam[] = [
     description:
       'Located within the exquisite Riad Laaroussa in the heart of the Fes medina, this intimate spa offers a deeply authentic hammam experience in a 17th-century palace setting. The hammam chamber features original tadelakt walls and is heated by a traditional wood-fired boiler, preserving the centuries-old method.',
     highlights: ['17th-century palace setting', 'Wood-fired traditional heating', 'Original tadelakt walls', 'Intimate private experience'],
-    image: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=80',
+    image: '/images/hero-riad-interior.webp',
   },
   {
     name: 'Riad Fes Spa',
@@ -315,7 +321,7 @@ const topHammams: Hammam[] = [
     description:
       'The spa at the five-star Riad Fes is one of the most luxurious wellness experiences in the imperial city. Built into the ancient riad architecture, the spa features a marble hammam, a swimming pool, and treatment rooms overlooking the medina rooftops. Their signature Ceremony of the Senses package combines hammam with a full aromatherapy journey.',
     highlights: ['Five-star luxury', 'Marble hammam chamber', 'Medina rooftop views', 'Ceremony of the Senses package'],
-    image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&q=80',
+    image: '/images/hero-riad-interior.webp',
   },
   {
     name: 'Hammam Ziani',
@@ -326,7 +332,7 @@ const topHammams: Hammam[] = [
     description:
       'A modern take on the traditional hammam in Casablanca cosmopolitan Maarif district. Hammam Ziani is popular with both locals and visitors for its clean, well-maintained facilities and professional staff. The hammam circuit is complemented by massage rooms, a relaxation lounge, and a range of beauty treatments.',
     highlights: ['Clean modern facilities', 'Popular with locals', 'Full beauty treatment menu', 'Central Casablanca location'],
-    image: 'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=600&q=80',
+    image: '/images/hero-hammam-interior.webp',
   },
   {
     name: 'La Sultana Spa',
@@ -337,7 +343,7 @@ const topHammams: Hammam[] = [
     description:
       'The crown jewel of Casablanca wellness, La Sultana Spa is a 2,500-square-meter sanctuary within the prestigious La Sultana Hotel. Featuring an indoor pool, vitality pool, hammam, and extensive treatment menu, it combines Moroccan traditions with international spa standards. The hammam uses heated black marble and hand-mixed products.',
     highlights: ['2,500 sqm spa complex', 'Indoor & vitality pools', 'Black marble hammam', 'International spa standards'],
-    image: 'https://images.unsplash.com/photo-1545579133-99bb5ab189bd?w=600&q=80',
+    image: '/images/hero-spa.webp',
   },
   {
     name: 'Hammam Lalla Mira',
@@ -348,7 +354,7 @@ const topHammams: Hammam[] = [
     description:
       'A pioneering eco-friendly hammam in Essaouira old medina, housed in a beautifully restored 18th-century building. Hammam Lalla Mira is heated entirely by a solar and recycled-oil system, making it one of the greenest hammams in Morocco. The experience is authentic, the products are organic, and the setting is enchanting.',
     highlights: ['Eco-friendly solar heating', 'Organic products', '18th-century building', 'Sustainable tourism pioneer'],
-    image: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&q=80',
+    image: '/images/hero-essaouira.webp',
   },
   {
     name: 'Hammam Balima',
@@ -359,7 +365,7 @@ const topHammams: Hammam[] = [
     description:
       'One of the oldest public hammams in Morocco capital city, located near the iconic Balima Hotel on Avenue Mohammed V. This is a true neighborhood hammam where Rabati families have bathed for generations. The simple, no-frills experience offers a window into authentic daily life in the capital.',
     highlights: ['Historic neighborhood hammam', 'Ultra-affordable', 'Authentic local experience', 'Central Rabat location'],
-    image: 'https://images.unsplash.com/photo-1548018560-c7196281e579?w=600&q=80',
+    image: '/images/hero-hammam.webp',
   },
   {
     name: 'Hammam Kasbah',
@@ -370,7 +376,7 @@ const topHammams: Hammam[] = [
     description:
       'Nestled in the ancient Kasbah quarter of Tangier overlooking the Strait of Gibraltar, this historic hammam has served the neighborhood for centuries. The atmospheric stone chambers and the proximity to the Kasbah Museum make it a cultural experience as much as a bathing one. Separate hours for men and women.',
     highlights: ['Historic Kasbah location', 'Centuries-old stone chambers', 'Near Kasbah Museum', 'Authentic neighborhood vibe'],
-    image: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?w=600&q=80',
+    image: '/images/hero-tangier-kasbah.webp',
   },
 ];
 
@@ -439,7 +445,7 @@ const products = [
   {
     name: 'Savon Beldi (Black Soap)',
     arabicName: 'صابون بلدي',
-    image: 'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=600&q=80',
+    image: '/images/hero-hammam-interior.webp',
     description:
       'A thick, dark olive-oil-based paste that has been the cornerstone of the Moroccan hammam ritual for centuries. Made from a blend of olive oil, crushed olives, and sometimes infused with eucalyptus or argan oil, savon beldi deeply nourishes the skin while softening dead cells for removal during the gommage scrub. Unlike Western soaps, it does not lather but rather coats the skin in a rich, emollient layer.',
     howToUse: 'Apply a thick layer over damp skin. Leave on for 10 minutes in the steam room. Scrub off with a kessa mitt.',
@@ -448,7 +454,7 @@ const products = [
   {
     name: 'Ghassoul Clay (Rhassoul)',
     arabicName: 'الغاسول',
-    image: 'https://images.unsplash.com/photo-1498843053639-170ff2122f35?w=600&q=80',
+    image: '/images/hero-spa.webp',
     description:
       'A unique mineral-rich clay found exclusively in the Atlas Mountains of Morocco, ghassoul has been used for over 1,400 years as a natural cleanser and skin treatment. Rich in silica, magnesium, iron, sodium, and potassium, this rare clay absorbs impurities, tightens pores, and leaves skin remarkably smooth. It is also used as a hair wash and scalp treatment.',
     howToUse: 'Mix clay powder with warm water or rose water to form a paste. Apply as a body and hair mask for 10-15 minutes. Rinse thoroughly.',
@@ -457,7 +463,7 @@ const products = [
   {
     name: 'Argan Oil',
     arabicName: 'زيت أركان',
-    image: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&q=80',
+    image: '/images/photo-argan-oil-stilllife.webp',
     description:
       'Called "liquid gold" by Berber women, pure argan oil is extracted from the nuts of the argan tree, which grows only in southwestern Morocco. Cosmetic argan oil (unroasted) is rich in vitamin E, essential fatty acids, and antioxidants, making it an exceptional moisturizer for skin and hair. After the hammam, argan oil is applied to nourish and protect the freshly exfoliated skin.',
     howToUse: 'Apply a few drops to damp skin immediately after the hammam rinse. Massage gently into face, body, and hair ends.',
@@ -466,7 +472,7 @@ const products = [
   {
     name: 'Rose Water (Eau de Rose)',
     arabicName: 'ماء الورد',
-    image: 'https://images.unsplash.com/photo-1490750967868-88aa4f44baee?w=600&q=80',
+    image: '/images/hero-spices.webp',
     description:
       'Distilled from Damascena roses cultivated in the Dades Valley and M Gouna region, Moroccan rose water is prized worldwide for its delicate fragrance and skin-soothing properties. In the hammam, it is used as a final rinse, toner, and body mist. Rose water tightens pores, reduces redness, and imparts a heavenly floral scent that lingers long after your visit.',
     howToUse: 'Splash onto face and body as a final rinse after ghassoul clay. Use as a daily toner by applying with cotton pads.',

@@ -72,12 +72,18 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/trekking',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&h=630&fit=crop',
+        url: '/images/hero-desert.webp',
         width: 1200,
         height: 630,
         alt: 'Mount Toubkal summit in the High Atlas Mountains of Morocco',
       },
     ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Trekking & Hiking Morocco | Toubkal & Atlas',
+    description:
+      'Mount Toubkal, Atlas Mountains trails, top 15 treks, guide hiring, and packing lists for Morocco trekking.',
   },
   alternates: { canonical: 'https://citytoursmorocco.com/trekking' },
 };
@@ -734,7 +740,7 @@ export default function TrekkingPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
                 <img
-                  src="https://images.unsplash.com/photo-1548820557-f0c4bc936f9b?w=800&q=80"
+                  src="/images/hero-trekking.webp"
                   alt="Mount Toubkal summit view with trekkers at the summit pyramid"
                   className="w-full h-64 object-cover rounded-xl mb-6"
                 />
@@ -1298,7 +1304,7 @@ export default function TrekkingPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
                 <img
-                  src="https://images.unsplash.com/photo-1500554861934-691ee8b30561?w=800&q=80"
+                  src="/images/hero-trekking.webp"
                   alt="Traditional Berber village in the Atlas Mountains with terraced fields"
                   className="w-full h-64 object-cover rounded-xl mb-6"
                 />

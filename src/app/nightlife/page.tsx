@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/nightlife',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=1200&h=630&fit=crop',
+        url: '/images/hero-jemaa-elfna-night.webp',
         width: 1200,
         height: 630,
         alt: 'Marrakech nightlife scene with atmospheric lighting',
@@ -87,7 +87,7 @@ const venues: Venue[] = [
     openingHours: '11 PM - 5 AM, Thu-Sat',
     priceRange: '$$$',
     dressCode: 'Smart casual to dressy',
-    image: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=800&q=80',
+    image: '/images/hero-jemaa-elfna-night.webp',
     rating: 4.5,
   },
   {
@@ -100,7 +100,7 @@ const venues: Venue[] = [
     openingHours: '7 PM - 2 AM, daily',
     priceRange: '$$$',
     dressCode: 'Smart elegant',
-    image: 'https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=800&q=80',
+    image: '/images/hero-marrakech.webp',
     rating: 4.6,
   },
   {
@@ -113,7 +113,7 @@ const venues: Venue[] = [
     openingHours: '11:30 PM - 5 AM, Wed-Sat',
     priceRange: '$$$',
     dressCode: 'Dressy / no sneakers',
-    image: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=800&q=80',
+    image: '/images/hero-jemaa-elfna-night.webp',
     rating: 4.4,
   },
   {
@@ -126,7 +126,7 @@ const venues: Venue[] = [
     openingHours: '6 PM - 1 AM, daily',
     priceRange: '$$$',
     dressCode: 'Smart casual',
-    image: 'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=800&q=80',
+    image: '/images/hero-marrakech.webp',
     rating: 4.5,
   },
   {
@@ -139,7 +139,7 @@ const venues: Venue[] = [
     openingHours: '10 AM - 11 PM, daily',
     priceRange: '$$',
     dressCode: 'Casual',
-    image: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=800&q=80',
+    image: '/images/hero-jemaa-elfna-night.webp',
     rating: 4.7,
   },
   {
@@ -152,7 +152,7 @@ const venues: Venue[] = [
     openingHours: '8 PM - 3 AM, daily',
     priceRange: '$$$',
     dressCode: 'Smart elegant',
-    image: 'https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=800&q=80',
+    image: '/images/hero-marrakech.webp',
     rating: 4.3,
   },
   {
@@ -165,7 +165,7 @@ const venues: Venue[] = [
     openingHours: '5 PM - 12 AM, Tue-Sun',
     priceRange: '$$',
     dressCode: 'Smart casual',
-    image: 'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=800&q=80',
+    image: '/images/hero-marrakech.webp',
     rating: 4.6,
   },
   {
@@ -178,7 +178,7 @@ const venues: Venue[] = [
     openingHours: '7 PM - 12 AM, Tue-Sun',
     priceRange: '$$$',
     dressCode: 'Smart elegant',
-    image: 'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=800&q=80',
+    image: '/images/hero-marrakech.webp',
     rating: 4.7,
   },
   {
@@ -191,7 +191,7 @@ const venues: Venue[] = [
     openingHours: '8 AM - 12 AM, daily',
     priceRange: '$$',
     dressCode: 'Casual / creative',
-    image: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=800&q=80',
+    image: '/images/hero-jemaa-elfna-night.webp',
     rating: 4.5,
   },
   {
@@ -204,7 +204,7 @@ const venues: Venue[] = [
     openingHours: '10 AM - 10 PM, daily',
     priceRange: '$',
     dressCode: 'Casual',
-    image: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=800&q=80',
+    image: '/images/hero-jemaa-elfna-night.webp',
     rating: 4.4,
   },
   {
@@ -217,7 +217,7 @@ const venues: Venue[] = [
     openingHours: '7 PM - 1 AM, daily',
     priceRange: '$$',
     dressCode: 'Smart casual',
-    image: 'https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=800&q=80',
+    image: '/images/hero-marrakech.webp',
     rating: 4.5,
   },
   {
@@ -230,7 +230,7 @@ const venues: Venue[] = [
     openingHours: '10 AM - 9 PM, daily',
     priceRange: '$$',
     dressCode: 'Casual',
-    image: 'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=800&q=80',
+    image: '/images/hero-marrakech.webp',
     rating: 4.7,
   },
   {
@@ -243,7 +243,7 @@ const venues: Venue[] = [
     openingHours: '10 AM - 7 PM, Mon-Sat',
     priceRange: '$',
     dressCode: 'Casual',
-    image: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=800&q=80',
+    image: '/images/hero-jemaa-elfna-night.webp',
     rating: 4.6,
   },
   {
@@ -256,7 +256,7 @@ const venues: Venue[] = [
     openingHours: '11 PM - 5 AM, Thu-Sun',
     priceRange: '$$',
     dressCode: 'Smart casual',
-    image: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=800&q=80',
+    image: '/images/hero-jemaa-elfna-night.webp',
     rating: 4.1,
   },
 
@@ -271,7 +271,7 @@ const venues: Venue[] = [
     openingHours: '5 PM - 2 AM, daily',
     priceRange: '$$$',
     dressCode: 'Smart casual',
-    image: 'https://images.unsplash.com/photo-1570804485046-99ca21dbdc43?w=800&q=80',
+    image: '/images/hero-morocco.webp',
     rating: 4.5,
   },
   {
@@ -284,7 +284,7 @@ const venues: Venue[] = [
     openingHours: '6 PM - 1 AM, daily',
     priceRange: '$$',
     dressCode: 'Smart casual',
-    image: 'https://images.unsplash.com/photo-1570804485046-99ca21dbdc43?w=800&q=80',
+    image: '/images/hero-morocco.webp',
     rating: 4.7,
   },
   {
@@ -297,7 +297,7 @@ const venues: Venue[] = [
     openingHours: '6 PM - 2 AM, daily',
     priceRange: '$$',
     dressCode: 'Casual',
-    image: 'https://images.unsplash.com/photo-1570804485046-99ca21dbdc43?w=800&q=80',
+    image: '/images/hero-morocco.webp',
     rating: 4.4,
   },
   {
@@ -310,7 +310,7 @@ const venues: Venue[] = [
     openingHours: '12 PM - 1 AM, daily',
     priceRange: '$$',
     dressCode: 'Casual',
-    image: 'https://images.unsplash.com/photo-1570804485046-99ca21dbdc43?w=800&q=80',
+    image: '/images/hero-morocco.webp',
     rating: 4.3,
   },
   {
@@ -323,7 +323,7 @@ const venues: Venue[] = [
     openingHours: '6 PM - 2 AM, Wed-Sun',
     priceRange: '$$$',
     dressCode: 'Smart casual',
-    image: 'https://images.unsplash.com/photo-1570804485046-99ca21dbdc43?w=800&q=80',
+    image: '/images/hero-morocco.webp',
     rating: 4.5,
   },
   {
@@ -336,7 +336,7 @@ const venues: Venue[] = [
     openingHours: '12 PM - 1 AM, daily',
     priceRange: '$$$',
     dressCode: 'Smart elegant',
-    image: 'https://images.unsplash.com/photo-1570804485046-99ca21dbdc43?w=800&q=80',
+    image: '/images/hero-morocco.webp',
     rating: 4.6,
   },
 
@@ -351,7 +351,7 @@ const venues: Venue[] = [
     openingHours: '9 AM - 10 PM, daily',
     priceRange: '$',
     dressCode: 'Casual',
-    image: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?w=800&q=80',
+    image: '/images/hero-chefchaouen.webp',
     rating: 4.8,
   },
   {
@@ -364,7 +364,7 @@ const venues: Venue[] = [
     openingHours: '7 PM - 1 AM, Tue-Sun',
     priceRange: '$$',
     dressCode: 'Smart casual',
-    image: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?w=800&q=80',
+    image: '/images/hero-chefchaouen.webp',
     rating: 4.6,
   },
   {
@@ -377,7 +377,7 @@ const venues: Venue[] = [
     openingHours: '10 AM - 10 PM, daily',
     priceRange: '$$',
     dressCode: 'Casual',
-    image: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?w=800&q=80',
+    image: '/images/hero-chefchaouen.webp',
     rating: 4.7,
   },
   {
@@ -390,7 +390,7 @@ const venues: Venue[] = [
     openingHours: '8 PM - 2 AM, Wed-Sun',
     priceRange: '$$',
     dressCode: 'Casual / creative',
-    image: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?w=800&q=80',
+    image: '/images/hero-chefchaouen.webp',
     rating: 4.4,
   },
 
@@ -405,7 +405,7 @@ const venues: Venue[] = [
     openingHours: '8 PM - 2 AM, daily',
     priceRange: '$',
     dressCode: 'Casual / bohemian',
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=800&q=80',
+    image: '/images/hero-essaouira.webp',
     rating: 4.5,
   },
   {
@@ -418,7 +418,7 @@ const venues: Venue[] = [
     openingHours: '10 AM - 11 PM, daily',
     priceRange: '$$',
     dressCode: 'Casual',
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=800&q=80',
+    image: '/images/hero-essaouira.webp',
     rating: 4.6,
   },
   {
@@ -431,7 +431,7 @@ const venues: Venue[] = [
     openingHours: '5 PM - 12 AM, daily',
     priceRange: '$',
     dressCode: 'Casual',
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=800&q=80',
+    image: '/images/hero-essaouira.webp',
     rating: 4.3,
   },
 
@@ -446,7 +446,7 @@ const venues: Venue[] = [
     openingHours: '11 PM - 5 AM, Thu-Sun',
     priceRange: '$$$',
     dressCode: 'Smart casual to dressy',
-    image: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=800&q=80',
+    image: '/images/hero-jemaa-elfna-night.webp',
     rating: 4.2,
   },
   {
@@ -459,7 +459,7 @@ const venues: Venue[] = [
     openingHours: '6 PM - 2 AM, daily',
     priceRange: '$$$',
     dressCode: 'Smart casual',
-    image: 'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=800&q=80',
+    image: '/images/hero-marrakech.webp',
     rating: 4.4,
   },
   {
@@ -472,7 +472,7 @@ const venues: Venue[] = [
     openingHours: '4 PM - 2 AM, daily',
     priceRange: '$',
     dressCode: 'Casual',
-    image: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=800&q=80',
+    image: '/images/hero-jemaa-elfna-night.webp',
     rating: 4.0,
   },
 
@@ -487,7 +487,7 @@ const venues: Venue[] = [
     openingHours: '7 PM - 1 AM, Tue-Sun',
     priceRange: '$$$',
     dressCode: 'Smart casual',
-    image: 'https://images.unsplash.com/photo-1570804485046-99ca21dbdc43?w=800&q=80',
+    image: '/images/hero-morocco.webp',
     rating: 4.5,
   },
   {
@@ -500,7 +500,7 @@ const venues: Venue[] = [
     openingHours: '9 AM - 9 PM, daily',
     priceRange: '$',
     dressCode: 'Casual',
-    image: 'https://images.unsplash.com/photo-1570804485046-99ca21dbdc43?w=800&q=80',
+    image: '/images/hero-morocco.webp',
     rating: 4.6,
   },
   {
@@ -513,7 +513,7 @@ const venues: Venue[] = [
     openingHours: '11 PM - 4 AM, Thu-Sat',
     priceRange: '$$',
     dressCode: 'Smart casual',
-    image: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=800&q=80',
+    image: '/images/hero-jemaa-elfna-night.webp',
     rating: 4.1,
   },
   {
@@ -526,7 +526,7 @@ const venues: Venue[] = [
     openingHours: '6 PM - 12 AM, daily',
     priceRange: '$$$',
     dressCode: 'Smart elegant',
-    image: 'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=800&q=80',
+    image: '/images/hero-marrakech.webp',
     rating: 4.6,
   },
 
@@ -541,7 +541,7 @@ const venues: Venue[] = [
     openingHours: '5 PM - 12 AM, daily',
     priceRange: '$$$',
     dressCode: 'Smart casual',
-    image: 'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=800&q=80',
+    image: '/images/hero-marrakech.webp',
     rating: 4.7,
   },
   {
@@ -554,7 +554,7 @@ const venues: Venue[] = [
     openingHours: '10 AM - 10 PM, Wed-Mon',
     priceRange: '$$',
     dressCode: 'Casual',
-    image: 'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=800&q=80',
+    image: '/images/hero-marrakech.webp',
     rating: 4.6,
   },
   {
@@ -567,7 +567,7 @@ const venues: Venue[] = [
     openingHours: '9 AM - 10 PM, daily',
     priceRange: '$',
     dressCode: 'Casual',
-    image: 'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=800&q=80',
+    image: '/images/hero-marrakech.webp',
     rating: 4.5,
   },
 ];
@@ -747,7 +747,7 @@ export default function NightlifePage() {
       <section className="relative overflow-hidden bg-[var(--color-primary-900)] text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=1600&q=80"
+            src="/images/hero-jemaa-elfna-night.webp"
             alt="Atmospheric evening scene in Marrakech with warm lighting"
             className="absolute inset-0 w-full h-full object-cover"
           />

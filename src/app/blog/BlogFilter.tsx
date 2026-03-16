@@ -79,31 +79,31 @@ const popularArticles = [
     slug: 'moroccan-tea-culture',
     title: 'Moroccan Tea Culture: The Art of Mint Tea',
     readTime: '15 min read',
-    image: 'https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=200&q=80',
+    image: '/images/photo-mint-tea-pouring.webp',
   },
   {
     slug: 'atlas-mountains-trekking',
     title: 'Atlas Mountains Trekking: Complete Guide',
     readTime: '18 min read',
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=200&q=80',
+    image: '/images/hero-desert.webp',
   },
   {
     slug: 'medina-shopping-guide',
     title: 'How to Shop in Moroccan Medinas',
     readTime: '16 min read',
-    image: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=200&q=80',
+    image: '/images/hero-souk-lamps.webp',
   },
   {
     slug: 'ultimate-first-timers-guide-to-marrakech',
     title: "The Ultimate First-Timer's Guide to Marrakech",
     readTime: '12 min read',
-    image: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=200&q=80',
+    image: '/images/hero-marrakech.webp',
   },
   {
     slug: 'complete-guide-to-moroccan-street-food',
     title: 'A Complete Guide to Moroccan Street Food',
     readTime: '10 min read',
-    image: 'https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=200&q=80',
+    image: '/images/photo-tagine-closeup.webp',
   },
 ];
 

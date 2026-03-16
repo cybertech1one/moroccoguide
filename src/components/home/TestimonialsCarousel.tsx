@@ -20,7 +20,7 @@ const testimonials: Testimonial[] = [
     location: 'Vancouver, Canada',
     rating: 5,
     tripType: 'Solo Adventure',
-    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face',
+    avatar: '/images/hero-marrakech.webp',
   },
   {
     quote:
@@ -29,7 +29,7 @@ const testimonials: Testimonial[] = [
     location: 'Milan, Italy',
     rating: 5,
     tripType: 'Adventure',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face',
+    avatar: '/images/hero-todra-gorge.webp',
   },
   {
     quote:
@@ -38,7 +38,7 @@ const testimonials: Testimonial[] = [
     location: 'London, UK',
     rating: 5,
     tripType: 'Family Vacation',
-    avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face',
+    avatar: '/images/hero-marrakech.webp',
   },
   {
     quote:
@@ -47,7 +47,7 @@ const testimonials: Testimonial[] = [
     location: 'Munich, Germany',
     rating: 5,
     tripType: 'Honeymoon',
-    avatar: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=100&h=100&fit=crop&crop=face',
+    avatar: '/images/hero-marrakech.webp',
   },
   {
     quote:
@@ -56,7 +56,7 @@ const testimonials: Testimonial[] = [
     location: 'Sydney, Australia',
     rating: 5,
     tripType: 'Trekking',
-    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face',
+    avatar: '/images/hero-marrakech.webp',
   },
   {
     quote:
@@ -65,7 +65,7 @@ const testimonials: Testimonial[] = [
     location: 'Mumbai, India',
     rating: 5,
     tripType: 'Family',
-    avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face',
+    avatar: '/images/hero-marrakech.webp',
   },
 ];
 

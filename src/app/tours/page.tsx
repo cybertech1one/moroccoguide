@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/tours',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&h=630&fit=crop',
+        url: '/images/hero-desert.webp',
         width: 1200,
         height: 630,
         alt: 'Camel trek in the Sahara Desert, Morocco',
@@ -85,7 +85,7 @@ const tours: Tour[] = [
     category: 'Desert',
     highlights: ['Ait Benhaddou UNESCO Site', 'Todra Gorge', 'Camel Trek at Sunset', 'Desert Camp'],
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=800&q=80',
+    image: '/images/hero-desert.webp',
   },
   {
     name: 'Imperial Cities 7-Day Circuit',
@@ -99,7 +99,7 @@ const tours: Tour[] = [
     category: 'Cultural',
     highlights: ['Fes Medina', 'Chefchaouen', 'Volubilis Ruins', 'Marrakech Souks'],
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1549140600-78c9b8275e9d?w=800&q=80',
+    image: '/images/hero-fes.webp',
   },
   {
     name: 'Atlas Mountains 2-Day Trek',
@@ -113,7 +113,7 @@ const tours: Tour[] = [
     category: 'Adventure',
     highlights: ['Imlil Valley', 'Berber Villages', 'Mountain Refuge', 'Atlas Panoramas'],
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1580746738099-0cf2b4063740?w=800&q=80',
+    image: '/images/hero-atlas.webp',
   },
   {
     name: 'Marrakech Food Tour',
@@ -127,7 +127,7 @@ const tours: Tour[] = [
     category: 'Food',
     highlights: ['Jemaa el-Fnaa Stalls', 'Spice Market', '15+ Tastings', 'Local Guide'],
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=800&q=80',
+    image: '/images/hero-marrakech.webp',
   },
   {
     name: 'Fes Artisan Workshop Experience',
@@ -141,7 +141,7 @@ const tours: Tour[] = [
     category: 'Cultural',
     highlights: ['Zellige Workshop', 'Brass Engraving', 'Leather Craft', 'Tannery Visit'],
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1549140600-78c9b8275e9d?w=800&q=80',
+    image: '/images/hero-fes.webp',
   },
   {
     name: 'Chefchaouen Day Trip from Fes',
@@ -155,7 +155,7 @@ const tours: Tour[] = [
     category: 'Cultural',
     highlights: ['Blue Medina', 'Spanish Mosque Hike', 'Ras el-Maa Waterfall', 'Local Lunch'],
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?w=800&q=80',
+    image: '/images/hero-chefchaouen.webp',
   },
   {
     name: 'Essaouira Surf & Explore 3-Day',
@@ -169,7 +169,7 @@ const tours: Tour[] = [
     category: 'Adventure',
     highlights: ['Surf Lessons', 'Medina Tour', 'Seafood Dinner', 'Beach Camel Ride'],
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1502680390548-bdbac40b3981?w=800&q=80',
+    image: '/images/hero-surfing.webp',
   },
   {
     name: 'Grand Morocco 14-Day Discovery',
@@ -183,7 +183,7 @@ const tours: Tour[] = [
     category: 'Cultural',
     highlights: ['All Imperial Cities', 'Sahara Camping', 'Atlas Trek', 'Essaouira Coast'],
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=800&q=80',
+    image: '/images/hero-morocco.webp',
   },
   {
     name: 'Draa Valley Expedition 4-Day',
@@ -197,7 +197,7 @@ const tours: Tour[] = [
     category: 'Desert',
     highlights: ['Draa Valley', 'Zagora', 'Erg Chigaga', 'Desert Bivouac'],
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=800&q=80',
+    image: '/images/hero-desert.webp',
   },
   {
     name: 'High Atlas Berber Villages 3-Day',
@@ -211,7 +211,7 @@ const tours: Tour[] = [
     category: 'Adventure',
     highlights: ['Berber Homestays', 'Mountain Passes', 'Traditional Meals', 'Walnut Groves'],
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1580746738099-0cf2b4063740?w=800&q=80',
+    image: '/images/hero-atlas.webp',
   },
   {
     name: 'Tangier Art & Culture Day Tour',
@@ -225,7 +225,7 @@ const tours: Tour[] = [
     category: 'Cultural',
     highlights: ['American Legation', 'Cafe Hafa', 'Contemporary Galleries', 'Kasbah Museum'],
     rating: 4.4,
-    image: 'https://images.unsplash.com/photo-1553522991-71439aa3bf8c?w=800&q=80',
+    image: '/images/hero-tangier-kasbah.webp',
   },
   {
     name: 'Ouarzazate Film Location Tour',
@@ -239,7 +239,7 @@ const tours: Tour[] = [
     category: 'Cultural',
     highlights: ['Atlas Studios', 'Ait Benhaddou Sets', 'Kasbah Taourirt', 'Film History'],
     rating: 4.3,
-    image: 'https://images.unsplash.com/photo-1548017267-5765e9b2ccfb?w=800&q=80',
+    image: '/images/hero-sahara-sunrise.webp',
   },
   {
     name: 'Dakhla Kitesurfing Week',
@@ -253,7 +253,7 @@ const tours: Tour[] = [
     category: 'Adventure',
     highlights: ['Flat Water Lagoon', 'Equipment Included', 'Desert Excursion', 'Beachfront Stay'],
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1502680390548-bdbac40b3981?w=800&q=80',
+    image: '/images/hero-surfing.webp',
   },
   {
     name: 'Agadir Coastal Discovery 2-Day',
@@ -267,7 +267,7 @@ const tours: Tour[] = [
     category: 'Family',
     highlights: ['Paradise Valley', 'Argan Cooperative', 'Taghazout Village', 'Flamingo Reserve'],
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1502680390548-bdbac40b3981?w=800&q=80',
+    image: '/images/hero-surfing.webp',
   },
   {
     name: 'Desert Glamping Experience 2-Night',
@@ -281,7 +281,7 @@ const tours: Tour[] = [
     category: 'Wellness',
     highlights: ['Luxury Tents', 'Stargazing Dinner', 'Sunrise Yoga', 'Sandboarding'],
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=800&q=80',
+    image: '/images/hero-desert.webp',
   },
   {
     name: 'Marrakech Cooking Class',
@@ -295,7 +295,7 @@ const tours: Tour[] = [
     category: 'Food',
     highlights: ['Market Tour', 'Hands-on Cooking', 'Full Meal Prepared', 'Recipe Book'],
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=800&q=80',
+    image: '/images/hero-marrakech.webp',
   },
   {
     name: 'Fes Ceramics & Pottery Workshop',
@@ -309,7 +309,7 @@ const tours: Tour[] = [
     category: 'Cultural',
     highlights: ['Wheel Throwing', 'Traditional Glazing', 'Take Home Pottery', 'Cooperative Visit'],
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1549140600-78c9b8275e9d?w=800&q=80',
+    image: '/images/hero-fes.webp',
   },
   {
     name: 'Atlas Mountain Biking 3-Day',
@@ -323,7 +323,7 @@ const tours: Tour[] = [
     category: 'Adventure',
     highlights: ['Technical Trails', 'Village Stops', 'River Crossings', 'Mountain Panoramas'],
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1580746738099-0cf2b4063740?w=800&q=80',
+    image: '/images/hero-atlas.webp',
   },
   {
     name: 'Rabat Royal Heritage Tour',
@@ -337,7 +337,7 @@ const tours: Tour[] = [
     category: 'Cultural',
     highlights: ['Hassan Tower', 'Kasbah Udayas', 'Chellah Ruins', 'Royal Palace'],
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1570804485046-99ca21dbdc43?w=800&q=80',
+    image: '/images/hero-hassan-mosque.webp',
   },
   {
     name: 'Mediterranean Coast Road Trip 5-Day',
@@ -351,7 +351,7 @@ const tours: Tour[] = [
     category: 'Adventure',
     highlights: ['Coastal Highway', 'Hidden Beaches', 'Rif Mountains', 'Al Hoceima Bay'],
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1553522991-71439aa3bf8c?w=800&q=80',
+    image: '/images/hero-tangier-kasbah.webp',
   },
   {
     name: 'Sahara Photography Expedition 4-Day',
@@ -365,7 +365,7 @@ const tours: Tour[] = [
     category: 'Photography',
     highlights: ['Golden Hour Shoots', 'Star Trail Session', 'Editing Workshop', 'Portfolio Review'],
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=800&q=80',
+    image: '/images/hero-desert.webp',
   },
 ];
 
@@ -434,7 +434,7 @@ export default function ToursPage() {
       <section className="relative overflow-hidden bg-[var(--color-primary-900)] text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1600&q=80"
+            src="/images/hero-desert.webp"
             alt="Camel caravan in the Sahara Desert at sunset"
             className="absolute inset-0 w-full h-full object-cover"
           />

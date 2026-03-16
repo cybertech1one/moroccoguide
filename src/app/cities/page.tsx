@@ -17,7 +17,7 @@ export const metadata: Metadata = {
       'The most comprehensive directory of Moroccan cities. Browse imperial cities, coastal towns, mountain retreats, and desert gateways.',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=2800',
+        url: '/images/hero-morocco.webp',
         width: 2800,
         height: 1600,
         alt: "Morocco's diverse cities and landscapes",
@@ -77,7 +77,7 @@ export default function CitiesPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=2800)',
+              'url(/images/hero-morocco.webp)',
           }}
         />
         <div className="hero-overlay absolute inset-0" />

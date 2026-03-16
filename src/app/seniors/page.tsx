@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/seniors',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=1200&h=630&fit=crop',
+        url: '/images/photo-henna-art.webp',
         width: 1200,
         height: 630,
         alt: 'Senior couple enjoying a peaceful Moroccan garden',
@@ -145,7 +145,7 @@ const seniorDestinations = [
       'Medina streets are uneven cobblestone. Stick to the main arteries or hire a guide. Gueliz is flat and modern. Many luxury riads have ground-floor suites. Hotel shuttles available.',
     accommodation:
       'La Mamounia (legendary, full accessibility), Royal Mansour (ultra-luxury, elevators), Les Jardins de la Koutoubia (pool, spa, central), Riad Kniza (boutique, ground-floor rooms).',
-    image: 'https://images.unsplash.com/photo-1597212618440-806262de4f6b?q=80&w=800',
+    image: '/images/hero-morocco.webp',
   },
   {
     name: 'Essaouira',
@@ -164,7 +164,7 @@ const seniorDestinations = [
       'The flattest medina in Morocco. Main streets are wide and mostly smooth. Some side alleys are narrow. The beach is accessible from several points. Most restaurants are at ground level.',
     accommodation:
       'Heure Bleue Palais (elegant, elevator, pool, rooftop), Villa Maroc (charming, some ground-floor rooms), Riad Mimouna (ocean views, accessible), Hotel Atlas Essaouira & Spa (modern, full accessibility).',
-    image: 'https://images.unsplash.com/photo-1560437091-4383266ac31b?q=80&w=800',
+    image: '/images/hero-fes-tanneries.webp',
   },
   {
     name: 'Agadir',
@@ -183,7 +183,7 @@ const seniorDestinations = [
       'The most accessible city in Morocco. Modern grid layout, paved sidewalks, resort hotels with elevators and ramps. Medical facilities (Clinique Internationale Agadir) on par with European standards.',
     accommodation:
       'Sofitel Agadir Royal Bay (5-star, beach, spa, fully accessible), Tikida Golf Palace (luxury, golf, pool), Robinson Club Agadir (all-inclusive, activity program), Atlantic Palace (beachfront, medical team available).',
-    image: 'https://images.unsplash.com/photo-1548017862-f75e0d17e5f5?q=80&w=800',
+    image: '/images/hero-sahara-night.webp',
   },
   {
     name: 'Rabat',
@@ -202,7 +202,7 @@ const seniorDestinations = [
       'Best public transport in Morocco (tram). Wide sidewalks in Agdal and Hassan neighborhoods. The Kasbah has some steep sections but the main route is manageable. Museums are modern and accessible.',
     accommodation:
       'Sofitel Rabat Jardin des Roses (luxury, gardens, spa), Le Diwan Rabat (boutique, central, elevator), La Tour Hassan Palace (historic, renovated, full service), Riad Dar El Kebira (traditional, ground-floor rooms available).',
-    image: 'https://images.unsplash.com/photo-1570698473651-b2de99bae12f?q=80&w=800',
+    image: '/images/hero-marrakech.webp',
   },
 ];
 
@@ -590,7 +590,7 @@ export default function SeniorsPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1539020140153-e479b8c22e70?q=80&w=2800)',
+              'url(/images/photo-henna-art.webp',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

@@ -26,14 +26,14 @@ interface Restaurant {
 }
 
 const PHOTO_STRIP = [
-  { src: 'https://images.unsplash.com/photo-1541518763643-2b3e3d66f3c4?q=80&w=400', alt: 'Moroccan Tagine' },
-  { src: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=400', alt: 'Couscous Dish' },
-  { src: 'https://images.unsplash.com/photo-1571934811356-5cc061b6821f?q=80&w=400', alt: 'Mint Tea' },
-  { src: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=400', alt: 'Pastilla' },
-  { src: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=400', alt: 'Spice Market' },
-  { src: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?q=80&w=400', alt: 'Harira Soup' },
-  { src: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=400', alt: 'Msemen Bread' },
-  { src: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=400', alt: 'Moroccan Dining' },
+  { src: '/images/photo-tagine-closeup.webp', alt: 'Moroccan Tagine' },
+  { src: '/images/hero-food.webp', alt: 'Couscous Dish' },
+  { src: '/images/photo-mint-tea-pouring.webp', alt: 'Mint Tea' },
+  { src: '/images/hero-food.webp', alt: 'Pastilla' },
+  { src: '/images/hero-spices.webp', alt: 'Spice Market' },
+  { src: '/images/hero-food.webp', alt: 'Harira Soup' },
+  { src: '/images/photo-moroccan-bread.webp', alt: 'Msemen Bread' },
+  { src: '/images/hero-food.webp', alt: 'Moroccan Dining' },
 ];
 
 const DISHES: Dish[] = [
@@ -43,7 +43,7 @@ const DISHES: Dish[] = [
     description: 'Iconic slow-cooked stew in a conical clay pot. Lamb, chicken, or vegetable.',
     price: '80-150 MAD',
     spiceLevel: 2,
-    image: 'https://images.unsplash.com/photo-1541518763643-2b3e3d66f3c4?q=80&w=500',
+    image: '/images/photo-tagine-closeup.webp',
     tall: true,
   },
   {
@@ -52,7 +52,7 @@ const DISHES: Dish[] = [
     description: 'The Friday staple. Hand-rolled semolina with tender meat and seasonal vegetables.',
     price: '70-120 MAD',
     spiceLevel: 1,
-    image: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=500',
+    image: '/images/hero-food.webp',
   },
   {
     name: 'Pastilla',
@@ -60,7 +60,7 @@ const DISHES: Dish[] = [
     description: 'Savory-sweet masterpiece of crispy pastry, pigeon, almonds, and cinnamon.',
     price: '90-160 MAD',
     spiceLevel: 1,
-    image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=500',
+    image: '/images/hero-food.webp',
   },
   {
     name: 'Harira',
@@ -68,7 +68,7 @@ const DISHES: Dish[] = [
     description: 'Rich tomato soup with lentils, chickpeas, and lamb. Ramadan tradition.',
     price: '30-50 MAD',
     spiceLevel: 2,
-    image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?q=80&w=500',
+    image: '/images/hero-food.webp',
     tall: true,
   },
   {
@@ -77,7 +77,7 @@ const DISHES: Dish[] = [
     description: 'Layered flatbread, crispy outside and soft within. Served with honey and butter.',
     price: '10-20 MAD',
     spiceLevel: 0,
-    image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=500',
+    image: '/images/photo-moroccan-bread.webp',
   },
   {
     name: 'Mint Tea',
@@ -85,7 +85,7 @@ const DISHES: Dish[] = [
     description: 'The national drink, poured with theatrical flair from a silver teapot.',
     price: '15-30 MAD',
     spiceLevel: 0,
-    image: 'https://images.unsplash.com/photo-1571934811356-5cc061b6821f?q=80&w=500',
+    image: '/images/photo-mint-tea-pouring.webp',
   },
 ];
 
@@ -96,7 +96,7 @@ const RESTAURANTS: Restaurant[] = [
     cuisineType: 'Modern Moroccan',
     priceRange: '150-300 MAD',
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=400',
+    image: '/images/hero-riad-interior.webp',
   },
   {
     name: 'Cafe Clock',
@@ -104,7 +104,7 @@ const RESTAURANTS: Restaurant[] = [
     cuisineType: 'Fusion Moroccan',
     priceRange: '80-180 MAD',
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=400',
+    image: '/images/hero-food.webp',
   },
   {
     name: 'Nomad',
@@ -112,7 +112,7 @@ const RESTAURANTS: Restaurant[] = [
     cuisineType: 'Contemporary',
     priceRange: '130-280 MAD',
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?q=80&w=400',
+    image: '/images/hero-food.webp',
   },
   {
     name: "Rick's Cafe",
@@ -120,7 +120,7 @@ const RESTAURANTS: Restaurant[] = [
     cuisineType: 'Moroccan-French',
     priceRange: '200-400 MAD',
     rating: 4.4,
-    image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=400',
+    image: '/images/hero-food.webp',
   },
   {
     name: 'Taros',
@@ -128,7 +128,7 @@ const RESTAURANTS: Restaurant[] = [
     cuisineType: 'Seafood & Moroccan',
     priceRange: '120-250 MAD',
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=400',
+    image: '/images/hero-food.webp',
   },
   {
     name: 'Al Fassia',
@@ -136,7 +136,7 @@ const RESTAURANTS: Restaurant[] = [
     cuisineType: 'Traditional Moroccan',
     priceRange: '180-350 MAD',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=400',
+    image: '/images/hero-spices.webp',
   },
 ];
 

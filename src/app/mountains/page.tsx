@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/mountains',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1548820513-f632723d10b4?w=1200&h=630&fit=crop',
+        url: '/images/hero-atlas.webp',
         width: 1200,
         height: 630,
         alt: 'Atlas Mountains landscape with snow-capped peaks and Berber village',
@@ -57,7 +57,7 @@ const mountainRanges = [
     highlights: ['Jebel Toubkal (4,167m)', 'Dramatic gorges and valleys', 'Traditional Berber villages', 'Snow in winter, wildflowers in spring'],
     bestTime: 'April-June, September-November',
     keyAreas: 'Toubkal region, Dades Valley, Todra Gorge, M\'Goun massif, Ourika Valley',
-    image: 'https://images.unsplash.com/photo-1548820513-f632723d10b4?q=80&w=800',
+    image: '/images/hero-atlas.webp',
   },
   {
     name: 'Middle Atlas',
@@ -67,7 +67,7 @@ const mountainRanges = [
     highlights: ['Cedar forests & Barbary macaques', 'Ifrane & Azrou forests', 'Ouzoud Waterfalls', 'Natural lakes (Aguelmame Azigza, Dayet Aoua)'],
     bestTime: 'Year-round (skiing Dec-Mar, hiking Apr-Nov)',
     keyAreas: 'Ifrane, Azrou, Ouzoud, Beni Mellal, Taza',
-    image: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?q=80&w=800',
+    image: '/images/hero-atlas.webp',
   },
   {
     name: 'Anti-Atlas',
@@ -77,7 +77,7 @@ const mountainRanges = [
     highlights: ['Ancient geological formations', 'Tafraoute painted rocks', 'Almond blossoms (February)', 'Ameln Valley'],
     bestTime: 'October-April (too hot in summer)',
     keyAreas: 'Tafraoute, Ameln Valley, Ait Mansour Gorge, Jebel Lkest',
-    image: 'https://images.unsplash.com/photo-1504019347908-b45f9b0b8dd5?q=80&w=800',
+    image: '/images/hero-trekking.webp',
   },
   {
     name: 'Rif Mountains',
@@ -87,7 +87,7 @@ const mountainRanges = [
     highlights: ['Chefchaouen (Blue City)', 'Talassemtane National Park', 'Akchour Waterfalls', 'God\'s Bridge natural arch'],
     bestTime: 'March-June, September-November',
     keyAreas: 'Chefchaouen, Akchour, Talassemtane, Al Hoceima',
-    image: 'https://images.unsplash.com/photo-1553522991-71439aa62779?q=80&w=800',
+    image: '/images/hero-chefchaouen.webp',
   },
 ];
 
@@ -105,7 +105,7 @@ const trekkingRoutes = [
     guideMandatory: true,
     season: 'April-June, September-November (winter summit requires crampons, ice axes, and alpine experience)',
     price: '2,000-4,000 MAD for guided 2-day trek (includes guide, mule, meals, refuge)',
-    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=800',
+    image: '/images/hero-trekking.webp',
   },
   {
     name: "M'Goun Traverse",
@@ -120,7 +120,7 @@ const trekkingRoutes = [
     guideMandatory: true,
     season: 'June-September (higher altitude means later snow melt; gorge requires low water levels)',
     price: '3,000-6,000 MAD for guided 5-day trek (includes guide, mule team, all meals, camping)',
-    image: 'https://images.unsplash.com/photo-1454496522488-7a8e488e8606?q=80&w=800',
+    image: '/images/hero-trekking.webp',
   },
   {
     name: 'Jebel Saghro',
@@ -135,7 +135,7 @@ const trekkingRoutes = [
     guideMandatory: false,
     season: 'October-April (the ideal winter alternative to High Atlas; too hot May-September)',
     price: '1,500-3,500 MAD for guided multi-day trek',
-    image: 'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?q=80&w=800',
+    image: '/images/hero-atlas.webp',
   },
   {
     name: 'Azzaden Valley',
@@ -150,7 +150,7 @@ const trekkingRoutes = [
     guideMandatory: false,
     season: 'March-November (lower altitude means a longer season)',
     price: '1,200-3,000 MAD for guided 3-day trek',
-    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=800',
+    image: '/images/hero-chefchaouen.webp',
   },
 ];
 
@@ -162,7 +162,7 @@ const gorgesAndFalls = [
     activities: ['Rock climbing (150+ routes, all grades)', 'Canyon walk (30-60 min)', 'Photography (morning light is best)', 'Swimming in spring (seasonal river pools)'],
     gettingThere: 'From Tinghir: 14 km (20 min drive). From Marrakech: 9 hours via Ouarzazate. From Merzouga: 3.5 hours.',
     practicalTip: 'Climbing gear can be rented in Tinghir or from guides at the gorge entrance (100-200 MAD/day). Experienced climbing guides charge 400-600 MAD/day. Visit early morning to avoid tour bus crowds.',
-    image: 'https://images.unsplash.com/photo-1539650116574-8efeb43e2750?q=80&w=600',
+    image: '/images/hero-todra-gorge.webp',
   },
   {
     name: 'Dades Gorge',
@@ -171,7 +171,7 @@ const gorgesAndFalls = [
     activities: ['Scenic driving (25 km gorge road)', 'Hiking side canyons', 'Rock climbing (developing scene)', 'Mountain biking', 'Photography (monkey fingers formations)'],
     gettingThere: 'From Boumalne Dades: 0 km (gorge starts at the town edge). From Ouarzazate: 115 km (1.5 hours). From Marrakech: 7-8 hours.',
     practicalTip: 'Stay overnight in the gorge for sunrise views. Auberge Le Festival and Chez Pierre are excellent mid-range options. The upper gorge road is unpaved and requires a 4x4 or sturdy walking legs.',
-    image: 'https://images.unsplash.com/photo-1531171074112-e2e0b6368535?q=80&w=600',
+    image: '/images/hero-dades-gorge.webp',
   },
   {
     name: 'Ouzoud Waterfalls',
@@ -180,7 +180,7 @@ const gorgesAndFalls = [
     activities: ['Waterfall viewing (multiple vantage points)', 'Boat ride at the base (20 MAD)', 'Barbary macaque spotting', 'Natural swimming pools', 'Hike the canyon rim trail (2-3 hours loop)'],
     gettingThere: 'From Marrakech: 150 km (2.5-3 hours via Beni Mellal). From Fes: 350 km (5 hours). No direct public transport; join a tour or hire a private driver.',
     practicalTip: 'Visit on a weekday to avoid weekend crowds. The trails down to the base are steep and slippery when wet. Wear proper shoes. Do not feed the macaques. Morning light creates the best rainbow effect in the mist.',
-    image: 'https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=600',
+    image: '/images/hero-national-parks.webp',
   },
 ];
 
@@ -191,7 +191,7 @@ const mountainVillages = [
     description: 'The main gateway to Toubkal and the most popular mountain village in Morocco. A bustling little hub with guesthouses, cafes, equipment hire shops, and the Bureau des Guides. The starting point for most Atlas treks. Despite its popularity, the village retains its Berber character with stone houses and terraced gardens.',
     fromMarrakech: '90 minutes by car (60 km via Asni)',
     mustDo: 'Stay at Kasbah du Toubkal, a stunning hilltop lodge built on the ruins of a former kasbah with panoramic Toubkal views',
-    image: 'https://images.unsplash.com/photo-1493246507139-91e8fad9978e?q=80&w=600',
+    image: '/images/hero-atlas.webp',
   },
   {
     name: 'Aremd (Aroumd)',
@@ -199,7 +199,7 @@ const mountainVillages = [
     description: 'A traditional Berber village perched above Imlil with breathtaking views of the Toubkal massif. More authentic and quieter than Imlil, it is the last permanent settlement on the Toubkal trail. Stone houses cascade down the hillside amid walnut and cherry trees. The village is car-free and reached by a 45-minute uphill walk from Imlil or a shorter mule ride.',
     fromMarrakech: '2 hours (90 min drive + 45 min walk from Imlil)',
     mustDo: 'Overnight in a family-run gite, share a home-cooked tagine dinner, and wake to views of snow-capped Toubkal',
-    image: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=600',
+    image: '/images/hero-trekking.webp',
   },
   {
     name: 'Setti Fatma',
@@ -207,7 +207,7 @@ const mountainVillages = [
     description: 'Located in the Ourika Valley, Setti Fatma is famous for its seven waterfalls and is one of the easiest Atlas experiences to access from Marrakech. On weekends, Moroccan families picnic along the river. The village hosts an annual moussem (festival) in August attracting pilgrims from across the region. The lower waterfalls are accessible to most fitness levels.',
     fromMarrakech: '60 minutes by car (60 km)',
     mustDo: 'Hike to the seven waterfalls with a local guide (50-100 MAD, 2-3 hours round trip) and swim in the natural pools',
-    image: 'https://images.unsplash.com/photo-1433838552652-f9a46b332c40?q=80&w=600',
+    image: '/images/hero-national-parks.webp',
   },
   {
     name: 'Ifrane & Azrou',
@@ -215,7 +215,7 @@ const mountainVillages = [
     description: 'Ifrane is Morocco\'s "Little Switzerland," a clean, orderly town with red-roofed chalets built during the French Protectorate. It holds the African cold record (-23.9C in 1935). Nearby Azrou is a more traditional Berber market town sitting at the edge of a magnificent cedar forest. The forest between the two towns is the best place in Morocco to see wild Barbary macaques, the only primate species native to Africa\'s north.',
     fromMarrakech: '5.5 hours via Beni Mellal (350 km). More commonly visited from Fes (75 km, 1 hour)',
     mustDo: 'Walk the Azrou Cedar Forest (Foret de Cedres) to spot Barbary macaques. The cedars here are centuries old, with some specimens reaching 40m tall.',
-    image: 'https://images.unsplash.com/photo-1605092676920-8ac5ae40c7c8?q=80&w=600',
+    image: '/images/hero-national-parks.webp',
   },
 ];
 
@@ -383,7 +383,7 @@ const jsonLd = {
   url: 'https://citytoursmorocco.com/mountains',
   touristType: ['Adventure tourism', 'Hiking', 'Nature tourism', 'Rock climbing'],
   geo: { '@type': 'GeoCoordinates', latitude: 31.0601, longitude: -7.9118 },
-  image: 'https://images.unsplash.com/photo-1548820513-f632723d10b4?w=1200',
+  image: '/images/hero-atlas.webp',
 };
 
 export default function MountainsPage() {
@@ -400,7 +400,7 @@ export default function MountainsPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1548820513-f632723d10b4?q=80&w=2800)',
+              'url(/images/hero-atlas.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

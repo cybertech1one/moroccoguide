@@ -66,9 +66,9 @@ const restaurants: Restaurant[] = [
     description:
       'Nomad is one of Marrakech\'s most sought-after restaurants, perched above the Rahba Kedima spice square in the heart of the ancient medina. This trendy rooftop establishment has redefined Moroccan dining by applying modern culinary techniques and creative presentation to traditional recipes and locally sourced ingredients.\n\nThe three-story space features a ground-floor bar, a first-floor dining room with open kitchen, and the coveted rooftop terrace where diners enjoy panoramic views over the medina rooftops to the Atlas Mountains beyond. The design is contemporary and cool, with clean lines softened by Moroccan textiles and potted herbs.\n\nChef-owner Kamal Laftimi draws inspiration from Morocco\'s diverse culinary traditions, from Berber mountain cooking to coastal seafood, reinterpreting them with a modern sensibility. The lamb shoulder, slow-cooked for eight hours, has become one of Marrakech\'s most iconic dishes, while the selection of Moroccan salads showcases the country\'s extraordinary vegetable heritage.',
     images: [
-      'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=1200&q=80',
-      'https://images.unsplash.com/photo-1549140600-78c9b8275e9d?w=1200&q=80',
-      'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=1200&q=80',
+      '/images/hero-marrakech.webp',
+      '/images/hero-fes.webp',
+      '/images/hero-essaouira.webp',
     ],
     rating: 4.6,
     reviewCount: 3245,
@@ -92,9 +92,9 @@ const restaurants: Restaurant[] = [
     description:
       'Le Jardin is a hidden oasis of tranquility in the heart of the Marrakech medina, a lush garden restaurant where diners are enveloped by tropical plants, climbing bougainvillea, and the gentle sound of birdsong. The restaurant occupies a beautifully restored riad courtyard that has been transformed into what feels like a secret botanical garden.\n\nThe menu artfully blends Mediterranean and Moroccan culinary traditions, with an emphasis on fresh, seasonal ingredients and lighter preparations that suit the garden setting. Dishes are colorful and beautifully plated, reflecting the vibrant surroundings. The fresh juices and smoothies, made from locally sourced fruits, are legendary among Marrakech visitors.\n\nBeyond the food, Le Jardin functions as a cultural space, hosting art exhibitions, book launches, and live music events. The upstairs gallery features rotating exhibitions by Moroccan and international artists, making a visit here a feast for all the senses. It is the perfect midday escape from the intensity of the souks.',
     images: [
-      'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=1200&q=80',
-      'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=1200&q=80',
-      'https://images.unsplash.com/photo-1549140600-78c9b8275e9d?w=1200&q=80',
+      '/images/hero-marrakech.webp',
+      '/images/hero-essaouira.webp',
+      '/images/hero-fes.webp',
     ],
     rating: 4.5,
     reviewCount: 2876,
@@ -118,9 +118,9 @@ const restaurants: Restaurant[] = [
     description:
       'Cafe Clock is a cultural institution in the heart of the Fes medina, occupying a beautifully restored multi-story house that has become a gathering place for travelers, artists, and locals alike. Founded by British expat Mike Richardson, the cafe is famous for its camel burger, a dish that has become so iconic it practically serves as a rite of passage for visitors to Fes.\n\nBut Cafe Clock is far more than its famous burger. The venue operates as a vibrant cultural hub, hosting traditional Gnawa music sessions, storytelling evenings, Arabic calligraphy workshops, cooking classes, and art exhibitions. The rooftop terrace offers stunning views over the medina, and the multi-level interior is decorated with eclectic art and vintage Moroccan posters.\n\nThe menu is a creative fusion of Moroccan and international flavors, with dishes designed to be approachable for visitors while celebrating local ingredients. The date milkshake is addictive, the Moroccan tapas plates are perfect for sharing, and the weekend brunch has become a beloved Fes tradition. Cafe Clock also operates a branch in Marrakech, but the Fes original remains the essential experience.',
     images: [
-      'https://images.unsplash.com/photo-1549140600-78c9b8275e9d?w=1200&q=80',
-      'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=1200&q=80',
-      'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=1200&q=80',
+      '/images/hero-fes.webp',
+      '/images/hero-marrakech.webp',
+      '/images/hero-essaouira.webp',
     ],
     rating: 4.4,
     reviewCount: 4123,
@@ -144,9 +144,9 @@ const restaurants: Restaurant[] = [
     description:
       'La Sqala is a beloved Casablanca institution set within the gardens of an 18th-century Portuguese fortified bastion near the old medina. The restaurant has been welcoming guests for decades, and its combination of historic setting, generous portions, and authentic Moroccan cuisine has made it a favorite among locals and visitors alike.\n\nThe outdoor garden dining area, shaded by ancient fig trees and fragrant with jasmine, provides one of Casablanca\'s most charming settings for a meal. In the cooler months, the interior dining rooms, with their thick stone walls and Moroccan decor, offer a cozy alternative. The atmosphere is genuinely relaxed and unhurried, a rare quality in this fast-paced commercial city.\n\nLa Sqala is particularly renowned for its traditional Moroccan breakfast, an elaborate spread of msemen flatbreads, fresh pastries, amlou (almond-argan butter), honey, olive oil, and mint tea that draws long weekend queues. The lunch and dinner menu features generous tagines, perfectly grilled meats, and fresh salads, all prepared with recipes that have been refined over generations.',
     images: [
-      'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=1200&q=80',
-      'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=1200&q=80',
-      'https://images.unsplash.com/photo-1549140600-78c9b8275e9d?w=1200&q=80',
+      '/images/hero-essaouira.webp',
+      '/images/hero-marrakech.webp',
+      '/images/hero-fes.webp',
     ],
     rating: 4.3,
     reviewCount: 3567,
@@ -170,9 +170,9 @@ const restaurants: Restaurant[] = [
     description:
       'Al Fassia holds a unique and revered position in the Moroccan dining landscape as one of the country\'s finest traditional restaurants, and notably, one that has been entirely run by women since its founding in 1987. The restaurant is a celebration of the rich culinary heritage of Fes, brought to Marrakech by a team of talented women who have dedicated their careers to preserving and perfecting the art of Moroccan gastronomy.\n\nLocated in the Gueliz neighborhood, Al Fassia offers an elegant dining experience in a space adorned with traditional Moroccan textiles, zellige tilework, and soft ambient lighting. The atmosphere is warm, sophisticated, and genuinely welcoming, reflecting the personal touch of its all-female team.\n\nThe menu is a masterclass in traditional Moroccan cuisine, with dishes prepared from recipes that have been passed down through generations. The lamb tagine, slow-cooked until impossibly tender, is legendary. The pigeon pastilla, with its delicate layers of phyllo, spiced meat, and a dusting of cinnamon and powdered sugar, is a revelation. Every dish demonstrates the depth of skill and passion that has made Al Fassia a national treasure.',
     images: [
-      'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=1200&q=80',
-      'https://images.unsplash.com/photo-1549140600-78c9b8275e9d?w=1200&q=80',
-      'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=1200&q=80',
+      '/images/hero-marrakech.webp',
+      '/images/hero-fes.webp',
+      '/images/hero-essaouira.webp',
     ],
     rating: 4.7,
     reviewCount: 2765,
@@ -196,9 +196,9 @@ const restaurants: Restaurant[] = [
     description:
       'Ocean Vagabond is the quintessential Essaouira beach restaurant, a laid-back surf shack turned stylish dining destination set directly on the golden sand beach with unobstructed Atlantic Ocean views. The restaurant embodies the free-spirited coastal lifestyle that has made Essaouira a favorite among surfers, artists, and bohemian travelers from around the world.\n\nThe open-air terrace faces directly onto the beach, where kite surfers and windsurfers perform their acrobatics against the backdrop of Essaouira\'s historic Portuguese ramparts and the Ile de Mogador. The decor is effortlessly cool: weathered wood, nautical touches, and colorful Berber textiles create a space that feels both rustic and refined.\n\nThe menu celebrates Essaouira\'s extraordinary seafood heritage, with the daily catch arriving fresh from the harbor each morning. Grilled octopus, fish tagines, and shellfish platters are prepared simply to let the quality of the ingredients shine. Beyond seafood, the restaurant offers excellent salads, sandwiches, and smoothies that fuel the active beach lifestyle. It is the perfect spot for a long, lazy lunch between surf sessions.',
     images: [
-      'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=1200&q=80',
-      'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=1200&q=80',
-      'https://images.unsplash.com/photo-1502680390548-bdbac40b3981?w=1200&q=80',
+      '/images/hero-essaouira.webp',
+      '/images/hero-marrakech.webp',
+      '/images/hero-surfing.webp',
     ],
     rating: 4.3,
     reviewCount: 1987,
@@ -222,9 +222,9 @@ const restaurants: Restaurant[] = [
     description:
       'Dar Hatim is the ultimate home-cooking experience in the Fes medina, a family-run restaurant where the matriarch of the Hatim family and her daughters prepare an ever-changing set menu of authentic Fassi cuisine in their beautifully decorated home. Dining here is not simply eating at a restaurant; it is being welcomed into a Moroccan family.\n\nThe experience begins when you are met at the medina gate and guided through the labyrinthine streets to the family\'s traditional dar (house). Inside, the dining room features gorgeous zellige tilework, carved stucco, and painted wooden ceilings. You are seated at communal tables set with elegant Moroccan pottery and silverware.\n\nThe set menu, which changes daily based on what is fresh at the souk, typically includes five or six courses of traditional Fassi specialties. Dishes like rfissa (shredded pastry with lentils and chicken), pastilla, slow-cooked tagines, and elaborate desserts represent centuries of culinary knowledge passed down through the women of Fes. The food is extraordinary, and the warmth of the family\'s hospitality makes it an unforgettable experience.',
     images: [
-      'https://images.unsplash.com/photo-1549140600-78c9b8275e9d?w=1200&q=80',
-      'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=1200&q=80',
-      'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=1200&q=80',
+      '/images/hero-fes.webp',
+      '/images/hero-marrakech.webp',
+      '/images/hero-essaouira.webp',
     ],
     rating: 4.6,
     reviewCount: 1234,
@@ -248,9 +248,9 @@ const restaurants: Restaurant[] = [
     description:
       'Le Salama is Marrakech\'s premier Moroccan fine dining destination, a spectacular multi-level palace restaurant located directly on the iconic Jemaa el-Fnaa square. The venue encompasses three distinct experiences: a ground-floor piano bar, an ornate first-floor dining room, and the legendary rooftop lounge with its unmatched views over the square\'s nightly carnival.\n\nThe interiors are nothing short of breathtaking. Every surface gleams with handcrafted zellige mosaic, carved cedar, and gilded plasterwork. Crystal chandeliers hang from painted ceilings, and the furniture is upholstered in the finest Moroccan fabrics. Dining at Le Salama feels like attending a feast at a royal palace.\n\nThe kitchen, led by a team of master chefs schooled in the traditions of Moroccan court cuisine, produces dishes of extraordinary refinement. The Royal Couscous, served on Fridays, is an elaborate ceremony of fluffy semolina, seven vegetables, and tender meats. The pastilla, encased in paper-thin warqa pastry, is among the best in the country. The evening experience, with live Andalusian music and the sounds of Jemaa el-Fnaa drifting up from below, is magical.',
     images: [
-      'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=1200&q=80',
-      'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=1200&q=80',
-      'https://images.unsplash.com/photo-1549140600-78c9b8275e9d?w=1200&q=80',
+      '/images/hero-marrakech.webp',
+      '/images/hero-kasbahs.webp',
+      '/images/hero-fes.webp',
     ],
     rating: 4.4,
     reviewCount: 2345,
@@ -274,9 +274,9 @@ const restaurants: Restaurant[] = [
     description:
       "Rick's Cafe is a loving tribute to the classic 1942 film Casablanca, brought to life by American businesswoman Kathy Kriger in a beautifully restored courtyard mansion on the Casablanca waterfront. While the film was actually shot entirely in Hollywood, Rick's Cafe has become a genuine Casablanca landmark, attracting film lovers, romantics, and curious travelers from around the world.\n\nThe interior faithfully recreates the Art Deco elegance of the film's fictional nightclub, with curved archways, brass railings, potted palms, and a central courtyard complete with a tinkling fountain. The grand piano is the centerpiece, and a live pianist performs classic standards every evening, creating an atmosphere of timeless glamour.\n\nThe menu is an international affair with Moroccan influences, featuring dishes like grilled sea bass, beef filet, and classic cocktails mixed by bartenders who take their craft seriously. While the food is good, the real draw is the atmosphere: sipping a cocktail in Rick's bar while the pianist plays \"As Time Goes By\" is one of Casablanca's most memorable experiences.",
     images: [
-      'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=1200&q=80',
-      'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=1200&q=80',
-      'https://images.unsplash.com/photo-1549140600-78c9b8275e9d?w=1200&q=80',
+      '/images/hero-essaouira.webp',
+      '/images/hero-marrakech.webp',
+      '/images/hero-fes.webp',
     ],
     rating: 4.2,
     reviewCount: 5432,
@@ -300,9 +300,9 @@ const restaurants: Restaurant[] = [
     description:
       "The Amal Women's Training Center is one of Marrakech's most heartwarming dining experiences, a social enterprise restaurant that trains disadvantaged women in professional culinary skills while serving some of the most authentic and delicious home-style Moroccan food in the city. Every meal here directly supports women in gaining economic independence and culinary expertise.\n\nLocated in the modern Gueliz neighborhood, the restaurant occupies a bright, cheerful space decorated with colorful artwork and Moroccan textiles. The atmosphere is warm and communal, with an open kitchen where you can watch the women trainees preparing dishes under the guidance of experienced mentors.\n\nThe daily set menu changes to reflect what is fresh at the market, but the quality is consistently outstanding. The Friday couscous, a massive communal platter of fluffy semolina with seven vegetables and tender meat, has achieved legendary status among Marrakech's food cognoscenti. Fresh salads, home-baked bread, and beautifully prepared tagines represent Moroccan home cooking at its very best, at prices that make this one of the best-value meals in the city.",
     images: [
-      'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=1200&q=80',
-      'https://images.unsplash.com/photo-1549140600-78c9b8275e9d?w=1200&q=80',
-      'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=1200&q=80',
+      '/images/hero-marrakech.webp',
+      '/images/hero-fes.webp',
+      '/images/hero-essaouira.webp',
     ],
     rating: 4.6,
     reviewCount: 2156,
@@ -326,9 +326,9 @@ const restaurants: Restaurant[] = [
     description:
       "Cafe Hafa is one of the most legendary cafes in all of Morocco, clinging to the cliff edge of Tangier's Marshan district with a series of terraced platforms that cascade down toward the Strait of Gibraltar. Since 1921, this unassuming clifftop cafe has been a gathering place for poets, artists, musicians, and dreamers drawn by its extraordinary location and timeless atmosphere.\n\nThe Rolling Stones, The Beatles, Paul Bowles, Tennessee Williams, and Jack Kerouac all sat on these very same terraces, sipping mint tea while gazing across the strait to Spain. The cafe has changed remarkably little since those days: simple blue tables and chairs, whitewashed walls, and no menu beyond mint tea and simple snacks. The simplicity is the point.\n\nWhat makes Cafe Hafa truly special is the view and the feeling. Sitting on the lowest terrace with a glass of sweet mint tea, watching the cargo ships traverse the strait while the sun sets over the Atlantic and the Mediterranean, is one of Morocco's most transcendent travel moments. This is not a place to eat; it is a place to simply be.",
     images: [
-      'https://images.unsplash.com/photo-1553522991-71439aa3bf8c?w=1200&q=80',
-      'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=1200&q=80',
-      'https://images.unsplash.com/photo-1549140600-78c9b8275e9d?w=1200&q=80',
+      '/images/hero-tangier-kasbah.webp',
+      '/images/hero-essaouira.webp',
+      '/images/hero-fes.webp',
     ],
     rating: 4.5,
     reviewCount: 3876,
@@ -352,9 +352,9 @@ const restaurants: Restaurant[] = [
     description:
       "Chez Lamine Hadj Mustapha is the undisputed king of tangia in Marrakech, a legendary hole-in-the-wall restaurant that has been serving this slow-cooked delicacy since the 1960s. Tangia is Marrakech's signature dish, a clay pot filled with lamb or beef, spices, and preserved lemon, sealed with parchment paper and slow-cooked for hours in the embers of the local hammam's furnace.\n\nThe restaurant itself is wonderfully unpretentious: a simple counter, a few tables, and the tantalizing aroma of meat that has been slowly braising for eight to twelve hours. The staff are efficient and friendly, and the ritual of cracking open a sealed tangia pot to reveal the impossibly tender, fall-off-the-bone meat within never gets old, even for locals who have been coming for decades.\n\nChez Lamine is not just a restaurant; it is a living piece of Marrakech's culinary heritage. The tangia tradition is tied to the city's bachelor craftsmen, who would prepare their pots in the morning and drop them at the hammam to cook while they worked. Today, Chez Lamine keeps this tradition alive, producing what many consider the finest tangia in the city at prices that seem impossibly low.",
     images: [
-      'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=1200&q=80',
-      'https://images.unsplash.com/photo-1549140600-78c9b8275e9d?w=1200&q=80',
-      'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=1200&q=80',
+      '/images/hero-marrakech.webp',
+      '/images/hero-fes.webp',
+      '/images/hero-essaouira.webp',
     ],
     rating: 4.7,
     reviewCount: 3245,

@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/visa',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=1200&h=630&fit=crop',
+        url: '/images/hero-marrakech.webp',
         width: 1200,
         height: 630,
         alt: 'Moroccan passport control and airport',
@@ -490,7 +490,7 @@ export default function VisaPage() {
       <section className="relative overflow-hidden bg-[var(--color-primary-900)] text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=1600&q=80"
+            src="/images/hero-marrakech.webp"
             alt="Moroccan airport and travel"
             className="absolute inset-0 w-full h-full object-cover"
           />

@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/football',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1200&h=630&fit=crop',
+        url: '/images/hero-morocco.webp',
         width: 1200,
         height: 630,
         alt: 'Football in Morocco - Stadium atmosphere',
@@ -186,7 +186,7 @@ const stadiums = [
     city: 'Casablanca',
     capacity: '67,000',
     teams: 'Wydad AC, Raja CA',
-    image: 'https://images.unsplash.com/photo-1522778119026-d647f0596c20?q=80&w=800',
+    image: '/images/hero-morocco.webp',
     description:
       'The beating heart of Moroccan football. Home to Africa\'s fiercest derby between Wydad and Raja, this iconic stadium has hosted countless historic matches and is the most electric venue in the country.',
     howToGetThere: 'Take the Casablanca tramway to Stade Mohammed V station, or taxi from Casa Voyageurs train station (15 min).',
@@ -196,7 +196,7 @@ const stadiums = [
     city: 'Rabat',
     capacity: '53,000',
     teams: 'AS FAR, FUS Rabat',
-    image: 'https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800',
+    image: '/images/hero-morocco.webp',
     description:
       'The national stadium and home of the Atlas Lions for major internationals. Located in the capital, it offers a grand setting for both league matches and high-profile fixtures.',
     howToGetThere: 'Accessible via Rabat tramway or a short taxi ride from Rabat Agdal train station.',
@@ -206,7 +206,7 @@ const stadiums = [
     city: 'Marrakech',
     capacity: '45,000',
     teams: 'Kawkab Marrakech, Chabab Atlas',
-    image: 'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=800',
+    image: '/images/hero-marrakech.webp',
     description:
       'A modern arena set against the backdrop of the Atlas Mountains. Built to international standards, it regularly hosts AFCON qualifiers, CAF Champions League matches, and major cultural events.',
     howToGetThere: 'Located near Menara district. Take a petit taxi from Jemaa el-Fnaa (20 min) or bus line 19.',
@@ -216,7 +216,7 @@ const stadiums = [
     city: 'Tangier',
     capacity: '65,000',
     teams: 'Ittihad Tanger, MAS',
-    image: 'https://images.unsplash.com/photo-1551958219-acbc608c6377?q=80&w=800',
+    image: '/images/hero-morocco.webp',
     description:
       'One of the largest and most modern stadiums in Africa. Named after the famous Tangier-born explorer, it features world-class facilities and has hosted FIFA Club World Cup matches.',
     howToGetThere: 'Take the city bus or taxi from Tangier Ville train station (25 min). Ample parking available.',
@@ -226,7 +226,7 @@ const stadiums = [
     city: 'Casablanca',
     capacity: '93,000',
     teams: '2030 World Cup Venue',
-    image: 'https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?q=80&w=800',
+    image: '/images/hero-morocco.webp',
     description:
       'Morocco\'s crown jewel, currently under construction for the 2030 FIFA World Cup. When completed, it will be the largest stadium in Africa and one of the largest in the world, featuring a retractable roof and cutting-edge design.',
     howToGetThere: 'Will be served by a new tramway extension and dedicated transport links. Located in the south of Casablanca.',
@@ -236,7 +236,7 @@ const stadiums = [
     city: 'Agadir',
     capacity: '45,000',
     teams: 'Hassania Agadir',
-    image: 'https://images.unsplash.com/photo-1459865264687-595d652de67e?q=80&w=800',
+    image: '/images/hero-morocco.webp',
     description:
       'A stunning seaside stadium in the sunny resort city of Agadir. Watching a match here is a unique experience &mdash; you can feel the Atlantic breeze and catch glimpses of the ocean from the upper tiers.',
     howToGetThere: 'Short taxi ride from Agadir city center (10 min). Close to the beach and main tourist hotels.',
@@ -246,7 +246,7 @@ const stadiums = [
     city: 'Fes',
     capacity: '45,000',
     teams: 'MAS Fes, Wydad Fes',
-    image: 'https://images.unsplash.com/photo-1489944440615-453fc2b6a9a9?q=80&w=800',
+    image: '/images/hero-fes.webp',
     description:
       'Located in Morocco\'s spiritual capital, this modern complex sits in contrast to the ancient medina nearby. Fes fans are known for their passion and intellectual approach to the beautiful game.',
     howToGetThere: 'Taxi from Fes train station (20 min). City bus routes 16 and 29 serve the stadium area.',
@@ -256,7 +256,7 @@ const stadiums = [
     city: 'Tetouan',
     capacity: '35,000',
     teams: 'Moghreb Tetouan',
-    image: 'https://images.unsplash.com/photo-1518604666860-9ed391f76460?q=80&w=800',
+    image: '/images/hero-morocco.webp',
     description:
       'Nestled in the foothills of the Rif Mountains, Tetouan\'s stadium offers an intimate atmosphere. The city\'s Andalusian heritage infuses the fan culture with a distinctive character found nowhere else in Morocco.',
     howToGetThere: 'Walking distance from Tetouan city center. Take a grand taxi from Tangier (1 hour) for day trips.',
@@ -342,49 +342,49 @@ const legends = [
     position: 'Right-Back',
     clubs: 'Real Madrid, Borussia Dortmund, Inter Milan, Paris Saint-Germain',
     achievement: 'Key player in Morocco\'s 2022 World Cup semi-final run. One of the best full-backs in the world, known for his blistering pace and attacking prowess.',
-    image: 'https://images.unsplash.com/photo-1560272564-c83b66b1ad12?q=80&w=400',
+    image: '/images/hero-morocco.webp',
   },
   {
     name: 'Hakim Ziyech',
     position: 'Winger / Attacking Midfielder',
     clubs: 'Ajax, Chelsea, Galatasaray',
     achievement: 'The creative maestro of Moroccan football. His left foot is considered one of the most gifted in world football, capable of delivering devastating crosses and long-range strikes.',
-    image: 'https://images.unsplash.com/photo-1553778263-73a83bab9b0c?q=80&w=400',
+    image: '/images/hero-morocco.webp',
   },
   {
     name: 'Yassine Bounou (Bono)',
     position: 'Goalkeeper',
     clubs: 'Girona, Sevilla, Al-Hilal',
     achievement: 'Hero of the 2022 World Cup with sensational saves against Spain and Portugal. Winner of the 2023 UEFA Europa League with Sevilla, cementing his status as a world-class goalkeeper.',
-    image: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=400',
+    image: '/images/hero-morocco.webp',
   },
   {
     name: 'Sofiane Boufal',
     position: 'Winger',
     clubs: 'Lille, Southampton, Celta Vigo, Al-Rayyan',
     achievement: 'Known for his mesmerizing dribbling skills. His iconic celebration dancing with his mother after Morocco\'s historic World Cup win over Portugal became one of the tournament\'s defining images.',
-    image: 'https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&w=400',
+    image: '/images/hero-morocco.webp',
   },
   {
     name: 'Noussair Mazraoui',
     position: 'Left-Back / Right-Back',
     clubs: 'Ajax, Bayern Munich, Manchester United',
     achievement: 'A versatile and technically gifted defender who can play on either flank. Mazraoui was instrumental in Morocco\'s defensive solidity during the 2022 World Cup.',
-    image: 'https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?q=80&w=400',
+    image: '/images/hero-morocco.webp',
   },
   {
     name: 'Azzedine Oughahi',
     position: 'Midfielder (Historic)',
     clubs: 'FAR Rabat, French league clubs',
     achievement: 'A pioneer of Moroccan football who helped establish the national team\'s reputation in the 1970s and 1980s. Oughahi represents the golden era that laid the foundation for today\'s success.',
-    image: 'https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?q=80&w=400',
+    image: '/images/hero-morocco.webp',
   },
   {
     name: 'Mustapha Hadji',
     position: 'Attacking Midfielder',
     clubs: 'Sporting CP, Deportivo La Coruna, Coventry City, Aston Villa',
     achievement: 'African Footballer of the Year 1998. A magician on the pitch, Hadji was Morocco\'s creative heartbeat during the late 1990s and early 2000s, inspiring a generation of Moroccan players.',
-    image: 'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=400',
+    image: '/images/hero-morocco.webp',
   },
 ];
 
@@ -490,7 +490,7 @@ export default function FootballPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=2800)',
+              'url(/images/hero-morocco.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />
@@ -784,7 +784,7 @@ export default function FootballPage() {
             <div className="grid grid-cols-1 md:grid-cols-2">
               <div className="relative h-64 md:h-auto overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?q=80&w=800"
+                  src="/images/hero-morocco.webp"
                   alt="Casablanca Derby - Wydad vs Raja - The biggest derby in Africa"
                   className="w-full h-full object-cover"
                   loading="lazy"
@@ -1087,7 +1087,7 @@ export default function FootballPage() {
             <div className="relative">
               <div className="card-moroccan overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&w=800"
+                  src="/images/flyer-worldcup2030.webp"
                   alt="Morocco national football team fans celebrating"
                   className="w-full h-80 object-cover"
                   loading="lazy"
@@ -1113,7 +1113,7 @@ export default function FootballPage() {
             <div className="lg:col-span-1">
               <div className="card-moroccan overflow-hidden h-full">
                 <img
-                  src="https://images.unsplash.com/photo-1551958219-acbc608c6377?q=80&w=800"
+                  src="/images/flyer-worldcup2030.webp"
                   alt="Street football in Morocco - children playing in a neighborhood"
                   className="w-full h-full object-cover min-h-[300px]"
                   loading="lazy"

@@ -31,7 +31,7 @@ const restaurants = [
     slug: 'le-dhow',
     description:
       'A one-of-a-kind dining experience aboard a beautifully restored traditional wooden dhow boat moored on the Bou Regreg river between Rabat and Sale. The floating restaurant serves refined Moroccan and international cuisine with spectacular views of the illuminated Kasbah of the Udayas at night. The multi-level vessel features a lounge bar on the lower deck and an open-air dining terrace above. Sunset cocktails here are an unforgettable Rabat experience.',
-    image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=800',
+    image: '/images/photo-moroccan-feast.webp',
     rating: 4.5,
     priceRange: '200-450 MAD',
     hours: '12:00 PM - 3:00 PM, 7:00 PM - 12:00 AM daily',
@@ -43,7 +43,7 @@ const restaurants = [
     slug: 'dar-zaki',
     description:
       'A beloved traditional Moroccan restaurant tucked away in a beautifully restored riad in the medina. Famous for its slow-cooked tagines and the best pastilla in Rabat, Dar Zaki offers an authentic dining experience with hand-painted zellij tiles, carved stucco walls, and the scent of orange blossoms from the courtyard fountain. The lamb tagine with caramelized pears and cinnamon is the signature dish, and the portions are generous.',
-    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800',
+    image: '/images/photo-moroccan-feast.webp',
     rating: 4.6,
     priceRange: '120-250 MAD',
     hours: '12:00 PM - 3:00 PM, 7:00 PM - 10:30 PM (Closed Mondays)',
@@ -55,7 +55,7 @@ const restaurants = [
     slug: 'cosmopolitan',
     description:
       'A stylish contemporary restaurant in the Agdal district that has become a favorite among Rabat\'s cosmopolitan crowd. The menu is a creative fusion of Mediterranean and Moroccan flavors, with dishes like harissa-spiced tuna tartare and saffron risotto with local seafood. The minimalist interior features local artwork, and the outdoor terrace is perfect for warm evenings. Their weekend brunch is considered one of the best in the city.',
-    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800',
+    image: '/images/photo-moroccan-feast.webp',
     rating: 4.3,
     priceRange: '150-350 MAD',
     hours: '12:00 PM - 11:00 PM daily',
@@ -67,7 +67,7 @@ const restaurants = [
     slug: 'paul',
     description:
       'The Rabat outpost of the renowned French bakery and brasserie chain, located in the upscale Hassan district. While it is an international brand, the Rabat location is exceptionally well-run with fresh-baked croissants, artisan breads, and a full French brasserie menu. Popular for breakfast meetings and leisurely lunches, the terrace overlooks a tree-lined boulevard. The croque monsieur and quiche lorraine are perfectly executed, and the pastry selection is outstanding.',
-    image: 'https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?q=80&w=800',
+    image: '/images/photo-moroccan-feast.webp',
     rating: 4.1,
     priceRange: '80-200 MAD',
     hours: '7:00 AM - 10:00 PM daily',
@@ -79,7 +79,7 @@ const restaurants = [
     slug: 'la-mamma',
     description:
       'Rabat\'s best-loved Italian restaurant, serving wood-fired pizzas and handmade pasta in a warm, family-friendly atmosphere for over two decades. The owner, originally from Naples, sources many ingredients directly from Italy while incorporating the freshest local Moroccan produce. The pizza margherita with buffalo mozzarella and the seafood linguine with Oualidia oysters are standout dishes. The bustling atmosphere and reasonable prices make it perennially popular.',
-    image: 'https://images.unsplash.com/photo-1600891964599-f61ba0e24092?q=80&w=800',
+    image: '/images/photo-moroccan-feast.webp',
     rating: 4.4,
     priceRange: '90-200 MAD',
     hours: '12:00 PM - 3:00 PM, 7:00 PM - 11:00 PM daily',
@@ -91,7 +91,7 @@ const restaurants = [
     slug: 'ty-potes',
     description:
       'A charming French-Breton creperie and wine bar that has carved out a loyal following in the Agdal neighborhood. The menu features both savory galettes made with organic buckwheat flour and sweet crepes with inventive fillings. Standouts include the galette with goat cheese, honey, and walnuts, and the crepe suzette flambeed at your table. The intimate, rustic-chic interior and carefully curated French wine list create a cozy dining atmosphere.',
-    image: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=800',
+    image: '/images/photo-moroccan-feast.webp',
     rating: 4.3,
     priceRange: '70-160 MAD',
     hours: '12:00 PM - 3:00 PM, 7:00 PM - 10:30 PM (Closed Sundays)',
@@ -103,7 +103,7 @@ const restaurants = [
     slug: 'restaurant-de-la-plage',
     description:
       'Situated right on the beach in the Kasbah district, this seafood restaurant offers the freshest catch with an unbeatable ocean view. Fish is displayed on ice for you to choose from and then grilled, fried, or prepared in a tagine to your preference. The grilled prawns, fried calamari, and fish chermoula are local favorites. The casual atmosphere with plastic chairs and paper tablecloths keeps prices accessible despite the prime location.',
-    image: 'https://images.unsplash.com/photo-1534604973900-c43ab4c2e0ab?q=80&w=800',
+    image: '/images/photo-moroccan-feast.webp',
     rating: 4.2,
     priceRange: '80-180 MAD',
     hours: '11:00 AM - 9:00 PM daily',
@@ -115,7 +115,7 @@ const restaurants = [
     slug: 'le-pietri',
     description:
       'An institution in Rabat\'s diplomatic quarter, Le Pietri is an elegant art-deco inspired restaurant and bar known for its sophisticated atmosphere and reliable French-Moroccan cuisine. Popular with diplomats, business executives, and well-heeled locals, the menu features classic dishes like duck magret with fig sauce and Moroccan-spiced lamb rack. The long mahogany bar is perfect for after-work drinks, and live music plays on Thursday and Friday evenings.',
-    image: 'https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=800',
+    image: '/images/photo-moroccan-feast.webp',
     rating: 4.4,
     priceRange: '200-400 MAD',
     hours: '12:00 PM - 3:00 PM, 7:00 PM - 12:00 AM daily',
@@ -157,7 +157,7 @@ export default function RabatRestaurantsPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1553522991-71439aa1ccaf?q=80&w=2800)',
+              'url(/images/photo-moroccan-feast.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

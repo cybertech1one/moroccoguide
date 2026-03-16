@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1553522991-71439aa62779?w=2800&q=80',
+        url: '/images/hero-asilah-aerial.webp',
         width: 2800,
         height: 1600,
         alt: 'Asilah medina with colorful murals and whitewashed walls, Morocco',
@@ -91,7 +91,7 @@ export default function AsilahPage() {
       name: 'Medina Murals',
       description:
         'The whitewashed walls of Asilah\'s medina serve as a rotating open-air gallery. Every summer during the Asilah Arts Festival, artists from around the world paint new murals on the walls, transforming the ancient streets into a living, breathing art exhibition.',
-      image: 'https://images.unsplash.com/photo-1553522991-71439aa62779?w=800&q=80',
+      image: '/images/hero-asilah-aerial.webp',
       type: 'Street Art',
       rating: 4.9,
     },
@@ -99,7 +99,7 @@ export default function AsilahPage() {
       name: 'Portuguese Ramparts',
       description:
         'Massive 15th-century fortification walls built by the Portuguese that still encircle the old medina. Walk along the top for sweeping Atlantic views, dramatic sunset vistas, and a sense of the centuries of history these walls have witnessed.',
-      image: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&q=80',
+      image: '/images/hero-asilah-aerial.webp',
       type: 'Fortress',
       rating: 4.7,
     },
@@ -107,7 +107,7 @@ export default function AsilahPage() {
       name: 'Paradise Beach',
       description:
         'A wide, uncrowded stretch of golden sand south of the medina, lapped by gentle Atlantic rollers. Far quieter than the beaches of Tangier or Agadir, it is the kind of beach where you can spread out and hear nothing but waves and seabirds.',
-      image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80',
+      image: '/images/hero-asilah-aerial.webp',
       type: 'Beach',
       rating: 4.6,
     },
@@ -115,7 +115,7 @@ export default function AsilahPage() {
       name: 'Centre Hassan II',
       description:
         'A cultural center that hosts the annual Asilah Arts Festival and year-round exhibitions, concerts, and literary events. The beautifully restored complex includes galleries, performance spaces, and gardens that pulse with creative energy.',
-      image: 'https://images.unsplash.com/photo-1548018560-c7196e5c3689?w=800&q=80',
+      image: '/images/hero-asilah-aerial.webp',
       type: 'Cultural Center',
       rating: 4.5,
     },
@@ -123,7 +123,7 @@ export default function AsilahPage() {
       name: 'Raissouni Palace',
       description:
         'A grand early 20th-century palace built by the famous bandit-turned-governor Raissouni, featuring ocean-facing terraces, ornate reception rooms, and stories of intrigue that rival any novel. Now used for cultural events during the festival season.',
-      image: 'https://images.unsplash.com/photo-1585155770913-5f63ce1c5d78?w=800&q=80',
+      image: '/images/hero-asilah-aerial.webp',
       type: 'Palace',
       rating: 4.4,
     },
@@ -160,7 +160,7 @@ export default function AsilahPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1553522991-71439aa62779?w=2800&q=80)',
+              'url(/images/hero-asilah-aerial.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

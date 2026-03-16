@@ -59,10 +59,10 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/solo-travel',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1200&h=630&fit=crop',
+        url: '/images/hero-desert.webp',
         width: 1200,
         height: 630,
-        alt: 'Solo traveler in Morocco desert',
+        alt: 'Solo traveler exploring the golden Sahara Desert dunes in Morocco',
       },
     ],
   },
@@ -94,7 +94,7 @@ const soloCities = [
       'The most popular starting point for solo travelers. Abundant hostels, organized tours, and an overwhelming array of experiences. Can feel intense at first but rewards those who push through.',
     pros: ['Huge traveler community', 'Endless things to do', 'Great hostel scene', 'Easy to join group tours'],
     cons: ['Can feel overwhelming initially', 'More persistent touts than other cities'],
-    image: 'https://images.unsplash.com/photo-1597212618440-806262de4f6b?q=80&w=800',
+    image: '/images/hero-morocco.webp',
   },
   {
     name: 'Essaouira',
@@ -103,7 +103,7 @@ const soloCities = [
       'The best city in Morocco for solo travelers. Laid-back atmosphere, compact medina that is impossible to get truly lost in, friendly locals, and a thriving surf and art community that welcomes newcomers.',
     pros: ['Very relaxed vibe', 'Easy to navigate', 'Active surf community', 'Extremely friendly'],
     cons: ['Smaller, fewer activities than Marrakech', 'Can be windy'],
-    image: 'https://images.unsplash.com/photo-1560437091-4383266ac31b?q=80&w=800',
+    image: '/images/hero-fes-tanneries.webp',
   },
   {
     name: 'Chefchaouen',
@@ -112,7 +112,7 @@ const soloCities = [
       'The blue city is a solo traveler haven. Small, walkable, photogenic, and incredibly safe. The hiking trails and relaxed cafe culture make it easy to spend days here decompressing.',
     pros: ['Extremely safe and calm', 'Perfect for photography', 'Great hiking nearby', 'Budget-friendly'],
     cons: ['Remote location', 'Limited nightlife'],
-    image: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?q=80&w=800',
+    image: '/images/hero-chefchaouen.webp',
   },
   {
     name: 'Fes',
@@ -121,7 +121,7 @@ const soloCities = [
       'The cultural capital of Morocco with the world\'s most complex medina. Navigation can be challenging solo, but the cultural rewards are immense. Hiring a guide for your first day is recommended.',
     pros: ['Deepest cultural experience', 'Incredible food scene', 'Less touristy than Marrakech', 'Authentic medina life'],
     cons: ['Easy to get lost in medina', 'More aggressive touts in places'],
-    image: 'https://images.unsplash.com/photo-1545041552-c7bf3e2daaee?q=80&w=800',
+    image: '/images/hero-camping.webp',
   },
   {
     name: 'Rabat',
@@ -130,7 +130,7 @@ const soloCities = [
       'Morocco\'s capital is clean, organized, and cosmopolitan. It lacks the tourist infrastructure of Marrakech but offers an authentic glimpse into modern Moroccan life with a welcoming, non-pushy atmosphere.',
     pros: ['Modern and organized', 'No tourist hassle', 'Great museums', 'Beach access'],
     cons: ['Fewer backpacker hostels', 'Less dramatic scenery'],
-    image: 'https://images.unsplash.com/photo-1570698473651-b2de99bae12f?q=80&w=800',
+    image: '/images/hero-marrakech.webp',
   },
   {
     name: 'Taghazout',
@@ -139,7 +139,7 @@ const soloCities = [
       'A small surf village north of Agadir that has become a magnet for solo travelers and digital nomads. The surf-and-yoga lifestyle creates an instant community, and the village is small enough to feel like home within a day.',
     pros: ['Instant surf community', 'Digital nomad friendly', 'Yoga and wellness scene', 'Beautiful coastline'],
     cons: ['Very small village', 'Limited cultural attractions', 'Can feel touristy in peak season'],
-    image: 'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?q=80&w=800',
+    image: '/images/hero-kasbahs.webp',
   },
 ];
 
@@ -551,7 +551,7 @@ export default function SoloTravelPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=2800)',
+              'url(/images/hero-desert.webp',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />
@@ -638,7 +638,7 @@ export default function SoloTravelPage() {
                 <div className="md:w-1/3 relative h-56 md:h-auto">
                   <img
                     src={city.image}
-                    alt={city.name}
+                    alt={`${city.name} - solo travel destination in Morocco`}
                     className="w-full h-full object-cover"
                     loading="lazy"
                   />

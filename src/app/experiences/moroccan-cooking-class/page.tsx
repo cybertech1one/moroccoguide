@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/experiences/moroccan-cooking-class',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1541518763-42d16cdaafd6?w=1200&h=630&fit=crop',
+        url: '/images/photo-cooking-class.webp',
         width: 1200,
         height: 630,
         alt: 'Moroccan cooking class with traditional tagine pots and fresh ingredients',
@@ -102,28 +102,28 @@ const dishes = [
     time: '45-60 min prep',
     description:
       'The crown jewel of Moroccan cuisine, named after the conical clay pot in which it slowly simmers. You will learn the art of layering spices, proteins, and vegetables in precise order so they meld into something far greater than the sum of their parts. Most classes teach chicken tagine with preserved lemons and olives (the most iconic version) alongside a lamb tagine with prunes and almonds. The secret lies in the low, slow heat that the clay pot provides -- and the patience to let it work its magic. You will discover how a handful of humble ingredients, treated with respect and time, become a dish that has sustained Moroccan families for centuries.',
-    image: 'https://images.unsplash.com/photo-1541518763669-27fef04b14ea?q=80&w=600',
+    image: '/images/hero-food.webp',
   },
   {
     name: 'Couscous',
     time: '90 min (3 steamings)',
     description:
       'Hand-rolling couscous is a meditative, deeply satisfying process that connects you directly to generations of Moroccan women who have performed this ritual every Friday for centuries. You begin with dry semolina, adding water and olive oil gradually while rolling the grains between your palms until they achieve the perfect tiny, uniform size. The grains are then steamed three times over a fragrant broth in a couscoussier, fluffed by hand between each steaming. The result is incomparably lighter and more flavorful than anything from a box. In Morocco, couscous is far more than food -- it is the dish of community, served every Friday after prayers and at every celebration.',
-    image: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=600',
+    image: '/images/photo-moroccan-feast.webp',
   },
   {
     name: 'Pastilla (B\'stilla)',
     time: '75 min',
     description:
       'Pastilla is the supreme achievement of Moroccan culinary art -- a dish so complex and refined that it was once reserved for royal banquets and wedding feasts. Layer upon layer of warqa (paper-thin pastry, similar to phyllo but handmade) are filled with shredded pigeon or chicken that has been cooked with saffron, ginger, and cinnamon, then mixed with caramelized onions and toasted almonds. The assembled pie is baked until golden, then dusted with powdered sugar and cinnamon. The interplay of sweet, savory, crispy, and tender in a single bite is revelatory. Making warqa from scratch is a skill that takes years to master, but your chef will demonstrate the technique.',
-    image: 'https://images.unsplash.com/photo-1511690743698-d9d18f7e20f1?q=80&w=600',
+    image: '/images/photo-pastilla.webp',
   },
   {
     name: 'Msemmen',
     time: '30 min',
     description:
       'These square, layered Moroccan flatbreads are one of the first things you will smell each morning in any Moroccan neighborhood -- the irresistible aroma of buttery, flaky dough cooking on a flat griddle. The technique involves stretching a ball of dough paper-thin on an oiled surface (so thin you can see through it), then folding it into a square with layers of butter and fine semolina between each fold. When cooked, the exterior is crispy and golden while the interior remains soft and layered like a savory croissant. Msemmen is served for breakfast with honey and butter, or alongside tagine to soak up the sauce. Once you master the stretching technique, you will make these at home regularly.',
-    image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=600',
+    image: '/images/photo-pastilla.webp',
   },
 ];
 
@@ -192,21 +192,21 @@ const relatedExperiences = [
   {
     title: 'Sahara Desert Glamping',
     slug: '/experiences/sahara-glamping',
-    image: 'https://images.unsplash.com/photo-1548017267-5765e9b2ccfb?w=400&q=80',
+    image: '/images/hero-sahara-sunrise.webp',
     duration: '1-3 nights',
     price: 'From $150',
   },
   {
     title: 'Traditional Hammam Ritual',
     slug: '/experiences/hammam-ritual',
-    image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&q=80',
+    image: '/images/hero-hammam-interior.webp',
     duration: '1.5-2 hours',
     price: 'From $10',
   },
   {
     title: 'Atlas Mountains Day Hike',
     slug: '/experiences/atlas-day-hike',
-    image: 'https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=400&q=80',
+    image: '/images/hero-trekking.webp',
     duration: 'Full day',
     price: 'From $40',
   },
@@ -228,7 +228,7 @@ export default function MoroccanCookingClassPage() {
       <section className="relative overflow-hidden bg-[var(--color-primary-900)] text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1541518763-42d16cdaafd6?w=1800&q=80"
+            src="/images/photo-cooking-class.webp"
             alt="Hands-on Moroccan cooking class with colorful spices and fresh ingredients"
             className="absolute inset-0 w-full h-full object-cover"
           />

@@ -33,7 +33,7 @@ const attractions = [
     slug: 'kasbah-udayas',
     description:
       'A UNESCO World Heritage Site perched on a cliff overlooking the Atlantic Ocean and the mouth of the Bou Regreg river. This 12th-century fortress was built by the Almohad dynasty and features a stunning monumental gate, whitewashed houses with blue trim reminiscent of Chefchaouen, and the serene Andalusian Gardens. The narrow streets inside are filled with artisan workshops and small cafes where you can sip tea while watching the waves crash below.',
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?q=80&w=800',
+    image: '/images/hero-hassan-mosque.webp',
     rating: 4.7,
     price: 'Free',
     hours: 'Open 24 hours (gardens 8:00 AM - 6:30 PM)',
@@ -45,7 +45,7 @@ const attractions = [
     slug: 'hassan-tower',
     description:
       'The iconic unfinished minaret of a mosque that was intended to be the largest in the world when construction began in 1195 under Sultan Yacoub al-Mansour. Standing at 44 meters tall, it was meant to reach 86 meters before the sultan\'s death halted the project. The surrounding field of 348 stone columns marks where the grand prayer hall would have stood. The tower\'s intricate carved stonework showcases the peak of Almohad architectural achievement.',
-    image: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=800',
+    image: '/images/hero-hassan-mosque.webp',
     rating: 4.8,
     price: 'Free',
     hours: 'Open 24 hours (exterior)',
@@ -57,7 +57,7 @@ const attractions = [
     slug: 'chellah-necropolis',
     description:
       'A hauntingly beautiful medieval fortified necropolis built atop the ruins of the ancient Roman city of Sala Colonia. The Merinid rulers constructed tombs, a mosque, and a madrasa here in the 14th century, now atmospheric ruins overgrown with fig trees and bougainvillea. Hundreds of storks nest in the crumbling minarets, and legend says the sacred pool is home to enchanted eels. The site offers a unique layering of Roman and Islamic history.',
-    image: 'https://images.unsplash.com/photo-1548018560-c7196e5010a0?q=80&w=800',
+    image: '/images/hero-hassan-mosque.webp',
     rating: 4.6,
     price: '70 MAD',
     hours: '8:30 AM - 6:30 PM daily',
@@ -69,7 +69,7 @@ const attractions = [
     slug: 'royal-palace',
     description:
       'The official residence of King Mohammed VI, known as Dar al-Makhzen, is an enormous complex covering over 30 hectares in the heart of Rabat. While the interior is closed to the public, the magnificent ceremonial entrance gate with its green-tiled roof, intricate brass doors, and uniformed royal guards on horseback is a spectacle in itself. The expansive mechouar (royal parade ground) is surrounded by immaculate gardens. Friday prayers bring a formal procession.',
-    image: 'https://images.unsplash.com/photo-1553522991-71439aa1ccaf?q=80&w=800',
+    image: '/images/hero-hassan-mosque.webp',
     rating: 4.3,
     price: 'Free (exterior only)',
     hours: 'Exterior viewable 24 hours',
@@ -81,7 +81,7 @@ const attractions = [
     slug: 'mohammed-vi-museum',
     description:
       'Morocco\'s first institution dedicated entirely to modern and contemporary art, opened in 2014. The museum houses a rotating collection of works by Moroccan and international artists spanning painting, sculpture, photography, and video art. The building itself is a striking piece of modern architecture with clean lines and abundant natural light. Temporary exhibitions focus on the dialogue between Moroccan artistic traditions and global contemporary movements.',
-    image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800',
+    image: '/images/hero-hassan-mosque.webp',
     rating: 4.4,
     price: '40 MAD',
     hours: '10:00 AM - 6:00 PM (Closed Tuesdays)',
@@ -93,7 +93,7 @@ const attractions = [
     slug: 'rabat-medina',
     description:
       'Smaller and more relaxed than the medinas of Fes or Marrakech, Rabat\'s old town offers an authentic shopping experience without the intense hustle. The main artery, Rue des Consuls, is lined with carpet shops, leather goods stores, and pottery vendors. The medina dates to the 17th century when Andalusian refugees settled here, bringing their architectural style. It is an excellent place for first-time visitors to Morocco to experience medina culture at a comfortable pace.',
-    image: 'https://images.unsplash.com/photo-1545071677-8e71b0d2c3c7?q=80&w=800',
+    image: '/images/hero-hassan-mosque.webp',
     rating: 4.2,
     price: 'Free',
     hours: 'Shops open 9:00 AM - 7:00 PM (most closed Sundays)',
@@ -105,7 +105,7 @@ const attractions = [
     slug: 'andalusian-gardens',
     description:
       'Nestled within the Kasbah of the Udayas, these tranquil gardens were laid out during the French Protectorate in the traditional Andalusian style. Orange and lemon trees line geometric pathways, jasmine and bougainvillea perfume the air, and the sound of birdsong replaces the bustle of the city outside. The gardens offer sweeping views of the Bou Regreg river and the neighboring city of Sale. It is the perfect place for a peaceful midday escape.',
-    image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=80&w=800',
+    image: '/images/hero-hassan-mosque.webp',
     rating: 4.5,
     price: 'Free',
     hours: '8:00 AM - 6:30 PM daily',
@@ -117,7 +117,7 @@ const attractions = [
     slug: 'mausoleum-mohammed-v',
     description:
       'A masterpiece of modern Alaouite architecture, this mausoleum houses the tombs of King Mohammed V and his two sons, King Hassan II and Prince Abdallah. The interior is breathtaking, with Italian white marble floors, hand-carved zellij tilework, gilded mahogany ceilings, and a stunning chandelier. Royal guards in traditional red and white uniforms stand at the entrance. Located adjacent to the Hassan Tower, it forms one of Rabat\'s most important memorial complexes.',
-    image: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?q=80&w=800',
+    image: '/images/hero-hassan-mosque.webp',
     rating: 4.8,
     price: 'Free',
     hours: '8:30 AM - 6:00 PM daily',
@@ -129,7 +129,7 @@ const attractions = [
     slug: 'rabat-zoo',
     description:
       'One of North Africa\'s finest zoological parks, reopened in 2012 after a major renovation. The zoo is organized by ecosystem, with sections representing the Atlas Mountains, Sahara Desert, African savanna, and tropical wetlands. Home to Atlas lions, Barbary macaques, and numerous bird species, many exhibits focus on North African and endangered species conservation. The park is beautifully landscaped with walking trails, picnic areas, and educational displays.',
-    image: 'https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?q=80&w=800',
+    image: '/images/hero-hassan-mosque.webp',
     rating: 4.1,
     price: '50 MAD (adults), 30 MAD (children)',
     hours: '10:00 AM - 6:00 PM daily',
@@ -141,7 +141,7 @@ const attractions = [
     slug: 'sale-medina',
     description:
       'Just across the Bou Regreg river from Rabat, the ancient city of Sale is often overlooked by tourists but rewards those who venture across with an authentic and untouristy medina experience. Founded in the 11th century, Sale was once a notorious base for the Barbary pirates known as the Sale Rovers. Key sights include the Medersa of Abu al-Hassan with its exquisite stucco carvings, the Grand Mosque, and the Bab Mrisa gate that once allowed ships to enter the city walls.',
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=800',
+    image: '/images/hero-hassan-mosque.webp',
     rating: 4.0,
     price: 'Free',
     hours: 'Open 24 hours',
@@ -182,7 +182,7 @@ export default function RabatAttractionsPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=2800)',
+              'url(/images/hero-hassan-mosque.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

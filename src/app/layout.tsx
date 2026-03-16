@@ -121,7 +121,7 @@ export const metadata: Metadata = {
   },
   // Verification tags for search engines and platforms
   verification: {
-    google: 'google-site-verification-token',
+    google: '7geD8QLPMHOGRyVsab5w5-L3TkdGERbygt92MYcKWCk',
     yandex: 'yandex-verification-token',
     other: {
       'msvalidate.01': 'bing-verification-token',
@@ -151,14 +151,14 @@ export const metadata: Metadata = {
         type: 'image/png',
       },
       {
-        url: 'https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=1200&h=630&fit=crop',
+        url: '/images/hero-marrakech.webp',
         width: 1200,
         height: 630,
         alt: 'Morocco travel - Marrakech medina aerial view',
         type: 'image/jpeg',
       },
       {
-        url: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?w=1200&h=630&fit=crop',
+        url: '/images/hero-chefchaouen-drone.webp',
         width: 1200,
         height: 630,
         alt: 'Chefchaouen blue streets in Morocco',
@@ -276,9 +276,7 @@ export default function RootLayout({
     >
       <head>
         {/* DNS Prefetch & Preconnect for external origins used by the site */}
-        <link rel="dns-prefetch" href="https://images.unsplash.com" />
         <link rel="dns-prefetch" href="https://upload.wikimedia.org" />
-        <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
 
         {/* Preconnect to Supabase (API + realtime) */}
         <link rel="dns-prefetch" href={`https://${process.env.NEXT_PUBLIC_SUPABASE_URL?.replace('https://', '') || ''}`} />

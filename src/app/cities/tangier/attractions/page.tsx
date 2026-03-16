@@ -33,7 +33,7 @@ const attractions = [
     slug: 'caves-of-hercules',
     description:
       'A spectacular natural cave system located at Cap Spartel, where the Atlantic Ocean meets the Mediterranean Sea. According to Greek mythology, Hercules rested here after completing his twelve labors. The cave features a famous opening shaped like the map of Africa, through which sunlight streams in during the afternoon. The interior reveals both natural formations and evidence of Phoenician-era stone quarrying.',
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?q=80&w=800',
+    image: '/images/hero-tangier-kasbah.webp',
     rating: 4.5,
     price: '60 MAD',
     hours: '9:00 AM - 6:00 PM daily',
@@ -45,7 +45,7 @@ const attractions = [
     slug: 'kasbah-museum',
     description:
       'Housed in the former Sultan\'s palace of Dar el-Makhzen, this museum sits at the highest point of the medina and offers a comprehensive journey through the region\'s history. The collection spans from prehistoric tools to Islamic art, with notable Roman mosaics from the ancient city of Volubilis. The palace itself is a masterpiece of Moroccan architecture with ornate carved ceilings, zellij tilework, and a serene Andalusian garden.',
-    image: 'https://images.unsplash.com/photo-1553522991-71439aa1ccaf?q=80&w=800',
+    image: '/images/hero-tangier-kasbah.webp',
     rating: 4.3,
     price: '20 MAD',
     hours: '9:00 AM - 4:00 PM (Closed Tuesdays)',
@@ -57,7 +57,7 @@ const attractions = [
     slug: 'petit-socco',
     description:
       'The beating heart of Tangier\'s old medina, this intimate square was once the center of the city\'s social and commercial life. In the 1950s and 60s, it was the gathering place for literary legends like Paul Bowles, William Burroughs, and Jack Kerouac. Today, its cafes still buzz with life as locals sip mint tea and tourists soak in the atmosphere of this storied intersection of cultures.',
-    image: 'https://images.unsplash.com/photo-1545071677-8e71b0d2c3c7?q=80&w=800',
+    image: '/images/hero-tangier-kasbah.webp',
     rating: 4.2,
     price: 'Free',
     hours: 'Open 24 hours',
@@ -69,7 +69,7 @@ const attractions = [
     slug: 'grand-socco',
     description:
       'Officially named Place du 9 Avril 1947, this large plaza marks the gateway between the old medina and the modern ville nouvelle. Surrounded by cinemas, cafes, and the colorful Mendoubia Gardens, it serves as Tangier\'s main gathering point. The daily market here sells everything from fresh produce to traditional clothing. The square commemorates the historic speech Sultan Mohammed V gave here advocating for Moroccan independence.',
-    image: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?q=80&w=800',
+    image: '/images/hero-tangier-kasbah.webp',
     rating: 4.0,
     price: 'Free',
     hours: 'Open 24 hours',
@@ -81,7 +81,7 @@ const attractions = [
     slug: 'cap-spartel',
     description:
       'Standing at the northwestern tip of Africa where the Atlantic and Mediterranean converge, Cap Spartel is a dramatic headland crowned by a 19th-century lighthouse. The panoramic views from here are breathtaking, with Spain visible across the Strait of Gibraltar on clear days. Below the cape, pristine beaches stretch for kilometers, offering some of the best surfing spots near Tangier. The lighthouse, built in 1864, was once maintained by an international commission.',
-    image: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=800',
+    image: '/images/hero-tangier-kasbah.webp',
     rating: 4.6,
     price: 'Free',
     hours: 'Sunrise to sunset',
@@ -93,7 +93,7 @@ const attractions = [
     slug: 'american-legation-museum',
     description:
       'The first American public property outside the United States, this historic building in the medina served as the U.S. diplomatic mission to Morocco from 1821 to 1956. Morocco was the first country to recognize American independence in 1777. Now a museum, it houses an eclectic collection including paintings by Moroccan and American artists, historical documents, and a room dedicated to Paul Bowles, the American writer who made Tangier his home.',
-    image: 'https://images.unsplash.com/photo-1548018560-c7196e5010a0?q=80&w=800',
+    image: '/images/hero-tangier-kasbah.webp',
     rating: 4.4,
     price: '20 MAD',
     hours: '10:00 AM - 5:00 PM (Mon-Fri), 10:00 AM - 3:00 PM (Sat)',
@@ -105,7 +105,7 @@ const attractions = [
     slug: 'mendoubia-gardens',
     description:
       'A lush urban oasis adjacent to the Grand Socco, these beautiful gardens were once the grounds of the Mendoub\'s palace during Tangier\'s international zone era. Towering banyan trees, some over 800 years old, create a canopy of shade over manicured paths. The gardens feature historical cannons, a monument to Moroccan independence, and benches where locals come to escape the medina\'s bustle. It is one of the most peaceful spots in the city center.',
-    image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=80&w=800',
+    image: '/images/hero-tangier-kasbah.webp',
     rating: 4.1,
     price: 'Free',
     hours: '8:00 AM - 6:30 PM daily',
@@ -117,7 +117,7 @@ const attractions = [
     slug: 'church-of-st-andrew',
     description:
       'A unique Anglican church built in 1894 in Moorish architectural style, blending Christian worship with Islamic design. The Lord\'s Prayer is inscribed in Arabic above the chancel arch, and the interior features intricate carved woodwork reminiscent of a mosque. The adjacent cemetery holds the graves of notable figures from Tangier\'s international era, including Walter Harris, the Times correspondent, and Sir Harry Maclean, a Scottish officer who served the Moroccan Sultan.',
-    image: 'https://images.unsplash.com/photo-1564769662533-4f00a87b4056?q=80&w=800',
+    image: '/images/hero-tangier-kasbah.webp',
     rating: 4.2,
     price: 'Free (donations welcome)',
     hours: '9:30 AM - 12:30 PM, 2:30 PM - 5:30 PM (Mon-Sat)',
@@ -158,7 +158,7 @@ export default function TangierAttractionsPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=2800)',
+              'url(/images/hero-tangier-kasbah.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

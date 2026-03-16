@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/honeymoon',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1548018560-c7196e91a1e2?w=1200&h=630&fit=crop',
+        url: '/images/hero-riad-interior.webp',
         width: 1200,
         height: 630,
         alt: 'Romantic riad courtyard in Marrakech with rose petals',
@@ -77,7 +77,7 @@ const romanticDestinations = [
     description:
       'Stay in a centuries-old riad with a private courtyard, plunge pool, and rooftop terrace overlooking the medina. Rose petals on the bed, candlelit dinners under the stars, and the distant call to prayer create an unforgettable atmosphere. Marrakech is Morocco\'s most popular honeymoon base and for good reason.',
     highlights: ['Private courtyard pools', 'Rooftop terrace dining', 'Traditional hammam for two', 'Rose petal turndown'],
-    image: 'https://images.unsplash.com/photo-1548018560-c7196e91a1e2?q=80&w=800',
+    image: '/images/hero-riad-interior.webp',
     priceRange: '$150 - $800/night',
   },
   {
@@ -85,7 +85,7 @@ const romanticDestinations = [
     description:
       'Sleep under a blanket of stars in a luxury desert camp among the golden dunes of Erg Chebbi near Merzouga. Private tented suites with en-suite bathrooms, four-poster beds, and private dining in the dunes make this a once-in-a-lifetime experience. The silence of the desert at night is profoundly intimate.',
     highlights: ['Private luxury tents', 'Sunset camel trek', 'Stargazing from your terrace', 'Candlelit dune dinner'],
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=800',
+    image: '/images/hero-desert.webp',
     priceRange: '$200 - $1,200/night',
   },
   {
@@ -93,7 +93,7 @@ const romanticDestinations = [
     description:
       'The windswept Atlantic coast town of Essaouira offers a laid-back, bohemian romance. Walk hand-in-hand along the ramparts at sunset, enjoy fresh seafood by the harbor, and explore art galleries in the charming medina. The cool ocean breeze is a welcome contrast to inland heat.',
     highlights: ['Beach sunset walks', 'Fresh seafood dinners', 'Boutique ocean-view riads', 'Art gallery hopping'],
-    image: 'https://images.unsplash.com/photo-1560437091-4383266ac31b?q=80&w=800',
+    image: '/images/hero-coastal.webp',
     priceRange: '$80 - $400/night',
   },
   {
@@ -101,7 +101,7 @@ const romanticDestinations = [
     description:
       'Escape to a kasbah or mountain lodge nestled in the High Atlas. Wake up to panoramic views of snow-capped peaks, take scenic hikes through Berber villages, and warm up by the fire with Moroccan mint tea. Kasbah Tamadot and Kasbah Bab Ourika offer exceptional mountain romance.',
     highlights: ['Mountain-view suites', 'Private hiking guides', 'Fireside evenings', 'Berber village visits'],
-    image: 'https://images.unsplash.com/photo-1493246507139-91e8fad9978e?q=80&w=800',
+    image: '/images/hero-atlas.webp',
     priceRange: '$100 - $600/night',
   },
   {
@@ -109,7 +109,7 @@ const romanticDestinations = [
     description:
       'Fes offers some of Morocco\'s most exquisite palace hotels, converted from centuries-old mansions. Intricate zellige tilework, carved cedar ceilings, and marble fountains surround you as you sip tea in opulent courtyards. Riad Fes and Palais Faraj are standout choices.',
     highlights: ['UNESCO medina setting', 'Palace-style architecture', 'Gourmet Fassi cuisine', 'Private guided medina tours'],
-    image: 'https://images.unsplash.com/photo-1545041552-c7bf3e2daaee?q=80&w=800',
+    image: '/images/hero-fes-tanneries.webp',
     priceRange: '$120 - $700/night',
   },
   {
@@ -117,7 +117,7 @@ const romanticDestinations = [
     description:
       'This hidden Atlantic lagoon between Casablanca and Essaouira is Morocco\'s best-kept romantic secret. La Sultana Oualidia offers overwater suites above the calm turquoise lagoon. Famous for its oyster farms, the village is blissfully quiet and perfect for couples seeking seclusion.',
     highlights: ['Overwater suites', 'Fresh oyster tastings', 'Kayaking the lagoon', 'Secluded beach walks'],
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800',
+    image: '/images/card-beach.webp',
     priceRange: '$200 - $500/night',
   },
   {
@@ -125,7 +125,7 @@ const romanticDestinations = [
     description:
       'The blue-washed mountain town of Chefchaouen is impossibly photogenic and deeply romantic. Wander blue-painted alleys hand-in-hand, watch the sunset from the Spanish Mosque hilltop, and stay in a charming guesthouse with Rif Mountain views. The pace of life here invites genuine relaxation.',
     highlights: ['Blue-painted medina', 'Mountain sunset views', 'Waterfall day trips', 'Artisan craft shopping'],
-    image: 'https://images.unsplash.com/photo-1553244695-ba57fe8f5b84?q=80&w=800',
+    image: '/images/hero-chefchaouen-drone.webp',
     priceRange: '$60 - $250/night',
   },
   {
@@ -133,7 +133,7 @@ const romanticDestinations = [
     description:
       'The Valley of Roses near Kelaat M\'Gouna produces the rose water used in riads across Morocco. Visit during the rose harvest in April-May for fields of pink Damask roses. The dramatic Dades Gorge nearby offers canyon-edge kasbahs with extraordinary views.',
     highlights: ['Rose harvest season', 'Gorge-edge kasbahs', 'Rose water distilleries', 'Dramatic canyon scenery'],
-    image: 'https://images.unsplash.com/photo-1539635278303-d4002c07eae3?q=80&w=800',
+    image: '/images/hero-dades-gorge.webp',
     priceRange: '$60 - $300/night',
   },
   {
@@ -141,7 +141,7 @@ const romanticDestinations = [
     description:
       'Just 40 minutes from Marrakech, the rocky Agafay desert offers a luxury desert experience without the long drive to the Sahara. Glamping camps like Scarabeo Camp and Inara Camp provide stylish tents with Atlas Mountain views, private pools, and candlelit dinners under vast skies.',
     highlights: ['Close to Marrakech', 'Luxury glamping', 'Atlas Mountain views', 'Private pool tents'],
-    image: 'https://images.unsplash.com/photo-1542401886-65d6c61db217?q=80&w=800',
+    image: '/images/hero-camping.webp',
     priceRange: '$250 - $800/night',
   },
   {
@@ -149,7 +149,7 @@ const romanticDestinations = [
     description:
       'Where Africa meets Europe, Tangier has a long history of attracting artists and romantics. Watch cargo ships and ferries cross the Strait of Gibraltar from a cafe terrace, dine at the legendary El Morocco Club, and stay at the newly restored El Minzah Hotel or the intimate Dar Nour.',
     highlights: ['Strait of Gibraltar views', 'Legendary cafe culture', 'Art gallery scene', 'European-Moroccan fusion'],
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?q=80&w=800',
+    image: '/images/hero-coastal.webp',
     priceRange: '$80 - $400/night',
   },
 ];

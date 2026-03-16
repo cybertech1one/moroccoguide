@@ -77,7 +77,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/crafts',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1531501410720-c8d437636169?w=1200&h=630&fit=crop',
+        url: '/images/detail-zellige-mosaic.webp',
         width: 1200,
         height: 630,
         alt: 'Moroccan artisan crafting traditional zellige tiles in Fes',
@@ -155,7 +155,7 @@ const crafts: Craft[] = [
     name: 'Zellige (Geometric Tilework)',
     arabicName: 'زليج',
     region: 'Fes',
-    image: 'https://images.unsplash.com/photo-1531501410720-c8d437636169?w=600&q=80',
+    image: '/images/detail-zellige-mosaic.webp',
     description:
       'Zellige is the art of hand-cut geometric mosaic tilework that adorns fountains, walls, floors, and courtyards across Morocco. Each tiny tile chip is individually chiseled from larger glazed terracotta squares, then assembled face-down into intricate mathematical patterns of breathtaking complexity. The craft demands years of apprenticeship and an intuitive understanding of geometry. Fes remains the undisputed capital of zellige production, where master craftsmen (maalems) work in workshops that have operated continuously for centuries.',
     history:
@@ -168,7 +168,7 @@ const crafts: Craft[] = [
     name: 'Tadelakt (Waterproof Plaster)',
     arabicName: 'تدلاكت',
     region: 'Marrakech',
-    image: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=600&q=80',
+    image: '/images/hero-hammam-interior.webp',
     description:
       'Tadelakt is a luxurious, waterproof lime plaster technique unique to Morocco, traditionally used to line the walls and floors of hammams, riads, and palaces. The plaster is made from limestone sourced near Marrakech, applied in multiple layers, and polished to a lustrous sheen using flat river stones and black soap. The result is a seamless, marble-like surface that is naturally waterproof, antibacterial, and stunningly beautiful.',
     history:
@@ -181,7 +181,7 @@ const crafts: Craft[] = [
     name: 'Leather Tanning',
     arabicName: 'الدباغة',
     region: 'Fes, Marrakech',
-    image: 'https://images.unsplash.com/photo-1517821362941-f7f753200fef?w=600&q=80',
+    image: '/images/hero-fes-tanneries.webp',
     description:
       'The leather tanneries of Fes are one of Morocco most iconic sights. The Chouara Tannery in the Fes medina has been operating since the 11th century, using the same techniques: raw animal hides are soaked in lime to remove hair, then submerged in vats of natural plant dyes including saffron (yellow), indigo (blue), poppy (red), and mint (green). Workers stand waist-deep in the stone vats, turning and kneading the leather by hand under the open sky.',
     history:
@@ -194,7 +194,7 @@ const crafts: Craft[] = [
     name: 'Carpet Weaving',
     arabicName: 'الزربية',
     region: 'Middle Atlas, High Atlas, Nationwide',
-    image: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&q=80',
+    image: '/images/art-berber-carpet-weaving.webp',
     description:
       'Moroccan carpets are among the most sought-after textiles in the world, with distinct styles varying by region and tribe. The three major types are Beni Ourain (cream-colored wool with bold black geometric patterns from the Middle Atlas), Boucherouite (colorful recycled fabric rugs from the High Atlas), and flat-woven kilims. Each rug is handmade on a traditional loom by Berber women, with patterns that encode tribal identity, spiritual protection, and personal stories.',
     history:
@@ -207,7 +207,7 @@ const crafts: Craft[] = [
     name: 'Pottery & Ceramics',
     arabicName: 'الفخار',
     region: 'Fes, Safi',
-    image: 'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=600&q=80',
+    image: '/images/photo-ceramics-pottery.webp',
     description:
       'Moroccan pottery is instantly recognizable by its vibrant colors and geometric designs. Fes is famous for its cobalt blue and white ceramics, inspired by the city centuries-old connection with Andalusia and the Middle East. Safi, on the Atlantic coast, is the other great pottery center, known for its polychrome pieces in greens, yellows, and reds. Both cities have active potters quarters where you can watch artisans throw, paint, and fire ceramics in traditional wood-burning kilns.',
     history:
@@ -220,7 +220,7 @@ const crafts: Craft[] = [
     name: 'Metalwork',
     arabicName: 'النحاس',
     region: 'Marrakech, Fes',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80',
+    image: '/images/hero-souk-lamps.webp',
     description:
       'The coppersmiths and brass workers of Morocco produce some of the most exquisite metalwork in the Islamic world. From the pierced brass lanterns that cast mesmerizing shadow patterns to ornate tea sets, trays, and door knockers, Moroccan metalwork combines functionality with extraordinary decorative artistry. In the metalworking souks of Marrakech and Fes, the rhythmic hammering of artisans fills the air as they transform flat sheets of copper and brass into three-dimensional works of art.',
     history:
@@ -233,7 +233,7 @@ const crafts: Craft[] = [
     name: 'Woodwork & Carving',
     arabicName: 'النجارة',
     region: 'Essaouira, Fes',
-    image: 'https://images.unsplash.com/photo-1590736969955-71cc94901144?w=600&q=80',
+    image: '/images/hero-essaouira.webp',
     description:
       'Morocco woodworking tradition splits into two distinct schools. Fes specializes in carved and painted cedar, used for the elaborate ceilings, doors, and screens that define Moroccan palace architecture. Essaouira is the capital of thuya wood, a rare, aromatic burl wood from the argan forest, which artisans turn into boxes, chess sets, furniture, and decorative objects using an ancient marquetry technique. The natural grain patterns of thuya create swirling, almost psychedelic designs.',
     history:
@@ -246,7 +246,7 @@ const crafts: Craft[] = [
     name: 'Silver Jewelry',
     arabicName: 'الحلي الفضية',
     region: 'Tiznit, Anti-Atlas',
-    image: 'https://images.unsplash.com/photo-1515562141589-67f0d569b41e?w=600&q=80',
+    image: '/images/hero-spices.webp',
     description:
       'Moroccan silver jewelry is primarily a Berber tradition, with designs that carry deep symbolic and protective meaning. The town of Tiznit in the Anti-Atlas is the historic capital of Moroccan silversmithing, where Jewish and Berber craftsmen developed distinctive styles featuring fibulae (large ornamental brooches), chunky bangles, talismanic pendants, and elaborate headpieces. Berber jewelry incorporates symbols of fertility, the evil eye, and natural elements like stars, moons, and geometric patterns.',
     history:
@@ -259,7 +259,7 @@ const crafts: Craft[] = [
     name: 'Babouche (Leather Slippers)',
     arabicName: 'البلغة',
     region: 'Fes, Marrakech',
-    image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80',
+    image: '/images/photo-babouche-slippers.webp',
     description:
       'The babouche is Morocco iconic leather slipper, recognized by its flat sole, pointed toe, and backless design that allows you to slip them on and off easily. Made from soft, hand-dyed leather, babouches come in every color imaginable, from classic camel and black to vivid saffron, cobalt, and fuchsia. Men traditional babouches tend to be simpler in design, while women versions may feature embroidery, sequins, or silk thread decoration.',
     history:
@@ -272,7 +272,7 @@ const crafts: Craft[] = [
     name: 'Argan Oil',
     arabicName: 'زيت أركان',
     region: 'Souss-Massa, Essaouira',
-    image: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&q=80',
+    image: '/images/photo-argan-oil-stilllife.webp',
     description:
       'Argan oil is extracted from the nuts of the argan tree, which grows only in southwestern Morocco in a UNESCO-protected biosphere reserve. There are two types: culinary argan oil (from roasted nuts, with a rich, nutty flavor used in cooking and as a bread dip) and cosmetic argan oil (from unroasted nuts, used for skin and hair care). The oil is rich in vitamin E, essential fatty acids, and antioxidants. Women cooperatives in the Souss region produce most of Morocco argan oil using traditional stone-grinding methods.',
     history:
@@ -285,7 +285,7 @@ const crafts: Craft[] = [
     name: 'Embroidery',
     arabicName: 'الطرز',
     region: 'Fes, Rabat, Sale',
-    image: 'https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=600&q=80',
+    image: '/images/art-berber-carpet-weaving.webp',
     description:
       'Moroccan embroidery is a refined art form with distinct regional styles. Fes embroidery (terz fassi) features monochrome designs in deep blue or red on white linen, with reversible stitching so precise that both sides are identical. Rabat embroidery uses bold, colorful geometric patterns on silk or cotton. Sale specializes in delicate floral cross-stitch. Embroidered items include tablecloths, cushion covers, caftans, and napkins, all painstakingly stitched by hand.',
     history:
@@ -298,7 +298,7 @@ const crafts: Craft[] = [
     name: 'Basket Weaving',
     arabicName: 'صناعة السلال',
     region: 'Nationwide, Rif, Sahara',
-    image: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=600&q=80',
+    image: '/images/hero-spices.webp',
     description:
       'Basket weaving is one of Morocco oldest and most widespread crafts, practiced across every region using locally available natural materials. In the north and Rif Mountains, artisans weave with palm leaves and doum palm. In the south, date palm fronds are the primary material. Raffia, straw, and esparto grass are also used. Products range from practical household items like bread baskets, storage containers, and shopping bags to decorative wall hangings, lampshades, and fashion accessories that have become popular worldwide.',
     history:
@@ -311,7 +311,7 @@ const crafts: Craft[] = [
     name: 'Calligraphy & Illumination',
     arabicName: 'الخط والزخرفة',
     region: 'Fes, Meknes, Marrakech',
-    image: 'https://images.unsplash.com/photo-1590076215667-875c2d20c94d?w=600&q=80',
+    image: '/images/art-moroccan-calligraphy.webp',
     description:
       'Arabic calligraphy in Morocco is a refined visual art practiced by master calligraphers (khattatine) who train for decades to achieve the flowing perfection of Maghrebi script, a distinctive North African calligraphic style with rounded, sweeping forms. Moroccan illumination (tezhib) accompanies calligraphy with intricate geometric and floral borders painted in gold leaf, lapis lazuli blue, and vegetable-based pigments. Together, these arts adorn Qurans, royal decrees, architectural inscriptions, and decorative panels found in mosques, palaces, and madrasas throughout the kingdom.',
     history:
@@ -325,7 +325,7 @@ const crafts: Craft[] = [
     name: 'Textile Dyeing',
     arabicName: 'صباغة النسيج',
     region: 'Marrakech, Fes, Ouarzazate',
-    image: 'https://images.unsplash.com/photo-1590274853856-f22d4d38b292?w=600&q=80',
+    image: '/images/hero-fes-tanneries.webp',
     description:
       'The dyers souk (souk des teinturiers) is one of the most visually spectacular sights in any Moroccan medina. Master dyers (sabbaghin) transform raw wool, cotton, and silk using an ancient palette of natural dyes extracted from plants, minerals, and insects. Saffron yields brilliant yellow, indigo produces deep blue, pomegranate rind creates gold, henna gives warm orange, and cochineal insects produce vivid crimson. The freshly dyed skeins of yarn are hung to dry on poles and lines above the narrow alleyways, creating cascading rainbows of color that have become iconic images of Morocco.',
     history:
@@ -338,7 +338,7 @@ const crafts: Craft[] = [
     name: 'Musical Instrument Making',
     arabicName: 'صناعة الآلات الموسيقية',
     region: 'Fes, Tetouan, Essaouira',
-    image: 'https://images.unsplash.com/photo-1511192336575-5a79af67a629?w=600&q=80',
+    image: '/images/art-gnawa-music.webp',
     description:
       'Morocco has a rich tradition of handcrafting musical instruments that are central to the country diverse musical heritage. The oud (a pear-shaped stringed instrument), the guembri (a three-stringed bass lute sacred to Gnawa musicians), the bendir (a large frame drum), and the rebab (a single-stringed fiddle) are all built by specialized luthiers using centuries-old techniques. Each instrument requires specific tonewoods, animal skins, and gut strings, with the guembri traditionally made from a single carved piece of walnut or mahogany covered with dromedary camel skin.',
     history:
@@ -352,7 +352,7 @@ const crafts: Craft[] = [
     name: 'Gebs (Carved Plaster)',
     arabicName: 'الجبص',
     region: 'Fes, Marrakech, Meknes',
-    image: 'https://images.unsplash.com/photo-1548018560-c7196e1eb2c2?w=600&q=80',
+    image: '/images/detail-zellige-pattern.webp',
     description:
       'Gebs is the Moroccan art of hand-carved decorative plasterwork that transforms walls, ceilings, arches, and columns into lace-like masterpieces of geometric and arabesque beauty. Working with freshly applied wet plaster, artisans use small chisels and hammers to carve intricate patterns before the material sets, requiring exceptional speed, precision, and memorized pattern knowledge. The finished surface is often whitewashed or painted in subtle earth tones, creating a layered, three-dimensional effect that plays magnificently with natural light and shadow.',
     history:
@@ -581,7 +581,7 @@ const masterArtisans: Artisan[] = [
     experience: '45+ years',
     description:
       'A fourth-generation zellige master (maalem) whose family workshop has been producing tilework since the late 19th century. Haj Ahmed is renowned for his ability to cut the most complex star patterns with sixteen or more points, a skill only a handful of living artisans possess. He has contributed to the restoration of several royal palaces and historic mosques.',
-    image: 'https://images.unsplash.com/photo-1531501410720-c8d437636169?w=400&q=80',
+    image: '/images/detail-zellige-mosaic.webp',
     specialty: '16-point star patterns and royal palace restoration',
   },
   {
@@ -592,7 +592,7 @@ const masterArtisans: Artisan[] = [
     experience: '35+ years',
     description:
       'A master weaver and co-founder of one of the first women weaving cooperatives in the High Atlas region. Fatima is celebrated for preserving ancient Ait Ouaouzguite tribal patterns that were at risk of being lost. She trains young women in traditional natural dyeing techniques using pomegranate, henna, saffron, and indigo.',
-    image: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=400&q=80',
+    image: '/images/art-berber-carpet-weaving.webp',
     specialty: 'Natural dyes and Ait Ouaouzguite tribal patterns',
   },
   {
@@ -603,7 +603,7 @@ const masterArtisans: Artisan[] = [
     experience: '30+ years',
     description:
       'One of the last master lantern makers in Marrakech who creates every piece entirely by hand, from cutting the brass sheet to piercing the intricate geometric light patterns. His workshop in the blacksmiths souk produces lanterns for luxury riads, international hotels, and private collectors. Omar apprenticed under his uncle and has trained over twenty young artisans.',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&q=80',
+    image: '/images/hero-souk-lamps.webp',
     specialty: 'Pierced geometric brass lanterns for luxury interiors',
   },
   {
@@ -614,7 +614,7 @@ const masterArtisans: Artisan[] = [
     experience: '40+ years',
     description:
       'A National Living Heritage treasure recognized by the Moroccan Ministry of Culture for her mastery of terz fassi, the centuries-old Fes embroidery tradition. Khadija specializes in the demanding technique of reversible stitching, where both sides of the fabric display identical patterns. She leads a small atelier of women artisans producing heirloom-quality tablecloths and ceremonial textiles.',
-    image: 'https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=400&q=80',
+    image: '/images/art-berber-carpet-weaving.webp',
     specialty: 'Reversible terz fassi embroidery on fine linen',
   },
   {
@@ -625,7 +625,7 @@ const masterArtisans: Artisan[] = [
     experience: '50+ years',
     description:
       'The eldest active thuya wood master in Essaouira and a founding member of the artisan cooperative near the Skala fortress. Moulay Hassan is famous for his marquetry technique, inlaying thuya burl wood with aromatic cedar, lemon wood, and mother-of-pearl to create chess sets, jewelry boxes, and decorative tables of extraordinary beauty. He has exhibited at craft fairs across Europe.',
-    image: 'https://images.unsplash.com/photo-1590736969955-71cc94901144?w=400&q=80',
+    image: '/images/hero-essaouira.webp',
     specialty: 'Multi-wood marquetry with mother-of-pearl inlay',
   },
 ];
@@ -649,7 +649,7 @@ const craftRegions: CraftRegion[] = [
       'The undisputed capital of Moroccan craftsmanship, Fes boasts the highest concentration of active artisan workshops in the country. The medina of Fes el-Bali is essentially a living museum of traditional crafts, with entire quarters devoted to single trades. Meknes adds its own specialty of Damascene metalwork.',
     specialties: ['Zellige tilework', 'Ceramics (blue & white)', 'Leather tanning', 'Embroidery', 'Calligraphy', 'Gebs plaster carving', 'Brass and copper work'],
     keyCity: 'Fes',
-    image: 'https://images.unsplash.com/photo-1549180030-48bf079c3c3e?w=500&q=80',
+    image: '/images/hero-fes.webp',
   },
   {
     region: 'Marrakech-Safi',
@@ -657,7 +657,7 @@ const craftRegions: CraftRegion[] = [
       'Marrakech is Morocco commercial craft hub, where artisans produce for both domestic and international markets. The city vast souk complex is the country busiest shopping destination. Safi, on the coast, is the pottery capital where an entire hillside is devoted to ceramic production.',
     specialties: ['Tadelakt plaster', 'Metalwork and lanterns', 'Textile dyeing', 'Safi polychrome pottery', 'Leather babouches', 'Spice blending'],
     keyCity: 'Marrakech',
-    image: 'https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=500&q=80',
+    image: '/images/hero-marrakech-koutoubia.webp',
   },
   {
     region: 'Souss-Massa & Anti-Atlas',
@@ -665,7 +665,7 @@ const craftRegions: CraftRegion[] = [
       'The southern regions are the heartland of Berber silver jewelry and argan oil production. Tiznit is the historic silversmithing capital, while women cooperatives in the argan forest zone produce the world supply of this precious oil. The region also has strong traditions in indigo textile work and leather.',
     specialties: ['Silver Berber jewelry', 'Argan oil production', 'Indigo textiles', 'Henna art', 'Berber leather goods'],
     keyCity: 'Tiznit',
-    image: 'https://images.unsplash.com/photo-1515562141589-67f0d569b41e?w=500&q=80',
+    image: '/images/hero-spices.webp',
   },
   {
     region: 'Middle & High Atlas',
@@ -673,7 +673,7 @@ const craftRegions: CraftRegion[] = [
       'The Atlas mountain communities are the source of Morocco most prized carpets and textiles. Berber women in remote villages weave rugs with patterns unique to their tribes, creating wearable art that encodes centuries of cultural identity. The town of Taznakht is the carpet-weaving capital.',
     specialties: ['Beni Ourain carpets', 'Boucherouite rugs', 'Kilim weaving', 'Wool spinning', 'Hanbel flat-weave textiles'],
     keyCity: 'Azrou / Taznakht',
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=500&q=80',
+    image: '/images/hero-atlas.webp',
   },
   {
     region: 'Essaouira & Atlantic Coast',
@@ -681,7 +681,7 @@ const craftRegions: CraftRegion[] = [
       'The windswept port city of Essaouira has a distinct artisan identity shaped by its Gnawa heritage, Portuguese influences, and the surrounding argan and thuya forests. The city is a magnet for artists, musicians, and woodworkers who give its crafts a creative, bohemian character unlike anywhere else in Morocco.',
     specialties: ['Thuya wood marquetry', 'Gnawa musical instruments', 'Raffia weaving', 'Contemporary art', 'Argan oil cosmetics'],
     keyCity: 'Essaouira',
-    image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=500&q=80',
+    image: '/images/hero-essaouira-ramparts.webp',
   },
 ];
 
@@ -913,7 +913,7 @@ export default function CraftsPage() {
       <section className="relative overflow-hidden bg-[var(--color-primary-900)] text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1531501410720-c8d437636169?w=1600&q=80"
+            src="/images/detail-zellige-mosaic.webp"
             alt="Moroccan artisan working on traditional zellige tilework in Fes workshop"
             className="absolute inset-0 w-full h-full object-cover"
           />

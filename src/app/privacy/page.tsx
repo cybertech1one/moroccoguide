@@ -206,7 +206,7 @@ export default function PrivacyPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1557672172-298e090bd0f1?q=80&w=2800)',
+              'url(/images/hero-marrakech.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

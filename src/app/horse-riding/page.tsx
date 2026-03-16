@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/horse-riding',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=1200&h=630&fit=crop',
+        url: '/images/photo-fantasia-tbourida.webp',
         width: 1200,
         height: 630,
         alt: 'Horse riding on the beach in Essaouira, Morocco at sunset',
@@ -131,7 +131,7 @@ const ridingExperiences = [
     duration: '1-3 hours',
     difficulty: 'All levels',
     difficultyColor: '#2d8a4e',
-    image: 'https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?q=80&w=800',
+    image: '/images/photo-fantasia-tbourida.webp',
     description:
       'The most popular riding experience in Morocco. Ride along wide, empty Atlantic beaches with crashing waves and golden sand stretching to the horizon. Essaouira is the undisputed capital of beach riding, with multiple operators offering rides from 1 hour to full-day excursions. At low tide, the hard-packed sand is perfect for cantering and galloping. Sunset rides are particularly magical, with the Atlantic turning copper and gold. Beginners receive gentle horses and walk along the surf line, while experienced riders can enjoy extended gallops.',
     highlights: [
@@ -152,7 +152,7 @@ const ridingExperiences = [
     duration: '2 hours to 5 days',
     difficulty: 'Intermediate to Advanced',
     difficultyColor: '#C4960C',
-    image: 'https://images.unsplash.com/photo-1548018560-c7196e66aca2?q=80&w=800',
+    image: '/images/photo-fantasia-tbourida.webp',
     description:
       'Riding through the Moroccan Sahara on horseback is a profoundly atmospheric experience. Cross rocky hamada plateaus, thread through palm oases, and ride to the base of towering sand dunes as the light shifts from gold to pink to purple. Multi-day desert rides camp under the stars in traditional bivouacs, with Berber meals cooked over open fires and traditional music around the campfire. Horses for desert riding are typically Arab-Barb crosses, bred for endurance and heat tolerance. Some desert operators also offer combined camel-and-horse treks.',
     highlights: [
@@ -173,7 +173,7 @@ const ridingExperiences = [
     duration: '2 hours to 7 days',
     difficulty: 'Intermediate to Advanced',
     difficultyColor: '#C4960C',
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=800',
+    image: '/images/hero-desert.webp',
     description:
       'The Atlas Mountains offer some of the most spectacular horse trekking in North Africa. Ride through walnut groves, past rushing rivers, up to high passes with views stretching to the Sahara, and through traditional Berber villages where life has changed little in centuries. Mountain riding demands confident riders who are comfortable on steep, rocky trails and stream crossings. The horses are mountain-bred Barbs, sure-footed and calm on precipitous paths. Multi-day treks include overnight stays in Berber guesthouses or mountain bivouacs, with home-cooked tagines and traditional hospitality.',
     highlights: [
@@ -194,7 +194,7 @@ const ridingExperiences = [
     duration: '3-7 days',
     difficulty: 'Intermediate to Advanced',
     difficultyColor: '#dc3545',
-    image: 'https://images.unsplash.com/photo-1512632578888-169bbbc64f33?q=80&w=800',
+    image: '/images/photo-fantasia-tbourida.webp',
     description:
       'For the ultimate Moroccan riding experience, multi-day treks take you deep into landscapes that are inaccessible by road. Ride through changing terrain over 3 to 7 days, sleeping under the stars or in remote Berber villages, following ancient trading routes and mountain passes. The classic multi-day treks include: the Atlantic to Atlas ride (coast to mountains in 5 days), the Roses to Saffron ride through the Ouarzazate region, and the Trans-Atlas crossing from Marrakech to the desert via mountain passes. These expeditions are life-changing experiences that combine physical challenge, natural beauty, and deep cultural immersion. All meals, camping equipment, and a support team with pack mules are included.',
     highlights: [

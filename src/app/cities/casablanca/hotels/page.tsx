@@ -33,7 +33,7 @@ const hotels = [
     type: 'Luxury Hotel',
     priceRange: '$$$$',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80',
+    image: '/images/card-riad.webp',
     description:
       'A stunning oceanfront luxury hotel with direct views of the Hassan II Mosque and the Atlantic. The resort-like property features lush gardens, multiple pools, a world-class spa, and impeccable Four Seasons service in one of the city\'s most coveted locations.',
     amenities: ['Ocean View', 'Multiple Pools', 'Spa', '3 Restaurants', 'Fitness', 'Wifi'],
@@ -43,7 +43,7 @@ const hotels = [
     type: 'Luxury Hotel',
     priceRange: '$$$$',
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80',
+    image: '/images/card-riad.webp',
     description:
       'An elegant hotel in the heart of the city center, blending Moroccan design elements with French luxury. The rooftop bar offers panoramic city views, the restaurant serves refined Moroccan-French cuisine, and the spa provides a sophisticated urban retreat.',
     amenities: ['Rooftop Bar', 'Spa', 'Restaurant', 'Pool', 'Wifi', 'Business Center'],
@@ -53,7 +53,7 @@ const hotels = [
     type: 'Business Hotel',
     priceRange: '$$$',
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80',
+    image: '/images/card-riad.webp',
     description:
       'Located on Place des Nations Unies, this centrally located hotel is ideal for both business and leisure travelers. Renovated rooms, an excellent fitness center, multiple dining options, and proximity to the Old Medina and Casa Port station make it a versatile choice.',
     amenities: ['Central Location', 'Fitness Center', 'Restaurant', 'Bar', 'Wifi', 'Meeting Rooms'],
@@ -63,7 +63,7 @@ const hotels = [
     type: 'Boutique Hotel',
     priceRange: '$$$',
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1590073242678-70ee3fc28e8e?w=800&q=80',
+    image: '/images/card-riad.webp',
     description:
       'A Relais & Chateaux boutique hotel housed in a restored 1930s Art Deco mansion, offering 16 individually designed rooms that celebrate Casablanca\'s golden age. The intimate restaurant, cocktail bar, and hammam spa make this the city\'s most characterful luxury option.',
     amenities: ['Art Deco Heritage', 'Restaurant', 'Hammam', 'Bar', 'Wifi', 'Concierge'],
@@ -73,7 +73,7 @@ const hotels = [
     type: 'Luxury Hotel',
     priceRange: '$$$',
     rating: 4.4,
-    image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80',
+    image: '/images/card-riad.webp',
     description:
       'The tallest hotel in North Africa at 28 stories, featuring dramatic city views from every room. The rooftop Sky 28 restaurant is Casablanca\'s highest dining venue, and the modern rooms offer a sleek, business-friendly aesthetic with all the expected amenities.',
     amenities: ['Sky Restaurant', 'Pool', 'Spa', 'Business Center', 'Wifi', 'Fitness'],
@@ -83,7 +83,7 @@ const hotels = [
     type: 'Upscale Hotel',
     priceRange: '$$',
     rating: 4.3,
-    image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80',
+    image: '/images/card-riad.webp',
     description:
       'A well-regarded international hotel near the Corniche and Morocco Mall, offering comfortable rooms, Swiss-style service, and excellent dining. The outdoor pool area is a welcome retreat, and the location provides easy access to both business and leisure destinations.',
     amenities: ['Pool', 'Restaurant', 'Fitness Center', 'Wifi', 'Parking', 'Kids Club'],
@@ -93,7 +93,7 @@ const hotels = [
     type: 'Mid-Range Hotel',
     priceRange: '$$',
     rating: 4.1,
-    image: 'https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80',
+    image: '/images/card-riad.webp',
     description:
       'A reliable and centrally located option in the Maarif district, close to shopping and restaurants. Modern rooms, a rooftop pool with city views, and consistent Novotel quality make this a solid choice for travelers seeking comfort without the luxury price tag.',
     amenities: ['Rooftop Pool', 'Restaurant', 'Bar', 'Wifi', 'Fitness', 'Parking'],
@@ -103,7 +103,7 @@ const hotels = [
     type: 'Modern Hotel',
     priceRange: '$$',
     rating: 4.2,
-    image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80',
+    image: '/images/card-riad.webp',
     description:
       'A contemporary hotel in the upscale Anfa district with stylish rooms, a wellness center, and multiple dining options. The modern design, outdoor pool, and proximity to the Corniche make it popular with both business travelers and weekend visitors.',
     amenities: ['Pool', 'Wellness Center', 'Restaurant', 'Bar', 'Wifi', 'Meeting Rooms'],
@@ -174,7 +174,7 @@ export default function CasablancaHotelsPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1566073771259-6a8506099945?w=2800&q=80)',
+              'url(/images/card-riad.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

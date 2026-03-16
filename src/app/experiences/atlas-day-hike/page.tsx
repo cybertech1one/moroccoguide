@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/experiences/atlas-day-hike',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=1200&h=630&fit=crop',
+        url: '/images/hero-trekking.webp',
         width: 1200,
         height: 630,
         alt: 'Trekking path through the Atlas Mountains with Berber villages below',
@@ -73,7 +73,7 @@ const jsonLd = {
   description:
     'Day hiking excursions from Marrakech into the High Atlas Mountains, featuring routes through Imlil, Toubkal base camp, and the Ourika Valley with Berber village visits.',
   url: 'https://citytoursmorocco.com/experiences/atlas-day-hike',
-  image: 'https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=1200',
+  image: '/images/hero-trekking.webp',
   address: {
     '@type': 'PostalAddress',
     addressRegion: 'Marrakech-Safi',
@@ -108,7 +108,7 @@ const routes = [
       'The most popular and accessible day hike from Marrakech, and for good reason. The gateway village of Imlil sits at 1,740 meters in a lush valley surrounded by walnut and cherry trees, with the snow-capped peak of Jebel Toubkal visible in the distance. From Imlil, well-worn trails lead through a network of traditional Berber villages -- Armed (Aroumd), Tachedirt, and Tinerhourhine -- where life has changed little in centuries. Stone and mud-brick houses cling to the hillsides, terraced fields cascade down the valleys, and irrigation channels bring snowmelt to orchards and gardens. Your guide introduces you to local families, explains Berber agricultural traditions, and stops for mint tea at a village home. The hiking is straightforward with moderate inclines, suitable for anyone with basic fitness. The drive from Marrakech takes approximately 1.5 hours, following the Tizi n\'Test road through increasingly dramatic mountain scenery.',
     highlights: ['Traditional Berber village visits', 'Mint tea with local families', 'Walnut and cherry orchards', 'Views of Jebel Toubkal', 'Traditional lunch in village home'],
     bestFor: 'Families, first-time hikers, cultural immersion',
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=800&q=80',
+    image: '/images/hero-desert.webp',
   },
   {
     name: 'Toubkal Base Camp (Refuge)',
@@ -120,7 +120,7 @@ const routes = [
       'For experienced and fit hikers seeking a serious mountain challenge within a single day, the trek from Imlil to the Toubkal refuge (3,207m) and back is one of the most rewarding day hikes in North Africa. The trail begins gently through the village of Armed, then steepens dramatically as it follows the Mizane Valley upward through increasingly barren, rocky terrain. Above the treeline, the landscape transforms into a stark alpine environment of scree slopes, snowfields (in winter and spring), and exposed ridgelines. The Toubkal refuge, operated by the Club Alpin Francais, sits in a dramatic cirque below the summit of North Africa\'s highest peak (4,167m). The views from the refuge are extraordinary -- a panorama of jagged peaks, deep valleys, and, on clear days, the distant shimmer of the Sahara. This is a demanding full-day hike requiring good fitness, proper footwear, and an early start (departure from Imlil by 7:00 AM recommended). The trail is well-marked but rocky and exposed in sections.',
     highlights: ['North Africa\'s highest mountain views', 'Alpine terrain above treeline', 'Historic mountain refuge', 'Dramatic Mizane Valley', 'Serious mountain achievement'],
     bestFor: 'Experienced hikers, fitness enthusiasts, mountain lovers',
-    image: 'https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=800&q=80',
+    image: '/images/hero-trekking.webp',
   },
   {
     name: 'Ourika Valley & Waterfalls',
@@ -132,7 +132,7 @@ const routes = [
       'The Ourika Valley is the closest mountain escape from Marrakech (just 45 minutes by car) and offers the gentlest introduction to the Atlas Mountains. The valley follows the Ourika River through a narrow gorge lined with small villages, craft shops, and riverside restaurants. The main hiking destination is the Setti Fatma waterfalls, a series of seven cascading falls that tumble down the mountainside above the village. Most visitors hike to the first two waterfalls (a moderate 30-45 minute climb on rocky paths) and enjoy lunch at one of the riverside restaurants below. Adventurous hikers can continue to the upper falls, though the path becomes more challenging and sometimes requires scrambling. The Ourika Valley is particularly beautiful in spring when the almond and cherry trees bloom, and the river runs high with snowmelt. It is also home to several organic gardens and a saffron cooperative that welcome visitors.',
     highlights: ['Setti Fatma waterfalls', 'Riverside lunch with mountain views', 'Organic garden visits', 'Saffron cooperative', 'Easy access from Marrakech'],
     bestFor: 'Families with children, casual walkers, half-day trips',
-    image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=800&q=80',
+    image: '/images/hero-desert.webp',
   },
 ];
 
@@ -221,21 +221,21 @@ const relatedExperiences = [
   {
     title: 'Sahara Desert Glamping',
     slug: '/experiences/sahara-glamping',
-    image: 'https://images.unsplash.com/photo-1548017267-5765e9b2ccfb?w=400&q=80',
+    image: '/images/hero-sahara-sunrise.webp',
     duration: '1-3 nights',
     price: 'From $150',
   },
   {
     title: 'Moroccan Cooking Class',
     slug: '/experiences/moroccan-cooking-class',
-    image: 'https://images.unsplash.com/photo-1541518763-42d16cdaafd6?w=400&q=80',
+    image: '/images/photo-cooking-class.webp',
     duration: '4-5 hours',
     price: 'From $30',
   },
   {
     title: 'Traditional Hammam Ritual',
     slug: '/experiences/hammam-ritual',
-    image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&q=80',
+    image: '/images/hero-hammam-interior.webp',
     duration: '1.5-2 hours',
     price: 'From $10',
   },
@@ -254,7 +254,7 @@ export default function AtlasDayHikePage() {
       <section className="relative overflow-hidden bg-[var(--color-primary-900)] text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=1800&q=80"
+            src="/images/hero-trekking.webp"
             alt="Hiking trail through the Atlas Mountains with Berber villages and snow-capped peaks"
             className="absolute inset-0 w-full h-full object-cover"
           />
