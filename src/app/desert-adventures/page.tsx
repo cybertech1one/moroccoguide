@@ -660,3 +660,469 @@ const safetyTips = [
       'Headscarf or buff (essential for dust), sunglasses with tight fit, sunscreen SPF 50+, lip balm with SPF, 2+ liters water bottle, light long-sleeved shirt, long pants, closed sturdy shoes, warm layer for evening, flashlight or headlamp, basic first aid kit, toilet paper, hand sanitizer, cash in small bills.',
   },
 ];
+
+/* ------------------------------------------------------------------ */
+/*  DATA: Booking Guide                                               */
+/* ------------------------------------------------------------------ */
+const bookingTips = [
+  {
+    title: 'Book Direct vs Through Hotel',
+    description:
+      'Hotels and riads add 20-40% commission on desert activities. Booking directly with operators is almost always cheaper. However, hotel-booked tours offer convenience and a layer of accountability. For standard experiences (sunset camel ride, quad biking), book direct. For multi-day 4x4 tours, the hotel can help vet operators.',
+  },
+  {
+    title: 'Comparing Operators',
+    description:
+      'Check reviews on TripAdvisor, Google, and GetYourGuide. Look for recent reviews (last 6 months). Ask specifically about vehicle condition, guide quality, and group sizes. The cheapest option is rarely the best. A 100 MAD difference often means significantly better equipment and safety standards.',
+  },
+  {
+    title: 'Red Flags to Watch For',
+    description:
+      'No safety briefing before the activity. Helmets not provided or in poor condition. Vehicles that look poorly maintained (bald tires, visible damage). Guides who pressure you to book additional services during the activity. No written confirmation or receipt. Unwillingness to show vehicle or equipment before departure.',
+  },
+  {
+    title: 'Age and Health Restrictions',
+    description:
+      'Quad biking: minimum age 16 (driver) or 6 (passenger with adult). Buggy driving: 18+ with valid license. Sandboarding: no age limit but physical fitness required for the hike. Camel riding: generally 4+ but at operator discretion. 4x4 tours: no restrictions. Motorcycle: 18+ with valid motorcycle license.',
+  },
+  {
+    title: 'Best Time to Book',
+    description:
+      'Peak season (October-April) requires booking 1-2 weeks ahead for popular activities, especially luxury glamping and multi-day 4x4 tours. Off-peak (May-September) has availability but dangerously high temperatures. Shoulder months (October and April) offer the best combination of good weather and availability.',
+  },
+  {
+    title: 'Payment and Negotiation',
+    description:
+      'Most operators accept cash (MAD) and some accept cards. Cash often gets a 5-10% discount. Negotiate respectfully but firmly. Group discounts are common for parties of 4+. Tips for guides are expected and appreciated: 50-100 MAD for a half-day guide, 100-200 MAD for full-day.',
+  },
+];
+
+/* ------------------------------------------------------------------ */
+/*  DATA: FAQ                                                         */
+/* ------------------------------------------------------------------ */
+const faqs = [
+  {
+    question: 'What is the best time of year for desert adventures in Morocco?',
+    answer: 'October through April is ideal. Temperatures are comfortable (15-30 degrees Celsius during the day) and the sky is usually clear. November and March are the sweet spot: warm days, cool nights, fewer crowds than December-January. Avoid June through August unless you can handle 45+ degree heat.',
+  },
+  {
+    question: 'Is the Sahara Desert safe for tourists?',
+    answer: "Yes. The Moroccan Sahara is safe for tourists. The areas around Merzouga, Zagora, and M'hamid are well-established tourist zones with experienced operators. The Moroccan government maintains security in desert areas. The main risks are environmental (heat, dehydration, getting lost) rather than security-related. Always go with a reputable guide for off-road activities.",
+  },
+  {
+    question: 'How far is the Sahara from Marrakech?',
+    answer: "The nearest real sand dunes (Erg Chebbi at Merzouga) are about 560km from Marrakech, roughly 9-10 hours by road. This is why most people do a 3-day tour. The Agafay Desert (rocky, no sand) is only 45 minutes from Marrakech. Erg Chigaga is about 600km via the Draa Valley route.",
+  },
+  {
+    question: 'Can I do desert activities with children?',
+    answer: 'Yes, many activities are family-friendly. Camel rides accept children from about 4 years (sharing a camel with a parent). Quad biking allows children as passengers from age 6. Sandboarding has no age limit. Glamping camps welcome families. Multi-day 4x4 tours are fine for children who can handle long drives. Buggy driving requires age 18.',
+  },
+  {
+    question: 'What is the difference between Erg Chebbi and Erg Chigaga?',
+    answer: "Erg Chebbi (Merzouga) is more accessible, better developed for tourism, with more accommodation and activity options. Dunes reach 150m. Erg Chigaga (M'hamid) is more remote, requires 4x4 access, has fewer tourists, and feels more wild and pristine. Dunes are lower but the area is larger. Choose Chebbi for convenience and variety, Chigaga for solitude and authenticity.",
+  },
+  {
+    question: 'Do I need a 4x4 to visit the desert?',
+    answer: 'To reach Merzouga town, no. The road is fully paved. But to access the dunes themselves or any off-road sites, you need a 4x4 or to join a tour. To reach Erg Chigaga, you absolutely need a 4x4 (the last 50km is across open desert with no road). Most desert activities include transport from your accommodation.',
+  },
+  {
+    question: 'How much should I budget for desert activities?',
+    answer: 'Budget tier: 200-400 MAD per activity (camel ride, basic sandboarding). Mid-range: 500-1,000 MAD per activity (quad biking, buggy tour). Premium: 1,500-5,000 MAD per night (luxury glamping). Multi-day 4x4 tour: 2,500-5,000 MAD per person for 3 days. A full desert adventure week with luxury camp costs roughly 15,000-25,000 MAD per person.',
+  },
+  {
+    question: 'Will I get cell phone reception in the desert?',
+    answer: 'In Merzouga town, yes (Maroc Telecom is best). At desert camps near the dunes, signal is weak to nonexistent. In Erg Chigaga, there is no signal at all. Luxury camps often have satellite WiFi, but it is slow. Download offline maps and notify family of your plans before departing into the desert.',
+  },
+  {
+    question: 'What should I wear for desert activities?',
+    answer: 'Long loose pants (not jeans for camel riding), a long-sleeved breathable shirt, closed sturdy shoes (not sandals for motorized activities), a headscarf or buff for dust and sun, sunglasses, and a warm layer for evening. Light colors reflect heat. Cotton or linen breathe better than synthetics in dry heat.',
+  },
+  {
+    question: 'Can I self-drive a 4x4 in the desert?',
+    answer: 'Technically yes, but it is not recommended unless you have serious off-road experience. Sand driving is a specialized skill. Getting stuck in soft sand in 45-degree heat with no phone signal is dangerous. Rental companies often void insurance for off-road damage. Hiring a local driver-guide costs 500-800 MAD per day and is vastly safer.',
+  },
+  {
+    question: 'Are the desert camps environmentally responsible?',
+    answer: 'It varies widely. Top camps like Kam Kam Dunes and Azalai use solar power, manage waste responsibly, and employ local staff. Budget camps can be problematic (litter, diesel generators, water waste). Ask about their environmental practices before booking. Erg Chigaga camps tend to be better because they are in a more protected area.',
+  },
+  {
+    question: 'How physically demanding is a camel trek?',
+    answer: 'A 1-hour sunset ride is not physically demanding at all, just uncomfortable. A full-day ride (4-6 hours) requires reasonable fitness and a tolerance for repetitive motion. Multi-day treks are genuinely challenging: saddle soreness, sun exposure, and basic camping conditions. Prepare with stretching and consider padded cycling shorts.',
+  },
+];
+
+/* ------------------------------------------------------------------ */
+/*  DATA: Best Season Matrix                                          */
+/* ------------------------------------------------------------------ */
+const seasonData = [
+  { activity: 'Quad Biking', months: [1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1] },
+  { activity: 'Sandboarding', months: [1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1] },
+  { activity: 'Buggy Tours', months: [1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1] },
+  { activity: '4x4 Expeditions', months: [1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1] },
+  { activity: 'Camel Trekking', months: [1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1] },
+  { activity: 'Desert Glamping', months: [1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1] },
+  { activity: 'Stargazing', months: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] },
+  { activity: 'Motorcycle Tours', months: [1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1] },
+  { activity: 'Agafay Activities', months: [1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1] },
+  { activity: 'Hot Air Ballooning', months: [1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1] },
+];
+
+const monthLabels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+/* ================================================================== */
+/*  PAGE COMPONENT                                                    */
+/* ================================================================== */
+
+export default function DesertAdventuresPage() {
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
+      {/* -- Hero Section -- */}
+      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+        <img
+          src="/images/hero-quad-biking.webp"
+          alt="Quad biking through golden Sahara dunes in Morocco"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="hero-overlay absolute inset-0" />
+        <div className="relative z-10 container-morocco text-center py-24">
+          <div className="inline-flex items-center gap-2 text-sm font-medium text-white/80 mb-6">
+            <Compass className="w-4 h-4" />
+            <span>Morocco Adventure Guide</span>
+          </div>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-display)] font-bold text-white mb-6 max-w-4xl mx-auto leading-tight">
+            Desert Adventures: Adrenaline in the Sahara &amp; Beyond
+          </h1>
+          <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-8 leading-relaxed">
+            From roaring quad bikes across golden dunes to silent camel treks under a billion stars,
+            Morocco&apos;s deserts offer the full spectrum of adventure. This is your complete guide
+            to every desert activity, with real prices, verified operators, and hard-won practical advice.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="#quad-biking"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-xl bg-[#A0522D] text-white font-semibold hover:bg-[#8B4726] transition-colors"
+            >
+              <Zap className="w-4 h-4" /> Explore Activities
+            </a>
+            <a
+              href="#booking-guide"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-xl border-2 border-white/60 text-white font-semibold hover:bg-white/10 transition-colors"
+            >
+              <BookOpen className="w-4 h-4" /> Booking Guide
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* -- Breadcrumb -- */}
+      <nav className="bg-[#FAF8F5] border-b border-[#EDE8E0]" aria-label="Breadcrumb">
+        <div className="container-morocco py-3">
+          <ol className="flex items-center gap-2 text-sm text-[#1A1814]/60">
+            <li>
+              <Link href="/" className="flex items-center gap-1 hover:text-[#A0522D] transition-colors">
+                <Home className="w-3.5 h-3.5" />
+                <span>Home</span>
+              </Link>
+            </li>
+            <ChevronRight className="w-3.5 h-3.5" />
+            <li>
+              <Link href="/adventure" className="hover:text-[#A0522D] transition-colors">
+                Adventure
+              </Link>
+            </li>
+            <ChevronRight className="w-3.5 h-3.5" />
+            <li className="text-[#A0522D] font-medium">Desert Adventures</li>
+          </ol>
+        </div>
+      </nav>
+
+      {/* -- Quick Navigation -- */}
+      <section className="py-8 bg-[#FAF8F5] border-b border-[#EDE8E0]">
+        <div className="container-morocco">
+          <div className="flex flex-wrap gap-3 justify-center">
+            {[
+              { label: 'Quad Biking', href: '#quad-biking', icon: Bike },
+              { label: 'Sandboarding', href: '#sandboarding', icon: Mountain },
+              { label: 'Buggy Tours', href: '#buggy-tours', icon: Car },
+              { label: '4x4 Expeditions', href: '#desert-4x4', icon: Route },
+              { label: 'Camel Trekking', href: '#camel-trekking', icon: Footprints },
+              { label: 'Glamping', href: '#glamping', icon: Tent },
+              { label: 'Stargazing', href: '#stargazing', icon: Moon },
+              { label: 'Motorcycle', href: '#motorcycle', icon: Bike },
+              { label: 'Agafay Desert', href: '#agafay', icon: Compass },
+              { label: 'Safety', href: '#safety', icon: Shield },
+            ].map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white border border-[#EDE8E0] text-sm font-medium text-[#1A1814] hover:border-[#A0522D] hover:text-[#A0522D] transition-colors"
+              >
+                <item.icon className="w-3.5 h-3.5" />
+                {item.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================== */}
+      {/*  SECTION 1: QUAD BIKING                                       */}
+      {/* ============================================================== */}
+      <section id="quad-biking" className="py-16 md:py-20">
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-[#A0522D] mb-4">
+              <Bike className="w-4 h-4" />
+              <span>Motorized Adventure</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[#1A1814] mb-4">
+              Quad Biking Across Morocco
+            </h2>
+            <p className="text-[#1A1814]/70 max-w-3xl mx-auto leading-relaxed">
+              Quad biking (ATV riding) is Morocco&apos;s most accessible motorized desert adventure.
+              No experience is needed, prices start at 400 MAD, and there are options from 15 minutes
+              outside Marrakech to the deep Saharan dunes. Here is where to go, what to pay, and
+              who to ride with.
+            </p>
+          </div>
+
+          {/* Safety Briefing Callout */}
+          <div className="card-moroccan p-6 border-l-4 border-l-[#C4960C] mb-10">
+            <div className="flex items-start gap-4">
+              <div className="inline-flex p-2 rounded-lg bg-[#C4960C]/10 shrink-0">
+                <Shield className="w-5 h-5 text-[#C4960C]" />
+              </div>
+              <div>
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-[#1A1814] mb-2">
+                  Safety Briefing: What Every Rider Must Know
+                </h3>
+                <ul className="space-y-2 text-sm text-[#1A1814]/70 leading-relaxed">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-[#A0522D] shrink-0 mt-0.5" />
+                    <span>Always wear the provided helmet, goggles, and gloves. Refuse to ride without them.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-[#A0522D] shrink-0 mt-0.5" />
+                    <span>Closed shoes are mandatory. Sandals, flip-flops, and bare feet are dangerous on quads (hot exhaust pipes, moving parts).</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-[#A0522D] shrink-0 mt-0.5" />
+                    <span>Maintain distance from the rider in front (dust clouds reduce visibility to near zero).</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-[#A0522D] shrink-0 mt-0.5" />
+                    <span>Do not attempt jumps or sharp turns at speed on unfamiliar terrain. Quads can roll.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-[#A0522D] shrink-0 mt-0.5" />
+                    <span>Wear long pants and a long-sleeved shirt. Sun, dust, and rocks spray up constantly.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Quad Biking Locations */}
+          <div className="space-y-8">
+            {quadBikingLocations.map((loc) => (
+              <div key={loc.name} className="card-moroccan overflow-hidden">
+                <div className="p-6 md:p-8">
+                  <h3 className="text-2xl font-[family-name:var(--font-display)] font-bold text-[#1A1814] mb-3">
+                    {loc.name}
+                  </h3>
+                  <p className="text-[#1A1814]/70 leading-relaxed mb-5">{loc.description}</p>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-5">
+                    <div className="p-3 rounded-lg bg-[#FAF8F5]">
+                      <div className="flex items-center gap-1.5 text-xs font-bold text-[#A0522D] uppercase tracking-wider mb-1">
+                        <Clock className="w-3 h-3" /> Duration
+                      </div>
+                      <p className="text-sm text-[#1A1814]/70">{loc.duration}</p>
+                    </div>
+                    <div className="p-3 rounded-lg bg-[#FAF8F5]">
+                      <div className="flex items-center gap-1.5 text-xs font-bold text-[#C4960C] uppercase tracking-wider mb-1">
+                        <DollarSign className="w-3 h-3" /> Price
+                      </div>
+                      <p className="text-sm text-[#1A1814]/70">{loc.price}</p>
+                    </div>
+                    <div className="p-3 rounded-lg bg-[#FAF8F5]">
+                      <div className="flex items-center gap-1.5 text-xs font-bold text-[#1A1814]/60 uppercase tracking-wider mb-1">
+                        <Compass className="w-3 h-3" /> Terrain
+                      </div>
+                      <p className="text-sm text-[#1A1814]/70">{loc.terrain}</p>
+                    </div>
+                  </div>
+
+                  <h4 className="text-sm font-bold text-[#1A1814] mb-3">Recommended Operators</h4>
+                  <div className="space-y-2 mb-4">
+                    {loc.operators.map((op) => (
+                      <div key={op} className="flex items-start gap-2 border-l-2 border-[#A0522D]/30 pl-3">
+                        <BadgeCheck className="w-4 h-4 text-[#A0522D] shrink-0 mt-0.5" />
+                        <p className="text-sm text-[#1A1814]/70">{op}</p>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="p-3 rounded-lg bg-[#C4960C]/5 border border-[#C4960C]/20">
+                    <div className="flex items-start gap-2">
+                      <Sparkles className="w-4 h-4 text-[#C4960C] shrink-0 mt-0.5" />
+                      <p className="text-sm text-[#1A1814]/70"><span className="font-semibold">Insider Tip:</span> {loc.tips}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================== */}
+      {/*  SECTION 2: SANDBOARDING                                      */}
+      {/* ============================================================== */}
+      <section id="sandboarding" className="py-16 md:py-20 bg-[#FAF8F5]">
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-[#A0522D] mb-4">
+              <Mountain className="w-4 h-4" />
+              <span>Dune Sports</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[#1A1814] mb-4">
+              Sandboarding the Saharan Dunes
+            </h2>
+            <p className="text-[#1A1814]/70 max-w-3xl mx-auto leading-relaxed">
+              Imagine snowboarding, but on golden sand dunes reaching 150 meters high, with nothing but
+              Sahara in every direction. Sandboarding in Morocco is accessible, affordable, and one of
+              the most pure-fun activities in the desert. You can do it for free or with a guide.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            {sandboardingLocations.map((loc) => (
+              <div key={loc.name} className="card-moroccan p-6 md:p-8">
+                <h3 className="text-xl font-[family-name:var(--font-display)] font-bold text-[#1A1814] mb-3">
+                  {loc.name}
+                </h3>
+                <p className="text-[#1A1814]/70 leading-relaxed mb-4">{loc.description}</p>
+                <div className="space-y-3">
+                  <div className="p-3 rounded-lg bg-[#FAF8F5]">
+                    <p className="text-xs font-bold text-[#A0522D] uppercase tracking-wider mb-1">Best Dunes</p>
+                    <p className="text-sm text-[#1A1814]/70">{loc.bestDunes}</p>
+                  </div>
+                  <div className="p-3 rounded-lg bg-[#FAF8F5]">
+                    <p className="text-xs font-bold text-[#C4960C] uppercase tracking-wider mb-1">Board Rental</p>
+                    <p className="text-sm text-[#1A1814]/70">{loc.rental}</p>
+                  </div>
+                  <div className="p-3 rounded-lg bg-[#FAF8F5]">
+                    <p className="text-xs font-bold text-[#1A1814]/60 uppercase tracking-wider mb-1">Guided Experience</p>
+                    <p className="text-sm text-[#1A1814]/70">{loc.guided}</p>
+                  </div>
+                  <div className="p-3 rounded-lg bg-[#FAF8F5]">
+                    <p className="text-xs font-bold text-green-700 uppercase tracking-wider mb-1">Free Option</p>
+                    <p className="text-sm text-[#1A1814]/70">{loc.freeOption}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mb-8">
+            <h3 className="text-2xl font-[family-name:var(--font-display)] font-bold text-[#1A1814] mb-6 text-center">
+              Sandboarding Technique Tips
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {sandboardingTips.map((tip) => (
+                <div key={tip.title} className="card-moroccan p-5">
+                  <div className="inline-flex p-2 rounded-lg bg-[#A0522D]/10 mb-3">
+                    <CheckCircle className="w-5 h-5 text-[#A0522D]" />
+                  </div>
+                  <h4 className="font-[family-name:var(--font-heading)] font-bold text-[#1A1814] mb-2">{tip.title}</h4>
+                  <p className="text-sm text-[#1A1814]/70 leading-relaxed">{tip.detail}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================== */}
+      {/*  SECTION 3: BUGGY & SIDE-BY-SIDE                              */}
+      {/* ============================================================== */}
+      <section id="buggy-tours" className="py-16 md:py-20">
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-[#A0522D] mb-4">
+              <Car className="w-4 h-4" />
+              <span>High-Powered Off-Road</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[#1A1814] mb-4">
+              Buggy &amp; Side-by-Side Adventures
+            </h2>
+            <p className="text-[#1A1814]/70 max-w-3xl mx-auto leading-relaxed">
+              For more power, speed, and protection from the elements, dune buggies and side-by-side
+              vehicles (UTVs) deliver a thrilling desert experience. These roll-cage-equipped vehicles
+              handle rough terrain at speed and seat 2-4 people. Prices range from 800 to 1,500 MAD
+              for a 2-hour session.
+            </p>
+          </div>
+
+          <div className="space-y-8">
+            {buggyLocations.map((loc) => (
+              <div key={loc.name} className="card-moroccan overflow-hidden">
+                <div className="p-6 md:p-8">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="inline-flex p-2 rounded-lg bg-[#A0522D]/10">
+                      <MapPin className="w-5 h-5 text-[#A0522D]" />
+                    </div>
+                    <h3 className="text-2xl font-[family-name:var(--font-display)] font-bold text-[#1A1814]">
+                      {loc.name}
+                    </h3>
+                  </div>
+                  <p className="text-[#1A1814]/70 leading-relaxed mb-5">{loc.description}</p>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-5">
+                    <div className="p-3 rounded-lg bg-[#FAF8F5]">
+                      <div className="flex items-center gap-1.5 text-xs font-bold text-[#1A1814]/60 uppercase tracking-wider mb-1">
+                        <Car className="w-3 h-3" /> Vehicles
+                      </div>
+                      <p className="text-sm text-[#1A1814]/70">{loc.vehicles}</p>
+                    </div>
+                    <div className="p-3 rounded-lg bg-[#FAF8F5]">
+                      <div className="flex items-center gap-1.5 text-xs font-bold text-[#A0522D] uppercase tracking-wider mb-1">
+                        <Clock className="w-3 h-3" /> Duration
+                      </div>
+                      <p className="text-sm text-[#1A1814]/70">{loc.duration}</p>
+                    </div>
+                    <div className="p-3 rounded-lg bg-[#FAF8F5]">
+                      <div className="flex items-center gap-1.5 text-xs font-bold text-[#C4960C] uppercase tracking-wider mb-1">
+                        <DollarSign className="w-3 h-3" /> Price
+                      </div>
+                      <p className="text-sm text-[#1A1814]/70">{loc.price}</p>
+                    </div>
+                    <div className="p-3 rounded-lg bg-[#FAF8F5]">
+                      <div className="flex items-center gap-1.5 text-xs font-bold text-green-700 uppercase tracking-wider mb-1">
+                        <Sparkles className="w-3 h-3" /> Tip
+                      </div>
+                      <p className="text-sm text-[#1A1814]/70">{loc.tips}</p>
+                    </div>
+                  </div>
+
+                  <h4 className="text-sm font-bold text-[#1A1814] mb-3">Recommended Operators</h4>
+                  <div className="space-y-2">
+                    {loc.operators.map((op) => (
+                      <div key={op} className="flex items-start gap-2 border-l-2 border-[#A0522D]/30 pl-3">
+                        <BadgeCheck className="w-4 h-4 text-[#A0522D] shrink-0 mt-0.5" />
+                        <p className="text-sm text-[#1A1814]/70">{op}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
