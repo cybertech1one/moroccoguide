@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B4965"/>
+      <stop offset="100%" stop-color="#C49B20"/>
+    </linearGradient>
+  </defs>
+  <!-- Outer circle with zellige-inspired border -->
+  <circle cx="16" cy="16" r="15" fill="none" stroke="url(#g)" stroke-width="1.5"/>
+  <!-- Inner zellige pattern ring -->
+  <circle cx="16" cy="16" r="12" fill="none" stroke="#1B4965" stroke-width="0.5" stroke-dasharray="3 2"/>
+  <!-- Moroccan arch shape (keyhole arch) -->
+  <path d="M11 22 V16 A5 5 0 0 1 21 16 V22" fill="none" stroke="#1B4965" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Compass needle / pin pointing up -->
+  <path d="M16 8 L14.5 14 L16 13 L17.5 14 Z" fill="#1B4965"/>
+  <!-- Star accent (Moroccan 8-point star simplified as diamond) -->
+  <path d="M16 17 L17 18.5 L16 20 L15 18.5 Z" fill="#C49B20"/>
+  <!-- Small decorative dots -->
+  <circle cx="13" cy="19" r="0.6" fill="#C49B20"/>
+  <circle cx="19" cy="19" r="0.6" fill="#C49B20"/>
+</svg>
