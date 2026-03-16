@@ -53,7 +53,7 @@ export const viewport: Viewport = {
 /* ─── SEO Metadata ─── */
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://cityguide.ma'),
+  metadataBase: new URL('https://citytoursmorocco.com'),
   title: {
     template: '%s | CityGuide - Your Complete Morocco Travel Companion',
     default:
@@ -104,7 +104,7 @@ export const metadata: Metadata = {
     'morocco faq',
     'morocco travel 2026',
   ],
-  authors: [{ name: 'CityGuide', url: 'https://cityguide.ma' }],
+  authors: [{ name: 'CityGuide', url: 'https://citytoursmorocco.com' }],
   creator: 'CityGuide',
   publisher: 'CityGuide',
   formatDetection: {
@@ -130,14 +130,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://cityguide.ma',
+    url: 'https://citytoursmorocco.com',
     siteName: 'CityGuide',
     title: 'CityGuide - The Ultimate Morocco Tourism Directory & Travel Guide',
     description:
       'Your complete Morocco travel companion. Explore destinations, book tours, find the best riads, restaurants, and plan your perfect Moroccan adventure.',
     images: [
       {
-        url: 'https://cityguide.ma/api/og?title=CityGuide&description=Your+Complete+Morocco+Travel+Companion&type=default',
+        url: 'https://citytoursmorocco.com/api/og?title=CityGuide&description=Your+Complete+Morocco+Travel+Companion&type=default',
         width: 1200,
         height: 630,
         alt: 'CityGuide - Morocco Travel Guide',
@@ -169,7 +169,7 @@ export const metadata: Metadata = {
       'Discover Morocco with the most comprehensive travel guide. Plan your perfect trip today.',
     images: [
       {
-        url: 'https://cityguide.ma/api/og?title=CityGuide&description=Your+Complete+Morocco+Travel+Companion&type=default',
+        url: 'https://citytoursmorocco.com/api/og?title=CityGuide&description=Your+Complete+Morocco+Travel+Companion&type=default',
         alt: 'CityGuide Morocco Travel Guide',
       },
     ],
@@ -188,11 +188,11 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://cityguide.ma',
+    canonical: 'https://citytoursmorocco.com',
     languages: {
-      'en-US': 'https://cityguide.ma',
-      'fr-FR': 'https://cityguide.ma/fr',
-      'ar-MA': 'https://cityguide.ma/ar',
+      'en-US': 'https://citytoursmorocco.com',
+      'fr-FR': 'https://citytoursmorocco.com/fr',
+      'ar-MA': 'https://citytoursmorocco.com/ar',
     },
   },
   icons: {
@@ -217,16 +217,16 @@ const jsonLd = {
   '@type': 'WebSite',
   name: 'CityGuide',
   alternateName: 'City Guide - Tourism Directory',
-  url: 'https://cityguide.ma',
+  url: 'https://citytoursmorocco.com',
   description:
     'The most comprehensive Morocco tourism directory and travel guide. Explore destinations, tours, accommodations, restaurants, and plan your trip.',
   publisher: {
     '@type': 'Organization',
     name: 'CityGuide',
-    url: 'https://cityguide.ma',
+    url: 'https://citytoursmorocco.com',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://cityguide.ma/logo.png',
+      url: 'https://citytoursmorocco.com/logo.png',
       width: 512,
       height: 512,
     },
@@ -241,7 +241,7 @@ const jsonLd = {
     '@type': 'SearchAction',
     target: {
       '@type': 'EntryPoint',
-      urlTemplate: 'https://cityguide.ma/search?q={search_term_string}',
+      urlTemplate: 'https://citytoursmorocco.com/search?q={search_term_string}',
     },
     'query-input': 'required name=search_term_string',
   },

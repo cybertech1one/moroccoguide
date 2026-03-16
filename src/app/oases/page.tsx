@@ -35,6 +35,7 @@ import {
   Info,
   Layers,
   Route,
+  Flower2,
 } from 'lucide-react';
 
 export const metadata: Metadata = {
