@@ -20,7 +20,6 @@ import {
   Sun,
   CloudSun,
   Landmark,
-  Ship,
   Shield,
   Droplets,
   TreePalm,
