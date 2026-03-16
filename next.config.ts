@@ -3,10 +3,12 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   compress: true,
+
+  /* ── Image Optimization ── */
   images: {
     formats: ['image/avif', 'image/webp'],
-    minimumCacheTTL: 60 * 60 * 24 * 30, // 30 days
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    minimumCacheTTL: 60 * 60 * 24 * 365, // 1 year (images are content-hashed)
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     remotePatterns: [
       { protocol: 'https', hostname: 'images.unsplash.com' },
@@ -15,7 +17,63 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: '*.supabase.co' },
     ],
   },
+
+  /* ── Experimental Performance Features ── */
+  experimental: {
+    optimizeCss: true,
+    scrollRestoration: true,
+    optimizePackageImports: [
+      'lucide-react',    // 300+ icon barrel file - only import used icons
+      'framer-motion',   // Heavy animation library - tree-shake aggressively
+      'date-fns',        // 200+ function barrel file - only import used fns
+      'recharts',        // Chart library - only import used chart types
+    ],
+  },
+
+  /* ── HTTP Headers ── */
   headers: async () => [
+    /* -- Immutable hashed assets (_next/static) -- */
+    {
+      source: '/_next/static/(.*)',
+      headers: [
+        {
+          key: 'Cache-Control',
+          value: 'public, max-age=31536000, immutable',
+        },
+      ],
+    },
+    /* -- Optimized images served by Next.js -- */
+    {
+      source: '/_next/image(.*)',
+      headers: [
+        {
+          key: 'Cache-Control',
+          value: 'public, max-age=31536000, immutable',
+        },
+      ],
+    },
+    /* -- Static files in /public (fonts, icons, images) -- */
+    {
+      source: '/(.*)\\.(ico|svg|png|jpg|jpeg|webp|avif|woff|woff2|ttf|eot)',
+      headers: [
+        {
+          key: 'Cache-Control',
+          value: 'public, max-age=31536000, immutable',
+        },
+      ],
+    },
+    /* -- Site manifest & web app config -- */
+    {
+      source: '/site.webmanifest',
+      headers: [
+        {
+          key: 'Cache-Control',
+          value: 'public, max-age=86400, stale-while-revalidate=604800',
+        },
+        { key: 'Content-Type', value: 'application/manifest+json' },
+      ],
+    },
+    /* -- All routes: security + performance headers -- */
     {
       source: '/(.*)',
       headers: [

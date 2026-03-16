@@ -8,34 +8,41 @@ import GrowthWidgets from '@/components/growth/GrowthWidgets';
 import AIAssistantLoader from '@/components/ai/AIAssistantLoader';
 import './globals.css';
 
-/* ─── Font Configuration ─── */
+/* ─── Font Configuration ───
+   Only load weights actually used in the design system.
+   Fewer weights = smaller font payload = faster LCP.
+   next/font/google self-hosts and subsets automatically. */
 
 const playfairDisplay = Playfair_Display({
   subsets: ['latin'],
   variable: '--font-display',
   display: 'swap',
-  weight: ['400', '500', '600', '700', '800', '900'],
+  weight: ['400', '600', '700'],
+  preload: true,
 });
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
   variable: '--font-heading',
   display: 'swap',
-  weight: ['300', '400', '500', '600', '700', '800'],
+  weight: ['400', '500', '600', '700'],
+  preload: true,
 });
 
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-body',
   display: 'swap',
-  weight: ['300', '400', '500', '600', '700'],
+  weight: ['400', '500', '600', '700'],
+  preload: true,
 });
 
 const notoNaskhArabic = Noto_Naskh_Arabic({
   subsets: ['arabic'],
   variable: '--font-arabic',
   display: 'swap',
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '700'],
+  preload: false, // Only needed for Arabic pages, defer loading
 });
 
 /* ─── Viewport ─── */
@@ -268,6 +275,15 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        {/* DNS Prefetch & Preconnect for external origins used by the site */}
+        <link rel="dns-prefetch" href="https://images.unsplash.com" />
+        <link rel="dns-prefetch" href="https://upload.wikimedia.org" />
+        <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
+
+        {/* Preconnect to Supabase (API + realtime) */}
+        <link rel="dns-prefetch" href={`https://${process.env.NEXT_PUBLIC_SUPABASE_URL?.replace('https://', '') || ''}`} />
+
+        {/* Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

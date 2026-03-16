@@ -173,6 +173,19 @@ export function middleware(request: NextRequest) {
     'max-age=63072000; includeSubDomains; preload'
   );
 
+  // ── Performance: Cache-Control for HTML pages ──
+  // stale-while-revalidate lets CDNs serve stale content instantly
+  // while revalidating in the background — crucial for perceived speed.
+  if (!pathname.startsWith('/api/') && !pathname.startsWith('/_next/')) {
+    response.headers.set(
+      'Cache-Control',
+      'public, s-maxage=3600, stale-while-revalidate=86400'
+    );
+  }
+
+  // ── Performance: Vary header for proper CDN caching ──
+  response.headers.set('Vary', 'Accept-Encoding');
+
   // ── SEO: X-Robots-Tag Header ──
   // Provides robots directives at the HTTP header level (supplements meta robots)
   if (pathname.startsWith('/api/')) {

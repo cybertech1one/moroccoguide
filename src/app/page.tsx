@@ -11,6 +11,7 @@ import {
   Mountain,
   Sun,
   Waves,
+  ChefHat,
   Landmark,
   Heart,
   Route,
