@@ -19,7 +19,6 @@ import {
   Heart,
   Award,
   CircleDollarSign,
-  Sunset,
   Sparkles,
   BookOpen,
   Globe,
