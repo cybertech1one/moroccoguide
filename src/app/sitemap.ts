@@ -156,6 +156,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/agadir',
     '/skiing',
     '/desert-adventures',
+    '/casablanca',
+    '/rabat',
+    '/ouarzazate',
+    '/dakhla',
+    '/street-food',
+    '/budget-travel',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

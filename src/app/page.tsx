@@ -199,7 +199,7 @@ const destinations = [
     slug: 'chefchaouen',
     tagline: 'The Blue Pearl of the Rif',
     description: 'Iconic blue-washed streets and mountain charm',
-    image: '/images/hero-fes-tanneries.webp',
+    image: '/images/hero-chefchaouen-streets.webp',
     color: '#4A6274',
   },
   {
@@ -207,7 +207,7 @@ const destinations = [
     slug: 'essaouira',
     tagline: 'Wind, Waves & Timeless Ramparts',
     description: 'Atlantic charm, fresh seafood, and bohemian vibes',
-    image: '/images/hero-chefchaouen-drone.webp',
+    image: '/images/hero-essaouira-port.webp',
     color: '#34495E',
   },
   {
@@ -215,7 +215,7 @@ const destinations = [
     slug: 'casablanca',
     tagline: 'Where Tradition Meets Modernity',
     description: 'Hassan II Mosque, Art Deco architecture, and cosmopolitan energy',
-    image: '/images/hero-coastal.webp',
+    image: '/images/hero-casablanca.webp',
     color: '#2C3E50',
   },
   {
@@ -223,7 +223,7 @@ const destinations = [
     slug: 'tangier',
     tagline: 'Gateway Between Two Worlds',
     description: 'Where the Mediterranean meets the Atlantic',
-    image: '/images/hero-todra-gorge.webp',
+    image: '/images/hero-tangier-bay.webp',
     color: '#5C6F7E',
   },
   {
@@ -247,49 +247,49 @@ const destinations = [
 const experienceCategories = [
   {
     title: 'Desert Adventures',
-    description: 'Camel treks, dune surfing, and starlit camps in the Sahara',
-    href: '/desert',
+    description: 'Quad biking, camel treks, sandboarding, and starlit glamping',
+    href: '/desert-adventures',
     image: '/images/hero-sahara-sunrise.webp',
     icon: Sun,
     color: '#C4960C',
   },
   {
-    title: 'Culinary Tours',
-    description: 'Cooking classes, street food walks, and tagine masterclasses',
-    href: '/food',
+    title: 'Cuisine & Street Food',
+    description: 'Tagines, street food, cooking classes, and spice markets',
+    href: '/cuisine',
     image: '/images/hero-food.webp',
     icon: ChefHat,
     color: '#A0522D',
   },
   {
-    title: 'Cultural Heritage',
-    description: 'Medinas, mosques, museums, and centuries of living history',
-    href: '/culture',
-    image: '/images/hero-marrakech.webp',
+    title: 'Berber Culture',
+    description: 'Ancient traditions, village stays, and Amazigh heritage',
+    href: '/berber-culture',
+    image: '/images/hero-atlas-village.webp',
     icon: Landmark,
     color: '#7A3E22',
   },
   {
-    title: 'Mountain Treks',
-    description: 'Atlas peaks, Berber villages, and dramatic gorge walks',
-    href: '/trekking',
+    title: 'Atlas Mountains',
+    description: 'Toubkal summit, Berber villages, and dramatic gorge treks',
+    href: '/atlas-mountains',
     image: '/images/hero-atlas.webp',
     icon: Mountain,
     color: '#1E6B4E',
   },
   {
-    title: 'Beach Escapes',
-    description: 'Surf towns, hidden coves, and Atlantic sunsets',
-    href: '/beaches',
+    title: 'Beach & Water Fun',
+    description: 'Surfing, water parks, kitesurfing, and Atlantic sunsets',
+    href: '/water-fun',
     image: '/images/card-beach.webp',
     icon: Waves,
     color: '#34495E',
   },
   {
-    title: 'City Life',
-    description: 'Rooftop bars, boutique riads, and vibrant nightlife',
-    href: '/cities',
-    image: '/images/hero-coastal.webp',
+    title: 'Souks & Shopping',
+    description: 'Haggling tips, artisan crafts, and market treasures',
+    href: '/souks',
+    image: '/images/photo-moroccan-souks.webp',
     icon: Sparkles,
     color: '#C07B52',
   },
@@ -680,13 +680,24 @@ export default function HomePage() {
               {destinations.map((dest, idx) => {
                 // First two cards are large (2x2), rest are normal
                 const isLarge = idx < 2;
+                // Use dedicated guide pages where available
+                const guidePages: Record<string, string> = {
+                  marrakech: '/marrakech',
+                  fes: '/fes-guide',
+                  chefchaouen: '/chefchaouen',
+                  essaouira: '/essaouira',
+                  casablanca: '/casablanca',
+                  tangier: '/tangier',
+                  ouarzazate: '/ouarzazate',
+                };
+                const destHref = guidePages[dest.slug] || `/cities/${dest.slug}`;
                 return (
                   <ScrollReveal
                     key={dest.slug}
                     delay={idx * 80}
                   >
                     <Link
-                      href={`/cities/${dest.slug}`}
+                      href={destHref}
                       className={`group relative overflow-hidden rounded-2xl block h-full ${
                         isLarge
                           ? 'col-span-2 row-span-2'
