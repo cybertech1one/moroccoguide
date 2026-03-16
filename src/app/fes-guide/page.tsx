@@ -107,7 +107,7 @@ export const metadata: Metadata = {
     type: 'article',
     images: [
       {
-        url: '/images/hero-morocco-medina.webp',
+        url: '/images/hero-fes-tanneries.webp',
         width: 1200,
         height: 630,
         alt: 'Panoramic view of the Fes medina with minarets and traditional rooftops',
@@ -119,7 +119,7 @@ export const metadata: Metadata = {
     title: 'Fes Travel Guide 2025-2026 | Morocco\'s Spiritual Capital',
     description:
       'Complete guide to Fes: Al-Qarawiyyin University, Chouara Tannery, Bou Inania Madrasa, Blue Gate, riads, food, crafts, day trips, and practical tips for the world\'s oldest medina.',
-    images: ['/images/hero-morocco-medina.webp'],
+    images: ['/images/hero-fes-tanneries.webp'],
   },
   alternates: {
     canonical: 'https://moroccoguide.com/fes-guide',
@@ -187,7 +187,7 @@ const attractions = [
     name: 'Fes el-Bali (The Medina)',
     description:
       'The largest car-free urban area in the world and a UNESCO World Heritage Site since 1981. Founded in the 9th century, this medieval labyrinth contains over 9,000 narrow alleyways, 11,000 historic buildings, 350 mosques, and countless fondouks (caravanserais). The sensory overload is absolute: the smell of cedar and leather, the sound of hammers on brass, the sight of donkeys carrying goods through passages barely wide enough for two people. Fes el-Bali is not a museum. It is a living, breathing medieval city where 150,000 people work, trade, pray, and live exactly as their ancestors have for twelve centuries.',
-    image: '/images/hero-morocco-medina.webp',
+    image: '/images/hero-fes-tanneries.webp',
     type: 'UNESCO Heritage',
     rating: 4.9,
     hours: 'Open 24 hours (shops close by sunset)',
@@ -198,7 +198,7 @@ const attractions = [
     name: 'Al-Qarawiyyin Mosque & University',
     description:
       'Founded in 859 AD by Fatima al-Fihri, a woman of extraordinary vision, Al-Qarawiyyin is recognized by UNESCO and the Guinness Book of World Records as the oldest continuously operating university in the world. For over 1,160 years, scholars have studied theology, law, mathematics, astronomy, and medicine within these walls. The mosque can hold 20,000 worshippers and features a stunning courtyard with zellige tilework, carved stucco, and cedarwood screens. The adjacent library, restored in 2016, contains manuscripts dating to the 9th century, including a 9th-century Quran written on camel skin.',
-    image: '/images/hero-morocco-medina.webp',
+    image: '/images/hero-fes-tanneries.webp',
     type: 'Historic University',
     rating: 4.9,
     hours: 'Non-Muslims cannot enter the mosque; the library has limited visiting hours',
@@ -209,7 +209,7 @@ const attractions = [
     name: 'Chouara Tannery',
     description:
       'The largest and oldest of the three medieval tanneries in Fes, operating continuously since the 11th century. Hundreds of stone vessels filled with vivid dyes of saffron yellow, poppy red, indigo blue, and mint green stretch across an open-air courtyard where tanners work waist-deep in the vats using methods unchanged for a thousand years. The process begins with soaking hides in pigeon droppings and quicklime to soften them, then dyeing with natural pigments. The result is the supple, world-famous Fes leather. The smell is legendarily pungent, which is why the surrounding leather shops hand out sprigs of fresh mint to hold under your nose.',
-    image: '/images/hero-morocco-medina.webp',
+    image: '/images/hero-fes-tanneries.webp',
     type: 'Historic Tannery',
     rating: 4.7,
     hours: 'Viewable from surrounding terraces daily, best 9:00 AM - 4:00 PM',
@@ -220,7 +220,7 @@ const attractions = [
     name: 'Bou Inania Madrasa',
     description:
       'The most lavishly decorated theological college in Morocco and one of the few religious buildings in Fes open to non-Muslims. Built between 1350 and 1357 by the Marinid Sultan Abu Inan Faris, every surface is covered in breathtaking zellige tilework, carved stucco arabesques, and intricately sculpted cedarwood. The central courtyard features a marble floor, an ablutions fountain, and a water clock (clepsydra) of 13 wooden windows and brass bowls that is the only surviving medieval water clock in the Islamic world. The rooftop offers stunning views over the medina.',
-    image: '/images/hero-morocco-medina.webp',
+    image: '/images/hero-fes-tanneries.webp',
     type: 'Historic Madrasa',
     rating: 4.8,
     hours: '9:00 AM - 6:00 PM daily (closed during Friday prayers)',
@@ -231,7 +231,7 @@ const attractions = [
     name: 'Dar Batha Museum',
     description:
       'Housed in a stunning 19th-century Hispano-Moorish palace built by Sultan Moulay Hassan I, this museum showcases the best of Fes craftsmanship across the centuries. The collection includes exquisite examples of Fassi woodcarving, zellige tilework, embroidery, Berber carpets, wrought iron, and most famously the cobalt blue ceramics that are synonymous with Fes. The Andalusian garden courtyard with its towering cypress trees, fountains, and birdsong is one of the most peaceful retreats in the entire medina.',
-    image: '/images/hero-morocco-medina.webp',
+    image: '/images/hero-fes-tanneries.webp',
     type: 'Museum',
     rating: 4.5,
     hours: '9:00 AM - 5:00 PM (closed Tuesdays)',
@@ -242,7 +242,7 @@ const attractions = [
     name: 'Merenid Tombs',
     description:
       'The ruined tombs of the Marinid dynasty sultans crown the hilltop north of Fes el-Bali, offering the most spectacular panoramic view of the entire medina. Built in the 14th century, the tombs themselves are now atmospheric ruins of carved stone and crumbling arches, but the location is the real treasure. At sunset, the entire medina stretches below you in a tapestry of minarets, satellite dishes, and terracotta rooftops, with the call to prayer echoing from hundreds of mosques simultaneously.',
-    image: '/images/hero-morocco-medina.webp',
+    image: '/images/hero-fes-tanneries.webp',
     type: 'Historic Ruins',
     rating: 4.6,
     hours: 'Open 24 hours (best at sunset)',
@@ -253,7 +253,7 @@ const attractions = [
     name: 'Mellah (Jewish Quarter)',
     description:
       'Founded in 1438, the Fes Mellah was the first Jewish ghetto in Morocco and once home to a thriving community of over 250,000 Jewish residents. The architecture is distinctive: balconied houses with outward-facing windows and wrought-iron railings, contrasting with the inward-facing homes of the Muslim medina. Today it contains the beautifully restored Ibn Danan Synagogue (17th century), the vast and haunting Jewish Cemetery with thousands of white-washed tombs overlooking the medina, and the vibrant Mellah Market where locals buy spices, dried fruits, and household goods at local prices.',
-    image: '/images/hero-morocco-medina.webp',
+    image: '/images/hero-fes-tanneries.webp',
     type: 'Historic Quarter',
     rating: 4.4,
     hours: 'Ibn Danan Synagogue: 9:00 AM - 6:00 PM; Cemetery: daylight hours',
@@ -264,7 +264,7 @@ const attractions = [
     name: 'Borj Nord (Arms Museum)',
     description:
       'A 16th-century Saadian fortress perched on the hillside above Fes el-Bali, now housing an impressive arms museum with over 8,000 pieces spanning thirteen centuries of Moroccan military history. The collection includes swords, daggers, muskets, cannons, and a massive 5-ton bronze cannon from the 1578 Battle of the Three Kings. Beyond the collection, the hilltop location provides sweeping views across the medina that rival the Merenid Tombs without the climb.',
-    image: '/images/hero-morocco-medina.webp',
+    image: '/images/hero-fes-tanneries.webp',
     type: 'Fortress & Museum',
     rating: 4.3,
     hours: '9:00 AM - 5:00 PM (closed Tuesdays)',
@@ -275,7 +275,7 @@ const attractions = [
     name: 'Royal Palace (Dar el-Makhzen)',
     description:
       'The Royal Palace of Fes covers an astonishing 80 hectares, making it one of the largest royal palaces in the world. While the interior is closed to visitors as it remains an active royal residence, the seven monumental brass doors at the main entrance are a masterpiece of Moroccan craftsmanship. Each door features intricate geometric patterns in hammered brass and zellige tilework surrounds in royal blue and green. The scale and opulence of the entrance alone conveys the importance Fes holds in Moroccan royal heritage.',
-    image: '/images/hero-morocco-medina.webp',
+    image: '/images/hero-fes-tanneries.webp',
     type: 'Royal Palace',
     rating: 4.5,
     hours: 'Exterior viewable 24 hours; interior closed to public',
@@ -286,7 +286,7 @@ const attractions = [
     name: 'Nejjarine Museum of Wooden Arts & Crafts',
     description:
       'Set in a meticulously restored 18th-century fondouk (caravanserai) on the photogenic Place Nejjarine, this museum celebrates the extraordinary tradition of Fassi woodworking. Three floors display carved cedarwood doors, painted ceilings, musical instruments, Quran stands, and the intricate moucharabieh lattice screens that adorn Fes\'s finest buildings. The fondouk itself, with its central courtyard, carved galleries, and original wooden beams, is as much a masterpiece as the collection it houses.',
-    image: '/images/hero-morocco-medina.webp',
+    image: '/images/hero-fes-tanneries.webp',
     type: 'Museum',
     rating: 4.6,
     hours: '10:00 AM - 5:00 PM daily',
@@ -297,7 +297,7 @@ const attractions = [
     name: 'Place Seffarine',
     description:
       'The coppersmith and brassworker square has been ringing with the sound of hammers on metal for over a thousand years. Artisans sit cross-legged at the edges of this small, tree-shaded plaza, hand-hammering enormous cauldrons, trays, teapots, and decorative platters using techniques passed down through generations. The square sits at the foot of the Al-Qarawiyyin library and is one of the most authentic, un-touristy scenes in Fes. The rhythmic metallic percussion is the soundtrack of the medina.',
-    image: '/images/hero-morocco-medina.webp',
+    image: '/images/hero-fes-tanneries.webp',
     type: 'Artisan Quarter',
     rating: 4.5,
     hours: 'Artisans work approximately 8:00 AM - 6:00 PM',
@@ -308,7 +308,7 @@ const attractions = [
     name: 'Bab Boujloud (The Blue Gate)',
     description:
       'The iconic western gateway to the Fes el-Bali medina and the most photographed monument in the city. Built in 1913, the gate features three symmetrical horseshoe arches adorned with stunning blue zellige tilework on the exterior (representing the color of Fes) and green zellige on the interior (representing Islam). The gate frames a dramatic view into the medina, with the minaret of the Bou Inania Madrasa visible through the central arch. Bab Boujloud is both a functional entrance and an architectural statement of Fes\'s identity.',
-    image: '/images/hero-morocco-medina.webp',
+    image: '/images/hero-fes-tanneries.webp',
     type: 'Historic Gate',
     rating: 4.7,
     hours: 'Open 24 hours',
@@ -960,7 +960,7 @@ export default function FesGuidePage() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(/images/hero-morocco-medina.webp)',
+            backgroundImage: 'url(/images/hero-fes-tanneries.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />
@@ -1917,7 +1917,7 @@ export default function FesGuidePage() {
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/hero-morocco-medina.webp"
+            src="/images/hero-fes-tanneries.webp"
             alt="Fes medina rooftops with minarets at golden hour"
             className="w-full h-full object-cover"
           />

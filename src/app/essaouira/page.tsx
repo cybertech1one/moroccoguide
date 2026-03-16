@@ -107,18 +107,90 @@ export default function EssaouiraPage() {
   /* -- Data Arrays -- */
 
   const attractions = [
-    { name: 'Skala de la Ville', description: "The iconic 18th-century sea bastion stretching along the northern cliffs of the medina. Lined with a row of European bronze cannons pointed at the Atlantic, this fortification was built by Sultan Mohammed III and designed by French architect Theodore Cornut. The ramparts offer sweeping panoramic views of the ocean, the Iles Purpuraires, and the medina rooftops. Orson Welles filmed scenes from Othello here in 1949, and Game of Thrones shot Astapor and Slaver's Bay sequences on these very walls.", image: '/images/hero-essaouira-port.webp', type: 'Historic Fortress', rating: 4.9 },
-    { name: 'Skala du Port', description: "The imposing circular watchtower guarding the entrance to Essaouira's working fishing port. Built in the 18th century as part of the city's fortification system, this bastion offers dramatic views of the harbour, the crashing Atlantic waves, and the fishing boats returning with their daily catch. The tower served as the filming location for the Walk of Punishment scene in Game of Thrones Season 3.", image: '/images/hero-essaouira-port.webp', type: 'Historic Fortress', rating: 4.8 },
-    { name: 'Moulay Hassan Square', description: "The vibrant heart of Essaouira and the main gathering place in the medina. This wide, sun-drenched plaza is ringed by cafes with outdoor terraces, restaurants, and the arched entrance to the port. By day it hums with vendors, street musicians, and tourists sipping mint tea. During the Gnaoua Festival in June, it transforms into the main concert stage with performances that electrify thousands of spectators.", image: '/images/hero-essaouira-port.webp', type: 'City Square', rating: 4.7 },
-    { name: 'Essaouira Port & Fish Market', description: "One of Morocco's most active Atlantic fishing ports, where blue wooden trawlers unload sardines, sea bass, sole, shrimp, and octopus each morning. The open-air fish market is a sensory whirlwind of shouting fishmongers, glistening catches, and swooping seagulls. Choose your fish at the stalls and have it grilled on the spot at the outdoor barbecue stands for 50 to 100 MAD per plate, served with bread, salad, and harissa.", image: '/images/hero-essaouira-port.webp', type: 'Market & Food', rating: 4.8 },
-    { name: 'Essaouira Medina (UNESCO)', description: "Inscribed as a UNESCO World Heritage Site in 2001, the medina of Essaouira is a masterpiece of late-18th-century military architecture blended with North African town planning. Unlike the labyrinthine medinas of Fes or Marrakech, Essaouira's streets follow a rational grid pattern inspired by European urban design. The medina is enclosed by crenellated walls and contains the mellah (Jewish quarter), souks, zawiyas, mosques, and hundreds of artisan workshops.", image: '/images/hero-essaouira-port.webp', type: 'UNESCO Heritage', rating: 4.9 },
-    { name: 'Essaouira Beach', description: "A vast crescent of golden sand stretching south from the medina walls for over 5 kilometers, battered by consistent Atlantic trade winds. The northern end near the medina is popular with football players and camel ride operators, while the southern stretch toward Diabat attracts kitesurfers and windsurfers. At low tide, the wet sand becomes a mirror reflecting the sky, creating spectacular photography conditions.", image: '/images/hero-essaouira-port.webp', type: 'Beach', rating: 4.7 },
-    { name: 'Sidi Mohammed Ben Abdallah Museum', description: "Housed in a beautifully restored 19th-century riad near Moulay Hassan Square, this ethnographic museum showcases the rich cultural heritage of the Essaouira region. Collections include traditional Berber and Jewish jewelry, antique weapons, musical instruments used in Gnaoua ceremonies, marquetry woodwork, Roman-era artifacts from the Iles Purpuraires, and historic photographs. Entry is 70 MAD.", image: '/images/hero-essaouira-port.webp', type: 'Museum', rating: 4.5 },
-    { name: 'Borj El Baroud', description: "A dramatic ruined bastion at the southern end of the beach, partially submerged at high tide. This crumbling 18th-century powder magazine sits where the Oued Ksob river meets the Atlantic, creating an evocative, almost otherworldly scene. At low tide you can walk right up to the ruins and explore the remnants of the fortification. A favorite spot for photographers seeking moody, atmospheric shots.", image: '/images/hero-essaouira-port.webp', type: 'Ruins', rating: 4.6 },
-    { name: 'The Mellah (Jewish Quarter)', description: "Essaouira once had the largest Jewish community in Morocco, and the mellah preserves this extraordinary heritage. The quarter features distinctive architecture with external balconies and large windows. The Slat Lkahal synagogue has been restored and is open to visitors. At its peak in the 19th century, Jews comprised nearly 40 percent of the city's population and dominated its international trade.", image: '/images/hero-essaouira-port.webp', type: 'Heritage Quarter', rating: 4.6 },
-    { name: 'Art Galleries of the Medina', description: "Essaouira has been a magnet for artists since the 1960s, and the medina contains dozens of galleries showcasing contemporary Moroccan art. Galerie Damgaard on Avenue Oqba Ibn Nafiaa is the most famous, having championed self-taught Gnaoua-inspired painters for decades. Other notable galleries include Espace Othello, La Petite Galerie, and the cooperative gallery on Rue de la Skala.", image: '/images/hero-essaouira-port.webp', type: 'Art & Culture', rating: 4.7 },
-    { name: 'Medina Souks & Thuya Wood Workshops', description: "The souks of Essaouira are calmer and more navigable than those of Marrakech, organized along the two main arteries of Avenue de l'Istiqlal and Avenue Sidi Mohammed Ben Abdallah. The city is famous for its thuya wood artisans, who carve intricate boxes, chess sets, and furniture from the aromatic root wood of the thuya tree endemic to the Essaouira region.", image: '/images/hero-essaouira-port.webp', type: 'Shopping & Crafts', rating: 4.6 },
-    { name: 'Diabat Village & Ruins', description: 'A small Berber village 5 kilometers south of Essaouira along the beach, famous for its association with Jimi Hendrix, who allegedly visited in 1969. The ruins of the Dar Soltane palace, a crumbling 18th-century royal residence half-buried in dunes, add to the mystique. The walk along the windswept beach through the sand dunes is undeniably magical.', image: '/images/hero-essaouira-port.webp', type: 'Village & Legend', rating: 4.5 },
+    {
+      name: 'Skala de la Ville',
+      description: "The iconic 18th-century sea bastion stretching along the northern cliffs of the medina. Lined with a row of European bronze cannons pointed at the Atlantic, this fortification was built by Sultan Mohammed III and designed by French architect Theodore Cornut. The ramparts offer sweeping panoramic views of the ocean, the Iles Purpuraires, and the medina rooftops. Orson Welles filmed scenes from Othello here in 1949, and Game of Thrones shot Astapor and Slaver's Bay sequences on these very walls.",
+      image: '/images/hero-essaouira-port.webp',
+      type: 'Historic Fortress',
+      rating: 4.9,
+    },
+    {
+      name: 'Skala du Port',
+      description: "The imposing circular watchtower guarding the entrance to Essaouira's working fishing port. Built in the 18th century as part of the city's fortification system, this bastion offers dramatic views of the harbour, the crashing Atlantic waves, and the fishing boats returning with their daily catch. The tower served as the filming location for the Walk of Punishment scene in Game of Thrones Season 3.",
+      image: '/images/hero-essaouira-port.webp',
+      type: 'Historic Fortress',
+      rating: 4.8,
+    },
+    {
+      name: 'Moulay Hassan Square',
+      description: "The vibrant heart of Essaouira and the main gathering place in the medina. This wide, sun-drenched plaza is ringed by cafes with outdoor terraces, restaurants, and the arched entrance to the port. By day it hums with vendors, street musicians, and tourists sipping mint tea. During the Gnaoua Festival in June, it transforms into the main concert stage with performances that electrify thousands of spectators.",
+      image: '/images/hero-essaouira-port.webp',
+      type: 'City Square',
+      rating: 4.7,
+    },
+    {
+      name: 'Essaouira Port & Fish Market',
+      description: "One of Morocco's most active Atlantic fishing ports, where blue wooden trawlers unload sardines, sea bass, sole, shrimp, and octopus each morning. The open-air fish market is a sensory whirlwind of shouting fishmongers, glistening catches, and swooping seagulls. Choose your fish at the stalls and have it grilled on the spot at the outdoor barbecue stands for 50 to 100 MAD per plate, served with bread, salad, and harissa.",
+      image: '/images/hero-essaouira-port.webp',
+      type: 'Market & Food',
+      rating: 4.8,
+    },
+    {
+      name: 'Essaouira Medina (UNESCO)',
+      description: "Inscribed as a UNESCO World Heritage Site in 2001, the medina of Essaouira is a masterpiece of late-18th-century military architecture blended with North African town planning. Unlike the labyrinthine medinas of Fes or Marrakech, Essaouira's streets follow a rational grid pattern inspired by European urban design. The medina is enclosed by crenellated walls and contains the mellah (Jewish quarter), souks, zawiyas, mosques, and hundreds of artisan workshops.",
+      image: '/images/hero-essaouira-port.webp',
+      type: 'UNESCO Heritage',
+      rating: 4.9,
+    },
+    {
+      name: 'Essaouira Beach',
+      description: "A vast crescent of golden sand stretching south from the medina walls for over 5 kilometers, battered by consistent Atlantic trade winds. The northern end near the medina is popular with football players and camel ride operators, while the southern stretch toward Diabat attracts kitesurfers and windsurfers. At low tide, the wet sand becomes a mirror reflecting the sky, creating spectacular photography conditions.",
+      image: '/images/hero-essaouira-port.webp',
+      type: 'Beach',
+      rating: 4.7,
+    },
+    {
+      name: 'Sidi Mohammed Ben Abdallah Museum',
+      description: "Housed in a beautifully restored 19th-century riad near Moulay Hassan Square, this ethnographic museum showcases the rich cultural heritage of the Essaouira region. Collections include traditional Berber and Jewish jewelry, antique weapons, musical instruments used in Gnaoua ceremonies, marquetry woodwork, Roman-era artifacts from the Iles Purpuraires, and historic photographs. Entry is 70 MAD.",
+      image: '/images/hero-essaouira-port.webp',
+      type: 'Museum',
+      rating: 4.5,
+    },
+    {
+      name: 'Borj El Baroud',
+      description: "A dramatic ruined bastion at the southern end of the beach, partially submerged at high tide. This crumbling 18th-century powder magazine sits where the Oued Ksob river meets the Atlantic, creating an evocative, almost otherworldly scene. At low tide you can walk right up to the ruins and explore the remnants of the fortification. A favorite spot for photographers seeking moody, atmospheric shots.",
+      image: '/images/hero-essaouira-port.webp',
+      type: 'Ruins',
+      rating: 4.6,
+    },
+    {
+      name: 'The Mellah (Jewish Quarter)',
+      description: "Essaouira once had the largest Jewish community in Morocco, and the mellah preserves this extraordinary heritage. The quarter features distinctive architecture with external balconies and large windows. The Slat Lkahal synagogue has been restored and is open to visitors. At its peak in the 19th century, Jews comprised nearly 40 percent of the city's population and dominated its international trade.",
+      image: '/images/hero-essaouira-port.webp',
+      type: 'Heritage Quarter',
+      rating: 4.6,
+    },
+    {
+      name: 'Art Galleries of the Medina',
+      description: "Essaouira has been a magnet for artists since the 1960s, and the medina contains dozens of galleries showcasing contemporary Moroccan art. Galerie Damgaard on Avenue Oqba Ibn Nafiaa is the most famous, having championed self-taught Gnaoua-inspired painters for decades. Other notable galleries include Espace Othello, La Petite Galerie, and the cooperative gallery on Rue de la Skala.",
+      image: '/images/hero-essaouira-port.webp',
+      type: 'Art & Culture',
+      rating: 4.7,
+    },
+    {
+      name: 'Medina Souks & Thuya Wood Workshops',
+      description: "The souks of Essaouira are calmer and more navigable than those of Marrakech, organized along the two main arteries of Avenue de l'Istiqlal and Avenue Sidi Mohammed Ben Abdallah. The city is famous for its thuya wood artisans, who carve intricate boxes, chess sets, and furniture from the aromatic root wood of the thuya tree endemic to the Essaouira region.",
+      image: '/images/hero-essaouira-port.webp',
+      type: 'Shopping & Crafts',
+      rating: 4.6,
+    },
+    {
+      name: 'Diabat Village & Ruins',
+      description: 'A small Berber village 5 kilometers south of Essaouira along the beach, famous for its association with Jimi Hendrix, who allegedly visited in 1969. The ruins of the Dar Soltane palace, a crumbling 18th-century royal residence half-buried in dunes, add to the mystique. The walk along the windswept beach through the sand dunes is undeniably magical.',
+      image: '/images/hero-essaouira-port.webp',
+      type: 'Village & Legend',
+      rating: 4.5,
+    },
   ];
 
   const windSports = [
@@ -128,41 +200,205 @@ export default function EssaouiraPage() {
   ];
 
   const windSchools = [
-    { name: 'ION Club Essaouira', specialty: 'Kitesurfing & Windsurfing', price: '500-800 MAD/session', description: "Part of the internationally renowned ION Club chain, this center offers professional IKO-certified kite instruction and windsurfing courses right on Essaouira beach. Top-quality Duotone and Fanatic equipment. Beginner courses start at 500 MAD for a 2-hour group lesson, private sessions from 800 MAD.", location: 'Essaouira Beach, near Sofitel' },
-    { name: 'Explora Watersports', specialty: 'Kitesurfing & Surfing', price: '400-700 MAD/session', description: "A well-established local school run by experienced Moroccan instructors. Known for patient teaching and a friendly atmosphere. Group kite lessons from 400 MAD, surf lessons from 400 MAD including board and wetsuit. Also arranges downwinders and guided kite trips to Moulay Bouzerktoune.", location: 'Essaouira Beach, south end' },
-    { name: 'Mogasurf', specialty: 'Surfing & SUP', price: '400-600 MAD/session', description: "Essaouira's premier surf school offering lessons for all levels at both Essaouira beach and Sidi Kaouki. Surf lessons from 400 MAD for 2 hours with equipment included. Also offers stand-up paddleboarding sessions and surf camps with accommodation packages starting at 3,500 MAD per week.", location: 'Rue Hoummane El Fatouaki, Medina' },
-    { name: 'Kite Paradise Essaouira', specialty: 'Kitesurfing', price: '500-750 MAD/session', description: "Boutique kite school offering personalized instruction with small group sizes (max 4 students per instructor). IKO-certified courses from discovery sessions to advanced coaching. Equipment rental available from 300 MAD per hour.", location: 'Essaouira Beach, central section' },
+    {
+      name: 'ION Club Essaouira',
+      specialty: 'Kitesurfing & Windsurfing',
+      price: '500-800 MAD/session',
+      description: "Part of the internationally renowned ION Club chain, this center offers professional IKO-certified kite instruction and windsurfing courses right on Essaouira beach. Top-quality Duotone and Fanatic equipment. Beginner courses start at 500 MAD for a 2-hour group lesson, private sessions from 800 MAD.",
+      location: 'Essaouira Beach, near Sofitel',
+    },
+    {
+      name: 'Explora Watersports',
+      specialty: 'Kitesurfing & Surfing',
+      price: '400-700 MAD/session',
+      description: "A well-established local school run by experienced Moroccan instructors. Known for patient teaching and a friendly atmosphere. Group kite lessons from 400 MAD, surf lessons from 400 MAD including board and wetsuit. Also arranges downwinders and guided kite trips to Moulay Bouzerktoune.",
+      location: 'Essaouira Beach, south end',
+    },
+    {
+      name: 'Mogasurf',
+      specialty: 'Surfing & SUP',
+      price: '400-600 MAD/session',
+      description: "Essaouira's premier surf school offering lessons for all levels at both Essaouira beach and Sidi Kaouki. Surf lessons from 400 MAD for 2 hours with equipment included. Also offers stand-up paddleboarding sessions and surf camps with accommodation packages starting at 3,500 MAD per week.",
+      location: 'Rue Hoummane El Fatouaki, Medina',
+    },
+    {
+      name: 'Kite Paradise Essaouira',
+      specialty: 'Kitesurfing',
+      price: '500-750 MAD/session',
+      description: "Boutique kite school offering personalized instruction with small group sizes (max 4 students per instructor). IKO-certified courses from discovery sessions to advanced coaching. Equipment rental available from 300 MAD per hour.",
+      location: 'Essaouira Beach, central section',
+    },
   ];
 
   const restaurants = [
-    { name: 'Ocean Vagabond', cuisine: 'International & Moroccan Fusion', price: '120-250 MAD', description: "A beachfront institution with its feet literally in the sand. This laid-back restaurant-bar serves excellent grilled fish, wood-fired pizzas, fresh salads, and Moroccan tagines. The outdoor terrace overlooking the ocean is the best seat in Essaouira for sunset. Try the grilled catch of the day with chermoula sauce.", location: 'Boulevard Mohammed V, Beachfront', highlight: 'Best sunset views in town' },
-    { name: 'La Table by Madada', cuisine: 'Modern Moroccan Fine Dining', price: '200-400 MAD', description: "The rooftop restaurant of the stylish Madada Mogador hotel, offering refined Moroccan cuisine with a contemporary twist. Chef uses locally sourced ingredients including fresh Atlantic seafood, regional argan oil, and seasonal produce. The tasting menu at 400 MAD is outstanding. Reservations essential.", location: '5 Rue Youssef El Fassi, Medina', highlight: 'Fine dining with medina rooftop views' },
-    { name: 'Taros Cafe', cuisine: 'Mediterranean & Moroccan', price: '100-200 MAD', description: "An Essaouira landmark occupying a multi-level building on Moulay Hassan Square with a famous rooftop terrace and live music program. The menu spans Moroccan classics, Mediterranean dishes, and excellent cocktails. Regular live Gnaoua music performances in the evening.", location: 'Place Moulay Hassan, 2nd Floor', highlight: 'Live Gnaoua music and rooftop terrace' },
-    { name: 'Les Alizes Mogador', cuisine: 'Traditional Moroccan', price: '80-160 MAD', description: "A beloved local restaurant tucked away in the medina serving authentic, home-style Moroccan cooking at fair prices. The fish tagine with preserved lemons and olives is legendary, and the couscous on Friday is not to be missed. Simple decor but enormous portions and genuine hospitality. No alcohol.", location: '26 Rue de la Skala, Medina', highlight: 'Authentic home-style Moroccan cooking' },
-    { name: 'Port Fish Stalls', cuisine: 'Grilled Seafood', price: '50-100 MAD', description: "The unmissable Essaouira experience. Choose your fish, prawns, calamari, or lobster from the fishmonger stalls near the port entrance, then have it grilled to order at the outdoor barbecue stands. A plate of mixed grilled fish with bread, salad, olives, and harissa costs 50 to 80 MAD. Lobster runs 100 to 150 MAD. Cash only.", location: 'Port entrance, off Place Moulay Hassan', highlight: 'Freshest and cheapest seafood in Morocco' },
-    { name: 'Elizir', cuisine: 'Italian-Moroccan Fusion', price: '100-220 MAD', description: "A charming Italian-run restaurant in the medina combining Moroccan ingredients with Italian technique. Handmade pasta, wood-fired pizzas, and creative fusion dishes like argan oil bruschetta and sea bass with chermoula pesto. The candlelit courtyard is one of the most romantic dining spots in the city.", location: 'Rue Aguenaou, Medina', highlight: 'Romantic courtyard dining' },
-    { name: 'Umia', cuisine: 'Asian-Moroccan Fusion', price: '130-250 MAD', description: "A stylish newcomer with creative Asian-Moroccan fusion dishes, excellent poke bowls, fresh juices, and craft cocktails. The modern interior with traditional Moroccan accents strikes the right balance. Vegetarian and vegan options are plentiful and well-executed.", location: '2 Rue du Rif, Medina', highlight: 'Best vegetarian options in Essaouira' },
-    { name: 'Cafe Restaurant Laayoune', cuisine: 'Traditional Moroccan', price: '40-80 MAD', description: "Where the locals eat. This no-frills restaurant on a quiet medina street serves enormous plates of tagine, grilled meats, and harira soup at incredible prices. The kefta tagine with egg is superb at just 45 MAD. Perfect for budget travelers seeking authenticity over ambiance.", location: 'Avenue Sidi Mohammed Ben Abdallah, Medina', highlight: 'Best budget meals in the medina' },
+    {
+      name: 'Ocean Vagabond',
+      cuisine: 'International & Moroccan Fusion',
+      price: '120-250 MAD',
+      description: "A beachfront institution with its feet literally in the sand. This laid-back restaurant-bar serves excellent grilled fish, wood-fired pizzas, fresh salads, and Moroccan tagines. The outdoor terrace overlooking the ocean is the best seat in Essaouira for sunset. Try the grilled catch of the day with chermoula sauce.",
+      location: 'Boulevard Mohammed V, Beachfront',
+      highlight: 'Best sunset views in town',
+    },
+    {
+      name: 'La Table by Madada',
+      cuisine: 'Modern Moroccan Fine Dining',
+      price: '200-400 MAD',
+      description: "The rooftop restaurant of the stylish Madada Mogador hotel, offering refined Moroccan cuisine with a contemporary twist. Chef uses locally sourced ingredients including fresh Atlantic seafood, regional argan oil, and seasonal produce. The tasting menu at 400 MAD is outstanding. Reservations essential.",
+      location: '5 Rue Youssef El Fassi, Medina',
+      highlight: 'Fine dining with medina rooftop views',
+    },
+    {
+      name: 'Taros Cafe',
+      cuisine: 'Mediterranean & Moroccan',
+      price: '100-200 MAD',
+      description: "An Essaouira landmark occupying a multi-level building on Moulay Hassan Square with a famous rooftop terrace and live music program. The menu spans Moroccan classics, Mediterranean dishes, and excellent cocktails. Regular live Gnaoua music performances in the evening.",
+      location: 'Place Moulay Hassan, 2nd Floor',
+      highlight: 'Live Gnaoua music and rooftop terrace',
+    },
+    {
+      name: 'Les Alizes Mogador',
+      cuisine: 'Traditional Moroccan',
+      price: '80-160 MAD',
+      description: "A beloved local restaurant tucked away in the medina serving authentic, home-style Moroccan cooking at fair prices. The fish tagine with preserved lemons and olives is legendary, and the couscous on Friday is not to be missed. Simple decor but enormous portions and genuine hospitality. No alcohol.",
+      location: '26 Rue de la Skala, Medina',
+      highlight: 'Authentic home-style Moroccan cooking',
+    },
+    {
+      name: 'Port Fish Stalls',
+      cuisine: 'Grilled Seafood',
+      price: '50-100 MAD',
+      description: "The unmissable Essaouira experience. Choose your fish, prawns, calamari, or lobster from the fishmonger stalls near the port entrance, then have it grilled to order at the outdoor barbecue stands. A plate of mixed grilled fish with bread, salad, olives, and harissa costs 50 to 80 MAD. Lobster runs 100 to 150 MAD. Cash only.",
+      location: 'Port entrance, off Place Moulay Hassan',
+      highlight: 'Freshest and cheapest seafood in Morocco',
+    },
+    {
+      name: 'Elizir',
+      cuisine: 'Italian-Moroccan Fusion',
+      price: '100-220 MAD',
+      description: "A charming Italian-run restaurant in the medina combining Moroccan ingredients with Italian technique. Handmade pasta, wood-fired pizzas, and creative fusion dishes like argan oil bruschetta and sea bass with chermoula pesto. The candlelit courtyard is one of the most romantic dining spots in the city.",
+      location: 'Rue Aguenaou, Medina',
+      highlight: 'Romantic courtyard dining',
+    },
+    {
+      name: 'Umia',
+      cuisine: 'Asian-Moroccan Fusion',
+      price: '130-250 MAD',
+      description: "A stylish newcomer with creative Asian-Moroccan fusion dishes, excellent poke bowls, fresh juices, and craft cocktails. The modern interior with traditional Moroccan accents strikes the right balance. Vegetarian and vegan options are plentiful and well-executed.",
+      location: '2 Rue du Rif, Medina',
+      highlight: 'Best vegetarian options in Essaouira',
+    },
+    {
+      name: 'Cafe Restaurant Laayoune',
+      cuisine: 'Traditional Moroccan',
+      price: '40-80 MAD',
+      description: "Where the locals eat. This no-frills restaurant on a quiet medina street serves enormous plates of tagine, grilled meats, and harira soup at incredible prices. The kefta tagine with egg is superb at just 45 MAD. Perfect for budget travelers seeking authenticity over ambiance.",
+      location: 'Avenue Sidi Mohammed Ben Abdallah, Medina',
+      highlight: 'Best budget meals in the medina',
+    },
   ];
 
   const accommodations = [
-    { name: 'Heure Bleue Palais', type: 'Luxury Hotel', price: '2,500-5,000 MAD/night', description: "Essaouira's most prestigious address, a Relais & Chateaux property occupying a restored 18th-century palace. Features a rooftop pool, cinema, spa, and opulent suites with antique furnishings. The rooftop terrace offers 360-degree views over the medina, port, and Atlantic.", budget: 'Luxury' },
-    { name: "Villa de l'O", type: 'Boutique Hotel', price: '1,800-3,500 MAD/night', description: "An exquisite boutique hotel built into the medina ramparts with rooms offering direct ocean views. Minimalist-chic design, a heated pool, excellent restaurant, and an intimate spa. One of the most architecturally stunning properties in Morocco.", budget: 'Luxury' },
-    { name: 'Riad Madada Mogador', type: 'Boutique Riad', price: '1,200-2,200 MAD/night', description: "A design-forward riad in the heart of the medina with just 7 rooms, each uniquely decorated with contemporary art and traditional craftsmanship. Home to the acclaimed La Table by Madada restaurant. The rooftop terrace with lounging areas is perfect for afternoon tea.", budget: 'Mid-Range to Luxury' },
-    { name: 'Riad Dar Maya', type: 'Traditional Riad', price: '700-1,400 MAD/night', description: "A beautifully restored traditional riad with a tranquil courtyard garden, plunge pool, and 6 individually designed rooms. Run by a welcoming British-Moroccan couple who provide excellent local tips. Homemade breakfast with freshly baked msemen is a highlight.", budget: 'Mid-Range' },
-    { name: 'Riad Baladin', type: 'Charming Riad', price: '500-900 MAD/night', description: "A colorful, art-filled riad with a sunny rooftop terrace and warm atmosphere. Each room features original artwork by local artists. Central medina location within walking distance of all major sights.", budget: 'Mid-Range' },
-    { name: 'Dar Liouba', type: 'Budget Riad', price: '350-600 MAD/night', description: "A simple but spotless riad offering excellent value in the medina. Small courtyard with a fountain, clean rooms with traditional decor, and a friendly owner who goes above and beyond. The rooftop terrace has partial ocean views. Breakfast included.", budget: 'Budget-Friendly' },
-    { name: 'Essaouira Youth Hostel (HI)', type: 'Hostel', price: '120-200 MAD/night', description: "A clean, well-run hostel near the medina walls with both dormitory beds and private rooms. Shared kitchen, communal lounge, and a small terrace. Popular with backpackers and surfers. Dorm beds from 120 MAD, private doubles from 200 MAD.", budget: 'Budget' },
-    { name: 'Sofitel Essaouira Mogador Golf & Spa', type: 'Resort', price: '2,000-4,000 MAD/night', description: "A sprawling 5-star resort outside the medina with a Gary Player-designed golf course, full-service thalassotherapy spa, multiple restaurants, and an enormous pool. Sits on the beachfront between the medina and the open dunes.", budget: 'Luxury' },
+    {
+      name: 'Heure Bleue Palais',
+      type: 'Luxury Hotel',
+      price: '2,500-5,000 MAD/night',
+      description: "Essaouira's most prestigious address, a Relais & Chateaux property occupying a restored 18th-century palace. Features a rooftop pool, cinema, spa, and opulent suites with antique furnishings. The rooftop terrace offers 360-degree views over the medina, port, and Atlantic.",
+      budget: 'Luxury',
+    },
+    {
+      name: "Villa de l'O",
+      type: 'Boutique Hotel',
+      price: '1,800-3,500 MAD/night',
+      description: "An exquisite boutique hotel built into the medina ramparts with rooms offering direct ocean views. Minimalist-chic design, a heated pool, excellent restaurant, and an intimate spa. One of the most architecturally stunning properties in Morocco.",
+      budget: 'Luxury',
+    },
+    {
+      name: 'Riad Madada Mogador',
+      type: 'Boutique Riad',
+      price: '1,200-2,200 MAD/night',
+      description: "A design-forward riad in the heart of the medina with just 7 rooms, each uniquely decorated with contemporary art and traditional craftsmanship. Home to the acclaimed La Table by Madada restaurant. The rooftop terrace with lounging areas is perfect for afternoon tea.",
+      budget: 'Mid-Range to Luxury',
+    },
+    {
+      name: 'Riad Dar Maya',
+      type: 'Traditional Riad',
+      price: '700-1,400 MAD/night',
+      description: "A beautifully restored traditional riad with a tranquil courtyard garden, plunge pool, and 6 individually designed rooms. Run by a welcoming British-Moroccan couple who provide excellent local tips. Homemade breakfast with freshly baked msemen is a highlight.",
+      budget: 'Mid-Range',
+    },
+    {
+      name: 'Riad Baladin',
+      type: 'Charming Riad',
+      price: '500-900 MAD/night',
+      description: "A colorful, art-filled riad with a sunny rooftop terrace and warm atmosphere. Each room features original artwork by local artists. Central medina location within walking distance of all major sights.",
+      budget: 'Mid-Range',
+    },
+    {
+      name: 'Dar Liouba',
+      type: 'Budget Riad',
+      price: '350-600 MAD/night',
+      description: "A simple but spotless riad offering excellent value in the medina. Small courtyard with a fountain, clean rooms with traditional decor, and a friendly owner who goes above and beyond. The rooftop terrace has partial ocean views. Breakfast included.",
+      budget: 'Budget-Friendly',
+    },
+    {
+      name: 'Essaouira Youth Hostel (HI)',
+      type: 'Hostel',
+      price: '120-200 MAD/night',
+      description: "A clean, well-run hostel near the medina walls with both dormitory beds and private rooms. Shared kitchen, communal lounge, and a small terrace. Popular with backpackers and surfers. Dorm beds from 120 MAD, private doubles from 200 MAD.",
+      budget: 'Budget',
+    },
+    {
+      name: 'Sofitel Essaouira Mogador Golf & Spa',
+      type: 'Resort',
+      price: '2,000-4,000 MAD/night',
+      description: "A sprawling 5-star resort outside the medina with a Gary Player-designed golf course, full-service thalassotherapy spa, multiple restaurants, and an enormous pool. Sits on the beachfront between the medina and the open dunes.",
+      budget: 'Luxury',
+    },
   ];
 
   const dayTrips = [
-    { name: 'Sidi Kaouki Beach', distance: '25 km south', duration: '30 min by car', description: "A laid-back surf village with a wide, windswept beach and consistent Atlantic swells. Much quieter than Essaouira, Sidi Kaouki has a handful of surf camps, a few beachfront cafes, and a Sufi shrine. Surfing lessons from 350 MAD. Grand taxis cost about 20 MAD per person.", icon: Waves },
-    { name: 'Argan Forest & Cooperatives', distance: '15-30 km east', duration: 'Half-day trip', description: "The Essaouira region is the heartland of the argan tree. Visit women's cooperatives where Berber women hand-crack argan nuts and cold-press the precious oil. Watch goats climbing argan trees (a genuine phenomenon). Half-day tours cost 300 to 500 MAD per person including transport and tastings.", icon: TreePine },
-    { name: 'Paradise Valley', distance: '60 km northeast', duration: 'Full-day trip', description: "A stunning hidden gorge with natural rock pools, waterfalls, and palm-lined cliffs about 90 minutes from Essaouira. The turquoise pools are perfect for swimming in summer. Popular combined with an argan cooperative visit. Organized tours run 400 to 600 MAD per person.", icon: Mountain },
-    { name: 'Diabat Village Walk', distance: '5 km south', duration: '2-3 hours walking', description: "A beautiful walk along the beach from Essaouira to the small Berber village of Diabat, passing the ruins of the Dar Soltane palace half-buried in sand dunes. Associated with Jimi Hendrix's 1969 visit. Stop for mint tea in the village. Free.", icon: Footprints },
-    { name: 'Camel Ride on the Beach', distance: 'From Essaouira beach', duration: '1-2 hours', description: "Camel and dromedary rides depart from the beach near the medina walls and head south toward Diabat. Sunset rides are particularly popular. Prices start at 200 MAD for one hour and 350 MAD for two hours. Negotiate firmly but fairly.", icon: Compass },
-    { name: 'Iles Purpuraires', distance: '1 km offshore', duration: 'Half-day', description: "Small islands visible from the Skala de la Ville, named for the purple dye the Romans extracted from murex shells. The main island hosts ruins of a prison and mosque, and is a breeding ground for Eleonora's falcon. Boat trips can be arranged for 200 to 400 MAD.", icon: Anchor },
+    {
+      name: 'Sidi Kaouki Beach',
+      distance: '25 km south',
+      duration: '30 min by car',
+      description: "A laid-back surf village with a wide, windswept beach and consistent Atlantic swells. Much quieter than Essaouira, Sidi Kaouki has a handful of surf camps, a few beachfront cafes, and a Sufi shrine. Surfing lessons from 350 MAD. Grand taxis cost about 20 MAD per person.",
+      icon: Waves,
+    },
+    {
+      name: 'Argan Forest & Cooperatives',
+      distance: '15-30 km east',
+      duration: 'Half-day trip',
+      description: "The Essaouira region is the heartland of the argan tree. Visit women's cooperatives where Berber women hand-crack argan nuts and cold-press the precious oil. Watch goats climbing argan trees (a genuine phenomenon). Half-day tours cost 300 to 500 MAD per person including transport and tastings.",
+      icon: TreePine,
+    },
+    {
+      name: 'Paradise Valley',
+      distance: '60 km northeast',
+      duration: 'Full-day trip',
+      description: "A stunning hidden gorge with natural rock pools, waterfalls, and palm-lined cliffs about 90 minutes from Essaouira. The turquoise pools are perfect for swimming in summer. Popular combined with an argan cooperative visit. Organized tours run 400 to 600 MAD per person.",
+      icon: Mountain,
+    },
+    {
+      name: 'Diabat Village Walk',
+      distance: '5 km south',
+      duration: '2-3 hours walking',
+      description: "A beautiful walk along the beach from Essaouira to the small Berber village of Diabat, passing the ruins of the Dar Soltane palace half-buried in sand dunes. Associated with Jimi Hendrix's 1969 visit. Stop for mint tea in the village. Free.",
+      icon: Footprints,
+    },
+    {
+      name: 'Camel Ride on the Beach',
+      distance: 'From Essaouira beach',
+      duration: '1-2 hours',
+      description: "Camel and dromedary rides depart from the beach near the medina walls and head south toward Diabat. Sunset rides are particularly popular. Prices start at 200 MAD for one hour and 350 MAD for two hours. Negotiate firmly but fairly.",
+      icon: Compass,
+    },
+    {
+      name: 'Iles Purpuraires',
+      distance: '1 km offshore',
+      duration: 'Half-day',
+      description: "Small islands visible from the Skala de la Ville, named for the purple dye the Romans extracted from murex shells. The main island hosts ruins of a prison and mosque, and is a breeding ground for Eleonora's falcon. Boat trips can be arranged for 200 to 400 MAD.",
+      icon: Anchor,
+    },
   ];
 
   const gettingThere = [
@@ -292,8 +528,107 @@ export default function EssaouiraPage() {
         </div>
       </section>
 
-      {/* -- Top Attractions -- */}
+      {/* -- Quick Facts -- */}
       <section className="py-12 md:py-16 bg-[var(--surface-muted)]">
+        <div className="container-morocco">
+          <div className="flex items-center gap-3 mb-8">
+            <Info className="w-6 h-6 text-[var(--color-primary)]" />
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+              Quick Facts
+            </h2>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            <div className="card-moroccan p-4 text-center">
+              <Users className="w-6 h-6 text-[var(--color-primary)] mx-auto mb-2" />
+              <p className="text-xs text-[var(--text-muted)] uppercase tracking-wide mb-1">Population</p>
+              <p className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+                77,000
+              </p>
+            </div>
+            <div className="card-moroccan p-4 text-center">
+              <Landmark className="w-6 h-6 text-[var(--color-primary)] mx-auto mb-2" />
+              <p className="text-xs text-[var(--text-muted)] uppercase tracking-wide mb-1">UNESCO Status</p>
+              <p className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+                Since 2001
+              </p>
+            </div>
+            <div className="card-moroccan p-4 text-center">
+              <Wind className="w-6 h-6 text-[var(--color-primary)] mx-auto mb-2" />
+              <p className="text-xs text-[var(--text-muted)] uppercase tracking-wide mb-1">Wind Days</p>
+              <p className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+                300+ / Year
+              </p>
+            </div>
+            <div className="card-moroccan p-4 text-center">
+              <ThermometerSun className="w-6 h-6 text-[var(--color-primary)] mx-auto mb-2" />
+              <p className="text-xs text-[var(--text-muted)] uppercase tracking-wide mb-1">Avg Temp</p>
+              <p className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+                20 C
+              </p>
+            </div>
+            <div className="card-moroccan p-4 text-center">
+              <Car className="w-6 h-6 text-[var(--color-primary)] mx-auto mb-2" />
+              <p className="text-xs text-[var(--text-muted)] uppercase tracking-wide mb-1">From Marrakech</p>
+              <p className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+                2.5 Hours
+              </p>
+            </div>
+            <div className="card-moroccan p-4 text-center">
+              <Music className="w-6 h-6 text-[var(--color-primary)] mx-auto mb-2" />
+              <p className="text-xs text-[var(--text-muted)] uppercase tracking-wide mb-1">Gnaoua Fest</p>
+              <p className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+                Late June
+              </p>
+            </div>
+          </div>
+          <div className="mt-8 card-moroccan p-6">
+            <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-lg mb-3">
+              Why Visit Essaouira?
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <ul className="space-y-2">
+                <li className="flex items-start gap-2 text-sm text-[var(--text-muted)]">
+                  <CheckCircle className="w-4 h-4 text-[var(--color-accent)] flex-shrink-0 mt-0.5" />
+                  <span>UNESCO-listed medina with a navigable grid layout</span>
+                </li>
+                <li className="flex items-start gap-2 text-sm text-[var(--text-muted)]">
+                  <CheckCircle className="w-4 h-4 text-[var(--color-accent)] flex-shrink-0 mt-0.5" />
+                  <span>World-class kitesurfing, windsurfing, and surfing</span>
+                </li>
+                <li className="flex items-start gap-2 text-sm text-[var(--text-muted)]">
+                  <CheckCircle className="w-4 h-4 text-[var(--color-accent)] flex-shrink-0 mt-0.5" />
+                  <span>Freshest grilled seafood in Morocco from 50 MAD</span>
+                </li>
+                <li className="flex items-start gap-2 text-sm text-[var(--text-muted)]">
+                  <CheckCircle className="w-4 h-4 text-[var(--color-accent)] flex-shrink-0 mt-0.5" />
+                  <span>Game of Thrones filming location (Astapor)</span>
+                </li>
+              </ul>
+              <ul className="space-y-2">
+                <li className="flex items-start gap-2 text-sm text-[var(--text-muted)]">
+                  <CheckCircle className="w-4 h-4 text-[var(--color-accent)] flex-shrink-0 mt-0.5" />
+                  <span>Gnaoua & World Music Festival every June (free)</span>
+                </li>
+                <li className="flex items-start gap-2 text-sm text-[var(--text-muted)]">
+                  <CheckCircle className="w-4 h-4 text-[var(--color-accent)] flex-shrink-0 mt-0.5" />
+                  <span>Thriving art gallery scene and thuya wood crafts</span>
+                </li>
+                <li className="flex items-start gap-2 text-sm text-[var(--text-muted)]">
+                  <CheckCircle className="w-4 h-4 text-[var(--color-accent)] flex-shrink-0 mt-0.5" />
+                  <span>Cooler temperatures than Marrakech year-round</span>
+                </li>
+                <li className="flex items-start gap-2 text-sm text-[var(--text-muted)]">
+                  <CheckCircle className="w-4 h-4 text-[var(--color-accent)] flex-shrink-0 mt-0.5" />
+                  <span>One of the safest and most relaxed cities in Morocco</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* -- Top Attractions -- */}
+      <section className="py-12 md:py-16">
         <div className="container-morocco">
           <div className="flex items-center gap-3 mb-3">
             <Camera className="w-6 h-6 text-[var(--color-primary)]" />
@@ -306,9 +641,17 @@ export default function EssaouiraPage() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {attractions.map((attraction, index) => (
-              <div key={attraction.name} className="card-moroccan overflow-hidden group hover:shadow-xl transition-all duration-300">
+              <div
+                key={attraction.name}
+                className="card-moroccan overflow-hidden group hover:shadow-xl transition-all duration-300"
+              >
                 <div className="relative aspect-[16/10] overflow-hidden">
-                  <img src={attraction.image} alt={attraction.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading={index < 3 ? 'eager' : 'lazy'} />
+                  <img
+                      src={attraction.image}
+                      alt={attraction.name}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading={index < 3 ? 'eager' : 'lazy'}
+                    />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                   <div className="absolute top-3 left-3">
                     <span className="tag bg-white/90 text-[var(--color-primary)] font-semibold">{attraction.type}</span>
@@ -319,7 +662,8 @@ export default function EssaouiraPage() {
                   </div>
                 </div>
                 <div className="p-5">
-                  <h3 className="font-[family-name:var(--font-display)] text-lg font-bold text-[var(--text-primary)] mb-2">{attraction.name}</h3>
+                  <h3 className="font-[family-name:var(--font-display)] text-lg font-bold text-[var(--text-primary)] mb-2"
+                    >{attraction.name}</h3>
                   <p className="text-sm text-[var(--text-muted)] leading-relaxed line-clamp-4">{attraction.description}</p>
                 </div>
               </div>
@@ -333,7 +677,8 @@ export default function EssaouiraPage() {
         <div className="container-morocco">
           <div className="flex items-center gap-3 mb-3">
             <Wind className="w-6 h-6 text-[var(--color-secondary)]" />
-            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">Wind Sports Capital of Africa</h2>
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]"
+              >Wind Sports Capital of Africa</h2>
           </div>
           <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">
             With 300+ days of rideable wind per year and consistent Alizee trade winds blowing 15 to 25 knots from April through September, Essaouira is one of the top wind sports destinations on the planet.
@@ -344,7 +689,8 @@ export default function EssaouiraPage() {
               return (
                 <div key={sport.sport} className="card-moroccan p-6">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[var(--color-primary-50)] text-[var(--color-primary)]"><Icon className="w-6 h-6" /></div>
+                    <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[var(--color-primary-50)] text-[var(--color-primary)]"
+                      ><Icon className="w-6 h-6" /></div>
                     <h3 className="font-[family-name:var(--font-display)] text-xl font-bold text-[var(--text-primary)]">{sport.sport}</h3>
                   </div>
                   <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-4">{sport.description}</p>
@@ -358,23 +704,30 @@ export default function EssaouiraPage() {
                       ))}
                     </ul>
                   </div>
-                  <div className="flex items-center gap-2 text-sm text-[var(--color-primary)] font-medium"><Calendar className="w-3.5 h-3.5" />{sport.season}</div>
+                  <div className="flex items-center gap-2 text-sm text-[var(--color-primary)] font-medium"
+                    ><Calendar className="w-3.5 h-3.5" />{sport.season}</div>
                 </div>
               );
             })}
           </div>
-          <h3 className="text-2xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-2">Recommended Schools & Centers</h3>
-          <p className="text-[var(--text-secondary)] mb-6">Lessons range from 400 to 800 MAD per session depending on sport, duration, and group or private instruction. All schools provide equipment.</p>
+          <h3 className="text-2xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-2"
+            >Recommended Schools & Centers</h3>
+          <p className="text-[var(--text-secondary)] mb-6"
+            >Lessons range from 400 to 800 MAD per session depending on sport, duration, and group or private instruction. All schools provide equipment.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {windSchools.map((school) => (
-              <div key={school.name} className="card-moroccan p-6">
+              <div
+                key={school.name}
+                className="card-moroccan p-6"
+              >
                 <div className="flex items-center justify-between mb-3">
                   <h4 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-lg">{school.name}</h4>
                   <span className="tag bg-[var(--color-accent-50)] text-[var(--color-accent)] font-semibold">{school.price}</span>
                 </div>
                 <span className="inline-block tag bg-[var(--color-primary-50)] text-[var(--color-primary)] mb-3">{school.specialty}</span>
                 <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-3">{school.description}</p>
-                <div className="flex items-center gap-2 text-sm text-[var(--text-secondary)]"><MapPin className="w-3.5 h-3.5 text-[var(--color-accent)]" />{school.location}</div>
+                <div className="flex items-center gap-2 text-sm text-[var(--text-secondary)]"
+                  ><MapPin className="w-3.5 h-3.5 text-[var(--color-accent)]" />{school.location}</div>
               </div>
             ))}
           </div>
@@ -388,39 +741,54 @@ export default function EssaouiraPage() {
             <Palette className="w-6 h-6 text-[var(--color-primary)]" />
             <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">Art & Culture</h2>
           </div>
-          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">Essaouira has been a magnet for artists, musicians, and bohemian travelers since the 1960s. The city&apos;s creative spirit is palpable in every gallery, workshop, and street corner.</p>
+          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl"
+            >Essaouira has been a magnet for artists, musicians, and bohemian travelers since the 1960s. The city&apos;s creative spirit is palpable in every gallery, workshop, and street corner.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="card-moroccan p-6">
               <div className="flex items-center gap-3 mb-4">
-                <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[var(--color-primary-50)] text-[var(--color-primary)]"><Eye className="w-5 h-5" /></div>
+                <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[var(--color-primary-50)] text-[var(--color-primary)]"
+                  ><Eye className="w-5 h-5" /></div>
                 <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-lg">The Gallery Scene</h3>
               </div>
-              <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-3">Essaouira hosts the densest concentration of art galleries of any Moroccan city relative to its size. The movement was catalyzed by Danish-born art dealer Frederic Damgaard, who opened Galerie Damgaard on Avenue Oqba Ibn Nafiaa in the 1980s and championed self-taught local artists.</p>
-              <p className="text-sm text-[var(--text-muted)] leading-relaxed">Notable spaces include Espace Othello (housed in a converted synagogue), La Petite Galerie, and Galerie d&apos;Art Frederic Damgaard. Prices range from 200 MAD for small prints to 20,000+ MAD for significant original works.</p>
+              <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-3"
+                >Essaouira hosts the densest concentration of art galleries of any Moroccan city relative to its size. The movement was catalyzed by Danish-born art dealer Frederic Damgaard, who opened Galerie Damgaard on Avenue Oqba Ibn Nafiaa in the 1980s and championed self-taught local artists.</p>
+              <p className="text-sm text-[var(--text-muted)] leading-relaxed"
+                >Notable spaces include Espace Othello (housed in a converted synagogue), La Petite Galerie, and Galerie d&apos;Art Frederic Damgaard. Prices range from 200 MAD for small prints to 20,000+ MAD for significant original works.</p>
             </div>
             <div className="card-moroccan p-6">
               <div className="flex items-center gap-3 mb-4">
-                <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[var(--color-primary-50)] text-[var(--color-primary)]"><TreePine className="w-5 h-5" /></div>
+                <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[var(--color-primary-50)] text-[var(--color-primary)]"
+                  ><TreePine className="w-5 h-5" /></div>
                 <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-lg">Thuya Wood Artisans</h3>
               </div>
-              <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-3">Essaouira is the undisputed capital of thuya wood craftsmanship. The thuya tree (Tetraclinis articulata) grows only in the Essaouira region and parts of Algeria, producing richly patterned, aromatic wood prized for marquetry and carving.</p>
-              <p className="text-sm text-[var(--text-muted)] leading-relaxed">Products range from small jewelry boxes (50 to 200 MAD) to elaborate chess sets (500 to 2,000 MAD). The Ensemble Artisanal cooperative offers fixed prices and quality assurance.</p>
+              <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-3"
+                >Essaouira is the undisputed capital of thuya wood craftsmanship. The thuya tree (Tetraclinis articulata) grows only in the Essaouira region and parts of Algeria, producing richly patterned, aromatic wood prized for marquetry and carving.</p>
+              <p className="text-sm text-[var(--text-muted)] leading-relaxed"
+                >Products range from small jewelry boxes (50 to 200 MAD) to elaborate chess sets (500 to 2,000 MAD). The Ensemble Artisanal cooperative offers fixed prices and quality assurance.</p>
             </div>
             <div className="card-moroccan p-6">
               <div className="flex items-center gap-3 mb-4">
-                <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[var(--color-primary-50)] text-[var(--color-primary)]"><Sparkles className="w-5 h-5" /></div>
-                <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-lg">Argan Oil Cooperatives</h3>
+                <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[var(--color-primary-50)] text-[var(--color-primary)]"
+                  ><Sparkles className="w-5 h-5" /></div>
+                <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-lg"
+                  >Argan Oil Cooperatives</h3>
               </div>
-              <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-3">The argan tree is endemic to southwestern Morocco, and the Essaouira region sits at the heart of the UNESCO-designated Arganeraie Biosphere Reserve. Women&apos;s cooperatives process the oil by hand using traditional stone mills.</p>
-              <p className="text-sm text-[var(--text-muted)] leading-relaxed">Culinary argan oil costs 150 to 250 MAD for 500ml. Cosmetic argan oil runs 200 to 350 MAD for 100ml. Cooperative prices are fair and fixed, with profits going directly to the women workers.</p>
+              <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-3"
+                >The argan tree is endemic to southwestern Morocco, and the Essaouira region sits at the heart of the UNESCO-designated Arganeraie Biosphere Reserve. Women&apos;s cooperatives process the oil by hand using traditional stone mills.</p>
+              <p className="text-sm text-[var(--text-muted)] leading-relaxed"
+                >Culinary argan oil costs 150 to 250 MAD for 500ml. Cosmetic argan oil runs 200 to 350 MAD for 100ml. Cooperative prices are fair and fixed, with profits going directly to the women workers.</p>
             </div>
             <div className="card-moroccan p-6">
               <div className="flex items-center gap-3 mb-4">
-                <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[var(--color-primary-50)] text-[var(--color-primary)]"><Music className="w-5 h-5" /></div>
-                <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-lg">Gnaoua Music Heritage</h3>
+                <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[var(--color-primary-50)] text-[var(--color-primary)]"
+                  ><Music className="w-5 h-5" /></div>
+                <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-lg"
+                  >Gnaoua Music Heritage</h3>
               </div>
-              <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-3">Essaouira is the spiritual home of Gnaoua music, a powerful blend of sub-Saharan African rhythms, Berber traditions, and Sufi spiritual practices. The music features the guembri (a three-stringed bass lute), krakeb castanets, and hypnotic call-and-response chanting.</p>
-              <p className="text-sm text-[var(--text-muted)] leading-relaxed">Gnaoua musicians perform in Moulay Hassan Square most evenings. The tradition was recognized by UNESCO as Intangible Cultural Heritage of Humanity in 2019.</p>
+              <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-3"
+                >Essaouira is the spiritual home of Gnaoua music, a powerful blend of sub-Saharan African rhythms, Berber traditions, and Sufi spiritual practices. The music features the guembri (a three-stringed bass lute), krakeb castanets, and hypnotic call-and-response chanting.</p>
+              <p className="text-sm text-[var(--text-muted)] leading-relaxed"
+                >Gnaoua musicians perform in Moulay Hassan Square most evenings. The tradition was recognized by UNESCO as Intangible Cultural Heritage of Humanity in 2019.</p>
             </div>
           </div>
         </div>
@@ -433,20 +801,108 @@ export default function EssaouiraPage() {
             <Utensils className="w-6 h-6 text-[var(--color-secondary)]" />
             <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">Where to Eat</h2>
           </div>
-          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">Essaouira&apos;s food scene revolves around the Atlantic catch. From 50 MAD grilled fish plates at the port to refined rooftop dining, every budget and taste is served. All prices in Moroccan Dirham (MAD).</p>
+          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl"
+            >Essaouira&apos;s food scene revolves around the Atlantic catch. From 50 MAD grilled fish plates at the port to refined rooftop dining, every budget and taste is served. All prices in Moroccan Dirham (MAD).</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {restaurants.map((restaurant) => (
-              <div key={restaurant.name} className="card-moroccan p-6">
+              <div
+                key={restaurant.name}
+                className="card-moroccan p-6"
+              >
                 <div className="flex items-center justify-between mb-2">
                   <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-lg">{restaurant.name}</h3>
-                  <span className="tag bg-[var(--color-accent-50)] text-[var(--color-accent)] font-semibold text-sm">{restaurant.price}</span>
+                  <span className="tag bg-[var(--color-accent-50)] text-[var(--color-accent)] font-semibold text-sm"
+                    >{restaurant.price}</span>
                 </div>
-                <div className="flex items-center gap-3 mb-3"><span className="tag bg-[var(--color-primary-50)] text-[var(--color-primary)]">{restaurant.cuisine}</span></div>
+                <div className="flex items-center gap-3 mb-3"
+                  ><span className="tag bg-[var(--color-primary-50)] text-[var(--color-primary)]"
+                  >{restaurant.cuisine}</span></div>
                 <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-3">{restaurant.description}</p>
-                <div className="flex items-center gap-2 text-sm text-[var(--text-secondary)] mb-2"><MapPin className="w-3.5 h-3.5 text-[var(--color-accent)] flex-shrink-0" />{restaurant.location}</div>
-                <div className="flex items-center gap-2 text-sm text-[var(--color-primary)] font-medium"><Star className="w-3.5 h-3.5 fill-[var(--color-accent)] text-[var(--color-accent)]" />{restaurant.highlight}</div>
+                <div className="flex items-center gap-2 text-sm text-[var(--text-secondary)] mb-2"
+                  ><MapPin className="w-3.5 h-3.5 text-[var(--color-accent)] flex-shrink-0" />{restaurant.location}</div>
+                <div className="flex items-center gap-2 text-sm text-[var(--color-primary)] font-medium"
+                  ><Star className="w-3.5 h-3.5 fill-[var(--color-accent)] text-[var(--color-accent)]" />{restaurant.highlight}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+
+      {/* -- Essaouira Signature Dishes -- */}
+      <section className="py-12 md:py-16 bg-[var(--surface-muted)]">
+        <div className="container-morocco">
+          <div className="flex items-center gap-3 mb-3">
+            <Fish className="w-6 h-6 text-[var(--color-primary)]" />
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+              Essaouira&apos;s Signature Dishes
+            </h2>
+          </div>
+          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">
+            The Atlantic coast delivers some of Morocco&apos;s finest flavors. Here are the dishes
+            you absolutely must try during your visit.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="card-moroccan p-6 text-center group">
+              <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-[var(--color-primary-50)] text-[var(--color-primary)] mx-auto mb-4 group-hover:bg-[var(--color-primary)] group-hover:text-white transition-colors">
+                <Fish className="w-7 h-7" />
+              </div>
+              <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-2">
+                Grilled Sardines
+              </h3>
+              <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-2">
+                Essaouira&apos;s most iconic dish. Fresh Atlantic sardines grilled over charcoal at
+                the port stalls, served with bread, harissa, and a squeeze of lemon.
+              </p>
+              <span className="text-sm font-semibold text-[var(--color-accent)]">
+                30-50 MAD/plate
+              </span>
+            </div>
+            <div className="card-moroccan p-6 text-center group">
+              <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-[var(--color-primary-50)] text-[var(--color-primary)] mx-auto mb-4 group-hover:bg-[var(--color-primary)] group-hover:text-white transition-colors">
+                <Utensils className="w-7 h-7" />
+              </div>
+              <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-2">
+                Fish Tagine with Chermoula
+              </h3>
+              <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-2">
+                Sea bass or sole slow-cooked in a clay tagine with chermoula marinade (cilantro,
+                garlic, cumin, paprika, lemon), preserved lemons, and Moroccan olives.
+              </p>
+              <span className="text-sm font-semibold text-[var(--color-accent)]">
+                80-150 MAD
+              </span>
+            </div>
+            <div className="card-moroccan p-6 text-center group">
+              <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-[var(--color-primary-50)] text-[var(--color-primary)] mx-auto mb-4 group-hover:bg-[var(--color-primary)] group-hover:text-white transition-colors">
+                <Sparkles className="w-7 h-7" />
+              </div>
+              <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-2">
+                Argan Oil Amlou
+              </h3>
+              <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-2">
+                A rich, thick paste made from argan oil, roasted almonds, and honey, often called
+                Moroccan peanut butter. Spread on bread at breakfast. An Essaouira specialty.
+              </p>
+              <span className="text-sm font-semibold text-[var(--color-accent)]">
+                50-80 MAD/jar
+              </span>
+            </div>
+            <div className="card-moroccan p-6 text-center group">
+              <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-[var(--color-primary-50)] text-[var(--color-primary)] mx-auto mb-4 group-hover:bg-[var(--color-primary)] group-hover:text-white transition-colors">
+                <Coffee className="w-7 h-7" />
+              </div>
+              <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-2">
+                Spiced Mint Tea
+              </h3>
+              <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-2">
+                Essaouira&apos;s cafes serve Morocco&apos;s beloved mint tea with a coastal twist:
+                sometimes infused with chiba (wormwood) or luisa (lemon verbena) grown in the region.
+              </p>
+              <span className="text-sm font-semibold text-[var(--color-accent)]">
+                10-15 MAD/glass
+              </span>
+            </div>
           </div>
         </div>
       </section>
@@ -458,11 +914,16 @@ export default function EssaouiraPage() {
             <Bed className="w-6 h-6 text-[var(--color-primary)]" />
             <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">Where to Stay</h2>
           </div>
-          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">From palatial Relais &amp; Chateaux properties to backpacker-friendly hostels, Essaouira offers accommodation for every budget. Staying inside the medina puts you steps from everything.</p>
+          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl"
+            >From palatial Relais &amp; Chateaux properties to backpacker-friendly hostels, Essaouira offers accommodation for every budget. Staying inside the medina puts you steps from everything.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {accommodations.map((hotel) => (
-              <div key={hotel.name} className="card-moroccan p-6 flex gap-4">
-                <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-[var(--color-accent-50)] text-[var(--color-accent)]"><Bed className="w-6 h-6" /></div>
+              <div
+                key={hotel.name}
+                className="card-moroccan p-6 flex gap-4"
+              >
+                <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-[var(--color-accent-50)] text-[var(--color-accent)]"
+                  ><Bed className="w-6 h-6" /></div>
                 <div>
                   <div className="flex items-center gap-2 mb-1 flex-wrap">
                     <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">{hotel.name}</h3>
@@ -485,16 +946,19 @@ export default function EssaouiraPage() {
         <div className="container-morocco">
           <div className="flex items-center gap-3 mb-3">
             <Compass className="w-6 h-6 text-[var(--color-secondary)]" />
-            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">Day Trips from Essaouira</h2>
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]"
+              >Day Trips from Essaouira</h2>
           </div>
-          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">From surf villages and hidden gorges to argan forests where goats climb trees. Most can be done independently or through local operators for 300 to 600 MAD per person.</p>
+          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl"
+            >From surf villages and hidden gorges to argan forests where goats climb trees. Most can be done independently or through local operators for 300 to 600 MAD per person.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {dayTrips.map((trip) => {
               const Icon = trip.icon;
               return (
                 <div key={trip.name} className="card-moroccan p-6">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[var(--color-primary-50)] text-[var(--color-primary)]"><Icon className="w-5 h-5" /></div>
+                    <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[var(--color-primary-50)] text-[var(--color-primary)]"
+                      ><Icon className="w-5 h-5" /></div>
                     <div>
                       <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">{trip.name}</h3>
                       <div className="flex items-center gap-3 text-xs text-[var(--text-muted)]">
@@ -511,6 +975,118 @@ export default function EssaouiraPage() {
         </div>
       </section>
 
+
+      {/* -- Budget Breakdown -- */}
+      <section className="py-12 md:py-16">
+        <div className="container-morocco">
+          <div className="flex items-center gap-3 mb-3">
+            <DollarSign className="w-6 h-6 text-[var(--color-secondary)]" />
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+              Budget Guide
+            </h2>
+          </div>
+          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">
+            Essaouira is one of Morocco&apos;s more affordable destinations. Here is what to
+            expect at each budget level, with all prices in Moroccan Dirham (MAD).
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="card-moroccan p-6 border-t-4 border-t-green-500">
+              <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-xl mb-4">
+                Budget Traveler
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] mb-4">
+                300-500 MAD per day
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-start gap-2 text-sm text-[var(--text-muted)]">
+                  <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+                  <span>Hostel dorm bed: 120-200 MAD/night</span>
+                </li>
+                <li className="flex items-start gap-2 text-sm text-[var(--text-muted)]">
+                  <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+                  <span>Port fish stalls for lunch: 50-80 MAD</span>
+                </li>
+                <li className="flex items-start gap-2 text-sm text-[var(--text-muted)]">
+                  <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+                  <span>Local restaurant dinner: 40-80 MAD</span>
+                </li>
+                <li className="flex items-start gap-2 text-sm text-[var(--text-muted)]">
+                  <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+                  <span>Free activities: ramparts, beach, medina walks</span>
+                </li>
+                <li className="flex items-start gap-2 text-sm text-[var(--text-muted)]">
+                  <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+                  <span>Supratours bus from Marrakech: 80 MAD</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="card-moroccan p-6 border-t-4 border-t-[var(--color-accent)]">
+              <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-xl mb-4">
+                Mid-Range Traveler
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] mb-4">
+                800-1,500 MAD per day
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-start gap-2 text-sm text-[var(--text-muted)]">
+                  <CheckCircle className="w-4 h-4 text-[var(--color-accent)] flex-shrink-0 mt-0.5" />
+                  <span>Charming riad: 500-900 MAD/night</span>
+                </li>
+                <li className="flex items-start gap-2 text-sm text-[var(--text-muted)]">
+                  <CheckCircle className="w-4 h-4 text-[var(--color-accent)] flex-shrink-0 mt-0.5" />
+                  <span>Restaurant lunches: 100-200 MAD</span>
+                </li>
+                <li className="flex items-start gap-2 text-sm text-[var(--text-muted)]">
+                  <CheckCircle className="w-4 h-4 text-[var(--color-accent)] flex-shrink-0 mt-0.5" />
+                  <span>Wind sports lesson: 400-600 MAD</span>
+                </li>
+                <li className="flex items-start gap-2 text-sm text-[var(--text-muted)]">
+                  <CheckCircle className="w-4 h-4 text-[var(--color-accent)] flex-shrink-0 mt-0.5" />
+                  <span>Day trip with transport: 300-500 MAD</span>
+                </li>
+                <li className="flex items-start gap-2 text-sm text-[var(--text-muted)]">
+                  <CheckCircle className="w-4 h-4 text-[var(--color-accent)] flex-shrink-0 mt-0.5" />
+                  <span>Dinner with drinks: 150-300 MAD</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="card-moroccan p-6 border-t-4 border-t-[#C4960C]">
+              <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-xl mb-4">
+                Luxury Traveler
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] mb-4">
+                3,000-6,000+ MAD per day
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-start gap-2 text-sm text-[var(--text-muted)]">
+                  <CheckCircle className="w-4 h-4 text-[#C4960C] flex-shrink-0 mt-0.5" />
+                  <span>Heure Bleue or Villa de l&apos;O: 2,000-5,000 MAD/night</span>
+                </li>
+                <li className="flex items-start gap-2 text-sm text-[var(--text-muted)]">
+                  <CheckCircle className="w-4 h-4 text-[#C4960C] flex-shrink-0 mt-0.5" />
+                  <span>Fine dining at La Table by Madada: 300-500 MAD</span>
+                </li>
+                <li className="flex items-start gap-2 text-sm text-[var(--text-muted)]">
+                  <CheckCircle className="w-4 h-4 text-[#C4960C] flex-shrink-0 mt-0.5" />
+                  <span>Private kite/surf lessons: 800 MAD</span>
+                </li>
+                <li className="flex items-start gap-2 text-sm text-[var(--text-muted)]">
+                  <CheckCircle className="w-4 h-4 text-[#C4960C] flex-shrink-0 mt-0.5" />
+                  <span>Private guided day trips: 1,000-2,000 MAD</span>
+                </li>
+                <li className="flex items-start gap-2 text-sm text-[var(--text-muted)]">
+                  <CheckCircle className="w-4 h-4 text-[#C4960C] flex-shrink-0 mt-0.5" />
+                  <span>Spa treatments at Sofitel: 500-1,500 MAD</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* -- Getting There -- */}
       <section className="py-12 md:py-16 bg-[var(--surface-muted)]">
         <div className="container-morocco">
@@ -518,18 +1094,24 @@ export default function EssaouiraPage() {
             <Plane className="w-6 h-6 text-[var(--color-primary)]" />
             <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">Getting There</h2>
           </div>
-          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">Essaouira is 175 km west of Marrakech (2.5 hours by road). Most visitors arrive by bus or taxi from Marrakech.</p>
+          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl"
+            >Essaouira is 175 km west of Marrakech (2.5 hours by road). Most visitors arrive by bus or taxi from Marrakech.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {gettingThere.map((transport) => {
               const Icon = transport.icon;
               return (
-                <div key={transport.method} className="card-moroccan p-6">
+                <div
+                  key={transport.method}
+                  className="card-moroccan p-6"
+                >
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[var(--color-primary-50)] text-[var(--color-primary)]"><Icon className="w-5 h-5" /></div>
+                    <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[var(--color-primary-50)] text-[var(--color-primary)]"
+                      ><Icon className="w-5 h-5" /></div>
                     <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">{transport.method}</h3>
                   </div>
                   <div className="flex items-center gap-4 mb-3 text-sm">
-                    <span className="flex items-center gap-1 text-[var(--text-secondary)]"><Clock className="w-3.5 h-3.5 text-[var(--color-accent)]" /> {transport.duration}</span>
+                    <span className="flex items-center gap-1 text-[var(--text-secondary)]"
+                      ><Clock className="w-3.5 h-3.5 text-[var(--color-accent)]" /> {transport.duration}</span>
                     <span className="font-semibold text-[var(--color-accent)]">{transport.price}</span>
                   </div>
                   <p className="text-sm text-[var(--text-muted)] leading-relaxed">{transport.details}</p>
@@ -552,9 +1134,13 @@ export default function EssaouiraPage() {
             {practicalInfo.map((info) => {
               const Icon = info.icon;
               return (
-                <div key={info.title} className="card-moroccan p-6">
+                <div
+                  key={info.title}
+                  className="card-moroccan p-6"
+                >
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[var(--color-primary-50)] text-[var(--color-primary)]"><Icon className="w-5 h-5" /></div>
+                    <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[var(--color-primary-50)] text-[var(--color-primary)]"
+                      ><Icon className="w-5 h-5" /></div>
                     <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">{info.title}</h3>
                   </div>
                   <ul className="space-y-2">
@@ -582,7 +1168,8 @@ export default function EssaouiraPage() {
           <p className="text-[var(--text-secondary)] mb-4 max-w-2xl">{gnaoua.dates}</p>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
             <div className="card-moroccan p-6">
-              <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-xl mb-4">About the Festival</h3>
+              <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-xl mb-4"
+                >About the Festival</h3>
               <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-4">{gnaoua.description}</p>
               <h4 className="font-[family-name:var(--font-heading)] font-semibold text-[var(--text-primary)] mb-3">Festival Highlights</h4>
               <ul className="space-y-2">
@@ -595,7 +1182,8 @@ export default function EssaouiraPage() {
             </div>
             <div>
               <div className="card-moroccan p-6 mb-6">
-                <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-xl mb-4">Practical Tips for Festival-Goers</h3>
+                <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-xl mb-4"
+                  >Practical Tips for Festival-Goers</h3>
                 <ul className="space-y-2">
                   {gnaoua.practicalInfo.map((tip, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-[var(--text-muted)] leading-relaxed">
@@ -605,7 +1193,8 @@ export default function EssaouiraPage() {
                 </ul>
               </div>
               <div className="card-moroccan p-6">
-                <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-xl mb-4">The Gnaoua Musical Tradition</h3>
+                <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-xl mb-4"
+                  >The Gnaoua Musical Tradition</h3>
                 <p className="text-sm text-[var(--text-muted)] leading-relaxed">{gnaoua.musicTradition}</p>
               </div>
             </div>
@@ -618,33 +1207,46 @@ export default function EssaouiraPage() {
         <div className="container-morocco">
           <div className="flex items-center gap-3 mb-3">
             <Sun className="w-6 h-6 text-[var(--color-secondary)]" />
-            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">Essaouira Through the Seasons</h2>
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]"
+              >Essaouira Through the Seasons</h2>
           </div>
           <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">Each season brings a different character to the Wind City.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="card-moroccan p-6 text-center">
-              <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-green-50 text-green-600 mx-auto mb-4"><TreePine className="w-7 h-7" /></div>
+              <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-green-50 text-green-600 mx-auto mb-4"
+                ><TreePine className="w-7 h-7" /></div>
               <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-2">Spring (Mar-May)</h3>
-              <p className="text-sm text-[var(--text-muted)] leading-relaxed">Temperatures rise to 18-23 C. Winds begin picking up in April. Wildflowers bloom. Fewer tourists than summer. Excellent balance of weather and crowds.</p>
-              <div className="mt-3 flex items-center justify-center gap-1 text-sm font-medium text-green-600"><ThermometerSun className="w-3.5 h-3.5" /> 18-23 C</div>
+              <p className="text-sm text-[var(--text-muted)] leading-relaxed"
+                >Temperatures rise to 18-23 C. Winds begin picking up in April. Wildflowers bloom. Fewer tourists than summer. Excellent balance of weather and crowds.</p>
+              <div className="mt-3 flex items-center justify-center gap-1 text-sm font-medium text-green-600"
+                ><ThermometerSun className="w-3.5 h-3.5" /> 18-23 C</div>
             </div>
             <div className="card-moroccan p-6 text-center">
-              <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-amber-50 text-amber-600 mx-auto mb-4"><Sun className="w-7 h-7" /></div>
+              <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-amber-50 text-amber-600 mx-auto mb-4"
+                ><Sun className="w-7 h-7" /></div>
               <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-2">Summer (Jun-Aug)</h3>
-              <p className="text-sm text-[var(--text-muted)] leading-relaxed">Peak wind sports season with 20-25 knot trade winds. 25-30 C but feels cooler. Gnaoua Festival in June. Busy with tourists. Book accommodation in advance.</p>
-              <div className="mt-3 flex items-center justify-center gap-1 text-sm font-medium text-amber-600"><ThermometerSun className="w-3.5 h-3.5" /> 25-30 C</div>
+              <p className="text-sm text-[var(--text-muted)] leading-relaxed"
+                >Peak wind sports season with 20-25 knot trade winds. 25-30 C but feels cooler. Gnaoua Festival in June. Busy with tourists. Book accommodation in advance.</p>
+              <div className="mt-3 flex items-center justify-center gap-1 text-sm font-medium text-amber-600"
+                ><ThermometerSun className="w-3.5 h-3.5" /> 25-30 C</div>
             </div>
             <div className="card-moroccan p-6 text-center">
-              <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-orange-50 text-orange-600 mx-auto mb-4"><Wind className="w-7 h-7" /></div>
+              <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-orange-50 text-orange-600 mx-auto mb-4"
+                ><Wind className="w-7 h-7" /></div>
               <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-2">Autumn (Sep-Nov)</h3>
-              <p className="text-sm text-[var(--text-muted)] leading-relaxed">Winds ease through September. October brings warmer sea temperatures and surf season. Tourist numbers drop significantly. Ideal for budget travelers.</p>
-              <div className="mt-3 flex items-center justify-center gap-1 text-sm font-medium text-orange-600"><ThermometerSun className="w-3.5 h-3.5" /> 18-26 C</div>
+              <p className="text-sm text-[var(--text-muted)] leading-relaxed"
+                >Winds ease through September. October brings warmer sea temperatures and surf season. Tourist numbers drop significantly. Ideal for budget travelers.</p>
+              <div className="mt-3 flex items-center justify-center gap-1 text-sm font-medium text-orange-600"
+                ><ThermometerSun className="w-3.5 h-3.5" /> 18-26 C</div>
             </div>
             <div className="card-moroccan p-6 text-center">
-              <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-blue-50 text-blue-600 mx-auto mb-4"><Waves className="w-7 h-7" /></div>
+              <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-blue-50 text-blue-600 mx-auto mb-4"
+                ><Waves className="w-7 h-7" /></div>
               <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-2">Winter (Dec-Feb)</h3>
-              <p className="text-sm text-[var(--text-muted)] leading-relaxed">Quietest season, 12-18 C. Occasional rain and calmer winds make this best for surfing at Sidi Kaouki. Hotel prices drop 30-50 percent. More intimate atmosphere.</p>
-              <div className="mt-3 flex items-center justify-center gap-1 text-sm font-medium text-blue-600"><ThermometerSun className="w-3.5 h-3.5" /> 12-18 C</div>
+              <p className="text-sm text-[var(--text-muted)] leading-relaxed"
+                >Quietest season, 12-18 C. Occasional rain and calmer winds make this best for surfing at Sidi Kaouki. Hotel prices drop 30-50 percent. More intimate atmosphere.</p>
+              <div className="mt-3 flex items-center justify-center gap-1 text-sm font-medium text-blue-600"
+                ><ThermometerSun className="w-3.5 h-3.5" /> 12-18 C</div>
             </div>
           </div>
         </div>
@@ -655,9 +1257,11 @@ export default function EssaouiraPage() {
         <div className="container-morocco">
           <div className="flex items-center gap-3 mb-3">
             <BookOpen className="w-6 h-6 text-[var(--color-primary)]" />
-            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">A Brief History of Essaouira</h2>
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]"
+              >A Brief History of Essaouira</h2>
           </div>
-          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">From Phoenician traders to Gnaoua musicians, Essaouira has always been a crossroads of cultures.</p>
+          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl"
+            >From Phoenician traders to Gnaoua musicians, Essaouira has always been a crossroads of cultures.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
               { year: '7th Century BC', title: 'Phoenician & Roman Trading Post', description: "Phoenician traders established a seasonal trading post on the Iles Purpuraires offshore. The Romans later extracted prized Tyrian purple dye from murex shells found here." },
@@ -672,7 +1276,9 @@ export default function EssaouiraPage() {
               { year: '2019', title: 'UNESCO Intangible Heritage', description: "Gnaoua culture and music was recognized by UNESCO as Intangible Cultural Heritage of Humanity." },
             ].map((event) => (
               <div key={event.year} className="card-moroccan p-5 flex gap-4 items-start">
-                <div className="flex-shrink-0"><span className="inline-block px-3 py-1 rounded-lg bg-[var(--color-primary)] text-white text-xs font-bold">{event.year}</span></div>
+                <div className="flex-shrink-0"
+                  ><span className="inline-block px-3 py-1 rounded-lg bg-[var(--color-primary)] text-white text-xs font-bold"
+                  >{event.year}</span></div>
                 <div>
                   <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-1">{event.title}</h3>
                   <p className="text-sm text-[var(--text-muted)] leading-relaxed">{event.description}</p>
@@ -683,14 +1289,347 @@ export default function EssaouiraPage() {
         </div>
       </section>
 
+
+
+      {/* -- Game of Thrones Filming Locations -- */}
+      <section className="py-12 md:py-16">
+        <div className="container-morocco">
+          <div className="flex items-center gap-3 mb-3">
+            <Camera className="w-6 h-6 text-[var(--color-secondary)]" />
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+              Game of Thrones Filming Locations
+            </h2>
+          </div>
+          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">
+            Essaouira served as the backdrop for several key scenes in HBO&apos;s Game of Thrones.
+            Here is where fiction met the dramatic reality of these 18th-century fortifications.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="card-moroccan p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[var(--color-accent-50)] text-[var(--color-accent)]">
+                  <Landmark className="w-5 h-5" />
+                </div>
+                <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+                  Astapor (Skala de la Ville)
+                </h3>
+              </div>
+              <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-3">
+                The cannon-lined ramparts served as the walls of Astapor, the slave city where
+                Daenerys Targaryen negotiated for and ultimately freed the Unsullied army in Season 3.
+                The dramatic scene where Daenerys reveals she speaks Valyrian was filmed on these very walls.
+              </p>
+              <p className="text-sm text-[var(--text-secondary)] font-medium">
+                Season 3, Episodes 3-4
+              </p>
+            </div>
+            <div className="card-moroccan p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[var(--color-accent-50)] text-[var(--color-accent)]">
+                  <Anchor className="w-5 h-5" />
+                </div>
+                <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+                  Walk of Punishment (Skala du Port)
+                </h3>
+              </div>
+              <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-3">
+                The circular port watchtower and its surrounding walls were used for the infamous
+                &quot;Walk of Punishment&quot; sequence, where enslaved people are displayed along the
+                walls of Astapor. The tower&apos;s dramatic architecture made it perfect for the scene.
+              </p>
+              <p className="text-sm text-[var(--text-secondary)] font-medium">
+                Season 3, Episode 3
+              </p>
+            </div>
+            <div className="card-moroccan p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[var(--color-accent-50)] text-[var(--color-accent)]">
+                  <Globe className="w-5 h-5" />
+                </div>
+                <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+                  Slaver&apos;s Bay Panoramas
+                </h3>
+              </div>
+              <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-3">
+                Wide establishing shots of the medina walls and Atlantic coastline were used to
+                represent the broader Slaver&apos;s Bay region throughout Seasons 3 and 4. The
+                city&apos;s photogenic ramparts, ocean views, and weathered stone provided the
+                perfect canvas for the fictional slave cities of Essos.
+              </p>
+              <p className="text-sm text-[var(--text-secondary)] font-medium">
+                Seasons 3-4
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* -- Self-Guided Walking Tour -- */}
+      <section className="py-12 md:py-16 bg-[var(--surface-muted)]">
+        <div className="container-morocco">
+          <div className="flex items-center gap-3 mb-3">
+            <Footprints className="w-6 h-6 text-[var(--color-primary)]" />
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+              Self-Guided Walking Tour
+            </h2>
+          </div>
+          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">
+            A perfect morning route covering the medina&apos;s highlights in about 3 hours. Start
+            early to catch the morning light on the ramparts and the fishermen returning with their catch.
+          </p>
+
+          <div className="space-y-4">
+            {[
+              {
+                step: 1,
+                title: 'Bab el Sebaa (Main Gate)',
+                time: '8:30 AM',
+                description:
+                  'Enter the medina through the grand Bab el Sebaa gate. Take a moment to admire the fortified walls and the arched entrance that has welcomed visitors for over 250 years. The gate opens onto the main commercial street.',
+              },
+              {
+                step: 2,
+                title: "Avenue de l'Istiqlal",
+                time: '8:45 AM',
+                description:
+                  "Walk the main commercial artery of the medina, lined with shops selling spices, argan oil, and traditional clothing. This wide street demonstrates Essaouira's unusually orderly grid layout, designed by European architects for a Moroccan sultan.",
+              },
+              {
+                step: 3,
+                title: 'Skala de la Ville',
+                time: '9:00 AM',
+                description:
+                  'Climb to the ramparts and walk along the row of European cannons pointing at the Atlantic. The morning light is perfect for photography. Look for the Game of Thrones filming plaques. Spend time enjoying the panoramic ocean views.',
+              },
+              {
+                step: 4,
+                title: 'Thuya Woodworking Quarter',
+                time: '9:30 AM',
+                description:
+                  'Descend from the Skala into the woodworking workshops below the ramparts. Watch artisans carving intricate designs from fragrant thuya wood. A small box makes an excellent souvenir and costs 50 to 200 MAD.',
+              },
+              {
+                step: 5,
+                title: 'Moulay Hassan Square',
+                time: '10:00 AM',
+                description:
+                  'Arrive at the main square and settle into a cafe terrace for mint tea and msemen (Moroccan pancakes). Watch the square come alive with musicians, vendors, and strolling visitors. This is the Gnaoua Festival main stage.',
+              },
+              {
+                step: 6,
+                title: 'Essaouira Port & Fish Market',
+                time: '10:30 AM',
+                description:
+                  'Walk through the arched port entrance to the fishing harbour. Watch the blue trawlers unloading the morning catch and browse the fish stalls. This is the time to choose your lunch fish from the freshest selection.',
+              },
+              {
+                step: 7,
+                title: 'Skala du Port',
+                time: '11:00 AM',
+                description:
+                  'Climb the circular watchtower for panoramic views of the port, the medina walls, and the open Atlantic. This is the Game of Thrones Walk of Punishment filming location. Entry costs 70 MAD.',
+              },
+              {
+                step: 8,
+                title: 'Grilled Fish Lunch at the Port',
+                time: '11:30 AM',
+                description:
+                  'Return to the fish grill stalls and have your chosen fish cooked to order. Enjoy the freshest, most affordable seafood meal in Morocco with bread, salad, and harissa. Budget 50 to 100 MAD per person.',
+              },
+            ].map((stop) => (
+              <div
+                key={stop.step}
+                className="card-moroccan p-5 flex gap-4 items-start"
+              >
+                <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-[var(--color-primary)] text-white font-bold"
+                  >
+                  {stop.step}
+                </div>
+                <div>
+                  <div className="flex items-center gap-3 mb-1">
+                    <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+                      {stop.title}
+                    </h3>
+                    <span className="text-xs text-[var(--text-muted)] flex items-center gap-1">
+                      <Clock className="w-3 h-3" /> {stop.time}
+                    </span>
+                  </div>
+                  <p className="text-sm text-[var(--text-muted)] leading-relaxed">
+                    {stop.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+      {/* -- Suggested 3-Day Itinerary -- */}
+      <section className="py-12 md:py-16">
+        <div className="container-morocco">
+          <div className="flex items-center gap-3 mb-3">
+            <Calendar className="w-6 h-6 text-[var(--color-secondary)]" />
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+              Suggested 3-Day Itinerary
+            </h2>
+          </div>
+          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">
+            Three days is the ideal amount of time to experience Essaouira properly. Here is
+            how to make the most of every moment.
+          </p>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {/* Day 1 */}
+            <div className="card-moroccan p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[var(--color-primary)] text-white font-bold">
+                  1
+                </div>
+                <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-lg">
+                  Day 1: Medina & Ramparts
+                </h3>
+              </div>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-2 text-sm text-[var(--text-muted)]">
+                  <Clock className="w-4 h-4 text-[var(--color-accent)] flex-shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold text-[var(--text-primary)]">Morning:</span> Walk
+                    the Skala de la Ville ramparts, explore the thuya wood workshops below, and visit
+                    Galerie Damgaard for Gnaoua-inspired art.
+                  </div>
+                </li>
+                <li className="flex items-start gap-2 text-sm text-[var(--text-muted)]">
+                  <Clock className="w-4 h-4 text-[var(--color-accent)] flex-shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold text-[var(--text-primary)]">Lunch:</span> Grilled
+                    fish at the port stalls. Choose your catch, watch it sizzle, and eat for under
+                    100 MAD.
+                  </div>
+                </li>
+                <li className="flex items-start gap-2 text-sm text-[var(--text-muted)]">
+                  <Clock className="w-4 h-4 text-[var(--color-accent)] flex-shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold text-[var(--text-primary)]">Afternoon:</span> Climb
+                    the Skala du Port, explore the mellah and Slat Lkahal synagogue, browse the
+                    medina souks for thuya boxes and spices.
+                  </div>
+                </li>
+                <li className="flex items-start gap-2 text-sm text-[var(--text-muted)]">
+                  <Clock className="w-4 h-4 text-[var(--color-accent)] flex-shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold text-[var(--text-primary)]">Evening:</span> Sunset
+                    drinks at Taros Cafe rooftop, followed by dinner at La Table by Madada or Les
+                    Alizes for authentic tagine.
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            {/* Day 2 */}
+            <div className="card-moroccan p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[var(--color-primary)] text-white font-bold">
+                  2
+                </div>
+                <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-lg">
+                  Day 2: Beach & Wind Sports
+                </h3>
+              </div>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-2 text-sm text-[var(--text-muted)]">
+                  <Clock className="w-4 h-4 text-[var(--color-accent)] flex-shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold text-[var(--text-primary)]">Morning:</span> Try a
+                    kitesurfing or surfing lesson with ION Club or Explora (400 to 800 MAD for
+                    2 hours with equipment). Or walk to Diabat along the beach.
+                  </div>
+                </li>
+                <li className="flex items-start gap-2 text-sm text-[var(--text-muted)]">
+                  <Clock className="w-4 h-4 text-[var(--color-accent)] flex-shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold text-[var(--text-primary)]">Lunch:</span> Ocean
+                    Vagabond beachfront restaurant for pizza, fish, and ocean views.
+                  </div>
+                </li>
+                <li className="flex items-start gap-2 text-sm text-[var(--text-muted)]">
+                  <Clock className="w-4 h-4 text-[var(--color-accent)] flex-shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold text-[var(--text-primary)]">Afternoon:</span> Visit
+                    the Sidi Mohammed Ben Abdallah Museum (70 MAD), then explore art galleries in the
+                    medina. Pick up argan oil from a cooperative.
+                  </div>
+                </li>
+                <li className="flex items-start gap-2 text-sm text-[var(--text-muted)]">
+                  <Clock className="w-4 h-4 text-[var(--color-accent)] flex-shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold text-[var(--text-primary)]">Evening:</span> Sunset
+                    camel ride on the beach (200 MAD/hour), then dinner at Elizir for romantic
+                    courtyard Italian-Moroccan fusion.
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            {/* Day 3 */}
+            <div className="card-moroccan p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[var(--color-primary)] text-white font-bold">
+                  3
+                </div>
+                <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-lg">
+                  Day 3: Day Trip
+                </h3>
+              </div>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-2 text-sm text-[var(--text-muted)]">
+                  <Clock className="w-4 h-4 text-[var(--color-accent)] flex-shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold text-[var(--text-primary)]">Morning:</span> Drive
+                    to an argan oil cooperative (30 min) to watch the traditional process and taste
+                    fresh argan products. Then continue to Paradise Valley for swimming in natural
+                    rock pools.
+                  </div>
+                </li>
+                <li className="flex items-start gap-2 text-sm text-[var(--text-muted)]">
+                  <Clock className="w-4 h-4 text-[var(--color-accent)] flex-shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold text-[var(--text-primary)]">Lunch:</span> Picnic
+                    at Paradise Valley or lunch at a local roadside restaurant. Budget 60 to 100 MAD.
+                  </div>
+                </li>
+                <li className="flex items-start gap-2 text-sm text-[var(--text-muted)]">
+                  <Clock className="w-4 h-4 text-[var(--color-accent)] flex-shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold text-[var(--text-primary)]">Alternative:</span> Spend
+                    the day at Sidi Kaouki surf village. Take a surf lesson (350 MAD), relax on the
+                    quieter beach, and have fresh fish at a beachfront cafe.
+                  </div>
+                </li>
+                <li className="flex items-start gap-2 text-sm text-[var(--text-muted)]">
+                  <Clock className="w-4 h-4 text-[var(--color-accent)] flex-shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold text-[var(--text-primary)]">Evening:</span> Final
+                    evening in the medina. Farewell dinner at Umia for creative fusion, or return to
+                    the port stalls for one last plate of the freshest seafood.
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* -- FAQ Section -- */}
       <section className="py-12 md:py-16">
         <div className="container-morocco">
           <div className="flex items-center gap-3 mb-3">
             <BookOpen className="w-6 h-6 text-[var(--color-secondary)]" />
-            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">Frequently Asked Questions</h2>
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]"
+              >Frequently Asked Questions</h2>
           </div>
-          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">Answers to the most common questions travelers ask about visiting Essaouira.</p>
+          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl"
+            >Answers to the most common questions travelers ask about visiting Essaouira.</p>
           <div className="max-w-3xl space-y-4">
             {faqItems.map((faq, index) => (
               <div key={index} className="card-moroccan p-6">
@@ -721,9 +1660,11 @@ export default function EssaouiraPage() {
         <div className="container-morocco">
           <div className="flex items-center gap-3 mb-3">
             <Globe className="w-6 h-6 text-[var(--color-primary)]" />
-            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">Explore More of Morocco</h2>
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]"
+              >Explore More of Morocco</h2>
           </div>
-          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">Essaouira pairs perfectly with these nearby destinations and related guides.</p>
+          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl"
+            >Essaouira pairs perfectly with these nearby destinations and related guides.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { title: 'Marrakech', description: 'The Red City, just 2.5 hours away. Most visitors combine both.', href: '/marrakech', icon: Building2 },
@@ -739,11 +1680,13 @@ export default function EssaouiraPage() {
               return (
                 <Link key={link.title} href={link.href} className="card-moroccan p-5 group hover:shadow-lg transition-all duration-300">
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[var(--color-primary-50)] text-[var(--color-primary)] group-hover:bg-[var(--color-primary)] group-hover:text-white transition-colors"><Icon className="w-5 h-5" /></div>
+                    <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[var(--color-primary-50)] text-[var(--color-primary)] group-hover:bg-[var(--color-primary)] group-hover:text-white transition-colors"
+                      ><Icon className="w-5 h-5" /></div>
                     <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">{link.title}</h3>
                   </div>
                   <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-2">{link.description}</p>
-                  <span className="text-sm font-semibold text-[var(--color-primary)] flex items-center gap-1 group-hover:gap-2 transition-all">Read guide <ArrowRight className="w-3.5 h-3.5" /></span>
+                  <span className="text-sm font-semibold text-[var(--color-primary)] flex items-center gap-1 group-hover:gap-2 transition-all"
+                    >Read guide <ArrowRight className="w-3.5 h-3.5" /></span>
                 </Link>
               );
             })}
@@ -754,13 +1697,17 @@ export default function EssaouiraPage() {
       {/* -- CTA Section -- */}
       <section className="py-12 md:py-16">
         <div className="container-morocco text-center">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">Ready to Discover Essaouira?</h2>
-          <p className="text-lg text-[var(--text-secondary)] max-w-xl mx-auto mb-8">Pack a windbreaker, bring your appetite for fresh fish, and prepare to fall in love with Morocco&apos;s most enchanting coastal city. The Wind City is calling.</p>
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4"
+            >Ready to Discover Essaouira?</h2>
+          <p className="text-lg text-[var(--text-secondary)] max-w-xl mx-auto mb-8"
+            >Pack a windbreaker, bring your appetite for fresh fish, and prepare to fall in love with Morocco&apos;s most enchanting coastal city. The Wind City is calling.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/cities" className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-xl bg-[var(--color-primary)] text-white font-semibold hover:bg-[var(--color-primary-dark)] transition-colors">
+            <Link href="/cities" className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-xl bg-[var(--color-primary)] text-white font-semibold hover:bg-[var(--color-primary-dark)] transition-colors"
+              >
               Explore All Cities <ArrowRight className="w-4 h-4" />
             </Link>
-            <Link href="/tools/planner" className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-xl border-2 border-[var(--color-primary)] text-[var(--color-primary)] font-semibold hover:bg-[var(--color-primary)] hover:text-white transition-colors">
+            <Link href="/tools/planner" className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-xl border-2 border-[var(--color-primary)] text-[var(--color-primary)] font-semibold hover:bg-[var(--color-primary)] hover:text-white transition-colors"
+              >
               Plan Your Trip <Calendar className="w-4 h-4" />
             </Link>
           </div>

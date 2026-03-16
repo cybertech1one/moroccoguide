@@ -3,514 +3,828 @@ import Link from 'next/link';
 import {
   ChevronRight,
   Home,
-  Droplets,
+  Landmark,
   Star,
-  MapPin,
   Clock,
-  Bus,
-  Car,
-  Bed,
-  Utensils,
-  Sun,
+  MapPin,
   Camera,
   ArrowRight,
-  Calendar,
-  ThermometerSun,
-  Compass,
-  Heart,
-  Mountain,
-  Eye,
-  Footprints,
-  ShoppingBag,
-  Coffee,
-  Sparkles,
-  Landmark,
-  AlertTriangle,
-  Info,
-  Map,
-  Sunrise,
-  Sunset,
-  CircleDollarSign,
   Shield,
-  HelpCircle,
-  Palette,
-  Navigation,
-  Waves,
-  BookOpen,
+  Compass,
   Users,
+  ShoppingBag,
+  Sun,
+  Utensils,
+  Bed,
+  Footprints,
+  Palette,
+  BookOpen,
+  Ticket,
+  CircleDollarSign,
+  CalendarDays,
+  Mountain,
+  Moon,
+  Map,
+  Bus,
+  Info,
+  Lightbulb,
+  Gem,
+  Coffee,
+  Eye,
+  Heart,
+  Navigation,
+  Building,
+  TreePine,
+  Droplets,
+  AlertTriangle,
   Leaf,
-  Building2,
+  HelpCircle,
+  Sunrise,
+  Tent,
+  PackageCheck,
 } from 'lucide-react';
 
-/* ================================================================
-   METADATA + JSON-LD
-   ================================================================ */
+/* ═══════════════════════════════════════════════════════════════
+   SEO METADATA
+   ═══════════════════════════════════════════════════════════════ */
 
 export const metadata: Metadata = {
-  title: 'Chefchaouen Travel Guide - Morocco\'s Blue Pearl of the Rif | MoroccoGuide',
+  title:
+    'Chefchaouen City Guide 2025 | Morocco\'s Blue Pearl in the Rif Mountains',
   description:
-    'Complete guide to Chefchaouen, Morocco\'s famous blue city in the Rif Mountains. Discover blue-washed streets, hiking trails, Akchour Waterfalls, authentic restaurants, riads, and practical travel tips.',
+    'The definitive Chefchaouen travel guide. Explore the Blue Pearl\'s painted medina, Plaza Uta el-Hammam, Kasbah museum, Spanish Mosque hike, Akchour Waterfalls, Ras el-Maa, Rif Mountain trails, photography spots, restaurants, riads, and practical tips for visiting.',
   keywords: [
-    'Chefchaouen',
-    'blue city Morocco',
-    'Rif Mountains',
+    'Chefchaouen travel guide',
+    'Chefchaouen blue city',
+    'Morocco blue pearl',
+    'Chefchaouen things to do',
+    'Chefchaouen photography',
+    'Chefchaouen medina',
     'Akchour Waterfalls',
-    'Morocco travel',
-    'blue pearl',
-    'Chaouen',
-    'medina',
-    'hiking Morocco',
+    'Spanish Mosque Chefchaouen',
+    'Rif Mountains Morocco',
+    'Chefchaouen hotels',
+    'Chefchaouen restaurants',
+    'Chefchaouen hiking',
+    'God\'s Bridge Morocco',
+    'Talassemtane National Park',
+    'Chefchaouen shopping',
+    'blue streets Morocco',
+    'Chefchaouen budget guide',
+    'Ras el-Maa waterfall',
+    'Plaza Uta el-Hammam',
+    'Chefchaouen day trips',
   ],
   openGraph: {
-    title: 'Chefchaouen - Morocco\'s Blue Pearl of the Rif | MoroccoGuide',
+    title: 'Chefchaouen City Guide - Morocco\'s Blue Pearl in the Rif Mountains',
     description:
-      'Explore Morocco\'s most photogenic city. Blue-washed streets, Rif Mountain hikes, Akchour Waterfalls, and authentic Berber culture in the heart of northern Morocco.',
-    url: 'https://moroccoguide.com/chefchaouen',
+      'Everything you need to know about Chefchaouen: the iconic blue medina, Rif Mountain hikes, Akchour Waterfalls, photography spots, local food, riads, and practical travel tips for Morocco\'s most photogenic city.',
+    url: 'https://citytoursmorocco.com/chefchaouen',
     type: 'website',
     images: [
       {
         url: '/images/hero-chefchaouen-streets.webp',
-        width: 2800,
-        height: 1600,
-        alt: 'Blue-washed streets of Chefchaouen medina in the Rif Mountains, Morocco',
+        width: 1200,
+        height: 630,
+        alt: 'Blue-painted streets and stairways in the Chefchaouen medina with potted plants',
       },
     ],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Chefchaouen City Guide 2025 | Morocco\'s Blue Pearl',
+    description:
+      'Complete guide to Chefchaouen: the blue medina, mountain hikes, photography spots, restaurants, riads, shopping, and travel tips for Morocco\'s most Instagrammed city.',
+  },
   alternates: {
-    canonical: 'https://moroccoguide.com/chefchaouen',
+    canonical: 'https://citytoursmorocco.com/chefchaouen',
   },
 };
 
-/* ================================================================
-   DATA
-   ================================================================ */
+/* ═══════════════════════════════════════════════════════════════
+   JSON-LD STRUCTURED DATA
+   ═══════════════════════════════════════════════════════════════ */
 
-const attractions = [
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'TravelGuide',
+  '@id': 'https://citytoursmorocco.com/chefchaouen',
+  name: 'Chefchaouen City Guide - Morocco\'s Blue Pearl in the Rif Mountains',
+  description:
+    'Comprehensive travel guide to Chefchaouen, Morocco covering the blue medina, top attractions, hiking trails, photography spots, restaurants, accommodations, shopping, day trips, and practical travel tips.',
+  url: 'https://citytoursmorocco.com/chefchaouen',
+  isPartOf: {
+    '@type': 'WebSite',
+    name: 'CityGuide Morocco',
+    url: 'https://citytoursmorocco.com',
+  },
+  about: {
+    '@type': 'City',
+    name: 'Chefchaouen',
+    alternateName: 'Chaouen',
+    country: {
+      '@type': 'Country',
+      name: 'Morocco',
+    },
+  },
+  breadcrumb: {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://citytoursmorocco.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Cities',
+        item: 'https://citytoursmorocco.com/cities',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Chefchaouen',
+        item: 'https://citytoursmorocco.com/chefchaouen',
+      },
+    ],
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   TOP ATTRACTIONS DATA
+   ═══════════════════════════════════════════════════════════════ */
+
+const topAttractions = [
   {
     name: 'Plaza Uta el-Hammam',
-    description:
-      'The beating heart of Chefchaouen. This lively central square is flanked by cafes, the Grand Mosque, and the 15th-century Kasbah. Grab a mint tea, watch the world go by, and soak in the atmosphere where locals and travelers mingle beneath ancient trees.',
     image: '/images/hero-chefchaouen-streets.webp',
-    type: 'Square',
-    rating: 4.8,
-    tip: 'Best in the evening when locals come out to socialize.',
+    description:
+      'The vibrant heart of Chefchaouen and the largest public square in the medina. Flanked by the 15th-century Kasbah fortress on one side and the distinctive octagonal minaret of the Grand Mosque on the other, this expansive plaza is where daily life converges. Lined with cafes and restaurants whose tables spill across the cobblestones, it serves as a gathering place for locals sipping mint tea, travelers comparing stories, and street cats lounging in the dappled shade of the ancient trees. The energy shifts beautifully throughout the day &mdash; quiet mornings give way to bustling afternoons and romantic evenings under string lights.',
+    fee: 'Free',
+    hours: 'Open 24 hours; cafes typically 8:00 AM - 11:00 PM',
+    tip: 'The cafes facing the Kasbah wall offer the best people-watching. Arrive before 9:00 AM for a peaceful breakfast when the plaza is washed in soft morning light and nearly empty. Evening is magical when the surrounding buildings glow blue under warm cafe lights.',
+    rating: 4.7,
   },
   {
     name: 'The Kasbah & Ethnographic Museum',
-    description:
-      'Built in the 15th century by Moulay Ali Ben Rachid, this restored fortress houses an ethnographic museum with traditional Rif costumes, weapons, musical instruments, and photographs. The garden courtyard is one of the most peaceful spots in the city. Climb the tower for panoramic views over the blue medina.',
     image: '/images/hero-chefchaouen-streets.webp',
-    type: 'Museum',
-    rating: 4.7,
-    tip: 'Entry 70 MAD. Allow 45 minutes. The tower view alone is worth the price.',
-  },
-  {
-    name: 'Grand Mosque',
     description:
-      'Chefchaouen\'s main mosque stands on the plaza with its distinctive octagonal minaret, unique in Morocco. Non-Muslims cannot enter, but the exterior architecture is striking and best viewed from the plaza cafes. The octagonal tower is said to be inspired by the minaret in the old Andalusian town of Chaouen\'s founders.',
-    image: '/images/hero-chefchaouen-streets.webp',
-    type: 'Religious',
+      'Built in the 15th century by Moulay Ali Ben Rachid, the founder of Chefchaouen, this fortress-turned-museum anchors the southeast corner of Plaza Uta el-Hammam. The Kasbah features a beautiful Andalusian garden courtyard shaded by towering trees and fragrant with jasmine, ringed by restored rooms that now house the Ethnographic Museum. The collection includes traditional Riffian weapons, musical instruments, elaborate bridal costumes, carved wooden chests, embroidered textiles, and old photographs documenting the city&apos;s history. The restored 15th-century dungeon and the rooftop tower offer commanding views over the blue medina and the Rif peaks beyond.',
+    fee: '70 MAD',
+    hours: '9:00 AM - 6:00 PM daily (closed Tuesdays)',
+    tip: 'Climb the watchtower for the best elevated view of the medina and surrounding mountains. The Andalusian garden is a tranquil escape from the medina bustle &mdash; bring a book and linger. The museum is small enough to complete in 45 minutes.',
     rating: 4.5,
-    tip: 'Best photographed from the Kasbah tower. Non-Muslims cannot enter.',
   },
   {
-    name: 'Spanish Mosque',
-    description:
-      'Perched on a hill overlooking the town, this unfinished mosque from the Spanish colonial era offers the single best panoramic view of Chefchaouen. The 20-minute uphill hike is rewarded with a sweeping vista of blue rooftops cascading down the mountainside, backed by the twin peaks of Jebel el-Kelaa.',
+    name: 'The Grand Mosque',
     image: '/images/hero-chefchaouen-streets.webp',
-    type: 'Viewpoint',
+    description:
+      'Chefchaouen&apos;s principal mosque, located on Plaza Uta el-Hammam, is instantly recognizable by its unique octagonal minaret &mdash; the only one of its kind in Morocco. Built in the 15th century and expanded in the 17th, the mosque&apos;s minaret reflects the Andalusian architectural heritage of the city&apos;s founders, who brought this octagonal form from Islamic Spain. While non-Muslims cannot enter, the exterior is a striking photographic subject, particularly when framed against the blue-painted buildings of the surrounding medina. The octagonal minaret glows beautifully at sunset.',
+    fee: 'Non-Muslims may not enter (exterior viewing only)',
+    hours: 'Exterior viewable at any time',
+    tip: 'The best photographs of the octagonal minaret are taken from the Kasbah garden or from the rooftop terraces of nearby restaurants. At prayer time, the call to prayer echoing across the blue valley is one of the most evocative soundscapes in Morocco.',
+    rating: 4.4,
+  },
+  {
+    name: 'Spanish Mosque Sunset Hike',
+    image: '/images/hero-chefchaouen-streets.webp',
+    description:
+      'Perched on a hilltop northeast of the medina, the unfinished Spanish Mosque (Mosquee Espagnole) was built during the Spanish colonial period in the 1920s but never completed. Today it serves a far more important purpose: as the premier sunset viewpoint over Chefchaouen. The 20-30 minute uphill hike from the medina follows the Ras el-Maa river path and then climbs through pine and olive groves to the hilltop. From here, the entire blue medina spreads below like a sapphire quilt draped over the mountainside, framed by the dramatic peaks of Jebel el-Kelaa and Jebel Meggou. At sunset, the blue walls catch the golden light and the entire city transforms.',
+    fee: 'Free',
+    hours: 'Best visited 1-2 hours before sunset',
+    tip: 'Start the hike at least 90 minutes before sunset to arrive with time to settle in. Bring a headlamp or phone flashlight for the walk back after dark &mdash; the trail is unlit. The path starts at Ras el-Maa waterfall (follow the river upstream). Wear decent shoes as the final stretch is steep and rocky.',
     rating: 4.9,
-    tip: 'Go at sunset. Bring a headlamp for the walk back. The trail starts near Bab el-Ain.',
   },
   {
     name: 'Ras el-Maa Waterfall',
-    description:
-      'At the eastern edge of the medina where the mountain stream cascades over rocks, local women wash laundry in the traditional way while children play in the water. This is where the medina ends and the mountains begin. A beautiful, authentic scene that feels unchanged for centuries.',
     image: '/images/hero-chefchaouen-streets.webp',
-    type: 'Natural',
+    description:
+      'Where the cold mountain river emerges from the Rif and tumbles over rocks at the northeastern edge of the medina, Ras el-Maa has been the communal gathering point for Chaouen&apos;s residents for centuries. Local women still come here to wash clothes and rugs in the clear mountain water, children splash in the shallow pools, and the sound of rushing water provides a natural soundtrack to this atmospheric spot. A traditional stone bridge spans the cascade, and several small cafes perch on the rocks above. This is where the trail to the Spanish Mosque begins, and where the blue medina gives way to the green wilderness of the Rif Mountains.',
+    fee: 'Free',
+    hours: 'Open 24 hours; most atmospheric in the morning',
+    tip: 'Visit on a weekday morning to see local women doing laundry in the traditional way. The water is clean and cold &mdash; a refreshing foot-soak on hot days. Follow the path upstream from Ras el-Maa for a scenic walk along the river gorge, even if you do not plan to hike to the Spanish Mosque.',
     rating: 4.6,
-    tip: 'Follow the path upstream for peaceful swimming spots away from crowds.',
   },
   {
-    name: 'The Blue Medina Streets',
-    description:
-      'The main event. Chefchaouen\'s medina is a labyrinth of blue-painted walls, steps, doorways, and alleys in every shade from powder blue to deep cobalt. Unlike Fes or Marrakech, this medina is small, safe, and nearly impossible to get truly lost in. Every corner reveals a new composition of blue.',
+    name: 'The Blue Streets (Medina Exploration)',
     image: '/images/hero-chefchaouen-streets.webp',
-    type: 'Historic',
-    rating: 5.0,
-    tip: 'The most vivid blues are in the residential area east of the plaza, near Rue Targhi.',
+    description:
+      'Chefchaouen&apos;s blue-painted medina is, of course, the main attraction itself. Unlike Fes or Marrakech, this is a medina you explore by wandering without a map &mdash; it is compact enough that you cannot get truly lost, and every turn reveals another photogenic composition of blue walls, colorful plant pots, ornate doorways, and narrow stairways. The blue wash ranges from powder blue to deep indigo to cobalt, and no two streets are the same shade. The medina has been continuously painted blue since at least the 1930s, though the tradition may date to the 15th-century Jewish community who associated blue with the divine. Today, residents maintain the blue as both tradition and tourist draw.',
+    fee: 'Free',
+    hours: 'Best explored early morning (7:00 - 9:00 AM) or late afternoon',
+    tip: 'The most photogenic streets are in the northeastern quarter of the medina, between Bab el-Ain and Ras el-Maa. Look for the famous narrow blue stairway near Rue Targhi. Venture away from the main tourist routes &mdash; the residential streets deeper in the medina are quieter, more authentic, and often more beautifully painted.',
+    rating: 4.9,
   },
   {
-    name: 'Bab el-Ain',
-    description:
-      'One of the main gates into the old medina, Bab el-Ain marks the transition from the new town into the blue-washed world. The gate area is a gathering point for locals and the starting point for the Spanish Mosque hike. Nearby you will find a cluster of handicraft shops with better prices than the medina center.',
+    name: 'Bab el-Ain (Gate of the Spring)',
     image: '/images/hero-chefchaouen-streets.webp',
-    type: 'Gate',
-    rating: 4.4,
-    tip: 'Start your medina exploration here for a logical walking route.',
-  },
-  {
-    name: 'The Souks',
     description:
-      'Chefchaouen\'s souks are refreshingly low-pressure compared to Marrakech. Browse handwoven blankets, goat cheese, local honey, leather goods, and the distinctive round straw hats worn by Rif Berbers. The artisans here still practice centuries-old crafts, and you can often watch them work.',
-    image: '/images/hero-chefchaouen-streets.webp',
-    type: 'Market',
-    rating: 4.6,
-    tip: 'Prices are already lower than Marrakech. Bargain gently, around 20-30% off asking.',
-  },
-  {
-    name: 'Bab el-Souk',
-    description:
-      'The main commercial gate leading into the souk area, always bustling with activity. From here, the main shopping street leads uphill through increasingly blue neighborhoods. The area just outside the gate has several good juice stalls and street food vendors serving msemen and harira.',
-    image: '/images/hero-chefchaouen-streets.webp',
-    type: 'Gate',
+      'One of the principal historic gates into the Chefchaouen medina, Bab el-Ain sits at the southeastern entrance and takes its name from the natural springs that flow through this part of the city. The gate itself is a modest but beautiful arched portal, but its real value is as a gateway to some of the most scenic and least visited corners of the medina. Passing through Bab el-Ain and heading uphill leads through a series of increasingly narrow, deeply blue streets that climb toward the mountain. This is the more residential, less commercialized side of the medina where you can experience daily life without the souvenir shops.',
+    fee: 'Free',
+    hours: 'Open 24 hours',
+    tip: 'Enter through Bab el-Ain in the morning and explore the streets heading uphill toward the northeast. These upper residential areas have some of the most intensely blue-painted houses in the city, as well as hidden viewpoints looking down over the medina rooftops.',
     rating: 4.3,
-    tip: 'Fresh orange juice stalls outside the gate charge 5-8 MAD per glass.',
   },
   {
-    name: 'Rue Targhi & Rue Zanqat Kharrazine',
-    description:
-      'These two streets in the eastern medina are among the most intensely blue in all of Chefchaouen. Narrow, winding, and lined with potted plants against vivid blue walls, this is where the most iconic photographs are taken. Visit early morning before the crowds arrive for the best light and empty lanes.',
+    name: 'The Souks of Chefchaouen',
     image: '/images/hero-chefchaouen-streets.webp',
-    type: 'Street',
-    rating: 4.8,
-    tip: 'Before 8 AM you will have these streets nearly to yourself.',
-  },
-  {
-    name: 'Outa Hammam Bridge Viewpoint',
     description:
-      'Cross the small bridge near the plaza for a classic framing of the Kasbah tower with blue buildings cascading behind it. This viewpoint is especially beautiful after rain when the blue paint is at its most saturated and vibrant.',
-    image: '/images/hero-chefchaouen-streets.webp',
-    type: 'Viewpoint',
+      'While smaller and more relaxed than the overwhelming souks of Fes or Marrakech, Chefchaouen&apos;s market streets offer a distinctly Riffian shopping experience with far less aggressive salesmanship. The main commercial streets radiate from Plaza Uta el-Hammam, with shops selling handwoven blankets and rugs in bold geometric patterns (a Riffian specialty), round goat cheese wheels, local honey, leather goods, djellabas, blue-painted ceramics and pottery, and the distinctive wide-brimmed straw hats worn by Riffian women. Bargaining is expected but the atmosphere is notably gentler than in larger Moroccan cities.',
+    fee: 'Free to browse',
+    hours: 'Most shops open 9:00 AM - 8:00 PM (some close for lunch 1:00 - 3:00 PM)',
+    tip: 'The best handwoven blankets are found in the shops along the alleys east of the plaza. Ask to see them unfolded completely &mdash; quality varies enormously. For the most authentic goat cheese, buy from women selling in the small square near Bab el-Ain. Start bargaining at about 40-50% of the asking price.',
     rating: 4.5,
-    tip: 'After a rain shower, the blues become incredibly vivid for photography.',
   },
   {
-    name: 'Hotel Casa Hassan Rooftop',
-    description:
-      'Even if you are not staying here, the rooftop terrace of this historic guesthouse offers one of the best in-medina views. Order a mint tea and look out over a sea of blue rooftops with the mountains as a backdrop. Several other riads also have rooftop terraces open to non-guests for the price of a drink.',
+    name: 'Jebel el-Kelaa Viewpoint',
     image: '/images/hero-chefchaouen-streets.webp',
-    type: 'Viewpoint',
-    rating: 4.6,
-    tip: 'Ask politely at any riad if you can visit the rooftop. Most welcome visitors.',
+    description:
+      'The twin limestone horns of Jebel el-Kelaa (literally "Fortress Mountain") rise dramatically behind Chefchaouen to an elevation of 1,616 meters, forming the city&apos;s most iconic natural backdrop. While the full summit hike is a serious half-day endeavor, a shorter trail to the lower viewpoints (about 1 hour from the medina edge) rewards with extraordinary bird&apos;s-eye perspectives of the entire blue city set against the vast green valley of the Rif. The mountain is also home to colonies of Barbary macaques, stands of ancient cedar, and a wealth of wildflowers in spring.',
+    fee: 'Free',
+    hours: 'Daylight hours; start early for the summit attempt',
+    tip: 'The trailhead is above Ras el-Maa. For the short viewpoint hike, follow the trail that branches left (north) after about 20 minutes. The full summit requires 3-4 hours round trip and proper hiking shoes. Bring plenty of water &mdash; there is no shade on the upper slopes.',
+    rating: 4.7,
+  },
+  {
+    name: 'Artisan Paint Workshops',
+    image: '/images/hero-chefchaouen-streets.webp',
+    description:
+      'Several local artisans in Chefchaouen offer hands-on workshops where visitors can learn traditional skills. The most popular are painting workshops where you create your own blue-themed artwork inspired by the medina, guided by local artists in their studios. Other experiences include traditional weaving demonstrations using the wooden looms that produce Chefchaouen&apos;s distinctive striped blankets, leather-working sessions, and guided photography walks led by residents who know every hidden angle and perfect blue doorway.',
+    fee: '150-400 MAD depending on workshop type and duration',
+    hours: 'Typically 10:00 AM - 12:00 PM or 3:00 - 5:00 PM (booking required)',
+    tip: 'Ask at your riad for recommended workshops &mdash; the best ones are run by local families who have practiced these crafts for generations. Photography workshops are particularly worthwhile as local guides can take you to spots you would never discover alone.',
+    rating: 4.4,
+  },
+  {
+    name: 'Oued Laou Valley Drive',
+    image: '/images/hero-chefchaouen-streets.webp',
+    description:
+      'The scenic road from Chefchaouen northwest to the Mediterranean fishing village of Oued Laou is one of the most spectacular drives in northern Morocco. The route descends from the Rif Mountains through a dramatic river valley, passing through terraced fields, small Berber villages, and lush riverside landscapes before arriving at the quiet beach town on the Mediterranean coast. The journey takes about 1.5 hours and can be done as a day trip by grand taxi.',
+    fee: 'Grand taxi: approximately 30-40 MAD per person (shared)',
+    hours: 'Daylight hours recommended; depart early morning',
+    tip: 'Saturday is market day in Oued Laou, making it the best day for a visit. The beach is long and usually uncrowded outside July-August. Combine with a seafood lunch at one of the beachfront restaurants for a perfect day trip from Chefchaouen.',
+    rating: 4.3,
   },
 ];
 
-const photographyGuide = [
+/* ═══════════════════════════════════════════════════════════════
+   PHOTOGRAPHY GUIDE DATA
+   ═══════════════════════════════════════════════════════════════ */
+
+const photographySpots = [
   {
-    title: 'The Blue Stairways of Rue Targhi',
-    description: 'Narrow blue stairs with potted plants on each step. Head east from the plaza, turn right at the small fountain. Best light: early morning (7-9 AM) when sun hits the eastern-facing walls.',
-    icon: Camera,
-    time: 'Morning',
+    name: 'The Blue Stairway (Rue Targhi)',
+    description:
+      'The most photographed spot in Chefchaouen: a narrow stairway flanked by deep blue walls, often adorned with colorful potted plants and draped textiles. This iconic composition has been shared millions of times on social media, making it the single most recognizable image of the city.',
+    bestTime: 'Early morning (7:00 - 8:30 AM) before crowds arrive',
+    technique: 'Shoot from below looking up. A wide-angle lens exaggerates the narrowness. Include the plant pots for color contrast against the blue.',
   },
   {
-    title: 'Spanish Mosque Panorama',
-    description: 'The iconic aerial view of the entire blue medina with Rif peaks behind. 20-minute hike from Bab el-Ain. Best light: golden hour before sunset when the blue rooftops glow.',
-    icon: Sunrise,
-    time: 'Sunset',
+    name: 'Spanish Mosque Panorama',
+    description:
+      'The definitive overview shot of Chefchaouen. From the hilltop mosque, the entire blue medina spreads below, backed by the dramatic twin peaks of Jebel el-Kelaa and framed by the green Rif valley.',
+    bestTime: 'Golden hour before sunset for warm light on the blue walls',
+    technique: 'Bring a telephoto lens (70-200mm) to compress the layers of blue rooftops. A wide shot with the foreground mosque ruin adds dramatic framing. Tripod recommended for long exposures as light fades.',
   },
   {
-    title: 'Ras el-Maa Laundry Scene',
-    description: 'Local women washing clothes in the mountain stream, a timeless scene. Always ask permission before photographing people. A smile and gesture go further than a telephoto lens.',
-    icon: Waves,
-    time: 'Mid-morning',
+    name: 'Ras el-Maa River Scenes',
+    description:
+      'Authentic daily life photography at its best. Local women washing colorful rugs in the river, children playing in the water, and the ancient stone bridge create naturally compelling compositions against the backdrop of blue buildings and green mountainside.',
+    bestTime: 'Mid-morning (9:00 - 11:00 AM) when laundry activity is at its peak',
+    technique: 'Always ask permission before photographing people, especially women. A medium zoom allows candid shots from a respectful distance. The reflections in the water add a beautiful secondary element.',
   },
   {
-    title: 'The Blue Doorways',
-    description: 'Scattered throughout the medina, ornate doors painted in contrasting shades of blue. The most photogenic cluster is on the streets south of the plaza near the leather tanneries.',
-    icon: Eye,
-    time: 'Any time',
+    name: 'The Residential Northeast Quarter',
+    description:
+      'The streets between Bab el-Ain and the upper medina are the hidden gem for photographers. Here, the blue paint is often more vivid, the doorways more ornate, and the flower displays more abundant &mdash; all without the tourist foot traffic of the main streets.',
+    bestTime: 'Late afternoon (4:00 - 6:00 PM) when angled sunlight creates long shadows on the blue walls',
+    technique: 'Look for light-and-shadow contrasts. A figure in a djellaba walking through a beam of light in a narrow blue alley is the quintessential Chefchaouen photograph. Patience is rewarded here.',
   },
   {
-    title: 'Cat Portraits',
-    description: 'Chefchaouen is famous for its photogenic cats lounging on blue steps. They are everywhere and generally unbothered by cameras. The cats near Ras el-Maa are particularly friendly.',
-    icon: Heart,
-    time: 'Any time',
+    name: 'Plaza Uta el-Hammam Night Scene',
+    description:
+      'After dark, the plaza transforms into a warm, atmospheric scene of string lights, glowing cafe windows, and the illuminated Kasbah wall. The contrast of warm artificial light against the blue buildings creates a moody, inviting composition.',
+    bestTime: 'Blue hour (30 minutes after sunset) for the perfect sky-to-building contrast',
+    technique: 'Tripod essential. Long exposure (2-4 seconds) to smooth the crowd movement while keeping buildings sharp. Include the octagonal minaret for a distinctive silhouette.',
   },
   {
-    title: 'The Hidden Instagram Alley',
-    description: 'A narrow alley near the Kasbah where someone has painted the ground, walls, steps, and even the flower pots in matching shades of blue. Ask a local kid to show you, they know exactly where it is and will expect a small tip (5-10 MAD).',
-    icon: Sparkles,
-    time: 'Midday',
+    name: 'Doorways and Details Collection',
+    description:
+      'Chefchaouen&apos;s doorways are masterworks of folk art. Traditional Moroccan arched doors painted in contrasting colors &mdash; blue doors against blue walls, teal against powder blue, cobalt against white &mdash; often decorated with heavy iron knockers, geometric carvings, and framed by cascading bougainvillea or hanging pots of geraniums.',
+    bestTime: 'Overcast days produce the most saturated blues; avoid harsh midday sun',
+    technique: 'Shoot doors and details straight-on for symmetry. A 35mm or 50mm lens is ideal. Create a series of 9 or 12 doorways for a powerful grid composition on social media.',
   },
 ];
+
+/* ═══════════════════════════════════════════════════════════════
+   HIKING TRAILS DATA
+   ═══════════════════════════════════════════════════════════════ */
 
 const hikingTrails = [
   {
     name: 'God\'s Bridge (Pont de Dieu)',
-    distance: '8 km round trip',
+    distance: '10 km one way from trailhead',
     difficulty: 'Moderate',
-    duration: '3-4 hours',
+    duration: '4-5 hours round trip',
     description:
-      'A massive natural rock arch spanning a river gorge, carved by millennia of water erosion. The hike follows the Akchour river valley through lush vegetation and involves some scrambling over rocks. The bridge itself is awe-inspiring, a 25-meter natural stone arch high above a turquoise pool.',
-    tips: 'Wear sturdy shoes with grip. The trail can be slippery after rain. Bring swimwear for the pools beneath the bridge. A guide is helpful but not strictly necessary if you follow the marked trail.',
-    price: 'Free (20 MAD parking at Akchour)',
+      'One of Morocco&apos;s most spectacular natural formations. God&apos;s Bridge is a massive natural stone arch spanning the Farda River gorge in the Talassemtane National Park, about 25 km from Chefchaouen. The arch is roughly 25 meters wide and sits above deep, crystal-clear turquoise pools perfect for swimming. The hike follows the river valley through lush forest, past smaller cascades and rock pools, and the trail is well-marked but includes some rocky scrambling near the bridge itself.',
+    howToGet: 'Take a grand taxi to the trailhead at the Akchour village (30 MAD per person, 45 minutes). The trail to God\'s Bridge diverges from the Akchour Waterfalls trail about 2 km from the village.',
+    tip: 'Bring swimwear &mdash; the pools beneath the bridge are irresistible on a warm day. The water is cold year-round (mountain spring-fed). Start early to avoid the midday heat. The trail can be slippery after rain; proper hiking shoes recommended.',
   },
   {
-    name: 'Akchour Waterfalls',
-    distance: '7 km round trip (both falls)',
+    name: 'Akchour Waterfalls (Cascades d\'Akchour)',
+    distance: '4 km one way to the grand cascade',
     difficulty: 'Easy to Moderate',
-    duration: '2-3 hours',
+    duration: '2-3 hours round trip',
     description:
-      'Two spectacular waterfalls set in a lush river canyon within Talassemtane National Park. The small waterfall (Cascades d\'Akchour) is a 1.5 km easy walk. The grand waterfall is a further 2 km upstream and plunges 40 meters into a crystal-clear pool. Both are suitable for swimming.',
-    tips: 'Start early to avoid afternoon crowds. The grand waterfall trail has some exposed sections. Local guides at the trailhead charge 150-200 MAD and know the safest route. Pack lunch since there are no facilities at the falls.',
-    price: '20 MAD parking, 150-200 MAD optional guide',
+      'The most popular hiking destination near Chefchaouen and for good reason. The trail follows the Oued Farda river through a beautiful gorge in the Talassemtane National Park, passing a series of smaller cascades and natural swimming pools before culminating at the grand cascade &mdash; a stunning waterfall plunging approximately 20 meters into a deep turquoise pool. The path is well-trodden and suitable for reasonably fit walkers, though it involves some rock-hopping and one rope-assisted scramble near the end.',
+    howToGet: 'Grand taxi from Chefchaouen to Akchour village (30 MAD per person, shared, 45 minutes). Alternatively, hire a private taxi for 200-250 MAD round trip with waiting time.',
+    tip: 'Visit on a weekday if possible &mdash; weekends (especially in summer) see large crowds. The small cascades halfway along the trail have the best swimming pools and are less crowded than the grand cascade. Bring water shoes for river crossings. Local cafes at the trailhead sell snacks and drinks.',
   },
   {
-    name: 'Talassemtane National Park',
-    distance: 'Various routes',
-    difficulty: 'Easy to Challenging',
-    duration: 'Half-day to multi-day',
+    name: 'Talassemtane National Park Circuit',
+    distance: 'Various routes from 8-30 km',
+    difficulty: 'Moderate to Challenging',
+    duration: '4 hours to full day',
     description:
-      'A 58,950-hectare national park protecting rare Moroccan fir forests, deep gorges, and dramatic limestone peaks. The park shelters endangered species including the Barbary macaque. Multiple hiking routes ranging from gentle forest walks to challenging ridge traversals reward with stunning Rif Mountain scenery.',
-    tips: 'Register at the park office in Chefchaouen or at the Talassemtane entrance. For multi-day treks, hire a licensed guide through the tourism office. Spring wildflowers (March-May) are spectacular.',
-    price: '10 MAD park entry, guides 300-500 MAD per day',
+      'Talassemtane National Park protects 58,950 hectares of pristine Rif Mountain wilderness, including the last stands of the endemic Moroccan fir (Abies marocana), found nowhere else on Earth. The park offers multiple hiking circuits ranging from gentle half-day walks through cedar and oak forest to challenging multi-day treks across high ridges with views extending to the Mediterranean. Wildlife includes Barbary macaques, wild boar, golden eagles, and the endangered Barbary leopard (though sightings are exceptionally rare). Spring brings spectacular wildflower displays.',
+    howToGet: 'Park entrance points accessible by grand taxi from Chefchaouen. For deeper explorations, a local guide is highly recommended and can be arranged through the park office or your riad.',
+    tip: 'Hire a licensed guide through the Chefchaouen tourist office (300-500 MAD per day) for the longer circuits. The Moroccan fir groves near the park\'s core are ancient and atmospheric. Spring (March-May) is the best season for wildflowers; autumn (October-November) for fall colors.',
   },
   {
-    name: 'Jebel el-Kelaa',
-    distance: '12 km round trip',
+    name: 'Jebel el-Kelaa Summit',
+    distance: '6 km round trip',
     difficulty: 'Challenging',
-    duration: '5-7 hours',
+    duration: '3-4 hours round trip',
     description:
-      'The twin-horned mountain (1,616m) that looms over Chefchaouen is a demanding but unforgettable day hike. The trail climbs steeply through pine forests before reaching exposed rocky terrain near the summit. The view from the top encompasses the entire Rif range, the Mediterranean coast on clear days, and the blue city far below.',
-    tips: 'Start before 7 AM in summer to avoid the heat. Carry at least 2 liters of water per person. The trail is not well-marked above the tree line, so a guide is strongly recommended. Not suitable in wet or windy conditions.',
-    price: 'Free, guide recommended 300-400 MAD',
+      'The twin horns of Jebel el-Kelaa (1,616 meters) tower directly above Chefchaouen and offer the most dramatic summit viewpoint accessible as a day hike from the city. The trail begins at Ras el-Maa on the medina&apos;s edge and climbs steeply through scrubland, sparse pine forest, and finally exposed limestone to the summit ridge. The final approach involves some easy scrambling. From the top, the views are extraordinary: the blue medina far below, the Rif range stretching in every direction, and on clear days, the Mediterranean coastline visible to the north.',
+    howToGet: 'Walk from the medina to Ras el-Maa and follow the trail signs heading south and uphill.',
+    tip: 'Start at dawn to avoid the heat and reach the summit in the cool morning air. Bring at least 2 liters of water per person, sun protection, and a windproof layer (the summit is exposed and windy). The descent is harder on the knees than the ascent &mdash; consider trekking poles.',
   },
 ];
 
-const restaurants = [
+/* ═══════════════════════════════════════════════════════════════
+   RESTAURANTS DATA
+   ═══════════════════════════════════════════════════════════════ */
+
+const bestRestaurants = [
   {
     name: 'Bab Ssour',
-    cuisine: 'Traditional Moroccan',
-    priceRange: '60-120 MAD',
-    description: 'Widely considered the best restaurant in Chefchaouen. Set in a beautifully restored building near the main gate, Bab Ssour serves exceptional tagines, couscous, and grilled meats. The rooftop terrace has panoramic views. The lamb tagine with prunes and almonds is legendary. Reservations recommended for dinner.',
-    mustTry: 'Lamb tagine with prunes and almonds',
+    cuisine: 'Traditional Moroccan with a creative twist',
+    price: '80-150 MAD per person',
+    description:
+      'Widely considered the best restaurant in Chefchaouen. Tucked into a beautifully restored house near the medina entrance, Bab Ssour serves elevated Moroccan cuisine with seasonal ingredients sourced from the Rif Mountains. The lamb tagine with local honey and almonds is exceptional, as is the kefta with chermoula and the homemade pastilla. The roof terrace overlooks the medina rooftops and mountains. Service is warm, portions generous, and the mint tea is perfectly prepared.',
+    location: 'Near Bab el-Ain, medina entrance',
   },
   {
     name: 'Aladdin Restaurant',
-    cuisine: 'Moroccan & International',
-    priceRange: '50-100 MAD',
-    description: 'A long-running favorite overlooking Plaza Uta el-Hammam from a prime terrace position. The Moroccan menu is solid, with excellent harira soup and kefta tagine. The location is unbeatable for people-watching, though you pay slightly more for the view. Tourist-friendly with English menus.',
-    mustTry: 'Kefta tagine with eggs, harira soup',
+    cuisine: 'Moroccan and international',
+    price: '60-120 MAD per person',
+    description:
+      'A Chefchaouen institution occupying a multi-level blue-painted building overlooking Plaza Uta el-Hammam. The rooftop terrace has arguably the best view of any restaurant in town, looking directly at the Kasbah walls and the Grand Mosque minaret. The menu covers all Moroccan classics &mdash; tagines, couscous, harira, brochettes &mdash; done well if not groundbreaking. The real draw is the atmosphere and the views. Perfect for a long, lazy lunch.',
+    location: 'Overlooking Plaza Uta el-Hammam',
   },
   {
     name: 'Restaurant Beldi',
-    cuisine: 'Traditional Moroccan',
-    priceRange: '40-80 MAD',
-    description: 'A locals favorite tucked away in the medina, serving honest home-style Moroccan cooking at genuine local prices. The portions are generous, the tajines are slow-cooked to perfection, and the atmosphere is unpretentious. This is where Chefchaouen families eat when they eat out.',
-    mustTry: 'Chicken tagine with preserved lemons and olives',
+    cuisine: 'Home-style Riffian cooking',
+    price: '40-80 MAD per person',
+    description:
+      'A hidden gem beloved by locals and budget-savvy travelers, Restaurant Beldi serves genuine home-cooked Riffian food at remarkably low prices. The menu changes daily based on what is available at the market &mdash; you might find a rich lentil soup, a perfectly spiced kefta tagine, or slow-cooked chicken with preserved lemons and olives. The space is simple, the portions are large, and the cooking is as authentic as you will find in any restaurant in northern Morocco. No alcohol served.',
+    location: 'Side street off the main souk, medina center',
   },
   {
     name: 'Sofia Restaurant',
-    cuisine: 'Moroccan Fusion',
-    priceRange: '60-150 MAD',
-    description: 'A slightly upscale spot with a gorgeous terrace and creative takes on Moroccan classics. The menu includes some international options for those craving a change. The pastilla (savory-sweet pie) here is exceptional. Service is attentive and the ambiance is romantic for evening meals.',
-    mustTry: 'Chicken pastilla, grilled kefta brochettes',
+    cuisine: 'Moroccan and Mediterranean',
+    price: '70-130 MAD per person',
+    description:
+      'A popular choice with travelers for its combination of good food, reasonable prices, and one of the best roof terraces in the medina. Sofia serves reliable Moroccan standards alongside some Mediterranean-inspired dishes. The vegetable tagine with preserved lemons is excellent, and the freshly squeezed orange juice (available year-round thanks to Morocco&apos;s citrus groves) is worth ordering at every meal. The terrace catches the afternoon sun beautifully.',
+    location: 'Central medina, near the main souk',
   },
   {
     name: 'Casa Aladdin',
-    cuisine: 'Moroccan',
-    priceRange: '50-100 MAD',
-    description: 'Not to be confused with Aladdin Restaurant, this separate establishment on the plaza serves reliably good food with arguably the best terrace seating in the square. The Berber omelette is a great breakfast option, and the vegetable tagines are perfect for vegetarians.',
-    mustTry: 'Berber omelette, vegetable tagine',
+    cuisine: 'Moroccan fusion',
+    price: '90-160 MAD per person',
+    description:
+      'Not to be confused with the Aladdin Restaurant on the plaza, Casa Aladdin is a more upscale option in a restored riad with multiple dining rooms and a stunning roof terrace. The menu ventures beyond traditional tagines into territory like lamb shank with fig reduction, grilled Mediterranean fish with chermoula, and creative salad compositions. The wine list is decent by Moroccan standards. Reservations recommended for the terrace table at sunset.',
+    location: 'Upper medina, near Ras el-Maa',
   },
   {
-    name: 'Cafe Clock Chefchaouen',
-    cuisine: 'Moroccan-International Fusion',
-    priceRange: '50-120 MAD',
-    description: 'Part of the acclaimed Cafe Clock group (also in Fes and Marrakech), this branch brings creative cooking, cultural events, and a cosmopolitan atmosphere to the medina. The famous camel burger is available here. Regular live music and storytelling events make it a cultural hub as well as a restaurant.',
-    mustTry: 'Camel burger, date milkshake',
+    name: 'Cafe Hafa (Terrace Cafe)',
+    cuisine: 'Light meals, crepes, and drinks',
+    price: '20-50 MAD per person',
+    description:
+      'Perched on a cliff edge on the hillside above the medina, this simple cafe offers some of the most spectacular views in Chefchaouen at the lowest prices. The menu is basic &mdash; msemen (Moroccan crepes), omelettes, sandwiches, fresh juices, and of course mint tea &mdash; but the panoramic vista over the blue rooftops and the Rif valley makes every meal feel like a feast. This is where locals come to unwind, and the relaxed vibe is infectious.',
+    location: 'Upper medina hillside, above Ras el-Maa',
   },
 ];
+
+/* ═══════════════════════════════════════════════════════════════
+   ACCOMMODATIONS DATA
+   ═══════════════════════════════════════════════════════════════ */
 
 const accommodations = [
   {
     name: 'Dar Echchaouen',
-    type: 'Luxury Riad',
-    priceRange: '1,200-2,500 MAD/night',
-    description: 'The finest accommodation in Chefchaouen. This stunning riad combines traditional craftsmanship with modern luxury, featuring a hammam, pool, and rooftop restaurant with breathtaking views. Each room is uniquely decorated with local textiles and tilework. The service is impeccable.',
+    category: 'Luxury Riad',
+    price: '1,200-2,500 MAD per night',
+    description:
+      'The finest accommodation in Chefchaouen, Dar Echchaouen is a meticulously restored traditional house with spacious suites featuring hand-carved cedarwood ceilings, zellige-tiled bathrooms, premium linens, and private balconies overlooking the medina. The rooftop terrace offers 360-degree views of the blue city and the Rif Mountains, and the in-house restaurant serves refined Moroccan cuisine. Breakfast is an elaborate spread of local specialties. The staff arranges hiking excursions, cooking classes, and private transfers.',
+    location: 'Central medina, quiet residential street',
+    bestFor: 'Couples, special occasions, luxury seekers',
   },
   {
     name: 'Casa Hassan',
-    type: 'Heritage Guesthouse',
-    priceRange: '500-900 MAD/night',
-    description: 'A Chefchaouen institution dating back decades. This charming guesthouse in the heart of the medina has character-filled rooms, a famous restaurant, and one of the best rooftop terraces in town. The owner is a wealth of local knowledge. Book well in advance for peak season.',
+    category: 'Heritage Riad',
+    price: '600-1,100 MAD per night',
+    description:
+      'One of the original guesthouses in Chefchaouen and still among the best. Casa Hassan has been welcoming travelers since 1985, making it an institution in the city. The 400-year-old house has been sympathetically restored with traditional Riffian decor &mdash; hand-woven blankets, painted wooden ceilings, and thick lime-washed walls. Rooms vary in size (ask for one with a mountain view). The legendary on-site restaurant serves some of the best traditional food in town, and the knowledgeable staff are invaluable for hiking and excursion advice.',
+    location: 'Central medina near Plaza Uta el-Hammam',
+    bestFor: 'Culture lovers, hikers, travelers seeking authenticity',
   },
   {
     name: 'Lina Ryad & Spa',
-    type: 'Boutique Riad',
-    priceRange: '800-1,500 MAD/night',
-    description: 'A beautifully designed boutique riad with a spa, plunge pool, and elegant rooms decorated in a contemporary Moroccan style. The in-house hammam is excellent, and the breakfast spread is among the best in the city. Located in a quiet corner of the medina.',
+    category: 'Boutique Riad',
+    price: '800-1,600 MAD per night',
+    description:
+      'A beautifully designed boutique riad that blends traditional Moroccan architecture with contemporary comfort. Lina Ryad features a small hammam and spa, elegant rooms with traditional touches and modern bathrooms, and a spectacular roof terrace with plunge pool (rare in Chefchaouen). The design aesthetic is refined without being precious &mdash; hand-troweled tadelakt walls, artisan tiles, and locally crafted furniture. The breakfast is excellent and the staff genuinely helpful.',
+    location: 'Upper medina with mountain views',
+    bestFor: 'Design-conscious travelers, couples, those wanting spa facilities',
   },
   {
     name: 'Dar Meziana',
-    type: 'Mid-Range Riad',
-    priceRange: '400-700 MAD/night',
-    description: 'Excellent value riad with warm hospitality, comfortable rooms, and a lovely rooftop terrace. The owners speak multiple languages and go out of their way to help with local recommendations and tour bookings. Breakfast included.',
+    category: 'Mid-Range Guesthouse',
+    price: '400-700 MAD per night',
+    description:
+      'A charming family-run guesthouse in a quiet corner of the medina, Dar Meziana offers excellent value with comfortable rooms, warm hospitality, and a lovely roof terrace. The rooms are simply but tastefully decorated with local crafts, beds are comfortable, and the shared spaces are inviting. The family cooks a generous Moroccan breakfast included in the rate. The location is peaceful yet within easy walking distance of the plaza and souks.',
+    location: 'Quiet residential area of the medina',
+    bestFor: 'Families, value-seekers, those wanting local atmosphere',
   },
   {
-    name: 'Hostel Chefchaouen',
-    type: 'Budget Hostel',
-    priceRange: '80-150 MAD/night',
-    description: 'The best budget option in town with clean dorms and private rooms. The communal rooftop terrace is a great place to meet fellow travelers. Kitchen access for self-catering. The location near the plaza means you are steps from everything.',
+    name: 'Hostel Chefchaouen (Ole Hostel)',
+    category: 'Budget Hostel',
+    price: '80-150 MAD per night (dorm); 250-400 MAD (private room)',
+    description:
+      'The most popular backpacker hostel in Chefchaouen, offering clean dormitory beds and private rooms in a converted traditional house. The rooftop terrace is a social hub where travelers share stories over mint tea. Facilities include a communal kitchen, hot showers, free Wi-Fi, and luggage storage. The staff organize group hikes to Akchour and the Spanish Mosque. Linen and breakfast are included in the rate. Book ahead in peak season (April-May, September-October) as beds fill fast.',
+    location: 'Central medina, near the main square',
+    bestFor: 'Solo travelers, backpackers, budget travelers',
   },
   {
-    name: 'Hotel Parador',
-    type: 'Mid-Range Hotel',
-    priceRange: '350-600 MAD/night',
-    description: 'A Spanish colonial-era hotel on the edge of the medina with a swimming pool, garden, and restaurant. The rooms are simple but clean with mountain views. The pool is a real luxury after a day of hiking. Parking available for drivers.',
+    name: 'Camping Azilan',
+    category: 'Campsite',
+    price: '40-60 MAD per person per night (tent pitch); bungalows 200-350 MAD',
+    description:
+      'Located just outside the medina walls with views of Jebel el-Kelaa, Camping Azilan is a well-maintained campsite offering tent pitches, basic bungalows, and a communal kitchen. Hot showers, clean toilets, and a small cafe are on-site. The setting is beautiful &mdash; under olive trees with the blue medina visible across the valley. A peaceful alternative to the medina bustle, particularly for those with their own vehicle or camping equipment.',
+    location: 'Just outside the medina, eastern edge',
+    bestFor: 'Campers, overlanders, nature lovers, ultra-budget travelers',
   },
 ];
 
-const shopping = [
+/* ═══════════════════════════════════════════════════════════════
+   SHOPPING GUIDE DATA
+   ═══════════════════════════════════════════════════════════════ */
+
+const shoppingItems = [
   {
     item: 'Woven Blankets & Rugs',
     priceRange: '100-500 MAD',
-    description: 'Chefchaouen is famous for its handwoven wool blankets and rugs in striking patterns. The Rif Berber women who make them use techniques passed down through generations. Look for tight weaving and natural dyes for the best quality. Larger rugs can be shipped home.',
-    where: 'Souks near Plaza Uta el-Hammam',
+    description:
+      'Chefchaouen is famous for its handwoven textiles, produced on traditional wooden looms by Riffian Berber women. The distinctive patterns &mdash; bold geometric stripes and diamonds in earthy reds, oranges, blues, and creams &mdash; are unique to this region. The finest blankets use pure wool, hand-spun from local sheep, and a single blanket can take several weeks to complete. They serve as bedspreads, wall hangings, or wraps, and the quality pieces last generations.',
+    buyingTip: 'Check the weave density by holding the fabric up to the light &mdash; the less light that passes through, the tighter and more durable the weave. Pure wool blankets are heavier and more expensive than cotton blends. Ask if the dyes are natural (more expensive but color-fast) or synthetic.',
   },
   {
     item: 'Goat Cheese (Jben)',
-    priceRange: '15-40 MAD per piece',
-    description: 'Fresh, soft goat cheese made in the surrounding Rif Mountains is a local specialty you will not find this fresh anywhere else in Morocco. Sold wrapped in palm leaves at the market. Eat it the same day for best flavor, ideally with fresh bread and olive oil.',
-    where: 'Morning market near Bab el-Ain',
+    priceRange: '15-40 MAD per round',
+    description:
+      'Fresh, tangy goat cheese (jben) is a Chefchaouen specialty, produced in the surrounding Rif Mountain villages where goat herding has been the primary livelihood for centuries. The cheese is sold in small rounds, often wrapped in palm leaves, and has a mild, slightly tart flavor. It is delicious spread on fresh bread with olive oil and mint, or crumbled over salads. Harder aged versions are also available.',
+    buyingTip: 'The freshest cheese is sold by women in the small square near Bab el-Ain, usually in the morning. Buy it fresh and consume within 1-2 days as it does not keep well without refrigeration. The harder, drier rounds travel better.',
   },
   {
     item: 'Local Honey',
-    priceRange: '50-150 MAD per jar',
-    description: 'Wild mountain honey from the Rif, ranging from light and floral to dark and intensely flavored. Some vendors sell thyme honey, wildflower honey, and rare varieties. Taste before buying. The genuine mountain honey is darker and more complex than commercial varieties.',
-    where: 'Spice shops in the souks',
+    priceRange: '50-200 MAD per jar',
+    description:
+      'The Rif Mountains produce exceptional honey from bees that forage on wild thyme, lavender, rosemary, and the diverse wildflowers of the mountain meadows. Chefchaouen&apos;s honey varies from light, floral thyme honey to dark, intense forest honey. Some producers offer honeycomb sections (rayon de miel) which are a special treat. The honey has genuine medicinal use in Moroccan tradition &mdash; mixed with argan oil and black seed (nigella) for immune support.',
+    buyingTip: 'Taste before buying. The best honey is sold by small producers in the souk or by roadside vendors in the surrounding villages. True mountain honey crystallizes naturally; if it remains permanently liquid, it may be adulterated with sugar syrup.',
   },
   {
     item: 'Leather Goods',
     priceRange: '80-400 MAD',
-    description: 'Handmade leather bags, belts, wallets, and sandals produced in small workshops within the medina. Quality varies, so inspect stitching and leather thickness. The round leather poufs that collapse for packing make excellent souvenirs.',
-    where: 'Leather workshops near the tanneries',
+    description:
+      'While Fes is the leather capital, Chefchaouen has its own leather-working tradition producing bags, wallets, belts, babouches (traditional slippers), and book covers. The leather is typically tanned in the traditional way using vegetable-based methods, and items are often dyed in Chefchaouen&apos;s signature blue or natural tan. The quality is generally good and prices significantly lower than in more touristic cities.',
+    buyingTip: 'Smell the leather &mdash; good quality should smell of leather, not chemicals. Check stitching carefully. Babouches should have stitched (not glued) soles. Leather goods make excellent, lightweight souvenirs that improve with age.',
   },
   {
     item: 'Blue-Painted Ceramics',
-    priceRange: '30-200 MAD',
-    description: 'Pottery and ceramics painted in the characteristic Chefchaouen blues. Plates, bowls, tagine pots, and decorative tiles make beautiful souvenirs. Some artisans will let you watch them paint. Ensure pieces are well-wrapped for travel.',
-    where: 'Artisan shops throughout the medina',
+    priceRange: '30-250 MAD',
+    description:
+      'Inspired by the city&apos;s blue aesthetic, local potters produce a range of ceramics in various shades of blue &mdash; plates, bowls, tagine pots, cups, tiles, and decorative pieces. While not as refined as the Fes blue-and-white tradition, Chefchaouen ceramics have their own rustic charm and make instantly recognizable souvenirs. Many pieces feature the distinctive blue-on-blue palette that makes them unmistakably from the Blue Pearl.',
+    buyingTip: 'Hand-painted pieces (slightly imperfect, visible brushstrokes) are more authentic and valuable than stenciled or mass-produced items. Small plates and bowls pack well in luggage. Tagine pots are beautiful but fragile for transport.',
   },
   {
-    item: 'Round Rif Straw Hats',
+    item: 'Riffian Straw Hats',
     priceRange: '30-80 MAD',
-    description: 'The distinctive wide-brimmed straw hats with pom-poms worn by Rif Berber women. They are both practical sun protection and a unique cultural souvenir. The women selling them near the plaza often wear them themselves.',
-    where: 'Street vendors near the plaza and Bab el-Ain',
+    description:
+      'The wide-brimmed straw hats with colorful pom-pom decorations worn by Riffian women are one of the most distinctive accessories in Morocco. These handwoven hats serve a practical purpose &mdash; protection from the fierce mountain sun &mdash; but have become a popular tourist souvenir and fashion accessory. Each hat is woven from dried palm or doum palm fiber and decorated with colored wool tassels.',
+    buyingTip: 'The most authentic hats are sold by the women who make them, often sitting on the ground near the market entrances. Mass-produced tourist versions are cheaper but flimsier. A genuine handwoven hat has visible irregularities that machine-made ones lack.',
   },
 ];
+
+/* ═══════════════════════════════════════════════════════════════
+   GETTING THERE DATA
+   ═══════════════════════════════════════════════════════════════ */
+
+const transportOptions = [
+  {
+    from: 'Fes',
+    method: 'CTM Bus',
+    duration: '4 hours',
+    price: '75 MAD',
+    description:
+      'The most popular route to Chefchaouen. CTM operates daily departures (typically 2-3 per day) from the Fes CTM station. The journey follows the N13 highway through rolling farmland, then climbs dramatically into the Rif Mountains with increasingly spectacular scenery as you approach. The road is winding in the final hour &mdash; those prone to motion sickness should take the front seat and bring medication. CTM buses are air-conditioned, comfortable, and reliable.',
+    tip: 'Book CTM tickets at least a day in advance online or at the station, especially in spring and autumn high season. Take the morning departure for the best mountain scenery. The bus arrives at the Chefchaouen bus station about 1 km below the medina.',
+  },
+  {
+    from: 'Tangier',
+    method: 'CTM Bus or Grand Taxi',
+    duration: '3-3.5 hours (bus) or 2.5 hours (taxi)',
+    price: '60-75 MAD (bus); 100-120 MAD per person (grand taxi)',
+    description:
+      'A popular route for travelers arriving in Morocco via the Tangier ferry port or flying into Ibn Battouta Airport. CTM buses depart from Tangier&apos;s bus station daily, and the road through the western Rif Mountains is scenic and well-maintained. Grand taxis (shared Mercedes sedans holding 6 passengers) depart from the Tangier grand taxi stand when full and are faster but less comfortable. The drive passes through the pleasant town of Tetouan, which is worth a stop.',
+    tip: 'If arriving at Tangier Med port (40 km from Tangier city), you can sometimes find grand taxis heading directly to Chefchaouen from the port. Otherwise, take a shuttle to Tangier city first. Grand taxi drivers will try to charge tourists a higher fare &mdash; confirm the price before departing and pay the standard local rate.',
+  },
+  {
+    from: 'Tetouan',
+    method: 'Grand Taxi or Local Bus',
+    duration: '1-1.5 hours',
+    price: '25-35 MAD per person (grand taxi)',
+    description:
+      'The closest city to Chefchaouen with a Spanish colonial heritage of its own. Grand taxis from Tetouan are the most frequent connection to Chefchaouen, departing regularly throughout the day from the grand taxi stand. The drive is short but spectacular, climbing through the Rif foothills with views back toward the Mediterranean. Local buses also cover this route but are slower and less comfortable.',
+    tip: 'Tetouan makes an excellent day trip from Chefchaouen or a worthwhile stop en route. Its UNESCO-listed medina has a distinctly Spanish-Moroccan character and sees far fewer tourists than Chefchaouen. Grand taxis fill up fastest in the morning.',
+  },
+  {
+    from: 'Casablanca or Rabat',
+    method: 'CTM Bus (via Tangier or direct)',
+    duration: '6-7 hours from Rabat; 7-8 hours from Casablanca',
+    price: '130-160 MAD',
+    description:
+      'Longer journeys that can be done in a single day but are tiring. CTM offers some direct services, though many routes require a change in either Tangier or Fes. For comfort, consider breaking the journey with an overnight stop in Fes or Tangier. There is no direct train to Chefchaouen (the nearest train station is in Tangier or Fes), so the final leg is always by road.',
+    tip: 'The most comfortable option from Casablanca or Rabat is to take the high-speed Al Boraq train to Tangier (2 hours from Casablanca, 1.5 hours from Rabat) and then a CTM bus or grand taxi to Chefchaouen. This combines speed and comfort.',
+  },
+];
+
+/* ═══════════════════════════════════════════════════════════════
+   DAY TRIPS DATA
+   ═══════════════════════════════════════════════════════════════ */
 
 const dayTrips = [
   {
-    name: 'Akchour Falls & God\'s Bridge',
-    distance: '30 km from Chefchaouen',
-    duration: 'Full day',
-    description: 'The most popular day trip from Chefchaouen combines two of the Rif Mountains\' greatest natural wonders. Drive or taxi to the village of Akchour, then hike to the waterfalls and the spectacular natural rock bridge. Pack a picnic and swimwear.',
-    transport: 'Grand taxi (150-200 MAD round trip shared, 300-400 MAD private) or organized tour',
+    name: 'Akchour Waterfalls & God\'s Bridge',
+    distance: '25 km from Chefchaouen',
+    duration: 'Full day (6-8 hours)',
+    description:
+      'The most popular day trip from Chefchaouen combines two of the Rif Mountains\' most spectacular natural attractions. The Akchour Waterfalls trail follows a river gorge to a series of cascades and swimming pools, culminating in a grand 20-meter waterfall. A separate trail leads to God&apos;s Bridge, a massive natural stone arch over turquoise pools. You can do one or both in a day, though doing both requires good fitness and an early start.',
+    howToGet: 'Grand taxi from Chefchaouen to Akchour village (30 MAD per person, 45 minutes). Arrange a return time with your driver.',
+    cost: 'Transport 30 MAD each way; park entrance 20 MAD; packed lunch from medina 30-50 MAD',
   },
   {
     name: 'Oued Laou Beach',
-    distance: '60 km from Chefchaouen',
+    distance: '65 km from Chefchaouen',
     duration: 'Full day',
-    description: 'A Mediterranean fishing village with a long, uncrowded sandy beach. The drive through the Rif Mountains is spectacular, winding through valleys and past traditional villages. Fresh seafood at beachside restaurants is excellent and cheap. A perfect contrast to the mountain setting of Chefchaouen.',
-    transport: 'Grand taxi (200-300 MAD round trip) or CTM bus (25 MAD one way)',
+    description:
+      'A Mediterranean fishing village with a long, uncrowded sandy beach where the Oued Laou river meets the sea. The drive through the Rif Mountains is spectacularly scenic, descending from the peaks to the coast through terraced hillsides, small Berber villages, and lush river valleys. The village itself is quiet and authentic &mdash; far from the resort tourism of Agadir or Tangier. Saturday is the weekly souk day when the town comes alive.',
+    howToGet: 'Grand taxi from Chefchaouen (30-40 MAD per person, shared, 1.5 hours). Some travelers hire a private taxi for 300-400 MAD round trip with waiting time.',
+    cost: 'Transport 60-80 MAD round trip; seafood lunch 60-100 MAD',
   },
   {
     name: 'Tetouan',
-    distance: '65 km from Chefchaouen',
-    duration: 'Full day',
-    description: 'A UNESCO-listed medina with strong Andalusian character, Tetouan feels distinctly different from Chefchaouen. White-washed buildings, Spanish colonial architecture, an excellent archaeological museum, and a vibrant working medina with minimal tourism. Well worth the one-hour drive.',
-    transport: 'CTM bus (35 MAD, 1.5 hours) or grand taxi (40-50 MAD per person)',
+    distance: '60 km from Chefchaouen',
+    duration: 'Half or full day',
+    description:
+      'Tetouan&apos;s UNESCO-listed medina is one of the most authentic in Morocco, with a uniquely Andalusian-Moroccan character reflecting the city&apos;s history as a refuge for Muslims and Jews expelled from Spain in 1492. The whitewashed medina, the Royal Palace, the Archaeology Museum, and the peaceful Feddan Park are all worth exploring. Tetouan sees a fraction of the tourists that Chefchaouen receives, making it a genuinely local experience. The nearby Martil beach is a popular addition.',
+    howToGet: 'Grand taxi from Chefchaouen (25-35 MAD per person, 1-1.5 hours). Frequent departures throughout the day.',
+    cost: 'Transport 50-70 MAD round trip; museum entries 20-30 MAD; lunch 50-80 MAD',
   },
   {
-    name: 'Moulay Abdeslam Shrine',
-    distance: '45 km from Chefchaouen',
+    name: 'Moulay Abdeslam',
+    distance: '35 km from Chefchaouen',
     duration: 'Half day',
-    description: 'A pilgrimage site sacred to Moroccan Sufis, set in a forested mountain village. The shrine of Moulay Abdeslam Ben Mchich is an important spiritual center. The surrounding cedar forests are beautiful for walking. Non-Muslims may visit the village but not the inner shrine.',
-    transport: 'Grand taxi (150-200 MAD round trip) or organized tour',
-  },
-  {
-    name: 'Talassemtane Forest Drive',
-    distance: '20-40 km loop',
-    duration: 'Half day',
-    description: 'Rent a car or hire a driver to explore the mountain roads through Talassemtane National Park. Stop at viewpoints, walk through Moroccan fir forests (found nowhere else on earth), and visit remote Berber villages. The scenery is some of the most dramatic in all of Morocco.',
-    transport: 'Rental car or private driver (400-600 MAD half day)',
+    description:
+      'A sacred pilgrimage site set in dense cedar forest on a mountainside south of Chefchaouen. The shrine of Moulay Abdeslam Ben Mchich (a 13th-century Sufi saint) draws thousands of Moroccan pilgrims, particularly during the annual moussem (festival). For non-pilgrims, the attraction is the stunning mountain setting, the ancient cedar forest, and the insight into a living spiritual tradition that remains central to Moroccan religious life. The drive through the mountains is beautiful.',
+    howToGet: 'Private taxi recommended (200-300 MAD round trip with waiting). Grand taxis available but infrequent.',
+    cost: 'Transport 200-300 MAD (private); shrine visit free; lunch 40-60 MAD',
   },
 ];
 
-const faqItems = [
+/* ═══════════════════════════════════════════════════════════════
+   FAQ DATA
+   ═══════════════════════════════════════════════════════════════ */
+
+const faqs = [
   {
     question: 'Why is Chefchaouen blue?',
-    answer: 'Several theories exist and the truth is probably a combination. The most common explanation is that Jewish refugees who settled here in the 1930s painted buildings blue as a symbol of heaven and God\'s power. Others say the blue repels mosquitoes, keeps buildings cool, or was simply a cheap available pigment from local plants. Whatever the origin, residents now maintain the tradition because it defines their city\'s identity and attracts tourism.',
+    answer:
+      'The most widely accepted explanation is that the tradition of painting buildings blue was introduced by Jewish refugees who settled in Chefchaouen in the 1930s, fleeing persecution in Europe. In Judaism, the color blue (tekhelet) represents the sky and heaven, serving as a reminder of God\'s presence. Others believe the blue paint was adopted to repel mosquitoes, as the insects are said to avoid blue surfaces. Some residents say the blue simply keeps buildings cooler in summer by reflecting sunlight. Whatever the original reason, the tradition has been maintained and expanded by the current Muslim residents who find the blue beautiful and good for tourism. Today, the city government provides blue paint to residents at subsidized prices to maintain the signature look.',
   },
   {
-    question: 'How many days do I need in Chefchaouen?',
-    answer: 'Two to three days is ideal. One full day for the medina and photography, one day for hiking (Akchour Falls or the Spanish Mosque), and optionally a third day for a day trip to Tetouan or Oued Laou. Many travelers stay longer than planned because the pace is so relaxing.',
+    question: 'How many days should I spend in Chefchaouen?',
+    answer:
+      'Two to three days is ideal. One full day is enough to explore the medina thoroughly, photograph the blue streets, visit the Kasbah, and hike to the Spanish Mosque for sunset. A second day allows for a day trip to Akchour Waterfalls or God\'s Bridge. A third day gives breathing room for a second day trip (Oued Laou beach or Tetouan), more medina exploration, or simply relaxing on a riad rooftop. Chefchaouen rewards slow travel &mdash; it is a place to decompress, not to rush through checking sights off a list.',
+  },
+  {
+    question: 'When is the best time to visit Chefchaouen?',
+    answer:
+      'The best months are April-May and September-October, when temperatures are pleasant (18-25 degrees Celsius), rainfall is minimal, and the surrounding mountains are green. Summer (July-August) is hot (30-35 degrees) and sees the most domestic Moroccan tourism. Winter (December-February) is cold and wet, with temperatures dropping to 5-10 degrees and occasional snow on higher peaks, but the medina is nearly empty and atmospheric in the rain. Ramadan dates shift annually; the town is quieter during the day but comes alive after iftar.',
   },
   {
     question: 'Is Chefchaouen safe for solo travelers and women?',
-    answer: 'Chefchaouen is considered one of the safest cities in Morocco. The medina is small and easy to navigate, violent crime is extremely rare, and the atmosphere is notably relaxed. Solo female travelers generally report feeling comfortable here. Standard precautions apply: be aware of your surroundings at night and ignore occasional hustlers near the gates.',
+    answer:
+      'Chefchaouen is generally considered one of the safest cities in Morocco for travelers, including solo women. The town is small, the medina is compact and easy to navigate, and the atmosphere is notably relaxed compared to larger Moroccan cities. Harassment levels are significantly lower than in Marrakech or Fes, though not entirely absent. The main annoyances are persistent offers to sell hashish (simply decline politely) and occasional requests to pose for paid photos in traditional dress. Use normal travel precautions: avoid poorly lit areas late at night, keep valuables secure, and trust your instincts.',
   },
   {
-    question: 'Will people try to sell me drugs?',
-    answer: 'Yes. The Rif region is Morocco\'s cannabis-growing heartland, and you will almost certainly be offered hashish or kif (marijuana) on the streets. A polite but firm "la shukran" (no thank you) is sufficient. Do not engage in lengthy conversations with dealers. While cannabis is culturally embedded in the region, buying and possessing it is technically illegal for tourists and can result in fines or worse.',
+    question: 'Can I drink the tap water in Chefchaouen?',
+    answer:
+      'The tap water in Chefchaouen comes from mountain springs and is generally cleaner than in most Moroccan cities. Some long-term residents and experienced travelers drink it without issue. However, for short-term visitors, bottled water is recommended to avoid potential stomach upset from unfamiliar minerals and bacteria. Large 1.5-liter bottles cost 5-7 MAD from shops throughout the medina. Some riads provide filtered water for guests.',
   },
   {
-    question: 'Can I drink the tap water?',
-    answer: 'No. Stick to bottled water, which is widely available for 5-8 MAD per 1.5 liters. The mountain spring water at Ras el-Maa looks clean but should not be consumed untreated. Most restaurants use purified water for cooking.',
+    question: 'What is the altitude of Chefchaouen and does it matter?',
+    answer:
+      'Chefchaouen sits at approximately 564 meters (1,850 feet) above sea level, nestled in the Rif Mountains. This is not high enough to cause altitude sickness, but it does affect the climate: evenings and mornings are cooler than you might expect in Morocco, especially in spring and autumn. Bring a light jacket or fleece. The surrounding peaks reach 1,600-2,000 meters, so day hikes involve meaningful elevation gains. The altitude also means the air is fresh and clean compared to lowland cities.',
   },
   {
-    question: 'Are there ATMs in Chefchaouen?',
-    answer: 'Yes, but limited. There are a handful of ATMs near the plaza and outside Bab el-Ain, but they can run out of cash on busy weekends and holidays. Bring enough cash from Fes or Tangier as a backup. Credit cards are accepted at upscale riads and some restaurants but not in the souks or at small eateries.',
+    question: 'Is there an ATM in Chefchaouen?',
+    answer:
+      'Yes, there are several ATMs in the new town (ville nouvelle) area below the medina entrance, including Banque Populaire, Attijariwafa Bank, and BMCE. Inside the medina itself, ATM access is limited. Withdraw cash before entering the medina, as most shops, restaurants, and accommodations in the old town accept cash only. Credit cards are accepted at some upscale riads but virtually nowhere else. Carry small denominations (10, 20, 50 MAD notes) as many vendors cannot break larger bills.',
   },
   {
-    question: 'What is the best time to visit?',
-    answer: 'Spring (March to May) and autumn (September to November) are ideal. Summer (June to August) can be hot during midday but evenings are pleasant due to the altitude. Winter (December to February) is cold, occasionally wet, but atmospheric with fewer tourists. Avoid Moroccan school holidays and Eid if you want quieter streets.',
+    question: 'What about the cannabis and hashish situation in Chefchaouen?',
+    answer:
+      'Chefchaouen sits in the heart of the Rif Mountains, which is Morocco\'s primary cannabis cultivation region. You will very likely be offered hashish (kif) by men on the streets, sometimes persistently. A polite but firm "la, shukran" (no, thank you) is the best response. Cannabis is technically illegal in Morocco for both possession and sale, though enforcement in the Rif region is complex due to the crop\'s deep economic and cultural roots. Tourists who purchase or carry cannabis risk fines, arrest, or extortion by corrupt individuals posing as police. The safest approach is to politely decline all offers.',
   },
   {
-    question: 'Is Chefchaouen accessible for people with mobility issues?',
-    answer: 'The medina is challenging for wheelchair users. Streets are steep, narrow, and cobbled with many steps. The new town is more accessible. Some riads have ground-floor rooms. The Spanish Mosque hike and Akchour trails are not wheelchair-accessible. Travelers with limited mobility can still enjoy the plaza, the Kasbah (partially accessible), and the lower medina streets.',
+    question: 'Do I need a guide in Chefchaouen?',
+    answer:
+      'Unlike the labyrinthine medinas of Fes or Marrakech, Chefchaouen\'s medina is compact and nearly impossible to get seriously lost in. A guide is not necessary for general exploration. However, hiring a local guide is highly recommended for hiking in Talassemtane National Park, visiting God\'s Bridge, or exploring the wider Rif Mountain area where trails can be unmarked and local knowledge is invaluable. Licensed guides can be arranged through your riad or the tourist office (300-500 MAD for a full-day hiking guide).',
   },
   {
-    question: 'Do I need a guide?',
-    answer: 'For the medina, no. Chefchaouen is tiny compared to Fes or Marrakech, and getting lost is difficult. For hiking to Akchour or Jebel el-Kelaa, a guide is recommended for safety and navigation. Official guides can be arranged through your riad or the tourism office near the plaza for 300-500 MAD per day.',
-  },
-  {
-    question: 'Can I take photos of people?',
-    answer: 'Always ask permission first. Many locals, especially older women in the Rif, do not want to be photographed. A smile and a gesture toward your camera before shooting is the respectful approach. Some people will expect a small tip (5-10 MAD) for posed photos. Never photograph someone who has said no.',
+    question: 'What should I pack for Chefchaouen?',
+    answer:
+      'Comfortable walking shoes are essential &mdash; the medina is built on a hillside with many steps and uneven cobblestones. Pack layers, as mornings and evenings are cool year-round. A good camera is obvious. For hikers, bring proper trail shoes, sun protection, and a daypack. A headlamp is useful for the Spanish Mosque sunset hike (the return is after dark). A reusable water bottle saves money and plastic. Pack modest clothing out of respect for local culture &mdash; shoulders and knees covered for both men and women.',
   },
 ];
 
-/* ================================================================
-   PAGE COMPONENT
-   ================================================================ */
+/* ═══════════════════════════════════════════════════════════════
+   PRACTICAL TIPS DATA
+   ═══════════════════════════════════════════════════════════════ */
 
-export default function ChefchaouenPage() {
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'TouristDestination',
-    name: 'Chefchaouen',
-    description:
-      'Morocco\'s famous Blue Pearl, a mountain city in the Rif range known for its blue-painted medina, stunning hiking trails, Akchour Waterfalls, and relaxed Berber culture. Founded in 1471 as a fortress against Portuguese invasion.',
-    url: 'https://moroccoguide.com/chefchaouen',
-    touristType: ['Photographers', 'Hikers', 'Culture Seekers', 'Backpackers', 'Solo Travelers'],
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 35.1688,
-      longitude: -5.2636,
-    },
-    includesAttraction: [
-      { '@type': 'TouristAttraction', name: 'Plaza Uta el-Hammam' },
-      { '@type': 'TouristAttraction', name: 'The Kasbah Museum' },
-      { '@type': 'TouristAttraction', name: 'Spanish Mosque' },
-      { '@type': 'TouristAttraction', name: 'Ras el-Maa Waterfall' },
-      { '@type': 'TouristAttraction', name: 'Akchour Waterfalls' },
-      { '@type': 'TouristAttraction', name: 'God\'s Bridge (Pont de Dieu)' },
-      { '@type': 'TouristAttraction', name: 'Talassemtane National Park' },
+const practicalTips = [
+  'Two to three days is the ideal length of stay. One day for the medina, one for hiking, and a third for day trips or relaxation.',
+  'The best months to visit are April-May and September-October for comfortable temperatures and clear skies.',
+  'Chefchaouen sits at 564 meters elevation. Evenings are cooler than you might expect &mdash; pack a light jacket.',
+  'ATMs are in the new town below the medina. Withdraw cash before entering the medina; most merchants are cash-only.',
+  'The medina is small and easy to navigate. You do not need a guide to explore the blue streets.',
+  'Politely decline offers to buy hashish. A firm "la, shukran" is sufficient.',
+  'Wi-Fi is available at most riads and cafes, though speeds vary. Purchase a Moroccan SIM card (Maroc Telecom or Orange) in the new town for reliable 4G data (20-30 MAD for a tourist package).',
+  'Friday is the holy day. Some shops close for extended hours, and the Grand Mosque area is busier during prayer times.',
+  'The Spanish Mosque sunset hike takes 20-30 minutes uphill. Bring a flashlight for the return walk after dark.',
+  'Tap water comes from mountain springs and is cleaner than in most Moroccan cities, but bottled water (5-7 MAD) is recommended for visitors.',
+  'Bargaining is expected in the souks but keep it friendly. Start at about 40-50% of the asking price and aim for 60-70%.',
+  'Photography of people: always ask first. Some residents, especially older women, do not wish to be photographed.',
+];
+
+/* ═══════════════════════════════════════════════════════════════
+   RELATED PAGES DATA
+   ═══════════════════════════════════════════════════════════════ */
+
+const relatedPages = [
+  {
+    title: 'Morocco Cities Guide',
+    description: 'Overview of all major Moroccan cities and what makes each unique.',
+    href: '/cities',
+  },
+  {
+    title: 'Fes City Guide',
+    description: 'The cultural capital: medina, tanneries, medersas, and artisan workshops.',
+    href: '/fes-guide',
+  },
+  {
+    title: 'Hiking in Morocco',
+    description: 'Complete guide to trekking the Atlas, Rif, and Anti-Atlas mountains.',
+    href: '/trekking',
+  },
+  {
+    title: 'Photography Guide',
+    description: 'Best locations, techniques, and tips for photographing Morocco.',
+    href: '/photography',
+  },
+  {
+    title: 'Morocco Souks & Shopping',
+    description: 'What to buy, where to find it, and how to bargain effectively.',
+    href: '/souks',
+  },
+  {
+    title: 'Budget Travel Morocco',
+    description: 'How to experience Morocco on a backpacker budget without missing out.',
+    href: '/backpacking',
+  },
+  {
+    title: 'National Parks',
+    description: 'Guide to Talassemtane and Morocco\'s other protected natural areas.',
+    href: '/national-parks',
+  },
+  {
+    title: 'Solo Travel Morocco',
+    description: 'Tips, safety advice, and itineraries for independent travelers.',
+    href: '/solo-travel',
+  },
+];
+
+/* ═══════════════════════════════════════════════════════════════
+   BUDGET GUIDE DATA
+   ═══════════════════════════════════════════════════════════════ */
+
+const budgetBreakdown = [
+  {
+    category: 'Budget Traveler',
+    daily: '200-400 MAD / day',
+    details: [
+      'Accommodation: Hostel dorm or budget guesthouse (80-200 MAD)',
+      'Food: Street food, local restaurants (50-80 MAD)',
+      'Transport: Walking everywhere in the medina (0 MAD)',
+      'Activities: Spanish Mosque hike, medina exploration (free)',
+      'Shopping/misc: Light browsing, mint tea (30-50 MAD)',
     ],
-  };
+    tip: 'Chefchaouen is one of Morocco\'s most affordable cities. The medina is walkable, the best experiences (blue streets, Spanish Mosque sunset, Ras el-Maa) are free, and excellent food can be found for under 50 MAD. Budget travelers can live well here.',
+  },
+  {
+    category: 'Mid-Range Traveler',
+    daily: '600-1,200 MAD / day',
+    details: [
+      'Accommodation: Quality riad with breakfast (400-800 MAD)',
+      'Food: Mix of local and upscale restaurants (100-200 MAD)',
+      'Transport: Grand taxis for day trips (60-100 MAD)',
+      'Activities: Akchour hike, Kasbah museum (50-100 MAD)',
+      'Shopping: Blankets, ceramics, souvenirs (100-300 MAD)',
+    ],
+    tip: 'The mid-range experience in Chefchaouen is excellent value. A beautiful riad, rooftop dining with mountain views, a day trip to Akchour Waterfalls, and quality souvenirs are all affordable without feeling like you are cutting corners.',
+  },
+  {
+    category: 'Luxury Traveler',
+    daily: '2,000-4,000+ MAD / day',
+    details: [
+      'Accommodation: Premium riad suite (1,200-2,500 MAD)',
+      'Food: Finest restaurants and private dining (300-500 MAD)',
+      'Transport: Private driver for excursions (400-600 MAD)',
+      'Activities: Private guides, workshops (300-500 MAD)',
+      'Shopping/spa: Premium crafts, hammam (200-500+ MAD)',
+    ],
+    tip: 'Luxury in Chefchaouen is about exclusivity and nature, not five-star gloss. Private hiking guides, sunset picnics arranged by your riad, hammam treatments, and bespoke craft commissions create memorable experiences.',
+  },
+];
 
+/* ═══════════════════════════════════════════════════════════════
+   HELPER: STAR RATING RENDERER
+   ═══════════════════════════════════════════════════════════════ */
+
+function renderStars(rating: number) {
+  const full = Math.floor(rating);
+  const hasHalf = rating % 1 >= 0.3;
+  const stars: React.ReactNode[] = [];
+  for (let i = 0; i < full; i++) {
+    stars.push(
+      <Star
+        key={`f-${i}`}
+        className="w-4 h-4 fill-[var(--color-accent)] text-[var(--color-accent)]"
+      />
+    );
+  }
+  if (hasHalf) {
+    stars.push(
+      <span key="half" className="relative inline-block w-4 h-4">
+        <Star className="absolute inset-0 w-4 h-4 text-[var(--color-accent)]" />
+        <span className="absolute inset-0 w-1/2 overflow-hidden">
+          <Star className="w-4 h-4 fill-[var(--color-accent)] text-[var(--color-accent)]" />
+        </span>
+      </span>
+    );
+  }
+  const remaining = 5 - full - (hasHalf ? 1 : 0);
+  for (let i = 0; i < remaining; i++) {
+    stars.push(
+      <Star
+        key={`e-${i}`}
+        className="w-4 h-4 text-[var(--color-accent)]/30"
+      />
+    );
+  }
+  return stars;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   PAGE COMPONENT (Server)
+   ═══════════════════════════════════════════════════════════════ */
+
+export default function ChefchaouenGuidePage() {
   return (
     <>
       <script
@@ -518,1281 +832,918 @@ export default function ChefchaouenPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* ── Hero Section ── */}
-      <section className="relative py-24 md:py-36 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(/images/hero-chefchaouen-streets.webp)',
-          }}
-        />
-        <div className="absolute inset-0 hero-overlay" />
-        <div className="container-morocco relative z-10">
-          <nav className="flex items-center gap-2 text-sm text-white/60 mb-8" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-white transition-colors"><Home className="w-3.5 h-3.5" /></Link>
+      {/* ══════════════════════════════════════════════════════════
+          SECTION 1: HERO
+          ══════════════════════════════════════════════════════════ */}
+      <section className="relative overflow-hidden bg-[var(--color-primary-900)] text-white">
+        <div className="absolute inset-0">
+          <img
+            src="/images/hero-chefchaouen-streets.webp"
+            alt="Blue-painted streets and stairways winding through the Chefchaouen medina with potted plants and warm sunlight"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="hero-overlay absolute inset-0" />
+        </div>
+        <div className="relative container-morocco py-20 md:py-28 lg:py-36">
+          <nav
+            className="flex items-center gap-2 text-sm text-white/60 mb-8"
+            aria-label="Breadcrumb"
+          >
+            <Link
+              href="/"
+              className="hover:text-white transition-colors inline-flex items-center gap-1"
+            >
+              <Home className="w-3.5 h-3.5" /> Home
+            </Link>
             <ChevronRight className="w-3.5 h-3.5" />
-            <Link href="/cities" className="hover:text-white transition-colors">Cities</Link>
+            <Link
+              href="/cities"
+              className="hover:text-white transition-colors"
+            >
+              Cities
+            </Link>
             <ChevronRight className="w-3.5 h-3.5" />
             <span className="text-white">Chefchaouen</span>
           </nav>
 
-          <div className="flex items-center gap-3 mb-4">
-            <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-white/10 backdrop-blur-sm">
-              <Droplets className="w-6 h-6 text-white" />
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-display)] font-bold text-white">
-              Chefchaouen
+          <div className="max-w-3xl">
+            <p className="text-[var(--color-accent)] font-semibold text-sm uppercase tracking-widest mb-4">
+              The Ultimate City Guide
+            </p>
+            <h1 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              Chefchaouen: Morocco&apos;s Blue Pearl
             </h1>
-          </div>
-          <p className="text-xl md:text-2xl text-white/90 font-[family-name:var(--font-display)] italic mb-4">
-            Morocco&apos;s Blue Pearl of the Rif
-          </p>
-          <p className="text-lg text-white/80 max-w-2xl mb-8">
-            Nestled in the Rif Mountains at 600 meters, this blue-washed dreamscape has captivated
-            travelers since its founding in 1471. Every wall, doorway, and stairway is painted in
-            shades of blue so vivid they seem to glow, a mountainside labyrinth where the sky and
-            the city are one.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            <span className="tag bg-white/15 text-white backdrop-blur-sm"><Droplets className="w-3.5 h-3.5 mr-1.5" /> Blue Medina</span>
-            <span className="tag bg-white/15 text-white backdrop-blur-sm"><Mountain className="w-3.5 h-3.5 mr-1.5" /> Rif Mountains</span>
-            <span className="tag bg-white/15 text-white backdrop-blur-sm"><Camera className="w-3.5 h-3.5 mr-1.5" /> Photography Paradise</span>
-            <span className="tag bg-white/15 text-white backdrop-blur-sm"><Footprints className="w-3.5 h-3.5 mr-1.5" /> Hiking Trails</span>
+            <p className="text-lg md:text-xl text-white/85 max-w-2xl leading-relaxed">
+              A dreamlike mountain city drenched in every shade of blue,
+              nestled in the dramatic Rif Mountains. Chefchaouen is
+              Morocco&apos;s most photogenic destination &mdash; a place
+              where ancient Andalusian medina streets painted in cobalt,
+              indigo, and powder blue cascade down the mountainside beneath
+              towering limestone peaks.
+            </p>
           </div>
         </div>
+        <div className="zellige-border" />
       </section>
 
-      <div className="zellige-border" />
-
-      {/* ── Overview / Why It's Blue ── */}
-      <section className="py-12 md:py-16">
-        <div className="container-morocco">
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
-              The Blue City in the Mountains
-            </h2>
-            <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-4">
-              Chefchaouen, often shortened to &quot;Chaouen&quot; by locals, is a city that defies
-              expectation. Founded in 1471 by Moulay Ali Ben Rachid as a small fortress to fight
-              Portuguese and Spanish invasions of northern Morocco, it spent centuries as a closed,
-              holy city that foreigners were forbidden to enter. Until 1920, only three Christians
-              had ever set foot here.
-            </p>
-            <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-4">
-              Today it is one of Morocco&apos;s most beloved destinations, home to roughly 45,000
-              people and visited by hundreds of thousands of travelers each year, all drawn by the
-              same magnetic force: the blue. Every shade from powder to cobalt to indigo adorns the
-              walls, stairs, doorways, and rooftops of the medina, creating a chromatic experience
-              unlike anywhere else on earth.
-            </p>
-            <p className="text-lg text-[var(--text-secondary)] leading-relaxed">
-              The Rif Mountains provide a dramatic backdrop, rising to over 2,000 meters on all
-              sides. The air here is cooler and crisper than the plains below, scented with pine
-              and cedar. The pace of life is slower. The hassle that characterizes some Moroccan
-              cities is largely absent here. In Chefchaouen, you can simply breathe.
-            </p>
-          </div>
-
-          {/* Why it's blue */}
-          <div className="max-w-4xl mx-auto">
-            <div className="flex items-center gap-3 mb-6">
-              <Palette className="w-6 h-6 text-[var(--color-primary)]" />
-              <h3 className="text-2xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
-                Why Is Everything Blue?
-              </h3>
+      {/* ══════════════════════════════════════════════════════════
+          SECTION 2: INTRODUCTION / OVERVIEW
+          ══════════════════════════════════════════════════════════ */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco max-w-4xl">
+          <div className="text-center mb-12">
+            <div className="inline-flex p-3 rounded-xl bg-[var(--color-primary)]/10 mb-4">
+              <BookOpen className="w-6 h-6 text-[var(--color-primary)]" />
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="card-moroccan p-6">
-                <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[var(--color-primary-50)] text-[var(--color-primary)] mb-4">
-                  <Star className="w-6 h-6" />
-                </div>
-                <h4 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                  The Jewish Tradition
-                </h4>
-                <p className="text-sm text-[var(--text-muted)] leading-relaxed">
-                  The most widely accepted theory. Jewish refugees fleeing Spanish persecution in
-                  the 1930s brought the tradition of painting buildings blue, symbolizing the sky
-                  and heaven, as a reminder of God&apos;s power. The practice was adopted by the
-                  broader community and became the city&apos;s defining feature.
-                </p>
-              </div>
-              <div className="card-moroccan p-6">
-                <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[var(--color-primary-50)] text-[var(--color-primary)] mb-4">
-                  <Shield className="w-6 h-6" />
-                </div>
-                <h4 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                  Mosquito Repellent
-                </h4>
-                <p className="text-sm text-[var(--text-muted)] leading-relaxed">
-                  A practical theory suggests the blue paint, traditionally derived from natural
-                  indigo and copper compounds, acts as a mosquito repellent. The mountain streams
-                  around Chefchaouen create breeding grounds for insects, and the blue pigment may
-                  have offered genuine protection. Science has not conclusively proven this claim.
-                </p>
-              </div>
-              <div className="card-moroccan p-6">
-                <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[var(--color-primary-50)] text-[var(--color-primary)] mb-4">
-                  <Sparkles className="w-6 h-6" />
-                </div>
-                <h4 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                  Spiritual Meaning
-                </h4>
-                <p className="text-sm text-[var(--text-muted)] leading-relaxed">
-                  In Islamic tradition, blue represents water, sky, and the divine. Chefchaouen has
-                  always been a deeply spiritual city, home to numerous saints&apos; tombs and Sufi
-                  traditions. The blue may reflect this spiritual character, connecting the earthly
-                  city to the heavens above. Residents simply say it keeps buildings cool and looks beautiful.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Top Attractions ── */}
-      <section className="py-12 md:py-16 bg-[var(--surface-muted)]">
-        <div className="container-morocco">
-          <div className="flex items-center gap-3 mb-3">
-            <Camera className="w-6 h-6 text-[var(--color-primary)]" />
-            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
-              Top Attractions
+            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
+              The Blue Pearl of the Rif Mountains
             </h2>
+            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
+              Founded in 1471, Chefchaouen has captivated travelers for centuries
+              with its ethereal blue medina, mountain wilderness, and gentle pace of life.
+            </p>
           </div>
-          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">
-            Twelve must-see sights in and around the blue city, from iconic plazas to hidden viewpoints.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {attractions.map((attraction, index) => (
-              <div
-                key={attraction.name}
-                className="card-moroccan overflow-hidden group hover:shadow-xl transition-all duration-300"
-              >
-                <div className="relative aspect-[16/10] overflow-hidden">
-                  <img
-                    src={attraction.image}
-                    alt={attraction.name}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading={index < 3 ? 'eager' : 'lazy'}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  <div className="absolute top-3 left-3">
-                    <span className="tag bg-white/90 text-[var(--color-primary)] font-semibold">
-                      {attraction.type}
-                    </span>
-                  </div>
-                  <div className="absolute bottom-3 right-3 flex items-center gap-1 px-2 py-1 rounded-full bg-black/50 backdrop-blur-sm">
-                    <Star className="w-3.5 h-3.5 fill-[var(--color-accent)] text-[var(--color-accent)]" />
-                    <span className="text-white text-xs font-semibold">{attraction.rating}</span>
-                  </div>
-                </div>
-                <div className="p-5">
-                  <h3 className="font-[family-name:var(--font-display)] text-lg font-bold text-[var(--text-primary)] mb-2">
-                    {attraction.name}
-                  </h3>
-                  <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-3">
-                    {attraction.description}
+
+          <div className="space-y-4 text-lg text-[var(--text-secondary)] leading-relaxed">
+            <p>
+              Chefchaouen (often shortened to Chaouen by locals) is a small city of approximately
+              45,000 people perched at 564 meters elevation in the heart of Morocco&apos;s Rif
+              Mountains. Founded in 1471 by Moulay Ali Ben Rachid as a fortress to fight
+              Portuguese incursions into northern Morocco, the city grew as a refuge for Muslims
+              and Jews expelled from Andalusia during the Spanish Reconquista. These Andalusian
+              refugees brought with them the architectural traditions, agricultural knowledge, and
+              cultural sensibilities that still define the city&apos;s character today.
+            </p>
+            <p>
+              The famous blue paint that covers virtually every surface in the medina &mdash; walls,
+              stairways, doorframes, flower pots, even the pavement in some streets &mdash; is
+              believed to have been introduced or popularized by the Jewish community in the 1930s.
+              In Jewish tradition, the color tekhelet (a specific shade of blue derived from a sea
+              snail) represents the sky and the divine, and painting homes blue served as a constant
+              reminder of God&apos;s presence. When the Jewish community largely emigrated to Israel
+              in the 1940s and 1950s, the Muslim residents continued the tradition. Today, the blue
+              is maintained partly out of custom, partly because residents believe it repels mosquitoes
+              and keeps buildings cool, and partly because the global fame of the &ldquo;Blue Pearl&rdquo;
+              has made tourism the city&apos;s primary economic engine.
+            </p>
+            <p>
+              Beyond the photogenic medina, Chefchaouen is a gateway to some of Morocco&apos;s finest
+              natural landscapes. The surrounding Rif Mountains &mdash; part of the Talassemtane
+              National Park &mdash; offer hiking trails through cedar and fir forests, past dramatic
+              waterfalls, natural stone bridges, and mountain peaks with Mediterranean views. The
+              Akchour Waterfalls and God&apos;s Bridge are among Morocco&apos;s most spectacular
+              natural attractions, and both are accessible as day trips from the city. The Rif region
+              also produces exceptional goat cheese, mountain honey, and handwoven textiles that make
+              distinctive souvenirs. Chefchaouen is Morocco at its most gentle, most beautiful, and
+              most enchanting.
+            </p>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 pt-8 border-t border-[var(--border-light)]">
+              {[
+                { label: 'Founded', value: '1471 AD' },
+                { label: 'Elevation', value: '564 m' },
+                { label: 'Population', value: '~45,000' },
+                { label: 'Region', value: 'Rif Mountains' },
+              ].map((stat) => (
+                <div
+                  key={stat.label}
+                  className="text-center p-4 rounded-xl bg-[var(--surface-muted)]"
+                >
+                  <p className="text-2xl font-bold text-[var(--color-primary)] font-[family-name:var(--font-display)]">
+                    {stat.value}
                   </p>
-                  <div className="flex items-start gap-2 text-xs text-[var(--color-accent)] bg-[var(--color-accent-50)] p-2 rounded-lg">
-                    <Info className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" />
-                    <span>{attraction.tip}</span>
+                  <p className="text-sm text-[var(--text-secondary)]">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════
+          SECTION 3: TOP ATTRACTIONS
+          ══════════════════════════════════════════════════════════ */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <div className="inline-flex p-3 rounded-xl bg-[var(--color-primary)]/10 mb-4">
+              <Landmark className="w-6 h-6 text-[var(--color-primary)]" />
+            </div>
+            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
+              Top Attractions in Chefchaouen
+            </h2>
+            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
+              From the iconic blue medina streets to mountain viewpoints and ancient
+              fortresses, these are the essential experiences in Morocco&apos;s Blue Pearl.
+            </p>
+          </div>
+
+          <div className="space-y-8">
+            {topAttractions.map((attraction, index) => (
+              <article
+                key={attraction.name}
+                className="card-moroccan overflow-hidden"
+              >
+                <div className={`grid grid-cols-1 lg:grid-cols-5 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+                  <div className="lg:col-span-2 relative h-64 lg:h-auto">
+                    <img
+                      src={attraction.image}
+                      alt={`${attraction.name} in Chefchaouen, Morocco`}
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="lg:col-span-3 p-6 md:p-8">
+                    <div className="flex items-start justify-between gap-4 mb-3">
+                      <h3 className="text-xl md:text-2xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+                        {attraction.name}
+                      </h3>
+                      <div className="flex items-center gap-0.5 shrink-0">
+                        {renderStars(attraction.rating)}
+                        <span className="ml-1.5 text-sm font-medium text-[var(--text-secondary)]">
+                          {attraction.rating}
+                        </span>
+                      </div>
+                    </div>
+
+                    <p className="text-[var(--text-secondary)] leading-relaxed mb-4">
+                      {attraction.description}
+                    </p>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
+                      <div className="flex items-center gap-2 text-sm">
+                        <Ticket className="w-4 h-4 text-[var(--color-primary)] shrink-0" />
+                        <span className="text-[var(--text-secondary)]">
+                          <strong className="text-[var(--text-primary)]">Entry:</strong>{' '}
+                          {attraction.fee}
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm">
+                        <Clock className="w-4 h-4 text-[var(--color-primary)] shrink-0" />
+                        <span className="text-[var(--text-secondary)]">
+                          <strong className="text-[var(--text-primary)]">Hours:</strong>{' '}
+                          {attraction.hours}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-2 pt-3 border-t border-[var(--border-light)]">
+                      <Lightbulb className="w-4 h-4 text-[var(--color-primary)] shrink-0 mt-0.5" />
+                      <p className="text-sm text-[var(--color-primary)] font-medium">
+                        {attraction.tip}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── Photography Guide ── */}
-      <section className="py-12 md:py-16">
+      {/* ══════════════════════════════════════════════════════════
+          SECTION 4: PHOTOGRAPHY GUIDE
+          ══════════════════════════════════════════════════════════ */}
+      <section className="py-16 md:py-20">
         <div className="container-morocco">
-          <div className="flex items-center gap-3 mb-3">
-            <Camera className="w-6 h-6 text-[var(--color-secondary)]" />
-            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
-              Photography Guide
+          <div className="text-center mb-12">
+            <div className="inline-flex p-3 rounded-xl bg-[var(--color-primary)]/10 mb-4">
+              <Camera className="w-6 h-6 text-[var(--color-primary)]" />
+            </div>
+            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
+              Photography Guide to Chefchaouen
             </h2>
+            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
+              Chefchaouen is arguably the most photogenic city in Morocco. Here are the
+              best spots, times, and techniques for capturing the Blue Pearl at its finest.
+            </p>
           </div>
-          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">
-            Chefchaouen is one of the most photogenic cities in the world. Here is how to capture it at its best.
-          </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-            {photographyGuide.map((spot) => {
-              const Icon = spot.icon;
-              return (
-                <div key={spot.title} className="card-moroccan p-6 group">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[var(--color-primary-50)] text-[var(--color-primary)] group-hover:bg-[var(--color-primary)] group-hover:text-white transition-colors">
-                      <Icon className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
-                        {spot.title}
-                      </h3>
-                      <span className="text-xs text-[var(--color-accent)] font-semibold">{spot.time}</span>
-                    </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {photographySpots.map((spot) => (
+              <article key={spot.name} className="card-moroccan p-6 flex flex-col">
+                <h3 className="text-lg font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-2">
+                  {spot.name}
+                </h3>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4 flex-1">
+                  {spot.description}
+                </p>
+                <div className="space-y-2 pt-3 border-t border-[var(--border-light)]">
+                  <div className="flex items-start gap-2 text-sm">
+                    <Sun className="w-4 h-4 text-[var(--color-primary)] shrink-0 mt-0.5" />
+                    <span className="text-[var(--text-secondary)]">
+                      <strong className="text-[var(--text-primary)]">Best Time:</strong>{' '}
+                      {spot.bestTime}
+                    </span>
                   </div>
-                  <p className="text-sm text-[var(--text-muted)] leading-relaxed">
-                    {spot.description}
-                  </p>
+                  <div className="flex items-start gap-2 text-sm">
+                    <Eye className="w-4 h-4 text-[var(--color-primary)] shrink-0 mt-0.5" />
+                    <span className="text-[var(--text-secondary)]">
+                      <strong className="text-[var(--text-primary)]">Technique:</strong>{' '}
+                      {spot.technique}
+                    </span>
+                  </div>
                 </div>
-              );
-            })}
+              </article>
+            ))}
           </div>
 
-          {/* Photography tips */}
-          <div className="max-w-3xl mx-auto">
-            <div className="card-moroccan p-8">
-              <h3 className="text-xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
-                Practical Photography Tips
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 flex items-center gap-2">
-                    <Sunrise className="w-4 h-4 text-[var(--color-accent)]" /> Golden Hour Timing
-                  </h4>
-                  <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-4">
-                    The medina faces roughly east-southeast, meaning morning golden hour (6:30-8:30 AM in
-                    spring/summer, 7:30-9:30 AM in winter) lights up the blue walls beautifully. Afternoon light
-                    creates deep shadows in the narrow streets. Sunset is best from elevated positions like the
-                    Spanish Mosque or rooftop terraces.
-                  </p>
-                  <h4 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 flex items-center gap-2">
-                    <Eye className="w-4 h-4 text-[var(--color-accent)]" /> Instagram vs Reality
-                  </h4>
-                  <p className="text-sm text-[var(--text-muted)] leading-relaxed">
-                    The most famous Instagram spots (the blue staircase with pots, the blue doorway with
-                    bougainvillea) get crowded by 10 AM. But Chefchaouen&apos;s real beauty is in the unplanned
-                    discoveries: a cat sleeping on a blue step, an old man reading the Quran in a doorway,
-                    afternoon light through a latticed window. Put the phone away sometimes and just look.
-                  </p>
+          <div className="mt-8 card-moroccan p-6 md:p-8">
+            <h3 className="text-lg font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)] mb-4 flex items-center gap-2">
+              <Info className="w-5 h-5 text-[var(--color-primary)]" />
+              Photography Ethics in Chefchaouen
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-[var(--text-secondary)]">
+              {[
+                'Always ask permission before photographing people, especially women and elderly residents. A smile and a gesture toward your camera is usually understood.',
+                'Some residents, particularly in the quieter residential areas, are weary of constant photography. Respect their privacy if they indicate they do not wish to be filmed.',
+                'Do not photograph children without parental permission. Be cautious of adults who position children in front of your camera and then demand payment.',
+                'The most famous blue streets receive thousands of photographers daily. Be mindful of residents trying to go about their daily lives and do not block doorways or stairways for extended periods.',
+                'Drone photography is technically restricted in Morocco and requires a permit. Many visitors fly drones without issue, but be aware of the legal risk.',
+                'If someone poses willingly for a portrait, a small tip of 5-10 MAD is a kind gesture of appreciation, though not always expected.',
+              ].map((tip) => (
+                <div key={tip} className="flex items-start gap-2">
+                  <Star className="w-3.5 h-3.5 text-[var(--color-primary)] shrink-0 mt-0.5" />
+                  <span>{tip}</span>
                 </div>
-                <div>
-                  <h4 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 flex items-center gap-2">
-                    <Users className="w-4 h-4 text-[var(--color-accent)]" /> Photographing People
-                  </h4>
-                  <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-4">
-                    This is crucial. Many Rif Berber people, especially older women, are deeply uncomfortable
-                    being photographed. Never shoot someone without asking. A smile and a gesture toward your
-                    camera says enough. Accept &quot;no&quot; gracefully. Offering to show them the photo on your
-                    screen often breaks the ice. Tipping 5-10 MAD for a portrait is standard and appreciated.
-                  </p>
-                  <h4 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 flex items-center gap-2">
-                    <Map className="w-4 h-4 text-[var(--color-accent)]" /> Hidden Gems
-                  </h4>
-                  <p className="text-sm text-[var(--text-muted)] leading-relaxed">
-                    The eastern residential area above Ras el-Maa has streets just as blue as the famous ones
-                    but with almost no tourists. The path along the river above Ras el-Maa offers unique
-                    compositions with water and blue buildings. The view from the cemetery hill north of the
-                    medina is lesser-known but stunning at sunrise.
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Hiking & Nature ── */}
-      <section className="py-12 md:py-16 bg-[var(--surface-muted)]">
+      {/* ══════════════════════════════════════════════════════════
+          SECTION 5: HIKING & NATURE
+          ══════════════════════════════════════════════════════════ */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco">
-          <div className="flex items-center gap-3 mb-3">
-            <Mountain className="w-6 h-6 text-[var(--color-primary)]" />
-            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
-              Hiking &amp; Nature
+          <div className="text-center mb-12">
+            <div className="inline-flex p-3 rounded-xl bg-[var(--color-primary)]/10 mb-4">
+              <Mountain className="w-6 h-6 text-[var(--color-primary)]" />
+            </div>
+            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
+              Hiking &amp; Nature in the Rif Mountains
             </h2>
+            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
+              Chefchaouen is a hiker&apos;s paradise. From gentle riverside walks to challenging
+              mountain summits, the Rif Mountains offer some of Morocco&apos;s finest trail experiences.
+            </p>
           </div>
-          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">
-            The Rif Mountains around Chefchaouen offer some of Morocco&apos;s most spectacular hiking,
-            from gentle forest walks to challenging summit climbs.
-          </p>
 
           <div className="space-y-6">
             {hikingTrails.map((trail) => (
-              <div key={trail.name} className="card-moroccan p-6 md:p-8">
-                <div className="flex flex-col md:flex-row md:items-start gap-6">
-                  <div className="flex-shrink-0 flex items-center justify-center w-14 h-14 rounded-2xl bg-[var(--color-primary-50)] text-[var(--color-primary)]">
-                    <Footprints className="w-7 h-7" />
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex flex-wrap items-center gap-3 mb-2">
-                      <h3 className="font-[family-name:var(--font-display)] text-xl font-bold text-[var(--text-primary)]">
-                        {trail.name}
-                      </h3>
-                      <span className="tag bg-[var(--color-primary-50)] text-[var(--color-primary)]">
-                        {trail.difficulty}
-                      </span>
-                    </div>
-                    <div className="flex flex-wrap gap-4 text-sm text-[var(--text-muted)] mb-3">
-                      <span className="flex items-center gap-1"><Navigation className="w-3.5 h-3.5" /> {trail.distance}</span>
-                      <span className="flex items-center gap-1"><Clock className="w-3.5 h-3.5" /> {trail.duration}</span>
-                      <span className="flex items-center gap-1"><CircleDollarSign className="w-3.5 h-3.5" /> {trail.price}</span>
-                    </div>
-                    <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-3">
-                      {trail.description}
-                    </p>
-                    <div className="flex items-start gap-2 text-xs text-[var(--color-accent)] bg-[var(--color-accent-50)] p-3 rounded-lg">
-                      <AlertTriangle className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" />
-                      <span>{trail.tips}</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Where to Eat ── */}
-      <section className="py-12 md:py-16">
-        <div className="container-morocco">
-          <div className="flex items-center gap-3 mb-3">
-            <Utensils className="w-6 h-6 text-[var(--color-secondary)]" />
-            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
-              Where to Eat
-            </h2>
-          </div>
-          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">
-            Chefchaouen&apos;s food scene is modest but honest. Expect hearty Rif Berber cooking with
-            generous portions at prices that feel like a steal. Most meals run 40-150 MAD per person.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {restaurants.map((restaurant) => (
-              <div key={restaurant.name} className="card-moroccan p-6">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-[var(--color-accent-50)] text-[var(--color-accent)]">
-                    <Utensils className="w-6 h-6" />
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-1 flex-wrap">
-                      <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
-                        {restaurant.name}
-                      </h3>
-                      <span className="tag bg-[var(--color-primary-50)] text-[var(--color-primary)]">
-                        {restaurant.cuisine}
-                      </span>
-                    </div>
-                    <p className="text-sm text-[var(--text-muted)] mb-2 leading-relaxed">
-                      {restaurant.description}
-                    </p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm font-semibold text-[var(--color-green)] flex items-center gap-1">
-                        <CircleDollarSign className="w-3.5 h-3.5" /> {restaurant.priceRange}
-                      </span>
-                      <span className="text-xs text-[var(--color-accent)] font-medium">
-                        Must try: {restaurant.mustTry}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Extra food tips */}
-          <div className="mt-8 card-moroccan p-6 md:p-8 max-w-3xl mx-auto">
-            <h3 className="text-lg font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4 flex items-center gap-2">
-              <Coffee className="w-5 h-5 text-[var(--color-accent)]" /> Food Tips for Chefchaouen
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-[var(--text-muted)]">
-              <div>
-                <p className="mb-3 leading-relaxed">
-                  <strong className="text-[var(--text-primary)]">Street food:</strong> Fresh-squeezed
-                  orange juice (5-8 MAD), msemen flatbread (3-5 MAD), and harira soup (10-15 MAD) are
-                  available from stalls near the gates. Breakfast at your riad is usually included and
-                  worth eating, a spread of bread, jam, olive oil, cheese, and mint tea.
-                </p>
-                <p className="leading-relaxed">
-                  <strong className="text-[var(--text-primary)]">Local specialties:</strong> Try
-                  &quot;bissara&quot; (fava bean soup), a Rif staple served with olive oil and cumin.
-                  The local goat cheese (&quot;jben&quot;) is excellent and not available this fresh
-                  elsewhere in Morocco. Rif-style couscous with buttermilk is a Friday tradition.
-                </p>
-              </div>
-              <div>
-                <p className="mb-3 leading-relaxed">
-                  <strong className="text-[var(--text-primary)]">Vegetarian-friendly:</strong> Chefchaouen
-                  is more vegetarian-friendly than most Moroccan cities. Vegetable tagines, lentil soup,
-                  zaalouk (eggplant dip), and fresh salads are available everywhere. Several restaurants
-                  have dedicated vegetarian sections on their menus.
-                </p>
-                <p className="leading-relaxed">
-                  <strong className="text-[var(--text-primary)]">Tipping:</strong> Tipping 10% at
-                  sit-down restaurants is standard. For quick meals and street food, rounding up or
-                  leaving a few dirhams is appreciated but not required. Service charges are rarely
-                  included.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Where to Stay ── */}
-      <section className="py-12 md:py-16 bg-[var(--surface-muted)]">
-        <div className="container-morocco">
-          <div className="flex items-center gap-3 mb-3">
-            <Bed className="w-6 h-6 text-[var(--color-primary)]" />
-            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
-              Where to Stay
-            </h2>
-          </div>
-          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">
-            From luxury riads to backpacker hostels, Chefchaouen has accommodation for every budget.
-            Book in advance during spring and autumn peak seasons.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {accommodations.map((hotel) => (
-              <div key={hotel.name} className="card-moroccan p-6 flex gap-4">
-                <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-[var(--color-accent-50)] text-[var(--color-accent)]">
-                  <Bed className="w-6 h-6" />
-                </div>
-                <div>
-                  <div className="flex items-center gap-2 mb-1 flex-wrap">
-                    <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
-                      {hotel.name}
+              <article key={trail.name} className="card-moroccan p-6 md:p-8">
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
+                  <div>
+                    <h3 className="text-xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-1">
+                      {trail.name}
                     </h3>
-                    <span className="tag bg-[var(--color-primary-50)] text-[var(--color-primary)]">{hotel.type}</span>
+                    <div className="flex flex-wrap items-center gap-4 text-sm text-[var(--text-secondary)]">
+                      <span className="flex items-center gap-1">
+                        <Footprints className="w-4 h-4 text-[var(--color-primary)]" />
+                        {trail.distance}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Clock className="w-4 h-4 text-[var(--color-primary)]" />
+                        {trail.duration}
+                      </span>
+                    </div>
                   </div>
-                  <p className="text-sm text-[var(--text-muted)] mb-2 leading-relaxed">{hotel.description}</p>
-                  <span className="text-sm font-semibold text-[var(--color-green)] flex items-center gap-1">
-                    <CircleDollarSign className="w-3.5 h-3.5" /> {hotel.priceRange}
+                  <span className={`inline-flex px-3 py-1 rounded-full text-xs font-semibold shrink-0 ${
+                    trail.difficulty === 'Easy to Moderate'
+                      ? 'bg-green-100 text-green-800'
+                      : trail.difficulty === 'Moderate'
+                        ? 'bg-yellow-100 text-yellow-800'
+                        : trail.difficulty === 'Moderate to Challenging'
+                          ? 'bg-orange-100 text-orange-800'
+                          : 'bg-red-100 text-red-800'
+                  }`}>
+                    {trail.difficulty}
                   </span>
                 </div>
-              </div>
-            ))}
-          </div>
 
-          <div className="mt-8 card-moroccan p-6 max-w-3xl mx-auto">
-            <h3 className="text-lg font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-3 flex items-center gap-2">
-              <Info className="w-5 h-5 text-[var(--color-accent)]" /> Accommodation Tips
-            </h3>
-            <ul className="text-sm text-[var(--text-muted)] space-y-2 leading-relaxed">
-              <li className="flex items-start gap-2">
-                <ChevronRight className="w-4 h-4 text-[var(--color-accent)] mt-0.5 flex-shrink-0" />
-                <span><strong className="text-[var(--text-primary)]">Stay in the medina.</strong> The whole point
-                of Chefchaouen is the blue city. Staying outside it means you miss the magic of waking up
-                surrounded by blue walls and stepping out your door into the labyrinth.</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <ChevronRight className="w-4 h-4 text-[var(--color-accent)] mt-0.5 flex-shrink-0" />
-                <span><strong className="text-[var(--text-primary)]">Luggage access:</strong> Many medina riads
-                require walking up steep, narrow streets with your bags. Pack light or arrange for your
-                riad to send someone to meet you at the gate. Some higher-end riads offer porter services.</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <ChevronRight className="w-4 h-4 text-[var(--color-accent)] mt-0.5 flex-shrink-0" />
-                <span><strong className="text-[var(--text-primary)]">Hot water:</strong> Budget accommodations
-                may have unreliable hot water, especially in winter. Ask before booking if this matters
-                to you. Mid-range and up generally have no issues.</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <ChevronRight className="w-4 h-4 text-[var(--color-accent)] mt-0.5 flex-shrink-0" />
-                <span><strong className="text-[var(--text-primary)]">Peak season:</strong> March through May and
-                September through November see the highest demand. Book at least two weeks in advance. In
-                summer and winter, you can often find rooms on arrival.</span>
-              </li>
-            </ul>
+                <p className="text-[var(--text-secondary)] leading-relaxed mb-4">
+                  {trail.description}
+                </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="flex items-start gap-2 text-sm">
+                    <Navigation className="w-4 h-4 text-[var(--color-primary)] shrink-0 mt-0.5" />
+                    <span className="text-[var(--text-secondary)]">
+                      <strong className="text-[var(--text-primary)]">Getting There:</strong>{' '}
+                      {trail.howToGet}
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-2 text-sm">
+                    <Lightbulb className="w-4 h-4 text-[var(--color-primary)] shrink-0 mt-0.5" />
+                    <span className="text-[var(--text-secondary)]">
+                      <strong className="text-[var(--text-primary)]">Tip:</strong>{' '}
+                      {trail.tip}
+                    </span>
+                  </div>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ── Shopping ── */}
-      <section className="py-12 md:py-16">
+      {/* ══════════════════════════════════════════════════════════
+          SECTION 6: WHERE TO EAT
+          ══════════════════════════════════════════════════════════ */}
+      <section className="py-16 md:py-20">
         <div className="container-morocco">
-          <div className="flex items-center gap-3 mb-3">
-            <ShoppingBag className="w-6 h-6 text-[var(--color-secondary)]" />
-            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
-              Shopping
+          <div className="text-center mb-12">
+            <div className="inline-flex p-3 rounded-xl bg-[var(--color-primary)]/10 mb-4">
+              <Utensils className="w-6 h-6 text-[var(--color-primary)]" />
+            </div>
+            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
+              Where to Eat in Chefchaouen
             </h2>
+            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
+              From elevated Riffian cuisine to hearty home cooking, Chefchaouen&apos;s
+              restaurant scene punches well above its weight. Prices range from 40-150 MAD per person.
+            </p>
           </div>
-          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">
-            Chefchaouen&apos;s souks are small, walkable, and refreshingly low-pressure.
-            Prices are already lower than Marrakech or Fes, and the artisans here still practice
-            traditional Rif crafts.
-          </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {shopping.map((item) => (
-              <div key={item.item} className="card-moroccan p-6">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[var(--color-accent-50)] text-[var(--color-accent)]">
-                    <ShoppingBag className="w-5 h-5" />
+            {bestRestaurants.map((restaurant) => (
+              <article key={restaurant.name} className="card-moroccan p-6 flex flex-col">
+                <h3 className="text-lg font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-1">
+                  {restaurant.name}
+                </h3>
+                <p className="text-sm text-[var(--color-accent)] font-medium mb-1">
+                  {restaurant.cuisine}
+                </p>
+                <p className="text-sm font-bold text-[var(--color-primary)] mb-3">
+                  {restaurant.price}
+                </p>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4 flex-1">
+                  {restaurant.description}
+                </p>
+                <div className="flex items-center gap-2 text-sm pt-3 border-t border-[var(--border-light)]">
+                  <MapPin className="w-4 h-4 text-[var(--color-primary)] shrink-0" />
+                  <span className="text-[var(--text-secondary)]">{restaurant.location}</span>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-8 card-moroccan p-6 md:p-8">
+            <h3 className="text-lg font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)] mb-4 flex items-center gap-2">
+              <Coffee className="w-5 h-5 text-[var(--color-primary)]" />
+              Chefchaouen Food Tips
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-[var(--text-secondary)]">
+              {[
+                'Riffian cuisine features more goat cheese, fresh herbs, and mountain honey than the cuisine of lowland Morocco. Try jben (fresh goat cheese) with olive oil and bread at any cafe.',
+                'Mint tea in Chefchaouen is often made with fresh wild mint from the surrounding mountains and has a notably more intense, refreshing flavor than in other cities. Accept every offering.',
+                'The best-value meals are the "menu du jour" (set menu) at local restaurants: typically a soup, salad, tagine or couscous, fruit, and tea for 50-80 MAD.',
+                'Street food options include msemen (layered flatbread), sfenj (fried doughnuts), harira soup, brochettes (grilled meat skewers), and fresh-squeezed orange juice (5-10 MAD).',
+                'Alcohol is available at some tourist-oriented restaurants and riads, but Chefchaouen is more conservative than Marrakech or Fes. Many restaurants do not serve alcohol.',
+                'Friday couscous is a tradition &mdash; nearly every restaurant offers a special couscous on Friday, the holy day. It is often the best meal of the week.',
+              ].map((tip) => (
+                <div key={tip} className="flex items-start gap-2">
+                  <Star className="w-3.5 h-3.5 text-[var(--color-primary)] shrink-0 mt-0.5" />
+                  <span>{tip}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════
+          SECTION 7: WHERE TO STAY
+          ══════════════════════════════════════════════════════════ */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <div className="inline-flex p-3 rounded-xl bg-[var(--color-primary)]/10 mb-4">
+              <Bed className="w-6 h-6 text-[var(--color-primary)]" />
+            </div>
+            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
+              Where to Stay in Chefchaouen
+            </h2>
+            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
+              From luxury riads to backpacker hostels and mountain campsites, Chefchaouen
+              offers accommodations for every budget and travel style.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {accommodations.map((place) => (
+              <article key={place.name} className="card-moroccan p-6 flex flex-col">
+                <div className="flex items-start justify-between gap-2 mb-2">
+                  <h3 className="text-lg font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+                    {place.name}
+                  </h3>
+                  <span className="inline-flex px-2 py-0.5 rounded-full text-xs font-semibold bg-[var(--color-primary)]/10 text-[var(--color-primary)] shrink-0">
+                    {place.category}
+                  </span>
+                </div>
+                <p className="text-sm font-bold text-[var(--color-accent)] mb-3">
+                  {place.price}
+                </p>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4 flex-1">
+                  {place.description}
+                </p>
+                <div className="space-y-2 pt-3 border-t border-[var(--border-light)]">
+                  <div className="flex items-center gap-2 text-sm">
+                    <MapPin className="w-4 h-4 text-[var(--color-primary)] shrink-0" />
+                    <span className="text-[var(--text-secondary)]">{place.location}</span>
                   </div>
-                  <div>
-                    <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
-                      {item.item}
-                    </h3>
-                    <span className="text-xs text-[var(--color-green)] font-semibold">{item.priceRange}</span>
+                  <div className="flex items-center gap-2 text-sm">
+                    <Users className="w-4 h-4 text-[var(--color-primary)] shrink-0" />
+                    <span className="text-[var(--text-secondary)]">
+                      <strong className="text-[var(--text-primary)]">Best for:</strong>{' '}
+                      {place.bestFor}
+                    </span>
                   </div>
                 </div>
-                <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-2">
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════
+          SECTION 8: SHOPPING
+          ══════════════════════════════════════════════════════════ */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <div className="inline-flex p-3 rounded-xl bg-[var(--color-primary)]/10 mb-4">
+              <ShoppingBag className="w-6 h-6 text-[var(--color-primary)]" />
+            </div>
+            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
+              Shopping in Chefchaouen
+            </h2>
+            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
+              The souks of Chefchaouen offer a gentler, less pressured shopping experience
+              than Morocco&apos;s larger cities. Here is what to buy and what to pay.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {shoppingItems.map((item) => (
+              <article key={item.item} className="card-moroccan p-6 md:p-8">
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
+                  <h3 className="text-xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+                    {item.item}
+                  </h3>
+                  <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm font-bold bg-[var(--color-accent)]/10 text-[var(--color-accent)] shrink-0">
+                    <CircleDollarSign className="w-4 h-4" />
+                    {item.priceRange}
+                  </span>
+                </div>
+                <p className="text-[var(--text-secondary)] leading-relaxed mb-4">
                   {item.description}
                 </p>
-                <p className="text-xs text-[var(--color-primary)] flex items-center gap-1">
-                  <MapPin className="w-3 h-3" /> {item.where}
-                </p>
-              </div>
+                <div className="flex items-start gap-2 pt-3 border-t border-[var(--border-light)]">
+                  <Lightbulb className="w-4 h-4 text-[var(--color-primary)] shrink-0 mt-0.5" />
+                  <p className="text-sm text-[var(--color-primary)] font-medium">
+                    {item.buyingTip}
+                  </p>
+                </div>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── Hash / Kif Culture ── */}
-      <section className="py-12 md:py-16 bg-[var(--surface-muted)]">
+      {/* ══════════════════════════════════════════════════════════
+          SECTION 9: GETTING THERE
+          ══════════════════════════════════════════════════════════ */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco">
-          <div className="max-w-3xl mx-auto">
-            <div className="flex items-center gap-3 mb-3">
-              <Leaf className="w-6 h-6 text-[var(--color-primary)]" />
-              <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
-                Cannabis &amp; Kif Culture: An Honest Discussion
-              </h2>
+          <div className="text-center mb-12">
+            <div className="inline-flex p-3 rounded-xl bg-[var(--color-primary)]/10 mb-4">
+              <Bus className="w-6 h-6 text-[var(--color-primary)]" />
             </div>
-            <p className="text-[var(--text-secondary)] mb-8">
-              Any honest guide to Chefchaouen must address this. The Rif Mountains are the historic
-              heartland of Moroccan cannabis cultivation, and the culture is deeply embedded in the
-              region. Here is what you need to know.
-            </p>
-
-            <div className="space-y-6">
-              <div className="card-moroccan p-6">
-                <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                  The Cultural Context
-                </h3>
-                <p className="text-sm text-[var(--text-muted)] leading-relaxed">
-                  Cannabis (locally called &quot;kif&quot;) has been cultivated in the Rif Mountains for centuries,
-                  long predating modern drug laws. For many Rif farming families, it has historically been a primary
-                  source of income in a region with limited economic alternatives. The Rif is estimated to produce
-                  the majority of the world&apos;s hashish. In 2021, Morocco legalized cannabis for medical and
-                  industrial use, though recreational use remains illegal. The relationship between the government,
-                  the industry, and the farming communities is complex and evolving.
-                </p>
-              </div>
-
-              <div className="card-moroccan p-6">
-                <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                  What Tourists Experience
-                </h3>
-                <p className="text-sm text-[var(--text-muted)] leading-relaxed">
-                  You will be approached, probably multiple times, with offers to buy hashish or kif. This happens
-                  on the streets, in the souks, and sometimes even from seemingly friendly locals who strike up
-                  conversation. The approaches range from subtle (&quot;you want something special?&quot;) to
-                  direct. Most sellers are harmless and will accept a polite &quot;la shukran&quot; (no thank
-                  you). Do not feel pressured or threatened.
-                </p>
-              </div>
-
-              <div className="card-moroccan p-6 border-l-4 border-[var(--color-accent)]">
-                <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3 flex items-center gap-2">
-                  <AlertTriangle className="w-5 h-5 text-[var(--color-accent)]" /> Legal Reality for Tourists
-                </h3>
-                <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-3">
-                  Despite the relaxed atmosphere and open culture, cannabis possession remains illegal for
-                  tourists. Police occasionally set up checkpoints on roads leaving Chefchaouen specifically
-                  targeting tourists who have purchased drugs. Penalties can include fines, confiscation of your
-                  passport, and in theory imprisonment, though fines and bribes are the more common outcome.
-                </p>
-                <p className="text-sm text-[var(--text-muted)] leading-relaxed">
-                  Some tourist-targeted scams involve a seller working with police: you buy, you get stopped,
-                  you pay a &quot;fine&quot; that is split between the seller and the officer. This is uncommon
-                  but documented. The safest approach is simply to decline all offers politely and move on.
-                </p>
-              </div>
-
-              <div className="card-moroccan p-6">
-                <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                  How to Handle Approaches
-                </h3>
-                <ul className="text-sm text-[var(--text-muted)] space-y-2 leading-relaxed">
-                  <li className="flex items-start gap-2">
-                    <ChevronRight className="w-4 h-4 text-[var(--color-primary)] mt-0.5 flex-shrink-0" />
-                    <span>A firm but friendly &quot;la shukran&quot; (no thank you) or &quot;non merci&quot; is sufficient in almost all cases.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <ChevronRight className="w-4 h-4 text-[var(--color-primary)] mt-0.5 flex-shrink-0" />
-                    <span>Do not engage in extended conversation if you are not interested. Politeness is good, but lingering invites persistence.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <ChevronRight className="w-4 h-4 text-[var(--color-primary)] mt-0.5 flex-shrink-0" />
-                    <span>Avoid eye contact with obvious street dealers near the gates, especially after dark.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <ChevronRight className="w-4 h-4 text-[var(--color-primary)] mt-0.5 flex-shrink-0" />
-                    <span>Never accept a &quot;free sample&quot; or an invitation to &quot;just come see my friend&apos;s farm.&quot;</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <ChevronRight className="w-4 h-4 text-[var(--color-primary)] mt-0.5 flex-shrink-0" />
-                    <span>If you feel uncomfortable, step into a shop or cafe. The hassle is concentrated on a few streets near the gates and dissipates quickly inside the medina.</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Getting There ── */}
-      <section className="py-12 md:py-16">
-        <div className="container-morocco">
-          <div className="flex items-center gap-3 mb-3">
-            <Bus className="w-6 h-6 text-[var(--color-secondary)]" />
-            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
-              Getting There
+            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
+              Getting to Chefchaouen
             </h2>
-          </div>
-          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">
-            Chefchaouen has no train station and no airport. Getting here is part of the adventure.
-            All routes wind through spectacular mountain scenery.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="card-moroccan p-6">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[var(--color-primary-50)] text-[var(--color-primary)]">
-                  <Bus className="w-5 h-5" />
-                </div>
-                <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">From Fes by Bus</h3>
-              </div>
-              <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-3">
-                CTM operates direct buses from Fes to Chefchaouen. The journey takes approximately 4 hours
-                through rolling farmland and into the Rif Mountains. Departures typically at 8:00 AM and
-                3:00 PM. Cost is approximately 75 MAD one way. Book at the CTM station in Fes or online.
-                The Fes bus station is outside the medina, accessible by petit taxi for 15-20 MAD.
-              </p>
-              <div className="flex items-center gap-4 text-xs text-[var(--text-muted)]">
-                <span className="flex items-center gap-1"><Clock className="w-3.5 h-3.5" /> 4 hours</span>
-                <span className="flex items-center gap-1"><CircleDollarSign className="w-3.5 h-3.5" /> 75 MAD</span>
-              </div>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[var(--color-primary-50)] text-[var(--color-primary)]">
-                  <Bus className="w-5 h-5" />
-                </div>
-                <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">From Tangier by Bus</h3>
-              </div>
-              <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-3">
-                CTM and other companies run buses from Tangier to Chefchaouen, taking roughly 3 to 3.5
-                hours. This is a popular route for travelers arriving from Spain via ferry. The road is
-                winding and mountainous, so sit near the front if you are prone to motion sickness. Cost
-                is approximately 75-85 MAD. Multiple departures daily.
-              </p>
-              <div className="flex items-center gap-4 text-xs text-[var(--text-muted)]">
-                <span className="flex items-center gap-1"><Clock className="w-3.5 h-3.5" /> 3-3.5 hours</span>
-                <span className="flex items-center gap-1"><CircleDollarSign className="w-3.5 h-3.5" /> 75-85 MAD</span>
-              </div>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[var(--color-primary-50)] text-[var(--color-primary)]">
-                  <Car className="w-5 h-5" />
-                </div>
-                <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">Grand Taxis</h3>
-              </div>
-              <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-3">
-                Shared grand taxis run from Fes, Tangier, and Tetouan. They depart when full (six
-                passengers) and are faster than buses but less comfortable. From Fes, expect to pay 80-100
-                MAD per person. From Tetouan, around 35-40 MAD. Grand taxis drop you at the Chefchaouen
-                taxi stand, a 10-minute walk from the medina gates or a 10 MAD petit taxi ride.
-              </p>
-              <div className="flex items-center gap-4 text-xs text-[var(--text-muted)]">
-                <span className="flex items-center gap-1"><Clock className="w-3.5 h-3.5" /> 3-4 hours from Fes</span>
-                <span className="flex items-center gap-1"><CircleDollarSign className="w-3.5 h-3.5" /> 80-100 MAD/person</span>
-              </div>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[var(--color-primary-50)] text-[var(--color-primary)]">
-                  <Car className="w-5 h-5" />
-                </div>
-                <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">Driving Yourself</h3>
-              </div>
-              <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-3">
-                Driving to Chefchaouen is rewarding but demands attention. The mountain roads are winding
-                with sharp switchbacks, steep drops, and occasional livestock on the road. The N2 from Fes
-                via Ouazzane is well-paved but slow. From Tangier, the A4 motorway to Tetouan is fast,
-                then the mountain road to Chefchaouen is scenic but twisting. Parking is available outside
-                the medina gates for 20-30 MAD per night (guarded lots).
-              </p>
-              <div className="flex items-start gap-2 text-xs text-[var(--color-accent)] bg-[var(--color-accent-50)] p-2 rounded-lg">
-                <AlertTriangle className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" />
-                <span>Night driving in the Rif Mountains is not recommended. Unlit roads, sharp curves, and occasional police checkpoints make it stressful and risky.</span>
-              </div>
-            </div>
-          </div>
-
-          {/* No train note */}
-          <div className="mt-6 card-moroccan p-4 max-w-2xl mx-auto text-center">
-            <p className="text-sm text-[var(--text-muted)] flex items-center justify-center gap-2">
-              <Info className="w-4 h-4 text-[var(--color-primary)]" />
-              <span>Chefchaouen has no train station. The nearest railway is in Fes (4 hours) or Tangier (3.5 hours).
-              There is no domestic airport serving the city.</span>
+            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
+              Chefchaouen has no airport or train station. All visitors arrive by road &mdash;
+              by CTM bus, grand taxi, or private transfer. Here are the main routes.
             </p>
+          </div>
+
+          <div className="space-y-6">
+            {transportOptions.map((option) => (
+              <article key={option.from} className="card-moroccan p-6 md:p-8">
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4">
+                  <div>
+                    <h3 className="text-xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-1">
+                      From {option.from}
+                    </h3>
+                    <p className="text-sm text-[var(--color-accent)] font-medium">
+                      {option.method}
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-4 shrink-0">
+                    <span className="flex items-center gap-1 text-sm text-[var(--text-secondary)]">
+                      <Clock className="w-4 h-4 text-[var(--color-primary)]" />
+                      {option.duration}
+                    </span>
+                    <span className="flex items-center gap-1 text-sm font-bold text-[var(--color-primary)]">
+                      <CircleDollarSign className="w-4 h-4" />
+                      {option.price}
+                    </span>
+                  </div>
+                </div>
+                <p className="text-[var(--text-secondary)] leading-relaxed mb-4">
+                  {option.description}
+                </p>
+                <div className="flex items-start gap-2 pt-3 border-t border-[var(--border-light)]">
+                  <Lightbulb className="w-4 h-4 text-[var(--color-primary)] shrink-0 mt-0.5" />
+                  <p className="text-sm text-[var(--color-primary)] font-medium">
+                    {option.tip}
+                  </p>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ── Day Trips ── */}
-      <section className="py-12 md:py-16 bg-[var(--surface-muted)]">
+      {/* ══════════════════════════════════════════════════════════
+          SECTION 10: CANNABIS CULTURE & THE RIF
+          ══════════════════════════════════════════════════════════ */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco max-w-4xl">
+          <div className="text-center mb-12">
+            <div className="inline-flex p-3 rounded-xl bg-[var(--color-primary)]/10 mb-4">
+              <Leaf className="w-6 h-6 text-[var(--color-primary)]" />
+            </div>
+            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
+              Cannabis Culture &amp; the Rif Region
+            </h2>
+            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
+              An honest discussion of the Rif Mountains&apos; most controversial industry,
+              its history, legal status, and what it means for visitors.
+            </p>
+          </div>
+
+          <div className="space-y-4 text-lg text-[var(--text-secondary)] leading-relaxed">
+            <p>
+              It is impossible to write honestly about Chefchaouen and the Rif Mountains without
+              addressing cannabis. The Rif region is one of the world&apos;s largest cannabis
+              cultivation areas, producing an estimated 700 tonnes of hashish annually (though
+              figures are inherently unreliable). Cannabis has been grown in these mountains for
+              centuries &mdash; long before it was criminalized &mdash; and for many rural Riffian
+              families, it remains the only viable cash crop in the region&apos;s poor, rocky soil.
+              The plant is deeply woven into the local economy and, to some degree, the local identity.
+            </p>
+            <p>
+              Visitors to Chefchaouen will almost certainly encounter cannabis. You will see (and
+              smell) it growing in the countryside on the drive in. You will be offered hashish by
+              men in the medina streets, sometimes multiple times in a single walk. The offers are
+              generally low-pressure compared to some cities &mdash; a simple &ldquo;no, thank
+              you&rdquo; (&ldquo;la, shukran&rdquo;) is usually sufficient &mdash; but they can be
+              persistent, particularly in the evening hours around the plaza.
+            </p>
+            <p>
+              <strong className="text-[var(--text-primary)]">Legal status:</strong> Cannabis
+              cultivation, sale, and possession are illegal in Morocco. In 2021, Morocco passed
+              legislation to legalize cannabis for medical and industrial use, but recreational use
+              remains prohibited. In practice, enforcement in the Rif region is complex and
+              inconsistent. Moroccan authorities have historically tolerated cultivation in the Rif
+              while cracking down on trafficking and export. For tourists, the risks of purchasing or
+              carrying cannabis include fines, arrest, or &mdash; more commonly &mdash; extortion by
+              individuals (sometimes posing as plainclothes police) who target tourists they have
+              observed buying.
+            </p>
+
+            <div className="card-moroccan p-6 mt-6">
+              <h3 className="text-lg font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)] mb-4 flex items-center gap-2">
+                <AlertTriangle className="w-5 h-5 text-[var(--color-accent)]" />
+                Practical Advice for Tourists
+              </h3>
+              <div className="space-y-3 text-base text-[var(--text-secondary)]">
+                {[
+                  'Politely decline all offers to buy hashish. A firm "la, shukran" (no, thank you) works. Do not engage in extended conversation about it.',
+                  'Be aware of the "setup" scam: someone sells you hashish, then an accomplice posing as police demands a large "fine." This is extortion, not law enforcement.',
+                  'Do not photograph cannabis fields or processing without explicit permission. This can create serious problems with local farmers.',
+                  'If you are genuinely interested in the cultural and economic dimensions of cannabis in the Rif, read the excellent academic literature on the subject or speak with locals you have built genuine rapport with over multiple days.',
+                  'The 2021 legalization law is slowly being implemented. Regulated cannabis products may become available through licensed channels in the future, but as of 2025, no such system is operational for recreational tourists.',
+                ].map((advice) => (
+                  <div key={advice} className="flex items-start gap-2">
+                    <Shield className="w-4 h-4 text-[var(--color-accent)] shrink-0 mt-1" />
+                    <span>{advice}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════
+          SECTION 11: DAY TRIPS
+          ══════════════════════════════════════════════════════════ */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
         <div className="container-morocco">
-          <div className="flex items-center gap-3 mb-3">
-            <Compass className="w-6 h-6 text-[var(--color-primary)]" />
-            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+          <div className="text-center mb-12">
+            <div className="inline-flex p-3 rounded-xl bg-[var(--color-primary)]/10 mb-4">
+              <Compass className="w-6 h-6 text-[var(--color-primary)]" />
+            </div>
+            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
               Day Trips from Chefchaouen
             </h2>
+            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
+              The Rif Mountains and northern Morocco offer excellent excursions from
+              Chefchaouen. These are the best day trips within reach.
+            </p>
           </div>
-          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">
-            Chefchaouen is an excellent base for exploring the Rif Mountains and the nearby
-            Mediterranean coast. These are the best excursions within easy reach.
-          </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {dayTrips.map((trip) => (
-              <div key={trip.name} className="card-moroccan p-6 group">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[var(--color-primary-50)] text-[var(--color-primary)] group-hover:bg-[var(--color-primary)] group-hover:text-white transition-colors">
-                    <MapPin className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
-                      {trip.name}
-                    </h3>
-                    <span className="text-xs text-[var(--text-muted)]">{trip.distance}</span>
-                  </div>
+              <article key={trip.name} className="card-moroccan p-6 flex flex-col">
+                <h3 className="text-lg font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-1">
+                  {trip.name}
+                </h3>
+                <div className="flex items-center gap-4 text-sm text-[var(--text-secondary)] mb-3">
+                  <span className="flex items-center gap-1">
+                    <MapPin className="w-3.5 h-3.5 text-[var(--color-primary)]" />
+                    {trip.distance}
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <Clock className="w-3.5 h-3.5 text-[var(--color-primary)]" />
+                    {trip.duration}
+                  </span>
                 </div>
-                <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-3">
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4 flex-1">
                   {trip.description}
                 </p>
-                <div className="flex items-center gap-3 text-xs text-[var(--text-muted)] mb-2">
-                  <span className="flex items-center gap-1"><Clock className="w-3.5 h-3.5" /> {trip.duration}</span>
+                <div className="space-y-2 pt-3 border-t border-[var(--border-light)]">
+                  <div className="flex items-start gap-2 text-sm">
+                    <Bus className="w-4 h-4 text-[var(--color-primary)] shrink-0 mt-0.5" />
+                    <span className="text-[var(--text-secondary)]">
+                      <strong className="text-[var(--text-primary)]">How to get there:</strong>{' '}
+                      {trip.howToGet}
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-2 text-sm">
+                    <CircleDollarSign className="w-4 h-4 text-[var(--color-primary)] shrink-0 mt-0.5" />
+                    <span className="text-[var(--text-secondary)]">
+                      <strong className="text-[var(--text-primary)]">Estimated cost:</strong>{' '}
+                      {trip.cost}
+                    </span>
+                  </div>
                 </div>
-                <p className="text-xs text-[var(--color-primary)] flex items-start gap-1">
-                  <Car className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" />
-                  <span>{trip.transport}</span>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════
+          SECTION 12: BUDGET GUIDE
+          ══════════════════════════════════════════════════════════ */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <div className="inline-flex p-3 rounded-xl bg-[var(--color-primary)]/10 mb-4">
+              <CircleDollarSign className="w-6 h-6 text-[var(--color-primary)]" />
+            </div>
+            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
+              Chefchaouen Budget Guide
+            </h2>
+            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
+              Chefchaouen is one of Morocco&apos;s most affordable destinations. Here is what
+              to expect at each budget level, with daily estimates in Moroccan Dirhams (MAD).
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {budgetBreakdown.map((tier) => (
+              <article key={tier.category} className="card-moroccan p-6 flex flex-col">
+                <h3 className="text-xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-1">
+                  {tier.category}
+                </h3>
+                <p className="text-lg font-bold text-[var(--color-accent)] mb-4">
+                  {tier.daily}
                 </p>
+
+                <ul className="space-y-2 mb-4 flex-1">
+                  {tier.details.map((detail) => (
+                    <li
+                      key={detail}
+                      className="flex items-start gap-2 text-sm text-[var(--text-secondary)]"
+                    >
+                      <Star className="w-3.5 h-3.5 text-[var(--color-primary)] shrink-0 mt-0.5" />
+                      <span>{detail}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="flex items-start gap-2 pt-3 border-t border-[var(--border-light)]">
+                  <Lightbulb className="w-4 h-4 text-[var(--color-primary)] shrink-0 mt-0.5" />
+                  <p className="text-xs text-[var(--color-primary)] font-medium">{tier.tip}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-8 card-moroccan p-6 md:p-8">
+            <h3 className="text-lg font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)] mb-4 flex items-center gap-2">
+              <Info className="w-5 h-5 text-[var(--color-primary)]" />
+              Money Tips for Chefchaouen
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-[var(--text-secondary)]">
+              {[
+                'ATMs (Banque Populaire, Attijariwafa, BMCE) are located in the new town below the medina entrance. Withdraw cash before heading into the old town.',
+                'Carry small bills (10, 20, 50 MAD) for tips, small purchases, and shared grand taxis. Many vendors cannot break 200 MAD notes.',
+                'Credit cards are accepted only at some upscale riads and a few tourist restaurants. Cash is king everywhere else in Chefchaouen.',
+                'Bargaining is expected in the souks but not in restaurants with printed menus. Start at 40-50% of the asking price; settle at 60-70%.',
+                'Tipping customs: 5-10% at restaurants, 10-20 MAD for riad staff, 50-100 MAD for hiking guides, 5 MAD for small services.',
+                'Chefchaouen is notably cheaper than Marrakech or Fes. The same riad quality that costs 800 MAD in Marrakech might be 400 MAD here.',
+              ].map((tip) => (
+                <div key={tip} className="flex items-start gap-2">
+                  <Star className="w-3.5 h-3.5 text-[var(--color-primary)] shrink-0 mt-0.5" />
+                  <span>{tip}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════
+          SECTION 13: PRACTICAL TIPS
+          ══════════════════════════════════════════════════════════ */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+        <div className="container-morocco max-w-4xl">
+          <div className="text-center mb-12">
+            <div className="inline-flex p-3 rounded-xl bg-[var(--color-primary)]/10 mb-4">
+              <PackageCheck className="w-6 h-6 text-[var(--color-primary)]" />
+            </div>
+            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
+              Practical Tips for Visiting Chefchaouen
+            </h2>
+            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
+              Essential information to make your visit to the Blue Pearl smooth,
+              comfortable, and hassle-free.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {practicalTips.map((tip) => (
+              <div
+                key={tip}
+                className="card-moroccan p-4 flex items-start gap-3"
+              >
+                <Lightbulb className="w-5 h-5 text-[var(--color-primary)] shrink-0 mt-0.5" />
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{tip}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── Practical Tips ── */}
-      <section className="py-12 md:py-16">
-        <div className="container-morocco">
-          <div className="flex items-center gap-3 mb-3">
-            <BookOpen className="w-6 h-6 text-[var(--color-secondary)]" />
-            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
-              Practical Tips
-            </h2>
-          </div>
-          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">
-            Everything you need to know to plan your visit and navigate the city smoothly.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="card-moroccan p-6">
-              <div className="flex items-center gap-3 mb-3">
-                <Calendar className="w-5 h-5 text-[var(--color-primary)]" />
-                <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">How Long to Stay</h3>
-              </div>
-              <p className="text-sm text-[var(--text-muted)] leading-relaxed">
-                Two to three days is the sweet spot. Day one for exploring the medina and photography,
-                day two for a hike (Akchour or Spanish Mosque), optional day three for a day trip or
-                simply relaxing on a rooftop terrace. Many travelers who planned one night end up staying
-                three.
-              </p>
+      {/* ══════════════════════════════════════════════════════════
+          SECTION 14: FAQ
+          ══════════════════════════════════════════════════════════ */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco max-w-4xl">
+          <div className="text-center mb-12">
+            <div className="inline-flex p-3 rounded-xl bg-[var(--color-primary)]/10 mb-4">
+              <HelpCircle className="w-6 h-6 text-[var(--color-primary)]" />
             </div>
-
-            <div className="card-moroccan p-6">
-              <div className="flex items-center gap-3 mb-3">
-                <ThermometerSun className="w-5 h-5 text-[var(--color-primary)]" />
-                <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Best Season</h3>
-              </div>
-              <p className="text-sm text-[var(--text-muted)] leading-relaxed">
-                Spring (March-May) and autumn (September-November) offer mild temperatures, clear skies,
-                and manageable crowds. Summer is hot midday but pleasant mornings and evenings. Winter can
-                be cold (5-12 degrees C) and occasionally rainy, but the medina is atmospheric and nearly
-                empty of tourists. Avoid Moroccan holidays for quieter streets.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <div className="flex items-center gap-3 mb-3">
-                <Mountain className="w-5 h-5 text-[var(--color-primary)]" />
-                <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Altitude Effects</h3>
-              </div>
-              <p className="text-sm text-[var(--text-muted)] leading-relaxed">
-                At roughly 600 meters above sea level, Chefchaouen is noticeably cooler than the lowland
-                cities. Bring a jacket for evenings year-round. The medina is built on a hillside, so
-                expect constant up-and-down walking. If you are coming from sea level and plan to hike
-                Jebel el-Kelaa (1,616m), give yourself a day to adjust.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <div className="flex items-center gap-3 mb-3">
-                <Droplets className="w-5 h-5 text-[var(--color-primary)]" />
-                <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Water Safety</h3>
-              </div>
-              <p className="text-sm text-[var(--text-muted)] leading-relaxed">
-                Do not drink the tap water. Bottled water is widely available (5-8 MAD for 1.5 liters).
-                The mountain spring at Ras el-Maa looks pristine but should not be consumed untreated.
-                Restaurants use purified water for cooking. Ice in drinks at reputable restaurants is
-                generally safe, but stick to bottled water from street vendors.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <div className="flex items-center gap-3 mb-3">
-                <CircleDollarSign className="w-5 h-5 text-[var(--color-primary)]" />
-                <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Money &amp; ATMs</h3>
-              </div>
-              <p className="text-sm text-[var(--text-muted)] leading-relaxed">
-                ATMs exist near the plaza and outside Bab el-Ain but can run out of cash on busy weekends.
-                Bring sufficient cash from Fes or Tangier as a backup. Most riads and upscale restaurants
-                accept cards, but the souks, small eateries, and taxis are cash-only. Budget roughly
-                300-500 MAD per day for mid-range travel (accommodation, food, activities).
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <div className="flex items-center gap-3 mb-3">
-                <Shield className="w-5 h-5 text-[var(--color-primary)]" />
-                <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Safety</h3>
-              </div>
-              <p className="text-sm text-[var(--text-muted)] leading-relaxed">
-                Chefchaouen is one of the safest cities in Morocco. Violent crime against tourists is
-                extremely rare. The main nuisances are persistent touts near the gates and the cannabis
-                sellers discussed elsewhere. The medina is well-lit at night and feels safe to walk.
-                Standard travel precautions apply: do not flash expensive items, keep valuables in your
-                riad safe, and be cautious with new &quot;friends&quot; who want to take you somewhere.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <div className="flex items-center gap-3 mb-3">
-                <Sun className="w-5 h-5 text-[var(--color-primary)]" />
-                <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">What to Pack</h3>
-              </div>
-              <p className="text-sm text-[var(--text-muted)] leading-relaxed">
-                Comfortable walking shoes with grip (cobblestones are slippery when wet), layers for
-                temperature changes, a headlamp for dark medina streets at night, sunscreen, a refillable
-                water bottle, a small daypack for hikes, and a camera. If hiking, bring proper footwear
-                and rain gear in spring. Women may want a scarf for visiting religious areas.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <div className="flex items-center gap-3 mb-3">
-                <Compass className="w-5 h-5 text-[var(--color-primary)]" />
-                <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Getting Around</h3>
-              </div>
-              <p className="text-sm text-[var(--text-muted)] leading-relaxed">
-                The medina is entirely walkable and car-free. You will not need any transport within the
-                city. Petit taxis (blue, naturally) connect the bus station and parking lots to the medina
-                gates for 10-15 MAD. For day trips, grand taxis depart from the station near the market.
-                There is no Uber or ride-hailing app that works here.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <div className="flex items-center gap-3 mb-3">
-                <Building2 className="w-5 h-5 text-[var(--color-primary)]" />
-                <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Language</h3>
-              </div>
-              <p className="text-sm text-[var(--text-muted)] leading-relaxed">
-                Locals speak Darija (Moroccan Arabic) and many in the Rif also speak Tarifit Berber.
-                French is widely understood and is the default second language. Spanish is spoken by many
-                older residents due to the colonial history. English is spoken at tourist-facing businesses
-                but less common than in Marrakech. Learning a few Arabic phrases goes a long way.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── FAQ Section ── */}
-      <section className="py-12 md:py-16 bg-[var(--surface-muted)]">
-        <div className="container-morocco">
-          <div className="flex items-center gap-3 mb-3">
-            <HelpCircle className="w-6 h-6 text-[var(--color-primary)]" />
-            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
               Frequently Asked Questions
             </h2>
+            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
+              Answers to the most common questions travelers ask about visiting Chefchaouen.
+            </p>
           </div>
-          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">
-            Honest answers to the questions every traveler asks about Chefchaouen.
-          </p>
 
-          <div className="max-w-3xl mx-auto space-y-4">
-            {faqItems.map((faq) => (
-              <div key={faq.question} className="card-moroccan p-6">
-                <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-3 flex items-start gap-2">
-                  <HelpCircle className="w-5 h-5 text-[var(--color-accent)] mt-0.5 flex-shrink-0" />
+          <div className="space-y-4">
+            {faqs.map((faq) => (
+              <details
+                key={faq.question}
+                className="card-moroccan p-6 group"
+              >
+                <summary className="flex items-start justify-between gap-4 cursor-pointer list-none font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-lg">
                   {faq.question}
-                </h3>
-                <p className="text-sm text-[var(--text-muted)] leading-relaxed pl-7">
+                  <ChevronRight className="w-5 h-5 text-[var(--color-primary)] shrink-0 mt-0.5 group-open:rotate-90 transition-transform" />
+                </summary>
+                <p className="mt-4 text-[var(--text-secondary)] leading-relaxed">
                   {faq.answer}
                 </p>
-              </div>
+              </details>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── Sample Itineraries ── */}
-      <section className="py-12 md:py-16">
+      {/* ══════════════════════════════════════════════════════════
+          SECTION 15: RELATED PAGES
+          ══════════════════════════════════════════════════════════ */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
         <div className="container-morocco">
-          <div className="flex items-center gap-3 mb-3">
-            <Calendar className="w-6 h-6 text-[var(--color-secondary)]" />
-            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
-              Suggested Itineraries
+          <div className="text-center mb-12">
+            <div className="inline-flex p-3 rounded-xl bg-[var(--color-primary)]/10 mb-4">
+              <Map className="w-6 h-6 text-[var(--color-primary)]" />
+            </div>
+            <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
+              Continue Exploring
             </h2>
+            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
+              Dive deeper into Chefchaouen and Morocco with these related guides.
+            </p>
           </div>
-          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">
-            How to spend your time in the Blue Pearl, whether you have one day or three.
-          </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Day 1 */}
-            <div className="card-moroccan p-6">
-              <div className="flex items-center gap-2 mb-4">
-                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[var(--color-primary)] text-white font-bold text-sm">1</span>
-                <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">Day One: The Blue City</h3>
-              </div>
-              <ul className="text-sm text-[var(--text-muted)] space-y-3 leading-relaxed">
-                <li className="flex items-start gap-2">
-                  <Sunrise className="w-4 h-4 text-[var(--color-accent)] mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-[var(--text-primary)]">7:00 AM:</strong> Early morning photography in the empty medina streets. Head to Rue Targhi for the best blue walls without crowds.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Coffee className="w-4 h-4 text-[var(--color-accent)] mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-[var(--text-primary)]">9:00 AM:</strong> Breakfast at your riad, then explore the souks. Buy goat cheese and bread for a picnic lunch.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Landmark className="w-4 h-4 text-[var(--color-accent)] mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-[var(--text-primary)]">11:00 AM:</strong> Visit the Kasbah museum (70 MAD). Climb the tower for panoramic views. Walk to Plaza Uta el-Hammam for mint tea.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Waves className="w-4 h-4 text-[var(--color-accent)] mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-[var(--text-primary)]">2:00 PM:</strong> Wander east to Ras el-Maa waterfall. Follow the stream uphill for swimming spots. Picnic in the shade.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Sunset className="w-4 h-4 text-[var(--color-accent)] mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-[var(--text-primary)]">5:30 PM:</strong> Hike to the Spanish Mosque for sunset over the blue city. Bring a headlamp for the walk back.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Utensils className="w-4 h-4 text-[var(--color-accent)] mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-[var(--text-primary)]">8:00 PM:</strong> Dinner at Bab Ssour. Try the lamb tagine with prunes. Walk the lantern-lit streets back to your riad.</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Day 2 */}
-            <div className="card-moroccan p-6">
-              <div className="flex items-center gap-2 mb-4">
-                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[var(--color-primary)] text-white font-bold text-sm">2</span>
-                <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">Day Two: Mountains &amp; Water</h3>
-              </div>
-              <ul className="text-sm text-[var(--text-muted)] space-y-3 leading-relaxed">
-                <li className="flex items-start gap-2">
-                  <Sunrise className="w-4 h-4 text-[var(--color-accent)] mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-[var(--text-primary)]">7:30 AM:</strong> Early breakfast at the riad. Pack water, snacks, and swimwear for the day.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Car className="w-4 h-4 text-[var(--color-accent)] mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-[var(--text-primary)]">8:30 AM:</strong> Grand taxi to Akchour (45 minutes, 150-200 MAD shared). Arrive at the trailhead by 9:15 AM.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Footprints className="w-4 h-4 text-[var(--color-accent)] mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-[var(--text-primary)]">9:30 AM:</strong> Hike to the small waterfall first (1.5 km, 30 min). Then continue to the grand waterfall (2 km more). Swim in the pools.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Mountain className="w-4 h-4 text-[var(--color-accent)] mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-[var(--text-primary)]">1:00 PM:</strong> Return to the fork and hike to God&apos;s Bridge (separate trail, 4 km). Picnic lunch at the bridge.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Car className="w-4 h-4 text-[var(--color-accent)] mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-[var(--text-primary)]">4:00 PM:</strong> Taxi back to Chefchaouen. Rest at the riad or relax in a hammam (100-200 MAD).</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Utensils className="w-4 h-4 text-[var(--color-accent)] mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-[var(--text-primary)]">7:30 PM:</strong> Dinner at Restaurant Beldi for authentic local food at local prices. Evening tea on a rooftop terrace.</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Day 3 */}
-            <div className="card-moroccan p-6">
-              <div className="flex items-center gap-2 mb-4">
-                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[var(--color-primary)] text-white font-bold text-sm">3</span>
-                <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">Day Three: Explore &amp; Relax</h3>
-              </div>
-              <ul className="text-sm text-[var(--text-muted)] space-y-3 leading-relaxed">
-                <li className="flex items-start gap-2">
-                  <Sunrise className="w-4 h-4 text-[var(--color-accent)] mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-[var(--text-primary)]">8:00 AM:</strong> Leisurely breakfast. Revisit your favorite blue streets for morning light photography.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <ShoppingBag className="w-4 h-4 text-[var(--color-accent)] mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-[var(--text-primary)]">10:00 AM:</strong> Serious souvenir shopping. Buy woven blankets, goat cheese, honey, and blue ceramics. Bargain gently.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Coffee className="w-4 h-4 text-[var(--color-accent)] mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-[var(--text-primary)]">12:00 PM:</strong> Lunch at Cafe Clock. Try the camel burger and date milkshake. Catch any cultural events they have on.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Compass className="w-4 h-4 text-[var(--color-accent)] mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-[var(--text-primary)]">2:00 PM:</strong> Option A: Day trip to Tetouan (1 hour). Option B: Walk the Talassemtane forest trails. Option C: Simply relax.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Eye className="w-4 h-4 text-[var(--color-accent)] mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-[var(--text-primary)]">5:00 PM:</strong> Final rooftop terrace session. Mint tea, mountain views, and reflections on the blue.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Utensils className="w-4 h-4 text-[var(--color-accent)] mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-[var(--text-primary)]">7:30 PM:</strong> Farewell dinner at Sofia or Aladdin. Soak in the lantern-lit plaza one last time.</span>
-                </li>
-              </ul>
-            </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {relatedPages.map((page) => (
+              <Link
+                key={page.href}
+                href={page.href}
+                className="card-moroccan p-6 group hover:shadow-lg transition-all duration-300"
+              >
+                <h3 className="text-base font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                  {page.title}
+                </h3>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-3">
+                  {page.description}
+                </p>
+                <span className="inline-flex items-center gap-1 text-sm font-semibold text-[var(--color-primary)]">
+                  Read Guide <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ── Budget Breakdown ── */}
-      <section className="py-12 md:py-16 bg-[var(--surface-muted)]">
-        <div className="container-morocco">
-          <div className="flex items-center gap-3 mb-3">
-            <CircleDollarSign className="w-6 h-6 text-[var(--color-primary)]" />
-            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
-              Budget Breakdown
-            </h2>
-          </div>
-          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">
-            What to expect in terms of daily spending in Chefchaouen, one of Morocco&apos;s more
-            affordable destinations.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div className="card-moroccan p-6 text-center">
-              <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-1">Budget</h3>
-              <p className="text-2xl font-bold text-[var(--color-green)] mb-3">200-350 MAD/day</p>
-              <ul className="text-sm text-[var(--text-muted)] space-y-1 text-left">
-                <li>Hostel dorm: 80-150 MAD</li>
-                <li>Street food meals: 60-100 MAD</li>
-                <li>Transport & activities: 50-100 MAD</li>
-                <li>Roughly $20-35 USD per day</li>
-              </ul>
-            </div>
-            <div className="card-moroccan p-6 text-center border-2 border-[var(--color-primary)]">
-              <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-1">Mid-Range</h3>
-              <p className="text-2xl font-bold text-[var(--color-green)] mb-3">500-900 MAD/day</p>
-              <ul className="text-sm text-[var(--text-muted)] space-y-1 text-left">
-                <li>Riad private room: 300-600 MAD</li>
-                <li>Restaurant meals: 120-200 MAD</li>
-                <li>Activities & transport: 100-200 MAD</li>
-                <li>Roughly $50-90 USD per day</li>
-              </ul>
-            </div>
-            <div className="card-moroccan p-6 text-center">
-              <h3 className="font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-1">Luxury</h3>
-              <p className="text-2xl font-bold text-[var(--color-green)] mb-3">1,500-3,000+ MAD/day</p>
-              <ul className="text-sm text-[var(--text-muted)] space-y-1 text-left">
-                <li>Luxury riad suite: 1,200-2,500 MAD</li>
-                <li>Fine dining: 200-400 MAD</li>
-                <li>Private guide & transport: 500-800 MAD</li>
-                <li>Roughly $150-300+ USD per day</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── History & Culture ── */}
-      <section className="py-12 md:py-16">
-        <div className="container-morocco">
-          <div className="flex items-center gap-3 mb-3">
-            <Landmark className="w-6 h-6 text-[var(--color-secondary)]" />
-            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
-              History &amp; Culture
-            </h2>
-          </div>
-          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">
-            Chefchaouen&apos;s history stretches back over five centuries, shaped by Berber tribes,
-            Andalusian refugees, Spanish colonizers, and Sufi saints.
-          </p>
-
-          <div className="max-w-3xl mx-auto space-y-6">
-            <div className="card-moroccan p-6">
-              <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                Founding &amp; Early History (1471-1920)
-              </h3>
-              <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-3">
-                In 1471, Moulay Ali Ben Rachid, a descendant of the Prophet Muhammad, established
-                Chefchaouen as a small kasbah fortress to rally Rif Berber tribes against Portuguese
-                and Spanish incursions along the northern Moroccan coast. The town grew rapidly as
-                Andalusian Muslim and Jewish refugees fleeing the Spanish Reconquista settled within
-                its walls, bringing their architecture, crafts, and cultural traditions.
-              </p>
-              <p className="text-sm text-[var(--text-muted)] leading-relaxed">
-                For centuries, Chefchaouen was considered a holy city, off-limits to Christians.
-                Its isolation in the Rif Mountains reinforced this seclusion. Until the early 20th
-                century, only three Europeans had ever visited: the French explorer Charles de Foucauld
-                (disguised as a rabbi in 1883), the British journalist Walter Harris (1889), and the
-                American William Summers (1892). The city remained a place of mystery to the outside
-                world.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                The Spanish Protectorate (1920-1956)
-              </h3>
-              <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-3">
-                In 1920, Spanish troops occupied Chefchaouen as part of the Spanish Protectorate of
-                northern Morocco. The occupation brought roads, electricity, and the construction of
-                the Spanish Mosque on the hill above town (never completed due to the Rif War). The
-                Spanish influence is still visible in the architecture, the prevalence of Spanish
-                language among older residents, and certain cultural customs.
-              </p>
-              <p className="text-sm text-[var(--text-muted)] leading-relaxed">
-                The Rif War (1921-1926) saw fierce resistance to colonial rule under Abd el-Krim,
-                a Rif Berber leader who briefly established the Republic of the Rif. This legacy of
-                resistance remains a source of pride in the region. Morocco gained independence in
-                1956, and Chefchaouen returned to Moroccan sovereignty.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                Jewish Heritage
-              </h3>
-              <p className="text-sm text-[var(--text-muted)] leading-relaxed">
-                The Jewish community played a formative role in Chefchaouen&apos;s identity. Arriving
-                in waves from Spain following the 1492 expulsion and later persecutions, Jewish families
-                settled in the mellah (Jewish quarter) near the Kasbah. They brought artisanal skills,
-                trade connections, and, most visibly, the tradition of blue-washed buildings. At its
-                peak, the Jewish community numbered several hundred families. After the creation of
-                Israel in 1948 and Moroccan independence in 1956, most Jewish residents emigrated.
-                Today, the mellah streets remain, and the blue paint that the community introduced
-                defines the entire city. A small synagogue in the mellah can sometimes be visited with
-                a local guide.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                Sufi Traditions &amp; Saints
-              </h3>
-              <p className="text-sm text-[var(--text-muted)] leading-relaxed">
-                Chefchaouen has always been a city of saints and scholars. The founder himself was a
-                Sufi leader, and the city is dotted with zaouias (Sufi lodges) and the tombs of
-                revered holy men. The spiritual atmosphere is palpable, especially during religious
-                festivals when Sufi brotherhoods perform their devotional music and rituals. The
-                nearby shrine of Moulay Abdeslam Ben Mchich is one of the most important pilgrimage
-                sites in Moroccan Sufism, attracting devotees from across the country.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Local Etiquette ── */}
-      <section className="py-12 md:py-16 bg-[var(--surface-muted)]">
-        <div className="container-morocco">
-          <div className="flex items-center gap-3 mb-3">
-            <Users className="w-6 h-6 text-[var(--color-primary)]" />
-            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
-              Local Etiquette &amp; Cultural Respect
-            </h2>
-          </div>
-          <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">
-            Chefchaouen is a conservative mountain town with deep religious traditions. Showing
-            respect for local customs will enrich your experience and earn genuine warmth from
-            residents.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <div className="card-moroccan p-6">
-              <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                Dress Modestly
-              </h3>
-              <p className="text-sm text-[var(--text-muted)] leading-relaxed">
-                Both men and women should dress modestly, especially in the medina. Shoulders and
-                knees should be covered. Tank tops, short shorts, and revealing clothing draw
-                uncomfortable attention and are considered disrespectful in this traditional community.
-                Lightweight, loose-fitting clothes work well in the heat and show cultural awareness.
-              </p>
-            </div>
-            <div className="card-moroccan p-6">
-              <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                Greetings Matter
-              </h3>
-              <p className="text-sm text-[var(--text-muted)] leading-relaxed">
-                A warm &quot;salam alaikum&quot; (peace be upon you) when entering a shop, meeting
-                someone, or passing a local goes a long way. The response is &quot;wa alaikum
-                salam.&quot; Handshakes between the same gender are common. Between opposite genders,
-                wait for the local person to initiate a handshake. In the Rif, some men place their
-                hand over their heart after a handshake as a sign of sincerity.
-              </p>
-            </div>
-            <div className="card-moroccan p-6">
-              <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                Ramadan Awareness
-              </h3>
-              <p className="text-sm text-[var(--text-muted)] leading-relaxed">
-                During Ramadan, most locals fast from dawn to sunset. Eating, drinking, or smoking
-                in public during fasting hours is considered very disrespectful. Some restaurants
-                close during the day or serve only tourists discreetly. Evenings come alive after
-                iftar (the breaking of the fast), making it a magical time to visit if you are
-                prepared for the altered schedule. The Kasbah and attractions may have reduced hours.
-              </p>
-            </div>
-            <div className="card-moroccan p-6">
-              <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                Bargaining Etiquette
-              </h3>
-              <p className="text-sm text-[var(--text-muted)] leading-relaxed">
-                Bargaining is expected in the souks but should be done respectfully and with good
-                humor. Start at around 60-70% of the asking price (Chefchaouen is less inflated
-                than Marrakech, so extreme lowballing is rude here). If you name a price and it is
-                accepted, you are morally committed to buying. Walking away is a negotiating tactic,
-                but do not do it repeatedly with the same vendor. Fixed prices are common at food
-                stalls and some modern shops.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── CTA ── */}
-      <section className="py-12 md:py-16">
+      {/* ══════════════════════════════════════════════════════════
+          CTA
+          ══════════════════════════════════════════════════════════ */}
+      <section className="py-16 md:py-20 gradient-moroccan">
         <div className="container-morocco text-center">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
-            Ready to Discover the Blue Pearl?
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-white mb-4">
+            Ready to Explore the Blue Pearl?
           </h2>
-          <p className="text-lg text-[var(--text-secondary)] max-w-xl mx-auto mb-8">
-            Chefchaouen is the kind of place that changes how you see color. Pack your camera,
-            lace up your walking shoes, and prepare to fall under the spell of Morocco&apos;s most
-            magical mountain city.
+          <p className="text-lg text-white/80 max-w-xl mx-auto mb-8">
+            Wander through blue-painted streets that seem to dissolve into the sky, hike
+            to mountain waterfalls, watch the sunset paint the medina gold, and discover
+            why Chefchaouen has captivated every traveler who has climbed into the Rif.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/cities"
-              className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-xl bg-[var(--color-primary)] text-white font-semibold hover:bg-[var(--color-primary-dark)] transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-xl bg-white text-[var(--color-primary)] font-semibold hover:bg-white/90 transition-colors"
             >
-              Explore All Cities <ArrowRight className="w-4 h-4" />
+              <Landmark className="w-4 h-4" /> Explore All Cities
             </Link>
             <Link
-              href="/tools/planner"
-              className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-xl border-2 border-[var(--color-primary)] text-[var(--color-primary)] font-semibold hover:bg-[var(--color-primary)] hover:text-white transition-colors"
+              href="/tours"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-xl border-2 border-white text-white font-semibold hover:bg-white/10 transition-colors"
             >
-              Plan Your Trip <Calendar className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4" /> Book a Morocco Tour
             </Link>
           </div>
         </div>

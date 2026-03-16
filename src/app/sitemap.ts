@@ -169,7 +169,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/romantic',
     '/photo-spots',
     '/darija',
-    '/street-food',
+    '/emergency',
+    '/sim-card',
+    '/driving',
+    '/holidays',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
