@@ -6,21 +6,17 @@ import {
   Mountain,
   MapPin,
   Clock,
-  Star,
   CheckCircle,
   AlertTriangle,
   Shield,
   Calendar,
   Compass,
   Heart,
-  Camera,
   Navigation,
   ArrowRight,
   PhoneCall,
   Sun,
-  Thermometer,
   Users,
-  Trophy,
   BookOpen,
   Globe,
   Tent,
@@ -505,7 +501,7 @@ export default function ClimbingPage() {
           </div>
 
           <div className="space-y-10">
-            {climbingAreas.map((area, index) => (
+            {climbingAreas.map((area) => (
               <div key={area.name} className="card-moroccan overflow-hidden">
                 <div className="grid md:grid-cols-3">
                   {/* Main Content */}

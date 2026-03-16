@@ -8,7 +8,6 @@ import {
   Sun,
   Thermometer,
   MapPin,
-  Clock,
   Star,
   CheckCircle,
   AlertTriangle,
@@ -16,7 +15,6 @@ import {
   Calendar,
   Compass,
   Heart,
-  Camera,
   Navigation,
   Anchor,
   ArrowRight,
@@ -33,7 +31,6 @@ import {
   Zap,
   CloudSun,
   Mountain,
-  LifeBuoy,
 } from 'lucide-react';
 
 /* ═══════════════════════════════════════════════════════════════
