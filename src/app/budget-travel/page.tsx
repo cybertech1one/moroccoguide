@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/budget-travel',
     images: [
       {
-        url: '/images/hero-morocco-medina.webp',
+        url: '/images/hero-jemaa-elfnaa-night.webp',
         width: 1200,
         height: 630,
         alt: 'Colorful Morocco medina market with budget-friendly goods',
@@ -1015,7 +1015,7 @@ export default function BudgetTravelPage() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(/images/hero-morocco-medina.webp)',
+            backgroundImage: 'url(/images/hero-jemaa-elfnaa-night.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

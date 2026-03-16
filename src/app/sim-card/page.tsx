@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     url: 'https://citytoursmorocco.com/sim-card',
     images: [
       {
-        url: '/images/hero-morocco-medina.webp',
+        url: '/images/hero-sim-card.webp',
         width: 1200,
         height: 630,
         alt: 'Traveler using smartphone to navigate a Moroccan medina',
@@ -861,7 +861,7 @@ export default function SimCardPage() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(/images/hero-morocco-medina.webp)',
+            backgroundImage: 'url(/images/hero-sim-card.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

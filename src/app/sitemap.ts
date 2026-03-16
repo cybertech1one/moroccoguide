@@ -173,6 +173,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/sim-card',
     '/driving',
     '/holidays',
+    '/birdwatching',
+    '/golf',
+    '/surfing',
+    '/yoga',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
