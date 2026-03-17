@@ -1754,6 +1754,30 @@ export default function ChefchaouenGuidePage() {
         </div>
       </section>
 
+      {/* Related Guides */}
+      <section className="py-12 md:py-16" style={{ backgroundColor: 'var(--surface-muted)' }}>
+        <div className="container-morocco">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold text-center mb-8" style={{ color: 'var(--text-primary)' }}>
+            Plan Your Chefchaouen Visit
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { href: '/morocco-day-trips', title: 'Day Trips', desc: 'Visit Chefchaouen as a day trip from Fes or Tangier.' },
+              { href: '/photography-guide', title: 'Photography Guide', desc: 'Capture the famous blue streets and mountain views.' },
+              { href: '/morocco-shopping-guide', title: 'Shopping Guide', desc: 'Handwoven blankets, leather, and Rif handicrafts.' },
+              { href: '/what-to-wear-in-morocco', title: 'What to Wear', desc: 'Dress code for the medina and mountain hikes.' },
+            ].map((guide) => (
+              <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-base mb-2 group-hover:text-[var(--color-accent)] transition-colors" style={{ color: 'var(--text-primary)' }}>
+                  {guide.title}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{guide.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ══════════════════════════════════════════════════════════
           CTA
           ══════════════════════════════════════════════════════════ */}

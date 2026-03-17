@@ -1525,6 +1525,30 @@ export default function TangierGuidePage() {
         </div>
       </section>
 
+      {/* Related Guides */}
+      <section className="py-12 md:py-16" style={{ backgroundColor: 'var(--surface-muted)' }}>
+        <div className="container-morocco">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold text-center mb-8" style={{ color: 'var(--text-primary)' }}>
+            Plan Your Tangier Trip
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { href: '/morocco-day-trips', title: 'Day Trips', desc: 'Chefchaouen, Asilah, and Cap Spartel from Tangier.' },
+              { href: '/morocco-nightlife-guide', title: 'Nightlife Guide', desc: 'Tangier rooftop bars and live music venues.' },
+              { href: '/morocco-airports-guide', title: 'Airports Guide', desc: 'Tangier Ibn Battouta airport info and transfers.' },
+              { href: '/morocco-train-routes', title: 'Train Routes', desc: 'Al Boraq high-speed from Casablanca to Tangier.' },
+            ].map((guide) => (
+              <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-base mb-2 group-hover:text-[var(--color-accent)] transition-colors" style={{ color: 'var(--text-primary)' }}>
+                  {guide.title}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{guide.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── CTA ── */}
       <section className="py-16 md:py-20 gradient-moroccan">
         <div className="container-morocco text-center">

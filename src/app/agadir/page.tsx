@@ -872,7 +872,10 @@ const relatedPages = [
   { href: '/argan-oil', title: 'Argan Oil Guide', description: 'Everything about Morocco\'s liquid gold: production, buying, and cooperatives.', icon: Leaf },
   { href: '/golf', title: 'Morocco Golf Guide', description: 'World-class golf courses from Agadir to Marrakech to Rabat.', icon: Trophy },
   { href: '/family', title: 'Family Travel Guide', description: 'Planning the perfect family holiday in Morocco with children.', icon: Users },
-  { href: '/day-trips', title: 'Day Trips from Agadir', description: 'Paradise Valley, Taroudant, Tiznit, Tafraoute, and more.', icon: Compass },
+  { href: '/morocco-day-trips', title: 'Day Trips from Agadir', description: 'Paradise Valley, Taroudant, Tiznit, Tafraoute, and more.', icon: Compass },
+  { href: '/morocco-golf-courses', title: 'Golf Courses', description: 'Golf du Soleil and other top courses near Agadir.', icon: Trophy },
+  { href: '/morocco-spa-guide', title: 'Spa & Hammam', description: 'Beach resort spas and traditional hammams in Agadir.', icon: Sparkles },
+  { href: '/morocco-weather-monthly', title: 'Weather Guide', description: 'Year-round sunshine — the best months for Agadir.', icon: Sun },
 ];
 
 /* =====================================================================
