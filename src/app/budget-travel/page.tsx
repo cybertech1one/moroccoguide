@@ -1874,21 +1874,21 @@ export default function BudgetTravelPage() {
               },
               {
                 title: 'Street Food Guide',
-                description: 'Every street food you need to try in Morocco, where to find it, what to pay, and how to eat safely.',
-                href: '/food',
+                description: 'Every street food you need to try in Morocco, from msemmen to snail soup.',
+                href: '/street-food',
                 icon: UtensilsCrossed,
               },
               {
-                title: 'Transport Guide',
-                description: 'Trains, buses, grands taxis, and everything else about getting around Morocco efficiently and cheaply.',
-                href: '/transport',
-                icon: Train,
+                title: 'Budget Calculator',
+                description: 'Interactive tool to estimate your Morocco trip costs by duration and travel style.',
+                href: '/tools/budget',
+                icon: CreditCard,
               },
               {
-                title: 'Money & Banking',
-                description: 'ATMs, currency exchange, tipping customs, and everything about handling money in Morocco.',
-                href: '/money',
-                icon: CreditCard,
+                title: 'Public Transport',
+                description: 'Buses, trams, grands taxis, and CTM — the cheapest ways to get around Morocco.',
+                href: '/public-transport',
+                icon: Train,
               },
             ].map((guide) => {
               const Icon = guide.icon;

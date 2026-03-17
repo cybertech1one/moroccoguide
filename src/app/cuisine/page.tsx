@@ -852,12 +852,12 @@ const glossary = [
    ═══════════════════════════════════════════════════════════════ */
 
 const relatedPages = [
-  { title: 'Moroccan Food Guide', href: '/food', description: 'Explore our interactive guide to 30+ must-try Moroccan dishes.' },
+  { title: 'Moroccan Food Guide', href: '/moroccan-food-guide', description: 'Complete encyclopedia of every Moroccan dish you must try.' },
+  { title: 'Street Food Guide', href: '/street-food', description: 'The best street food from Jemaa el-Fnaa to Fes medina alleys.' },
   { title: 'Cooking Classes', href: '/cooking-classes', description: 'Learn to cook Moroccan cuisine with expert chefs across the country.' },
+  { title: 'Moroccan Markets', href: '/moroccan-markets', description: 'Navigate the vibrant souks where Moroccans shop for food and spices.' },
+  { title: 'Food Tours', href: '/food-tours', description: 'Guided food tours through medinas with local experts.' },
   { title: 'Restaurants', href: '/restaurants', description: 'Find the best restaurants from street food stalls to fine dining.' },
-  { title: 'Spices of Morocco', href: '/spices', description: 'Deep dive into the aromatic world of Moroccan spices and herbs.' },
-  { title: 'Moroccan Tea Culture', href: '/tea-culture', description: 'The art, ritual, and social significance of Moroccan mint tea.' },
-  { title: 'Markets & Souks', href: '/markets', description: 'Navigate the vibrant markets where Moroccans shop for food.' },
   { title: 'Moroccan Culture', href: '/culture', description: 'Understand the cultural context behind Moroccan dining traditions.' },
   { title: 'Ramadan in Morocco', href: '/ramadan', description: 'Experience the food traditions of the holy month of Ramadan.' },
 ];

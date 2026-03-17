@@ -6,6 +6,7 @@ import {
   Route,
   Clock,
   MapPin,
+  Calendar,
 } from 'lucide-react';
 import ItinerariesClientSection from './ItinerariesClient';
 
@@ -635,6 +636,35 @@ export default function ItinerariesPage() {
           budgetLabels={BUDGET_LABELS}
           styleLabels={STYLE_LABELS}
         />
+      </section>
+
+      {/* ── Detailed Itinerary Guides ── */}
+      <section className="py-12 md:py-16" style={{ backgroundColor: 'var(--surface-muted)' }}>
+        <div className="container-morocco">
+          <h2 className="font-display text-2xl md:text-3xl font-bold text-center mb-8" style={{ color: 'var(--text-primary)' }}>
+            Detailed Day-by-Day Guides
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <Link href="/morocco-itinerary-7-days" className="card-moroccan p-6 hover:shadow-lg transition-shadow group">
+              <Calendar className="w-8 h-8 mb-3" style={{ color: 'var(--color-accent)' }} />
+              <h3 className="font-heading font-bold text-lg mb-2 group-hover:text-[var(--color-accent)] transition-colors" style={{ color: 'var(--text-primary)' }}>
+                7-Day Morocco Itinerary
+              </h3>
+              <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>
+                The perfect one-week route: Marrakech, Sahara desert, Fes, and the Atlas Mountains with day-by-day breakdowns, budgets, and local tips.
+              </p>
+            </Link>
+            <Link href="/morocco-itinerary-14-days" className="card-moroccan p-6 hover:shadow-lg transition-shadow group">
+              <Route className="w-8 h-8 mb-3" style={{ color: 'var(--color-accent)' }} />
+              <h3 className="font-heading font-bold text-lg mb-2 group-hover:text-[var(--color-accent)] transition-colors" style={{ color: 'var(--text-primary)' }}>
+                14-Day Morocco Itinerary
+              </h3>
+              <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>
+                The ultimate two-week grand tour covering all highlights: imperial cities, Sahara, coast, and hidden gems with detailed logistics.
+              </p>
+            </Link>
+          </div>
+        </div>
       </section>
     </>
   );

@@ -902,10 +902,12 @@ const relatedPages = [
   { title: 'Getting Around Morocco', href: '/transport', description: 'Complete transport guide: trains, buses, taxis, flights' },
   { title: 'Where to Stay', href: '/accommodations', description: 'Riads, hotels, and accommodation guide by city' },
   { title: 'Moroccan Food Guide', href: '/food', description: 'Full guide to Moroccan cuisine and where to eat' },
-  { title: '7-Day Morocco Itinerary', href: '/itineraries/7-day-morocco', description: 'Detailed day-by-day itinerary for first-timers' },
-  { title: 'Morocco on a Budget', href: '/backpacking', description: 'Budget travel tips, cheap eats, and money-saving hacks' },
-  { title: 'Solo Travel in Morocco', href: '/solo-travel', description: 'Solo travel guide with safety tips and social tips' },
-  { title: 'Language Guide', href: '/language', description: 'Essential Arabic, French, and Berber phrases' },
+  { title: '7-Day Morocco Itinerary', href: '/morocco-itinerary-7-days', description: 'Detailed day-by-day itinerary for first-timers' },
+  { title: 'Budget Calculator', href: '/tools/budget', description: 'Plan your Morocco spending with our interactive calculator' },
+  { title: 'Learn Darija', href: '/darija', description: 'Essential Moroccan Arabic phrases for travelers' },
+  { title: 'Emergency Contacts', href: '/emergency', description: 'Police, hospitals, embassies, and emergency numbers' },
+  { title: 'Public Transport', href: '/public-transport', description: 'Buses, trams, taxis, and how to get around' },
+  { title: 'Packing Checklist', href: '/tools/checklist', description: 'Interactive Morocco-specific packing list' },
 ];
 
 /* ===================================================================

@@ -198,6 +198,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-itinerary-14-days',
     '/public-transport',
     '/recipes',
+    '/morocco-for-locals',
+    '/photography-guide',
+    '/morocco-safety-tips',
+    '/morocco-weather-monthly',
+    '/morocco-airports-guide',
+    '/morocco-train-routes',
+    '/morocco-wedding-venues',
+    '/morocco-digital-nomad-guide',
+    '/morocco-road-trip-routes',
+    '/morocco-spa-guide',
+    '/morocco-shopping-guide',
+    '/morocco-nightlife-guide',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
