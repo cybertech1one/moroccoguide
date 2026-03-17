@@ -913,6 +913,10 @@ const relatedPages = [
   { href: '/crafts', title: 'Moroccan Crafts Guide', description: 'Pottery, leather, brasswork, and the artisan traditions of Morocco.', icon: ShoppingBag },
   { href: '/cities', title: 'All Morocco Cities', description: 'Explore every destination across the kingdom.', icon: Globe },
   { href: '/unesco', title: 'UNESCO Sites Guide', description: 'Morocco\'s nine UNESCO World Heritage Sites explored in depth.', icon: BookOpen },
+  { href: '/morocco-day-trips', title: 'Day Trips from Fes', description: 'Meknes, Volubilis, Ifrane, and Chefchaouen day excursions.', icon: Compass },
+  { href: '/morocco-shopping-guide', title: 'Shopping Guide', description: 'Bargaining tips and fair prices for Fes leather and ceramics.', icon: ShoppingBag },
+  { href: '/morocco-food-tours', title: 'Fes Food Tours', description: 'Guided culinary tours through the world\'s oldest medina.', icon: Utensils },
+  { href: '/morocco-language-schools', title: 'Language Schools', description: 'Study Arabic or Darija at Fes language institutes.', icon: BookOpen },
 ];
 
 /* =====================================================================

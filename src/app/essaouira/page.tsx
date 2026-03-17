@@ -1726,6 +1726,30 @@ export default function EssaouiraPage() {
         </div>
       </section>
 
+      {/* Related Guides */}
+      <section className="py-12 md:py-16" style={{ backgroundColor: 'var(--surface-muted)' }}>
+        <div className="container-morocco">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold text-center mb-8" style={{ color: 'var(--text-primary)' }}>
+            Plan Your Essaouira Trip
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { href: '/morocco-day-trips', title: 'Day Trips', desc: 'Easy day trip from Marrakech along the Argan Road.' },
+              { href: '/morocco-food-tours', title: 'Food Tours', desc: 'Seafood tours and culinary walks in the port city.' },
+              { href: '/morocco-shopping-guide', title: 'Shopping Guide', desc: 'Thuya wood, argan oil, and souk bargaining tips.' },
+              { href: '/morocco-weather-monthly', title: 'Weather Guide', desc: 'Best months to visit the Wind City.' },
+            ].map((guide) => (
+              <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-base mb-2 group-hover:text-[var(--color-accent)] transition-colors" style={{ color: 'var(--text-primary)' }}>
+                  {guide.title}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{guide.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* -- CTA Section -- */}
       <section className="py-12 md:py-16">
         <div className="container-morocco text-center">

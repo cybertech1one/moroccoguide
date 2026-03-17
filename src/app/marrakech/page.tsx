@@ -843,6 +843,10 @@ const relatedPages = [
   { href: '/morocco-nightlife-guide', title: 'Morocco Nightlife Guide', description: 'Rooftop bars, live music, and after-dark culture in Marrakech and beyond.', icon: Moon },
   { href: '/morocco-shopping-guide', title: 'Morocco Shopping Guide', description: 'What to buy, where to shop, and how to get the best prices across Morocco.', icon: ShoppingBag },
   { href: '/morocco-spa-guide', title: 'Morocco Spa Guide', description: 'Luxury hammams, traditional treatments, and the best spas in the kingdom.', icon: Sparkles },
+  { href: '/marrakech-to-sahara', title: 'Marrakech to Sahara', description: 'Tour options, route details, desert camps, and prices for the iconic trip.', icon: Compass },
+  { href: '/morocco-day-trips', title: 'Day Trips from Marrakech', description: 'Ouzoud Falls, Ourika Valley, Essaouira, and more in a day.', icon: MapPin },
+  { href: '/morocco-food-tours', title: 'Morocco Food Tours', description: 'Guided culinary walks through the souks and hidden food stalls.', icon: Utensils },
+  { href: '/morocco-trip-cost', title: 'Morocco Trip Cost', description: 'Complete budget breakdown for backpackers to luxury travelers.', icon: ShoppingBag },
 ];
 
 /* =====================================================================
