@@ -1930,6 +1930,32 @@ export default function RomanticPage() {
         </div>
       </section>
 
+      {/* Related Romance Guides */}
+      <section className="py-12 md:py-16" style={{ backgroundColor: 'var(--surface-muted)' }}>
+        <div className="container-morocco">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold text-center mb-8" style={{ color: 'var(--text-primary)' }}>
+            More Romantic Travel Guides
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { href: '/morocco-for-couples', title: 'Morocco for Couples', desc: 'Complete romantic guide: riads, sunset spots, and couple activities.' },
+              { href: '/morocco-luxury-hotels', title: 'Luxury Hotels', desc: 'The 8 most romantic luxury hotels in Morocco.' },
+              { href: '/morocco-spa-guide', title: 'Spa & Hammam', desc: 'Couples hammam experiences and luxury spa treatments.' },
+              { href: '/morocco-wedding-venues', title: 'Wedding Venues', desc: 'Destination wedding planning in Morocco\'s finest venues.' },
+              { href: '/photography-guide', title: 'Photography Guide', desc: 'Capture your romantic Morocco moments perfectly.' },
+              { href: '/morocco-food-tours', title: 'Food Tours', desc: 'Romantic culinary experiences for couples.' },
+            ].map((guide) => (
+              <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-base mb-2 group-hover:text-[var(--color-accent)] transition-colors" style={{ color: 'var(--text-primary)' }}>
+                  {guide.title}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{guide.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* =====================================================================
          13. FINAL CTA
          ===================================================================== */}

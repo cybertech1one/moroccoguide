@@ -1141,6 +1141,8 @@ export default function HoneymoonPage() {
               { title: 'Morocco Wedding Venues', href: '/morocco-wedding-venues', description: 'Dream venues for destination weddings -- palatial riads, desert camps, and coastal estates.', icon: Heart },
               { title: 'Morocco Spa Guide', href: '/morocco-spa-guide', description: 'Couples hammams, luxury spa retreats, and traditional Moroccan wellness rituals.', icon: Sparkles },
               { title: 'Photography Guide', href: '/photography-guide', description: 'Capture stunning honeymoon photos at Morocco\'s most photogenic locations.', icon: Camera },
+              { title: 'Morocco for Couples', href: '/morocco-for-couples', description: 'Romantic riads, sunset spots, and couple activities across Morocco.', icon: Heart },
+              { title: 'Morocco Luxury Hotels', href: '/morocco-luxury-hotels', description: 'The finest hotels for a romantic getaway — La Mamounia, Royal Mansour, and more.', icon: Sparkles },
             ].map((guide) => (
               <Link
                 key={guide.href}
