@@ -635,6 +635,12 @@ export default function MoroccanHammamPage() {
         </div>
       </section>
 
+      <section className="py-8 md:py-12">
+        <div className="container-morocco max-w-4xl">
+          <img src="/images/art-moroccan-hammam-ritual.webp" alt="Illustration of a traditional Moroccan hammam ritual with steam-filled marble interiors, arched doorways, and bathing accessories including black soap and a kessa glove" loading="lazy" className="w-full rounded-xl shadow-lg" />
+        </div>
+      </section>
+
       {/* ---- Step by Step ---- */}
       <section className="container-morocco py-16">
         <h2 className="font-[family-name:var(--font-display)] text-3xl font-bold text-text-primary mb-4 text-center">

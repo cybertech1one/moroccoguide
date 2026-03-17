@@ -1399,6 +1399,12 @@ export default function DrivingInMoroccoPage() {
         </div>
       </section>
 
+      <section className="py-8 md:py-12">
+        <div className="container-morocco max-w-4xl">
+          <img src="/images/poster-morocco-road-trip.webp" alt="Scenic poster-style illustration of a Morocco road trip featuring a winding highway through dramatic Atlas Mountain passes and sun-drenched desert landscapes" loading="lazy" className="w-full rounded-xl shadow-lg" />
+        </div>
+      </section>
+
       {/* ============================================================
           SECTION 4: TOLL ROADS
           ============================================================ */}

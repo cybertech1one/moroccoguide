@@ -92,7 +92,16 @@ const navigationItems: NavItem[] = [
           { label: 'Chefchaouen', href: '/chefchaouen', description: 'Blue Pearl' },
           { label: 'Sahara Desert', href: '/sahara', description: 'Dunes & Stars' },
           { label: 'Atlas Mountains', href: '/atlas-mountains', description: 'Trekking & Villages' },
-          { label: 'Ouarzazate', href: '/cities/ouarzazate', description: 'Hollywood of Africa' },
+          { label: 'Ouarzazate', href: '/ouarzazate', description: 'Hollywood of Africa' },
+        ],
+      },
+      {
+        title: 'Hidden Gems',
+        items: [
+          { label: 'Paradise Valley', href: '/paradise-valley', description: 'Oasis near Agadir' },
+          { label: 'Todra Gorge', href: '/todra-gorge', description: 'Canyon walls' },
+          { label: 'Tetouan', href: '/tetouan', description: 'White Dove' },
+          { label: 'Draa Valley', href: '/draa-valley', description: 'Palm oasis route' },
         ],
       },
     ],
@@ -236,10 +245,10 @@ const navigationItems: NavItem[] = [
       {
         title: 'Discover',
         items: [
+          { label: 'Moroccan Food Guide', href: '/moroccan-food-guide' },
+          { label: 'Street Food', href: '/street-food' },
+          { label: 'Moroccan Markets', href: '/moroccan-markets' },
           { label: 'Souks & Markets', href: '/souks' },
-          { label: 'Shopping Guide', href: '/shopping' },
-          { label: 'Spa & Hammam', href: '/spa' },
-          { label: 'Wine & Vineyards', href: '/wine' },
         ],
       },
     ],
@@ -262,25 +271,25 @@ const navigationItems: NavItem[] = [
         items: [
           { label: 'Desert Adventures', href: '/desert-adventures' },
           { label: 'Hot Air Balloon', href: '/hot-air-balloon' },
-          { label: 'Trekking & Hiking', href: '/trekking' },
-          { label: 'Skiing & Snow', href: '/skiing' },
+          { label: 'Paragliding', href: '/paragliding' },
+          { label: 'Quad Biking', href: '/quad-biking' },
         ],
       },
       {
         title: 'Water & Outdoor',
         items: [
-          { label: 'Surfing & Water Sports', href: '/water-sports' },
-          { label: 'Water Parks & Fun', href: '/water-fun' },
-          { label: 'Camping', href: '/camping' },
-          { label: 'Stargazing', href: '/stargazing' },
+          { label: 'Surfing Taghazout', href: '/taghazout-surf' },
+          { label: 'Kayaking', href: '/kayaking' },
+          { label: 'Sandboarding', href: '/sandboarding' },
+          { label: 'Trekking & Hiking', href: '/trekking' },
         ],
       },
       {
         title: 'Culture & Leisure',
         items: [
-          { label: 'Hammam & Spa', href: '/spa' },
-          { label: 'Photography', href: '/photography' },
-          { label: 'Wine & Vineyards', href: '/wine' },
+          { label: 'Moroccan Hammam', href: '/moroccan-hammam' },
+          { label: 'Photography Guide', href: '/photography-guide' },
+          { label: 'Moroccan Festivals', href: '/moroccan-festivals' },
           { label: 'Festivals & Events', href: '/festivals' },
         ],
       },
@@ -302,18 +311,18 @@ const navigationItems: NavItem[] = [
       {
         title: 'Itineraries',
         items: [
+          { label: '7-Day Morocco', href: '/morocco-itinerary-7-days' },
+          { label: '14-Day Morocco', href: '/morocco-itinerary-14-days' },
           { label: '3 Days in Marrakech', href: '/itineraries/3-day-marrakech' },
-          { label: '5-Day Desert Tour', href: '/itineraries/5-day-desert' },
-          { label: '7-Day Morocco', href: '/itineraries/7-day-morocco' },
           { label: '10-Day Grand Tour', href: '/itineraries/10-day-grand-tour' },
         ],
       },
       {
         title: 'Resources',
         items: [
-          { label: 'Trains & Transport', href: '/trains' },
-          { label: 'Berber Culture', href: '/berber-culture' },
-          { label: 'Ramadan Guide', href: '/ramadan' },
+          { label: 'Public Transport', href: '/public-transport' },
+          { label: 'Emergency Contacts', href: '/emergency' },
+          { label: 'Learn Darija', href: '/darija' },
           { label: 'World Cup 2030', href: '/worldcup-2030' },
         ],
       },
@@ -359,12 +368,21 @@ const navigationItems: NavItem[] = [
     icon: Wrench,
     columns: [
       {
-        title: 'Plan Your Trip',
+        title: 'Calculators',
         items: [
-          { label: 'Trip Planner', href: '/tools/planner' },
           { label: 'Budget Calculator', href: '/tools/budget' },
           { label: 'Currency Converter', href: '/tools/currency' },
-          { label: 'Map Explorer', href: '/tools/map' },
+          { label: 'City Distances', href: '/tools/distances' },
+          { label: 'Trip Planner', href: '/tools/planner' },
+        ],
+      },
+      {
+        title: 'Checklists & Guides',
+        items: [
+          { label: 'Packing Checklist', href: '/tools/checklist' },
+          { label: 'Darija Phrasebook', href: '/tools/phrases' },
+          { label: 'Interactive Map', href: '/tools/map' },
+          { label: 'Weather Forecast', href: '/tools/weather' },
         ],
       },
     ],

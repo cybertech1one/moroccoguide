@@ -1276,6 +1276,12 @@ export default function StargazingPage() {
         </div>
       </section>
 
+      <section className="py-8 md:py-12">
+        <div className="container-morocco max-w-4xl">
+          <img src="/images/art-desert-stargazing.webp" alt="Artistic depiction of stargazing in the Moroccan Sahara Desert with a brilliant Milky Way arching over sand dunes and a silhouetted figure gazing upward" loading="lazy" className="w-full rounded-xl shadow-lg" />
+        </div>
+      </section>
+
       {/* =================================================================
           STARGAZING TOURS
           ================================================================= */}

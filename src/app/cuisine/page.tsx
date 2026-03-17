@@ -1392,6 +1392,12 @@ export default function CuisinePage() {
         </div>
       </section>
 
+      <section className="py-8 md:py-12">
+        <div className="container-morocco max-w-4xl">
+          <img src="/images/art-moroccan-couscous.webp" alt="Artistic depiction of a traditional Moroccan couscous dish served in a decorative tagine with steamed vegetables and tender meat" loading="lazy" className="w-full rounded-xl shadow-lg" />
+        </div>
+      </section>
+
       {/* ════════════════════════════════════════════════════════
           DRINKS
           ════════════════════════════════════════════════════════ */}

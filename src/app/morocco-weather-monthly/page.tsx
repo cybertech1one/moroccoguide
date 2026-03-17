@@ -22,6 +22,7 @@ import {
   Sunrise,
   CloudRain,
   Info,
+  Moon,
 } from 'lucide-react';
 
 /* =====================================================================

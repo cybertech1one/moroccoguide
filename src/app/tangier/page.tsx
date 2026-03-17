@@ -1053,6 +1053,12 @@ export default function TangierGuidePage() {
         </div>
       </section>
 
+      <section className="py-8 md:py-12">
+        <div className="container-morocco max-w-4xl">
+          <img src="/images/art-tangier-kasbah.webp" alt="Artistic rendering of the historic Tangier Kasbah with its whitewashed walls, ornate doorways, and sweeping views over the Strait of Gibraltar" loading="lazy" className="w-full rounded-xl shadow-lg" />
+        </div>
+      </section>
+
       {/* ── Beach Guide ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco">

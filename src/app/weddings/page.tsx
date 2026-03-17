@@ -724,6 +724,12 @@ export default function WeddingsPage() {
         </div>
       </section>
 
+      <section className="py-8 md:py-12">
+        <div className="container-morocco max-w-4xl">
+          <img src="/images/art-moroccan-wedding.webp" alt="Illustration of a traditional Moroccan wedding celebration with ornate decorations, vibrant textiles, and festive atmosphere" loading="lazy" className="w-full rounded-xl shadow-lg" />
+        </div>
+      </section>
+
       {/* Planning Timeline */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
         <div className="container-morocco max-w-4xl">

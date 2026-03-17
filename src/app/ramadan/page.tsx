@@ -991,6 +991,12 @@ export default function RamadanPage() {
         </div>
       </section>
 
+      <section className="py-8 md:py-12">
+        <div className="container-morocco max-w-4xl">
+          <img src="/images/art-moroccan-tea-ceremony.webp" alt="Illustration of a traditional Moroccan mint tea ceremony with an ornate silver teapot pouring into decorated glasses, surrounded by fresh mint leaves and sugar cones" loading="lazy" className="w-full rounded-xl shadow-lg" />
+        </div>
+      </section>
+
       {/* ── What to Eat During Ramadan ── */}
       <section className="py-16 md:py-20 moroccan-pattern">
         <div className="container-morocco">

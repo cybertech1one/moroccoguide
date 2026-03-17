@@ -1169,6 +1169,12 @@ export default function SouksPage() {
         </div>
       </section>
 
+      <section className="py-8 md:py-12">
+        <div className="container-morocco max-w-4xl">
+          <img src="/images/art-moroccan-market-spices.webp" alt="Vibrant illustration of a Moroccan market spice stall with colorful pyramids of cumin, saffron, paprika, and ras el hanout displayed in traditional woven baskets" loading="lazy" className="w-full rounded-xl shadow-lg" />
+        </div>
+      </section>
+
       {/* ============================================================
           COMMON SCAMS IN SOUKS
           ============================================================ */}
