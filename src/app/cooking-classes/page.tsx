@@ -1327,6 +1327,32 @@ export default function CookingClassesPage() {
         </div>
       </section>
 
+      {/* Related Food & Culture Guides */}
+      <section className="py-12 md:py-16" style={{ backgroundColor: 'var(--surface-muted)' }}>
+        <div className="container-morocco">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold text-center mb-8" style={{ color: 'var(--text-primary)' }}>
+            More Food & Culture Guides
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { href: '/morocco-food-tours', title: 'Food Tours', desc: 'Guided culinary walks through Morocco\'s best markets and food stalls.' },
+              { href: '/morocco-shopping-guide', title: 'Shopping Guide', desc: 'Find the best spices, argan oil, and ingredients to bring home.' },
+              { href: '/morocco-for-couples', title: 'For Couples', desc: 'Romantic cooking classes for two in Marrakech and Fes.' },
+              { href: '/morocco-day-trips', title: 'Day Trips', desc: 'Combine cooking classes with day excursions from major cities.' },
+              { href: '/morocco-trip-cost', title: 'Trip Cost Guide', desc: 'How much to budget for cooking classes and food experiences.' },
+              { href: '/what-to-wear-in-morocco', title: 'What to Wear', desc: 'Comfortable dress code for market visits and cooking kitchens.' },
+            ].map((guide) => (
+              <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-base mb-2 group-hover:text-[var(--color-accent)] transition-colors" style={{ color: 'var(--text-primary)' }}>
+                  {guide.title}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{guide.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── CTA ── */}
       <section className="py-16 md:py-20 gradient-moroccan">
         <div className="container-morocco text-center">

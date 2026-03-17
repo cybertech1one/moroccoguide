@@ -838,6 +838,9 @@ const relatedPages = [
   { title: 'Fes City Guide', href: '/cities/fes', description: 'Explore the oldest medina in the world and its living artisan traditions.' },
   { title: 'Moroccan Ceramics', href: '/ceramics', description: 'Deep dive into pottery traditions from Fes, Safi, and beyond.' },
   { title: 'Spices of Morocco', href: '/cuisine', description: 'The essential Moroccan spices and where to find the best quality.' },
+  { title: 'Morocco Shopping Guide', href: '/morocco-shopping-guide', description: 'Complete bargaining guide, fair prices, and what to buy.' },
+  { title: 'Morocco Food Tours', href: '/morocco-food-tours', description: 'Guided walks through souk food stalls and hidden eateries.' },
+  { title: 'Morocco Trip Cost', href: '/morocco-trip-cost', description: 'Budget for souk shopping, activities, and daily expenses.' },
 ];
 
 /* =====================================================================
