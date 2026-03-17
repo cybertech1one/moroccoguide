@@ -1392,6 +1392,30 @@ export default function VisaPage() {
         </div>
       </section>
 
+      {/* Related Planning Guides */}
+      <section className="py-12 md:py-16" style={{ backgroundColor: 'var(--surface-muted)' }}>
+        <div className="container-morocco">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold text-center mb-8" style={{ color: 'var(--text-primary)' }}>
+            Plan the Rest of Your Trip
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { href: '/morocco-airports-guide', title: 'Airports Guide', desc: 'Find your arrival airport, terminals, and transfer options.' },
+              { href: '/morocco-travel-insurance', title: 'Travel Insurance', desc: 'Compare 6 insurance providers for Morocco coverage.' },
+              { href: '/morocco-safety-tips', title: 'Safety Tips', desc: 'Practical safety advice for your Morocco trip.' },
+              { href: '/morocco-weather-monthly', title: 'Weather Guide', desc: 'Month-by-month climate to choose the best travel dates.' },
+            ].map((guide) => (
+              <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-base mb-2 group-hover:text-[var(--color-accent)] transition-colors" style={{ color: 'var(--text-primary)' }}>
+                  {guide.title}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{guide.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ============================================================
           CTA
           ============================================================ */}

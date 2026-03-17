@@ -679,6 +679,32 @@ export default function TipsPage() {
         </div>
       </section>
 
+      {/* Detailed Guides */}
+      <section className="py-12 md:py-16">
+        <div className="container-morocco">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold text-center mb-8" style={{ color: 'var(--text-primary)' }}>
+            Go Deeper with Our Specialized Guides
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { href: '/morocco-safety-tips', title: 'Safety Tips', desc: 'Detailed safety advice: scams, health, transport, and emergency contacts.' },
+              { href: '/morocco-shopping-guide', title: 'Shopping Guide', desc: 'Master bargaining, avoid fakes, and know fair prices in the souks.' },
+              { href: '/morocco-train-routes', title: 'Train Routes', desc: 'Complete ONCF rail guide with routes, schedules, and prices.' },
+              { href: '/morocco-weather-monthly', title: 'Weather Guide', desc: 'Month-by-month climate data to plan your perfect trip.' },
+              { href: '/morocco-airports-guide', title: 'Airports Guide', desc: 'All Moroccan airports with transport options and tips.' },
+              { href: '/morocco-travel-insurance', title: 'Travel Insurance', desc: 'Compare providers and find the right coverage for Morocco.' },
+            ].map((guide) => (
+              <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-base mb-2 group-hover:text-[var(--color-accent)] transition-colors" style={{ color: 'var(--text-primary)' }}>
+                  {guide.title}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{guide.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="bg-[var(--surface-muted)] py-12">
         <div className="container-morocco text-center">
