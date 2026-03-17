@@ -880,6 +880,13 @@ export default function MoroccoHolidaysPage() {
         </div>
       </section>
 
+      {/* ── Surf Morocco Image ── */}
+      <section className="py-8 md:py-12">
+        <div className="container-morocco max-w-4xl">
+          <img src="/images/poster-surf-morocco.webp" alt="Surfing on Morocco's Atlantic coast, one of many outdoor activities to enjoy during Moroccan holidays and festivals" loading="lazy" className="w-full rounded-xl shadow-lg" />
+        </div>
+      </section>
+
       {/* ── Islamic Holidays ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco">

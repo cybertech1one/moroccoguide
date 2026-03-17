@@ -697,6 +697,21 @@ export default function HealthPage() {
         </div>
       </section>
 
+      {/* ── Visual Break ── */}
+      <div className="container-morocco py-12">
+        <div className="rounded-2xl overflow-hidden">
+          <img
+            src="/images/card-mosque.webp"
+            alt="Ornate Moroccan mosque exterior with intricate geometric tilework and carved stucco detailing"
+            loading="lazy"
+            className="w-full h-64 md:h-80 object-cover"
+          />
+          <p className="text-sm text-[var(--text-muted)] mt-3 text-center">
+            Morocco's healthcare system blends modern facilities in cities with traditional practices in rural areas
+          </p>
+        </div>
+      </div>
+
       {/* ============================================================
           TRAVEL INSURANCE
           ============================================================ */}

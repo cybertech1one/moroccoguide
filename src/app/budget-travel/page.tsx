@@ -1827,6 +1827,37 @@ export default function BudgetTravelPage() {
         </div>
       </section>
 
+      {/* BUDGET TRAVEL VISUALS */}
+      <section className="py-16 md:py-20" style={{ backgroundColor: '#FAF8F5' }}>
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold mb-4" style={{ color: '#1A1814' }}>
+              Budget Travel at a Glance
+            </h2>
+            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
+              Essential cost breakdowns and backpacking inspiration for budget-conscious travelers.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <div className="relative overflow-hidden rounded-2xl shadow-lg">
+              <img src="/images/infographic-budget.webp" alt="Infographic showing daily budget breakdown for Morocco travel including accommodation, food, transport, and activities in MAD" loading="lazy" className="w-full h-auto" />
+            </div>
+            <div className="relative overflow-hidden rounded-2xl aspect-[4/3] md:aspect-auto group">
+              <img src="/images/hero-backpacking.webp" alt="Backpacker exploring a colorful Moroccan medina with a backpack, representing budget travel in Morocco" loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6">
+                <p className="text-white font-[family-name:var(--font-display)] text-xl md:text-2xl font-bold">
+                  Backpacking Morocco
+                </p>
+                <p className="text-white/80 text-sm md:text-base mt-1">
+                  Morocco remains one of the best-value destinations for backpackers -- rich culture, incredible food, and dramatic scenery on a shoestring budget.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Related Guides */}
       <section className="py-16 md:py-20">
         <div className="container-morocco">

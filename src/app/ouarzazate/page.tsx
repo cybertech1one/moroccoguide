@@ -1881,6 +1881,43 @@ export default function OuarzazatePage() {
       </section>
 
       {/* =================================================================
+          PHOTO GALLERY
+          ================================================================= */}
+      <section className="py-16 md:py-20" style={{ backgroundColor: '#FAF8F5' }}>
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <Camera className="w-8 h-8 mx-auto mb-4" style={{ color: '#A0522D' }} />
+            <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold mb-4" style={{ color: '#1A1814' }}>
+              Ouarzazate in Pictures
+            </h2>
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: '#1A1814', opacity: 0.7 }}>
+              Where ancient kasbahs meet Hollywood film sets &mdash; the cinematic landscapes
+              of Morocco&apos;s desert heartland captured at the golden hour.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {[
+              { src: '/images/hero-ouarzazate.webp', alt: 'Panoramic view of Ouarzazate with the Atlas Mountains in the background' },
+              { src: '/images/hero-ouarzazate-kasbah.webp', alt: 'Kasbah Taourirt earthen fortress in the heart of Ouarzazate at sunset' },
+              { src: '/images/hero-ouarzazate-studios.webp', alt: 'Atlas Film Studios set pieces in Ouarzazate with desert landscape' },
+              { src: '/images/hero-ait-benhaddou-sunset.webp', alt: 'Ait Ben Haddou UNESCO ksar glowing amber at sunset across the river' },
+              { src: '/images/photo-atlas-film-studios.webp', alt: 'Film set props and ancient Egyptian temple replicas at Atlas Studios Ouarzazate' },
+            ].map((img, i) => (
+              <div key={i} className={`relative overflow-hidden rounded-xl group ${i === 0 ? 'md:col-span-2 md:row-span-2 aspect-[4/3]' : 'aspect-[4/3]'}`}>
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* =================================================================
           FINAL CTA
           ================================================================= */}
       <section className="relative py-24 overflow-hidden">

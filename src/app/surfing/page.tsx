@@ -2375,6 +2375,40 @@ export default function SurfingPage() {
       </section>
 
       {/* ============================================================
+          SURF & WATER SPORTS GALLERY
+          ============================================================ */}
+      <section className="py-16 md:py-20" style={{ backgroundColor: '#FAF8F5' }}>
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold mb-4" style={{ color: '#1A1814' }}>
+              Surf and Water Sports Gallery
+            </h2>
+            <p className="text-lg text-[#1A1814]/70 max-w-2xl mx-auto">
+              Morocco&apos;s Atlantic coastline delivers world-class waves, wind, and aquatic adventures.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {[
+              { src: '/images/hero-surfing-taghazout.webp', alt: 'Surfer riding a wave at Taghazout, Morocco premier surf destination' },
+              { src: '/images/hero-surfing-taghazout-wave.webp', alt: 'Perfect barrel wave breaking at Anchor Point near Taghazout' },
+              { src: '/images/hero-kayaking.webp', alt: 'Sea kayaking along the dramatic Moroccan Atlantic coastline' },
+              { src: '/images/hero-water-park.webp', alt: 'Exciting water park slides and pools in Morocco' },
+              { src: '/images/photo-imsouane-surf.webp', alt: 'Long right-hand wave at Imsouane Bay, known for the longest rideable wave in Morocco' },
+              { src: '/images/photo-dakhla-kitesurf.webp', alt: 'Kitesurfer jumping high over the turquoise lagoon of Dakhla' },
+            ].map((img, i) => (
+              <div key={i} className={`relative overflow-hidden rounded-xl group ${i === 0 ? 'md:col-span-2 aspect-[16/9]' : 'aspect-[4/3]'}`}>
+                <img src={img.src} alt={img.alt} loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <p className="absolute bottom-2 left-2 right-2 text-xs text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 line-clamp-2">
+                  {img.alt}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================
           SECTION 15 - EXPLORE MORE
           ============================================================ */}
       <ExploreMore

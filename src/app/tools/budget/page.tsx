@@ -1,274 +1,151 @@
 'use client'
 
-import { useState, useMemo, useCallback } from 'react'
+import { useState, useMemo } from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import {
   ArrowLeft,
   Bed,
   UtensilsCrossed,
   Bus,
   Ticket,
-  ShoppingBag,
   Lightbulb,
-  Printer,
   Calculator,
-  Users,
   CalendarDays,
-  TrendingUp,
   Info,
   Gem,
   Wallet,
   Star,
   Coffee,
   Car,
-  Train,
-  Compass,
-  Landmark,
+  Home,
+  ChevronRight,
+  ChevronDown,
+  ChevronUp,
+  TrendingDown,
   Tent,
-  ChefHat,
-  CircleDollarSign,
-  Download,
+  Crown,
 } from 'lucide-react'
-import {
-  PieChart,
-  Pie,
-  Cell,
-  ResponsiveContainer,
-  Tooltip,
-  Legend,
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-} from 'recharts'
 import { cn } from '@/lib/utils'
 
-/* ------------------------------------------------------------------ */
-/*  Exchange Rates                                                     */
-/* ------------------------------------------------------------------ */
-const MAD_TO_USD = 0.10
-const MAD_TO_EUR = 0.092
-const MAD_TO_GBP = 0.079
+/* ================================================================== */
+/*  Types                                                              */
+/* ================================================================== */
+type TripStyle = 'budget' | 'midrange' | 'luxury'
 
-/* ------------------------------------------------------------------ */
-/*  Accommodation Presets                                               */
-/* ------------------------------------------------------------------ */
-const ACCOMMODATION_PRESETS = [
-  {
-    label: 'Budget',
-    sublabel: 'Hostel / Basic Guesthouse',
-    price: 150,
-    icon: Tent,
-    examples: ['Hostel dorm: 80-120 MAD', 'Basic room: 150-250 MAD'],
+interface DailyCosts {
+  accommodation: { min: number; max: number }
+  food: { min: number; max: number }
+  transport: { min: number; max: number }
+  activities: { min: number; max: number }
+}
+
+/* ================================================================== */
+/*  Cost Data                                                          */
+/* ================================================================== */
+const DAILY_COSTS: Record<TripStyle, DailyCosts> = {
+  budget: {
+    accommodation: { min: 200, max: 400 },
+    food: { min: 100, max: 200 },
+    transport: { min: 50, max: 100 },
+    activities: { min: 100, max: 200 },
   },
-  {
-    label: 'Mid-Range',
-    sublabel: 'Riad / 3-Star Hotel',
-    price: 550,
-    icon: Bed,
-    examples: ['Traditional riad: 400-700 MAD', '3-star hotel: 500-800 MAD'],
+  midrange: {
+    accommodation: { min: 800, max: 1500 },
+    food: { min: 300, max: 500 },
+    transport: { min: 200, max: 400 },
+    activities: { min: 300, max: 500 },
   },
-  {
-    label: 'Luxury',
-    sublabel: '5-Star / Boutique',
-    price: 1500,
-    icon: Gem,
-    examples: ['Luxury riad: 1200-2500 MAD', '5-star resort: 2000-5000 MAD'],
+  luxury: {
+    accommodation: { min: 2000, max: 5000 },
+    food: { min: 500, max: 1000 },
+    transport: { min: 500, max: 1000 },
+    activities: { min: 500, max: 1500 },
   },
+}
+
+const STYLE_OPTIONS: { id: TripStyle; label: string; icon: React.ElementType; description: string; color: string }[] = [
+  { id: 'budget', label: 'Budget', icon: Tent, description: 'Hostels, street food, public transport', color: 'from-[#4A6741] to-[#5B7D52]' },
+  { id: 'midrange', label: 'Mid-Range', icon: Star, description: 'Riads, local restaurants, mixed transport', color: 'from-[#C4960C] to-[#A0522D]' },
+  { id: 'luxury', label: 'Luxury', icon: Crown, description: '5-star hotels, fine dining, private drivers', color: 'from-[#A0522D] to-[#8B4513]' },
 ]
 
-/* ------------------------------------------------------------------ */
-/*  Food Presets                                                        */
-/* ------------------------------------------------------------------ */
-const FOOD_PRESETS = [
-  {
-    label: 'Street Food',
-    sublabel: 'Markets & stalls',
-    price: 40,
-    icon: Coffee,
-    examples: ['Sandwich: 15-25 MAD', 'Tajine stall: 25-40 MAD', 'Juice: 5-10 MAD'],
-  },
-  {
-    label: 'Casual',
-    sublabel: 'Local restaurants',
-    price: 120,
-    icon: UtensilsCrossed,
-    examples: ['Set menu: 60-90 MAD', 'Pizza/pasta: 50-80 MAD', 'Tajine: 40-70 MAD'],
-  },
-  {
-    label: 'Fine Dining',
-    sublabel: 'Upscale restaurants',
-    price: 350,
-    icon: ChefHat,
-    examples: ['3-course meal: 250-500 MAD', 'Rooftop dinner: 200-400 MAD'],
-  },
-]
+const DURATION_OPTIONS = [3, 5, 7, 10, 14]
 
-/* ------------------------------------------------------------------ */
-/*  Transport Presets                                                   */
-/* ------------------------------------------------------------------ */
-const TRANSPORT_PRESETS = [
-  { label: 'Public Bus', sublabel: '~5 MAD/ride', dailyCost: 30, icon: Bus },
-  { label: 'Taxi/Ride', sublabel: '~20 MAD/ride', dailyCost: 100, icon: Car },
-  { label: 'Car Rental', sublabel: '~400 MAD/day', dailyCost: 400, icon: Compass },
-  { label: 'Train', sublabel: 'Intercity rail', dailyCost: 150, icon: Train },
-]
-
-/* ------------------------------------------------------------------ */
-/*  Activity Presets                                                    */
-/* ------------------------------------------------------------------ */
-const ACTIVITY_PRESETS = [
-  { name: 'Museum / Monument Entry', cost: 70, icon: Landmark },
-  { name: 'Traditional Hammam', cost: 200, icon: Star },
-  { name: 'Cooking Class', cost: 500, icon: ChefHat },
-  { name: 'Desert Overnight (per person)', cost: 800, icon: Tent },
-  { name: 'Guided City Tour (half day)', cost: 300, icon: Compass },
-  { name: 'Surf Lesson (2 hours)', cost: 350, icon: Star },
-  { name: 'Hot Air Balloon (Marrakech)', cost: 1800, icon: Compass },
-  { name: 'Atlas Mountains Day Trek', cost: 400, icon: TrendingUp },
-]
-
-/* ------------------------------------------------------------------ */
-/*  Shopping Reference                                                  */
-/* ------------------------------------------------------------------ */
-const SHOPPING_ITEMS = [
-  { name: 'Leather bag', range: '200 - 800 MAD' },
-  { name: 'Argan oil (1L)', range: '150 - 300 MAD' },
-  { name: 'Berber rug', range: '1,000 - 5,000 MAD' },
-  { name: 'Spices (mixed bag)', range: '20 - 100 MAD' },
-  { name: 'Ceramic plate', range: '50 - 200 MAD' },
-  { name: 'Babouche slippers', range: '80 - 200 MAD' },
-  { name: 'Silver jewelry', range: '100 - 500 MAD' },
-  { name: 'Lantern / lamp', range: '150 - 600 MAD' },
-]
-
-const PIE_COLORS = ['#C4960C', '#A0522D', '#1A1814', '#4A6741', '#8B7355', '#DAA520']
-
-/* ------------------------------------------------------------------ */
-/*  Budget Tips                                                        */
-/* ------------------------------------------------------------------ */
-const BUDGET_TIPS = [
-  'Eat where locals eat. Look for restaurants full of Moroccans -- the food is better and cheaper.',
-  'Travel by CTM or Supratours buses between cities. They are comfortable and cost a fraction of private taxis.',
-  'Negotiate in souks. Start at 40-50% of the asking price and work your way up.',
-  'Stay in riads in the medina for an authentic experience, often cheaper than international hotels.',
-  'Drink mint tea freely -- it is often complimentary and refusing may seem impolite.',
-  'Use petit taxis within cities (metered) and grand taxis between cities (shared rides).',
-  'Visit museums on Fridays when some offer free or discounted entry.',
-  'Book desert tours from Merzouga directly rather than from Marrakech to save 30-50%.',
-  'Bring a reusable water bottle. Many riads offer free filtered water refills.',
-  'Download offline maps before arriving. This saves data costs and works in remote areas.',
-]
-
-/* ------------------------------------------------------------------ */
-/*  Daily Budget Comparison (for a couple)                              */
-/* ------------------------------------------------------------------ */
-const DAILY_COMPARISON = [
-  { name: 'Budget', daily: 600, style: 'Hostels, street food, buses' },
-  { name: 'Mid-Range', daily: 1500, style: 'Riads, restaurants, mixed transport' },
-  { name: 'Luxury', daily: 4000, style: 'Premium hotels, fine dining, private drivers' },
+const COST_CATEGORIES: { key: keyof DailyCosts; label: string; icon: React.ElementType }[] = [
+  { key: 'accommodation', label: 'Accommodation', icon: Bed },
+  { key: 'food', label: 'Food & Drinks', icon: UtensilsCrossed },
+  { key: 'transport', label: 'Transport', icon: Bus },
+  { key: 'activities', label: 'Activities', icon: Ticket },
 ]
 
 /* ================================================================== */
-/*  COMPONENT                                                          */
+/*  Money-Saving Tips                                                  */
+/* ================================================================== */
+const SAVING_TIPS = [
+  {
+    title: 'Eat where locals eat',
+    text: 'Look for restaurants full of Moroccans. The food is better, more authentic, and costs 50-70% less than tourist spots.',
+  },
+  {
+    title: 'Use CTM or Supratours buses',
+    text: 'Inter-city buses are comfortable with AC and cost a fraction of private taxis. Book online for guaranteed seats.',
+  },
+  {
+    title: 'Negotiate in souks',
+    text: 'Start at 40-50% of the asking price and work your way up. Walk away if the price is too high -- vendors often call you back.',
+  },
+  {
+    title: 'Stay in medina riads',
+    text: 'Traditional riads in the old city are often cheaper than international hotels and offer an authentic Moroccan experience with breakfast included.',
+  },
+  {
+    title: 'Book desert tours locally',
+    text: 'Book Sahara tours from Merzouga directly rather than from Marrakech. You can save 30-50% and support local operators.',
+  },
+  {
+    title: 'Use petit taxis with meters',
+    text: 'Always insist on the meter (compteur) in city taxis. Between cities, share grand taxis with other passengers to split costs.',
+  },
+  {
+    title: 'Visit on Fridays',
+    text: 'Some museums and monuments offer free or discounted entry on Fridays. Check opening hours as some sites close for midday prayer.',
+  },
+  {
+    title: 'Bring a reusable bottle',
+    text: 'Many riads offer free filtered water refills. You will save from 5 MAD per bottle and reduce plastic waste.',
+  },
+  {
+    title: 'Download offline maps',
+    text: 'Download Google Maps or Maps.me offline before arriving. Navigate for free and save on data costs, especially in remote areas.',
+  },
+  {
+    title: 'Travel in shoulder season',
+    text: 'Visit in March-May or September-November for lower prices, fewer crowds, and comfortable weather. Peak season (December-February, Easter) is 20-40% more expensive.',
+  },
+]
+
+/* ================================================================== */
+/*  Component                                                          */
 /* ================================================================== */
 export default function BudgetCalculatorPage() {
+  const [style, setStyle] = useState<TripStyle>('midrange')
   const [days, setDays] = useState(7)
-  const [groupSize, setGroupSize] = useState(2)
-  const [accommodationPerNight, setAccommodationPerNight] = useState(550)
-  const [mealsPerDay, setMealsPerDay] = useState(3)
-  const [mealCost, setMealCost] = useState(120)
-  const [transportDaily, setTransportDaily] = useState(100)
-  const [selectedActivities, setSelectedActivities] = useState<Set<number>>(new Set([0, 1, 4]))
-  const [shoppingBudget, setShoppingBudget] = useState(500)
-  const [tipPercent, setTipPercent] = useState(12)
-  const [currency, setCurrency] = useState<'MAD' | 'USD' | 'EUR' | 'GBP'>('MAD')
+  const [showTips, setShowTips] = useState(false)
 
-  const convertFromMAD = useCallback(
-    (mad: number) => {
-      if (currency === 'USD') return Math.round(mad * MAD_TO_USD)
-      if (currency === 'EUR') return Math.round(mad * MAD_TO_EUR)
-      if (currency === 'GBP') return Math.round(mad * MAD_TO_GBP)
-      return mad
-    },
-    [currency]
-  )
+  const costs = DAILY_COSTS[style]
 
-  const currencySymbol = currency === 'USD' ? '$' : currency === 'EUR' ? '\u20AC' : currency === 'GBP' ? '\u00A3' : ''
-  const currencyLabel = currency === 'MAD' ? 'MAD' : currency
+  const dailyMin = useMemo(() => {
+    return Object.values(costs).reduce((sum, c) => sum + c.min, 0)
+  }, [costs])
 
-  const activitiesCost = useMemo(() => {
-    let total = 0
-    selectedActivities.forEach((idx) => {
-      total += ACTIVITY_PRESETS[idx].cost
-    })
-    return total * groupSize
-  }, [selectedActivities, groupSize])
+  const dailyMax = useMemo(() => {
+    return Object.values(costs).reduce((sum, c) => sum + c.max, 0)
+  }, [costs])
 
-  const toggleActivity = useCallback((idx: number) => {
-    setSelectedActivities((prev) => {
-      const next = new Set(prev)
-      if (next.has(idx)) {
-        next.delete(idx)
-      } else {
-        next.add(idx)
-      }
-      return next
-    })
-  }, [])
+  const totalMin = dailyMin * days
+  const totalMax = dailyMax * days
 
-  const breakdown = useMemo(() => {
-    const accommodation = accommodationPerNight * days
-    const food = mealCost * mealsPerDay * days * groupSize
-    const transport = transportDaily * days
-    const activities = activitiesCost
-    const shopping = shoppingBudget
-    const subtotal = accommodation + food + transport + activities + shopping
-    const misc = Math.round(subtotal * (tipPercent / 100))
-    const total = subtotal + misc
-
-    return {
-      accommodation,
-      food,
-      transport,
-      activities,
-      shopping,
-      misc,
-      total,
-      dailyAvg: Math.round(total / days),
-      perPerson: Math.round(total / groupSize),
-      perPersonPerDay: Math.round(total / groupSize / days),
-    }
-  }, [
-    days, groupSize, accommodationPerNight, mealsPerDay, mealCost,
-    transportDaily, activitiesCost, shoppingBudget, tipPercent,
-  ])
-
-  const pieData = useMemo(
-    () =>
-      [
-        { name: 'Accommodation', value: breakdown.accommodation },
-        { name: 'Food', value: breakdown.food },
-        { name: 'Transport', value: breakdown.transport },
-        { name: 'Activities', value: breakdown.activities },
-        { name: 'Shopping', value: breakdown.shopping },
-        { name: 'Tips & Misc', value: breakdown.misc },
-      ].filter((d) => d.value > 0),
-    [breakdown]
-  )
-
-  const comparisonData = useMemo(
-    () =>
-      DAILY_COMPARISON.map((d) => ({
-        name: d.name,
-        amount: d.daily * days,
-      })).concat([{ name: 'Your Trip', amount: breakdown.total }]),
-    [breakdown.total, days]
-  )
-
-  const handlePrint = useCallback(() => window.print(), [])
+  const formatMAD = (n: number) => n.toLocaleString('en-US')
 
   return (
     <main className="min-h-screen bg-[#FAF8F5]">
@@ -278,630 +155,236 @@ export default function BudgetCalculatorPage() {
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C4960C' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
         }} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <Link
-            href="/tools"
-            className="inline-flex items-center text-[#FAF8F5]/40 hover:text-[#C4960C] mb-6 text-sm transition-colors"
-          >
-            <ArrowLeft className="h-4 w-4 mr-1.5" />
-            All Tools
-          </Link>
+          <nav className="flex items-center gap-2 text-sm text-[#FAF8F5]/30 mb-6" aria-label="Breadcrumb">
+            <Link href="/" className="hover:text-[#C4960C] transition-colors"><Home className="w-3.5 h-3.5" /></Link>
+            <ChevronRight className="w-3.5 h-3.5" />
+            <Link href="/tools" className="hover:text-[#C4960C] transition-colors">Tools</Link>
+            <ChevronRight className="w-3.5 h-3.5" />
+            <span className="text-[#FAF8F5]/60">Budget Calculator</span>
+          </nav>
           <div className="flex items-center gap-4 mb-4">
             <div className="h-14 w-14 rounded-2xl bg-[#C4960C]/10 border border-[#C4960C]/20 flex items-center justify-center">
               <Calculator className="h-7 w-7 text-[#C4960C]" />
             </div>
             <div>
-              <h1 className="text-3xl md:text-4xl font-bold text-[#FAF8F5] font-serif">
-                Budget Calculator
+              <h1 className="text-3xl md:text-4xl font-bold text-[#FAF8F5] font-[family-name:var(--font-display)]">
+                Trip Budget Calculator
               </h1>
               <p className="text-[#FAF8F5]/50 mt-1">
-                Estimate your Morocco trip costs with pre-filled local prices
+                Estimate your Morocco trip costs by travel style and duration
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* ============================================================ */}
-          {/*  LEFT: Inputs                                                 */}
-          {/* ============================================================ */}
-          <div className="lg:col-span-2 space-y-6">
-            {/* Trip Basics */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="p-6 md:p-8 rounded-2xl bg-white border border-[#1A1814]/5 shadow-sm"
-            >
-              <h2 className="text-lg font-bold text-[#1A1814] mb-5 flex items-center gap-2 font-serif">
-                <CalendarDays className="h-5 w-5 text-[#C4960C]" />
-                Trip Basics
-              </h2>
-              <div className="grid grid-cols-2 gap-5">
-                <div>
-                  <label className="block text-sm font-semibold text-[#1A1814]/60 mb-2">
-                    Duration (days)
-                  </label>
-                  <input
-                    type="number"
-                    min={1}
-                    max={90}
-                    value={days}
-                    onChange={(e) => setDays(Math.max(1, Number(e.target.value)))}
-                    className="w-full rounded-xl border border-[#1A1814]/10 bg-white px-4 py-3 text-[#1A1814] focus:border-[#C4960C] focus:ring-2 focus:ring-[#C4960C]/20 outline-none transition-all"
-                  />
-                  <div className="flex gap-2 mt-2">
-                    {[3, 5, 7, 10, 14].map((d) => (
-                      <button
-                        key={d}
-                        onClick={() => setDays(d)}
-                        className={cn(
-                          'px-2.5 py-1 rounded-lg text-xs font-medium transition-all',
-                          days === d
-                            ? 'bg-[#C4960C] text-white'
-                            : 'bg-[#FAF8F5] text-[#1A1814]/50 hover:bg-[#C4960C]/10 hover:text-[#C4960C]'
-                        )}
-                      >
-                        {d}d
-                      </button>
-                    ))}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14">
+        {/* Trip Style Selector */}
+        <div className="mb-8">
+          <h2 className="text-sm font-semibold text-[#1A1814]/40 uppercase tracking-wider mb-3">
+            Select your travel style
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {STYLE_OPTIONS.map((opt) => {
+              const Icon = opt.icon
+              const isActive = style === opt.id
+              return (
+                <button
+                  key={opt.id}
+                  onClick={() => setStyle(opt.id)}
+                  className={cn(
+                    'p-5 rounded-2xl border-2 text-left transition-all',
+                    isActive
+                      ? 'border-[#C4960C] bg-[#C4960C]/5 shadow-md'
+                      : 'border-[#1A1814]/5 bg-white hover:border-[#C4960C]/30'
+                  )}
+                >
+                  <div className={cn(
+                    'inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br text-white mb-3',
+                    opt.color
+                  )}>
+                    <Icon className="h-5 w-5" />
                   </div>
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-[#1A1814]/60 mb-2">
-                    <Users className="inline h-4 w-4 mr-1" />
-                    Travelers
-                  </label>
-                  <input
-                    type="number"
-                    min={1}
-                    max={20}
-                    value={groupSize}
-                    onChange={(e) => setGroupSize(Math.max(1, Number(e.target.value)))}
-                    className="w-full rounded-xl border border-[#1A1814]/10 bg-white px-4 py-3 text-[#1A1814] focus:border-[#C4960C] focus:ring-2 focus:ring-[#C4960C]/20 outline-none transition-all"
-                  />
-                  <div className="flex gap-2 mt-2">
-                    {[1, 2, 3, 4].map((g) => (
-                      <button
-                        key={g}
-                        onClick={() => setGroupSize(g)}
-                        className={cn(
-                          'px-2.5 py-1 rounded-lg text-xs font-medium transition-all',
-                          groupSize === g
-                            ? 'bg-[#C4960C] text-white'
-                            : 'bg-[#FAF8F5] text-[#1A1814]/50 hover:bg-[#C4960C]/10 hover:text-[#C4960C]'
-                        )}
-                      >
-                        {g}
-                      </button>
-                    ))}
+                  <div className="text-base font-bold text-[#1A1814] font-[family-name:var(--font-heading)]">{opt.label}</div>
+                  <div className="text-xs text-[#1A1814]/50 mt-1">{opt.description}</div>
+                </button>
+              )
+            })}
+          </div>
+        </div>
+
+        {/* Duration Selector */}
+        <div className="mb-8">
+          <h2 className="text-sm font-semibold text-[#1A1814]/40 uppercase tracking-wider mb-3">
+            Trip duration
+          </h2>
+          <div className="flex flex-wrap gap-3">
+            {DURATION_OPTIONS.map((d) => (
+              <button
+                key={d}
+                onClick={() => setDays(d)}
+                className={cn(
+                  'px-5 py-3 rounded-xl border-2 text-sm font-bold transition-all',
+                  days === d
+                    ? 'border-[#C4960C] bg-[#C4960C] text-white'
+                    : 'border-[#1A1814]/5 bg-white text-[#1A1814]/60 hover:border-[#C4960C]/30'
+                )}
+              >
+                {d} days
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Daily Breakdown */}
+        <div className="p-6 md:p-8 rounded-2xl bg-white border border-[#1A1814]/5 shadow-lg mb-8">
+          <h2 className="text-lg font-bold text-[#1A1814] mb-6 flex items-center gap-2 font-[family-name:var(--font-display)]">
+            <Wallet className="h-5 w-5 text-[#C4960C]" />
+            Estimated Daily Costs ({style === 'budget' ? 'Budget' : style === 'midrange' ? 'Mid-Range' : 'Luxury'})
+          </h2>
+          <div className="space-y-4">
+            {COST_CATEGORIES.map((cat) => {
+              const cost = costs[cat.key]
+              const Icon = cat.icon
+              const pctOfTotal = ((cost.min + cost.max) / 2) / ((dailyMin + dailyMax) / 2) * 100
+              return (
+                <div key={cat.key}>
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center gap-2">
+                      <Icon className="h-4 w-4 text-[#C4960C]" />
+                      <span className="text-sm font-semibold text-[#1A1814]">{cat.label}</span>
+                    </div>
+                    <span className="text-sm font-bold text-[#1A1814]">
+                      {formatMAD(cost.min)} - {formatMAD(cost.max)} MAD
+                    </span>
                   </div>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Accommodation */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.05 }}
-              className="p-6 md:p-8 rounded-2xl bg-white border border-[#1A1814]/5 shadow-sm"
-            >
-              <h2 className="text-lg font-bold text-[#1A1814] mb-2 flex items-center gap-2 font-serif">
-                <Bed className="h-5 w-5 text-[#C4960C]" />
-                Accommodation
-              </h2>
-              <p className="text-xs text-[#1A1814]/40 mb-5">Per night, for the entire group</p>
-              <div className="grid grid-cols-3 gap-3 mb-5">
-                {ACCOMMODATION_PRESETS.map((p) => {
-                  const Icon = p.icon
-                  return (
-                    <button
-                      key={p.label}
-                      onClick={() => setAccommodationPerNight(p.price)}
-                      className={cn(
-                        'p-4 rounded-xl border text-left transition-all group',
-                        accommodationPerNight === p.price
-                          ? 'border-[#C4960C] bg-[#C4960C]/5 shadow-md'
-                          : 'border-[#1A1814]/5 hover:border-[#C4960C]/30 hover:bg-[#FAF8F5]'
-                      )}
-                    >
-                      <Icon className={cn(
-                        'h-5 w-5 mb-2',
-                        accommodationPerNight === p.price ? 'text-[#C4960C]' : 'text-[#1A1814]/30'
-                      )} />
-                      <div className="text-sm font-bold text-[#1A1814]">{p.label}</div>
-                      <div className="text-xs text-[#1A1814]/40 mb-2">{p.sublabel}</div>
-                      <div className="text-xs font-semibold text-[#C4960C]">{p.price} MAD/night</div>
-                      <div className="mt-2 space-y-0.5">
-                        {p.examples.map((ex) => (
-                          <div key={ex} className="text-[10px] text-[#1A1814]/30">{ex}</div>
-                        ))}
-                      </div>
-                    </button>
-                  )
-                })}
-              </div>
-              <div>
-                <label className="block text-xs font-medium text-[#1A1814]/40 mb-1">Custom amount (MAD/night)</label>
-                <input
-                  type="number"
-                  min={0}
-                  value={accommodationPerNight}
-                  onChange={(e) => setAccommodationPerNight(Number(e.target.value))}
-                  className="w-full rounded-xl border border-[#1A1814]/10 bg-white px-4 py-2.5 text-[#1A1814] text-sm focus:border-[#C4960C] outline-none transition-all"
-                />
-              </div>
-            </motion.div>
-
-            {/* Food */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="p-6 md:p-8 rounded-2xl bg-white border border-[#1A1814]/5 shadow-sm"
-            >
-              <h2 className="text-lg font-bold text-[#1A1814] mb-2 flex items-center gap-2 font-serif">
-                <UtensilsCrossed className="h-5 w-5 text-[#C4960C]" />
-                Food & Drink
-              </h2>
-              <p className="text-xs text-[#1A1814]/40 mb-5">Average cost per meal, per person</p>
-              <div className="grid grid-cols-3 gap-3 mb-5">
-                {FOOD_PRESETS.map((p) => {
-                  const Icon = p.icon
-                  return (
-                    <button
-                      key={p.label}
-                      onClick={() => setMealCost(p.price)}
-                      className={cn(
-                        'p-4 rounded-xl border text-left transition-all',
-                        mealCost === p.price
-                          ? 'border-[#C4960C] bg-[#C4960C]/5 shadow-md'
-                          : 'border-[#1A1814]/5 hover:border-[#C4960C]/30 hover:bg-[#FAF8F5]'
-                      )}
-                    >
-                      <Icon className={cn(
-                        'h-5 w-5 mb-2',
-                        mealCost === p.price ? 'text-[#C4960C]' : 'text-[#1A1814]/30'
-                      )} />
-                      <div className="text-sm font-bold text-[#1A1814]">{p.label}</div>
-                      <div className="text-xs text-[#1A1814]/40 mb-2">{p.sublabel}</div>
-                      <div className="text-xs font-semibold text-[#C4960C]">~{p.price} MAD/meal</div>
-                      <div className="mt-2 space-y-0.5">
-                        {p.examples.map((ex) => (
-                          <div key={ex} className="text-[10px] text-[#1A1814]/30">{ex}</div>
-                        ))}
-                      </div>
-                    </button>
-                  )
-                })}
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-xs font-medium text-[#1A1814]/40 mb-1">Meals per day</label>
-                  <input
-                    type="number"
-                    min={1}
-                    max={5}
-                    value={mealsPerDay}
-                    onChange={(e) => setMealsPerDay(Number(e.target.value))}
-                    className="w-full rounded-xl border border-[#1A1814]/10 bg-white px-4 py-2.5 text-[#1A1814] text-sm focus:border-[#C4960C] outline-none transition-all"
-                  />
-                </div>
-                <div>
-                  <label className="block text-xs font-medium text-[#1A1814]/40 mb-1">Cost per meal (MAD)</label>
-                  <input
-                    type="number"
-                    min={0}
-                    value={mealCost}
-                    onChange={(e) => setMealCost(Number(e.target.value))}
-                    className="w-full rounded-xl border border-[#1A1814]/10 bg-white px-4 py-2.5 text-[#1A1814] text-sm focus:border-[#C4960C] outline-none transition-all"
-                  />
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Transport */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.15 }}
-              className="p-6 md:p-8 rounded-2xl bg-white border border-[#1A1814]/5 shadow-sm"
-            >
-              <h2 className="text-lg font-bold text-[#1A1814] mb-2 flex items-center gap-2 font-serif">
-                <Bus className="h-5 w-5 text-[#C4960C]" />
-                Transport
-              </h2>
-              <p className="text-xs text-[#1A1814]/40 mb-5">Average daily transport cost for the group</p>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
-                {TRANSPORT_PRESETS.map((p) => {
-                  const Icon = p.icon
-                  return (
-                    <button
-                      key={p.label}
-                      onClick={() => setTransportDaily(p.dailyCost)}
-                      className={cn(
-                        'p-4 rounded-xl border text-center transition-all',
-                        transportDaily === p.dailyCost
-                          ? 'border-[#C4960C] bg-[#C4960C]/5 shadow-md'
-                          : 'border-[#1A1814]/5 hover:border-[#C4960C]/30 hover:bg-[#FAF8F5]'
-                      )}
-                    >
-                      <Icon className={cn(
-                        'h-5 w-5 mx-auto mb-2',
-                        transportDaily === p.dailyCost ? 'text-[#C4960C]' : 'text-[#1A1814]/30'
-                      )} />
-                      <div className="text-xs font-bold text-[#1A1814]">{p.label}</div>
-                      <div className="text-[10px] text-[#1A1814]/40">{p.sublabel}</div>
-                      <div className="text-xs font-semibold text-[#C4960C] mt-1">{p.dailyCost} MAD/day</div>
-                    </button>
-                  )
-                })}
-              </div>
-              <div>
-                <label className="block text-xs font-medium text-[#1A1814]/40 mb-1">Custom daily transport (MAD)</label>
-                <input
-                  type="number"
-                  min={0}
-                  value={transportDaily}
-                  onChange={(e) => setTransportDaily(Number(e.target.value))}
-                  className="w-full rounded-xl border border-[#1A1814]/10 bg-white px-4 py-2.5 text-[#1A1814] text-sm focus:border-[#C4960C] outline-none transition-all"
-                />
-              </div>
-            </motion.div>
-
-            {/* Activities */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="p-6 md:p-8 rounded-2xl bg-white border border-[#1A1814]/5 shadow-sm"
-            >
-              <h2 className="text-lg font-bold text-[#1A1814] mb-2 flex items-center gap-2 font-serif">
-                <Ticket className="h-5 w-5 text-[#C4960C]" />
-                Activities & Excursions
-              </h2>
-              <p className="text-xs text-[#1A1814]/40 mb-5">
-                Select activities you plan to do (costs shown per person, total calculated for your group of {groupSize})
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                {ACTIVITY_PRESETS.map((activity, idx) => {
-                  const isSelected = selectedActivities.has(idx)
-                  const Icon = activity.icon
-                  return (
-                    <button
-                      key={activity.name}
-                      onClick={() => toggleActivity(idx)}
-                      className={cn(
-                        'flex items-center gap-3 p-3 rounded-xl border text-left transition-all',
-                        isSelected
-                          ? 'border-[#C4960C] bg-[#C4960C]/5'
-                          : 'border-[#1A1814]/5 hover:border-[#C4960C]/30'
-                      )}
-                    >
-                      <div className={cn(
-                        'h-8 w-8 rounded-lg flex items-center justify-center shrink-0',
-                        isSelected ? 'bg-[#C4960C] text-white' : 'bg-[#FAF8F5] text-[#1A1814]/30'
-                      )}>
-                        <Icon className="h-4 w-4" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="text-sm font-medium text-[#1A1814] truncate">{activity.name}</div>
-                        <div className="text-xs text-[#C4960C] font-semibold">{activity.cost} MAD/person</div>
-                      </div>
-                    </button>
-                  )
-                })}
-              </div>
-              {selectedActivities.size > 0 && (
-                <div className="mt-4 p-3 rounded-xl bg-[#C4960C]/5 border border-[#C4960C]/10">
-                  <div className="text-xs text-[#1A1814]/40">
-                    {selectedActivities.size} activities selected
+                  <div className="h-2.5 bg-[#FAF8F5] rounded-full overflow-hidden">
+                    <div
+                      className="h-full bg-gradient-to-r from-[#C4960C] to-[#A0522D] rounded-full transition-all duration-500"
+                      style={{ width: `${pctOfTotal}%` }}
+                    />
                   </div>
-                  <div className="text-sm font-bold text-[#C4960C]">
-                    Total: {activitiesCost.toLocaleString()} MAD ({groupSize} person{groupSize > 1 ? 's' : ''})
-                  </div>
+                  <div className="text-right text-xs text-[#1A1814]/30 mt-1">{Math.round(pctOfTotal)}% of daily budget</div>
                 </div>
-              )}
-            </motion.div>
-
-            {/* Shopping */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.25 }}
-              className="p-6 md:p-8 rounded-2xl bg-white border border-[#1A1814]/5 shadow-sm"
-            >
-              <h2 className="text-lg font-bold text-[#1A1814] mb-2 flex items-center gap-2 font-serif">
-                <ShoppingBag className="h-5 w-5 text-[#C4960C]" />
-                Shopping & Souvenirs
-              </h2>
-              <p className="text-xs text-[#1A1814]/40 mb-4">Total shopping budget for the trip</p>
-              <input
-                type="number"
-                min={0}
-                value={shoppingBudget}
-                onChange={(e) => setShoppingBudget(Number(e.target.value))}
-                className="w-full rounded-xl border border-[#1A1814]/10 bg-white px-4 py-3 text-[#1A1814] focus:border-[#C4960C] outline-none transition-all mb-4"
-                placeholder="Total shopping budget (MAD)"
-              />
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                {SHOPPING_ITEMS.map((item) => (
-                  <div key={item.name} className="p-2.5 rounded-lg bg-[#FAF8F5] border border-[#1A1814]/5">
-                    <div className="text-xs font-medium text-[#1A1814]">{item.name}</div>
-                    <div className="text-[10px] text-[#C4960C] font-semibold">{item.range}</div>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-
-            {/* Tips & Misc */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="p-6 md:p-8 rounded-2xl bg-white border border-[#1A1814]/5 shadow-sm"
-            >
-              <h2 className="text-lg font-bold text-[#1A1814] mb-2 flex items-center gap-2 font-serif">
-                <Wallet className="h-5 w-5 text-[#C4960C]" />
-                Tips & Miscellaneous
-              </h2>
-              <p className="text-xs text-[#1A1814]/40 mb-4">
-                Percentage buffer for tips, SIM cards, toiletries, and emergencies
-              </p>
-              <div className="flex items-center gap-4">
-                <input
-                  type="range"
-                  min={5}
-                  max={25}
-                  value={tipPercent}
-                  onChange={(e) => setTipPercent(Number(e.target.value))}
-                  className="flex-1 accent-[#C4960C] h-2"
-                />
-                <span className="w-14 text-center font-bold text-[#C4960C] text-lg">{tipPercent}%</span>
-              </div>
-              <p className="text-xs text-[#1A1814]/30 mt-2">
-                10-15% is typical. Includes tipping guides, restaurant service (10%), and hotel staff (10-20 MAD/day).
-              </p>
-            </motion.div>
+              )
+            })}
           </div>
 
-          {/* ============================================================ */}
-          {/*  RIGHT: Summary (sticky)                                      */}
-          {/* ============================================================ */}
-          <div className="space-y-6">
-            <div className="lg:sticky lg:top-24 space-y-6">
-              {/* Summary Card */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="p-6 md:p-8 rounded-2xl bg-white border border-[#1A1814]/5 shadow-lg"
-              >
-                <h2 className="text-lg font-bold text-[#1A1814] mb-5 flex items-center gap-2 font-serif">
-                  <CircleDollarSign className="h-5 w-5 text-[#C4960C]" />
-                  Trip Summary
-                </h2>
-
-                {/* Currency toggle */}
-                <div className="flex rounded-xl bg-[#FAF8F5] border border-[#1A1814]/5 p-1 mb-5">
-                  {(['MAD', 'USD', 'EUR', 'GBP'] as const).map((c) => (
-                    <button
-                      key={c}
-                      onClick={() => setCurrency(c)}
-                      className={cn(
-                        'flex-1 py-1.5 rounded-lg text-xs font-bold transition-all',
-                        currency === c
-                          ? 'bg-[#1A1814] text-[#FAF8F5]'
-                          : 'text-[#1A1814]/40 hover:text-[#1A1814]'
-                      )}
-                    >
-                      {c}
-                    </button>
-                  ))}
-                </div>
-
-                {/* Total */}
-                <div className="text-center mb-6 p-5 rounded-xl bg-[#1A1814] text-[#FAF8F5]">
-                  <div className="text-xs uppercase tracking-wider text-[#FAF8F5]/40 mb-1">
-                    Total Estimated Budget
-                  </div>
-                  <div className="text-3xl font-bold font-serif mt-1">
-                    {currencySymbol}{convertFromMAD(breakdown.total).toLocaleString()} {currencyLabel}
-                  </div>
-                  {currency !== 'MAD' && (
-                    <div className="text-xs text-[#FAF8F5]/30 mt-1">
-                      {breakdown.total.toLocaleString()} MAD
-                    </div>
-                  )}
-                </div>
-
-                {/* Breakdown */}
-                <div className="space-y-3 mb-6">
-                  {[
-                    { label: 'Accommodation', value: breakdown.accommodation, color: PIE_COLORS[0] },
-                    { label: 'Food & Drink', value: breakdown.food, color: PIE_COLORS[1] },
-                    { label: 'Transport', value: breakdown.transport, color: PIE_COLORS[2] },
-                    { label: 'Activities', value: breakdown.activities, color: PIE_COLORS[3] },
-                    { label: 'Shopping', value: breakdown.shopping, color: PIE_COLORS[4] },
-                    { label: 'Tips & Misc', value: breakdown.misc, color: PIE_COLORS[5] },
-                  ].map((item) => (
-                    <div key={item.label} className="flex items-center justify-between">
-                      <div className="flex items-center gap-2">
-                        <div className="h-3 w-3 rounded-full" style={{ backgroundColor: item.color }} />
-                        <span className="text-sm text-[#1A1814]/60">{item.label}</span>
-                      </div>
-                      <span className="text-sm font-semibold text-[#1A1814]">
-                        {currencySymbol}{convertFromMAD(item.value).toLocaleString()}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="border-t border-[#1A1814]/5 pt-4 space-y-2.5">
-                  <div className="flex justify-between text-sm">
-                    <span className="text-[#1A1814]/40">Daily average</span>
-                    <span className="font-semibold text-[#1A1814]">
-                      {currencySymbol}{convertFromMAD(breakdown.dailyAvg).toLocaleString()} {currencyLabel}
-                    </span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-[#1A1814]/40">Per person total</span>
-                    <span className="font-semibold text-[#1A1814]">
-                      {currencySymbol}{convertFromMAD(breakdown.perPerson).toLocaleString()} {currencyLabel}
-                    </span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-[#1A1814]/40">Per person / day</span>
-                    <span className="font-semibold text-[#C4960C]">
-                      {currencySymbol}{convertFromMAD(breakdown.perPersonPerDay).toLocaleString()} {currencyLabel}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="flex gap-2 mt-5 no-print">
-                  <button
-                    onClick={handlePrint}
-                    className="flex-1 py-3 rounded-xl bg-[#FAF8F5] border border-[#1A1814]/5 text-sm font-semibold text-[#1A1814]/60 hover:bg-[#1A1814]/5 transition-colors flex items-center justify-center gap-2"
-                  >
-                    <Printer className="h-4 w-4" />
-                    Print
-                  </button>
-                  <button
-                    onClick={handlePrint}
-                    className="flex-1 py-3 rounded-xl bg-[#C4960C] text-white text-sm font-semibold hover:bg-[#A0522D] transition-colors flex items-center justify-center gap-2"
-                  >
-                    <Download className="h-4 w-4" />
-                    Export
-                  </button>
-                </div>
-              </motion.div>
-
-              {/* Pie Chart */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
-                className="p-6 rounded-2xl bg-white border border-[#1A1814]/5"
-              >
-                <h3 className="text-sm font-bold text-[#1A1814] mb-4 font-serif">Spending Breakdown</h3>
-                <div className="h-64">
-                  <ResponsiveContainer width="100%" height="100%">
-                    <PieChart>
-                      <Pie
-                        data={pieData}
-                        cx="50%"
-                        cy="50%"
-                        innerRadius={50}
-                        outerRadius={80}
-                        paddingAngle={3}
-                        dataKey="value"
-                      >
-                        {pieData.map((_, idx) => (
-                          <Cell key={idx} fill={PIE_COLORS[idx % PIE_COLORS.length]} />
-                        ))}
-                      </Pie>
-                      <Tooltip
-                        formatter={(value) => [`${currencySymbol}${convertFromMAD(Number(value)).toLocaleString()} ${currencyLabel}`, '']}
-                        contentStyle={{
-                          borderRadius: '12px',
-                          border: '1px solid rgba(26,24,20,0.1)',
-                          fontSize: '13px',
-                          boxShadow: '0 4px 12px rgba(0,0,0,0.08)',
-                        }}
-                      />
-                      <Legend wrapperStyle={{ fontSize: '12px' }} />
-                    </PieChart>
-                  </ResponsiveContainer>
-                </div>
-              </motion.div>
-
-              {/* Comparison */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.15 }}
-                className="p-6 rounded-2xl bg-white border border-[#1A1814]/5"
-              >
-                <h3 className="text-sm font-bold text-[#1A1814] mb-4 flex items-center gap-2 font-serif">
-                  <TrendingUp className="h-4 w-4 text-[#A0522D]" />
-                  How Your Trip Compares
-                </h3>
-                <div className="h-48">
-                  <ResponsiveContainer width="100%" height="100%">
-                    <BarChart data={comparisonData} layout="vertical">
-                      <CartesianGrid strokeDasharray="3 3" stroke="rgba(26,24,20,0.05)" />
-                      <XAxis
-                        type="number"
-                        tickFormatter={(v) => `${(v / 1000).toFixed(0)}k`}
-                        fontSize={11}
-                        tick={{ fill: '#1A1814', opacity: 0.4 }}
-                      />
-                      <YAxis
-                        type="category"
-                        dataKey="name"
-                        fontSize={11}
-                        width={80}
-                        tick={{ fill: '#1A1814', opacity: 0.6 }}
-                      />
-                      <Tooltip
-                        formatter={(value) => [`${Number(value).toLocaleString()} MAD`, '']}
-                        contentStyle={{
-                          borderRadius: '12px',
-                          border: '1px solid rgba(26,24,20,0.1)',
-                          fontSize: '13px',
-                        }}
-                      />
-                      <Bar dataKey="amount" radius={[0, 8, 8, 0]}>
-                        {comparisonData.map((entry, idx) => (
-                          <Cell
-                            key={idx}
-                            fill={entry.name === 'Your Trip' ? '#C4960C' : '#1A1814'}
-                            fillOpacity={entry.name === 'Your Trip' ? 1 : 0.15}
-                          />
-                        ))}
-                      </Bar>
-                    </BarChart>
-                  </ResponsiveContainer>
-                </div>
-                <div className="space-y-1.5 mt-3">
-                  {DAILY_COMPARISON.map((d) => (
-                    <div key={d.name} className="flex justify-between text-[10px] text-[#1A1814]/30">
-                      <span>{d.name}: {d.style}</span>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
+                <p className="text-xs text-[var(--text-muted)] mt-4 italic">Prices may vary by season and operator. All prices are approximate.</p>
+          <div className="mt-6 pt-6 border-t border-[#1A1814]/5">
+            <div className="flex items-center justify-between">
+              <span className="text-sm font-semibold text-[#1A1814]/60">Daily total</span>
+              <span className="text-lg font-bold text-[#C4960C]">
+                {formatMAD(dailyMin)} - {formatMAD(dailyMax)} MAD
+              </span>
             </div>
           </div>
         </div>
 
-        {/* Budget Tips */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.35 }}
-          className="mt-14 p-8 md:p-10 rounded-2xl bg-[#1A1814] relative overflow-hidden"
-        >
+        {/* Total Trip Estimate */}
+        <div className="p-6 md:p-8 rounded-2xl bg-[#1A1814] relative overflow-hidden mb-8">
           <div className="absolute inset-0 opacity-[0.03]" style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C4960C' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
           }} />
-          <div className="relative">
-            <h2 className="text-xl font-bold text-[#FAF8F5] mb-6 flex items-center gap-3 font-serif">
-              <Lightbulb className="h-6 w-6 text-[#C4960C]" />
-              Budget Tips for Morocco
+          <div className="relative text-center">
+            <div className="flex items-center justify-center gap-2 mb-2">
+              <CalendarDays className="h-5 w-5 text-[#C4960C]" />
+              <span className="text-sm font-semibold text-[#FAF8F5]/40 uppercase tracking-wider">
+                {days}-Day Trip Estimate
+              </span>
+            </div>
+            <div className="text-3xl md:text-4xl font-bold text-[#C4960C] font-[family-name:var(--font-display)] mb-2">
+              {formatMAD(totalMin)} - {formatMAD(totalMax)} MAD
+            </div>
+            <div className="text-sm text-[#FAF8F5]/30">
+              Approximately ${formatMAD(Math.round(totalMin * 0.10))} - ${formatMAD(Math.round(totalMax * 0.10))} USD
+            </div>
+            <p className="text-xs text-[#FAF8F5]/20 mt-3">
+              Per person estimate. Does not include international flights, travel insurance, or shopping.
+            </p>
+          </div>
+        </div>
+
+        {/* Comparison Table */}
+        <div className="p-6 md:p-8 rounded-2xl bg-white border border-[#1A1814]/5 shadow-sm mb-8">
+          <h2 className="text-lg font-bold text-[#1A1814] mb-5 flex items-center gap-2 font-[family-name:var(--font-display)]">
+            <Info className="h-5 w-5 text-[#C4960C]" />
+            Style Comparison ({days} days)
+          </h2>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-[#1A1814]/5">
+                  <th className="text-left py-3 text-[#1A1814]/40 font-semibold text-xs uppercase tracking-wider">Category</th>
+                  <th className="text-right py-3 text-[#1A1814]/40 font-semibold text-xs uppercase tracking-wider">Budget</th>
+                  <th className="text-right py-3 text-[#1A1814]/40 font-semibold text-xs uppercase tracking-wider">Mid-Range</th>
+                  <th className="text-right py-3 text-[#1A1814]/40 font-semibold text-xs uppercase tracking-wider">Luxury</th>
+                </tr>
+              </thead>
+              <tbody>
+                {COST_CATEGORIES.map((cat) => (
+                  <tr key={cat.key} className="border-b border-[#1A1814]/5 last:border-0">
+                    <td className="py-3 font-medium text-[#1A1814]">{cat.label}</td>
+                    <td className={cn('text-right py-3 font-semibold', style === 'budget' ? 'text-[#C4960C]' : 'text-[#1A1814]/40')}>
+                      {formatMAD(DAILY_COSTS.budget[cat.key].min * days)}-{formatMAD(DAILY_COSTS.budget[cat.key].max * days)}
+                    </td>
+                    <td className={cn('text-right py-3 font-semibold', style === 'midrange' ? 'text-[#C4960C]' : 'text-[#1A1814]/40')}>
+                      {formatMAD(DAILY_COSTS.midrange[cat.key].min * days)}-{formatMAD(DAILY_COSTS.midrange[cat.key].max * days)}
+                    </td>
+                    <td className={cn('text-right py-3 font-semibold', style === 'luxury' ? 'text-[#C4960C]' : 'text-[#1A1814]/40')}>
+                      {formatMAD(DAILY_COSTS.luxury[cat.key].min * days)}-{formatMAD(DAILY_COSTS.luxury[cat.key].max * days)}
+                    </td>
+                  </tr>
+                ))}
+                <tr className="border-t-2 border-[#1A1814]/10">
+                  <td className="py-3 font-bold text-[#1A1814]">Total</td>
+                  <td className={cn('text-right py-3 font-bold', style === 'budget' ? 'text-[#C4960C]' : 'text-[#1A1814]/40')}>
+                    {formatMAD(Object.values(DAILY_COSTS.budget).reduce((s, c) => s + c.min, 0) * days)}-{formatMAD(Object.values(DAILY_COSTS.budget).reduce((s, c) => s + c.max, 0) * days)} MAD
+                  </td>
+                  <td className={cn('text-right py-3 font-bold', style === 'midrange' ? 'text-[#C4960C]' : 'text-[#1A1814]/40')}>
+                    {formatMAD(Object.values(DAILY_COSTS.midrange).reduce((s, c) => s + c.min, 0) * days)}-{formatMAD(Object.values(DAILY_COSTS.midrange).reduce((s, c) => s + c.max, 0) * days)} MAD
+                  </td>
+                  <td className={cn('text-right py-3 font-bold', style === 'luxury' ? 'text-[#C4960C]' : 'text-[#1A1814]/40')}>
+                    {formatMAD(Object.values(DAILY_COSTS.luxury).reduce((s, c) => s + c.min, 0) * days)}-{formatMAD(Object.values(DAILY_COSTS.luxury).reduce((s, c) => s + c.max, 0) * days)} MAD
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* Money-Saving Tips */}
+        <div className="p-6 md:p-8 rounded-2xl bg-white border border-[#C4960C]/10">
+          <button
+            onClick={() => setShowTips(!showTips)}
+            className="w-full flex items-center justify-between"
+          >
+            <h2 className="text-lg font-bold text-[#1A1814] flex items-center gap-2 font-[family-name:var(--font-display)]">
+              <TrendingDown className="h-5 w-5 text-[#C4960C]" />
+              Money-Saving Tips for Morocco
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {BUDGET_TIPS.map((tip, idx) => (
-                <div key={idx} className="flex items-start gap-3 text-sm text-[#FAF8F5]/60">
-                  <span className="shrink-0 h-6 w-6 rounded-lg bg-[#C4960C]/20 text-[#C4960C] text-xs flex items-center justify-center font-bold mt-0.5">
-                    {idx + 1}
-                  </span>
-                  <span className="leading-relaxed">{tip}</span>
+            {showTips ? (
+              <ChevronUp className="h-5 w-5 text-[#1A1814]/30" />
+            ) : (
+              <ChevronDown className="h-5 w-5 text-[#1A1814]/30" />
+            )}
+          </button>
+          {showTips && (
+            <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {SAVING_TIPS.map((tip, idx) => (
+                <div key={idx} className="flex items-start gap-3">
+                  <div className="h-6 w-6 rounded-full bg-[#C4960C]/10 flex items-center justify-center shrink-0 mt-0.5">
+                    <span className="text-xs font-bold text-[#C4960C]">{idx + 1}</span>
+                  </div>
+                  <div>
+                    <div className="text-sm font-semibold text-[#1A1814] mb-0.5">{tip.title}</div>
+                    <p className="text-xs text-[#1A1814]/50 leading-relaxed">{tip.text}</p>
+                  </div>
                 </div>
               ))}
             </div>
-          </div>
-        </motion.div>
+          )}
+        </div>
       </div>
     </main>
   )

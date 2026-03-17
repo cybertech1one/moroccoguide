@@ -1992,6 +1992,45 @@ export default function FestivalsCalendarPage() {
         </section>
 
         {/* ═══════════════════════════════════════════════════════
+            FESTIVAL HIGHLIGHTS GALLERY
+            ═══════════════════════════════════════════════════════ */}
+        <section className="py-16 md:py-20" style={{ backgroundColor: '#FAF8F5' }}>
+          <div className="container-morocco">
+            <div className="text-center mb-12">
+              <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold mb-4" style={{ color: '#1A1814' }}>
+                Festival Highlights
+              </h2>
+              <p className="text-lg text-[#1A1814]/70 max-w-2xl mx-auto">
+                From the spiritual rhythms of Gnaoua to the thunder of Fantasia cavalry charges, Morocco&apos;s festivals are unforgettable.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="relative overflow-hidden rounded-xl aspect-[4/3] group">
+                <img src="/images/hero-gnaoua-festival.webp" alt="Musicians performing at the Gnaoua World Music Festival in Essaouira, Morocco" loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <p className="absolute bottom-2 left-2 right-2 text-xs text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  Gnaoua World Music Festival -- Essaouira
+                </p>
+              </div>
+              <div className="relative overflow-hidden rounded-xl aspect-[4/3] group">
+                <img src="/images/hero-fantasia-tbourida.webp" alt="Traditional Fantasia Tbourida cavalry charge with Moroccan horsemen in ceremonial dress" loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <p className="absolute bottom-2 left-2 right-2 text-xs text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  Fantasia Tbourida -- Traditional cavalry charge
+                </p>
+              </div>
+              <div className="relative overflow-hidden rounded-xl aspect-[4/3] group">
+                <img src="/images/poster-ramadan.webp" alt="Illustrated poster showing Ramadan traditions in Morocco including iftar meals, prayer times, and cultural practices" loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <p className="absolute bottom-2 left-2 right-2 text-xs text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  Ramadan in Morocco -- A month of reflection and community
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════════════════════════
             SECTION 12: EXPLORE MORE
             ═══════════════════════════════════════════════════════ */}
         <ExploreMore

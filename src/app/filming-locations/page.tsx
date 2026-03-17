@@ -32,7 +32,6 @@ import {
   Landmark,
   Sunrise,
   Mountain,
-  TreePalm,
   Drama,
   Video,
   Megaphone,

@@ -544,6 +544,21 @@ export default function MedinaGuidePage() {
         </div>
       </section>
 
+      {/* ── Illustrated Map Visual ── */}
+      <div className="container-morocco py-12">
+        <div className="rounded-2xl overflow-hidden">
+          <img
+            src="/images/art-morocco-illustrated-map.webp"
+            alt="Artistic illustrated map of Morocco highlighting major medina cities, trade routes, and cultural landmarks"
+            loading="lazy"
+            className="w-full h-64 md:h-96 object-cover"
+          />
+          <p className="text-sm text-[var(--text-muted)] mt-3 text-center">
+            Morocco's greatest medinas span the kingdom from the Rif Mountains to the Atlantic coast
+          </p>
+        </div>
+      </div>
+
       {/* ── 10 Navigation Tips ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco">
@@ -579,6 +594,21 @@ export default function MedinaGuidePage() {
           </div>
         </div>
       </section>
+
+      {/* ── Fes Souk Painting Visual ── */}
+      <div className="container-morocco py-12">
+        <div className="rounded-2xl overflow-hidden">
+          <img
+            src="/images/art-fes-souk-painting.webp"
+            alt="Artistic painting depicting the bustling Fes souk with merchants, colorful goods, and narrow alleyways under shafts of light"
+            loading="lazy"
+            className="w-full h-64 md:h-80 object-cover"
+          />
+          <p className="text-sm text-[var(--text-muted)] mt-3 text-center">
+            The souks of Fes have inspired artists for centuries -- a sensory feast of color, craft, and commerce
+          </p>
+        </div>
+      </div>
 
       {/* ── Souk Guide ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)]">

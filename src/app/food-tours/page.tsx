@@ -63,7 +63,7 @@ const jsonLd = {
       name: 'How much does a food tour in Morocco cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Food tours in Morocco range from 150 MAD for a self-guided walk with street food tastings to 1,200 MAD for a premium private guided tour with multiple courses. The average guided group food tour costs 300-600 MAD per person including tastings. Cooking class combos that include a market tour typically cost 500-1,000 MAD.',
+        text: 'Food tours in Morocco range from 150 MAD for a self-guided walk with street food tastings to 1,200 MAD for a premium private guided tour with multiple courses. The average guided group food tour costs from 300 MAD per person including tastings. Cooking class combos that include a market tour typically cost from 500 MAD.',
       },
     },
     {
@@ -133,7 +133,7 @@ const marrakechTours = [
   {
     name: 'Jemaa el-Fnaa Evening Food Walk',
     duration: '3-4 hours',
-    price: '350-600 MAD',
+    price: 'from 350 MAD',
     groupSize: '2-12',
     rating: 5,
     bestTime: 'Start at 6:30 PM (sunset)',
@@ -153,7 +153,7 @@ const marrakechTours = [
   {
     name: 'Medina Tasting Trail',
     duration: '3 hours',
-    price: '300-500 MAD',
+    price: 'from 300 MAD',
     groupSize: '2-8',
     rating: 5,
     bestTime: 'Morning, 9:30 AM - 12:30 PM',
@@ -173,7 +173,7 @@ const marrakechTours = [
   {
     name: 'Cooking Class + Market Tour Combo',
     duration: '4-5 hours',
-    price: '500-800 MAD',
+    price: 'from 500 MAD',
     groupSize: '2-10',
     rating: 5,
     bestTime: 'Morning, 9:00 AM start',
@@ -200,7 +200,7 @@ const fesTours = [
   {
     name: 'Fes Medina Food Walk',
     duration: '3-4 hours',
-    price: '350-700 MAD',
+    price: 'from 350 MAD',
     groupSize: '2-8',
     rating: 5,
     bestTime: 'Morning, 10:00 AM',
@@ -220,7 +220,7 @@ const fesTours = [
   {
     name: 'Pastilla Tasting Experience',
     duration: '2-3 hours',
-    price: '250-500 MAD',
+    price: 'from 250 MAD',
     groupSize: '2-6',
     rating: 5,
     bestTime: 'Afternoon, 2:00 PM',
@@ -238,7 +238,7 @@ const fesTours = [
   {
     name: 'Jewish Quarter Food Heritage',
     duration: '2.5 hours',
-    price: '300-550 MAD',
+    price: 'from 300 MAD',
     groupSize: '2-8',
     rating: 4,
     bestTime: 'Morning, 10:00 AM',
@@ -263,7 +263,7 @@ const casablancaTours = [
   {
     name: 'Central Market (Marche Central) Food Tour',
     duration: '2.5-3 hours',
-    price: '300-550 MAD',
+    price: 'from 300 MAD',
     groupSize: '2-10',
     rating: 4,
     bestTime: 'Morning, 9:00 AM - 12:00 PM',
@@ -282,7 +282,7 @@ const casablancaTours = [
   {
     name: 'Casablanca Street Food by Night',
     duration: '3 hours',
-    price: '250-450 MAD',
+    price: 'from 250 MAD',
     groupSize: '2-12',
     rating: 4,
     bestTime: 'Evening, 7:00 PM start',
@@ -308,7 +308,7 @@ const essaouiraTours = [
   {
     name: 'Fish Market to Table Experience',
     duration: '3-4 hours',
-    price: '350-650 MAD',
+    price: 'from 350 MAD',
     groupSize: '2-8',
     rating: 5,
     bestTime: 'Morning, 9:00 AM (when boats return)',
@@ -328,7 +328,7 @@ const essaouiraTours = [
   {
     name: 'Argan Oil Tasting Tour',
     duration: '2-3 hours',
-    price: '200-400 MAD',
+    price: 'from 200 MAD',
     groupSize: '2-10',
     rating: 4,
     bestTime: 'Afternoon, 2:00 PM',
@@ -339,7 +339,7 @@ const essaouiraTours = [
       'Watch the traditional argan oil extraction process by hand',
       'Taste culinary vs. cosmetic argan oil and learn the differences',
       'Amlou tasting -- argan oil blended with roasted almonds and honey',
-      'Learn fair prices to avoid tourist markup (culinary oil: 250-350 MAD per liter)',
+      'Learn fair prices to avoid tourist markup (culinary oil: from 250 MAD per liter)',
       'Support a social enterprise that empowers rural Amazigh women',
     ],
   },
@@ -353,7 +353,7 @@ const chefchaouenExperiences = [
   {
     name: 'Blue City Food Walk',
     duration: '2.5 hours',
-    price: '200-400 MAD',
+    price: 'from 200 MAD',
     groupSize: '2-8',
     rating: 4,
     bestTime: 'Morning, 10:00 AM',
@@ -371,7 +371,7 @@ const chefchaouenExperiences = [
   {
     name: 'Rif Mountain Cooking Experience',
     duration: '3-4 hours',
-    price: '350-550 MAD',
+    price: 'from 350 MAD',
     groupSize: '2-6',
     rating: 4,
     bestTime: 'Morning, 9:30 AM',
@@ -396,7 +396,7 @@ const tourOperators = [
   {
     name: 'Marrakech Food Tours',
     city: 'Marrakech',
-    priceRange: '350-800 MAD',
+    priceRange: 'from 350 MAD',
     website: 'marrakechfoodtours.com',
     tours: ['Evening Jemaa el-Fnaa walk', 'Morning medina trail', 'Cooking + market combo'],
     rating: 5,
@@ -406,7 +406,7 @@ const tourOperators = [
   {
     name: 'Fes Cooking & Food Tours',
     city: 'Fes',
-    priceRange: '300-700 MAD',
+    priceRange: 'from 300 MAD',
     website: 'fescooking.com',
     tours: ['Fes Medina food walk', 'Pastilla experience', 'Jewish Quarter heritage tour'],
     rating: 5,
@@ -416,7 +416,7 @@ const tourOperators = [
   {
     name: 'Plan-it Fez',
     city: 'Fes',
-    priceRange: '400-900 MAD',
+    priceRange: 'from 400 MAD',
     website: 'plan-it-fez.com',
     tours: ['Fes street food walk', 'Market & cooking class', 'Full-day Fassi immersion'],
     rating: 5,
@@ -426,7 +426,7 @@ const tourOperators = [
   {
     name: 'Casablanca Food Tours',
     city: 'Casablanca',
-    priceRange: '250-550 MAD',
+    priceRange: 'from 250 MAD',
     website: 'casablancafoodtours.com',
     tours: ['Central Market morning tour', 'Street food by night', 'Habous quarter walk'],
     rating: 4,
@@ -436,7 +436,7 @@ const tourOperators = [
   {
     name: 'Essaouira Food & Culture',
     city: 'Essaouira',
-    priceRange: '200-650 MAD',
+    priceRange: 'from 200 MAD',
     website: 'essaouirafood.com',
     tours: ['Fish market to table', 'Argan oil tasting', 'Medina food walk'],
     rating: 5,
@@ -446,7 +446,7 @@ const tourOperators = [
   {
     name: 'Morocco Food Guide',
     city: 'Multiple cities',
-    priceRange: '400-1,200 MAD',
+    priceRange: 'from 400 MAD',
     website: 'moroccofoodguide.com',
     tours: ['Multi-city food odyssey', 'Custom food itineraries', 'Private chef experiences'],
     rating: 5,
@@ -465,15 +465,15 @@ const selfGuidedRoutes = [
     routeName: 'Jemaa el-Fnaa to Mellah Spice Loop',
     duration: '2-3 hours',
     distance: '2.5 km',
-    budget: '100-200 MAD for all tastings',
+    budget: 'from 100 MAD for all tastings',
     stops: [
       { name: 'Orange juice row on Jemaa el-Fnaa', item: 'Fresh-squeezed orange juice (4 MAD)', note: 'Look for stalls squeezing to order, not pre-made' },
-      { name: 'Stall 14 for snail broth (babouche)', item: 'Small bowl of snail soup (5-10 MAD)', note: 'The stall with the longest local queue' },
-      { name: 'Grilled meat row (south side of square)', item: 'Mixed grill plate with bread (30-40 MAD)', note: 'Insist on a freshly grilled plate, not reheated' },
-      { name: 'Rue Riad Zitoun el-Kedim heading south', item: 'Msemen from a street-side griddle stall (3-5 MAD)', note: 'Best eaten hot off the griddle with honey or cheese' },
+      { name: 'Stall 14 for snail broth (babouche)', item: 'Small bowl of snail soup (from 5 MAD)', note: 'The stall with the longest local queue' },
+      { name: 'Grilled meat row (south side of square)', item: 'Mixed grill plate with bread (from 30 MAD)', note: 'Insist on a freshly grilled plate, not reheated' },
+      { name: 'Rue Riad Zitoun el-Kedim heading south', item: 'Msemen from a street-side griddle stall (from 3 MAD)', note: 'Best eaten hot off the griddle with honey or cheese' },
       { name: 'Mellah Spice Souk (Place des Ferblantiers area)', item: 'Spice browsing and tasting', note: 'Compare prices at 3 stalls before buying' },
-      { name: 'Bahia Palace area olive vendors', item: 'Mixed olives (10-20 MAD per portion)', note: 'Ask to taste before buying -- vendors expect it' },
-      { name: 'Bab Mellah area bakeries', item: 'Chebakia pastry and almond briouats (5-10 MAD)', note: 'The neighborhood bakeries are cheaper than the souk' },
+      { name: 'Bahia Palace area olive vendors', item: 'Mixed olives (from 10 MAD per portion)', note: 'Ask to taste before buying -- vendors expect it' },
+      { name: 'Bab Mellah area bakeries', item: 'Chebakia pastry and almond briouats (from 5 MAD)', note: 'The neighborhood bakeries are cheaper than the souk' },
     ],
   },
   {
@@ -481,15 +481,15 @@ const selfGuidedRoutes = [
     routeName: 'Talaa Kbira Descent -- The Great Foodway',
     duration: '2-3 hours',
     distance: '2 km (all downhill)',
-    budget: '80-150 MAD for all tastings',
+    budget: 'from 80 MAD for all tastings',
     stops: [
-      { name: 'Bab Bou Jeloud (Blue Gate) entrance', item: 'Sfenj (donuts) from the stall on the right (2-3 MAD each)', note: 'Buy them hot from the oil -- best at 8-9 AM' },
-      { name: 'First section of Talaa Kbira', item: 'Fresh nougat and dried fruit (10-20 MAD)', note: 'The nougat sellers are right after the Blue Gate' },
+      { name: 'Bab Bou Jeloud (Blue Gate) entrance', item: 'Sfenj (donuts) from the stall on the right (from 2 MAD each)', note: 'Buy them hot from the oil -- best at 8-9 AM' },
+      { name: 'First section of Talaa Kbira', item: 'Fresh nougat and dried fruit (from 10 MAD)', note: 'The nougat sellers are right after the Blue Gate' },
       { name: 'Neighborhood ferran (communal oven)', item: 'Watch bread going in and out of the wood oven (free)', note: 'A fascinating cultural experience -- tip the baker 5 MAD' },
-      { name: 'Souk el-Attarine (spice and perfume souk)', item: 'Ras el hanout and saffron tasting (free with purchase)', note: 'Buy saffron here: 15-30 MAD per gram for genuine threads' },
-      { name: 'Pastilla shop near Medersa Bou Inania', item: 'Individual pastilla (15-25 MAD)', note: 'Ask for a pigeon pastilla if available -- the original variety' },
-      { name: 'Olive merchants on lower Talaa Kbira', item: 'Olive tasting and purchase (10-15 MAD per portion)', note: 'Fes olives are different from Marrakech -- try the green cracked variety' },
-      { name: 'Bottom of Talaa Kbira near Kairaouine Mosque', item: 'Harira soup (5-8 MAD) and fresh bread', note: 'The stalls here serve the medina workers -- authentic and cheap' },
+      { name: 'Souk el-Attarine (spice and perfume souk)', item: 'Ras el hanout and saffron tasting (free with purchase)', note: 'Buy saffron here: from 15 MAD per gram for genuine threads' },
+      { name: 'Pastilla shop near Medersa Bou Inania', item: 'Individual pastilla (from 15 MAD)', note: 'Ask for a pigeon pastilla if available -- the original variety' },
+      { name: 'Olive merchants on lower Talaa Kbira', item: 'Olive tasting and purchase (from 10 MAD per portion)', note: 'Fes olives are different from Marrakech -- try the green cracked variety' },
+      { name: 'Bottom of Talaa Kbira near Kairaouine Mosque', item: 'Harira soup (from 5 MAD) and fresh bread', note: 'The stalls here serve the medina workers -- authentic and cheap' },
     ],
   },
   {
@@ -497,13 +497,13 @@ const selfGuidedRoutes = [
     routeName: 'Port to Medina Seafood Trail',
     duration: '1.5-2 hours',
     distance: '1.5 km',
-    budget: '80-200 MAD for all tastings',
+    budget: 'from 80 MAD for all tastings',
     stops: [
       { name: 'Port de Peche (fishing port) entrance', item: 'Watch the morning fish auction (free)', note: 'Best at 7-9 AM when boats return with the catch' },
-      { name: 'Outdoor grill restaurants by the port', item: 'Grilled fish or mixed seafood platter (60-120 MAD)', note: 'Negotiate the price before sitting down -- ask for the day\'s catch' },
-      { name: 'Medina entrance near Porte de la Marine', item: 'Sardine sandwich from a street vendor (10-15 MAD)', note: 'Essaouira\'s signature cheap eat -- fresh sardines in bread' },
-      { name: 'Rue de la Skala food stalls', item: 'Moroccan salads and bread (15-25 MAD)', note: 'Small hole-in-the-wall stalls serving locals' },
-      { name: 'Place Moulay Hassan juice vendors', item: 'Fresh juices and smoothies (10-20 MAD)', note: 'Try the avocado-almond milkshake -- an Essaouira specialty' },
+      { name: 'Outdoor grill restaurants by the port', item: 'Grilled fish or mixed seafood platter (from 60 MAD)', note: 'Negotiate the price before sitting down -- ask for the day\'s catch' },
+      { name: 'Medina entrance near Porte de la Marine', item: 'Sardine sandwich from a street vendor (from 10 MAD)', note: 'Essaouira\'s signature cheap eat -- fresh sardines in bread' },
+      { name: 'Rue de la Skala food stalls', item: 'Moroccan salads and bread (from 15 MAD)', note: 'Small hole-in-the-wall stalls serving locals' },
+      { name: 'Place Moulay Hassan juice vendors', item: 'Fresh juices and smoothies (from 10 MAD)', note: 'Try the avocado-almond milkshake -- an Essaouira specialty' },
       { name: 'Argan oil shop on Rue de la Skala', item: 'Amlou tasting and argan oil (free tasting, oil from 250 MAD/liter)', note: 'Taste the culinary oil on bread -- the flavor is unmistakable' },
     ],
   },
@@ -514,16 +514,16 @@ const selfGuidedRoutes = [
    ================================================================= */
 
 const topCookingClasses = [
-  { rank: 1, name: 'La Maison Arabe', city: 'Marrakech', price: '700-1,200 MAD', specialty: 'Classic Moroccan three-course meal with market tour', bestFor: 'Luxury, iconic setting' },
-  { rank: 2, name: 'Souk Cuisine', city: 'Marrakech', price: '500-800 MAD', specialty: 'Intimate riad kitchen with food history focus', bestFor: 'Food enthusiasts, solo travelers' },
-  { rank: 3, name: 'Amal Center', city: 'Marrakech', price: '300-500 MAD', specialty: 'Non-profit training center with home-cooking focus', bestFor: 'Budget, social impact' },
-  { rank: 4, name: 'Cafe Clock', city: 'Fes', price: '400-700 MAD', specialty: 'Fassi palace cuisine in the heart of the medina', bestFor: 'Cultural depth, medina setting' },
-  { rank: 5, name: 'Palais Amani', city: 'Fes', price: '800-1,500 MAD', specialty: 'Garden-to-table with rooftop herb garden', bestFor: 'Luxury, serious cooks' },
-  { rank: 6, name: 'Dar Namir', city: 'Marrakech', price: '500-900 MAD', specialty: 'Deep-dive into a single dish', bestFor: 'Perfectionists, couples' },
-  { rank: 7, name: "L'Atelier de Madada", city: 'Essaouira', price: '600-1,000 MAD', specialty: 'Seafood cooking starting at the fishing port', bestFor: 'Seafood lovers, port experience' },
-  { rank: 8, name: 'Khmissa Cooking', city: 'Essaouira', price: '400-700 MAD', specialty: 'Family home cooking with mother-daughter team', bestFor: 'Authentic family experience' },
-  { rank: 9, name: 'Ruined Garden', city: 'Fes', price: '500-900 MAD', specialty: 'Atmospheric ruined riad with researched Fassi recipes', bestFor: 'Atmosphere, foodies' },
-  { rank: 10, name: 'Lina Ryad & Spa', city: 'Chefchaouen', price: '350-600 MAD', specialty: 'Riffian mountain cuisine with rooftop views', bestFor: 'Off-beat, mountain food' },
+  { rank: 1, name: 'La Maison Arabe', city: 'Marrakech', price: 'from 700 MAD', specialty: 'Classic Moroccan three-course meal with market tour', bestFor: 'Luxury, iconic setting' },
+  { rank: 2, name: 'Souk Cuisine', city: 'Marrakech', price: 'from 500 MAD', specialty: 'Intimate riad kitchen with food history focus', bestFor: 'Food enthusiasts, solo travelers' },
+  { rank: 3, name: 'Amal Center', city: 'Marrakech', price: 'from 300 MAD', specialty: 'Non-profit training center with home-cooking focus', bestFor: 'Budget, social impact' },
+  { rank: 4, name: 'Cafe Clock', city: 'Fes', price: 'from 400 MAD', specialty: 'Fassi palace cuisine in the heart of the medina', bestFor: 'Cultural depth, medina setting' },
+  { rank: 5, name: 'Palais Amani', city: 'Fes', price: 'from 800 MAD', specialty: 'Garden-to-table with rooftop herb garden', bestFor: 'Luxury, serious cooks' },
+  { rank: 6, name: 'Dar Namir', city: 'Marrakech', price: 'from 500 MAD', specialty: 'Deep-dive into a single dish', bestFor: 'Perfectionists, couples' },
+  { rank: 7, name: "L'Atelier de Madada", city: 'Essaouira', price: 'from 600 MAD', specialty: 'Seafood cooking starting at the fishing port', bestFor: 'Seafood lovers, port experience' },
+  { rank: 8, name: 'Khmissa Cooking', city: 'Essaouira', price: 'from 400 MAD', specialty: 'Family home cooking with mother-daughter team', bestFor: 'Authentic family experience' },
+  { rank: 9, name: 'Ruined Garden', city: 'Fes', price: 'from 500 MAD', specialty: 'Atmospheric ruined riad with researched Fassi recipes', bestFor: 'Atmosphere, foodies' },
+  { rank: 10, name: 'Lina Ryad & Spa', city: 'Chefchaouen', price: 'from 350 MAD', specialty: 'Riffian mountain cuisine with rooftop views', bestFor: 'Off-beat, mountain food' },
 ];
 
 /* =================================================================
@@ -531,14 +531,14 @@ const topCookingClasses = [
    ================================================================= */
 
 const spiceGuide = [
-  { name: 'Ras el Hanout', fairPrice: '80-150 MAD per 100g', description: 'The iconic Moroccan spice blend meaning "head of the shop" -- each merchant\'s signature mix of 12-30 spices. Quality varies enormously. A good blend should be fragrant, complex, and never dusty or stale. Ask to smell before buying.', tip: 'Buy from a spice merchant, not a tourist souk stall. The tourist price can be 3x the local price.' },
-  { name: 'Saffron', fairPrice: '15-30 MAD per gram', description: 'Moroccan saffron is grown in the Taliouine region of the Anti-Atlas. Genuine saffron threads are deep red, slightly moist, and intensely fragrant. Imitation saffron (dyed safflower or corn silk) is common in tourist souks.', tip: 'Test by dropping a thread in warm water: real saffron releases color slowly and stays red. Fake saffron turns the water yellow immediately and the threads lose color.' },
-  { name: 'Cumin (Kamoun)', fairPrice: '20-40 MAD per 100g', description: 'Used in nearly every Moroccan savory dish. Moroccan cumin is slightly different from the Indian variety -- earthier and less sharp. Essential for tagines, harira, and as a table condiment alongside salt.', tip: 'Buy whole seeds and grind at home for the best flavor. Pre-ground cumin loses its aroma within weeks.' },
-  { name: 'Turmeric (Kharkoum)', fairPrice: '15-30 MAD per 100g', description: 'The golden spice used for color and a mild earthy flavor. Moroccan turmeric is used more subtly than in Indian cooking -- as a background note rather than a dominant flavor.', tip: 'Fresh turmeric root is available in some markets and is far more flavorful than dried. It stains everything yellow, so handle with care.' },
-  { name: 'Cinnamon (Karfa)', fairPrice: '30-60 MAD per 100g (sticks)', description: 'Used in both savory and sweet dishes, Moroccan cooking uses true Ceylon cinnamon (lighter, more delicate) rather than the stronger cassia variety common in the United States. Essential for pastilla and many tagines.', tip: 'Buy cinnamon sticks rather than ground. They last longer and you can grind as needed. Sticks should be thin-barked and fragrant.' },
-  { name: 'Paprika (Felfla Hamra)', fairPrice: '15-25 MAD per 100g', description: 'Moroccan paprika ranges from sweet to mildly hot. It provides the red color base for many tagines and sauces. Often combined with cumin and turmeric for the foundational Moroccan spice trio.', tip: 'The smoked variety (similar to Spanish pimenton) is less common in Morocco but increasingly available. The standard sweet paprika is what most recipes call for.' },
-  { name: 'Ginger (Skinjbir)', fairPrice: '20-40 MAD per 100g', description: 'Dried ground ginger is a cornerstone of Moroccan cuisine, used in tagines, couscous, pastilla, and pastries. It adds warmth without the sharpness of fresh ginger. Moroccan cooking uses dried ginger far more than fresh.', tip: 'Quality dried ginger should be light tan and intensely fragrant. Dark or clumpy ginger is old and has lost its potency.' },
-  { name: 'Preserved Lemons (Hamd Marakad)', fairPrice: '5-15 MAD each', description: 'Not a spice but an essential Moroccan ingredient. Whole lemons preserved in salt and their own juice for 30 days. The rind becomes soft, silky, and incredibly flavorful. Indispensable in chicken tagine with olives.', tip: 'The best preserved lemons are at least one month old. You use only the rind, not the flesh. One lemon goes a long way.' },
+  { name: 'Ras el Hanout', fairPrice: 'from 80 MAD per 100g', description: 'The iconic Moroccan spice blend meaning "head of the shop" -- each merchant\'s signature mix of 12-30 spices. Quality varies enormously. A good blend should be fragrant, complex, and never dusty or stale. Ask to smell before buying.', tip: 'Buy from a spice merchant, not a tourist souk stall. The tourist price can be 3x the local price.' },
+  { name: 'Saffron', fairPrice: 'from 15 MAD per gram', description: 'Moroccan saffron is grown in the Taliouine region of the Anti-Atlas. Genuine saffron threads are deep red, slightly moist, and intensely fragrant. Imitation saffron (dyed safflower or corn silk) is common in tourist souks.', tip: 'Test by dropping a thread in warm water: real saffron releases color slowly and stays red. Fake saffron turns the water yellow immediately and the threads lose color.' },
+  { name: 'Cumin (Kamoun)', fairPrice: 'from 20 MAD per 100g', description: 'Used in nearly every Moroccan savory dish. Moroccan cumin is slightly different from the Indian variety -- earthier and less sharp. Essential for tagines, harira, and as a table condiment alongside salt.', tip: 'Buy whole seeds and grind at home for the best flavor. Pre-ground cumin loses its aroma within weeks.' },
+  { name: 'Turmeric (Kharkoum)', fairPrice: 'from 15 MAD per 100g', description: 'The golden spice used for color and a mild earthy flavor. Moroccan turmeric is used more subtly than in Indian cooking -- as a background note rather than a dominant flavor.', tip: 'Fresh turmeric root is available in some markets and is far more flavorful than dried. It stains everything yellow, so handle with care.' },
+  { name: 'Cinnamon (Karfa)', fairPrice: 'from 30 MAD per 100g (sticks)', description: 'Used in both savory and sweet dishes, Moroccan cooking uses true Ceylon cinnamon (lighter, more delicate) rather than the stronger cassia variety common in the United States. Essential for pastilla and many tagines.', tip: 'Buy cinnamon sticks rather than ground. They last longer and you can grind as needed. Sticks should be thin-barked and fragrant.' },
+  { name: 'Paprika (Felfla Hamra)', fairPrice: 'from 15 MAD per 100g', description: 'Moroccan paprika ranges from sweet to mildly hot. It provides the red color base for many tagines and sauces. Often combined with cumin and turmeric for the foundational Moroccan spice trio.', tip: 'The smoked variety (similar to Spanish pimenton) is less common in Morocco but increasingly available. The standard sweet paprika is what most recipes call for.' },
+  { name: 'Ginger (Skinjbir)', fairPrice: 'from 20 MAD per 100g', description: 'Dried ground ginger is a cornerstone of Moroccan cuisine, used in tagines, couscous, pastilla, and pastries. It adds warmth without the sharpness of fresh ginger. Moroccan cooking uses dried ginger far more than fresh.', tip: 'Quality dried ginger should be light tan and intensely fragrant. Dark or clumpy ginger is old and has lost its potency.' },
+  { name: 'Preserved Lemons (Hamd Marakad)', fairPrice: 'from 5 MAD each', description: 'Not a spice but an essential Moroccan ingredient. Whole lemons preserved in salt and their own juice for 30 days. The rind becomes soft, silky, and incredibly flavorful. Indispensable in chicken tagine with olives.', tip: 'The best preserved lemons are at least one month old. You use only the rind, not the flesh. One lemon goes a long way.' },
 ];
 
 /* =================================================================
@@ -612,8 +612,8 @@ const etiquetteTips = [
   { title: 'Eat with your right hand', description: 'In Moroccan culture, the left hand is considered unclean. When eating from shared dishes, always use your right hand. Utensils are provided in restaurants, but traditional eating with bread uses the right hand to scoop food.' },
   { title: 'Accept hospitality graciously', description: 'If a stall vendor offers you a taste, accept it with a smile and a thank you (shukran). Refusing food is considered impolite in Moroccan culture. You are not obligated to buy after tasting, but it is a gesture of goodwill.' },
   { title: 'Pace yourself on food tours', description: 'A typical food tour includes 8-12 tastings over 3-4 hours. Take small portions at each stop, especially at the beginning. The portions increase as the tour progresses, and you do not want to be full by stop number four.' },
-  { title: 'Tipping on food tours', description: 'Tip your food tour guide 50-100 MAD at the end of the tour. For cooking classes, 50-100 MAD per person is appropriate. At individual food stalls, tipping is not expected but rounding up is appreciated. A 10 MAD tip at a bakery or ferran is generous.' },
-  { title: 'Photography etiquette', description: 'Ask before photographing people, especially women and children. Photographing food is always welcome and vendors are usually proud to have their dishes photographed. Some stall owners may expect a small tip (5-10 MAD) for posing.' },
+  { title: 'Tipping on food tours', description: 'Tip your food tour guide from 50 MAD at the end of the tour. For cooking classes, from 50 MAD per person is appropriate. At individual food stalls, tipping is not expected but rounding up is appreciated. A 10 MAD tip at a bakery or ferran is generous.' },
+  { title: 'Photography etiquette', description: 'Ask before photographing people, especially women and children. Photographing food is always welcome and vendors are usually proud to have their dishes photographed. Some stall owners may expect a small tip (from 5 MAD) for posing.' },
   { title: 'Dress modestly', description: 'Cover shoulders and knees, especially in the medina and near religious sites. Comfortable closed-toe shoes with good grip are essential for slippery medina streets. Bring a light scarf for entering areas near mosques.' },
   { title: 'Bargaining at food stalls', description: 'Prices at food stalls are generally fixed and low. Do not try to haggle over a 5 MAD bowl of soup. Bargaining is appropriate at spice shops and for larger purchases of dried goods, nuts, and argan oil.' },
   { title: 'Water and ice safety', description: 'Drink bottled water (Sidi Ali and Ain Saiss are the main Moroccan brands). Ice in restaurants is generally safe (made from purified water), but avoid ice from street vendors. Freshly squeezed juices are safe when squeezed in front of you.' },
@@ -760,7 +760,7 @@ export default function FoodToursPage() {
             <p className="text-lg text-[#1A1814]/70 max-w-3xl mx-auto">
               The Red City is Morocco&apos;s culinary playground. From the legendary night food stalls of
               Jemaa el-Fnaa to hidden medina bakeries and hands-on cooking classes, Marrakech offers
-              the widest variety of food tour experiences in the country. Budget 300-800 MAD per person.
+              the widest variety of food tour experiences in the country. Budget from 300 MAD per person.
             </p>
           </div>
 
@@ -1319,6 +1319,11 @@ export default function FoodToursPage() {
           </div>
         </div>
       </section>
+
+      {/* Pricing Note */}
+      <div className="container-morocco">
+        <p className="text-xs text-[var(--text-muted)] italic py-2 text-center">All prices are approximate and may vary by season, location, and operator.</p>
+      </div>
 
       {/* ─────────────────────────────────────────────────────────
           SECTION 11 : SPICE GUIDE

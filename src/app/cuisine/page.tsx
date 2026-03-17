@@ -1964,6 +1964,53 @@ export default function CuisinePage() {
       </section>
 
 {/* ════════════════════════════════════════════════════════
+          MOROCCAN FOOD GALLERY
+          ════════════════════════════════════════════════════════ */}
+      <section className="py-16 md:py-20" style={{ backgroundColor: '#FAF8F5' }}>
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <Camera className="w-8 h-8 text-[var(--color-primary)] mx-auto mb-3" />
+            <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold mb-4" style={{ color: '#1A1814' }}>
+              Moroccan Food Gallery
+            </h2>
+            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
+              A visual feast of Morocco&apos;s culinary heritage -- from sizzling street food stalls to elaborate family feasts.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {[
+              { src: '/images/photo-street-food-marrakech.webp', alt: 'Bustling street food stall in Marrakech Jemaa el-Fna serving grilled meats and snails' },
+              { src: '/images/photo-moroccan-breakfast.webp', alt: 'Traditional Moroccan breakfast spread with msemen, amlou, honey, olive oil, and mint tea' },
+              { src: '/images/photo-moroccan-couscous.webp', alt: 'Platter of Friday couscous topped with seven vegetables and tender lamb' },
+              { src: '/images/photo-moroccan-dates.webp', alt: 'Fresh Medjool dates from the Draa Valley stacked at a Moroccan market' },
+              { src: '/images/photo-moroccan-olives.webp', alt: 'Colorful display of marinated Moroccan olives in a souk market stall' },
+              { src: '/images/photo-moroccan-salads.webp', alt: 'Array of traditional Moroccan salads including zaalouk, taktouka, and carrot salad' },
+              { src: '/images/photo-moroccan-sweets.webp', alt: 'Plate of Moroccan pastries including chebakia, kaab ghzal, and ghriba' },
+              { src: '/images/photo-moroccan-market-fruit.webp', alt: 'Pyramids of fresh fruit at a Moroccan market including oranges, pomegranates, and figs' },
+              { src: '/images/photo-rfissa.webp', alt: 'Traditional Moroccan rfissa dish with shredded msemen, lentils, and chicken in fenugreek sauce' },
+              { src: '/images/photo-mechoui.webp', alt: 'Whole roasted mechoui lamb served on a platter, a Moroccan celebration staple' },
+              { src: '/images/photo-bastilla.webp', alt: 'Golden Moroccan bastilla pastry dusted with powdered sugar and cinnamon' },
+              { src: '/images/photo-msemen.webp', alt: 'Freshly cooked Moroccan msemen flatbread with flaky layers on a griddle' },
+              { src: '/images/photo-sfenj.webp', alt: 'Golden Moroccan sfenj donuts freshly fried at a street vendor' },
+              { src: '/images/photo-harira.webp', alt: 'Bowl of hearty Moroccan harira soup with tomatoes, lentils, and chickpeas' },
+              { src: '/images/photo-couscous.webp', alt: 'Close-up of traditional hand-rolled Moroccan couscous with seasonal vegetables' },
+              { src: '/images/photo-moroccan-spices.webp', alt: 'Vibrant spice cones at a Moroccan spice market including cumin, saffron, and ras el hanout' },
+              { src: '/images/photo-moroccan-mint-tea.webp', alt: 'Moroccan mint tea being poured from height into traditional glasses' },
+              { src: '/images/photo-moroccan-tea-set.webp', alt: 'Ornate Moroccan silver tea set with engraved teapot and painted glasses' },
+            ].map((img, i) => (
+              <div key={i} className="relative overflow-hidden rounded-xl aspect-[4/3] group">
+                <img src={img.src} alt={img.alt} loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <p className="absolute bottom-2 left-2 right-2 text-xs text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 line-clamp-2">
+                  {img.alt}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+{/* ════════════════════════════════════════════════════════
           CTA
           ════════════════════════════════════════════════════════ */}
       <section className="py-16 md:py-20 gradient-moroccan">

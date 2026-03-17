@@ -271,6 +271,21 @@ export default function AsilahPage() {
         </div>
       </section>
 
+      {/* ── Mural Art Visual Break ── */}
+      <div className="container-morocco py-12">
+        <div className="rounded-2xl overflow-hidden">
+          <img
+            src="/images/hero-asilah-murals.webp"
+            alt="Colorful street murals painted on whitewashed walls of Asilah medina during the annual arts festival"
+            loading="lazy"
+            className="w-full h-64 md:h-96 object-cover"
+          />
+          <p className="text-sm text-[var(--text-muted)] mt-3 text-center">
+            Asilah's medina walls come alive each summer with new murals from artists around the world
+          </p>
+        </div>
+      </div>
+
       {/* ── 8 Things To Do ── */}
       <section className="py-12 md:py-16">
         <div className="container-morocco">

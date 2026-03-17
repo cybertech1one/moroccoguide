@@ -1775,6 +1775,24 @@ export default function SkiingMoroccoPage() {
         </div>
       </section>
 
+      {/* ── OUKAIMEDEN FEATURE IMAGE ── */}
+      <section className="py-16 md:py-20" style={{ backgroundColor: '#FAF8F5' }}>
+        <div className="container-morocco max-w-4xl">
+          <div className="relative overflow-hidden rounded-2xl aspect-[16/9] group">
+            <img src="/images/hero-ski-oukaimeden.webp" alt="Skiers on the slopes of Oukaimeden, Africa highest ski resort in the Atlas Mountains of Morocco" loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+            <div className="absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6">
+              <p className="text-white font-[family-name:var(--font-display)] text-xl md:text-2xl font-bold">
+                Oukaimeden -- Africa&apos;s Highest Ski Resort
+              </p>
+              <p className="text-white/80 text-sm md:text-base mt-1">
+                At 3,200 meters in the High Atlas, just 80 km from Marrakech. Season runs December through March.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── CTA ── */}
       <section className="py-16 md:py-20 gradient-moroccan">
         <div className="container-morocco text-center">

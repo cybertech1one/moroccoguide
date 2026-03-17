@@ -173,10 +173,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/sim-card',
     '/driving',
     '/holidays',
-    '/birdwatching',
-    '/golf',
-    '/surfing',
-    '/yoga',
+    // New destination pages
+    '/paradise-valley',
+    '/todra-gorge',
+    '/draa-valley',
+    '/bin-el-ouidane',
+    '/tetouan',
+    // New activity pages
+    '/paragliding',
+    '/kayaking',
+    '/sandboarding',
+    '/quad-biking',
+    '/zip-lining',
+    '/mountain-biking',
+    '/fishing',
+    '/taghazout-surf',
+    // New local/culture pages
+    '/moroccan-festivals',
+    '/moroccan-food-guide',
+    '/moroccan-hammam',
+    '/moroccan-markets',
+    '/moroccan-riads',
+    '/morocco-itinerary-7-days',
+    '/morocco-itinerary-14-days',
+    '/public-transport',
+    '/recipes',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
@@ -252,8 +273,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Merzouga
     '/cities/merzouga/attractions',
     '/cities/merzouga/experiences',
-    // Note: standalone city pages (dakhla, ifrane, tetouan, el-jadida, asilah)
-    // are already generated dynamically via cityPages from the cities data array.
+    // Standalone city pages
+    '/cities/asilah',
+    '/cities/dakhla',
+    '/cities/el-jadida',
+    '/cities/ifrane',
+    '/cities/tetouan',
   ];
   const citySubPages: MetadataRoute.Sitemap = citySubpageRoutes.map(
     (route) => ({
@@ -388,6 +413,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/tools/packing',
     '/tools/weather',
     '/tools/distance',
+    '/tools/distances',
+    '/tools/checklist',
+    '/tools/packing',
+    '/tools/phrases',
   ];
 
   const toolPages: MetadataRoute.Sitemap = toolRoutes.map((route) => ({

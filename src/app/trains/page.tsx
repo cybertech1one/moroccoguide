@@ -1664,6 +1664,34 @@ export default function TrainsPage() {
       </section>
 
       {/* ============================================================
+          TRAIN TRAVEL GALLERY
+          ============================================================ */}
+      <section className="py-16 md:py-20" style={{ backgroundColor: '#FAF8F5' }}>
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold mb-4" style={{ color: '#1A1814' }}>
+              Morocco by Rail
+            </h2>
+            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
+              From Africa&apos;s first high-speed train to scenic railway routes through the mountains.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="relative overflow-hidden rounded-xl aspect-[16/9] group">
+              <img src="/images/hero-al-boraq-train.webp" alt="The Al Boraq high-speed train, Africa first bullet train connecting Tangier to Casablanca at 320 km/h" loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <p className="absolute bottom-3 left-3 right-3 text-sm text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                The Al Boraq -- Africa&apos;s first high-speed rail connecting Tangier to Casablanca
+              </p>
+            </div>
+            <div className="relative overflow-hidden rounded-xl aspect-[16/9]">
+              <img src="/images/poster-train-travel.webp" alt="Illustrated poster of Morocco rail network showing major routes, travel times, and key destinations" loading="lazy" className="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================
           CTA
           ============================================================ */}
       <section className="py-16 md:py-20 gradient-moroccan">

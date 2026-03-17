@@ -33,7 +33,7 @@ import {
   ShieldCheck,
   CircleAlert,
   Palette,
-  TreePalm,
+  Leaf,
   Mountain,
   Waves,
 } from 'lucide-react';
@@ -606,7 +606,7 @@ const femaleFriendlyActivities = [
     description:
       'A night in the Sahara is transformative. Luxury desert camps offer private tents, camel treks at sunset, traditional Berber music around the campfire, and a sky full of stars like you have never seen. Many camps have excellent facilities for women.',
     location: 'Merzouga, Zagora',
-    icon: <TreePalm className="w-5 h-5" />,
+    icon: <Leaf className="w-5 h-5" />,
   },
 ];
 
@@ -1575,6 +1575,23 @@ export default function WomenTravelPage() {
               Browse Itineraries
               <ArrowRight className="w-4 h-4" />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── WOMEN TRAVEL VISUAL ─── */}
+      <section className="py-16 md:py-20" style={{ backgroundColor: '#FAF8F5' }}>
+        <div className="container-morocco max-w-3xl">
+          <div className="text-center mb-8">
+            <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold" style={{ color: '#1A1814' }}>
+              Your Morocco Travel Companion
+            </h2>
+            <p className="text-[var(--text-secondary)] mt-2">
+              Save or share this quick-reference guide for women traveling in Morocco.
+            </p>
+          </div>
+          <div className="relative overflow-hidden rounded-2xl shadow-lg">
+            <img src="/images/flyer-women-travel.webp" alt="Illustrated guide for women traveling in Morocco covering dress code, safety tips, cultural etiquette, and recommended experiences" loading="lazy" className="w-full h-auto" />
           </div>
         </div>
       </section>

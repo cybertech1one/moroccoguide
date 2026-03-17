@@ -17,7 +17,7 @@ import {
   Wine,
   Mountain,
   Plane,
-  TreePalm,
+  Leaf,
   Bath,
   Gem,
 } from 'lucide-react';
@@ -673,6 +673,13 @@ export default function HoneymoonPage() {
         </div>
       </section>
 
+      {/* ── Riad Courtyard Image ── */}
+      <section className="py-8 md:py-12">
+        <div className="container-morocco max-w-4xl">
+          <img src="/images/art-moroccan-riad-courtyard.webp" alt="Beautiful Moroccan riad courtyard with zellige tilework, a tranquil fountain, and lush greenery perfect for a romantic honeymoon retreat" loading="lazy" className="w-full rounded-xl shadow-lg" />
+        </div>
+      </section>
+
       {/* Top 10 Romantic Destinations */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco">
@@ -1076,7 +1083,7 @@ export default function HoneymoonPage() {
             </div>
             <div className="card-moroccan p-6">
               <h3 className="font-bold text-[var(--text-primary)] mb-3 flex items-center gap-2">
-                <TreePalm className="w-5 h-5 text-[var(--color-primary)]" />
+                <Leaf className="w-5 h-5 text-[var(--color-primary)]" />
                 Do Not Over-Schedule
               </h3>
               <p className="text-sm text-[var(--text-secondary)] leading-relaxed">

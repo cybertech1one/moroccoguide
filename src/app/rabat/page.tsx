@@ -1907,6 +1907,40 @@ export default function RabatGuidePage() {
       </section>
 
       {/* =================================================================
+          PHOTO GALLERY
+          ================================================================= */}
+      <section className="py-16 md:py-20" style={{ backgroundColor: '#FAF8F5' }}>
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <Camera className="w-8 h-8 mx-auto mb-4" style={{ color: '#A0522D' }} />
+            <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold mb-4" style={{ color: '#1A1814' }}>
+              Rabat &amp; Surroundings
+            </h2>
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: '#1A1814', opacity: 0.7 }}>
+              Morocco&apos;s elegant capital &mdash; where imperial history, Atlantic breezes,
+              and modern culture converge along the banks of the Bouregreg.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {[
+              { src: '/images/hero-rabat-kasbah.webp', alt: 'Blue and white walls of the Kasbah of the Udayas in Rabat overlooking the Atlantic' },
+              { src: '/images/photo-moulay-idriss.webp', alt: 'The holy town of Moulay Idriss Zerhoun nestled in green hills near Rabat' },
+            ].map((img, i) => (
+              <div key={i} className="relative overflow-hidden rounded-xl aspect-[16/9] group">
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* =================================================================
           FINAL CTA
           ================================================================= */}
       <section className="relative py-24 overflow-hidden">

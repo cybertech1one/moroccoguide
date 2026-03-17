@@ -1720,6 +1720,41 @@ export default function ChefchaouenGuidePage() {
       </section>
 
       {/* ══════════════════════════════════════════════════════════
+          PHOTO GALLERY
+          ══════════════════════════════════════════════════════════ */}
+      <section className="py-16 md:py-20" style={{ backgroundColor: '#FAF8F5' }}>
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <Camera className="w-8 h-8 mx-auto mb-4" style={{ color: '#A0522D' }} />
+            <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold mb-4" style={{ color: '#1A1814' }}>
+              Chefchaouen in Pictures
+            </h2>
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: '#1A1814', opacity: 0.7 }}>
+              Every shade of blue, every winding alley, every hand-painted doorway &mdash;
+              the Blue Pearl is the most photogenic city in all of Morocco.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {[
+              { src: '/images/hero-chefchaouen-blue.webp', alt: 'Vivid blue-washed walls and stairways in the heart of the Chefchaouen medina' },
+              { src: '/images/photo-chefchaouen-door.webp', alt: 'Ornate traditional door painted in shades of blue in a Chefchaouen alleyway' },
+              { src: '/images/poster-chefchaouen-retro.webp', alt: 'Retro-style travel poster illustration of Chefchaouen with the Rif Mountains' },
+            ].map((img, i) => (
+              <div key={i} className="relative overflow-hidden rounded-xl aspect-[4/3] group">
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════
           CTA
           ══════════════════════════════════════════════════════════ */}
       <section className="py-16 md:py-20 gradient-moroccan">

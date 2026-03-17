@@ -587,6 +587,13 @@ export default function VisaPage() {
         </div>
       </section>
 
+      {/* ── Marrakech Souk Image ── */}
+      <section className="py-8 md:py-12">
+        <div className="container-morocco max-w-4xl">
+          <img src="/images/poster-marrakech-souk.webp" alt="Colorful Marrakech souk scene showcasing the vibrant markets that await visitors arriving in Morocco" loading="lazy" className="w-full rounded-xl shadow-lg" />
+        </div>
+      </section>
+
       {/* ============================================================
           VISA-ON-ARRIVAL & E-VISA
           ============================================================ */}

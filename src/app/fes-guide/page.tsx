@@ -1912,6 +1912,44 @@ export default function FesGuidePage() {
       </section>
 
       {/* =================================================================
+          PHOTO GALLERY
+          ================================================================= */}
+      <section className="py-16 md:py-20" style={{ backgroundColor: '#FAF8F5' }}>
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <Camera className="w-8 h-8 mx-auto mb-4" style={{ color: '#A0522D' }} />
+            <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold mb-4" style={{ color: '#1A1814' }}>
+              Fes in Pictures
+            </h2>
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: '#1A1814', opacity: 0.7 }}>
+              Twelve centuries of history captured through the medina&apos;s ancient alleyways, iconic tanneries,
+              and the intricate artistry of Morocco&apos;s spiritual capital.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {[
+              { src: '/images/hero-fes-medina.webp', alt: 'Panoramic aerial view of the Fes medina with hundreds of rooftops and minarets' },
+              { src: '/images/photo-bab-boujloud-fes.webp', alt: 'Bab Boujloud, the iconic Blue Gate entrance to the Fes el-Bali medina' },
+              { src: '/images/photo-fes-pottery-workshop.webp', alt: 'Artisan painting traditional blue ceramics in a Fes pottery workshop' },
+              { src: '/images/photo-fes-medina-alley.webp', alt: 'Narrow cobblestone alleyway deep inside the Fes medina with shafts of sunlight' },
+              { src: '/images/photo-food-tour-fes.webp', alt: 'Traditional Fassi dishes and street food spread during a Fes food tour' },
+              { src: '/images/photo-fes-tanneries-aerial.webp', alt: 'Aerial view of the Chouara Tannery vats filled with colorful dyes in Fes' },
+            ].map((img, i) => (
+              <div key={i} className={`relative overflow-hidden rounded-xl group ${i === 0 ? 'md:col-span-2 md:row-span-2 aspect-[4/3]' : 'aspect-[4/3]'}`}>
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* =================================================================
           FINAL CTA
           ================================================================= */}
       <section className="relative py-24 overflow-hidden">

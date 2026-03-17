@@ -14,7 +14,6 @@ import {
   UtensilsCrossed,
   Users,
   Store,
-  TreePalm,
   Sunrise,
 } from 'lucide-react';
 import GalleryClient from './GalleryClient';

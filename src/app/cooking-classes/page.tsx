@@ -827,6 +827,13 @@ export default function CookingClassesPage() {
         </div>
       </section>
 
+      {/* ── Mint Tea Image ── */}
+      <section className="py-8 md:py-12">
+        <div className="container-morocco max-w-4xl">
+          <img src="/images/art-moroccan-mint-tea.webp" alt="Traditional Moroccan mint tea being poured from a silver teapot into ornate glasses, an essential part of every cooking class experience" loading="lazy" className="w-full rounded-xl shadow-lg" />
+        </div>
+      </section>
+
       {/* ── Signature Dishes You'll Learn ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco">

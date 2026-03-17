@@ -719,6 +719,13 @@ export default function SeniorsPage() {
         </div>
       </section>
 
+      {/* ── Moroccan Sunset Image ── */}
+      <section className="py-8 md:py-12">
+        <div className="container-morocco max-w-4xl">
+          <img src="/images/art-moroccan-sunset.webp" alt="Stunning golden sunset over the Moroccan landscape, capturing the peaceful beauty that makes Morocco ideal for mature travelers" loading="lazy" className="w-full rounded-xl shadow-lg" />
+        </div>
+      </section>
+
       {/* Best Destinations */}
       <section className="py-16 md:py-20">
         <div className="container-morocco">

@@ -22,7 +22,7 @@ import {
   Sunrise,
   Sunset,
   Mountain,
-  TreePalm,
+  Leaf,
   Info,
   Lightbulb,
 } from 'lucide-react';
@@ -489,7 +489,7 @@ export default function DesertPage() {
       <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <TreePalm className="w-8 h-8 inline text-[var(--color-primary)] mr-2" />
+            <Leaf className="w-8 h-8 inline text-[var(--color-primary)] mr-2" />
             The Draa Valley Route
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">

@@ -1440,6 +1440,36 @@ export default function ArchitecturePage() {
         </div>
       </section>
 
+      {/* ARCHITECTURAL DETAILS GALLERY */}
+      <section className="py-16 md:py-20" style={{ backgroundColor: '#FAF8F5' }}>
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold mb-4" style={{ color: '#1A1814' }}>
+              Architectural Details Gallery
+            </h2>
+            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
+              The beauty of Moroccan architecture lives in the details -- every arch, fountain, and garden tells a story.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { src: '/images/art-moroccan-arch.webp', alt: 'Ornate horseshoe arch with carved stucco decoration in a Moroccan palace' },
+              { src: '/images/art-moroccan-stucco.webp', alt: 'Detailed carved stucco plasterwork with geometric and floral arabesques' },
+              { src: '/images/art-moroccan-fountain.webp', alt: 'Traditional zellige-tiled Moroccan fountain with intricate mosaic patterns' },
+              { src: '/images/art-moroccan-garden.webp', alt: 'Lush Moroccan riad garden with orange trees, fountains, and tiled pathways' },
+            ].map((img, i) => (
+              <div key={i} className="relative overflow-hidden rounded-xl aspect-square group">
+                <img src={img.src} alt={img.alt} loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <p className="absolute bottom-2 left-2 right-2 text-xs text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 line-clamp-2">
+                  {img.alt}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 md:py-20 bg-[var(--color-primary-900)] text-white moroccan-pattern-dark">
         <div className="container-morocco text-center max-w-3xl">

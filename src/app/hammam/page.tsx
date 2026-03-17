@@ -899,6 +899,24 @@ export default function HammamPage() {
         </div>
       </section>
 
+      {/* HAMMAM INTERIOR IMAGE */}
+      <section className="py-16 md:py-20" style={{ backgroundColor: '#FAF8F5' }}>
+        <div className="container-morocco max-w-4xl">
+          <div className="relative overflow-hidden rounded-2xl aspect-[16/9] group">
+            <img src="/images/photo-hammam-interior.webp" alt="Steam-filled interior of a traditional Moroccan hammam with tiled walls, marble benches, and warm ambient lighting" loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+            <div className="absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6">
+              <p className="text-white font-[family-name:var(--font-display)] text-xl md:text-2xl font-bold">
+                Inside a Traditional Hammam
+              </p>
+              <p className="text-white/80 text-sm md:text-base mt-1">
+                The warm room (wusta) where the cleansing ritual unfolds -- a tradition that has remained unchanged for centuries.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 md:py-20 gradient-moroccan">
         <div className="container-morocco text-center">

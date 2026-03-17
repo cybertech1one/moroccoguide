@@ -687,6 +687,21 @@ export default function LanguagePage() {
         </div>
       </section>
 
+      {/* ── Decorative Visual Break ── */}
+      <div className="container-morocco py-12">
+        <div className="rounded-2xl overflow-hidden">
+          <img
+            src="/images/art-moroccan-lanterns.webp"
+            alt="Ornate Moroccan brass lanterns casting intricate shadow patterns, a symbol of the artistry woven into everyday Moroccan life"
+            loading="lazy"
+            className="w-full h-64 md:h-80 object-cover"
+          />
+          <p className="text-sm text-[var(--text-muted)] mt-3 text-center">
+            Language, like Moroccan lantern-work, is intricate, layered, and full of hidden beauty
+          </p>
+        </div>
+      </div>
+
       {/* ── Essential Darija Phrases ── */}
       <section className="py-16 md:py-20 moroccan-pattern">
         <div className="container-morocco">

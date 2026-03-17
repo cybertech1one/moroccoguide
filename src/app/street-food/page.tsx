@@ -119,7 +119,7 @@ const faqItems = [
   {
     question: 'How much does street food cost in Morocco?',
     answer:
-      'Moroccan street food is extremely affordable. A full meal from street stalls can cost 20-40 MAD (2-4 USD). Individual items range from 1-2 MAD for sfenj donuts to 40-60 MAD for tangia. Fresh orange juice is 5-10 MAD, sandwiches are 15-25 MAD, and harira soup is 5-10 MAD. You can eat well all day for under 100 MAD.',
+      'Moroccan street food is extremely affordable. A full meal from street stalls can cost from 20 MAD (2-4 USD). Individual items range from 1 MAD for sfenj donuts to just 40 MAD for tangia. Fresh orange juice is from 5 MAD, sandwiches are from 15 MAD, and harira soup is from 5 MAD. You can eat well all day for under 100 MAD.',
   },
   {
     question: 'What is the most popular street food in Marrakech?',
@@ -139,7 +139,7 @@ const faqItems = [
   {
     question: 'Should I tip street food vendors in Morocco?',
     answer:
-      'Tipping is not expected at street food stalls, but rounding up the bill or leaving 1-2 MAD is a kind gesture. If you sit at a small table and are served, leaving 5-10% is appropriate. At sit-down restaurants, 10-15% is customary. Never leave coins on the ground as this is considered disrespectful.',
+      'Tipping is not expected at street food stalls, but rounding up the bill or leaving from 1 MAD is a kind gesture. If you sit at a small table and are served, leaving 5-10% is appropriate. At sit-down restaurants, 10-15% is customary. Never leave coins on the ground as this is considered disrespectful.',
   },
   {
     question: 'How do I order street food if I do not speak Arabic or French?',
@@ -154,7 +154,7 @@ const faqItems = [
   {
     question: 'What is babbouche (snail soup) and should I try it?',
     answer:
-      'Babbouche is a beloved Moroccan street snack of small snails simmered in a fragrant herbal broth with thyme, licorice root, mint, and other spices. The broth is considered medicinal, good for digestion and warming in cold weather. You pick the snails out with a toothpick and sip the broth. It costs 5-10 MAD per bowl and is an authentic Moroccan experience. The taste is mild and earthy, and the broth is delicious.',
+      'Babbouche is a beloved Moroccan street snack of small snails simmered in a fragrant herbal broth with thyme, licorice root, mint, and other spices. The broth is considered medicinal, good for digestion and warming in cold weather. You pick the snails out with a toothpick and sip the broth. It costs from 5 MAD per bowl and is an authentic Moroccan experience. The taste is mild and earthy, and the broth is delicious.',
   },
   {
     question: 'Is Moroccan street food halal?',
@@ -245,7 +245,7 @@ const streetFoods: StreetFood[] = [
     description: 'Layered square flatbread, crispy outside and soft within',
     longDescription:
       'Msemen is the quintessential Moroccan breakfast street food: a square-shaped, layered flatbread made from a simple dough of flour, semolina, butter, and oil. The dough is stretched paper-thin on an oiled surface, folded into layers, and cooked on a flat griddle until golden and flaky. The result is a bread that shatters with a satisfying crunch on the outside while remaining soft, chewy, and slightly buttery inside. Every morning across Morocco, you will see women sitting beside small charcoal stoves, patting and stretching msemen dough with practiced, mesmerizing speed. Eaten plain with honey and butter for breakfast, or stuffed with kefta, vegetables, or cheese for a savory snack, msemen is pure comfort food and one of the most affordable bites in the country.',
-    priceRange: '2-5 MAD',
+    priceRange: 'from 2 MAD',
     priceNote: 'Plain is cheapest; stuffed versions cost more',
     whereToFind: 'Every medina corner, morning markets, and roadside stalls across Morocco',
     tip: 'Ask for one fresh off the griddle. The best msemen are the ones you watch being made right in front of you, still glistening with oil.',
@@ -260,7 +260,7 @@ const streetFoods: StreetFood[] = [
     description: 'Thousand-hole spongy pancakes that soak up honey',
     longDescription:
       'Known as "the thousand-hole pancake," baghrir is a uniquely Moroccan creation that looks like no other pancake in the world. Made from a batter of fine semolina, flour, yeast, and baking powder, the magic happens when the batter hits the hot griddle: as it cooks from one side only, hundreds of tiny bubbles form and burst on the surface, creating a sponge-like texture riddled with tiny craters. These holes serve a delicious purpose -- they act as tiny reservoirs that absorb the traditional topping of melted butter mixed with honey. The first bite releases a flood of warm, sweet butterscotch-like flavor. Baghrir is cooked on one side only, never flipped, and the contrast between the smooth, golden bottom and the porous, crater-covered top is part of its charm. A breakfast staple during Ramadan and year-round.',
-    priceRange: '2-3 MAD',
+    priceRange: 'from 2 MAD',
     priceNote: 'Per pancake; usually sold in stacks of 3-5',
     whereToFind: 'Breakfast stalls, medina bakeries, and Ramadan night markets',
     tip: 'Drizzle with a mixture of melted butter and honey for the authentic experience. The holes should be uniform and the pancake spongy, not flat.',
@@ -275,7 +275,7 @@ const streetFoods: StreetFood[] = [
     description: 'Rich tomato-based soup with lentils, chickpeas, and warming spices',
     longDescription:
       'Harira is the soul of Morocco in a bowl. This thick, hearty soup is the national comfort food, traditionally served to break the Ramadan fast but beloved year-round as a street food staple. The base is a rich tomato broth, thickened with a fermented flour-water mixture called tadouira that gives it a silky, slightly tangy body. Into this go green lentils, chickpeas, diced lamb or beef (though vegetarian versions are common), celery, onions, and a generous handful of fresh cilantro and parsley. The spice profile is complex but never overwhelming: ginger, turmeric, cinnamon, saffron, and pepper work in harmony. Just before serving, a squeeze of lemon brightens everything. Street vendors serve harira in small bowls alongside dates and chebakia honey cookies. During Ramadan, entire streets transform into open-air harira kitchens, with enormous cauldrons simmering throughout the afternoon. The first sip at sunset, breaking a day-long fast, is one of the most communal and sacred food moments in Moroccan culture.',
-    priceRange: '5-10 MAD',
+    priceRange: 'from 5 MAD',
     priceNote: 'Per bowl; often served with bread and dates',
     whereToFind: 'Everywhere during Ramadan; year-round in medina soup stalls and small restaurants',
     tip: 'During Ramadan, find a spot near a mosque around sunset. The atmosphere of an entire neighborhood breaking fast together with harira is unforgettable.',
@@ -290,7 +290,7 @@ const streetFoods: StreetFood[] = [
     description: 'Marrakech-exclusive slow-cooked meat in an earthenware urn',
     longDescription:
       'Tangia is the ultimate bachelor food of Marrakech -- literally. This dish was invented by the unmarried craftsmen of the Marrakech souks who needed a meal that would cook itself while they worked. The preparation is brilliantly simple: chunks of lamb or beef are placed in a tall, amphora-shaped earthenware urn along with preserved lemons, garlic, cumin, saffron, ras el hanout, and a generous pour of olive oil. The urn is sealed with parchment paper and string, then taken to the local hammam (public bathhouse) and buried in the hot ashes of the furnace that heats the bathwater. It slow-cooks for 6-8 hours until the meat is so tender it dissolves at the touch. The result is intensely concentrated, falling-apart meat in a rich, golden broth. Tangia is unique to Marrakech -- you will not find it in Fes or Casablanca. It is traditionally a communal dish, prepared by groups of men for celebrations, and remains a living symbol of Marrakchi working-class food culture.',
-    priceRange: '40-60 MAD',
+    priceRange: 'from 40 MAD',
     priceNote: 'Per serving; often shared among 2-3 people',
     whereToFind: 'Marrakech medina only -- stalls near Jemaa el-Fna and Rahba Kedima spice square',
     tip: 'This is a Marrakech-only experience. Order ahead or arrive early as the best stalls sell out. The urn itself is part of the presentation.',
@@ -305,7 +305,7 @@ const streetFoods: StreetFood[] = [
     description: 'Golden-fried potato fritters, crispy outside and creamy inside',
     longDescription:
       'Maakouda are the Moroccan answer to hash browns, but infinitely more flavorful. These golden discs of deep-fried potato are seasoned with cumin, parsley, garlic, and sometimes a touch of turmeric for color. The technique is what makes them special: boiled potatoes are mashed smooth, shaped into thick patties, dipped in a light batter, and fried in bubbling oil until they develop a shatteringly crisp golden crust while remaining creamy and fluffy inside. Maakouda are rarely eaten alone -- they are most commonly stuffed into a sandwich (bocadillo) with harissa hot sauce, tomato, and olives, creating what might be the most satisfying 5 MAD meal on earth. You will find them at virtually every street food stall and sandwich shop in Morocco, and they are a staple filling for the working-class lunch bocadillo. The best maakouda are fried to order in fresh oil and served piping hot, so the crust crackles when you bite into it.',
-    priceRange: '3-5 MAD',
+    priceRange: 'from 3 MAD',
     priceNote: 'Per piece; 2-3 make a filling snack',
     whereToFind: 'Sandwich stalls, medina food carts, and bocadillo shops everywhere',
     tip: 'Get them inside a bocadillo with harissa and olives for the full Moroccan working-class lunch experience. Absolute best value meal in Morocco.',
@@ -320,7 +320,7 @@ const streetFoods: StreetFood[] = [
     description: 'Charcoal-grilled meat skewers seasoned with cumin and paprika',
     longDescription:
       'The intoxicating smoke of charcoal-grilled brochettes wafting through a Moroccan medina is one of travel\'s most irresistible aromas. These skewers of marinated meat -- lamb, beef, chicken, or kefta (seasoned ground meat) -- are threaded onto metal skewers and grilled over white-hot charcoal. The marinade is deceptively simple: cumin, paprika, salt, pepper, and a brush of oil. The magic is in the searing heat of the charcoal, which chars the exterior while keeping the inside juicy and smoky. Brochettes are served on a plate with bread, raw onion slices, salt, and cumin for dipping, alongside a simple tomato-and-onion salad. The best brochette stalls display their raw meat proudly, letting you choose your cut, and you watch as it is threaded, seasoned, and grilled before your eyes. At Jemaa el-Fna in Marrakech, competitive brochette vendors form an entire row, each one calling out to passersby with theatrical enthusiasm. Lamb liver and heart brochettes (boulfaf) are a particular delicacy, often wrapped in caul fat.',
-    priceRange: '15-30 MAD',
+    priceRange: 'from 15 MAD',
     priceNote: 'Per skewer; lamb is priciest, kefta most affordable',
     whereToFind: 'Jemaa el-Fna, all medina grill stalls, and roadside restaurants',
     tip: 'Choose a stall where the charcoal is glowing white, not flaming. Ask for cumin and salt on the side to season to your taste. Lamb fat brochettes are the most flavorful.',
@@ -334,8 +334,8 @@ const streetFoods: StreetFood[] = [
     arabicName: '\u0633\u0641\u0646\u062c',
     description: 'Airy Moroccan donuts, golden-fried and sugar-dusted',
     longDescription:
-      'Sfenj are the irresistible Moroccan donut -- and at 1-2 MAD each, they may be the cheapest moment of pure happiness in the country. These ring-shaped, yeasted dough fritters are made from a very wet, sticky dough that is shaped by hand with impressive dexterity: the sfenj maker grabs a handful of dough, stretches it into a ring around his fingers, and drops it into a vat of hot oil where it puffs up into a golden, airy ring with a slightly chewy crust. Unlike Western donuts, sfenj have no sugar in the dough itself -- they are sometimes dusted with granulated sugar after frying, but many Moroccans prefer them plain, still glistening with oil, their natural yeasty sweetness enough. The outside is crispy and golden, the inside is soft, airy, and stretchy, with large irregular air pockets. Sfenj are best eaten within minutes of frying, often paired with a glass of mint tea or strong cafe noir for the quintessential Moroccan breakfast. You will spot sfenj makers by their massive round frying pans of oil and the crowd of locals waiting impatiently for the next batch.',
-    priceRange: '1-2 MAD',
+      'Sfenj are the irresistible Moroccan donut -- and at just 1 MAD each, they may be the cheapest moment of pure happiness in the country. These ring-shaped, yeasted dough fritters are made from a very wet, sticky dough that is shaped by hand with impressive dexterity: the sfenj maker grabs a handful of dough, stretches it into a ring around his fingers, and drops it into a vat of hot oil where it puffs up into a golden, airy ring with a slightly chewy crust. Unlike Western donuts, sfenj have no sugar in the dough itself -- they are sometimes dusted with granulated sugar after frying, but many Moroccans prefer them plain, still glistening with oil, their natural yeasty sweetness enough. The outside is crispy and golden, the inside is soft, airy, and stretchy, with large irregular air pockets. Sfenj are best eaten within minutes of frying, often paired with a glass of mint tea or strong cafe noir for the quintessential Moroccan breakfast. You will spot sfenj makers by their massive round frying pans of oil and the crowd of locals waiting impatiently for the next batch.',
+    priceRange: 'from 1 MAD',
     priceNote: 'Per piece; buy 5-10 for a family breakfast',
     whereToFind: 'Morning stalls near mosques, bakeries, and medina intersections',
     tip: 'Find a stall with a queue of locals -- the best sfenj makers always have a line. Eat them immediately; they lose their magic after 15 minutes.',
@@ -350,7 +350,7 @@ const streetFoods: StreetFood[] = [
     description: 'Snails simmered in a fragrant herbal broth with medicinal spices',
     longDescription:
       'Nothing says "authentic Morocco" quite like standing at a steaming babbouche cart, toothpick in hand, picking tiny snails from their shells while sipping the aromatic broth. Babbouche is a beloved Moroccan street snack of small garden snails (not the French escargot variety, but smaller, more tender Moroccan species) slowly simmered in a complex broth infused with over a dozen herbs and spices: thyme, licorice root, gum arabic, anise, mint, caraway, black pepper, and other closely guarded secret ingredients that vary by vendor. The broth is considered deeply medicinal -- locals swear it aids digestion, warms the body in winter, and cures everything from the common cold to stomach ailments. The snails themselves are mild and earthy in flavor, but it is really the broth that people come for. Vendors serve it in small bowls with a toothpick for extracting the snails and a spoon for the precious broth. Each vendor has their own proprietary spice blend, and regular customers are fiercely loyal to their preferred babbouche stall.',
-    priceRange: '5-10 MAD',
+    priceRange: 'from 5 MAD',
     priceNote: 'Per bowl; the broth is the star',
     whereToFind: 'Jemaa el-Fna (Marrakech), Rcif area (Fes), central medina squares in most cities',
     tip: 'The broth is the real treasure -- drink every drop. Locals consider it a health tonic. If the snails intimidate you, just order the broth alone.',
@@ -364,8 +364,8 @@ const streetFoods: StreetFood[] = [
     arabicName: '\u0628\u0648\u0643\u0627\u062f\u064a\u0648',
     description: 'Stuffed baguette sandwiches with endless filling combinations',
     longDescription:
-      'The bocadillo (from the Spanish word for sandwich) is the everyday lunch of working Morocco. A crusty half-baguette is split open and loaded with an extraordinary variety of fillings. The classic combination includes maakouda (potato fritters), hard-boiled egg, tuna, olives, harissa, and a drizzle of olive oil -- all in one sandwich. Other popular fillings include grilled kefta, merguez sausage, fried fish, omelette, liver, brain, or simply vegetables with cheese. The beauty of the Moroccan bocadillo is the customization: you point at the fillings you want from an array of bowls and containers displayed at the stall, and the vendor assembles your creation. Harissa hot sauce and cumin are standard additions. A loaded bocadillo for 15-25 MAD is one of the most satisfying and filling budget meals in Morocco. Bocadillo stalls are particularly busy during the lunch rush (12-2 PM), when workers, students, and shoppers queue for their daily fix.',
-    priceRange: '15-25 MAD',
+      'The bocadillo (from the Spanish word for sandwich) is the everyday lunch of working Morocco. A crusty half-baguette is split open and loaded with an extraordinary variety of fillings. The classic combination includes maakouda (potato fritters), hard-boiled egg, tuna, olives, harissa, and a drizzle of olive oil -- all in one sandwich. Other popular fillings include grilled kefta, merguez sausage, fried fish, omelette, liver, brain, or simply vegetables with cheese. The beauty of the Moroccan bocadillo is the customization: you point at the fillings you want from an array of bowls and containers displayed at the stall, and the vendor assembles your creation. Harissa hot sauce and cumin are standard additions. A loaded bocadillo for just 15 MAD is one of the most satisfying and filling budget meals in Morocco. Bocadillo stalls are particularly busy during the lunch rush (12-2 PM), when workers, students, and shoppers queue for their daily fix.',
+    priceRange: 'from 15 MAD',
     priceNote: 'Depends on fillings; kefta and merguez cost more',
     whereToFind: 'Every medina, near schools, markets, and bus stations',
     tip: 'Say "komplet" for the works. Add harissa for heat and ask for extra olive oil. The best bocadillo stalls are the ones packed with workers at lunchtime.',
@@ -379,8 +379,8 @@ const streetFoods: StreetFood[] = [
     arabicName: '\u0639\u0635\u064a\u0631 \u0627\u0644\u0628\u0631\u062a\u0642\u0627\u0644',
     description: 'Freshly squeezed from sweet Moroccan oranges, served ice-cold',
     longDescription:
-      'Morocco is one of the world\'s great citrus producers, and the fresh-squeezed orange juice available at virtually every street corner is a revelation. Forget anything you have ever had from a carton -- Moroccan street orange juice is made from sweet, sun-ripened oranges pressed to order in front of you, with nothing added. The juice is thick, vibrant, and intensely sweet with a brightness that comes from fruit picked at peak ripeness. At Jemaa el-Fna in Marrakech, entire rows of orange juice stalls compete for customers, their counters piled high with pyramids of oranges, vendors squeezing on manual or electric presses. The juice is served in glasses or poured into plastic cups with ice. At 5-10 MAD per glass (roughly 0.50-1 USD), it is one of the best deals in Morocco and the perfect antidote to the heat, dust, and sensory overload of the medina. Some vendors also offer mixed juices -- orange with carrot, pomegranate, or grapefruit. The orange juice at Jemaa el-Fna is a rite of passage for every Morocco visitor.',
-    priceRange: '5-10 MAD',
+      'Morocco is one of the world\'s great citrus producers, and the fresh-squeezed orange juice available at virtually every street corner is a revelation. Forget anything you have ever had from a carton -- Moroccan street orange juice is made from sweet, sun-ripened oranges pressed to order in front of you, with nothing added. The juice is thick, vibrant, and intensely sweet with a brightness that comes from fruit picked at peak ripeness. At Jemaa el-Fna in Marrakech, entire rows of orange juice stalls compete for customers, their counters piled high with pyramids of oranges, vendors squeezing on manual or electric presses. The juice is served in glasses or poured into plastic cups with ice. at just 5 MAD per glass (roughly 0.50-1 USD), it is one of the best deals in Morocco and the perfect antidote to the heat, dust, and sensory overload of the medina. Some vendors also offer mixed juices -- orange with carrot, pomegranate, or grapefruit. The orange juice at Jemaa el-Fna is a rite of passage for every Morocco visitor.',
+    priceRange: 'from 5 MAD',
     priceNote: 'Jemaa el-Fna stalls may charge more; 4 MAD in local neighborhoods',
     whereToFind: 'Jemaa el-Fna, all medinas, roadside stands, and juice bars nationwide',
     tip: 'Watch them squeeze it fresh -- avoid pre-squeezed juice sitting in jugs. At Jemaa el-Fna, stalls on the outer edge are often cheaper than those in the center.',
@@ -395,7 +395,7 @@ const streetFoods: StreetFood[] = [
     description: 'Round communal bread baked in neighborhood wood-fired ovens',
     longDescription:
       'Khobz is not just bread in Morocco -- it is a utensil, a plate, a social ritual, and the foundation of every meal. This round, flatish loaf with a golden crust and soft, dense crumb is the most consumed food in the country. Every neighborhood has a communal wood-fired oven (ferran) where families bring their homemade dough to be baked for a few dirhams. The baker marks each family\'s loaves to identify them, slides them into the blazing oven on a long wooden paddle, and returns them golden and fragrant. On the street, you will see children and adults carrying wooden trays of bread on their heads to and from the ferran -- one of the most iconic sights of Moroccan daily life. Khobz is torn by hand (never cut with a knife at a traditional Moroccan table) and used to scoop tagine sauce, pinch pieces of meat, and mop every last drop from the plate. Wasting bread is considered sinful -- leftover bread is dried and used in other dishes or given to animals. At street stalls, fresh khobz is always available as an accompaniment to any meal.',
-    priceRange: '1-2 MAD',
+    priceRange: 'from 1 MAD',
     priceNote: 'Per loaf; one loaf feeds 2-3 people',
     whereToFind: 'Neighborhood fernans (bakeries), medina bread stalls, and every food vendor',
     tip: 'Follow the scent of baking bread to find the nearest ferran. Buying a warm loaf straight from the oven and eating it with olive oil and honey is one of life\'s simple pleasures.',
@@ -410,10 +410,10 @@ const streetFoods: StreetFood[] = [
     description: 'Whole sardines charcoal-grilled with chermoula marinade',
     longDescription:
       'Morocco is the world\'s largest exporter of sardines, and nowhere is this abundance more delicious than at the street-side grill stalls of Essaouira, Casablanca, and Tangier. Whole fresh sardines are marinated in chermoula -- a vibrant green paste of cilantro, parsley, garlic, cumin, paprika, lemon juice, and olive oil -- then grilled over charcoal until the skin blisters and chars while the flesh stays moist and oily. They are served on a plate or in a sandwich, head and all, with a wedge of lemon, sliced onion, and crusty bread. The flavor is intensely marine, smoky, and herbaceous. At the fish market in Essaouira, you choose your sardines from the fishmongers (still glistening from the morning catch), hand them to the grill next door, and within minutes you are eating the freshest possible grilled fish at a rickety seaside table. In Casablanca, the old medina and port area have legendary sardine grill stalls. Eating charcoal-grilled sardines by the ocean, watching fishing boats rock in the harbor, is a quintessential Moroccan coast experience.',
-    priceRange: '10-20 MAD',
+    priceRange: 'from 10 MAD',
     priceNote: 'For a generous plate; cheaper at fish markets than tourist areas',
     whereToFind: 'Essaouira fish market, Casablanca port, Tangier fish market, all coastal cities',
-    tip: 'In Essaouira, buy sardines at the fish market stalls and have the adjacent grill cook them for 10-15 MAD. Freshest fish you will ever eat.',
+    tip: 'In Essaouira, buy sardines at the fish market stalls and have the adjacent grill cook them for just 10 MAD. Freshest fish you will ever eat.',
     icon: Flame,
     category: 'meat',
     vegetarian: false,
@@ -425,8 +425,8 @@ const streetFoods: StreetFood[] = [
     description: 'Spiced ground meat grilled and stuffed in bread with toppings',
     longDescription:
       'Kefta is Moroccan ground meat elevated to an art form. Beef or lamb is mixed with grated onion, fresh parsley, cilantro, cumin, paprika, and a touch of cinnamon, then shaped into logs around a skewer or pressed into flat patties and grilled over charcoal. The spice blend gives kefta a distinctive warmth and depth that distinguishes it from any Western hamburger. As a street food, kefta is most commonly served in a crusty bread roll (bocadillo) with sliced tomato, raw onion, and a generous smear of harissa hot sauce. Some stalls also offer kefta in a tagine -- grilled patties simmered in a spiced tomato sauce with a cracked egg on top, served bubbling in a small clay dish with bread for dipping. The charcoal grill gives kefta a smoky char on the outside while keeping the center juicy and aromatic. Kefta stalls are identifiable by the distinctive scent of grilling spiced meat and the cloud of charcoal smoke hovering above them.',
-    priceRange: '15-25 MAD',
-    priceNote: 'Sandwich; kefta tagine with egg costs 25-40 MAD',
+    priceRange: 'from 15 MAD',
+    priceNote: 'Sandwich; kefta tagine with egg costs from 25 MAD',
     whereToFind: 'Grill stalls in medinas, bocadillo shops, and night food markets',
     tip: 'Order kefta tagine with egg if you want the full experience. Tear bread and scoop the spiced meat and runny egg together. Outstanding.',
     icon: Flame,
@@ -440,7 +440,7 @@ const streetFoods: StreetFood[] = [
     description: 'Flower-shaped sesame cookies drenched in honey',
     longDescription:
       'Chebakia is the most labor-intensive and visually stunning sweet in the Moroccan pastry repertoire. Strips of dough flavored with orange blossom water, anise, sesame, vinegar, and saffron are hand-folded into intricate rose or flower shapes (a skill that takes years to master), deep-fried until golden, immediately dipped in hot honey syrup until they absorb maximum sweetness, then coated in toasted sesame seeds. The result is a cookie that is simultaneously crispy, chewy, sticky, fragrant, and deeply sweet. Chebakia is traditionally associated with Ramadan, where it is served alongside harira soup at iftar (the sunset meal breaking the fast). The combination of savory, warming harira with sweet, honey-drenched chebakia is one of Ramadan\'s most iconic flavor pairings. Making chebakia is a communal activity -- extended families gather (usually the women) in the days before Ramadan to fold hundreds of these intricate pastries. On the street, chebakia is sold by weight at pastry stalls and is available year-round, though production peaks during Ramadan.',
-    priceRange: '5-10 MAD',
+    priceRange: 'from 5 MAD',
     priceNote: 'For 2-3 pieces; sold by weight at pastry stalls',
     whereToFind: 'Pastry shops, medina sweet stalls, and Ramadan markets everywhere',
     tip: 'Pair with harira soup for the authentic Ramadan experience. During Ramadan, fresh chebakia is made daily -- it is noticeably better than the pre-made version.',
@@ -455,7 +455,7 @@ const streetFoods: StreetFood[] = [
     description: 'Thick, creamy avocado shake blended with milk and nuts',
     longDescription:
       'The Moroccan avocado smoothie is nothing like the savory avocado preparations of Western cuisine -- in Morocco, avocado is treated purely as a fruit, and the smoothie is a dessert-level indulgence. Ripe avocados are blended with cold milk, sugar (or honey), and sometimes a handful of almonds or walnuts to create an impossibly thick, creamy, pale-green shake. Some juice bars add a drizzle of argan oil or a sprinkle of cinnamon. The texture is like drinking velvet. These smoothies are served in tall glasses at juice bars (every medina has dozens) and are particularly refreshing in the heat of Moroccan summers. Morocco\'s avocados, grown primarily in the Gharb and Souss regions, are exceptionally rich and buttery. Many juice bars display their creations in the window -- towering glasses of avocado, banana, strawberry, almond, and date smoothies, each one a different shade of deliciousness. The avocado smoothie is the most popular and arguably the most uniquely Moroccan of the bunch.',
-    priceRange: '10-15 MAD',
+    priceRange: 'from 10 MAD',
     priceNote: 'Mixed fruit smoothies cost slightly more',
     whereToFind: 'Juice bars in every medina, tourist areas, and modern cafes',
     tip: 'Ask for it with almonds and a drizzle of argan oil for the premium version. Pair with msemen for a heavenly Moroccan breakfast combo.',
@@ -722,6 +722,11 @@ export default function StreetFoodPage() {
         </div>
       </section>
 
+      {/* Pricing Note */}
+      <div className="container-morocco">
+        <p className="text-xs text-[var(--text-muted)] italic py-2 text-center">All prices are approximate and may vary by season, location, and operator.</p>
+      </div>
+
       {/* ══════════════════════════════════════════════════════════
           INTRODUCTION
           ══════════════════════════════════════════════════════════ */}
@@ -755,7 +760,7 @@ export default function StreetFoodPage() {
                 medina of Marrakech, Fes, or any Moroccan city is a culinary education: the sizzle of brochettes on charcoal, the
                 rhythmic slap of msemen dough being stretched, the bubbling cauldrons of harira, the theatrical squeeze of orange juice,
                 the sweet scent of honey-drenched chebakia. Every sense is engaged, every corner reveals something new, and the prices
-                remain astonishingly low -- a complete street food meal rarely exceeds 30-50 MAD (3-5 USD).
+                remain astonishingly low -- a complete street food meal rarely exceeds from 30 MAD (3-5 USD).
               </p>
               <p>
                 This guide covers everything you need to know: the 15 essential street foods you must try, city-by-city
@@ -1004,7 +1009,7 @@ export default function StreetFoodPage() {
                 className="w-full h-full object-cover"
               />
               <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 to-transparent p-6">
-                <h3 className="text-white font-bold text-lg font-[family-name:var(--font-display)]">Sfenj: 1-2 MAD of Pure Happiness</h3>
+                <h3 className="text-white font-bold text-lg font-[family-name:var(--font-display)]">Sfenj: from 1 MAD of Pure Happiness</h3>
                 <p className="text-white/80 text-sm mt-1">The cheapest and most beloved breakfast on the streets of Morocco</p>
               </div>
             </div>
@@ -1138,7 +1143,7 @@ export default function StreetFoodPage() {
                   {[
                     'Choose stalls with high customer turnover -- busy stalls mean fresh food and happy locals',
                     'Watch your food being cooked fresh in front of you -- this is both safer and tastier',
-                    'Drink bottled water only -- widely available for 3-5 MAD',
+                    'Drink bottled water only -- widely available for just 3 MAD',
                     'Eat fruits you can peel yourself: oranges, bananas, mandarins',
                     'Start with cooked, hot food items during your first days to let your stomach adjust',
                     'Use hand sanitizer before eating if no washing facilities are available',
@@ -1318,19 +1323,19 @@ export default function StreetFoodPage() {
               <div className="rounded-2xl bg-white p-5 border border-[#EDE8E0] text-center">
                 <DollarSign className="h-6 w-6 text-[#C4960C] mx-auto mb-2" />
                 <h4 className="font-bold text-[#1A1814] font-[family-name:var(--font-heading)]">Budget Day</h4>
-                <p className="text-2xl font-bold text-[#A0522D] font-[family-name:var(--font-display)] mt-1">60-80 MAD</p>
+                <p className="text-2xl font-bold text-[#A0522D] font-[family-name:var(--font-display)] mt-1">from 60 MAD</p>
                 <p className="text-xs text-[#1A1814]/50 mt-1">~6-8 USD / 3 meals from stalls</p>
               </div>
               <div className="rounded-2xl bg-white p-5 border border-[#EDE8E0] text-center">
                 <DollarSign className="h-6 w-6 text-[#C4960C] mx-auto mb-2" />
                 <h4 className="font-bold text-[#1A1814] font-[family-name:var(--font-heading)]">Moderate Day</h4>
-                <p className="text-2xl font-bold text-[#A0522D] font-[family-name:var(--font-display)] mt-1">100-150 MAD</p>
+                <p className="text-2xl font-bold text-[#A0522D] font-[family-name:var(--font-display)] mt-1">from 100 MAD</p>
                 <p className="text-xs text-[#1A1814]/50 mt-1">~10-15 USD / mix of stalls & cafes</p>
               </div>
               <div className="rounded-2xl bg-white p-5 border border-[#EDE8E0] text-center">
                 <DollarSign className="h-6 w-6 text-[#C4960C] mx-auto mb-2" />
                 <h4 className="font-bold text-[#1A1814] font-[family-name:var(--font-heading)]">Splurge Day</h4>
-                <p className="text-2xl font-bold text-[#A0522D] font-[family-name:var(--font-display)] mt-1">200-300 MAD</p>
+                <p className="text-2xl font-bold text-[#A0522D] font-[family-name:var(--font-display)] mt-1">from 200 MAD</p>
                 <p className="text-xs text-[#1A1814]/50 mt-1">~20-30 USD / everything + restaurants</p>
               </div>
             </div>
@@ -1564,7 +1569,7 @@ export default function StreetFoodPage() {
                 {
                   title: 'Tipping at Street Stalls',
                   description:
-                    'Tipping is not expected at basic street stalls. For a 10 MAD harira, you do not need to tip. However, rounding up is kind (paying 10 MAD for an 8 MAD item). If you sit at a stall with table service, leaving 2-5 MAD is appropriate. At Jemaa el-Fna sit-down stalls, 5-10% is reasonable.',
+                    'Tipping is not expected at basic street stalls. For a 10 MAD harira, you do not need to tip. However, rounding up is kind (paying 10 MAD for an 8 MAD item). If you sit at a stall with table service, leaving from 2 MAD is appropriate. At Jemaa el-Fna sit-down stalls, 5-10% is reasonable.',
                   icon: DollarSign,
                 },
                 {
@@ -1588,7 +1593,7 @@ export default function StreetFoodPage() {
                 {
                   title: 'Photographing Food Stalls',
                   description:
-                    'Most vendors do not mind photos of their food, but always ask first ("Mumkin sura?" -- can I take a photo?). Buying something before or after taking photos is good etiquette. At Jemaa el-Fna, some entertainers and vendors may expect a small tip (2-5 MAD) for being photographed.',
+                    'Most vendors do not mind photos of their food, but always ask first ("Mumkin sura?" -- can I take a photo?). Buying something before or after taking photos is good etiquette. At Jemaa el-Fna, some entertainers and vendors may expect a small tip (from 2 MAD) for being photographed.',
                   icon: Eye,
                 },
               ].map((tip) => {
@@ -1701,7 +1706,7 @@ export default function StreetFoodPage() {
               </h2>
               <p className="mt-3 text-lg text-[#1A1814]/70 font-[family-name:var(--font-heading)] max-w-2xl mx-auto">
                 Follow this self-guided itinerary for the ultimate street food experience
-                in Morocco's culinary capital. Total estimated cost: 80-120 MAD.
+                in Morocco's culinary capital. Total estimated cost: from 80 MAD.
               </p>
             </div>
 
@@ -1715,8 +1720,8 @@ export default function StreetFoodPage() {
                     time: '7:00 AM',
                     title: 'Sfenj & Coffee at Bab Doukkala',
                     description:
-                      'Start your day like a Marrakchi. Head to the Bab Doukkala neighborhood where the city\'s best sfenj makers have been frying since dawn. Order 3-4 sfenj (3-4 MAD total) and a glass of cafe noir or noss-noss (half coffee, half milk). Sit on a plastic stool and watch the city wake up. The sfenj here are lighter and airier than the tourist-area versions.',
-                    cost: '8-12 MAD',
+                      'Start your day like a Marrakchi. Head to the Bab Doukkala neighborhood where the city\'s best sfenj makers have been frying since dawn. Order 3-4 sfenj (from 3 MAD total) and a glass of cafe noir or noss-noss (half coffee, half milk). Sit on a plastic stool and watch the city wake up. The sfenj here are lighter and airier than the tourist-area versions.',
+                    cost: 'from 8 MAD',
                     icon: Coffee,
                   },
                   {
@@ -1724,7 +1729,7 @@ export default function StreetFoodPage() {
                     title: 'Msemen & Orange Juice at Riad Zitoun',
                     description:
                       'Walk through the medina to the Riad Zitoun el-Kedim area, where several msemen stalls cluster near the entrance to the souks. Order a stuffed msemen (with cheese or kefta) and wash it down with a glass of freshly squeezed orange juice from one of the juice carts. The combination of flaky, buttery bread and cold, sweet juice is perfection.',
-                    cost: '10-15 MAD',
+                    cost: 'from 10 MAD',
                     icon: Wheat,
                   },
                   {
@@ -1732,7 +1737,7 @@ export default function StreetFoodPage() {
                     title: 'Maakouda Bocadillo near Rahba Kedima',
                     description:
                       'By late morning, hunger returns. Navigate to the area around Rahba Kedima (the spice square) where bocadillo stalls do brisk trade with souk workers. Order a bocadillo komplet with maakouda, egg, olives, and harissa. This is the authentic working-class lunch of Marrakech, and the stalls here cater to locals, not tourists -- prices and quality reflect this.',
-                    cost: '15-20 MAD',
+                    cost: 'from 15 MAD',
                     icon: UtensilsCrossed,
                   },
                   {
@@ -1740,7 +1745,7 @@ export default function StreetFoodPage() {
                     title: 'Snail Soup at a Medina Cart',
                     description:
                       'After the midday heat subsides, seek out a babbouche cart in the northern medina. The snail vendors set up near busy intersections and mosque areas. A bowl of snail soup is the perfect mid-afternoon pick-me-up -- the herbal broth is warming and the snails are fun to eat with the provided toothpick. Sip the broth slowly.',
-                    cost: '5-10 MAD',
+                    cost: 'from 5 MAD',
                     icon: Soup,
                   },
                   {
@@ -1748,7 +1753,7 @@ export default function StreetFoodPage() {
                     title: 'Avocado Smoothie & Chebakia Break',
                     description:
                       'Find a juice bar (there are dozens along the main medina arteries) and order a thick avocado smoothie with almonds. Pick up a few pieces of chebakia from a nearby pastry stall. Sit in the shade and recharge before the evening spectacle. This sweet pairing is the perfect energy boost.',
-                    cost: '15-20 MAD',
+                    cost: 'from 15 MAD',
                     icon: LeafyGreen,
                   },
                   {
@@ -1756,7 +1761,7 @@ export default function StreetFoodPage() {
                     title: 'Jemaa el-Fna: Brochettes & Harira',
                     description:
                       'The grand finale. As the sun sets, Jemaa el-Fna explodes into life. Grab a seat at one of the numbered stalls (locals recommend stalls 1, 14, and 32 for quality and fair prices). Order a bowl of harira soup to start, then brochettes of lamb and kefta with bread, cumin, and a fresh tomato salad. Watch the square transform into the greatest food show on earth as you eat.',
-                    cost: '30-45 MAD',
+                    cost: 'from 30 MAD',
                     icon: Flame,
                   },
                 ].map((stop, i) => {

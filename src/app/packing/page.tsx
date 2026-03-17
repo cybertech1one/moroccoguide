@@ -46,7 +46,7 @@ import {
   Tent,
   Umbrella,
   Glasses,
-  TreePalm,
+  Flower2,
 } from 'lucide-react';
 
 /* ===================================================================
@@ -675,7 +675,7 @@ interface SeasonalPackList {
 const seasonalPackLists: SeasonalPackList[] = [
   {
     season: 'Spring',
-    icon: <TreePalm className="w-6 h-6" />,
+    icon: <Flower2 className="w-6 h-6" />,
     months: 'March - May',
     weather: 'Mild days (18-28C), cool nights, occasional rain in north',
     colorAccent: '#4CAF50',

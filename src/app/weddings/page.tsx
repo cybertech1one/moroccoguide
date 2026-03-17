@@ -16,7 +16,7 @@ import {
   Crown,
   Building,
   Mountain,
-  Palmtree,
+  Flower2,
   GlassWater,
   Gem,
   BookOpen,
@@ -418,7 +418,7 @@ const photographySpots = [
 
 const honeymoonAddons = [
   {
-    icon: Palmtree,
+    icon: Flower2,
     title: 'Sahara Desert Extension',
     duration: '2-3 nights',
     description:
@@ -988,6 +988,24 @@ export default function WeddingsPage() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* WEDDING CELEBRATION IMAGE */}
+      <section className="py-16 md:py-20" style={{ backgroundColor: '#FAF8F5' }}>
+        <div className="container-morocco max-w-4xl">
+          <div className="relative overflow-hidden rounded-2xl aspect-[16/9] group">
+            <img src="/images/photo-moroccan-wedding-celebration.webp" alt="Joyful Moroccan wedding celebration with traditional music, colorful outfits, and festive decorations" loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+            <div className="absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6">
+              <p className="text-white font-[family-name:var(--font-display)] text-xl md:text-2xl font-bold">
+                A Moroccan Wedding Celebration
+              </p>
+              <p className="text-white/80 text-sm md:text-base mt-1">
+                Traditional Moroccan weddings are multi-day celebrations filled with music, dance, feasting, and elaborate ceremony.
+              </p>
+            </div>
           </div>
         </div>
       </section>

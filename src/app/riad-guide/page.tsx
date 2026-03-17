@@ -838,6 +838,21 @@ export default function RiadGuidePage() {
         </div>
       </section>
 
+      {/* ───────────────────────── Riad Courtyard Visual ───────────────────────── */}
+      <div className="container-morocco py-12">
+        <div className="rounded-2xl overflow-hidden">
+          <img
+            src="/images/photo-riad-courtyard.webp"
+            alt="Sunlit courtyard of a traditional Moroccan riad with zellige tilework, potted plants, and a central fountain"
+            loading="lazy"
+            className="w-full h-64 md:h-96 object-cover"
+          />
+          <p className="text-sm text-[var(--text-muted)] mt-3 text-center">
+            The central courtyard is the heart of every riad -- a private oasis of light, water, and greenery
+          </p>
+        </div>
+      </div>
+
       {/* ───────────────────────── Types of Riads ───────────────────────── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco">
@@ -1017,6 +1032,21 @@ export default function RiadGuidePage() {
           </div>
         </div>
       </section>
+
+      {/* ───────────────────────── Mint Tea Visual ───────────────────────── */}
+      <div className="container-morocco py-12">
+        <div className="rounded-2xl overflow-hidden">
+          <img
+            src="/images/card-mint-tea.webp"
+            alt="Traditional Moroccan mint tea being poured from a silver teapot into ornate glasses"
+            loading="lazy"
+            className="w-full h-64 md:h-80 object-cover"
+          />
+          <p className="text-sm text-[var(--text-muted)] mt-3 text-center">
+            Mint tea is the cornerstone of riad hospitality -- always offered upon arrival and throughout your stay
+          </p>
+        </div>
+      </div>
 
       {/* ───────────────────────── Riad vs Hotel ───────────────────────── */}
       <section className="py-16 md:py-20">

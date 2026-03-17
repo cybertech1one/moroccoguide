@@ -212,6 +212,21 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ── Visual Accent ── */}
+      <div className="container-morocco py-12">
+        <div className="rounded-2xl overflow-hidden">
+          <img
+            src="/images/poster-oasis.webp"
+            alt="Vintage-style travel poster depicting a Moroccan oasis with palm trees, a kasbah, and warm desert tones"
+            loading="lazy"
+            className="w-full h-64 md:h-80 object-cover"
+          />
+          <p className="text-sm text-[var(--text-muted)] mt-3 text-center">
+            Our mission: to be the oasis of reliable information in the vast landscape of Morocco travel
+          </p>
+        </div>
+      </div>
+
       {/* Values */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco">

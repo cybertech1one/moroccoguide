@@ -31,13 +31,11 @@ import {
   CheckCircle,
   AlertTriangle,
   Tent,
-  TreePalm,
   Compass,
   Plane,
   Phone,
   Bath,
   Lamp,
-  Palmtree,
   CircleDot,
 } from 'lucide-react';
 
@@ -1895,6 +1893,39 @@ export default function RomanticPage() {
                 </div>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* =====================================================================
+         ROMANTIC MOROCCO GALLERY
+         ===================================================================== */}
+      <section className="py-16 md:py-20" style={{ backgroundColor: '#FAF8F5' }}>
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <Heart className="w-8 h-8 text-[var(--color-primary)] mx-auto mb-3" />
+            <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold mb-4" style={{ color: '#1A1814' }}>
+              Romance in Morocco
+            </h2>
+            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
+              Intimate dinners under the stars, rose petal baths, and unforgettable landscapes for two.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="relative overflow-hidden rounded-xl aspect-[16/9] group">
+              <img src="/images/hero-romantic-dinner.webp" alt="Candlelit romantic dinner for two on a Moroccan riad rooftop with lanterns and rose petals" loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <p className="absolute bottom-3 left-3 right-3 text-sm text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                Private rooftop dinner -- the most romantic evening in Morocco
+              </p>
+            </div>
+            <div className="relative overflow-hidden rounded-xl aspect-[16/9] group">
+              <img src="/images/photo-rose-harvest-valley.webp" alt="Rose harvest in the Dades Valley with pink Damask roses in bloom against the Atlas Mountains" loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <p className="absolute bottom-3 left-3 right-3 text-sm text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                The Rose Valley -- millions of Damask roses bloom each May in the Dades Valley
+              </p>
+            </div>
           </div>
         </div>
       </section>

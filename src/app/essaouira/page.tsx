@@ -1694,6 +1694,38 @@ export default function EssaouiraPage() {
         </div>
       </section>
 
+      {/* -- Photo Gallery -- */}
+      <section className="py-16 md:py-20" style={{ backgroundColor: '#FAF8F5' }}>
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <Camera className="w-8 h-8 mx-auto mb-4" style={{ color: '#A0522D' }} />
+            <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold mb-4" style={{ color: '#1A1814' }}>
+              Essaouira in Pictures
+            </h2>
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: '#1A1814', opacity: 0.7 }}>
+              Atlantic winds, Portuguese ramparts, blue fishing boats, and the bohemian soul
+              of Morocco&apos;s beloved Wind City on the coast.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {[
+              { src: '/images/hero-essaouira-ramparts.webp', alt: 'Historic Portuguese ramparts of Essaouira with cannons overlooking the Atlantic Ocean' },
+              { src: '/images/hero-essaouira-fishing.webp', alt: 'Traditional blue fishing boats in the Essaouira port with the medina walls in the background' },
+            ].map((img, i) => (
+              <div key={i} className="relative overflow-hidden rounded-xl aspect-[16/9] group">
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* -- CTA Section -- */}
       <section className="py-12 md:py-16">
         <div className="container-morocco text-center">

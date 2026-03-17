@@ -1782,6 +1782,43 @@ export default function MarrakechPage() {
       </section>
 
       {/* =================================================================
+          PHOTO GALLERY
+          ================================================================= */}
+      <section className="py-16 md:py-20" style={{ backgroundColor: '#FAF8F5' }}>
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <Camera className="w-8 h-8 mx-auto mb-4" style={{ color: '#A0522D' }} />
+            <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold mb-4" style={{ color: '#1A1814' }}>
+              Marrakech in Pictures
+            </h2>
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: '#1A1814', opacity: 0.7 }}>
+              The Red City&apos;s kaleidoscope of color &mdash; from the nightly spectacle of Jemaa el-Fnaa to
+              the serene blues of Majorelle and the golden glow of Koutoubia at sunset.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {[
+              { src: '/images/hero-bahia-palace.webp', alt: 'Ornate courtyard and zellige tilework of Bahia Palace in Marrakech' },
+              { src: '/images/hero-jemaa-elfna-night.webp', alt: 'Jemaa el-Fnaa square at night with food stall smoke and lights in Marrakech' },
+              { src: '/images/hero-majorelle-blue.webp', alt: 'Vibrant cobalt blue walls of the Majorelle Garden in Marrakech' },
+              { src: '/images/hero-koutoubia-sunset.webp', alt: 'Koutoubia Mosque minaret silhouetted against a golden Marrakech sunset' },
+              { src: '/images/hero-souk-lamps.webp', alt: 'Colorful Moroccan brass and glass lanterns hanging in a Marrakech souk' },
+            ].map((img, i) => (
+              <div key={i} className={`relative overflow-hidden rounded-xl group ${i === 0 ? 'md:col-span-2 md:row-span-2 aspect-[4/3]' : 'aspect-[4/3]'}`}>
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* =================================================================
           FINAL CTA
           ================================================================= */}
       <section className="relative py-24 overflow-hidden">

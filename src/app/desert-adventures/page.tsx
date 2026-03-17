@@ -1751,6 +1751,42 @@ export default function DesertAdventuresPage() {
       </section>
 
       {/* ============================================================== */}
+      {/*  DESERT PHOTO GALLERY                                         */}
+      {/* ============================================================== */}
+      <section className="py-16 md:py-20" style={{ backgroundColor: '#FAF8F5' }}>
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <Camera className="w-8 h-8 text-[#A0522D] mx-auto mb-3" />
+            <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold mb-4" style={{ color: '#1A1814' }}>
+              Desert Adventure Gallery
+            </h2>
+            <p className="text-lg text-[#1A1814]/70 max-w-2xl mx-auto">
+              From camel caravans crossing golden dunes to adrenaline-fueled buggy rides -- the Sahara awaits.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {[
+              { src: '/images/hero-buggy-desert.webp', alt: 'Dune buggy racing across golden Sahara sand dunes near Merzouga' },
+              { src: '/images/hero-sandboarding.webp', alt: 'Sandboarding down the towering dunes of Erg Chebbi in the Moroccan Sahara' },
+              { src: '/images/hero-camel-caravan-sahara.webp', alt: 'Camel caravan crossing the vast Sahara Desert at golden hour' },
+              { src: '/images/photo-camel-sunset.webp', alt: 'Silhouette of camels and riders against a fiery Saharan sunset' },
+              { src: '/images/photo-photographer-sahara.webp', alt: 'Photographer capturing the dramatic light and shadows of Sahara sand dunes' },
+              { src: '/images/card-camel.webp', alt: 'Decorated camel resting in the desert camp near Merzouga dunes' },
+              { src: '/images/hero-merzouga.webp', alt: 'Panoramic view of the Erg Chebbi dunes rising above Merzouga village' },
+            ].map((img, i) => (
+              <div key={i} className={`relative overflow-hidden rounded-xl group ${i === 0 ? 'md:col-span-2 aspect-[16/9]' : 'aspect-[4/3]'}`}>
+                <img src={img.src} alt={img.alt} loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <p className="absolute bottom-2 left-2 right-2 text-xs text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 line-clamp-2">
+                  {img.alt}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================== */}
       {/*  CTA SECTION                                                  */}
       {/* ============================================================== */}
       <section className="py-16 md:py-20">

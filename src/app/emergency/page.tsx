@@ -728,7 +728,7 @@ interface InsuranceItem {
 const insuranceChecklist: InsuranceItem[] = [
   {
     coverage: 'Emergency Medical Treatment',
-    why: 'Private hospital visits can cost 1,000-5,000 MAD per day',
+    why: 'Private hospital visits can cost from 1,000 MAD per day',
     minRecommended: '500,000 MAD (approx. $50,000 USD)',
   },
   {
@@ -1071,7 +1071,7 @@ export default function EmergencyPage() {
                     <div className="flex items-start gap-2 text-[#1A1814]/70">
                       <Info className="w-4 h-4 text-[#2563EB] mt-0.5 shrink-0" />
                       <span>
-                        Expect to pay 300-800 MAD for a dental consultation and basic treatment
+                        Expect to pay from 300 MAD for a dental consultation and basic treatment
                       </span>
                     </div>
                     <div className="flex items-start gap-2 text-[#1A1814]/70">
@@ -1503,7 +1503,7 @@ export default function EmergencyPage() {
                 <div className="flex items-start gap-2">
                   <Star className="w-4 h-4 text-[#C4960C] mt-0.5 shrink-0" />
                   <span>
-                    <strong>Always carry backup cash</strong> -- keep 500-1,000 MAD
+                    <strong>Always carry backup cash</strong> -- keep from 500 MAD
                     (about $50-100) hidden separately from your main wallet
                   </span>
                 </div>
@@ -2241,7 +2241,7 @@ export default function EmergencyPage() {
                 </h3>
                 <p className="text-sm text-[#1A1814]/70 mb-3">
                   A local SIM card with data is highly recommended for emergency situations.
-                  Available at the airport and in every city for around 30-50 MAD (about $3-5)
+                  Available at the airport and in every city for around from 30 MAD (about $3-5)
                   with a data package.
                 </p>
                 <div className="grid gap-3 sm:grid-cols-3 text-sm">

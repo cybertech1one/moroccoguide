@@ -1223,6 +1223,49 @@ export default function CraftsPage() {
         </div>
       </section>
 
+      {/* =====================================================================
+         ARTISAN CRAFT GALLERY
+         ===================================================================== */}
+      <section className="py-16 md:py-20" style={{ backgroundColor: '#FAF8F5' }}>
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <Eye className="w-8 h-8 text-[var(--color-primary)] mx-auto mb-3" />
+            <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold mb-4" style={{ color: '#1A1814' }}>
+              Artisan Craft Gallery
+            </h2>
+            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
+              A visual journey through Morocco&apos;s living heritage of handmade craftsmanship.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {[
+              { src: '/images/photo-carpet-weaving-artisan.webp', alt: 'Berber artisan weaving a traditional carpet on a handloom in the Atlas Mountains' },
+              { src: '/images/photo-moroccan-jewelry.webp', alt: 'Handcrafted Moroccan silver jewelry with Berber symbols and semi-precious stones' },
+              { src: '/images/photo-moroccan-leather.webp', alt: 'Moroccan leather goods including bags, belts, and babouche slippers in a souk' },
+              { src: '/images/photo-moroccan-pottery.webp', alt: 'Colorful Moroccan pottery and ceramics displayed at a workshop in Safi' },
+              { src: '/images/photo-moroccan-pottery-workshop.webp', alt: 'Potter shaping clay on a wheel at a traditional Moroccan pottery workshop' },
+              { src: '/images/photo-fes-pottery-workshop.webp', alt: 'Artisan painting intricate blue and white patterns on pottery in Fes' },
+              { src: '/images/card-zellige.webp', alt: 'Geometric zellige mosaic tilework in traditional Moroccan patterns' },
+              { src: '/images/card-souk.webp', alt: 'Vibrant Moroccan souk market stall with handcrafted goods and lanterns' },
+              { src: '/images/card-leather.webp', alt: 'Leather tanning vats at the Chouara Tannery in Fes medina' },
+              { src: '/images/portrait-artisan.webp', alt: 'Portrait of a master Moroccan artisan in their workshop' },
+              { src: '/images/art-moroccan-woodwork.webp', alt: 'Intricate Moroccan woodwork with hand-carved geometric and floral designs' },
+              { src: '/images/art-moroccan-brass.webp', alt: 'Moroccan brass lanterns and tea sets with hammered patterns' },
+              { src: '/images/art-moroccan-tiles.webp', alt: 'Hand-cut zellige tiles arranged in a star pattern by a Moroccan craftsman' },
+              { src: '/images/art-moroccan-zouak.webp', alt: 'Painted zouak woodwork ceiling with traditional Moroccan geometric motifs' },
+            ].map((img, i) => (
+              <div key={i} className="relative overflow-hidden rounded-xl aspect-[4/3] group">
+                <img src={img.src} alt={img.alt} loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <p className="absolute bottom-2 left-2 right-2 text-xs text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 line-clamp-2">
+                  {img.alt}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 md:py-20 gradient-moroccan">
         <div className="container-morocco text-center">

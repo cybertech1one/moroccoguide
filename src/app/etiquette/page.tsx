@@ -800,6 +800,21 @@ export default function EtiquettePage() {
         </div>
       </section>
 
+      {/* ── Henna Art Visual ── */}
+      <div className="container-morocco py-12">
+        <div className="rounded-2xl overflow-hidden">
+          <img
+            src="/images/photo-henna-art.webp"
+            alt="Intricate henna designs being applied to hands, a traditional Moroccan art form used for celebrations and everyday beauty"
+            loading="lazy"
+            className="w-full h-64 md:h-80 object-cover"
+          />
+          <p className="text-sm text-[var(--text-muted)] mt-3 text-center">
+            Henna art is deeply woven into Moroccan culture -- from weddings to everyday adornment
+          </p>
+        </div>
+      </div>
+
       {/* ── Dining Etiquette ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
         <div className="container-morocco">
@@ -860,6 +875,21 @@ export default function EtiquettePage() {
           </div>
         </div>
       </section>
+
+      {/* ── Moroccan Carpet Visual ── */}
+      <div className="container-morocco py-12">
+        <div className="rounded-2xl overflow-hidden">
+          <img
+            src="/images/art-moroccan-carpet.webp"
+            alt="Richly patterned traditional Moroccan carpet with geometric Berber motifs in warm reds, oranges, and natural tones"
+            loading="lazy"
+            className="w-full h-64 md:h-80 object-cover"
+          />
+          <p className="text-sm text-[var(--text-muted)] mt-3 text-center">
+            Moroccan carpets tell stories through their patterns -- each region has its own distinct weaving traditions
+          </p>
+        </div>
+      </div>
 
       {/* ── Photography Rules ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)]">

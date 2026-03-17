@@ -130,7 +130,7 @@ const jsonLd = {
           name: 'Do I need a permit to photograph in Morocco?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'No general permit is required for personal photography in public spaces. However, some historic sites charge a camera fee (typically 10-30 MAD). Drone photography requires authorization from the Moroccan Civil Aviation Authority (Direction Generale de lAviation Civile). Military installations, police stations, and royal palaces must never be photographed.',
+            text: 'No general permit is required for personal photography in public spaces. However, some historic sites charge a camera fee (typically from 10 MAD). Drone photography requires authorization from the Moroccan Civil Aviation Authority (Direction Generale de lAviation Civile). Military installations, police stations, and royal palaces must never be photographed.',
           },
         },
         {
@@ -146,7 +146,7 @@ const jsonLd = {
           name: 'Can I photograph people in Morocco?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Always ask permission before photographing individuals. Many Moroccans are happy to be photographed but it is culturally important to ask first. In markets and tourist areas, some people may expect a small tip (5-10 MAD) for posing. Never photograph people who decline, and be especially respectful around women and religious sites.',
+            text: 'Always ask permission before photographing individuals. Many Moroccans are happy to be photographed but it is culturally important to ask first. In markets and tourist areas, some people may expect a small tip (from 5 MAD) for posing. Never photograph people who decline, and be especially respectful around women and religious sites.',
           },
         },
         {
@@ -1498,7 +1498,7 @@ export default function PhotoSpotsPage() {
                   the tanneries in Fes, some individuals make part of their
                   living by posing for tourist photographs. Snake charmers, water
                   sellers in traditional dress, henna artists, and musicians may
-                  expect a small tip of 10-20 MAD (1-2 USD) for a photograph. This
+                  expect a small tip of from 10 MAD (1-2 USD) for a photograph. This
                   is a legitimate economic exchange and should be respected rather
                   than resented. Agree on the amount before taking the photo to
                   avoid misunderstandings. Sneaking photos to avoid paying is both
@@ -1918,7 +1918,7 @@ export default function PhotoSpotsPage() {
                 <p className="text-sm text-[#1A1814]/70 leading-relaxed">
                   No general permit is required for personal photography in public
                   spaces. However, some historic sites charge a small camera or
-                  video fee (typically 10-30 MAD). Tripods may attract attention
+                  video fee (typically from 10 MAD). Tripods may attract attention
                   at some monuments as they suggest professional/commercial use.
                   Drone photography always requires prior authorization from the
                   Direction Generale de l&apos;Aviation Civile (DGAC). Military
@@ -1954,7 +1954,7 @@ export default function PhotoSpotsPage() {
                   culturally important to ask first. A smile and a gesture toward
                   your camera is usually sufficient. In markets and tourist areas,
                   some people (snake charmers, water sellers, henna artists) may
-                  expect a small tip of 10-20 MAD for posing. Never photograph
+                  expect a small tip of from 10 MAD for posing. Never photograph
                   people who decline, and be especially respectful around women
                   and at religious sites. A telephoto lens allows candid
                   documentation of street life from a respectful distance without

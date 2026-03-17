@@ -1119,6 +1119,21 @@ export default function AgadirPage() {
         </div>
       </section>
 
+      {/* ── Fishing Heritage Visual ── */}
+      <div className="container-morocco py-12">
+        <div className="rounded-2xl overflow-hidden">
+          <img
+            src="/images/hero-fishing-morocco.webp"
+            alt="Traditional Moroccan fishing boats in a harbor with colorful painted hulls and nets drying in the sun"
+            loading="lazy"
+            className="w-full h-64 md:h-80 object-cover"
+          />
+          <p className="text-sm text-[var(--text-muted)] mt-3 text-center">
+            Agadir is Morocco's largest fishing port -- the daily catch fuels the city's legendary seafood restaurants
+          </p>
+        </div>
+      </div>
+
       {/* =================================================================
           SURFING CAPITAL
           ================================================================= */}
@@ -1684,6 +1699,40 @@ export default function AgadirPage() {
                 <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
                   {faq.answer}
                 </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* =================================================================
+          PHOTO GALLERY
+          ================================================================= */}
+      <section className="py-16 md:py-20" style={{ backgroundColor: '#FAF8F5' }}>
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <Camera className="w-8 h-8 mx-auto mb-4" style={{ color: '#A0522D' }} />
+            <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold mb-4" style={{ color: '#1A1814' }}>
+              Agadir &amp; Nearby Beaches
+            </h2>
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: '#1A1814', opacity: 0.7 }}>
+              Sun-drenched coastline, dramatic rock arches, and the wild beauty of southern
+              Morocco&apos;s Atlantic shore await just beyond the city.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {[
+              { src: '/images/hero-legzira.webp', alt: 'Legzira Beach near Agadir with dramatic red stone arches over the Atlantic Ocean' },
+              { src: '/images/hero-legzira-arch.webp', alt: 'Close-up of the iconic natural rock arch formation at Legzira Beach, southern Morocco' },
+            ].map((img, i) => (
+              <div key={i} className="relative overflow-hidden rounded-xl aspect-[16/9] group">
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
             ))}
           </div>

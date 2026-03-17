@@ -1683,6 +1683,45 @@ export default function TrekkingPage() {
       </section>
 
       {/* ============================================================
+          TREKKING PHOTO GALLERY
+          ============================================================ */}
+      <section className="py-16 md:py-20" style={{ backgroundColor: '#FAF8F5' }}>
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold mb-4" style={{ color: '#1A1814' }}>
+              Atlas Mountains Gallery
+            </h2>
+            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
+              Dramatic peaks, lush valleys, and ancient Berber trails -- Morocco&apos;s mountains offer world-class trekking.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="relative overflow-hidden rounded-xl aspect-[4/3] group">
+              <img src="/images/hero-hiking-atlas.webp" alt="Hikers traversing a scenic trail through the High Atlas Mountains with snow-capped peaks in the distance" loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <p className="absolute bottom-2 left-2 right-2 text-xs text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                Trekking through the High Atlas Mountains
+              </p>
+            </div>
+            <div className="relative overflow-hidden rounded-xl aspect-[4/3] group">
+              <img src="/images/hero-toubkal.webp" alt="Summit view from Jebel Toubkal, North Africa highest peak at 4,167 meters" loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <p className="absolute bottom-2 left-2 right-2 text-xs text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                Jebel Toubkal -- North Africa&apos;s highest peak
+              </p>
+            </div>
+            <div className="relative overflow-hidden rounded-xl aspect-[4/3] group">
+              <img src="/images/hero-mountain-biking.webp" alt="Mountain biker riding a trail through the Atlas Mountains with valley views" loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <p className="absolute bottom-2 left-2 right-2 text-xs text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                Mountain biking through the Atlas Mountains
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================
           FINAL CTA
           ============================================================ */}
       <section className="py-16 md:py-20 gradient-moroccan">

@@ -809,6 +809,13 @@ export default function RegionsPage() {
         </div>
       </section>
 
+      {/* ── Atlas Mountain Village Image ── */}
+      <section className="py-8 md:py-12">
+        <div className="container-morocco max-w-4xl">
+          <img src="/images/art-atlas-mountain-village.webp" alt="Traditional Berber village nestled in the Atlas Mountains of Morocco with terraced fields and dramatic mountain backdrop" loading="lazy" className="w-full rounded-xl shadow-lg" />
+        </div>
+      </section>
+
       {/* Interactive Region Map */}
       <section className="py-12 md:py-16 moroccan-pattern">
         <div className="container-morocco">
@@ -1070,6 +1077,13 @@ export default function RegionsPage() {
           </section>
         );
       })}
+
+      {/* ── Todgha Gorge Image ── */}
+      <section className="py-8 md:py-12">
+        <div className="container-morocco max-w-4xl">
+          <img src="/images/hero-todgha.webp" alt="The dramatic Todgha Gorge with towering red rock canyon walls in Morocco's Draa-Tafilalet region" loading="lazy" className="w-full rounded-xl shadow-lg" />
+        </div>
+      </section>
 
       {/* Climate Comparison Table */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)]">

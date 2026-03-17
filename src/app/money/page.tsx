@@ -802,6 +802,13 @@ export default function MoneyPage() {
         </div>
       </section>
 
+      {/* ── Sahara Golden Hour Image ── */}
+      <section className="py-8 md:py-12">
+        <div className="container-morocco max-w-4xl">
+          <img src="/images/art-sahara-golden-hour.webp" alt="Golden hour light over the Sahara Desert dunes, a breathtaking landscape that draws travelers to Morocco's desert tour experiences" loading="lazy" className="w-full rounded-xl shadow-lg" />
+        </div>
+      </section>
+
       {/* ============================================================
           SECTION 5: TIPPING CULTURE
           ============================================================ */}

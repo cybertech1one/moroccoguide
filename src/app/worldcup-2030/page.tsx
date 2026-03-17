@@ -345,7 +345,7 @@ const travelMethods = [
       'The conventional ONCF rail network connects all major host cities. Casablanca to Marrakech takes approximately 3 hours, Casablanca to Fes takes around 3.5 hours.',
       'Morocco is investing heavily in expanding its rail network ahead of 2030. New high-speed lines connecting Marrakech and Agadir are planned, which would dramatically reduce travel times between southern host cities.',
       'Special World Cup rail passes and increased train frequencies are expected during the tournament.',
-      'First-class rail travel in Morocco is comfortable and affordable, typically costing 200-400 MAD ($20-40 USD) for intercity journeys.',
+      'First-class rail travel in Morocco is comfortable and affordable, typically costing from 200 MAD ($20-40 USD) for intercity journeys.',
     ],
   },
 ];
@@ -386,15 +386,15 @@ const accommodationTypes = [
 ];
 
 const transportBetweenCities = [
-  { from: 'Casablanca', to: 'Rabat', method: 'Al Boraq (High-Speed Rail)', duration: '50 minutes', cost: '100-150 MAD' },
-  { from: 'Casablanca', to: 'Marrakech', method: 'ONCF Train', duration: '2 hr 45 min', cost: '150-250 MAD' },
-  { from: 'Casablanca', to: 'Fes', method: 'ONCF Train', duration: '3 hr 30 min', cost: '200-300 MAD' },
-  { from: 'Casablanca', to: 'Tangier', method: 'Al Boraq (High-Speed Rail)', duration: '2 hr 10 min', cost: '200-350 MAD' },
-  { from: 'Casablanca', to: 'Agadir', method: 'CTM/Supratours Bus', duration: '4 hr 30 min', cost: '180-250 MAD' },
-  { from: 'Marrakech', to: 'Agadir', method: 'CTM/Supratours Bus', duration: '3 hr 00 min', cost: '140-200 MAD' },
-  { from: 'Tangier', to: 'Fes', method: 'ONCF Train', duration: '3 hr 30 min', cost: '150-250 MAD' },
-  { from: 'Rabat', to: 'Fes', method: 'ONCF Train', duration: '2 hr 30 min', cost: '150-250 MAD' },
-  { from: 'Tangier', to: 'Tarifa (Spain)', method: 'Fast Ferry', duration: '35 min', cost: '350-500 MAD' },
+  { from: 'Casablanca', to: 'Rabat', method: 'Al Boraq (High-Speed Rail)', duration: '50 minutes', cost: 'from 100 MAD' },
+  { from: 'Casablanca', to: 'Marrakech', method: 'ONCF Train', duration: '2 hr 45 min', cost: 'from 150 MAD' },
+  { from: 'Casablanca', to: 'Fes', method: 'ONCF Train', duration: '3 hr 30 min', cost: 'from 200 MAD' },
+  { from: 'Casablanca', to: 'Tangier', method: 'Al Boraq (High-Speed Rail)', duration: '2 hr 10 min', cost: 'from 200 MAD' },
+  { from: 'Casablanca', to: 'Agadir', method: 'CTM/Supratours Bus', duration: '4 hr 30 min', cost: 'from 180 MAD' },
+  { from: 'Marrakech', to: 'Agadir', method: 'CTM/Supratours Bus', duration: '3 hr 00 min', cost: 'from 140 MAD' },
+  { from: 'Tangier', to: 'Fes', method: 'ONCF Train', duration: '3 hr 30 min', cost: 'from 150 MAD' },
+  { from: 'Rabat', to: 'Fes', method: 'ONCF Train', duration: '2 hr 30 min', cost: 'from 150 MAD' },
+  { from: 'Tangier', to: 'Tarifa (Spain)', method: 'Fast Ferry', duration: '35 min', cost: 'from 350 MAD' },
 ];
 
 const fanZoneActivities = [
@@ -462,10 +462,10 @@ const foodGuide = [
     title: 'Must-Try Moroccan Dishes',
     icon: UtensilsCrossed,
     items: [
-      { name: 'Tagine', description: 'Morocco\'s signature slow-cooked stew, made in a conical clay pot. Try chicken with preserved lemons and olives, lamb with prunes and almonds, or vegetable tagine with seasonal produce. Available everywhere from street stalls (40-60 MAD) to upscale restaurants (150-300 MAD).' },
-      { name: 'Couscous', description: 'The Friday staple. Steamed semolina topped with vegetables, meat, and a rich broth. Traditionally a family dish served on Fridays, but available at restaurants throughout the week. Budget 60-120 MAD at a mid-range restaurant.' },
-      { name: 'Moroccan Mint Tea', description: 'The national drink. Green tea brewed with fresh spearmint and generous amounts of sugar, poured theatrically from height. Served everywhere, from market stalls (5-10 MAD) to hotel terraces (25-50 MAD). Refusing tea is considered impolite.' },
-      { name: 'Msemen & Harcha', description: 'Flaky, pan-fried flatbread (msemen) and semolina griddle bread (harcha). Perfect street breakfast foods, often served with honey, cheese, or amlou (argan oil and almond paste). Just 3-10 MAD from street vendors.' },
+      { name: 'Tagine', description: 'Morocco\'s signature slow-cooked stew, made in a conical clay pot. Try chicken with preserved lemons and olives, lamb with prunes and almonds, or vegetable tagine with seasonal produce. Available everywhere from street stalls (from 40 MAD) to upscale restaurants (from 150 MAD).' },
+      { name: 'Couscous', description: 'The Friday staple. Steamed semolina topped with vegetables, meat, and a rich broth. Traditionally a family dish served on Fridays, but available at restaurants throughout the week. Budget from 60 MAD at a mid-range restaurant.' },
+      { name: 'Moroccan Mint Tea', description: 'The national drink. Green tea brewed with fresh spearmint and generous amounts of sugar, poured theatrically from height. Served everywhere, from market stalls (from 5 MAD) to hotel terraces (from 25 MAD). Refusing tea is considered impolite.' },
+      { name: 'Msemen & Harcha', description: 'Flaky, pan-fried flatbread (msemen) and semolina griddle bread (harcha). Perfect street breakfast foods, often served with honey, cheese, or amlou (argan oil and almond paste). Just from 3 MAD from street vendors.' },
       { name: 'Pastilla', description: 'A sweet and savory pastry layered with shredded pigeon or chicken, almonds, eggs, and cinnamon, wrapped in crispy warqa pastry and dusted with powdered sugar. A Moroccan delicacy typically found in Fes.' },
       { name: 'Mechoui', description: 'Slow-roasted whole lamb, cooked for hours until the meat falls off the bone. A celebratory dish perfect for match-day feasting. Found at specialist mechoui restaurants, especially in Marrakech\'s Mechoui Alley.' },
     ],
@@ -474,10 +474,10 @@ const foodGuide = [
     title: 'Street Food for Football Fans',
     icon: Coffee,
     items: [
-      { name: 'Merguez Sandwiches', description: 'Spicy lamb sausage served in a baguette with harissa, onions, and fresh vegetables. The quintessential Moroccan match-day snack. 15-30 MAD from street vendors.' },
-      { name: 'Bocadillo', description: 'A Moroccan take on the Spanish sandwich, filled with grilled kefta (minced meat), tuna, or egg. Fast, filling, and cheap at 10-25 MAD.' },
-      { name: 'Freshly Squeezed Juice', description: 'Orange juice, avocado smoothies, pomegranate juice, and mixed fruit drinks are available on virtually every street corner. Prices range from 5-15 MAD for a large glass.' },
-      { name: 'Shawarma & Brochettes', description: 'Grilled meat skewers (brochettes) are sold outside every stadium in Morocco. Paired with bread, harissa, and a fresh salad, this is the ultimate pre-match fuel. Expect 20-40 MAD.' },
+      { name: 'Merguez Sandwiches', description: 'Spicy lamb sausage served in a baguette with harissa, onions, and fresh vegetables. The quintessential Moroccan match-day snack. From 15 MAD from street vendors.' },
+      { name: 'Bocadillo', description: 'A Moroccan take on the Spanish sandwich, filled with grilled kefta (minced meat), tuna, or egg. Fast, filling, and cheap at just 10 MAD.' },
+      { name: 'Freshly Squeezed Juice', description: 'Orange juice, avocado smoothies, pomegranate juice, and mixed fruit drinks are available on virtually every street corner. Prices range from 5 MAD for a large glass.' },
+      { name: 'Shawarma & Brochettes', description: 'Grilled meat skewers (brochettes) are sold outside every stadium in Morocco. Paired with bread, harissa, and a fresh salad, this is the ultimate pre-match fuel. Expect from 20 MAD.' },
       { name: 'Chebakia', description: 'Deep-fried sesame cookies soaked in honey. A sweet Ramadan tradition that is available year-round from bakeries. Perfect with mint tea.' },
     ],
   },
@@ -517,12 +517,12 @@ const tourismHighlights = [
 ];
 
 const budgetItems = [
-  { category: 'Accommodation (per night)', budget: '200-500 MAD ($20-50)', mid: '500-1,500 MAD ($50-150)', luxury: '1,500-5,000+ MAD ($150-500+)' },
-  { category: 'Meals (per day)', budget: '100-200 MAD ($10-20)', mid: '200-500 MAD ($20-50)', luxury: '500-1,500+ MAD ($50-150+)' },
-  { category: 'Local Transport (per day)', budget: '30-80 MAD ($3-8)', mid: '80-200 MAD ($8-20)', luxury: '200-600 MAD ($20-60)' },
-  { category: 'Intercity Travel', budget: '100-250 MAD ($10-25)', mid: '200-400 MAD ($20-40)', luxury: '400-1,000+ MAD ($40-100+)' },
-  { category: 'Match Tickets', budget: 'From ~700 MAD ($70)', mid: '~1,500-3,000 MAD ($150-300)', luxury: '5,000-15,000+ MAD ($500-1,500+)' },
-  { category: 'Activities & Sightseeing', budget: '50-150 MAD ($5-15)', mid: '150-500 MAD ($15-50)', luxury: '500-2,000+ MAD ($50-200+)' },
+  { category: 'Accommodation (per night)', budget: 'from 200 MAD ($20-50)', mid: 'from 500 MAD ($50-150)', luxury: '1,500-5,000+ MAD ($150-500+)' },
+  { category: 'Meals (per day)', budget: 'from 100 MAD ($10-20)', mid: 'from 200 MAD ($20-50)', luxury: '500-1,500+ MAD ($50-150+)' },
+  { category: 'Local Transport (per day)', budget: 'from 30 MAD ($3-8)', mid: 'from 80 MAD ($8-20)', luxury: 'from 200 MAD ($20-60)' },
+  { category: 'Intercity Travel', budget: 'from 100 MAD ($10-25)', mid: 'from 200 MAD ($20-40)', luxury: '400-1,000+ MAD ($40-100+)' },
+  { category: 'Match Tickets', budget: 'From ~700 MAD ($70)', mid: '~from 1,500 MAD ($150-300)', luxury: '5,000-15,000+ MAD ($500-1,500+)' },
+  { category: 'Activities & Sightseeing', budget: 'from 50 MAD ($5-15)', mid: 'from 150 MAD ($15-50)', luxury: '500-2,000+ MAD ($50-200+)' },
 ];
 
 const culturalTips = [
@@ -564,7 +564,7 @@ const culturalTips = [
       'Currency: Moroccan Dirham (MAD). Approximately 10 MAD = 1 USD (check current rates).',
       'ATMs are widely available in all host cities. Visa and Mastercard are accepted at most hotels and larger restaurants.',
       'Cash is essential for taxis, street food, souks, and smaller establishments.',
-      'Tipping (pourboire) is customary: 10-15% at restaurants, 10-20 MAD for hotel porters, round up taxi fares.',
+      'Tipping (pourboire) is customary: 10-15% at restaurants, from 10 MAD for hotel porters, round up taxi fares.',
       'Haggling is expected in souks and with taxis that do not use meters.',
     ],
   },
@@ -661,7 +661,7 @@ const faqItems = [
   },
   {
     question: 'Can I use my mobile phone in Morocco?',
-    answer: 'Yes. Morocco has excellent 4G/LTE coverage in all cities and most rural areas, with 5G being rolled out. International roaming works but can be expensive. The best option is to buy a local SIM card upon arrival (Maroc Telecom, Inwi, or Orange) for approximately 30-50 MAD with a generous data package. SIM cards are available at airports and phone shops everywhere.',
+    answer: 'Yes. Morocco has excellent 4G/LTE coverage in all cities and most rural areas, with 5G being rolled out. International roaming works but can be expensive. The best option is to buy a local SIM card upon arrival (Maroc Telecom, Inwi, or Orange) for approximately from 30 MAD with a generous data package. SIM cards are available at airports and phone shops everywhere.',
   },
 ];
 
@@ -740,6 +740,11 @@ export default function WorldCup2030Page() {
           </div>
         </div>
       </section>
+
+      {/* Pricing Note */}
+      <div className="container-morocco">
+        <p className="text-xs text-[var(--text-muted)] italic py-2 text-center">All prices are approximate and may vary by season, location, and operator.</p>
+      </div>
 
       {/* ===============================================================
           2. OVERVIEW

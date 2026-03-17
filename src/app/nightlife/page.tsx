@@ -830,6 +830,13 @@ export default function NightlifePage() {
         </div>
       </section>
 
+      {/* ── Atmospheric Image ── */}
+      <section className="py-8 md:py-12">
+        <div className="container-morocco max-w-4xl">
+          <img src="/images/art-moroccan-door-collection.webp" alt="Collection of ornate Moroccan doors with intricate carvings and colorful tilework, reflecting the artistry found in Morocco's nightlife districts" loading="lazy" className="w-full rounded-xl shadow-lg" />
+        </div>
+      </section>
+
       {/* ── Venue Directory (Client Component) ── */}
       <section className="container-morocco py-12 md:py-16">
         <div className="text-center mb-10">

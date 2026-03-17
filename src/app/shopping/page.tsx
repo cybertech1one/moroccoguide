@@ -703,6 +703,13 @@ export default function ShoppingPage() {
         </div>
       </section>
 
+      {/* ── Souk Atmosphere Image ── */}
+      <section className="py-8 md:py-12">
+        <div className="container-morocco max-w-4xl">
+          <img src="/images/art-moroccan-spice-market.webp" alt="Vibrant Moroccan spice market with colorful pyramids of cumin, saffron, paprika, and ras el hanout in traditional copper bowls" loading="lazy" className="w-full rounded-xl shadow-lg" />
+        </div>
+      </section>
+
       {/* ── Bargaining Scripts ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco">

@@ -970,6 +970,30 @@ export default function EcoTourismPage() {
         </div>
       </section>
 
+      {/* ── Argan Ecosystem Visual ── */}
+      <div className="container-morocco py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="rounded-2xl overflow-hidden">
+            <img
+              src="/images/photo-argan-trees.webp"
+              alt="Ancient argan trees dotting the dry landscape of southwestern Morocco, a UNESCO Biosphere Reserve"
+              loading="lazy"
+              className="w-full h-64 md:h-80 object-cover"
+            />
+            <p className="text-sm text-[var(--text-muted)] mt-2 text-center">Argan trees in the Souss Valley -- a UNESCO-protected biosphere</p>
+          </div>
+          <div className="rounded-2xl overflow-hidden">
+            <img
+              src="/images/art-argan-botanical.webp"
+              alt="Botanical illustration of the argan tree showing its fruit, nut, leaves, and the oil extraction process"
+              loading="lazy"
+              className="w-full h-64 md:h-80 object-cover"
+            />
+            <p className="text-sm text-[var(--text-muted)] mt-2 text-center">The argan tree -- Morocco's liquid gold and a pillar of sustainable rural livelihoods</p>
+          </div>
+        </div>
+      </div>
+
       {/* ──────────────────────────── COOPERATIVES ──────────────────────────── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco">
@@ -1670,6 +1694,24 @@ export default function EcoTourismPage() {
                 </div>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ──────────────────────────── ECO-TOURISM INFOGRAPHIC ──────────────────────────── */}
+      <section className="py-16 md:py-20" style={{ backgroundColor: '#FAF8F5' }}>
+        <div className="container-morocco max-w-3xl">
+          <div className="text-center mb-8">
+            <Leaf className="w-8 h-8 text-[var(--color-primary)] mx-auto mb-3" />
+            <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold" style={{ color: '#1A1814' }}>
+              Eco-Tourism in Morocco at a Glance
+            </h2>
+            <p className="text-[var(--text-secondary)] mt-2">
+              Key facts, figures, and impact data about sustainable travel in Morocco.
+            </p>
+          </div>
+          <div className="relative overflow-hidden rounded-2xl shadow-lg">
+            <img src="/images/infographic-eco-tourism.webp" alt="Infographic showing Morocco eco-tourism statistics including national parks, endangered species, renewable energy targets, and sustainable accommodation options" loading="lazy" className="w-full h-auto" />
           </div>
         </div>
       </section>

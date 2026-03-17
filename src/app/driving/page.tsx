@@ -2084,6 +2084,38 @@ export default function DrivingInMoroccoPage() {
       </section>
 
       {/* ============================================================
+          SCENIC DRIVING GALLERY
+          ============================================================ */}
+      <section className="py-16 md:py-20" style={{ backgroundColor: '#FAF8F5' }}>
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold mb-4" style={{ color: '#1A1814' }}>
+              Scenic Roads of Morocco
+            </h2>
+            <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
+              From winding mountain passes to endless desert highways -- Morocco&apos;s roads are as spectacular as the destinations.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="relative overflow-hidden rounded-xl aspect-[16/9] group">
+              <img src="/images/hero-driving-morocco.webp" alt="Car driving along a scenic Moroccan road with palm trees and mountains in the background" loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <p className="absolute bottom-3 left-3 right-3 text-sm text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                The open road -- driving through Morocco&apos;s varied landscapes
+              </p>
+            </div>
+            <div className="relative overflow-hidden rounded-xl aspect-[16/9] group">
+              <img src="/images/hero-dades-valley-road.webp" alt="The famous Dades Gorge road with dramatic switchback turns through red canyon walls" loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <p className="absolute bottom-3 left-3 right-3 text-sm text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                The Dades Gorge switchbacks -- one of Morocco&apos;s most iconic driving routes
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================
           CTA
           ============================================================ */}
       <section className="py-16 md:py-20 gradient-moroccan">

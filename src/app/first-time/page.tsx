@@ -1038,6 +1038,21 @@ export default function FirstTimePage() {
         </div>
       </section>
 
+      {/* ── Illustrated Map Visual ── */}
+      <div className="container-morocco py-12">
+        <div className="rounded-2xl overflow-hidden">
+          <img
+            src="/images/illustration-morocco-map.webp"
+            alt="Illustrated map of Morocco showing major cities, landmarks, the Atlas Mountains, Sahara Desert, and Atlantic coastline"
+            loading="lazy"
+            className="w-full h-64 md:h-96 object-cover"
+          />
+          <p className="text-sm text-[var(--text-muted)] mt-3 text-center">
+            Morocco at a glance -- from the Mediterranean coast to the Sahara, packed with diversity in a compact geography
+          </p>
+        </div>
+      </div>
+
       {/* ============================================================
           BEFORE YOU GO CHECKLIST
           ============================================================ */}
@@ -1079,6 +1094,30 @@ export default function FirstTimePage() {
           </div>
         </div>
       </section>
+
+      {/* ── Morocco Infographic ── */}
+      <div className="container-morocco py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="rounded-2xl overflow-hidden">
+            <img
+              src="/images/infographic-morocco.webp"
+              alt="Infographic showing key Morocco travel statistics, distances between cities, currency, climate zones, and useful facts"
+              loading="lazy"
+              className="w-full h-64 md:h-80 object-cover"
+            />
+            <p className="text-sm text-[var(--text-muted)] mt-2 text-center">Essential Morocco facts at a glance</p>
+          </div>
+          <div className="rounded-2xl overflow-hidden">
+            <img
+              src="/images/poster-morocco-vintage.webp"
+              alt="Vintage-style travel poster of Morocco featuring iconic architecture, palm trees, and warm desert tones"
+              loading="lazy"
+              className="w-full h-64 md:h-80 object-cover"
+            />
+            <p className="text-sm text-[var(--text-muted)] mt-2 text-center">Morocco has inspired travelers for centuries</p>
+          </div>
+        </div>
+      </div>
 
       {/* ============================================================
           GETTING THERE - AIRPORTS

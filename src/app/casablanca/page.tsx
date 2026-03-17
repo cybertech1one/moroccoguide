@@ -1775,6 +1775,45 @@ export default function CasablancaPage() {
       </section>
 
       {/* ================================================================
+          PHOTO GALLERY
+          ================================================================ */}
+      <section className="py-16 md:py-20" style={{ backgroundColor: '#FAF8F5' }}>
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <Camera className="w-8 h-8 mx-auto mb-4" style={{ color: '#A0522D' }} />
+            <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold mb-4" style={{ color: '#1A1814' }}>
+              Casablanca in Pictures
+            </h2>
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: '#1A1814', opacity: 0.7 }}>
+              From the towering Hassan II Mosque to the Art Deco boulevards and the sun-drenched Corniche,
+              discover the many faces of Morocco&apos;s largest city.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {[
+              { src: '/images/hero-casablanca-mosque.webp', alt: 'Hassan II Mosque rising above the Atlantic Ocean in Casablanca at golden hour' },
+              { src: '/images/hero-casablanca-skyline.webp', alt: 'Modern Casablanca skyline with twin towers and city center architecture' },
+              { src: '/images/hero-hassan-ii-ocean.webp', alt: 'Hassan II Mosque oceanfront view with waves crashing against the seawall' },
+              { src: '/images/photo-casablanca-art-deco.webp', alt: 'Art Deco building facade along Boulevard Mohammed V in Casablanca' },
+              { src: '/images/photo-casablanca-corniche.webp', alt: 'Ain Diab Corniche promenade along the Casablanca Atlantic waterfront' },
+              { src: '/images/photo-ricks-cafe-casablanca.webp', alt: 'Rick\'s Cafe interior in Casablanca inspired by the classic Humphrey Bogart film' },
+              { src: '/images/photo-hassan-ii-mosque.webp', alt: 'Intricate zellige tilework and carved plaster details inside the Hassan II Mosque' },
+            ].map((img, i) => (
+              <div key={i} className={`relative overflow-hidden rounded-xl group ${i === 0 ? 'md:col-span-2 md:row-span-2 aspect-[4/3]' : 'aspect-[4/3]'}`}>
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ================================================================
           CTA SECTION
           ================================================================ */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-[#A0522D] to-[#7a3e22]">

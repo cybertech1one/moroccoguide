@@ -996,6 +996,30 @@ export default function DayTripsPage() {
         </div>
       </section>
 
+      {/* ── Scenic Day Trip Destinations Gallery ── */}
+      <div className="container-morocco py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="rounded-2xl overflow-hidden">
+            <img
+              src="/images/hero-paradise-valley.webp"
+              alt="Paradise Valley near Agadir with turquoise natural pools surrounded by palm trees and red cliffs"
+              loading="lazy"
+              className="w-full h-64 md:h-80 object-cover"
+            />
+            <p className="text-sm text-[var(--text-muted)] mt-2 text-center">Paradise Valley -- a stunning half-day trip from Agadir</p>
+          </div>
+          <div className="rounded-2xl overflow-hidden">
+            <img
+              src="/images/hero-draa-valley.webp"
+              alt="Draa Valley landscape with date palm oasis and kasbah ruins stretching toward the horizon"
+              loading="lazy"
+              className="w-full h-64 md:h-80 object-cover"
+            />
+            <p className="text-sm text-[var(--text-muted)] mt-2 text-center">The Draa Valley -- Morocco's longest river oasis</p>
+          </div>
+        </div>
+      </div>
+
       {/* ── Quick Navigation ── */}
       <section className="bg-[var(--surface-muted)] border-y border-[var(--border-light)]">
         <div className="container-morocco py-8">
@@ -1290,6 +1314,30 @@ export default function DayTripsPage() {
           </div>
         </div>
       </section>
+
+      {/* ── Visual Break: More Destinations ── */}
+      <div className="container-morocco py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="rounded-2xl overflow-hidden">
+            <img
+              src="/images/hero-bin-el-ouidane.webp"
+              alt="Bin El Ouidane lake with deep blue water surrounded by arid mountain terrain in the Atlas foothills"
+              loading="lazy"
+              className="w-full h-64 md:h-80 object-cover"
+            />
+            <p className="text-sm text-[var(--text-muted)] mt-2 text-center">Bin El Ouidane -- a hidden lake in the Atlas foothills</p>
+          </div>
+          <div className="rounded-2xl overflow-hidden">
+            <img
+              src="/images/hero-paradise-valley-pool.webp"
+              alt="Natural swimming pool in Paradise Valley with crystal clear turquoise water and surrounding rock formations"
+              loading="lazy"
+              className="w-full h-64 md:h-80 object-cover"
+            />
+            <p className="text-sm text-[var(--text-muted)] mt-2 text-center">Natural pools at Paradise Valley -- perfect for a refreshing swim</p>
+          </div>
+        </div>
+      </div>
 
       {/* ── Planning Tips Section ── */}
       <section className="moroccan-pattern">

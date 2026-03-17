@@ -29,7 +29,6 @@ import {
   BookOpen,
   Users,
   Building,
-  Palmtree,
   Wheat,
   Waypoints,
   Info,
@@ -317,7 +316,7 @@ const dateVarieties: DateVariety[] = [
    ================================================================ */
 
 const oasisCrops = [
-  { name: 'Dates', icon: <Palmtree className="w-4 h-4" />, description: 'The primary crop of every oasis. Morocco produces approximately 130,000 tonnes annually from over 6 million date palms. The date palm provides far more than fruit: its trunk is used for construction, fronds for roofing and weaving, and the fibrous sheath for rope and fuel.' },
+  { name: 'Dates', icon: <TreePine className="w-4 h-4" />, description: 'The primary crop of every oasis. Morocco produces approximately 130,000 tonnes annually from over 6 million date palms. The date palm provides far more than fruit: its trunk is used for construction, fronds for roofing and weaving, and the fibrous sheath for rope and fuel.' },
   { name: 'Olives', icon: <Leaf className="w-4 h-4" />, description: 'The second tier of oasis agriculture. Olive trees grow beneath the date palm canopy, benefiting from the filtered light and shared water. Moroccan olive oil from oasis regions has a distinctive, robust flavor.' },
   { name: 'Almonds', icon: <TreePine className="w-4 h-4" />, description: 'Almond trees thrive in the semi-arid conditions of Morocco\'s oases, blooming spectacularly in late February and early March. The Tafraout region of the Anti-Atlas is famous for its almond festival.' },
   { name: 'Henna', icon: <Leaf className="w-4 h-4" />, description: 'Many oases, particularly Tata and the Draa Valley, cultivate henna for use in traditional body art and hair dyeing. The leaves are dried, ground, and sold in souks across Morocco. Henna cultivation has deep cultural significance.' },
@@ -348,7 +347,7 @@ const ecologicalChallenges: EcologicalChallenge[] = [
    ================================================================ */
 
 const quickStats = [
-  { icon: <Palmtree className="w-5 h-5" />, label: 'Date Palms', value: '6 Million+', detail: 'Across Morocco' },
+  { icon: <TreePine className="w-5 h-5" />, label: 'Date Palms', value: '6 Million+', detail: 'Across Morocco' },
   { icon: <Droplets className="w-5 h-5" />, label: 'Major Oases', value: '15+', detail: 'Valley systems' },
   { icon: <Wheat className="w-5 h-5" />, label: 'Date Production', value: '130,000t', detail: 'Annually' },
   { icon: <Layers className="w-5 h-5" />, label: 'Agriculture Tiers', value: '3', detail: 'Palm-tree-ground' },
@@ -437,7 +436,7 @@ export default function OasesPage() {
         <div className="relative container-morocco py-20 md:py-28 lg:py-36">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm text-white/90 text-sm mb-6">
-              <Palmtree className="w-4 h-4 text-emerald-400" />
+              <TreePine className="w-4 h-4 text-emerald-400" />
               Oases &amp; Palm Groves
             </div>
             <h1 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
@@ -475,7 +474,7 @@ export default function OasesPage() {
         <div className="container-morocco max-w-4xl">
           <div className="text-center mb-12">
             <div className="inline-flex p-3 rounded-xl bg-[var(--color-primary)]/10 mb-4">
-              <Palmtree className="w-6 h-6 text-[var(--color-primary)]" />
+              <TreePine className="w-6 h-6 text-[var(--color-primary)]" />
             </div>
             <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
               What Makes Moroccan Oases Unique
@@ -565,7 +564,7 @@ export default function OasesPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1A1814]/80 via-[#1A1814]/30 to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4">
                     <div className="flex items-center gap-2 text-xs font-bold text-[#C4960C] uppercase tracking-wider mb-1">
-                      <Palmtree className="w-3.5 h-3.5" />
+                      <TreePine className="w-3.5 h-3.5" />
                       {oasis.region}
                     </div>
                     <h3 className="text-2xl md:text-3xl font-[family-name:var(--font-display)] font-bold text-white">
@@ -699,7 +698,7 @@ export default function OasesPage() {
         <div className="container-morocco">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--color-primary)]/10 text-[var(--color-primary)] text-sm font-medium mb-4">
-              <Palmtree className="w-4 h-4" />
+              <TreePine className="w-4 h-4" />
               October Harvest Season
             </div>
             <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
@@ -1109,7 +1108,7 @@ export default function OasesPage() {
       {/* ──────────────────────────── CTA SECTION ──────────────────────────── */}
       <section className="py-16 md:py-20 bg-[#1A1814] text-white moroccan-pattern-dark">
         <div className="container-morocco text-center max-w-3xl">
-          <Palmtree className="w-10 h-10 text-[#C4960C] mx-auto mb-4" />
+          <TreePine className="w-10 h-10 text-[#C4960C] mx-auto mb-4" />
           <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold mb-4">
             Discover Morocco&apos;s Oasis Heritage
           </h2>

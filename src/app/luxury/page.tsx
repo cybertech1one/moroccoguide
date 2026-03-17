@@ -604,6 +604,13 @@ export default function LuxuryPage() {
         </div>
       </section>
 
+      {/* ── Zellige Craftsmanship Image ── */}
+      <section className="py-8 md:py-12">
+        <div className="container-morocco max-w-4xl">
+          <img src="/images/art-moroccan-pattern-zellige.webp" alt="Intricate Moroccan zellige tilework pattern showcasing the geometric craftsmanship found in luxury riads and palace hotels" loading="lazy" className="w-full rounded-xl shadow-lg" />
+        </div>
+      </section>
+
       {/* Top 15 Hotels */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco">

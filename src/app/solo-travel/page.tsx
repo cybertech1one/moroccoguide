@@ -621,6 +621,13 @@ export default function SoloTravelPage() {
         </div>
       </section>
 
+      {/* ── Chefchaouen Blue Streets Image ── */}
+      <section className="py-8 md:py-12">
+        <div className="container-morocco max-w-4xl">
+          <img src="/images/art-chefchaouen-blue.webp" alt="The iconic blue-painted streets of Chefchaouen, one of Morocco's most photogenic and solo-traveler-friendly destinations" loading="lazy" className="w-full rounded-xl shadow-lg" />
+        </div>
+      </section>
+
       {/* ============================================================
           BEST CITIES
           ============================================================ */}
