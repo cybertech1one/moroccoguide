@@ -929,6 +929,24 @@ const relatedPages = [
     title: 'UNESCO Heritage Sites',
     description: 'Explore Morocco\'s UNESCO World Heritage Sites, including Rabat\'s historic medina and monuments.',
   },
+  {
+    href: '/morocco-language-schools',
+    icon: Landmark,
+    title: 'Language Schools',
+    description: 'Study Arabic or French in Rabat — home to Morocco\'s best language institutes.',
+  },
+  {
+    href: '/morocco-train-routes',
+    icon: Train,
+    title: 'Train Routes (ONCF)',
+    description: 'Al Boraq high-speed and all ONCF routes from Rabat.',
+  },
+  {
+    href: '/morocco-day-trips',
+    icon: Compass,
+    title: 'Day Trips',
+    description: 'Meknes, Volubilis, and Casablanca day excursions from Rabat.',
+  },
 ];
 
 /* =====================================================================

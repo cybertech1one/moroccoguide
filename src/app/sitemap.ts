@@ -225,6 +225,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-vs-egypt',
     '/morocco-3-days',
     '/marrakech-to-sahara',
+    '/morocco-for-couples',
+    '/morocco-for-seniors',
+    '/morocco-with-kids',
+    '/morocco-vs-turkey',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
