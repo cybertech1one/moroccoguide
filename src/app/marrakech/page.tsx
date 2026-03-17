@@ -840,6 +840,9 @@ const relatedPages = [
   { href: '/souks', title: 'Souk Shopping Guide', description: 'Master the art of haggling and find the best Moroccan crafts.', icon: ShoppingBag },
   { href: '/itineraries/3-day-marrakech', title: '3-Day Marrakech Itinerary', description: 'A detailed day-by-day plan for the perfect Marrakech trip.', icon: Calendar },
   { href: '/hammam', title: 'Hammam Guide', description: 'Everything you need to know about the Moroccan bathhouse ritual.', icon: Sparkles },
+  { href: '/morocco-nightlife-guide', title: 'Morocco Nightlife Guide', description: 'Rooftop bars, live music, and after-dark culture in Marrakech and beyond.', icon: Moon },
+  { href: '/morocco-shopping-guide', title: 'Morocco Shopping Guide', description: 'What to buy, where to shop, and how to get the best prices across Morocco.', icon: ShoppingBag },
+  { href: '/morocco-spa-guide', title: 'Morocco Spa Guide', description: 'Luxury hammams, traditional treatments, and the best spas in the kingdom.', icon: Sparkles },
 ];
 
 /* =====================================================================

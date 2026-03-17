@@ -2122,6 +2122,44 @@ export default function DrivingInMoroccoPage() {
       </section>
 
       {/* ============================================================
+          RELATED GUIDES
+          ============================================================ */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold text-[var(--text-primary)] mb-8 text-center">
+            Related Travel Guides
+          </h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {[
+              { title: 'Morocco Road Trip Routes', href: '/morocco-road-trip-routes', description: 'Pre-planned scenic routes from coast to desert, with stops, distances, and timing.', icon: Route },
+              { title: 'Morocco Airports Guide', href: '/morocco-airports-guide', description: 'All major airports, transfers, car rental desks, and arrival tips.', icon: Navigation },
+              { title: 'Morocco Train Routes', href: '/morocco-train-routes', description: 'High-speed Al Boraq, intercity ONCF services, and scenic rail journeys.', icon: Map },
+            ].map((guide) => (
+              <Link
+                key={guide.href}
+                href={guide.href}
+                className="card-moroccan p-6 group flex flex-col items-start"
+              >
+                <div className="w-10 h-10 rounded-xl bg-[var(--color-accent)]/10 flex items-center justify-center mb-4 group-hover:bg-[var(--color-accent)]/20 transition-colors">
+                  <guide.icon className="w-5 h-5 text-[var(--color-accent)]" />
+                </div>
+                <h3 className="font-[family-name:var(--font-heading)] text-base font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-secondary)] transition-colors">
+                  {guide.title}
+                </h3>
+                <p className="text-sm text-[var(--text-secondary)] mb-3 leading-relaxed">
+                  {guide.description}
+                </p>
+                <span className="mt-auto inline-flex items-center gap-1 text-sm font-semibold text-[var(--color-secondary)]">
+                  Read Guide
+                  <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================
           CTA
           ============================================================ */}
       <section className="py-16 md:py-20 gradient-moroccan">

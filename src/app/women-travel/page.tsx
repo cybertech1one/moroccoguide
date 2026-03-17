@@ -1608,6 +1608,9 @@ export default function WomenTravelPage() {
               { title: 'Safety Guide', href: '/safety', icon: <Shield className="w-5 h-5" /> },
               { title: 'Wellness and Hammams', href: '/wellness', icon: <Sparkles className="w-5 h-5" /> },
               { title: 'Cooking Classes', href: '/cooking-classes', icon: <Utensils className="w-5 h-5" /> },
+              { title: 'Morocco Safety Tips', href: '/morocco-safety-tips', icon: <ShieldCheck className="w-5 h-5" /> },
+              { title: 'Morocco Nightlife Guide', href: '/morocco-nightlife-guide', icon: <Star className="w-5 h-5" /> },
+              { title: 'Morocco Shopping Guide', href: '/morocco-shopping-guide', icon: <Gem className="w-5 h-5" /> },
             ].map((guide, i) => (
               <Link
                 key={i}

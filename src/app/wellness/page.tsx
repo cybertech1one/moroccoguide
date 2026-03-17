@@ -1202,6 +1202,43 @@ export default function WellnessPage() {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════
+         RELATED GUIDES
+         ═══════════════════════════════════════════════════════════ */}
+      <section className="py-16 md:py-20" style={{ backgroundColor: '#FAF8F5' }}>
+        <div className="container-morocco">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold text-[var(--text-primary)] mb-8 text-center">
+            Related Wellness Guides
+          </h2>
+          <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            {[
+              { title: 'Morocco Spa Guide', href: '/morocco-spa-guide', description: 'In-depth guide to Morocco\'s best spas, luxury hammams, and signature treatments.', icon: Sparkles },
+              { title: 'Morocco Weather Monthly', href: '/morocco-weather-monthly', description: 'Plan your wellness retreat around the best weather -- month-by-month climate guide.', icon: Sun },
+            ].map((guide) => (
+              <Link
+                key={guide.href}
+                href={guide.href}
+                className="card-moroccan p-6 group flex flex-col items-start"
+              >
+                <div className="w-10 h-10 rounded-xl bg-[var(--color-accent)]/10 flex items-center justify-center mb-4 group-hover:bg-[var(--color-accent)]/20 transition-colors">
+                  <guide.icon className="w-5 h-5 text-[var(--color-accent)]" />
+                </div>
+                <h3 className="font-[family-name:var(--font-heading)] text-base font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-secondary)] transition-colors">
+                  {guide.title}
+                </h3>
+                <p className="text-sm text-[var(--text-secondary)] mb-3 leading-relaxed">
+                  {guide.description}
+                </p>
+                <span className="mt-auto inline-flex items-center gap-1 text-sm font-semibold text-[var(--color-secondary)]">
+                  Read Guide
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════
          CTA -- Link to Activities
          ═══════════════════════════════════════════════════════════ */}
       <section className="py-16 md:py-20 gradient-moroccan">

@@ -16,6 +16,10 @@ import {
   Sun,
   Waves,
   Shield,
+  Moon,
+  Car,
+  Gem,
+  Wifi,
 } from 'lucide-react';
 
 /* ─── Smart Contextual Linking Component ───
@@ -68,9 +72,11 @@ const allPages: Record<string, PageLink[]> = {
     { label: 'Currency Converter', href: '/tools/currency', icon: Shield, description: 'MAD exchange rates' },
     { label: 'Packing Checklist', href: '/tools/checklist', icon: ShoppingBag, description: 'Interactive packing list' },
     { label: 'Darija Phrases', href: '/tools/phrases', icon: Heart, description: 'Essential Arabic words' },
-    { label: 'Trains & Transport', href: '/trains', icon: Train, description: 'Getting around' },
+    { label: 'Train Routes', href: '/morocco-train-routes', icon: Train, description: 'ONCF rail network' },
     { label: 'Public Transport', href: '/public-transport', icon: Train, description: 'Buses, trams, taxis' },
-    { label: 'Scams to Avoid', href: '/scams', icon: Shield, description: 'Stay safe' },
+    { label: 'Airports Guide', href: '/morocco-airports-guide', icon: Plane, description: 'All Morocco airports' },
+    { label: 'Safety Tips', href: '/morocco-safety-tips', icon: Shield, description: 'Stay safe in Morocco' },
+    { label: 'Weather Monthly', href: '/morocco-weather-monthly', icon: Sun, description: 'Month-by-month climate' },
     { label: 'Emergency Contacts', href: '/emergency', icon: Shield, description: 'Police, hospitals, embassies' },
   ],
   culture: [
@@ -90,6 +96,14 @@ const allPages: Record<string, PageLink[]> = {
     { label: 'Tetouan', href: '/tetouan', icon: MapPin, description: 'White Dove of the Rif' },
     { label: 'Ouarzazate', href: '/ouarzazate', icon: Camera, description: 'Hollywood of Africa' },
     { label: 'Meknes', href: '/meknes', icon: MapPin, description: 'Imperial city' },
+  ],
+  lifestyle: [
+    { label: 'Digital Nomad Guide', href: '/morocco-digital-nomad-guide', icon: Wifi, description: 'Remote work in Morocco', tag: 'New' },
+    { label: 'Road Trip Routes', href: '/morocco-road-trip-routes', icon: Car, description: '6 epic driving routes', tag: 'New' },
+    { label: 'Shopping Guide', href: '/morocco-shopping-guide', icon: ShoppingBag, description: 'Bargaining & best buys' },
+    { label: 'Nightlife Guide', href: '/morocco-nightlife-guide', icon: Moon, description: 'Bars, clubs & shows' },
+    { label: 'Spa & Hammam', href: '/morocco-spa-guide', icon: Gem, description: 'Treatments & wellness' },
+    { label: 'Wedding Venues', href: '/morocco-wedding-venues', icon: Heart, description: 'Destination weddings', tag: 'New' },
   ],
 };
 
