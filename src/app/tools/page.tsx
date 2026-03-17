@@ -13,12 +13,15 @@ import {
   Compass,
   Sparkles,
   Star,
+  Languages,
+  Ruler,
+  CheckSquare,
 } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Morocco Travel Tools | Plan Your Perfect Trip',
   description:
-    'Free travel planning tools for Morocco: trip planner, budget calculator, currency converter, flight finder, interactive map, packing list, weather guide, and distance calculator.',
+    'Free Morocco travel planning tools: trip planner, budget calculator, currency converter, Darija phrasebook, interactive packing checklist, city distances, flight finder, interactive map, and weather guide.',
   openGraph: {
     title: 'Morocco Travel Tools',
     description: 'Everything you need to plan your perfect Morocco trip.',
@@ -96,6 +99,33 @@ const tools = [
     href: '/tools/distance',
     icon: Route,
     gradient: 'from-[#4A6741] to-[#3D6B35]',
+    featured: false,
+  },
+  {
+    title: 'Darija Phrasebook',
+    description:
+      'Essential Moroccan Arabic phrases for travelers. Greetings, directions, bargaining, food ordering, and emergency phrases with pronunciation.',
+    href: '/tools/phrases',
+    icon: Languages,
+    gradient: 'from-[#C4960C] to-[#8B6914]',
+    featured: false,
+  },
+  {
+    title: 'City Distances',
+    description:
+      'Travel times and distances between all major Moroccan cities. Compare driving, bus, and train options with estimated costs.',
+    href: '/tools/distances',
+    icon: Ruler,
+    gradient: 'from-[#A0522D] to-[#6B3A1F]',
+    featured: false,
+  },
+  {
+    title: 'Pre-Trip Checklist',
+    description:
+      'Interactive checklist covering visa, vaccinations, insurance, bookings, packing, and day-before departure tasks.',
+    href: '/tools/checklist',
+    icon: CheckSquare,
+    gradient: 'from-[#1A1814] to-[#4A6741]',
     featured: false,
   },
 ]

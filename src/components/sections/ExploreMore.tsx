@@ -45,33 +45,51 @@ const allPages: Record<string, PageLink[]> = {
   activities: [
     { label: 'Desert Adventures', href: '/desert-adventures', icon: Compass, description: 'Quad, camel, sandboarding', tag: 'Top Pick' },
     { label: 'Hot Air Balloon', href: '/hot-air-balloon', icon: Sparkles, description: 'Soar over Morocco' },
-    { label: 'Skiing', href: '/skiing', icon: Mountain, description: 'Atlas snow sports' },
-    { label: 'Water Fun', href: '/water-fun', icon: Waves, description: 'Parks & beaches' },
+    { label: 'Paragliding', href: '/paragliding', icon: Compass, description: 'Fly over the Atlas', tag: 'New' },
+    { label: 'Quad Biking', href: '/quad-biking', icon: Compass, description: 'Desert & palm grove rides' },
+    { label: 'Surfing Taghazout', href: '/taghazout-surf', icon: Waves, description: 'World-class surf' },
     { label: 'Atlas Trekking', href: '/atlas-mountains', icon: Mountain, description: 'Peaks & villages' },
-    { label: 'Surfing', href: '/water-sports', icon: Waves, description: 'Atlantic waves' },
+    { label: 'Sandboarding', href: '/sandboarding', icon: Sun, description: 'Ride the Sahara dunes' },
+    { label: 'Kayaking', href: '/kayaking', icon: Waves, description: 'Rivers & coast' },
   ],
   food: [
     { label: 'Cuisine Guide', href: '/cuisine', icon: UtensilsCrossed, description: 'Complete food encyclopedia', tag: 'Essential' },
+    { label: 'Moroccan Food Guide', href: '/moroccan-food-guide', icon: UtensilsCrossed, description: 'Dishes you must try' },
     { label: 'Souks & Markets', href: '/souks', icon: ShoppingBag, description: 'Haggling & treasures' },
     { label: 'Street Food', href: '/street-food', icon: UtensilsCrossed, description: 'Eat like a local' },
     { label: 'Cooking Classes', href: '/cooking-classes', icon: UtensilsCrossed, description: 'Learn to cook' },
-    { label: 'Spa & Hammam', href: '/spa', icon: Heart, description: 'Wellness rituals' },
+    { label: 'Moroccan Markets', href: '/moroccan-markets', icon: ShoppingBag, description: 'Best souks & markets' },
+    { label: 'Hammam Guide', href: '/moroccan-hammam', icon: Heart, description: 'Traditional bath ritual' },
   ],
   planning: [
     { label: 'First Time Guide', href: '/first-time', icon: Sparkles, description: 'Everything you need', tag: 'Start Here' },
-    { label: 'Budget Travel', href: '/budget-travel', icon: Shield, description: 'Save smart' },
-    { label: 'Packing List', href: '/packing', icon: ShoppingBag, description: 'What to bring' },
-    { label: 'Money Guide', href: '/money', icon: Shield, description: 'MAD currency tips' },
+    { label: 'Travel Tools', href: '/tools', icon: Compass, description: 'Calculators & checklists', tag: 'New' },
+    { label: 'Budget Calculator', href: '/tools/budget', icon: Shield, description: 'Plan your spending' },
+    { label: 'Currency Converter', href: '/tools/currency', icon: Shield, description: 'MAD exchange rates' },
+    { label: 'Packing Checklist', href: '/tools/checklist', icon: ShoppingBag, description: 'Interactive packing list' },
+    { label: 'Darija Phrases', href: '/tools/phrases', icon: Heart, description: 'Essential Arabic words' },
     { label: 'Trains & Transport', href: '/trains', icon: Train, description: 'Getting around' },
-    { label: 'Weather Guide', href: '/weather', icon: Sun, description: 'When to visit' },
+    { label: 'Public Transport', href: '/public-transport', icon: Train, description: 'Buses, trams, taxis' },
     { label: 'Scams to Avoid', href: '/scams', icon: Shield, description: 'Stay safe' },
-    { label: 'Riad Guide', href: '/riad-guide', icon: Home, description: 'Where to stay' },
+    { label: 'Emergency Contacts', href: '/emergency', icon: Shield, description: 'Police, hospitals, embassies' },
   ],
   culture: [
     { label: 'Berber Culture', href: '/berber-culture', icon: Heart, description: 'Amazigh heritage' },
+    { label: 'Moroccan Festivals', href: '/moroccan-festivals', icon: Calendar, description: 'Celebrations year-round', tag: 'New' },
+    { label: 'Learn Darija', href: '/darija', icon: Heart, description: 'Moroccan Arabic basics' },
     { label: 'Ramadan Guide', href: '/ramadan', icon: Calendar, description: 'Visiting during Ramadan' },
     { label: 'World Cup 2030', href: '/worldcup-2030', icon: Sparkles, description: 'FIFA comes to Morocco', tag: 'New' },
-    { label: 'Sahara Desert', href: '/sahara', icon: Sun, description: 'Desert guide' },
+    { label: 'Morocco for Locals', href: '/morocco-for-locals', icon: MapPin, description: 'Guide for Moroccans' },
+    { label: 'Photography Guide', href: '/photography-guide', icon: Camera, description: 'Best shots & techniques' },
+  ],
+  destinations: [
+    { label: 'Paradise Valley', href: '/paradise-valley', icon: Mountain, description: 'Hidden oasis near Agadir', tag: 'Hidden Gem' },
+    { label: 'Todra Gorge', href: '/todra-gorge', icon: Mountain, description: 'Dramatic canyon walls' },
+    { label: 'Draa Valley', href: '/draa-valley', icon: Sun, description: 'Oasis & palm groves' },
+    { label: 'Bin El Ouidane', href: '/bin-el-ouidane', icon: Waves, description: 'Mountain lake escape' },
+    { label: 'Tetouan', href: '/tetouan', icon: MapPin, description: 'White Dove of the Rif' },
+    { label: 'Ouarzazate', href: '/ouarzazate', icon: Camera, description: 'Hollywood of Africa' },
+    { label: 'Meknes', href: '/meknes', icon: MapPin, description: 'Imperial city' },
   ],
 };
 
@@ -121,11 +139,12 @@ export default function ExploreMore({
                 className="text-xs font-bold uppercase tracking-wider mb-3 font-[family-name:var(--font-heading)]"
                 style={{ color: 'var(--color-accent)' }}
               >
-                {category === 'cities' && 'Destinations'}
+                {category === 'cities' && 'Major Cities'}
                 {category === 'activities' && 'Things to Do'}
                 {category === 'food' && 'Food & Culture'}
                 {category === 'planning' && 'Plan Your Trip'}
                 {category === 'culture' && 'Culture & Events'}
+                {category === 'destinations' && 'Hidden Gems'}
               </h3>
               <ul className="space-y-2">
                 {pages
