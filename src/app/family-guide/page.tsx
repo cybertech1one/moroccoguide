@@ -814,6 +814,30 @@ export default function FamilyGuidePage() {
         </div>
       </section>
 
+      {/* Related Guides for Families */}
+      <section className="py-12 md:py-16">
+        <div className="container-morocco">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold text-center mb-8" style={{ color: 'var(--text-primary)' }}>
+            More Family Travel Resources
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { href: '/morocco-safety-tips', title: 'Safety Tips', desc: 'Essential safety advice for traveling with children in Morocco.' },
+              { href: '/morocco-day-trips', title: 'Day Trips', desc: '15 family-friendly day trips from major cities.' },
+              { href: '/morocco-weather-monthly', title: 'Weather Guide', desc: 'Choose the best month for a family trip.' },
+              { href: '/morocco-travel-insurance', title: 'Travel Insurance', desc: 'Family coverage options for peace of mind.' },
+            ].map((guide) => (
+              <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-base mb-2 group-hover:text-[var(--color-accent)] transition-colors" style={{ color: 'var(--text-primary)' }}>
+                  {guide.title}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{guide.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
         <div className="container-morocco text-center">

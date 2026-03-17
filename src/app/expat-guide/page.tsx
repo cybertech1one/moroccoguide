@@ -1654,6 +1654,32 @@ export default function ExpatGuidePage() {
         </div>
       </section>
 
+      {/* Related Guides for Expats */}
+      <section className="py-12 md:py-16" style={{ backgroundColor: 'var(--surface-muted)' }}>
+        <div className="container-morocco">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold text-center mb-8" style={{ color: 'var(--text-primary)' }}>
+            Essential Expat Resources
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { href: '/morocco-sim-card', title: 'SIM Card & Data', desc: 'Best mobile plans, eSIM options, and internet setup for residents.' },
+              { href: '/morocco-for-locals', title: 'Morocco for Locals', desc: 'Insider tips for living like a local in Morocco.' },
+              { href: '/morocco-safety-tips', title: 'Safety Tips', desc: 'Practical safety guidance for everyday life in Morocco.' },
+              { href: '/morocco-train-routes', title: 'Train Routes', desc: 'Navigate ONCF rail for commuting and weekend trips.' },
+              { href: '/morocco-shopping-guide', title: 'Shopping Guide', desc: 'Master souk bargaining and find the best local shops.' },
+              { href: '/morocco-travel-insurance', title: 'Health Insurance', desc: 'Compare insurance options for long-term stays.' },
+            ].map((guide) => (
+              <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-base mb-2 group-hover:text-[var(--color-accent)] transition-colors" style={{ color: 'var(--text-primary)' }}>
+                  {guide.title}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{guide.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 md:py-20 gradient-moroccan">
         <div className="container-morocco text-center">
@@ -1680,7 +1706,7 @@ export default function ExpatGuidePage() {
               Explore Cities
             </Link>
             <Link
-              href="/digital-nomad"
+              href="/morocco-digital-nomad-guide"
               className="inline-flex items-center gap-2 px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors"
             >
               <Globe className="w-4 h-4" />

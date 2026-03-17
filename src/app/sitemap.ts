@@ -213,6 +213,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-luxury-hotels',
     '/morocco-travel-insurance',
     '/morocco-with-pets',
+    '/morocco-sim-card',
+    '/morocco-day-trips',
+    '/morocco-food-tours',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
