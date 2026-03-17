@@ -1787,6 +1787,32 @@ export default function DesertAdventuresPage() {
       </section>
 
       {/* ============================================================== */}
+      {/* Related Desert & Adventure Guides */}
+      <section className="py-12 md:py-16" style={{ backgroundColor: 'var(--surface-muted)' }}>
+        <div className="container-morocco">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold text-center mb-8" style={{ color: 'var(--text-primary)' }}>
+            Plan Your Desert Adventure
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { href: '/marrakech-to-sahara', title: 'Marrakech to Sahara', desc: 'Complete guide: tour options, route stops, desert camps, and prices.' },
+              { href: '/morocco-road-trip-routes', title: 'Road Trip Routes', desc: '6 epic driving routes including the Sahara crossing.' },
+              { href: '/photography-guide', title: 'Photography Guide', desc: 'Capture stunning desert landscapes and starry nights.' },
+              { href: '/morocco-day-trips', title: 'Day Trips', desc: 'Desert excursions you can do in a single day.' },
+              { href: '/morocco-safety-tips', title: 'Safety Tips', desc: 'Stay safe in extreme heat and remote desert areas.' },
+              { href: '/morocco-weather-monthly', title: 'Weather Guide', desc: 'Best months for desert travel — avoid extreme heat.' },
+            ].map((guide) => (
+              <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-base mb-2 group-hover:text-[var(--color-accent)] transition-colors" style={{ color: 'var(--text-primary)' }}>
+                  {guide.title}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{guide.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/*  CTA SECTION                                                  */}
       {/* ============================================================== */}
       <section className="py-16 md:py-20">
