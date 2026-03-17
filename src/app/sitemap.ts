@@ -216,6 +216,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-sim-card',
     '/morocco-day-trips',
     '/morocco-food-tours',
+    '/morocco-volunteering',
+    '/morocco-language-schools',
+    '/morocco-golf-courses',
+    '/is-morocco-safe',
+    '/what-to-wear-in-morocco',
+    '/morocco-trip-cost',
+    '/morocco-vs-egypt',
+    '/morocco-3-days',
+    '/marrakech-to-sahara',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
