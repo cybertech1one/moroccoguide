@@ -1098,6 +1098,32 @@ export default function SoloTravelPage() {
       {/* ============================================================
           CTA
           ============================================================ */}
+      {/* Related Guides for Solo Travelers */}
+      <section className="py-12 md:py-16" style={{ backgroundColor: 'var(--surface-muted)' }}>
+        <div className="container-morocco">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold text-center mb-8" style={{ color: 'var(--text-primary)' }}>
+            Essential Guides for Solo Travelers
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { href: '/morocco-safety-tips', title: 'Safety Tips', desc: 'Stay safe with practical advice on scams, transport, and health in Morocco.' },
+              { href: '/morocco-shopping-guide', title: 'Shopping Guide', desc: 'Bargaining tips, best buys, and how to avoid common scams in the souks.' },
+              { href: '/morocco-nightlife-guide', title: 'Nightlife Guide', desc: 'Safe nightlife options by city — rooftop bars, cultural shows, and more.' },
+              { href: '/morocco-digital-nomad-guide', title: 'Digital Nomad Guide', desc: 'Coworking spaces, costs, and visa info for remote workers in Morocco.' },
+              { href: '/morocco-train-routes', title: 'Train Routes', desc: 'Navigate Morocco by train — the safest and most scenic way to travel solo.' },
+              { href: '/public-transport', title: 'Public Transport', desc: 'Complete guide to buses, trams, taxis, and getting around Morocco.' },
+            ].map((guide) => (
+              <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-base mb-2 group-hover:text-[var(--color-accent)] transition-colors" style={{ color: 'var(--text-primary)' }}>
+                  {guide.title}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{guide.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 md:py-20">
         <div className="container-morocco text-center">
           <User className="w-10 h-10 text-[var(--color-primary)] mx-auto mb-4" />

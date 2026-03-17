@@ -210,6 +210,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-spa-guide',
     '/morocco-shopping-guide',
     '/morocco-nightlife-guide',
+    '/morocco-luxury-hotels',
+    '/morocco-travel-insurance',
+    '/morocco-with-pets',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

@@ -30,6 +30,14 @@ import {
   Headphones,
   Map,
   Zap,
+  ShoppingBag,
+  Car,
+  Moon,
+  Gem,
+  Wifi,
+  Train,
+  Plane,
+  Shield,
 } from 'lucide-react';
 import HeroSearchBar from '@/components/home/HeroSearchBar';
 import TestimonialsCarousel from '@/components/home/TestimonialsCarousel';
@@ -1352,6 +1360,50 @@ export default function HomePage() {
                     </div>
                   </Link>
                 </ScrollReveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ===================================================
+            8b. MORE GUIDES - Quick links to specialized guides
+        =================================================== */}
+        <section className="py-16 md:py-20" style={{ backgroundColor: 'var(--surface-muted)' }}>
+          <div className="container-morocco">
+            <div className="text-center mb-10">
+              <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold" style={{ color: 'var(--text-primary)' }}>
+                Specialized Travel Guides
+              </h2>
+              <p className="mt-2 text-base" style={{ color: 'var(--text-secondary)' }}>
+                Deep-dive guides for every type of traveler
+              </p>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+              {[
+                { label: 'Road Trip Routes', href: '/morocco-road-trip-routes', icon: Car },
+                { label: 'Shopping Guide', href: '/morocco-shopping-guide', icon: ShoppingBag },
+                { label: 'Nightlife Guide', href: '/morocco-nightlife-guide', icon: Moon },
+                { label: 'Spa & Hammam', href: '/morocco-spa-guide', icon: Gem },
+                { label: 'Digital Nomad', href: '/morocco-digital-nomad-guide', icon: Wifi },
+                { label: 'Wedding Venues', href: '/morocco-wedding-venues', icon: Heart },
+                { label: 'Safety Tips', href: '/morocco-safety-tips', icon: Shield },
+                { label: 'Weather Guide', href: '/morocco-weather-monthly', icon: Sun },
+                { label: 'Train Routes', href: '/morocco-train-routes', icon: Train },
+                { label: 'Airports Guide', href: '/morocco-airports-guide', icon: Plane },
+                { label: 'Photography', href: '/photography-guide', icon: Camera },
+                { label: 'For Locals', href: '/morocco-for-locals', icon: MapPin },
+              ].map((guide) => (
+                <Link
+                  key={guide.href}
+                  href={guide.href}
+                  className="flex items-center gap-3 p-3 rounded-lg transition-all duration-200 hover:shadow-md group"
+                  style={{ backgroundColor: 'white', border: '1px solid rgba(160,82,45,0.1)' }}
+                >
+                  <guide.icon className="w-5 h-5 shrink-0" style={{ color: 'var(--color-accent)' }} />
+                  <span className="font-[family-name:var(--font-heading)] text-sm font-medium group-hover:text-[var(--color-accent)] transition-colors" style={{ color: 'var(--text-primary)' }}>
+                    {guide.label}
+                  </span>
+                </Link>
               ))}
             </div>
           </div>

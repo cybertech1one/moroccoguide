@@ -1747,7 +1747,7 @@ export default function ScamsPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              href="/safety"
+              href="/morocco-safety-tips"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white text-[var(--color-primary)] font-semibold hover:bg-white/90 transition-colors"
             >
               <ShieldCheck className="w-5 h-5" />
@@ -1768,7 +1768,7 @@ export default function ScamsPage() {
               Etiquette Guide
             </Link>
             <Link
-              href="/shopping"
+              href="/morocco-shopping-guide"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-white/30 text-white font-semibold hover:bg-white/10 transition-colors"
             >
               <Store className="w-5 h-5" />
