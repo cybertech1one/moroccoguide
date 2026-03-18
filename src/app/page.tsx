@@ -38,6 +38,10 @@ import {
   Train,
   Plane,
   Shield,
+  UtensilsCrossed,
+  Bed,
+  DollarSign,
+  Shirt,
 } from 'lucide-react';
 import HeroSearchBar from '@/components/home/HeroSearchBar';
 import TestimonialsCarousel from '@/components/home/TestimonialsCarousel';
@@ -1391,6 +1395,10 @@ export default function HomePage() {
                 { label: 'Train Routes', href: '/morocco-train-routes', icon: Train },
                 { label: 'Airports Guide', href: '/morocco-airports-guide', icon: Plane },
                 { label: 'Photography', href: '/photography-guide', icon: Camera },
+                { label: 'Food Guide', href: '/morocco-food-guide', icon: UtensilsCrossed },
+                { label: 'Best Riads', href: '/morocco-best-riads', icon: Bed },
+                { label: 'Trip Cost', href: '/morocco-trip-cost', icon: DollarSign },
+                { label: 'What to Wear', href: '/what-to-wear-in-morocco', icon: Shirt },
                 { label: 'For Locals', href: '/morocco-for-locals', icon: MapPin },
               ].map((guide) => (
                 <Link
