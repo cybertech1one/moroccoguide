@@ -238,6 +238,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-desert-tour',
     '/things-to-do-marrakech',
     '/morocco-honeymoon-guide',
+    '/things-to-do-fes',
+    '/morocco-travel-tips',
+    '/morocco-itinerary-10-days',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

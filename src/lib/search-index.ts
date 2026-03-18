@@ -1532,6 +1532,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['Morocco honeymoon', 'honeymoon Morocco', 'honeymoon itinerary', 'romantic Morocco'],
       priority: 9,
     },
+    {
+      title: 'Things to Do in Fes',
+      description: '25+ best things to do in Fes — tanneries, medina, cooking classes, museums, and day trips.',
+      type: 'page',
+      url: '/things-to-do-fes',
+      tags: ['Fes', 'activities', 'sightseeing'],
+      keywords: ['things to do Fes', 'Fes attractions', 'Fes activities', 'what to do Fes', 'Fes medina'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Travel Tips: 50+ Essential Tips',
+      description: 'Comprehensive travel tips for Morocco — money, safety, transport, culture, food, and packing essentials.',
+      type: 'page',
+      url: '/morocco-travel-tips',
+      tags: ['tips', 'planning', 'first-time'],
+      keywords: ['Morocco travel tips', 'Morocco tips', 'Morocco advice', 'Morocco do and dont'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco 10-Day Itinerary',
+      description: 'Day-by-day 10-day Morocco itinerary — Marrakech, Atlas, Sahara, Fes, and Chefchaouen.',
+      type: 'page',
+      url: '/morocco-itinerary-10-days',
+      tags: ['itinerary', '10 days', 'planning'],
+      keywords: ['Morocco 10 days', '10 day itinerary Morocco', 'Morocco 10 day trip', 'two weeks Morocco'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
