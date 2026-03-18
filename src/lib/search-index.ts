@@ -1505,6 +1505,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['Moroccan food', 'what to eat Morocco', 'tagine', 'couscous', 'street food Morocco', 'Moroccan cuisine'],
       priority: 9,
     },
+    {
+      title: 'Morocco Desert Tour Guide',
+      description: 'Complete guide to Sahara desert tours — Erg Chebbi vs Erg Chigaga, camel treks, glamping, and booking tips.',
+      type: 'page',
+      url: '/morocco-desert-tour',
+      tags: ['desert', 'Sahara', 'camel trek'],
+      keywords: ['Morocco desert tour', 'Sahara tour', 'camel trek Morocco', 'Erg Chebbi', 'desert camping'],
+      priority: 9,
+    },
+    {
+      title: 'Things to Do in Marrakech',
+      description: '30+ best things to do in Marrakech — souks, palaces, gardens, food, nightlife, and day trips.',
+      type: 'page',
+      url: '/things-to-do-marrakech',
+      tags: ['Marrakech', 'activities', 'sightseeing'],
+      keywords: ['things to do Marrakech', 'Marrakech attractions', 'Marrakech activities', 'what to do Marrakech'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Honeymoon Guide',
+      description: 'Plan your dream honeymoon in Morocco — luxury riads, romantic activities, itineraries, and budget tips.',
+      type: 'page',
+      url: '/morocco-honeymoon-guide',
+      tags: ['honeymoon', 'romantic', 'couples'],
+      keywords: ['Morocco honeymoon', 'honeymoon Morocco', 'honeymoon itinerary', 'romantic Morocco'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

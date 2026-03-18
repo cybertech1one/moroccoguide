@@ -2106,6 +2106,32 @@ export default function StargazingPage() {
         </div>
       </section>
 
+      {/* Related Guides */}
+      <section className="py-12 md:py-16" style={{ backgroundColor: 'var(--surface-muted)' }}>
+        <div className="container-morocco">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold text-center mb-8" style={{ color: 'var(--text-primary)' }}>
+            Related Outdoor Experiences
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { href: '/camping', title: 'Camping Guide', desc: 'From wild desert bivouacs to mountain glamping, discover the best camping experiences across Morocco.' },
+              { href: '/sahara', title: 'Sahara Desert Guide', desc: 'Plan your Sahara adventure with tips on erg dunes, desert camps, camel treks, and oasis visits.' },
+              { href: '/desert-adventures', title: 'Desert Adventures', desc: 'Explore thrilling Sahara excursions from camel treks to sandboarding and 4x4 dune expeditions.' },
+              { href: '/morocco-road-trip-routes', title: 'Road Trip Routes', desc: 'Epic driving itineraries through mountain passes, coastal roads, and desert highways across Morocco.' },
+              { href: '/best-time-visit-morocco', title: 'Best Time to Visit', desc: 'Season-by-season breakdown of weather, crowds, and prices to help you plan the ideal Morocco trip.' },
+              { href: '/photography-guide', title: 'Photography Guide', desc: 'Master the art of capturing Morocco\'s landscapes, medinas, and night skies with expert photography tips.' },
+            ].map((guide) => (
+              <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-base mb-2 group-hover:text-[var(--color-accent)] transition-colors" style={{ color: 'var(--text-primary)' }}>
+                  {guide.title}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{guide.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Zellige divider */}
       <div className="zellige-border" />
     </>

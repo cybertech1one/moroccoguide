@@ -2408,6 +2408,32 @@ export default function SurfingPage() {
         </div>
       </section>
 
+      {/* Related Guides */}
+      <section className="py-12 md:py-16" style={{ backgroundColor: 'var(--surface-muted)' }}>
+        <div className="container-morocco">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold text-center mb-8" style={{ color: 'var(--text-primary)' }}>
+            More Activity Guides
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { href: '/taghazout-surf', title: 'Taghazout Surf Guide', desc: 'Deep dive into Morocco\'s surf capital with spot breakdowns, board rentals, surf camps, and local tips.' },
+              { href: '/water-sports', title: 'Water Sports', desc: 'From kitesurfing in Dakhla to jet skiing in Agadir, explore all the aquatic adventures Morocco offers.' },
+              { href: '/essaouira', title: 'Essaouira Guide', desc: 'Discover the windy city\'s medina, beaches, seafood, and vibrant arts scene on Morocco\'s Atlantic coast.' },
+              { href: '/agadir', title: 'Agadir Guide', desc: 'Sun-soaked beaches, modern resorts, and easy access to Taghazout and Paradise Valley adventures.' },
+              { href: '/best-time-visit-morocco', title: 'Best Time to Visit', desc: 'Season-by-season breakdown of swell, weather, and crowds to help you time your surf trip perfectly.' },
+              { href: '/morocco-trip-cost', title: 'Trip Cost Breakdown', desc: 'Detailed budget guide covering accommodation, food, transport, and activity costs across Morocco.' },
+            ].map((guide) => (
+              <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-base mb-2 group-hover:text-[var(--color-accent)] transition-colors" style={{ color: 'var(--text-primary)' }}>
+                  {guide.title}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{guide.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ============================================================
           SECTION 15 - EXPLORE MORE
           ============================================================ */}

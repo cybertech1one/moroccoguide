@@ -235,6 +235,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-best-riads',
     '/best-time-visit-morocco',
     '/morocco-food-guide',
+    '/morocco-desert-tour',
+    '/things-to-do-marrakech',
+    '/morocco-honeymoon-guide',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

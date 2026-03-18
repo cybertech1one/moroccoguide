@@ -1731,6 +1731,32 @@ export default function YogaPage() {
         </div>
       </section>
 
+      {/* Related Guides */}
+      <section className="py-12 md:py-16" style={{ backgroundColor: 'var(--surface-muted)' }}>
+        <div className="container-morocco">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold text-center mb-8" style={{ color: 'var(--text-primary)' }}>
+            More Wellness & Activity Guides
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { href: '/wellness', title: 'Wellness Guide', desc: 'Holistic wellness experiences across Morocco from meditation retreats to traditional healing practices.' },
+              { href: '/morocco-spa-guide', title: 'Spa & Hammam Guide', desc: 'Navigate Morocco\'s legendary hammam culture and luxury spa experiences like a local.' },
+              { href: '/surfing', title: 'Surfing in Morocco', desc: 'Ride Atlantic waves at world-class breaks from Taghazout to Imsouane and Dakhla.' },
+              { href: '/morocco-for-seniors', title: 'Morocco for Seniors', desc: 'Practical advice for mature travellers covering accessibility, health, comfort, and pace-friendly itineraries.' },
+              { href: '/best-time-visit-morocco', title: 'Best Time to Visit', desc: 'Season-by-season breakdown of weather, crowds, and prices to help you plan the perfect retreat.' },
+              { href: '/essaouira', title: 'Essaouira Guide', desc: 'Explore the laid-back coastal town known for its creative energy, ocean breezes, and wellness retreats.' },
+            ].map((guide) => (
+              <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-base mb-2 group-hover:text-[var(--color-accent)] transition-colors" style={{ color: 'var(--text-primary)' }}>
+                  {guide.title}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{guide.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ═══════════════════════════════════════════════════════════
          SECTION 15: EXPLORE MORE
          ═══════════════════════════════════════════════════════════ */}
