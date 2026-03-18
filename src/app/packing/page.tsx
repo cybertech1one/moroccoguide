@@ -1946,6 +1946,32 @@ export default function PackingListPage() {
           </div>
         </div>
       </section>
+
+      {/* Related Planning Guides */}
+      <section className="py-12 md:py-16" style={{ backgroundColor: 'var(--surface-muted)' }}>
+        <div className="container-morocco">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold text-center mb-8" style={{ color: 'var(--text-primary)' }}>
+            More Travel Planning Guides
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { href: '/what-to-wear-in-morocco', title: 'What to Wear in Morocco', desc: 'Detailed dress code guide for mosques, medinas, beaches, and the desert.' },
+              { href: '/morocco-trip-cost', title: 'Trip Cost Breakdown', desc: 'Budget for your trip — daily costs for accommodation, food, and transport.' },
+              { href: '/morocco-sim-card', title: 'SIM Card & Data Guide', desc: 'Stay connected with the cheapest mobile data plans in Morocco.' },
+              { href: '/morocco-travel-insurance', title: 'Travel Insurance', desc: 'Best insurance options covering health, theft, and trip cancellation.' },
+              { href: '/weather', title: 'Weather by Region', desc: 'Temperatures and rainfall across Morocco — plan your wardrobe accordingly.' },
+              { href: '/morocco-tipping-guide', title: 'Tipping Guide', desc: 'How much to tip in Morocco — restaurants, hotels, guides, and more.' },
+            ].map((guide) => (
+              <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-base mb-2 group-hover:text-[var(--color-accent)] transition-colors" style={{ color: 'var(--text-primary)' }}>
+                  {guide.title}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{guide.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }

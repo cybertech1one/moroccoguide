@@ -1966,6 +1966,32 @@ export default function FirstTimePage() {
           </div>
         </div>
       </section>
+
+      {/* Essential First-Time Visitor Guides */}
+      <section className="py-12 md:py-16" style={{ backgroundColor: 'var(--surface-muted)' }}>
+        <div className="container-morocco">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold text-center mb-8" style={{ color: 'var(--text-primary)' }}>
+            Essential First-Time Visitor Guides
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { href: '/morocco-trip-cost', title: 'Morocco Trip Cost Breakdown', desc: 'Know exactly how much to budget — daily costs for food, transport, accommodation, and activities.' },
+              { href: '/what-to-wear-in-morocco', title: 'What to Wear in Morocco', desc: 'Dress code guide for mosques, medinas, beaches, and the desert — by season and region.' },
+              { href: '/is-morocco-safe', title: 'Is Morocco Safe?', desc: 'Honest safety guide covering scams, solo travel, women travelers, and neighborhood safety ratings.' },
+              { href: '/morocco-tipping-guide', title: 'Morocco Tipping Guide', desc: 'How much to tip at restaurants, hotels, and for tour guides — avoid awkward moments.' },
+              { href: '/morocco-sim-card', title: 'SIM Card & Internet Guide', desc: 'Stay connected — best carriers, data plans, and where to buy a SIM card on arrival.' },
+              { href: '/morocco-3-days', title: 'Morocco in 3 Days', desc: 'Short on time? This itinerary covers the must-see highlights in just three days.' },
+            ].map((guide) => (
+              <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-base mb-2 group-hover:text-[var(--color-accent)] transition-colors" style={{ color: 'var(--text-primary)' }}>
+                  {guide.title}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{guide.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }

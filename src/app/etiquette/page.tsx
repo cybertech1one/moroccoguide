@@ -1218,6 +1218,32 @@ export default function EtiquettePage() {
           </div>
         </div>
       </section>
+
+      {/* Culture & Etiquette Guides */}
+      <section className="py-12 md:py-16" style={{ backgroundColor: 'var(--surface-muted)' }}>
+        <div className="container-morocco">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold text-center mb-8" style={{ color: 'var(--text-primary)' }}>
+            Related Culture &amp; Etiquette Guides
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { href: '/what-to-wear-in-morocco', title: 'What to Wear in Morocco', desc: 'Complete dress code guide for mosques, medinas, beaches, and the desert — by season and region.' },
+              { href: '/morocco-tipping-guide', title: 'Tipping Etiquette', desc: 'How much to tip at restaurants, hotels, hammams, and for tour guides — cultural expectations explained.' },
+              { href: '/morocco-halal-travel', title: 'Halal Travel Guide', desc: 'Muslim-friendly travel guide with prayer times, halal dining, and cultural sensitivity tips.' },
+              { href: '/darija', title: 'Darija Language Guide', desc: 'Essential Moroccan Arabic phrases for greetings, bargaining, and everyday interactions.' },
+              { href: '/scams', title: 'Common Scams to Avoid', desc: 'Stay savvy — know the tourist scams and how to handle pushy vendors respectfully.' },
+              { href: '/women-travel', title: 'Women Travelers Guide', desc: 'Practical tips for women visiting Morocco — dress codes, safety, and cultural considerations.' },
+            ].map((guide) => (
+              <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-base mb-2 group-hover:text-[var(--color-accent)] transition-colors" style={{ color: 'var(--text-primary)' }}>
+                  {guide.title}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{guide.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }

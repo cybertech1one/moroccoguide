@@ -865,6 +865,32 @@ export default function FamilyGuidePage() {
           </div>
         </div>
       </section>
+
+      {/* Family Travel Guides */}
+      <section className="py-12 md:py-16" style={{ backgroundColor: 'var(--surface-muted)' }}>
+        <div className="container-morocco">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold text-center mb-8" style={{ color: 'var(--text-primary)' }}>
+            More Family Travel Guides
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { href: '/morocco-with-kids', title: 'Morocco with Kids', desc: 'Age-specific tips, kid-friendly activities, and family accommodation picks across Morocco.' },
+              { href: '/morocco-for-seniors', title: 'Morocco for Seniors', desc: 'Senior-friendly travel guide with accessible tours, health tips, and comfortable hotels.' },
+              { href: '/morocco-for-couples', title: 'Morocco for Couples', desc: 'Romantic getaways, luxury riads, and couple activities from Marrakech to the Sahara.' },
+              { href: '/is-morocco-safe', title: 'Is Morocco Safe?', desc: 'Honest safety guide covering family travel, neighborhoods, and health precautions.' },
+              { href: '/morocco-day-trips', title: 'Best Day Trips', desc: 'Family-friendly day trips from major cities — waterfalls, beaches, and mountain villages.' },
+              { href: '/morocco-travel-insurance', title: 'Travel Insurance', desc: 'Best family travel insurance options covering health emergencies and trip cancellation.' },
+            ].map((guide) => (
+              <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-base mb-2 group-hover:text-[var(--color-accent)] transition-colors" style={{ color: 'var(--text-primary)' }}>
+                  {guide.title}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{guide.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }

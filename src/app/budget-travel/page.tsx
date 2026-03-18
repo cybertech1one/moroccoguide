@@ -1858,6 +1858,32 @@ export default function BudgetTravelPage() {
         </div>
       </section>
 
+      {/* More Budget Resources */}
+      <section className="py-12 md:py-16" style={{ backgroundColor: 'var(--surface-muted)' }}>
+        <div className="container-morocco">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold text-center mb-8" style={{ color: 'var(--text-primary)' }}>
+            More Budget Travel Resources
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { href: '/morocco-trip-cost', title: 'Morocco Trip Cost Breakdown', desc: 'Detailed daily budget estimates for budget, mid-range, and luxury travel styles across Morocco.' },
+              { href: '/morocco-tipping-guide', title: 'Morocco Tipping Guide', desc: 'Know exactly how much to tip at restaurants, hotels, tours, and taxis — avoid overpaying.' },
+              { href: '/morocco-sim-card', title: 'SIM Card & Data Guide', desc: 'Cheapest mobile data plans and where to buy SIM cards to stay connected on a budget.' },
+              { href: '/morocco-3-days', title: 'Morocco in 3 Days', desc: 'Short trip itinerary that covers the highlights without breaking the bank.' },
+              { href: '/morocco-food-tours', title: 'Food Tours Guide', desc: 'Best food tours for trying authentic Moroccan cuisine — many under 300 MAD.' },
+              { href: '/morocco-day-trips', title: 'Best Day Trips', desc: 'Affordable day trips from major cities including transport and entrance fees.' },
+            ].map((guide) => (
+              <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-base mb-2 group-hover:text-[var(--color-accent)] transition-colors" style={{ color: 'var(--text-primary)' }}>
+                  {guide.title}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{guide.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Related Guides */}
       <section className="py-16 md:py-20">
         <div className="container-morocco">

@@ -1523,6 +1523,32 @@ export default function MoneyPage() {
           </div>
         </div>
       </section>
+
+      {/* Money & Budget Guides */}
+      <section className="py-12 md:py-16">
+        <div className="container-morocco">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold text-center mb-8" style={{ color: 'var(--text-primary)' }}>
+            Related Money &amp; Budget Guides
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { href: '/morocco-tipping-guide', title: 'Morocco Tipping Guide', desc: 'Exactly how much to tip at restaurants, hotels, spas, and for tour guides across Morocco.' },
+              { href: '/morocco-trip-cost', title: 'Trip Cost Breakdown', desc: 'Complete daily budget estimates for budget, mid-range, and luxury travel styles.' },
+              { href: '/budget-travel', title: 'Budget Travel Guide', desc: 'How to travel Morocco on a budget — cheap eats, free attractions, and money-saving tips.' },
+              { href: '/morocco-travel-insurance', title: 'Travel Insurance Guide', desc: 'Best travel insurance options for Morocco covering health, theft, and trip cancellation.' },
+              { href: '/morocco-sim-card', title: 'SIM Card & Data Guide', desc: 'Cheapest mobile data plans to avoid international roaming charges in Morocco.' },
+              { href: '/scams', title: 'Scams to Avoid', desc: 'Common tourist scams and overcharging tactics — protect your money while traveling.' },
+            ].map((guide) => (
+              <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-base mb-2 group-hover:text-[var(--color-accent)] transition-colors" style={{ color: 'var(--text-primary)' }}>
+                  {guide.title}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{guide.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }

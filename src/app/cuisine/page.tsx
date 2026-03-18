@@ -2050,6 +2050,32 @@ export default function CuisinePage() {
           </div>
         </div>
       </section>
+
+      {/* More Food & Dining Guides */}
+      <section className="py-12 md:py-16" style={{ backgroundColor: 'var(--surface-muted)' }}>
+        <div className="container-morocco">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold text-center mb-8" style={{ color: 'var(--text-primary)' }}>
+            More Food &amp; Dining Guides
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { href: '/morocco-food-tours', title: 'Best Food Tours in Morocco', desc: 'Guided food tours in Marrakech, Fes, and Casablanca — taste the best of each city with local experts.' },
+              { href: '/morocco-vegan-food', title: 'Vegan Food Guide', desc: 'Complete guide to plant-based eating in Morocco — vegan restaurants, street food, and traditional dishes.' },
+              { href: '/morocco-halal-travel', title: 'Halal Travel Guide', desc: 'Muslim-friendly travel guide with halal dining, prayer facilities, and modest accommodation options.' },
+              { href: '/street-food', title: 'Street Food Guide', desc: 'From msemmen to snail soup — the best street food across Morocco with prices and where to find it.' },
+              { href: '/morocco-tipping-guide', title: 'Tipping Etiquette', desc: 'Know how much to tip at restaurants, cafés, and for food tour guides across Morocco.' },
+              { href: '/cooking-classes', title: 'Cooking Classes', desc: 'Learn to make tagine, couscous, and pastilla — top cooking class experiences across Morocco.' },
+            ].map((guide) => (
+              <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-base mb-2 group-hover:text-[var(--color-accent)] transition-colors" style={{ color: 'var(--text-primary)' }}>
+                  {guide.title}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{guide.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }

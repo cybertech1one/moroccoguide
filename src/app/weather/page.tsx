@@ -1686,6 +1686,32 @@ export default function WeatherPage() {
           </div>
         </div>
       </section>
+
+      {/* Planning Guides */}
+      <section className="py-12 md:py-16" style={{ backgroundColor: 'var(--surface-muted)' }}>
+        <div className="container-morocco">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold text-center mb-8" style={{ color: 'var(--text-primary)' }}>
+            Plan Your Trip
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { href: '/what-to-wear-in-morocco', title: 'What to Wear in Morocco', desc: 'Season-by-season dress code guide for every region and occasion.' },
+              { href: '/packing', title: 'Packing Checklist', desc: 'Complete packing list organized by season, activity, and travel style.' },
+              { href: '/morocco-trip-cost', title: 'Trip Cost Breakdown', desc: 'How much to budget daily for accommodation, food, transport, and activities.' },
+              { href: '/morocco-weather-monthly', title: 'Monthly Weather Guide', desc: 'Detailed month-by-month weather data for every major Moroccan destination.' },
+              { href: '/first-time', title: 'First-Time Visitor Guide', desc: 'Everything you need to know before your first trip to Morocco.' },
+              { href: '/morocco-3-days', title: 'Morocco in 3 Days', desc: 'Short trip? Make the most of 3 days with this optimized itinerary.' },
+            ].map((guide) => (
+              <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-base mb-2 group-hover:text-[var(--color-accent)] transition-colors" style={{ color: 'var(--text-primary)' }}>
+                  {guide.title}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{guide.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }
