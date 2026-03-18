@@ -232,6 +232,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-tipping-guide',
     '/morocco-halal-travel',
     '/morocco-vegan-food',
+    '/morocco-best-riads',
+    '/best-time-visit-morocco',
+    '/morocco-food-guide',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

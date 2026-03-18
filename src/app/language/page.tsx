@@ -1105,6 +1105,32 @@ export default function LanguagePage() {
         </div>
       </section>
 
+      {/* Related Guides */}
+      <section className="py-12 md:py-16" style={{ backgroundColor: 'var(--surface-muted)' }}>
+        <div className="container-morocco">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold text-center mb-8" style={{ color: 'var(--text-primary)' }}>
+            Related Culture Guides
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { href: '/darija', title: 'Darija Phrasebook', desc: 'Go beyond the basics with our comprehensive Moroccan Arabic phrasebook featuring pronunciation audio, regional variations, and conversation scripts.' },
+              { href: '/etiquette', title: 'Etiquette Guide', desc: 'Understand Moroccan social customs including greetings, dining etiquette, mosque visits, and the unwritten rules that earn you local respect.' },
+              { href: '/morocco-halal-travel', title: 'Halal Travel Guide', desc: 'Plan a halal-friendly trip with guidance on certified restaurants, prayer facilities, modest accommodation, and family-oriented activities.' },
+              { href: '/morocco-tipping-guide', title: 'Tipping Guide', desc: 'Know exactly who to tip, how much, and when across restaurants, riads, guided tours, hammams, and everyday services in Morocco.' },
+              { href: '/what-to-wear-in-morocco', title: 'What to Wear', desc: 'Practical dress code advice for every setting from sacred sites and conservative towns to coastal resorts and Sahara camps.' },
+              { href: '/scams', title: 'Avoiding Scams', desc: 'Identify and avoid common tourist scams in Moroccan medinas, markets, and transport hubs with proven strategies from experienced travelers.' },
+            ].map((guide) => (
+              <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-base mb-2 group-hover:text-[var(--color-accent)] transition-colors" style={{ color: 'var(--text-primary)' }}>
+                  {guide.title}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{guide.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── CTA ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco text-center">

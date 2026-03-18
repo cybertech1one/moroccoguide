@@ -1681,6 +1681,32 @@ export default function HealthPage() {
         </div>
       </section>
 
+      {/* Related Guides */}
+      <section className="py-12 md:py-16" style={{ backgroundColor: 'var(--surface-muted)' }}>
+        <div className="container-morocco">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold text-center mb-8" style={{ color: 'var(--text-primary)' }}>
+            Related Travel Health Guides
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { href: '/morocco-travel-insurance', title: 'Travel Insurance', desc: 'Compare the best travel insurance plans for Morocco covering medical emergencies, trip cancellation, and adventure activities like trekking and desert tours.' },
+              { href: '/morocco-halal-travel', title: 'Halal Travel Guide', desc: 'Navigate halal dining, prayer facilities, and Muslim-friendly accommodation options across every major Moroccan city and region.' },
+              { href: '/morocco-vegan-food', title: 'Vegan Food Guide', desc: 'Discover plant-based Moroccan dishes, vegan-friendly restaurants, and how to communicate dietary needs at local eateries.' },
+              { href: '/is-morocco-safe', title: 'Is Morocco Safe?', desc: 'Honest safety assessment for tourists including crime statistics, neighbourhood ratings, and practical tips to stay secure during your trip.' },
+              { href: '/emergency', title: 'Emergency Numbers', desc: 'Quick-reference guide to all emergency contacts in Morocco including police, ambulance, fire services, embassies, and tourist helplines.' },
+              { href: '/morocco-trip-cost', title: 'Trip Cost Breakdown', desc: 'Detailed budget breakdown for Morocco travel covering accommodation, food, transport, activities, and healthcare costs in MAD.' },
+            ].map((guide) => (
+              <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-base mb-2 group-hover:text-[var(--color-accent)] transition-colors" style={{ color: 'var(--text-primary)' }}>
+                  {guide.title}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{guide.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ============================================================
           FINAL TIPS / CTA
           ============================================================ */}

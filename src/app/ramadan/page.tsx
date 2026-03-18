@@ -1517,6 +1517,32 @@ export default function RamadanPage() {
           </div>
         </div>
       </section>
+
+      {/* Related Guides */}
+      <section className="py-12 md:py-16" style={{ backgroundColor: 'var(--surface-muted)' }}>
+        <div className="container-morocco">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold text-center mb-8" style={{ color: 'var(--text-primary)' }}>
+            Related Cultural Guides
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { href: '/morocco-halal-travel', title: 'Halal Travel Guide', desc: 'Everything you need to know about halal dining, prayer times, mosque locations, and Muslim-friendly hotels across Morocco.' },
+              { href: '/etiquette', title: 'Moroccan Etiquette', desc: 'Master local customs from greeting styles and dining manners to mosque visits and gift-giving traditions that show cultural respect.' },
+              { href: '/what-to-wear-in-morocco', title: 'What to Wear', desc: 'Dress code guidance for men and women covering mosques, medinas, beaches, desert excursions, and mountain treks in Morocco.' },
+              { href: '/morocco-tipping-guide', title: 'Tipping Guide', desc: 'Who to tip, how much to give, and when tipping is expected at restaurants, riads, tours, hammams, and with taxi drivers.' },
+              { href: '/darija', title: 'Darija Language Guide', desc: 'Learn essential Moroccan Arabic phrases for greetings, shopping, dining, and navigating your way through cities and souks.' },
+              { href: '/cooking-classes', title: 'Cooking Classes', desc: 'Book authentic Moroccan cooking experiences to learn tagine, couscous, pastilla, and traditional bread-making from local chefs.' },
+            ].map((guide) => (
+              <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-base mb-2 group-hover:text-[var(--color-accent)] transition-colors" style={{ color: 'var(--text-primary)' }}>
+                  {guide.title}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{guide.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }

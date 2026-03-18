@@ -1478,6 +1478,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['vegan Morocco', 'vegan food Morocco', 'plant-based Morocco', 'vegetarian Morocco'],
       priority: 8,
     },
+    {
+      title: 'Best Riads in Morocco',
+      description: 'Curated guide to the best riads across Marrakech, Fes, Essaouira, and Chefchaouen — budget to luxury.',
+      type: 'page',
+      url: '/morocco-best-riads',
+      tags: ['riads', 'accommodation', 'luxury'],
+      keywords: ['best riads Morocco', 'riad Marrakech', 'riad Fes', 'boutique hotel Morocco', 'where to stay'],
+      priority: 9,
+    },
+    {
+      title: 'Best Time to Visit Morocco',
+      description: 'Month-by-month guide to weather, crowds, prices, and events — find your ideal travel window.',
+      type: 'page',
+      url: '/best-time-visit-morocco',
+      tags: ['weather', 'planning', 'seasons'],
+      keywords: ['best time visit Morocco', 'when to go Morocco', 'Morocco weather', 'peak season Morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Food Guide: What to Eat',
+      description: 'Complete guide to Moroccan cuisine — must-try dishes, street food, beverages, dining etiquette, and regional specialties.',
+      type: 'page',
+      url: '/morocco-food-guide',
+      tags: ['food', 'cuisine', 'dining'],
+      keywords: ['Moroccan food', 'what to eat Morocco', 'tagine', 'couscous', 'street food Morocco', 'Moroccan cuisine'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

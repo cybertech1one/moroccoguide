@@ -814,6 +814,32 @@ export default function SafetyPage() {
         </div>
       </section>
 
+      {/* Related Guides */}
+      <section className="py-12 md:py-16" style={{ backgroundColor: 'var(--surface-muted)' }}>
+        <div className="container-morocco">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold text-center mb-8" style={{ color: 'var(--text-primary)' }}>
+            Essential Safety Resources
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { href: '/is-morocco-safe', title: 'Is Morocco Safe?', desc: 'Data-driven safety overview covering crime rates, regional risk levels, and honest answers to the most common safety questions from first-time visitors.' },
+              { href: '/scams', title: 'Common Scams', desc: 'Detailed breakdown of tourist scams in Fes, Marrakech, and Tangier with step-by-step advice on how to recognize and avoid each one.' },
+              { href: '/morocco-travel-insurance', title: 'Travel Insurance', desc: 'Compare top travel insurance providers for Morocco with coverage for medical emergencies, adventure sports, theft, and trip cancellation.' },
+              { href: '/emergency', title: 'Emergency Numbers', desc: 'All essential emergency contacts including police, ambulance, fire, tourist police, embassy hotlines, and roadside assistance numbers.' },
+              { href: '/women-travel', title: 'Women Travelers', desc: 'Candid safety advice for solo female travelers in Morocco covering dress, transport, accommodation, and city-specific tips from women who have been.' },
+              { href: '/morocco-tipping-guide', title: 'Tipping Guide', desc: 'Avoid awkward encounters by knowing the expected tipping amounts for guides, drivers, restaurant staff, hammam attendants, and hotel porters.' },
+            ].map((guide) => (
+              <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-base mb-2 group-hover:text-[var(--color-accent)] transition-colors" style={{ color: 'var(--text-primary)' }}>
+                  {guide.title}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{guide.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ============================================================
           CTA
           ============================================================ */}

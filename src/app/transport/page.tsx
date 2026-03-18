@@ -934,6 +934,32 @@ export default function TransportPage() {
         </div>
       </section>
 
+      {/* Related Guides */}
+      <section className="py-12 md:py-16" style={{ backgroundColor: 'var(--surface-muted)' }}>
+        <div className="container-morocco">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold text-center mb-8" style={{ color: 'var(--text-primary)' }}>
+            More Getting Around Guides
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { href: '/morocco-road-trip-routes', title: 'Road Trip Routes', desc: 'Scenic self-drive itineraries through the Atlas Mountains, Atlantic coast, and Sahara Desert with fuel stops, driving times, and road condition updates.' },
+              { href: '/morocco-sim-card', title: 'SIM Card Guide', desc: 'Stay connected on the road with the best prepaid SIM cards, eSIM options, data plans, and coverage maps for Maroc Telecom, Inwi, and Orange.' },
+              { href: '/driving', title: 'Driving in Morocco', desc: 'Everything you need for driving in Morocco including licence requirements, road rules, fuel prices, toll roads, and tips for mountain and desert driving.' },
+              { href: '/morocco-train-routes', title: 'Train Routes', desc: 'Complete guide to ONCF rail routes, Al Boraq high-speed services, ticket booking, station facilities, and scenic train journeys across Morocco.' },
+              { href: '/morocco-airports-guide', title: 'Airports Guide', desc: 'Arrivals guide for all major Moroccan airports covering transfers, currency exchange, SIM cards, luggage storage, and getting to city centres.' },
+              { href: '/morocco-day-trips', title: 'Best Day Trips', desc: 'Top-rated day trips from Marrakech, Fes, Casablanca, and Tangier with transport options, costs, and what to see at each destination.' },
+            ].map((guide) => (
+              <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-base mb-2 group-hover:text-[var(--color-accent)] transition-colors" style={{ color: 'var(--text-primary)' }}>
+                  {guide.title}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{guide.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ============================================================
           CTA
           ============================================================ */}
