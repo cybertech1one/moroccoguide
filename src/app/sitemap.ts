@@ -241,6 +241,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/things-to-do-fes',
     '/morocco-travel-tips',
     '/morocco-itinerary-10-days',
+    '/things-to-do-chefchaouen',
+    '/best-beaches-morocco',
+    '/morocco-solo-female-travel',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

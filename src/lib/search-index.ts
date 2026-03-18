@@ -1559,6 +1559,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['Morocco 10 days', '10 day itinerary Morocco', 'Morocco 10 day trip', 'two weeks Morocco'],
       priority: 9,
     },
+    {
+      title: 'Things to Do in Chefchaouen',
+      description: '15+ things to do in the Blue City — medina walks, Akchour waterfalls, Spanish Mosque, shopping, and more.',
+      type: 'page',
+      url: '/things-to-do-chefchaouen',
+      tags: ['Chefchaouen', 'activities', 'Blue City'],
+      keywords: ['things to do Chefchaouen', 'Chefchaouen guide', 'Blue City Morocco', 'Chefchaouen activities'],
+      priority: 9,
+    },
+    {
+      title: 'Best Beaches in Morocco',
+      description: 'Top 15 beaches in Morocco — surf spots, family beaches, hidden coves, and luxury beach resorts.',
+      type: 'page',
+      url: '/best-beaches-morocco',
+      tags: ['beaches', 'coast', 'surfing'],
+      keywords: ['best beaches Morocco', 'Morocco beaches', 'surfing Morocco', 'beach holiday Morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Solo Female Travel in Morocco',
+      description: 'Complete guide for women traveling alone in Morocco — safety, what to wear, harassment tips, and itineraries.',
+      type: 'page',
+      url: '/morocco-solo-female-travel',
+      tags: ['solo female', 'women', 'safety'],
+      keywords: ['solo female Morocco', 'women travel Morocco', 'Morocco safe for women', 'solo woman Morocco'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
