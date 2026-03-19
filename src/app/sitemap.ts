@@ -252,6 +252,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-currency-guide',
     '/morocco-photography-tips',
     '/things-to-do-essaouira',
+    '/things-to-do-tangier',
+    '/morocco-visa-guide',
+    '/things-to-do-agadir',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

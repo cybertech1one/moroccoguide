@@ -1658,6 +1658,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['things to do Essaouira', 'Essaouira guide', 'Essaouira activities', 'Essaouira surfing'],
       priority: 9,
     },
+    {
+      title: 'Things to Do in Tangier',
+      description: '15+ things to do in Tangier — Kasbah, Cap Spartel, Hercules Caves, medina, cafes, and day trips.',
+      type: 'page',
+      url: '/things-to-do-tangier',
+      tags: ['Tangier', 'activities', 'sightseeing'],
+      keywords: ['things to do Tangier', 'Tangier attractions', 'Tangier guide', 'Cap Spartel'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Visa Guide',
+      description: 'Complete visa requirements — visa-free countries, how to apply, passport rules, and entry/exit procedures.',
+      type: 'page',
+      url: '/morocco-visa-guide',
+      tags: ['visa', 'passport', 'entry'],
+      keywords: ['Morocco visa', 'visa requirements Morocco', 'do I need visa Morocco', 'Morocco passport'],
+      priority: 9,
+    },
+    {
+      title: 'Things to Do in Agadir',
+      description: '15+ things to do in Agadir — beach, Kasbah, Paradise Valley, surfing, golf, and seafood.',
+      type: 'page',
+      url: '/things-to-do-agadir',
+      tags: ['Agadir', 'activities', 'beach'],
+      keywords: ['things to do Agadir', 'Agadir attractions', 'Agadir beach', 'Agadir guide'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
