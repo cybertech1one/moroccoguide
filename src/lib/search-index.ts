@@ -1811,6 +1811,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['Morocco etiquette guide', 'Morocco cultural tips', 'Morocco customs', 'dos and don\'ts Morocco'],
       priority: 9,
     },
+    {
+      title: 'Morocco Instagram Spots',
+      description: '25+ most Instagrammable places in Morocco — Chefchaouen blue streets, Sahara dunes, Jardin Majorelle, and photo tips.',
+      type: 'page',
+      url: '/morocco-instagram-spots',
+      tags: ['photography', 'Instagram', 'photo spots', 'travel'],
+      keywords: ['Morocco Instagram spots', 'Instagrammable places Morocco', 'Morocco photo locations', 'best photos Morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Street Food Guide',
+      description: '16+ must-try Moroccan street foods — msemen, sfenj, harira, snail soup, prices, best cities, and food safety tips.',
+      type: 'page',
+      url: '/morocco-street-food-guide',
+      tags: ['street food', 'food', 'cuisine', 'budget'],
+      keywords: ['Morocco street food', 'best street food Morocco', 'Moroccan street food guide', 'what to eat Morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Souk Guide',
+      description: 'Complete guide to Moroccan souks — top souks by city, haggling tips, what to buy, fair prices, and scams to avoid.',
+      type: 'page',
+      url: '/morocco-souk-guide',
+      tags: ['souks', 'shopping', 'haggling', 'markets'],
+      keywords: ['Morocco souk guide', 'shopping Moroccan souks', 'best souks Morocco', 'how to haggle Morocco'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

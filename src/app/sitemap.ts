@@ -269,6 +269,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-wellness-retreats',
     '/morocco-adventure-sports',
     '/morocco-cultural-etiquette',
+    '/morocco-instagram-spots',
+    '/morocco-street-food-guide',
+    '/morocco-souk-guide',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
