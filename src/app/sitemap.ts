@@ -244,6 +244,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/things-to-do-chefchaouen',
     '/best-beaches-morocco',
     '/morocco-solo-female-travel',
+    '/morocco-hiking-guide',
+    '/what-to-buy-morocco',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

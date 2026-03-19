@@ -1586,6 +1586,24 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['solo female Morocco', 'women travel Morocco', 'Morocco safe for women', 'solo woman Morocco'],
       priority: 9,
     },
+    {
+      title: 'Morocco Hiking Guide',
+      description: 'Complete hiking and trekking guide — Toubkal, M\'Goun, Jebel Saghro, difficulty ratings, and packing tips.',
+      type: 'page',
+      url: '/morocco-hiking-guide',
+      tags: ['hiking', 'trekking', 'mountains'],
+      keywords: ['hiking Morocco', 'trekking Morocco', 'Toubkal trek', 'Morocco mountains hiking'],
+      priority: 9,
+    },
+    {
+      title: 'What to Buy in Morocco',
+      description: 'Top souvenirs and shopping guide — leather, carpets, argan oil, ceramics, spices, and bargaining tips.',
+      type: 'page',
+      url: '/what-to-buy-morocco',
+      tags: ['shopping', 'souvenirs', 'souks'],
+      keywords: ['what to buy Morocco', 'Morocco souvenirs', 'Morocco shopping', 'Moroccan crafts'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
