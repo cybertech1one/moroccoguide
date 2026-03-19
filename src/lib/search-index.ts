@@ -1631,6 +1631,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['Morocco train', 'ONCF', 'Al Boraq', 'Morocco train travel', 'train tickets Morocco'],
       priority: 8,
     },
+    {
+      title: 'Morocco Currency Guide',
+      description: 'Complete guide to the Moroccan Dirham — exchange rates, ATMs, credit cards, denominations, and daily budgets.',
+      type: 'page',
+      url: '/morocco-currency-guide',
+      tags: ['currency', 'money', 'MAD'],
+      keywords: ['Morocco currency', 'Moroccan dirham', 'MAD exchange rate', 'money Morocco'],
+      priority: 8,
+    },
+    {
+      title: 'Morocco Photography Tips',
+      description: 'Best photo spots, golden hour timing, etiquette, drone rules, gear tips, and Instagram locations.',
+      type: 'page',
+      url: '/morocco-photography-tips',
+      tags: ['photography', 'camera', 'Instagram'],
+      keywords: ['Morocco photography', 'photo spots Morocco', 'Morocco camera tips', 'Instagram Morocco'],
+      priority: 8,
+    },
+    {
+      title: 'Things to Do in Essaouira',
+      description: '15+ things to do in Essaouira — surfing, Gnaoua music, medina walks, fishing port, and art galleries.',
+      type: 'page',
+      url: '/things-to-do-essaouira',
+      tags: ['Essaouira', 'activities', 'coast'],
+      keywords: ['things to do Essaouira', 'Essaouira guide', 'Essaouira activities', 'Essaouira surfing'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

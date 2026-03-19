@@ -249,6 +249,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/things-to-do-casablanca',
     '/morocco-camping-guide',
     '/morocco-train-travel',
+    '/morocco-currency-guide',
+    '/morocco-photography-tips',
+    '/things-to-do-essaouira',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
