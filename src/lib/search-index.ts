@@ -1784,6 +1784,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['Morocco road trip', 'driving in Morocco', 'Morocco self-drive', 'Morocco road trip itinerary'],
       priority: 9,
     },
+    {
+      title: 'Morocco Wellness Retreats',
+      description: 'Wellness retreats in Morocco — yoga, spa holidays, hammam treatments, meditation, detox programs, and top retreat centers.',
+      type: 'page',
+      url: '/morocco-wellness-retreats',
+      tags: ['wellness', 'yoga', 'spa', 'retreats'],
+      keywords: ['Morocco wellness retreat', 'Morocco yoga retreat', 'Morocco spa holiday', 'wellness vacation Morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Adventure Sports',
+      description: 'Adventure sports in Morocco — surfing, sandboarding, paragliding, quad biking, rock climbing, canyoning, and more.',
+      type: 'page',
+      url: '/morocco-adventure-sports',
+      tags: ['adventure', 'sports', 'outdoor', 'extreme'],
+      keywords: ['Morocco adventure sports', 'adventure activities Morocco', 'extreme sports Morocco', 'outdoor activities Morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Cultural Etiquette Guide',
+      description: 'Morocco etiquette guide — greetings, dress code, dining customs, tipping, photography rules, haggling, and essential Darija phrases.',
+      type: 'page',
+      url: '/morocco-cultural-etiquette',
+      tags: ['etiquette', 'culture', 'customs', 'tips'],
+      keywords: ['Morocco etiquette guide', 'Morocco cultural tips', 'Morocco customs', 'dos and don\'ts Morocco'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
