@@ -1757,6 +1757,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['Morocco group travel', 'Morocco group tour', 'group trip Morocco', 'Morocco with friends'],
       priority: 9,
     },
+    {
+      title: 'Morocco Luxury Travel Guide',
+      description: 'Luxury travel in Morocco — top 5-star hotels, private desert experiences, fine dining, VIP tours, and luxury itineraries.',
+      type: 'page',
+      url: '/morocco-luxury-travel',
+      tags: ['luxury', 'hotels', 'fine dining', 'VIP'],
+      keywords: ['luxury travel Morocco', 'Morocco luxury hotels', 'luxury Morocco trip', '5 star Morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Ramadan Travel Guide',
+      description: 'Visiting Morocco during Ramadan — what stays open, iftar experiences, etiquette, city-by-city impact, and Ramadan dates.',
+      type: 'page',
+      url: '/morocco-ramadan-travel',
+      tags: ['Ramadan', 'culture', 'etiquette', 'religion'],
+      keywords: ['Morocco Ramadan travel', 'visiting Morocco Ramadan', 'Ramadan in Morocco', 'iftar Morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Road Trip Guide',
+      description: 'Complete Morocco road trip guide — car rental, driving rules, best routes, fuel costs, toll roads, mountain passes, and safety tips.',
+      type: 'page',
+      url: '/morocco-road-trip-guide',
+      tags: ['road trip', 'driving', 'car rental', 'routes'],
+      keywords: ['Morocco road trip', 'driving in Morocco', 'Morocco self-drive', 'Morocco road trip itinerary'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

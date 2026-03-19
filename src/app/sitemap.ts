@@ -263,6 +263,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-for-couples',
     '/morocco-for-seniors',
     '/morocco-group-travel',
+    '/morocco-luxury-travel',
+    '/morocco-ramadan-travel',
+    '/morocco-road-trip-guide',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
