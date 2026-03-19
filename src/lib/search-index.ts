@@ -1838,6 +1838,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['Morocco souk guide', 'shopping Moroccan souks', 'best souks Morocco', 'how to haggle Morocco'],
       priority: 9,
     },
+    {
+      title: 'Morocco Tea Culture',
+      description: 'Moroccan mint tea guide — history, ceremony etiquette, how to make it, regional variations, best tea houses, and tea experiences.',
+      type: 'page',
+      url: '/morocco-tea-culture',
+      tags: ['tea', 'culture', 'cuisine', 'traditions'],
+      keywords: ['Moroccan mint tea', 'Morocco tea culture', 'how to make Moroccan tea', 'mint tea Morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Nightlife Guide',
+      description: 'Morocco nightlife guide — best bars, clubs, rooftop venues, live music, alcohol laws, and nightlife by city.',
+      type: 'page',
+      url: '/morocco-nightlife',
+      tags: ['nightlife', 'bars', 'clubs', 'music'],
+      keywords: ['Morocco nightlife', 'best bars Morocco', 'Marrakech nightlife', 'Morocco party scene'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco World Cup 2030 Guide',
+      description: 'FIFA 2030 World Cup Morocco guide — host cities, stadiums, transport, accommodation, visa info, and fan essentials.',
+      type: 'page',
+      url: '/morocco-world-cup-2030',
+      tags: ['World Cup', 'football', '2030', 'events'],
+      keywords: ['Morocco World Cup 2030', 'FIFA 2030 Morocco', 'World Cup Morocco travel', '2030 host cities Morocco'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

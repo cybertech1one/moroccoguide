@@ -272,6 +272,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-instagram-spots',
     '/morocco-street-food-guide',
     '/morocco-souk-guide',
+    '/morocco-tea-culture',
+    '/morocco-nightlife',
+    '/morocco-world-cup-2030',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
