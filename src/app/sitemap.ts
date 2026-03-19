@@ -261,6 +261,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-with-kids',
     '/morocco-budget-guide',
     '/morocco-for-couples',
+    '/morocco-for-seniors',
+    '/morocco-group-travel',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

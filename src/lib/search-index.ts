@@ -1739,6 +1739,24 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['Morocco for couples', 'romantic Morocco trip', 'Morocco couple guide', 'Morocco honeymoon alternative'],
       priority: 9,
     },
+    {
+      title: 'Morocco for Seniors',
+      description: 'Senior travel guide to Morocco — accessibility tips, best cities, comfortable accommodations, pace-friendly itineraries, and health info.',
+      type: 'page',
+      url: '/morocco-for-seniors',
+      tags: ['seniors', 'accessibility', 'health', 'comfort'],
+      keywords: ['Morocco for seniors', 'senior travel Morocco', 'elderly travel Morocco', 'over 60 Morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Group Travel Guide',
+      description: 'Group travel guide to Morocco — tour types, group activities, transport, split-cost tips, group dining, and planning timeline.',
+      type: 'page',
+      url: '/morocco-group-travel',
+      tags: ['group', 'tours', 'friends', 'planning'],
+      keywords: ['Morocco group travel', 'Morocco group tour', 'group trip Morocco', 'Morocco with friends'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

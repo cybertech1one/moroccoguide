@@ -476,6 +476,81 @@ const packingList = [
 ] as const;
 
 /* ═══════════════════════════════════════════════════════════════
+   JSON-LD: FAQ PAGE
+   ═══════════════════════════════════════════════════════════════ */
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Is there a quarantine period for pets entering Morocco?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No, there is no mandatory quarantine for pets entering Morocco with complete documentation (valid rabies vaccination, titer test above 0.5 IU/ml, endorsed health certificate, and ONSSA import permit). However, if your documents are incomplete or if the ONSSA veterinarian at the port of entry has concerns, your pet may be held in a temporary facility while issues are resolved. This can cost from 200 MAD per day.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I bring my pet into Moroccan hotels and restaurants?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Pet policies vary significantly. Luxury hotels and international chains are most likely to accept pets, usually with a supplement from 250 MAD to 600 MAD per night. Most riads in the medina are not pet-friendly due to small spaces and resident cats. Traditional restaurants generally do not allow pets. Hotels with gardens or outdoor spaces are your best options. Always confirm the pet policy before booking.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What happens if my pet gets sick in Morocco?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Morocco has veterinary clinics in all major cities. Casablanca and Rabat have the most advanced facilities with diagnostic equipment comparable to European standards. Consultation fees start from 180 MAD. Emergency after-hours services are available in major cities. The SOS Animaux network operates in several cities and can provide referrals.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Are there specific dog breeds banned from entering Morocco?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Morocco does not maintain an official breed ban list for pet imports. However, ONSSA reserves the right to refuse entry to animals deemed dangerous. Breeds commonly classified as dangerous in other countries may face additional scrutiny at customs. Some pet-friendly accommodations also restrict certain large or powerful breeds.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I take my pet to the beach in Morocco?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Beach rules for pets vary by location. Agadir main beach generally does not allow dogs, but beaches to the north and south are more relaxed. Essaouira beaches are relatively pet-friendly. Taghazout and the surfing beaches south of Agadir are generally accepting of dogs. Always keep your dog on a leash near other beachgoers and provide shade and fresh water.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the best way to travel within Morocco with a pet?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The most practical option is renting a car, which gives you full control over your pet comfort and schedule. Rental cars are available from 250 MAD per day. ONCF trains only allow small pets in carriers. Most bus services do not accept pets. For longer distances, consider hiring a private driver from 500 MAD per trip.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does it cost to bring a pet to Morocco?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Budget from 2,500 MAD to 8,000 MAD total for pet travel preparation. This includes rabies titer test (from 1,500 MAD equivalent), health certificate endorsement fees, ONSSA import permit (from 350 MAD), airline pet transport fees (from 800 MAD to 3,500 MAD depending on cabin or cargo), and a pet-friendly accommodation surcharge from 250 MAD per night. Prices vary by country of origin and airline.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I need pet travel insurance for Morocco?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Pet travel insurance is not legally required but highly recommended. Standard travel insurance does not cover veterinary emergencies abroad. Specialized pet travel insurance policies cover emergency vet visits, surgery, medication, and even emergency repatriation. Policies start from around 150 MAD equivalent per trip. Companies like Petplan, Trupanion, and ManyPets offer international coverage options.',
+      },
+    },
+  ],
+};
+
+/* ═══════════════════════════════════════════════════════════════
    DATA: FAQ
    ═══════════════════════════════════════════════════════════════ */
 
@@ -510,6 +585,16 @@ const faqItems = [
     answer:
       'The most practical option is renting a car, which gives you full control over your pet\'s comfort and schedule. Rental cars are available from 250 MAD per day at all major airports and cities. Private transfers can be arranged through hotels from 500 MAD per trip for intercity travel. ONCF trains only allow small pets in carriers. Most bus services (CTM, Supratours) do not accept pets. Petit taxis rarely accept pets, while grand taxi drivers may agree for an additional fee. For longer distances, consider hiring a private driver.',
   },
+  {
+    question: 'How much does it cost to bring a pet to Morocco?',
+    answer:
+      'Budget from 2,500 MAD to 8,000 MAD total for pet travel preparation. This includes the rabies titer test (from 1,500 MAD equivalent depending on country), health certificate endorsement fees, ONSSA import permit (from 350 MAD), airline pet transport fees (from 800 MAD for cabin to 3,500 MAD for cargo hold), and a pet-friendly accommodation surcharge from 250 MAD per night. Prices vary significantly by your country of origin and chosen airline. Seasonal pricing can change these estimates.',
+  },
+  {
+    question: 'Do I need pet travel insurance for Morocco?',
+    answer:
+      'Pet travel insurance is not legally required but is highly recommended. Standard travel insurance policies do not cover veterinary emergencies abroad. Specialized pet travel insurance policies can cover emergency vet visits, surgery, medication, and even emergency repatriation of your pet. Policies start from around 150 MAD equivalent per trip depending on the provider and coverage level. Companies like Petplan, Trupanion, and ManyPets offer international coverage options that work in Morocco.',
+  },
 ] as const;
 
 /* ═══════════════════════════════════════════════════════════════
@@ -522,6 +607,10 @@ export default function MoroccoWithPetsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
       {/* ── Hero Section ── */}
@@ -974,44 +1063,70 @@ export default function MoroccoWithPetsPage() {
         </div>
       </section>
 
-      {/* ── Related Pages ── */}
+      {/* ── Related Guides ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
-            Continue Exploring Morocco
+            Related Guides
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Link href="/morocco-travel-tips" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            <Link href="/morocco-visa-guide" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
+              <FileText className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
+                Morocco Visa Guide
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] mb-3">
+                Entry requirements, visa-free countries, passport rules, and everything you need to enter Morocco legally.
+              </p>
+              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
+                Read more <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
+            <Link href="/morocco-travel-tips" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
               <BookOpen className="w-8 h-8 text-[var(--color-accent)] mb-3" />
               <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
                 Morocco Travel Tips
               </h3>
               <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Essential tips for first-time visitors to Morocco, covering transport, safety, and cultural etiquette.
+                Essential tips for first-time visitors covering transport, safety, cultural etiquette, and budgeting.
               </p>
               <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
                 Read more <ArrowRight className="w-3.5 h-3.5" />
               </span>
             </Link>
-            <Link href="/family" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
-              <Heart className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+            <Link href="/health" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
+              <Stethoscope className="w-8 h-8 text-[var(--color-accent)] mb-3" />
               <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Family Travel Morocco
+                Health Guide Morocco
               </h3>
               <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Plan a family-friendly trip to Morocco with guides to kid-friendly activities, accommodations, and safety.
+                Vaccinations, healthcare facilities, pharmacies, water safety, and staying healthy during your trip.
               </p>
               <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
                 Read more <ArrowRight className="w-3.5 h-3.5" />
               </span>
             </Link>
-            <Link href="/driving" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Link href="/morocco-travel-insurance" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
+              <ShieldCheck className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
+                Travel Insurance Morocco
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] mb-3">
+                Compare travel insurance options, understand coverage for pets, medical emergencies, and trip cancellations.
+              </p>
+              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
+                Read more <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
+            <Link href="/transport" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
               <Navigation className="w-8 h-8 text-[var(--color-accent)] mb-3" />
               <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Driving in Morocco
+                Transport in Morocco
               </h3>
               <p className="text-sm text-[var(--text-secondary)] mb-3">
-                The most practical way to travel Morocco with pets. Guide to rental cars, road rules, and routes.
+                Trains, buses, taxis, rental cars, and the best ways to get around Morocco with your pet.
               </p>
               <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
                 Read more <ArrowRight className="w-3.5 h-3.5" />

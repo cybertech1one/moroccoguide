@@ -1,37 +1,11 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import {
-  ChevronRight,
-  Home,
-  MapPin,
-  Star,
-  Heart,
-  Clock,
-  Info,
-  ArrowRight,
-  ShieldCheck,
-  Thermometer,
-  DollarSign,
-  CheckCircle,
-  AlertTriangle,
-  Users,
-  Building,
-  Award,
-  BookOpen,
-  Phone,
-  Stethoscope,
-  Footprints,
-  Sun,
-  Mountain,
-  Utensils,
-  Map,
-  Compass,
-  BedDouble,
-  Accessibility,
-  HeartPulse,
-  Umbrella,
-  Waves,
-  CalendarDays,
+  ChevronRight, Home, Shield, ShieldCheck, CheckCircle, Info, ArrowRight,
+  MapPin, Users, Heart, Star, Globe, Sun, Wallet, Navigation, Car,
+  BookOpen, Compass, Hotel, Map, Coffee, CalendarDays, Thermometer,
+  Accessibility, Stethoscope, BadgeCheck, BriefcaseMedical, Plane,
+  HandHeart, GlassWater,
 } from 'lucide-react';
 
 /* ═══════════════════════════════════════════════════════════════
@@ -45,68 +19,53 @@ const BASE_URL = 'https://citytoursmorocco.com';
    ═══════════════════════════════════════════════════════════════ */
 
 export const metadata: Metadata = {
-  title: 'Morocco for Seniors 2026 | Over 50s Travel Guide & Accessibility Tips',
+  title: 'Morocco for Seniors 2026: Complete Travel Guide for Over 60 Travelers',
   description:
-    'Complete guide to visiting Morocco for senior travelers and over 50s. Accessibility advice, best cities for older visitors, gentle activities, health considerations, recommended accommodations with elevators, travel insurance for over 65s, and medical facilities across Morocco.',
+    'The ultimate guide to traveling Morocco as a senior in 2026. Accessibility tips, best cities for older travelers, health and medical info, pace-friendly itineraries, comfortable accommodations, guided tours, transport comfort, and travel insurance advice.',
   keywords: [
-    'Morocco for seniors',
-    'over 50 Morocco travel',
-    'senior travel Morocco',
-    'Morocco accessibility',
-    'older travelers Morocco',
-    'Morocco over 60 travel',
-    'Morocco over 65 travel',
-    'senior friendly Morocco',
-    'Morocco travel guide seniors',
-    'Morocco health advice seniors',
-    'Morocco mobility advice',
-    'gentle activities Morocco',
-    'best cities seniors Morocco',
-    'Morocco travel insurance over 65',
-    'Morocco medical facilities',
-    'Morocco guided tours seniors',
-    'Morocco accommodations elevator',
-    'Morocco safe travel older adults',
-    'retirement travel Morocco',
-    'Morocco slow travel',
+    'Morocco for seniors', 'Morocco senior travel', 'elderly travel Morocco',
+    'over 60 travel Morocco', 'Morocco for older travelers', 'senior friendly Morocco',
+    'Morocco accessibility', 'Morocco retirement travel', 'Morocco comfortable travel',
+    'Morocco guided tours seniors', 'Morocco health travel tips', 'Morocco slow travel',
+    'Morocco luxury senior', 'Morocco travel insurance seniors', 'Morocco senior tour packages',
   ],
   openGraph: {
-    title: 'Morocco for Seniors 2026 | Over 50s Travel Guide & Accessibility Tips',
+    title: 'Morocco for Seniors 2026: Complete Travel Guide for Over 60 Travelers',
     description:
-      'Everything senior travelers need to know about Morocco. Best cities, gentle activities, health tips, accessible accommodations, and recommended tour operators for over 50s.',
+      'Everything seniors need to travel Morocco comfortably and safely. Accessibility tips, best cities, health info, pace-friendly itineraries, guided tours, and comfortable accommodations.',
     url: `${BASE_URL}/morocco-for-seniors`,
     images: [
       {
-        url: `${BASE_URL}/images/hero-morocco-culture.webp`,
+        url: `${BASE_URL}/images/hero-morocco-seniors.webp`,
         width: 1200,
         height: 630,
-        alt: 'Senior travelers enjoying a peaceful courtyard garden in a traditional Moroccan riad',
+        alt: 'Senior couple enjoying a peaceful courtyard in a traditional Moroccan riad with mosaic tiles and a fountain',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Morocco for Seniors 2026 | Over 50s Travel Guide',
+    title: 'Morocco for Seniors: 2026 Complete Travel Guide for Over 60s',
     description:
-      'Complete guide for senior travelers visiting Morocco. Best cities, accessibility tips, health advice, gentle activities, and accommodations with elevators.',
-    images: [`${BASE_URL}/images/hero-morocco-culture.webp`],
+      'Accessibility tips, best cities, comfortable accommodations, health advice, guided tours, and pace-friendly itineraries for senior travelers in Morocco.',
+    images: [`${BASE_URL}/images/hero-morocco-seniors.webp`],
   },
   alternates: { canonical: `${BASE_URL}/morocco-for-seniors` },
 };
 
 /* ═══════════════════════════════════════════════════════════════
-   JSON-LD STRUCTURED DATA
+   JSON-LD STRUCTURED DATA — TravelGuide
    ═══════════════════════════════════════════════════════════════ */
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'TravelGuide',
   '@id': `${BASE_URL}/morocco-for-seniors`,
-  name: 'Morocco for Seniors 2026 | Over 50s Travel Guide & Accessibility Tips',
+  name: 'Morocco for Seniors 2026: Complete Travel Guide for Over 60 Travelers',
   description:
-    'Complete guide to visiting Morocco for senior travelers and over 50s. Accessibility, health considerations, best cities, gentle activities, accommodations, travel insurance, and medical facilities.',
+    'Comprehensive guide for senior travelers visiting Morocco. Covers accessibility, best cities, health and medical info, comfortable accommodations, guided tours, transport options, and pace-friendly itineraries.',
   url: `${BASE_URL}/morocco-for-seniors`,
-  image: `${BASE_URL}/images/hero-morocco-culture.webp`,
+  image: `${BASE_URL}/images/hero-morocco-seniors.webp`,
   author: {
     '@type': 'Organization',
     name: 'CityGuide Morocco',
@@ -117,8 +76,8 @@ const jsonLd = {
     name: 'CityGuide Morocco',
     url: BASE_URL,
   },
-  datePublished: '2026-03-17',
-  dateModified: '2026-03-17',
+  datePublished: '2026-03-19',
+  dateModified: '2026-03-19',
   mainEntityOfPage: `${BASE_URL}/morocco-for-seniors`,
   isPartOf: {
     '@type': 'WebSite',
@@ -129,6 +88,10 @@ const jsonLd = {
     '@type': 'Country',
     name: 'Morocco',
   },
+  audience: {
+    '@type': 'PeopleAudience',
+    suggestedMinAge: 60,
+  },
   breadcrumb: {
     '@type': 'BreadcrumbList',
     itemListElement: [
@@ -138,24 +101,52 @@ const jsonLd = {
   },
 };
 
+/* ═══════════════════════════════════════════════════════════════
+   JSON-LD STRUCTURED DATA — FAQPage
+   ═══════════════════════════════════════════════════════════════ */
+
 const faqJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Is Morocco safe for senior travelers?',
+      name: 'Is Morocco a good destination for senior travelers?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes, Morocco is generally safe for senior travelers. The country has a strong culture of respecting elders, and locals are typically very helpful. Stick to well-known tourist areas, use registered guides, and take common-sense precautions. Guided tours are recommended for first-time visitors over 65 as they handle all logistics and provide support.',
+        text: 'Yes, Morocco is an excellent destination for seniors. The culture deeply respects elders, the climate is warm and sunny for most of the year, and there is a wide range of comfortable accommodations including luxury riads and five-star hotels. Guided tours handle all logistics, and the pace can be tailored to your comfort level. Many cities have modern medical facilities, and the cost of living is very affordable.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can I navigate the medinas with limited mobility?',
+      name: 'What are the best cities in Morocco for older travelers?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Medinas present significant challenges for those with limited mobility. Streets are narrow, uneven, and often include steps. Wheelchairs are extremely difficult to use in most medinas. However, you can enjoy the medina edges, hire a local guide who knows accessible routes, or explore the French-built ville nouvelle areas which are flat and paved. Cities like Agadir and Essaouira have more accessible layouts.',
+        text: 'Marrakech offers the best tourist infrastructure with luxury accommodations and guided experiences. Rabat is modern, clean, and easy to navigate with a tram system. Essaouira has a flat, walkable medina and a relaxed coastal atmosphere. Agadir is a modern resort city with wide streets and beach accessibility. Fes is culturally rich but the medina has steep hills, so a guide and comfortable shoes are essential.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Are there accessible accommodations in Morocco for seniors?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. International chain hotels like Sofitel, Four Seasons, Fairmont, and Marriott offer elevators, accessible rooms, and medical assistance. Many luxury riads have been renovated with ground-floor rooms and walk-in showers. When booking, specifically request ground-floor rooms and ask about step-free access. Prices for accessible luxury accommodations start from 1,200 MAD per night.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What medical facilities are available for tourists in Morocco?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Morocco has private hospitals and clinics in all major cities that meet international standards. Clinique Internationale in Marrakech, Clinique du Parc in Casablanca, and Clinique Agdal in Rabat have English-speaking doctors. Most pharmacies are well-stocked with common medications. Bring a sufficient supply of your prescription medications with a doctor letter, as specific brands may not be available locally.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I need travel insurance for Morocco as a senior?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Travel insurance is essential for seniors visiting Morocco. Standard policies often have age limits, so use specialist providers like AllClear, Staysure, or World Nomads that cover travelers over 65. Ensure your policy covers pre-existing conditions, medical evacuation, trip cancellation, and repatriation. A comprehensive policy for a two-week trip typically costs between 800 and 2,500 MAD depending on age and coverage level.',
       },
     },
     {
@@ -163,701 +154,476 @@ const faqJsonLd = {
       name: 'What is the best time of year for seniors to visit Morocco?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The best months for senior travelers are March-May and October-November. These shoulder seasons offer mild temperatures (18-25 degrees Celsius), fewer crowds, and lower prices. Avoid June-August when temperatures in cities like Marrakech regularly exceed 40 degrees Celsius, which can be dangerous for older adults. Coastal cities like Essaouira and Agadir are comfortable year-round.',
+        text: 'Spring (March to May) and autumn (September to November) are ideal for seniors. Temperatures range from 20 to 28 degrees Celsius, which is comfortable for walking and sightseeing. Avoid June through August when inland cities exceed 40 degrees Celsius, which can be dangerous for older travelers. Winter (December to February) is mild on the coast but cold in the mountains and desert at night.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Do I need special travel insurance for visiting Morocco over age 65?',
+      name: 'How accessible are Moroccan medinas for people with mobility issues?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes, standard travel insurance policies often exclude travelers over 65 or charge higher premiums. Specialist providers like Staysure, AllClear, and Saga offer policies specifically for older travelers. Ensure your policy covers medical evacuation (the nearest major European hospital is in Spain), pre-existing conditions, and repatriation. Budget from 500 MAD to 2,000 MAD for a 2-week trip depending on age and coverage level.',
+        text: 'Traditional medinas can be challenging with narrow streets, uneven cobblestones, steps, and slopes. Marrakech medina has some wider main streets but many narrow alleys. Essaouira has the most accessible medina with a relatively flat grid layout. Using a licensed guide who knows accessible routes is highly recommended. Consider exploring medinas in the morning when they are less crowded and cooler.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Are there good medical facilities in Morocco for seniors?',
+      name: 'What transport is most comfortable for senior travelers in Morocco?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Morocco has good private medical facilities in major cities. Marrakech, Casablanca, Rabat, and Fes all have private hospitals and clinics with English or French-speaking doctors. Pharmacies are widely available and well-stocked. For serious medical emergencies, Casablanca has the best facilities. Always carry a list of your medications (with generic names) and your doctor contact information.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What gentle activities are best for older travelers in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Morocco offers many gentle activities perfect for seniors: garden visits (Jardin Majorelle, Andalusian Gardens), cooking classes, food tours, traditional hammam spa experiences, guided museum visits, leisurely cafe culture, sunset camel rides on the beach, bird watching in Souss-Massa, pottery workshops, and gentle walking tours with frequent rest stops. Most can be arranged at a relaxed pace.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Should seniors do guided or independent travel in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'For first-time senior visitors, guided tours are strongly recommended. They handle all logistics, provide air-conditioned transport, ensure accessible accommodation, and offer knowledgeable guides who can adapt the pace. Independent travel is possible for experienced travelers, especially in modern cities like Casablanca, Agadir, and Rabat. A middle ground is hiring a private driver-guide for custom itineraries.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How do I handle the heat in Morocco as an older traveler?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Heat management is critical for senior travelers. Visit between March-May or October-November for milder temperatures. Stay hydrated with at least 2-3 liters of water daily. Plan outdoor activities for early morning (before 10am) and late afternoon (after 4pm). Rest during the hottest midday hours. Choose coastal cities like Essaouira or Agadir for naturally cooler temperatures. Always wear a hat and use sunscreen.',
+        text: 'Private drivers are the most comfortable option for seniors, typically costing from 1,200 MAD per day. The Al Boraq high-speed train between Tangier and Casablanca is modern and smooth. ONCF first-class train carriages have comfortable assigned seats. For longer distances, domestic flights with Royal Air Maroc connect major cities. Avoid grand taxis, which are cramped shared vehicles with limited legroom.',
       },
     },
   ],
 };
 
 /* ═══════════════════════════════════════════════════════════════
+   DATA: SENIOR TRAVEL OVERVIEW
+   ═══════════════════════════════════════════════════════════════ */
+
+const seniorOverview = [
+  {
+    label: 'Cultural Respect',
+    value: 'Elders Honored',
+    detail: 'Moroccan culture deeply respects older people',
+    icon: Heart,
+  },
+  {
+    label: 'Climate',
+    value: '300+ Sunny Days',
+    detail: 'Warm Mediterranean and semi-arid climate year-round',
+    icon: Sun,
+  },
+  {
+    label: 'Healthcare',
+    value: 'Private Clinics Available',
+    detail: 'English-speaking doctors in all major cities',
+    icon: Stethoscope,
+  },
+  {
+    label: 'Value for Money',
+    value: 'Very Affordable',
+    detail: 'Luxury experiences at a fraction of European prices',
+    icon: Wallet,
+  },
+];
+
+/* ═══════════════════════════════════════════════════════════════
    DATA: BEST CITIES FOR SENIORS
    ═══════════════════════════════════════════════════════════════ */
 
-const bestCities = [
+const bestCitiesForSeniors = [
   {
-    name: 'Essaouira',
-    icon: Waves,
-    image: '/images/hero-essaouira-ramparts.webp',
-    rating: 'Best Overall for Seniors',
-    description:
-      'The ideal Moroccan city for older travelers. Essaouira offers a compact, relatively flat medina with a relaxed Atlantic breeze that keeps temperatures comfortable year-round. The pace of life is slow, the locals are welcoming, and the car-free medina streets are peaceful. The seafront promenade is perfect for gentle walks.',
-    pros: [
-      'Compact, walkable medina',
-      'Cooler coastal climate year-round',
-      'Relaxed, unhurried atmosphere',
-      'Flat seafront promenade',
-      'Excellent seafood restaurants',
-      'Less aggressive vendors than Marrakech',
-    ],
-    considerations: [
-      'Some medina streets are uneven cobblestone',
-      'Wind can be strong, especially in summer',
-      'Fewer luxury hotel options than Marrakech',
-    ],
-    accessibility: 'Good',
-  },
-  {
-    name: 'Marrakech',
-    icon: Star,
-    image: '/images/hero-marrakech-rooftop.webp',
-    rating: 'Best for Culture & Gardens',
-    description:
-      'Morocco\'s cultural capital offers world-class gardens, museums, and restaurants. While the medina can be overwhelming, the ville nouvelle (Gueliz and Hivernage) is modern and accessible. Stay in a hotel with a pool in Hivernage and take day trips into the medina with a guide. The garden circuit alone justifies a visit.',
-    pros: [
-      'World-class gardens (Majorelle, Menara, Agdal)',
-      'Best selection of luxury hotels with elevators',
-      'Excellent restaurants and cooking classes',
-      'Private guided tours widely available',
-      'Good private medical facilities',
-      'Direct international flights from many cities',
-    ],
-    considerations: [
-      'Medina is hectic, noisy, and has uneven surfaces',
-      'Extreme heat June-August (40+ degrees Celsius)',
-      'Aggressive vendors around Jemaa el-Fna',
-      'Traffic can be stressful',
-    ],
-    accessibility: 'Mixed',
-  },
-  {
-    name: 'Agadir',
-    icon: Sun,
-    image: '/images/hero-agadir-beach.webp',
-    rating: 'Best for Beach & Resort',
-    description:
-      'Rebuilt after the 1960 earthquake on a modern grid layout, Agadir is Morocco\'s most accessible city. Wide boulevards, a long flat beach promenade, modern hotels with full accessibility features, and a mild year-round climate make it ideal for seniors who want beach relaxation without the chaos of a traditional medina.',
-    pros: [
-      'Modern city layout with wide, flat streets',
-      'Long, flat beach promenade ideal for walking',
-      'Year-round mild climate (rarely below 15 or above 30 degrees)',
-      'Modern resort hotels with elevators and pools',
-      'Less cultural intensity, more relaxing',
-      'Good golf courses nearby',
-    ],
-    considerations: [
-      'Less culturally authentic than other cities',
-      'Beach can be crowded in summer',
-      'Limited historic sights compared to Marrakech or Fes',
-    ],
-    accessibility: 'Excellent',
-  },
-  {
-    name: 'Rabat',
-    icon: Building,
-    image: '/images/hero-rabat.webp',
-    rating: 'Best for Calm City Culture',
-    description:
-      'Morocco\'s capital is often overlooked by tourists, which is precisely what makes it ideal for seniors. The Kasbah des Oudaias is compact and charming, the Hassan Tower and Mausoleum are accessible, and the ville nouvelle is spacious and well-maintained. The tram system is modern and easy to use.',
-    pros: [
-      'Modern tram system for easy transport',
-      'Compact, well-maintained tourist sites',
-      'Less tourist pressure and hassle',
-      'Excellent restaurants in Agdal district',
-      'Good private hospitals and pharmacies',
-      'Andalusian Gardens are flat and shaded',
-    ],
-    considerations: [
-      'Fewer luxury accommodation options',
-      'Less dramatic scenery than Marrakech',
-      'Medina still has uneven surfaces',
-    ],
-    accessibility: 'Very Good',
-  },
-  {
-    name: 'Fes',
-    icon: BookOpen,
-    image: '/images/hero-fes-medina.webp',
-    rating: 'Best for History (With Caveats)',
-    description:
-      'Fes has the most spectacular medina in Morocco and arguably the world. However, it is also the most challenging for seniors. The medina is a labyrinth of steep, narrow alleys with steps and uneven surfaces. Visit with a guide, wear sturdy shoes, take frequent breaks, and stay in the ville nouvelle or a riad near the medina edge for easier access.',
-    pros: [
-      'UNESCO World Heritage medina, truly extraordinary',
-      'Exceptional traditional crafts and cuisine',
-      'Quieter, more authentic than Marrakech',
-      'Excellent riad accommodations near medina edges',
-      'World-class cooking schools',
-      'Less hectic vendor culture',
-    ],
-    considerations: [
-      'Medina has steep hills and many steps',
-      'Very challenging for mobility-limited visitors',
-      'Summer heat can be intense',
-      'Fewer modern hotel options',
-    ],
-    accessibility: 'Challenging',
-  },
-];
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: HEALTH & SAFETY CONSIDERATIONS
-   ═══════════════════════════════════════════════════════════════ */
-
-const healthConsiderations = [
-  {
-    title: 'Heat Management',
-    icon: Thermometer,
-    severity: 'High Priority',
-    description:
-      'Morocco can be extremely hot, particularly inland cities like Marrakech and Fes from June to September when temperatures regularly exceed 40 degrees Celsius. Heat stroke and dehydration are real risks for older adults.',
-    tips: [
-      'Visit during shoulder seasons (March-May, October-November)',
-      'Drink at least 2-3 liters of water daily',
-      'Stay indoors during midday heat (12pm-4pm)',
-      'Choose coastal cities for naturally cooler temperatures',
-      'Wear a hat, sunglasses, and high-SPF sunscreen',
-      'Carry a small spray bottle for misting',
-    ],
-  },
-  {
-    title: 'Altitude Awareness',
-    icon: Mountain,
-    severity: 'Medium Priority',
-    description:
-      'If your itinerary includes the Atlas Mountains or any high-altitude excursion, be aware that altitude sickness can affect anyone over 2,500 meters. Symptoms include headache, dizziness, nausea, and shortness of breath, which can be more severe for seniors.',
-    tips: [
-      'Ascend gradually, no more than 500m per day above 2,500m',
-      'Stay well hydrated at altitude',
-      'Avoid strenuous activity on arrival at altitude',
-      'Consult your doctor before high-altitude trips if you have heart or lung conditions',
-      'The Tizi n\'Tichka pass reaches 2,260m, generally safe for most travelers',
-      'Consider Ourika Valley (1,000m) as a gentler alternative to Imlil',
-    ],
-  },
-  {
-    title: 'Walking Distances & Terrain',
-    icon: Footprints,
-    severity: 'High Priority',
-    description:
-      'Exploring Moroccan medinas involves significant walking on uneven cobblestones, steep inclines, and narrow passages. A typical medina visit can involve 3-5 km of walking. The ville nouvelle areas of cities are generally flat and paved.',
-    tips: [
-      'Wear sturdy, broken-in walking shoes with good grip',
-      'Use a walking stick or trekking pole on cobblestones',
-      'Plan medina visits for the morning when you have most energy',
-      'Hire a guide who understands pace limitations',
-      'Schedule rest stops every 30-45 minutes',
-      'Use taxis between major sites rather than walking between them',
-    ],
-  },
-  {
-    title: 'Medication & Prescriptions',
-    icon: Stethoscope,
-    severity: 'High Priority',
-    description:
-      'Bring more than enough medication for your entire trip plus extra in case of delays. Moroccan pharmacies are well-stocked but may use different brand names. Some medications available over-the-counter in Europe or North America require a prescription in Morocco.',
-    tips: [
-      'Carry medications in original packaging with labels',
-      'Bring a letter from your doctor listing all medications with generic names',
-      'Pack medications in carry-on luggage, never in checked bags',
-      'Bring extra supplies in case of travel delays (at least 5 extra days)',
-      'Know the generic names of all your medications',
-      'Research availability of your specific medications in Morocco before departure',
-    ],
-  },
-  {
-    title: 'Food & Water Safety',
-    icon: Utensils,
-    severity: 'Medium Priority',
-    description:
-      'Morocco has excellent cuisine, but senior travelers should take extra care with food and water. Digestive upsets are common for all travelers and can be more serious for older adults, particularly those on certain medications.',
-    tips: [
-      'Drink only bottled water (Sidi Ali or Sidi Harazem brands)',
-      'Avoid raw salads at street stalls',
-      'Eat at busy restaurants where food turnover is high',
-      'Carry oral rehydration salts (available at pharmacies from 5 MAD)',
-      'Introduce street food gradually, not on the first day',
-      'Avoid ice in drinks outside hotels and upscale restaurants',
-    ],
-  },
-  {
-    title: 'Sun Exposure',
-    icon: Sun,
-    severity: 'Medium Priority',
-    description:
-      'Morocco has intense sunshine, particularly from May through September. UV levels are significantly higher than in Northern Europe or the northern United States. Prolonged sun exposure increases risk of heat exhaustion and sunburn, especially for those on photosensitive medications.',
-    tips: [
-      'Use SPF 50+ sunscreen and reapply every 2 hours',
-      'Wear a wide-brimmed hat and UV-protective sunglasses',
-      'Check if your medications increase sun sensitivity',
-      'Seek shade during peak UV hours (11am-3pm)',
-      'Wear lightweight, long-sleeved clothing in light colors',
-      'Buy a Moroccan scarf to drape over shoulders for extra protection',
-    ],
-  },
-];
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: RECOMMENDED ACCOMMODATIONS
-   ═══════════════════════════════════════════════════════════════ */
-
-const accommodations = [
-  {
-    name: 'La Mamounia',
     city: 'Marrakech',
-    type: 'Luxury Hotel',
-    icon: Award,
-    price: 'From 4,500 MAD per night',
-    seniorFeatures: ['Elevator access to all floors', 'Ground floor rooms available', 'On-site medical assistance', 'Wheelchair-accessible spa', 'Large gardens with benches'],
+    rating: 5,
+    image: '/images/hero-marrakech.webp',
+    vibe: 'Vibrant with luxury options',
     description:
-      'The gold standard for senior-friendly luxury in Morocco. This iconic palace hotel has full elevator access, ground floor suites, a world-class spa with accessibility features, and 8 hectares of gardens with plenty of shaded seating. Staff are trained to assist guests with mobility needs.',
+      'Marrakech is the top choice for senior travelers thanks to its exceptional tourist infrastructure. The city offers world-class luxury riads and hotels, professional guided tours that handle all logistics, and an extraordinary range of cultural experiences. The Gueliz new town area is modern and easy to navigate, and many hotels offer wheelchair access and medical assistance on call.',
+    highlights: [
+      'Luxury accommodations from 800 MAD per night with elevator access',
+      'Majorelle Garden and Bahia Palace are accessible on flat ground',
+      'Private cooking classes and hammam experiences available',
+      'Modern hospitals and pharmacies within 15 minutes',
+    ],
   },
   {
-    name: 'Sofitel Marrakech Lounge & Spa',
-    city: 'Marrakech',
-    type: 'Luxury Hotel',
-    icon: Building,
-    price: 'From 2,800 MAD per night',
-    seniorFeatures: ['Full elevator access', 'Accessible rooms', 'Flat grounds and pathways', 'On-site restaurant and spa', 'Pool with easy entry'],
-    description:
-      'A modern luxury hotel in Hivernage with excellent accessibility. Located outside the medina, it offers a calm base with flat pathways throughout the property. The pool has gradual entry steps, and the spa is accessible. Short taxi ride to Jemaa el-Fna.',
-  },
-  {
-    name: 'Sofitel Essaouira Mogador',
     city: 'Essaouira',
-    type: 'Beach Resort',
-    icon: Waves,
-    price: 'From 2,200 MAD per night',
-    seniorFeatures: ['Full elevator access', 'Beach-level pool', 'Thalassotherapy spa', 'Golf course on-site', 'Shuttle to medina'],
+    rating: 5,
+    image: '/images/hero-essaouira.webp',
+    vibe: 'Relaxed coastal pace',
     description:
-      'A beachfront resort with full accessibility features. The flat resort layout is easy to navigate, the spa offers therapeutic thalasso treatments beneficial for joint pain, and a regular shuttle takes guests to Essaouira\'s medina. Ground floor rooms overlook the ocean.',
+      'Essaouira is ideal for seniors who prefer a gentle pace. The medina is one of the most accessible in Morocco with a relatively flat grid layout and manageable size. The Atlantic breeze keeps temperatures comfortable even in summer, and the relaxed atmosphere with excellent seafood makes it perfect for leisurely exploration.',
+    highlights: [
+      'Flat, grid-layout medina that is easy to navigate on foot',
+      'Cool ocean breezes keep temperatures comfortable year-round',
+      'Fresh seafood restaurants with terrace seating from 80 MAD',
+      'Small enough to explore without exhaustion',
+    ],
   },
   {
-    name: 'Hotel & Ryad Art Place',
-    city: 'Marrakech',
-    type: 'Boutique Hotel',
-    icon: Star,
-    price: 'From 1,800 MAD per night',
-    seniorFeatures: ['Elevator', 'Rooftop restaurant', 'Central Gueliz location', 'Modern bathrooms with grab bars', 'Flat access throughout'],
-    description:
-      'A modern boutique hotel in the heart of Gueliz, the new town. Its central location means you are within walking distance of restaurants and shops on flat, paved streets. The hotel has an elevator, modern accessible bathrooms, and a rooftop restaurant so you do not need to go out for dinner.',
-  },
-  {
-    name: 'Tikida Golf Palace',
-    city: 'Agadir',
-    type: 'Resort Hotel',
-    icon: Sun,
-    price: 'From 1,500 MAD per night',
-    seniorFeatures: ['Full elevator access', 'Ground floor rooms', 'On-site golf course', 'Heated pool', 'Medical clinic nearby'],
-    description:
-      'An excellent resort choice for seniors who want sun, relaxation, and golf. The modern layout is fully accessible, with flat grounds and elevator access. The heated pool is ideal for gentle exercise, and Agadir\'s modern infrastructure makes independent exploration easy.',
-  },
-  {
-    name: 'Riad Fes - Relais & Chateaux',
-    city: 'Fes',
-    type: 'Luxury Riad',
-    icon: BookOpen,
-    price: 'From 3,000 MAD per night',
-    seniorFeatures: ['Elevator (rare for a riad)', 'Accessible suites', 'Terrace restaurant', 'Spa with hammam', 'Medina edge location for easier access'],
-    description:
-      'One of the very few riads in Fes with an elevator, making it uniquely suited for senior travelers who want the riad experience without the stair challenge. Located on the edge of the medina, it is easier to reach by taxi. The terrace restaurant overlooks the entire medina.',
-  },
-  {
-    name: 'Villa Mandarine',
     city: 'Rabat',
-    type: 'Boutique Hotel',
-    icon: Building,
-    price: 'From 1,600 MAD per night',
-    seniorFeatures: ['Ground floor rooms available', 'Citrus garden setting', 'Quiet residential neighborhood', 'Pool', 'Easy taxi access to sites'],
+    rating: 5,
+    image: '/images/hero-rabat.webp',
+    vibe: 'Modern and organized',
     description:
-      'A charming villa hotel set in a citrus orchard in a quiet Rabat neighborhood. Ground floor rooms with garden access make it ideal for seniors. The peaceful setting is a world away from medina chaos, and taxis to the main sights are from 30 MAD.',
+      'Morocco\'s capital is one of the easiest cities for seniors to navigate. Modern infrastructure, a clean tram system, wide boulevards, and well-maintained public spaces make Rabat feel more European than many Moroccan cities. The medina is clean and organized, and cultural sites are spread across manageable distances.',
+    highlights: [
+      'Modern tram system with step-free access at all stops',
+      'Wide, well-maintained boulevards and sidewalks',
+      'Hassan Tower and Mausoleum are accessible on flat ground',
+      'Major hospitals and international clinics nearby',
+    ],
+  },
+  {
+    city: 'Agadir',
+    rating: 4,
+    image: '/images/hero-agadir.webp',
+    vibe: 'Beach resort comfort',
+    description:
+      'Agadir is the most physically accessible city in Morocco. Rebuilt as a modern resort city after the 1960 earthquake, it has wide streets, modern buildings, and resort-style infrastructure. The long beachfront promenade is flat and perfect for morning walks. It offers maximum comfort for seniors with mobility considerations.',
+    highlights: [
+      'Modern grid layout with wide, flat streets and sidewalks',
+      'Beachfront promenade ideal for gentle walks and wheelchair users',
+      'All-inclusive resorts with full accessibility features',
+      'Modern Souss-Massa hospital with international standards',
+    ],
+  },
+  {
+    city: 'Fes',
+    rating: 3,
+    image: '/images/hero-fes.webp',
+    vibe: 'Culturally rich but challenging',
+    description:
+      'Fes offers the most authentic cultural experience in Morocco, but seniors should plan carefully. The ancient medina has steep hills, narrow passages, and uneven cobblestones. A licensed guide is essential. Stay in a luxury riad with ground-floor access and take the medina in short morning sessions with rest breaks.',
+    highlights: [
+      'The world\'s most authentic medieval city experience',
+      'Licensed guides who know step-free routes through the medina',
+      'Exceptional luxury riads with ground-floor rooms available',
+      'Ville Nouvelle area is modern and flat for easy walking',
+    ],
   },
 ];
 
 /* ═══════════════════════════════════════════════════════════════
-   DATA: GENTLE ACTIVITIES
+   DATA: HEALTH AND MEDICAL INFO
    ═══════════════════════════════════════════════════════════════ */
 
-const gentleActivities = [
+const healthMedicalInfo = [
   {
-    name: 'Garden Visits',
-    icon: Star,
-    intensity: 'Low',
-    cities: 'Marrakech, Rabat, Meknes',
-    price: 'From 70 MAD entry',
+    topic: 'Prescription Medications',
+    icon: BriefcaseMedical,
     description:
-      'Morocco\'s gardens are world-class and perfect for seniors. The Jardin Majorelle in Marrakech (from 70 MAD) offers shaded paths and benches. The Menara Gardens have flat, olive-tree-lined walks. Rabat\'s Andalusian Gardens are quiet and shaded. All can be enjoyed at your own pace with frequent rest stops.',
-    bestFor: 'All mobility levels',
+      'Bring a full supply of all prescriptions plus an extra week as buffer. Carry in original packaging with a doctor\'s letter. Specific brands may not be available locally, though generics are stocked.',
+    tips: [
+      'Carry medications in hand luggage, never in checked bags',
+      'Bring a doctor\'s letter in English and French listing all medications',
+      'Pack an extra week of all prescriptions as a safety buffer',
+      'Pharmacies in Morocco are marked with green crosses and are widespread',
+    ],
   },
   {
-    name: 'Cooking Classes',
-    icon: Utensils,
-    intensity: 'Low',
-    cities: 'Marrakech, Fes, Essaouira',
-    price: 'From 400 MAD per person',
+    topic: 'Private Hospitals and Clinics',
+    icon: Stethoscope,
     description:
-      'Moroccan cooking classes are a wonderful seated activity. Learn to make tagine, couscous, and pastilla while sitting comfortably. Many classes include a market visit (which can be done at a gentle pace or skipped) followed by 2-3 hours of cooking and eating. La Maison Arabe in Marrakech (from 600 MAD) is particularly senior-friendly.',
-    bestFor: 'All mobility levels, food lovers',
+      'Private hospitals in all major cities have English-speaking doctors, modern equipment, and reasonable fees. Standard consultations from 300 MAD. Emergency treatment available 24 hours.',
+    tips: [
+      'Clinique Internationale Marrakech: English-speaking staff, 24-hour emergency',
+      'Clinique du Parc Casablanca: full-service private hospital',
+      'Clinique Agdal Rabat: modern facility near the embassy district',
+      'Your hotel or riad can arrange a doctor visit to your room if needed',
+    ],
   },
   {
-    name: 'Hammam & Spa',
+    topic: 'Heat and Hydration',
+    icon: Thermometer,
+    description:
+      'Heat is the biggest health risk for seniors. Inland cities exceed 40 degrees Celsius in summer. Plan outdoor activities for early morning or late afternoon, and rest during the hottest hours.',
+    tips: [
+      'Drink at least 2 to 3 liters of bottled water daily',
+      'Avoid outdoor activities between 12:00 and 16:00 in summer months',
+      'Wear a wide-brimmed hat, sunglasses, and loose light-colored clothing',
+      'Watch for signs of heat exhaustion: dizziness, nausea, rapid heartbeat',
+    ],
+  },
+  {
+    topic: 'Food and Water Safety',
+    icon: GlassWater,
+    description:
+      'Drink only bottled water, including for brushing teeth. Choose busy restaurants with high food turnover. Avoid raw salads and unpeeled fruits from street vendors.',
+    tips: [
+      'Drink only sealed bottled water from reputable brands like Sidi Ali or Ain Saiss',
+      'Eat at restaurants with high turnover where food is freshly prepared',
+      'Cooked tagines and grilled meats are generally safe choices',
+      'Carry anti-diarrhea medication and oral rehydration sachets',
+    ],
+  },
+];
+
+/* ═══════════════════════════════════════════════════════════════
+   DATA: COMFORTABLE ACCOMMODATIONS
+   ═══════════════════════════════════════════════════════════════ */
+
+const comfortableAccommodations = [
+  {
+    type: 'Luxury Riads with Ground-Floor Access',
     icon: Heart,
-    intensity: 'Low',
-    cities: 'All major cities',
-    price: 'From 300 MAD per treatment',
+    priceRange: 'From 800 MAD / night',
+    bestFor: 'Cultural atmosphere, personal service',
     description:
-      'A luxury spa hammam is deeply therapeutic for older bodies. The warm steam soothes joints, the gentle scrubbing improves circulation, and the massage relieves tension. Choose a luxury spa over a public hammam for more comfort and assistance. Heritage Spa in Marrakech (from 400 MAD) has excellent facilities for seniors.',
-    bestFor: 'All mobility levels, joint pain sufferers',
+      'The most charming option for seniors. Best luxury riads offer ground-floor rooms with walk-in showers. Staff arrange transport, accommodate dietary needs, and the courtyard setting is perfect for relaxing.',
+    tips: [
+      'Always request a ground-floor room when booking to avoid steep riad staircases',
+      'Ask about walk-in showers versus traditional bathtub-only bathrooms',
+      'Staff will arrange trusted drivers, guides, and restaurant reservations',
+      'Riad La Sultana and Royal Mansour in Marrakech are senior-friendly',
+    ],
   },
   {
-    name: 'Food Tours',
-    icon: MapPin,
-    intensity: 'Low to Medium',
-    cities: 'Marrakech, Fes, Casablanca',
-    price: 'From 500 MAD per person',
+    type: 'Five-Star International Hotels',
+    icon: Hotel,
+    priceRange: 'From 1,500 MAD / night',
+    bestFor: 'Full accessibility, modern amenities',
     description:
-      'Guided food tours allow you to sample Moroccan cuisine with expert commentary. Good operators walk at a gentle pace with regular stops. Specify any dietary restrictions or pace requirements when booking. Marrakech Food Tours offers a "gentle pace" option (from 600 MAD) specifically designed for older travelers.',
-    bestFor: 'Moderate mobility, food enthusiasts',
+      'International chains like Four Seasons Marrakech, Sofitel Rabat, and Fairmont Royal Palm offer elevators, accessible rooms, 24-hour medical assistance, and staff trained in senior guest needs. The safest choice for travelers with mobility concerns.',
+    tips: [
+      'Request accessible rooms with grab bars, walk-in showers, and wide doorways',
+      'Four Seasons and Fairmont have on-call medical services',
+      'Concierge services arrange private tours with accessible vehicles',
+      'Many offer airport wheelchair assistance and private transfers',
+    ],
   },
   {
-    name: 'Sunset Camel Rides',
+    type: 'Boutique Hotels in Ville Nouvelle',
+    icon: Star,
+    priceRange: 'From 600 MAD / night',
+    bestFor: 'Modern comfort, easy neighborhood access',
+    description:
+      'New town hotels balance Moroccan charm with modern convenience. Wide sidewalks, restaurants, and pharmacies are walking distance. Easier to navigate than medina locations.',
+    tips: [
+      'Gueliz district in Marrakech has flat streets and modern amenities',
+      'Look for hotels with elevators and 24-hour reception',
+      'Modern areas have ATMs, pharmacies, and supermarkets within walking distance',
+      'Taxis to the medina are inexpensive and take 5 to 10 minutes',
+    ],
+  },
+  {
+    type: 'All-Inclusive Beach Resorts',
     icon: Sun,
-    intensity: 'Low',
-    cities: 'Essaouira, Agadir',
-    price: 'From 250 MAD per person',
+    priceRange: 'From 1,200 MAD / night',
+    bestFor: 'Maximum convenience, relaxation focus',
     description:
-      'Beach camel rides at sunset are a gentle, memorable experience. The camel\'s rocking motion is soothing rather than jarring on the flat beach sand. Rides typically last 1-2 hours. Handlers assist with mounting and dismounting. Essaouira beach rides (from 250 MAD) are particularly scenic and calm.',
-    bestFor: 'Moderate mobility (need to mount/dismount camel)',
-  },
-  {
-    name: 'Museum & Gallery Visits',
-    icon: BookOpen,
-    intensity: 'Low',
-    cities: 'Marrakech, Rabat, Tangier',
-    price: 'From 30 MAD entry',
-    description:
-      'Morocco has excellent museums, many in restored palaces. The MACAAL contemporary art museum in Marrakech (from 40 MAD) is modern and accessible. The Mohammed VI Museum in Rabat (from 30 MAD) has elevator access. The Museum of Moroccan Judaism in Casablanca is small and ground-floor.',
-    bestFor: 'All mobility levels',
-  },
-  {
-    name: 'Rooftop Cafe Culture',
-    icon: Utensils,
-    intensity: 'Very Low',
-    cities: 'All cities',
-    price: 'From 25 MAD for mint tea',
-    description:
-      'One of Morocco\'s greatest pleasures requires no walking at all. Settle into a rooftop cafe with a glass of mint tea and watch the world go by. In Marrakech, the cafes around Jemaa el-Fna offer front-row seats to the spectacle below. Many cafes have elevator access or are on ground floors.',
-    bestFor: 'All mobility levels',
-  },
-  {
-    name: 'Bird Watching',
-    icon: Compass,
-    intensity: 'Low',
-    cities: 'Souss-Massa, Oualidia, Merja Zerga',
-    price: 'From 200 MAD for guided trip',
-    description:
-      'Morocco is a world-class bird watching destination with over 480 species. Souss-Massa National Park near Agadir is home to the rare Northern Bald Ibis. Oualidia lagoon attracts flamingos and herons. Many hides and viewing points are accessible. Guided trips (from 200 MAD) provide transport and expertise.',
-    bestFor: 'All mobility levels, nature lovers',
-  },
-  {
-    name: 'Pottery & Craft Workshops',
-    icon: Award,
-    intensity: 'Low',
-    cities: 'Fes, Safi, Marrakech',
-    price: 'From 300 MAD per workshop',
-    description:
-      'Try your hand at traditional Moroccan crafts in a seated workshop. Pottery classes in Fes and Safi (from 300 MAD) are a 2-3 hour experience where you shape clay on a wheel. Zellige tile workshops in Fes teach the ancient mosaic art. These are indoor, seated activities ideal for seniors.',
-    bestFor: 'All mobility levels, creative travelers',
+      'All-inclusive resorts in Agadir offer the easiest experience for seniors. Meals, activities, and pool access are handled. Many have on-site spas, adapted pools, and medical staff for peace of mind.',
+    tips: [
+      'RIU and Iberostar in Agadir have excellent accessibility features',
+      'All-inclusive packages remove the stress of daily meal planning',
+      'Ask about adapted rooms with roll-in showers before booking',
+      'Seasonal pricing can change; book shoulder season for best value',
+    ],
   },
 ];
 
 /* ═══════════════════════════════════════════════════════════════
-   DATA: TOUR OPERATORS FOR SENIORS
+   DATA: GUIDED TOURS FOR SENIORS
    ═══════════════════════════════════════════════════════════════ */
 
-const tourOperators = [
+const seniorFriendlyTours = [
   {
-    name: 'Saga Holidays',
-    specialty: 'Over 50s specialist',
-    icon: Users,
-    description:
-      'The UK\'s leading over-50s travel company offers escorted Morocco tours with a pace specifically designed for older travelers. Groups are small (20-30), transport is air-conditioned, and hotels are selected for accessibility. Their 10-day "Imperial Cities" tour covers Marrakech, Fes, Meknes, and Rabat.',
-    price: 'From 15,000 MAD per person (10 days)',
-    features: ['Small group sizes', 'Accessible hotels guaranteed', 'On-tour support', 'Includes travel insurance'],
-  },
-  {
-    name: 'Intrepid Travel (Comfort Range)',
-    specialty: 'Small group, upgraded comfort',
-    icon: Compass,
-    description:
-      'Intrepid\'s Comfort range offers Morocco tours with better hotels, more inclusions, and a more relaxed pace than their standard trips. Groups are capped at 12 people, and private transport is included. The "Premium Morocco" 12-day tour is their best option for seniors.',
-    price: 'From 18,000 MAD per person (12 days)',
-    features: ['Max 12 travelers', 'Premium hotels', 'Private transport', 'Flexible pace'],
-  },
-  {
-    name: 'Private Driver-Guide',
-    specialty: 'Custom private touring',
+    name: 'Private Guided City Tours',
     icon: Map,
+    priceRange: 'From 600 MAD / half day',
     description:
-      'Hiring a private driver-guide is often the best option for senior travelers. You set the pace, choose the stops, and rest whenever you need to. Drivers speak English or French, know accessible routes, and can adapt on the fly. Book through your hotel or a reputable agency.',
-    price: 'From 1,200 MAD per day (car + driver-guide)',
-    features: ['Complete flexibility', 'Door-to-door service', 'Custom itinerary', 'Air-conditioned vehicle'],
+      'Private guides tailor pace to your comfort, know accessible medina routes, and handle all vendor interactions. The single best investment for senior travelers in Morocco.',
+    bookingTip: 'Request a guide experienced with senior travelers. Your hotel can arrange this. Licensed guides carry official ID cards.',
   },
   {
-    name: 'Morocco Private Tours',
-    specialty: 'Luxury private itineraries',
-    icon: Star,
-    description:
-      'A Marrakech-based agency specializing in luxury private tours that can be tailored for senior travelers. They pre-screen hotels for accessibility, plan gentle itineraries with built-in rest time, and provide experienced English-speaking guides who understand senior needs.',
-    price: 'From 2,500 MAD per day (all-inclusive)',
-    features: ['Fully customizable', 'Accessibility vetted', 'Luxury vehicles', 'All-inclusive pricing'],
-  },
-  {
-    name: 'Explore Worldwide (Walking Grade 1-2)',
-    specialty: 'Low-intensity small groups',
-    icon: Footprints,
-    description:
-      'Explore rates all trips by walking grade. Their Morocco trips rated Grade 1-2 involve minimal walking (under 2 hours per day on flat terrain) and are suitable for seniors with moderate fitness. The "Highlights of Morocco" 8-day tour is rated Grade 2.',
-    price: 'From 12,000 MAD per person (8 days)',
-    features: ['Walking grade system', 'Clear fitness requirements', 'Small groups (max 16)', 'Leader support'],
-  },
-];
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: MEDICAL FACILITIES
-   ═══════════════════════════════════════════════════════════════ */
-
-const medicalFacilities = [
-  {
-    city: 'Casablanca',
-    hospital: 'Clinique Badr',
-    phone: '+212 522 250 250',
-    notes: 'Best private hospital in Morocco. English and French-speaking doctors. Full range of specialists. Emergency department 24/7.',
-    icon: HeartPulse,
-  },
-  {
-    city: 'Marrakech',
-    hospital: 'Clinique Internationale',
-    phone: '+212 524 438 282',
-    notes: 'Modern private clinic with English-speaking doctors. X-ray, laboratory, and pharmacy on-site. Located in Gueliz, easy taxi access.',
-    icon: Stethoscope,
-  },
-  {
-    city: 'Fes',
-    hospital: 'Clinique Atlas',
-    phone: '+212 535 651 751',
-    notes: 'Private clinic in the ville nouvelle. French and some English-speaking staff. General medicine and cardiology specialists.',
-    icon: Stethoscope,
-  },
-  {
-    city: 'Rabat',
-    hospital: 'Hopital Cheikh Zaid',
-    phone: '+212 537 755 555',
-    notes: 'Major hospital with international standards. All specialties available. English and French-speaking doctors. 24/7 emergency.',
-    icon: HeartPulse,
-  },
-  {
-    city: 'Agadir',
-    hospital: 'Clinique Tilila',
-    phone: '+212 528 843 643',
-    notes: 'Private clinic serving the tourist zone. French and some English-speaking staff. General practitioners and specialists on call.',
-    icon: Stethoscope,
-  },
-  {
-    city: 'All Cities',
-    hospital: 'Pharmacies',
-    phone: 'Look for green cross sign',
-    notes: 'Moroccan pharmacies are excellent and widely available. Pharmacists speak French and often English. Many medications available without prescription. Green cross signs indicate 24-hour pharmacies.',
-    icon: ShieldCheck,
-  },
-];
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: TRAVEL INSURANCE PROVIDERS
-   ═══════════════════════════════════════════════════════════════ */
-
-const insuranceProviders = [
-  {
-    name: 'Staysure',
-    ageLimit: 'No upper age limit',
-    icon: Umbrella,
-    coverage: 'Medical, cancellation, baggage, repatriation',
-    price: 'From 500 MAD (2-week trip, age 65-70)',
-    notes: 'Specialist insurer for older travelers. Covers pre-existing conditions with medical screening. Includes medical evacuation to Spain if needed.',
-  },
-  {
-    name: 'AllClear Travel Insurance',
-    ageLimit: 'No upper age limit',
-    icon: ShieldCheck,
-    coverage: 'Medical, cancellation, baggage, repatriation, cruise',
-    price: 'From 600 MAD (2-week trip, age 65-70)',
-    notes: 'Specializes in covering pre-existing medical conditions. Free medical screening online. Covers over 100 pre-existing conditions including heart conditions and diabetes.',
-  },
-  {
-    name: 'Saga Travel Insurance',
-    ageLimit: 'Over 50s only',
+    name: 'Small Group Cultural Tours',
     icon: Users,
-    coverage: 'Medical, cancellation, baggage, repatriation, legal',
-    price: 'From 700 MAD (2-week trip, age 65-70)',
-    notes: 'Designed exclusively for over-50s. Higher coverage limits than standard policies. Includes 24-hour medical helpline with multilingual support.',
+    priceRange: 'From 8,000 MAD / 7 days',
+    description:
+      'Companies like Saga Holidays and Riviera Travel offer small-group tours for over-50s with comfortable hotels, air-conditioned vehicles, and gentle daily itineraries with built-in rest time.',
+    bookingTip: 'Book tours labeled "gentle pace" or "easy walking" for the most comfortable experience.',
   },
   {
-    name: 'World Nomads (for active seniors)',
-    ageLimit: 'Up to age 69',
+    name: 'Cooking Classes and Food Tours',
+    icon: Coffee,
+    priceRange: 'From 400 MAD / class',
+    description:
+      'Seated cooking classes teach tagine, couscous, and pastilla from expert Moroccan cooks. A wonderful low-impact cultural activity. Food tours involve gentle walking with frequent stops.',
+    bookingTip: 'La Maison Arabe and Amal Center in Marrakech offer seated classes. Ask for a private session.',
+  },
+  {
+    name: 'Private Driver Day Excursions',
+    icon: Car,
+    priceRange: 'From 1,200 MAD / full day',
+    description:
+      'A private driver with air-conditioned vehicle is ideal for exploring beyond cities. Visit the Atlas Mountains, Ouzoud Waterfalls, or scenic routes with stops at your leisure.',
+    bookingTip: 'Request a Mercedes Vito or Toyota Land Cruiser for best comfort. Your hotel can arrange a trusted driver.',
+  },
+  {
+    name: 'Garden and Palace Visits',
     icon: Compass,
-    coverage: 'Medical, adventure activities, cancellation, baggage',
-    price: 'From 400 MAD (2-week trip, age 60-69)',
-    notes: 'Best for active seniors planning hiking, camel riding, or other activities. Covers a wide range of adventure sports that other insurers exclude. Note: upper age limit of 69.',
+    priceRange: 'From 70 MAD / entrance',
+    description:
+      'Majorelle Garden has paved paths and seating. Bahia Palace is on one level. Menara Gardens offer flat walks. Among the most accessible cultural attractions in Morocco.',
+    bookingTip: 'Visit in the morning when cooler and less crowded. Wheelchair access varies; call ahead.',
   },
 ];
 
 /* ═══════════════════════════════════════════════════════════════
-   DATA: GUIDED VS INDEPENDENT COMPARISON
+   DATA: TRANSPORT COMFORT
    ═══════════════════════════════════════════════════════════════ */
 
-const travelStyleComparison = [
+const transportComfort = [
   {
-    aspect: 'Logistics',
-    guided: 'All transport, hotels, and activities pre-arranged. You just show up. Airport transfers, intercity travel, and daily itineraries handled by the tour operator.',
-    independent: 'You arrange everything yourself: flights, hotels, intercity transport, activities. Requires research and advance booking. Apps like Booking.com and ONCF (trains) help significantly.',
+    mode: 'Private Driver',
+    icon: Car,
+    comfortRating: 'Excellent',
+    ratingColor: 'text-green-700',
+    description:
+      'The best transport option for seniors. Drivers handle navigation and logistics while you relax in air-conditioned comfort. Stop anywhere for photos, rest, or refreshments.',
+    tips: [
+      'Typical cost from 1,200 MAD per day including fuel and the driver',
+      'Request a Mercedes Vito, Toyota Land Cruiser, or similar comfortable vehicle',
+      'Your hotel or riad can recommend a trusted driver',
+      'Agree on the itinerary, stops, and total price before departure',
+    ],
   },
   {
-    aspect: 'Pace',
-    guided: 'Set by the group or the tour leader. Most senior-focused tours build in rest days and gentle mornings. However, you are tied to the group schedule.',
-    independent: 'Completely your own pace. Sleep in if you want, skip a site, spend an extra hour at a cafe. Maximum flexibility but requires more decision-making energy.',
+    mode: 'First-Class Trains (ONCF)',
+    icon: Navigation,
+    comfortRating: 'Very Good',
+    ratingColor: 'text-green-700',
+    description:
+      'ONCF trains connect major cities with comfortable first-class carriages offering assigned seats, air conditioning, and quiet atmosphere. The Al Boraq high-speed train is modern and smooth.',
+    tips: [
+      'Book first class for assigned seats, more space, and quieter carriages',
+      'The Al Boraq high-speed train is the smoothest ride in Morocco',
+      'Rabat Agdal station is newer and more accessible than Rabat Ville',
+      'Assistance for boarding can be requested at major stations',
+    ],
   },
   {
-    aspect: 'Cost',
-    guided: 'Higher upfront cost (from 12,000 MAD for 8 days) but includes most expenses. Fewer surprise costs. Good value when you factor in what is included.',
-    independent: 'Lower daily cost (from 800 MAD per day for comfortable travel) but you pay for each element separately. Meals, entry fees, and transport add up. More control over budget.',
+    mode: 'Domestic Flights',
+    icon: Plane,
+    comfortRating: 'Good',
+    ratingColor: 'text-green-700',
+    description:
+      'Royal Air Maroc connects major cities with short flights. Marrakech to Fes takes one hour versus seven by train. Wheelchair assistance available at all airports.',
+    tips: [
+      'Marrakech to Fes flights from 400 MAD if booked in advance',
+      'Request wheelchair or buggy assistance when booking',
+      'Domestic flights eliminate exhausting overland journeys',
+      'Casablanca Mohammed V is the main hub for connections',
+    ],
   },
   {
-    aspect: 'Social',
-    guided: 'Built-in social group. Great for solo senior travelers who want company. However, you may not always connect with all group members.',
-    independent: 'More solitary, but also more opportunity for genuine local interactions. You meet people on your own terms, which can lead to more authentic connections.',
-  },
-  {
-    aspect: 'Safety & Support',
-    guided: 'Tour leader handles any problems. Medical emergencies, lost luggage, and transport issues are managed for you. 24-hour support line available.',
-    independent: 'You handle problems yourself. Travel insurance helpline is your backup. Requires more confidence and problem-solving ability. Hotel staff can assist with most issues.',
-  },
-  {
-    aspect: 'Accessibility',
-    guided: 'Senior-focused tours pre-screen hotels for accessibility and plan routes with mobility in mind. Vehicles have step assistance. Guides carry first-aid kits.',
-    independent: 'You must research and verify accessibility yourself. Hotels may not accurately describe their accessibility features. Medina riads often have stairs with no elevator.',
+    mode: 'Premium Buses (CTM)',
+    icon: Car,
+    comfortRating: 'Adequate',
+    ratingColor: 'text-amber-700',
+    description:
+      'CTM and Supratours serve routes not covered by trains (Essaouira, Chefchaouen) with assigned seats and air conditioning. Seats may feel cramped on longer journeys. Rest stops every 2-3 hours.',
+    tips: [
+      'Book seats near the front for less bumpy ride and easier exit',
+      'CTM buses have air conditioning and assigned seating',
+      'Marrakech to Essaouira takes approximately 3 hours by CTM bus',
+      'Consider a private driver for longer routes if budget allows',
+    ],
   },
 ];
 
 /* ═══════════════════════════════════════════════════════════════
-   DATA: PACE RECOMMENDATIONS BY AGE
+   DATA: PACE-FRIENDLY ITINERARIES
    ═══════════════════════════════════════════════════════════════ */
 
-const paceRecommendations = [
+const seniorItineraries = [
   {
-    group: '50-60 (Active)',
-    icon: Footprints,
-    dailyWalking: '5-8 km comfortable',
-    sightsPerDay: '3-4 major sites',
-    restDays: '1 rest day per 4 travel days',
-    itineraryStyle: 'Full itinerary with some physical activities',
-    notes: 'Most activities accessible. Can handle medina exploration with good shoes. Atlas Mountain day trips fine. Consider a desert overnight rather than multi-day trek.',
-  },
-  {
-    group: '60-70 (Moderate)',
-    icon: Clock,
-    dailyWalking: '3-5 km comfortable',
-    sightsPerDay: '2-3 major sites',
-    restDays: '1 rest day per 3 travel days',
-    itineraryStyle: 'Morning activities, afternoon rest',
-    notes: 'Medina visits best with a guide at a gentle pace. Prioritize gardens, museums, and cooking classes over long walks. Use taxis between sites. Desert trip possible with comfortable camp.',
-  },
-  {
-    group: '70-80 (Gentle)',
+    title: 'Gentle Introduction to Morocco (7 Days)',
     icon: Heart,
-    dailyWalking: '1-3 km comfortable',
-    sightsPerDay: '1-2 major sites',
-    restDays: '1 rest day per 2 travel days',
-    itineraryStyle: 'One activity per morning, rest in afternoon',
-    notes: 'Focus on Essaouira, Agadir, or Rabat for easier terrain. Guided tours essential. Choose hotels with elevators and ground floor rooms. Avoid Fes medina unless very fit. Cooking classes and garden visits ideal.',
+    difficulty: 'Easy',
+    budget: 'From 12,000 MAD total (comfortable)',
+    highlights: 'Marrakech, Essaouira',
+    days: [
+      { day: 'Day 1', location: 'Arrive Marrakech', activity: 'Airport transfer to luxury riad. Rest, settle in, and gentle evening walk in Gueliz.' },
+      { day: 'Day 2', location: 'Marrakech', activity: 'Private guided tour of Bahia Palace and Majorelle Garden (flat, accessible). Afternoon rest. Optional hammam.' },
+      { day: 'Day 3', location: 'Marrakech', activity: 'Gentle medina walk with guide. Afternoon: private cooking class (seated).' },
+      { day: 'Day 4', location: 'Essaouira', activity: 'Private driver (2.5 hours) with argan cooperative stop. Seafront hotel. Evening rampart walk.' },
+      { day: 'Day 5', location: 'Essaouira', activity: 'Gentle medina exploration, art galleries, seafood lunch at the port from 100 MAD.' },
+      { day: 'Day 6', location: 'Return', activity: 'Free morning. Afternoon driver back to Marrakech. Farewell dinner.' },
+      { day: 'Day 7', location: 'Departure', activity: 'Relaxed morning. Private transfer to Marrakech airport.' },
+    ],
   },
   {
-    group: '80+ (Leisurely)',
-    icon: BedDouble,
-    dailyWalking: 'Under 1 km comfortable',
-    sightsPerDay: '1 major site',
-    restDays: 'Alternate activity/rest days',
-    itineraryStyle: 'Base in one city, gentle excursions',
-    notes: 'Base yourself in one comfortable hotel in Agadir or Marrakech (Hivernage). Take short day outings with private driver. Focus on hotel amenities, garden visits, and dining. Private driver-guide essential.',
+    title: 'Imperial Cities at a Gentle Pace (10 Days)',
+    icon: Globe,
+    difficulty: 'Moderate',
+    budget: 'From 18,000 MAD total (comfortable)',
+    highlights: 'Marrakech, Rabat, Fes',
+    days: [
+      { day: 'Day 1-2', location: 'Marrakech', activity: 'Arrive and rest. Day 2: Bahia Palace, Saadian Tombs, Majorelle Garden with guide. Hammam.' },
+      { day: 'Day 3', location: 'Train to Rabat', activity: 'First-class train (4 hours). Hotel in Agdal district. Evening tram ride.' },
+      { day: 'Day 4', location: 'Rabat', activity: 'Hassan Tower, Mausoleum (flat). Kasbah des Oudaias. Tea overlooking the river.' },
+      { day: 'Day 5', location: 'Train to Fes', activity: 'Train (2.5 hours). Luxury riad ground-floor room. Rest. Evening Ville Nouvelle walk.' },
+      { day: 'Day 6', location: 'Fes', activity: 'Private guided medina tour on accessible routes. Bou Inania, tanneries, artisan workshops.' },
+      { day: 'Day 7', location: 'Fes', activity: 'Cooking class. Jnan Sbil Garden. Or day trip to Meknes and Volubilis.' },
+      { day: 'Day 8', location: 'Train to Marrakech', activity: 'First-class train (7 hours via Casablanca). Rest evening.' },
+      { day: 'Day 9', location: 'Marrakech', activity: 'Free day: shopping, spa, or Ourika Valley day trip. Farewell dinner.' },
+      { day: 'Day 10', location: 'Departure', activity: 'Private transfer to airport.' },
+    ],
   },
 ];
 
 /* ═══════════════════════════════════════════════════════════════
-   DATA: MOBILITY CHALLENGES IN MEDINAS
+   DATA: TRAVEL INSURANCE
    ═══════════════════════════════════════════════════════════════ */
 
-const medinaAccessibility = [
+const travelInsuranceTips = [
   {
-    challenge: 'Uneven Cobblestones',
-    icon: Footprints,
-    severity: 'Common everywhere',
-    description: 'Medina streets are paved with irregular cobblestones, polished smooth by centuries of foot traffic. They can be slippery when wet. Walking requires constant attention to where you place your feet.',
-    solution: 'Wear shoes with excellent grip and ankle support. A walking stick provides stability. Walk slowly and deliberately. Ask your guide to choose smoother routes.',
+    topic: 'Age-Specific Coverage',
+    icon: Shield,
+    description:
+      'Many standard policies have age limits at 65-75. Specialist providers like AllClear, Staysure, and World Nomads offer policies for older travelers with no upper age limit at higher premiums.',
   },
   {
-    challenge: 'Steep Inclines & Steps',
-    icon: Mountain,
-    severity: 'Especially Fes and Chefchaouen',
-    description: 'Many medinas are built on hillsides. Fes medina has significant elevation changes with frequent staircases. Chefchaouen is almost entirely stairs. Even Marrakech has unexpected steps within the souks.',
-    solution: 'In Fes, visit only the lower medina areas near Bab Bou Jeloud. In Marrakech, stick to main thoroughfares which are relatively flat. Skip Chefchaouen if mobility is limited.',
+    topic: 'Pre-Existing Conditions',
+    icon: Stethoscope,
+    description:
+      'Declare all conditions honestly; undisclosed conditions void your policy. Senior-focused insurers cover high blood pressure, diabetes, and heart conditions at reasonable premiums.',
   },
   {
-    challenge: 'Narrow Passages',
-    icon: AlertTriangle,
-    severity: 'Common in all medinas',
-    description: 'Some medina alleys are barely 1 meter wide. You must press against the wall to let donkeys, motorbikes, or handcarts pass. There is no space for wheelchairs or wide walkers in most inner medina passages.',
-    solution: 'Stay on wider main routes. Your guide should know which streets are broadest. Avoid peak shopping hours (10am-1pm) when passages are most crowded. Early morning visits are best.',
+    topic: 'Medical Evacuation',
+    icon: Plane,
+    description:
+      'Ensure coverage for medical evacuation and repatriation. This is the most important component. Evacuation from Morocco can cost from 50,000 MAD without insurance.',
   },
   {
-    challenge: 'Lack of Handrails',
-    icon: AlertTriangle,
-    severity: 'Universal',
-    description: 'Steps and inclines in medinas almost never have handrails. Riad staircases are often steep and narrow with no rails. Even restaurant terraces may have steep stairs without adequate support.',
-    solution: 'Bring a sturdy walking stick or trekking pole. When booking a riad, specifically ask about stairs and whether ground floor rooms are available. Choose hotels over riads if stairs are a concern.',
+    topic: 'Trip Cancellation',
+    icon: CalendarDays,
+    description:
+      'Choose policies covering cancellation for medical reasons, including conditions developing after booking. Some offer "cancel for any reason" at higher premiums.',
+  },
+];
+
+/* ═══════════════════════════════════════════════════════════════
+   DATA: ACCESSIBILITY TIPS
+   ═══════════════════════════════════════════════════════════════ */
+
+const accessibilityTips = [
+  {
+    area: 'Medina Navigation',
+    tips: [
+      'Hire a licensed guide who knows accessible routes with minimal stairs',
+      'Visit medinas in the early morning when streets are emptiest and coolest',
+      'Wear supportive shoes with good grip for uneven cobblestone surfaces',
+      'Plan medina visits in 1 to 2 hour sessions with rest breaks',
+    ],
   },
   {
-    challenge: 'Motor Vehicles & Donkeys',
-    icon: AlertTriangle,
-    severity: 'Constant in Marrakech and Fes',
-    description: 'Despite being pedestrian medinas, motorbikes weave through the crowds at speed, and loaded donkeys take priority on narrow streets. You must be alert and step aside quickly when you hear "balek" (watch out).',
-    solution: 'Stay alert and walk near the walls rather than the center of passages. Your guide will watch for approaching vehicles. Visit during quieter early morning hours. Essaouira medina has far less motor vehicle traffic.',
+    area: 'Wheelchair and Mobility Aid Access',
+    tips: [
+      'Traditional medinas are very difficult for wheelchairs due to narrow streets and steps',
+      'Modern areas (Gueliz Marrakech, Ville Nouvelle Fes, Agdal Rabat) are more accessible',
+      'Five-star hotels have the best wheelchair-accessible facilities',
+      'Request wheelchair assistance at airports when booking flights',
+    ],
+  },
+  {
+    area: 'Dietary Needs and Allergies',
+    tips: [
+      'Moroccan cuisine naturally accommodates many dietary needs: gluten-free tagines, vegetable couscous',
+      'Inform your riad or hotel of dietary restrictions at check-in',
+      'Carry a dietary card in Arabic and French explaining your allergies',
+      'Nuts are widely used in Moroccan cooking; alert restaurants if allergic',
+    ],
+  },
+  {
+    area: 'Communication and Emergencies',
+    tips: [
+      'Emergency numbers: 19 (police), 15 (ambulance), 150 (fire)',
+      'Buy a local SIM card at the airport from 30 MAD',
+      'Download offline Google Maps and save your hotel address in Arabic',
+      'Carry a card with your hotel address in Arabic for taxi drivers',
+    ],
   },
 ];
 
@@ -877,42 +643,31 @@ export default function MoroccoForSeniorsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
-      {/* ── Hero Section ── */}
+      {/* HERO */}
       <section className="relative py-20 md:py-28 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(/images/hero-morocco-culture.webp)',
-          }}
-        />
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(/images/hero-morocco-seniors.webp)' }} />
         <div className="absolute inset-0 hero-overlay" />
         <div className="container-morocco relative z-10">
           <nav className="flex items-center gap-2 text-sm text-white/60 mb-8" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-white transition-colors">
-              <Home className="w-3.5 h-3.5" />
-            </Link>
+            <Link href="/" className="hover:text-white transition-colors"><Home className="w-3.5 h-3.5" /></Link>
             <ChevronRight className="w-3.5 h-3.5" />
             <span className="text-white">Morocco for Seniors</span>
           </nav>
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm text-white/90 text-sm mb-6">
-            <Heart className="w-4 h-4" />
-            Senior Travel Guide
+            <HandHeart className="w-4 h-4" /> Senior Travel Guide
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-display)] font-bold text-white mb-4">
-            Morocco for Seniors:
-            <br className="hidden md:block" /> The Over 50s Travel Guide
+            Morocco for Seniors<br className="hidden md:block" /> &mdash; Travel Guide 2026
           </h1>
           <p className="text-xl text-white/80 max-w-2xl">
-            Everything older travelers need to know about visiting Morocco. Accessibility advice,
-            health considerations, gentle activities, and the best cities for a comfortable,
-            enriching experience.
+            The complete guide for travelers over 60. Accessibility tips, comfortable accommodations,
+            health advice, pace-friendly itineraries, and guided tour recommendations.
           </p>
         </div>
       </section>
-
       <div className="zellige-border" />
 
-      {/* ── Introduction ── */}
+      {/* INTRODUCTION */}
       <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
           <div className="prose-moroccan">
@@ -921,360 +676,121 @@ export default function MoroccoForSeniorsPage() {
             </h2>
             <div className="space-y-4 text-lg text-[var(--text-secondary)] leading-relaxed">
               <p>
-                Morocco is one of the most rewarding destinations in the world for travelers over 50.
-                The country has a deep, instinctive respect for elders that is woven into its culture.
-                In Moroccan society, age brings status and wisdom, and visitors of all ages are treated
-                with genuine warmth and hospitality.
+                Morocco is one of the most rewarding destinations for travelers over 60. The country offers a
+                unique combination of rich culture, warm climate, affordable luxury, and a deep cultural respect
+                for elders that you will feel in every interaction. In Moroccan society, older people are honored
+                and treated with genuine deference, making senior travelers feel valued and welcome.
               </p>
               <p>
-                The country offers an extraordinary range of experiences that do not require extreme
-                fitness: world-class gardens, cooking classes, relaxing hammam spas, gentle food tours,
-                stunning architecture, and a cafe culture that invites you to slow down and savor every
-                moment. Morocco rewards those who take their time.
-              </p>
-              <p>
-                That said, Morocco does present some challenges for older travelers. The famous medinas
-                have uneven surfaces and steep alleys. The heat can be intense. And the sensory overload
-                of cities like Marrakech can be tiring. This guide covers everything you need to plan
-                a comfortable, safe, and deeply enriching trip.
+                This guide covers every aspect of visiting Morocco as a senior &mdash; from accessible
+                accommodations and navigating ancient medinas safely, to health considerations, pace-friendly
+                itineraries, and guided tour recommendations. With modern private hospitals in every major city,
+                professional guides, and luxury accommodations at a fraction of European prices, Morocco offers
+                comfort and cultural richness in equal measure.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Pace Recommendations ── */}
+      {/* SENIOR TRAVEL OVERVIEW */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <CalendarDays className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Pace Recommendations by Age Group
+            <ShieldCheck className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Why Seniors Love Morocco
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            How to structure your itinerary based on your fitness level and age. These are guidelines,
-            not rules. Your personal fitness matters more than your age.
+            Cultural richness, comfort, and affordability that few destinations can match.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {paceRecommendations.map((rec) => {
-              const RecIcon = rec.icon;
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {seniorOverview.map((stat) => {
+              const StatIcon = stat.icon;
               return (
-                <div key={rec.group} className="card-moroccan p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                      <RecIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                    </div>
-                    <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                      {rec.group}
-                    </h3>
+                <div key={stat.label} className="card-moroccan p-6 text-center">
+                  <div className="w-12 h-12 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center mx-auto mb-4">
+                    <StatIcon className="w-6 h-6 text-[var(--color-accent)]" />
                   </div>
-                  <div className="space-y-2 mb-4">
-                    <div className="flex items-center gap-2 text-sm">
-                      <Footprints className="w-3.5 h-3.5 text-[var(--color-gold)]" />
-                      <span className="text-[var(--text-muted)]">Daily walking:</span>
-                      <span className="font-medium text-[var(--text-primary)]">{rec.dailyWalking}</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm">
-                      <MapPin className="w-3.5 h-3.5 text-[var(--color-gold)]" />
-                      <span className="text-[var(--text-muted)]">Sites per day:</span>
-                      <span className="font-medium text-[var(--text-primary)]">{rec.sightsPerDay}</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm">
-                      <BedDouble className="w-3.5 h-3.5 text-[var(--color-gold)]" />
-                      <span className="text-[var(--text-muted)]">Rest days:</span>
-                      <span className="font-medium text-[var(--text-primary)]">{rec.restDays}</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm">
-                      <Clock className="w-3.5 h-3.5 text-[var(--color-gold)]" />
-                      <span className="text-[var(--text-muted)]">Style:</span>
-                      <span className="font-medium text-[var(--text-primary)]">{rec.itineraryStyle}</span>
-                    </div>
-                  </div>
-                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{rec.notes}</p>
+                  <p className="text-2xl font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)] mb-1">
+                    {stat.value}
+                  </p>
+                  <p className="text-sm font-medium text-[var(--text-primary)] mb-2">{stat.label}</p>
+                  <p className="text-xs text-[var(--text-muted)]">{stat.detail}</p>
                 </div>
               );
             })}
           </div>
+
+          <div className="mt-8 max-w-4xl mx-auto card-moroccan p-6">
+            <div className="flex items-start gap-3">
+              <Info className="w-5 h-5 text-[var(--color-accent)] mt-0.5 shrink-0" />
+              <p className="text-sm text-[var(--text-secondary)]">
+                <span className="font-semibold text-[var(--text-primary)]">Cultural advantage:</span> In Morocco,
+                age brings respect. Older travelers are treated with more courtesy, patience, and warmth. You will
+                be offered seats, given priority, and addressed with respectful language. The Moroccan pace of life
+                &mdash; tea ceremonies, unhurried meals, and leisurely strolls &mdash; naturally suits travelers who
+                prefer quality over speed.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* ── Best Cities for Seniors ── */}
+      {/* BEST CITIES FOR SENIORS */}
       <section className="py-16 md:py-20">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <MapPin className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Best Cities for Senior Travelers
+            Best Cities in Morocco for Senior Travelers
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Not all Moroccan cities are equally accessible. Here are the best options ranked by
-            ease of travel for older visitors.
+            Top destinations reviewed from a senior traveler&apos;s perspective.
           </p>
 
-          <div className="space-y-8">
-            {bestCities.map((city) => {
-              const CityIcon = city.icon;
-              return (
-                <div key={city.name} className="card-moroccan overflow-hidden">
-                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
-                    <div className="relative h-64 lg:h-auto">
-                      <img
-                        src={city.image}
-                        alt={`${city.name}, Morocco - a recommended city for senior travelers`}
-                        className="w-full h-full object-cover"
-                        loading="lazy"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent lg:bg-gradient-to-r" />
-                      <div className="absolute bottom-4 left-4 lg:bottom-auto lg:top-4">
-                        <div className="flex items-center gap-2 mb-2">
-                          <CityIcon className="w-5 h-5 text-white" />
-                          <h3 className="text-2xl font-[family-name:var(--font-display)] font-bold text-white">
-                            {city.name}
-                          </h3>
-                        </div>
-                        <span className="inline-block px-2 py-0.5 text-xs font-medium rounded bg-white/20 text-white backdrop-blur-sm">
-                          {city.rating}
-                        </span>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {bestCitiesForSeniors.map((city) => (
+              <div key={city.city} className="card-moroccan overflow-hidden">
+                <div className="relative h-48">
+                  <img
+                    src={city.image}
+                    alt={`${city.city}, Morocco — a popular destination for senior travelers`}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  <div className="absolute bottom-4 left-4">
+                    <h3 className="text-xl font-[family-name:var(--font-display)] font-bold text-white mb-1">
+                      {city.city}
+                    </h3>
+                    <div className="flex items-center gap-2">
+                      <div className="flex gap-0.5">
+                        {Array.from({ length: 5 }).map((_, i) => (
+                          <Star
+                            key={i}
+                            className={`w-4 h-4 ${i < city.rating ? 'text-[var(--color-gold)] fill-[var(--color-gold)]' : 'text-white/30'}`}
+                          />
+                        ))}
                       </div>
-                    </div>
-                    <div className="lg:col-span-2 p-6">
-                      <div className="flex items-center gap-2 mb-3">
-                        <Accessibility className="w-4 h-4 text-[var(--color-accent)]" />
-                        <span className="text-sm font-semibold text-[var(--color-accent)]">
-                          Accessibility: {city.accessibility}
-                        </span>
-                      </div>
-                      <p className="text-sm text-[var(--text-secondary)] mb-4">{city.description}</p>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div>
-                          <h4 className="text-xs font-semibold text-[var(--text-primary)] uppercase tracking-wider mb-2">
-                            Advantages
-                          </h4>
-                          <div className="space-y-1.5">
-                            {city.pros.map((pro, i) => (
-                              <div key={i} className="flex items-start gap-1.5 text-xs text-[var(--text-secondary)]">
-                                <CheckCircle className="w-3 h-3 mt-0.5 shrink-0 text-[var(--color-gold)]" />
-                                {pro}
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                        <div>
-                          <h4 className="text-xs font-semibold text-[var(--text-primary)] uppercase tracking-wider mb-2">
-                            Considerations
-                          </h4>
-                          <div className="space-y-1.5">
-                            {city.considerations.map((con, i) => (
-                              <div key={i} className="flex items-start gap-1.5 text-xs text-[var(--text-secondary)]">
-                                <AlertTriangle className="w-3 h-3 mt-0.5 shrink-0 text-[var(--color-accent)]" />
-                                {con}
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
+                      <span className="text-sm text-white/80">{city.vibe}</span>
                     </div>
                   </div>
                 </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Health & Safety Considerations ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <HeartPulse className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Health &amp; Safety Considerations
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Key health factors that senior travelers should consider when planning a trip to Morocco.
-            Preparation is the key to a safe and enjoyable visit.
-          </p>
-
-          <div className="space-y-8 max-w-4xl mx-auto">
-            {healthConsiderations.map((item) => {
-              const ItemIcon = item.icon;
-              return (
-                <div key={item.title} className="card-moroccan p-6">
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="w-12 h-12 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                      <ItemIcon className="w-6 h-6 text-[var(--color-accent)]" />
+                <div className="p-6">
+                  <p className="text-sm text-[var(--text-secondary)] mb-4">{city.description}</p>
+                  <div>
+                    <h4 className="text-xs font-semibold text-green-700 uppercase tracking-wide mb-2 flex items-center gap-1">
+                      <CheckCircle className="w-3.5 h-3.5" />
+                      Senior-Friendly Highlights
+                    </h4>
+                    <div className="space-y-1.5">
+                      {city.highlights.map((h, i) => (
+                        <p key={i} className="text-xs text-[var(--text-muted)] flex items-start gap-1.5">
+                          <CheckCircle className="w-3 h-3 mt-0.5 shrink-0 text-green-600" />
+                          {h}
+                        </p>
+                      ))}
                     </div>
-                    <div className="flex-1">
-                      <div className="flex items-center gap-3 mb-1">
-                        <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                          {item.title}
-                        </h3>
-                        <span className="inline-block px-2 py-0.5 text-xs font-medium rounded bg-[var(--color-accent)]/10 text-[var(--color-accent)]">
-                          {item.severity}
-                        </span>
-                      </div>
-                      <p className="text-sm text-[var(--text-secondary)]">{item.description}</p>
-                    </div>
-                  </div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2 ml-16">
-                    {item.tips.map((tip, i) => (
-                      <div key={i} className="flex items-start gap-1.5 text-xs text-[var(--text-muted)]">
-                        <CheckCircle className="w-3 h-3 mt-0.5 shrink-0 text-[var(--color-gold)]" />
-                        {tip}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Gentle Activities ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Heart className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Gentle Activities for Senior Travelers
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-4">
-            Morocco offers a wealth of experiences that do not require extreme fitness. These activities
-            are perfect for older travelers who want enriching experiences at a comfortable pace.
-          </p>
-          <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
-            <Info className="w-3.5 h-3.5 inline mr-1" />
-            All prices are starting prices and may vary by season and operator.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {gentleActivities.map((activity) => {
-              const ActivityIcon = activity.icon;
-              return (
-                <div key={activity.name} className="card-moroccan p-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-[var(--surface-muted)] flex items-center justify-center shrink-0">
-                      <ActivityIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                    </div>
-                    <div>
-                      <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                        {activity.name}
-                      </h3>
-                      <div className="flex items-center gap-2 text-xs text-[var(--text-muted)]">
-                        <span>Intensity: {activity.intensity}</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="inline-block px-2 py-0.5 text-xs font-medium rounded bg-[var(--color-accent)]/10 text-[var(--color-accent)] mb-3">
-                    {activity.price}
-                  </div>
-                  <p className="text-sm text-[var(--text-secondary)] mb-3">{activity.description}</p>
-                  <div className="flex items-center gap-2 text-xs text-[var(--text-muted)] mb-2">
-                    <MapPin className="w-3 h-3 text-[var(--color-gold)]" />
-                    {activity.cities}
-                  </div>
-                  <div className="flex items-center gap-2 text-xs text-[var(--text-muted)]">
-                    <Users className="w-3 h-3 text-[var(--color-gold)]" />
-                    {activity.bestFor}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Recommended Accommodations ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <BedDouble className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Senior-Friendly Accommodations
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-4">
-            Hotels and riads selected specifically for their accessibility features, elevator access,
-            ground floor options, and suitability for older travelers.
-          </p>
-          <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
-            <Info className="w-3.5 h-3.5 inline mr-1" />
-            All prices are starting rates per night and vary by season. Peak season (October-April) rates may be 30-50% higher.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {accommodations.map((hotel) => {
-              const HotelIcon = hotel.icon;
-              return (
-                <div key={hotel.name} className="card-moroccan p-6">
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                      <HotelIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                        {hotel.name}
-                      </h3>
-                      <div className="flex items-center gap-3 text-sm text-[var(--text-muted)]">
-                        <span className="flex items-center gap-1">
-                          <MapPin className="w-3.5 h-3.5" />
-                          {hotel.city}
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <Building className="w-3.5 h-3.5" />
-                          {hotel.type}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="inline-block px-2 py-0.5 text-xs font-medium rounded bg-[var(--color-accent)]/10 text-[var(--color-accent)] mb-3">
-                    {hotel.price}
-                  </div>
-                  <p className="text-sm text-[var(--text-secondary)] mb-4">{hotel.description}</p>
-                  <div className="space-y-1.5">
-                    {hotel.seniorFeatures.map((feature, i) => (
-                      <div key={i} className="flex items-start gap-1.5 text-xs text-[var(--text-muted)]">
-                        <Accessibility className="w-3 h-3 mt-0.5 shrink-0 text-[var(--color-gold)]" />
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Guided vs Independent Travel ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Compass className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Guided vs. Independent Travel
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            One of the biggest decisions for senior travelers is whether to join a guided tour or
-            travel independently. Both approaches have merits depending on your experience and
-            comfort level.
-          </p>
-
-          <div className="max-w-5xl mx-auto space-y-6">
-            {travelStyleComparison.map((item) => (
-              <div key={item.aspect} className="card-moroccan p-6">
-                <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4">
-                  {item.aspect}
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="bg-[var(--surface-muted)] p-4 rounded-lg">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Users className="w-4 h-4 text-[var(--color-accent)]" />
-                      <span className="text-sm font-semibold text-[var(--color-accent)]">Guided Tour</span>
-                    </div>
-                    <p className="text-sm text-[var(--text-secondary)]">{item.guided}</p>
-                  </div>
-                  <div className="bg-[var(--surface-muted)] p-4 rounded-lg">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Compass className="w-4 h-4 text-[var(--color-gold)]" />
-                      <span className="text-sm font-semibold text-[var(--color-gold)]">Independent Travel</span>
-                    </div>
-                    <p className="text-sm text-[var(--text-secondary)]">{item.independent}</p>
                   </div>
                 </div>
               </div>
@@ -1283,43 +799,38 @@ export default function MoroccoForSeniorsPage() {
         </div>
       </section>
 
-      {/* ── Tour Operators for Seniors ── */}
+      {/* HEALTH AND MEDICAL INFO */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Map className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Recommended Tour Operators for Seniors
+            <Stethoscope className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Health and Medical Information
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Tour operators that specialize in or cater well to senior travelers visiting Morocco.
-            All have experience accommodating older adults and can adapt pace and activities.
+            Everything seniors need to know about medical facilities, medications, and health precautions.
           </p>
 
-          <div className="space-y-6 max-w-4xl mx-auto">
-            {tourOperators.map((operator) => {
-              const OperatorIcon = operator.icon;
+          <div className="space-y-8 max-w-4xl mx-auto">
+            {healthMedicalInfo.map((item) => {
+              const ItemIcon = item.icon;
               return (
-                <div key={operator.name} className="card-moroccan p-6">
+                <div key={item.topic} className="card-moroccan p-6">
                   <div className="flex items-start gap-4 mb-4">
-                    <div className="w-12 h-12 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                      <OperatorIcon className="w-6 h-6 text-[var(--color-accent)]" />
+                    <div className="w-12 h-12 rounded-full bg-[var(--surface-muted)] flex items-center justify-center shrink-0">
+                      <ItemIcon className="w-6 h-6 text-[var(--color-accent)]" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                        {operator.name}
+                      <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+                        {item.topic}
                       </h3>
-                      <p className="text-sm text-[var(--text-muted)]">{operator.specialty}</p>
-                    </div>
-                    <div className="inline-block px-2 py-0.5 text-xs font-medium rounded bg-[var(--color-accent)]/10 text-[var(--color-accent)] shrink-0">
-                      {operator.price}
                     </div>
                   </div>
-                  <p className="text-sm text-[var(--text-secondary)] mb-4">{operator.description}</p>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-                    {operator.features.map((feature, i) => (
-                      <div key={i} className="flex items-start gap-1.5 text-xs text-[var(--text-muted)]">
-                        <CheckCircle className="w-3 h-3 mt-0.5 shrink-0 text-[var(--color-gold)]" />
-                        {feature}
+                  <p className="text-sm text-[var(--text-secondary)] mb-4">{item.description}</p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                    {item.tips.map((tip, i) => (
+                      <div key={i} className="flex items-start gap-2 text-xs text-[var(--text-muted)]">
+                        <CheckCircle className="w-3.5 h-3.5 mt-0.5 shrink-0 text-[var(--color-gold)]" />
+                        <span>{tip}</span>
                       </div>
                     ))}
                   </div>
@@ -1330,92 +841,196 @@ export default function MoroccoForSeniorsPage() {
         </div>
       </section>
 
-      {/* ── Mobility Challenges in Medinas ── */}
+      {/* COMFORTABLE ACCOMMODATIONS */}
       <section className="py-16 md:py-20">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <AlertTriangle className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Mobility Challenges in Medinas
+            <Hotel className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Comfortable Accommodations for Seniors
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Morocco&apos;s historic medinas are beautiful but present real challenges for those with
-            limited mobility. Here is what to expect and how to manage each challenge.
+            The best accommodation types for senior travelers with accessibility tips and price guidance.
+          </p>
+
+          <div className="space-y-8 max-w-4xl mx-auto">
+            {comfortableAccommodations.map((acc) => {
+              const AccIcon = acc.icon;
+              return (
+                <div key={acc.type} className="card-moroccan p-6">
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-[var(--surface-muted)] flex items-center justify-center shrink-0">
+                      <AccIcon className="w-6 h-6 text-[var(--color-accent)]" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+                        {acc.type}
+                      </h3>
+                      <div className="flex items-center gap-3 mt-1">
+                        <span className="text-sm font-semibold text-[var(--color-accent)]">{acc.priceRange}</span>
+                        <span className="text-xs text-[var(--text-muted)]">Best for: {acc.bestFor}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-sm text-[var(--text-secondary)] mb-4">{acc.description}</p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                    {acc.tips.map((tip, i) => (
+                      <div key={i} className="flex items-start gap-2 text-xs text-[var(--text-muted)]">
+                        <CheckCircle className="w-3.5 h-3.5 mt-0.5 shrink-0 text-[var(--color-gold)]" />
+                        <span>{tip}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+        </div>
+      </section>
+
+      {/* GUIDED TOURS FOR SENIORS */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+        <div className="container-morocco">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Compass className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Senior-Friendly Tours and Experiences
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            From private guided tours to gentle cultural activities, all adapted to your pace.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {seniorFriendlyTours.map((tour) => {
+              const TourIcon = tour.icon;
+              return (
+                <div key={tour.name} className="card-moroccan p-6">
+                  <div className="flex items-start gap-3 mb-3">
+                    <div className="w-10 h-10 rounded-full bg-[var(--surface-muted)] flex items-center justify-center shrink-0">
+                      <TourIcon className="w-5 h-5 text-[var(--color-accent)]" />
+                    </div>
+                    <div>
+                      <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+                        {tour.name}
+                      </h3>
+                      <span className="text-sm font-semibold text-[var(--color-accent)]">{tour.priceRange}</span>
+                    </div>
+                  </div>
+                  <p className="text-sm text-[var(--text-secondary)] mb-3">{tour.description}</p>
+                  <div className="p-3 bg-[var(--surface-muted)] rounded-lg">
+                    <div className="flex items-start gap-2">
+                      <BadgeCheck className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
+                      <p className="text-xs text-[var(--text-muted)]">
+                        <span className="font-semibold text-[var(--text-primary)]">Booking Tip:</span> {tour.bookingTip}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* TRANSPORT COMFORT */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Navigation className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Transport Options Ranked by Comfort
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Each transport mode rated for comfort, accessibility, and suitability for older travelers.
           </p>
 
           <div className="space-y-6 max-w-4xl mx-auto">
-            {medinaAccessibility.map((item) => {
-              const ChallengeIcon = item.icon;
+            {transportComfort.map((transport) => {
+              const TransportIcon = transport.icon;
               return (
-                <div key={item.challenge} className="card-moroccan p-6">
+                <div key={transport.mode} className="card-moroccan p-6">
                   <div className="flex items-start gap-4 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-[var(--surface-muted)] flex items-center justify-center shrink-0">
-                      <ChallengeIcon className="w-5 h-5 text-[var(--color-accent)]" />
+                    <div className="w-12 h-12 rounded-full bg-[var(--surface-muted)] flex items-center justify-center shrink-0">
+                      <TransportIcon className="w-6 h-6 text-[var(--color-accent)]" />
                     </div>
                     <div className="flex-1">
-                      <div className="flex items-center gap-3 mb-1">
-                        <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                          {item.challenge}
-                        </h3>
-                        <span className="text-xs text-[var(--text-muted)]">{item.severity}</span>
+                      <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+                        {transport.mode}
+                      </h3>
+                      <span className={`text-sm font-semibold ${transport.ratingColor}`}>
+                        Comfort: {transport.comfortRating}
+                      </span>
+                    </div>
+                  </div>
+                  <p className="text-sm text-[var(--text-secondary)] mb-4">{transport.description}</p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                    {transport.tips.map((tip, i) => (
+                      <div key={i} className="flex items-start gap-2 text-xs text-[var(--text-muted)]">
+                        <CheckCircle className="w-3.5 h-3.5 mt-0.5 shrink-0 text-[var(--color-gold)]" />
+                        <span>{tip}</span>
                       </div>
-                      <p className="text-sm text-[var(--text-secondary)] mb-3">{item.description}</p>
-                      <div className="p-3 bg-[var(--surface-muted)] rounded-lg">
-                        <div className="flex items-start gap-2">
-                          <ShieldCheck className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
-                          <p className="text-xs text-[var(--text-muted)]">
-                            <span className="font-semibold text-[var(--text-primary)]">Solution:</span> {item.solution}
-                          </p>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* PACE-FRIENDLY ITINERARIES */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+        <div className="container-morocco">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <CalendarDays className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Pace-Friendly Itineraries for Seniors
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Curated itineraries with built-in rest time and gentle daily schedules.
+          </p>
+
+          <div className="space-y-10 max-w-4xl mx-auto">
+            {seniorItineraries.map((itin) => {
+              const ItinIcon = itin.icon;
+              return (
+                <div key={itin.title} className="card-moroccan overflow-hidden">
+                  <div className="p-6 bg-gradient-to-r from-[var(--color-accent)]/5 to-transparent border-b border-[var(--color-accent)]/10">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
+                        <ItinIcon className="w-6 h-6 text-[var(--color-accent)]" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+                          {itin.title}
+                        </h3>
+                        <div className="flex flex-wrap items-center gap-3 mt-2">
+                          <span className="text-xs px-2 py-1 rounded-full bg-[var(--color-accent)]/10 text-[var(--color-accent)] font-medium">
+                            {itin.difficulty}
+                          </span>
+                          <span className="text-xs text-[var(--text-muted)] flex items-center gap-1">
+                            <Wallet className="w-3 h-3" /> {itin.budget}
+                          </span>
+                          <span className="text-xs text-[var(--text-muted)] flex items-center gap-1">
+                            <MapPin className="w-3 h-3" /> {itin.highlights}
+                          </span>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Travel Insurance ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Umbrella className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Travel Insurance for Over 65s
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-4">
-            Travel insurance is essential for senior travelers visiting Morocco. Standard policies
-            often exclude or overcharge older travelers. These specialist providers offer fair
-            coverage with no upper age limits.
-          </p>
-          <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
-            <Info className="w-3.5 h-3.5 inline mr-1" />
-            Always declare all pre-existing medical conditions. Undisclosed conditions will void your policy. Prices shown are approximate for a 2-week trip.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {insuranceProviders.map((provider) => {
-              const ProviderIcon = provider.icon;
-              return (
-                <div key={provider.name} className="card-moroccan p-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                      <ProviderIcon className="w-5 h-5 text-[var(--color-accent)]" />
+                  <div className="p-6">
+                    <div className="space-y-4">
+                      {itin.days.map((day) => (
+                        <div key={day.day} className="flex items-start gap-4">
+                          <div className="min-w-[80px]">
+                            <span className="text-xs font-bold text-[var(--color-accent)] bg-[var(--color-accent)]/10 px-2 py-1 rounded">
+                              {day.day}
+                            </span>
+                          </div>
+                          <div className="flex-1">
+                            <h4 className="text-sm font-semibold text-[var(--text-primary)] mb-1">{day.location}</h4>
+                            <p className="text-xs text-[var(--text-muted)]">{day.activity}</p>
+                          </div>
+                        </div>
+                      ))}
                     </div>
-                    <div>
-                      <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                        {provider.name}
-                      </h3>
-                      <p className="text-xs text-[var(--text-muted)]">Age limit: {provider.ageLimit}</p>
-                    </div>
-                  </div>
-                  <div className="inline-block px-2 py-0.5 text-xs font-medium rounded bg-[var(--color-accent)]/10 text-[var(--color-accent)] mb-3">
-                    {provider.price}
-                  </div>
-                  <p className="text-sm text-[var(--text-secondary)] mb-3">{provider.notes}</p>
-                  <div className="flex items-center gap-1 text-xs text-[var(--text-muted)]">
-                    <ShieldCheck className="w-3 h-3 text-[var(--color-gold)]" />
-                    <span>Covers: {provider.coverage}</span>
                   </div>
                 </div>
               );
@@ -1424,150 +1039,79 @@ export default function MoroccoForSeniorsPage() {
         </div>
       </section>
 
-      {/* ── Medical Facilities ── */}
+      {/* ACCESSIBILITY TIPS */}
       <section className="py-16 md:py-20">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Stethoscope className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Medical Facilities in Morocco
+            <Accessibility className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Accessibility Tips
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Morocco has good private healthcare in major cities. These are the key medical facilities
-            that senior travelers should know about in case of need.
+            Practical advice for navigating Morocco with mobility considerations.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {accessibilityTips.map((section) => (
+              <div key={section.area} className="card-moroccan p-6">
+                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                  {section.area}
+                </h3>
+                <div className="space-y-2">
+                  {section.tips.map((tip, i) => (
+                    <div key={i} className="flex items-start gap-2 text-xs text-[var(--text-muted)]">
+                      <CheckCircle className="w-3.5 h-3.5 mt-0.5 shrink-0 text-[var(--color-gold)]" />
+                      <span>{tip}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* TRAVEL INSURANCE */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+        <div className="container-morocco">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Shield className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Travel Insurance for Senior Travelers
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Essential, not optional. Here is what to look for and which providers specialize in senior travelers.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {medicalFacilities.map((facility) => {
-              const FacilityIcon = facility.icon;
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {travelInsuranceTips.map((item) => {
+              const InsIcon = item.icon;
               return (
-                <div key={facility.city + facility.hospital} className="card-moroccan p-5">
-                  <div className="flex items-center gap-2 mb-3">
-                    <FacilityIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                    <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                      {facility.city}
-                    </h3>
+                <div key={item.topic} className="card-moroccan p-6">
+                  <div className="w-10 h-10 rounded-full bg-[var(--surface-muted)] flex items-center justify-center mb-3">
+                    <InsIcon className="w-5 h-5 text-[var(--color-accent)]" />
                   </div>
-                  <p className="text-sm font-medium text-[var(--text-primary)] mb-1">{facility.hospital}</p>
-                  <div className="flex items-center gap-1 text-xs text-[var(--color-accent)] mb-2">
-                    <Phone className="w-3 h-3" />
-                    {facility.phone}
-                  </div>
-                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{facility.notes}</p>
+                  <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                    {item.topic}
+                  </h3>
+                  <p className="text-sm text-[var(--text-secondary)]">{item.description}</p>
                 </div>
               );
             })}
           </div>
 
-          <div className="max-w-4xl mx-auto mt-8">
-            <div className="card-moroccan p-6 border-l-4 border-l-[var(--color-accent)]">
-              <div className="flex items-start gap-3">
-                <AlertTriangle className="w-5 h-5 text-[var(--color-accent)] mt-0.5 shrink-0" />
-                <div>
-                  <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
-                    Emergency Numbers
-                  </h3>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-2 text-sm text-[var(--text-secondary)]">
-                    <div><span className="font-medium">Police:</span> 19</div>
-                    <div><span className="font-medium">Ambulance:</span> 15</div>
-                    <div><span className="font-medium">Fire:</span> 15</div>
-                  </div>
-                  <p className="text-xs text-[var(--text-muted)] mt-2">
-                    Save these numbers in your phone before departure. Also save your embassy number
-                    and your travel insurance emergency helpline.
-                  </p>
-                </div>
-              </div>
-            </div>
+          <div className="mt-8 max-w-4xl mx-auto card-moroccan p-6">
+            <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+              <BookOpen className="w-5 h-5 inline-block text-[var(--color-accent)] mr-2" />
+              Estimated Insurance Costs
+            </h3>
+            <p className="text-sm text-[var(--text-secondary)]">
+              For a 2-week trip: from 800 MAD (age 60-65), from 1,500 MAD (age 66-75), from 2,500 MAD (age 76+).
+              Specialist senior providers like AllClear and Staysure are recommended for over-75s.
+              Seasonal pricing can change; always compare multiple providers before purchasing.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* ── Practical Packing Tips ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
-            <Info className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Practical Tips for Senior Travelers
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <Footprints className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Footwear Is Critical
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Bring sturdy, broken-in walking shoes with excellent grip for medina cobblestones.
-                Avoid sandals and new shoes. Consider packing a collapsible walking stick for extra
-                stability. Slip-on shoes are useful for mosques and riads where you remove shoes frequently.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <DollarSign className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Carry Cash in Small Bills
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Many places in Morocco are cash-only. Carry small denominations (from 10 MAD and 20 MAD notes)
-                for taxis, tips, and small purchases. ATMs are widely available in cities. Inform your
-                bank before traveling to prevent card blocks.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <Phone className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Get a Local SIM Card
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                A Moroccan SIM card from Maroc Telecom or Inwi (from 30 MAD with data) gives you
-                internet access for maps and translation apps. Ask at the airport or any phone shop.
-                Staff will set it up for you. Google Maps and Google Translate are invaluable.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <Clock className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Embrace the Moroccan Pace
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Morocco does not rush, and neither should you. Long lunches, afternoon mint tea, and
-                evening strolls are part of the culture. Do not try to see everything. Choose a few
-                highlights per day and savor them. The best moments often come when you slow down.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <ShieldCheck className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Dress Modestly and Comfortably
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Light, loose-fitting clothing that covers shoulders and knees is both culturally respectful
-                and practical for the heat. Linen and cotton breathe well. A light scarf is useful
-                for sun protection, mosque visits, and chilly evenings.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <BookOpen className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Learn a Few Arabic Phrases
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                A few words of Arabic or French go a long way. &quot;Salaam alaikum&quot; (hello),
-                &quot;shukran&quot; (thank you), &quot;la shukran&quot; (no thank you), and
-                &quot;bslama&quot; (goodbye) will earn you smiles and respect. Moroccans deeply
-                appreciate the effort.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── FAQ Section ── */}
+      {/* FAQ SECTION */}
       <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
@@ -1575,160 +1119,69 @@ export default function MoroccoForSeniorsPage() {
           </h2>
 
           <div className="space-y-6">
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                Is Morocco safe for senior travelers?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                Yes, Morocco is generally safe for senior travelers. The country has a strong culture of
-                respecting elders, and locals are typically very helpful. Stick to well-known tourist areas,
-                use registered guides, and take common-sense precautions. Guided tours are recommended for
-                first-time visitors over 65 as they handle all logistics and provide on-the-ground support.
-                Petty theft (pickpocketing) can occur in crowded areas, so use a money belt.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                Can I navigate the medinas with limited mobility?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                Medinas present significant challenges for those with limited mobility. Streets are narrow,
-                uneven, and often include steps. Wheelchairs are extremely difficult to use in most medinas.
-                However, you can enjoy the medina edges, hire a local guide who knows accessible routes, or
-                explore the French-built ville nouvelle areas which are flat and paved. Cities like Agadir
-                and Essaouira have more accessible layouts than Fes or Chefchaouen.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                What is the best time of year for seniors to visit Morocco?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                The best months for senior travelers are March through May and October through November. These
-                shoulder seasons offer mild temperatures (18-25 degrees Celsius), fewer crowds, and lower prices.
-                Avoid June through August when temperatures in inland cities like Marrakech regularly exceed
-                40 degrees Celsius. Coastal cities like Essaouira and Agadir are comfortable year-round due
-                to Atlantic Ocean breezes keeping temperatures moderate.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                Do I need special travel insurance for visiting Morocco over age 65?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                Yes, standard travel insurance policies often exclude travelers over 65 or charge significantly
-                higher premiums. Specialist providers like Staysure, AllClear, and Saga offer policies
-                specifically designed for older travelers. Ensure your policy covers medical evacuation (the
-                nearest major European hospital is in Spain), pre-existing conditions, and repatriation.
-                Budget from 500 MAD to 2,000 MAD for a 2-week trip depending on your age and coverage level.
-                Always declare all pre-existing conditions honestly.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                Are there good medical facilities in Morocco?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                Morocco has good private medical facilities in major cities. Marrakech, Casablanca, Rabat,
-                and Fes all have private hospitals and clinics with English or French-speaking doctors.
-                Pharmacies are widely available and well-stocked (look for the green cross sign). For serious
-                medical emergencies, Casablanca has the best facilities. Always carry a list of your
-                medications with generic names, your doctor&apos;s contact information, and your insurance
-                policy details.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                What gentle activities are best for older travelers?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                Morocco excels at activities that do not require extreme fitness. Garden visits (Jardin
-                Majorelle from 70 MAD, Menara Gardens free), cooking classes (from 400 MAD), traditional
-                hammam spa experiences (from 300 MAD), guided museum visits (from 30 MAD), rooftop cafe
-                culture (from 25 MAD for mint tea), sunset beach camel rides (from 250 MAD), bird watching
-                (from 200 MAD for guided trip), and pottery workshops (from 300 MAD) are all ideal.
-                Most can be done entirely at your own pace.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                Should seniors choose guided or independent travel in Morocco?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                For first-time senior visitors, guided tours are strongly recommended. They handle all
-                logistics, provide air-conditioned transport, ensure accessible accommodation, and offer
-                knowledgeable guides who can adapt the pace to your needs. Independent travel is viable for
-                experienced travelers, especially in modern cities like Casablanca, Agadir, and Rabat.
-                A middle ground is hiring a private driver-guide (from 1,200 MAD per day) for custom
-                itineraries at your own pace with full flexibility.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                How do I handle the heat in Morocco as an older traveler?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                Heat management is critical for senior travelers. Visit during shoulder seasons (March through
-                May or October through November) for milder temperatures. Stay hydrated with at least 2-3 liters
-                of water daily. Plan outdoor activities for early morning (before 10am) and late afternoon
-                (after 4pm). Rest during the hottest midday hours in your air-conditioned hotel. Choose
-                coastal cities like Essaouira or Agadir where Atlantic breezes keep temperatures moderate
-                even in summer. Always wear a wide-brimmed hat and use SPF 50+ sunscreen.
-              </p>
-            </div>
+            {faqJsonLd.mainEntity.map((faq) => (
+              <div key={faq.name} className="card-moroccan p-6">
+                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                  {faq.name}
+                </h3>
+                <p className="text-sm text-[var(--text-secondary)]">
+                  {faq.acceptedAnswer.text}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ── Related Pages ── */}
+      {/* RELATED GUIDES */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
-            Continue Exploring Morocco
+            Continue Planning Your Trip
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Link href="/morocco-spa-guide" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
-              <Heart className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Spa &amp; Hammam Guide
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Complete guide to Morocco&apos;s best spa experiences and traditional hammams, perfect for relaxation.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            {[
+              { href: '/seniors', icon: Users, title: 'Senior Travel Hub', desc: 'More resources for senior travelers.' },
+              { href: '/health', icon: Stethoscope, title: 'Health Guide', desc: 'Health and medical guide for Morocco.' },
+              { href: '/morocco-trip-cost', icon: Wallet, title: 'Trip Cost Guide', desc: 'Budget breakdown for Morocco.' },
+              { href: '/luxury', icon: Star, title: 'Luxury Morocco', desc: 'Premium experiences and five-star hotels.' },
+              { href: '/morocco-best-riads', icon: Hotel, title: 'Best Riads', desc: 'Top-rated riads with accessibility info.' },
+            ].map((link) => {
+              const LinkIcon = link.icon;
+              return (
+                <Link key={link.href} href={link.href} className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
+                  <LinkIcon className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+                  <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
+                    {link.title}
+                  </h3>
+                  <p className="text-sm text-[var(--text-secondary)] mb-3">{link.desc}</p>
+                  <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
+                    Read more <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* BOTTOM CTA */}
+      <section className="py-20 md:py-28 bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-accent)]/80">
+        <div className="container-morocco text-center">
+          <HandHeart className="w-12 h-12 text-white/80 mx-auto mb-6" />
+          <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-white mb-4">
+            Morocco Awaits You
+          </h2>
+          <p className="text-lg text-white/80 max-w-2xl mx-auto mb-8">
+            With the right preparation and a comfortable pace, you will discover one of the world&apos;s most
+            fascinating countries while being treated with the warmth that Moroccan culture reserves for its honored elders.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link href="/morocco-trip-cost" className="inline-flex items-center gap-2 px-8 py-3 bg-white text-[var(--color-accent)] font-semibold rounded-lg hover:bg-white/90 transition-colors">
+              <Wallet className="w-5 h-5" /> Plan Your Budget
             </Link>
-            <Link href="/essaouira" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
-              <Waves className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Essaouira Guide
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Explore the relaxed coastal city that is our top pick for senior travelers visiting Morocco.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-            <Link href="/wellness" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
-              <Star className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Morocco Wellness Guide
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Therapeutic activities and wellness experiences throughout Morocco for mind and body.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
+            <Link href="/morocco-travel-tips" className="inline-flex items-center gap-2 px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">
+              <BookOpen className="w-5 h-5" /> Morocco Travel Tips <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
