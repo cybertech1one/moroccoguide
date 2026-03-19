@@ -258,6 +258,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-hammam-guide',
     '/marrakech-to-fes',
     '/morocco-airport-transfers',
+    '/morocco-with-kids',
+    '/morocco-budget-guide',
+    '/morocco-for-couples',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

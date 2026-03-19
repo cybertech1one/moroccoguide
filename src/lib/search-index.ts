@@ -1712,6 +1712,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['Morocco airport transfer', 'Marrakech airport to city', 'airport taxi Morocco', 'Morocco arrival tips'],
       priority: 8,
     },
+    {
+      title: 'Morocco with Kids',
+      description: 'Family travel guide to Morocco — kid-friendly attractions, safety tips, food for picky eaters, family riads, and sample itineraries.',
+      type: 'page',
+      url: '/morocco-with-kids',
+      tags: ['family', 'kids', 'safety', 'travel tips'],
+      keywords: ['Morocco with kids', 'family travel Morocco', 'Morocco safe for children', 'kid-friendly Morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Budget Guide',
+      description: 'How much does Morocco cost? Daily budget breakdowns, money-saving tips, cheapest cities, and budget itineraries.',
+      type: 'page',
+      url: '/morocco-budget-guide',
+      tags: ['budget', 'money', 'costs', 'backpacking'],
+      keywords: ['Morocco budget travel', 'how much Morocco cost', 'Morocco on a budget', 'cheap Morocco guide'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco for Couples',
+      description: 'Romantic Morocco travel guide — best couple experiences, romantic riads, desert camps, cultural tips, and couple itineraries.',
+      type: 'page',
+      url: '/morocco-for-couples',
+      tags: ['couples', 'romantic', 'honeymoon', 'travel'],
+      keywords: ['Morocco for couples', 'romantic Morocco trip', 'Morocco couple guide', 'Morocco honeymoon alternative'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

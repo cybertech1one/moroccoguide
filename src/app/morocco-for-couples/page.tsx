@@ -13,7 +13,6 @@ import {
   ShieldCheck,
   DollarSign,
   CheckCircle,
-  AlertTriangle,
   Users,
   Gem,
   Building,
@@ -27,11 +26,16 @@ import {
   Mountain,
   Wind,
   Compass,
-  CalendarHeart,
   Globe,
   MessageCircle,
   Bed,
   Coffee,
+  Sun,
+  Thermometer,
+  Wallet,
+  Calendar,
+  Map,
+  AlertTriangle,
 } from 'lucide-react';
 
 /* ═══════════════════════════════════════════════════════════════
@@ -45,51 +49,50 @@ const BASE_URL = 'https://citytoursmorocco.com';
    ═══════════════════════════════════════════════════════════════ */
 
 export const metadata: Metadata = {
-  title: 'Morocco for Couples 2026 | Romantic Trips, Riads & Experiences',
+  title: 'Morocco for Couples 2026 | Romantic Trip Guide, Riads & Experiences',
   description:
-    'The ultimate couples\' guide to Morocco. Romantic riads, desert glamping, sunset spots, couple-friendly hammams, proposal ideas, and the best cities for a romantic Moroccan getaway. Prices, tips, and itineraries.',
+    'Plan the perfect romantic Morocco trip for couples. Romantic cities, desert camps, rooftop dinners, spa days, cooking classes, cultural tips, LGBTQ+ awareness, best seasons, itineraries, and budget advice. Prices in MAD.',
   keywords: [
     'Morocco for couples',
     'romantic Morocco trip',
-    'Morocco honeymoon',
+    'Morocco couple travel guide',
+    'Morocco honeymoon alternative',
+    'romantic things to do Morocco',
+    'Morocco romantic getaway',
+    'couples trip Morocco',
+    'Morocco romantic cities',
     'romantic riads Morocco',
-    'couples desert glamping Morocco',
-    'Morocco proposal ideas',
-    'romantic restaurants Morocco',
-    'Marrakech for couples',
-    'Essaouira couples trip',
-    'Chefchaouen romantic getaway',
-    'Morocco anniversary trip',
-    'couple hammam Morocco',
-    'Morocco romantic itinerary',
-    'PDA rules Morocco',
-    'Morocco couple activities',
-    'Morocco romantic hotels',
-    'best cities couples Morocco',
-    'hot air balloon Marrakech couples',
-    'Morocco cooking class couples',
-    'Morocco sunset spots',
-    'romantic Morocco 2026',
+    'Morocco couple itinerary',
+    'Morocco couples experiences',
+    'desert camp couples Morocco',
+    'rooftop dinner Morocco couples',
+    'Morocco spa couples',
+    'Morocco couple budget',
+    'Morocco LGBTQ travel',
+    'Morocco cultural tips couples',
+    'Morocco photography spots couples',
+    'Morocco romantic destinations 2026',
+    'Morocco couple travel tips',
   ],
   openGraph: {
-    title: 'Morocco for Couples 2026 | Romantic Trips, Riads & Experiences',
+    title: 'Morocco for Couples 2026 | Romantic Trip Guide, Riads & Experiences',
     description:
-      'Plan the perfect romantic trip to Morocco. Discover romantic riads, desert glamping, sunset spots, couple-friendly hammams, and the best cities for couples.',
+      'The ultimate couple travel guide to Morocco. Romantic cities, luxury riads, desert glamping, rooftop dinners, and curated itineraries with prices and expert tips.',
     url: `${BASE_URL}/morocco-for-couples`,
     images: [
       {
         url: `${BASE_URL}/images/hero-couples-morocco.webp`,
         width: 1200,
         height: 630,
-        alt: 'Couple enjoying a romantic sunset on a Moroccan riad rooftop terrace with lanterns and rose petals',
+        alt: 'Couple enjoying a rooftop dinner in a Moroccan riad with lanterns and Atlas Mountain views',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Morocco for Couples 2026 | Romantic Trips & Experiences',
+    title: 'Morocco for Couples 2026 | Romantic Trip Guide & Experiences',
     description:
-      'Romantic riads, desert glamping, sunset spots, and proposal ideas. The ultimate guide to Morocco for couples.',
+      'Romantic riads, Sahara glamping, rooftop dinners, and couple itineraries. The complete guide to visiting Morocco as a couple.',
     images: [`${BASE_URL}/images/hero-couples-morocco.webp`],
   },
   alternates: { canonical: `${BASE_URL}/morocco-for-couples` },
@@ -103,9 +106,9 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'TravelGuide',
   '@id': `${BASE_URL}/morocco-for-couples`,
-  name: 'Morocco for Couples 2026 | Romantic Trips, Riads & Experiences',
+  name: 'Morocco for Couples 2026 | Romantic Trip Guide, Riads & Experiences',
   description:
-    'The ultimate couples\' guide to Morocco. Romantic riads, desert glamping, sunset spots, couple-friendly hammams, proposal ideas, and the best cities for a romantic Moroccan getaway.',
+    'The ultimate couple travel guide to Morocco. Romantic cities, luxury riads, desert glamping, rooftop dinners, cooking classes, cultural sensitivity tips, and curated couple itineraries with prices.',
   url: `${BASE_URL}/morocco-for-couples`,
   image: `${BASE_URL}/images/hero-couples-morocco.webp`,
   author: {
@@ -118,8 +121,8 @@ const jsonLd = {
     name: 'CityGuide Morocco',
     url: BASE_URL,
   },
-  datePublished: '2026-03-17',
-  dateModified: '2026-03-17',
+  datePublished: '2026-03-19',
+  dateModified: '2026-03-19',
   mainEntityOfPage: `${BASE_URL}/morocco-for-couples`,
   isPartOf: {
     '@type': 'WebSite',
@@ -148,15 +151,7 @@ const faqJsonLd = {
       name: 'Is Morocco a good destination for couples?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Morocco is an excellent destination for couples. The country offers romantic riads with private courtyards, desert glamping under the stars, stunning sunset spots, couple-friendly hammams, and world-class dining. Cities like Marrakech, Essaouira, and Chefchaouen are particularly popular for romantic getaways.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can couples show affection in public in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Morocco is a conservative Muslim country. Holding hands is generally acceptable for married couples, but kissing and other displays of affection in public are frowned upon and can attract unwanted attention. Unmarried couples should be especially discreet. Within private spaces like riads, hotels, and restaurants, couples can be more relaxed.',
+        text: 'Morocco is one of the most romantic destinations in the world. Couples can enjoy luxury riads with plunge pools, candlelit rooftop dinners overlooking ancient medinas, Sahara desert glamping under the Milky Way, couples hammam experiences, and stunning photography at every turn. The combination of exotic culture, affordable luxury, extraordinary food, and warm hospitality makes Morocco ideal for couples at every stage of their relationship.',
       },
     },
     {
@@ -164,499 +159,478 @@ const faqJsonLd = {
       name: 'Can unmarried couples share a hotel room in Morocco?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Technically, Moroccan law prohibits unmarried Moroccan couples from sharing a room. However, for foreign tourists, this is rarely enforced. International hotels, riads, and guesthouses routinely accommodate unmarried foreign couples without issue. You will not be asked for a marriage certificate at tourist-oriented accommodations.',
+        text: 'Moroccan law technically prohibits unmarried Moroccan couples from sharing a room, but this rule is very rarely applied to foreign tourists. International hotels, tourist-oriented riads, and guesthouses routinely accommodate unmarried foreign couples without any questions. You will not be asked for a marriage certificate. Simply book a double room as you would anywhere else.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What is the most romantic city in Morocco?',
+      name: 'Is public affection acceptable in Morocco?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Marrakech is the most popular romantic destination with its luxury riads, rooftop restaurants, and desert excursions. Essaouira offers a more laid-back coastal romance with sunset beach walks. Chefchaouen, the Blue City, is visually stunning and perfect for couples who love photography and quiet mountain charm.',
+        text: 'Morocco is a Muslim-majority country and public displays of affection should be kept modest. Holding hands is generally fine, especially in tourist areas, but kissing and overt physical affection in public are frowned upon. Within your riad, hotel, or restaurant you can be more relaxed. Respecting local customs enhances your experience and earns genuine warmth from Moroccans.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How much does a romantic trip to Morocco cost for a couple?',
+      name: 'Is Morocco safe for LGBTQ+ couples?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'A mid-range romantic trip to Morocco for two costs from 8,000-15,000 MAD per week including accommodation in romantic riads (from 1,200 MAD/night), dining, activities, and transport. A luxury experience with 5-star riads, private desert camps, and fine dining can cost from 25,000-50,000 MAD per week for two.',
+        text: 'Same-sex relationships are illegal in Morocco, and LGBTQ+ travelers should exercise discretion. Many LGBTQ+ travelers do visit Morocco without incident by being mindful of public behavior. Avoid public displays of affection, and book accommodations at internationally-oriented riads in tourist areas. While attitudes are gradually evolving in larger cities, caution is strongly advised.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What are the best couple activities in Morocco?',
+      name: 'How much does a couples trip to Morocco cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Top couple activities include private cooking classes (from 400 MAD per couple), hot air balloon rides over Marrakech (from 2,000 MAD per person), couple hammam experiences (from 1,200 MAD for two), sunset camel rides (from 300 MAD per person), horse riding on the beach in Essaouira (from 400 MAD per person), and private desert glamping (from 3,000 MAD per night for two).',
+        text: 'A budget-friendly couple trip to Morocco for 7 days costs from 7,000-12,000 MAD including charming guesthouse stays, local dining, and shared tours. A mid-range trip with romantic riads, good restaurants, and key experiences costs from 15,000-25,000 MAD per couple. A luxury romantic getaway with 5-star riads, private desert camps, spa treatments, and fine dining costs from 35,000-70,000 MAD per couple for a week.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the best time of year for a couples trip to Morocco?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The best months for couples are March to May and September to November. Temperatures are warm but comfortable (20-28 degrees Celsius), the light is perfect for photography, and crowds are smaller. Spring brings wildflowers to the Atlas Mountains and the rose harvest in May. Autumn offers golden light and perfect desert temperatures. Avoid July and August in Marrakech when temperatures exceed 40 degrees Celsius.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What are the most romantic cities in Morocco?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Marrakech is the most popular romantic city with luxury riads, rooftop dining, and easy access to desert experiences. Essaouira offers laid-back coastal romance with sunset beach walks and fresh seafood. Fes provides cultural depth with palatial riads and ancient medina charm. Chefchaouen is a photogenic Blue City with mountain scenery. Most couples combine two or three cities for variety.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What romantic experiences can couples enjoy in Morocco?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Top couple experiences include private rooftop dinners with rose petals and candles (from 600 MAD per couple), sunrise hot air balloon rides (from 2,000 MAD per person), couples hammam spa sessions (from 1,200 MAD for two), sunset camel treks in the Sahara (from 300 MAD per person), private cooking classes (from 400 MAD per couple), luxury desert glamping (from 3,000 MAD per night), and beach horse riding at sunset (from 400 MAD per person).',
       },
     },
   ],
 };
 
 /* ═══════════════════════════════════════════════════════════════
-   DATA: BEST CITIES FOR COUPLES
+   DATA: MOST ROMANTIC CITIES
    ═══════════════════════════════════════════════════════════════ */
 
-const bestCitiesForCouples = [
+const romanticCities = [
   {
     city: 'Marrakech',
     icon: Star,
     image: '/images/hero-marrakech-medina.webp',
-    tagline: 'The Classic Romantic Choice',
+    tagline: 'The Red City of Romance and Sensory Magic',
     description:
-      'Marrakech is where most couples begin their Moroccan love story. The city pulses with sensory magic: the scent of orange blossom in hidden riad courtyards, the glow of brass lanterns at rooftop dinners, the call to prayer drifting across the rose-tinted skyline at dusk. From luxury spas to hot air balloon rides at dawn, Marrakech delivers romance on an epic scale.',
+      'Marrakech is the beating heart of couple travel in Morocco. From the moment you step through the carved wooden door of your riad into a courtyard filled with orange blossom and the soft glow of brass lanterns, you understand why this city captivates lovers from around the world. Luxury riads offer private plunge pools, candlelit rooftop terraces with Atlas Mountain views, and couples hammam experiences that leave you floating. The medina is an adventure for two, with hidden palace gardens, artisan souks bursting with color, and rooftop restaurants where the sunset paints the sky above a thousand-year-old skyline.',
     highlights: [
-      'World-class riad accommodation',
-      'Rooftop dining with Atlas views',
-      'Hot air balloon rides at sunrise',
-      'Luxury couple hammam experiences',
-      'Day trips to Ourika Valley and Ouzoud Falls',
+      'Luxury riads with private courtyards and pools',
+      'Candlelit rooftop dinners with mountain views',
+      'Couples hammam spa experiences',
+      'Jardin Majorelle and Le Jardin Secret strolls',
+      'Souk shopping for handmade treasures',
+      'Day trips to Agafay Desert or Atlas foothills',
     ],
-    bestFor: 'First-time visitors, luxury seekers, foodies, anniversary celebrations',
+    bestFor: 'First-time visitors, luxury seekers, foodies',
     budget: 'From 1,500 MAD/night for a romantic riad suite',
   },
   {
     city: 'Essaouira',
     icon: Wind,
     image: '/images/hero-essaouira-ramparts.webp',
-    tagline: 'Bohemian Coastal Romance',
+    tagline: 'Windswept Atlantic Romance',
     description:
-      'Essaouira is Marrakech\'s cooler, calmer counterpart. This whitewashed coastal town wrapped in Atlantic breezes offers a different kind of romance: long walks on windswept beaches, sunset drinks at the ramparts, fresh seafood by the harbor, and a Bohemian art scene. The pace is slower, the crowds thinner, and the vibe more intimate.',
+      'Essaouira is the perfect counterpoint to the intensity of Marrakech. This whitewashed coastal town offers a slower, more intimate kind of romance. Walk hand in hand along the ramparts as the Atlantic crashes below, share fresh oysters at the harbor while seagulls wheel overhead, and ride horses together along the wide empty beach at sunset. The medina is small enough to explore without a guide, and the laid-back creative atmosphere, with its art galleries, surf culture, and musicians, creates a bohemian backdrop for couples who prefer quiet beauty over crowds.',
     highlights: [
       'Sunset walks along the beach and ramparts',
-      'Horse riding on the beach for two',
-      'Fresh seafood at the harbor',
-      'Boutique riad stays in the medina',
-      'Art galleries and coastal charm',
+      'Horse riding for two on the Atlantic shore',
+      'Fresh seafood at the picturesque harbor',
+      'Boutique riads in the charming medina',
+      'Art galleries and live Gnawa music',
+      'Windsurfing and water sports together',
     ],
-    bestFor: 'Laid-back couples, beach lovers, artists, second-visit travelers',
-    budget: 'From 800 MAD/night for a charming riad',
+    bestFor: 'Beach-loving couples, nature seekers, creative spirits',
+    budget: 'From 800 MAD/night for a charming boutique riad',
+  },
+  {
+    city: 'Fes',
+    icon: BookOpen,
+    image: '/images/hero-fes-medina.webp',
+    tagline: 'Ancient Romance in the Imperial Capital',
+    description:
+      'Fes is where you fall in love with Morocco on a deeper level. The ancient medina, the largest car-free urban area on Earth, wraps you in a thousand years of history. Palatial riads here rival museums, with soaring plasterwork ceilings, hand-carved cedar, and zouak painting that took artisans years to complete. The city is quieter and more contemplative than Marrakech, offering couples a chance to lose themselves in winding medieval lanes, discover hidden courtyard gardens, share a tagine in a restored palace, and connect over the weight of centuries of culture.',
+    highlights: [
+      'Palatial riads with museum-quality architecture',
+      'Rooftop dining above the medieval medina',
+      'Private guided medina walking tours',
+      'Cooking classes in a traditional Fassi home',
+      'Madrasa visits with stunning tilework',
+      'Artisan workshops and tannery views',
+    ],
+    bestFor: 'Culture lovers, history enthusiasts, foodies',
+    budget: 'From 1,200 MAD/night for a palatial riad suite',
   },
   {
     city: 'Chefchaouen',
     icon: Camera,
     image: '/images/hero-chefchaouen-blue.webp',
-    tagline: 'The Blue City of Dreams',
+    tagline: 'The Blue City of Photographs and Quiet Moments',
     description:
-      'Chefchaouen is one of the most photogenic places on Earth and an unforgettable backdrop for couples. Every corner of this blue-washed mountain town is a photograph waiting to happen. The Rif Mountain air is cool and fresh, the pace is gentle, and the sunsets over the valley are breathtaking. It is quieter and more reflective than Marrakech, making it ideal for couples who want quality time together.',
+      'Chefchaouen is one of the most photogenic places on Earth and a dream destination for couples who love capturing memories. Every corner of this mountain town is washed in shades of blue, from powder to indigo, creating an otherworldly backdrop for couple photos. The pace is deliciously slow: spend mornings sipping coffee at a shaded terrace, afternoons hiking to the Spanish Mosque viewpoint for panoramic valley views, and evenings sharing local goat cheese and freshly baked bread. The Rif Mountain setting adds a touch of alpine romance to an already enchanting town.',
     highlights: [
-      'Endlessly photogenic blue streets',
-      'Mountain hiking trails for two',
-      'Quiet rooftop terrace evenings',
-      'Ras el-Maa waterfall walks',
-      'Authentic mountain village atmosphere',
+      'Endless blue-washed streets for couple photos',
+      'Spanish Mosque sunset hike for two',
+      'Mountain terrace cafes with valley views',
+      'Local artisan shopping in quiet souks',
+      'Akchour Waterfalls day trip',
+      'Rif Mountain walks through pine forests',
     ],
-    bestFor: 'Photography-loving couples, hikers, those seeking tranquility',
-    budget: 'From 500 MAD/night for a traditional guesthouse',
+    bestFor: 'Photography enthusiasts, hikers, slow travelers',
+    budget: 'From 500 MAD/night for a blue-washed riad',
+  },
+  {
+    city: 'Sahara Desert (Merzouga)',
+    icon: Tent,
+    image: '/images/hero-sahara-merzouga.webp',
+    tagline: 'Starlit Nights at the Edge of the World',
+    description:
+      'Nothing bonds a couple quite like the shared experience of the Sahara. The journey south through the Dades and Todra gorges is dramatic enough, but when you finally reach the towering golden dunes of Erg Chebbi and climb onto a camel as the sun begins to set, you enter a world that feels like it belongs to just the two of you. Luxury desert camps offer king-size beds under canvas, candlelit dinners in the sand, Berber music by the campfire, and a sky so thick with stars that you lose yourselves in silence. It is the most profoundly romantic night many couples ever experience.',
+    highlights: [
+      'Sunset camel trek across golden dunes',
+      'Luxury glamping with king-size beds',
+      'Candlelit dinner served in the desert',
+      'Stargazing with zero light pollution',
+      'Sunrise from the top of the dunes',
+      'Berber music around the campfire',
+    ],
+    bestFor: 'Adventure-seeking couples, stargazers, photographers',
+    budget: 'From 3,000 MAD/night for luxury desert glamping for two',
   },
 ];
 
 /* ═══════════════════════════════════════════════════════════════
-   DATA: ROMANTIC ACCOMMODATION PICKS
+   DATA: ROMANTIC RIADS FOR COUPLES
    ═══════════════════════════════════════════════════════════════ */
 
-const romanticAccommodation = [
+const romanticRiads = [
   {
-    rank: 1,
     name: 'Riad Yasmine',
     city: 'Marrakech',
-    type: 'Boutique Riad',
     icon: Heart,
     price: 'From 1,800 MAD per night',
     description:
-      'Perhaps the most photographed riad in Morocco, and for good reason. The turquoise plunge pool surrounded by lush greenery and zellige tilework is achingly beautiful. Rooms are elegantly decorated with Berber textiles and brass fixtures. The rooftop terrace offers candlelit dinners with Atlas Mountain views. Breakfast is served by the pool.',
+      'The most Instagrammed riad in Morocco. The turquoise plunge pool surrounded by lush greenery and zellige tilework is achingly beautiful. Rooms are elegantly decorated with Berber textiles and brass fixtures. Rooftop candlelit dinners with Atlas views make this a couple favorite.',
     highlights: ['Iconic turquoise plunge pool', 'Rooftop candlelit dinners', 'Atlas Mountain views', 'Zellige-decorated suites'],
   },
   {
-    rank: 2,
     name: 'La Sultana Marrakech',
     city: 'Marrakech',
-    type: 'Luxury Palace Riad',
     icon: Crown,
     price: 'From 4,500 MAD per night',
     description:
-      'Five interconnected riads forming one of the most opulent stays in Morocco. Private plunge pools, a rooftop spa with city views, and suites decorated with museum-quality antiques. The private couple hammam experience here is legendary. Each room tells a different story from Moroccan history.',
-    highlights: ['Private plunge pools in suites', 'Rooftop spa for two', 'Museum-quality interiors', 'Private couple hammam'],
+      'Five interconnected riads forming one of the most opulent stays in Morocco. Private plunge pools in suites, a rooftop spa with panoramic views, and museum-quality antique interiors. The couples hammam here is legendary among visiting lovers.',
+    highlights: ['Private plunge pools in suites', 'Rooftop spa for two', 'Museum-quality interiors', 'Legendary couple hammam'],
   },
   {
-    rank: 3,
     name: 'Dar Ahlam',
-    city: 'Ouarzazate',
-    type: 'Luxury Desert Retreat',
+    city: 'Skoura Oasis',
     icon: Sparkles,
     price: 'From 6,000 MAD per night',
     description:
-      'The "House of Dreams" lives up to its name. This restored kasbah in the Skoura oasis operates as a maison d\'hotes with just 14 suites, offering a level of personalization that larger hotels cannot match. There are no menus; the chef prepares whatever you desire. Dinner might be served in the rose garden, on the roof, or in the desert under the stars.',
-    highlights: ['Utterly personalized service', 'No-menu dining anywhere you choose', 'Restored kasbah architecture', 'Desert excursions for two'],
+      'The "House of Dreams" is one of the most extraordinary romantic stays on Earth. This restored kasbah has just 14 suites with utterly personalized service. There are no menus; the chef prepares whatever you desire. Dinner might be served in the rose garden, on the roof, or in the desert under the stars.',
+    highlights: ['Personalized no-menu dining', 'Surprise dinner locations nightly', 'Restored kasbah architecture', 'Private desert excursions'],
   },
   {
-    rank: 4,
-    name: 'Lina Ryad & Spa',
-    city: 'Chefchaouen',
-    type: 'Boutique Riad',
+    name: 'Riad Fes',
+    city: 'Fes',
     icon: Gem,
-    price: 'From 1,200 MAD per night',
+    price: 'From 2,800 MAD per night',
     description:
-      'The finest accommodation in the Blue City. Perched at the edge of the medina with panoramic views of the blue-washed rooftops and the Rif Mountains beyond. The terrace is one of the most romantic spots in all of Morocco at sunset. Rooms blend traditional Chefchaouen blue with modern comforts.',
-    highlights: ['Panoramic Rif Mountain views', 'Spectacular sunset terrace', 'In-house spa treatments', 'Blue-themed luxury rooms'],
+      'The finest riad in Fes and a palatial retreat for couples. Soaring zouak-painted ceilings, a candlelit pool courtyard, and an award-winning restaurant. The rooftop bar overlooking the medina is one of the most atmospheric spots in all of Morocco.',
+    highlights: ['Zouak-painted palatial ceilings', 'Candlelit pool courtyard', 'Medina-view rooftop bar', 'Award-winning restaurant'],
   },
   {
-    rank: 5,
-    name: 'Villa des Orangers',
-    city: 'Marrakech',
-    type: 'Relais & Chateaux',
-    icon: Crown,
-    price: 'From 3,500 MAD per night',
-    description:
-      'A Relais and Chateaux property with just 27 rooms built around three courtyards filled with orange trees. The heated pool, the Michelin-recommended restaurant, and the attentive service create an atmosphere of refined romance. The private terrace suites with plunge pools are made for couples.',
-    highlights: ['Relais & Chateaux quality', 'Heated pool and spa', 'Private terrace suites', 'Orange tree courtyards'],
-  },
-  {
-    rank: 6,
     name: 'L\'Heure Bleue Palais',
     city: 'Essaouira',
-    type: 'Heritage Palace Hotel',
     icon: Building,
     price: 'From 2,200 MAD per night',
     description:
-      'Essaouira\'s most elegant address. This heritage palace near the ramparts features an indoor pool, a cinema room, and a rooftop terrace with 360-degree ocean and medina views. The suites are grand without being ostentatious. The evening rooftop aperitif watching the sun set over the Atlantic is unforgettable.',
+      'Essaouira\'s most elegant address with an indoor pool, cinema room, and rooftop terrace offering 360-degree ocean and medina views. The evening aperitif watching the sun set over the Atlantic from the rooftop is unforgettable for couples.',
     highlights: ['Rooftop sunset terrace', 'Indoor heated pool', 'Ocean and medina views', 'Heritage palace atmosphere'],
   },
   {
-    rank: 7,
-    name: 'Scarabeo Camp',
-    city: 'Agafay Desert (near Marrakech)',
-    type: 'Desert Glamping',
-    icon: Tent,
-    price: 'From 3,000 MAD per night',
-    description:
-      'Luxury desert glamping just 40 minutes from Marrakech. The Agafay stone desert provides a Saharan-like landscape without the long drive to Merzouga. Tented suites have real beds, hot showers, and private terraces. Dinner is served under the stars with live music. The silence at night, broken only by the wind, is profoundly romantic.',
-    highlights: ['Luxury tented suites', 'Dinner under the stars', 'Atlas Mountain backdrop', 'Just 40 minutes from Marrakech'],
-  },
-  {
-    rank: 8,
-    name: 'Kasbah Tamadot',
-    city: 'Atlas Mountains',
-    type: 'Mountain Luxury Resort',
-    icon: Mountain,
-    price: 'From 5,000 MAD per night',
-    description:
-      'Sir Richard Branson\'s mountain retreat in the High Atlas. Perched above a Berber village with sweeping views of the valley and peaks, it combines Moroccan artisanship with Virgin\'s signature style. The infinity pool, the spa with mountain views, and the private terrace suites create one of Morocco\'s most romantic settings.',
-    highlights: ['Infinity pool with mountain views', 'Spa with panoramic terrace', 'Private Berber village setting', 'Helicopter arrival option'],
-  },
-];
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: SUNSET SPOTS
-   ═══════════════════════════════════════════════════════════════ */
-
-const sunsetSpots = [
-  {
-    name: 'Le Jardin Secret Rooftop',
-    city: 'Marrakech',
-    description: 'Watch the sun set over the medina rooftops and the Atlas Mountains from this beautifully restored historic garden. The rooftop tower offers one of the best vantage points in the entire city.',
-    tip: 'Visit from 5 PM. Entry from 80 MAD per person.',
-  },
-  {
-    name: 'Cafe Clock Rooftop',
-    city: 'Fes',
-    description: 'Sip a date milkshake or Moroccan mint tea as the sun paints the ancient Fes medina in golden light. The panoramic view of the world\'s largest car-free urban area is mesmerizing at dusk.',
-    tip: 'Arrive by 5:30 PM for the best terrace seats.',
-  },
-  {
-    name: 'Essaouira Ramparts (Skala de la Ville)',
-    city: 'Essaouira',
-    description: 'The Atlantic-facing ramparts of Essaouira offer one of Morocco\'s most dramatic sunset experiences. Watch the sun drop into the ocean while fishing boats return to the harbor. The cannons along the fortress wall add historic drama.',
-    tip: 'Free access. Best spot is near the Skala de la Ville at the north end.',
-  },
-  {
-    name: 'Spanish Mosque Viewpoint',
+    name: 'Lina Ryad & Spa',
     city: 'Chefchaouen',
-    description: 'A short uphill walk from the medina brings you to this abandoned mosque with the best panoramic view of the Blue City. At sunset, the blue buildings glow pink and gold against the green Rif Mountains.',
-    tip: 'A 15-minute uphill walk from the medina. Bring a blanket to sit on.',
-  },
-  {
-    name: 'Erg Chebbi Dunes',
-    city: 'Merzouga (Sahara)',
-    description: 'Nothing compares to watching the sun set over the Sahara. The shifting colors of the Erg Chebbi dunes, from gold to orange to deep purple, create a spectacle that couples never forget. Many desert camps include sunset camel rides.',
-    tip: 'Book a desert camp with a sunset camel trek from 300 MAD per person.',
-  },
-  {
-    name: 'Cafe des Epices',
-    city: 'Marrakech',
-    description: 'A laid-back rooftop cafe overlooking the bustling Rahba Kedima spice square. The view at sunset transforms the ochre medina into a warm golden canvas. Simple drinks, zero pretension, maximum atmosphere.',
-    tip: 'Order fresh-squeezed orange juice from 20 MAD. Gets busy after 5 PM.',
+    icon: Sparkles,
+    price: 'From 1,400 MAD per night',
+    description:
+      'A luxury gem in the Blue City with a heated pool, excellent spa, and beautifully appointed rooms. The rooftop terrace offers stunning views of the blue medina and Rif Mountains. A tranquil base for couples exploring Chefchaouen.',
+    highlights: ['Heated pool and spa', 'Rif Mountain panoramic views', 'Blue-washed courtyards', 'Peaceful garden setting'],
   },
 ];
 
 /* ═══════════════════════════════════════════════════════════════
-   DATA: COUPLE ACTIVITIES
+   DATA: COUPLE EXPERIENCES
    ═══════════════════════════════════════════════════════════════ */
 
-const coupleActivities = [
+const coupleExperiences = [
+  {
+    activity: 'Private Rooftop Dinner',
+    icon: Heart,
+    price: 'From 600 MAD per couple',
+    duration: '2-3 hours',
+    description:
+      'A table set with brass lanterns, rose petals, and flickering candles on a private rooftop terrace. A multi-course Moroccan feast served under the stars with views over the medina skyline. Some riads include live Gnawa or Andalusian music. This is Morocco at its most romantic.',
+    bestIn: 'Marrakech, Fes, Essaouira',
+  },
+  {
+    activity: 'Luxury Desert Glamping',
+    icon: Tent,
+    price: 'From 3,000 MAD per night for two',
+    duration: '2-3 days recommended',
+    description:
+      'Spend the night in a luxury camp at the edge of the Erg Chebbi dunes. King-size beds in lavish tents with en-suite bathrooms, private terraces, and butler service. Candlelit dinner in the sand followed by stargazing with zero light pollution. The silence is profoundly romantic.',
+    bestIn: 'Merzouga, Agafay Desert',
+  },
+  {
+    activity: 'Couples Hammam & Spa',
+    icon: Sparkles,
+    price: 'From 1,200 MAD for two',
+    duration: '90 minutes to 2 hours',
+    description:
+      'Share a private steam room, receive side-by-side body scrubs with black soap and kessa gloves, enjoy argan oil massages, and relax in a private lounge with mint tea and pastries. The best spas use rose petals, orange blossom water, and pure argan oil.',
+    bestIn: 'Marrakech, Fes, Essaouira',
+  },
   {
     activity: 'Private Cooking Class',
     icon: Utensils,
     price: 'From 400 MAD per couple',
     duration: '3-4 hours',
     description:
-      'Learn to make a traditional Moroccan tagine, couscous, or pastilla together. Many classes start with a guided souk visit to buy ingredients. You cook side by side with a local chef, then enjoy the meal you prepared on a rooftop terrace.',
+      'Learn to make a traditional Moroccan tagine, couscous, or pastilla together. Many classes begin with a guided souk visit to select fresh ingredients. Cook side by side in a beautiful riad kitchen, then enjoy the meal you prepared on a rooftop terrace.',
     bestIn: 'Marrakech, Fes',
-    romanticFactor: 'Cooking together in a riad kitchen, then sharing the meal you made',
   },
   {
-    activity: 'Hot Air Balloon Ride',
+    activity: 'Sunrise Hot Air Balloon Ride',
     icon: Compass,
     price: 'From 2,000 MAD per person',
     duration: '3-4 hours (including transfer)',
     description:
-      'Float silently over the Marrakech palmeraie and the Atlas foothills at sunrise. The world below is quiet, the air is cool, and the view stretches to the snow-capped High Atlas. Many operators include a Berber breakfast after landing.',
+      'Float silently over the Marrakech palmeraie and Atlas foothills as the sun rises. The world below is quiet, the air is cool, and the view stretches to the snow-capped High Atlas. Request a private balloon for two for the most intimate experience.',
     bestIn: 'Marrakech',
-    romanticFactor: 'Sharing a sunrise from a thousand feet above the desert',
   },
   {
-    activity: 'Couple Hammam Experience',
-    icon: Sparkles,
-    price: 'From 1,200 MAD for two',
-    duration: '90 minutes to 2 hours',
-    description:
-      'A private hammam experience for two. You share a steam room, receive side-by-side scrubs and massages, and relax in a private lounge with mint tea and pastries. The best spas use rose petals, argan oil, and orange blossom products.',
-    bestIn: 'Marrakech, Fes, Essaouira',
-    romanticFactor: 'A deeply relaxing shared experience in a private, intimate setting',
-  },
-  {
-    activity: 'Beach Horse Riding',
+    activity: 'Sunset Beach Horse Riding',
     icon: Wind,
     price: 'From 400 MAD per person',
     duration: '1.5-2 hours',
     description:
-      'Ride along the Atlantic coast on horseback as the sun sets. Essaouira\'s long, wide beach is perfect for this. The horses are well-trained, and guides accommodate all experience levels. The combination of ocean spray, golden light, and the rhythm of the ride is unforgettable.',
+      'Ride along the Atlantic coast on horseback as the sun sets over the ocean. Essaouira\'s long, wide beach is perfect for this experience. The combination of ocean spray, golden light, and riding side by side is profoundly romantic.',
     bestIn: 'Essaouira, Agadir',
-    romanticFactor: 'Riding side by side along a sunset beach with the Atlantic waves',
-  },
-  {
-    activity: 'Sahara Desert Glamping',
-    icon: Tent,
-    price: 'From 3,000 MAD per night for two',
-    duration: '2-3 days recommended',
-    description:
-      'Spend the night in a luxury desert camp at the edge of the Erg Chebbi dunes. Camps range from basic Berber tents to luxury suites with king-size beds, en-suite bathrooms, and private terraces. Dinner by candlelight in the desert, followed by stargazing with zero light pollution.',
-    bestIn: 'Merzouga, Zagora, Agafay',
-    romanticFactor: 'Sleeping under a canopy of stars in absolute silence, together',
-  },
-  {
-    activity: 'Sunset Camel Trek',
-    icon: Sunset,
-    price: 'From 300 MAD per person',
-    duration: '1-2 hours',
-    description:
-      'A camel ride into the Sahara dunes at sunset is the quintessential Moroccan romantic experience. The golden dunes, the fading light, and the gentle sway of the camels create a scene from a film. Most treks include mint tea at a viewpoint.',
-    bestIn: 'Merzouga, Agafay Desert',
-    romanticFactor: 'A cinematic shared adventure as the desert turns gold and crimson',
-  },
-  {
-    activity: 'Private Riad Rooftop Dinner',
-    icon: Utensils,
-    price: 'From 600 MAD per couple',
-    duration: '2-3 hours',
-    description:
-      'Many riads offer private rooftop dinners for couples. A table set with lanterns, rose petals, and candles. A multi-course Moroccan feast served under the stars. Some include live Gnawa or Andalusian music. This is Morocco at its most romantic.',
-    bestIn: 'Marrakech, Fes, Essaouira',
-    romanticFactor: 'A private candlelit dinner under the stars on a Moroccan rooftop',
-  },
-  {
-    activity: 'Atlas Mountain Day Trip for Two',
-    icon: Mountain,
-    price: 'From 800 MAD per couple (private transfer)',
-    duration: 'Full day',
-    description:
-      'Escape the city with a private day trip to the Atlas Mountains. Visit the Ourika Valley with its terraced Berber villages and waterfalls, or drive the dramatic Tizi n\'Test pass. Lunch in a Berber home with valley views. The mountain air and landscapes are a refreshing contrast to the medina.',
-    bestIn: 'From Marrakech',
-    romanticFactor: 'A private adventure through stunning mountain scenery with just the two of you',
   },
 ];
 
 /* ═══════════════════════════════════════════════════════════════
-   DATA: ROMANTIC RESTAURANTS
+   DATA: PHOTOGRAPHY SPOTS FOR COUPLES
    ═══════════════════════════════════════════════════════════════ */
 
-const romanticRestaurants = [
+const photoSpots = [
   {
-    name: 'Le Jardin',
+    spot: 'Riad Yasmine Pool',
     city: 'Marrakech',
-    cuisine: 'Moroccan-Mediterranean fusion',
-    price: 'From 250 MAD per person',
-    description: 'Hidden behind an unassuming medina doorway, this lush garden restaurant is a tranquil oasis. Dine under banana trees and bougainvillea with soft lighting. The menu blends Moroccan and Mediterranean flavors.',
+    description: 'The iconic turquoise pool framed by lush greenery and zellige tilework. Best shot at midday when the light hits the water.',
   },
   {
-    name: 'Nomad',
+    spot: 'Bahia Palace Courtyards',
     city: 'Marrakech',
-    cuisine: 'Modern Moroccan',
-    price: 'From 200 MAD per person',
-    description: 'A multi-level rooftop restaurant with panoramic views of the medina and Koutoubia Mosque. Modern Moroccan cuisine with creative twists on tagine, couscous, and pastilla. The rooftop terrace at sunset is extraordinary.',
+    description: 'Intricate zellige mosaics and painted cedar ceilings create a palatial backdrop. Visit early morning for empty courtyards.',
   },
   {
-    name: 'Restaurant Dar Hatim',
-    city: 'Fes',
-    cuisine: 'Traditional Fassi',
-    price: 'From 300 MAD per person',
-    description: 'An intimate dining experience inside a beautifully decorated riad. The Fassi cuisine is prepared by women who have preserved family recipes for generations. The tasting menu is a journey through Fes\'s culinary heritage.',
+    spot: 'Chefchaouen Blue Streets',
+    city: 'Chefchaouen',
+    description: 'Every corner is a photo opportunity. The blue-washed steps and doorways are endlessly photogenic for couple portraits.',
   },
   {
-    name: 'Taros',
+    spot: 'Erg Chebbi Dunes at Sunset',
+    city: 'Merzouga',
+    description: 'Golden dunes shifting from amber to crimson as the sun sets. The silhouette of two people on a dune ridge is iconic.',
+  },
+  {
+    spot: 'Essaouira Ramparts',
     city: 'Essaouira',
-    cuisine: 'Seafood & Moroccan',
-    price: 'From 180 MAD per person',
-    description: 'Perched above Place Moulay Hassan with ocean views from the rooftop terrace. Fresh seafood, Moroccan classics, and cocktails. Live music on some evenings. The sunset view over the port is the main event.',
+    description: 'Dramatic ocean views from the centuries-old Portuguese fortifications. The golden hour light here is extraordinary.',
   },
   {
-    name: 'La Table du Riad at Riad 72',
-    city: 'Marrakech',
-    cuisine: 'Contemporary Moroccan',
-    price: 'From 350 MAD per person',
-    description: 'An intimate dining experience in one of Marrakech\'s most stylish riads. Just a handful of tables around a candlelit courtyard. The tasting menu changes daily. Reservations are essential and worth every dirham.',
-  },
-  {
-    name: 'Cafe Clock',
-    city: 'Fes / Marrakech / Chefchaouen',
-    cuisine: 'Moroccan-fusion',
-    price: 'From 100 MAD per person',
-    description: 'A cultural cafe with locations in three romantic cities. Known for its camel burger, date milkshakes, and rooftop terraces. More casual than the fine-dining options but full of character and local atmosphere.',
+    spot: 'Bou Inania Madrasa',
+    city: 'Fes',
+    description: 'Jaw-dropping carved stucco, zellige tilework, and cedar mashrabiya screens in one of the finest buildings in Morocco.',
   },
 ];
 
 /* ═══════════════════════════════════════════════════════════════
-   DATA: PDA & CULTURAL GUIDELINES
+   DATA: BUDGET COMPARISON
    ═══════════════════════════════════════════════════════════════ */
 
-const pdaGuidelines = [
+const budgetTiers = [
   {
-    rule: 'Holding Hands',
-    icon: Heart,
-    status: 'Generally Acceptable',
-    statusColor: 'text-green-600',
-    description:
-      'Married couples holding hands is generally fine in cities and tourist areas. In rural and conservative areas, even this may draw attention. Use your judgment based on the setting.',
+    tier: 'Budget-Friendly Romance',
+    icon: Wallet,
+    totalBudget: 'From 7,000 - 12,000 MAD per couple (7 days)',
+    color: 'text-green-600',
+    bgColor: 'bg-green-600/10',
+    description: 'Charming guesthouses, local restaurants, shared desert tours, and walking explorations. Proof that romance in Morocco does not require a fortune.',
+    breakdown: [
+      { item: 'Accommodation (6 nights)', cost: 'From 3,000 - 5,000 MAD', detail: 'Charming guesthouses, from 500-850 MAD/night' },
+      { item: 'Desert excursion (2 days/1 night)', cost: 'From 1,500 - 2,500 MAD', detail: 'Shared tour with standard desert camp' },
+      { item: 'Dining (7 days)', cost: 'From 1,500 - 2,500 MAD', detail: 'Local restaurants and street food' },
+      { item: 'Activities', cost: 'From 500 - 1,000 MAD', detail: 'Walking tours, free gardens, one hammam' },
+      { item: 'Transport', cost: 'From 500 - 1,000 MAD', detail: 'Buses, shared taxis, local transport' },
+    ],
   },
   {
-    rule: 'Kissing in Public',
-    icon: AlertTriangle,
-    status: 'Avoid',
-    statusColor: 'text-red-600',
-    description:
-      'Kissing in public, even a peck on the cheek, is frowned upon and can attract unwanted attention or even a reprimand. Save it for private spaces like your riad or hotel room.',
+    tier: 'Mid-Range Romance',
+    icon: Wallet,
+    totalBudget: 'From 15,000 - 25,000 MAD per couple (7 days)',
+    color: 'text-[var(--color-accent)]',
+    bgColor: 'bg-[var(--color-accent)]/10',
+    description: 'Beautiful romantic riads, good restaurants, key experiences, and a private desert tour. The sweet spot of quality and value for most couples.',
+    breakdown: [
+      { item: 'Accommodation (6 nights)', cost: 'From 6,000 - 10,000 MAD', detail: 'Romantic riads with pool, from 1,000-1,700 MAD/night' },
+      { item: 'Desert excursion (2 days/1 night)', cost: 'From 3,000 - 5,000 MAD', detail: 'Private tour with mid-range desert camp' },
+      { item: 'Dining (7 days)', cost: 'From 2,500 - 4,000 MAD', detail: 'Mix of riad dinners and restaurant meals' },
+      { item: 'Activities', cost: 'From 2,000 - 3,500 MAD', detail: 'Hammam, cooking class, guided tours' },
+      { item: 'Transport', cost: 'From 1,500 - 2,500 MAD', detail: 'Airport transfers, taxis, intercity travel' },
+    ],
   },
   {
-    rule: 'Hugging & Close Contact',
-    icon: Users,
-    status: 'Be Discreet',
-    statusColor: 'text-amber-600',
-    description:
-      'Brief, friendly hugs are tolerated in tourist areas, but prolonged embraces or sitting very close together in public may draw stares. Be more conservative in the medina and rural areas.',
-  },
-  {
-    rule: 'Unmarried Couples',
-    icon: ShieldCheck,
-    status: 'Legally Complex',
-    statusColor: 'text-amber-600',
-    description:
-      'Moroccan law technically prohibits sexual relations outside of marriage. For foreign tourists, this is very rarely enforced. Hotels and riads catering to tourists accommodate unmarried couples without issue. You will not be asked for a marriage certificate.',
-  },
-  {
-    rule: 'Same-Sex Couples',
-    icon: AlertTriangle,
-    status: 'Exercise Caution',
-    statusColor: 'text-red-600',
-    description:
-      'Same-sex relationships are illegal in Morocco. While Morocco is generally welcoming to all tourists, same-sex couples should avoid any public displays of affection. International hotels and riads are professional and discreet. Book a double room as two travelers.',
-  },
-  {
-    rule: 'Dress Code',
-    icon: ShieldCheck,
-    status: 'Dress Modestly',
-    statusColor: 'text-amber-600',
-    description:
-      'Both partners should dress modestly, especially in the medina, rural areas, and near mosques. Shoulders and knees should be covered. In luxury hotel pools and private accommodations, swimwear is fine. Beach resorts are more relaxed.',
+    tier: 'Luxury Romance',
+    icon: Crown,
+    totalBudget: 'From 35,000 - 70,000 MAD per couple (7 days)',
+    color: 'text-[var(--color-gold)]',
+    bgColor: 'bg-[var(--color-gold)]/10',
+    description: 'Five-star riads with suites, private transfers throughout, premium desert camps, fine dining, and signature experiences. No detail overlooked.',
+    breakdown: [
+      { item: 'Accommodation (6 nights)', cost: 'From 15,000 - 30,000 MAD', detail: 'Luxury riad suites, from 2,500-5,000 MAD/night' },
+      { item: 'Desert excursion (2 days/1 night)', cost: 'From 6,000 - 12,000 MAD', detail: 'Private tour with luxury glamping' },
+      { item: 'Dining (7 days)', cost: 'From 5,000 - 10,000 MAD', detail: 'Fine dining, private rooftop dinners' },
+      { item: 'Activities', cost: 'From 5,000 - 10,000 MAD', detail: 'Private balloon, couples spa, cooking class' },
+      { item: 'Transport', cost: 'From 4,000 - 8,000 MAD', detail: 'All private transfers, luxury vehicles' },
+    ],
   },
 ];
 
 /* ═══════════════════════════════════════════════════════════════
-   DATA: PROPOSAL & ANNIVERSARY IDEAS
+   DATA: BEST SEASONS FOR COUPLES
    ═══════════════════════════════════════════════════════════════ */
 
-const proposalIdeas = [
+const bestSeasons = [
   {
-    idea: 'Private Rooftop Dinner in Marrakech',
-    icon: Heart,
+    season: 'Spring (March - May)',
+    icon: Sun,
+    rating: 'Excellent',
+    ratingColor: 'text-green-600',
     description:
-      'Arrange a private rooftop dinner at your riad, decorated with rose petals and candles, with the Atlas Mountains glowing at sunset in the background. Many riads will help coordinate the surprise, including hiding the ring in a dessert or having a musician play.',
-    budget: 'From 2,000 MAD for the full setup',
+      'The ideal season for couples. Warm days (20-28 degrees), wildflowers in the Atlas, the rose harvest in the Dades Valley in May, and golden light perfect for photography. Gardens are at peak bloom, and the desert is comfortable before summer heat.',
+    highlights: ['Wildflower blooms in Atlas valleys', 'Pleasant desert temperatures', 'Rose harvest in Dades (May)', 'Perfect photography light'],
   },
   {
-    idea: 'Sunrise Hot Air Balloon Proposal',
-    icon: Compass,
+    season: 'Autumn (September - November)',
+    icon: Sunset,
+    rating: 'Excellent',
+    ratingColor: 'text-green-600',
     description:
-      'Propose at a thousand feet above the Marrakech palmeraie as the sun rises over the Atlas Mountains. Several balloon operators offer private flights for couples and will coordinate the moment. The photos from a balloon proposal are spectacular.',
-    budget: 'From 5,000 MAD for a private balloon flight for two',
+      'Equally wonderful for couples. Summer heat fades to comfortable warmth, golden afternoon light bathes every surface, and the date harvest brings festive energy to the oases. October and November are widely considered the most pleasant months in Marrakech.',
+    highlights: ['Golden autumn light for photos', 'Perfect desert temperatures', 'Date harvest festivals', 'Comfortable across all regions'],
   },
   {
-    idea: 'Sahara Desert Under the Stars',
-    icon: Tent,
-    description:
-      'After a sunset camel ride into the Erg Chebbi dunes, propose at a private dinner table set in the desert with lanterns and candles. The Milky Way stretches above you with zero light pollution. Luxury desert camps will arrange every detail.',
-    budget: 'From 4,000 MAD for a private desert dinner setup',
-  },
-  {
-    idea: 'Blue City Terrace in Chefchaouen',
-    icon: Camera,
-    description:
-      'The rooftop terraces of Chefchaouen look out over a sea of blue buildings with the Rif Mountains behind. At sunset, the colors are extraordinary. Arrange a private terrace with mint tea and Moroccan pastries for an intimate, photogenic proposal.',
-    budget: 'From 800 MAD for a decorated private terrace',
-  },
-  {
-    idea: 'Anniversary Spa Ritual for Two',
-    icon: Sparkles,
-    description:
-      'Celebrate an anniversary with a private couple\'s hammam and spa ritual at a luxury spa. The best packages include a private hammam, side-by-side massages, rose petal baths, champagne, and a private relaxation lounge. La Mamounia and Royal Mansour offer the finest experiences.',
-    budget: 'From 3,000 MAD for a premium couple spa ritual',
-  },
-];
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: ROMANTIC ITINERARY SUGGESTIONS
-   ═══════════════════════════════════════════════════════════════ */
-
-const itineraries = [
-  {
-    name: 'Classic Romantic Week',
-    duration: '7 days',
-    icon: Heart,
-    route: 'Marrakech (3) - Essaouira (2) - Marrakech (2)',
-    description:
-      'The most popular couples\' itinerary. Start with the sensory overload of Marrakech, including a riad stay, rooftop dinners, and a couple hammam. Drive to coastal Essaouira for sunset walks and seafood. Return to Marrakech for a hot air balloon ride and final night splurge.',
-    highlights: ['Riad stay in Marrakech medina', 'Couple hammam at Heritage Spa', 'Coastal Essaouira escape', 'Sunrise balloon ride'],
-    budget: 'From 12,000 MAD per couple (mid-range) / from 30,000 MAD (luxury)',
-  },
-  {
-    name: 'Desert Romance',
-    duration: '5 days',
-    icon: Tent,
-    route: 'Marrakech (1) - Ait Benhaddou (1) - Merzouga Desert (2) - Marrakech (1)',
-    description:
-      'A road trip through the dramatic landscapes of southern Morocco. Drive through the High Atlas, stop at the UNESCO kasbah of Ait Benhaddou, traverse the Dades and Todra Gorges, and arrive at the Sahara for two nights of desert glamping, camel rides, and stargazing.',
-    highlights: ['Ait Benhaddou sunset', 'Dades Gorge scenic drive', 'Luxury desert camp in Merzouga', 'Sunset camel trek'],
-    budget: 'From 10,000 MAD per couple (mid-range) / from 25,000 MAD (luxury)',
-  },
-  {
-    name: 'Blue City & Mountains',
-    duration: '5 days',
+    season: 'Winter (December - February)',
     icon: Mountain,
-    route: 'Fes (2) - Chefchaouen (2) - Fes (1)',
+    rating: 'Good',
+    ratingColor: 'text-amber-600',
     description:
-      'Combine the ancient romance of Fes with the visual magic of Chefchaouen. Explore the Fes medina together, dine in a traditional palace, then escape to the Blue City for mountain walks, photography, and quiet terrace evenings. Return to Fes for a final night at a luxury riad.',
-    highlights: ['Fes medina exploration', 'Dinner at Dar Hatim', 'Chefchaouen blue streets', 'Spanish Mosque sunset'],
-    budget: 'From 8,000 MAD per couple (mid-range) / from 20,000 MAD (luxury)',
+      'Mild, sunny city days (16-20 degrees) with cool evenings, creating a cozy atmosphere in lantern-lit riads. Snow-capped Atlas views add drama. Christmas and New Year in Marrakech are magical, with many riads offering special celebrations for couples.',
+    highlights: ['Cozy riad evenings', 'Snow-capped Atlas backdrop', 'Festive holiday atmosphere', 'Fewer tourists in January'],
+  },
+  {
+    season: 'Summer (June - August)',
+    icon: Thermometer,
+    rating: 'Not Recommended',
+    ratingColor: 'text-red-600',
+    description:
+      'Inland cities regularly exceed 40 degrees and the desert is dangerously hot. If you must visit in summer, focus on coastal Essaouira, which stays pleasant year-round thanks to Atlantic breezes, or retreat to the cooler Atlas Mountains.',
+    highlights: ['Extremely hot inland cities', 'Essaouira remains pleasant', 'Atlas Mountains are cooler', 'Lowest hotel prices'],
+  },
+];
+
+/* ═══════════════════════════════════════════════════════════════
+   DATA: ROMANTIC ITINERARY
+   ═══════════════════════════════════════════════════════════════ */
+
+const coupleItinerary = [
+  {
+    day: 1,
+    title: 'Arrive in Marrakech: First Impressions',
+    icon: Map,
+    location: 'Marrakech',
+    description:
+      'Arrive at Marrakech Menara Airport where your riad\'s private transfer awaits. Check into your romantic riad in the medina and let the courtyard, with its fountain, orange trees, and brass lanterns, set the mood. Spend the afternoon by the pool or exploring the immediate neighborhood. In the evening, enjoy your first rooftop dinner together, watching the sun set behind the Atlas Mountains as the call to prayer echoes across the city.',
+    highlights: ['Private airport transfer', 'Riad check-in and courtyard discovery', 'Poolside afternoon', 'Rooftop welcome dinner'],
+  },
+  {
+    day: 2,
+    title: 'Marrakech: Medina Magic and Hammam Bliss',
+    icon: Sparkles,
+    location: 'Marrakech',
+    description:
+      'Explore the medina together: visit the Bahia Palace, wander the colorful souks, and get intentionally lost in the labyrinthine lanes. After lunch at a shaded terrace, retreat to a couples hammam for side-by-side scrubs, argan oil massages, and mint tea in a private lounge. In the evening, visit Jardin Majorelle at golden hour, then dine at a candlelit restaurant.',
+    highlights: ['Bahia Palace visit', 'Souk exploration for two', 'Couples hammam and spa', 'Jardin Majorelle at golden hour'],
+  },
+  {
+    day: 3,
+    title: 'Desert Road: Kasbahs and Gorges',
+    icon: Mountain,
+    location: 'Marrakech to Dades Valley',
+    description:
+      'Depart with your private driver over the Tizi n\'Tichka pass. Stop at the UNESCO kasbah of Ait Benhaddou for photos together against the ancient fortress, then continue through the Valley of Roses into the spectacular Dades Gorge. Check into a kasbah hotel perched on the rim with staggering canyon views.',
+    highlights: ['Tizi n\'Tichka mountain pass', 'Ait Benhaddou couple photos', 'Valley of Roses drive', 'Kasbah hotel with gorge views'],
+  },
+  {
+    day: 4,
+    title: 'Sahara: Camel Trek and Desert Night',
+    icon: Tent,
+    location: 'Dades to Merzouga',
+    description:
+      'Continue through the Todra Gorge to Merzouga. In the late afternoon, climb onto camels and ride side by side into the golden Erg Chebbi dunes as the sun sets. At your luxury camp, a private candlelit dinner in the sand awaits, followed by Berber drumming by the fire and stargazing under the Milky Way.',
+    highlights: ['Todra Gorge visit', 'Sunset camel trek together', 'Candlelit desert dinner', 'Milky Way stargazing'],
+  },
+  {
+    day: 5,
+    title: 'Sahara Sunrise and Essaouira',
+    icon: Sun,
+    location: 'Merzouga to Essaouira (via flight or drive)',
+    description:
+      'Wake before dawn to watch the sunrise paint the dunes in gold and rose. After a leisurely camp breakfast, fly or drive to Essaouira for a change of scenery. Check into a coastal riad and spend the evening walking the ramparts at sunset, then share fresh seafood at the harbor.',
+    highlights: ['Sahara sunrise from the dunes', 'Coastal arrival in Essaouira', 'Rampart sunset walk', 'Harbor seafood dinner'],
+  },
+  {
+    day: 6,
+    title: 'Essaouira: Beach and Bohemian Vibes',
+    icon: Wind,
+    location: 'Essaouira',
+    description:
+      'A relaxed day by the ocean. Spend the morning browsing art galleries and boutiques in the medina, then head to the beach for a sunset horse ride along the shore. Return for dinner at a rooftop restaurant overlooking the Atlantic, or arrange a private dinner at your riad.',
+    highlights: ['Art gallery and boutique browsing', 'Beach horse riding at sunset', 'Atlantic coast relaxation', 'Rooftop seafood dinner'],
+  },
+  {
+    day: 7,
+    title: 'Return to Marrakech: Farewell',
+    icon: Heart,
+    location: 'Essaouira to Marrakech',
+    description:
+      'Drive back to Marrakech (3 hours) and enjoy a final afternoon together. Pick up souvenirs in the souks, visit a garden, or simply relax at your riad pool. End your trip with a memorable farewell dinner at a palatial restaurant, savoring the flavors and atmosphere one last time before departure.',
+    highlights: ['Scenic coastal drive', 'Last-minute souk shopping', 'Final riad pool time', 'Farewell dinner at a palace restaurant'],
   },
 ];
 
@@ -668,37 +642,42 @@ const faqs = [
   {
     question: 'Is Morocco a good destination for couples?',
     answer:
-      'Morocco is an outstanding destination for couples. The country offers romantic riads with private courtyards and plunge pools, desert glamping under the Milky Way, stunning sunset spots from Marrakech rooftops to Sahara dunes, couple-friendly hammam experiences, and some of the most atmospheric restaurants in North Africa. The combination of exotic culture, beautiful landscapes, excellent food, and warm hospitality makes Morocco one of the world\'s most romantic destinations.',
+      'Morocco is one of the most romantic destinations in the world. Couples enjoy luxury riads with plunge pools, candlelit rooftop dinners overlooking ancient medinas, Sahara desert glamping under the Milky Way, couples hammam experiences, and stunning photography at every turn. The combination of exotic culture, affordable luxury, extraordinary food, and warm hospitality makes Morocco ideal for couples, whether you are celebrating an anniversary, a birthday, a proposal, or simply quality time together.',
   },
   {
     question: 'Can unmarried couples share a hotel room in Morocco?',
     answer:
-      'Technically, Moroccan law prohibits unmarried Moroccan couples from sharing a room. However, for foreign tourists, this rule is very rarely enforced. International hotels, tourist-oriented riads, and guesthouses routinely accommodate unmarried foreign couples without any issue. You will not be asked for a marriage certificate. Simply book a double room as you would anywhere else in the world.',
+      'Moroccan law technically prohibits unmarried Moroccan couples from sharing a room, but this rule is very rarely applied to foreign tourists. International hotels, tourist-oriented riads, and guesthouses routinely accommodate unmarried foreign couples without any questions. You will not be asked for a marriage certificate. Simply book a double room as you would anywhere else in the world.',
   },
   {
-    question: 'Is it safe for couples to walk around at night in Morocco?',
+    question: 'Is public affection acceptable in Morocco?',
     answer:
-      'Main tourist areas in Marrakech, Fes, Essaouira, and Chefchaouen are generally safe for couples at night, especially the main squares and well-lit streets. As with any travel destination, avoid poorly lit back alleys late at night. Use a taxi or your riad\'s car service if returning late. The medina lanes can be confusing after dark, so save your phone battery for maps. Overall, Morocco is a safe country for tourists.',
+      'Morocco is a Muslim-majority country and public displays of affection should be kept modest. Holding hands is generally fine, especially in tourist areas like Marrakech and Essaouira, but kissing and overt physical affection in public are frowned upon and can draw unwanted attention. Within your riad, hotel, or restaurant you can be completely relaxed. Respecting local customs enhances your experience and earns genuine warmth from the people you meet.',
   },
   {
-    question: 'What is the best time of year for a romantic trip to Morocco?',
+    question: 'Is Morocco safe for LGBTQ+ couples?',
     answer:
-      'The best months for a romantic trip are March to May and September to November. The weather is warm but not oppressively hot, the light is golden and perfect for photographs, and the crowds are thinner than in peak summer. For desert trips, October to March is ideal as the Sahara summer heat is brutal. Essaouira is pleasant year-round thanks to the Atlantic breeze. Avoid July and August in Marrakech when temperatures regularly exceed 40 degrees Celsius.',
+      'Same-sex relationships are illegal in Morocco, and LGBTQ+ travelers should exercise discretion. Many LGBTQ+ travelers do visit Morocco without incident by being mindful of public behavior and avoiding displays of affection. Book accommodations at internationally-oriented riads in tourist areas where staff are accustomed to diverse guests. While attitudes are gradually evolving in larger cities, caution is strongly advised. Research current conditions before your trip.',
   },
   {
-    question: 'How should couples dress in Morocco?',
+    question: 'How much does a couples trip to Morocco cost?',
     answer:
-      'Morocco is a Muslim country and modest dress is appreciated, especially in medinas, rural areas, and near mosques. Both partners should cover shoulders and knees in public. Within your riad, hotel pool, or private accommodation, you can dress as you please. Beach resorts and Essaouira are more relaxed. Avoid very tight or revealing clothing in the medina. The good news: Moroccan fashion is elegant, and you can buy beautiful local clothing in the souks.',
+      'A budget-friendly couple trip for 7 days costs from 7,000-12,000 MAD including guesthouse stays, local dining, and shared tours. A mid-range trip with romantic riads and key experiences costs from 15,000-25,000 MAD per couple. A luxury romantic getaway with 5-star riads, private desert camps, spa treatments, and fine dining costs from 35,000-70,000 MAD per couple for a week. Morocco offers exceptional value compared to European or Caribbean destinations.',
   },
   {
-    question: 'What are the best couple activities in Morocco?',
+    question: 'What is the best time of year for a couples trip to Morocco?',
     answer:
-      'The most popular couple activities include private cooking classes (from 400 MAD per couple), hot air balloon rides over Marrakech at sunrise (from 2,000 MAD per person), private couple hammam experiences (from 1,200 MAD for two), sunset camel rides in the Sahara (from 300 MAD per person), horse riding on the beach in Essaouira (from 400 MAD per person), private riad rooftop dinners (from 600 MAD per couple), and Atlas Mountain day trips (from 800 MAD per couple). Most activities can be booked through your riad or hotel.',
+      'The best months are March to May and September to November. Temperatures are warm but comfortable (20-28 degrees Celsius), the light is perfect for photographs, and crowds are smaller. Spring brings wildflowers and the rose harvest. Autumn offers golden light and perfect desert temperatures. Avoid July and August inland when temperatures exceed 40 degrees, though Essaouira on the coast is pleasant year-round.',
   },
   {
-    question: 'How much should we budget for a romantic week in Morocco?',
+    question: 'What should couples wear in Morocco?',
     answer:
-      'A mid-range romantic week for two costs from 8,000-15,000 MAD including romantic riad accommodation (from 1,200 MAD/night), dining at good restaurants, activities, and internal transport. A luxury experience with 5-star riads, private desert camps, fine dining, and premium activities can cost from 25,000-50,000 MAD per week for two. Budget-conscious couples can enjoy Morocco for from 4,000-6,000 MAD per week by staying in charming but simpler guesthouses and eating at local restaurants.',
+      'Dress modestly in public, covering shoulders and knees, especially in medinas and near mosques. Loose, breathable fabrics work best in the heat. At your riad pool or a private hotel, swimwear is perfectly fine. For rooftop dinners, smart-casual is the norm. Bring layers for desert evenings (surprisingly cold at night), comfortable walking shoes for cobblestones, and a scarf that doubles as sun and sand protection.',
+  },
+  {
+    question: 'What are the most romantic experiences for couples in Morocco?',
+    answer:
+      'Top couple experiences include private rooftop dinners with rose petals and candles (from 600 MAD per couple), sunrise hot air balloon rides over Marrakech (from 2,000 MAD per person), couples hammam spa sessions (from 1,200 MAD for two), sunset camel treks in the Sahara (from 300 MAD per person), private cooking classes (from 400 MAD per couple), luxury desert glamping (from 3,000 MAD per night), and beach horse riding at sunset in Essaouira (from 400 MAD per person). Seasonal pricing may vary.',
   },
 ];
 
@@ -737,15 +716,16 @@ export default function MoroccoForCouplesPage() {
           </nav>
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm text-white/90 text-sm mb-6">
             <Heart className="w-4 h-4" />
-            Romance &amp; Travel
+            Couple Travel Guide
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-display)] font-bold text-white mb-4">
             Morocco for Couples:
-            <br className="hidden md:block" /> The Ultimate Romantic Guide
+            <br className="hidden md:block" /> Your Romantic Escape
           </h1>
           <p className="text-xl text-white/80 max-w-2xl">
-            Romantic riads, desert glamping under the stars, sunset rooftop dinners, and unforgettable
-            couple experiences. Everything you need to plan the perfect romantic trip to Morocco.
+            Rooftop dinners under the stars, desert glamping at the edge of the Sahara, couples
+            hammam rituals, and the world&apos;s most photogenic streets. The complete guide to
+            experiencing Morocco as a couple.
           </p>
         </div>
       </section>
@@ -757,72 +737,79 @@ export default function MoroccoForCouplesPage() {
         <div className="container-morocco max-w-4xl">
           <div className="prose-moroccan">
             <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
-              Why Morocco Is One of the World&apos;s Most Romantic Destinations
+              Why Morocco Is Perfect for Couples
             </h2>
             <div className="space-y-4 text-lg text-[var(--text-secondary)] leading-relaxed">
               <p>
-                Morocco is a place where romance is woven into the fabric of daily life. The scent
-                of orange blossom drifts through riad courtyards. Lanterns cast golden light on
-                zellige-tiled walls. Rooftop terraces overlook ancient medinas as the sun sets behind
-                the Atlas Mountains. The desert sky reveals more stars than you believed existed.
+                Morocco is not just a honeymoon destination. It is one of the most romantic places
+                on Earth for couples at every stage: anniversaries, milestone birthdays, proposals,
+                rekindling trips, or simply a week of quality time far from the everyday. The country
+                wraps you in beauty from the moment you arrive. Orange blossom drifts through riad
+                courtyards. Brass lanterns cast warm light on hand-cut zellige tiles. Rooftop terraces
+                open to skies that shift from gold to pink to deep violet as the call to prayer echoes
+                across ancient rooftops.
               </p>
               <p>
-                For couples, Morocco offers a rare combination: exotic adventure and intimate luxury.
-                You can spend the morning lost together in a thousand-year-old medina, the afternoon
-                being pampered in a private hammam, and the evening dining on a candlelit rooftop
-                with views that stretch to the mountains. The next day, you might be riding camels
-                into the Sahara or floating over the desert in a hot air balloon at sunrise.
+                What makes Morocco truly special for couples is the range of experiences packed into
+                one compact country. In a single week, you can wake in a luxury riad with a private
+                plunge pool, ride camels into the Sahara at sunset, share a candlelit dinner in the
+                desert under the Milky Way, gallop on horseback along an Atlantic beach, explore a
+                medieval medina hand in hand, and be pampered in a rose-petal hammam. No other
+                destination at this price point delivers such variety and romance.
               </p>
               <p>
-                This guide covers everything couples need: the most romantic accommodations, the
-                best cities for two, couple-friendly activities from cooking classes to desert glamping,
-                sunset spots, restaurant picks, cultural guidelines around PDA, proposal and anniversary
-                ideas, and sample itineraries with realistic budgets.
+                This guide covers everything couples need to know: the most romantic cities, where
+                to stay, experiences designed for two, cultural sensitivity and LGBTQ+ awareness,
+                photography spots, the best seasons to visit, a 7-day couple itinerary, and realistic
+                budgets from backpacker to luxury. Whether you are planning a romantic Morocco trip as
+                a honeymoon alternative or simply want the trip of a lifetime together, this is your
+                starting point.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Best Cities for Couples ── */}
+      {/* ── Most Romantic Cities ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <MapPin className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Best Cities for Couples
+            Most Romantic Cities in Morocco
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Each Moroccan city offers a different flavor of romance. Here is where to go depending on what kind of couple you are.
+            Each city offers a different flavor of romance, from sensory overload in Marrakech
+            to windswept coastal walks in Essaouira and starlit desert silence in the Sahara.
           </p>
 
           <div className="space-y-10">
-            {bestCitiesForCouples.map((city) => {
-              const CityIcon = city.icon;
+            {romanticCities.map((dest) => {
+              const DestIcon = dest.icon;
               return (
-                <div key={city.city} className="card-moroccan overflow-hidden">
+                <div key={dest.city} className="card-moroccan overflow-hidden">
                   <div className="grid grid-cols-1 lg:grid-cols-2">
                     <div className="relative h-64 lg:h-auto">
                       <img
-                        src={city.image}
-                        alt={`Romantic scene in ${city.city}, Morocco for couples`}
+                        src={dest.image}
+                        alt={`${dest.city} romantic destination for couples in Morocco`}
                         className="w-full h-full object-cover"
                         loading="lazy"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent lg:bg-gradient-to-r" />
                       <div className="absolute bottom-4 left-4 lg:bottom-6 lg:left-6">
                         <div className="flex items-center gap-2 mb-1">
-                          <CityIcon className="w-5 h-5 text-white" />
+                          <DestIcon className="w-5 h-5 text-white" />
                           <h3 className="text-2xl font-[family-name:var(--font-display)] font-bold text-white">
-                            {city.city}
+                            {dest.city}
                           </h3>
                         </div>
-                        <p className="text-sm text-white/80 italic">{city.tagline}</p>
+                        <p className="text-sm text-white/80 italic">{dest.tagline}</p>
                       </div>
                     </div>
                     <div className="p-6 lg:p-8">
-                      <p className="text-sm text-[var(--text-secondary)] mb-4 leading-relaxed">{city.description}</p>
+                      <p className="text-sm text-[var(--text-secondary)] mb-4 leading-relaxed">{dest.description}</p>
                       <div className="space-y-2 mb-4">
-                        {city.highlights.map((highlight, i) => (
+                        {dest.highlights.map((highlight, i) => (
                           <div key={i} className="flex items-start gap-2 text-sm text-[var(--text-muted)]">
                             <CheckCircle className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
                             {highlight}
@@ -832,11 +819,11 @@ export default function MoroccoForCouplesPage() {
                       <div className="flex flex-wrap gap-4 text-xs text-[var(--text-muted)] pt-3 border-t border-[var(--border-default)]">
                         <span className="flex items-center gap-1">
                           <Users className="w-3.5 h-3.5 text-[var(--color-accent)]" />
-                          <strong>Best for:</strong> {city.bestFor}
+                          <strong>Best for:</strong> {dest.bestFor}
                         </span>
                         <span className="flex items-center gap-1">
                           <DollarSign className="w-3.5 h-3.5 text-[var(--color-accent)]" />
-                          {city.budget}
+                          {dest.budget}
                         </span>
                       </div>
                     </div>
@@ -848,52 +835,47 @@ export default function MoroccoForCouplesPage() {
         </div>
       </section>
 
-      {/* ── Romantic Accommodation Picks ── */}
+      {/* ── Romantic Riads ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <Bed className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            8 Most Romantic Stays in Morocco
+            Most Romantic Riads for Couples
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-4">
-            From intimate medina riads to desert glamping and mountain retreats, these are the most romantic places to stay in Morocco.
+            From intimate boutique stays to palatial retreats, these riads set the stage for
+            an unforgettable romantic trip.
           </p>
           <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
             <Info className="w-3.5 h-3.5 inline mr-1" />
-            Prices are starting rates and vary by season. Peak season (October-April) and holidays may be 30-50% higher. Book well in advance for romantic occasions.
+            Prices are starting rates and vary by season. Peak season (October-April) and holidays may be 30-50% higher.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {romanticAccommodation.map((stay) => {
-              const StayIcon = stay.icon;
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {romanticRiads.map((riad) => {
+              const RiadIcon = riad.icon;
               return (
-                <div key={stay.rank} className="card-moroccan p-6">
+                <div key={riad.name} className="card-moroccan p-6">
                   <div className="flex items-start gap-4 mb-4">
                     <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                      <span className="text-sm font-bold text-[var(--color-accent)]">#{stay.rank}</span>
+                      <RiadIcon className="w-5 h-5 text-[var(--color-accent)]" />
                     </div>
                     <div className="flex-1">
                       <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                        {stay.name}
+                        {riad.name}
                       </h3>
-                      <div className="flex items-center gap-3 text-sm text-[var(--text-muted)]">
-                        <span className="flex items-center gap-1">
-                          <MapPin className="w-3.5 h-3.5" />
-                          {stay.city}
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <StayIcon className="w-3.5 h-3.5" />
-                          {stay.type}
-                        </span>
-                      </div>
+                      <span className="flex items-center gap-1 text-sm text-[var(--text-muted)]">
+                        <MapPin className="w-3.5 h-3.5" />
+                        {riad.city}
+                      </span>
                     </div>
                   </div>
                   <div className="inline-block px-2 py-0.5 text-xs font-medium rounded bg-[var(--color-accent)]/10 text-[var(--color-accent)] mb-3">
-                    {stay.price}
+                    {riad.price}
                   </div>
-                  <p className="text-sm text-[var(--text-secondary)] mb-4">{stay.description}</p>
+                  <p className="text-sm text-[var(--text-secondary)] mb-4">{riad.description}</p>
                   <div className="grid grid-cols-2 gap-2">
-                    {stay.highlights.map((highlight, i) => (
+                    {riad.highlights.map((highlight, i) => (
                       <div key={i} className="flex items-start gap-1.5 text-xs text-[var(--text-muted)]">
                         <CheckCircle className="w-3 h-3 mt-0.5 shrink-0 text-[var(--color-gold)]" />
                         {highlight}
@@ -907,19 +889,20 @@ export default function MoroccoForCouplesPage() {
         </div>
       </section>
 
-      {/* ── Couple Activities ── */}
+      {/* ── Couple Experiences ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <CalendarHeart className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Best Couple Activities in Morocco
+            <Sparkles className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Unforgettable Couple Experiences
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Experiences that bring you closer together. From cooking classes to desert stargazing, these are the activities couples love most in Morocco.
+            From desert glamping to rooftop dinners and hammam rituals, these are the experiences
+            that make a Morocco couple trip truly special.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {coupleActivities.map((item) => {
+            {coupleExperiences.map((item) => {
               const ActivityIcon = item.icon;
               return (
                 <div key={item.activity} className="card-moroccan p-6">
@@ -944,15 +927,9 @@ export default function MoroccoForCouplesPage() {
                     </div>
                   </div>
                   <p className="text-sm text-[var(--text-secondary)] mb-3">{item.description}</p>
-                  <div className="flex flex-col gap-2 text-xs">
-                    <div className="flex items-center gap-1.5 text-[var(--text-muted)]">
-                      <MapPin className="w-3 h-3 text-[var(--color-accent)]" />
-                      <strong>Best in:</strong> {item.bestIn}
-                    </div>
-                    <div className="flex items-start gap-1.5 p-2 bg-[var(--surface-muted)] rounded-lg">
-                      <Heart className="w-3 h-3 mt-0.5 text-[var(--color-accent)] shrink-0" />
-                      <span className="text-[var(--text-secondary)] italic">{item.romanticFactor}</span>
-                    </div>
+                  <div className="flex items-center gap-1.5 text-xs text-[var(--text-muted)]">
+                    <MapPin className="w-3 h-3 text-[var(--color-accent)]" />
+                    <strong>Best in:</strong> {item.bestIn}
                   </div>
                 </div>
               );
@@ -961,151 +938,156 @@ export default function MoroccoForCouplesPage() {
         </div>
       </section>
 
-      {/* ── Sunset Spots ── */}
+      {/* ── Cultural Sensitivity & LGBTQ+ ── */}
       <section className="py-16 md:py-20">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Sunset className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Most Romantic Sunset Spots
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
+            <ShieldCheck className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Cultural Sensitivity for Couples
           </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Morocco offers some of the world&apos;s most breathtaking sunsets. Here are the best places to watch the day end, together.
-          </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {sunsetSpots.map((spot) => (
-              <div key={spot.name} className="card-moroccan p-6">
-                <div className="flex items-center gap-2 mb-3">
-                  <Sunset className="w-5 h-5 text-[var(--color-gold)]" />
-                  <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                    {spot.name}
-                  </h3>
-                </div>
-                <div className="flex items-center gap-1 text-xs text-[var(--text-muted)] mb-3">
-                  <MapPin className="w-3 h-3" />
-                  {spot.city}
-                </div>
-                <p className="text-sm text-[var(--text-secondary)] mb-3">{spot.description}</p>
-                <div className="flex items-start gap-2 p-2 bg-[var(--surface-muted)] rounded-lg">
-                  <Info className="w-3 h-3 text-[var(--color-gold)] mt-0.5 shrink-0" />
-                  <p className="text-xs text-[var(--text-muted)]">{spot.tip}</p>
-                </div>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="card-moroccan p-5">
+              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                <Heart className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
+                Public Displays of Affection
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                Holding hands is generally fine in tourist areas. Kissing and overt physical
+                affection in public are frowned upon. Within your riad, hotel, or restaurant,
+                you can be completely relaxed. Respecting this boundary enhances your experience
+                and earns genuine warmth from locals, who will often go out of their way for you.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-5">
+              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                <Users className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
+                Unmarried Couples
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                While Moroccan law prohibits unmarried Moroccan couples from sharing a room,
+                this rule is very rarely applied to foreign tourists. International hotels and
+                tourist riads accommodate unmarried foreign couples routinely. You will not be
+                asked for a marriage certificate. Book double rooms normally.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-5">
+              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                <AlertTriangle className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
+                LGBTQ+ Awareness
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                Same-sex relationships are illegal in Morocco. LGBTQ+ travelers should exercise
+                discretion and avoid public displays of affection. Many LGBTQ+ travelers visit
+                Morocco without incident by being mindful. Book internationally-oriented riads
+                in tourist areas. While attitudes are slowly evolving in cities like Marrakech,
+                caution is strongly advised. Research current conditions before your trip.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-5">
+              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                <BookOpen className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
+                Dress Code
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                Dress modestly in public, covering shoulders and knees, especially in medinas
+                and near mosques. Loose, breathable fabrics are ideal. At riad pools and private
+                hotels, swimwear is fine. For rooftop dinners, smart-casual is the norm. Bring
+                layers for cool desert evenings and a scarf for sun and sand protection.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ── Romantic Restaurants ── */}
+      {/* ── Photography Spots ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Utensils className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Most Romantic Restaurants
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            From hidden garden restaurants to rooftop terraces overlooking the medina. The best places for a romantic dinner in Morocco.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {romanticRestaurants.map((restaurant) => (
-              <div key={restaurant.name} className="card-moroccan p-6">
-                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
-                  {restaurant.name}
-                </h3>
-                <div className="flex items-center gap-3 text-xs text-[var(--text-muted)] mb-3">
-                  <span className="flex items-center gap-1">
-                    <MapPin className="w-3 h-3" />
-                    {restaurant.city}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Coffee className="w-3 h-3" />
-                    {restaurant.cuisine}
-                  </span>
-                </div>
-                <p className="text-sm text-[var(--text-secondary)] mb-3">{restaurant.description}</p>
-                <div className="inline-block px-2 py-0.5 text-xs font-medium rounded bg-[var(--color-accent)]/10 text-[var(--color-accent)]">
-                  {restaurant.price}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── PDA & Cultural Guidelines ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <ShieldCheck className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            PDA &amp; Cultural Guidelines for Couples
+            <Camera className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Best Photography Spots for Couples
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-4">
-            Morocco is a warm and welcoming country, but it is also a conservative Muslim society.
-            Understanding these guidelines will help you navigate public spaces comfortably.
+            Morocco is one of the most photogenic countries on Earth. These spots are perfect
+            for couple portraits and memories.
           </p>
           <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
             <Info className="w-3.5 h-3.5 inline mr-1" />
-            These guidelines are based on social norms, not just laws. What is tolerated in a five-star hotel lobby may not be appropriate in a medina alley.
+            For professional couple photoshoots, hire a local photographer from 1,500 MAD for a 2-hour session. Best light is at sunrise and the hour before sunset.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {pdaGuidelines.map((item) => {
-              const GuideIcon = item.icon;
-              return (
-                <div key={item.rule} className="card-moroccan p-5">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-[var(--surface-muted)] flex items-center justify-center shrink-0">
-                      <GuideIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                    </div>
-                    <div>
-                      <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                        {item.rule}
-                      </h3>
-                      <span className={`text-xs font-semibold ${item.statusColor}`}>
-                        {item.status}
-                      </span>
-                    </div>
-                  </div>
-                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{item.description}</p>
+            {photoSpots.map((spot) => (
+              <div key={spot.spot} className="card-moroccan p-5">
+                <div className="flex items-center gap-2 mb-2">
+                  <Camera className="w-4 h-4 text-[var(--color-accent)]" />
+                  <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+                    {spot.spot}
+                  </h3>
                 </div>
-              );
-            })}
+                <span className="inline-flex items-center gap-1 text-xs text-[var(--text-muted)] mb-2">
+                  <MapPin className="w-3 h-3" />
+                  {spot.city}
+                </span>
+                <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{spot.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ── Proposal & Anniversary Ideas ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+      {/* ── 7-Day Couple Itinerary ── */}
+      <section className="py-16 md:py-20">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Gem className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Proposal &amp; Anniversary Ideas
+            <Globe className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            7-Day Romantic Morocco Itinerary for Couples
           </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Morocco provides some of the most unforgettable settings in the world for a proposal or anniversary celebration. Here are five ideas with logistics and budgets.
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-4">
+            A curated week combining medina magic, desert adventure, and coastal relaxation.
+            The most romantic route through Morocco.
+          </p>
+          <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
+            <Info className="w-3.5 h-3.5 inline mr-1" />
+            This itinerary can be customized. Swap Essaouira for Fes for cultural depth, or add Chefchaouen for mountain scenery.
           </p>
 
           <div className="max-w-4xl mx-auto">
             <div className="relative">
-              {/* Timeline line */}
               <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-[var(--color-accent)]/20 hidden md:block" />
 
               <div className="space-y-8">
-                {proposalIdeas.map((item, index) => {
-                  const IdeaIcon = item.icon;
+                {coupleItinerary.map((day) => {
+                  const DayIcon = day.icon;
                   return (
-                    <div key={index} className="relative flex gap-6">
+                    <div key={day.day} className="relative flex gap-6">
                       <div className="w-12 h-12 rounded-full bg-[var(--color-accent)] flex items-center justify-center shrink-0 z-10">
-                        <IdeaIcon className="w-5 h-5 text-white" />
+                        <DayIcon className="w-5 h-5 text-white" />
                       </div>
                       <div className="card-moroccan p-6 flex-1">
-                        <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                          {item.idea}
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="text-xs font-bold text-[var(--color-accent)] bg-[var(--color-accent)]/10 px-2 py-0.5 rounded">
+                            Day {day.day}
+                          </span>
+                          <span className="text-xs text-[var(--text-muted)] flex items-center gap-1">
+                            <MapPin className="w-3 h-3" />
+                            {day.location}
+                          </span>
+                        </div>
+                        <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                          {day.title}
                         </h3>
-                        <p className="text-sm text-[var(--text-secondary)] mb-3">{item.description}</p>
-                        <div className="inline-block px-2 py-0.5 text-xs font-medium rounded bg-[var(--color-gold)]/10 text-[var(--color-gold)]">
-                          {item.budget}
+                        <p className="text-sm text-[var(--text-secondary)] mb-4">{day.description}</p>
+                        <div className="space-y-2">
+                          {day.highlights.map((highlight, i) => (
+                            <div key={i} className="flex items-start gap-1.5 text-xs text-[var(--text-muted)]">
+                              <CheckCircle className="w-3 h-3 mt-0.5 shrink-0 text-[var(--color-gold)]" />
+                              {highlight}
+                            </div>
+                          ))}
                         </div>
                       </div>
                     </div>
@@ -1117,54 +1099,49 @@ export default function MoroccoForCouplesPage() {
         </div>
       </section>
 
-      {/* ── Romantic Itineraries ── */}
-      <section className="py-16 md:py-20">
+      {/* ── Budget Breakdown ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Globe className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Romantic Itinerary Suggestions
+            <Wallet className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Couples Trip Budget Guide
           </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Three tried-and-tested itineraries for couples, from a classic romantic week to a desert adventure and a mountain escape.
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-4">
+            Realistic budgets for every level of couple trip, from budget-friendly to luxury indulgence.
+            All prices are for two people for 7 days.
+          </p>
+          <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
+            <Info className="w-3.5 h-3.5 inline mr-1" />
+            Prices in Moroccan Dirhams (MAD). 1 USD is approximately 10 MAD, 1 EUR approximately 11 MAD (as of 2026). Seasonal pricing may vary.
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {itineraries.map((itinerary) => {
-              const ItineraryIcon = itinerary.icon;
+            {budgetTiers.map((tier) => {
+              const TierIcon = tier.icon;
               return (
-                <div key={itinerary.name} className="card-moroccan p-6">
+                <div key={tier.tier} className="card-moroccan p-6">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                      <ItineraryIcon className="w-5 h-5 text-[var(--color-accent)]" />
+                    <div className={`w-10 h-10 rounded-full ${tier.bgColor} flex items-center justify-center shrink-0`}>
+                      <TierIcon className={`w-5 h-5 ${tier.color}`} />
                     </div>
                     <div>
                       <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                        {itinerary.name}
+                        {tier.tier}
                       </h3>
-                      <div className="flex items-center gap-2 text-xs text-[var(--text-muted)]">
-                        <Clock className="w-3 h-3" />
-                        {itinerary.duration}
-                      </div>
+                      <span className={`text-xs font-semibold ${tier.color}`}>{tier.totalBudget}</span>
                     </div>
                   </div>
-                  <div className="flex items-center gap-1 text-xs text-[var(--color-accent)] font-medium mb-3 p-2 bg-[var(--color-accent)]/5 rounded-lg">
-                    <Compass className="w-3 h-3" />
-                    {itinerary.route}
-                  </div>
-                  <p className="text-sm text-[var(--text-secondary)] mb-4">{itinerary.description}</p>
-                  <div className="space-y-2 mb-4">
-                    {itinerary.highlights.map((highlight, i) => (
-                      <div key={i} className="flex items-start gap-1.5 text-xs text-[var(--text-muted)]">
-                        <CheckCircle className="w-3 h-3 mt-0.5 shrink-0 text-[var(--color-gold)]" />
-                        {highlight}
+                  <p className="text-sm text-[var(--text-secondary)] mb-4">{tier.description}</p>
+                  <div className="space-y-3">
+                    {tier.breakdown.map((line, i) => (
+                      <div key={i} className="border-b border-[var(--border-default)] pb-2 last:border-b-0">
+                        <div className="flex justify-between items-center mb-0.5">
+                          <span className="text-xs font-medium text-[var(--text-primary)]">{line.item}</span>
+                          <span className={`text-xs font-semibold ${tier.color}`}>{line.cost}</span>
+                        </div>
+                        <p className="text-xs text-[var(--text-muted)]">{line.detail}</p>
                       </div>
                     ))}
-                  </div>
-                  <div className="pt-3 border-t border-[var(--border-default)]">
-                    <div className="flex items-center gap-1 text-xs text-[var(--text-muted)]">
-                      <DollarSign className="w-3 h-3 text-[var(--color-accent)]" />
-                      {itinerary.budget}
-                    </div>
                   </div>
                 </div>
               );
@@ -1173,38 +1150,80 @@ export default function MoroccoForCouplesPage() {
         </div>
       </section>
 
-      {/* ── Practical Tips for Couples ── */}
+      {/* ── Best Time for Couples ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Calendar className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Best Time for a Couples Trip to Morocco
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Timing your trip right makes all the difference. Here is what to expect each season.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {bestSeasons.map((season) => {
+              const SeasonIcon = season.icon;
+              return (
+                <div key={season.season} className="card-moroccan p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
+                      <SeasonIcon className="w-5 h-5 text-[var(--color-accent)]" />
+                    </div>
+                    <div>
+                      <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+                        {season.season}
+                      </h3>
+                      <span className={`text-xs font-semibold ${season.ratingColor}`}>{season.rating}</span>
+                    </div>
+                  </div>
+                  <p className="text-sm text-[var(--text-secondary)] mb-4">{season.description}</p>
+                  <div className="space-y-2">
+                    {season.highlights.map((highlight, i) => (
+                      <div key={i} className="flex items-start gap-1.5 text-xs text-[var(--text-muted)]">
+                        <CheckCircle className="w-3 h-3 mt-0.5 shrink-0 text-[var(--color-gold)]" />
+                        {highlight}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Practical Tips ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
             <Info className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Practical Tips for Couples
+            Essential Tips for Couples
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="card-moroccan p-5">
               <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
                 <BookOpen className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Book Riads in Advance
+                Book Riads Early
               </h3>
               <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                The most romantic riads have only 5-10 rooms and sell out months ahead for peak
-                season (October-April). Book at least 2-3 months in advance, especially for
-                Valentine\'s Day, New Year, and Christmas. Ask about special romantic packages
-                that include rooftop dinners and spa treatments.
+                The most romantic riads have only 5-10 rooms and sell out months ahead. Book at
+                least 3-6 months in advance for peak season. Mention special occasions when
+                booking; many riads offer complimentary rose petals, champagne, or upgrades.
               </p>
             </div>
 
             <div className="card-moroccan p-5">
               <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <DollarSign className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Tipping Etiquette
+                <Award className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
+                Let Your Riad Arrange Everything
               </h3>
               <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Tip from 10-20 MAD for small services (porters, taxi help), from 20-50 MAD for restaurant
-                waiters (10% of bill), and from 50-100 MAD per day for guides and drivers. At
-                luxury riads, a tip for the staff who prepare your private dinner is appreciated
-                (from 50-100 MAD).
+                A good riad is your greatest travel ally. Ask them to arrange rooftop dinners,
+                spa bookings, desert excursions, restaurant reservations, and airport transfers.
+                Riad staff know the city intimately and can access experiences not available to
+                walk-in tourists.
               </p>
             </div>
 
@@ -1214,49 +1233,48 @@ export default function MoroccoForCouplesPage() {
                 Dealing with Touts
               </h3>
               <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                In the medinas of Marrakech and Fes, you may encounter people offering directions,
-                shops, or restaurant recommendations. A polite but firm &quot;la, shukran&quot; (no, thank you)
-                is sufficient. Walking confidently as a couple reduces approaches. Avoid engaging
-                if you are not interested.
+                In Marrakech and Fes medinas, you may encounter persistent touts. A polite but
+                firm &quot;la, shukran&quot; (no, thank you) is enough. Walking confidently as a
+                couple reduces approaches. Do not engage if not interested; smile and keep walking.
               </p>
             </div>
 
             <div className="card-moroccan p-5">
               <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <ShieldCheck className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Safety at Night
+                <Coffee className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
+                Do Not Over-Schedule
               </h3>
               <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Main tourist areas are safe at night, but medina alleys can be disorienting
-                after dark. Use GPS or ask your riad for directions. Riads can arrange taxis.
-                Keep your phone charged for navigation. Avoid carrying large amounts of cash
-                or wearing flashy jewelry in the medina.
+                The biggest travel mistake is trying to see everything. Morocco rewards slow
+                travel. Leave time for lazy riad mornings by the pool, spontaneous souk wandering,
+                and sitting on a rooftop together watching the world. The most romantic moments
+                are unplanned.
               </p>
             </div>
 
             <div className="card-moroccan p-5">
               <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <Camera className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Photography Tips
+                <Globe className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
+                Travel Insurance
               </h3>
               <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Morocco is incredibly photogenic, but always ask before photographing people.
-                Some may ask for a small tip (from 10 MAD). Sunrise and sunset are the best
-                times for romantic photos. For professional couple photoshoots, hire a local
-                photographer (from 1,500 MAD for a 2-hour session).
+                Always purchase comprehensive travel insurance. Ensure it covers medical
+                emergencies, trip cancellation, lost luggage, and adventure activities like
+                camel riding and hot air balloon flights. Morocco has good private hospitals
+                in major cities, but insurance provides essential peace of mind.
               </p>
             </div>
 
             <div className="card-moroccan p-5">
               <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <Award className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Let Your Riad Help
+                <DollarSign className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
+                Tipping Etiquette
               </h3>
               <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                A good riad is your greatest ally for a romantic trip. Ask them to arrange
-                rooftop dinners, spa bookings, desert excursions, restaurant reservations, and
-                even proposal setups. Riad staff know the city intimately and can often access
-                experiences not available to walk-in tourists.
+                Tip from 10-20 MAD for small services, from 20-50 MAD for restaurant waiters
+                (10% of the bill), and from 50-100 MAD per day for guides and drivers. A tip
+                for staff who arrange special setups at your riad is warmly appreciated. Keep
+                small bills handy throughout your trip.
               </p>
             </div>
           </div>
@@ -1283,50 +1301,109 @@ export default function MoroccoForCouplesPage() {
         </div>
       </section>
 
-      {/* ── Related Pages ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+      {/* ── Related Guides ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
-            Continue Exploring Morocco
+            Related Guides
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Link href="/morocco-spa-guide" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
-              <Sparkles className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Morocco Spa &amp; Hammam Guide
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            <Link href="/romantic" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
+              <Heart className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
+                Romantic Morocco
               </h3>
               <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Top 20 spa experiences including couple-friendly hammams with prices and booking tips.
+                The most romantic experiences, destinations, and sunset spots across Morocco.
               </p>
               <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
                 Read more <ArrowRight className="w-3.5 h-3.5" />
               </span>
             </Link>
-            <Link href="/accommodations" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
+            <Link href="/honeymoon" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
+              <Gem className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
+                Honeymoon Guide
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] mb-3">
+                Planning a honeymoon? Our dedicated guide covers everything for newlyweds.
+              </p>
+              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
+                Read more <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
+            <Link href="/morocco-honeymoon-guide" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
+              <Crown className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
+                Honeymoon Itinerary
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] mb-3">
+                A detailed 7-day honeymoon itinerary with luxury riads and desert glamping.
+              </p>
+              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
+                Read more <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
+            <Link href="/morocco-best-riads" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
               <Bed className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Where to Stay in Morocco
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
+                Best Riads
               </h3>
               <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Complete guide to Moroccan accommodation from traditional riads to luxury desert camps.
+                Top-rated riads in Marrakech, Fes, Essaouira, and Chefchaouen.
               </p>
               <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
                 Read more <ArrowRight className="w-3.5 h-3.5" />
               </span>
             </Link>
-            <Link href="/best-time" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
-              <CalendarHeart className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Best Time to Visit Morocco
+            <Link href="/morocco-spa-guide" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
+              <Sparkles className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
+                Spa &amp; Hammam Guide
               </h3>
               <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Month-by-month guide to weather, events, and the ideal time for your romantic trip.
+                Couple-friendly hammams, spa experiences, and wellness retreats.
               </p>
               <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
                 Read more <ArrowRight className="w-3.5 h-3.5" />
               </span>
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* ── CTA Section ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+        <div className="container-morocco max-w-3xl text-center">
+          <Heart className="w-12 h-12 text-[var(--color-accent)] mx-auto mb-6" />
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
+            Ready to Plan Your Romantic Morocco Trip?
+          </h2>
+          <p className="text-lg text-[var(--text-secondary)] mb-8">
+            Morocco awaits with lantern-lit courtyards, desert skies full of stars, rooftop
+            dinners above ancient medinas, and memories that will last a lifetime. Start
+            planning your couple getaway today.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link
+              href="/morocco-honeymoon-guide"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--color-accent)] text-white rounded-lg hover:bg-[var(--color-accent)]/90 transition-colors font-[family-name:var(--font-heading)] font-semibold"
+            >
+              <Crown className="w-4 h-4" />
+              Honeymoon Itinerary Guide
+            </Link>
+            <Link
+              href="/morocco-spa-guide"
+              className="inline-flex items-center gap-2 px-6 py-3 border border-[var(--color-accent)] text-[var(--color-accent)] rounded-lg hover:bg-[var(--color-accent)]/5 transition-colors font-[family-name:var(--font-heading)] font-semibold"
+            >
+              <Sparkles className="w-4 h-4" />
+              Spa &amp; Hammam Guide
+            </Link>
+          </div>
+          <p className="text-xs text-[var(--text-muted)] mt-6">
+            All prices listed in Moroccan Dirhams (MAD). Prices are estimates and may vary by season, availability, and provider.
+            Last updated: March 2026.
+          </p>
         </div>
       </section>
     </>
