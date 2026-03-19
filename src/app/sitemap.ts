@@ -255,6 +255,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/things-to-do-tangier',
     '/morocco-visa-guide',
     '/things-to-do-agadir',
+    '/morocco-hammam-guide',
+    '/marrakech-to-fes',
+    '/morocco-airport-transfers',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

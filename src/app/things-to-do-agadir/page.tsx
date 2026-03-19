@@ -42,51 +42,18 @@ const BASE_URL = 'https://citytoursmorocco.com';
 
 export const metadata: Metadata = {
   title: 'Top 15+ Things to Do in Agadir 2026 | Complete Guide',
-  description:
-    'Discover the best things to do in Agadir in 2026. Beach promenade, Kasbah Oufella, Souk El Had, Crocoparc, Paradise Valley, Taghazout surfing, golf, hammam, seafood port, and more. Prices in MAD and insider tips.',
-  keywords: [
-    'things to do in Agadir',
-    'Agadir attractions',
-    'what to do in Agadir',
-    'Agadir activities',
-    'Agadir sightseeing',
-    'Agadir beach',
-    'Kasbah Oufella',
-    'Souk El Had Agadir',
-    'Crocoparc Agadir',
-    'Paradise Valley Morocco',
-    'Taghazout surfing',
-    'Agadir golf',
-    'Agadir hammam',
-    'Agadir seafood',
-    'Valley of the Birds Agadir',
-    'Amazigh Heritage Museum',
-    'Agadir camel rides',
-    'Agadir boat cruise',
-    'Tiznit day trip',
-    'Agadir 2026',
-    'Agadir travel guide',
-    'best Agadir experiences',
-  ],
+  description: 'Discover the best things to do in Agadir in 2026. Beach promenade, Kasbah Oufella, Souk El Had, Crocoparc, Paradise Valley, Taghazout surfing, golf, hammam, seafood port, and more. Prices in MAD and insider tips.',
+  keywords: ['things to do in Agadir', 'Agadir attractions', 'what to do in Agadir', 'Agadir activities', 'Agadir sightseeing', 'Agadir beach', 'Kasbah Oufella', 'Souk El Had Agadir', 'Crocoparc Agadir', 'Paradise Valley Morocco', 'Taghazout surfing', 'Agadir golf', 'Agadir hammam', 'Agadir seafood', 'Valley of the Birds Agadir', 'Amazigh Heritage Museum', 'Agadir camel rides', 'Agadir boat cruise', 'Tiznit day trip', 'Agadir 2026', 'Agadir travel guide', 'best Agadir experiences'],
   openGraph: {
     title: 'Top 15+ Things to Do in Agadir 2026 | Complete Guide',
-    description:
-      'The complete guide to Agadir activities and experiences. Beach, Kasbah Oufella, Souk El Had, surfing, golf, Paradise Valley, and more with prices in MAD.',
+    description: 'The complete guide to Agadir activities and experiences. Beach, Kasbah Oufella, Souk El Had, surfing, golf, Paradise Valley, and more with prices in MAD.',
     url: `${BASE_URL}/things-to-do-agadir`,
-    images: [
-      {
-        url: `${BASE_URL}/images/hero-agadir.webp`,
-        width: 1200,
-        height: 630,
-        alt: 'Panoramic view of Agadir beach and promenade with the Atlantic Ocean and modern waterfront hotels',
-      },
-    ],
+    images: [{ url: `${BASE_URL}/images/hero-agadir.webp`, width: 1200, height: 630, alt: 'Panoramic view of Agadir beach and promenade with the Atlantic Ocean and modern waterfront hotels' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Top 15+ Things to Do in Agadir 2026',
-    description:
-      'Beach, Kasbah Oufella, Souk El Had, Crocoparc, surfing at Taghazout, Paradise Valley, golf, hammam, and more. Complete guide with real prices.',
+    description: 'Beach, Kasbah Oufella, Souk El Had, Crocoparc, surfing at Taghazout, Paradise Valley, golf, hammam, and more. Complete guide with real prices.',
     images: [`${BASE_URL}/images/hero-agadir.webp`],
   },
   alternates: { canonical: `${BASE_URL}/things-to-do-agadir` },
@@ -97,48 +64,23 @@ export const metadata: Metadata = {
    ═══════════════════════════════════════════════════════════════ */
 
 const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'TravelGuide',
+  '@context': 'https://schema.org', '@type': 'TravelGuide',
   '@id': `${BASE_URL}/things-to-do-agadir`,
   name: 'Top 15+ Things to Do in Agadir 2026 | Complete Guide',
-  description:
-    'Discover the best things to do in Agadir in 2026. From the sweeping beach promenade and Kasbah Oufella to surfing Taghazout, Paradise Valley day trips, and world-class golf.',
+  description: 'Discover the best things to do in Agadir in 2026. From the sweeping beach promenade and Kasbah Oufella to surfing Taghazout, Paradise Valley, and world-class golf.',
   url: `${BASE_URL}/things-to-do-agadir`,
   image: `${BASE_URL}/images/hero-agadir.webp`,
-  author: {
-    '@type': 'Organization',
-    name: 'CityGuide Morocco',
-    url: BASE_URL,
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'CityGuide Morocco',
-    url: BASE_URL,
-  },
-  datePublished: '2026-03-19',
-  dateModified: '2026-03-19',
+  author: { '@type': 'Organization', name: 'CityGuide Morocco', url: BASE_URL },
+  publisher: { '@type': 'Organization', name: 'CityGuide Morocco', url: BASE_URL },
+  datePublished: '2026-03-19', dateModified: '2026-03-19',
   mainEntityOfPage: `${BASE_URL}/things-to-do-agadir`,
-  isPartOf: {
-    '@type': 'WebSite',
-    name: 'CityGuide Morocco',
-    url: BASE_URL,
-  },
-  about: {
-    '@type': 'City',
-    name: 'Agadir',
-    containedInPlace: {
-      '@type': 'Country',
-      name: 'Morocco',
-    },
-  },
-  breadcrumb: {
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Agadir', item: `${BASE_URL}/agadir` },
-      { '@type': 'ListItem', position: 3, name: 'Things to Do', item: `${BASE_URL}/things-to-do-agadir` },
-    ],
-  },
+  isPartOf: { '@type': 'WebSite', name: 'CityGuide Morocco', url: BASE_URL },
+  about: { '@type': 'City', name: 'Agadir', containedInPlace: { '@type': 'Country', name: 'Morocco' } },
+  breadcrumb: { '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
+    { '@type': 'ListItem', position: 2, name: 'Agadir', item: `${BASE_URL}/agadir` },
+    { '@type': 'ListItem', position: 3, name: 'Things to Do', item: `${BASE_URL}/things-to-do-agadir` },
+  ] },
 };
 
 const faqJsonLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
@@ -560,12 +502,11 @@ export default function ThingsToDoAgadirPage() {
             Beaches &amp; Waterfront
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-4">
-            Agadir 10-kilometer golden beach is the centerpiece of the city. From swimming and sunbathing
-            to camel rides and sunset cruises, the waterfront delivers the classic Moroccan beach experience.
+            Agadir 10-kilometer golden beach is the centerpiece. From swimming and sunbathing to camel rides and sunset cruises, the waterfront delivers.
           </p>
           <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
             <Info className="w-3.5 h-3.5 inline mr-1" />
-            Prices shown are starting prices per person. Seasonal pricing may apply for water activities and boat cruises.
+            All prices are starting prices per person. Seasonal pricing may apply.
           </p>
 
           <div className="space-y-8 max-w-5xl mx-auto">
@@ -627,12 +568,11 @@ export default function ThingsToDoAgadirPage() {
             Landmarks &amp; Culture
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-4">
-            Though rebuilt after the 1960 earthquake, Agadir preserves its heritage through the hilltop Kasbah,
-            an outstanding Amazigh museum, and a green oasis in the heart of the city.
+            Though rebuilt after the 1960 earthquake, Agadir preserves heritage through the hilltop Kasbah, an outstanding Amazigh museum, and a green city oasis.
           </p>
           <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
             <Info className="w-3.5 h-3.5 inline mr-1" />
-            Most cultural attractions are free or very affordable. Opening times may change during Ramadan and national holidays.
+            Most cultural attractions are free or very affordable. Opening times may change during Ramadan.
           </p>
 
           <div className="space-y-8 max-w-5xl mx-auto">
@@ -694,12 +634,11 @@ export default function ThingsToDoAgadirPage() {
             Shopping &amp; Markets
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-4">
-            Souk El Had is one of the largest markets in Morocco — an authentic shopping experience
-            with local prices and the vibrancy of a true Moroccan souk.
+            Souk El Had is one of the largest markets in Morocco — authentic shopping with local prices and true souk vibrancy.
           </p>
           <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
             <Info className="w-3.5 h-3.5 inline mr-1" />
-            Haggling is expected in the souk. Prices are negotiable and starting at half the asking price is standard practice.
+            Haggling is expected. Start at half the asking price.
           </p>
 
           <div className="space-y-8 max-w-5xl mx-auto">
@@ -761,12 +700,11 @@ export default function ThingsToDoAgadirPage() {
             Nature &amp; Adventure
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-4">
-            From crocodile parks and hidden mountain pools to world-class surfing and tropical plantations,
-            the area around Agadir is packed with adventure.
+            Crocodile parks, hidden mountain pools, world-class surfing, and tropical plantations — the Agadir area is packed with adventure.
           </p>
           <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
             <Info className="w-3.5 h-3.5 inline mr-1" />
-            Day trips to Paradise Valley and Taghazout are easily done independently or with organized tours.
+            Paradise Valley and Taghazout are easily reached independently or with organized tours.
           </p>
 
           <div className="space-y-8 max-w-5xl mx-auto">
@@ -828,12 +766,11 @@ export default function ThingsToDoAgadirPage() {
             Food, Wellness &amp; Sport
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-4">
-            Fresh Atlantic seafood, traditional hammam rituals, and championship golf courses make Agadir
-            a destination for the body as much as the soul.
+            Fresh Atlantic seafood, traditional hammam rituals, and championship golf make Agadir a destination for body and soul.
           </p>
           <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
             <Info className="w-3.5 h-3.5 inline mr-1" />
-            Seafood prices vary by catch and season. Golf green fees are lowest in summer and for afternoon tee times.
+            Seafood prices vary by catch and season. Golf fees are lowest in summer and for afternoon tee times.
           </p>
 
           <div className="space-y-8 max-w-5xl mx-auto">
@@ -895,12 +832,11 @@ export default function ThingsToDoAgadirPage() {
             Day Trips &amp; Excursions
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-4">
-            Beyond the city, the Souss region offers walled silver towns, argan forests, and dramatic
-            coastline waiting to be explored.
+            Beyond the city: walled silver towns, argan forests, and dramatic coastline waiting to be explored.
           </p>
           <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
             <Info className="w-3.5 h-3.5 inline mr-1" />
-            Day trip prices are starting prices per person. Self-guided options are available for all destinations.
+            Starting prices per person. Self-guided options available for all destinations.
           </p>
 
           <div className="space-y-8 max-w-5xl mx-auto">
@@ -1041,36 +977,24 @@ export default function ThingsToDoAgadirPage() {
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <Sun className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
-                  <div>
-                    <p className="text-sm font-semibold text-[var(--text-primary)]">Morning</p>
-                    <p className="text-xs text-[var(--text-secondary)]">
-                      Start with a beach walk along the 10 km promenade (free). Swim in the gentle Atlantic
-                      waves and relax on the golden sand. Visit Valley of the Birds (free) for a peaceful
-                      break with exotic birds and shaded walkways.
-                    </p>
-                  </div>
+                  <p className="text-xs text-[var(--text-secondary)]">
+                    <span className="text-sm font-semibold text-[var(--text-primary)]">Morning: </span>
+                    Beach walk along the 10 km promenade (free). Swim and relax. Visit Valley of the Birds (free).
+                  </p>
                 </div>
                 <div className="flex items-start gap-3">
                   <Sun className="w-4 h-4 text-[var(--color-accent)] mt-0.5 shrink-0" />
-                  <div>
-                    <p className="text-sm font-semibold text-[var(--text-primary)]">Afternoon</p>
-                    <p className="text-xs text-[var(--text-secondary)]">
-                      Explore Souk El Had (free) — browse argan oil, spices, and leather goods. Visit the
-                      Amazigh Heritage Museum (from 20 MAD) for cultural context. Lunch at a local restaurant
-                      near the souk (from 40-80 MAD).
-                    </p>
-                  </div>
+                  <p className="text-xs text-[var(--text-secondary)]">
+                    <span className="text-sm font-semibold text-[var(--text-primary)]">Afternoon: </span>
+                    Souk El Had (free) for argan oil and spices. Amazigh Heritage Museum (from 20 MAD). Lunch near the souk (from 40-80 MAD).
+                  </p>
                 </div>
                 <div className="flex items-start gap-3">
                   <Star className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
-                  <div>
-                    <p className="text-sm font-semibold text-[var(--text-primary)]">Evening</p>
-                    <p className="text-xs text-[var(--text-secondary)]">
-                      Taxi to Kasbah Oufella for sunset (from 30 MAD taxi). Watch the bay turn golden from
-                      236 meters above the city. Dinner at the fishing port — grilled seafood from 50-100 MAD.
-                      Estimated Day 1 cost: from 150-300 MAD.
-                    </p>
-                  </div>
+                  <p className="text-xs text-[var(--text-secondary)]">
+                    <span className="text-sm font-semibold text-[var(--text-primary)]">Evening: </span>
+                    Kasbah Oufella for sunset (from 30 MAD taxi). Dinner at the port — grilled seafood from 50-100 MAD. Day 1 cost: from 150-300 MAD.
+                  </p>
                 </div>
               </div>
             </div>
@@ -1088,35 +1012,24 @@ export default function ThingsToDoAgadirPage() {
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <Sun className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
-                  <div>
-                    <p className="text-sm font-semibold text-[var(--text-primary)]">Morning</p>
-                    <p className="text-xs text-[var(--text-secondary)]">
-                      Option A: Paradise Valley day trip (from 40 MAD by shared taxi). Swim in turquoise rock
-                      pools and hike through palm-lined gorges. Option B: Grand taxi to Taghazout (from 15 MAD)
-                      for a surf lesson (from 250 MAD).
-                    </p>
-                  </div>
+                  <p className="text-xs text-[var(--text-secondary)]">
+                    <span className="text-sm font-semibold text-[var(--text-primary)]">Morning: </span>
+                    Option A: Paradise Valley (from 40 MAD taxi) — swim in turquoise pools. Option B: Taghazout surf lesson (from 250 MAD).
+                  </p>
                 </div>
                 <div className="flex items-start gap-3">
                   <Sun className="w-4 h-4 text-[var(--color-accent)] mt-0.5 shrink-0" />
-                  <div>
-                    <p className="text-sm font-semibold text-[var(--text-primary)]">Afternoon</p>
-                    <p className="text-xs text-[var(--text-secondary)]">
-                      Lunch at Paradise Valley (Berber tagine from 50 MAD) or Taghazout (fish tagine from 50
-                      MAD). Explore the surf village or continue swimming. Return to Agadir by late afternoon.
-                    </p>
-                  </div>
+                  <p className="text-xs text-[var(--text-secondary)]">
+                    <span className="text-sm font-semibold text-[var(--text-primary)]">Afternoon: </span>
+                    Lunch: Berber tagine or fish tagine from 50 MAD. Explore the surf village or continue swimming. Return to Agadir.
+                  </p>
                 </div>
                 <div className="flex items-start gap-3">
                   <Star className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
-                  <div>
-                    <p className="text-sm font-semibold text-[var(--text-primary)]">Evening</p>
-                    <p className="text-xs text-[var(--text-secondary)]">
-                      Traditional hammam to soothe tired muscles (from 20 MAD public / from 250 MAD spa).
-                      Promenade stroll and dinner at a waterfront restaurant (from 80-150 MAD).
-                      Estimated Day 2 cost: from 200-600 MAD.
-                    </p>
-                  </div>
+                  <p className="text-xs text-[var(--text-secondary)]">
+                    <span className="text-sm font-semibold text-[var(--text-primary)]">Evening: </span>
+                    Hammam (from 20 MAD public / from 250 MAD spa). Promenade dinner (from 80-150 MAD). Day 2 cost: from 200-600 MAD.
+                  </p>
                 </div>
               </div>
             </div>

@@ -92,9 +92,7 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: `${BASE_URL}/things-to-do-essaouira` },
 };
-
 /* ── SECTION ── */
-
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'TravelGuide',
@@ -154,7 +152,6 @@ const faqJsonLd = {
 };
 
 /* ── SECTION ── */
-
 const medinaAttractions = [
   {
     name: 'Medina & Ramparts Walk',
@@ -207,7 +204,6 @@ const medinaAttractions = [
 ];
 
 /* ── SECTION ── */
-
 const beachActivities = [
   {
     name: 'Surfing & Windsurfing',
@@ -234,7 +230,6 @@ const beachActivities = [
 ];
 
 /* ── SECTION ── */
-
 const cultureExperiences = [
   {
     name: 'Gnaoua Music Experience',
@@ -272,7 +267,6 @@ const cultureExperiences = [
 ];
 
 /* ── SECTION ── */
-
 const foodExperiences = [
   {
     name: 'Essaouira Cooking Class',
@@ -299,7 +293,6 @@ const foodExperiences = [
 ];
 
 /* ── SECTION ── */
-
 const dayTrips = [
   {
     name: 'Diabat Village & Borj el-Berod Ruins',
@@ -337,7 +330,6 @@ const dayTrips = [
 ];
 
 /* ── SECTION ── */
-
 const wellnessAndShopping = [
   {
     name: 'Traditional Hammam',
@@ -364,7 +356,6 @@ const wellnessAndShopping = [
 ];
 
 /* ── SECTION ── */
-
 const budgetTips = [
   { tip: 'Eat at the Port Fish Grills', icon: Fish, description: 'The outdoor grills serve the freshest seafood. Point at your fish, they grill it — sardines, calamari, or sole from 40-80 MAD, a fraction of restaurant prices.', savings: 'Save from 50-100 MAD per meal' },
   { tip: 'Walk the Medina for Free', icon: Footprints, description: 'The medina, rampart walls (exterior), beach, port, and Diabat ruins are all free. The best experiences — atmosphere, light, ocean spray — cost nothing.', savings: 'Free — the best of Essaouira' },
@@ -375,7 +366,6 @@ const budgetTips = [
 ];
 
 /* ── SECTION ── */
-
 const insiderTips = [
   { tip: 'The Wind Is Real', icon: Wind, description: 'The Alizee trade winds blow strongest June to August. Bring layers, secure hats, and expect sand on the beach. Exhilarating for water sports but challenging for relaxed beach days.' },
   { tip: 'Carry a Light Layer', icon: CheckCircle, description: 'Even in summer, evenings are cool due to the ocean breeze. A light jacket or shawl is essential year-round. Medina alleys can be chilly in the morning even when the beach is warm.' },
@@ -386,7 +376,6 @@ const insiderTips = [
 ];
 
 /* ── SECTION ── */
-
 const faqs = [
   { question: 'What are the top things to do in Essaouira?', answer: 'The top things to do include walking the Skala de la Ville ramparts (from 70 MAD), exploring the UNESCO medina (free), visiting the fishing port at dawn (free), surfing or windsurfing (from 200 MAD lesson), Gnaoua music (free), argan cooperatives (free), camel rides (from 200 MAD), cooking classes (from 350 MAD), art galleries (free), and sunset at Place Moulay Hassan.' },
   { question: 'How many days do you need in Essaouira?', answer: 'Two to three days is ideal. Day 1: medina, Skala ramparts, fishing port, sunset at Place Moulay Hassan. Day 2: surfing, argan cooperative, cooking class or camel ride. Day 3: Diabat ruins, Sidi Kaouki, hammam. With one day from Marrakech, focus on medina, port, and Skala.' },
@@ -398,7 +387,6 @@ const faqs = [
 ];
 
 /* ── SECTION ── */
-
 const relatedGuides = [
   { href: '/essaouira', icon: MapPin, title: 'Essaouira City Guide', description: 'Complete guide to Essaouira: neighborhoods, transport, accommodation, and planning.' },
   { href: '/surfing', icon: Wind, title: 'Surfing in Morocco', description: 'Best surf spots from Essaouira and Taghazout to Sidi Kaouki and Imsouane.' },
@@ -468,25 +456,16 @@ export default function ThingsToDoEssaouiraPage() {
             </h2>
             <div className="space-y-4 text-lg text-[var(--text-secondary)] leading-relaxed">
               <p>
-                Essaouira is a city that defies Moroccan stereotypes. While Marrakech overwhelms with
-                intensity and Fes mesmerizes with complexity, Essaouira seduces with ease. This
-                18th-century fortified port on Morocco&apos;s Atlantic coast is a place where whitewashed
-                walls meet crashing waves, where Gnaoua rhythms drift through blue-shuttered alleys, and
-                where the pace of life slows to the rhythm of the tide.
-              </p>
-              <p>
-                The medina — a UNESCO World Heritage Site — is a masterpiece of European-Moroccan
-                military architecture, its grid-like streets refreshingly easy to navigate. Beyond the
-                ramparts, a vast sandy beach stretches south, drawing surfers, windsurfers, and
-                kitesurfers from around the world. The fishing port is a daily spectacle of color and
-                activity, and the seafood grilled fresh from the boats is among the best you will eat
-                anywhere.
+                Essaouira is a city that defies Moroccan stereotypes. This 18th-century fortified port
+                on Morocco&apos;s Atlantic coast is a place where whitewashed walls meet crashing waves,
+                Gnaoua rhythms drift through blue-shuttered alleys, and life slows to the rhythm of the
+                tide. The UNESCO medina is refreshingly easy to navigate, the beach draws surfers from
+                around the world, and the seafood grilled fresh at the port is among the best anywhere.
               </p>
               <p>
                 This guide covers 15+ of the best things to do in Essaouira, organized by category:
                 medina sights, beach activities, culture and music, food experiences, day trips, and
-                wellness. Each includes real 2026 prices in MAD, practical logistics, and insider tips
-                from people who know this city intimately.
+                wellness. Each includes real 2026 prices in MAD and insider tips.
               </p>
             </div>
           </div>

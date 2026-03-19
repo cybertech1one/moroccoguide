@@ -1685,6 +1685,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['things to do Agadir', 'Agadir attractions', 'Agadir beach', 'Agadir guide'],
       priority: 9,
     },
+    {
+      title: 'Morocco Hammam Guide',
+      description: 'Complete guide to Moroccan hammam experience — public vs private, etiquette, what to bring, prices, and best hammams by city.',
+      type: 'page',
+      url: '/morocco-hammam-guide',
+      tags: ['hammam', 'wellness', 'culture', 'spa'],
+      keywords: ['Morocco hammam guide', 'traditional hammam', 'hammam etiquette', 'best hammams Morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Marrakech to Fes Travel Guide',
+      description: 'How to get from Marrakech to Fes — train, bus, private transfer, driving, and scenic desert route with prices and tips.',
+      type: 'page',
+      url: '/marrakech-to-fes',
+      tags: ['transport', 'Marrakech', 'Fes', 'routes'],
+      keywords: ['Marrakech to Fes', 'Marrakech Fes train', 'how to get to Fes', 'Morocco transport'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Airport Transfers Guide',
+      description: 'Airport transfer options for all major Moroccan airports — taxis, buses, private transfers, prices, and scam-avoidance tips.',
+      type: 'page',
+      url: '/morocco-airport-transfers',
+      tags: ['airports', 'transport', 'transfers', 'practical'],
+      keywords: ['Morocco airport transfer', 'Marrakech airport to city', 'airport taxi Morocco', 'Morocco arrival tips'],
+      priority: 8,
+    },
   ];
 
   pages.forEach((p, i) => {
