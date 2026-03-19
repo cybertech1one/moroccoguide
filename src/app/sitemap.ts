@@ -246,6 +246,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-solo-female-travel',
     '/morocco-hiking-guide',
     '/what-to-buy-morocco',
+    '/things-to-do-casablanca',
+    '/morocco-camping-guide',
+    '/morocco-train-travel',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

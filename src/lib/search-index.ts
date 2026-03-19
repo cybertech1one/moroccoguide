@@ -1604,6 +1604,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['what to buy Morocco', 'Morocco souvenirs', 'Morocco shopping', 'Moroccan crafts'],
       priority: 9,
     },
+    {
+      title: 'Things to Do in Casablanca',
+      description: '20+ things to do in Casablanca — Hassan II Mosque, Corniche, Rick\'s Cafe, Art Deco, and nightlife.',
+      type: 'page',
+      url: '/things-to-do-casablanca',
+      tags: ['Casablanca', 'activities', 'sightseeing'],
+      keywords: ['things to do Casablanca', 'Casablanca attractions', 'Casablanca guide', 'Hassan II Mosque'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Camping Guide',
+      description: 'Complete camping guide — wild camping, glamping, desert camps, best spots, gear, and safety tips.',
+      type: 'page',
+      url: '/morocco-camping-guide',
+      tags: ['camping', 'glamping', 'outdoors'],
+      keywords: ['camping Morocco', 'glamping Morocco', 'desert camping', 'wild camping Morocco'],
+      priority: 8,
+    },
+    {
+      title: 'Morocco Train Travel Guide',
+      description: 'ONCF train guide — Al Boraq high-speed, routes, timetables, ticket classes, and booking tips.',
+      type: 'page',
+      url: '/morocco-train-travel',
+      tags: ['trains', 'transport', 'ONCF'],
+      keywords: ['Morocco train', 'ONCF', 'Al Boraq', 'Morocco train travel', 'train tickets Morocco'],
+      priority: 8,
+    },
   ];
 
   pages.forEach((p, i) => {
