@@ -8,68 +8,69 @@ import {
   Clock,
   Star,
   CheckCircle,
-  Shield,
   AlertTriangle,
   Globe,
-  Compass,
   Users,
   Car,
   Fuel,
   Info,
-  Navigation,
   CreditCard,
   ShieldCheck,
   Key,
   FileText,
   DollarSign,
   Calendar,
-  HelpCircle,
+  Route,
+  Shield,
+  CircleDollarSign,
+  Navigation,
 } from 'lucide-react';
 
-/* =====================================================================
+/* ═══════════════════════════════════════════════════════════════
    CONSTANTS
-   ===================================================================== */
+   ═══════════════════════════════════════════════════════════════ */
 
 const BASE_URL = 'https://citytoursmorocco.com';
 
-/* =====================================================================
+/* ═══════════════════════════════════════════════════════════════
    SEO METADATA
-   ===================================================================== */
+   ═══════════════════════════════════════════════════════════════ */
 
 export const metadata: Metadata = {
-  title: 'Morocco Car Rental Guide 2026 | Prices, Tips & Insurance Explained',
+  title: 'Morocco Car Rental Guide 2026 | Prices, Companies, Insurance & Driving Tips',
   description:
-    'Complete Morocco car rental guide for 2026. Compare international vs local agencies, vehicle types, daily rates from 250 MAD, insurance options, driving rules, fuel costs, parking tips, scam warnings, and essential documentation. Book with confidence.',
+    'Rent a car in Morocco with confidence. Compare Hertz, Europcar, Sixt, and local agencies. Daily rates from 250 MAD, insurance options, driving rules, toll roads, fuel costs, scam warnings, road trip routes, and license requirements for 2026.',
   keywords: [
-    'Morocco car rental',
-    'renting a car in Morocco',
-    'car hire Morocco',
-    'Morocco car rental tips',
-    'Morocco rental car prices',
-    'rent a car Marrakech',
-    'Morocco driving permit',
-    'Morocco car insurance',
-    'Morocco car rental companies',
-    'Morocco car rental guide',
-    'cheap car rental Morocco',
-    'SUV rental Morocco',
-    '4x4 rental Morocco',
-    'Morocco car rental scams',
-    'Morocco car hire tips 2026',
-    'Morocco road trip car rental',
-    'Casablanca airport car rental',
+    'rent a car morocco',
+    'morocco car rental',
+    'car hire morocco',
+    'driving in morocco tips',
+    'best car rental companies morocco',
+    'morocco car rental prices 2026',
+    'morocco rental car insurance',
+    'morocco toll roads cost',
+    'morocco road trip routes',
+    'rent a car marrakech',
+    'casablanca airport car hire',
+    'morocco 4x4 rental',
+    'dacia duster morocco',
+    'morocco driving license requirements',
+    'morocco car rental scams',
+    'fuel cost morocco 2026',
+    'morocco autoroute tolls',
+    'cheap car rental morocco',
   ],
   openGraph: {
-    title: 'Morocco Car Rental Guide 2026 | Prices, Tips & Insurance Explained',
+    title: 'Morocco Car Rental Guide 2026 | Prices, Companies, Insurance & Driving Tips',
     description:
-      'Everything you need to rent a car in Morocco. Compare agencies, understand insurance, check prices, and avoid common pitfalls with our comprehensive 2026 guide.',
+      'Everything you need to rent a car in Morocco. Compare agencies, understand insurance, check prices from 250 MAD/day, and plan epic road trips across the Atlas, desert, and coast.',
     url: `${BASE_URL}/morocco-car-rental`,
     images: [
       {
         url: `${BASE_URL}/images/hero-morocco.webp`,
         width: 1200,
         height: 630,
-        alt: 'Car driving along a scenic Moroccan road with Atlas Mountains in the background',
+        alt: 'Car driving along a winding Moroccan road with Atlas Mountains in the background',
       },
     ],
   },
@@ -77,52 +78,37 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Morocco Car Rental Guide 2026 | Prices, Tips & Insurance',
     description:
-      'Compare rental agencies, vehicle types, insurance options, and daily rates. Essential tips for renting a car in Morocco.',
+      'Compare rental agencies, vehicle types, insurance options, and daily rates. Essential tips for renting and driving a car in Morocco.',
     images: [`${BASE_URL}/images/hero-morocco.webp`],
   },
   alternates: { canonical: `${BASE_URL}/morocco-car-rental` },
 };
 
-/* =====================================================================
+/* ═══════════════════════════════════════════════════════════════
    JSON-LD STRUCTURED DATA
-   ===================================================================== */
+   ═══════════════════════════════════════════════════════════════ */
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'TravelGuide',
   '@id': `${BASE_URL}/morocco-car-rental`,
-  name: 'Morocco Car Rental Guide 2026 | Prices, Tips & Insurance Explained',
+  name: 'Morocco Car Rental Guide 2026 | Prices, Companies, Insurance & Driving Tips',
   description:
-    'Comprehensive guide to renting a car in Morocco covering rental agencies, vehicle types, pricing, insurance options, documentation requirements, driving rules, fuel costs, parking tips, and scam warnings.',
+    'Comprehensive guide to renting a car in Morocco covering rental agencies, vehicle pricing, insurance options, documentation, driving rules, toll roads, fuel costs, parking, road trip routes, and scam warnings.',
   url: `${BASE_URL}/morocco-car-rental`,
   image: `${BASE_URL}/images/hero-morocco.webp`,
-  author: {
-    '@type': 'Organization',
-    name: 'CityGuide Morocco',
-    url: BASE_URL,
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'CityGuide Morocco',
-    url: BASE_URL,
-  },
-  datePublished: '2026-03-19',
-  dateModified: '2026-03-19',
+  author: { '@type': 'Organization', name: 'CityGuide Morocco', url: BASE_URL },
+  publisher: { '@type': 'Organization', name: 'CityGuide Morocco', url: BASE_URL },
+  datePublished: '2026-03-20',
+  dateModified: '2026-03-20',
   mainEntityOfPage: `${BASE_URL}/morocco-car-rental`,
-  isPartOf: {
-    '@type': 'WebSite',
-    name: 'CityGuide Morocco',
-    url: BASE_URL,
-  },
-  about: {
-    '@type': 'Country',
-    name: 'Morocco',
-  },
+  isPartOf: { '@type': 'WebSite', name: 'CityGuide Morocco', url: BASE_URL },
+  about: { '@type': 'Country', name: 'Morocco' },
   breadcrumb: {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Morocco Car Rental Guide', item: `${BASE_URL}/morocco-car-rental` },
+      { '@type': 'ListItem', position: 2, name: 'Morocco Car Rental', item: `${BASE_URL}/morocco-car-rental` },
     ],
   },
 };
@@ -136,7 +122,7 @@ const faqJsonLd = {
       name: 'Do I need an international driving permit to rent a car in Morocco?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes, an International Driving Permit (IDP) is strongly recommended and frequently required alongside your home country license. While some rental agencies accept EU or US licenses alone, police at checkpoints often ask for an IDP. Obtain one from your national automobile association before traveling. It must be accompanied by your original license at all times.',
+        text: 'An International Driving Permit (IDP) is strongly recommended and frequently required alongside your home country license. Police at checkpoints routinely ask for it. Obtain one from your national automobile association (AAA in the US, Post Office in the UK) before traveling. It costs around $20 and is valid for one year.',
       },
     },
     {
@@ -144,7 +130,7 @@ const faqJsonLd = {
       name: 'How much does it cost to rent a car in Morocco per day?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Car rental in Morocco starts from around 250 MAD per day for a compact economy car and from 500 MAD per day for a midsize SUV. A full-size 4x4 suitable for desert tracks starts from 700 MAD per day. Prices increase during peak season (July-August and Christmas/New Year). Weekly rentals offer better per-day rates. Always confirm that insurance, mileage, and taxes are included.',
+        text: 'A compact economy car like a Dacia Sandero starts from 250 MAD per day. A midsize SUV such as a Dacia Duster starts from 500 MAD per day. A full 4x4 like a Toyota Land Cruiser runs from 700 MAD per day. Prices spike 30-50% during July-August and Christmas/New Year. Weekly rentals offer significantly better per-day rates.',
       },
     },
     {
@@ -152,15 +138,7 @@ const faqJsonLd = {
       name: 'Should I rent from an international or local agency in Morocco?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'International agencies like Hertz, Avis, and Europcar offer newer fleets, roadside assistance, and multi-location drop-offs but charge higher rates. Local agencies such as Medloc or Afrique Cars can be 20-40% cheaper but may have older vehicles and stricter damage policies. For first-time visitors, international agencies offer more peace of mind. Experienced travelers comfortable negotiating often save money with local firms.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What type of car should I rent for Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'For city driving and highway travel between major cities, a compact hatchback like a Dacia Sandero or Renault Clio is sufficient and economical. For Atlas Mountain passes and varied terrain, a midsize SUV like a Dacia Duster provides better ground clearance and comfort. For off-road desert tracks and remote areas, a proper 4x4 like a Toyota Land Cruiser is essential. Most rental cars are manual transmission; automatic costs more and should be reserved in advance.',
+        text: 'International agencies like Hertz, Europcar, and Sixt offer newer fleets, roadside assistance, and multi-city drop-offs but charge higher rates. Local agencies such as Medloc Car, SureCar Morocco, or Green Mouse Cars can be 20-40% cheaper but may have older vehicles. First-time visitors usually prefer international agencies for reliability. Experienced travelers save money with local firms.',
       },
     },
     {
@@ -168,23 +146,15 @@ const faqJsonLd = {
       name: 'What insurance do I need when renting a car in Morocco?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Basic CDW (Collision Damage Waiver) is usually included but carries a high excess of 5,000-15,000 MAD. Upgrading to Super CDW or full coverage reduces the excess to zero. Theft protection (TP) and personal accident insurance (PAI) are recommended add-ons. Tire and windshield damage are often excluded from standard policies. Check if your travel insurance or credit card offers rental car coverage to avoid paying twice.',
+        text: 'Basic CDW (Collision Damage Waiver) is usually included but carries a high excess of 5,000-15,000 MAD. Upgrading to Super CDW (from 80-150 MAD/day) reduces the excess to zero. Theft Protection and Personal Accident Insurance are recommended add-ons. Tire and windshield damage are often excluded even from full coverage. Check if your credit card already provides rental car coverage.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can I drive a rental car from one city and return it in another?',
+      name: 'How much do toll roads cost in Morocco?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes, most international agencies and many local companies offer one-way rentals between major cities. A drop-off fee of 500-1,500 MAD typically applies depending on the distance. Popular one-way routes include Marrakech to Casablanca, Marrakech to Fes, and Casablanca to Tangier. Confirm the one-way policy and fee before booking, as some smaller agencies only allow returns to the pickup location.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What are common car rental scams in Morocco and how do I avoid them?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The most common issues include being charged for pre-existing damage, fuel gauge manipulation, and unnecessary insurance upsells. Always photograph and video every scratch and dent before leaving the lot. Check the fuel level matches the contract. Get all charges in writing and keep copies. Inspect tires, spare tire, and jack. Never hand over your passport as a deposit, only a photocopy. Use reputable agencies with online reviews and pay by credit card for chargeback protection.',
+        text: 'Morocco has approximately 1,800 km of toll motorways (autoroutes). Casablanca to Marrakech costs around 67 MAD, Casablanca to Tangier around 170 MAD, and Casablanca to Fes around 110 MAD. Tolls are paid in cash (MAD) or by Jawaz electronic tag at automated booths. Budget 100-300 MAD per day for toll roads depending on your route.',
       },
     },
     {
@@ -192,360 +162,134 @@ const faqJsonLd = {
       name: 'Is it safe to drive in Morocco as a tourist?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes, driving in Morocco is generally safe for tourists, especially on the modern motorway network. The main challenges are assertive local driving styles in cities, unlit rural roads at night, and winding mountain passes. Avoid night driving in rural areas, stay alert for motorcycles and pedestrians, and drive defensively. Morocco drives on the right side of the road. Police checkpoints are common and routine; always carry your documents.',
+        text: 'Driving in Morocco is manageable for confident drivers, especially on the modern motorway network. Main challenges include assertive local driving styles in cities, unlit rural roads at night, and winding mountain passes. Avoid night driving in rural areas. Morocco drives on the right. Police checkpoints are common and routine; carry all documents at all times.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What are common car rental scams in Morocco?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The most common issues are pre-existing damage claims, fuel gauge manipulation, and pressure to buy unnecessary insurance at the counter. Always photograph every surface of the car before driving away. Check the fuel level matches the contract. Get all charges in writing. Pay by credit card for chargeback protection. Use agencies with strong online reviews.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I drive a rental car from one city and return it in another?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Most international and many local agencies allow one-way rentals between major cities. A drop-off fee of 500-1,500 MAD typically applies. Popular one-way routes include Marrakech to Fes and Casablanca to Tangier. Confirm the policy and fee before booking, as smaller local agencies may only accept returns to the pickup location.',
       },
     },
   ],
 };
 
-/* =====================================================================
-   DATA: QUICK FACTS
-   ===================================================================== */
-
-const quickFacts = [
-  {
-    label: 'Economy Car',
-    value: 'From 250 MAD/day',
-    detail: 'Compact cars like Dacia Sandero or Renault Clio',
-    icon: Car,
-  },
-  {
-    label: 'SUV / 4x4',
-    value: 'From 500 MAD/day',
-    detail: 'Dacia Duster, Hyundai Tucson, or Toyota RAV4',
-    icon: Compass,
-  },
-  {
-    label: 'Fuel Cost',
-    value: 'From 11 MAD/L',
-    detail: 'Diesel is cheapest; gasoline from 13 MAD/L',
-    icon: Fuel,
-  },
-  {
-    label: 'Minimum Age',
-    value: '21 years',
-    detail: 'Some agencies require 25+; young driver surcharge may apply',
-    icon: Users,
-  },
-];
-
-/* =====================================================================
-   DATA: WHY RENT A CAR
-   ===================================================================== */
-
-const whyRentReasons = [
-  {
-    title: 'Freedom & Flexibility',
-    detail: 'Set your own pace and itinerary. Stop at any roadside viewpoint, village market, or hidden waterfall without waiting for tour buses or negotiating with taxi drivers.',
-    icon: Key,
-  },
-  {
-    title: 'Access Remote Areas',
-    detail: 'Many of Morocco\'s most stunning destinations, from isolated Berber villages in the Atlas to desert oases near Zagora, are only reachable by car. Public transport simply does not go there.',
-    icon: Navigation,
-  },
-  {
-    title: 'Mountain Passes & Scenic Routes',
-    detail: 'The Tizi n\'Tichka, Tizi n\'Test, and Dades Gorge roads are among the most spectacular drives on Earth. A rental car lets you experience every hairpin turn at your own pace.',
-    icon: MapPin,
-  },
-  {
-    title: 'Desert & Coastal Adventures',
-    detail: 'Drive from the Atlantic surf beaches of Taghazout to the golden Sahara dunes of Merzouga in a single trip. Morocco\'s compact size makes epic road trips surprisingly accessible.',
-    icon: Globe,
-  },
-  {
-    title: 'Cost-Effective for Groups',
-    detail: 'For two or more travelers, renting a car often costs less than buying individual bus or train tickets, especially when you factor in the flexibility and time savings.',
-    icon: DollarSign,
-  },
-  {
-    title: 'Family-Friendly Travel',
-    detail: 'Traveling with children or elderly family members is far more comfortable in a private vehicle. Install your own child seat, stop for breaks whenever needed, and carry luggage easily.',
-    icon: Users,
-  },
-];
-
-/* =====================================================================
-   DATA: RENTAL COMPANIES COMPARISON
-   ===================================================================== */
+/* ═══════════════════════════════════════════════════════════════
+   DATA: RENTAL COMPANIES
+   ═══════════════════════════════════════════════════════════════ */
 
 const internationalAgencies = [
-  {
-    name: 'Hertz',
-    pros: 'Large fleet, airport locations, roadside assistance, well-known brand',
-    cons: 'Higher daily rates, insurance upsells at the counter',
-    priceRange: 'From 350 MAD/day',
-  },
-  {
-    name: 'Avis',
-    pros: 'Good vehicle condition, multi-city drop-off, loyalty program',
-    cons: 'Premium pricing, limited budget options',
-    priceRange: 'From 350 MAD/day',
-  },
-  {
-    name: 'Europcar',
-    pros: 'Largest network in Morocco, reliable fleet, online booking deals',
-    cons: 'Counter upsells, fuel policy variations between branches',
-    priceRange: 'From 300 MAD/day',
-  },
-  {
-    name: 'Sixt',
-    pros: 'Modern vehicles, good SUV selection, flexible cancellation',
-    cons: 'Fewer locations than competitors, can be pricey in peak season',
-    priceRange: 'From 320 MAD/day',
-  },
-];
+  { name: 'Hertz', pros: 'Large fleet, airport desks at all major airports, 24/7 roadside assistance', cons: 'Highest daily rates, aggressive insurance upsells at counter', price: 'From 350 MAD/day' },
+  { name: 'Europcar', pros: 'Largest network in Morocco (30+ locations), reliable fleet, online booking deals', cons: 'Fuel policy varies between branches, counter staff push add-ons', price: 'From 300 MAD/day' },
+  { name: 'Sixt', pros: 'Modern vehicles, strong SUV selection, flexible cancellation up to 48h before', cons: 'Fewer locations than Europcar, premium pricing in peak season', price: 'From 320 MAD/day' },
+  { name: 'Avis / Budget', pros: 'Same parent company offering two price tiers, good vehicle condition, loyalty perks', cons: 'Budget brand has older cars, limited off-airport locations', price: 'From 300 MAD/day' },
+] as const;
 
 const localAgencies = [
-  {
-    name: 'Medloc Car',
-    pros: 'Competitive pricing, good local knowledge, flexible on negotiation',
-    cons: 'Older fleet, limited English support, stricter damage policies',
-    priceRange: 'From 200 MAD/day',
-  },
-  {
-    name: 'Afrique Cars',
-    pros: 'Budget-friendly, multiple Moroccan city locations, 4x4 specialist',
-    cons: 'Variable vehicle condition, deposit requirements can be high',
-    priceRange: 'From 220 MAD/day',
-  },
-];
+  { name: 'Medloc Car', pros: 'Competitive pricing, negotiable rates for multi-week rentals, speaks Arabic/French/English', cons: 'Older fleet, stricter damage policies, limited roadside assistance', price: 'From 200 MAD/day' },
+  { name: 'SureCar Morocco', pros: 'Good online reviews, transparent pricing, free airport delivery in Marrakech', cons: 'Small fleet, advance booking essential in peak season', price: 'From 220 MAD/day' },
+  { name: 'Green Mouse Cars', pros: 'Budget-friendly, 4x4 options for desert trips, offices in Ouarzazate and Errachidia', cons: 'English support limited, deposits can be high, no credit card at some branches', price: 'From 180 MAD/day' },
+] as const;
 
-/* =====================================================================
+/* ═══════════════════════════════════════════════════════════════
    DATA: VEHICLE TYPES
-   ===================================================================== */
+   ═══════════════════════════════════════════════════════════════ */
 
 const vehicleTypes = [
-  {
-    type: 'Compact / Economy',
-    examples: 'Dacia Sandero, Renault Clio, Hyundai i10',
-    bestFor: 'City driving, short trips between major cities, budget travelers',
-    dailyRate: 'From 250 MAD/day',
-    fuelEconomy: '5-6 L/100km',
-    notes: 'Perfect for paved roads and highways. Not recommended for mountain passes in winter or unpaved desert tracks.',
-  },
-  {
-    type: 'Midsize Sedan',
-    examples: 'Renault Megane, Dacia Logan, Peugeot 301',
-    bestFor: 'Couples or small families, comfort on longer highway drives',
-    dailyRate: 'From 350 MAD/day',
-    fuelEconomy: '6-7 L/100km',
-    notes: 'Good boot space for luggage. Handles all paved roads comfortably including well-maintained mountain routes.',
-  },
-  {
-    type: 'SUV / Crossover',
-    examples: 'Dacia Duster, Hyundai Tucson, Toyota RAV4',
-    bestFor: 'Atlas Mountain passes, mixed terrain, families with luggage',
-    dailyRate: 'From 500 MAD/day',
-    fuelEconomy: '7-9 L/100km',
-    notes: 'Higher ground clearance for rough paved roads. The Dacia Duster is Morocco\'s most popular rental SUV and handles most conditions well.',
-  },
-  {
-    type: 'Full 4x4 / Off-Road',
-    examples: 'Toyota Land Cruiser, Mitsubishi Pajero, Suzuki Jimny',
-    bestFor: 'Sahara desert tracks, remote mountain villages, off-road exploration',
-    dailyRate: 'From 700 MAD/day',
-    fuelEconomy: '10-14 L/100km',
-    notes: 'Essential for unpaved roads and desert driving. Must have explicit off-road permission in the rental agreement. Often requires a deposit of 10,000+ MAD.',
-  },
-];
+  { type: 'Compact / Economy', examples: 'Dacia Sandero, Renault Clio, Hyundai i10', bestFor: 'City driving, highway travel, budget trips', rate: 'From 250 MAD/day', fuel: '5-6 L/100km', note: 'Handles all paved roads. Not for mountain passes in winter or unpaved desert tracks.' },
+  { type: 'Midsize Sedan', examples: 'Dacia Logan, Renault Megane, Peugeot 301', bestFor: 'Couples, small families, longer highway drives', rate: 'From 350 MAD/day', fuel: '6-7 L/100km', note: 'Good boot space. Comfortable on well-maintained mountain roads.' },
+  { type: 'SUV / Crossover', examples: 'Dacia Duster, Hyundai Tucson, Toyota RAV4', bestFor: 'Atlas Mountain passes, families with luggage, mixed terrain', rate: 'From 500 MAD/day', fuel: '7-9 L/100km', note: 'The Dacia Duster is Morocco\'s most popular rental SUV. Handles most conditions well.' },
+  { type: 'Full 4x4 / Off-Road', examples: 'Toyota Land Cruiser, Mitsubishi Pajero, Suzuki Jimny', bestFor: 'Sahara desert tracks, remote villages, off-road exploration', rate: 'From 700 MAD/day', fuel: '10-14 L/100km', note: 'Must have explicit off-road permission in contract. Deposit often 10,000+ MAD.' },
+] as const;
 
-/* =====================================================================
-   DATA: DOCUMENTATION REQUIRED
-   ===================================================================== */
-
-const requiredDocs = [
-  {
-    doc: 'Valid Driving License',
-    detail: 'Your home country driving license must be valid for the entire rental period. Licenses in non-Latin scripts require an official translation or IDP.',
-    icon: FileText,
-  },
-  {
-    doc: 'International Driving Permit (IDP)',
-    detail: 'Strongly recommended and often required. Obtain from your national automobile association (AAA in the US, Post Office in the UK) before traveling. Valid for 1 year.',
-    icon: Globe,
-  },
-  {
-    doc: 'Passport',
-    detail: 'Required for identity verification at pickup. Some agencies keep a photocopy; never leave your original passport as a deposit.',
-    icon: FileText,
-  },
-  {
-    doc: 'Credit Card in Driver\'s Name',
-    detail: 'Mandatory for the security deposit (typically 3,000-15,000 MAD blocked on the card). Debit cards are usually not accepted. The card must match the primary driver\'s name.',
-    icon: CreditCard,
-  },
-  {
-    doc: 'Proof of Return Travel',
-    detail: 'Some agencies ask for your return flight ticket or travel itinerary to confirm the rental duration. Not always required but good to have handy.',
-    icon: Calendar,
-  },
-];
-
-/* =====================================================================
+/* ═══════════════════════════════════════════════════════════════
    DATA: INSURANCE TYPES
-   ===================================================================== */
+   ═══════════════════════════════════════════════════════════════ */
 
 const insuranceTypes = [
-  {
-    type: 'CDW (Collision Damage Waiver)',
-    included: 'Usually included',
-    excess: '5,000-15,000 MAD',
-    covers: 'Damage to the rental vehicle from collisions',
-    notes: 'Basic protection with a high excess. You pay the excess amount if the car is damaged, regardless of fault.',
-  },
-  {
-    type: 'SCDW (Super CDW)',
-    included: 'Optional add-on',
-    excess: '0-2,000 MAD',
-    covers: 'Same as CDW but with a reduced or zero excess',
-    notes: 'Highly recommended. Costs from 80-150 MAD/day but eliminates the worry of a large excess charge.',
-  },
-  {
-    type: 'TP (Theft Protection)',
-    included: 'Sometimes included',
-    excess: '5,000-10,000 MAD',
-    covers: 'Theft of the vehicle or its parts',
-    notes: 'Essential coverage. Check if your personal travel insurance already covers rental car theft before paying twice.',
-  },
-  {
-    type: 'Tire & Windshield',
-    included: 'Rarely included',
-    excess: 'Full cost',
-    covers: 'Punctured tires, cracked windshields, undercarriage damage',
-    notes: 'Often excluded from even full coverage policies. Especially important for mountain and desert driving where road debris is common.',
-  },
-  {
-    type: 'PAI (Personal Accident)',
-    included: 'Optional add-on',
-    excess: 'N/A',
-    covers: 'Medical expenses for driver and passengers',
-    notes: 'Redundant if you have travel insurance with medical coverage.',
-  },
-];
+  { type: 'CDW (Collision Damage Waiver)', included: 'Usually included', excess: '5,000-15,000 MAD', covers: 'Collision damage to rental vehicle', note: 'Basic protection with high excess. You pay the excess regardless of fault.' },
+  { type: 'SCDW (Super CDW)', included: 'Optional add-on', excess: '0-2,000 MAD', covers: 'Same as CDW with reduced or zero excess', note: 'From 80-150 MAD/day. Eliminates the big excess worry.' },
+  { type: 'TP (Theft Protection)', included: 'Sometimes included', excess: '5,000-10,000 MAD', covers: 'Theft of vehicle or parts', note: 'Check if your travel insurance covers rental car theft first.' },
+  { type: 'Tire & Windshield', included: 'Rarely included', excess: 'Full cost', covers: 'Punctured tires, cracked windshields, undercarriage', note: 'Critical for mountain and desert driving. Road debris is common.' },
+  { type: 'PAI (Personal Accident)', included: 'Optional', excess: 'N/A', covers: 'Medical expenses for driver and passengers', note: 'Redundant if you carry travel insurance with medical coverage.' },
+] as const;
 
-/* =====================================================================
-   DATA: DRIVING RULES
-   ===================================================================== */
+/* ═══════════════════════════════════════════════════════════════
+   DATA: TOLL ROADS
+   ═══════════════════════════════════════════════════════════════ */
 
-const drivingRules = [
-  'Drive on the right side of the road; overtake on the left',
-  'Speed limits: 60 km/h in towns, 80-100 km/h on national roads, 120 km/h on motorways',
-  'Seatbelts mandatory for all passengers; children under 10 must sit in the back',
-  'Mobile phone use while driving is illegal; hands-free devices are permitted',
-  'Blood alcohol limit is 0.02% (effectively zero tolerance)',
-  'Roundabouts give priority to vehicles already in the circle (yield on entry)',
-  'You must carry license, IDP, passport, rental agreement, and insurance at all times',
-  'Police checkpoints are common; always stop when flagged and present documents calmly',
-  'Speed cameras are widespread on motorways and national roads; fines start from 300 MAD',
-  'Horn use is restricted in urban areas between 9 PM and 6 AM',
-];
+const tollRoutes = [
+  { route: 'Casablanca - Marrakech', distance: '240 km', toll: 'From 67 MAD', time: '2h 30min' },
+  { route: 'Casablanca - Rabat', distance: '90 km', toll: 'From 25 MAD', time: '1h' },
+  { route: 'Casablanca - Tangier', distance: '340 km', toll: 'From 170 MAD', time: '3h 30min' },
+  { route: 'Casablanca - Fes', distance: '295 km', toll: 'From 110 MAD', time: '3h' },
+  { route: 'Rabat - Fes', distance: '200 km', toll: 'From 85 MAD', time: '2h 15min' },
+  { route: 'Marrakech - Agadir', distance: '250 km', toll: 'From 60 MAD', time: '2h 45min' },
+] as const;
 
-/* =====================================================================
-   DATA: PARKING TIPS
-   ===================================================================== */
+/* ═══════════════════════════════════════════════════════════════
+   DATA: ROAD TRIP ROUTES
+   ═══════════════════════════════════════════════════════════════ */
 
-const parkingTips = [
-  {
-    title: 'Gardien System',
-    text: 'Informal parking attendants (gardiens) in high-visibility vests watch your car in most cities. Pay 5-10 MAD for daytime, 10-20 MAD for overnight. Your car is generally safer with a gardien present.',
-    icon: Users,
-  },
-  {
-    title: 'Hotel & Riad Parking',
-    text: 'Most medina riads have no parking. Hotels direct you to nearby guarded lots. Budget from 30-50 MAD per night for garage parking near medinas in Marrakech, Fes, and Meknes.',
-    icon: MapPin,
-  },
-  {
-    title: 'City Parking Zones',
-    text: 'Blue-line zones require a ticket from a machine or horodateur receipt. Yellow curbs mean no parking. Green zones are usually free. Parking apps are emerging in Casablanca and Rabat.',
-    icon: Info,
-  },
-  {
-    title: 'Never Drive Into a Medina',
-    text: 'Medina alleyways are pedestrian-only. You will get stuck. Park outside the medina walls at a designated lot and walk or take a petit taxi to your accommodation.',
-    icon: AlertTriangle,
-  },
-];
+const roadTripRoutes = [
+  { name: 'Atlantic Coast Run', days: '3-4 days', distance: '~800 km', route: 'Tangier - Asilah - Rabat - El Jadida - Essaouira - Agadir', highlights: 'Surf towns, Portuguese fortifications, fresh seafood at every stop', carNeeded: 'Economy car works fine' },
+  { name: 'Grand Atlas Circuit', days: '5-7 days', distance: '~1,200 km', route: 'Marrakech - Tizi n\'Tichka - Ouarzazate - Dades Gorge - Todra Gorge - Merzouga - Errachidia - Midelt - Fes', highlights: 'Kasbahs, dramatic gorges, Sahara dunes, Berber villages', carNeeded: 'SUV recommended (Dacia Duster ideal)' },
+  { name: 'Rif Mountain Loop', days: '3-4 days', distance: '~600 km', route: 'Tangier - Chefchaouen - Al Hoceima - Nador - Fes', highlights: 'Blue city, Mediterranean coves, mountain cedar forests', carNeeded: 'Any car; roads are well-paved' },
+  { name: 'Southern Desert Explorer', days: '4-5 days', distance: '~1,000 km', route: 'Ouarzazate - Zagora - Tata - Tiznit - Tafraout - Taroudant - Agadir', highlights: 'Draa Valley palmeraies, Anti-Atlas granite, argan country', carNeeded: 'SUV preferred; some rough patches near Tata' },
+] as const;
 
-/* =====================================================================
-   DATA: COMMON SCAMS
-   ===================================================================== */
+/* ═══════════════════════════════════════════════════════════════
+   DATA: WHY RENT A CAR
+   ═══════════════════════════════════════════════════════════════ */
 
-const commonScams = [
-  {
-    scam: 'Pre-Existing Damage Claims',
-    how: 'Agency claims you caused scratches or dents that existed before your rental.',
-    prevention: 'Photograph and video every surface of the car before leaving the lot. Ensure all existing damage is documented on the rental agreement. Take dated photos.',
-    icon: Shield,
-  },
-  {
-    scam: 'Fuel Gauge Manipulation',
-    how: 'Car is handed over with less fuel than the contract states, or the gauge is inaccurate.',
-    prevention: 'Check the fuel level matches the contract before driving away. Take a photo of the dashboard fuel gauge with the odometer visible. Fill up at a nearby station and keep the receipt.',
-    icon: Fuel,
-  },
-  {
-    scam: 'Unnecessary Insurance Upsells',
-    how: 'Counter staff pressure you into buying expensive add-on insurance you do not need.',
-    prevention: 'Research insurance before arrival. Check if your credit card or travel insurance covers rental cars. Politely decline coverage you have already confirmed elsewhere.',
-    icon: ShieldCheck,
-  },
-  {
-    scam: 'Hidden Fees at Return',
-    how: 'Charges for cleaning, late return (even minutes), or mileage overages appear on your bill.',
-    prevention: 'Read the contract carefully before signing. Confirm the return time, mileage policy, and fuel policy in writing. Return the car clean and on time.',
-    icon: CreditCard,
-  },
-];
+const whyRentReasons = [
+  { title: 'Freedom & Flexibility', detail: 'Stop at any roadside viewpoint, village market, or hidden waterfall. No tour bus schedule, no negotiating with taxi drivers.', icon: Key },
+  { title: 'Access Remote Areas', detail: 'Berber villages in the Atlas, oases near Zagora, surfing coves south of Taghazout. Public transport simply does not reach them.', icon: MapPin },
+  { title: 'Mountain Pass Driving', detail: 'Tizi n\'Tichka, Tizi n\'Test, and the Dades Gorge road are among the most spectacular drives on Earth. A rental car lets you take every hairpin at your own pace.', icon: Navigation },
+  { title: 'Cost-Effective for Groups', detail: 'For two or more travelers, a rental car often beats the combined cost of bus tickets, grand taxis, and day tours. Time savings are significant too.', icon: DollarSign },
+  { title: 'Coastal to Sahara in One Day', detail: 'Morocco is compact. Leave the Atlantic surf at breakfast, cross the Atlas by lunch, arrive at the Sahara dunes for sunset. No other transport makes that possible.', icon: Globe },
+  { title: 'Family Comfort', detail: 'Traveling with children or elderly relatives is far easier in a private vehicle. Install your own child seat, stop for breaks freely, carry luggage without stress.', icon: Users },
+] as const;
 
-/* =====================================================================
-   DATA: RELATED GUIDES
-   ===================================================================== */
+/* ═══════════════════════════════════════════════════════════════
+   DATA: PICKUP CHECKLIST
+   ═══════════════════════════════════════════════════════════════ */
 
-const relatedGuides = [
-  {
-    href: '/driving',
-    title: 'Driving in Morocco',
-    description: 'Detailed rules of the road, license requirements, and comprehensive tips for foreign drivers.',
-    icon: Car,
-  },
-  {
-    href: '/morocco-road-trip-guide',
-    title: 'Morocco Road Trip Guide',
-    description: 'Complete self-drive guide with itineraries, scenic routes, mountain passes, and desert driving tips.',
-    icon: Compass,
-  },
-  {
-    href: '/morocco-road-trip-routes',
-    title: 'Road Trip Routes',
-    description: 'Scenic routes through mountains, deserts, and coasts with detailed stop-by-stop directions.',
-    icon: Navigation,
-  },
-  {
-    href: '/morocco-airport-transfers',
-    title: 'Airport Transfers',
-    description: 'How to get from Morocco\'s airports to your hotel by taxi, bus, train, or private transfer.',
-    icon: MapPin,
-  },
-  {
-    href: '/morocco-safety-tips',
-    title: 'Morocco Safety Tips',
-    description: 'Essential safety advice for travelers including scams, health, solo travel, and emergency contacts.',
-    icon: Shield,
-  },
-  {
-    href: '/morocco-travel-insurance',
-    title: 'Travel Insurance Guide',
-    description: 'What travel insurance covers in Morocco, recommended providers, and how to make a claim.',
-    icon: ShieldCheck,
-  },
-];
+const pickupChecklist = [
+  'Walk around the entire car and photograph every scratch, dent, and chip. Video is even better.',
+  'Check the fuel gauge matches the contract. Photo the dashboard showing fuel level and mileage.',
+  'Inspect all four tires plus the spare. Check the jack and wheel wrench are present.',
+  'Test headlights, brake lights, indicators, wipers, and horn before leaving the lot.',
+  'Confirm the insurance documents, rental agreement, and emergency roadside number are in the car.',
+  'Verify the air conditioning works. Moroccan summers hit 45 degrees in the south.',
+  'Ask where the nearest petrol station is if the tank is not full.',
+  'Save the agency phone number and your contract number in your phone.',
+] as const;
 
-/* =====================================================================
+/* ═══════════════════════════════════════════════════════════════
+   DATA: SCAM WARNINGS
+   ═══════════════════════════════════════════════════════════════ */
+
+const scamWarnings = [
+  { scam: 'Pre-Existing Damage Claims', how: 'Agency blames you for scratches that were already there.', fix: 'Photograph and video every panel, bumper, wheel, and interior mark before leaving the lot. Insist all damage is noted on the contract.' },
+  { scam: 'Fuel Gauge Tricks', how: 'Car handed over with less fuel than the contract states.', fix: 'Photo the dashboard with fuel gauge and odometer visible. Fill up at the nearest station and keep the receipt.' },
+  { scam: 'Insurance Pressure', how: 'Counter staff insist you need expensive add-on coverage.', fix: 'Research coverage before arrival. Know what your credit card and travel insurance already cover. Decline firmly.' },
+  { scam: 'Hidden Return Fees', how: 'Surprise charges for cleaning, late return by minutes, or mileage overages.', fix: 'Read the full contract. Confirm return time, mileage cap, and cleaning policy in writing. Return clean and on time.' },
+] as const;
+
+/* ═══════════════════════════════════════════════════════════════
    PAGE COMPONENT
-   ===================================================================== */
+   ═══════════════════════════════════════════════════════════════ */
 
 export default function MoroccoCarRentalPage() {
   return (
@@ -559,34 +303,27 @@ export default function MoroccoCarRentalPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
-      {/* ── Hero Section ── */}
+      {/* ── Hero ── */}
       <section className="relative py-20 md:py-28 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(/images/hero-morocco.webp)',
-          }}
-        />
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(/images/hero-morocco.webp)' }} />
         <div className="absolute inset-0 hero-overlay" />
         <div className="container-morocco relative z-10">
           <nav className="flex items-center gap-2 text-sm text-white/60 mb-8" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-white transition-colors">
-              <Home className="w-3.5 h-3.5" />
-            </Link>
+            <Link href="/" className="hover:text-white transition-colors"><Home className="w-3.5 h-3.5" /></Link>
             <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-white">Morocco Car Rental Guide</span>
+            <span className="text-white">Morocco Car Rental</span>
           </nav>
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm text-white/90 text-sm mb-6">
             <Car className="w-4 h-4" />
             Car Rental Guide 2026
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-display)] font-bold text-white mb-4">
-            Morocco Car Rental
-            <br className="hidden md:block" /> Complete Guide 2026
+            Morocco Car Rental:
+            <br className="hidden md:block" /> The Complete Guide
           </h1>
           <p className="text-xl text-white/80 max-w-2xl">
-            Everything you need to rent a car in Morocco &mdash; comparing agencies, choosing the right vehicle,
-            understanding insurance, and driving with confidence from the coast to the Sahara.
+            Agencies, prices, insurance, driving tips, toll roads, and road trip routes.
+            Everything you need to get behind the wheel in Morocco.
           </p>
         </div>
       </section>
@@ -598,45 +335,83 @@ export default function MoroccoCarRentalPage() {
         <div className="container-morocco max-w-4xl">
           <div className="prose-moroccan">
             <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
-              The Freedom of the Open Road in Morocco
+              Why a Rental Car Changes Everything in Morocco
             </h2>
             <div className="space-y-4 text-lg text-[var(--text-secondary)] leading-relaxed">
               <p>
-                Renting a car in Morocco unlocks a travel experience no bus ticket or guided tour can match. Within a single day behind the wheel, you can weave through the snow-dusted peaks of the High Atlas, descend into the palm-filled Draa Valley, cruise along the rugged Atlantic coastline, and arrive at the towering dunes of Erg Chebbi as the Saharan sun sets.
+                A bus can take you from Marrakech to Fes. A grand taxi can squeeze you into a seat to Ouarzazate.
+                But neither will stop at the unmarked viewpoint above Tizi n&apos;Tichka where the entire High Atlas
+                unfolds at your feet, or let you pull over in the Dades Valley when a hundred kasbahs catch the
+                late-afternoon light. That kind of freedom requires your own wheels.
               </p>
               <p>
-                Morocco&apos;s modern motorway network links major cities swiftly and safely, while scenic national roads and mountain passes lead to hidden kasbahs, Berber villages, and landscapes that public transport simply cannot reach. A rental car gives you complete control over your itinerary, your stops, and your pace.
+                Morocco&apos;s road network has transformed in the past decade. Over 1,800 km of modern autoroutes
+                connect major cities at 120 km/h, while scenic national roads wind through gorges, over mountain
+                passes, and along 3,500 km of Atlantic and Mediterranean coastline. Fuel is affordable, parking
+                is cheap, and the country is compact enough that you can drive from the ocean to the Sahara in a
+                single day.
               </p>
               <p>
-                This guide covers every practical detail: which agencies to use, what vehicle type you need, how much to budget, what insurance to choose, the documentation you must carry, and how to avoid the most common pitfalls that catch first-time visitors off guard.
+                The catch? Rental contracts, insurance jargon, and unfamiliar driving customs trip up first-timers
+                every year. This guide strips out the confusion and covers every detail: which companies to trust,
+                what car to pick, how much to budget, and what to do when a goat blocks the road at a hairpin turn
+                above the Todra Gorge.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Quick Facts ── */}
+      {/* ── Why Rent a Car ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco">
+        <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Key className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Why Rent a Car in Morocco?
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Six reasons to get behind the wheel instead of relying on buses, trains, and taxis.
+          </p>
+          <div className="grid md:grid-cols-2 gap-5">
+            {whyRentReasons.map((r) => {
+              const Icon = r.icon;
+              return (
+                <div key={r.title} className="card-moroccan p-5 flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
+                    <Icon className="w-5 h-5 text-[var(--color-accent)]" />
+                  </div>
+                  <div>
+                    <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">{r.title}</h3>
+                    <p className="text-sm text-[var(--text-secondary)]">{r.detail}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Quick Facts ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
             <Car className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
             Morocco Car Rental at a Glance
           </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Key pricing and requirements for renting a car in Morocco in 2026.
-          </p>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {quickFacts.map((fact) => {
-              const FactIcon = fact.icon;
+            {([
+              { icon: Car, value: 'From 250 MAD/day', label: 'Economy Car', detail: 'Dacia Sandero, Renault Clio' },
+              { icon: Navigation, value: 'From 500 MAD/day', label: 'SUV / 4x4', detail: 'Dacia Duster, Toyota RAV4' },
+              { icon: Fuel, value: 'From 11 MAD/L', label: 'Diesel Fuel', detail: 'Gasoline from 13 MAD/L' },
+              { icon: Users, value: '21 years min', label: 'Minimum Age', detail: 'Some agencies require 25+' },
+            ] as const).map((fact) => {
+              const Icon = fact.icon;
               return (
                 <div key={fact.label} className="card-moroccan p-6 text-center">
                   <div className="w-12 h-12 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center mx-auto mb-4">
-                    <FactIcon className="w-6 h-6 text-[var(--color-accent)]" />
+                    <Icon className="w-6 h-6 text-[var(--color-accent)]" />
                   </div>
-                  <p className="text-2xl font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)] mb-1">
-                    {fact.value}
-                  </p>
+                  <p className="text-2xl font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)] mb-1">{fact.value}</p>
                   <p className="text-sm font-medium text-[var(--text-primary)] mb-2">{fact.label}</p>
                   <p className="text-xs text-[var(--text-muted)]">{fact.detail}</p>
                 </div>
@@ -644,101 +419,50 @@ export default function MoroccoCarRentalPage() {
             })}
           </div>
           <p className="text-center text-xs text-[var(--text-muted)] mt-6">
-            Prices are approximate for 2026. Seasonal pricing may change rates significantly during peak periods.
+            <Info className="w-3.5 h-3.5 inline mr-1" />
+            Prices are estimates for 2026. Seasonal pricing can change rates by 30-50% during peak periods.
           </p>
         </div>
       </section>
 
-      {/* ── Why Rent a Car ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Key className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Why Rent a Car in Morocco?
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Six compelling reasons to get behind the wheel and explore Morocco on your own terms.
-          </p>
-
-          <div className="grid md:grid-cols-2 gap-5">
-            {whyRentReasons.map((reason) => {
-              const ReasonIcon = reason.icon;
-              return (
-                <div key={reason.title} className="card-moroccan p-5 flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                    <ReasonIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                  </div>
-                  <div>
-                    <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
-                      {reason.title}
-                    </h3>
-                    <p className="text-sm text-[var(--text-secondary)]">{reason.detail}</p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Rental Companies Comparison ── */}
+      {/* ── Rental Companies ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <Globe className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            International vs Local Rental Agencies
+            Best Car Rental Companies in Morocco
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Compare the major international chains with local Moroccan companies to find the best fit for your trip.
+            International chains vs. local Moroccan agencies. The tradeoff is price against peace of mind.
           </p>
 
-          <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4">
-            International Agencies
-          </h3>
+          <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4">International Agencies</h3>
           <div className="space-y-4 mb-8">
-            {internationalAgencies.map((agency) => (
-              <div key={agency.name} className="card-moroccan p-5">
+            {internationalAgencies.map((a) => (
+              <div key={a.name} className="card-moroccan p-5">
                 <div className="flex items-center justify-between mb-3">
-                  <h4 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] text-lg">
-                    {agency.name}
-                  </h4>
-                  <span className="text-sm font-semibold text-[var(--color-accent)]">{agency.priceRange}</span>
+                  <h4 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] text-lg">{a.name}</h4>
+                  <span className="text-sm font-semibold text-[var(--color-accent)]">{a.price}</span>
                 </div>
                 <div className="grid md:grid-cols-2 gap-3 text-sm">
-                  <div className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 shrink-0" />
-                    <span className="text-[var(--text-secondary)]">{agency.pros}</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <AlertTriangle className="w-4 h-4 text-amber-500 mt-0.5 shrink-0" />
-                    <span className="text-[var(--text-secondary)]">{agency.cons}</span>
-                  </div>
+                  <div className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-green-600 mt-0.5 shrink-0" /><span className="text-[var(--text-secondary)]">{a.pros}</span></div>
+                  <div className="flex items-start gap-2"><AlertTriangle className="w-4 h-4 text-amber-500 mt-0.5 shrink-0" /><span className="text-[var(--text-secondary)]">{a.cons}</span></div>
                 </div>
               </div>
             ))}
           </div>
 
-          <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4">
-            Local Moroccan Agencies
-          </h3>
+          <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4">Local Moroccan Agencies</h3>
           <div className="space-y-4">
-            {localAgencies.map((agency) => (
-              <div key={agency.name} className="card-moroccan p-5">
+            {localAgencies.map((a) => (
+              <div key={a.name} className="card-moroccan p-5">
                 <div className="flex items-center justify-between mb-3">
-                  <h4 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] text-lg">
-                    {agency.name}
-                  </h4>
-                  <span className="text-sm font-semibold text-[var(--color-gold)]">{agency.priceRange}</span>
+                  <h4 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] text-lg">{a.name}</h4>
+                  <span className="text-sm font-semibold text-[var(--color-gold)]">{a.price}</span>
                 </div>
                 <div className="grid md:grid-cols-2 gap-3 text-sm">
-                  <div className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 shrink-0" />
-                    <span className="text-[var(--text-secondary)]">{agency.pros}</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <AlertTriangle className="w-4 h-4 text-amber-500 mt-0.5 shrink-0" />
-                    <span className="text-[var(--text-secondary)]">{agency.cons}</span>
-                  </div>
+                  <div className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-green-600 mt-0.5 shrink-0" /><span className="text-[var(--text-secondary)]">{a.pros}</span></div>
+                  <div className="flex items-start gap-2"><AlertTriangle className="w-4 h-4 text-amber-500 mt-0.5 shrink-0" /><span className="text-[var(--text-secondary)]">{a.cons}</span></div>
                 </div>
               </div>
             ))}
@@ -750,9 +474,24 @@ export default function MoroccoCarRentalPage() {
               <div>
                 <p className="font-semibold text-[var(--text-primary)] mb-1">Booking Tip</p>
                 <p className="text-sm text-[var(--text-secondary)]">
-                  Use comparison sites like DiscoverCars, Rentalcars.com, or AutoEurope to compare prices
-                  across agencies. Booking 2-4 weeks in advance typically secures the best rates. During peak
-                  season (July-August, Christmas), book at least 6 weeks ahead as popular vehicles sell out.
+                  Use DiscoverCars, Rentalcars.com, or AutoEurope to compare prices across agencies. Booking 2-4 weeks ahead
+                  usually secures the best rate. During July-August and Christmas, book 6+ weeks out &mdash; popular vehicles
+                  sell out fast.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="card-moroccan p-6 mt-4 bg-[var(--color-gold)]/5 border-l-4 border-[var(--color-gold)]">
+            <div className="flex items-start gap-3">
+              <MapPin className="w-6 h-6 text-[var(--color-gold)] mt-0.5 shrink-0" />
+              <div>
+                <p className="font-semibold text-[var(--text-primary)] mb-1">One-Way Rentals</p>
+                <p className="text-sm text-[var(--text-secondary)]">
+                  Most international agencies and many local companies allow one-way drops between major cities. A fee
+                  of 500-1,500 MAD applies depending on distance. Popular combos: Marrakech to Fes (via the Atlas circuit),
+                  Casablanca to Tangier (coastal route), and Agadir to Marrakech. Confirm the policy before booking &mdash;
+                  some smaller agencies only accept returns to the pickup location.
                 </p>
               </div>
             </div>
@@ -763,70 +502,57 @@ export default function MoroccoCarRentalPage() {
       {/* ── Vehicle Types ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Car className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
+            <Key className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
             Which Vehicle Do You Need?
           </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Choosing the right car makes all the difference. Match your vehicle to your itinerary.
-          </p>
-
           <div className="grid md:grid-cols-2 gap-6">
             {vehicleTypes.map((v) => (
               <div key={v.type} className="card-moroccan p-6">
                 <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                    {v.type}
-                  </h3>
-                  <span className="text-sm font-semibold text-[var(--color-accent)]">{v.dailyRate}</span>
+                  <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">{v.type}</h3>
+                  <span className="text-sm font-semibold text-[var(--color-accent)]">{v.rate}</span>
                 </div>
                 <p className="text-xs text-[var(--text-muted)] mb-3">{v.examples}</p>
                 <div className="space-y-2 text-sm text-[var(--text-secondary)]">
-                  <div className="flex items-start gap-2">
-                    <Star className="w-4 h-4 text-[var(--color-accent)] shrink-0 mt-0.5" />
-                    <span><strong>Best for:</strong> {v.bestFor}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Fuel className="w-4 h-4 text-[var(--color-accent)] shrink-0" />
-                    <span><strong>Fuel economy:</strong> {v.fuelEconomy}</span>
-                  </div>
+                  <div className="flex items-start gap-2"><Star className="w-4 h-4 text-[var(--color-accent)] shrink-0 mt-0.5" /><span><strong>Best for:</strong> {v.bestFor}</span></div>
+                  <div className="flex items-center gap-2"><Fuel className="w-4 h-4 text-[var(--color-accent)] shrink-0" /><span><strong>Fuel:</strong> {v.fuel}</span></div>
                 </div>
                 <div className="mt-3 pt-3 border-t border-[var(--border-primary)]">
-                  <p className="text-xs text-[var(--text-muted)]">{v.notes}</p>
+                  <p className="text-xs text-[var(--text-muted)]">{v.note}</p>
                 </div>
               </div>
             ))}
           </div>
           <p className="text-center text-xs text-[var(--text-muted)] mt-6">
-            Daily rates are estimates for 2026. Seasonal pricing can change rates by 30-50% during peak periods.
+            Most rental cars in Morocco have manual transmission. Automatics cost 50-100 MAD more per day and must be reserved in advance.
           </p>
         </div>
       </section>
 
-      {/* ── Essential Documentation ── */}
+      {/* ── Documentation ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
             <FileText className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Essential Documentation
+            Documents You Must Bring
           </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            What you must bring to the rental desk. Missing documents means no car.
-          </p>
-
           <div className="space-y-4">
-            {requiredDocs.map((doc) => {
-              const DocIcon = doc.icon;
+            {([
+              { doc: 'Valid Driving License', detail: 'Must be valid for the entire rental period. Non-Latin scripts require an official translation or IDP.', icon: FileText },
+              { doc: 'International Driving Permit', detail: 'Strongly recommended. Police at checkpoints routinely request it. Costs ~$20 from your national auto association.', icon: Globe },
+              { doc: 'Passport', detail: 'Required for identity at pickup. Give a photocopy if asked for a deposit. Never hand over the original.', icon: FileText },
+              { doc: 'Credit Card in Driver\'s Name', detail: 'Mandatory for the security deposit (3,000-15,000 MAD hold). Debit cards almost never accepted. Card must match the driver\'s name.', icon: CreditCard },
+            ] as const).map((d) => {
+              const Icon = d.icon;
               return (
-                <div key={doc.doc} className="card-moroccan p-5 flex items-start gap-4">
+                <div key={d.doc} className="card-moroccan p-5 flex items-start gap-4">
                   <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                    <DocIcon className="w-5 h-5 text-[var(--color-accent)]" />
+                    <Icon className="w-5 h-5 text-[var(--color-accent)]" />
                   </div>
                   <div>
-                    <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
-                      {doc.doc}
-                    </h3>
-                    <p className="text-sm text-[var(--text-secondary)]">{doc.detail}</p>
+                    <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">{d.doc}</h3>
+                    <p className="text-sm text-[var(--text-secondary)]">{d.detail}</p>
                   </div>
                 </div>
               );
@@ -835,17 +561,13 @@ export default function MoroccoCarRentalPage() {
         </div>
       </section>
 
-      {/* ── Insurance Explained ── */}
+      {/* ── Insurance ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
             <ShieldCheck className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
             Insurance Explained
           </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Understanding your coverage options is the most important part of renting a car in Morocco.
-          </p>
-
           <div className="card-moroccan p-6">
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
@@ -870,17 +592,15 @@ export default function MoroccoCarRentalPage() {
               </table>
             </div>
           </div>
-
           <div className="card-moroccan p-6 mt-6 bg-[var(--color-gold)]/5 border-l-4 border-[var(--color-gold)]">
             <div className="flex items-start gap-3">
-              <Info className="w-6 h-6 text-[var(--color-gold)] mt-0.5 shrink-0" />
+              <CreditCard className="w-6 h-6 text-[var(--color-gold)] mt-0.5 shrink-0" />
               <div>
-                <p className="font-semibold text-[var(--text-primary)] mb-1">Credit Card Coverage Tip</p>
+                <p className="font-semibold text-[var(--text-primary)] mb-1">Credit Card Coverage</p>
                 <p className="text-sm text-[var(--text-secondary)]">
-                  Many premium credit cards (Visa Gold, Mastercard World, Amex Platinum) include rental car
-                  CDW coverage when you pay for the rental with that card. Contact your card issuer before your
-                  trip to confirm coverage details and any exclusions for Morocco. This can save you from 80-150
-                  MAD per day in SCDW charges.
+                  Many premium credit cards (Visa Gold, Mastercard World, Amex Platinum) include CDW coverage when you
+                  pay for the rental with that card. Confirm details and Morocco-specific exclusions with your issuer before
+                  the trip. This can save from 80-150 MAD per day in SCDW charges.
                 </p>
               </div>
             </div>
@@ -888,20 +608,27 @@ export default function MoroccoCarRentalPage() {
         </div>
       </section>
 
-      {/* ── Driving Rules ── */}
+      {/* ── Driving Rules & Tips ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Navigation className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Driving Rules &amp; Road Conditions
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
+            <AlertTriangle className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Driving Rules &amp; Road Tips
           </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Essential rules every driver must know before getting behind the wheel in Morocco.
-          </p>
-
-          <div className="card-moroccan p-6">
+          <div className="card-moroccan p-6 mb-6">
             <ul className="space-y-3">
-              {drivingRules.map((rule) => (
+              {[
+                'Drive on the right, overtake on the left',
+                'Speed limits: 60 km/h urban, 80-100 km/h national roads, 120 km/h autoroutes',
+                'Seatbelts mandatory for all. Children under 10 ride in the back',
+                'Phone use while driving is illegal. Hands-free only',
+                'Blood alcohol limit: 0.02% (effectively zero tolerance)',
+                'Carry license, IDP, passport, rental contract, and insurance at all times',
+                'Police checkpoints are routine. Stop when flagged, present documents calmly',
+                'Speed cameras everywhere on autoroutes. Fines start from 300 MAD',
+                'Unmarked speed bumps at every village entrance. Slow down or lose your suspension',
+                'Roundabouts: yield to vehicles already inside the circle',
+              ].map((rule) => (
                 <li key={rule} className="flex items-start gap-3 text-[var(--text-secondary)]">
                   <CheckCircle className="w-5 h-5 text-[var(--color-accent)] mt-0.5 shrink-0" />
                   <span>{rule}</span>
@@ -909,43 +636,34 @@ export default function MoroccoCarRentalPage() {
               ))}
             </ul>
           </div>
-
-          <div className="grid md:grid-cols-2 gap-6 mt-6">
+          <div className="grid md:grid-cols-2 gap-6">
             <div className="card-moroccan p-6">
-              <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4">
-                Road Conditions
-              </h3>
+              <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4">Road Conditions</h3>
               <ul className="space-y-3">
                 {[
-                  'Motorways (autoroutes) are modern, well-maintained, and fast with clear signage in Arabic and French',
-                  'National roads (routes nationales) vary from excellent to rough, especially in mountain areas',
-                  'Rural and mountain roads can be narrow with sharp turns, steep drops, and limited guardrails',
-                  'Watch for unmarked speed bumps (dos d\'ane) at every village entrance',
-                  'Night driving is risky in rural areas due to unlit vehicles, livestock, and pedestrians on the road',
-                ].map((tip) => (
-                  <li key={tip} className="flex items-start gap-3 text-sm text-[var(--text-secondary)]">
-                    <CheckCircle className="w-4 h-4 text-[var(--color-accent)] mt-0.5 shrink-0" />
-                    <span>{tip}</span>
+                  'Autoroutes are modern, smooth, and well-signed in Arabic and French',
+                  'National roads range from excellent to rough, especially in the mountains',
+                  'Rural roads can be narrow with blind corners, steep drops, and no guardrails',
+                  'Night driving is risky outside cities: unlit donkey carts, pedestrians, livestock',
+                ].map((t) => (
+                  <li key={t} className="flex items-start gap-3 text-sm text-[var(--text-secondary)]">
+                    <CheckCircle className="w-4 h-4 text-[var(--color-accent)] mt-0.5 shrink-0" /><span>{t}</span>
                   </li>
                 ))}
               </ul>
             </div>
-
             <div className="card-moroccan p-6">
-              <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4">
-                Mountain &amp; Desert Tips
-              </h3>
+              <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4">Mountain &amp; Desert</h3>
               <ul className="space-y-3">
                 {[
-                  'Atlas passes (Tizi n\'Tichka, Tizi n\'Test) are winding with hairpin turns; drive slowly and use low gear on descents',
-                  'Winter snow can close mountain passes December-February; carry chains or check conditions first',
-                  'Desert roads to Merzouga and Zagora are paved; a regular car handles these fine',
-                  'Off-road desert tracks require a 4x4 with explicit rental permission',
-                  'Always fill up before entering remote mountain or desert zones; stations can be 100+ km apart',
-                ].map((tip) => (
-                  <li key={tip} className="flex items-start gap-3 text-sm text-[var(--text-secondary)]">
-                    <CheckCircle className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
-                    <span>{tip}</span>
+                  'Atlas passes (Tizi n\'Tichka, Tizi n\'Test) have hairpin turns. Use low gear on descents',
+                  'Winter snow can close passes Dec-Feb. Carry chains or check conditions first',
+                  'Main desert roads to Merzouga and Zagora are paved. A regular car handles them',
+                  'Off-road desert tracks need a 4x4 with explicit rental permission',
+                  'Fill up before remote zones. Stations can be 100+ km apart',
+                ].map((t) => (
+                  <li key={t} className="flex items-start gap-3 text-sm text-[var(--text-secondary)]">
+                    <CheckCircle className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" /><span>{t}</span>
                   </li>
                 ))}
               </ul>
@@ -954,59 +672,86 @@ export default function MoroccoCarRentalPage() {
         </div>
       </section>
 
-      {/* ── Fuel & Petrol Stations ── */}
+      {/* ── Toll Roads ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Fuel className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Fuel &amp; Petrol Stations
+            <CircleDollarSign className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Toll Roads (Autoroutes)
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            What to expect at the pump and how to budget for fuel across Morocco.
+            Morocco&apos;s 1,800 km motorway network is fast and well-maintained. Tolls are affordable
+            and paid in cash (MAD) or by Jawaz electronic tag at automated booths.
           </p>
+          <div className="card-moroccan p-6">
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b border-[var(--border-primary)]">
+                    <th className="text-left py-3 pr-4 font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Route</th>
+                    <th className="text-left py-3 pr-4 font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Distance</th>
+                    <th className="text-left py-3 pr-4 font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Toll</th>
+                    <th className="text-left py-3 font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Drive Time</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {tollRoutes.map((t) => (
+                    <tr key={t.route} className="border-b border-[var(--border-primary)] last:border-0">
+                      <td className="py-3 pr-4 font-semibold text-[var(--text-primary)]">{t.route}</td>
+                      <td className="py-3 pr-4 text-[var(--text-secondary)]">{t.distance}</td>
+                      <td className="py-3 pr-4 font-semibold text-[var(--color-accent)]">{t.toll}</td>
+                      <td className="py-3 text-[var(--text-secondary)]">{t.time}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <p className="text-center text-xs text-[var(--text-muted)] mt-6">
+            Toll prices are approximate for 2026 and may change. Keep small bills ready &mdash; booths don&apos;t always have change for 200 MAD notes.
+          </p>
+        </div>
+      </section>
 
+      {/* ── Fuel & Stations ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
+            <Fuel className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Fuel Costs &amp; Stations
+          </h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="card-moroccan p-6">
-              <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4">
-                Fuel Prices (2026 Estimates)
-              </h3>
+              <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4">2026 Fuel Prices</h3>
               <ul className="space-y-3">
                 {[
-                  { label: 'Gasoline (Essence)', value: 'From 13-15 MAD per liter' },
                   { label: 'Diesel (Gasoil)', value: 'From 11-13 MAD per liter' },
-                  { label: 'Average Full Tank (50L diesel)', value: 'From 550-650 MAD' },
+                  { label: 'Gasoline (Essence)', value: 'From 13-15 MAD per liter' },
+                  { label: 'Full Tank (50L diesel)', value: 'From 550-650 MAD' },
                   { label: 'Marrakech to Ouarzazate', value: 'Approx. 200-250 MAD in fuel' },
-                  { label: 'Weekly Road Trip (1,500 km)', value: 'Approx. 1,200-1,800 MAD total' },
-                ].map((spec) => (
-                  <li key={spec.label} className="flex items-start gap-3">
+                  { label: 'Weekly Road Trip (1,500 km)', value: 'Approx. 1,200-1,800 MAD total fuel' },
+                ].map((s) => (
+                  <li key={s.label} className="flex items-start gap-3">
                     <DollarSign className="w-5 h-5 text-[var(--color-accent)] mt-0.5 shrink-0" />
-                    <span className="text-[var(--text-secondary)]">
-                      <strong className="text-[var(--text-primary)]">{spec.label}:</strong> {spec.value}
-                    </span>
+                    <span className="text-[var(--text-secondary)]"><strong className="text-[var(--text-primary)]">{s.label}:</strong> {s.value}</span>
                   </li>
                 ))}
               </ul>
-              <p className="text-xs text-[var(--text-muted)] mt-4">
-                Fuel prices may change seasonally. Prices are approximate for 2026.
-              </p>
+              <p className="text-xs text-[var(--text-muted)] mt-4">Fuel prices may change seasonally.</p>
             </div>
-
             <div className="card-moroccan p-6">
-              <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4">
-                Station Tips
-              </h3>
+              <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4">Station Tips</h3>
               <ul className="space-y-3">
                 {[
-                  'Major brands include Afriquia, Shell, and TotalEnergies; stations every 30-50 km on highways',
-                  'Most stations accept cash (MAD) only; a few in cities accept credit cards',
-                  'Attendants pump fuel for you at most stations; a tip of 2-5 MAD is appreciated',
-                  'Stations in remote Atlas and desert areas may close early; fill up before noon in isolated zones',
-                  'Diesel is the default fuel for most Moroccan vehicles; double-check your rental car fuel type',
-                  'Rest areas on motorways have fuel, toilets, cafes, and sometimes prayer rooms',
+                  'Major brands: Afriquia, Shell, TotalEnergies. Stations every 30-50 km on highways',
+                  'Most stations accept cash only. A few in cities take credit cards',
+                  'Attendants pump for you. A tip of 2-5 MAD is standard',
+                  'Remote Atlas and desert stations may close early. Fill up before noon in isolated areas',
+                  'Double-check your rental car fuel type. Most Moroccan cars run on diesel',
+                  'Autoroute rest areas have fuel, toilets, cafes, and sometimes prayer rooms',
                 ].map((tip) => (
                   <li key={tip} className="flex items-start gap-3 text-[var(--text-secondary)]">
-                    <CheckCircle className="w-5 h-5 text-[var(--color-gold)] mt-0.5 shrink-0" />
-                    <span>{tip}</span>
+                    <CheckCircle className="w-5 h-5 text-[var(--color-gold)] mt-0.5 shrink-0" /><span>{tip}</span>
                   </li>
                 ))}
               </ul>
@@ -1015,84 +760,149 @@ export default function MoroccoCarRentalPage() {
         </div>
       </section>
 
-      {/* ── Parking Tips ── */}
+      {/* ── Parking ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
+            <MapPin className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Parking in Moroccan Cities
+          </h2>
+          <div className="grid md:grid-cols-2 gap-5">
+            {([
+              { title: 'Gardien System', text: 'Informal parking attendants in high-vis vests guard your car in every city. Pay 5-10 MAD daytime, 10-20 MAD overnight. Your car is safer with a gardien than without one.', icon: Users },
+              { title: 'Hotel & Riad Parking', text: 'Medina riads have zero parking. Hotels direct you to nearby guarded lots. Budget from 30-50 MAD per night for garage parking near medinas in Marrakech, Fes, and Meknes.', icon: MapPin },
+              { title: 'City Parking Zones', text: 'Blue-line zones need a ticket from a horodateur machine. Yellow curbs: no parking. Green zones are usually free. Parking apps are emerging in Casablanca and Rabat.', icon: Info },
+              { title: 'Never Drive Into a Medina', text: 'Medina alleys are pedestrian-only. You will get stuck. Park outside the walls at a designated lot and walk or take a petit taxi.', icon: AlertTriangle },
+            ] as const).map((p) => {
+              const Icon = p.icon;
+              return (
+                <div key={p.title} className="card-moroccan p-5">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-9 h-9 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
+                      <Icon className="w-4 h-4 text-[var(--color-accent)]" />
+                    </div>
+                    <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">{p.title}</h3>
+                  </div>
+                  <p className="text-sm text-[var(--text-secondary)]">{p.text}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Budget Estimator ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <MapPin className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Parking in Major Cities
+            <DollarSign className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            What Does a Week Cost?
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            How to park safely and affordably across Moroccan cities and towns.
+            Realistic budget estimates for a 7-day rental road trip covering ~1,500 km.
           </p>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="card-moroccan p-6">
+              <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4">Budget Trip (Economy Car)</h3>
+              <ul className="space-y-3">
+                {[
+                  { label: 'Rental (7 days, Dacia Sandero)', value: 'From 1,750 MAD' },
+                  { label: 'SCDW insurance upgrade', value: 'From 560 MAD' },
+                  { label: 'Fuel (~1,500 km diesel)', value: 'From 1,200 MAD' },
+                  { label: 'Tolls', value: 'From 300 MAD' },
+                  { label: 'Parking (7 nights)', value: 'From 210 MAD' },
+                  { label: 'Total estimate', value: 'From 4,020 MAD (~$400)' },
+                ].map((item) => (
+                  <li key={item.label} className="flex items-center justify-between text-sm">
+                    <span className="text-[var(--text-secondary)]">{item.label}</span>
+                    <span className="font-semibold text-[var(--text-primary)]">{item.value}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="card-moroccan p-6">
+              <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4">Comfort Trip (SUV)</h3>
+              <ul className="space-y-3">
+                {[
+                  { label: 'Rental (7 days, Dacia Duster)', value: 'From 3,500 MAD' },
+                  { label: 'SCDW insurance upgrade', value: 'From 700 MAD' },
+                  { label: 'Fuel (~1,500 km diesel)', value: 'From 1,500 MAD' },
+                  { label: 'Tolls', value: 'From 400 MAD' },
+                  { label: 'Parking (7 nights)', value: 'From 280 MAD' },
+                  { label: 'Total estimate', value: 'From 6,380 MAD (~$640)' },
+                ].map((item) => (
+                  <li key={item.label} className="flex items-center justify-between text-sm">
+                    <span className="text-[var(--text-secondary)]">{item.label}</span>
+                    <span className="font-semibold text-[var(--text-primary)]">{item.value}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          <p className="text-center text-xs text-[var(--text-muted)] mt-6">
+            Estimates assume off-peak pricing. Seasonal pricing can change these totals by 30-50%. One-way drop-off fees not included.
+          </p>
+        </div>
+      </section>
 
-          <div className="grid md:grid-cols-2 gap-5">
-            {parkingTips.map((tip) => {
-              const TipIcon = tip.icon;
-              return (
-                <div key={tip.title} className="card-moroccan p-5">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-9 h-9 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                      <TipIcon className="w-4.5 h-4.5 text-[var(--color-accent)]" />
-                    </div>
-                    <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                      {tip.title}
-                    </h3>
-                  </div>
-                  <p className="text-sm text-[var(--text-secondary)]">{tip.text}</p>
+      {/* ── Best Road Trip Routes ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Route className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Best Road Trip Routes
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Four proven self-drive itineraries. Each one shows you a different face of Morocco.
+          </p>
+          <div className="grid md:grid-cols-2 gap-6">
+            {roadTripRoutes.map((r) => (
+              <div key={r.name} className="card-moroccan p-6">
+                <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">{r.name}</h3>
+                <div className="flex flex-wrap gap-3 text-xs text-[var(--text-muted)] mb-3">
+                  <span className="flex items-center gap-1"><Clock className="w-3.5 h-3.5" /> {r.days}</span>
+                  <span className="flex items-center gap-1"><MapPin className="w-3.5 h-3.5" /> {r.distance}</span>
                 </div>
-              );
-            })}
+                <p className="text-sm text-[var(--text-secondary)] mb-2"><strong>Route:</strong> {r.route}</p>
+                <p className="text-sm text-[var(--text-secondary)] mb-2"><strong>Highlights:</strong> {r.highlights}</p>
+                <div className="mt-3 pt-3 border-t border-[var(--border-primary)]">
+                  <p className="text-xs text-[var(--text-muted)] flex items-center gap-1"><Car className="w-3.5 h-3.5 text-[var(--color-accent)]" /> {r.carNeeded}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ── Common Scams ── */}
-      <section className="py-16 md:py-20">
+      {/* ── Pickup & Return Checklist ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <AlertTriangle className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Common Scams &amp; How to Avoid Them
+            <Calendar className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Pickup &amp; Return Checklist
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Forewarned is forearmed. Know these common car rental pitfalls before you arrive.
+            Do every single one of these before you drive away. Skipping any step is how disputes start.
           </p>
-
-          <div className="space-y-4">
-            {commonScams.map((item) => {
-              const ScamIcon = item.icon;
-              return (
-                <div key={item.scam} className="card-moroccan p-5">
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                      <ScamIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                    </div>
-                    <div>
-                      <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
-                        {item.scam}
-                      </h3>
-                      <p className="text-sm text-[var(--text-secondary)] mb-2">
-                        <strong>How it works:</strong> {item.how}
-                      </p>
-                      <p className="text-sm text-[var(--text-secondary)]">
-                        <strong className="text-green-700">How to avoid it:</strong> {item.prevention}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
+          <div className="card-moroccan p-6">
+            <ul className="space-y-3">
+              {pickupChecklist.map((item) => (
+                <li key={item} className="flex items-start gap-3 text-[var(--text-secondary)]">
+                  <CheckCircle className="w-5 h-5 text-[var(--color-accent)] mt-0.5 shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
-
-          <div className="card-moroccan p-6 mt-6 bg-[var(--color-accent)]/5 border-l-4 border-[var(--color-accent)]">
+          <div className="card-moroccan p-6 mt-6 bg-[var(--color-gold)]/5 border-l-4 border-[var(--color-gold)]">
             <div className="flex items-start gap-3">
-              <Info className="w-6 h-6 text-[var(--color-accent)] mt-0.5 shrink-0" />
+              <Info className="w-6 h-6 text-[var(--color-gold)] mt-0.5 shrink-0" />
               <div>
-                <p className="font-semibold text-[var(--text-primary)] mb-1">Golden Rule</p>
+                <p className="font-semibold text-[var(--text-primary)] mb-1">At Return</p>
                 <p className="text-sm text-[var(--text-secondary)]">
-                  Always pay by credit card, never cash or debit card, for your rental. Credit cards offer
-                  chargeback protection if disputes arise. Keep all paperwork, receipts, and photos until
-                  you confirm no unexpected charges have appeared on your statement.
+                  Fill the tank to the agreed level. Return on time &mdash; even 30 minutes late can trigger an
+                  extra-day charge. Walk the car with the agent, get written confirmation of no damage, and ask
+                  when the deposit hold will be released from your credit card (typically 7-14 business days).
                 </p>
               </div>
             </div>
@@ -1100,26 +910,48 @@ export default function MoroccoCarRentalPage() {
         </div>
       </section>
 
-      {/* ── FAQ Section ── */}
+      {/* ── Scams to Avoid ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
+            <Shield className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Rental Scams &amp; How to Avoid Them
+          </h2>
+          <div className="space-y-4">
+            {scamWarnings.map((s) => (
+              <div key={s.scam} className="card-moroccan p-5">
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">{s.scam}</h3>
+                <p className="text-sm text-[var(--text-secondary)] mb-2"><strong>How it works:</strong> {s.how}</p>
+                <p className="text-sm text-[var(--text-secondary)]"><strong className="text-green-700">Prevention:</strong> {s.fix}</p>
+              </div>
+            ))}
+          </div>
+          <div className="card-moroccan p-6 mt-6 bg-[var(--color-accent)]/5 border-l-4 border-[var(--color-accent)]">
+            <div className="flex items-start gap-3">
+              <CreditCard className="w-6 h-6 text-[var(--color-accent)] mt-0.5 shrink-0" />
+              <div>
+                <p className="font-semibold text-[var(--text-primary)] mb-1">The Golden Rule</p>
+                <p className="text-sm text-[var(--text-secondary)]">
+                  Always pay by credit card, never cash or debit. Credit cards offer chargeback protection if disputes arise.
+                  Keep all paperwork, receipts, and photos until you confirm no unexpected charges on your statement.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── FAQ ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <HelpCircle className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
             Frequently Asked Questions
           </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Answers to the most common questions about renting a car in Morocco.
-          </p>
-
           <div className="space-y-4">
             {faqJsonLd.mainEntity.map((faq) => (
               <div key={faq.name} className="card-moroccan p-6">
-                <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                  {faq.name}
-                </h3>
-                <p className="text-[var(--text-secondary)] leading-relaxed">
-                  {faq.acceptedAnswer.text}
-                </p>
+                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">{faq.name}</h3>
+                <p className="text-sm text-[var(--text-secondary)]">{faq.acceptedAnswer.text}</p>
               </div>
             ))}
           </div>
@@ -1129,63 +961,62 @@ export default function MoroccoCarRentalPage() {
       {/* ── Related Guides ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            Related Driving &amp; Travel Guides
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
+            Continue Exploring Morocco
           </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Continue planning your Morocco driving adventure with these detailed guides.
-          </p>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {relatedGuides.map((guide) => {
-              const GuideIcon = guide.icon;
-              return (
-                <Link key={guide.href} href={guide.href} className="card-moroccan p-5 group hover:border-[var(--color-accent)] transition-colors">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                      <GuideIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                    </div>
-                    <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] group-hover:text-[var(--color-accent)] transition-colors">
-                      {guide.title}
-                    </h3>
-                  </div>
-                  <p className="text-sm text-[var(--text-secondary)] mb-3">{guide.description}</p>
-                  <span className="inline-flex items-center gap-1 text-sm font-medium text-[var(--color-accent)]">
-                    Read Guide <ArrowRight className="w-4 h-4" />
-                  </span>
-                </Link>
-              );
-            })}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Link href="/morocco-road-trip-guide" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
+              <Route className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">Road Trip Guide</h3>
+              <p className="text-sm text-[var(--text-secondary)] mb-3">Self-drive itineraries, scenic routes, mountain passes, and desert driving advice.</p>
+              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">Read more <ArrowRight className="w-3.5 h-3.5" /></span>
+            </Link>
+            <Link href="/driving" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
+              <Car className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">Driving in Morocco</h3>
+              <p className="text-sm text-[var(--text-secondary)] mb-3">Detailed rules of the road, license requirements, and tips for foreign drivers.</p>
+              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">Read more <ArrowRight className="w-3.5 h-3.5" /></span>
+            </Link>
+            <Link href="/morocco-safety-tips" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
+              <ShieldCheck className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">Safety Tips</h3>
+              <p className="text-sm text-[var(--text-secondary)] mb-3">Essential safety advice including scams, health, solo travel, and emergency numbers.</p>
+              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">Read more <ArrowRight className="w-3.5 h-3.5" /></span>
+            </Link>
+            <Link href="/morocco-budget-travel" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
+              <DollarSign className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">Budget Travel</h3>
+              <p className="text-sm text-[var(--text-secondary)] mb-3">How to travel Morocco on a budget including transport, food, and accommodation costs.</p>
+              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">Read more <ArrowRight className="w-3.5 h-3.5" /></span>
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* ── CTA Section ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
-        <div className="container-morocco text-center max-w-3xl">
-          <Car className="w-12 h-12 text-[var(--color-accent)] mx-auto mb-4" />
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
-            Ready to Rent &amp; Explore?
+      {/* ── CTA ── */}
+      <section className="py-16 md:py-20 bg-[var(--color-accent)]">
+        <div className="container-morocco text-center">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-white mb-4">
+            Ready to Hit the Road?
           </h2>
-          <p className="text-lg text-[var(--text-secondary)] mb-8">
-            With the right car, the right insurance, and the right preparation, Morocco becomes one of
-            the world&apos;s greatest driving destinations. From the Atlantic coast to the High Atlas to
-            the Sahara, every kilometer reveals something extraordinary. Book your rental, plan your route,
-            and discover Morocco at your own pace.
+          <p className="text-lg text-white/80 max-w-2xl mx-auto mb-8">
+            The right car, the right insurance, and a tank of diesel. That&apos;s all it takes to turn Morocco
+            into one of the world&apos;s greatest driving destinations. From the Atlantic coast to the High Atlas
+            to the Sahara &mdash; every kilometer reveals something extraordinary.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/morocco-road-trip-guide"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[var(--color-accent)] text-white rounded-lg font-semibold hover:bg-[var(--color-accent)]/90 transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[var(--color-accent)] rounded-lg font-semibold hover:bg-white/90 transition-colors"
             >
-              <Compass className="w-5 h-5" />
+              <Route className="w-5 h-5" />
               Plan Your Road Trip
             </Link>
             <Link
               href="/driving"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-[var(--color-accent)] text-[var(--color-accent)] rounded-lg font-semibold hover:bg-[var(--color-accent)] hover:text-white transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 text-white border border-white/30 rounded-lg font-semibold hover:bg-white/20 transition-colors"
             >
-              <Navigation className="w-5 h-5" />
+              <Car className="w-5 h-5" />
               Driving Rules Guide
             </Link>
           </div>
