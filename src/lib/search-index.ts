@@ -1973,6 +1973,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['Morocco Jewish heritage', 'Jewish sites Morocco', 'Morocco Jewish tour', 'mellah Morocco'],
       priority: 9,
     },
+    {
+      title: 'Morocco Film Locations',
+      description: 'Famous filming locations in Morocco — Atlas Studios, Ait Ben Haddou, Game of Thrones sites, Gladiator, and guided film tours.',
+      type: 'page',
+      url: '/morocco-film-locations',
+      tags: ['film', 'movies', 'locations', 'Ouarzazate'],
+      keywords: ['Morocco filming locations', 'movies filmed Morocco', 'Game of Thrones Morocco', 'Gladiator Morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Sahara Overnight',
+      description: 'Sahara desert overnight guide — camp types, Erg Chebbi vs Chigaga, stargazing, Berber music, and what to pack.',
+      type: 'page',
+      url: '/morocco-sahara-overnight',
+      tags: ['Sahara', 'desert', 'camping', 'overnight'],
+      keywords: ['Sahara overnight Morocco', 'Morocco desert camp', 'sleeping in Sahara', 'luxury desert camp Morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Spice Guide',
+      description: 'Moroccan spice guide — ras el hanout, saffron, cumin, best spice souks, quality tips, prices, and cooking uses.',
+      type: 'page',
+      url: '/morocco-spice-guide',
+      tags: ['spices', 'food', 'shopping', 'cooking'],
+      keywords: ['Morocco spices', 'Moroccan spice guide', 'buying spices Morocco', 'ras el hanout guide'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
