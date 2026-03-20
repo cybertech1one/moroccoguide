@@ -2963,6 +2963,24 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['morocco art galleries', 'moroccan contemporary art', 'marrakech art scene', 'morocco museums art', 'MACMA marrakech'],
       priority: 9,
     },
+    {
+      title: 'Morocco Festivals & Events Calendar 2026',
+      description: 'Complete month-by-month guide to Morocco festivals — Mawazine, Gnaoua, Jazzablanca, Rose Festival, Ramadan dates, and cultural events across Morocco.',
+      type: 'page',
+      url: '/morocco-festivals-calendar',
+      tags: ['festivals', 'events', 'music', 'culture', 'calendar'],
+      keywords: ['morocco festivals 2026', 'morocco events calendar', 'moroccan festivals', 'morocco music festivals', 'gnaoua festival essaouira'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Wildlife & Nature Guide 2026',
+      description: 'Morocco wildlife guide — national parks, birdwatching hotspots, marine life, Atlas Mountains fauna, desert wildlife, and eco-tourism opportunities.',
+      type: 'page',
+      url: '/morocco-wildlife-nature',
+      tags: ['wildlife', 'nature', 'national parks', 'birdwatching', 'eco-tourism'],
+      keywords: ['morocco wildlife', 'morocco national parks', 'birdwatching morocco', 'morocco nature tourism', 'barbary macaque ifrane'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

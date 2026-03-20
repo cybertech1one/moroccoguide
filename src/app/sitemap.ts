@@ -397,6 +397,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-carpet-buying',
     '/morocco-wedding-guide',
     '/morocco-art-galleries',
+    '/morocco-festivals-calendar',
+    '/morocco-wildlife-nature',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
