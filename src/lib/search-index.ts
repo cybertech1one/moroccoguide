@@ -2459,6 +2459,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['ouarzazate', 'ouarzazate morocco', 'Atlas Film Studios', 'Ait Benhaddou', 'ouarzazate things to do'],
       priority: 9,
     },
+    {
+      title: 'Morocco Honeymoon Guide — Romantic Destinations & Luxury Stays',
+      description: 'Complete Morocco honeymoon guide — romantic destinations, luxury riads, couples activities, 7-day itinerary, and budget breakdown.',
+      type: 'page',
+      url: '/morocco-honeymoon-guide',
+      tags: ['honeymoon', 'romantic', 'couples', 'luxury', 'wedding trip'],
+      keywords: ['morocco honeymoon', 'honeymoon in morocco', 'morocco honeymoon resorts', 'romantic morocco', 'couples trip'],
+      priority: 9,
+    },
+    {
+      title: 'Driving in Morocco Guide — Road Rules, Tips & Road Trip Routes',
+      description: 'Complete driving guide for Morocco — road rules, license requirements, toll roads, best road trip routes, police checkpoints, and safety tips.',
+      type: 'page',
+      url: '/morocco-driving-guide',
+      tags: ['driving', 'road trip', 'car', 'roads', 'transport'],
+      keywords: ['driving in morocco', 'morocco road trip', 'morocco driving tips', 'roads in morocco', 'self-drive morocco'],
+      priority: 9,
+    },
+    {
+      title: 'What Is a Medina? — Guide to Morocco\'s Historic Walled Cities',
+      description: 'Complete guide to Moroccan medinas — meaning, history, architecture, best medinas ranked, navigation tips, shopping, and safety advice.',
+      type: 'page',
+      url: '/morocco-medina-guide',
+      tags: ['medina', 'old city', 'history', 'architecture', 'UNESCO'],
+      keywords: ['what is a medina', 'medina meaning', 'medina morocco', 'moroccan medina', 'best medinas morocco'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

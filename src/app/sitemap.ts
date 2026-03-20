@@ -341,6 +341,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-ski-resorts',
     '/morocco-wildlife-guide',
     '/ouarzazate-guide',
+    '/morocco-honeymoon-guide',
+    '/morocco-driving-guide',
+    '/morocco-medina-guide',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
