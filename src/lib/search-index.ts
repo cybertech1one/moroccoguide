@@ -2324,6 +2324,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['Morocco art scene', 'Moroccan contemporary art', 'art galleries Morocco', 'Marrakech art'],
       priority: 9,
     },
+    {
+      title: 'Morocco Riads vs Hotels — Which Stay Is Right for You?',
+      description: 'Compare traditional Moroccan riads and modern hotels — pricing, ambiance, amenities, locations, and tips for choosing your perfect accommodation.',
+      type: 'page',
+      url: '/morocco-riads-vs-hotels',
+      tags: ['riads', 'hotels', 'accommodation', 'comparison', 'where to stay'],
+      keywords: ['riads vs hotels Morocco', 'where to stay Morocco', 'Moroccan riad experience', 'Morocco accommodation'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Family Activities — Best Things to Do with Kids',
+      description: 'Top family-friendly activities in Morocco — camel rides, cooking classes, beach resorts, desert camps, and cultural experiences for all ages.',
+      type: 'page',
+      url: '/morocco-family-activities',
+      tags: ['family', 'kids', 'activities', 'family travel', 'children'],
+      keywords: ['Morocco family activities', 'things to do with kids Morocco', 'family travel Morocco', 'Morocco with children'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Markets Guide — Best Souks & Shopping Tips',
+      description: 'Complete guide to Moroccan markets and souks — best markets by city, what to buy, haggling tips, and must-visit bazaars.',
+      type: 'page',
+      url: '/morocco-markets-guide',
+      tags: ['markets', 'souks', 'shopping', 'bazaar', 'haggling'],
+      keywords: ['Morocco markets guide', 'best souks Morocco', 'Moroccan bazaar', 'shopping in Morocco'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

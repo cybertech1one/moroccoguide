@@ -326,6 +326,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-water-guide',
     '/morocco-airport-guide',
     '/morocco-art-scene',
+    '/morocco-riads-vs-hotels',
+    '/morocco-family-activities',
+    '/morocco-markets-guide',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
