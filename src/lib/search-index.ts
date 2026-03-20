@@ -2594,6 +2594,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['wild camping morocco', 'camping in morocco', 'free camping morocco', 'overlanding morocco', 'camping spots morocco'],
       priority: 9,
     },
+    {
+      title: 'Living in Morocco as an Expat — Cost of Living, Visa & Lifestyle',
+      description: 'Complete expat guide — visa types, cost of living, best cities, housing, healthcare, banking, international schools, and digital nomad scene.',
+      type: 'page',
+      url: '/morocco-expat-guide',
+      tags: ['expat', 'living abroad', 'cost of living', 'visa', 'digital nomad'],
+      keywords: ['living in morocco expat', 'expat life morocco', 'cost of living morocco', 'moving to morocco', 'retire in morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco SIM Card Guide — Maroc Telecom, Inwi & Orange Plans',
+      description: 'Complete SIM card guide — carrier comparison, tourist plans, where to buy, activation, eSIM options, coverage, top-up methods, and WiFi.',
+      type: 'page',
+      url: '/morocco-sim-card-guide',
+      tags: ['SIM card', 'mobile', 'internet', 'Maroc Telecom', 'connectivity'],
+      keywords: ['morocco sim card', 'maroc telecom tourist sim', 'inwi tourist sim', 'best network morocco', 'data sim morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco UNESCO World Heritage Sites — Complete Guide to All 9 Sites',
+      description: 'Complete guide to all 9 UNESCO sites — Fes, Marrakech, Ait-Ben-Haddou, Meknes, Volubilis, Tetouan, Essaouira, El Jadida, Rabat, plus itineraries.',
+      type: 'page',
+      url: '/morocco-unesco-sites',
+      tags: ['UNESCO', 'world heritage', 'cultural sites', 'history', 'preservation'],
+      keywords: ['unesco morocco sites', 'world heritage sites morocco', 'UNESCO sites Morocco', 'morocco heritage sites', 'cultural heritage morocco'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

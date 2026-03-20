@@ -356,6 +356,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-nature-tours',
     '/dakhla-guide',
     '/morocco-wild-camping',
+    '/morocco-expat-guide',
+    '/morocco-sim-card-guide',
+    '/morocco-unesco-sites',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
