@@ -25,6 +25,8 @@ import {
   Scroll,
   Map,
   Compass,
+  Music,
+  Camera,
 } from 'lucide-react';
 
 /* ═══════════════════════════════════════════════════════════════
@@ -38,50 +40,53 @@ const BASE_URL = 'https://citytoursmorocco.com';
    ═══════════════════════════════════════════════════════════════ */
 
 export const metadata: Metadata = {
-  title: 'Morocco Jewish Heritage Guide 2026 | Mellahs, Synagogues & Cultural Sites',
+  title: 'Jewish Heritage in Morocco 2026 | Mellahs, Synagogues & Cultural Tours',
   description:
-    'Complete guide to Jewish heritage in Morocco. Explore historic mellahs in Fes, Marrakech, and Essaouira, visit ancient synagogues like Slat al-Fassiyyin and Lazama, discover the Museum of Moroccan Judaism, and learn about King Mohammed V\'s protection of Jews during WWII.',
+    'Complete guide to Jewish heritage in Morocco. Explore 2,000+ years of history across the mellahs of Fes, Marrakech, Essaouira, and Meknes. Visit the Ibn Danan and Slat al-Azama synagogues, the Museum of Moroccan Judaism, and Hiloula pilgrimage sites. Guided tour prices from 300 MAD.',
   keywords: [
-    'Morocco Jewish heritage',
-    'Jewish quarter Morocco',
-    'mellah Morocco',
-    'synagogues Morocco',
-    'Jewish history Morocco',
-    'Slat al-Fassiyyin Fes',
-    'Lazama synagogue Marrakech',
-    'Beth-El synagogue Casablanca',
+    'jewish heritage morocco',
+    'morocco jewish history',
+    'mellah morocco',
+    'jewish tour morocco',
+    'synagogues morocco',
+    'Ibn Danan synagogue Fes',
+    'Slat al-Azama Marrakech',
+    'Lazama synagogue',
+    'Beth-El Casablanca',
     'Museum of Moroccan Judaism',
     'mellah Fes',
     'mellah Marrakech',
     'mellah Essaouira',
+    'mellah Meknes',
     'Jewish cemetery Morocco',
     'Hiloula pilgrimage Morocco',
-    'King Mohammed V Jews',
-    'Jewish Moroccan cuisine',
-    'Jewish tours Morocco',
-    'Morocco interfaith heritage',
-    'Moroccan Jewish community',
+    'King Mohammed V Jews WWII',
+    'Jewish Moroccan cuisine dafina',
+    'Andre Azoulay Morocco',
+    'Samy Elmaghribi',
+    'Bayt Dakira Essaouira',
     'Jewish quarter Fes medina',
+    'morocco interfaith heritage',
   ],
   openGraph: {
-    title: 'Morocco Jewish Heritage Guide 2026 | Mellahs, Synagogues & Cultural Sites',
+    title: 'Jewish Heritage in Morocco 2026 | Mellahs, Synagogues & Cultural Tours',
     description:
-      'Discover Morocco\'s rich Jewish heritage. From ancient mellahs and restored synagogues to the only Jewish museum in the Arab world. A story of centuries of coexistence.',
+      'Discover 2,000+ years of Jewish life in Morocco. Ancient mellahs, restored synagogues, the only Jewish museum in the Arab world, and guided heritage tours from 300 MAD.',
     url: `${BASE_URL}/morocco-jewish-heritage`,
     images: [
       {
         url: `${BASE_URL}/images/hero-fes-medina.webp`,
         width: 1200,
         height: 630,
-        alt: 'Historic mellah quarter in Morocco with traditional architecture and narrow streets',
+        alt: 'Historic mellah quarter in Fes, Morocco with traditional balconied architecture and narrow streets',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Morocco Jewish Heritage Guide 2026 | Mellahs & Synagogues',
+    title: 'Jewish Heritage in Morocco 2026 | Mellahs & Synagogues',
     description:
-      'Explore Morocco\'s Jewish heritage: historic mellahs, ancient synagogues, the Museum of Moroccan Judaism, and a centuries-long story of coexistence and cultural exchange.',
+      'Explore Morocco&apos;s Jewish heritage: ancient mellahs, restored synagogues, the Museum of Moroccan Judaism, Hiloula pilgrimages, and King Mohammed V&apos;s WWII protection of 250,000 Jews.',
     images: [`${BASE_URL}/images/hero-fes-medina.webp`],
   },
   alternates: { canonical: `${BASE_URL}/morocco-jewish-heritage` },
@@ -95,9 +100,9 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'TravelGuide',
   '@id': `${BASE_URL}/morocco-jewish-heritage`,
-  name: 'Morocco Jewish Heritage Guide 2026 | Mellahs, Synagogues & Cultural Sites',
+  name: 'Jewish Heritage in Morocco 2026 | Mellahs, Synagogues & Cultural Tours',
   description:
-    'Complete guide to Jewish heritage in Morocco. Explore historic mellahs, visit ancient synagogues, discover the Museum of Moroccan Judaism, and learn about the centuries of Jewish-Muslim coexistence.',
+    'Complete guide to Jewish heritage in Morocco. Explore 2,000+ years of history across mellahs, synagogues, museums, and guided cultural tours.',
   url: `${BASE_URL}/morocco-jewish-heritage`,
   image: `${BASE_URL}/images/hero-fes-medina.webp`,
   author: {
@@ -111,7 +116,7 @@ const jsonLd = {
     url: BASE_URL,
   },
   datePublished: '2026-03-19',
-  dateModified: '2026-03-19',
+  dateModified: '2026-03-20',
   mainEntityOfPage: `${BASE_URL}/morocco-jewish-heritage`,
   isPartOf: {
     '@type': 'WebSite',
@@ -126,7 +131,7 @@ const jsonLd = {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Morocco Jewish Heritage Guide', item: `${BASE_URL}/morocco-jewish-heritage` },
+      { '@type': 'ListItem', position: 2, name: 'Jewish Heritage in Morocco', item: `${BASE_URL}/morocco-jewish-heritage` },
     ],
   },
 };
@@ -140,7 +145,7 @@ const faqJsonLd = {
       name: 'Can you visit Jewish heritage sites in Morocco?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Morocco actively preserves its Jewish heritage. Synagogues, mellahs, cemeteries, and the Museum of Moroccan Judaism in Casablanca are open to visitors. Many sites are free or charge a small entry fee from 20 MAD. Guided heritage tours are available in Fes, Marrakech, Essaouira, and Casablanca.',
+        text: 'Yes. Morocco actively preserves its Jewish heritage sites. Synagogues, mellahs, cemeteries, and the Museum of Moroccan Judaism in Casablanca are open to visitors. Entry fees range from 20 to 40 MAD. Guided heritage tours run in Fes, Marrakech, Essaouira, and Casablanca from 300 MAD per person.',
       },
     },
     {
@@ -148,7 +153,7 @@ const faqJsonLd = {
       name: 'What is a mellah in Morocco?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'A mellah is a historic Jewish quarter in a Moroccan city. The term originates from the Arabic word for salt. Mellahs were established from the 15th century onward and often featured distinctive architecture with balconied houses and interior courtyards. The most famous mellahs are in Fes (the oldest, dating to 1438), Marrakech, and Essaouira.',
+        text: 'A mellah is a historic Jewish quarter found in Moroccan cities. The term comes from the Arabic word for salt. The first mellah was established in Fes in 1438 under the Marinid dynasty. Mellahs feature distinctive architecture with exterior balconies and larger windows. Major mellahs exist in Fes, Marrakech, Essaouira, and Meknes.',
       },
     },
     {
@@ -156,7 +161,7 @@ const faqJsonLd = {
       name: 'How did King Mohammed V protect Moroccan Jews during WWII?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'During World War II, when the Vichy French regime demanded Morocco hand over its Jewish citizens, King Mohammed V famously refused, reportedly saying "There are no Jews in Morocco. There are only Moroccan subjects." He insisted that anti-Jewish laws would not be enforced in his kingdom, protecting the approximately 250,000 Jews living in Morocco at the time.',
+        text: 'When the Vichy French regime demanded Morocco hand over its Jewish citizens during World War II, King Mohammed V refused. He reportedly declared "There are no Jews in Morocco. There are only Moroccan subjects." He continued inviting Jewish leaders to royal events and resisted enforcement of anti-Jewish laws, helping protect approximately 250,000 Moroccan Jews.',
       },
     },
     {
@@ -164,7 +169,15 @@ const faqJsonLd = {
       name: 'Are there still Jews living in Morocco today?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Morocco is home to the largest Jewish community in the Arab world, with an estimated 2,000-3,000 Jews living primarily in Casablanca, with smaller communities in Marrakech, Fes, Rabat, and Tangier. The community is active and maintains synagogues, schools, and cultural institutions.',
+        text: 'Yes. Morocco has the largest Jewish community in the Arab world, with an estimated 2,000 to 3,000 residents. Most live in Casablanca, with smaller communities in Marrakech, Fes, Rabat, and Tangier. The community operates synagogues, schools, a rabbinical court, and cultural institutions.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is dafina, the Jewish-Moroccan Shabbat dish?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Dafina (also called skhina) is a slow-cooked stew prepared on Friday before Shabbat and left to cook overnight. It contains beef, chickpeas, potatoes, whole eggs in their shells, wheat berries, and warm spices like cinnamon and turmeric. It is the Moroccan-Jewish equivalent of Ashkenazi cholent and remains popular in Israel among Moroccan-origin families.',
       },
     },
     {
@@ -172,14 +185,22 @@ const faqJsonLd = {
       name: 'What is the Hiloula pilgrimage in Morocco?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The Hiloula is an annual Jewish pilgrimage tradition where Moroccan Jews, including many who have emigrated to Israel and France, return to visit the tombs of venerated rabbis and saints. The largest Hiloula ceremonies take place at the tombs of Rabbi Amram Ben Diwan near Ouezzane and Rabbi Haim Pinto in Essaouira.',
+        text: 'The Hiloula is an annual Jewish pilgrimage to the tombs of venerated rabbis and saints in Morocco. Moroccan Jews from Israel, France, and other countries return each year to light candles, pray, and celebrate. Major sites include Rabbi Amram Ben Diwan near Ouezzane, Rabbi Haim Pinto in Essaouira, and Rabbi David ou Moshe in the Atlas Mountains.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does a Jewish heritage tour in Morocco cost?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Half-day walking tours of individual mellahs start from 300 MAD per person in Essaouira and from 400 MAD in Fes. Full multi-city heritage circuits covering Casablanca, Marrakech, Essaouira, and Fes over 5-7 days start from 12,000 MAD per person, including a specialist guide, transport, and site entry fees.',
       },
     },
   ],
 };
 
 /* ═══════════════════════════════════════════════════════════════
-   DATA: KEY MELLAHS BY CITY
+   DATA: MELLAHS BY CITY
    ═══════════════════════════════════════════════════════════════ */
 
 const mellahsByCity = [
@@ -189,8 +210,8 @@ const mellahsByCity = [
     image: '/images/hero-fes-medina.webp',
     established: '1438',
     description:
-      'The Fes mellah is the oldest Jewish quarter in Morocco and one of the oldest in the world. Established in 1438 under the Marinid dynasty, it sits within Fes el-Jdid (New Fes) near the Royal Palace. At its peak, it housed over 250,000 residents and was the spiritual center of Moroccan Jewry. The quarter features distinctive architecture with balconied houses, interior courtyards, and narrow winding streets. Today it contains restored synagogues, a vast Jewish cemetery, and the iconic Aben Danan Synagogue.',
-    highlights: ['Oldest mellah in Morocco (1438)', 'Aben Danan Synagogue', 'Ibn Danan Jewish Cemetery', 'Habarim Cemetery with thousands of white tombs'],
+      'The oldest mellah in Morocco and among the oldest in the world. Founded under the Marinid dynasty, it occupies a section of Fes el-Jdid near the Royal Palace. At its height, the Fes mellah housed tens of thousands of residents and served as the spiritual capital of Moroccan Jewry. The quarter has distinctive balconied houses, interior courtyards, and narrow passages. The Aben Danan and Slat al-Fassiyyin synagogues stand here, along with the Habarim Cemetery containing thousands of whitewashed tombs.',
+    highlights: ['Oldest mellah in Morocco (1438)', 'Aben Danan Synagogue', 'Slat al-Fassiyyin Synagogue', 'Habarim Cemetery with medieval tombstones'],
   },
   {
     city: 'Marrakech',
@@ -198,8 +219,8 @@ const mellahsByCity = [
     image: '/images/hero-marrakech-medina.webp',
     established: '1558',
     description:
-      'The Marrakech mellah, established in 1558 under the Saadian dynasty, is located southeast of the Royal Palace in the medina. It was once one of the largest Jewish quarters in Morocco, with a population of over 35,000. The quarter features the beautifully restored Lazama Synagogue, a spice market, and traditional fondouks. The mellah\'s architecture is distinctly different from the Muslim quarters, with houses featuring exterior balconies and larger windows. The Jewish cemetery of Miaara is one of the largest Jewish burial grounds in the Islamic world.',
-    highlights: ['Lazama Synagogue (17th century)', 'Miaara Jewish Cemetery', 'Mellah spice market', 'Saadian-era fondouks'],
+      'Established by the Saadian dynasty, the Marrakech mellah sits southeast of the Royal Palace within the medina. It once held over 35,000 Jewish residents and was a center of trade, goldsmithing, and sugar refining. The architecture differs from Muslim quarters: houses have exterior balconies and larger windows facing the street. The Lazama Synagogue and Slat al-Azama remain active. The Miaara Cemetery, one of the largest Jewish burial grounds in the Islamic world, spreads across a hillside adjacent to the quarter.',
+    highlights: ['Lazama Synagogue (16th century)', 'Slat al-Azama Synagogue', 'Miaara Jewish Cemetery', 'Mellah spice market and fondouks'],
   },
   {
     city: 'Essaouira',
@@ -207,17 +228,17 @@ const mellahsByCity = [
     image: '/images/hero-essaouira-ramparts.webp',
     established: '1764',
     description:
-      'Essaouira (formerly Mogador) holds a unique place in Moroccan Jewish history. When Sultan Mohammed III built the city in 1764, he actively invited Jewish merchants and diplomats, known as the Tujjar al-Sultan (merchants of the king), to help develop the port. At one point, Jews made up nearly 40% of the city\'s population. The mellah is integrated into the medina rather than walled off, reflecting the unusual level of integration in Essaouira. The Slat Lkahal Synagogue and Simon Attias Synagogue have been restored and can be visited.',
-    highlights: ['Jews comprised 40% of population', 'Slat Lkahal Synagogue', 'Simon Attias Synagogue', 'Bayt Dakira cultural center'],
+      'Essaouira holds a singular place in Moroccan-Jewish history. When Sultan Mohammed III built the port city in 1764, he recruited Jewish merchants and diplomats — the Tujjar al-Sultan (merchants of the king) — to run its international trade. Jews eventually comprised nearly 40% of the population. Unlike other mellahs, the Jewish quarter here was integrated into the medina rather than walled off, reflecting unusually close Muslim-Jewish relations. The Slat Lkahal and Simon Attias synagogues have been restored, and the Bayt Dakira cultural center preserves this history.',
+    highlights: ['Jews comprised 40% of population', 'Slat Lkahal Synagogue', 'Simon Attias Synagogue', 'Bayt Dakira (House of Memory)'],
   },
   {
-    city: 'Casablanca',
-    icon: Building,
-    image: '/images/hero-casablanca-skyline.webp',
-    established: '1750s',
+    city: 'Meknes',
+    icon: Crown,
+    image: '/images/hero-meknes.webp',
+    established: '17th century',
     description:
-      'Casablanca became the center of Moroccan Jewish life in the 20th century as Jews migrated from smaller cities. The old mellah near the medina dates to the 1750s, but the Jewish community expanded into the Lusitania neighborhood and other modern quarters. Today Casablanca is home to the largest remaining Jewish community in the Arab world, with active synagogues, kosher restaurants, a Jewish school, and the Museum of Moroccan Judaism, the only Jewish museum in the Arab world.',
-    highlights: ['Museum of Moroccan Judaism', 'Beth-El Synagogue', 'Temple Beth-El community center', 'Active kosher restaurants'],
+      'The Meknes mellah grew under Sultan Moulay Ismail, who employed Jewish craftsmen, merchants, and diplomats during his ambitious building campaigns. Located near the imposing Bab Mansour gate, the mellah featured a synagogue, market, and residential blocks organized around internal courtyards. Though smaller than the Fes or Marrakech quarters, the Meknes mellah played a key role in Moroccan-Jewish commercial life, particularly in the textile trade between the Saharan interior and Mediterranean ports.',
+    highlights: ['Built under Moulay Ismail', 'Near Bab Mansour gate', 'Key textile trade hub', 'Courtyard residential architecture'],
   },
 ];
 
@@ -227,34 +248,34 @@ const mellahsByCity = [
 
 const keySynagogues = [
   {
-    name: 'Slat al-Fassiyyin Synagogue',
+    name: 'Ibn Danan Synagogue',
     city: 'Fes',
     icon: Landmark,
     century: '17th century',
     price: 'From 20 MAD entry',
     description:
-      'One of the oldest synagogues in Morocco, located in the heart of the Fes mellah. Named after Jews who immigrated from Al-Andalus (Islamic Spain), it features stunning tilework, carved wooden ceilings, and a beautifully preserved bimah (raised platform). The synagogue was meticulously restored and serves as both a place of worship during holidays and a cultural heritage site.',
-    features: ['Andalusian-style architecture', 'Original 17th-century Torah ark', 'Zellige tilework and carved plaster', 'Restored mikveh (ritual bath)'],
+      'The most visited synagogue in Fes, restored in 1996 with UNESCO support. Built on multiple levels, it has a women&apos;s gallery above and a mikveh (ritual bath) in the basement. The interior blends Hispano-Moorish architecture with Jewish religious motifs — carved cedarwood, painted plaster, and zellige tilework produced by the same Muslim artisans who decorated the city&apos;s mosques and madrasas. Named after the Aben Danan rabbinical dynasty.',
+    features: ['UNESCO-supported restoration', 'Multi-level with underground mikveh', 'Hispano-Moorish carved cedarwood', 'Latticed women&apos;s gallery'],
   },
   {
-    name: 'Aben Danan Synagogue',
-    city: 'Fes',
-    icon: Scroll,
-    century: '17th century',
-    price: 'From 20 MAD entry',
-    description:
-      'The most visited synagogue in Fes, beautifully restored in 1996 with support from UNESCO. The synagogue is built on multiple levels, with the women\'s gallery above and a mikveh in the basement. The interior blends Hispano-Moorish architectural elements with Jewish religious motifs. Named after the Aben Danan rabbinical family, it is a testament to the craftsmanship shared between Jewish and Muslim artisans.',
-    features: ['UNESCO-supported restoration', 'Multi-level design with mikveh', 'Hispano-Moorish woodwork', 'Women\'s gallery with latticed screens'],
-  },
-  {
-    name: 'Lazama Synagogue',
+    name: 'Slat al-Azama Synagogue',
     city: 'Marrakech',
     icon: Star,
     century: '16th century',
     price: 'From 30 MAD entry',
     description:
-      'The most significant synagogue in Marrakech, built by Jews expelled from the Iberian Peninsula (Megorashim). Located in the heart of the mellah, the Lazama Synagogue features a peaceful inner courtyard with a fountain, blue-and-white tilework, and a painted wooden ceiling. It remains active for prayer and is considered one of the finest examples of Moroccan-Jewish religious architecture in the country.',
-    features: ['Active synagogue with regular services', 'Andalusian courtyard with fountain', 'Blue-and-white decorative tilework', 'Painted wooden ceiling'],
+      'Named after the Sephardic Jews who arrived from the "great" (al-Azama) communities of Castile and Aragon after 1492, this synagogue stands at the heart of the Marrakech mellah. The blue-and-white interior tilework, carved stucco, and painted ceiling display a synthesis of Iberian Jewish and Moroccan decorative traditions. An active place of worship during holidays, Slat al-Azama has been restored with support from the Moroccan government.',
+    features: ['Named after Castilian Sephardim', 'Blue-and-white zellige tilework', 'Active during Jewish holidays', 'Government-funded restoration'],
+  },
+  {
+    name: 'Lazama Synagogue',
+    city: 'Marrakech',
+    icon: Scroll,
+    century: '16th century',
+    price: 'From 30 MAD entry',
+    description:
+      'The most significant synagogue in Marrakech, founded by Megorashim (Jews expelled from Iberia). It sits in the mellah&apos;s core, behind an unassuming doorway that opens onto a peaceful Andalusian courtyard with a central fountain. The painted wooden ceiling, carved stucco arabesques, and iron-railed bimah make it one of the finest examples of Moroccan-Jewish religious architecture still in use.',
+    features: ['Active with regular prayer services', 'Andalusian courtyard and fountain', 'Painted wooden ceiling', 'Iron-railed bimah (reading platform)'],
   },
   {
     name: 'Beth-El Synagogue',
@@ -263,8 +284,8 @@ const keySynagogues = [
     century: '20th century',
     price: 'Free (donations welcome)',
     description:
-      'The largest active synagogue in Casablanca and one of the most important in the Arab world. Built in the Art Deco style during the French Protectorate era, Beth-El serves the city\'s remaining Jewish community of approximately 2,000 people. The synagogue hosts Shabbat services every Friday evening and Saturday morning. It also functions as a community center with educational programs and cultural events.',
-    features: ['Art Deco architecture', 'Regular Shabbat services', 'Community center and events', 'Largest active synagogue in Morocco'],
+      'The largest active synagogue in Morocco, built in the Art Deco style during the French Protectorate era. Beth-El serves Casablanca&apos;s Jewish community of approximately 2,000 people with Shabbat services every Friday evening and Saturday morning. The building also functions as a community center hosting educational programs, cultural events, and holiday celebrations.',
+    features: ['Art Deco architecture', 'Weekly Shabbat services', 'Community center and event space', 'Largest active synagogue in Morocco'],
   },
   {
     name: 'Slat Lkahal Synagogue',
@@ -273,8 +294,8 @@ const keySynagogues = [
     century: '19th century',
     price: 'From 20 MAD entry',
     description:
-      'One of several historic synagogues in Essaouira, Slat Lkahal has been beautifully restored and now forms part of the Bayt Dakira (House of Memory) cultural center. The restoration project preserved the original Star of David motifs, Hebrew inscriptions, and Moroccan-Jewish decorative arts. The surrounding complex includes exhibitions on Jewish life in Essaouira and the port city\'s multicultural history.',
-    features: ['Part of Bayt Dakira cultural center', 'Star of David decorative motifs', 'Hebrew and Arabic inscriptions', 'Exhibitions on Jewish-Moroccan life'],
+      'Part of the Bayt Dakira (House of Memory) cultural center, Slat Lkahal has been restored to reveal its original Star of David motifs, Hebrew inscriptions, and Moroccan-Jewish decorative elements. The surrounding complex houses exhibitions on Jewish life in Essaouira and the port city&apos;s multicultural trading past. The synagogue hosted the city&apos;s Sephardic community for over a century.',
+    features: ['Part of Bayt Dakira complex', 'Star of David decorative motifs', 'Hebrew and Arabic inscriptions', 'Exhibitions on Jewish-Mogador life'],
   },
 ];
 
@@ -283,17 +304,18 @@ const keySynagogues = [
    ═══════════════════════════════════════════════════════════════ */
 
 const historicalTimeline = [
-  { year: '1st century CE', event: 'First Jewish communities established in Morocco, with some historians tracing Jewish presence to the era of King Solomon.' },
-  { year: '7th-8th century', event: 'Jewish-Berber tribes coexist. Under early Islamic rule, Jews are granted dhimmi (protected) status.' },
-  { year: '1438', event: 'The first mellah is established in Fes under the Marinid dynasty, becoming the model for Jewish quarters across Morocco.' },
-  { year: '1492', event: 'Tens of thousands of Sephardic Jews flee the Spanish Inquisition to Morocco, bringing Iberian traditions and the Haketia language.' },
-  { year: '1558', event: 'The Marrakech mellah is established by the Saadian dynasty, becoming one of the largest Jewish quarters in North Africa.' },
-  { year: '1672-1727', event: 'Under Sultan Moulay Ismail, Jewish merchants serve as trade envoys and diplomats to European courts.' },
-  { year: '1764', event: 'Sultan Mohammed III invites Jewish merchants (Tujjar al-Sultan) to manage the new port of Essaouira.' },
-  { year: '1912-1956', event: 'During the French Protectorate, Jewish life modernizes. Many Jews move to Casablanca and other modern cities.' },
-  { year: '1940-1945', event: 'King Mohammed V refuses to hand over Moroccan Jews to the Vichy regime, protecting approximately 250,000 Jews.' },
-  { year: '1948-1960s', event: 'Large-scale emigration to Israel reduces the Jewish population from 250,000 to approximately 50,000.' },
-  { year: '2010s-present', event: 'King Mohammed VI funds synagogue renovations, cemetery restoration, and the Bayt Dakira cultural center.' },
+  { year: '1st century CE', event: 'Jewish communities appear in Morocco. Some historians trace the presence to King Solomon&apos;s era; archaeological evidence confirms settlement by the Roman period.' },
+  { year: '7th-8th century', event: 'Jewish-Berber tribes coexist in the Atlas and Draa regions. Under early Islamic rule, Jews receive dhimmi (protected) status with guaranteed religious freedom.' },
+  { year: '1438', event: 'The first mellah is established in Fes under the Marinid dynasty, setting the model for Jewish quarters across Morocco.' },
+  { year: '1492', event: 'Tens of thousands of Sephardic Jews flee the Spanish Inquisition to Morocco. They bring Iberian scholarly traditions, the Haketia language, and new trade networks.' },
+  { year: '1558', event: 'The Saadian dynasty creates the Marrakech mellah, which grows into one of North Africa&apos;s largest Jewish quarters.' },
+  { year: '1672-1727', event: 'Sultan Moulay Ismail employs Jewish merchants as trade envoys and diplomats to European courts, expanding commerce.' },
+  { year: '1764', event: 'Sultan Mohammed III recruits Jewish merchants (Tujjar al-Sultan) to manage the new port of Essaouira, where Jews eventually reach 40% of the population.' },
+  { year: '1912-1956', event: 'Under the French Protectorate, Jewish life modernizes rapidly. Many families move from traditional mellahs to European-style neighborhoods in Casablanca, Rabat, and Tangier.' },
+  { year: '1940-1945', event: 'King Mohammed V refuses Vichy demands to deport Moroccan Jews, protecting approximately 250,000 people.' },
+  { year: '1948-1960s', event: 'Large-scale emigration to Israel and France reduces the Jewish population from 250,000 to roughly 50,000.' },
+  { year: '2011', event: 'The new Moroccan constitution recognizes the "Hebraic" tributary as part of Morocco&apos;s national identity.' },
+  { year: '2020s', event: 'King Mohammed VI funds synagogue renovations, cemetery restorations, and the Bayt Dakira cultural center in Essaouira.' },
 ];
 
 /* ═══════════════════════════════════════════════════════════════
@@ -301,12 +323,23 @@ const historicalTimeline = [
    ═══════════════════════════════════════════════════════════════ */
 
 const jewishMoroccanDishes = [
-  { name: 'Dafina (Skhina)', description: 'The Moroccan-Jewish Shabbat stew, slow-cooked overnight from Friday to Saturday. Made with beef, chickpeas, potatoes, whole eggs, wheat berries, and warm spices. The Moroccan equivalent of Ashkenazi cholent.', price: 'From 50 MAD at local eateries' },
-  { name: 'Pastilla au Poisson', description: 'A Jewish-Moroccan variation of the classic pastilla, using fish instead of pigeon or chicken to comply with kosher dietary laws. Wrapped in warqa pastry with vermicelli, herbs, and a touch of cinnamon.', price: 'From 80 MAD at restaurants' },
-  { name: 'Matbucha', description: 'A cooked tomato and roasted pepper salad of Moroccan-Jewish origin, seasoned with garlic, chili, and olive oil. Now a beloved dish throughout Israel and the broader Sephardic world.', price: 'From 25 MAD as a starter' },
-  { name: 'Meguina', description: 'A Moroccan-Jewish frittata made with ground meat, herbs, and eggs. Often prepared for Shabbat lunch or holiday celebrations. Each family has its own variation.', price: 'From 40 MAD' },
-  { name: 'Mahia', description: 'A traditional Moroccan-Jewish fig or date brandy, distilled at home by Jewish families for generations. Now rare but still produced by a few artisans. It was traditionally served at celebrations and Hiloula gatherings.', price: 'From 100 MAD (specialty shops)' },
-  { name: 'Mimouna Sweets', description: 'An array of sweets prepared for the Mimouna celebration at the end of Passover, including mufleta (thin pancakes with butter and honey), and tables laden with dates, nuts, and dried fruits. The Mimouna is a uniquely Moroccan-Jewish tradition.', price: 'From 30 MAD at bakeries' },
+  { name: 'Dafina (Skhina)', description: 'The Shabbat stew. Prepared Friday afternoon and slow-cooked overnight in a communal oven or on low heat. Contains beef, chickpeas, potatoes, whole eggs (which turn brown in their shells), wheat berries, and spices like cinnamon, cumin, and turmeric. The Moroccan-Jewish answer to Ashkenazi cholent.', price: 'From 50 MAD at local eateries' },
+  { name: 'Pastilla au Poisson', description: 'A kosher adaptation of the classic pigeon or chicken pastilla. This fish version layers vermicelli noodles, white fish, herbs, and a dusting of cinnamon inside crispy warqa pastry. The dish reflects how Jewish cooks adapted iconic Moroccan recipes to kosher dietary laws.', price: 'From 80 MAD at restaurants' },
+  { name: 'Maacouda', description: 'Crispy potato fritters seasoned with cumin, turmeric, and fresh cilantro, then fried golden. A staple of Jewish-Moroccan home cooking that became a standard street food across Morocco and later a beloved dish in Israel.', price: 'From 15 MAD (street vendors)' },
+  { name: 'Matbucha', description: 'A cooked salad of roasted peppers and tomatoes, slow-simmered with garlic, chili, and olive oil until thick. Moroccan-Jewish families brought this recipe to Israel, where it became a national staple.', price: 'From 25 MAD as a starter' },
+  { name: 'Mimouna Sweets', description: 'The post-Passover Mimouna features mufleta (thin pancakes with butter and honey), dates, almonds, dried figs, and nougat. A uniquely Moroccan-Jewish tradition now celebrated nationwide in Israel.', price: 'From 30 MAD at bakeries' },
+  { name: 'Mahia', description: 'A traditional fig or date brandy distilled by Jewish families for generations. Clear and strong, mahia was served at celebrations and Hiloula gatherings. Production has become rare, but a few artisans in Casablanca still make it.', price: 'From 100 MAD (specialty shops)' },
+];
+
+/* ═══════════════════════════════════════════════════════════════
+   DATA: NOTABLE MOROCCAN JEWS
+   ═══════════════════════════════════════════════════════════════ */
+
+const notableFigures = [
+  { name: 'Andre Azoulay', role: 'Senior Advisor to King Mohammed VI', icon: Crown, description: 'Born in Essaouira in 1941, Azoulay has served as a senior advisor to both King Hassan II and King Mohammed VI. He is the driving force behind Morocco&apos;s Jewish heritage preservation programs and the co-founder of the Essaouira Gnaoua and World Music Festival. He exemplifies the continuing place of Jews in Moroccan public life.' },
+  { name: 'Samy Elmaghribi', role: 'Singer & Cultural Icon (1922-2008)', icon: Music, description: 'Born Salomon Amzallag in Rabat, Samy Elmaghribi was Morocco&apos;s most celebrated Jewish musician. He sang in Arabic, Haketia, and French, blending Andalusian, Amazigh, and Arab musical traditions. His recordings of malhun poetry and popular songs remain iconic in Morocco decades after his emigration to Canada.' },
+  { name: 'Edmond Amran El Maleh', role: 'Novelist & Intellectual (1917-2010)', icon: BookOpen, description: 'A Safi-born writer whose French-language novels drew on the rhythms of Moroccan Jewish life. His works, including "Parcours immobile" and "Ailen ou la nuit du recit," explored the intertwined identities of Jewish and Muslim Moroccans. He was a vocal advocate for Palestinian rights and Moroccan-Jewish cultural pride.' },
+  { name: 'Haim Zafrani', role: 'Scholar of Judeo-Moroccan Heritage (1922-2004)', icon: Scroll, description: 'Born in Mogador (Essaouira), Zafrani was the foremost academic authority on Jewish intellectual life in Morocco. His multi-volume works documented the legal, literary, and liturgical traditions of Moroccan Jews from the medieval era to the 20th century. His research remains the definitive scholarly reference on the subject.' },
 ];
 
 /* ═══════════════════════════════════════════════════════════════
@@ -314,11 +347,11 @@ const jewishMoroccanDishes = [
    ═══════════════════════════════════════════════════════════════ */
 
 const guidedTours = [
-  { city: 'Fes', tour: 'Mellah & Heritage Walk', duration: '3-4 hours', price: 'From 400 MAD', description: 'Aben Danan Synagogue, Slat al-Fassiyyin, Jewish cemetery, and mellah walking tour.' },
-  { city: 'Marrakech', tour: 'Jewish Quarter Tour', duration: '2-3 hours', price: 'From 350 MAD', description: 'Lazama Synagogue, Miaara Cemetery, mellah spice market, Saadian-era history.' },
-  { city: 'Essaouira', tour: 'Heritage Trail', duration: '2-3 hours', price: 'From 300 MAD', description: 'Bayt Dakira center, restored synagogues, Tujjar al-Sultan merchant history.' },
-  { city: 'Casablanca', tour: 'Jewish Heritage Tour', duration: '3-4 hours', price: 'From 500 MAD', description: 'Museum of Moroccan Judaism, Beth-El Synagogue, old mellah, living community.' },
-  { city: 'Multi-city', tour: 'Heritage Circuit', duration: '5-7 days', price: 'From 12,000 MAD', description: 'Full circuit: Casablanca, Marrakech, Essaouira, Fes with synagogues, Hiloula sites, kosher dining.' },
+  { city: 'Fes', tour: 'Mellah & Heritage Walk', duration: '3-4 hours', price: 'From 400 MAD', description: 'Ibn Danan Synagogue, Slat al-Fassiyyin, Habarim Cemetery, and mellah walking tour with a specialist guide.' },
+  { city: 'Marrakech', tour: 'Jewish Quarter Tour', duration: '2-3 hours', price: 'From 350 MAD', description: 'Lazama and Slat al-Azama synagogues, Miaara Cemetery, mellah spice market, and Saadian-era history.' },
+  { city: 'Essaouira', tour: 'Heritage Trail', duration: '2-3 hours', price: 'From 300 MAD', description: 'Bayt Dakira cultural center, restored synagogues, and the story of the Tujjar al-Sultan merchant dynasty.' },
+  { city: 'Casablanca', tour: 'Jewish Heritage Tour', duration: '3-4 hours', price: 'From 500 MAD', description: 'Museum of Moroccan Judaism, Beth-El Synagogue, old mellah, and encounters with the living community.' },
+  { city: 'Multi-city', tour: 'Heritage Circuit', duration: '5-7 days', price: 'From 12,000 MAD', description: 'Full circuit: Casablanca, Marrakech, Essaouira, Fes. All synagogues, Hiloula sites, kosher dining, and specialist guiding.' },
 ];
 
 /* ═══════════════════════════════════════════════════════════════
@@ -352,54 +385,53 @@ export default function MoroccoJewishHeritagePage() {
               <Home className="w-3.5 h-3.5" />
             </Link>
             <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-white">Morocco Jewish Heritage Guide</span>
+            <span className="text-white">Jewish Heritage in Morocco</span>
           </nav>
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm text-white/90 text-sm mb-6">
             <Landmark className="w-4 h-4" />
             History &amp; Heritage
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-display)] font-bold text-white mb-4">
-            Morocco Jewish Heritage Guide:
-            <br className="hidden md:block" /> Mellahs, Synagogues &amp; Cultural Sites
+            Jewish Heritage in Morocco:
+            <br className="hidden md:block" /> Mellahs, Synagogues &amp; Cultural Tours
           </h1>
           <p className="text-xl text-white/80 max-w-2xl">
-            A thousand years of coexistence. Explore the mellahs, synagogues, cemeteries, and
-            living traditions of one of the world&apos;s oldest and most remarkable Jewish communities.
+            Two thousand years of coexistence. Explore the ancient mellahs, restored synagogues,
+            pilgrimage sites, and living traditions of one of the world&apos;s oldest Jewish communities.
           </p>
         </div>
       </section>
 
       <div className="zellige-border" />
 
-      {/* ── Introduction ── */}
+      {/* ── Overview ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
           <div className="prose-moroccan">
             <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
-              A Story of Coexistence Spanning Two Millennia
+              A Story Written Over Two Millennia
             </h2>
             <div className="space-y-4 text-lg text-[var(--text-secondary)] leading-relaxed">
               <p>
-                Morocco&apos;s Jewish heritage is one of the most extraordinary chapters in the history of
-                the Islamic world. For over 2,000 years, Jewish communities have lived, thrived, and
-                shaped Moroccan culture in ways that still resonate today. From the ancient Berber-Jewish
-                tribes who predated the Arab conquest to the Sephardic scholars who fled the Spanish Inquisition,
-                Moroccan Jews have left an indelible mark on the kingdom&apos;s architecture, cuisine, music,
-                and commerce.
+                Jewish presence in Morocco predates the Arab conquest by centuries. Archaeological evidence
+                and historical records place Jewish communities in the region as early as the 1st century CE,
+                with some traditions tracing roots to the era of King Solomon. Berber-Jewish tribes lived in
+                the Atlas Mountains and the Draa Valley long before Islam arrived.
               </p>
               <p>
-                At its peak in the 1940s, Morocco was home to approximately 250,000 Jews, making it the
-                largest Jewish community in the Arab world. Though emigration to Israel and France has reduced
-                that number to roughly 2,000-3,000 today, Morocco has done something remarkable: it has
-                actively preserved, restored, and celebrated its Jewish heritage. Under King Mohammed VI,
-                synagogues have been renovated, cemeteries restored, and cultural centers built to ensure
-                this shared history is never forgotten.
+                After the fall of Muslim Spain in 1492, tens of thousands of Sephardic Jews crossed the
+                Strait of Gibraltar into Morocco. They brought Iberian scholarship, the Haketia language,
+                and trade connections that transformed Moroccan commerce. By the 1940s, Morocco was home
+                to roughly 250,000 Jews — the largest Jewish community in the Arab world.
               </p>
               <p>
-                For travelers, Morocco offers a rare opportunity to explore a living Jewish heritage within
-                an Islamic country. From the ancient mellah of Fes to the restored synagogues of Essaouira,
-                from the only Jewish museum in the Arab world to the annual Hiloula pilgrimages that draw
-                thousands, this guide covers everything you need to plan a meaningful visit.
+                Emigration to Israel and France after 1948 reduced the community to approximately 2,000-3,000
+                people today. But Morocco has done something that sets it apart: under King Mohammed VI, the
+                state has spent millions restoring synagogues, renovating cemeteries, and building cultural
+                centers to preserve this shared heritage. The 2011 constitution explicitly recognizes
+                the &quot;Hebraic&quot; tributary as part of Moroccan national identity. For travelers, this
+                makes Morocco one of the few countries in the Islamic world where Jewish heritage sites
+                are actively maintained, well-signposted, and open to visitors.
               </p>
             </div>
           </div>
@@ -411,10 +443,10 @@ export default function MoroccoJewishHeritagePage() {
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <History className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            A Timeline of Jewish Life in Morocco
+            Timeline: 2,000+ Years of Jewish Life in Morocco
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Over two thousand years of history, from ancient Berber-Jewish coexistence to modern heritage preservation.
+            From ancient Berber-Jewish coexistence to modern constitutional recognition.
           </p>
 
           <div className="max-w-4xl mx-auto">
@@ -441,51 +473,15 @@ export default function MoroccoJewishHeritagePage() {
         </div>
       </section>
 
-      {/* ── King Mohammed V Section ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <ShieldCheck className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            King Mohammed V: Protector of Morocco&apos;s Jews
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            A defining moment in Moroccan history and a symbol of the kingdom&apos;s tradition of tolerance.
-          </p>
-
-          <div className="card-moroccan p-8">
-            <div className="space-y-4 text-[var(--text-secondary)] leading-relaxed">
-              <p>
-                During World War II, when the Vichy French administration imposed anti-Jewish laws across
-                French-controlled territories, King Mohammed V took a courageous stand. He refused to
-                distinguish between his Muslim and Jewish subjects, famously declaring: &quot;There are
-                no Jews in Morocco. There are only Moroccan subjects.&quot; He continued to invite Jewish
-                leaders to the throne celebration and insisted that anti-Jewish laws would not apply.
-              </p>
-              <p>
-                While historians debate how fully the Vichy laws were blocked in practice, Mohammed V&apos;s
-                stance provided a degree of protection to approximately 250,000 Moroccan Jews during one
-                of history&apos;s darkest chapters. Morocco was one of the very few countries in the Muslim
-                world where Jewish communities emerged from World War II largely intact.
-              </p>
-              <p>
-                Today, this legacy continues. King Mohammed VI has spoken repeatedly about the importance
-                of Morocco&apos;s Jewish heritage. The 2011 Moroccan constitution explicitly recognizes
-                the &quot;Hebraic&quot; tributary as part of Morocco&apos;s rich cultural identity.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ── Mellahs by City ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+      <section className="py-16 md:py-20">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <MapPin className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Historic Mellahs: The Jewish Quarters of Morocco
+            The Mellahs: Morocco&apos;s Historic Jewish Quarters
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Each Moroccan city&apos;s mellah tells a unique chapter of the Jewish-Moroccan story. Here are the most significant.
+            Each mellah tells a distinct chapter of the Moroccan-Jewish story. Four survive in Fes, Marrakech, Essaouira, and Meknes.
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -529,19 +525,19 @@ export default function MoroccoJewishHeritagePage() {
         </div>
       </section>
 
-      {/* ── Key Synagogues ── */}
-      <section className="py-16 md:py-20">
+      {/* ── Synagogues ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <Scroll className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Key Synagogues to Visit in Morocco
+            Historic Synagogues Still Standing
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-4">
-            Morocco&apos;s restored synagogues are architectural treasures that blend Jewish religious tradition with Moroccan decorative arts.
+            Morocco&apos;s restored synagogues blend Jewish religious tradition with Moroccan zellige, carved cedarwood, and stucco arabesques.
           </p>
           <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
             <Info className="w-3.5 h-3.5 inline mr-1" />
-            All prices are starting prices. Seasonal pricing applies during peak tourist months and holiday periods.
+            All prices are starting prices. Seasonal pricing may apply during peak tourist months and Jewish holiday periods.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -588,74 +584,105 @@ export default function MoroccoJewishHeritagePage() {
         </div>
       </section>
 
-      {/* ── Museum of Moroccan Judaism ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+      {/* ── Jewish Museums ── */}
+      <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <Award className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            The Museum of Moroccan Judaism
+            Jewish Museums in Morocco
           </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            The only Jewish museum in the Arab world, located in Casablanca&apos;s Oasis neighborhood.
-          </p>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">Two institutions preserve centuries of Jewish-Moroccan cultural production.</p>
 
-          <div className="card-moroccan p-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-              <div className="text-center">
-                <MapPin className="w-6 h-6 text-[var(--color-accent)] mx-auto mb-2" />
-                <p className="text-sm font-semibold text-[var(--text-primary)]">Location</p>
-                <p className="text-xs text-[var(--text-muted)]">81 Rue Chasseur Jules Gros, Oasis, Casablanca</p>
+          <div className="space-y-8">
+            <div className="card-moroccan p-8">
+              <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4">
+                Museum of Moroccan Judaism, Casablanca
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                <div className="text-center">
+                  <MapPin className="w-6 h-6 text-[var(--color-accent)] mx-auto mb-2" />
+                  <p className="text-sm font-semibold text-[var(--text-primary)]">Location</p>
+                  <p className="text-xs text-[var(--text-muted)]">81 Rue Chasseur Jules Gros, Oasis, Casablanca</p>
+                </div>
+                <div className="text-center">
+                  <Clock className="w-6 h-6 text-[var(--color-accent)] mx-auto mb-2" />
+                  <p className="text-sm font-semibold text-[var(--text-primary)]">Hours</p>
+                  <p className="text-xs text-[var(--text-muted)]">Mon-Fri 10:00-17:00, Sun 11:00-15:00 (closed Sat &amp; Jewish holidays)</p>
+                </div>
+                <div className="text-center">
+                  <DollarSign className="w-6 h-6 text-[var(--color-accent)] mx-auto mb-2" />
+                  <p className="text-sm font-semibold text-[var(--text-primary)]">Entry</p>
+                  <p className="text-xs text-[var(--text-muted)]">From 40 MAD (students from 20 MAD)</p>
+                </div>
               </div>
-              <div className="text-center">
-                <Clock className="w-6 h-6 text-[var(--color-accent)] mx-auto mb-2" />
-                <p className="text-sm font-semibold text-[var(--text-primary)]">Hours</p>
-                <p className="text-xs text-[var(--text-muted)]">Mon-Fri 10:00-17:00, Sun 11:00-15:00 (closed Sat &amp; Jewish holidays)</p>
-              </div>
-              <div className="text-center">
-                <DollarSign className="w-6 h-6 text-[var(--color-accent)] mx-auto mb-2" />
-                <p className="text-sm font-semibold text-[var(--text-primary)]">Entry</p>
-                <p className="text-xs text-[var(--text-muted)]">From 40 MAD (students from 20 MAD)</p>
+              <div className="space-y-4 text-sm text-[var(--text-secondary)] leading-relaxed">
+                <p>
+                  Founded in 1997, this is the only Jewish museum in the Arab world. Its collection spans
+                  centuries: Torah scrolls, Hanukkah menorahs, traditional wedding garments, ceremonial
+                  silverwork, and photographs documenting daily life across Morocco&apos;s Jewish communities.
+                  One room reconstructs a synagogue interior with a Torah ark, bimah, and original furnishings.
+                </p>
+                <p>
+                  Temporary exhibitions rotate every few months, covering Jewish-Moroccan music, artisanal
+                  crafts, and the diaspora in Israel and France. The photographic archive alone is worth the
+                  visit — images from the mellahs of Fes and Marrakech to remote Atlas Mountain communities.
+                </p>
               </div>
             </div>
 
-            <div className="space-y-4 text-sm text-[var(--text-secondary)] leading-relaxed">
-              <p>
-                Founded in 1997, the Museum of Moroccan Judaism (Musee du Judaisme Marocain) is the only
-                Jewish museum in the Arab world. Its collection spans centuries of Jewish life in Morocco:
-                Torah scrolls, Hanukkah menorahs, traditional wedding garments, ceremonial objects, and
-                photographs tracing daily life and religious practices across Moroccan Jewish communities.
-              </p>
-              <p>
-                One room reconstructs a typical synagogue interior with a Torah ark, bimah, and traditional
-                furnishings. The photographic archive documents communities from the mellahs of Fes and
-                Marrakech to the Atlas Mountains. Temporary exhibitions explore Jewish-Moroccan music,
-                artisanal crafts, and the diaspora in Israel and France.
-              </p>
+            <div className="card-moroccan p-8">
+              <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4">
+                Bayt Dakira (House of Memory), Essaouira
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                <div className="text-center">
+                  <MapPin className="w-6 h-6 text-[var(--color-accent)] mx-auto mb-2" />
+                  <p className="text-sm font-semibold text-[var(--text-primary)]">Location</p>
+                  <p className="text-xs text-[var(--text-muted)]">Mellah quarter, Essaouira medina</p>
+                </div>
+                <div className="text-center">
+                  <Clock className="w-6 h-6 text-[var(--color-accent)] mx-auto mb-2" />
+                  <p className="text-sm font-semibold text-[var(--text-primary)]">Hours</p>
+                  <p className="text-xs text-[var(--text-muted)]">Daily 09:00-18:00 (closed Jewish holidays)</p>
+                </div>
+                <div className="text-center">
+                  <DollarSign className="w-6 h-6 text-[var(--color-accent)] mx-auto mb-2" />
+                  <p className="text-sm font-semibold text-[var(--text-primary)]">Entry</p>
+                  <p className="text-xs text-[var(--text-muted)]">From 30 MAD</p>
+                </div>
+              </div>
+              <div className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                <p>
+                  Inaugurated in 2020 with royal patronage, Bayt Dakira occupies a restored building in
+                  Essaouira&apos;s mellah. It houses the Slat Lkahal synagogue, exhibition spaces documenting
+                  the Tujjar al-Sultan merchant era, and a research library. The center hosts lectures,
+                  film screenings, and concerts of Andalusian-Jewish music. Andre Azoulay, the royal advisor
+                  from Essaouira, was instrumental in its creation.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Jewish Cemeteries ── */}
-      <section className="py-16 md:py-20">
+      {/* ── Cemeteries & Hiloula ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <Compass className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Jewish Cemeteries of Morocco
+            Jewish Cemeteries &amp; the Hiloula Pilgrimages
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Silent witnesses to centuries of Jewish life, Morocco&apos;s Jewish cemeteries are among the most significant in the Sephardic world.
+            Silent witnesses to centuries of Jewish life, and the annual pilgrimages that keep the connection alive.
           </p>
 
-          <div className="space-y-6">
+          <div className="space-y-6 mb-12">
             <div className="card-moroccan p-6">
               <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
                 Miaara Cemetery, Marrakech
               </h3>
               <p className="text-sm text-[var(--text-secondary)] mb-3">
-                One of the largest Jewish cemeteries in the Islamic world. Thousands of white-painted tombs
-                stretch across the grounds adjacent to the mellah, some dating to the 16th century. Maintained
-                under royal patronage and open to visitors. Respectful dress expected.
+                One of the largest Jewish cemeteries in the Islamic world. Thousands of white-painted tombs stretch across grounds adjacent to the mellah, some dating to the 16th century Saadian era. Maintained under royal patronage. Respectful dress expected.
               </p>
               <div className="flex items-center gap-4 text-xs text-[var(--text-muted)]">
                 <span className="flex items-center gap-1"><DollarSign className="w-3 h-3 text-[var(--color-accent)]" /> Free (donations appreciated)</span>
@@ -668,9 +695,7 @@ export default function MoroccoJewishHeritagePage() {
                 Habarim Cemetery, Fes
               </h3>
               <p className="text-sm text-[var(--text-secondary)] mb-3">
-                One of the oldest Jewish cemeteries in Morocco with medieval-era tombstones. White-washed
-                tombs cover a hillside near the mellah. Several tombs of venerated rabbis serve as Hiloula
-                pilgrimage sites. Recently restored with government and international support.
+                Among the oldest Jewish cemeteries in Morocco, with medieval tombstones. White-washed tombs cover a hillside near the mellah. Several tombs of venerated rabbis serve as Hiloula pilgrimage destinations. Restored with government support.
               </p>
               <div className="flex items-center gap-4 text-xs text-[var(--text-muted)]">
                 <span className="flex items-center gap-1"><DollarSign className="w-3 h-3 text-[var(--color-accent)]" /> From 10 MAD donation</span>
@@ -683,13 +708,42 @@ export default function MoroccoJewishHeritagePage() {
                 Ben M&apos;sik Cemetery, Casablanca
               </h3>
               <p className="text-sm text-[var(--text-secondary)] mb-3">
-                The largest Jewish cemetery in active use in Morocco. Contains graves from the 19th century
-                to the present, including a memorial section honoring Moroccan Jews who served in the French
-                military during both World Wars.
+                The largest Jewish cemetery still in active use in Morocco. Graves span the 19th century to the present, including a memorial section for Moroccan Jews who served in the French military during both World Wars.
               </p>
               <div className="flex items-center gap-4 text-xs text-[var(--text-muted)]">
                 <span className="flex items-center gap-1"><DollarSign className="w-3 h-3 text-[var(--color-accent)]" /> Free entry</span>
-                <span className="flex items-center gap-1"><MapPin className="w-3 h-3 text-[var(--color-accent)]" /> Ben M&apos;sik, Casablanca</span>
+                <span className="flex items-center gap-1"><MapPin className="w-3 h-3 text-[var(--color-accent)]" /> Ben M&apos;sik district, Casablanca</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="card-moroccan p-8">
+            <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4">
+              <Heart className="w-5 h-5 inline mr-2 text-[var(--color-accent)]" />
+              The Hiloula: Annual Pilgrimages to Saints&apos; Tombs
+            </h3>
+            <div className="space-y-4 text-sm text-[var(--text-secondary)] leading-relaxed">
+              <p>
+                The Hiloula (from the Aramaic for &quot;celebration&quot;) is a pilgrimage tradition unique
+                to Moroccan Jewry. Each year, on the anniversary of a revered rabbi&apos;s death, pilgrims
+                travel from Israel, France, Canada, and beyond to gather at the tomb. They light candles,
+                recite prayers, sing piyyutim (liturgical poems), and share communal meals. The Moroccan
+                government provides security and logistical support for these gatherings, and neighboring
+                Muslim communities often participate in welcoming the visitors.
+              </p>
+            </div>
+            <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="bg-[var(--surface-muted)] p-4 rounded-lg text-center">
+                <h4 className="text-sm font-semibold text-[var(--text-primary)] mb-1">Rabbi Amram Ben Diwan</h4>
+                <p className="text-xs text-[var(--text-muted)]">Near Ouezzane — largest annual Hiloula</p>
+              </div>
+              <div className="bg-[var(--surface-muted)] p-4 rounded-lg text-center">
+                <h4 className="text-sm font-semibold text-[var(--text-primary)] mb-1">Rabbi Haim Pinto</h4>
+                <p className="text-xs text-[var(--text-muted)]">Essaouira — major pilgrimage site</p>
+              </div>
+              <div className="bg-[var(--surface-muted)] p-4 rounded-lg text-center">
+                <h4 className="text-sm font-semibold text-[var(--text-primary)] mb-1">Rabbi David ou Moshe</h4>
+                <p className="text-xs text-[var(--text-muted)]">Atlas Mountains — remote mountain shrine</p>
               </div>
             </div>
           </div>
@@ -697,18 +751,18 @@ export default function MoroccoJewishHeritagePage() {
       </section>
 
       {/* ── Jewish-Moroccan Cuisine ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+      <section className="py-16 md:py-20">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <Utensils className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
             Jewish-Moroccan Cuisine
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-4">
-            Centuries of Jewish life in Morocco produced a distinctive culinary tradition that blends kosher dietary laws with Moroccan flavors.
+            Centuries of Jewish life in Morocco produced a culinary tradition fusing kosher dietary laws with Moroccan spices and techniques.
           </p>
           <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
             <Info className="w-3.5 h-3.5 inline mr-1" />
-            Prices shown are starting prices and may vary by restaurant, season, and location.
+            Prices are starting prices and may vary by restaurant, season, and city.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -727,130 +781,96 @@ export default function MoroccoJewishHeritagePage() {
         </div>
       </section>
 
-      {/* ── Hiloula Pilgrimages ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Heart className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            The Hiloula: Annual Pilgrimages to Holy Sites
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Each year, thousands of Moroccan Jews from around the world return to visit the tombs of venerated rabbis and saints.
-          </p>
-
-          <div className="card-moroccan p-8">
-            <div className="space-y-4 text-sm text-[var(--text-secondary)] leading-relaxed">
-              <p>
-                The Hiloula (from the Aramaic word for &quot;celebration&quot;) is a uniquely Moroccan-Jewish
-                tradition: an annual pilgrimage to the tombs of tzaddikim (righteous holy men), typically held
-                on the anniversary of the rabbi&apos;s death. Pilgrims travel from Israel, France, Canada, and
-                across the world to participate, lighting candles, praying, singing piyyutim (liturgical poems),
-                and sharing communal meals.
-              </p>
-              <p>
-                Key Hiloula sites include the tomb of Rabbi Amram Ben Diwan near Ouezzane (the largest annual
-                gathering), Rabbi Haim Pinto in Essaouira, and Rabbi David ou Moshe in the Atlas Mountains.
-                The Moroccan government facilitates these pilgrimages with security and logistical support,
-                and local Muslim communities participate in welcoming the pilgrims.
-              </p>
-            </div>
-
-            <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="bg-[var(--surface-muted)] p-4 rounded-lg text-center">
-                <h4 className="text-sm font-semibold text-[var(--text-primary)] mb-1">Rabbi Amram Ben Diwan</h4>
-                <p className="text-xs text-[var(--text-muted)]">Near Ouezzane — largest annual Hiloula gathering</p>
-              </div>
-              <div className="bg-[var(--surface-muted)] p-4 rounded-lg text-center">
-                <h4 className="text-sm font-semibold text-[var(--text-primary)] mb-1">Rabbi Haim Pinto</h4>
-                <p className="text-xs text-[var(--text-muted)]">Essaouira — major pilgrimage site</p>
-              </div>
-              <div className="bg-[var(--surface-muted)] p-4 rounded-lg text-center">
-                <h4 className="text-sm font-semibold text-[var(--text-primary)] mb-1">Rabbi David ou Moshe</h4>
-                <p className="text-xs text-[var(--text-muted)]">Atlas Mountains — remote mountain shrine</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Modern Jewish Community ── */}
+      {/* ── Notable Moroccan Jews ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <Users className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            The Jewish Community in Morocco Today
+            Notable Moroccan Jews
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">Figures who shaped Moroccan culture, politics, music, and scholarship.</p>
+
+          <div className="space-y-6">
+            {notableFigures.map((figure) => {
+              const FigureIcon = figure.icon;
+              return (
+                <div key={figure.name} className="card-moroccan p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
+                      <FigureIcon className="w-5 h-5 text-[var(--color-accent)]" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+                        {figure.name}
+                      </h3>
+                      <p className="text-sm text-[var(--color-accent)] font-medium mb-2">{figure.role}</p>
+                      <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{figure.description}</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── King Mohammed V ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <ShieldCheck className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            King Mohammed V and the Protection of Morocco&apos;s Jews
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            The largest Jewish community in the Arab world, with active institutions and a unique role in Moroccan society.
+            A defining chapter in Moroccan history — and a symbol of the kingdom&apos;s tradition of pluralism.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <Building className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Community Size &amp; Location
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                An estimated 2,000-3,000 Jews live in Morocco today, primarily in Casablanca with smaller
-                communities in Marrakech, Fes, Rabat, Tangier, and Meknes. The community maintains synagogues,
-                schools, a rabbinical court, and social welfare institutions.
+          <div className="card-moroccan p-8">
+            <div className="space-y-4 text-[var(--text-secondary)] leading-relaxed">
+              <p>
+                In 1940, after France fell to Nazi Germany, the Vichy regime imposed anti-Jewish legislation
+                across French-controlled territories, including Morocco. The laws required a census of Jews,
+                restricted their professions, and set the stage for potential deportation. King Mohammed V,
+                the reigning sultan, pushed back.
               </p>
-            </div>
-
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <Crown className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Royal Patronage
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                The Moroccan monarchy has consistently supported the Jewish community. King Mohammed VI has
-                funded the restoration of dozens of synagogues and cemeteries, and senior Jewish figures serve
-                as royal advisors. Andre Azoulay, a Jewish Moroccan, has been a senior advisor to both King
-                Hassan II and King Mohammed VI.
+              <p>
+                He refused to distinguish between his Muslim and Jewish subjects. He continued to invite
+                Jewish leaders to the annual throne celebration. When the Vichy resident-general pressed
+                him to sign the anti-Jewish decrees, Mohammed V reportedly replied: &quot;There are no Jews
+                in Morocco. There are only Moroccan subjects.&quot; The practical effect of his resistance
+                was that the harshest measures were softened or unenforced. Morocco&apos;s approximately
+                250,000 Jews survived the war largely intact — a rare outcome in territories under Vichy
+                control.
               </p>
-            </div>
-
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <BookOpen className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Education &amp; Culture
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                The community operates the Ozar Hatorah and Em Habanim schools in Casablanca, providing
-                Jewish education alongside the Moroccan national curriculum. Cultural events, concerts of
-                Andalusian-Jewish music, and academic conferences on Moroccan-Jewish heritage are held regularly.
+              <p>
+                Historians debate the extent to which Mohammed V was able to block the laws outright,
+                given France&apos;s military occupation. Some Vichy restrictions — such as quotas on Jewish
+                students in French schools — were enforced. But the king&apos;s public solidarity was
+                unmistakable, and Moroccan Jews have honored his memory ever since.
               </p>
-            </div>
-
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <Globe className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Diaspora Connections
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Over one million Israelis trace their roots to Morocco, making Moroccan Jews the largest
-                ethnic group in Israel. Hundreds of thousands more live in France, Canada, and Latin America.
-                Many return annually for the Hiloula pilgrimages and maintain deep connections with their
-                ancestral homeland.
+              <p>
+                His grandson, King Mohammed VI, has carried forward this legacy. Royal funds have restored
+                dozens of synagogues and cemeteries. In 2020, the normalization of Morocco-Israel relations
+                under the Abraham Accords opened new avenues for heritage tourism and cultural exchange.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Guided Tours ── */}
-      <section className="py-16 md:py-20">
+      {/* ── Guided Heritage Tours ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <Map className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Jewish Heritage Guided Tours
+            Guided Jewish Heritage Tours
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-4">
-            Expert-led tours bring the history to life. Here are the best options for exploring Morocco&apos;s Jewish heritage.
+            Specialist guides bring the history to life with firsthand knowledge of the mellahs, synagogues, and community stories.
           </p>
           <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
             <Info className="w-3.5 h-3.5 inline mr-1" />
-            All prices are starting prices per person. Seasonal pricing applies during peak tourist months (October-April) and may increase by 15-25%.
+            All prices are starting prices per person. Seasonal pricing applies October-April and may increase 15-25%.
           </p>
 
           <div className="max-w-4xl mx-auto">
@@ -876,11 +896,38 @@ export default function MoroccoJewishHeritagePage() {
               ))}
             </div>
           </div>
+
+          <div className="max-w-4xl mx-auto mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="card-moroccan p-5">
+              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                <Camera className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
+                Booking Tips
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                Book specialist Jewish heritage guides through your riad or hotel. General medina guides
+                often lack detailed knowledge of the mellahs. For multi-city circuits, reputable operators
+                include Made in Essaouira Tours and Heritage Morocco Travel. Book 2-3 weeks ahead during
+                October-April peak season.
+              </p>
+            </div>
+            <div className="card-moroccan p-5">
+              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                <Globe className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
+                Tour Operators
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                Israel-based and US-based operators run dedicated Moroccan Jewish heritage itineraries,
+                especially popular around Hiloula season. Local operators in Fes and Marrakech offer
+                half-day mellah walks without advance booking needed. Private guides charge from 800 MAD
+                per day for exclusive access and tailored itineraries.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* ── Practical Tips ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+      {/* ── Practical Visitor Tips ── */}
+      <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
             <Info className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
@@ -894,9 +941,9 @@ export default function MoroccoJewishHeritagePage() {
                 Best Time to Visit
               </h3>
               <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Heritage sites are open year-round. The best months are March-May and September-November when
-                temperatures are comfortable for walking tours. If you want to witness a Hiloula, check the
-                specific dates (usually in spring or summer) as they follow the Hebrew calendar.
+                Heritage sites are open year-round. March-May and September-November offer the most
+                comfortable walking temperatures. To witness a Hiloula, check specific dates (they follow
+                the Hebrew calendar, usually in spring or summer).
               </p>
             </div>
 
@@ -906,9 +953,9 @@ export default function MoroccoJewishHeritagePage() {
                 Dress Code &amp; Etiquette
               </h3>
               <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Dress modestly when visiting synagogues and cemeteries. Men should wear a head covering
-                (kippah) inside synagogues; these are often provided at the entrance. Remove shoes if
-                requested. Photography is usually permitted but always ask first.
+                Dress modestly at synagogues and cemeteries. Men should wear a head covering (kippah) inside
+                synagogues; these are usually provided at the entrance. Remove shoes if asked. Photography
+                is typically allowed — always ask first.
               </p>
             </div>
 
@@ -918,21 +965,9 @@ export default function MoroccoJewishHeritagePage() {
                 Entry Fees &amp; Donations
               </h3>
               <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Most synagogues charge a small entry fee from 20-40 MAD. Cemeteries are generally free but
-                donations are appreciated. The Museum of Moroccan Judaism charges from 40 MAD. Tipping the
-                caretaker (gardien) from 20 MAD is customary and ensures they can continue maintaining these sites.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <Users className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Hiring a Guide
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                A knowledgeable guide transforms the experience. Look for guides who specialize in Jewish
-                heritage tours, as general medina guides may have limited knowledge of the mellah&apos;s history.
-                Heritage-specific tours start from 300 MAD per person for a half-day tour.
+                Most synagogues charge from 20-40 MAD. Cemeteries are free but donations are appreciated.
+                The Museum of Moroccan Judaism charges from 40 MAD. Tipping the caretaker (gardien) from
+                20 MAD is customary and helps maintain these sites.
               </p>
             </div>
 
@@ -942,9 +977,9 @@ export default function MoroccoJewishHeritagePage() {
                 Shabbat Considerations
               </h3>
               <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Synagogues are closed for tourism on Shabbat (Friday sunset to Saturday sunset) and Jewish
-                holidays. The Museum of Moroccan Judaism is also closed on Saturdays. Plan your visits
-                for Sunday through Friday morning for the best access.
+                Synagogues close for tourism on Shabbat (Friday sunset to Saturday sunset) and Jewish
+                holidays. The Museum of Moroccan Judaism closes Saturdays. Plan visits for Sunday through
+                Friday morning.
               </p>
             </div>
 
@@ -954,10 +989,21 @@ export default function MoroccoJewishHeritagePage() {
                 Kosher Dining
               </h3>
               <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Casablanca has several kosher restaurants and a kosher butcher. In other cities, kosher
-                options are very limited. Vegetarian and fish dishes at regular Moroccan restaurants can be
-                a practical alternative. Hotels catering to Jewish tourists can often arrange kosher meals
-                with advance notice.
+                Casablanca has several kosher restaurants and a kosher butcher. Other cities have very limited
+                kosher options. Vegetarian and fish dishes at standard Moroccan restaurants work as a practical
+                alternative. Hotels catering to Jewish tourists can arrange kosher meals with advance notice.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-5">
+              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                <Users className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
+                Hiring a Specialist Guide
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                A knowledgeable guide transforms the experience. General medina guides may have limited mellah
+                knowledge. Ask for guides who specialize in Jewish heritage. Half-day heritage-specific tours
+                start from 300 MAD per person.
               </p>
             </div>
           </div>
@@ -965,7 +1011,7 @@ export default function MoroccoJewishHeritagePage() {
       </section>
 
       {/* ── FAQ Section ── */}
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
             Frequently Asked Questions
@@ -977,10 +1023,10 @@ export default function MoroccoJewishHeritagePage() {
                 Can you visit Jewish heritage sites in Morocco?
               </h3>
               <p className="text-sm text-[var(--text-secondary)]">
-                Yes. Morocco actively preserves its Jewish heritage. Synagogues, mellahs, cemeteries, and the
-                Museum of Moroccan Judaism in Casablanca are open to visitors. Many sites are free or charge a
-                small entry fee from 20 MAD. Guided heritage tours are available in Fes, Marrakech, Essaouira,
-                and Casablanca.
+                Yes. Morocco actively preserves its Jewish heritage and welcomes visitors. Synagogues, mellahs,
+                cemeteries, and the Museum of Moroccan Judaism in Casablanca are open to the public. Entry
+                fees range from 20 to 40 MAD. Guided heritage tours operate in Fes, Marrakech, Essaouira,
+                and Casablanca, starting from 300 MAD per person.
               </p>
             </div>
 
@@ -989,10 +1035,10 @@ export default function MoroccoJewishHeritagePage() {
                 What is a mellah in Morocco?
               </h3>
               <p className="text-sm text-[var(--text-secondary)]">
-                A mellah is a historic Jewish quarter in a Moroccan city. The term originates from the Arabic
-                word for salt. Mellahs were established from the 15th century onward and often featured
-                distinctive architecture with balconied houses and interior courtyards. The most famous mellahs
-                are in Fes (the oldest, dating to 1438), Marrakech, and Essaouira.
+                A mellah is a historic Jewish quarter. The word comes from the Arabic for &quot;salt.&quot;
+                The first was founded in Fes in 1438 under the Marinid dynasty. Mellahs featured distinctive
+                architecture: houses with exterior balconies and larger windows compared to Muslim quarters.
+                The most significant mellahs are in Fes, Marrakech, Essaouira, and Meknes.
               </p>
             </div>
 
@@ -1001,10 +1047,10 @@ export default function MoroccoJewishHeritagePage() {
                 How did King Mohammed V protect Moroccan Jews during WWII?
               </h3>
               <p className="text-sm text-[var(--text-secondary)]">
-                During World War II, when the Vichy French regime demanded Morocco hand over its Jewish citizens,
-                King Mohammed V famously refused, reportedly saying &quot;There are no Jews in Morocco. There are
-                only Moroccan subjects.&quot; He insisted that anti-Jewish laws would not be enforced in his
-                kingdom, protecting the approximately 250,000 Jews living in Morocco at the time.
+                When the Vichy French regime demanded Morocco hand over its Jewish citizens, King Mohammed V
+                refused. He reportedly declared &quot;There are no Jews in Morocco. There are only Moroccan
+                subjects.&quot; He continued inviting Jewish leaders to royal ceremonies and resisted the
+                enforcement of anti-Jewish legislation, helping protect roughly 250,000 Moroccan Jews.
               </p>
             </div>
 
@@ -1013,10 +1059,22 @@ export default function MoroccoJewishHeritagePage() {
                 Are there still Jews living in Morocco today?
               </h3>
               <p className="text-sm text-[var(--text-secondary)]">
-                Yes. Morocco is home to the largest Jewish community in the Arab world, with an estimated
-                2,000-3,000 Jews living primarily in Casablanca, with smaller communities in Marrakech, Fes,
-                Rabat, and Tangier. The community is active and maintains synagogues, schools, and cultural
-                institutions.
+                Yes. Morocco has the largest Jewish community in the Arab world, with an estimated 2,000 to
+                3,000 people. Most live in Casablanca, with smaller communities in Marrakech, Fes, Rabat,
+                and Tangier. Active synagogues, Jewish schools, a rabbinical court, and cultural institutions
+                serve the community.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                What is dafina, the Jewish-Moroccan Shabbat dish?
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                Dafina (also called skhina) is a slow-cooked stew prepared on Friday before Shabbat. It
+                cooks overnight and contains beef, chickpeas, potatoes, whole eggs in their shells, wheat
+                berries, and warm spices including cinnamon and turmeric. It is the Moroccan equivalent of
+                Ashkenazi cholent and remains a staple among Moroccan-Jewish families in Israel and France.
               </p>
             </div>
 
@@ -1025,10 +1083,24 @@ export default function MoroccoJewishHeritagePage() {
                 What is the Hiloula pilgrimage in Morocco?
               </h3>
               <p className="text-sm text-[var(--text-secondary)]">
-                The Hiloula is an annual Jewish pilgrimage tradition where Moroccan Jews, including many who
-                have emigrated to Israel and France, return to visit the tombs of venerated rabbis and saints.
-                The largest Hiloula ceremonies take place at the tombs of Rabbi Amram Ben Diwan near Ouezzane
-                and Rabbi Haim Pinto in Essaouira.
+                The Hiloula is an annual Jewish pilgrimage to the tombs of venerated rabbis and saints.
+                Moroccan Jews from Israel, France, Canada, and elsewhere return each year to light candles,
+                pray, and celebrate. The largest gatherings occur at the tomb of Rabbi Amram Ben Diwan
+                near Ouezzane and Rabbi Haim Pinto in Essaouira. The Moroccan government provides security
+                and logistical support.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                How much does a Jewish heritage tour in Morocco cost?
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                Half-day walking tours of individual mellahs start from 300 MAD per person in Essaouira and
+                from 400 MAD in Fes. Full multi-city heritage circuits covering Casablanca, Marrakech,
+                Essaouira, and Fes over 5-7 days start from 12,000 MAD per person, including a specialist
+                guide, transport between cities, and site entry fees. Private guides charge from 800 MAD
+                per day for tailored itineraries.
               </p>
             </div>
           </div>
@@ -1036,7 +1108,7 @@ export default function MoroccoJewishHeritagePage() {
       </section>
 
       {/* ── Related Guides ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+      <section className="py-16 md:py-20">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
             Related Guides
@@ -1072,23 +1144,51 @@ export default function MoroccoJewishHeritagePage() {
                 Essaouira Guide
               </h3>
               <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Discover the wind city&apos;s Portuguese ramparts, art galleries, and its unique Jewish-Muslim heritage.
+                Discover the wind city&apos;s ramparts, art galleries, and its singular Jewish-Muslim heritage.
               </p>
               <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
                 Read more <ArrowRight className="w-3.5 h-3.5" />
               </span>
             </Link>
-            <Link href="/morocco-culture-guide" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
-              <BookOpen className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+            <Link href="/morocco-history-guide" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
+              <History className="w-8 h-8 text-[var(--color-accent)] mb-3" />
               <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Morocco Culture Guide
+                Morocco History Guide
               </h3>
               <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Deep dive into Morocco&apos;s diverse cultural heritage: Berber, Arab, Andalusian, and Jewish traditions.
+                From Phoenician traders to modern independence — Morocco&apos;s full historical sweep in one guide.
               </p>
               <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
                 Read more <ArrowRight className="w-3.5 h-3.5" />
               </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA ── */}
+      <section className="py-16 md:py-20 bg-[var(--color-accent)]">
+        <div className="container-morocco text-center">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-white mb-4">
+            Plan Your Jewish Heritage Journey
+          </h2>
+          <p className="text-lg text-white/80 max-w-2xl mx-auto mb-8">
+            From the ancient mellah of Fes to the restored synagogues of Essaouira, Morocco offers a rare window into 2,000 years of Jewish-Muslim coexistence. Guided tours start from 300 MAD.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[var(--color-accent)] rounded-lg font-semibold hover:bg-white/90 transition-colors"
+            >
+              Get in Touch
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link
+              href="/morocco-jewish-heritage-tour"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-transparent border-2 border-white text-white rounded-lg font-semibold hover:bg-white/10 transition-colors"
+            >
+              View Heritage Tours
+              <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
