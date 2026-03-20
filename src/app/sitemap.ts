@@ -374,6 +374,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-train-travel',
     '/morocco-7-day-itinerary',
     '/morocco-spa-wellness',
+    '/morocco-shopping-guide',
+    '/morocco-2-week-itinerary',
+    '/morocco-riads-guide',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

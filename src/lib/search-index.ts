@@ -2756,6 +2756,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['morocco spa', 'spa morocco', 'wellness retreat morocco', 'spa resorts morocco', 'best spa in marrakech'],
       priority: 9,
     },
+    {
+      title: 'Morocco Shopping Guide 2026',
+      description: 'Complete shopping guide for Morocco — top 10 souvenirs, best souks, haggling tips, price guide, cooperatives, and shipping advice.',
+      type: 'page',
+      url: '/morocco-shopping-guide',
+      tags: ['shopping', 'souvenirs', 'souks', 'crafts', 'haggling'],
+      keywords: ['shopping in morocco', 'morocco souvenirs', 'what to buy in morocco', 'morocco souk shopping', 'moroccan crafts'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco 2-Week Itinerary 2026',
+      description: 'Ultimate 14-day Morocco itinerary — Casablanca, Chefchaouen, Fez, Sahara Desert, gorges, Marrakech, and Essaouira with daily plans and budgets.',
+      type: 'page',
+      url: '/morocco-2-week-itinerary',
+      tags: ['itinerary', '2 weeks', '14 days', 'travel plan', 'route'],
+      keywords: ['2 weeks in morocco', 'morocco 2 week itinerary', '14 days morocco', 'two weeks morocco itinerary'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Riads Guide 2026',
+      description: 'Everything about Moroccan riads — architecture, best riads in Marrakech and Fez, booking tips, riad vs hotel, etiquette, and price ranges.',
+      type: 'page',
+      url: '/morocco-riads-guide',
+      tags: ['riads', 'accommodation', 'marrakech', 'fez', 'traditional'],
+      keywords: ['riad morocco', 'best riads in morocco', 'what is a riad', 'riads in marrakech', 'riads in fez'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
