@@ -2927,6 +2927,24 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['history of morocco', 'morocco history', 'moroccan dynasties', 'morocco timeline', 'ancient morocco'],
       priority: 9,
     },
+    {
+      title: 'Best Beaches in Morocco Guide 2026',
+      description: 'Complete guide to Morocco beaches — Atlantic coast, Mediterranean shores, hidden coves, surf beaches, family-friendly spots, and beach town accommodation.',
+      type: 'page',
+      url: '/morocco-beaches-guide',
+      tags: ['beaches', 'coast', 'swimming', 'surfing', 'seaside'],
+      keywords: ['best beaches morocco', 'morocco beach guide', 'legzira beach', 'taghazout beach', 'morocco coastal towns'],
+      priority: 9,
+    },
+    {
+      title: 'Moroccan Carpet & Rug Buying Guide 2026',
+      description: 'How to buy authentic Moroccan carpets — Beni Ourain, Azilal, Boucherouite, Kilim types, negotiation tips, prices, shipping, and how to spot fakes.',
+      type: 'page',
+      url: '/morocco-carpet-buying',
+      tags: ['carpets', 'rugs', 'shopping', 'Berber', 'crafts'],
+      keywords: ['moroccan carpet buying guide', 'beni ourain rug', 'morocco carpet prices', 'berber rug morocco', 'how to buy moroccan carpet'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
