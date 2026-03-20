@@ -2351,6 +2351,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['Morocco markets guide', 'best souks Morocco', 'Moroccan bazaar', 'shopping in Morocco'],
       priority: 9,
     },
+    {
+      title: 'Morocco Tagine Guide — Recipes, Types, History & Where to Eat',
+      description: 'Complete guide to Moroccan tagine — history, types of tagine, regional variations, best restaurants, cooking classes, and recipe tips.',
+      type: 'page',
+      url: '/morocco-tagine-guide',
+      tags: ['tagine', 'food', 'recipes', 'cooking', 'cuisine'],
+      keywords: ['Moroccan tagine guide', 'best tagine Morocco', 'tagine recipes', 'types of tagine', 'where to eat tagine'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Jewish Heritage — Mellahs, Synagogues & Cultural Sites',
+      description: 'Guide to Jewish heritage in Morocco — mellahs, synagogues, Jewish cemeteries, Museum of Moroccan Judaism, Hiloula pilgrimages, and guided tours.',
+      type: 'page',
+      url: '/morocco-jewish-heritage',
+      tags: ['jewish', 'heritage', 'history', 'mellah', 'synagogue', 'culture'],
+      keywords: ['Morocco Jewish heritage', 'Jewish quarter Morocco', 'mellah Morocco', 'synagogues Morocco', 'Jewish history Morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Best Luxury Riads in Morocco — Top Boutique Stays',
+      description: 'Top luxury riads across Morocco — Royal Mansour, La Mamounia, Riad Fes, boutique stays with private hammams, rooftop dining, and exclusive experiences.',
+      type: 'page',
+      url: '/morocco-luxury-riads',
+      tags: ['luxury', 'riads', 'accommodation', 'boutique', 'hotels'],
+      keywords: ['luxury riads Morocco', 'best riads Marrakech', 'boutique riad Morocco', 'luxury accommodation Morocco'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

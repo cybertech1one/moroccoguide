@@ -329,6 +329,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-riads-vs-hotels',
     '/morocco-family-activities',
     '/morocco-markets-guide',
+    '/morocco-tagine-guide',
+    '/morocco-jewish-heritage',
+    '/morocco-luxury-riads',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
