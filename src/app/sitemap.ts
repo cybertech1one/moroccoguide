@@ -362,6 +362,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-3-day-itinerary',
     '/morocco-solo-female-travel',
     '/morocco-fishing-guide',
+    '/morocco-berber-culture',
+    '/morocco-hammam-guide',
+    '/morocco-regions-guide',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

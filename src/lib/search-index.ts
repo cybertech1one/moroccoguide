@@ -2648,6 +2648,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['fishing morocco', 'deep sea fishing morocco', 'sport fishing morocco', 'fishing spots morocco'],
       priority: 9,
     },
+    {
+      title: 'Berber Culture in Morocco — Amazigh Heritage, Traditions & Villages',
+      description: 'Complete Berber culture guide — Amazigh history, Tifinagh script, crafts, architecture, music, village visits, museums, and ethical tourism.',
+      type: 'page',
+      url: '/morocco-berber-culture',
+      tags: ['berber', 'amazigh', 'culture', 'heritage', 'traditions'],
+      keywords: ['berber culture', 'amazigh', 'berber heritage', 'Berber villages Morocco', 'Amazigh culture Morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Moroccan Hammam Guide — Traditional Bathhouse Experience & Etiquette',
+      description: 'Complete hammam guide — ritual step-by-step, public vs private, etiquette, best hammams by city, what to bring, health benefits, and pricing.',
+      type: 'page',
+      url: '/morocco-hammam-guide',
+      tags: ['hammam', 'bathhouse', 'spa', 'wellness', 'tradition'],
+      keywords: ['moroccan hammam', 'hammam morocco', 'hammam marokko', 'traditional hammam experience', 'best hammams Morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Regions Guide — All 12 Regions, Geography & Travel Planning',
+      description: 'Complete guide to all 12 Moroccan regions — capitals, key cities, highlights, geography, best-for guides, and multi-region itineraries.',
+      type: 'page',
+      url: '/morocco-regions-guide',
+      tags: ['regions', 'geography', 'map', 'travel planning', 'destinations'],
+      keywords: ['morocco regions', 'regions of morocco', 'moroccan regions', 'morocco geography', 'morocco map regions'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
