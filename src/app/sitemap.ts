@@ -284,6 +284,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-camel-trekking',
     '/morocco-atlas-guide',
     '/morocco-medina-tips',
+    '/morocco-beach-towns',
+    '/morocco-accessible-travel',
+    '/morocco-jewish-heritage-tour',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

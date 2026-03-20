@@ -1946,6 +1946,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['navigating Moroccan medina', 'medina tips Morocco', 'how not get lost medina', 'Morocco old town guide'],
       priority: 9,
     },
+    {
+      title: 'Morocco Beach Towns',
+      description: 'Top 10 Morocco beach towns — Essaouira, Agadir, Taghazout, Dakhla, Asilah, and more with beaches, water sports, and dining.',
+      type: 'page',
+      url: '/morocco-beach-towns',
+      tags: ['beaches', 'coastal', 'towns', 'seaside'],
+      keywords: ['Morocco beach towns', 'best coastal towns Morocco', 'Morocco seaside destinations', 'beach holiday Morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Accessible Travel',
+      description: 'Accessible travel guide to Morocco — wheelchair-friendly hotels, adapted transport, accessible attractions, and specialist tour operators.',
+      type: 'page',
+      url: '/morocco-accessible-travel',
+      tags: ['accessible', 'disability', 'wheelchair', 'inclusive'],
+      keywords: ['Morocco wheelchair accessible', 'accessible travel Morocco', 'Morocco disability travel', 'wheelchair friendly Morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Jewish Heritage Tour',
+      description: 'Jewish heritage in Morocco — mellahs, synagogues, museums, cemeteries, Hiloula pilgrimages, and Jewish-Moroccan cuisine.',
+      type: 'page',
+      url: '/morocco-jewish-heritage-tour',
+      tags: ['Jewish', 'heritage', 'history', 'culture'],
+      keywords: ['Morocco Jewish heritage', 'Jewish sites Morocco', 'Morocco Jewish tour', 'mellah Morocco'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
