@@ -305,6 +305,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-leather-guide',
     '/morocco-desert-glamping',
     '/morocco-public-holidays',
+    '/morocco-olive-oil',
+    '/morocco-yoga-retreats',
+    '/morocco-surfing-guide',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

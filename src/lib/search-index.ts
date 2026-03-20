@@ -2135,6 +2135,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['Morocco public holidays', 'Moroccan holidays 2026', 'Morocco national holidays', 'Eid Morocco', 'Throne Day'],
       priority: 9,
     },
+    {
+      title: 'Morocco Olive Oil Guide',
+      description: 'Complete guide to Moroccan olive oil — growing regions, varieties, traditional production, farm visits, tastings, prices, and buying tips.',
+      type: 'page',
+      url: '/morocco-olive-oil',
+      tags: ['olive oil', 'food', 'agriculture', 'shopping', 'Meknes'],
+      keywords: ['Moroccan olive oil', 'buy olive oil Morocco', 'Morocco olive oil guide', 'olive farm Morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Yoga Retreats Guide',
+      description: 'Best yoga retreats in Morocco — Essaouira, Taghazout, Atlas Mountains, types of retreats, prices, and what to expect.',
+      type: 'page',
+      url: '/morocco-yoga-retreats',
+      tags: ['yoga', 'wellness', 'retreats', 'Essaouira', 'Taghazout'],
+      keywords: ['yoga retreats Morocco', 'Morocco yoga retreat', 'best yoga Morocco', 'surf yoga Taghazout'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Surfing Guide',
+      description: 'Complete Morocco surf guide — best surf spots, season guide, camps, gear rental, wetsuit advice, and surf culture.',
+      type: 'page',
+      url: '/morocco-surfing-guide',
+      tags: ['surfing', 'water sports', 'Taghazout', 'beach', 'adventure'],
+      keywords: ['surfing Morocco', 'Morocco surf guide', 'best surf spots Morocco', 'Taghazout surfing', 'surf camp Morocco'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
