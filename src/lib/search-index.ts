@@ -2378,6 +2378,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['luxury riads Morocco', 'best riads Marrakech', 'boutique riad Morocco', 'luxury accommodation Morocco'],
       priority: 9,
     },
+    {
+      title: 'Morocco Couscous Guide — Types, Friday Tradition & Where to Eat',
+      description: 'Complete guide to Moroccan couscous — Friday tradition, types, regional variations, hand-rolling technique, best restaurants, and cooking classes.',
+      type: 'page',
+      url: '/morocco-couscous-guide',
+      tags: ['couscous', 'food', 'tradition', 'cuisine', 'Friday'],
+      keywords: ['Moroccan couscous guide', 'Friday couscous Morocco', 'types of couscous', 'best couscous Morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Ultimate Sahara Desert Guide Morocco — Merzouga, Zagora & Desert Camps',
+      description: 'Complete Sahara desert guide — Erg Chebbi vs Erg Chigaga, camel treks, luxury desert camps, sandboarding, stargazing, and multi-day tour itineraries.',
+      type: 'page',
+      url: '/morocco-sahara-guide',
+      tags: ['sahara', 'desert', 'Merzouga', 'Zagora', 'camel trek', 'camping'],
+      keywords: ['Sahara desert Morocco guide', 'Merzouga desert', 'Morocco desert tour', 'camel trek Sahara', 'desert camp Morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Moroccan Wedding Traditions — Customs, Ceremonies & Celebrations',
+      description: 'Guide to Moroccan wedding traditions — henna night, seven dresses ceremony, negafa, regional variations, wedding food, and destination weddings.',
+      type: 'page',
+      url: '/morocco-wedding-traditions',
+      tags: ['wedding', 'traditions', 'culture', 'henna', 'ceremonies'],
+      keywords: ['Moroccan wedding traditions', 'Morocco wedding customs', 'Moroccan henna ceremony', 'traditional Moroccan wedding'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

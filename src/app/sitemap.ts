@@ -332,6 +332,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-tagine-guide',
     '/morocco-jewish-heritage',
     '/morocco-luxury-riads',
+    '/morocco-couscous-guide',
+    '/morocco-sahara-guide',
+    '/morocco-wedding-traditions',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
