@@ -2432,6 +2432,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['Morocco nightlife guide', 'Marrakech nightlife', 'Casablanca clubs', 'bars in Morocco', 'rooftop bars Morocco'],
       priority: 9,
     },
+    {
+      title: 'Morocco Ski Resorts Guide — Oukaimeden, Michlifen & Atlas Skiing',
+      description: 'Complete guide to skiing in Morocco — Oukaimeden, Michlifen, lift passes, equipment rental, ski season, accommodation, and combining skiing with Marrakech.',
+      type: 'page',
+      url: '/morocco-ski-resorts',
+      tags: ['skiing', 'ski resort', 'Oukaimeden', 'Michlifen', 'winter sports', 'Atlas'],
+      keywords: ['morocco ski resort', 'ski resort morocco', 'skiing in morocco', 'Oukaimeden ski', 'Michlifen', 'Atlas Mountains skiing'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Wildlife Guide — Animals, Birds & National Parks',
+      description: 'Complete Morocco wildlife guide — Barbary macaque, fennec fox, flamingos, national parks, birdwatching spots, wildlife tours, and conservation.',
+      type: 'page',
+      url: '/morocco-wildlife-guide',
+      tags: ['wildlife', 'animals', 'birds', 'national parks', 'nature'],
+      keywords: ['wildlife in morocco', 'animals in morocco', 'morocco wildlife', 'Barbary macaque', 'morocco national parks'],
+      priority: 9,
+    },
+    {
+      title: 'Ouarzazate Travel Guide — Hollywood of Morocco, Kasbahs & Film Studios',
+      description: 'Complete Ouarzazate guide — Atlas Film Studios, Ait Benhaddou, Kasbah Taourirt, day trips, accommodation, and films shot in Morocco.',
+      type: 'page',
+      url: '/ouarzazate-guide',
+      tags: ['ouarzazate', 'film studios', 'kasbahs', 'Ait Benhaddou', 'desert gateway'],
+      keywords: ['ouarzazate', 'ouarzazate morocco', 'Atlas Film Studios', 'Ait Benhaddou', 'ouarzazate things to do'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

@@ -338,6 +338,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-mint-tea-guide',
     '/morocco-atlas-mountains',
     '/morocco-nightlife-guide',
+    '/morocco-ski-resorts',
+    '/morocco-wildlife-guide',
+    '/ouarzazate-guide',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
