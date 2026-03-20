@@ -2216,6 +2216,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['Tangier vs Chefchaouen', 'Chefchaouen or Tangier', 'northern Morocco cities'],
       priority: 9,
     },
+    {
+      title: 'Morocco Zellige Tiles Guide',
+      description: 'Complete guide to Moroccan zellige mosaic tiles — history, making process, patterns, where to see and buy, prices, and workshops.',
+      type: 'page',
+      url: '/morocco-zellige-tiles',
+      tags: ['zellige', 'tiles', 'crafts', 'architecture', 'Fes'],
+      keywords: ['Moroccan zellige tiles', 'zellige Morocco', 'Moroccan mosaic tiles', 'Fes zellige workshop'],
+      priority: 9,
+    },
+    {
+      title: 'Essaouira vs Agadir — Which Beach Town',
+      description: 'Essaouira vs Agadir comparison — beaches, water sports, food, nightlife, costs, and which Atlantic coast town suits your trip.',
+      type: 'page',
+      url: '/essaouira-vs-agadir',
+      tags: ['comparison', 'Essaouira', 'Agadir', 'beach', 'coast'],
+      keywords: ['Essaouira vs Agadir', 'Agadir or Essaouira', 'Morocco beach town comparison'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Train Travel Guide',
+      description: 'Complete guide to trains in Morocco — ONCF routes, Al Boraq high-speed, tickets, classes, stations, and scenic journeys.',
+      type: 'page',
+      url: '/morocco-train-guide',
+      tags: ['trains', 'transport', 'ONCF', 'Al Boraq', 'travel'],
+      keywords: ['Morocco train guide', 'trains in Morocco', 'ONCF Morocco', 'Al Boraq train', 'Morocco rail travel'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

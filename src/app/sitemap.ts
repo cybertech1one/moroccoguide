@@ -314,6 +314,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-backpacking-guide',
     '/morocco-food-etiquette',
     '/tangier-vs-chefchaouen',
+    '/morocco-zellige-tiles',
+    '/essaouira-vs-agadir',
+    '/morocco-train-guide',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
