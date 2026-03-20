@@ -368,6 +368,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-budget-travel',
     '/al-hoceima-guide',
     '/morocco-food-tour',
+    '/morocco-desert-oasis',
+    '/kasbah-tamadot-guide',
+    '/morocco-photography-guide',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

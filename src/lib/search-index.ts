@@ -2702,6 +2702,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['morocco food tour', 'moroccan food tour', 'marrakech food tour', 'moroccan street food', 'best food in morocco'],
       priority: 9,
     },
+    {
+      title: 'Morocco Desert Oases Guide 2026',
+      description: 'Explore Morocco\'s stunning desert oases — Skoura, Draa Valley, Figuig, Zagora, Tinghir palm groves, kasbah architecture, and cultural experiences.',
+      type: 'page',
+      url: '/morocco-desert-oasis',
+      tags: ['oasis', 'desert', 'palm groves', 'kasbahs', 'draa valley'],
+      keywords: ['morocco desert oasis', 'oasis morocco', 'draa valley', 'skoura oasis', 'figuig oasis', 'zagora oasis'],
+      priority: 9,
+    },
+    {
+      title: 'Kasbah Tamadot Guide 2026 — Virgin Limited Edition Morocco',
+      description: 'Complete guide to Kasbah Tamadot — Richard Branson\'s luxury Atlas Mountains hotel with rooms, dining, activities, community impact, and booking tips.',
+      type: 'page',
+      url: '/kasbah-tamadot-guide',
+      tags: ['kasbah tamadot', 'luxury hotel', 'atlas mountains', 'virgin', 'resort'],
+      keywords: ['kasbah tamadot', 'kasbah tamadot morocco', 'virgin limited edition morocco', 'luxury hotel atlas mountains'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Photography Guide 2026',
+      description: 'Ultimate photography guide for Morocco — best photo spots, golden hour locations, street photography tips, gear advice, drone rules, and photography tours.',
+      type: 'page',
+      url: '/morocco-photography-guide',
+      tags: ['photography', 'instagram', 'photo spots', 'camera', 'travel photography'],
+      keywords: ['morocco photography', 'best photos morocco', 'instagram spots morocco', 'morocco photography tips', 'photography tours morocco'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
