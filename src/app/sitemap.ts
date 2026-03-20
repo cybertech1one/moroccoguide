@@ -293,6 +293,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-berber-guide',
     '/morocco-waterfalls',
     '/day-trips-from-marrakech',
+    '/morocco-carpet-guide',
+    '/day-trips-from-fes',
+    '/morocco-haggling-guide',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

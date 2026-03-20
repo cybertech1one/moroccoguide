@@ -2027,6 +2027,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['day trips from Marrakech', 'Marrakech excursions', 'best day trips Marrakech', 'Marrakech day tour'],
       priority: 9,
     },
+    {
+      title: 'Morocco Carpet Buying Guide',
+      description: 'Complete guide to buying Moroccan carpets and rugs — Beni Ourain, Boucherouite, Kilim types, quality tests, fair prices, and bargaining tips.',
+      type: 'page',
+      url: '/morocco-carpet-guide',
+      tags: ['carpets', 'rugs', 'shopping', 'souks', 'crafts'],
+      keywords: ['Morocco carpet guide', 'Moroccan rug buying', 'Beni Ourain carpet', 'buy carpet Morocco', 'Moroccan carpet prices'],
+      priority: 9,
+    },
+    {
+      title: 'Day Trips from Fes',
+      description: '10 best day trips from Fes — Meknes, Volubilis, Ifrane, Middle Atlas cedar forests, Moulay Idriss, Sefrou, Bhalil cave houses, and more.',
+      type: 'page',
+      url: '/day-trips-from-fes',
+      tags: ['day trips', 'Fes', 'excursions', 'tours', 'Middle Atlas'],
+      keywords: ['day trips from Fes', 'Fes excursions', 'best day trips Fez', 'Fes day tour', 'Volubilis day trip'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Haggling Guide',
+      description: 'Master the art of haggling in Moroccan souks — step-by-step bargaining process, fair prices, seller tactics, etiquette, and cultural tips.',
+      type: 'page',
+      url: '/morocco-haggling-guide',
+      tags: ['haggling', 'bargaining', 'souks', 'shopping', 'tips'],
+      keywords: ['haggling Morocco', 'how to bargain Morocco', 'Morocco souk bargaining', 'haggling tips souks', 'Morocco shopping tips'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
