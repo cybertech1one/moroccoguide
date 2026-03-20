@@ -10,25 +10,24 @@ import {
   Info,
   ArrowRight,
   Sparkles,
-  ShieldCheck,
   DollarSign,
   CheckCircle,
   Users,
-  Gem,
   Building,
   Award,
-  BookOpen,
   Crown,
   Waves,
-  Sun,
-  Snowflake,
-  Leaf,
-  Flower2,
+  Mountain,
+  UtensilsCrossed,
   Calendar,
-  Tag,
-  Bed,
+  Gem,
+  Shield,
+  Wine,
+  Sun,
   Globe,
-  Lightbulb,
+  HelpCircle,
+  Phone,
+  Bed,
 } from 'lucide-react';
 
 /* ═══════════════════════════════════════════════════════════════
@@ -42,53 +41,51 @@ const BASE_URL = 'https://citytoursmorocco.com';
    ═══════════════════════════════════════════════════════════════ */
 
 export const metadata: Metadata = {
-  title: 'Morocco Luxury Hotels Guide 2026 | Top 8 Five-Star Hotels & Resorts',
+  title: 'Best Luxury Hotels in Morocco 2026 | 5-Star Resorts, Palaces & Boutique Stays',
   description:
-    'Complete guide to Morocco\'s finest luxury hotels and resorts. From La Mamounia and Royal Mansour in Marrakech to beach resorts and Atlas Mountain retreats. Room rates from 3,500 MAD, seasonal pricing, booking tips, and insider recommendations for the best luxury stays in Morocco.',
+    'Guide to the 15 best luxury hotels in Morocco — from Royal Mansour and La Mamounia in Marrakech to Banyan Tree Tamouda Bay and desert kasbahs. Room rates from 3,500 MAD, seasonal pricing, spa packages, and booking tips.',
   keywords: [
-    'Morocco luxury hotels',
-    'best hotels Morocco',
-    'La Mamounia Marrakech',
+    'luxury hotels morocco',
+    'best 5 star hotels morocco',
+    'morocco palace hotels',
+    'luxury resorts marrakech',
     'Royal Mansour Marrakech',
+    'La Mamounia hotel',
+    'Amanjena Marrakech',
+    'Mandarin Oriental Marrakech',
+    'Four Seasons Marrakech',
     'Kasbah Tamadot Morocco',
-    'Mazagan Beach Resort',
-    'Sofitel Tamuda Bay',
-    'Four Seasons Casablanca',
-    'Fairmont Royal Palm Marrakech',
-    'Palais Namaskar Marrakech',
-    'luxury hotels Marrakech',
-    'five star hotels Morocco',
-    'Morocco palace hotels',
-    'luxury resorts Morocco',
-    'boutique riads Morocco',
-    'desert luxury camps Morocco',
-    'beach resorts Morocco',
-    'Morocco hotel prices 2026',
-    'best time to visit Morocco hotels',
-    'Morocco luxury accommodation',
-    'Morocco honeymoon hotels',
-    'luxury travel Morocco',
+    'luxury riads Morocco',
+    'morocco 5 star resorts',
+    'best hotels Fes Morocco',
+    'luxury desert hotel Morocco',
+    'Dar Ahlam Morocco',
+    'morocco honeymoon hotels',
+    'luxury golf resort Morocco',
+    'Morocco palace stay',
+    'boutique luxury Morocco',
+    'morocco hotel prices 2026',
   ],
   openGraph: {
-    title: 'Morocco Luxury Hotels Guide 2026 | Top 8 Five-Star Hotels & Resorts',
+    title: 'Best Luxury Hotels in Morocco 2026 | 5-Star Palaces & Resorts',
     description:
-      'Discover Morocco\'s finest luxury hotels. From legendary palace hotels in Marrakech to Atlantic beach resorts and Atlas Mountain retreats. Complete guide with prices, seasonal tips, and insider recommendations.',
+      'The definitive guide to Morocco\'s finest hotels. 15 hand-picked properties from Marrakech palaces to desert retreats, with real prices and booking tips.',
     url: `${BASE_URL}/morocco-luxury-hotels`,
     images: [
       {
-        url: `${BASE_URL}/images/cover-morocco-luxury.webp`,
+        url: `${BASE_URL}/images/hero-luxury-hotels.webp`,
         width: 1200,
         height: 630,
-        alt: 'Luxury hotel courtyard in Morocco with zellige tilework, fountain, and palm trees under warm golden light',
+        alt: 'Grand courtyard of a luxury Moroccan palace hotel with a central fountain, zellige tilework, and lush gardens',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Morocco Luxury Hotels Guide 2026 | Top 8 Five-Star Hotels & Resorts',
+    title: 'Best Luxury Hotels in Morocco 2026 | 5-Star Palaces & Resorts',
     description:
-      'From La Mamounia to desert glamping camps. Complete guide to Morocco\'s finest luxury hotels with prices from 3,500 MAD, seasonal tips, and booking advice.',
-    images: [`${BASE_URL}/images/cover-morocco-luxury.webp`],
+      'From Royal Mansour\'s private riads to Sahara desert retreats. 15 top luxury hotels across Morocco with rates, seasonal pricing, and insider booking tips.',
+    images: [`${BASE_URL}/images/hero-luxury-hotels.webp`],
   },
   alternates: { canonical: `${BASE_URL}/morocco-luxury-hotels` },
 };
@@ -97,15 +94,15 @@ export const metadata: Metadata = {
    JSON-LD STRUCTURED DATA
    ═══════════════════════════════════════════════════════════════ */
 
-const jsonLd = {
+const jsonLdTravel = {
   '@context': 'https://schema.org',
   '@type': 'TravelGuide',
   '@id': `${BASE_URL}/morocco-luxury-hotels`,
-  name: 'Morocco Luxury Hotels Guide 2026 | Top 8 Five-Star Hotels & Resorts',
+  name: 'Best Luxury Hotels in Morocco 2026 | 5-Star Resorts, Palaces & Boutique Stays',
   description:
-    'Complete guide to Morocco\'s finest luxury hotels and resorts. From palace hotels and desert camps to boutique riads and beach resorts, with seasonal pricing and booking tips.',
+    'Comprehensive guide to 15 of Morocco\'s best luxury hotels — palace properties, international 5-star resorts, and boutique desert retreats across Marrakech, Fes, Rabat, Tangier, and the Sahara.',
   url: `${BASE_URL}/morocco-luxury-hotels`,
-  image: `${BASE_URL}/images/cover-morocco-luxury.webp`,
+  image: `${BASE_URL}/images/hero-luxury-hotels.webp`,
   author: {
     '@type': 'Organization',
     name: 'CityGuide Morocco',
@@ -116,313 +113,151 @@ const jsonLd = {
     name: 'CityGuide Morocco',
     url: BASE_URL,
   },
-  datePublished: '2026-03-17',
-  dateModified: '2026-03-17',
+  datePublished: '2026-03-20',
+  dateModified: '2026-03-20',
   mainEntityOfPage: `${BASE_URL}/morocco-luxury-hotels`,
   isPartOf: {
     '@type': 'WebSite',
     name: 'CityGuide Morocco',
     url: BASE_URL,
   },
-  about: {
-    '@type': 'Country',
-    name: 'Morocco',
+};
+
+const faqItems = [
+  {
+    q: 'What is the most expensive hotel in Morocco?',
+    a: 'Royal Mansour Marrakech holds the title, with its three-bedroom Grand Riad suites priced above 100,000 MAD per night. Each riad is a standalone three-story house with a private plunge pool, rooftop terrace, and dedicated butler. La Mamounia\'s Churchill Suite and Amanjena\'s Maison also rank among the most expensive accommodations in North Africa.',
   },
-  breadcrumb: {
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Morocco Luxury Hotels Guide', item: `${BASE_URL}/morocco-luxury-hotels` },
-    ],
+  {
+    q: 'When is the cheapest time to book luxury hotels in Morocco?',
+    a: 'July and August offer the lowest rates at most luxury properties (30-50% below peak), because daytime temperatures in Marrakech regularly exceed 40 degrees Celsius. Ramadan periods also see reduced rates. The exception: coastal hotels in Essaouira and Tamouda Bay charge peak rates during summer since Europeans flock to the coast to escape inland heat.',
   },
+  {
+    q: 'Do luxury hotels in Morocco serve alcohol?',
+    a: 'Yes. All international 5-star hotels and most upscale Moroccan-owned properties hold liquor licenses. Expect full bars, wine lists featuring Moroccan labels from the Meknes region, and craft cocktail programs. Minibar selections typically include local beer (Casablanca, Flag Speciale) and imported spirits. Some boutique riads in the medina may not serve alcohol — confirm before booking if this matters to you.',
+  },
+  {
+    q: 'Is Morocco safe for luxury travelers?',
+    a: 'Morocco ranks among the safest destinations in Africa for tourists. Luxury hotels provide airport transfers, private guides, and 24-hour security. The Tourist Police (Brigade Touristique) patrol major cities. Credit card fraud is rare at reputable hotels. The biggest practical concern is aggressive touts in medina areas, which hotel concierges help you navigate.',
+  },
+  {
+    q: 'Should I stay in a luxury riad or a 5-star resort hotel?',
+    a: 'Riads deliver intimate, culturally immersive stays — think 6-12 rooms, central courtyards, and home-cooked meals. Resort hotels offer pools, spas, golf courses, kids\' clubs, and international dining. For a first visit, split your stay: two nights in a luxury riad inside the medina, then move to a resort property for the remaining nights.',
+  },
+  {
+    q: 'How far in advance should I book luxury hotels in Morocco?',
+    a: 'For peak season (October-November, March-April) and the December holidays, book 4-6 months ahead. Royal Mansour and La Mamounia frequently sell out 3+ months in advance for these windows. For summer stays, 4-6 weeks is sufficient. Some properties like Dar Ahlam only have 14 suites, so availability is always tight regardless of season.',
+  },
+  {
+    q: 'Do Morocco luxury hotels include breakfast?',
+    a: 'Most 5-star properties include breakfast in the room rate — typically a lavish buffet with Moroccan pastries (msemen, baghrir, beghrir), fresh-squeezed orange juice, argan oil with honey, and international options. Some boutique properties offer a la carte breakfast menus. Always confirm inclusions when comparing rates, as breakfast at these hotels can cost 400-800 MAD per person if purchased separately.',
+  },
+];
+
+const jsonLdFaq = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map((item) => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.a,
+    },
+  })),
 };
 
 /* ═══════════════════════════════════════════════════════════════
-   DATA: TOP 8 LUXURY HOTELS
+   DATA
    ═══════════════════════════════════════════════════════════════ */
 
-const luxuryHotels = [
+const TOP_HOTELS = [
+  { name: 'La Mamounia', city: 'Marrakech', type: 'Palace', stars: 5, from: 5500, highlight: 'Century-old palace with 8 hectares of gardens designed by Jacques Majorelle\'s contemporaries. Winston Churchill painted here.' },
+  { name: 'Royal Mansour', city: 'Marrakech', type: 'Palace', stars: 5, from: 12000, highlight: 'King Mohammed VI\'s showcase property. Each unit is a private three-story riad with its own plunge pool and rooftop terrace.' },
+  { name: 'Amanjena', city: 'Marrakech', type: 'Resort', stars: 5, from: 8500, highlight: 'Aman Resorts\' first African property. Rose-pink pavilions circle a central basin (bassin) inspired by the Menara Gardens.' },
+  { name: 'Mandarin Oriental', city: 'Marrakech', type: 'Resort', stars: 5, from: 6000, highlight: '54 private villas each with a heated pool, set across 20 hectares of olive groves on the Route de la Palmeraie.' },
+  { name: 'Four Seasons Resort', city: 'Marrakech', type: 'Resort', stars: 5, from: 5000, highlight: 'Family-friendly luxury with a dedicated kids\' club, three pools, and direct views of the Koutoubia Mosque minaret.' },
+  { name: 'Palais Namaskar', city: 'Marrakech', type: 'Palace', stars: 5, from: 7000, highlight: 'Designed by Imaad Rahmouni. Water palaces float above reflecting pools, while lake-view villas overlook the Atlas Mountains.' },
+  { name: 'Kasbah Tamadot', city: 'Atlas Mountains', type: 'Boutique', stars: 5, from: 4500, highlight: 'Richard Branson\'s Virgin Limited Edition property perched at 1,200m altitude in the village of Asni.' },
+  { name: 'Sofitel Marrakech Lounge & Spa', city: 'Marrakech', type: 'Hotel', stars: 5, from: 3500, highlight: 'Contemporary French-Moroccan design along Avenue du President Kennedy. The So Spa covers 2,000 sqm with a traditional hammam.' },
+  { name: 'Fairmont Royal Palm', city: 'Marrakech', type: 'Resort', stars: 5, from: 4800, highlight: '18-hole golf course designed by Cabell Robinson, plus a 3,500 sqm spa and private pool villas.' },
+  { name: 'Mazagan Beach & Golf Resort', city: 'El Jadida', type: 'Resort', stars: 5, from: 3000, highlight: '500-room Atlantic beachfront mega-resort with a casino, Gary Player golf course, and the largest spa in Morocco.' },
+  { name: 'Banyan Tree Tamouda Bay', city: 'Tamouda Bay', type: 'Resort', stars: 5, from: 5500, highlight: '92 pool villas on the Mediterranean coast between Tangier and Tetouan. Each villa has an infinity-edge private pool.' },
+  { name: 'The Ritz-Carlton Rabat, Dar Es Salam', city: 'Rabat', type: 'Hotel', stars: 5, from: 4000, highlight: 'Set within the 440-hectare Royal Dar Es Salam golf complex. Morocco\'s only Ritz-Carlton, with a 1,500 sqm spa.' },
+  { name: 'Hyatt Regency Casablanca', city: 'Casablanca', type: 'Hotel', stars: 5, from: 2500, highlight: 'Central Place des Nations location. A business-luxury hybrid with views of the Hassan II Mosque and the Atlantic.' },
+  { name: 'La Sultana Marrakech', city: 'Marrakech', type: 'Boutique', stars: 5, from: 4500, highlight: 'Five connected riads form this 28-room property steps from the Saadian Tombs. The rooftop pool overlooks the medina.' },
+  { name: 'Dar Ahlam', city: 'Skoura (Desert)', type: 'Boutique', stars: 5, from: 9000, highlight: 'All-inclusive kasbah with only 14 suites. No menus — the chef prepares surprise meals in a different location each night.' },
+] as const;
+
+const PRICE_COMPARISON = [
+  { hotel: 'Hyatt Regency Casablanca', low: 2500, peak: 4500, suite: 7000 },
+  { hotel: 'Mazagan Beach & Golf', low: 3000, peak: 5500, suite: 12000 },
+  { hotel: 'Sofitel Marrakech', low: 3500, peak: 6000, suite: 9000 },
+  { hotel: 'Kasbah Tamadot', low: 4500, peak: 7500, suite: 15000 },
+  { hotel: 'Four Seasons Marrakech', low: 5000, peak: 9000, suite: 20000 },
+  { hotel: 'La Mamounia', low: 5500, peak: 11000, suite: 35000 },
+  { hotel: 'Mandarin Oriental', low: 6000, peak: 10000, suite: 25000 },
+  { hotel: 'Palais Namaskar', low: 7000, peak: 12000, suite: 30000 },
+  { hotel: 'Amanjena', low: 8500, peak: 14000, suite: 35000 },
+  { hotel: 'Dar Ahlam (all-incl.)', low: 9000, peak: 14000, suite: 22000 },
+  { hotel: 'Royal Mansour', low: 12000, peak: 22000, suite: 100000 },
+] as const;
+
+const CITY_SECTIONS = [
   {
-    name: 'La Mamounia',
     city: 'Marrakech',
-    stars: 5,
-    priceRange: 'From 5,500 MAD per night',
-    description:
-      'The crown jewel of Moroccan hospitality, La Mamounia has welcomed royalty, heads of state, and celebrities since 1923. Set within a century-old palace surrounded by lush gardens designed by Jacques Majorelle, this legendary hotel blends Moorish architecture with Art Deco elegance. Its 2,500 sqm spa, three Michelin-worthy restaurants, and legendary bar have made it consistently one of the world\'s most celebrated hotels. Winston Churchill called it "the most lovely spot in the whole world."',
-    image: '/images/hero-marrakech.webp',
-    highlights: ['Historic palace setting since 1923', 'Three world-class restaurants', '2,500 sqm luxury spa', 'Eight hectares of private gardens'],
-    amenities: ['Heated outdoor pool', 'Hammam & spa', 'Fine dining', 'Private gardens', 'Butler service', 'Fitness center'],
-    bestFor: 'History lovers, honeymooners, and those seeking the quintessential Moroccan palace experience',
+    count: '8+',
+    desc: 'The undisputed capital of Moroccan luxury hospitality. Marrakech holds more palace-classified hotels than any other city in Africa. The Palmeraie district and Hivernage quarter concentrate the major international brands, while the medina harbors converted riad gems like La Sultana.',
+    hotels: ['La Mamounia', 'Royal Mansour', 'Amanjena', 'Mandarin Oriental', 'Four Seasons', 'Palais Namaskar', 'Sofitel', 'Fairmont Royal Palm', 'La Sultana'],
   },
   {
-    name: 'Royal Mansour',
-    city: 'Marrakech',
-    stars: 5,
-    priceRange: 'From 8,000 MAD per night',
-    description:
-      'Commissioned by King Mohammed VI himself, the Royal Mansour is not a hotel in the conventional sense. It is a private medina of 53 individual riads, each with its own plunge pool, rooftop terrace, and butler. The level of craftsmanship is staggering: 1,500 artisans spent three years hand-carving the zellige, stucco, and cedarwood throughout the property. Service is delivered through underground tunnels so guests are never disturbed. The three-Michelin-starred restaurant Le Jardin adds to its unmatched culinary credentials.',
-    image: '/images/art-moroccan-riad-courtyard.webp',
-    highlights: ['53 private riads with individual plunge pools', 'Three-Michelin-starred restaurant', 'Underground tunnel service system', '1,500 artisans over three years of construction'],
-    amenities: ['Private plunge pools', 'Personal butler', 'Award-winning spa', 'Multiple restaurants', 'Rooftop terraces', 'Kids\' club'],
-    bestFor: 'Ultra-luxury travelers, privacy seekers, and those who appreciate extraordinary craftsmanship',
+    city: 'Fes',
+    count: '3-4',
+    desc: 'Fes prioritizes intimate boutique luxury over mega-resorts. The standout properties — Palais Faraj, Riad Fes, and Hotel Sahrai — convert historic buildings into refined retreats overlooking the UNESCO-listed medina. Room counts stay small (under 25 rooms), and the focus leans toward gastronomy and cultural immersion.',
+    hotels: ['Palais Faraj Suites & Spa', 'Riad Fes', 'Hotel Sahrai'],
   },
   {
-    name: 'Kasbah Tamadot',
-    city: 'Atlas Mountains',
-    stars: 5,
-    priceRange: 'From 4,500 MAD per night',
-    description:
-      'Sir Richard Branson\'s Moroccan retreat sits at 1,300 meters in the foothills of the High Atlas, overlooking the Berber village of Asni. Originally purchased by Branson\'s mother Eve after she fell in love with the views, the kasbah combines Berber hospitality with Virgin Limited Edition luxury. Each of the 28 rooms is individually decorated with antiques collected by the Branson family. The infinity pool appears to float above the mountains, and the on-site mule treks and cooking classes immerse guests in authentic Berber culture.',
-    image: '/images/hero-atlas.webp',
-    highlights: ['Panoramic Atlas Mountain views', 'Individually decorated rooms with Branson family antiques', 'Infinity pool overlooking Berber villages', 'Authentic Berber cultural experiences'],
-    amenities: ['Infinity pool', 'Mountain spa', 'Berber cooking classes', 'Mule trekking', 'Tennis court', 'Yoga deck'],
-    bestFor: 'Mountain lovers, adventure seekers, and those wanting luxury combined with authentic Berber culture',
+    city: 'Rabat',
+    count: '2-3',
+    desc: 'Morocco\'s capital city gained its first true international luxury player when the Ritz-Carlton opened within the Royal Dar Es Salam golf complex. Sofitel Rabat Jardin des Roses provides a second option along Boulevard de la Tour Hassan. The luxury market here remains undersaturated compared to Marrakech.',
+    hotels: ['Ritz-Carlton Dar Es Salam', 'Sofitel Rabat Jardin des Roses'],
   },
   {
-    name: 'Mazagan Beach & Golf Resort',
-    city: 'El Jadida',
-    stars: 5,
-    priceRange: 'From 3,500 MAD per night',
-    description:
-      'Morocco\'s largest luxury beach resort stretches along seven kilometers of Atlantic coastline near the historic Portuguese city of El Jadida. The 500-room resort is a self-contained world with an 18-hole Gary Player championship golf course, a 2,000 sqm spa, a casino, and more than seven restaurants. The resort caters equally well to families and couples, with a comprehensive kids\' club and an adults-only pool. The architecture draws on Moorish design with a contemporary beach resort sensibility.',
-    image: '/images/card-beach.webp',
-    highlights: ['Seven kilometers of private Atlantic beach', '18-hole Gary Player championship golf course', '2,000 sqm spa with hydrotherapy circuit', 'Morocco\'s premier casino'],
-    amenities: ['Private beach', 'Golf course', 'Casino', 'Multiple pools', 'Kids\' club', 'Seven restaurants'],
-    bestFor: 'Families, golf enthusiasts, and those seeking a comprehensive beach resort experience',
+    city: 'Tangier & Tamouda Bay',
+    count: '3-4',
+    desc: 'The northern Mediterranean coast has emerged as Morocco\'s luxury beachfront corridor. Banyan Tree Tamouda Bay anchors the zone with 92 pool villas. In Tangier proper, the restored El Minzah Hotel and the new Fairmont Tazi Palace serve travelers exploring the city\'s literary and artistic heritage.',
+    hotels: ['Banyan Tree Tamouda Bay', 'Fairmont Tazi Palace Tangier', 'El Minzah Hotel'],
   },
   {
-    name: 'Sofitel Tamuda Bay Beach & Spa',
-    city: 'Tetouan',
-    stars: 5,
-    priceRange: 'From 4,000 MAD per night',
-    description:
-      'Perched on the stunning Mediterranean coast between Tetouan and the Rif Mountains, the Sofitel Tamuda Bay is Morocco\'s most elegant beach resort. Every one of its 128 rooms and suites faces the sea, and the design blends French luxury with Moroccan craftsmanship. The So SPA with L\'Occitane offers treatments using locally sourced argan oil and rose water. The private beach club, with its Balinese beds and dedicated butler service, creates a Mediterranean riviera atmosphere that is rare in Morocco.',
-    image: '/images/hero-agadir.webp',
-    highlights: ['Direct Mediterranean beachfront', 'All rooms face the sea', 'So SPA with L\'Occitane products', 'Private beach club with butler service'],
-    amenities: ['Private beach', 'Infinity pool', 'L\'Occitane spa', 'Beach club', 'Fine dining', 'Water sports'],
-    bestFor: 'Beach lovers, couples, and those seeking a Mediterranean luxury experience in Morocco',
+    city: 'Essaouira',
+    count: '2-3',
+    desc: 'Essaouira\'s laid-back Atlantic energy attracts a different luxury traveler — one drawn to wind, art, and seafood rather than gilded lobbies. Heure Bleue Palais dominates the upscale segment inside the medina walls, while Villa de l\'O delivers a boutique garden retreat outside them.',
+    hotels: ['Heure Bleue Palais', 'Villa de l\'O', 'Le Jardin des Douars (nearby)'],
   },
   {
-    name: 'Four Seasons Hotel Casablanca',
-    city: 'Casablanca',
-    stars: 5,
-    priceRange: 'From 5,000 MAD per night',
-    description:
-      'The Four Seasons Casablanca is a striking urban resort overlooking the Atlantic Ocean, set within extensive Andalusian-style gardens. Its 186 rooms and suites are the most spacious in the city, with many featuring ocean views and private balconies. The property houses Casablanca\'s finest spa, a heated outdoor pool flanked by cabanas, and a signature restaurant that blends Moroccan and French cuisine. Its position between the ocean and the Hassan II Mosque makes it the definitive luxury address in Morocco\'s largest city.',
-    image: '/images/hero-casablanca-skyline.webp',
-    highlights: ['Atlantic Ocean views', 'Andalusian-style gardens', 'Casablanca\'s premier spa', 'Walking distance to Hassan II Mosque'],
-    amenities: ['Ocean-view pool', 'Full-service spa', 'Multiple restaurants', 'Fitness center', 'Tennis courts', 'Concierge'],
-    bestFor: 'Business travelers, city explorers, and those who appreciate Four Seasons service standards',
-  },
-  {
-    name: 'Fairmont Royal Palm Marrakech',
-    city: 'Marrakech',
-    stars: 5,
-    priceRange: 'From 4,200 MAD per night',
-    description:
-      'Set on 231 hectares of olive groves with the Atlas Mountains as a backdrop, the Fairmont Royal Palm is Marrakech\'s most expansive luxury resort. The property features an 18-hole golf course designed by Cabell B. Robinson, the largest hotel pool in North Africa, and private villas with their own pools and gardens. The resort maintains a working olive farm, and guests can join harvest activities in season. The 3,500 sqm spa is among the most comprehensive in the country, offering traditional hammam alongside cutting-edge treatments.',
-    image: '/images/art-moroccan-garden.webp',
-    highlights: ['231 hectares of olive groves', 'Largest hotel pool in North Africa', '18-hole championship golf course', '3,500 sqm spa'],
-    amenities: ['Championship golf', 'Enormous pool', 'Private villas', 'Spa & hammam', 'Tennis academy', 'Kids\' club'],
-    bestFor: 'Golf lovers, families wanting space, and those seeking a resort experience outside the medina',
-  },
-  {
-    name: 'Palais Namaskar',
-    city: 'Marrakech',
-    stars: 5,
-    priceRange: 'From 6,000 MAD per night',
-    description:
-      'Palais Namaskar redefines luxury hospitality by merging Moroccan palace architecture with influences from Bali, India, and Japan. Set within 12 acres of landscaped gardens featuring four lakes, the property offers just 41 suites and villas, each with extraordinary scale and design. The water suites float over lotus-covered pools; the palace suites feature double-height ceilings and private terraces. The restaurant serves fusion cuisine that mirrors the property\'s multicultural design philosophy. It is perhaps Morocco\'s most visually striking hotel.',
-    image: '/images/photo-riad-courtyard.webp',
-    highlights: ['Multicultural design merging Moroccan, Balinese, and Asian influences', 'Water suites floating over lotus pools', 'Only 41 rooms for ultimate exclusivity', 'Twelve acres of landscaped gardens with four lakes'],
-    amenities: ['Multiple pools', 'Private gardens', 'Destination spa', 'Fusion restaurant', 'Lake suites', 'Yoga pavilion'],
-    bestFor: 'Design enthusiasts, honeymooners, and those seeking a truly unique architectural experience',
+    city: 'Desert & Atlas',
+    count: '3-4',
+    desc: 'Dar Ahlam in Skoura and Kasbah Tamadot in Asni represent the pinnacle of experiential luxury — properties where the landscape itself becomes the main feature. Desert camps like Scarabeo Camp and Merzouga Luxury Desert Camp offer elevated glamping with full butler service under Saharan skies.',
+    hotels: ['Dar Ahlam', 'Kasbah Tamadot', 'Scarabeo Camp', 'Merzouga Luxury Desert Camp'],
   },
 ] as const;
 
-/* ═══════════════════════════════════════════════════════════════
-   DATA: HOTEL CATEGORIES
-   ═══════════════════════════════════════════════════════════════ */
-
-const hotelCategories = [
-  {
-    name: 'Palace Hotels',
-    icon: Crown,
-    image: '/images/hero-bahia-palace.webp',
-    description:
-      'Morocco\'s palace hotels are the pinnacle of hospitality, often housed in historic buildings or purpose-built to replicate the grandeur of royal residences. Expect zellige tilework, carved stucco, cedarwood ceilings, grand courtyards with marble fountains, and service that reflects centuries of Moroccan hospitality tradition. Many are in Marrakech, where the tradition of palatial luxury is strongest.',
-    priceRange: 'From 5,000 MAD to 15,000 MAD per night',
-    examples: ['La Mamounia', 'Royal Mansour', 'Palais Namaskar', 'Amanjena'],
-    highlights: ['Historic or historically-inspired architecture', 'World-class restaurants and spas', 'Vast private gardens and courtyards', 'Butler and concierge service'],
-  },
-  {
-    name: 'Desert Luxury Camps',
-    icon: Star,
-    image: '/images/hero-desert-glamping.webp',
-    description:
-      'The Sahara Desert near Merzouga and Zagora has given rise to a new category of luxury: desert glamping camps that offer five-star comfort under the stars. These camps feature lavish tents with proper beds, en-suite bathrooms, and often private decks for stargazing. Evening entertainment includes traditional Gnawa music, campfire dinners, and camel treks at sunset. The silence and immensity of the desert create an experience that no palace hotel can replicate.',
-    priceRange: 'From 3,000 MAD to 8,000 MAD per night',
-    examples: ['Scarabeo Camp', 'Desert Luxury Camp Merzouga', 'Erg Chigaga Luxury Camp', 'Kam Kam Dunes'],
-    highlights: ['Luxury tents with en-suite bathrooms', 'Saharan sunset camel treks', 'Stargazing in zero light pollution', 'Traditional Berber campfire dinners'],
-  },
-  {
-    name: 'Boutique Riads',
-    icon: Gem,
-    image: '/images/card-riad.webp',
-    description:
-      'The riad is Morocco\'s most distinctive accommodation. These traditional houses, built around a central courtyard with a garden or fountain, have been lovingly restored into intimate boutique hotels. The best riads offer just 5 to 15 rooms, ensuring personalized service. Many feature rooftop terraces with medina views, plunge pools, and home-cooked meals that rival the finest restaurants. Staying in a riad is not just accommodation; it is a cultural immersion.',
-    priceRange: 'From 1,500 MAD to 5,000 MAD per night',
-    examples: ['Riad Kniza', 'Riad Fes', 'Riad Laaroussa', 'Dar Ahlam'],
-    highlights: ['Intimate settings with 5-15 rooms', 'Central courtyards with fountains', 'Rooftop terraces with medina views', 'Personalized home-cooked cuisine'],
-  },
-  {
-    name: 'Beach Resorts',
-    icon: Waves,
-    image: '/images/hero-essaouira-ramparts.webp',
-    description:
-      'Morocco\'s Atlantic and Mediterranean coasts host world-class beach resorts that rival the best in the Mediterranean. From the windswept shores of Essaouira to the calm waters of Tamuda Bay, these resorts combine ocean access with full resort amenities. Many feature golf courses, thalassotherapy spas, and water sports facilities. The beach resort experience in Morocco offers excellent value compared to similar properties in Southern Europe.',
-    priceRange: 'From 2,500 MAD to 7,000 MAD per night',
-    examples: ['Mazagan Beach Resort', 'Sofitel Tamuda Bay', 'Sofitel Essaouira Mogador', 'Banyan Tree Tamouda Bay'],
-    highlights: ['Direct beach access', 'Championship golf courses', 'Thalassotherapy and ocean spas', 'Water sports and ocean activities'],
-  },
+const LUXURY_EXPERIENCES = [
+  { icon: UtensilsCrossed, title: 'Private Dining', desc: 'Rooftop dinners under lantern light, Berber feasts in mountain villages, and chef\'s table tastings paired with Moroccan wines from the Meknes AOG region.' },
+  { icon: Waves, title: 'Hammam & Spa Rituals', desc: 'Multi-hour signature rituals combining black soap scrubs, ghassoul clay wraps, and argan oil massage. Top spas: So Spa (Sofitel), Royal Mansour Spa, and Amanjena Spa.' },
+  { icon: Globe, title: 'Championship Golf', desc: 'Fairmont Royal Palm\'s Cabell Robinson course, Mazagan\'s Gary Player layout, and Royal Dar Es Salam (host of the Hassan II Trophy since 1971) — all accessible through hotel concierge.' },
+  { icon: Mountain, title: 'Atlas Mountain Excursions', desc: 'Helicopter transfers to Kasbah Tamadot, guided treks to Toubkal base camp, and mule-supported picnic lunches at 2,500m altitude — arranged by hotel adventure desks.' },
+  { icon: Wine, title: 'Wine & Cocktail Programs', desc: 'La Mamounia\'s Le Bar and Royal Mansour\'s Le Bar each stock 300+ labels. Palais Namaskar runs mixology masterclasses using local ingredients: saffron, orange blossom, and dried figs.' },
+  { icon: Sun, title: 'Desert Stargazing', desc: 'Dar Ahlam arranges private astronomy sessions in the Draa Valley — one of North Africa\'s darkest sky zones. Some camps at Merzouga set up telescopes and Berber mint tea under the Milky Way.' },
 ] as const;
 
-/* ═══════════════════════════════════════════════════════════════
-   DATA: SEASONAL PRICING
-   ═══════════════════════════════════════════════════════════════ */
-
-const seasonalPricing = [
-  {
-    season: 'Peak Season (October - April)',
-    icon: Sun,
-    priceRange: 'From 4,000 MAD to 15,000 MAD per night',
-    description:
-      'The most popular time to visit Morocco, with perfect weather in Marrakech and the south. Hotel rates are at their highest, and availability can be tight at the most popular properties. Christmas, New Year, and Easter see the steepest premiums, with some hotels charging 50-100% above standard rates.',
-    tip: 'Book at least 3-4 months in advance for peak-season stays. Many luxury hotels offer early-booking discounts of 10-15% for reservations made 90+ days ahead.',
-    color: 'var(--color-accent)',
-  },
-  {
-    season: 'Shoulder Season (May - June, September)',
-    icon: Leaf,
-    priceRange: 'From 3,000 MAD to 10,000 MAD per night',
-    description:
-      'An excellent time for value. Weather is still pleasant (though warmer in the south), crowds are thinner, and hotel rates drop by 20-30% compared to peak season. September is particularly good as the summer heat fades but the crowds have not yet returned.',
-    tip: 'The best balance of price and weather. Many hotels offer complimentary upgrades during shoulder season when occupancy is lower.',
-    color: 'var(--color-gold)',
-  },
-  {
-    season: 'Summer (July - August)',
-    icon: Snowflake,
-    priceRange: 'From 2,500 MAD to 7,000 MAD per night',
-    description:
-      'Marrakech and inland cities can exceed 45 degrees Celsius, making this the low season for most luxury hotels. However, beach resorts on the Atlantic and Mediterranean coasts thrive during summer. Expect the lowest rates of the year at inland properties, but higher rates at coastal resorts.',
-    tip: 'For inland hotels, summer is when you get the best deals. Beach resorts are the exception and will be at peak pricing. Consider the Atlas Mountains as a cool alternative.',
-    color: '#4A90D9',
-  },
-  {
-    season: 'Ramadan Period (Varies Annually)',
-    icon: Calendar,
-    priceRange: 'From 2,000 MAD to 6,000 MAD per night',
-    description:
-      'During Ramadan, many Moroccans travel domestically and some restaurants operate reduced hours during the day. Luxury hotels continue to serve meals to guests but the atmosphere is more subdued. Rates are often at their lowest, making this a unique opportunity for budget-conscious luxury travelers who respect the cultural moment.',
-    tip: 'An excellent time for deals if you are comfortable with the cultural context. Hotel restaurants always remain open for guests. The iftar (breaking of fast) dinners are a special cultural experience.',
-    color: '#7B68AE',
-  },
-] as const;
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: BOOKING TIPS
-   ═══════════════════════════════════════════════════════════════ */
-
-const bookingTips = [
-  {
-    title: 'Book Direct for Best Perks',
-    icon: Globe,
-    description:
-      'While third-party sites may show lower rates, booking directly through the hotel\'s website often comes with perks: complimentary breakfast, room upgrades, late checkout, and spa credits. Many luxury hotels in Morocco price-match third-party sites and add these extras when you book direct.',
-  },
-  {
-    title: 'Ask About Package Deals',
-    icon: Tag,
-    description:
-      'Most luxury hotels offer packages that bundle accommodation with airport transfers, spa treatments, or dining credits. These packages can save 15-25% compared to booking everything separately. Ask about honeymoon, anniversary, and golf packages specifically.',
-  },
-  {
-    title: 'Consider Half-Board or Full-Board',
-    icon: Bed,
-    description:
-      'Many Moroccan luxury hotels offer half-board (breakfast and dinner) or full-board rates that represent excellent value. Since hotel restaurants in Morocco are often among the best in the city, this can save significantly compared to dining out at similar quality restaurants.',
-  },
-  {
-    title: 'Travel Midweek for Lower Rates',
-    icon: Calendar,
-    description:
-      'Sunday through Thursday stays are typically 10-20% cheaper than Friday and Saturday nights at most Moroccan luxury hotels. If your dates are flexible, arriving on a Sunday or Monday and departing midweek can yield meaningful savings.',
-  },
-  {
-    title: 'Join Loyalty Programs Before Booking',
-    icon: Award,
-    description:
-      'Properties like Four Seasons, Fairmont, and Sofitel belong to larger hotel groups with loyalty programs. Sign up before your first booking to start earning points. Elite members often receive complimentary upgrades, late checkout, and welcome amenities even on their first stay.',
-  },
-  {
-    title: 'Book During Moroccan Holidays for Unique Experiences',
-    icon: Sparkles,
-    description:
-      'While prices may be higher during Moroccan holidays, the cultural programming at luxury hotels is extraordinary. Many properties host special dinners, traditional music performances, and cultural activities during Eid, Throne Day, and other celebrations that are unavailable at other times.',
-  },
-] as const;
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: PRICE OVERVIEW
-   ═══════════════════════════════════════════════════════════════ */
-
-const priceOverview = [
-  { category: 'Boutique Riad (Luxury)', price: 'From 1,500 MAD per night', note: '5-15 rooms, intimate and personalized' },
-  { category: 'Desert Luxury Camp', price: 'From 3,000 MAD per night', note: 'Glamping with five-star amenities' },
-  { category: 'Beach Resort (5-Star)', price: 'From 3,500 MAD per night', note: 'Full resort with pool, beach, golf' },
-  { category: 'Mountain Retreat', price: 'From 4,000 MAD per night', note: 'Atlas Mountain setting with activities' },
-  { category: 'City Palace Hotel', price: 'From 5,000 MAD per night', note: 'Historic grandeur, world-class dining' },
-  { category: 'Ultra-Luxury Riad/Palace', price: 'From 8,000 MAD per night', note: 'Private riads, butler service, Michelin dining' },
-  { category: 'Private Villa Rental', price: 'From 10,000 MAD per night', note: 'Staffed villa with cook, pool, gardens' },
-  { category: 'Royal Suite (Top Properties)', price: 'From 25,000 MAD per night', note: 'The pinnacle: personal staff, maximum space' },
-] as const;
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: FAQ
-   ═══════════════════════════════════════════════════════════════ */
-
-const faqs = [
-  {
-    question: 'What is the best luxury hotel in Morocco overall?',
-    answer:
-      'La Mamounia and Royal Mansour in Marrakech consistently rank as Morocco\'s top two luxury hotels. La Mamounia offers a more historic, classic experience, while the Royal Mansour provides unmatched privacy with its individual riad concept. Both deliver extraordinary service, dining, and spa experiences. Your choice depends on whether you prefer the heritage and gardens of La Mamounia (from 5,500 MAD per night) or the contemporary ultra-luxury of the Royal Mansour (from 8,000 MAD per night).',
-  },
-  {
-    question: 'Is it worth paying more for a palace hotel versus a boutique riad?',
-    answer:
-      'Both offer exceptional experiences, but they are fundamentally different. Palace hotels provide grand public spaces, multiple restaurants, large pools, and comprehensive amenities. Boutique riads offer intimacy, personalized attention, and a feeling of being a guest in a private home. Many travelers stay at both during a single trip: a palace hotel for the resort experience and a riad for the cultural immersion. Luxury riads start from 1,500 MAD per night, while palace hotels start from 5,000 MAD per night.',
-  },
-  {
-    question: 'When is the cheapest time to book luxury hotels in Morocco?',
-    answer:
-      'July and August offer the lowest rates at inland hotels, with discounts of 30-50% compared to peak season. However, temperatures in Marrakech regularly exceed 40 degrees Celsius. For the best balance of price and comfort, target May, June, or September, when rates are 20-30% below peak but the weather is still pleasant. Ramadan also brings lower rates at many properties.',
-  },
-  {
-    question: 'Do Morocco luxury hotels cater to families with children?',
-    answer:
-      'Many do, and some are specifically designed for families. Mazagan Beach Resort and Fairmont Royal Palm both have excellent kids\' clubs, family pools, and child-friendly dining options. The Four Seasons Casablanca offers complimentary amenities for children. Desert camps can also be family-friendly for children over six years old. Boutique riads with fewer than 10 rooms may be less suited to young children due to plunge pools and steep stairs.',
-  },
-  {
-    question: 'How far in advance should I book luxury hotels in Morocco?',
-    answer:
-      'For peak season (October to April), book at least 3-4 months in advance, and 6 months or more for Christmas and New Year stays. For shoulder season, 4-6 weeks is usually sufficient. Properties with fewer than 20 rooms, such as boutique riads and intimate desert camps, sell out faster than large resorts. The Royal Mansour and La Mamounia can be fully booked months in advance during peak periods.',
-  },
-  {
-    question: 'Are luxury hotel prices in Morocco good value compared to Europe?',
-    answer:
-      'Exceptional value. A five-star luxury experience in Morocco typically costs 30-50% less than equivalent properties in France, Italy, or Spain. A night at La Mamounia (from 5,500 MAD, approximately 500 EUR) delivers a level of service, craftsmanship, and dining that would cost 800-1,200 EUR at comparable European palace hotels. The exchange rate further benefits visitors paying in EUR, GBP, or USD.',
-  },
+const RELATED_GUIDES = [
+  { href: '/morocco-spa-guide', label: 'Morocco Spa & Hammam Guide' },
+  { href: '/best-riads-morocco', label: 'Best Riads in Morocco' },
+  { href: '/morocco-food-guide', label: 'Morocco Food & Cuisine Guide' },
+  { href: '/best-time-visit-morocco', label: 'Best Time to Visit Morocco' },
+  { href: '/honeymoon', label: 'Morocco Honeymoon Guide' },
+  { href: '/golf', label: 'Golf in Morocco' },
 ] as const;
 
 /* ═══════════════════════════════════════════════════════════════
@@ -432,497 +267,816 @@ const faqs = [
 export default function MoroccoLuxuryHotelsPage() {
   return (
     <>
+      {/* JSON-LD */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdTravel) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
       />
 
-      {/* ── Hero Section ── */}
-      <section className="relative py-20 md:py-28 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(/images/cover-morocco-luxury.webp)',
-          }}
-        />
-        <div className="absolute inset-0 hero-overlay" />
-        <div className="container-morocco relative z-10">
-          <nav className="flex items-center gap-2 text-sm text-white/60 mb-8" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-white transition-colors">
-              <Home className="w-3.5 h-3.5" />
-            </Link>
-            <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-white">Morocco Luxury Hotels Guide</span>
-          </nav>
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm text-white/90 text-sm mb-6">
-            <Crown className="w-4 h-4" />
-            Luxury Accommodation
+      <main className="min-h-screen bg-[#FAF8F5]">
+
+        {/* ── HERO ─────────────────────────────────────── */}
+        <section className="relative hero-overlay bg-gradient-to-br from-[#2C1810] via-[#4A2C1A] to-[#1a0f0a] py-20 md:py-28">
+          <div className="container-morocco relative z-10">
+            {/* Breadcrumbs */}
+            <nav aria-label="Breadcrumb" className="mb-6">
+              <ol className="flex flex-wrap items-center gap-1.5 text-sm text-white/70">
+                <li className="flex items-center gap-1">
+                  <Home className="h-3.5 w-3.5" />
+                  <Link href="/" className="hover:text-white transition-colors">Home</Link>
+                </li>
+                <li className="flex items-center gap-1">
+                  <ChevronRight className="h-3.5 w-3.5" />
+                  <Link href="/accommodations" className="hover:text-white transition-colors">Accommodations</Link>
+                </li>
+                <li className="flex items-center gap-1">
+                  <ChevronRight className="h-3.5 w-3.5" />
+                  <span className="text-white font-medium">Luxury Hotels</span>
+                </li>
+              </ol>
+            </nav>
+
+            <div className="max-w-3xl">
+              <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#C4960C]/20 border border-[#C4960C]/40 rounded-full text-[#C4960C] text-sm font-medium mb-5">
+                <Crown className="h-4 w-4" />
+                Definitive Guide — Updated March 2026
+              </span>
+              <h1 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-5">
+                Best Luxury Hotels in Morocco
+              </h1>
+              <p className="font-[family-name:var(--font-heading)] text-lg md:text-xl text-white/85 leading-relaxed mb-8">
+                15 hand-picked 5-star palaces, international resorts, and boutique retreats across
+                Marrakech, Fes, Rabat, the Atlas Mountains, and the Sahara Desert. Real rates,
+                seasonal pricing breakdowns, and insider booking strategies.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <span className="flex items-center gap-1.5 bg-white/10 backdrop-blur px-3 py-1.5 rounded-lg text-white/90 text-sm">
+                  <Building className="h-4 w-4 text-[#C4960C]" /> 15 Properties Reviewed
+                </span>
+                <span className="flex items-center gap-1.5 bg-white/10 backdrop-blur px-3 py-1.5 rounded-lg text-white/90 text-sm">
+                  <MapPin className="h-4 w-4 text-[#C4960C]" /> 6 Regions Covered
+                </span>
+                <span className="flex items-center gap-1.5 bg-white/10 backdrop-blur px-3 py-1.5 rounded-lg text-white/90 text-sm">
+                  <DollarSign className="h-4 w-4 text-[#C4960C]" /> From 2,500 MAD/night
+                </span>
+              </div>
+            </div>
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-display)] font-bold text-white mb-4">
-            Morocco Luxury Hotels Guide:
-            <br className="hidden md:block" /> Top 8 Five-Star Hotels &amp; Resorts
-          </h1>
-          <p className="text-xl text-white/80 max-w-2xl">
-            From legendary palace hotels in Marrakech to Atlas Mountain retreats and Atlantic
-            beach resorts. Your complete guide to the finest luxury stays in Morocco, with prices
-            from 3,500 MAD per night.
-          </p>
-        </div>
-      </section>
+        </section>
 
-      <div className="zellige-border" />
+        {/* ── INTRO — MOROCCO'S LUXURY HOTEL SCENE ─────── */}
+        <section className="py-16 md:py-20">
+          <div className="container-morocco">
+            <div className="max-w-4xl mx-auto">
+              <div className="flex items-center gap-3 mb-6">
+                <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-[#A0522D]/10">
+                  <Award className="h-5 w-5 text-[#A0522D]" />
+                </span>
+                <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl text-[#2C1810]">
+                  Morocco&apos;s Luxury Hotel Scene
+                </h2>
+              </div>
 
-      {/* ── Introduction ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco max-w-4xl">
-          <div className="prose-moroccan">
-            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
-              Why Morocco Is One of the World&apos;s Great Luxury Destinations
-            </h2>
-            <div className="space-y-4 text-lg text-[var(--text-secondary)] leading-relaxed">
-              <p>
-                Morocco occupies a unique position in the global luxury travel landscape. It is
-                one of the few countries where centuries-old craftsmanship, from zellige tilework
-                to hand-carved cedarwood, is not merely preserved as museum artifact but actively
-                employed in the creation of contemporary luxury. The result is hotels that feel
-                both ancient and modern, rooted in tradition yet entirely fresh.
+              <div className="space-y-5 text-[#5D4E42] leading-relaxed font-[family-name:var(--font-heading)]">
+                <p>
+                  Morocco attracts over 14 million visitors annually, and the luxury segment has grown
+                  at 12% per year since 2019. The country now holds three Cond&eacute; Nast Traveler Gold List
+                  properties, four entries on Travel + Leisure&apos;s World&apos;s Best Hotels, and two Forbes
+                  Five-Star-rated resorts — the only ones in North Africa.
+                </p>
+                <p>
+                  What sets Moroccan luxury apart from Dubai or the Maldives is architecture. The kingdom
+                  enforces design guidelines that require luxury builds to use local materials —
+                  tadelakt plaster, zellige mosaic tile, carved cedarwood, and wrought iron (fer forg&eacute;).
+                  International brands like Aman, Four Seasons, and Mandarin Oriental hire Moroccan artisan
+                  cooperatives (maalems) to execute traditional craftsmanship at a scale rarely seen
+                  elsewhere.
+                </p>
+                <p>
+                  Royal patronage amplifies the standard. King Mohammed VI personally commissioned
+                  Royal Mansour Marrakech, staffing it with 1,400 employees for just 53 riads. That
+                  staff-to-room ratio of 26:1 eclipses any comparable property worldwide. The king
+                  also backed the &ldquo;Vision 2030&rdquo; tourism plan, which earmarks 80 billion MAD for
+                  hospitality infrastructure — including new luxury zones at Tamouda Bay, Mogador
+                  (Essaouira), and Lixus (near Larache).
+                </p>
+                <p>
+                  Price positioning gives Morocco an edge. A top-tier suite at Royal Mansour — arguably
+                  the most lavish hotel in Africa — runs roughly 40% less than comparable rooms at the
+                  Burj Al Arab or Aman Tokyo. The dirham&apos;s relative weakness against the euro and dollar
+                  amplifies value for international visitors. Meanwhile, operational costs remain lower
+                  than in the Gulf or Southeast Asia, allowing Moroccan properties to maintain exceptional
+                  staff-to-guest ratios without the astronomical nightly rates found elsewhere.
+                </p>
+                <p>
+                  The country&apos;s geographic diversity means luxury travelers can combine vastly different
+                  landscapes in a single trip. Start with a palace hotel in Marrakech, transfer by
+                  helicopter to a mountain kasbah in the Atlas, then drive south to a desert camp under
+                  Saharan stars — all within a 3-4 hour radius. No other luxury destination in Africa
+                  or the Middle East matches this variety of terrain and experience within such a
+                  compact geographic footprint.
+                </p>
+              </div>
+
+              {/* Quick Stats */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
+                {[
+                  { num: '53', label: '5-Star Hotels', icon: Star },
+                  { num: '6', label: 'Palace-Class Hotels', icon: Crown },
+                  { num: '26:1', label: 'Top Staff Ratio', icon: Users },
+                  { num: '80B MAD', label: 'Vision 2030 Budget', icon: Building },
+                ].map((stat) => (
+                  <div key={stat.label} className="card-moroccan p-5 text-center">
+                    <stat.icon className="h-6 w-6 text-[#C4960C] mx-auto mb-2" />
+                    <p className="font-[family-name:var(--font-display)] text-2xl text-[#2C1810]">{stat.num}</p>
+                    <p className="text-sm text-[#5D4E42] font-[family-name:var(--font-heading)]">{stat.label}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── TOP 15 LUXURY HOTELS ─────────────────────── */}
+        <section className="py-16 md:py-20 bg-white">
+          <div className="container-morocco">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <span className="inline-flex items-center gap-2 px-3 py-1 bg-[#C4960C]/10 rounded-full text-[#C4960C] text-sm font-medium mb-4">
+                <Gem className="h-4 w-4" /> Curated Selection
+              </span>
+              <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl text-[#2C1810] mb-4">
+                Top 15 Luxury Hotels in Morocco
+              </h2>
+              <p className="text-[#5D4E42] font-[family-name:var(--font-heading)]">
+                Each property was selected based on international ratings, guest reviews,
+                architectural significance, and service consistency across multiple seasons.
               </p>
-              <p>
-                The range of experiences is extraordinary. Within a single trip, you can sleep in
-                a restored 17th-century riad in the Fes medina, a contemporary glass-and-stone
-                suite overlooking the Atlas Mountains, a tented camp under the Saharan stars, and
-                an Atlantic-facing beach villa. No other destination offers this diversity within
-                such a compact geography.
-              </p>
-              <p>
-                Crucially, luxury in Morocco remains exceptional value. A night at one of the
-                world&apos;s finest palace hotels here costs a fraction of what you would pay for a
-                comparable experience in London, Paris, or Dubai. The service, the food, the
-                architecture, and the cultural richness are equal to the best anywhere, but the
-                prices start from 3,500 MAD per night, making world-class luxury genuinely
-                accessible.
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {TOP_HOTELS.map((hotel, idx) => (
+                <div key={hotel.name} className="card-moroccan p-6 flex flex-col">
+                  <div className="flex items-start justify-between mb-3">
+                    <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-[#C4960C]/10 text-[#C4960C] font-bold text-sm">
+                      {String(idx + 1).padStart(2, '0')}
+                    </span>
+                    <span className="flex items-center gap-1 text-sm text-[#C4960C]">
+                      {Array.from({ length: hotel.stars }).map((_, i) => (
+                        <Star key={i} className="h-3.5 w-3.5 fill-[#C4960C]" />
+                      ))}
+                    </span>
+                  </div>
+                  <h3 className="font-[family-name:var(--font-display)] text-xl text-[#2C1810] mb-1">
+                    {hotel.name}
+                  </h3>
+                  <div className="flex items-center gap-3 text-sm text-[#5D4E42] mb-3">
+                    <span className="flex items-center gap-1">
+                      <MapPin className="h-3.5 w-3.5 text-[#A0522D]" /> {hotel.city}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Building className="h-3.5 w-3.5 text-[#A0522D]" /> {hotel.type}
+                    </span>
+                  </div>
+                  <p className="text-sm text-[#5D4E42] font-[family-name:var(--font-heading)] leading-relaxed flex-grow">
+                    {hotel.highlight}
+                  </p>
+                  <div className="mt-4 pt-4 border-t border-[#E8E0D8] flex items-center justify-between">
+                    <span className="text-[#A0522D] font-semibold font-[family-name:var(--font-heading)]">
+                      from {hotel.from.toLocaleString()} MAD
+                    </span>
+                    <span className="text-xs text-[#5D4E42]/70">per night</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-8 p-5 bg-[#FFF8E7] border border-[#C4960C]/20 rounded-xl flex gap-3">
+              <Info className="h-5 w-5 text-[#C4960C] shrink-0 mt-0.5" />
+              <p className="text-sm text-[#5D4E42] font-[family-name:var(--font-heading)]">
+                <strong>Price note:</strong> All rates shown are starting prices for standard rooms in
+                low season (July-August 2025/2026). Peak season (October-April) rates run 40-80% higher.
+                Seasonal pricing can change — always verify directly with the hotel or your booking platform.
               </p>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* ── Price Quick Reference ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <DollarSign className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Luxury Hotel Price Overview
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-4">
-            What to expect to pay across different tiers of luxury accommodation in Morocco.
-          </p>
-          <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
-            <Info className="w-3.5 h-3.5 inline mr-1" />
-            All prices are starting prices for standard rooms. Seasonal pricing applies during peak tourist months (October-April) and holiday periods, when rates may increase by 30-100%.
-          </p>
-          <div className="max-w-4xl mx-auto">
-            <div className="card-moroccan overflow-hidden">
-              <div className="grid grid-cols-3 gap-0 bg-[var(--color-accent)] text-white text-sm font-medium">
-                <div className="p-3 px-4">Category</div>
-                <div className="p-3 px-4">Price</div>
-                <div className="p-3 px-4">Note</div>
-              </div>
-              {priceOverview.map((item, i) => (
-                <div
-                  key={item.category}
-                  className={`grid grid-cols-3 gap-0 text-sm ${i % 2 === 0 ? 'bg-white' : 'bg-[var(--surface-muted)]'}`}
-                >
-                  <div className="p-3 px-4 font-medium text-[var(--text-primary)]">{item.category}</div>
-                  <div className="p-3 px-4 text-[var(--color-accent)] font-semibold">{item.price}</div>
-                  <div className="p-3 px-4 text-[var(--text-muted)]">{item.note}</div>
+        {/* ── BY CITY ──────────────────────────────────── */}
+        <section className="py-16 md:py-20">
+          <div className="container-morocco">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <span className="inline-flex items-center gap-2 px-3 py-1 bg-[#A0522D]/10 rounded-full text-[#A0522D] text-sm font-medium mb-4">
+                <MapPin className="h-4 w-4" /> By Region
+              </span>
+              <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl text-[#2C1810] mb-4">
+                Luxury Hotels by City & Region
+              </h2>
+              <p className="text-[#5D4E42] font-[family-name:var(--font-heading)]">
+                Morocco&apos;s luxury properties cluster in six distinct zones, each with a
+                different character, climate, and guest profile.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              {CITY_SECTIONS.map((section) => (
+                <div key={section.city} className="card-moroccan p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-[#A0522D]/10">
+                      <MapPin className="h-5 w-5 text-[#A0522D]" />
+                    </span>
+                    <div>
+                      <h3 className="font-[family-name:var(--font-display)] text-xl text-[#2C1810]">
+                        {section.city}
+                      </h3>
+                      <span className="text-sm text-[#C4960C] font-medium">{section.count} luxury properties</span>
+                    </div>
+                  </div>
+                  <p className="text-sm text-[#5D4E42] font-[family-name:var(--font-heading)] leading-relaxed mb-4">
+                    {section.desc}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {section.hotels.map((h) => (
+                      <span key={h} className="text-xs bg-[#FAF8F5] border border-[#E8E0D8] px-2.5 py-1 rounded-lg text-[#5D4E42]">
+                        {h}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* ── Top 8 Luxury Hotel Profiles ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Award className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Top 8 Luxury Hotels in Morocco
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-4">
-            From historic palace hotels and mountain retreats to beach resorts and design masterpieces, these are Morocco&apos;s finest luxury properties.
-          </p>
-          <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
-            <Info className="w-3.5 h-3.5 inline mr-1" />
-            Prices shown are starting rates and vary by season, room type, and availability.
-          </p>
+        {/* ── PRICE COMPARISON TABLE ───────────────────── */}
+        <section className="py-16 md:py-20 bg-white">
+          <div className="container-morocco">
+            <div className="max-w-4xl mx-auto">
+              <div className="flex items-center gap-3 mb-6">
+                <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-[#C4960C]/10">
+                  <DollarSign className="h-5 w-5 text-[#C4960C]" />
+                </span>
+                <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl text-[#2C1810]">
+                  Price Comparison Table
+                </h2>
+              </div>
+              <p className="text-[#5D4E42] font-[family-name:var(--font-heading)] mb-8">
+                Nightly rates in MAD (Moroccan Dirhams). Approximate conversions: 10 MAD = ~1 USD / ~0.92 EUR.
+                Seasonal pricing can change — verify with the property.
+              </p>
 
-          <div className="space-y-12">
-            {luxuryHotels.map((hotel, index) => (
-              <div key={hotel.name} className="card-moroccan overflow-hidden">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-                  {/* Image side */}
-                  <div className={`relative h-64 lg:h-auto min-h-[320px] ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                    <img
-                      src={hotel.image}
-                      alt={`${hotel.name} luxury hotel in ${hotel.city}, Morocco - exterior and grounds`}
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-black/10" />
-                    <div className="absolute top-4 left-4 inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/90 backdrop-blur-sm text-sm font-semibold text-[var(--color-accent)]">
-                      <Crown className="w-3.5 h-3.5" />
-                      #{index + 1}
-                    </div>
-                    <div className="absolute bottom-4 left-4 flex items-center gap-1">
-                      {Array.from({ length: hotel.stars }).map((_, i) => (
-                        <Star key={i} className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-                      ))}
-                    </div>
+              <div className="overflow-x-auto zellige-border rounded-xl">
+                <table className="w-full text-left">
+                  <thead>
+                    <tr className="bg-[#2C1810] text-white">
+                      <th className="px-5 py-4 font-[family-name:var(--font-heading)] font-semibold text-sm">Hotel</th>
+                      <th className="px-5 py-4 font-[family-name:var(--font-heading)] font-semibold text-sm text-center">Low Season</th>
+                      <th className="px-5 py-4 font-[family-name:var(--font-heading)] font-semibold text-sm text-center">Peak Season</th>
+                      <th className="px-5 py-4 font-[family-name:var(--font-heading)] font-semibold text-sm text-center">Top Suite</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {PRICE_COMPARISON.map((row, idx) => (
+                      <tr key={row.hotel} className={idx % 2 === 0 ? 'bg-[#FAF8F5]' : 'bg-white'}>
+                        <td className="px-5 py-3.5 font-[family-name:var(--font-heading)] text-sm text-[#2C1810] font-medium">
+                          {row.hotel}
+                        </td>
+                        <td className="px-5 py-3.5 text-sm text-[#5D4E42] text-center font-[family-name:var(--font-heading)]">
+                          from {row.low.toLocaleString()} MAD
+                        </td>
+                        <td className="px-5 py-3.5 text-sm text-[#A0522D] text-center font-medium font-[family-name:var(--font-heading)]">
+                          from {row.peak.toLocaleString()} MAD
+                        </td>
+                        <td className="px-5 py-3.5 text-sm text-[#C4960C] text-center font-semibold font-[family-name:var(--font-heading)]">
+                          from {row.suite.toLocaleString()} MAD
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── WHEN TO BOOK ─────────────────────────────── */}
+        <section className="py-16 md:py-20">
+          <div className="container-morocco">
+            <div className="max-w-4xl mx-auto">
+              <div className="flex items-center gap-3 mb-6">
+                <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-[#A0522D]/10">
+                  <Calendar className="h-5 w-5 text-[#A0522D]" />
+                </span>
+                <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl text-[#2C1810]">
+                  When to Book — Seasonal Pricing
+                </h2>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
+                <div className="card-moroccan p-6">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Sun className="h-5 w-5 text-[#C4960C]" />
+                    <h3 className="font-[family-name:var(--font-display)] text-lg text-[#2C1810]">Peak Season (October - April)</h3>
                   </div>
+                  <ul className="space-y-2 text-sm text-[#5D4E42] font-[family-name:var(--font-heading)]">
+                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-[#A0522D] shrink-0 mt-0.5" /> Highest rates — plan for 40-80% above published minimums</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-[#A0522D] shrink-0 mt-0.5" /> December 20 - January 5 commands absolute peak pricing</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-[#A0522D] shrink-0 mt-0.5" /> Book 4-6 months ahead for Royal Mansour, La Mamounia</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-[#A0522D] shrink-0 mt-0.5" /> Best weather: daytime highs of 20-26°C in Marrakech</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-[#A0522D] shrink-0 mt-0.5" /> March-April is shoulder — slightly lower rates, wildflower season</li>
+                  </ul>
+                </div>
 
-                  {/* Content side */}
-                  <div className={`p-6 lg:p-8 ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                    <div className="flex items-start justify-between mb-3">
-                      <div>
-                        <h3 className="text-2xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
-                          {hotel.name}
-                        </h3>
-                        <div className="flex items-center gap-2 text-sm text-[var(--text-muted)] mt-1">
-                          <MapPin className="w-3.5 h-3.5" />
-                          {hotel.city}, Morocco
-                        </div>
-                      </div>
-                    </div>
+                <div className="card-moroccan p-6">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Clock className="h-5 w-5 text-[#C4960C]" />
+                    <h3 className="font-[family-name:var(--font-display)] text-lg text-[#2C1810]">Off-Peak (May - September)</h3>
+                  </div>
+                  <ul className="space-y-2 text-sm text-[#5D4E42] font-[family-name:var(--font-heading)]">
+                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-[#C4960C] shrink-0 mt-0.5" /> Rates drop 30-50% at inland properties</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-[#C4960C] shrink-0 mt-0.5" /> July-August: Marrakech hits 40°C+ daily — pool time dominates</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-[#C4960C] shrink-0 mt-0.5" /> Coastal hotels (Essaouira, Tamouda Bay) charge peak summer rates</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-[#C4960C] shrink-0 mt-0.5" /> Ramadan: some restaurants and bars keep limited hours</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-[#C4960C] shrink-0 mt-0.5" /> Ideal for spa-focused stays — fewer crowds, spa availability opens up</li>
+                  </ul>
+                </div>
+              </div>
 
-                    <div className="inline-block px-3 py-1 text-sm font-semibold rounded-lg bg-[var(--color-accent)]/10 text-[var(--color-accent)] mb-4">
-                      {hotel.priceRange}
-                    </div>
-
-                    <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-5">
-                      {hotel.description}
-                    </p>
-
-                    <div className="mb-5">
-                      <h4 className="text-xs font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] uppercase tracking-wider mb-3">
-                        Highlights
-                      </h4>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                        {hotel.highlights.map((highlight, i) => (
-                          <div key={i} className="flex items-start gap-1.5 text-xs text-[var(--text-muted)]">
-                            <CheckCircle className="w-3.5 h-3.5 mt-0.5 shrink-0 text-[var(--color-gold)]" />
-                            {highlight}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="mb-5">
-                      <h4 className="text-xs font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] uppercase tracking-wider mb-3">
-                        Key Amenities
-                      </h4>
-                      <div className="flex flex-wrap gap-2">
-                        {hotel.amenities.map((amenity, i) => (
-                          <span key={i} className="inline-flex items-center px-2.5 py-1 text-xs rounded-full bg-[var(--surface-muted)] text-[var(--text-muted)]">
-                            {amenity}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-2 p-3 bg-[var(--surface-muted)] rounded-lg">
-                      <Heart className="w-4 h-4 text-[var(--color-accent)] mt-0.5 shrink-0" />
-                      <p className="text-xs text-[var(--text-muted)]">
-                        <span className="font-semibold text-[var(--text-primary)]">Best for:</span> {hotel.bestFor}
-                      </p>
-                    </div>
+              <div className="card-moroccan p-6 bg-gradient-to-r from-[#2C1810] to-[#4A2C1A] text-white">
+                <div className="flex items-center gap-2 mb-3">
+                  <Shield className="h-5 w-5 text-[#C4960C]" />
+                  <h3 className="font-[family-name:var(--font-display)] text-lg">Booking Strategy</h3>
+                </div>
+                <div className="grid md:grid-cols-3 gap-4 text-sm font-[family-name:var(--font-heading)]">
+                  <div>
+                    <p className="text-[#C4960C] font-semibold mb-1">Direct Booking</p>
+                    <p className="text-white/80">Most palace hotels offer a best-rate guarantee plus perks (room upgrade, late checkout, spa credit) when you book through their website.</p>
+                  </div>
+                  <div>
+                    <p className="text-[#C4960C] font-semibold mb-1">Travel Advisor</p>
+                    <p className="text-white/80">Virtuoso- and Signature-affiliated agents unlock complimentary breakfast, upgrades, and resort credits at Four Seasons, Aman, and Mandarin Oriental.</p>
+                  </div>
+                  <div>
+                    <p className="text-[#C4960C] font-semibold mb-1">Credit Card Programs</p>
+                    <p className="text-white/80">Amex Fine Hotels + Resorts covers La Mamounia and Four Seasons Marrakech. Benefits: noon check-in, 4 PM checkout, and a property-specific amenity.</p>
                   </div>
                 </div>
               </div>
-            ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* ── Hotel Categories ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Building className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Types of Luxury Accommodation in Morocco
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Morocco offers four distinct categories of luxury accommodation, each with its own character and appeal.
-          </p>
+        {/* ── LUXURY EXPERIENCES ────────────────────────── */}
+        <section className="py-16 md:py-20 bg-white">
+          <div className="container-morocco">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <span className="inline-flex items-center gap-2 px-3 py-1 bg-[#C4960C]/10 rounded-full text-[#C4960C] text-sm font-medium mb-4">
+                <Sparkles className="h-4 w-4" /> Beyond the Room
+              </span>
+              <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl text-[#2C1810] mb-4">
+                Signature Luxury Experiences
+              </h2>
+              <p className="text-[#5D4E42] font-[family-name:var(--font-heading)]">
+                Morocco&apos;s top hotels compete on experiences as much as rooms. These six categories
+                represent the activities that drive repeat bookings and five-star reviews.
+              </p>
+            </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {hotelCategories.map((category) => {
-              const CategoryIcon = category.icon;
-              return (
-                <div key={category.name} className="card-moroccan overflow-hidden">
-                  <div className="relative h-52">
-                    <img
-                      src={category.image}
-                      alt={`${category.name} luxury accommodation in Morocco`}
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                    <div className="absolute bottom-4 left-4 flex items-center gap-2">
-                      <CategoryIcon className="w-5 h-5 text-white" />
-                      <h3 className="text-xl font-[family-name:var(--font-display)] font-bold text-white">
-                        {category.name}
-                      </h3>
-                    </div>
-                    <div className="absolute top-4 right-4 inline-block px-3 py-1 text-xs font-semibold rounded-full bg-white/90 backdrop-blur-sm text-[var(--color-accent)]">
-                      {category.priceRange}
-                    </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {LUXURY_EXPERIENCES.map((exp) => (
+                <div key={exp.title} className="card-moroccan p-6">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-[#C4960C]/10">
+                      <exp.icon className="h-5 w-5 text-[#C4960C]" />
+                    </span>
+                    <h3 className="font-[family-name:var(--font-display)] text-lg text-[#2C1810]">
+                      {exp.title}
+                    </h3>
                   </div>
-                  <div className="p-6">
-                    <p className="text-sm text-[var(--text-secondary)] mb-4 leading-relaxed">
-                      {category.description}
-                    </p>
-
-                    <div className="mb-4">
-                      <h4 className="text-xs font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] uppercase tracking-wider mb-2">
-                        Notable Properties
-                      </h4>
-                      <div className="flex flex-wrap gap-2">
-                        {category.examples.map((example, i) => (
-                          <span key={i} className="inline-flex items-center px-2.5 py-1 text-xs rounded-full bg-[var(--color-accent)]/10 text-[var(--color-accent)] font-medium">
-                            {example}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-2 gap-2">
-                      {category.highlights.map((highlight, i) => (
-                        <div key={i} className="flex items-start gap-1.5 text-xs text-[var(--text-muted)]">
-                          <CheckCircle className="w-3 h-3 mt-0.5 shrink-0 text-[var(--color-gold)]" />
-                          {highlight}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Seasonal Pricing Guide ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Calendar className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Seasonal Pricing Guide
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            When you visit significantly impacts what you pay. Here is how rates vary across the year at Morocco&apos;s luxury hotels.
-          </p>
-
-          <div className="max-w-4xl mx-auto space-y-6">
-            {seasonalPricing.map((season) => {
-              const SeasonIcon = season.icon;
-              return (
-                <div key={season.season} className="card-moroccan p-6">
-                  <div className="flex items-start gap-4 mb-4">
-                    <div
-                      className="w-12 h-12 rounded-full flex items-center justify-center shrink-0"
-                      style={{ backgroundColor: `${season.color}15` }}
-                    >
-                      <SeasonIcon className="w-6 h-6" style={{ color: season.color }} />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                        {season.season}
-                      </h3>
-                      <div className="inline-block px-2 py-0.5 text-xs font-medium rounded mt-1" style={{ backgroundColor: `${season.color}15`, color: season.color }}>
-                        {season.priceRange}
-                      </div>
-                    </div>
-                  </div>
-                  <p className="text-sm text-[var(--text-secondary)] mb-4 leading-relaxed">
-                    {season.description}
+                  <p className="text-sm text-[#5D4E42] font-[family-name:var(--font-heading)] leading-relaxed">
+                    {exp.desc}
                   </p>
-                  <div className="flex items-start gap-2 p-3 bg-[var(--surface-muted)] rounded-lg">
-                    <Lightbulb className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
-                    <p className="text-xs text-[var(--text-muted)]">
-                      <span className="font-semibold text-[var(--text-primary)]">Tip:</span> {season.tip}
-                    </p>
-                  </div>
                 </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Booking Tips ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <BookOpen className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Expert Booking Tips
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Insider advice for getting the best value at Morocco&apos;s luxury hotels.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {bookingTips.map((tip) => {
-              const TipIcon = tip.icon;
-              return (
-                <div key={tip.title} className="card-moroccan p-5">
-                  <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center mb-3">
-                    <TipIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                  </div>
-                  <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                    {tip.title}
-                  </h3>
-                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{tip.description}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Gallery Section ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
-            Morocco&apos;s Luxury Hotel Landscapes
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="relative h-72 rounded-xl overflow-hidden">
-              <img
-                src="/images/hero-marrakech.webp"
-                alt="Marrakech cityscape with palace hotels, minarets, and the Atlas Mountains in the background"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-              <p className="absolute bottom-4 left-4 text-white text-sm font-medium">Marrakech Palace Hotels</p>
-            </div>
-            <div className="relative h-72 rounded-xl overflow-hidden">
-              <img
-                src="/images/hero-desert-glamping.webp"
-                alt="Luxury desert camp in the Sahara with elegant tented suites under a starlit sky"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-              <p className="absolute bottom-4 left-4 text-white text-sm font-medium">Sahara Desert Luxury Camps</p>
-            </div>
-            <div className="relative h-72 rounded-xl overflow-hidden">
-              <img
-                src="/images/hero-atlas.webp"
-                alt="Mountain retreat hotel in the High Atlas with panoramic views over valleys and Berber villages"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-              <p className="absolute bottom-4 left-4 text-white text-sm font-medium">Atlas Mountain Retreats</p>
+              ))}
             </div>
           </div>
+        </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-            <div className="relative h-64 rounded-xl overflow-hidden">
-              <img
-                src="/images/card-riad.webp"
-                alt="Interior courtyard of a luxury boutique riad in Morocco with zellige tilework and central fountain"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-              <p className="absolute bottom-4 left-4 text-white text-sm font-medium">Boutique Riad Courtyards</p>
-            </div>
-            <div className="relative h-64 rounded-xl overflow-hidden">
-              <img
-                src="/images/card-beach.webp"
-                alt="Luxury beach resort on Morocco's Atlantic coast with infinity pool overlooking the ocean"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-              <p className="absolute bottom-4 left-4 text-white text-sm font-medium">Atlantic Beach Resorts</p>
-            </div>
-          </div>
-        </div>
-      </section>
+        {/* ── ARCHITECTURE & DESIGN ──────────────────── */}
+        <section className="py-16 md:py-20">
+          <div className="container-morocco">
+            <div className="max-w-4xl mx-auto">
+              <div className="flex items-center gap-3 mb-6">
+                <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-[#A0522D]/10">
+                  <Building className="h-5 w-5 text-[#A0522D]" />
+                </span>
+                <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl text-[#2C1810]">
+                  Architecture & Design Philosophy
+                </h2>
+              </div>
 
-      {/* ── FAQ Section ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
-            Frequently Asked Questions
-          </h2>
-
-          <div className="space-y-6">
-            {faqs.map((faq) => (
-              <div key={faq.question} className="card-moroccan p-6">
-                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                  {faq.question}
-                </h3>
-                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                  {faq.answer}
+              <div className="space-y-5 text-[#5D4E42] leading-relaxed font-[family-name:var(--font-heading)] mb-10">
+                <p>
+                  Moroccan luxury hotels stand apart from global peers through a building philosophy
+                  that fuses centuries-old craft traditions with contemporary comfort. The government&apos;s
+                  architectural code requires new luxury builds to incorporate at least three traditional
+                  Moroccan construction techniques. This mandate produces hotels that feel rooted in
+                  place rather than transplanted from a global template.
+                </p>
+                <p>
+                  Four core materials define the aesthetic. <strong>Tadelakt</strong> — a polished lime
+                  plaster originally used in hammams — covers bathroom walls and sometimes entire facades,
+                  creating a waterproof surface with a warm, marble-like sheen. <strong>Zellige</strong>
+                  tilework, hand-cut into geometric patterns by artisans in Fes, appears in fountains,
+                  pool surrounds, and feature walls. <strong>Carved cedarwood</strong> from the Middle
+                  Atlas forms doors, ceilings, and window screens (moucharabiehs). <strong>Wrought
+                  iron</strong> (fer forg&eacute;) shapes balustrades, lanterns, and courtyard furniture.
+                </p>
+                <p>
+                  Royal Mansour employed 1,500 artisans over three years to hand-craft its 53 riads.
+                  Each riad features unique zellige patterns — no two are identical. La Mamounia&apos;s
+                  restoration (completed in 2009 by Jacques Garcia) blended Art Deco elements from the
+                  original 1923 structure with Moorish geometries, costing an estimated 1.4 billion MAD.
+                  Amanjena drew from Saadian dynasty architecture, modeling its central basin on the
+                  12th-century Menara reflecting pool.
                 </p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* ── Related Pages ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
-            Continue Exploring Morocco
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Link href="/morocco-spa-guide" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
-              <Sparkles className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Morocco Spa &amp; Hammam Guide
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                From traditional public hammams at 50 MAD to world-class luxury spa rituals. Complete wellness guide with prices and etiquette.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-            <Link href="/luxury" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
-              <Crown className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Luxury Morocco
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                The finest hotels, riads, restaurants, and experiences for luxury travelers across Morocco.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-            <Link href="/city/marrakech" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
-              <MapPin className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Marrakech City Guide
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Complete guide to Marrakech: medina, souks, palaces, gardens, restaurants, and nightlife.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
+              <div className="grid md:grid-cols-3 gap-5">
+                <div className="card-moroccan p-5 text-center">
+                  <Gem className="h-6 w-6 text-[#C4960C] mx-auto mb-3" />
+                  <h3 className="font-[family-name:var(--font-display)] text-lg text-[#2C1810] mb-2">Tadelakt & Zellige</h3>
+                  <p className="text-sm text-[#5D4E42] font-[family-name:var(--font-heading)]">
+                    Hand-polished lime plaster and hand-cut mosaic tile — techniques unchanged since the
+                    Marinid dynasty (13th-15th century). Each zellige tile is individually chipped to shape
+                    with a hammer, then assembled into mathematical star patterns.
+                  </p>
+                </div>
+                <div className="card-moroccan p-5 text-center">
+                  <Crown className="h-6 w-6 text-[#C4960C] mx-auto mb-3" />
+                  <h3 className="font-[family-name:var(--font-display)] text-lg text-[#2C1810] mb-2">Royal Patronage</h3>
+                  <p className="text-sm text-[#5D4E42] font-[family-name:var(--font-heading)]">
+                    The Moroccan monarchy has directly financed or championed the construction of
+                    several landmark properties. Royal Mansour remains the king&apos;s personal project.
+                    La Mamounia was originally a wedding gift from Sultan Mohammed ben Abdallah.
+                  </p>
+                </div>
+                <div className="card-moroccan p-5 text-center">
+                  <Globe className="h-6 w-6 text-[#C4960C] mx-auto mb-3" />
+                  <h3 className="font-[family-name:var(--font-display)] text-lg text-[#2C1810] mb-2">International Architects</h3>
+                  <p className="text-sm text-[#5D4E42] font-[family-name:var(--font-heading)]">
+                    Top firms collaborate with local maalems: Kerry Hill (Amanjena), Pascal Desprez
+                    (Mandarin Oriental), Imaad Rahmouni (Palais Namaskar). The result blends global
+                    luxury standards with irreplaceable Moroccan craftsmanship.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        {/* ── DINING AT LUXURY HOTELS ──────────────────── */}
+        <section className="py-16 md:py-20 bg-white">
+          <div className="container-morocco">
+            <div className="max-w-4xl mx-auto">
+              <div className="flex items-center gap-3 mb-6">
+                <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-[#C4960C]/10">
+                  <UtensilsCrossed className="h-5 w-5 text-[#C4960C]" />
+                </span>
+                <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl text-[#2C1810]">
+                  Dining at Morocco&apos;s Top Hotels
+                </h2>
+              </div>
+
+              <p className="text-[#5D4E42] font-[family-name:var(--font-heading)] leading-relaxed mb-8">
+                Morocco&apos;s palace hotels house some of the country&apos;s most ambitious restaurants.
+                Several have attracted internationally recognized chefs and earned placement on
+                regional best-of lists. Fine dining here ranges from refined Moroccan tasting menus
+                to French haute cuisine and Pan-Asian fusion.
+              </p>
+
+              <div className="space-y-4">
+                {[
+                  {
+                    restaurant: 'La Grande Table Marocaine',
+                    hotel: 'Royal Mansour',
+                    chef: 'Yannick Alléno (3 Michelin stars at Pavillon Ledoyen, Paris)',
+                    desc: 'A seven-course Moroccan tasting menu reinterpreted through French technique. The dining room features a 6-meter carved cedarwood ceiling and hand-painted zellige columns. Expect from 1,800 MAD per person without wine.',
+                  },
+                  {
+                    restaurant: 'L\'Italien & Le Marocain',
+                    hotel: 'La Mamounia',
+                    chef: 'Jean-Georges Vongerichten (oversaw menu redesign)',
+                    desc: 'Two signature restaurants anchor La Mamounia\'s dining program. Le Marocain serves classic pastilla, slow-cooked tagines, and mechoui lamb under hand-painted Moorish arches. L\'Italien focuses on wood-fired Italian cooking with Moroccan olive oils.',
+                  },
+                  {
+                    restaurant: 'Ling Ling',
+                    hotel: 'Mandarin Oriental',
+                    chef: 'Hakkasan Group collaboration',
+                    desc: 'Pan-Asian cuisine in a sultry poolside setting. Cantonese dim sum, Japanese robata grill, and cocktails built around Moroccan botanicals. The weekend brunch (from 950 MAD) draws Marrakech\'s international residents.',
+                  },
+                  {
+                    restaurant: 'The Nama',
+                    hotel: 'Amanjena',
+                    chef: 'Rotating Aman guest chef series',
+                    desc: 'Aman\'s signature farm-to-table approach, using produce from the resort\'s own organic garden and eggs from its on-site chicken coop. Outdoor dining beside the rose garden, with Atlas Mountain views at sunset.',
+                  },
+                ].map((r) => (
+                  <div key={r.restaurant} className="card-moroccan p-5 flex flex-col md:flex-row gap-4">
+                    <div className="md:w-1/3">
+                      <h3 className="font-[family-name:var(--font-display)] text-lg text-[#2C1810] mb-1">{r.restaurant}</h3>
+                      <p className="text-sm text-[#C4960C] font-medium font-[family-name:var(--font-heading)]">{r.hotel}</p>
+                      <p className="text-xs text-[#5D4E42]/70 font-[family-name:var(--font-heading)] mt-1">{r.chef}</p>
+                    </div>
+                    <p className="md:w-2/3 text-sm text-[#5D4E42] font-[family-name:var(--font-heading)] leading-relaxed">
+                      {r.desc}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── HONEYMOON & SPECIAL OCCASIONS ─────────── */}
+        <section className="py-16 md:py-20">
+          <div className="container-morocco">
+            <div className="max-w-4xl mx-auto">
+              <div className="flex items-center gap-3 mb-6">
+                <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-[#C4960C]/10">
+                  <Heart className="h-5 w-5 text-[#C4960C]" />
+                </span>
+                <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl text-[#2C1810]">
+                  Honeymoon & Special Occasions
+                </h2>
+              </div>
+
+              <p className="text-[#5D4E42] font-[family-name:var(--font-heading)] leading-relaxed mb-8">
+                Morocco ranks among the top five honeymoon destinations for European couples, and
+                its luxury hotels have invested heavily in romance packages. Several properties
+                maintain dedicated wedding and events teams that coordinate everything from
+                traditional Moroccan ceremonies to contemporary celebrations.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-5">
+                <div className="card-moroccan p-5">
+                  <h3 className="font-[family-name:var(--font-display)] text-lg text-[#2C1810] mb-3 flex items-center gap-2">
+                    <Sparkles className="h-4 w-4 text-[#C4960C]" /> Honeymoon Packages
+                  </h3>
+                  <ul className="space-y-2 text-sm text-[#5D4E42] font-[family-name:var(--font-heading)]">
+                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-[#C4960C] shrink-0 mt-0.5" /> Royal Mansour: private riad with rose petal turndown, couples hammam, and rooftop dinner — from 28,000 MAD/night</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-[#C4960C] shrink-0 mt-0.5" /> Amanjena: three-night honeymoon package with hot air balloon ride over the Palmeraie and a desert picnic</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-[#C4960C] shrink-0 mt-0.5" /> Four Seasons: complimentary upgrade (subject to availability), champagne on arrival, and late checkout</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-[#C4960C] shrink-0 mt-0.5" /> Dar Ahlam: the entire 14-suite kasbah can be booked exclusively for intimate celebrations</li>
+                  </ul>
+                </div>
+
+                <div className="card-moroccan p-5">
+                  <h3 className="font-[family-name:var(--font-display)] text-lg text-[#2C1810] mb-3 flex items-center gap-2">
+                    <Award className="h-4 w-4 text-[#C4960C]" /> Milestone Celebrations
+                  </h3>
+                  <ul className="space-y-2 text-sm text-[#5D4E42] font-[family-name:var(--font-heading)]">
+                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-[#C4960C] shrink-0 mt-0.5" /> La Mamounia hosts destination weddings for up to 300 guests in its garden pavilion, with full event planning from 500,000 MAD</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-[#C4960C] shrink-0 mt-0.5" /> Fairmont Royal Palm stages corporate retreats and anniversary parties on its polo grounds</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-[#C4960C] shrink-0 mt-0.5" /> Mandarin Oriental arranges milestone birthday dinners in a private olive grove setting with Berber musicians</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-[#C4960C] shrink-0 mt-0.5" /> Kasbah Tamadot offers buyout packages for the entire property (28 rooms) during off-peak months</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── PRACTICAL TIPS ───────────────────────────── */}
+        <section className="py-16 md:py-20 bg-white">
+          <div className="container-morocco">
+            <div className="max-w-4xl mx-auto">
+              <div className="flex items-center gap-3 mb-6">
+                <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-[#A0522D]/10">
+                  <Info className="h-5 w-5 text-[#A0522D]" />
+                </span>
+                <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl text-[#2C1810]">
+                  Practical Tips for Luxury Travelers
+                </h2>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="card-moroccan p-5">
+                  <h3 className="font-[family-name:var(--font-display)] text-lg text-[#2C1810] mb-3 flex items-center gap-2">
+                    <Phone className="h-4 w-4 text-[#A0522D]" /> Airport Transfers
+                  </h3>
+                  <p className="text-sm text-[#5D4E42] font-[family-name:var(--font-heading)] leading-relaxed">
+                    Every 5-star hotel arranges private airport transfers — typically a Mercedes V-Class
+                    or similar. Expect from 500 MAD for the 15-minute Marrakech Menara run and from 1,500 MAD
+                    for Casablanca Mohammed V Airport (2.5 hours). Some properties like Royal Mansour and
+                    Amanjena operate their own vehicle fleet with uniformed chauffeurs. Request the transfer
+                    at least 48 hours before arrival.
+                  </p>
+                </div>
+
+                <div className="card-moroccan p-5">
+                  <h3 className="font-[family-name:var(--font-display)] text-lg text-[#2C1810] mb-3 flex items-center gap-2">
+                    <Bed className="h-4 w-4 text-[#A0522D]" /> Room Categories
+                  </h3>
+                  <p className="text-sm text-[#5D4E42] font-[family-name:var(--font-heading)] leading-relaxed">
+                    Moroccan luxury hotels use distinct terminology. A &ldquo;pavilion&rdquo; at Amanjena is a
+                    standalone building with an outdoor fireplace and private garden. A &ldquo;riad&rdquo; at
+                    Royal Mansour is a three-story private house. A &ldquo;water palace&rdquo; at Palais Namaskar
+                    floats above a reflecting pool. Standard &ldquo;superior rooms&rdquo; at palace hotels still
+                    average 45-60 sqm — larger than suites at most 4-star properties elsewhere.
+                  </p>
+                </div>
+
+                <div className="card-moroccan p-5">
+                  <h3 className="font-[family-name:var(--font-display)] text-lg text-[#2C1810] mb-3 flex items-center gap-2">
+                    <Heart className="h-4 w-4 text-[#A0522D]" /> Tipping Etiquette
+                  </h3>
+                  <p className="text-sm text-[#5D4E42] font-[family-name:var(--font-heading)] leading-relaxed">
+                    Tipping is expected and appreciated. Budget 20-50 MAD per interaction for porters and
+                    housekeeping. For a private guide arranged through the hotel, 200-500 MAD per day is standard.
+                    Restaurant tips of 10-15% apply on top of any service charge. Some luxury properties
+                    add a 10% service charge to the bill — check before doubling up.
+                  </p>
+                </div>
+
+                <div className="card-moroccan p-5">
+                  <h3 className="font-[family-name:var(--font-display)] text-lg text-[#2C1810] mb-3 flex items-center gap-2">
+                    <Shield className="h-4 w-4 text-[#A0522D]" /> Dress Code
+                  </h3>
+                  <p className="text-sm text-[#5D4E42] font-[family-name:var(--font-heading)] leading-relaxed">
+                    Most Moroccan luxury hotels maintain a smart-casual standard. La Mamounia&apos;s
+                    L&apos;Italien and Le Marocain restaurants require collared shirts for men at dinner.
+                    Royal Mansour&apos;s La Grande Table Marocaine requests &ldquo;elegant attire.&rdquo; Pool areas
+                    are relaxed. Outside the hotel, modest clothing (covering shoulders and knees) shows
+                    respect, especially near mosques and in medina neighborhoods.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── FAQ ──────────────────────────────────────── */}
+        <section className="py-16 md:py-20 bg-white">
+          <div className="container-morocco">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-10">
+                <span className="inline-flex items-center gap-2 px-3 py-1 bg-[#A0522D]/10 rounded-full text-[#A0522D] text-sm font-medium mb-4">
+                  <HelpCircle className="h-4 w-4" /> Common Questions
+                </span>
+                <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl text-[#2C1810]">
+                  Frequently Asked Questions
+                </h2>
+              </div>
+
+              <div className="space-y-4">
+                {faqItems.map((faq, idx) => (
+                  <div key={idx} className="card-moroccan p-6">
+                    <h3 className="font-[family-name:var(--font-display)] text-lg text-[#2C1810] mb-3 flex items-start gap-3">
+                      <span className="flex items-center justify-center w-7 h-7 rounded-lg bg-[#C4960C]/10 text-[#C4960C] font-bold text-sm shrink-0 mt-0.5">
+                        {idx + 1}
+                      </span>
+                      {faq.q}
+                    </h3>
+                    <p className="text-sm text-[#5D4E42] font-[family-name:var(--font-heading)] leading-relaxed pl-10">
+                      {faq.a}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── QUICK REFERENCE ────────────────────────── */}
+        <section className="py-16 md:py-20 bg-white">
+          <div className="container-morocco">
+            <div className="max-w-4xl mx-auto">
+              <div className="flex items-center gap-3 mb-6">
+                <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-[#C4960C]/10">
+                  <Star className="h-5 w-5 text-[#C4960C]" />
+                </span>
+                <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl text-[#2C1810]">
+                  Quick Reference — At a Glance
+                </h2>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-5">
+                <div className="card-moroccan p-5">
+                  <h3 className="font-[family-name:var(--font-display)] text-lg text-[#2C1810] mb-3">Best for Couples</h3>
+                  <ul className="space-y-2 text-sm text-[#5D4E42] font-[family-name:var(--font-heading)]">
+                    <li className="flex items-start gap-2"><Star className="h-4 w-4 text-[#C4960C] shrink-0 mt-0.5" /> Royal Mansour — private three-story riads, total seclusion</li>
+                    <li className="flex items-start gap-2"><Star className="h-4 w-4 text-[#C4960C] shrink-0 mt-0.5" /> Dar Ahlam — only 14 suites, surprise dinner locations each night</li>
+                    <li className="flex items-start gap-2"><Star className="h-4 w-4 text-[#C4960C] shrink-0 mt-0.5" /> La Sultana — rooftop pool overlooking the medina, intimate scale</li>
+                  </ul>
+                </div>
+
+                <div className="card-moroccan p-5">
+                  <h3 className="font-[family-name:var(--font-display)] text-lg text-[#2C1810] mb-3">Best for Families</h3>
+                  <ul className="space-y-2 text-sm text-[#5D4E42] font-[family-name:var(--font-heading)]">
+                    <li className="flex items-start gap-2"><Star className="h-4 w-4 text-[#C4960C] shrink-0 mt-0.5" /> Four Seasons Marrakech — dedicated kids club, three pools, family suites</li>
+                    <li className="flex items-start gap-2"><Star className="h-4 w-4 text-[#C4960C] shrink-0 mt-0.5" /> Mazagan Beach & Golf — waterpark, equestrian center, 500 rooms</li>
+                    <li className="flex items-start gap-2"><Star className="h-4 w-4 text-[#C4960C] shrink-0 mt-0.5" /> Fairmont Royal Palm — pool villas, pony rides, family-sized accommodations</li>
+                  </ul>
+                </div>
+
+                <div className="card-moroccan p-5">
+                  <h3 className="font-[family-name:var(--font-display)] text-lg text-[#2C1810] mb-3">Best for Golf</h3>
+                  <ul className="space-y-2 text-sm text-[#5D4E42] font-[family-name:var(--font-heading)]">
+                    <li className="flex items-start gap-2"><Star className="h-4 w-4 text-[#C4960C] shrink-0 mt-0.5" /> Fairmont Royal Palm — on-site 18-hole Cabell Robinson course</li>
+                    <li className="flex items-start gap-2"><Star className="h-4 w-4 text-[#C4960C] shrink-0 mt-0.5" /> Ritz-Carlton Rabat — within the Royal Dar Es Salam golf complex</li>
+                    <li className="flex items-start gap-2"><Star className="h-4 w-4 text-[#C4960C] shrink-0 mt-0.5" /> Mazagan Beach — Gary Player-designed championship layout</li>
+                  </ul>
+                </div>
+
+                <div className="card-moroccan p-5">
+                  <h3 className="font-[family-name:var(--font-display)] text-lg text-[#2C1810] mb-3">Best for Beach</h3>
+                  <ul className="space-y-2 text-sm text-[#5D4E42] font-[family-name:var(--font-heading)]">
+                    <li className="flex items-start gap-2"><Star className="h-4 w-4 text-[#C4960C] shrink-0 mt-0.5" /> Banyan Tree Tamouda Bay — 92 pool villas on the Mediterranean</li>
+                    <li className="flex items-start gap-2"><Star className="h-4 w-4 text-[#C4960C] shrink-0 mt-0.5" /> Mazagan Beach — direct Atlantic beachfront at El Jadida</li>
+                    <li className="flex items-start gap-2"><Star className="h-4 w-4 text-[#C4960C] shrink-0 mt-0.5" /> Heure Bleue Palais — Essaouira medina, 10-minute walk to the beach</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── RELATED GUIDES ──────────────────────────── */}
+        <section className="py-16 md:py-20">
+          <div className="container-morocco">
+            <div className="max-w-4xl mx-auto">
+              <div className="flex items-center gap-3 mb-8">
+                <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-[#A0522D]/10">
+                  <ArrowRight className="h-5 w-5 text-[#A0522D]" />
+                </span>
+                <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl text-[#2C1810]">
+                  Related Guides
+                </h2>
+              </div>
+
+              <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+                {RELATED_GUIDES.map((guide) => (
+                  <Link
+                    key={guide.href}
+                    href={guide.href}
+                    className="card-moroccan p-5 group hover:border-[#A0522D]/30 transition-all duration-300"
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className="font-[family-name:var(--font-heading)] text-[#2C1810] font-medium text-sm group-hover:text-[#A0522D] transition-colors">
+                        {guide.label}
+                      </span>
+                      <ArrowRight className="h-4 w-4 text-[#A0522D] opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── CTA ─────────────────────────────────────── */}
+        <section className="py-16 md:py-20 bg-gradient-to-br from-[#2C1810] via-[#4A2C1A] to-[#1a0f0a]">
+          <div className="container-morocco">
+            <div className="max-w-3xl mx-auto text-center">
+              <Crown className="h-10 w-10 text-[#C4960C] mx-auto mb-5" />
+              <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl text-white mb-5">
+                Plan Your Luxury Morocco Stay
+              </h2>
+              <p className="text-white/80 font-[family-name:var(--font-heading)] text-lg leading-relaxed mb-8">
+                From palace hotels in Marrakech&apos;s Palmeraie to remote desert kasbahs under the
+                Milky Way — Morocco delivers world-class luxury at prices that undercut comparable
+                properties in Europe and the Middle East by 30-50%. Start with our city guides
+                to build your itinerary.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link
+                  href="/marrakech"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#C4960C] text-white rounded-xl font-[family-name:var(--font-heading)] font-medium hover:bg-[#B38A0B] transition-colors"
+                >
+                  <MapPin className="h-4 w-4" /> Explore Marrakech
+                </Link>
+                <Link
+                  href="/fes"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur text-white border border-white/20 rounded-xl font-[family-name:var(--font-heading)] font-medium hover:bg-white/20 transition-colors"
+                >
+                  <MapPin className="h-4 w-4" /> Explore Fes
+                </Link>
+                <Link
+                  href="/best-time-visit-morocco"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur text-white border border-white/20 rounded-xl font-[family-name:var(--font-heading)] font-medium hover:bg-white/20 transition-colors"
+                >
+                  <Calendar className="h-4 w-4" /> Best Time to Visit
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
     </>
   );
 }
