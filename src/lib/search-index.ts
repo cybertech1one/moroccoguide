@@ -2729,6 +2729,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['morocco photography', 'best photos morocco', 'instagram spots morocco', 'morocco photography tips', 'photography tours morocco'],
       priority: 9,
     },
+    {
+      title: 'Morocco Train Travel Guide 2026',
+      description: 'Complete guide to train travel in Morocco — ONCF network, Al Boraq high-speed train, routes, tickets, classes, station guides, and budget tips.',
+      type: 'page',
+      url: '/morocco-train-travel',
+      tags: ['train', 'ONCF', 'al boraq', 'transport', 'railway'],
+      keywords: ['morocco train', 'ONCF morocco', 'morocco train tickets', 'marrakech to fez train', 'al boraq high speed train'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco 7-Day Itinerary 2026',
+      description: 'Perfect one-week Morocco itinerary — Marrakech, Atlas Mountains, Sahara Desert, Todra Gorge, and Fez with day-by-day plans, budgets, and tips.',
+      type: 'page',
+      url: '/morocco-7-day-itinerary',
+      tags: ['itinerary', '7 days', 'one week', 'travel plan', 'route'],
+      keywords: ['7 days in morocco', 'morocco 7 day itinerary', 'one week morocco itinerary', 'morocco itinerary 7 days', 'week in morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Spa & Wellness Guide 2026',
+      description: 'Ultimate guide to spa and wellness in Morocco — traditional hammams, luxury spas, argan oil treatments, wellness retreats, and budget spa options.',
+      type: 'page',
+      url: '/morocco-spa-wellness',
+      tags: ['spa', 'wellness', 'hammam', 'luxury', 'relaxation'],
+      keywords: ['morocco spa', 'spa morocco', 'wellness retreat morocco', 'spa resorts morocco', 'best spa in marrakech'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
