@@ -350,6 +350,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-darija-phrases',
     '/morocco-vaccinations-guide',
     '/morocco-flowers-guide',
+    '/morocco-spring-guide',
+    '/morocco-outdoor-activities',
+    '/ifrane-guide',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

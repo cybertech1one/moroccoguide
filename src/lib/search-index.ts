@@ -2540,6 +2540,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['flowers of morocco', 'morocco national flower', 'Rose Valley Morocco', 'Morocco rose festival', 'wildflowers morocco'],
       priority: 9,
     },
+    {
+      title: 'Morocco in Spring Guide — Best Destinations, Weather & Festivals',
+      description: 'Complete guide to spring in Morocco — weather by city, wildflower blooms, festivals, best destinations, crowd levels, and itinerary suggestions.',
+      type: 'page',
+      url: '/morocco-spring-guide',
+      tags: ['spring', 'weather', 'seasons', 'festivals', 'travel planning'],
+      keywords: ['spring in morocco', 'morocco spring', 'morocco in march', 'morocco in april', 'best time visit morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Outdoor Activities — Adventure Sports, Nature & Active Holidays',
+      description: 'Complete outdoor activities guide — hiking, rock climbing, surfing, kitesurfing, camel trekking, paragliding, hot air ballooning, and seasonal calendar.',
+      type: 'page',
+      url: '/morocco-outdoor-activities',
+      tags: ['outdoor', 'adventure', 'sports', 'hiking', 'surfing', 'climbing'],
+      keywords: ['outdoor activities morocco', 'nature tours morocco', 'climbing morocco', 'water sports morocco', 'adventure activities'],
+      priority: 9,
+    },
+    {
+      title: 'Ifrane Travel Guide — Morocco\'s Alpine City & Cedar Forests',
+      description: 'Complete Ifrane guide — the Swiss city of Morocco, cedar forests, Barbary macaques, Michlifen ski resort, Alpine architecture, and day trips.',
+      type: 'page',
+      url: '/ifrane-guide',
+      tags: ['ifrane', 'alpine', 'cedar forest', 'ski', 'Middle Atlas'],
+      keywords: ['ifrane morocco', 'ifrane tours', 'ifrane alpine architecture', 'ifrane Switzerland Morocco', 'ifrane cedar forest'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
