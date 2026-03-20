@@ -2054,6 +2054,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['haggling Morocco', 'how to bargain Morocco', 'Morocco souk bargaining', 'haggling tips souks', 'Morocco shopping tips'],
       priority: 9,
     },
+    {
+      title: 'Day Trips from Casablanca',
+      description: '11 best day trips from Casablanca — Rabat, El Jadida, Mohammedia, Azemmour, Ifrane, Bin El Ouidane, and Marrakech by express train.',
+      type: 'page',
+      url: '/day-trips-from-casablanca',
+      tags: ['day trips', 'Casablanca', 'excursions', 'tours'],
+      keywords: ['day trips from Casablanca', 'Casablanca excursions', 'best day trips Casablanca', 'Casablanca day tour'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Car Rental Guide',
+      description: 'Complete guide to renting a car in Morocco — agencies, vehicle types, insurance, driving rules, fuel costs, parking, and scam avoidance tips.',
+      type: 'page',
+      url: '/morocco-car-rental',
+      tags: ['car rental', 'driving', 'road trip', 'transport', 'tips'],
+      keywords: ['Morocco car rental', 'rent car Morocco', 'car hire Morocco', 'driving Morocco tips', 'Morocco road trip car'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Packing List',
+      description: 'Ultimate Morocco packing list — clothing by season, cultural dress tips, footwear, electronics, toiletries, and activity-specific gear.',
+      type: 'page',
+      url: '/morocco-packing-list',
+      tags: ['packing', 'travel tips', 'preparation', 'clothing', 'gear'],
+      keywords: ['Morocco packing list', 'what to pack Morocco', 'packing for Morocco trip', 'Morocco travel essentials'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

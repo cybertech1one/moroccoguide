@@ -296,6 +296,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-carpet-guide',
     '/day-trips-from-fes',
     '/morocco-haggling-guide',
+    '/day-trips-from-casablanca',
+    '/morocco-car-rental',
+    '/morocco-packing-list',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
