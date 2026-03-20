@@ -3008,6 +3008,24 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['morocco photography spots', 'instagram morocco', 'best photos morocco', 'morocco photo locations', 'chefchaouen photography'],
       priority: 9,
     },
+    {
+      title: 'Moroccan Wine Guide 2026',
+      description: 'Morocco wine guide — vineyards, wine regions, top wineries, grape varieties, tasting tours, and where to drink wine in Morocco.',
+      type: 'page',
+      url: '/morocco-wine-guide',
+      tags: ['wine', 'vineyards', 'tasting', 'Meknes', 'food & drink'],
+      keywords: ['moroccan wine', 'morocco wine regions', 'morocco vineyards', 'wine tasting morocco', 'chateau roslane'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco for Seniors Travel Guide 2026',
+      description: 'Senior travel guide to Morocco — best cities, mobility tips, medical facilities, senior-friendly tours, pace of travel, and travel insurance advice.',
+      type: 'page',
+      url: '/morocco-senior-travel',
+      tags: ['senior travel', 'older travelers', 'accessibility', 'comfort', 'tours'],
+      keywords: ['morocco senior travel', 'morocco for older travelers', 'senior tour morocco', 'morocco retirement travel'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

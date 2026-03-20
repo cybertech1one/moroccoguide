@@ -402,6 +402,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-crafts-artisans',
     '/morocco-pet-travel',
     '/morocco-photography-spots',
+    '/morocco-wine-guide',
+    '/morocco-senior-travel',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
