@@ -2189,6 +2189,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['Marrakech vs Casablanca', 'Casablanca or Marrakech', 'Marrakech Casablanca comparison'],
       priority: 9,
     },
+    {
+      title: 'Morocco Backpacking Guide',
+      description: 'Complete backpacking guide for Morocco — routes, daily budgets, hostels, street food, transport, safety tips, and packing essentials.',
+      type: 'page',
+      url: '/morocco-backpacking-guide',
+      tags: ['backpacking', 'budget', 'hostels', 'routes', 'adventure'],
+      keywords: ['backpacking Morocco', 'Morocco backpacking guide', 'backpacking Morocco budget', 'Morocco hostels'],
+      priority: 9,
+    },
+    {
+      title: 'Moroccan Food Etiquette Guide',
+      description: 'Moroccan dining customs — eating with hands, communal tagine, tea ceremony, bread etiquette, guest rules, and Ramadan dining.',
+      type: 'page',
+      url: '/morocco-food-etiquette',
+      tags: ['etiquette', 'food', 'culture', 'dining', 'customs'],
+      keywords: ['Moroccan food etiquette', 'eating in Morocco', 'Moroccan dining customs', 'Morocco tea etiquette'],
+      priority: 9,
+    },
+    {
+      title: 'Tangier vs Chefchaouen — Which to Visit',
+      description: 'Tangier vs Chefchaouen comparison — culture, photography, food, costs, and which northern Morocco city suits your trip.',
+      type: 'page',
+      url: '/tangier-vs-chefchaouen',
+      tags: ['comparison', 'Tangier', 'Chefchaouen', 'northern Morocco'],
+      keywords: ['Tangier vs Chefchaouen', 'Chefchaouen or Tangier', 'northern Morocco cities'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

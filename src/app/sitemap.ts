@@ -311,6 +311,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-museums',
     '/morocco-all-inclusive',
     '/marrakech-vs-casablanca',
+    '/morocco-backpacking-guide',
+    '/morocco-food-etiquette',
+    '/tangier-vs-chefchaouen',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
