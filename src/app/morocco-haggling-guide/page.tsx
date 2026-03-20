@@ -3,29 +3,30 @@ import Link from 'next/link';
 import {
   ChevronRight,
   Home,
+  MapPin,
+  Star,
+  ShoppingBag,
   HandCoins,
+  MessageCircle,
+  Shield,
+  Clock,
   Info,
   ArrowRight,
   CheckCircle,
   AlertTriangle,
-  Users,
-  Shield,
-  Star,
-  MapPin,
+  XCircle,
+  Tag,
+  Store,
+  Languages,
   Compass,
   Banknote,
-  Heart,
-  HelpCircle,
-  Sparkles,
-  Clock,
-  ShoppingBag,
-  Store,
-  Tag,
-  Percent,
-  Scale,
-  Eye,
   ThumbsUp,
-  Coffee,
+  ThumbsDown,
+  Footprints,
+  BookOpen,
+  Globe,
+  Gem,
+  Heart,
 } from 'lucide-react';
 
 /* ═══════════════════════════════════════════════════════════════
@@ -39,51 +40,51 @@ const BASE_URL = 'https://citytoursmorocco.com';
    ═══════════════════════════════════════════════════════════════ */
 
 export const metadata: Metadata = {
-  title: 'Morocco Haggling Guide 2026 | How to Bargain in Souks Like a Pro',
+  title: 'How to Haggle in Morocco 2026 | Souk Bargaining Tips & Fair Prices',
   description:
-    'Master the art of haggling in Morocco. Step-by-step bargaining tips for souks, price expectations for leather, ceramics, spices, carpets, and textiles. Cultural etiquette, seller tactics, and the mint tea ritual.',
+    'Master the art of haggling in Moroccan souks. Fair price guide for 20+ items, step-by-step bargaining strategy, essential Darija phrases, and scam warnings. Save 40-70% on leather bags, rugs, ceramics, spices, and more.',
   keywords: [
-    'how to haggle in Morocco',
-    'Morocco bargaining tips',
-    'haggling guide Morocco souks',
-    'Morocco souk bargaining',
-    'how to negotiate in Morocco',
-    'Morocco market haggling',
-    'bargaining tips Marrakech',
-    'haggling in Fes medina',
-    'Morocco shopping negotiation',
-    'souk prices Morocco',
-    'what to pay in Moroccan souks',
-    'Morocco fair prices guide',
-    'haggling etiquette Morocco',
-    'Morocco carpet bargaining',
-    'Marrakech souk prices 2026',
-    'how much to pay Morocco markets',
-    'Morocco leather prices',
-    'haggling culture Morocco',
-    'walking away technique Morocco',
-    'mint tea haggling Morocco',
+    'haggling morocco',
+    'bargaining morocco souks',
+    'how to haggle morocco',
+    'morocco souk prices',
+    'morocco bargaining tips',
+    'fair prices morocco souks',
+    'moroccan souk shopping guide',
+    'haggling tips marrakech',
+    'morocco market prices',
+    'how to bargain fes souk',
+    'morocco shopping tips 2026',
+    'darija bargaining phrases',
+    'morocco souk scams',
+    'marrakech souk prices',
+    'fes souk bargaining',
+    'leather bags morocco price',
+    'moroccan rug prices',
+    'argan oil prices morocco',
+    'morocco ceramics prices',
+    'babouche slippers morocco',
   ],
   openGraph: {
-    title: 'Morocco Haggling Guide 2026 | How to Bargain in Souks Like a Pro',
+    title: 'How to Haggle in Morocco 2026 | Souk Bargaining Tips & Fair Prices',
     description:
-      'Master the art of haggling in Moroccan souks. Step-by-step bargaining process, fair prices for common items, seller tactics, and cultural etiquette tips.',
+      'Master bargaining in Moroccan souks with our fair price guide for 20+ items, step-by-step strategy, Darija phrases, and scam warnings. Save 40-70% on your purchases.',
     url: `${BASE_URL}/morocco-haggling-guide`,
     images: [
       {
-        url: `${BASE_URL}/images/hero-morocco-souk.webp`,
+        url: `${BASE_URL}/images/hero-souks.webp`,
         width: 1200,
         height: 630,
-        alt: 'Colorful Moroccan souk with handmade goods and lanterns in the medina',
+        alt: 'Colorful Moroccan souk stall with handmade goods and a shopkeeper greeting customers',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Morocco Haggling Guide 2026 | Bargaining Tips for Souks',
+    title: 'How to Haggle in Morocco 2026 | Bargaining Tips & Fair Prices',
     description:
-      'Step-by-step guide to haggling in Moroccan souks. Fair prices, seller tactics, cultural etiquette, and the art of negotiation.',
-    images: [`${BASE_URL}/images/hero-morocco-souk.webp`],
+      'Fair price guide for 20+ souk items, step-by-step bargaining strategy, essential Darija phrases, and common scam warnings for Morocco.',
+    images: [`${BASE_URL}/images/hero-souks.webp`],
   },
   alternates: { canonical: `${BASE_URL}/morocco-haggling-guide` },
 };
@@ -92,15 +93,15 @@ export const metadata: Metadata = {
    JSON-LD STRUCTURED DATA
    ═══════════════════════════════════════════════════════════════ */
 
-const jsonLd = {
+const jsonLdGuide = {
   '@context': 'https://schema.org',
   '@type': 'TravelGuide',
   '@id': `${BASE_URL}/morocco-haggling-guide`,
-  name: 'Morocco Haggling Guide 2026 | How to Bargain in Souks Like a Pro',
+  name: 'How to Haggle in Morocco 2026 | Souk Bargaining Tips & Fair Prices',
   description:
-    'Master the art of haggling in Morocco. Step-by-step bargaining tips for souks, price expectations for leather, ceramics, spices, carpets, and textiles.',
+    'Complete guide to bargaining in Moroccan souks. Fair price guide for 20+ common items, step-by-step haggling strategy, essential Darija phrases, and scam avoidance tips.',
   url: `${BASE_URL}/morocco-haggling-guide`,
-  image: `${BASE_URL}/images/hero-morocco-souk.webp`,
+  image: `${BASE_URL}/images/hero-souks.webp`,
   author: {
     '@type': 'Organization',
     name: 'CityGuide Morocco',
@@ -111,8 +112,8 @@ const jsonLd = {
     name: 'CityGuide Morocco',
     url: BASE_URL,
   },
-  datePublished: '2026-03-19',
-  dateModified: '2026-03-19',
+  datePublished: '2026-03-20',
+  dateModified: '2026-03-20',
   mainEntityOfPage: `${BASE_URL}/morocco-haggling-guide`,
   isPartOf: {
     '@type': 'WebSite',
@@ -132,16 +133,16 @@ const jsonLd = {
   },
 };
 
-const faqJsonLd = {
+const jsonLdFaq = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'How much lower should my first offer be when haggling in Morocco?',
+      name: 'What is a fair starting counter-offer when haggling in Morocco?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Start your first offer at roughly 30-40% of the seller\'s asking price. This gives both sides room to negotiate toward a fair middle ground, typically 50-60% of the initial asking price. The exact ratio depends on the item: mass-produced goods have less markup than handcrafted artisan pieces.',
+        text: 'Start your counter-offer at 30-40% of the seller\'s asking price. The final agreed price typically lands between 40-60% of the initial ask. For high-ticket items like rugs, you can start even lower at 20-25%.',
       },
     },
     {
@@ -149,389 +150,237 @@ const faqJsonLd = {
       name: 'Is it rude to haggle in Morocco?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Not at all. Haggling is an integral part of Moroccan culture and commerce. Sellers expect it and enjoy the social interaction. What is considered rude is haggling aggressively or disrespectfully, starting a negotiation with no intention of buying, or walking away from an agreed price. Approach it with a smile and treat it as a cultural exchange.',
+        text: 'Not at all. Haggling is an expected part of Moroccan souk culture and has been for centuries. Shopkeepers build bargaining margins into their prices. Not haggling actually surprises most sellers. The key is to stay respectful, smile, and treat it as a social exchange.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What should I NOT haggle for in Morocco?',
+      name: 'How much can I save by haggling in Moroccan souks?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Do not haggle at supermarkets, pharmacies, government offices, petrol stations, or restaurants with printed menus. These have fixed prices. Also avoid haggling for basic necessities like bread at bakeries or staple goods at small neighborhood shops. Haggling is reserved for souks, markets, taxi fares (before the ride), and independent shops without marked prices.',
+        text: 'Skilled hagglers save 40-70% off the initial asking price. Tourist-heavy areas like Marrakech\'s Jemaa el-Fnaa have higher markups (sometimes 5-10x), while smaller cities like Meknes or Essaouira have lower initial markups of 2-3x.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Does the walking away technique really work in Morocco?',
+      name: 'Should I haggle for everything in Morocco?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes, walking away is one of the most effective bargaining techniques in Moroccan souks. If a seller lets you leave without calling you back, the price they quoted may already have been fair. If they call you back with a lower offer, you know there is still room to negotiate. Only use this technique genuinely -- walk away if the price truly does not work for you, not as a bluff.',
+        text: 'No. Haggling applies to souk goods, taxis (without meters), and private tours. Do not haggle at pharmacies, supermarkets, restaurants, fixed-price shops (look for "prix fixe" signs), or when buying bread and produce from street vendors with displayed prices.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Why do sellers offer mint tea during negotiations?',
+      name: 'What Darija phrases help with bargaining in Morocco?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Offering mint tea is a traditional Moroccan gesture of hospitality. It creates a relaxed atmosphere and builds rapport between buyer and seller. Accepting tea does not obligate you to buy, but it does signal that you are genuinely interested. The tea ritual slows down the negotiation, giving both sides time to assess the deal. It is perfectly acceptable to enjoy the tea and still walk away.',
+        text: 'Key phrases include "B-shhal?" (How much?), "Ghali bzaf" (Too expensive), "Akhir taman?" (Last price?), and "La shukran" (No thank you). Speaking even basic Darija earns respect and often better prices.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How do I know if I got a fair price in Morocco?',
+      name: 'What are fair prices for leather bags in Moroccan souks?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'A fair price is one you are happy to pay and the seller is happy to accept. As a general guideline, paying 40-60% of the initial asking price is normal for most souk items. You can research prices beforehand at fixed-price cooperatives or ensemble artisanal shops, which display government-set prices. If multiple sellers offer similar items at similar prices, you are likely in the right range.',
+        text: 'A quality leather handbag in Morocco costs from 200-400 MAD at fair haggled prices. Sellers typically start at 600-1,200 MAD. Larger travel bags cost from 400-800 MAD. Check stitching quality, smell (real leather has a distinct scent), and ask if it is goat, cow, or camel leather.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Should I haggle differently in Marrakech vs Fes vs smaller towns?',
+      name: 'Which Moroccan souk is best for haggling and fair prices?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. In major tourist cities like Marrakech and Fes, initial asking prices tend to be higher (sometimes 3-5x the fair price), so more aggressive bargaining is expected. In smaller towns like Chefchaouen, Essaouira, or rural markets, markups are typically lower and sellers may be more direct. Adjust your starting offer accordingly and always remain respectful.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can I haggle in Moroccan taxis?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'For petit taxis (city taxis), always insist on the meter. If the driver refuses, negotiate the fare before getting in. For grand taxis (shared inter-city taxis), the fare is typically fixed per seat. For private grand taxi hire, you should negotiate the price upfront. Never discuss the fare mid-ride, and agree on the total before departing.',
+        text: 'Fes el-Bali offers the most authentic haggling with lower tourist markups. Essaouira\'s souk is relaxed and prices are fairer. Marrakech has the biggest selection but the highest markups. Meknes is under-the-radar with local prices. For rugs, the carpet souks of Fes and Marrakech are unmatched.',
       },
     },
   ],
 };
 
 /* ═══════════════════════════════════════════════════════════════
-   DATA: STEP-BY-STEP HAGGLING PROCESS
+   DATA: FAIR PRICE GUIDE
    ═══════════════════════════════════════════════════════════════ */
 
-const hagglingSteps = [
-  {
-    step: 1,
-    title: 'Greet & Build Rapport',
-    icon: Heart,
-    description:
-      'Begin with a warm greeting. Say "As-salamu alaykum" (peace be upon you) or "Bonjour." Ask how the seller is doing. In Morocco, business begins with human connection. Rushing straight to prices signals inexperience and invites higher quotes.',
-    tip: 'Learn 3-4 basic Arabic or Darija phrases. Sellers genuinely appreciate the effort and may offer better starting prices to someone who shows cultural respect.',
-  },
-  {
-    step: 2,
-    title: 'Browse Casually & Show Interest',
-    icon: Eye,
-    description:
-      'Walk through the shop and look at multiple items before focusing on what you want. Avoid showing too much excitement about a specific item -- sellers read body language expertly. Pick up a few things, ask about craftsmanship, and let the conversation flow naturally.',
-    tip: 'If you show intense interest in one item immediately, the seller knows you want it and will price accordingly. Spread your attention across several items.',
-  },
-  {
-    step: 3,
-    title: 'Ask the Price',
-    icon: Tag,
-    description:
-      'When you are ready, ask "Beshhal?" (how much?) or "Quel est le prix?" The seller will give their opening price, which is typically 2-4 times the price they are willing to accept. Listen calmly, do not react with shock or outrage. Nod thoughtfully as if considering the number.',
-    tip: 'The seller\'s first price is never the final price. It is the starting point of a conversation, not a take-it-or-leave-it figure.',
-  },
-  {
-    step: 4,
-    title: 'Make Your Counter-Offer',
-    icon: Scale,
-    description:
-      'Offer roughly 30-40% of their asking price. This is not insulting -- it is expected. The seller will likely act surprised and counter with a lower number than their opening. You are now in the dance. Each side moves gradually toward a middle ground, typically landing at 40-60% of the original ask.',
-    tip: 'State your offer with a friendly smile, not apologetically. Confidence signals that you know the market and have shopped around.',
-  },
-  {
-    step: 5,
-    title: 'Negotiate Back & Forth',
-    icon: Users,
-    description:
-      'The negotiation continues with each side adjusting their price. The seller may highlight the quality, the craftsmanship, or how the item is handmade. You can mention that you have seen similar items elsewhere, that you are buying multiple items, or that your budget is limited. Keep the tone friendly and even humorous.',
-    tip: 'Bundling multiple items together ("I will take the bag and two scarves for X MAD") often gets you a better overall deal than negotiating each item separately.',
-  },
-  {
-    step: 6,
-    title: 'The Walk-Away Moment',
-    icon: ArrowRight,
-    description:
-      'If you cannot agree on a price, politely thank the seller and begin to leave. Say "C\'est trop cher" (it is too expensive) or "Shukran, ghali bezzaf" (thank you, too expensive). If the seller has room to negotiate further, they will call you back with a better offer. If they do not, their last price may have been close to fair.',
-    tip: 'Only walk away if you genuinely mean it. Using this as a bluff repeatedly will damage trust and the seller will stop taking you seriously.',
-  },
-  {
-    step: 7,
-    title: 'Seal the Deal',
-    icon: HandCoins,
-    description:
-      'When you reach a price both sides are happy with, shake hands and pay. In Morocco, once a price is verbally agreed upon, the deal is considered binding. Going back on an agreed price is considered very rude. Pay the exact amount -- do not ask for change from a large bill as it can reopen the negotiation.',
-    tip: 'Carry small denominations (20, 50, 100 MAD notes). Having the exact amount ready shows you planned for this price and avoids the awkward "I only have a 200" moment.',
-  },
-];
+const priceGuideItems = [
+  { item: 'Leather Handbag (medium)', askingPrice: '600–1,200 MAD', fairPrice: 'from 200 MAD', category: 'Leather' },
+  { item: 'Leather Travel Bag', askingPrice: '1,200–2,500 MAD', fairPrice: 'from 400 MAD', category: 'Leather' },
+  { item: 'Leather Belt', askingPrice: '200–400 MAD', fairPrice: 'from 80 MAD', category: 'Leather' },
+  { item: 'Babouche Slippers (basic)', askingPrice: '200–350 MAD', fairPrice: 'from 60 MAD', category: 'Leather' },
+  { item: 'Babouche Slippers (embroidered)', askingPrice: '350–600 MAD', fairPrice: 'from 120 MAD', category: 'Leather' },
+  { item: 'Handwoven Berber Rug (small, 1x1.5m)', askingPrice: '2,000–5,000 MAD', fairPrice: 'from 600 MAD', category: 'Textiles' },
+  { item: 'Handwoven Berber Rug (large, 2x3m)', askingPrice: '5,000–15,000 MAD', fairPrice: 'from 2,000 MAD', category: 'Textiles' },
+  { item: 'Kilim Flat-weave Rug', askingPrice: '1,500–4,000 MAD', fairPrice: 'from 500 MAD', category: 'Textiles' },
+  { item: 'Silk Scarf / Pashmina', askingPrice: '300–600 MAD', fairPrice: 'from 80 MAD', category: 'Textiles' },
+  { item: 'Kaftan (ready-made)', askingPrice: '800–2,000 MAD', fairPrice: 'from 300 MAD', category: 'Textiles' },
+  { item: 'Ceramic Tagine (decorative)', askingPrice: '200–500 MAD', fairPrice: 'from 80 MAD', category: 'Ceramics' },
+  { item: 'Ceramic Plate (painted, large)', askingPrice: '150–400 MAD', fairPrice: 'from 60 MAD', category: 'Ceramics' },
+  { item: 'Fes Blue Ceramic Bowl', askingPrice: '100–250 MAD', fairPrice: 'from 40 MAD', category: 'Ceramics' },
+  { item: 'Brass Lantern (small)', askingPrice: '300–800 MAD', fairPrice: 'from 120 MAD', category: 'Metalwork' },
+  { item: 'Brass Lantern (large, floor)', askingPrice: '1,500–4,000 MAD', fairPrice: 'from 500 MAD', category: 'Metalwork' },
+  { item: 'Silver Berber Bracelet', askingPrice: '300–800 MAD', fairPrice: 'from 100 MAD', category: 'Jewelry' },
+  { item: 'Silver Berber Necklace', askingPrice: '500–1,500 MAD', fairPrice: 'from 200 MAD', category: 'Jewelry' },
+  { item: 'Argan Oil (1 liter, cosmetic)', askingPrice: '400–800 MAD', fairPrice: 'from 200 MAD', category: 'Spices & Oil' },
+  { item: 'Argan Oil (1 liter, culinary)', askingPrice: '300–600 MAD', fairPrice: 'from 180 MAD', category: 'Spices & Oil' },
+  { item: 'Saffron (10g)', askingPrice: '100–300 MAD', fairPrice: 'from 40 MAD', category: 'Spices & Oil' },
+  { item: 'Ras el Hanout (250g)', askingPrice: '80–200 MAD', fairPrice: 'from 30 MAD', category: 'Spices & Oil' },
+  { item: 'Moroccan Tea Set (teapot + 6 glasses)', askingPrice: '400–1,000 MAD', fairPrice: 'from 150 MAD', category: 'Metalwork' },
+  { item: 'Thuya Wood Box (medium)', askingPrice: '200–500 MAD', fairPrice: 'from 80 MAD', category: 'Woodwork' },
+  { item: 'Thuya Wood Chess Set', askingPrice: '500–1,500 MAD', fairPrice: 'from 200 MAD', category: 'Woodwork' },
+] as const;
 
 /* ═══════════════════════════════════════════════════════════════
-   DATA: PRICE EXPECTATIONS
+   DATA: GOLDEN RULES
    ═══════════════════════════════════════════════════════════════ */
 
-const priceExpectations = [
+const goldenRules = [
   {
-    category: 'Leather Goods',
-    icon: ShoppingBag,
-    items: [
-      { item: 'Leather bag (medium)', askingPrice: 'From 600-1,200 MAD', fairPrice: 'From 250-500 MAD' },
-      { item: 'Leather pouf (unstuffed)', askingPrice: 'From 400-800 MAD', fairPrice: 'From 200-350 MAD' },
-      { item: 'Leather belt', askingPrice: 'From 150-300 MAD', fairPrice: 'From 60-120 MAD' },
-      { item: 'Leather wallet', askingPrice: 'From 200-400 MAD', fairPrice: 'From 80-150 MAD' },
-      { item: 'Leather babouche slippers', askingPrice: 'From 150-400 MAD', fairPrice: 'From 60-150 MAD' },
-    ],
-  },
-  {
-    category: 'Ceramics & Pottery',
-    icon: Store,
-    items: [
-      { item: 'Decorative tagine (large)', askingPrice: 'From 300-600 MAD', fairPrice: 'From 120-250 MAD' },
-      { item: 'Hand-painted plate', askingPrice: 'From 100-300 MAD', fairPrice: 'From 40-120 MAD' },
-      { item: 'Small ceramic bowl', askingPrice: 'From 50-150 MAD', fairPrice: 'From 20-60 MAD' },
-      { item: 'Ceramic tile set (4 pcs)', askingPrice: 'From 80-200 MAD', fairPrice: 'From 30-80 MAD' },
-      { item: 'Mosaic fountain (small)', askingPrice: 'From 2,000-5,000 MAD', fairPrice: 'From 800-2,000 MAD' },
-    ],
-  },
-  {
-    category: 'Spices & Food',
-    icon: Sparkles,
-    items: [
-      { item: 'Saffron (1 gram, genuine)', askingPrice: 'From 30-80 MAD', fairPrice: 'From 15-30 MAD' },
-      { item: 'Ras el hanout (100g)', askingPrice: 'From 30-60 MAD', fairPrice: 'From 10-25 MAD' },
-      { item: 'Cumin, turmeric (100g)', askingPrice: 'From 15-40 MAD', fairPrice: 'From 5-15 MAD' },
-      { item: 'Argan oil (1 liter, cosmetic)', askingPrice: 'From 300-600 MAD', fairPrice: 'From 150-300 MAD' },
-      { item: 'Dried fruit mix (500g)', askingPrice: 'From 50-120 MAD', fairPrice: 'From 25-50 MAD' },
-    ],
-  },
-  {
-    category: 'Textiles & Carpets',
-    icon: Tag,
-    items: [
-      { item: 'Berber carpet (small, 1x1.5m)', askingPrice: 'From 1,500-4,000 MAD', fairPrice: 'From 600-1,500 MAD' },
-      { item: 'Berber carpet (medium, 2x3m)', askingPrice: 'From 3,000-8,000 MAD', fairPrice: 'From 1,200-3,500 MAD' },
-      { item: 'Silk scarf / pashmina', askingPrice: 'From 200-500 MAD', fairPrice: 'From 80-200 MAD' },
-      { item: 'Djellaba (traditional robe)', askingPrice: 'From 300-800 MAD', fairPrice: 'From 150-350 MAD' },
-      { item: 'Embroidered tablecloth', askingPrice: 'From 200-500 MAD', fairPrice: 'From 80-200 MAD' },
-    ],
-  },
-  {
-    category: 'Lamps & Metalwork',
-    icon: Star,
-    items: [
-      { item: 'Brass lantern (medium)', askingPrice: 'From 400-1,000 MAD', fairPrice: 'From 150-400 MAD' },
-      { item: 'Metal ceiling lamp', askingPrice: 'From 600-2,000 MAD', fairPrice: 'From 250-800 MAD' },
-      { item: 'Silver teapot', askingPrice: 'From 300-800 MAD', fairPrice: 'From 150-350 MAD' },
-      { item: 'Brass tea tray', askingPrice: 'From 200-500 MAD', fairPrice: 'From 80-200 MAD' },
-      { item: 'Metal mirror frame', askingPrice: 'From 300-700 MAD', fairPrice: 'From 120-300 MAD' },
-    ],
-  },
-  {
-    category: 'Jewelry & Accessories',
-    icon: Sparkles,
-    items: [
-      { item: 'Silver Berber bracelet', askingPrice: 'From 200-600 MAD', fairPrice: 'From 80-250 MAD' },
-      { item: 'Silver Berber necklace', askingPrice: 'From 300-800 MAD', fairPrice: 'From 120-350 MAD' },
-      { item: 'Beaded bracelet', askingPrice: 'From 30-80 MAD', fairPrice: 'From 10-30 MAD' },
-      { item: 'Amber necklace (genuine)', askingPrice: 'From 500-1,500 MAD', fairPrice: 'From 200-600 MAD' },
-      { item: 'Hand of Fatima pendant', askingPrice: 'From 50-200 MAD', fairPrice: 'From 20-80 MAD' },
-    ],
-  },
-];
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: SELLER TACTICS & RESPONSES
-   ═══════════════════════════════════════════════════════════════ */
-
-const sellerTactics = [
-  {
-    tactic: 'The Emotional Appeal',
-    icon: Heart,
-    description: '"I am losing money at this price!" or "My family depends on this sale." These are classic bargaining phrases, not genuine distress.',
-    response: 'Smile warmly and stay with your price. Say "I understand, but this is my budget." The seller would never agree to a price that loses money.',
-  },
-  {
-    tactic: 'The Quality Comparison',
-    icon: Star,
-    description: '"This is real silver / genuine leather / hand-dyed." The seller emphasizes quality to justify a higher price, sometimes exaggerating authenticity.',
-    response: 'Ask to see the item closely. Check weight, stitching, dye quality. If you cannot verify authenticity, factor uncertainty into your price.',
-  },
-  {
-    tactic: 'The Calculator Trick',
-    icon: Percent,
-    description: 'The seller punches numbers into a calculator and shows you a "special discount" -- often just the price they intended to sell at all along.',
-    response: 'Acknowledge the discount graciously, then counter with your own number on the calculator. It turns the negotiation into a visual game.',
-  },
-  {
-    tactic: 'The Friend Price',
-    icon: Users,
-    description: '"Because you are my friend, I give you a special price." This flattering approach makes you feel obligated to accept a higher price out of social pressure.',
-    response: 'Thank them for the kindness, then offer your price as "the friend price from my side." Keep it light and playful.',
-  },
-  {
-    tactic: 'The Guilt Trip',
-    icon: AlertTriangle,
-    description: '"You come to my shop, I serve you tea, and you offer this?" The seller implies that your low offer disrespects their hospitality.',
-    response: 'Express genuine thanks for the tea and hospitality. Clarify that you respect the product and the seller, but your budget is fixed. Accepting tea never obligates a purchase.',
-  },
-  {
-    tactic: 'The Urgency Play',
-    icon: Clock,
-    description: '"Last one! Another tourist wanted this just today." Creating urgency pressures you to decide quickly before "losing" the item.',
-    response: 'Take your time. In a souk with hundreds of stalls, the same item is almost certainly available elsewhere. Say "If it is sold, I will find another."',
-  },
-  {
-    tactic: 'The Bundle Push',
-    icon: ShoppingBag,
-    description: '"Buy two and I give you a better price." The seller encourages you to spend more by offering a volume discount.',
-    response: 'Bundling can be genuinely good value -- but only if you actually want multiple items. Calculate the per-item price to ensure the "deal" is real.',
-  },
-  {
-    tactic: 'The Send-Away & Call-Back',
-    icon: ArrowRight,
-    description: 'You start leaving and the seller calls "Okay, okay, come back!" with a lower price. This is the walk-away technique working in reverse.',
-    response: 'If the new price is within your range, go back and close the deal. If not, keep walking. There is no obligation to return.',
-  },
-];
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: WHAT NOT TO HAGGLE FOR
-   ═══════════════════════════════════════════════════════════════ */
-
-const noHagglingZones = [
-  {
-    place: 'Supermarkets & chain stores',
-    icon: Store,
-    reason: 'All items have fixed, labeled prices. Carrefour, Marjane, Acima, and similar chains operate on non-negotiable retail pricing.',
-  },
-  {
-    place: 'Pharmacies',
+    number: 1,
+    title: 'Never Show Desperation',
     icon: Shield,
-    reason: 'Medication and health products have government-regulated fixed prices. Prices are printed on the packaging.',
+    text: 'The moment a seller sees you fixated on an item, the price climbs. Browse casually. Pick things up and set them down. Ask about multiple items before zeroing in on the one you actually want.',
   },
   {
-    place: 'Restaurants with printed menus',
-    icon: Coffee,
-    reason: 'Menu prices are fixed. However, negotiation may apply to large group bookings or special catering arrangements.',
+    number: 2,
+    title: 'Know Before You Go',
+    icon: BookOpen,
+    text: 'Research approximate fair prices before entering the souk. Use our price guide below. Visit a fixed-price shop first (Ensemble Artisanal in Marrakech or Fes) to calibrate your expectations for quality and cost.',
   },
   {
-    place: 'Government offices & museums',
-    icon: MapPin,
-    reason: 'Entry fees, visas, and official charges are fixed. Never attempt to negotiate with government officials.',
+    number: 3,
+    title: 'Start at 30-40% of the Asking Price',
+    icon: Tag,
+    text: 'The seller expects you to counter low. Start at roughly a third of what they ask. This gives room for both sides to negotiate toward a fair middle ground. For expensive rugs, start at 20-25%.',
   },
   {
-    place: 'Petrol stations',
-    icon: Compass,
-    reason: 'Fuel prices are nationally regulated and displayed on pumps. They are the same at every station across Morocco.',
+    number: 4,
+    title: 'Walk Away — The Most Powerful Tool',
+    icon: Footprints,
+    text: 'If the price stalls above your target, thank the seller and leave. In many cases, they will call you back with a lower offer. If they let you go, the price was already fair or you were too low.',
   },
   {
-    place: 'Bakeries & basic grocery shops',
+    number: 5,
+    title: 'Bundle for Better Deals',
     icon: ShoppingBag,
-    reason: 'Bread and staple items have set prices in neighborhood shops. These are low-margin essentials, not luxury goods.',
+    text: 'Buying three items from one seller? Negotiate a package price. Sellers give bigger discounts on bulk purchases because the overall transaction value is higher. Mention you want several things early in the conversation.',
   },
-];
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: BODY LANGUAGE & ETIQUETTE
-   ═══════════════════════════════════════════════════════════════ */
-
-const etiquetteTips = [
   {
-    rule: 'Smile & Stay Friendly',
+    number: 6,
+    title: 'Cash Is King',
+    icon: Banknote,
+    text: 'Carry small bills and exact change. Showing a fat wallet signals you can pay more. Some sellers add a 5-10% surcharge for card payments. Having the exact amount ready in your pocket speeds up the final handshake.',
+  },
+  {
+    number: 7,
+    title: 'Keep It Friendly',
     icon: Heart,
-    description:
-      'Haggling in Morocco is a social activity, not a fight. Maintain a warm, friendly demeanor throughout the negotiation. Humor goes a long way. A seller who likes you is more likely to give you a fair price.',
+    text: 'Bargaining in Morocco is social, not adversarial. Smile, joke, accept the mint tea. Aggressive tactics backfire. The best deals happen when both buyer and seller enjoy the interaction.',
   },
-  {
-    rule: 'Maintain Eye Contact',
-    icon: Eye,
-    description:
-      'Direct eye contact shows confidence and sincerity. It signals that you are serious about buying but also firm about your price. Avoiding eye contact may be read as disinterest or dishonesty.',
-  },
-  {
-    rule: 'Use Your Right Hand',
-    icon: HandCoins,
-    description:
-      'When handling items or passing money, use your right hand or both hands. The left hand alone is considered impolite in Moroccan culture.',
-  },
-  {
-    rule: 'Do Not Insult the Goods',
-    icon: AlertTriangle,
-    description:
-      'Never criticize the quality of an item to drive the price down. Saying "this looks cheap" or "this is poor quality" is deeply offensive. Instead, calmly state what you are willing to pay.',
-  },
-  {
-    rule: 'Dress Modestly',
-    icon: Shield,
-    description:
-      'How you dress influences how sellers perceive your budget. Flashy jewelry, designer bags, and expensive cameras can lead to higher starting prices. Dress simply and practically for souk visits.',
-  },
-  {
-    rule: 'Be Patient',
-    icon: Clock,
-    description:
-      'Moroccan negotiations move at their own pace. Rushing signals desperation and weak bargaining position. Allow 10-20 minutes for significant purchases like carpets. The best deals come to patient buyers.',
-  },
-  {
-    rule: 'Know When to Stop',
-    icon: CheckCircle,
-    description:
-      'Once you agree on a price, the deal is done. Do not try to renegotiate after shaking hands. Walking away from an agreed price is the biggest breach of souk etiquette.',
-  },
-  {
-    rule: 'Respect the Culture',
-    icon: Star,
-    description:
-      'Remember that haggling supports livelihoods. The goal is a fair exchange, not "winning." Pushing a seller below their cost is not a victory -- it is exploitation. A good deal leaves both sides satisfied.',
-  },
-];
+] as const;
 
 /* ═══════════════════════════════════════════════════════════════
-   DATA: FAQ
+   DATA: DARIJA PHRASES
    ═══════════════════════════════════════════════════════════════ */
 
-const faqs = [
+const darijaPhrases = [
+  { darija: 'B-shhal?', pronunciation: 'besh-HALL', english: 'How much?' },
+  { darija: 'Ghali bzaf', pronunciation: 'GHAH-lee b-ZAFF', english: 'Too expensive' },
+  { darija: 'Akhir taman?', pronunciation: 'AH-kheer ta-MAN', english: 'Last/final price?' },
+  { darija: 'La shukran', pronunciation: 'la shoo-KRAN', english: 'No, thank you' },
+  { darija: 'Naqas shwiya', pronunciation: 'NA-qas SHWEE-ya', english: 'Reduce a little' },
+  { darija: 'Makaynsh flous', pronunciation: 'ma-KYNE-sh FLOOS', english: 'I don\'t have money (for that price)' },
+  { darija: 'Atini wahd l-prix mezyan', pronunciation: 'ah-TEE-nee wahd el-PREE mez-YAHN', english: 'Give me a good price' },
+  { darija: 'Shukran', pronunciation: 'shoo-KRAN', english: 'Thank you' },
+  { darija: 'Insha\'Allah', pronunciation: 'in-SHA-al-lah', english: 'God willing (used to soften refusals)' },
+  { darija: 'Bezzaf', pronunciation: 'bez-ZAFF', english: 'Too much' },
+  { darija: 'Smeh liya', pronunciation: 'SMEH lee-ya', english: 'Excuse me' },
+  { darija: 'Wakha', pronunciation: 'WAH-kha', english: 'OK / agreed' },
+] as const;
+
+/* ═══════════════════════════════════════════════════════════════
+   DATA: BEST SOUKS BY CITY
+   ═══════════════════════════════════════════════════════════════ */
+
+const bestSouks = [
   {
-    question: 'How much lower should my first offer be when haggling in Morocco?',
-    answer:
-      'Start your first offer at roughly 30-40% of the seller\'s asking price. This gives both sides room to negotiate toward a fair middle ground, typically 50-60% of the initial asking price. The exact ratio depends on the item: mass-produced goods have less markup than handcrafted artisan pieces. In heavily touristic areas like the Marrakech medina, initial prices can be 3-5 times the fair price, so starting low is expected.',
+    city: 'Marrakech',
+    souks: [
+      { name: 'Souk Semmarine', specialty: 'Textiles, clothing, babouche slippers' },
+      { name: 'Souk el-Attarine', specialty: 'Spices, perfumes, herbs' },
+      { name: 'Souk Haddadine', specialty: 'Metalwork, lanterns, iron goods' },
+      { name: 'Souk des Teinturiers', specialty: 'Dyed fabrics and yarns' },
+      { name: 'Rahba Kedima', specialty: 'Natural cosmetics, henna, spices' },
+    ],
+    tip: 'Avoid the first row of shops around Jemaa el-Fnaa — prices drop 50% once you walk deeper into the souk network. The best leather is found past the Medersa Ben Youssef.',
+    markupLevel: 'High (3-10x on tourist items)',
   },
   {
-    question: 'Is it rude to haggle in Morocco?',
-    answer:
-      'Not at all. Haggling is an integral part of Moroccan culture and commerce. Sellers expect it and genuinely enjoy the social interaction. What is considered rude is haggling aggressively, starting a negotiation with no intention of buying, or walking away from a price you have already agreed upon. Approach it with a smile and treat it as a cultural exchange rather than a confrontation.',
+    city: 'Fes',
+    souks: [
+      { name: 'Fes el-Bali Medina', specialty: 'Leather, ceramics, woodwork — the largest car-free urban area in the world' },
+      { name: 'Ain Nokbi Tanneries', specialty: 'Leather goods at source prices' },
+      { name: 'Place Seffarine', specialty: 'Copperware and brasswork' },
+      { name: 'Souk el-Henna', specialty: 'Ceramics, pottery, tiles' },
+    ],
+    tip: 'Fes artisans produce goods that Marrakech sellers resell at markup. Buying in Fes means buying closer to the source. The blue ceramics here are the originals — not imports.',
+    markupLevel: 'Medium (2-4x)',
   },
   {
-    question: 'What should I NOT haggle for in Morocco?',
-    answer:
-      'Do not haggle at supermarkets, pharmacies, government offices, petrol stations, or restaurants with printed menus. These have fixed prices. Also avoid haggling for basic necessities like bread at bakeries or staple goods at small neighborhood shops. Haggling is reserved for souks, markets, taxi fares (before the ride), and independent shops without marked prices.',
+    city: 'Essaouira',
+    souks: [
+      { name: 'Medina Souk', specialty: 'Thuya woodwork, silver jewelry, argan oil' },
+      { name: 'Skala de la Ville', specialty: 'Art galleries and painting' },
+      { name: 'Fish Market (Port)', specialty: 'Fresh seafood (fixed prices)' },
+    ],
+    tip: 'Essaouira sellers are more relaxed than Marrakech. Markups are lower and the pressure to buy is minimal. This is the best city for first-time hagglers. Thuya wood is the local specialty — buy it here, not Marrakech.',
+    markupLevel: 'Low-Medium (1.5-3x)',
   },
   {
-    question: 'Does the walking away technique really work in Morocco?',
-    answer:
-      'Yes, walking away is one of the most effective bargaining techniques in Moroccan souks. If a seller lets you leave without calling you back, the price they quoted may already have been fair. If they call you back with a lower offer, you know there is still room to negotiate. Only use this technique genuinely -- walk away if the price does not work for you, not as a bluff you repeat at every stall.',
+    city: 'Meknes',
+    souks: [
+      { name: 'Souk Nejjarine', specialty: 'Woodworking, furniture, carved doors' },
+      { name: 'Souk Bezzarine', specialty: 'Textiles, household goods' },
+      { name: 'Souk Sebbat', specialty: 'Babouche slippers at local prices' },
+    ],
+    tip: 'Meknes sees far fewer tourists than Marrakech or Fes. Prices start lower, and sellers are less practiced at extracting tourist premiums. Expect markups of only 1.5-2x.',
+    markupLevel: 'Low (1.5-2x)',
+  },
+] as const;
+
+/* ═══════════════════════════════════════════════════════════════
+   DATA: COMMON SCAMS
+   ═══════════════════════════════════════════════════════════════ */
+
+const commonScams = [
+  {
+    scam: 'The "My Uncle\'s Shop" Redirect',
+    description: 'A friendly stranger offers to show you "the real souk" or "my uncle\'s shop" away from tourist areas. They earn a commission (10-20%) on anything you buy, which gets added to your price.',
+    avoidance: 'Politely decline guides you did not hire. Say "La shukran" and keep walking. If you did not seek them out, they are working for a shop.',
   },
   {
-    question: 'Why do sellers offer mint tea during negotiations?',
-    answer:
-      'Offering mint tea is a traditional Moroccan gesture of hospitality. It creates a relaxed atmosphere and builds rapport between buyer and seller. Accepting tea does not obligate you to buy, but it signals genuine interest. The tea ritual slows down the negotiation, giving both sides time to assess the deal. It is perfectly acceptable to enjoy the tea and still walk away if you cannot agree on a price.',
+    scam: 'The Carpet Tea Ceremony Trap',
+    description: 'A rug seller invites you for tea, unfolds 30 rugs, and creates social pressure to buy after spending an hour of their time. The tea is free — the guilt trip is the sales technique.',
+    avoidance: 'Accept tea only if you genuinely want to buy a rug. State your budget immediately: "I have 800 MAD to spend on a small rug." This filters out sellers who only deal in high-end pieces.',
   },
   {
-    question: 'How do I know if I got a fair price in Morocco?',
-    answer:
-      'A fair price is one you are happy to pay and the seller is happy to accept. As a general guideline, paying 40-60% of the initial asking price is normal for most souk items. You can research prices beforehand at fixed-price cooperatives or ensemble artisanal shops, which display standardized prices. If multiple sellers offer similar items at similar final prices, you are likely in the right range.',
+    scam: 'The Fake "Closing Sale"',
+    description: '"I am closing my shop forever — everything 50% off today only." This shop has been "closing" for five years. It creates false urgency to stop you from comparing prices.',
+    avoidance: 'Ignore urgency tactics. Walk away and compare at three other shops. Genuine closing sales are rare and would not target a single tourist.',
   },
   {
-    question: 'Should I haggle differently in Marrakech vs Fes vs smaller towns?',
-    answer:
-      'Yes. In major tourist cities like Marrakech and Fes, initial asking prices tend to be significantly higher (sometimes 3-5 times the fair price), so more assertive bargaining is expected. In smaller towns like Chefchaouen, Essaouira, or rural markets, markups are typically lower and sellers may be more straightforward with pricing. Adjust your starting offer accordingly and always remain respectful regardless of location.',
+    scam: 'The Bait and Switch',
+    description: 'You agree on a price for a quality item. While wrapping it, the seller swaps in a lower-quality piece. Common with leather bags, argan oil, and saffron.',
+    avoidance: 'Watch the wrapping process. Mark your item with a small pen dot or take a photo before they wrap it. Open the package before leaving the shop to verify.',
   },
   {
-    question: 'Can I haggle in Moroccan taxis?',
-    answer:
-      'For petit taxis (city taxis), always insist on the meter. If the driver refuses to use the meter, negotiate the fare before getting in. For grand taxis on fixed routes, the fare per seat is standard and non-negotiable. For private grand taxi hire, you should negotiate the price upfront. The key rule is to always agree on the fare before you start the journey.',
+    scam: 'The "Fixed Price" Lie',
+    description: 'Seller claims "prix fixe — no bargaining here." In a souk stall, this is almost never true. It is a technique to avoid negotiation and sell at inflated prices.',
+    avoidance: 'Test it. Make a counter-offer anyway. If they truly have fixed prices, they will show you a price tag. Only legitimate fixed-price shops (Ensemble Artisanal, cooperatives) post printed tags.',
   },
-];
+  {
+    scam: 'Fake Saffron and Argan Oil',
+    description: 'Cheap safflower dyed red and sold as saffron. Industrial oil with argan scent sold as pure argan oil. Both are widespread in tourist areas.',
+    avoidance: 'Buy saffron from reputable spice shops — real saffron has three red threads per strand and releases color slowly in warm water. Buy argan oil from women\'s cooperatives with sealed bottles.',
+  },
+] as const;
 
 /* ═══════════════════════════════════════════════════════════════
    PAGE COMPONENT
@@ -540,473 +389,119 @@ const faqs = [
 export default function MoroccoHagglingGuidePage() {
   return (
     <>
+      {/* ── JSON-LD ── */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGuide) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
       />
 
-      {/* ── Hero Section ── */}
-      <section className="relative py-20 md:py-28 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(/images/hero-morocco-souk.webp)',
-          }}
-        />
-        <div className="absolute inset-0 hero-overlay" />
-        <div className="container-morocco relative z-10">
-          <nav className="flex items-center gap-2 text-sm text-white/60 mb-8" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-white transition-colors">
-              <Home className="w-3.5 h-3.5" />
+      {/* ══════════════════════════════════════════════════════════
+          HERO SECTION
+          ══════════════════════════════════════════════════════════ */}
+      <section className="relative min-h-[60vh] flex items-center justify-center bg-gradient-to-br from-[#3D1E0F] via-[#5C2E1A] to-[#1a0f0a]">
+        <div className="hero-overlay" />
+        <div className="relative z-10 container-morocco text-center py-24 md:py-32">
+          {/* Breadcrumbs */}
+          <nav aria-label="Breadcrumb" className="flex items-center justify-center gap-1 text-xs text-white/70 mb-6">
+            <Link href="/" className="hover:text-white transition-colors flex items-center gap-1">
+              <Home className="w-3 h-3" /> Home
             </Link>
-            <ChevronRight className="w-3.5 h-3.5" />
+            <ChevronRight className="w-3 h-3" />
             <span className="text-white">Morocco Haggling Guide</span>
           </nav>
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm text-white/90 text-sm mb-6">
-            <HandCoins className="w-4 h-4" />
-            Shopping &amp; Souks
-          </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-display)] font-bold text-white mb-4">
-            Morocco Haggling Guide:
-            <br className="hidden md:block" /> The Art of Bargaining in Souks
+
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-display)] font-bold text-white mb-6 leading-tight">
+            How to Haggle in Morocco
           </h1>
-          <p className="text-xl text-white/80 max-w-2xl">
-            Master the centuries-old art of negotiation in Moroccan markets. Step-by-step
-            bargaining tips, fair prices for common items, seller tactics decoded, and
-            the cultural etiquette that turns haggling into an unforgettable experience.
+          <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-8 font-[family-name:var(--font-heading)]">
+            Souk bargaining tips, fair prices for 20+ items, essential Darija phrases,
+            and the walk-away strategies that actually work
           </p>
-        </div>
-      </section>
-
-      <div className="zellige-border" />
-
-      {/* ── Introduction: The Culture of Haggling ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco max-w-4xl">
-          <div className="prose-moroccan">
-            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
-              Haggling in Morocco: A Cultural Tradition, Not a Battle
-            </h2>
-            <div className="space-y-4 text-lg text-[var(--text-secondary)] leading-relaxed">
-              <p>
-                In Morocco, haggling is not a confrontation -- it is a conversation. For
-                centuries, the souks of Marrakech, Fes, Meknes, and beyond have operated
-                on a system where prices are fluid and negotiation is the norm. The
-                process is deeply woven into Moroccan social fabric, as much about human
-                connection as it is about commerce.
-              </p>
-              <p>
-                For many Western visitors, bargaining feels uncomfortable at first. We are
-                conditioned to accept price tags as final. But in Morocco, the asking
-                price is an invitation to engage, not a fixed number. The seller expects
-                you to counter, and the back-and-forth that follows is a ritual both sides
-                understand and enjoy.
-              </p>
-              <p>
-                The key to successful haggling is mindset. You are not trying to
-                &quot;win&quot; or get the lowest possible price. You are seeking a fair
-                exchange where both you and the seller walk away satisfied. The seller
-                makes a reasonable profit, and you pay a price that feels right for the
-                value you are receiving. That mutual satisfaction is the true art of
-                Moroccan bargaining.
-              </p>
-            </div>
+          <div className="flex flex-wrap justify-center gap-4 text-sm text-white/80">
+            <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-full">
+              <Tag className="w-3.5 h-3.5" /> 24 Items Priced
+            </span>
+            <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-full">
+              <Languages className="w-3.5 h-3.5" /> 12 Darija Phrases
+            </span>
+            <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-full">
+              <Clock className="w-3.5 h-3.5" /> Updated March 2026
+            </span>
           </div>
         </div>
       </section>
 
-      {/* ── Step-by-Step Haggling Process ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Scale className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            The 7-Step Haggling Process
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Follow this step-by-step guide to navigate any negotiation in a Moroccan souk with confidence and cultural sensitivity.
-          </p>
-
-          <div className="max-w-4xl mx-auto space-y-6">
-            {hagglingSteps.map((item) => {
-              const StepIcon = item.icon;
-              return (
-                <div key={item.step} className="card-moroccan p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-[var(--color-accent)] flex items-center justify-center shrink-0">
-                      <span className="text-white font-bold text-lg">{item.step}</span>
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-2">
-                        <StepIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                        <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                          {item.title}
-                        </h3>
-                      </div>
-                      <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-3">
-                        {item.description}
-                      </p>
-                      <div className="bg-[var(--surface-muted)] p-3 rounded-lg">
-                        <div className="flex items-start gap-2">
-                          <Info className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
-                          <p className="text-xs text-[var(--text-secondary)]">
-                            <span className="font-semibold text-[var(--color-gold)]">Pro Tip:</span>{' '}
-                            {item.tip}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Price Expectations ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Banknote className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Price Expectations: What Things Actually Cost
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-4">
-            Typical asking prices vs. fair prices for common souk items. Use these ranges as a guide during your negotiations.
-          </p>
-          <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
-            <Info className="w-3.5 h-3.5 inline mr-1" />
-            All prices in Moroccan dirhams (MAD). Prices vary by quality, city, and season. Seasonal pricing can change.
-          </p>
-
-          <div className="space-y-10 max-w-5xl mx-auto">
-            {priceExpectations.map((category) => {
-              const CategoryIcon = category.icon;
-              return (
-                <div key={category.category}>
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                      <CategoryIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                    </div>
-                    <h3 className="text-2xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
-                      {category.category}
-                    </h3>
-                  </div>
-                  <div className="card-moroccan overflow-hidden ml-[52px]">
-                    <div className="grid grid-cols-3 gap-0 bg-[var(--color-accent)] text-white text-sm font-medium">
-                      <div className="p-3 px-4">Item</div>
-                      <div className="p-3 px-4">Typical Asking Price</div>
-                      <div className="p-3 px-4">Fair Price (After Haggling)</div>
-                    </div>
-                    {category.items.map((row, i) => (
-                      <div
-                        key={row.item}
-                        className={`grid grid-cols-3 gap-0 text-sm ${i % 2 === 0 ? 'bg-white' : 'bg-[var(--surface-muted)]'}`}
-                      >
-                        <div className="p-3 px-4 font-medium text-[var(--text-primary)]">{row.item}</div>
-                        <div className="p-3 px-4 text-[var(--text-muted)] line-through">{row.askingPrice}</div>
-                        <div className="p-3 px-4 text-[var(--color-accent)] font-semibold">{row.fairPrice}</div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── What NOT to Haggle For ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <AlertTriangle className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Where NOT to Haggle in Morocco
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Not everything in Morocco is negotiable. These places and situations have fixed prices -- attempting to haggle is inappropriate.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {noHagglingZones.map((item) => {
-              const ItemIcon = item.icon;
-              return (
-                <div key={item.place} className="card-moroccan p-5">
-                  <div className="w-10 h-10 rounded-full bg-[var(--surface-muted)] flex items-center justify-center mb-3">
-                    <ItemIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                  </div>
-                  <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                    {item.place}
-                  </h3>
-                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{item.reason}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Seller Tactics & How to Respond ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Shield className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Common Seller Tactics &amp; How to Respond
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Moroccan sellers are skilled negotiators. Recognizing their techniques helps you navigate the dance with confidence.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            {sellerTactics.map((item) => {
-              const TacticIcon = item.icon;
-              return (
-                <div key={item.tactic} className="card-moroccan p-5">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                      <TacticIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                    </div>
-                    <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                      {item.tactic}
-                    </h3>
-                  </div>
-                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed mb-3">
-                    <span className="font-semibold">What they do:</span> {item.description}
-                  </p>
-                  <div className="bg-[var(--surface-muted)] p-3 rounded-lg">
-                    <p className="text-xs text-[var(--text-secondary)]">
-                      <span className="font-semibold text-[var(--color-gold)]">
-                        <ThumbsUp className="w-3 h-3 inline mr-1" />
-                        Your response:
-                      </span>{' '}
-                      {item.response}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Body Language & Etiquette ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Users className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Body Language &amp; Etiquette Tips
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            How you conduct yourself matters as much as the numbers you negotiate. These etiquette guidelines ensure respectful and successful bargaining.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {etiquetteTips.map((rule) => {
-              const RuleIcon = rule.icon;
-              return (
-                <div key={rule.rule} className="card-moroccan p-5">
-                  <div className="w-10 h-10 rounded-full bg-[var(--surface-muted)] flex items-center justify-center mb-3">
-                    <RuleIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                  </div>
-                  <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                    {rule.rule}
-                  </h3>
-                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{rule.description}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── The Mint Tea Ritual ── */}
+      {/* ══════════════════════════════════════════════════════════
+          THE ART OF HAGGLING — CULTURAL CONTEXT
+          ══════════════════════════════════════════════════════════ */}
       <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Coffee className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            The Mint Tea Ritual During Negotiations
+            The Art of Haggling in Morocco
           </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Understanding the role of mint tea in Moroccan haggling is essential for any visitor to the souks.
+          <p className="text-center text-[var(--text-secondary)] mb-10 max-w-2xl mx-auto">
+            Bargaining is woven into daily Moroccan commerce — and has been for over a thousand years
           </p>
 
-          <div className="space-y-6">
-            <div className="card-moroccan p-6">
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                Why Sellers Offer Tea
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                Mint tea (&quot;atay&quot;) is Morocco&apos;s national drink and offering it to visitors is a gesture of hospitality
-                rooted in centuries of tradition. In the context of a souk negotiation, tea serves multiple purposes: it
-                slows the pace, creates a comfortable atmosphere, and signals that the seller views you as a serious buyer
-                worthy of their time. The act of preparing and pouring tea together transforms a commercial transaction into
-                a social interaction -- and that is exactly how Moroccans prefer to do business.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="card-moroccan p-5">
-                <h4 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                  <CheckCircle className="w-4 h-4 inline mr-1 text-[var(--color-gold)]" />
-                  When to Accept Tea
-                </h4>
-                <ul className="space-y-2 text-sm text-[var(--text-secondary)]">
-                  <li className="flex items-start gap-2">
-                    <ChevronRight className="w-3.5 h-3.5 mt-0.5 shrink-0 text-[var(--color-accent)]" />
-                    You are genuinely interested in buying something
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <ChevronRight className="w-3.5 h-3.5 mt-0.5 shrink-0 text-[var(--color-accent)]" />
-                    You are shopping for a big-ticket item like a carpet
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <ChevronRight className="w-3.5 h-3.5 mt-0.5 shrink-0 text-[var(--color-accent)]" />
-                    You want to learn about the craft and the seller&apos;s work
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <ChevronRight className="w-3.5 h-3.5 mt-0.5 shrink-0 text-[var(--color-accent)]" />
-                    You have time to enjoy the experience
-                  </li>
-                </ul>
-              </div>
-
-              <div className="card-moroccan p-5">
-                <h4 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                  <Info className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                  Key Things to Know
-                </h4>
-                <ul className="space-y-2 text-sm text-[var(--text-secondary)]">
-                  <li className="flex items-start gap-2">
-                    <ChevronRight className="w-3.5 h-3.5 mt-0.5 shrink-0 text-[var(--color-accent)]" />
-                    Accepting tea does not obligate you to buy anything
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <ChevronRight className="w-3.5 h-3.5 mt-0.5 shrink-0 text-[var(--color-accent)]" />
-                    Declining tea politely is perfectly acceptable
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <ChevronRight className="w-3.5 h-3.5 mt-0.5 shrink-0 text-[var(--color-accent)]" />
-                    Tea is typically free -- it is part of the shopping experience
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <ChevronRight className="w-3.5 h-3.5 mt-0.5 shrink-0 text-[var(--color-accent)]" />
-                    Carpet and leather shops are most likely to offer tea
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="card-moroccan p-5 bg-[var(--color-accent)]/5">
-              <div className="flex items-start gap-3">
-                <Info className="w-5 h-5 text-[var(--color-accent)] mt-0.5 shrink-0" />
+          <div className="prose max-w-none">
+            <div className="card-moroccan p-6 md:p-8 mb-8">
+              <div className="flex items-start gap-4">
+                <HandCoins className="w-10 h-10 text-[var(--color-accent)] shrink-0 mt-1" />
                 <div>
-                  <h4 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
-                    Cultural Insight
-                  </h4>
+                  <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                    Haggling Is Not Rude — It Is Expected
+                  </h3>
+                  <p className="text-sm text-[var(--text-secondary)] mb-3">
+                    Moroccan souk sellers price their goods with bargaining built in. The initial asking price in most medinas
+                    runs 2-5 times higher than what the seller expects to receive. In heavy tourist zones like the streets
+                    around Jemaa el-Fnaa, markups can hit 10x on small items like scarves and keychains.
+                  </p>
+                  <p className="text-sm text-[var(--text-secondary)] mb-3">
+                    Paying the first price a seller quotes does not make you generous — it marks you as someone unfamiliar
+                    with local customs. Moroccans themselves haggle for everything from shoes to furniture. The interaction
+                    is social: a conversation that involves tea, small talk, and a mutual search for a number both
+                    parties accept.
+                  </p>
                   <p className="text-sm text-[var(--text-secondary)]">
-                    In Moroccan culture, refusing hospitality can be seen as impolite. If you truly do not want tea,
-                    a gentle &quot;la shukran, ana mashi aatshan&quot; (no thanks, I am not thirsty) with a warm smile
-                    is the most gracious way to decline. If you are in a rush, explain that you have limited time and
-                    the seller will understand.
+                    The ritual follows a predictable pattern. The seller names a high price. You counter low. Both sides
+                    move toward the middle. Along the way, you learn about the item, the craftsmanship, and the seller&apos;s
+                    family. This exchange is as much about human connection as it is about commerce, and rushing it
+                    defeats the purpose.
                   </p>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* ── When to Walk Away vs. Good Deal ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
-            <Compass className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            When to Walk Away vs. When You Have a Good Deal
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="card-moroccan p-6">
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4">
-                <AlertTriangle className="w-5 h-5 inline mr-1 text-[var(--color-accent)]" />
-                Walk Away When...
-              </h3>
-              <ul className="space-y-3 text-sm text-[var(--text-secondary)]">
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="w-3.5 h-3.5 mt-0.5 shrink-0 text-[var(--color-accent)]" />
-                  The seller will not budge from an unreasonably high price
-                </li>
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="w-3.5 h-3.5 mt-0.5 shrink-0 text-[var(--color-accent)]" />
-                  You feel pressured, rushed, or uncomfortable
-                </li>
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="w-3.5 h-3.5 mt-0.5 shrink-0 text-[var(--color-accent)]" />
-                  The seller becomes aggressive or disrespectful
-                </li>
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="w-3.5 h-3.5 mt-0.5 shrink-0 text-[var(--color-accent)]" />
-                  You suspect the item is not authentic or as described
-                </li>
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="w-3.5 h-3.5 mt-0.5 shrink-0 text-[var(--color-accent)]" />
-                  The price exceeds what you genuinely want to pay
-                </li>
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="w-3.5 h-3.5 mt-0.5 shrink-0 text-[var(--color-accent)]" />
-                  You were led to the shop by an unsolicited guide expecting commission
-                </li>
-              </ul>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4">
-                <CheckCircle className="w-5 h-5 inline mr-1 text-[var(--color-gold)]" />
-                You Have a Good Deal When...
-              </h3>
-              <ul className="space-y-3 text-sm text-[var(--text-secondary)]">
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="w-3.5 h-3.5 mt-0.5 shrink-0 text-[var(--color-gold)]" />
-                  The price is 40-60% of the original asking price
-                </li>
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="w-3.5 h-3.5 mt-0.5 shrink-0 text-[var(--color-gold)]" />
-                  You have compared prices at 2-3 other shops for similar items
-                </li>
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="w-3.5 h-3.5 mt-0.5 shrink-0 text-[var(--color-gold)]" />
-                  The seller is smiling and satisfied (not visibly upset)
-                </li>
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="w-3.5 h-3.5 mt-0.5 shrink-0 text-[var(--color-gold)]" />
-                  You feel happy about the purchase, not just the price
-                </li>
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="w-3.5 h-3.5 mt-0.5 shrink-0 text-[var(--color-gold)]" />
-                  The price aligns with the ranges in the table above
-                </li>
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="w-3.5 h-3.5 mt-0.5 shrink-0 text-[var(--color-gold)]" />
-                  The item is genuinely handmade and you value the craftsmanship
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="mt-8 card-moroccan p-5 bg-[var(--color-accent)]/5">
-            <div className="flex items-start gap-3">
-              <Sparkles className="w-5 h-5 text-[var(--color-gold)] mt-0.5 shrink-0" />
-              <div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="card-moroccan p-5 text-center">
+                <ThumbsUp className="w-8 h-8 text-green-600 mx-auto mb-2" />
                 <h4 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
-                  The Golden Rule of Haggling
+                  Do This
                 </h4>
-                <p className="text-sm text-[var(--text-secondary)]">
-                  If you love an item and the price feels fair to you, buy it. Do not agonize over whether you could
-                  have saved from 20-30 MAD more. The memory of the experience and the item itself are worth far more than
-                  the difference. Conversely, never buy something you do not truly want just because the price is low.
-                  A bargain on something you do not need is not a bargain at all.
+                <p className="text-xs text-[var(--text-secondary)]">
+                  Smile, make eye contact, accept tea, counter-offer with respect, compliment the craftsmanship, walk away politely
+                </p>
+              </div>
+              <div className="card-moroccan p-5 text-center">
+                <ThumbsDown className="w-8 h-8 text-red-600 mx-auto mb-2" />
+                <h4 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
+                  Avoid This
+                </h4>
+                <p className="text-xs text-[var(--text-secondary)]">
+                  Insulting the goods, laughing at prices, getting angry, making offers you would not honor, haggling and then not buying
+                </p>
+              </div>
+              <div className="card-moroccan p-5 text-center">
+                <Info className="w-8 h-8 text-[var(--color-gold)] mx-auto mb-2" />
+                <h4 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
+                  Remember
+                </h4>
+                <p className="text-xs text-[var(--text-secondary)]">
+                  Once a price is agreed and you shake on it, the deal is done. Backing out after agreement is considered deeply disrespectful
                 </p>
               </div>
             </div>
@@ -1014,106 +509,586 @@ export default function MoroccoHagglingGuidePage() {
         </div>
       </section>
 
-      {/* ── FAQ Section ── */}
-      <section className="py-16 md:py-20">
+      {/* ══════════════════════════════════════════════════════════
+          7 GOLDEN RULES OF BARGAINING
+          ══════════════════════════════════════════════════════════ */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
         <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
-            Frequently Asked Questions About Haggling in Morocco
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            The 7 Golden Rules of Bargaining
           </h2>
+          <p className="text-center text-[var(--text-secondary)] mb-12 max-w-2xl mx-auto">
+            Follow these rules and you will pay fair prices across every souk in Morocco
+          </p>
 
-          <div className="space-y-6">
-            {faqs.map((faq) => (
-              <div key={faq.question} className="card-moroccan p-6">
-                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                  {faq.question}
-                </h3>
-                <p className="text-sm text-[var(--text-secondary)]">
-                  {faq.answer}
-                </p>
+          <div className="space-y-4">
+            {goldenRules.map((rule) => (
+              <div key={rule.number} className="card-moroccan p-5 md:p-6 flex items-start gap-4">
+                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[var(--color-accent)] text-white font-bold text-lg shrink-0">
+                  {rule.number}
+                </div>
+                <div>
+                  <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1 flex items-center gap-2">
+                    <rule.icon className="w-4 h-4 text-[var(--color-accent)]" />
+                    {rule.title}
+                  </h3>
+                  <p className="text-sm text-[var(--text-secondary)]">{rule.text}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── Related Guides ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+      {/* ══════════════════════════════════════════════════════════
+          STEP-BY-STEP HAGGLING STRATEGY
+          ══════════════════════════════════════════════════════════ */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            Step-by-Step Haggling Strategy
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] mb-12 max-w-2xl mx-auto">
+            A proven sequence that works in every Moroccan souk — from Marrakech to Meknes
+          </p>
+
+          <div className="space-y-6">
+            {/* Step 1 */}
+            <div className="card-moroccan p-6 border-l-4 border-l-[var(--color-accent)]">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                <span className="text-[var(--color-accent)] mr-2">Step 1:</span> Scout First, Buy Later
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                Walk the souk once without buying anything. Note which shops carry the item you want
+                and roughly where prices start. Visit the Ensemble Artisanal (government fixed-price shop) to
+                see baseline quality and pricing. This costs you an hour but saves you hundreds of dirhams.
+              </p>
+            </div>
+
+            {/* Step 2 */}
+            <div className="card-moroccan p-6 border-l-4 border-l-[var(--color-accent)]">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                <span className="text-[var(--color-accent)] mr-2">Step 2:</span> Approach With Casual Interest
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                Browse several items in the shop. Ask about things you do not intend to buy. When you pick up
+                your target item, ask &quot;B-shhal?&quot; (how much?) as if it is just another question. Let the seller
+                give the first number. Never name your price first — you lose the anchor advantage.
+              </p>
+            </div>
+
+            {/* Step 3 */}
+            <div className="card-moroccan p-6 border-l-4 border-l-[var(--color-accent)]">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                <span className="text-[var(--color-accent)] mr-2">Step 3:</span> React and Counter
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                When they name their price, pause. Raise your eyebrows slightly. Say &quot;Ghali bzaf&quot; (too expensive)
+                with a friendly tone, not anger. Then counter at 30-40% of their ask. If they said 1,000 MAD,
+                you say 300-400 MAD. Expect them to act shocked — this is part of the performance.
+              </p>
+            </div>
+
+            {/* Step 4 */}
+            <div className="card-moroccan p-6 border-l-4 border-l-[var(--color-accent)]">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                <span className="text-[var(--color-accent)] mr-2">Step 4:</span> The Back-and-Forth
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                Each round, increase your offer in smaller increments. Move from 300 to 350, then 380, then 400.
+                The seller drops in larger increments at first (1,000 to 700 to 550). As the gap narrows, both
+                sides slow down. This phase takes 5-15 minutes depending on the item value.
+              </p>
+            </div>
+
+            {/* Step 5 */}
+            <div className="card-moroccan p-6 border-l-4 border-l-[var(--color-accent)]">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                <span className="text-[var(--color-accent)] mr-2">Step 5:</span> The Walk-Away
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                If the price stalls above your target, say &quot;Shukran, I will think about it&quot; and start walking
+                toward the exit. In approximately 7 out of 10 cases, the seller calls you back with a lower
+                number. If they let you go, their last price was near their actual cost — come back later
+                and accept it, or try the next shop.
+              </p>
+            </div>
+
+            {/* Step 6 */}
+            <div className="card-moroccan p-6 border-l-4 border-l-[var(--color-accent)]">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                <span className="text-[var(--color-accent)] mr-2">Step 6:</span> Close the Deal
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                Once you reach a price you are happy with, shake hands. Pay in cash with as close to exact
+                change as possible. If buying multiple items, negotiate the bundle price before paying for
+                anything. Watch the seller wrap your purchase and verify the item matches what you agreed on.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-8 card-moroccan p-5 bg-amber-50 border-amber-200">
+            <div className="flex items-start gap-3">
+              <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
+              <div>
+                <h4 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
+                  Critical Rule: Never Haggle Unless You Intend to Buy
+                </h4>
+                <p className="text-xs text-[var(--text-secondary)]">
+                  Making a counter-offer signals genuine interest. If the seller accepts your price, you are
+                  morally obligated to complete the purchase. Haggling for sport and then walking away after
+                  agreement wastes the seller&apos;s time and is considered rude.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════
+          FAIR PRICE GUIDE — 24 ITEMS
+          ══════════════════════════════════════════════════════════ */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+        <div className="container-morocco">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            Fair Price Guide — 24 Common Souk Items
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] mb-4 max-w-2xl mx-auto">
+            What sellers ask vs. what you should pay after haggling. Prices reflect 2026 rates and may vary by city, quality, and season.
+          </p>
+          <p className="text-center text-xs text-[var(--text-secondary)] mb-10 max-w-xl mx-auto">
+            <Info className="w-3 h-3 inline mr-1" />
+            &quot;Fair price&quot; assumes decent quality and a tourist-area souk. Local-area souks and cooperatives may be 20-30% lower.
+          </p>
+
+          <div className="overflow-x-auto">
+            <table className="w-full card-moroccan overflow-hidden">
+              <thead>
+                <tr className="bg-[var(--color-accent)] text-white">
+                  <th className="text-left p-3 md:p-4 text-sm font-[family-name:var(--font-heading)] font-bold">Item</th>
+                  <th className="text-left p-3 md:p-4 text-sm font-[family-name:var(--font-heading)] font-bold">Category</th>
+                  <th className="text-left p-3 md:p-4 text-sm font-[family-name:var(--font-heading)] font-bold">Seller&apos;s Ask</th>
+                  <th className="text-left p-3 md:p-4 text-sm font-[family-name:var(--font-heading)] font-bold">Fair Haggled Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                {priceGuideItems.map((row, i) => (
+                  <tr
+                    key={row.item}
+                    className={`border-t border-[var(--border-primary)] ${i % 2 === 0 ? 'bg-white' : 'bg-[#FAF8F5]'}`}
+                  >
+                    <td className="p-3 md:p-4 text-sm text-[var(--text-primary)] font-medium">{row.item}</td>
+                    <td className="p-3 md:p-4 text-xs text-[var(--text-secondary)]">{row.category}</td>
+                    <td className="p-3 md:p-4 text-sm text-red-600 line-through">{row.askingPrice}</td>
+                    <td className="p-3 md:p-4 text-sm text-green-700 font-bold">{row.fairPrice}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <p className="text-xs text-[var(--text-secondary)] text-center mt-4">
+            Seasonal pricing can change. Prices are higher during peak tourist season (October-April) and around major holidays.
+          </p>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════
+          WHAT NOT TO HAGGLE FOR
+          ══════════════════════════════════════════════════════════ */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            What NOT to Haggle For
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] mb-12 max-w-2xl mx-auto">
+            Not everything in Morocco is negotiable. Know the exceptions.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="card-moroccan p-5">
+              <div className="flex items-start gap-3">
+                <XCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
+                <div>
+                  <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
+                    Supermarkets &amp; Chain Stores
+                  </h3>
+                  <p className="text-xs text-[var(--text-secondary)]">
+                    Carrefour, Marjane, Acima, and BIM all have fixed prices with barcodes. Attempting to haggle here will get you odd looks.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="card-moroccan p-5">
+              <div className="flex items-start gap-3">
+                <XCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
+                <div>
+                  <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
+                    Restaurants &amp; Cafes
+                  </h3>
+                  <p className="text-xs text-[var(--text-secondary)]">
+                    Menu prices are fixed. You pay what the menu says. Tipping is separate (10-15% is standard for good service).
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="card-moroccan p-5">
+              <div className="flex items-start gap-3">
+                <XCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
+                <div>
+                  <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
+                    Pharmacies &amp; Medicine
+                  </h3>
+                  <p className="text-xs text-[var(--text-secondary)]">
+                    Pharmaceutical prices are government-regulated in Morocco. Every pharmacy charges the same amount for the same medication.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="card-moroccan p-5">
+              <div className="flex items-start gap-3">
+                <XCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
+                <div>
+                  <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
+                    Bread &amp; Basic Staples
+                  </h3>
+                  <p className="text-xs text-[var(--text-secondary)]">
+                    Khobz (Moroccan bread) is sold at regulated prices — typically from 1.50 MAD per round loaf. Vegetable and fruit vendors with displayed prices use fixed rates.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="card-moroccan p-5">
+              <div className="flex items-start gap-3">
+                <XCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
+                <div>
+                  <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
+                    Fixed-Price Artisan Shops
+                  </h3>
+                  <p className="text-xs text-[var(--text-secondary)]">
+                    Look for &quot;prix fixe&quot; signage. Government-run Ensemble Artisanal shops, women&apos;s cooperatives, and fair-trade shops set non-negotiable prices to ensure artisans earn fairly.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="card-moroccan p-5">
+              <div className="flex items-start gap-3">
+                <XCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
+                <div>
+                  <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
+                    Metered Taxis &amp; Trains
+                  </h3>
+                  <p className="text-xs text-[var(--text-secondary)]">
+                    Petit taxis with running meters and ONCF trains have fixed rates. Grand taxis between cities are negotiable. Always insist petit taxis turn on the meter (&quot;compteur&quot;).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════
+          DARIJA PHRASES FOR BARGAINING
+          ══════════════════════════════════════════════════════════ */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            Essential Darija Phrases for Bargaining
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] mb-12 max-w-2xl mx-auto">
+            Speaking even a few words of Moroccan Arabic (Darija) earns respect and often earns you lower prices
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            {darijaPhrases.map((phrase) => (
+              <div key={phrase.darija} className="card-moroccan p-4 flex items-center gap-4">
+                <MessageCircle className="w-5 h-5 text-[var(--color-accent)] shrink-0" />
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-baseline gap-2 flex-wrap">
+                    <span className="text-base font-bold text-[var(--text-primary)] font-[family-name:var(--font-heading)]">
+                      {phrase.darija}
+                    </span>
+                    <span className="text-xs text-[var(--color-accent)] italic">
+                      ({phrase.pronunciation})
+                    </span>
+                  </div>
+                  <p className="text-sm text-[var(--text-secondary)]">{phrase.english}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 card-moroccan p-5">
+            <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 flex items-center gap-2">
+              <Languages className="w-4 h-4 text-[var(--color-accent)]" />
+              Language Tip
+            </h3>
+            <p className="text-xs text-[var(--text-secondary)]">
+              Most souk sellers speak French, and many speak English, Spanish, or Italian. But opening in Darija
+              — even just &quot;B-shhal?&quot; — signals that you have spent time in Morocco and are less likely to accept
+              inflated tourist prices. French is your backup language. Saying &quot;C&apos;est trop cher&quot; (it&apos;s too
+              expensive) works perfectly alongside Darija phrases.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════
+          WHERE TO HAGGLE — BEST SOUKS BY CITY
+          ══════════════════════════════════════════════════════════ */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco max-w-5xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            Where to Haggle — Best Souks by City
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] mb-12 max-w-2xl mx-auto">
+            Each city has its own haggling culture, markup levels, and specialties
+          </p>
+
+          <div className="space-y-6">
+            {bestSouks.map((city) => (
+              <div key={city.city} className="card-moroccan p-6 md:p-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <MapPin className="w-6 h-6 text-[var(--color-accent)]" />
+                  <h3 className="text-xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+                    {city.city}
+                  </h3>
+                  <span className="ml-auto text-xs bg-[var(--color-accent)]/10 text-[var(--color-accent)] px-2 py-1 rounded-full font-medium">
+                    Markup: {city.markupLevel}
+                  </span>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
+                  {city.souks.map((souk) => (
+                    <div key={souk.name} className="flex items-start gap-2">
+                      <Store className="w-4 h-4 text-[var(--color-gold)] shrink-0 mt-0.5" />
+                      <div>
+                        <span className="text-sm font-bold text-[var(--text-primary)]">{souk.name}</span>
+                        <p className="text-xs text-[var(--text-secondary)]">{souk.specialty}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="bg-[var(--surface-muted)] rounded-lg p-3">
+                  <p className="text-xs text-[var(--text-secondary)]">
+                    <Star className="w-3 h-3 inline mr-1 text-[var(--color-gold)]" />
+                    <strong>Insider tip:</strong> {city.tip}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════
+          COMMON SCAMS & HOW TO AVOID THEM
+          ══════════════════════════════════════════════════════════ */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            Common Scams &amp; How to Avoid Them
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] mb-12 max-w-2xl mx-auto">
+            Most sellers are honest, but knowing these tactics keeps you from overpaying
+          </p>
+
+          <div className="space-y-4">
+            {commonScams.map((scam) => (
+              <div key={scam.scam} className="card-moroccan p-5 md:p-6">
+                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 flex items-start gap-2">
+                  <AlertTriangle className="w-4 h-4 text-amber-500 shrink-0 mt-1" />
+                  {scam.scam}
+                </h3>
+                <p className="text-sm text-[var(--text-secondary)] mb-3">
+                  {scam.description}
+                </p>
+                <div className="flex items-start gap-2 bg-green-50 rounded-lg p-3">
+                  <CheckCircle className="w-4 h-4 text-green-600 shrink-0 mt-0.5" />
+                  <p className="text-xs text-green-800">
+                    <strong>How to avoid:</strong> {scam.avoidance}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════
+          FAQ SECTION
+          ══════════════════════════════════════════════════════════ */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
+            Frequently Asked Questions
+          </h2>
+
+          <div className="space-y-6">
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                What is a fair starting counter-offer when haggling in Morocco?
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                Start your counter-offer at 30-40% of the seller&apos;s asking price. The final agreed price
+                typically lands between 40-60% of the initial ask. For high-ticket items like rugs, you can
+                start even lower at 20-25%. The seller expects low counter-offers — it is part of the game.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                Is it rude to haggle in Morocco?
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                Not at all. Haggling is an expected part of Moroccan souk culture and has been for centuries.
+                Shopkeepers build bargaining margins into their prices. Not haggling actually surprises most
+                sellers. The key is to stay respectful, smile, and treat it as a social exchange rather than
+                a confrontation.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                How much can I save by haggling in Moroccan souks?
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                Skilled hagglers save 40-70% off the initial asking price. Tourist-heavy areas like
+                Marrakech&apos;s Jemaa el-Fnaa have higher markups (sometimes 5-10x), while smaller cities like
+                Meknes or Essaouira have lower initial markups of 2-3x. Your savings depend on the item,
+                location, time of day, and how many tourists are around.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                Should I haggle for everything in Morocco?
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                No. Haggling applies to souk goods, grand taxis (between cities), and private tours. Do
+                not haggle at pharmacies, supermarkets, restaurants, fixed-price shops (look for &quot;prix fixe&quot;
+                signs), or when buying bread and basic produce from vendors with displayed prices. Petit taxis
+                should use meters — insist on &quot;compteur.&quot;
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                What Darija phrases help with bargaining in Morocco?
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                Key phrases include &quot;B-shhal?&quot; (how much?), &quot;Ghali bzaf&quot; (too expensive), &quot;Akhir taman?&quot;
+                (last price?), and &quot;La shukran&quot; (no thank you). Speaking even basic Darija earns respect
+                from sellers and often leads to better prices. You do not need fluency — four or five phrases
+                make a measurable difference.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                What are fair prices for leather bags in Moroccan souks?
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                A quality leather handbag costs from 200-400 MAD at fair haggled prices. Sellers typically
+                start at 600-1,200 MAD. Larger travel bags cost from 400-800 MAD. Check stitching quality,
+                smell the leather (real leather has a distinct natural scent), and ask whether it is goat, cow,
+                or camel leather. Goat leather is the softest; cow leather is the most durable.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                Which Moroccan souk is best for haggling and fair prices?
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                Fes el-Bali offers the most authentic haggling with lower tourist markups. Essaouira&apos;s souk
+                is relaxed and prices are fairer from the start. Marrakech has the biggest selection but the
+                highest markups. Meknes is under-the-radar with prices close to local rates. For rugs, the
+                carpet souks of Fes and Marrakech remain unmatched for variety and quality.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════
+          RELATED GUIDES + CTA
+          ══════════════════════════════════════════════════════════ */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
-            Continue Exploring Morocco
+            Related Morocco Guides
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Link href="/morocco-souk-guide" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
-              <Store className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Link href="/budget-travel" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
+              <Banknote className="w-8 h-8 text-[var(--color-accent)] mb-3" />
               <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Morocco Souk Guide
+                Morocco Budget Travel Guide
               </h3>
               <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Navigate Morocco&apos;s famous markets. Souk layouts, what to find where, and insider tips for each city.
+                How to travel Morocco on from 300 MAD per day. Budget accommodations, transport, and food tips.
               </p>
               <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
                 Read more <ArrowRight className="w-3.5 h-3.5" />
               </span>
             </Link>
-            <Link href="/what-to-buy-morocco" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
-              <ShoppingBag className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                What to Buy in Morocco
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                The best souvenirs and handicrafts to bring home. Quality guide for leather, ceramics, textiles, and more.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-            <Link href="/morocco-shopping-guide" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
-              <Tag className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Morocco Shopping Guide
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Complete shopping guide covering souks, cooperatives, modern malls, and the best places to shop in every city.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-            <Link href="/morocco-carpet-guide" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
-              <Sparkles className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Morocco Carpet Guide
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                How to buy a genuine Moroccan carpet. Types, quality indicators, pricing, and how to ship them home.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-            <Link href="/morocco-spice-guide" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
-              <Star className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Morocco Spice Guide
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Discover Morocco&apos;s aromatic spice markets. What to buy, how to spot quality, and fair prices for saffron and more.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-            <Link href="/morocco-tipping-guide" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
+            <Link href="/morocco-money-guide" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
               <HandCoins className="w-8 h-8 text-[var(--color-accent)] mb-3" />
               <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Morocco Tipping Guide
+                Morocco Money &amp; Currency Guide
               </h3>
               <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Who to tip, how much, and when in Morocco. Practical guide with exact amounts in MAD for every situation.
+                ATM locations, exchange rates, tipping customs, and how to handle cash across Morocco.
               </p>
               <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
                 Read more <ArrowRight className="w-3.5 h-3.5" />
               </span>
+            </Link>
+            <Link href="/morocco-first-time" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
+              <Compass className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
+                First Time in Morocco
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] mb-3">
+                Everything first-time visitors need to know — visas, safety, cultural norms, and top destinations.
+              </p>
+              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
+                Read more <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA Section ── */}
+      <section className="py-16 md:py-20 bg-gradient-to-br from-[#3D1E0F] via-[#5C2E1A] to-[#1a0f0a] text-white">
+        <div className="container-morocco text-center">
+          <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold mb-6">
+            Ready to Shop the Souks?
+          </h2>
+          <p className="text-lg text-white/90 max-w-2xl mx-auto mb-8">
+            Bookmark this guide on your phone. Pull up the price table before entering any souk.
+            Practice &quot;B-shhal?&quot; and &quot;Ghali bzaf&quot; — and enjoy the art of the deal.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link
+              href="/marrakech"
+              className="bg-white text-[var(--color-accent)] px-6 py-3 rounded-lg font-bold hover:bg-white/90 transition-colors flex items-center gap-2"
+            >
+              <Globe className="w-4 h-4" /> Explore Marrakech
+            </Link>
+            <Link
+              href="/fes"
+              className="border-2 border-white text-white px-6 py-3 rounded-lg font-bold hover:bg-white/10 transition-colors flex items-center gap-2"
+            >
+              <MapPin className="w-4 h-4" /> Explore Fes
             </Link>
           </div>
         </div>

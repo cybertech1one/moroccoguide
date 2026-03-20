@@ -399,6 +399,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-art-galleries',
     '/morocco-festivals-calendar',
     '/morocco-wildlife-nature',
+    '/morocco-crafts-artisans',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

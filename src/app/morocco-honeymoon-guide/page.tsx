@@ -7,16 +7,13 @@ import {
   Star,
   Heart,
   Clock,
-  Info,
   ArrowRight,
   Sparkles,
   ShieldCheck,
   DollarSign,
   CheckCircle,
-  Users,
   Gem,
   Building,
-  Award,
   BookOpen,
   Crown,
   Camera,
@@ -29,6 +26,7 @@ import {
   Plane,
   Calendar,
   Sunset,
+  Luggage,
 } from 'lucide-react';
 
 /* ═══════════════════════════════════════════════════════════════
@@ -42,46 +40,50 @@ const BASE_URL = 'https://citytoursmorocco.com';
    ═══════════════════════════════════════════════════════════════ */
 
 export const metadata: Metadata = {
-  title: 'Morocco Honeymoon Guide 2026 | Best Romantic Destinations, Luxury Riads & Couples Activities',
+  title: 'Morocco Honeymoon Guide 2026 | Romantic Destinations & Luxury Escapes',
   description:
-    'Plan the perfect honeymoon in Morocco. Discover the most romantic destinations from Marrakech to the Sahara, luxury riads like Royal Mansour and La Mamounia, couples activities, a 7-day itinerary, budget breakdown, and insider tips for an unforgettable romantic trip.',
+    'Plan a Morocco honeymoon with this complete guide. Top romantic destinations including Marrakech, the Sahara, and Essaouira. Luxury riads, couples experiences, 7/10/14-day itineraries, and budget breakdowns from mid-range to ultra-luxury.',
   keywords: [
     'morocco honeymoon',
+    'romantic morocco trip',
+    'honeymoon marrakech',
+    'couples travel morocco',
     'honeymoon in morocco',
     'morocco honeymoon resorts',
-    'romantic morocco',
-    'best place in morocco for couples',
-    'honeymoon morocco',
-    'morocco couples trip',
-    'romantic riads morocco',
-    'morocco honeymoon itinerary',
     'luxury honeymoon morocco',
     'sahara desert honeymoon',
-    'marrakech honeymoon',
     'morocco romantic getaway',
-    'couples activities morocco',
-    'morocco honeymoon budget',
-    'best time for morocco honeymoon',
+    'best riads for couples morocco',
+    'morocco honeymoon itinerary',
+    'la mamounia honeymoon',
+    'royal mansour couples',
+    'kasbah tamadot honeymoon',
+    'morocco honeymoon cost',
+    'morocco honeymoon packing list',
+    'best time honeymoon morocco',
+    'chefchaouen couples trip',
+    'essaouira romantic escape',
+    'atlas mountains honeymoon',
   ],
   openGraph: {
-    title: 'Morocco Honeymoon Guide 2026 | Romantic Destinations & Luxury Riads',
+    title: 'Morocco Honeymoon Guide 2026 | Romantic Destinations & Luxury Escapes',
     description:
-      'Your complete guide to a romantic honeymoon in Morocco. Top destinations, luxury riads, couples activities, 7-day itinerary, and budget planning tips.',
+      'Complete Morocco honeymoon planning guide. Luxury riads, desert camps, romantic experiences, sample itineraries, and budgets from mid-range to ultra-luxury.',
     url: `${BASE_URL}/morocco-honeymoon-guide`,
     images: [
       {
         url: `${BASE_URL}/images/hero-honeymoon.webp`,
         width: 1200,
         height: 630,
-        alt: 'Romantic Moroccan riad courtyard with rose petals, lanterns, and candlelit dinner setting',
+        alt: 'Romantic rooftop dinner setup at a Marrakech riad with candles, rose petals, and Atlas Mountain views at sunset',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Morocco Honeymoon Guide 2026 | Romantic Destinations & Luxury Riads',
+    title: 'Morocco Honeymoon Guide 2026 | Romantic Destinations & Luxury Escapes',
     description:
-      'Plan an unforgettable honeymoon in Morocco. Luxury riads, Sahara sunsets, private cooking classes, and more. Complete guide with itinerary and budget.',
+      'Luxury riads, Sahara desert camps, couples hammams, and private riad dinners. Complete honeymoon planning guide with 7/10/14-day itineraries.',
     images: [`${BASE_URL}/images/hero-honeymoon.webp`],
   },
   alternates: { canonical: `${BASE_URL}/morocco-honeymoon-guide` },
@@ -91,13 +93,13 @@ export const metadata: Metadata = {
    JSON-LD STRUCTURED DATA
    ═══════════════════════════════════════════════════════════════ */
 
-const jsonLd = {
+const jsonLdTravel = {
   '@context': 'https://schema.org',
   '@type': 'TravelGuide',
   '@id': `${BASE_URL}/morocco-honeymoon-guide`,
-  name: 'Morocco Honeymoon Guide 2026 | Best Romantic Destinations, Luxury Riads & Couples Activities',
+  name: 'Morocco Honeymoon Guide 2026 | Romantic Destinations & Luxury Escapes',
   description:
-    'Complete guide to planning the perfect honeymoon in Morocco. Romantic destinations, luxury riads, couples activities, 7-day itinerary, and budget breakdown.',
+    'Complete guide to planning a romantic honeymoon in Morocco. Covers top destinations, luxury accommodations, couples experiences, sample itineraries, and detailed budget breakdowns.',
   url: `${BASE_URL}/morocco-honeymoon-guide`,
   image: `${BASE_URL}/images/hero-honeymoon.webp`,
   author: { '@type': 'Organization', name: 'CityGuide Morocco', url: BASE_URL },
@@ -116,455 +118,502 @@ const jsonLd = {
   },
 };
 
-const faqJsonLd = {
+const jsonLdFaq = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Is Morocco a good honeymoon destination?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Morocco is an exceptional honeymoon destination offering a unique blend of romance, luxury, culture, and adventure. From candlelit dinners in ancient riads to sunset camel rides across the Sahara, Morocco provides unforgettable experiences at a fraction of the cost of European or Caribbean alternatives.',
-      },
+      name: 'How much does a Morocco honeymoon cost?',
+      acceptedAnswer: { '@type': 'Answer', text: 'A mid-range Morocco honeymoon runs from 15,000-25,000 MAD per couple for 7 days, including boutique riad stays and guided excursions. Luxury honeymooners should budget from 50,000-120,000 MAD for 10 days at five-star properties like La Mamounia or Royal Mansour, with private experiences and internal flights.' },
     },
     {
       '@type': 'Question',
-      name: 'What is the best time to visit Morocco for a honeymoon?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The best months for a honeymoon in Morocco are March-May and September-November. Spring offers blooming gardens and mild temperatures (20-25 C), while autumn brings warm days and cool evenings. Avoid July-August when inland temperatures can exceed 40 C.',
-      },
+      name: 'What is the best time of year for a Morocco honeymoon?',
+      acceptedAnswer: { '@type': 'Answer', text: 'March through May and September through November offer the most comfortable weather. Spring brings wildflowers in the Atlas Mountains and pleasant 22-28 C temperatures. Autumn has warm days, cool nights, and fewer crowds than summer. Avoid July-August if you dislike intense heat (40 C+ in Marrakech).' },
     },
     {
       '@type': 'Question',
-      name: 'How much does a honeymoon in Morocco cost?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A luxury honeymoon in Morocco typically costs from 25,000-50,000 MAD per person for 7 days, including flights, luxury riad accommodation, private tours, and fine dining. Budget-conscious couples can enjoy a beautiful trip from 12,000-20,000 MAD per person.',
-      },
+      name: 'Is Morocco safe for honeymooners?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Morocco is one of the safest countries in North Africa for tourists. Petty crime like pickpocketing exists in crowded medinas, but violent crime against tourists is rare. Couples attract less attention from touts than solo travelers. Stick to well-lit areas after dark and use registered guides for desert excursions.' },
     },
     {
       '@type': 'Question',
-      name: 'What are the most romantic places in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The most romantic places in Morocco include Marrakech (luxury riads and rooftop dining), the Sahara Desert (private glamping under the stars), Essaouira (coastal charm and sunset walks), Chefchaouen (blue-painted streets), and Fes (ancient medina and palace hotels).',
-      },
+      name: 'Can couples share a room in Morocco?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Married couples face no issues at any hotel or riad. Unmarried couples are officially required to show a marriage certificate at Moroccan hotels, but international tourist hotels and riads rarely enforce this. Book through international platforms, and bring a copy of your marriage certificate if you have one.' },
     },
     {
       '@type': 'Question',
-      name: 'What couples activities are available in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Popular couples activities include private cooking classes, hammam spa experiences for two, sunset camel rides in the Sahara, hot air balloon rides over Marrakech, private rooftop dinners, Atlas Mountain trekking, and shopping together in the vibrant souks.',
-      },
+      name: 'How many days do you need for a Morocco honeymoon?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Seven days covers the essentials: Marrakech, the Atlas Mountains, and the Sahara or Essaouira. Ten days adds Fes and a second coastal city. Two weeks lets you explore at a relaxed pace, adding Chefchaouen or Ouarzazate without rushing.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What should couples pack for a Morocco honeymoon?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Modest but stylish clothing works best. Women should pack scarves for mosque visits and looser-fitting outfits for the medina. Bring layers for cool desert nights (temperatures drop to 5 C in winter) and sturdy sandals for uneven medina streets. Sunscreen SPF 50 and a good camera are essentials.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I need a visa for Morocco?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Citizens of the US, UK, EU, Canada, Australia, and many other countries get visa-free entry for 90 days. Your passport must be valid for at least six months from your arrival date. Check the Moroccan consulate website for your specific nationality before booking.' },
     },
   ],
 };
 
 /* ═══════════════════════════════════════════════════════════════
-   DATA: ROMANTIC DESTINATIONS
+   DATA: HONEYMOON DESTINATIONS
    ═══════════════════════════════════════════════════════════════ */
 
-const romanticDestinations = [
+const honeymoonDestinations = [
   {
     name: 'Marrakech',
     icon: Crown,
-    image: '/images/hero-marrakech-koutoubia.webp',
     tagline: 'The Red City of Romance',
     description:
-      'Marrakech is the ultimate honeymoon base. Centuries-old riads with plunge pools, rooftop restaurants overlooking the Atlas Mountains, world-class spas, and the intoxicating energy of Jemaa el-Fnaa square. Every corner is designed for romance.',
-    highlights: ['Private riad suites with plunge pools', 'Rooftop dining under the stars', 'World-class hammam experiences', 'Hot air balloon sunrise flights'],
+      'Private riad courtyards with plunge pools, rooftop dinners above the medina, and some of Africa\'s finest luxury hotels. Marrakech delivers the sensory overload that makes a honeymoon unforgettable: spice-scented souks, golden sunsets over the Koutoubia minaret, and candlelit hammam sessions for two.',
+    highlights: ['Rooftop dining with Atlas views', 'Couples hammam at luxury spas', 'Majorelle Garden morning walks', 'Hot air balloon at sunrise'],
+    bestFor: 'Luxury & culture',
   },
   {
-    name: 'Sahara Desert',
-    icon: Sparkles,
-    image: '/images/art-sahara-golden-hour.webp',
-    tagline: 'Starlit Nights in the Dunes',
+    name: 'Sahara Desert (Merzouga)',
+    icon: Sunset,
+    tagline: 'Starlight & Sand Dunes',
     description:
-      'Nothing compares to spending a night together under a canopy of stars in the Sahara. Private luxury desert camps offer king-size beds in elegant tents, candlelit dinners on the dunes, and sunrise views that will take your breath away.',
-    highlights: ['Private luxury desert camps', 'Sunset camel rides for two', 'Stargazing in absolute silence', 'Candlelit dinner on the dunes'],
+      'A night in a luxury desert camp at Erg Chebbi ranks among the most romantic experiences on Earth. Ride camels into the dunes at sunset, dine under a Saharan sky with zero light pollution, and wake to silence broken only by birdsong. Luxury camps offer private tented suites with en-suite bathrooms and heated plunge pools.',
+    highlights: ['Sunset camel trek for two', 'Private luxury tented suite', 'Stargazing with no light pollution', 'Berber music around the fire'],
+    bestFor: 'Once-in-a-lifetime romance',
   },
   {
     name: 'Essaouira',
     icon: Compass,
-    image: '/images/hero-essaouira-ramparts.webp',
-    tagline: 'Coastal Charm and Ocean Breezes',
+    tagline: 'Atlantic Coast Bohemia',
     description:
-      'This laid-back coastal town offers a completely different pace of romance. Walk hand-in-hand along the ramparts at sunset, enjoy fresh seafood by the harbor, explore the art galleries, and let the Atlantic breeze set the mood for a quieter kind of love.',
-    highlights: ['Sunset walks along the ramparts', 'Fresh seafood dining by the port', 'Boutique oceanfront riads', 'Windsurfing and beach horseback riding'],
-  },
-  {
-    name: 'Chefchaouen',
-    icon: Camera,
-    image: '/images/art-chefchaouen-blue.webp',
-    tagline: 'The Blue Pearl',
-    description:
-      'The most photogenic town in Morocco is also one of its most romantic. Wander through blue-painted streets, sip mint tea on a hidden terrace, and hike to the Spanish Mosque for panoramic views at golden hour. Chefchaouen is pure magic for couples.',
-    highlights: ['Endlessly photogenic blue streets', 'Quiet mountain atmosphere', 'Hiking trails with panoramic views', 'Artisan workshops and boutique shopping'],
+      'Wind-swept ramparts, fresh seafood grilled at the port, and a laid-back medina with none of Marrakech\'s intensity. Essaouira is perfect for couples who want long walks on empty beaches, sunset drinks on a riad terrace, and an unhurried pace. The town\'s art galleries and live Gnaoua music add creative energy.',
+    highlights: ['Beach walks at Diabat', 'Sunset on the ramparts', 'Fresh oysters at the port', 'Argan oil spa treatments'],
+    bestFor: 'Relaxed coastal escape',
   },
   {
     name: 'Fes',
     icon: Building,
-    image: '/images/hero-fes-medina.webp',
-    tagline: 'Ancient Grandeur and Hidden Palaces',
+    tagline: 'Medieval Grandeur & Intimacy',
     description:
-      'Fes offers a deeper, more cultural romantic experience. Stay in a restored palace-riad, explore the world\'s oldest university, lose yourselves in the labyrinthine medina, and dine in riads where sultans once entertained. Fes is romance with substance.',
-    highlights: ['Restored palace-riad accommodation', 'Private guided medina tours', 'Traditional Fassi cooking classes', 'Rooftop views of the ancient medina'],
+      'The world\'s largest car-free urban area hides some of Morocco\'s most beautiful riads. Fes offers an intimate, intellectual honeymoon: explore the 9th-century University of Al Quaraouiyine, get lost together in 9,000 alleyways, and learn to cook pastilla and couscous in a private cooking class. Riad Fes and Palais Faraj offer five-star seclusion.',
+    highlights: ['Private food tour of the medina', 'Couples cooking class', 'Al Quaraouiyine University visit', 'Rooftop views of the tanneries'],
+    bestFor: 'Culture & gastronomy',
   },
-];
+  {
+    name: 'Chefchaouen',
+    icon: Camera,
+    tagline: 'The Blue Pearl',
+    description:
+      'Every corner of this Rif Mountain town produces a photograph. The blue-washed walls create a dreamlike backdrop for honeymoon photos. Chefchaouen is small enough to explore in two days, with hiking trails in the surrounding Talassemtane National Park and local goat cheese tastings at nearby farms.',
+    highlights: ['Blue medina photography', 'Ras El Maa waterfall hike', 'Akchour waterfalls day trip', 'Local goat cheese tasting'],
+    bestFor: 'Photography & hiking',
+  },
+  {
+    name: 'Atlas Mountains',
+    icon: Mountain,
+    tagline: 'Mountain Lodge Romance',
+    description:
+      'Kasbah Tamadot, Richard Branson\'s Moroccan retreat, sits at 1,800 meters with panoramic views of the High Atlas. The mountains offer cool air, hiking through Berber villages, mule treks to hidden waterfalls, and evenings by the fire. From June to September, the mountains are an escape from the lowland heat.',
+    highlights: ['Kasbah Tamadot luxury retreat', 'Guided Berber village trek', 'Imlil Valley exploration', 'Mountain sunrise from the terrace'],
+    bestFor: 'Adventure & seclusion',
+  },
+  {
+    name: 'Ouarzazate & Dades Valley',
+    icon: Globe,
+    tagline: 'Cinematic Desert Landscapes',
+    description:
+      'The gateway to the Sahara passes through the Valley of a Thousand Kasbahs. Ait Benhaddou\'s UNESCO-listed earthen fortress appears in dozens of films. Stay in a converted kasbah hotel, drive the Dades Gorge switchbacks, and watch the sunset paint the desert pink. The Rose Valley blooms spectacularly each April.',
+    highlights: ['Ait Benhaddou at golden hour', 'Dades Gorge road trip', 'Rose Valley in April', 'Kasbah hotel overnight'],
+    bestFor: 'Road trip romance',
+  },
+] as const;
 
 /* ═══════════════════════════════════════════════════════════════
-   DATA: LUXURY RIADS FOR COUPLES
+   DATA: ROMANTIC HOTELS & RIADS
    ═══════════════════════════════════════════════════════════════ */
 
-const luxuryRiads = [
-  {
-    name: 'Royal Mansour',
-    city: 'Marrakech',
-    icon: Crown,
-    price: 'From 15,000 MAD per night',
-    description:
-      'The ultimate honeymoon splurge. Each accommodation is a private three-story riad with its own plunge pool, rooftop terrace, and personal butler. The spa is one of the finest in Africa, and the restaurants hold Michelin-level acclaim.',
-    highlights: ['Private riad with plunge pool', 'Personal butler service', 'Three on-site restaurants', 'Award-winning 2,500 sqm spa'],
-  },
+const romanticHotels = [
   {
     name: 'La Mamounia',
-    city: 'Marrakech',
-    icon: Award,
-    price: 'From 6,000 MAD per night',
-    description:
-      'A legendary palace hotel set within eight acres of gardens. Winston Churchill called it "the most lovely spot in the whole world." Suites feature Art Deco elegance, and the gardens are perfect for an evening stroll after dinner.',
-    highlights: ['Historic palace hotel since 1923', 'Eight acres of lush gardens', 'Three pools including heated indoor', 'World-renowned spa'],
+    location: 'Marrakech',
+    icon: Crown,
+    priceRange: 'From 8,000 MAD/night',
+    description: 'A palace hotel since 1929, surrounded by eight hectares of gardens designed by French landscape architect. The Churchill Suite, the three-Michelin-starred restaurant by Jean-Georges, and the 2,500 sqm spa make this the definitive Marrakech luxury stay.',
+    romantic: 'Private garden dining under century-old olive trees, couples spa rituals with gold-infused argan oil.',
+  },
+  {
+    name: 'Royal Mansour',
+    location: 'Marrakech',
+    icon: Gem,
+    priceRange: 'From 12,000 MAD/night',
+    description: 'Each accommodation is a private three-story riad with its own plunge pool, rooftop terrace, and dedicated butler. Built by 1,500 artisans over three years. The white marble spa features an indoor pool, snow room, and vitality pool.',
+    romantic: 'Total seclusion in your private riad, rooftop breakfast served by your butler at the hour you choose.',
   },
   {
     name: 'Kasbah Tamadot',
-    city: 'Atlas Mountains',
+    location: 'Atlas Mountains',
     icon: Mountain,
-    price: 'From 5,500 MAD per night',
-    description:
-      'Sir Richard Branson\'s mountain retreat sits at 1,200 meters in the High Atlas. Suites feature hand-carved Berber furniture and private terraces with mountain views. The infinity pool overlooking the valley is one of Morocco\'s most romantic spots.',
-    highlights: ['Infinity pool with Atlas views', 'Berber-inspired luxury suites', 'Mountain spa treatments', 'Private terrace dining'],
+    priceRange: 'From 5,500 MAD/night',
+    description: 'Sir Richard Branson\'s Moroccan mountain retreat sits in the foothills of the Atlas at 1,800 meters. 28 rooms and suites decorated with antiques collected from Branson\'s travels. Infinity pool overlooking the valley, Berber tents for outdoor dining, and guided mountain treks.',
+    romantic: 'Starlit dinner in a Berber tent, private picnic in the mountains arranged by the concierge.',
   },
   {
     name: 'Riad Fes',
-    city: 'Fes',
-    icon: Gem,
-    price: 'From 3,500 MAD per night',
-    description:
-      'A restored 300-year-old palace in the heart of the Fes medina. The rooftop restaurant serves Fassi cuisine with views across the old city, and the spa uses traditional techniques. An intimate, culturally rich alternative to Marrakech.',
-    highlights: ['300-year-old restored palace', 'Rooftop restaurant with medina views', 'Traditional hammam and spa', 'Cooking classes available'],
+    location: 'Fes',
+    icon: Star,
+    priceRange: 'From 3,500 MAD/night',
+    description: 'A Relais & Chateaux property in the heart of the Fes medina. Restored 17th-century palace with intricate zouak ceilings, a courtyard pool, and a rooftop bar overlooking the old city. The in-house restaurant serves refined Fassi cuisine.',
+    romantic: 'Rooftop cocktails at sunset, private Fassi cooking class in the riad kitchen.',
   },
   {
-    name: 'Heure Bleue Palais',
-    city: 'Essaouira',
-    icon: Star,
-    price: 'From 2,800 MAD per night',
-    description:
-      'A heritage palace hotel near Essaouira\'s ramparts. The rooftop cinema and heated pool offer unique romantic experiences. Rooms blend Art Deco style with Moroccan tradition, and the restaurant specializes in Atlantic seafood.',
-    highlights: ['Rooftop cinema and pool', 'Ocean-view suites', 'Heritage palace architecture', 'Seafood restaurant'],
+    name: 'La Sultana Essaouira',
+    location: 'Essaouira',
+    icon: Compass,
+    priceRange: 'From 2,800 MAD/night',
+    description: 'Built into the historic ramparts with direct ocean views. 28 rooms and suites, each uniquely designed. The spa uses locally sourced argan oil, and the restaurant serves Atlantic seafood caught that morning. The rooftop pool faces the ocean.',
+    romantic: 'Sunset from the rampart terrace, private seafood dinner by candlelight on the rooftop.',
   },
-];
+  {
+    name: 'Desert Luxury Camp (Erg Chebbi)',
+    location: 'Merzouga, Sahara',
+    icon: Sunset,
+    priceRange: 'From 4,000 MAD/night',
+    description: 'Top camps like Merzouga Luxury Desert Camp and Erg Chigaga Luxury Camp offer king-size beds, en-suite bathrooms with hot water, and private terraces facing the dunes. Some feature heated plunge pools. Dinner is served communally or privately under the stars.',
+    romantic: 'Private dune dinner with Berber musicians, sunrise camel ride to the highest dune.',
+  },
+] as const;
 
 /* ═══════════════════════════════════════════════════════════════
-   DATA: COUPLES ACTIVITIES
+   DATA: ROMANTIC EXPERIENCES
    ═══════════════════════════════════════════════════════════════ */
 
-const couplesActivities = [
+const romanticExperiences = [
   {
-    name: 'Private Cooking Class',
-    icon: Utensils,
-    price: 'From 800 MAD per couple',
-    duration: '3-4 hours',
-    description:
-      'Learn to prepare a traditional Moroccan feast together. Visit the souk to select fresh ingredients with your chef, then cook tagine, couscous, and pastilla in a private riad kitchen. End with a candlelit meal of your own creation.',
-  },
-  {
-    name: 'Hammam Spa for Two',
+    name: 'Couples Hammam & Spa',
     icon: Sparkles,
     price: 'From 1,200 MAD per couple',
-    duration: '2-3 hours',
-    description:
-      'Experience the ancient hammam ritual together in a private suite. A full treatment includes steam, black soap scrub, ghassoul clay mask, and argan oil massage. Many luxury riads offer in-house couples hammam experiences.',
+    duration: '90 min - 3 hours',
+    description: 'A private hammam session for two at a luxury spa. The ritual starts with black soap and eucalyptus steam, followed by a kessa glove exfoliation, ghassoul clay mask, and a full-body argan oil massage. Heritage Spa and Les Bains de Marrakech both offer excellent couples packages.',
   },
   {
-    name: 'Sunset Camel Ride',
-    icon: Sunset,
-    price: 'From 600 MAD per couple',
-    duration: '1.5-2 hours',
-    description:
-      'Ride camels across the golden dunes of Erg Chebbi or Erg Chigaga as the sun sets over the Sahara. Many tours include mint tea on the dunes and a stop to watch the stars appear. An iconic Moroccan honeymoon moment.',
-  },
-  {
-    name: 'Hot Air Balloon Over Marrakech',
-    icon: Globe,
-    price: 'From 2,000 MAD per person',
-    duration: '3-4 hours (including transfer)',
-    description:
-      'Float above the Atlas foothills and Marrakech palm groves at sunrise. The flight lasts about an hour and is followed by a traditional Berber breakfast in the countryside. Book a private basket for true intimacy.',
-  },
-  {
-    name: 'Private Rooftop Dinner',
-    icon: Star,
-    price: 'From 1,500 MAD per couple',
-    duration: '2-3 hours',
-    description:
-      'Many luxury riads arrange exclusive rooftop dinners for couples. Imagine a table set with lanterns, rose petals, and candles overlooking the medina at night, with a private chef serving a multi-course Moroccan tasting menu.',
-  },
-  {
-    name: 'Atlas Mountains Day Trek',
-    icon: Mountain,
-    price: 'From 1,000 MAD per couple',
-    duration: 'Full day',
-    description:
-      'Hike through Berber villages and walnut groves in the Ourika or Imlil valleys. A private guide leads you to waterfalls and panoramic viewpoints. Lunch is served in a local family home. Perfect for active couples.',
-  },
-];
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: 7-DAY HONEYMOON ITINERARY
-   ═══════════════════════════════════════════════════════════════ */
-
-const honeymoonItinerary = [
-  {
-    day: 1,
-    title: 'Arrive in Marrakech',
-    icon: Plane,
-    description:
-      'Arrive at Marrakech Menara Airport and transfer to your luxury riad. Spend the afternoon relaxing by the plunge pool. In the evening, enjoy a private rooftop dinner overlooking the Koutoubia Mosque as the call to prayer echoes across the medina.',
-  },
-  {
-    day: 2,
-    title: 'Explore Marrakech',
-    icon: Compass,
-    description:
-      'Morning hot air balloon ride over the palm groves, followed by a Berber breakfast. Afternoon exploring the Bahia Palace, Majorelle Garden, and souks with a private guide. Evening couples hammam at your riad or a luxury spa.',
-  },
-  {
-    day: 3,
-    title: 'Atlas Mountains Escape',
-    icon: Mountain,
-    description:
-      'Private transfer to Kasbah Tamadot or a mountain lodge. Hike to waterfalls in the Ourika Valley, then enjoy a late lunch at a riverside restaurant. Afternoon at the infinity pool with Atlas views. Dinner under the stars at the kasbah.',
-  },
-  {
-    day: 4,
-    title: 'Journey to the Sahara',
+    name: 'Hot Air Balloon at Sunrise',
     icon: Sun,
-    description:
-      'Scenic drive through the Tizi n\'Tichka pass, stopping at Ait Benhaddou. Continue through the Dades Valley with its dramatic rock formations. Arrive at your luxury desert camp by late afternoon. Watch the sunset from the dunes together.',
+    price: 'From 2,000 MAD per person',
+    duration: '4 hours (including transfer)',
+    description: 'Launch from the Palmeraie at dawn and float over the Haouz Plain as the Atlas Mountains glow pink. The flight lasts about 60 minutes, followed by a traditional Berber breakfast on landing. Book through Ciel d\'Afrique or Marrakech By Air for the most reliable operators.',
   },
   {
-    day: 5,
-    title: 'Sahara Magic',
-    icon: Sparkles,
-    description:
-      'Sunrise over the dunes from your tent. Morning camel ride into the deep desert. Afternoon relaxing at camp with sandboarding or simply being together in the silence. Private candlelit dinner on the dunes followed by stargazing.',
+    name: 'Sunset Camel Trek',
+    icon: Sunset,
+    price: 'From 800 MAD per couple',
+    duration: '2-3 hours',
+    description: 'Ride into Erg Chebbi or Erg Chigaga as the desert turns gold and purple. Most treks include mint tea at a Berber camp and the option to spend the night. The silence after sunset is absolute, broken only by wind across the sand.',
   },
   {
-    day: 6,
-    title: 'Essaouira Coast',
-    icon: Compass,
-    description:
-      'Fly or drive to Essaouira. Check into your oceanfront riad. Afternoon exploring the ramparts, medina, and art galleries. Watch the sunset from the Skala fortress. Evening seafood feast at a harbor-side restaurant.',
+    name: 'Private Riad Dinner',
+    icon: Utensils,
+    price: 'From 1,500 MAD per couple',
+    duration: 'Full evening',
+    description: 'Many riads arrange private rooftop or courtyard dinners with a personal chef. Expect five courses: briouats, harira, a tagine or tangia, couscous, and a dessert of pastilla with milk or orange blossom crème caramel. Rose petals, candles, and Gnaoua music set the scene.',
   },
   {
-    day: 7,
-    title: 'Final Day and Departure',
+    name: 'Cooking Class Together',
+    icon: BookOpen,
+    price: 'From 500 MAD per person',
+    duration: '4-5 hours',
+    description: 'Start at the souk selecting ingredients with your chef-guide, then return to a riad kitchen to prepare a full Moroccan meal. You will learn tagine technique, how to roll couscous by hand, and the spice blends that define Moroccan cuisine. La Maison Arabe in Marrakech runs the most established program.',
+  },
+] as const;
+
+/* ═══════════════════════════════════════════════════════════════
+   DATA: SAMPLE ITINERARIES
+   ═══════════════════════════════════════════════════════════════ */
+
+const itineraries = [
+  {
+    duration: '7 Days',
+    title: 'Classic Honeymoon',
     icon: Heart,
-    description:
-      'Morning walk along Essaouira beach. Final shopping for souvenirs in the medina: argan oil, leather goods, and Thuya wood crafts. Leisurely lunch before transfer to Marrakech or Essaouira airport for your departure.',
+    days: [
+      { day: '1-3', location: 'Marrakech', activities: 'Arrive, check into a luxury riad. Day 2: souks, Bahia Palace, and Jardin Majorelle. Day 3: couples hammam, rooftop dinner.' },
+      { day: '4', location: 'Atlas Mountains', activities: 'Private transfer to Kasbah Tamadot or Imlil lodge. Afternoon hike through Berber villages. Evening dinner on the terrace.' },
+      { day: '5-6', location: 'Sahara Desert', activities: 'Drive through Ouarzazate and Dades Gorge to Merzouga. Sunset camel trek, luxury camp overnight. Sunrise from the dunes.' },
+      { day: '7', location: 'Return to Marrakech', activities: 'Morning flight or scenic drive back. Final shopping in the souks. Farewell dinner at a Michelin-starred restaurant.' },
+    ],
   },
-];
+  {
+    duration: '10 Days',
+    title: 'Extended Romance',
+    icon: Gem,
+    days: [
+      { day: '1-3', location: 'Marrakech', activities: 'Luxury riad stay. Souks, palaces, hammam, hot air balloon at sunrise, cooking class, and private rooftop dinner.' },
+      { day: '4-5', location: 'Essaouira', activities: 'Transfer to the coast. Beach walks, seafood lunch at the port, sunset on the ramparts, argan oil spa treatment.' },
+      { day: '6', location: 'Atlas Mountains', activities: 'Return via Marrakech to the High Atlas. Afternoon hike, mountain lodge overnight.' },
+      { day: '7-8', location: 'Sahara Desert', activities: 'Drive to Merzouga via Ait Benhaddou. Luxury desert camp, camel trek, stargazing, private dune dinner.' },
+      { day: '9-10', location: 'Fes', activities: 'Internal flight to Fes. Medina exploration, private food tour, Riad Fes overnight. Depart from Fes airport.' },
+    ],
+  },
+  {
+    duration: '14 Days',
+    title: 'Ultimate Morocco Honeymoon',
+    icon: Crown,
+    days: [
+      { day: '1-3', location: 'Marrakech', activities: 'Full immersion: souks, palaces, hammam, cooking class, hot air balloon, Jardin Majorelle, evening at Djemaa el Fna.' },
+      { day: '4-5', location: 'Essaouira', activities: 'Coastal relaxation. Beach, seafood, art galleries, Gnaoua music, argan cooperative visit.' },
+      { day: '6-7', location: 'Atlas Mountains', activities: 'Kasbah Tamadot or boutique mountain lodge. Trek to Berber villages, waterfall hike, mountain picnic.' },
+      { day: '8-9', location: 'Ouarzazate & Dades', activities: 'Ait Benhaddou, Dades Gorge, Rose Valley. Kasbah hotel stay.' },
+      { day: '10-11', location: 'Sahara Desert', activities: 'Two nights at a luxury camp. Extended camel trek, sandboarding, private dinner, sunrise photography.' },
+      { day: '12-13', location: 'Fes', activities: 'Medina deep dive, tanneries, pottery workshop, Fassi cuisine, rooftop sunset.' },
+      { day: '14', location: 'Chefchaouen', activities: 'Day trip or overnight in the Blue Pearl. Photography walk, local cheese tasting. Depart from Fes.' },
+    ],
+  },
+] as const;
 
 /* ═══════════════════════════════════════════════════════════════
-   DATA: BUDGET BREAKDOWN
+   DATA: BUDGET TIERS
    ═══════════════════════════════════════════════════════════════ */
 
-const budgetBreakdown = [
-  { category: 'Luxury riad (7 nights)', budget: 'From 3,500 MAD', midRange: 'From 7,000 MAD', luxury: 'From 15,000 MAD', note: 'Per night for a double/suite' },
-  { category: 'Meals and dining', budget: 'From 300 MAD/day', midRange: 'From 600 MAD/day', luxury: 'From 1,500 MAD/day', note: 'Per couple, including drinks' },
-  { category: 'Activities (total)', budget: 'From 3,000 MAD', midRange: 'From 8,000 MAD', luxury: 'From 20,000 MAD', note: 'For the full trip' },
-  { category: 'Desert camp (1-2 nights)', budget: 'From 1,500 MAD', midRange: 'From 4,000 MAD', luxury: 'From 10,000 MAD', note: 'Per night per couple' },
-  { category: 'Private transfers', budget: 'From 2,000 MAD', midRange: 'From 5,000 MAD', luxury: 'From 12,000 MAD', note: 'Total for the trip' },
-  { category: 'Spa and hammam', budget: 'From 600 MAD', midRange: 'From 2,000 MAD', luxury: 'From 5,000 MAD', note: 'Per couple, 1-2 sessions' },
-];
+const budgetTiers = [
+  {
+    tier: 'Mid-Range Romantic',
+    icon: Heart,
+    perDay: 'From 2,000-3,500 MAD/day per couple',
+    total7: 'From 15,000-25,000 MAD (7 days)',
+    accommodation: 'Boutique riads with courtyards and pools (from 800-1,500 MAD/night)',
+    dining: 'Riad breakfast included, lunch at local restaurants (from 80-150 MAD), dinner at mid-range restaurants (from 200-400 MAD)',
+    experiences: 'Shared group tours, public hammam, self-guided medina walks',
+    transport: 'Shared transfers, CTM buses between cities',
+  },
+  {
+    tier: 'Luxury',
+    icon: Gem,
+    perDay: 'From 5,000-10,000 MAD/day per couple',
+    total7: 'From 35,000-70,000 MAD (7 days)',
+    accommodation: 'Five-star riads and hotels (from 2,500-5,000 MAD/night)',
+    dining: 'Hotel restaurants, private riad dinners, wine pairings',
+    experiences: 'Private guides, couples hammam, cooking classes, sunset camel trek',
+    transport: 'Private driver and air-conditioned 4x4 throughout',
+  },
+  {
+    tier: 'Ultra-Luxury',
+    icon: Crown,
+    perDay: 'From 12,000-20,000 MAD/day per couple',
+    total7: 'From 85,000-140,000 MAD (7 days)',
+    accommodation: 'La Mamounia, Royal Mansour, Kasbah Tamadot (from 5,500-15,000 MAD/night)',
+    dining: 'Michelin-starred restaurants, private chef experiences, champagne and canapés',
+    experiences: 'Hot air balloon, helicopter transfers, private desert camp, bespoke itineraries',
+    transport: 'Chauffeur-driven luxury vehicle, internal flights, helicopter options',
+  },
+] as const;
 
 /* ═══════════════════════════════════════════════════════════════
-   DATA: FAQ
+   DATA: PACKING TIPS
    ═══════════════════════════════════════════════════════════════ */
 
-const faqs = [
-  {
-    question: 'Is Morocco a good honeymoon destination?',
-    answer:
-      'Morocco is an exceptional honeymoon destination. It offers a unique blend of romance, luxury, culture, and adventure at a fraction of the cost of European or Caribbean alternatives. From candlelit dinners in ancient riads to sunset camel rides in the Sahara, the country provides once-in-a-lifetime experiences. The combination of exotic culture, world-class accommodation, and incredible food makes it ideal for couples.',
-  },
-  {
-    question: 'What is the best time to visit Morocco for a honeymoon?',
-    answer:
-      'The best months are March through May and September through November. Spring brings blooming gardens, mild temperatures of 20-25 degrees Celsius, and fewer crowds. Autumn offers warm days, cool evenings, and harvest season in the countryside. Avoid July and August when inland temperatures regularly exceed 40 degrees Celsius, though coastal Essaouira remains pleasant year-round.',
-  },
-  {
-    question: 'How much does a honeymoon in Morocco cost?',
-    answer:
-      'A luxury 7-day honeymoon typically costs from 25,000-50,000 MAD per person, including return flights, luxury riad accommodation, private tours, fine dining, and activities. Mid-range couples can enjoy a wonderful trip from 15,000-25,000 MAD per person. Budget-savvy honeymooners can manage from 10,000-15,000 MAD per person with boutique riads and shared tours. Seasonal pricing applies, with peak season (October-April) being 20-30% higher.',
-  },
-  {
-    question: 'Is Morocco safe for couples?',
-    answer:
-      'Morocco is generally very safe for couples. Tourist areas are well-policed, and Moroccans are famously hospitable. Modest dress is appreciated (covering shoulders and knees), and public displays of affection should be kept subtle, as Morocco is a conservative Muslim country. Stick to well-lit areas at night, use registered taxis, and you will have a wonderful time.',
-  },
-  {
-    question: 'What should we pack for a Morocco honeymoon?',
-    answer:
-      'Pack layers, as temperatures vary significantly between desert, mountains, and coast. Bring modest clothing for medina visits, comfortable walking shoes, a swimsuit for riad pools, a warm layer for desert nights, sunscreen, and a scarf for visiting mosques. For romantic evenings, bring one smart outfit for fine dining at palace restaurants.',
-  },
-];
+const packingTips = [
+  { item: 'Lightweight linen layers', icon: Sun, reason: 'Temperatures shift 15-20 C between day and night, especially in the desert and mountains. Linen breathes in heat and layers keep you warm after dark.' },
+  { item: 'Modest but elegant outfits', icon: Heart, reason: 'Morocco is conservative. Shoulders and knees covered in the medina. Pack one dressy outfit for fine dining at La Mamounia or Royal Mansour.' },
+  { item: 'Sturdy walking sandals', icon: Compass, reason: 'Medina streets are uneven stone and narrow. Avoid heels. Leather sandals or comfortable walking shoes handle both cobblestones and restaurant floors.' },
+  { item: 'Scarf or pashmina', icon: ShieldCheck, reason: 'Essential for mosque visits (women). Also protects from sand in the desert, wind in Essaouira, and doubles as a blanket on cool evenings.' },
+  { item: 'SPF 50 sunscreen & sunglasses', icon: Thermometer, reason: 'The Moroccan sun is intense year-round, especially in the Sahara. Reapply every two hours during outdoor activities.' },
+  { item: 'Camera with low-light capability', icon: Camera, reason: 'Medina interiors, candlelit dinners, and desert starscapes demand good low-light performance. A mirrorless camera or recent smartphone handles this well.' },
+] as const;
 
 /* ═══════════════════════════════════════════════════════════════
    PAGE COMPONENT
    ═══════════════════════════════════════════════════════════════ */
 
-export default function MoroccoHoneymoonGuidePage() {
+export default function MoroccoHoneymoonGuide() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
+      {/* JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdTravel) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }} />
 
       {/* ── Hero Section ── */}
-      <section className="relative py-20 md:py-28 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url(/images/hero-honeymoon.webp)' }}
+      <section className="relative min-h-[70vh] flex items-center justify-center hero-overlay">
+        <img
+          src="/images/hero-honeymoon.webp"
+          alt="Romantic rooftop terrace at a Marrakech riad with candles and rose petals at sunset"
+          className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 hero-overlay" />
-        <div className="container-morocco relative z-10">
-          <nav className="flex items-center gap-2 text-sm text-white/60 mb-8" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-white transition-colors">
-              <Home className="w-3.5 h-3.5" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/60" />
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+          {/* Breadcrumbs */}
+          <nav aria-label="Breadcrumb" className="flex items-center justify-center gap-1 text-white/80 text-sm mb-6">
+            <Link href="/" className="flex items-center gap-1 hover:text-white transition-colors">
+              <Home className="w-3.5 h-3.5" /> Home
             </Link>
             <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-white">Morocco Honeymoon Guide</span>
+            <span className="text-white font-medium">Morocco Honeymoon Guide</span>
           </nav>
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm text-white/90 text-sm mb-6">
-            <Heart className="w-4 h-4" />
-            Romance &amp; Couples
-          </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-display)] font-bold text-white mb-4">
-            Morocco Honeymoon Guide:
-            <br className="hidden md:block" /> Romantic Destinations &amp; Luxury Riads
+          <h1 className="text-4xl md:text-6xl font-[family-name:var(--font-display)] font-bold text-white mb-4 leading-tight">
+            Morocco Honeymoon Guide
           </h1>
-          <p className="text-xl text-white/80 max-w-2xl">
-            From candlelit riad dinners in Marrakech to starlit nights in the Sahara.
-            Your complete guide to planning an unforgettable honeymoon in Morocco.
+          <p className="text-lg md:text-xl text-white/90 font-[family-name:var(--font-heading)] max-w-2xl mx-auto mb-6">
+            Romantic destinations, luxury riads, desert camps, and detailed itineraries for couples planning an unforgettable trip to Morocco
           </p>
+          <div className="flex flex-wrap justify-center gap-4 text-sm text-white/80">
+            <span className="flex items-center gap-1"><MapPin className="w-4 h-4" /> 7 Destinations</span>
+            <span className="flex items-center gap-1"><Building className="w-4 h-4" /> 6 Luxury Hotels</span>
+            <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> 3 Itinerary Options</span>
+            <span className="flex items-center gap-1"><DollarSign className="w-4 h-4" /> Budget Breakdowns</span>
+          </div>
         </div>
       </section>
 
-      <div className="zellige-border" />
-
-      {/* ── Why Morocco for Your Honeymoon ── */}
+      {/* ── Why Morocco for a Honeymoon ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
-          <div className="prose-moroccan">
-            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
-              Why Choose Morocco for Your Honeymoon?
-            </h2>
-            <div className="space-y-4 text-lg text-[var(--text-secondary)] leading-relaxed">
-              <p>
-                Morocco is one of the world&apos;s most romantic destinations, offering a combination of
-                exotic culture, stunning landscapes, world-class luxury, and incredible value that few
-                countries can match. For the price of a standard European city break, you can stay in a
-                restored palace with a private plunge pool, dine on rooftops under the stars, and ride
-                camels across golden dunes at sunset.
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Heart className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Why Morocco for a Honeymoon
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Morocco ranks among the top honeymoon destinations worldwide, and the reasons go far beyond Instagram appeal.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="card-moroccan p-6">
+              <DollarSign className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                Extraordinary Value
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                A five-star riad in Marrakech costs a fraction of comparable luxury in Santorini or the Maldives. A candlelit
+                five-course dinner for two runs from 800 MAD at many top-tier riads. Your budget stretches two to three times
+                further here than in most European honeymoon destinations.
               </p>
-              <p>
-                What makes Morocco special for honeymooners is its diversity. In a single week, you can
-                explore the buzzing souks of Marrakech, hike through Berber villages in the Atlas Mountains,
-                sleep under the stars in the Sahara Desert, and unwind on the Atlantic coast in Essaouira.
-                Each destination has its own romantic character, and the transitions between them are part of
-                the adventure.
+            </div>
+            <div className="card-moroccan p-6">
+              <Sparkles className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                Built-in Romance
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                Moroccan riads are designed around private courtyards, fountains, and rooftop terraces. Every element — the rose
+                petals on the bed, the orange blossom water in the hammam, the candlelit zellige walls — creates intimacy without
+                effort. The architecture itself is romantic.
               </p>
-              <p>
-                The Moroccan tradition of hospitality, known as <em>terraha</em>, means that wherever you
-                go, you will be welcomed warmly. Riad owners go out of their way to arrange special touches
-                for honeymooners: rose petals on the bed, private dinners, and personalized itineraries.
-                Romance is woven into the fabric of Moroccan culture.
+            </div>
+            <div className="card-moroccan p-6">
+              <Globe className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                Dramatic Diversity
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                In a single trip, you move from medieval medinas to Atlantic beaches, snow-capped mountains to Saharan dunes. Few
+                countries pack this range of landscapes into such a compact geography. A 10-day honeymoon here covers terrain
+                that would require three separate trips elsewhere.
+              </p>
+            </div>
+            <div className="card-moroccan p-6">
+              <ShieldCheck className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                Privacy & Seclusion
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                Riad architecture — inward-facing homes with no windows on the street — guarantees privacy. Even in the busiest
+                medina, step through a riad door and you enter a silent courtyard. Luxury desert camps and mountain lodges offer
+                total isolation with full-service hospitality.
               </p>
             </div>
           </div>
-
-          {/* Quick Facts */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
-            {[
-              { label: 'Best Months', value: 'Mar-May, Sep-Nov', icon: Calendar },
-              { label: 'Budget (7 days)', value: 'From 12,000 MAD pp', icon: DollarSign },
-              { label: 'Top City', value: 'Marrakech', icon: MapPin },
-              { label: 'Flight Time', value: '3-4h from Europe', icon: Plane },
-            ].map((fact) => {
-              const FactIcon = fact.icon;
-              return (
-                <div key={fact.label} className="card-moroccan p-4 text-center">
-                  <FactIcon className="w-5 h-5 text-[var(--color-accent)] mx-auto mb-2" />
-                  <p className="text-xs text-[var(--text-muted)] mb-1">{fact.label}</p>
-                  <p className="text-sm font-semibold text-[var(--text-primary)]">{fact.value}</p>
-                </div>
-              );
-            })}
-          </div>
         </div>
       </section>
 
-      {/* ── Top Romantic Destinations ── */}
+      {/* ── Best Honeymoon Destinations ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <MapPin className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Top 5 Romantic Destinations
+            Best Honeymoon Destinations in Morocco
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Each Moroccan city offers a different flavor of romance. Here are the five best places in Morocco for couples.
+            Seven destinations, each offering a distinct flavor of romance. Most honeymooners combine two or three.
           </p>
 
-          <div className="space-y-8">
-            {romanticDestinations.map((dest) => {
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {honeymoonDestinations.map((dest) => {
               const DestIcon = dest.icon;
               return (
                 <div key={dest.name} className="card-moroccan overflow-hidden">
-                  <div className="grid grid-cols-1 lg:grid-cols-5 gap-0">
-                    <div className="relative h-64 lg:h-auto lg:col-span-2">
-                      <img
-                        src={dest.image}
-                        alt={`Romantic ${dest.name}, Morocco - perfect honeymoon destination`}
-                        className="w-full h-full object-cover"
-                        loading="lazy"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent lg:bg-gradient-to-r" />
-                      <div className="absolute bottom-4 left-4 lg:bottom-6 lg:left-6">
-                        <div className="flex items-center gap-2 text-white">
-                          <DestIcon className="w-5 h-5" />
-                          <h3 className="text-xl font-[family-name:var(--font-display)] font-bold">{dest.name}</h3>
-                        </div>
-                        <p className="text-sm text-white/80 italic">{dest.tagline}</p>
+                  <div className="p-6">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-10 h-10 rounded-full bg-[var(--surface-muted)] flex items-center justify-center">
+                        <DestIcon className="w-5 h-5 text-[var(--color-accent)]" />
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+                          {dest.name}
+                        </h3>
+                        <span className="text-xs text-[var(--color-gold)] font-medium">{dest.tagline}</span>
                       </div>
                     </div>
-                    <div className="p-6 lg:col-span-3">
-                      <p className="text-sm text-[var(--text-secondary)] mb-4">{dest.description}</p>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                        {dest.highlights.map((h, i) => (
-                          <div key={i} className="flex items-start gap-1.5 text-xs text-[var(--text-muted)]">
-                            <CheckCircle className="w-3.5 h-3.5 mt-0.5 shrink-0 text-[var(--color-gold)]" />
-                            {h}
-                          </div>
-                        ))}
+                    <p className="text-sm text-[var(--text-secondary)] mb-4">{dest.description}</p>
+                    <div className="space-y-2 mb-4">
+                      {dest.highlights.map((h) => (
+                        <div key={h} className="flex items-center gap-2 text-xs text-[var(--text-muted)]">
+                          <CheckCircle className="w-3.5 h-3.5 text-[var(--color-accent)] shrink-0" />
+                          <span>{h}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="flex items-center gap-1 text-xs font-medium text-[var(--color-accent)]">
+                      <Star className="w-3.5 h-3.5" />
+                      Best for: {dest.bestFor}
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Top Romantic Hotels & Riads ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Crown className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Top Romantic Hotels &amp; Riads
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Six properties that consistently earn top marks from honeymooning couples. Prices reflect seasonal variation; book
+            direct for honeymoon packages that often include spa credits and private dinners.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {romanticHotels.map((hotel) => {
+              const HotelIcon = hotel.icon;
+              return (
+                <div key={hotel.name} className="card-moroccan p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-[var(--surface-muted)] flex items-center justify-center shrink-0">
+                      <HotelIcon className="w-6 h-6 text-[var(--color-accent)]" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex items-center justify-between mb-1">
+                        <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+                          {hotel.name}
+                        </h3>
+                      </div>
+                      <div className="flex items-center gap-3 text-xs text-[var(--text-muted)] mb-3">
+                        <span className="flex items-center gap-1">
+                          <MapPin className="w-3 h-3 text-[var(--color-accent)]" /> {hotel.location}
+                        </span>
+                        <span className="flex items-center gap-1 text-[var(--color-gold)] font-semibold">
+                          <DollarSign className="w-3 h-3" /> {hotel.priceRange}
+                        </span>
+                      </div>
+                      <p className="text-sm text-[var(--text-secondary)] mb-3">{hotel.description}</p>
+                      <div className="bg-[var(--surface-muted)] rounded-lg p-3">
+                        <span className="text-xs font-[family-name:var(--font-heading)] font-bold text-[var(--color-accent)]">
+                          <Heart className="w-3 h-3 inline mr-1" />Romantic highlight:
+                        </span>
+                        <p className="text-xs text-[var(--text-secondary)] mt-1">{hotel.romantic}</p>
                       </div>
                     </div>
                   </div>
@@ -575,48 +624,85 @@ export default function MoroccoHoneymoonGuidePage() {
         </div>
       </section>
 
-      {/* ── Luxury Riads for Couples ── */}
+      {/* ── Romantic Experiences ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Sparkles className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Romantic Experiences for Couples
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Five experiences that transform a good trip into a great honeymoon. Book in advance during peak season (March-May, September-November).
+          </p>
+
+          <div className="space-y-6">
+            {romanticExperiences.map((exp) => {
+              const ExpIcon = exp.icon;
+              return (
+                <div key={exp.name} className="card-moroccan p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-[var(--surface-muted)] flex items-center justify-center shrink-0">
+                      <ExpIcon className="w-6 h-6 text-[var(--color-accent)]" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
+                        {exp.name}
+                      </h3>
+                      <div className="flex flex-wrap items-center gap-3 text-xs text-[var(--text-muted)] mb-3">
+                        <span className="flex items-center gap-1 text-[var(--color-gold)] font-semibold">
+                          <DollarSign className="w-3 h-3" /> {exp.price}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Clock className="w-3 h-3 text-[var(--color-accent)]" /> {exp.duration}
+                        </span>
+                      </div>
+                      <p className="text-sm text-[var(--text-secondary)]">{exp.description}</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Sample Itineraries ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Crown className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Luxury Riads &amp; Hotels for Honeymooners
+            <Plane className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Sample Honeymoon Itineraries
           </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-4">
-            Morocco&apos;s finest accommodations for couples, from royal palace hotels to intimate mountain retreats.
-          </p>
-          <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
-            <Info className="w-3.5 h-3.5 inline mr-1" />
-            Prices shown are starting rates. Seasonal pricing applies during peak months (October-April) and holidays, when rates may increase by 30-50%.
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Three tested routes from one week to two weeks. All can be customized with a private driver or self-driven rental.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {luxuryRiads.map((riad) => {
-              const RiadIcon = riad.icon;
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {itineraries.map((itin) => {
+              const ItinIcon = itin.icon;
               return (
-                <div key={riad.name} className="card-moroccan p-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                      <RiadIcon className="w-5 h-5 text-[var(--color-accent)]" />
+                <div key={itin.duration} className="card-moroccan p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-[var(--surface-muted)] flex items-center justify-center">
+                      <ItinIcon className="w-5 h-5 text-[var(--color-accent)]" />
                     </div>
                     <div>
                       <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                        {riad.name}
+                        {itin.duration}
                       </h3>
-                      <span className="text-xs text-[var(--text-muted)] flex items-center gap-1">
-                        <MapPin className="w-3 h-3" /> {riad.city}
-                      </span>
+                      <span className="text-xs text-[var(--color-gold)] font-medium">{itin.title}</span>
                     </div>
                   </div>
-                  <div className="inline-block px-2 py-0.5 text-xs font-medium rounded bg-[var(--color-accent)]/10 text-[var(--color-accent)] mb-3">
-                    {riad.price}
-                  </div>
-                  <p className="text-sm text-[var(--text-secondary)] mb-4">{riad.description}</p>
-                  <div className="space-y-1.5">
-                    {riad.highlights.map((h, i) => (
-                      <div key={i} className="flex items-start gap-1.5 text-xs text-[var(--text-muted)]">
-                        <CheckCircle className="w-3 h-3 mt-0.5 shrink-0 text-[var(--color-gold)]" />
-                        {h}
+                  <div className="space-y-4">
+                    {itin.days.map((d) => (
+                      <div key={d.day} className="border-l-2 border-[var(--color-accent)] pl-4">
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="text-xs font-bold text-[var(--color-accent)]">Day {d.day}</span>
+                          <span className="text-xs font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+                            {d.location}
+                          </span>
+                        </div>
+                        <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{d.activities}</p>
                       </div>
                     ))}
                   </div>
@@ -627,39 +713,55 @@ export default function MoroccoHoneymoonGuidePage() {
         </div>
       </section>
 
-      {/* ── Couples Activities ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+      {/* ── Budget Planning ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Heart className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Best Couples Activities in Morocco
+            <DollarSign className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Honeymoon Budget Planning
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Unforgettable shared experiences that will define your honeymoon memories.
+            All prices are per couple and reflect 2026 rates. Seasonal pricing can change, especially during Christmas/New Year and Easter.
+            Book at least three months ahead for luxury properties.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {couplesActivities.map((activity) => {
-              const ActivityIcon = activity.icon;
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {budgetTiers.map((tier) => {
+              const TierIcon = tier.icon;
               return (
-                <div key={activity.name} className="card-moroccan p-5">
-                  <div className="w-10 h-10 rounded-full bg-[var(--surface-muted)] flex items-center justify-center mb-3">
-                    <ActivityIcon className="w-5 h-5 text-[var(--color-accent)]" />
+                <div key={tier.tier} className="card-moroccan p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-[var(--surface-muted)] flex items-center justify-center">
+                      <TierIcon className="w-5 h-5 text-[var(--color-accent)]" />
+                    </div>
+                    <div>
+                      <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+                        {tier.tier}
+                      </h3>
+                      <span className="text-xs text-[var(--color-gold)] font-semibold">{tier.perDay}</span>
+                    </div>
                   </div>
-                  <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
-                    {activity.name}
-                  </h3>
-                  <div className="flex items-center gap-3 text-xs text-[var(--text-muted)] mb-3">
-                    <span className="flex items-center gap-1">
-                      <DollarSign className="w-3 h-3 text-[var(--color-accent)]" />
-                      {activity.price}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Clock className="w-3 h-3" />
-                      {activity.duration}
-                    </span>
+                  <div className="bg-[var(--surface-muted)] rounded-lg p-3 mb-4">
+                    <span className="text-sm font-bold text-[var(--color-accent)]">{tier.total7}</span>
                   </div>
-                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{activity.description}</p>
+                  <div className="space-y-3 text-xs text-[var(--text-secondary)]">
+                    <div>
+                      <span className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Accommodation:</span>
+                      <p className="mt-0.5">{tier.accommodation}</p>
+                    </div>
+                    <div>
+                      <span className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Dining:</span>
+                      <p className="mt-0.5">{tier.dining}</p>
+                    </div>
+                    <div>
+                      <span className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Experiences:</span>
+                      <p className="mt-0.5">{tier.experiences}</p>
+                    </div>
+                    <div>
+                      <span className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Transport:</span>
+                      <p className="mt-0.5">{tier.transport}</p>
+                    </div>
+                  </div>
                 </div>
               );
             })}
@@ -667,164 +769,61 @@ export default function MoroccoHoneymoonGuidePage() {
         </div>
       </section>
 
-      {/* ── 7-Day Honeymoon Itinerary ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Calendar className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            7-Day Morocco Honeymoon Itinerary
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            A carefully designed week that balances adventure, culture, relaxation, and romance across Morocco&apos;s most beautiful destinations.
-          </p>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="relative">
-              <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-[var(--color-accent)]/20 hidden md:block" />
-              <div className="space-y-6">
-                {honeymoonItinerary.map((day) => {
-                  const DayIcon = day.icon;
-                  return (
-                    <div key={day.day} className="relative flex gap-6">
-                      <div className="w-12 h-12 rounded-full bg-[var(--color-accent)] flex items-center justify-center shrink-0 z-10">
-                        <span className="text-white font-bold text-sm">{day.day}</span>
-                      </div>
-                      <div className="card-moroccan p-5 flex-1">
-                        <div className="flex items-center gap-2 mb-2">
-                          <DayIcon className="w-4 h-4 text-[var(--color-accent)]" />
-                          <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                            {day.title}
-                          </h3>
-                        </div>
-                        <p className="text-sm text-[var(--text-secondary)]">{day.description}</p>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Budget Breakdown ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <DollarSign className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Honeymoon Budget Breakdown
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-4">
-            What to expect to spend on a 7-day Morocco honeymoon at different comfort levels.
-          </p>
-          <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
-            <Info className="w-3.5 h-3.5 inline mr-1" />
-            All prices are starting estimates per couple. Seasonal pricing applies during peak season (October-April) and may increase costs by 20-30%.
-          </p>
-          <div className="max-w-5xl mx-auto">
-            <div className="card-moroccan overflow-hidden overflow-x-auto">
-              <div className="grid grid-cols-5 gap-0 bg-[var(--color-accent)] text-white text-sm font-medium min-w-[640px]">
-                <div className="p-3 px-4">Category</div>
-                <div className="p-3 px-4">Budget</div>
-                <div className="p-3 px-4">Mid-Range</div>
-                <div className="p-3 px-4">Luxury</div>
-                <div className="p-3 px-4">Note</div>
-              </div>
-              {budgetBreakdown.map((item, i) => (
-                <div
-                  key={item.category}
-                  className={`grid grid-cols-5 gap-0 text-sm min-w-[640px] ${i % 2 === 0 ? 'bg-white' : 'bg-[var(--surface-muted)]'}`}
-                >
-                  <div className="p-3 px-4 font-medium text-[var(--text-primary)]">{item.category}</div>
-                  <div className="p-3 px-4 text-[var(--text-secondary)]">{item.budget}</div>
-                  <div className="p-3 px-4 text-[var(--color-accent)] font-semibold">{item.midRange}</div>
-                  <div className="p-3 px-4 text-[var(--color-gold)] font-semibold">{item.luxury}</div>
-                  <div className="p-3 px-4 text-[var(--text-muted)]">{item.note}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Best Time to Visit ── */}
+      {/* ── Best Time for a Morocco Honeymoon ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Thermometer className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Best Time to Visit Morocco for a Honeymoon
+            <Calendar className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Best Time for a Morocco Honeymoon
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Timing your trip right can make all the difference for a romantic experience.
+            Morocco is a year-round destination, but certain months stand out for honeymooners.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="card-moroccan p-6">
-              <div className="flex items-center gap-2 mb-3">
-                <Sun className="w-5 h-5 text-[var(--color-gold)]" />
-                <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                  Spring (March - May)
-                </h3>
-              </div>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                The ideal season for a honeymoon. Temperatures range from 20-28 degrees Celsius. Gardens are in
-                full bloom, including the famous rose harvest in the Dades Valley (May). Lower tourist numbers
-                mean more intimate experiences at riads and restaurants.
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                <Sun className="w-4 h-4 inline mr-1 text-[var(--color-gold)]" />
+                Spring (March - May) — Peak Season
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                The best overall window. Temperatures range from 22-28 C in Marrakech and Fes. The Atlas Mountains burst
+                with wildflowers and almond blossoms. The Rose Valley near Ouarzazate blooms in April and hosts an annual
+                rose festival. Desert temperatures are comfortable (25-32 C) rather than brutal.
               </p>
-              <div className="flex items-center gap-1 text-xs text-[var(--color-gold)] font-semibold">
-                <Star className="w-3 h-3" /> Highly Recommended
-              </div>
             </div>
-
             <div className="card-moroccan p-6">
-              <div className="flex items-center gap-2 mb-3">
-                <Sun className="w-5 h-5 text-[var(--color-gold)]" />
-                <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                  Autumn (September - November)
-                </h3>
-              </div>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Equally wonderful for honeymooners. The summer heat fades but warm sunshine remains. The
-                light is golden, perfect for photography. Date harvest season adds a festive atmosphere in
-                southern Morocco. Comfortable for desert excursions.
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                <Sunset className="w-4 h-4 inline mr-1 text-[var(--color-gold)]" />
+                Autumn (September - November) — Best Value
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                Warm days (24-30 C), cool evenings, and thinner crowds than spring. Hotel rates drop 15-25% compared to
+                peak season. October is particularly good: the summer heat breaks, the ocean is still warm for swimming in
+                Essaouira, and the date harvest fills the markets with fresh fruit.
               </p>
-              <div className="flex items-center gap-1 text-xs text-[var(--color-gold)] font-semibold">
-                <Star className="w-3 h-3" /> Highly Recommended
-              </div>
             </div>
-
             <div className="card-moroccan p-6">
-              <div className="flex items-center gap-2 mb-3">
-                <Thermometer className="w-5 h-5 text-[var(--color-accent)]" />
-                <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                  Winter (December - February)
-                </h3>
-              </div>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Mild in the cities (15-20 degrees Celsius) but cold in the mountains and desert at night.
-                Fewer tourists and lower prices. Marrakech and Fes are pleasant for daytime exploration.
-                Snow-capped Atlas Mountains provide a dramatic backdrop. Pack warm layers for evenings.
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                <Thermometer className="w-4 h-4 inline mr-1 text-[var(--color-gold)]" />
+                Summer (June - August) — Coastal Focus
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                Interior cities hit 40 C+ and the Sahara is off-limits for comfort. If you visit in summer, focus on Essaouira
+                (22-26 C thanks to Atlantic breezes), the northern coast, or the Atlas Mountains. Luxury hotels in Marrakech drop
+                rates significantly, and you can score La Mamounia for 30% less than spring.
               </p>
-              <div className="flex items-center gap-1 text-xs text-[var(--text-muted)]">
-                <CheckCircle className="w-3 h-3" /> Good with Preparation
-              </div>
             </div>
-
             <div className="card-moroccan p-6">
-              <div className="flex items-center gap-2 mb-3">
-                <ShieldCheck className="w-5 h-5 text-[var(--text-muted)]" />
-                <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                  Summer (June - August)
-                </h3>
-              </div>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Inland temperatures often exceed 40 degrees Celsius, making Marrakech, Fes, and the desert
-                uncomfortable. However, Essaouira stays at a pleasant 22-26 degrees Celsius thanks to Atlantic
-                breezes. If you visit in summer, base your trip on the coast.
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                <Sparkles className="w-4 h-4 inline mr-1 text-[var(--color-gold)]" />
+                Winter (December - February) — Desert & South
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                Perfect for the Sahara (15-22 C days, cold nights) and southern Morocco. Marrakech stays mild (18-22 C days)
+                and sunny. The High Atlas gets snow, opening up the possibility of a ski-and-desert honeymoon combo. Christmas
+                and New Year bring peak prices at luxury properties.
               </p>
-              <div className="flex items-center gap-1 text-xs text-[var(--text-muted)]">
-                <Info className="w-3 h-3" /> Coast Only
-              </div>
             </div>
           </div>
         </div>
@@ -834,224 +833,200 @@ export default function MoroccoHoneymoonGuidePage() {
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <BookOpen className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            <Luggage className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
             Honeymoon Packing Tips
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            What to bring for a trip that spans medinas, mountains, deserts, and fine dining.
+            Pack smart for Morocco&apos;s mix of medina streets, desert sand, mountain trails, and fine dining.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { title: 'Modest Clothing', icon: Users, tip: 'Cover shoulders and knees in medinas and rural areas. Lightweight linen and cotton are ideal for the Moroccan climate.' },
-              { title: 'Comfortable Shoes', icon: Compass, tip: 'Cobblestone medina streets demand sturdy, comfortable walking shoes. Bring sandals for riads and flip-flops for the hammam.' },
-              { title: 'Smart Evening Outfit', icon: Gem, tip: 'One elegant outfit each for romantic dinners at palace restaurants. Moroccan evenings can be stylish affairs.' },
-              { title: 'Sun Protection', icon: Sun, tip: 'Strong Moroccan sun requires SPF 50+, sunglasses, and a wide-brimmed hat. Essential for desert and mountain excursions.' },
-              { title: 'Warm Desert Layer', icon: Thermometer, tip: 'Sahara nights drop to 5-10 degrees Celsius even in spring. Bring a warm jacket or fleece for your desert camp stay.' },
-              { title: 'Camera and Charger', icon: Camera, tip: 'Morocco is extraordinarily photogenic. Bring a portable charger for long days of exploring and photographing together.' },
-            ].map((item) => {
-              const PackIcon = item.icon;
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {packingTips.map((tip) => {
+              const TipIcon = tip.icon;
               return (
-                <div key={item.title} className="card-moroccan p-5">
-                  <div className="w-10 h-10 rounded-full bg-[var(--surface-muted)] flex items-center justify-center mb-3">
-                    <PackIcon className="w-5 h-5 text-[var(--color-accent)]" />
+                <div key={tip.item} className="card-moroccan p-5">
+                  <div className="flex items-start gap-3">
+                    <div className="w-9 h-9 rounded-full bg-[var(--surface-muted)] flex items-center justify-center shrink-0 mt-0.5">
+                      <TipIcon className="w-4.5 h-4.5 text-[var(--color-accent)]" />
+                    </div>
+                    <div>
+                      <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
+                        {tip.item}
+                      </h3>
+                      <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{tip.reason}</p>
+                    </div>
                   </div>
-                  <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{item.tip}</p>
                 </div>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Gallery Section ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
-            Romantic Morocco: A Visual Journey
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="relative h-72 rounded-xl overflow-hidden">
-              <img
-                src="/images/hero-romantic-dinner.webp"
-                alt="Romantic candlelit dinner on a Moroccan riad rooftop with lanterns and rose petals"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-              <p className="absolute bottom-4 left-4 text-white text-sm font-medium">Rooftop Dining in Marrakech</p>
-            </div>
-            <div className="relative h-72 rounded-xl overflow-hidden">
-              <img
-                src="/images/art-sahara-golden-hour.webp"
-                alt="Golden hour sunset over the Sahara Desert dunes, ideal for a romantic camel ride"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-              <p className="absolute bottom-4 left-4 text-white text-sm font-medium">Sahara Desert at Golden Hour</p>
-            </div>
-            <div className="relative h-72 rounded-xl overflow-hidden">
-              <img
-                src="/images/art-moroccan-riad-courtyard.webp"
-                alt="Beautiful Moroccan riad courtyard with fountain, zellige tiles, and lush greenery"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-              <p className="absolute bottom-4 left-4 text-white text-sm font-medium">Intimate Riad Courtyard</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Insider Tips ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Award className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Insider Tips for Honeymooners
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Practical advice from experienced travelers to make your Morocco honeymoon seamless.
-          </p>
-
-          <div className="space-y-4">
-            {[
-              {
-                tip: 'Tell your riad it is your honeymoon when booking. Most will arrange complimentary upgrades, rose petals, or a special welcome with Moroccan pastries and mint tea.',
-              },
-              {
-                tip: 'Book a private guide for the medinas. Navigating the labyrinthine streets alone can be stressful on your first day. A guide lets you relax and absorb the atmosphere together.',
-              },
-              {
-                tip: 'Carry small change (from 10-20 MAD notes) for tips. Tipping is customary for porters, guides, restaurant staff, and hammam attendants throughout Morocco.',
-              },
-              {
-                tip: 'Pre-arrange airport transfers through your riad. Arriving to a driver holding a sign with your name is far more romantic than negotiating a taxi at midnight.',
-              },
-              {
-                tip: 'Learn a few Arabic phrases. "Shukran" (thank you) and "Labas" (how are you) go a long way. Moroccans deeply appreciate the effort and will respond warmly.',
-              },
-            ].map((item, i) => (
-              <div key={i} className="flex items-start gap-3 card-moroccan p-4">
-                <div className="w-7 h-7 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0 mt-0.5">
-                  <CheckCircle className="w-4 h-4 text-[var(--color-accent)]" />
-                </div>
-                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{item.tip}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
 
       {/* ── FAQ Section ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+      <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <BookOpen className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
             Frequently Asked Questions
           </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Everything you need to know about planning a honeymoon in Morocco.
-          </p>
 
           <div className="space-y-6">
-            {faqs.map((faq) => (
-              <div key={faq.question} className="card-moroccan p-6">
-                <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                  {faq.question}
-                </h3>
-                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{faq.answer}</p>
-              </div>
-            ))}
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                How much does a Morocco honeymoon cost?
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                A mid-range honeymoon runs from 15,000-25,000 MAD per couple for 7 days. This covers boutique riads, guided day trips,
+                and restaurant meals. Luxury honeymooners should budget from 50,000-120,000 MAD for 10 days at five-star properties
+                with private drivers, couples spa sessions, and desert camp overnights. Flights from Europe start from 2,000 MAD
+                round-trip per person on budget carriers.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                What is the best time of year for a Morocco honeymoon?
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                March through May and September through November deliver the best combination of weather, availability, and price.
+                Spring averages 22-28 C in the cities and brings wildflowers to the Atlas. Autumn has fewer tourists and hotel
+                rates drop 15-25% from peak. Avoid July-August unless you plan to stay on the coast, as Marrakech and Fes
+                regularly exceed 40 C.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                Is Morocco safe for honeymooners?
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                Morocco is one of the safest North African countries for tourists. Violent crime against visitors is extremely rare.
+                Petty crime (pickpocketing, scams) exists in crowded medinas — keep valuables in your riad safe and use inside
+                pockets in the souks. Couples generally attract less attention from touts than solo travelers. Registered guides
+                for desert excursions eliminate navigation and safety concerns.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                Can couples share a room in Morocco?
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                Married couples face zero issues at any accommodation. Moroccan law technically requires proof of marriage for
+                shared rooms, but international tourist hotels, riads, and guesthouses booked through platforms like Booking.com
+                or Airbnb rarely ask. Carry a copy of your marriage certificate as a precaution. In practice, refusal is
+                extremely uncommon at tourist-oriented properties.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                How many days do you need for a Morocco honeymoon?
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                Seven days covers Marrakech, one excursion (Atlas Mountains or Sahara), and enough downtime to feel relaxed rather
+                than rushed. Ten days adds a second city (Fes or Essaouira) and a more comfortable pace. Two weeks opens up the
+                full country — Marrakech, Essaouira, Atlas, desert, Fes, and Chefchaouen — with rest days between transfers.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                What should couples pack for a Morocco honeymoon?
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                Layers are essential: lightweight linen or cotton for daytime heat, a warm layer for mountain and desert nights
+                where temperatures drop to 5-10 C. Women should bring a scarf for mosque visits and conservative settings.
+                Pack one dressy outfit for fine dining. Sturdy walking sandals beat heels on medina cobblestones. SPF 50
+                sunscreen, a good camera, and a power adapter (Morocco uses Type C and E plugs) round out the list.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                Do I need a visa for Morocco?
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                Citizens of the US, UK, EU, Canada, Australia, Japan, and many other countries enter visa-free for up to 90 days.
+                Your passport must have at least six months validity from the date you arrive. No vaccinations are required for
+                entry. Check your specific nationality at the Moroccan Ministry of Foreign Affairs website before booking,
+                as visa requirements can change.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* ── Related Guides ── */}
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
         <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
             Related Guides
           </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Continue planning your romantic Morocco trip with these in-depth guides.
-          </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                title: 'Romantic Getaways',
-                href: '/morocco-romantic-getaways',
-                description: 'Discover the most romantic experiences Morocco has to offer, from desert glamping to coastal retreats.',
-                icon: Heart,
-              },
-              {
-                title: 'Luxury Riads Guide',
-                href: '/morocco-luxury-riads',
-                description: 'A curated guide to the finest riads and boutique hotels across Morocco for discerning travelers.',
-                icon: Crown,
-              },
-              {
-                title: 'Spa & Hammam Guide',
-                href: '/morocco-spa-guide',
-                description: 'Everything you need to know about traditional hammams and luxury spas, with prices and etiquette tips.',
-                icon: Sparkles,
-              },
-              {
-                title: 'Desert Glamping',
-                href: '/morocco-desert-glamping',
-                description: 'The ultimate guide to luxury desert camps in the Sahara, from Erg Chebbi to Erg Chigaga.',
-                icon: Globe,
-              },
-            ].map((guide) => {
-              const GuideIcon = guide.icon;
-              return (
-                <Link key={guide.href} href={guide.href} className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
-                  <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center mb-3">
-                    <GuideIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                  </div>
-                  <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                    {guide.title}
-                  </h3>
-                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed mb-3">{guide.description}</p>
-                  <span className="inline-flex items-center gap-1 text-xs font-medium text-[var(--color-accent)]">
-                    Read guide <ArrowRight className="w-3 h-3" />
-                  </span>
-                </Link>
-              );
-            })}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Link href="/morocco-spa-guide" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
+              <Sparkles className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
+                Spa &amp; Hammam Guide
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] mb-3">
+                Complete guide to Morocco&apos;s best hammams and luxury spas. Prices, etiquette, and the top 20 experiences.
+              </p>
+              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
+                Read more <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
+            <Link href="/best-riads-morocco" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
+              <Building className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
+                Best Riads in Morocco
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] mb-3">
+                Top-rated riads across Marrakech, Fes, Essaouira, and beyond. Boutique to ultra-luxury picks.
+              </p>
+              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
+                Read more <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
+            <Link href="/luxury" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
+              <Crown className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
+                Luxury Morocco
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] mb-3">
+                The finest hotels, restaurants, and experiences for luxury travelers across Morocco.
+              </p>
+              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
+                Read more <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* ── Final CTA ── */}
-      <section className="py-16 md:py-20 bg-[var(--color-accent)]">
+      {/* ── CTA Section ── */}
+      <section className="py-16 md:py-20 bg-gradient-to-br from-[var(--color-accent)] to-[#7a3a1e]">
         <div className="container-morocco text-center">
-          <Heart className="w-10 h-10 text-white/80 mx-auto mb-4" />
+          <Heart className="w-12 h-12 text-white/80 mx-auto mb-4" />
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-white mb-4">
-            Ready to Plan Your Morocco Honeymoon?
+            Start Planning Your Morocco Honeymoon
           </h2>
-          <p className="text-lg text-white/80 max-w-2xl mx-auto mb-8">
-            Morocco offers a honeymoon unlike anywhere else: ancient romance, exotic luxury, and adventures
-            you will remember for a lifetime. Start exploring our destination guides to build your perfect trip.
+          <p className="text-white/90 max-w-2xl mx-auto mb-8 font-[family-name:var(--font-heading)]">
+            From the medinas of Marrakech to the silence of the Sahara, Morocco delivers romance at every price point.
+            Explore our destination guides to build your perfect itinerary.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/marrakech"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[var(--color-accent)] rounded-lg font-semibold hover:bg-white/90 transition-colors"
+              className="inline-flex items-center gap-2 bg-white text-[var(--color-accent)] px-6 py-3 rounded-lg font-[family-name:var(--font-heading)] font-bold hover:bg-white/90 transition-colors"
             >
               Explore Marrakech <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
-              href="/sahara-desert-morocco"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 text-white border border-white/30 rounded-lg font-semibold hover:bg-white/20 transition-colors"
+              href="/sahara-desert"
+              className="inline-flex items-center gap-2 bg-white/10 text-white border border-white/30 px-6 py-3 rounded-lg font-[family-name:var(--font-heading)] font-bold hover:bg-white/20 transition-colors"
             >
-              Discover the Sahara <ArrowRight className="w-4 h-4" />
+              Sahara Desert Guide <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>

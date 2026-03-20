@@ -2981,6 +2981,15 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['morocco wildlife', 'morocco national parks', 'birdwatching morocco', 'morocco nature tourism', 'barbary macaque ifrane'],
       priority: 9,
     },
+    {
+      title: 'Moroccan Crafts & Artisans Guide 2026',
+      description: 'Traditional Moroccan handicrafts guide — zellige tilework, leather goods, ceramics, metalwork, woodwork, textiles, and where to watch artisans at work.',
+      type: 'page',
+      url: '/morocco-crafts-artisans',
+      tags: ['crafts', 'artisans', 'handicrafts', 'zellige', 'leather'],
+      keywords: ['moroccan crafts', 'morocco artisans', 'moroccan handicrafts', 'traditional moroccan crafts', 'zellige tilework'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
