@@ -2819,6 +2819,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['morocco festivals', 'festivals in morocco', 'gnaoua festival', 'fez festival sacred music', 'rose festival morocco'],
       priority: 9,
     },
+    {
+      title: 'Morocco Road Trips Guide 2026',
+      description: 'Epic Morocco road trip routes — Atlantic Coast, Grand Atlas Circuit, Imperial Cities Loop, Desert Explorer, Rif Mountains, and Draa Valley with day-by-day plans.',
+      type: 'page',
+      url: '/morocco-road-trips',
+      tags: ['road trip', 'driving', 'self drive', 'routes', 'itinerary'],
+      keywords: ['morocco road trip', 'best road trips morocco', 'morocco self drive itinerary', 'morocco driving route'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Scams & Safety Guide 2026',
+      description: 'Honest guide to scams and safety in Morocco — common tourist scams, how to avoid them, emergency contacts, women traveler safety, and street-smart tips.',
+      type: 'page',
+      url: '/morocco-scams-safety',
+      tags: ['scams', 'safety', 'tips', 'security', 'tourist traps'],
+      keywords: ['morocco scams', 'scams in morocco', 'is morocco safe', 'morocco safety tips', 'tourist scams marrakech'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Backpacking Guide 2026',
+      description: 'Complete backpacking guide for Morocco — daily budgets under 300 MAD, best hostels, backpacker routes, cheap eats, transport, and solo safety tips.',
+      type: 'page',
+      url: '/morocco-backpacking',
+      tags: ['backpacking', 'budget', 'hostels', 'solo travel', 'cheap'],
+      keywords: ['backpacking morocco', 'morocco backpacking guide', 'backpacking morocco budget', 'morocco hostel guide'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

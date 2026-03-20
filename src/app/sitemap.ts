@@ -381,6 +381,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-romantic-getaway',
     '/morocco-trekking-guide',
     '/morocco-cultural-festivals',
+    '/morocco-road-trips',
+    '/morocco-scams-safety',
+    '/morocco-backpacking',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
