@@ -2486,6 +2486,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['what is a medina', 'medina meaning', 'medina morocco', 'moroccan medina', 'best medinas morocco'],
       priority: 9,
     },
+    {
+      title: 'Volubilis Guide — Morocco\'s Roman Ruins & UNESCO World Heritage Site',
+      description: 'Complete Volubilis guide — Roman ruins, mosaics, Triumphal Arch, getting there from Meknes/Fes, entrance fees, and Moulay Idriss Zerhoun.',
+      type: 'page',
+      url: '/volubilis-guide',
+      tags: ['volubilis', 'roman ruins', 'UNESCO', 'history', 'Meknes'],
+      keywords: ['volubilis', 'volubilis morocco', 'roman ruins morocco', 'volubilis ruins', 'roman cities morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Palaces Guide — Royal Palaces & Grand Architecture',
+      description: 'Complete guide to Moroccan palaces — Bahia Palace, El Badi Palace, Royal Palaces, palace architecture, palace-hotels, and visiting tips.',
+      type: 'page',
+      url: '/morocco-palaces-guide',
+      tags: ['palaces', 'royal palace', 'architecture', 'history', 'Bahia'],
+      keywords: ['morocco palaces', 'moroccan palaces', 'palaces in morocco', 'Bahia Palace', 'El Badi Palace'],
+      priority: 9,
+    },
+    {
+      title: 'Best 5-Star Hotels in Morocco — Luxury Resorts & Palace Hotels',
+      description: 'Top 5-star hotels across Morocco — Royal Mansour, La Mamounia, Four Seasons, by city with price ranges, amenities, and booking tips.',
+      type: 'page',
+      url: '/morocco-5-star-hotels',
+      tags: ['5 star', 'luxury hotels', 'resorts', 'palace hotels', 'premium'],
+      keywords: ['5 star hotels morocco', 'luxury hotel morocco', 'morocco 5 star resorts', 'five star hotels morocco', 'best luxury hotels morocco'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

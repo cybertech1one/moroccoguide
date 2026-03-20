@@ -344,6 +344,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-honeymoon-guide',
     '/morocco-driving-guide',
     '/morocco-medina-guide',
+    '/volubilis-guide',
+    '/morocco-palaces-guide',
+    '/morocco-5-star-hotels',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
