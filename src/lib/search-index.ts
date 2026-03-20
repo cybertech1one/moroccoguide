@@ -2954,6 +2954,15 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['morocco wedding', 'destination wedding morocco', 'marrakech wedding venue', 'moroccan wedding traditions', 'morocco wedding planner'],
       priority: 9,
     },
+    {
+      title: 'Morocco Art Galleries & Museums Guide 2026',
+      description: 'Best art galleries, contemporary art spaces, and museums in Morocco — Marrakech, Casablanca, Rabat, Essaouira, and Tangier art scene guide.',
+      type: 'page',
+      url: '/morocco-art-galleries',
+      tags: ['art', 'galleries', 'museums', 'contemporary', 'culture'],
+      keywords: ['morocco art galleries', 'moroccan contemporary art', 'marrakech art scene', 'morocco museums art', 'MACMA marrakech'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
