@@ -3,27 +3,26 @@ import Link from 'next/link';
 import {
   ChevronRight,
   Home,
+  MapPin,
+  Star,
+  Clock,
   Info,
   ArrowRight,
-  Globe,
-  CheckCircle,
-  Clock,
-  BookOpen,
-  Users,
-  Lightbulb,
   Sparkles,
-  MapPin,
-  Compass,
-  Heart,
+  ShieldCheck,
+  CheckCircle,
+  Globe,
   Landmark,
-  Shield,
+  BookOpen,
   Crown,
-  Sword,
-  Flag,
   Building,
-  Star,
+  Scroll,
+  Swords,
+  Shield,
+  Flag,
+  Mountain,
+  Users,
   Calendar,
-  MessageCircle,
 } from 'lucide-react';
 
 /* ═══════════════════════════════════════════════════════════════
@@ -37,48 +36,51 @@ const BASE_URL = 'https://citytoursmorocco.com';
    ═══════════════════════════════════════════════════════════════ */
 
 export const metadata: Metadata = {
-  title: 'History of Morocco Guide 2026 | Dynasties, Historical Sites & Timeline',
+  title: 'History of Morocco 2026 | Complete Timeline from Prehistoric Era to Modern Kingdom',
   description:
-    'Complete guide to the history of Morocco in 2026. Explore Moroccan dynasties from the Almoravids to the Alaouites, key historical sites like Volubilis and Chellah, the French protectorate era, independence, and a full timeline of major events.',
+    'Complete guide to the history of Morocco. From prehistoric cave paintings and Berber kingdoms to Roman Volubilis, Islamic dynasties, the French protectorate, independence in 1956, and the modern Alaouite monarchy under Mohamed VI.',
   keywords: [
-    'Morocco history',
-    'history of Morocco',
-    'Moroccan dynasties',
-    'Morocco historical sites',
-    'Almoravid dynasty',
-    'Almohad dynasty',
-    'Marinid dynasty',
-    'Saadian dynasty',
-    'Alaouite dynasty',
-    'Volubilis Morocco',
-    'Chellah Rabat',
-    'Ait Ben Haddou history',
-    'French protectorate Morocco',
-    'Morocco independence',
-    'Berber kingdoms Morocco',
-    'Roman Morocco',
-    'imperial cities Morocco',
+    'history of morocco',
+    'morocco history',
+    'moroccan dynasties',
+    'morocco timeline',
+    'ancient morocco',
+    'berber kingdoms',
+    'almoravid dynasty',
+    'almohad dynasty',
+    'marinid dynasty',
+    'saadian dynasty',
+    'alaouite dynasty',
+    'roman morocco volubilis',
+    'french protectorate morocco',
+    'morocco independence 1956',
+    'green march 1975',
+    'idrisid dynasty fes',
+    'morocco historical sites',
+    'moroccan history guide',
+    'mohamed vi morocco',
+    'islamic conquest morocco',
   ],
   openGraph: {
-    title: 'History of Morocco Guide 2026 | Dynasties, Historical Sites & Timeline',
+    title: 'History of Morocco 2026 | Complete Timeline from Prehistoric Era to Modern Kingdom',
     description:
-      'Explore 3,000 years of Moroccan history: prehistoric origins, Roman ruins, Berber dynasties, the Arab conquest, colonial era, and modern Morocco. Includes a timeline, key historical sites, and FAQs.',
+      'From Paleolithic cave paintings to the modern Alaouite monarchy. Explore 12,000 years of Moroccan history: Berber kingdoms, Roman ruins, Islamic dynasties, colonial era, and independence.',
     url: `${BASE_URL}/morocco-history-guide`,
     images: [
       {
-        url: `${BASE_URL}/images/hero-morocco.webp`,
+        url: `${BASE_URL}/images/hero-kasbahs.webp`,
         width: 1200,
         height: 630,
-        alt: 'Ancient Moroccan historical ruins with dramatic sky overlooking the landscape',
+        alt: 'Ancient kasbah fortress in Morocco representing centuries of Moroccan history and architecture',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'History of Morocco Guide 2026 | Dynasties, Sites & Timeline',
+    title: 'History of Morocco 2026 | Complete Timeline & Dynasties Guide',
     description:
-      '3,000 years of Moroccan history: prehistoric origins, Roman Volubilis, Berber dynasties, Arab conquest, colonial era, independence & modern Morocco. Complete guide with timeline & FAQ.',
-    images: [`${BASE_URL}/images/hero-morocco.webp`],
+      'From prehistoric Berber kingdoms and Roman Volubilis to Islamic golden ages, colonial resistance, and modern Morocco. The full story of 12,000 years of history.',
+    images: [`${BASE_URL}/images/hero-kasbahs.webp`],
   },
   alternates: { canonical: `${BASE_URL}/morocco-history-guide` },
 };
@@ -91,11 +93,11 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'TravelGuide',
   '@id': `${BASE_URL}/morocco-history-guide`,
-  name: 'History of Morocco Guide 2026 | Dynasties, Historical Sites & Timeline',
+  name: 'History of Morocco 2026 | Complete Timeline from Prehistoric Era to Modern Kingdom',
   description:
-    'Complete guide to the history of Morocco covering prehistoric origins, Phoenician and Roman settlements, Arab conquest, Berber dynasties (Almoravids, Almohads, Marinids, Saadians, Alaouites), French and Spanish protectorate, independence, modern Morocco, and key historical sites to visit.',
+    'Complete guide to the history of Morocco covering prehistoric cave paintings, Berber kingdoms, Roman Volubilis, Islamic dynasties, French protectorate, independence, and the modern Alaouite monarchy.',
   url: `${BASE_URL}/morocco-history-guide`,
-  image: `${BASE_URL}/images/hero-morocco.webp`,
+  image: `${BASE_URL}/images/hero-kasbahs.webp`,
   author: {
     '@type': 'Organization',
     name: 'CityGuide Morocco',
@@ -106,8 +108,8 @@ const jsonLd = {
     name: 'CityGuide Morocco',
     url: BASE_URL,
   },
-  datePublished: '2026-03-19',
-  dateModified: '2026-03-19',
+  datePublished: '2026-03-20',
+  dateModified: '2026-03-20',
   mainEntityOfPage: `${BASE_URL}/morocco-history-guide`,
   isPartOf: {
     '@type': 'WebSite',
@@ -136,23 +138,15 @@ const faqJsonLd = {
       name: 'How old is Morocco as a country?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Morocco has been inhabited for over 300,000 years, as evidenced by the oldest known Homo sapiens fossils discovered at Jebel Irhoud in 2017. As a unified kingdom, Morocco dates to 788 AD when Idris I founded the Idrisid dynasty in Volubilis. The modern Kingdom of Morocco gained independence from France and Spain on March 2, 1956, making it one of the oldest continuously ruled monarchies in the world.',
+        text: 'Morocco was founded as a unified state in 789 AD by Idris I, making it one of the oldest kingdoms in the world. However, human habitation in the region dates back over 300,000 years, with Jebel Irhoud yielding the oldest known Homo sapiens fossils. The modern Kingdom of Morocco gained independence from France on March 2, 1956.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What are the major Moroccan dynasties?',
+      name: 'What are the major dynasties of Morocco?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Morocco has been shaped by several major dynasties: the Idrisids (788-974 AD), who founded Fes; the Almoravids (1040-1147), Saharan Berbers who built Marrakech; the Almohads (1121-1269), who created an empire spanning North Africa and Spain; the Marinids (1244-1465), patrons of Fes architecture; the Wattasids (1472-1554); the Saadians (1549-1659), who built the El Badi Palace; and the Alaouites (1631-present), the current ruling dynasty under King Mohammed VI.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What was the French protectorate in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The French protectorate in Morocco lasted from 1912 to 1956, established by the Treaty of Fez. France controlled most of Morocco while Spain administered the northern Rif region and parts of the Sahara. The protectorate brought modern infrastructure including railways, roads, and the Ville Nouvelle (new city) districts, but also suppressed Moroccan sovereignty and culture. Morocco gained independence on March 2, 1956, under Sultan Mohammed V.',
+        text: 'Morocco has been ruled by seven major dynasties: the Idrisids (789-974), Almoravids (1040-1147), Almohads (1121-1269), Marinids (1244-1465), Wattasids (1472-1554), Saadians (1549-1659), and the Alaouites (1631-present). Each left distinct architectural, cultural, and political legacies across the country.',
       },
     },
     {
@@ -160,39 +154,31 @@ const faqJsonLd = {
       name: 'Can you visit Roman ruins in Morocco?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes, Morocco has several well-preserved Roman archaeological sites. The most famous is Volubilis (near Meknes), a UNESCO World Heritage Site with impressive mosaics, triumphal arches, and basilica ruins dating to the 2nd and 3rd centuries AD. Other sites include Lixus near Larache, Banasa near Kenitra, and Sala Colonia (the ancient part of Chellah in Rabat). Volubilis is the most accessible and best-preserved, taking about 2 hours to explore.',
+        text: 'Yes. Volubilis, a UNESCO World Heritage Site near Meknes, is the best-preserved Roman site in Morocco. Founded in the 3rd century BC, it features intact mosaic floors, a triumphal arch, basilica, and olive presses. Entry costs from 70 MAD. Other Roman sites include Lixus near Larache and Banasa near Kenitra.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Why are there four imperial cities in Morocco?',
+      name: 'What was the Green March of 1975?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Morocco has four imperial cities because different dynasties chose different capitals throughout history. Fes was founded by the Idrisids in 789 AD; Marrakech was established by the Almoravids in 1062; Meknes became the capital under the Alaouite Sultan Moulay Ismail in 1672; and Rabat has served as the capital since the French protectorate era in 1912. Each city reflects the architectural and cultural legacy of the dynasty that built it.',
+        text: 'On November 6, 1975, King Hassan II organized a peaceful march of 350,000 unarmed Moroccan civilians into the Spanish-controlled Western Sahara. This diplomatic maneuver pressured Spain to sign the Madrid Accords on November 14, 1975, transferring the territory to Morocco and Mauritania. The Green March is a major national holiday in Morocco.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What is the significance of Ait Ben Haddou?',
+      name: 'Who were the Berbers in ancient Morocco?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Ait Ben Haddou is a UNESCO World Heritage Site and a fortified ksar (village) along the former caravan route between the Sahara and Marrakech. Dating to the 17th century, its earthen clay architecture represents the traditional pre-Saharan building style. It has been used as a filming location for movies including Gladiator, Game of Thrones, and Lawrence of Arabia. A few families still live within the kasbah, and visitors can explore the narrow lanes and climb to the granary at the top.',
+        text: 'The Berbers, or Amazigh ("free people"), are the indigenous inhabitants of North Africa. They established kingdoms like Mauretania (not to be confused with modern Mauritania) as early as the 3rd century BC. Berber leaders like Jugurtha fought Rome, and Berber dynasties -- the Almoravids and Almohads -- built empires stretching from Spain to Senegal. Today, 40-50% of Moroccans identify as Amazigh.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Who were the Berbers and what is their role in Moroccan history?',
+      name: 'How long did France control Morocco?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The Berbers (Amazigh, meaning "free people") are the indigenous inhabitants of North Africa who have lived in Morocco for thousands of years. They played a central role in Moroccan history: the Almoravid and Almohad dynasties were Berber in origin, and Berber tribes resisted both Arab and European colonization. Today, Amazigh culture is officially recognized in the Moroccan constitution (2011), and Tamazight is an official language alongside Arabic. About 40% of Moroccans identify as Amazigh.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What happened during the Green March of 1975?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The Green March (La Marche Verte) of November 6, 1975, was a mass peaceful demonstration organized by King Hassan II in which 350,000 unarmed Moroccan civilians marched into the Spanish Sahara to assert Morocco claim to the territory. Spain had been the colonial ruler of the region, and the march led to the Madrid Accords, by which Spain ceded the territory. The Green March is celebrated annually as a national holiday in Morocco and remains one of the most significant events in modern Moroccan history.',
+        text: 'France established its protectorate over Morocco on March 30, 1912, through the Treaty of Fes. Spain controlled a northern zone and the Ifni enclave. The protectorate lasted 44 years until Morocco regained independence on March 2, 1956, under Sultan Mohammed V. The French colonial period transformed Morocco with modern infrastructure, but also provoked significant resistance movements.',
       },
     },
     {
@@ -200,211 +186,235 @@ const faqJsonLd = {
       name: 'What are the best historical sites to visit in Morocco?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The top historical sites in Morocco include Volubilis (Roman ruins near Meknes), Chellah (Roman and Marinid necropolis in Rabat), Ait Ben Haddou (fortified village near Ouarzazate), the Fes Medina (world largest car-free urban zone), the Saadian Tombs in Marrakech, the Koutoubia Mosque, Meknes imperial city walls, El Badi Palace ruins, Bab Mansour gate, the Hassan Tower in Rabat, and the Kasbah of the Udayas. UNESCO has designated nine World Heritage Sites in Morocco.',
+        text: 'Top historical sites include: Volubilis (Roman ruins near Meknes), Fes el-Bali (world\'s oldest functioning medina, founded 808 AD), Ait Benhaddou (UNESCO kasbah near Ouarzazate), the Koutoubia Mosque in Marrakech (1147), the Hassan Tower in Rabat (1195), Chellah necropolis in Rabat (Phoenician-Roman-Marinid layers), and the Saadian Tombs in Marrakech (1578-1603).',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What happened during Morocco\'s independence movement?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Morocco\'s independence movement intensified after France exiled Sultan Mohammed V to Madagascar in 1953. This backfired: Moroccans rallied around the exiled sultan, and armed resistance groups launched attacks. Widespread unrest, combined with international pressure and the Algerian War draining French resources, forced France to negotiate. Mohammed V returned triumphantly on November 16, 1955, and Morocco declared independence on March 2, 1956.',
       },
     },
   ],
 };
 
 /* ═══════════════════════════════════════════════════════════════
-   DATA: HISTORICAL TIMELINE
+   DATA: TIMELINE ERAS
    ═══════════════════════════════════════════════════════════════ */
 
-const historicalTimeline = [
+const timelineEras = [
   {
-    era: '300,000 BC',
-    title: 'Earliest Human Presence',
-    detail: 'The oldest known Homo sapiens fossils, discovered at Jebel Irhoud in 2017, reveal that early humans inhabited Morocco over 300,000 years ago. Stone tools and cave art found across the Atlas Mountains and Sahara region testify to continuous prehistoric habitation.',
-    icon: Globe,
+    era: 'Prehistoric Morocco',
+    period: '300,000 BC -- 1,000 BC',
+    icon: Mountain,
+    color: 'var(--color-accent)',
+    events: [
+      'Jebel Irhoud fossils (discovered 2017): oldest Homo sapiens remains on Earth, dated to approximately 300,000 years ago',
+      'Taforalt cave (eastern Morocco): evidence of the oldest known jewelry -- perforated Nassarius shells dating to 82,000 BC',
+      'Tazina rock engravings in the eastern Sahara and High Atlas depict elephants, rhinoceros, and hunting scenes from 10,000-6,000 BC',
+      'Neolithic revolution reached Morocco around 5,000 BC, bringing agriculture, pottery, and megalithic stone circles like Msoura near Asilah',
+    ],
   },
   {
-    era: '1100 BC',
-    title: 'Phoenician Trading Posts',
-    detail: 'Phoenician merchants from present-day Lebanon established coastal trading settlements at Lixus (near modern Larache), Tingis (Tangier), and Mogador (Essaouira). These outposts facilitated trade in gold, ivory, and purple dye extracted from murex shells.',
-    icon: Globe,
-  },
-  {
-    era: '40 AD',
-    title: 'Roman Province of Mauretania Tingitana',
-    detail: 'Rome annexed northern Morocco as the province of Mauretania Tingitana. The city of Volubilis flourished as the regional capital with grand temples, basilicas, and mosaic-adorned villas. Roman influence extended south to Sala Colonia (Rabat) and Lixus.',
-    icon: Landmark,
-  },
-  {
-    era: '682 AD',
-    title: 'Arab Conquest Begins',
-    detail: 'The Umayyad general Uqba ibn Nafi led the first Arab expedition into Morocco, introducing Islam to the Amazigh (Berber) population. Resistance was fierce, led by figures like Kahina and Kusaila, but by 710 AD most of Morocco had embraced Islam while retaining Amazigh customs.',
-    icon: Star,
-  },
-  {
-    era: '788 AD',
-    title: 'Idrisid Dynasty Founded',
-    detail: 'Idris I, a descendant of the Prophet Muhammad, fled the Abbasids and established Morocco first Islamic dynasty at Volubilis. His son Idris II founded Fes in 808 AD, which became a center of learning, commerce, and the home of the University of al-Qarawiyyin (founded 859 AD), the oldest continually operating university in the world.',
-    icon: Crown,
-  },
-  {
-    era: '1062',
-    title: 'Almoravid Empire',
-    detail: 'Yusuf ibn Tashfin founded Marrakech and built a vast Saharan Berber empire stretching from Senegal to Spain. The Almoravids unified Morocco, spread Islam across West Africa, and defended Muslim Spain (Al-Andalus) against the Christian Reconquista.',
+    era: 'Berber Kingdoms & Phoenician Contact',
+    period: '1,000 BC -- 40 AD',
     icon: Shield,
+    color: 'var(--color-gold)',
+    events: [
+      'Phoenicians established trading posts at Lixus (near Larache), Tingis (Tangier), and Mogador (Essaouira) around 1,000-800 BC',
+      'Carthage controlled coastal settlements after 500 BC, trading purple dye from murex shells -- the origin of the name "Mauretania" (land of the Mauri)',
+      'Kingdom of Mauretania emerged as a Berber client state of Rome under King Bocchus I (110 BC), who betrayed Jugurtha to the Romans in 105 BC',
+      'King Juba II (25 BC - 23 AD) made Volubilis a secondary capital. A scholar-king educated in Rome, he married Cleopatra Selene, daughter of Cleopatra VII and Mark Antony',
+      'Rome annexed Mauretania Tingitana in 40 AD after Emperor Caligula murdered the last Berber king, Ptolemy of Mauretania',
+    ],
   },
   {
-    era: '1147',
-    title: 'Almohad Caliphate',
-    detail: 'The Almohads, led by Ibn Tumart and Abd al-Mumin, overthrew the Almoravids and built the largest Berber empire in history, spanning from Libya to Spain. They constructed the Koutoubia Mosque in Marrakech, the Giralda in Seville, and the Hassan Tower in Rabat.',
-    icon: Building,
+    era: 'Roman Morocco',
+    period: '40 AD -- 429 AD',
+    icon: Landmark,
+    color: 'var(--color-accent)',
+    events: [
+      'Volubilis grew to 20,000 inhabitants with a forum, basilica, triumphal arch (217 AD), public baths, and olive oil production that supplied Rome',
+      'Roman control extended only to the Bou Regreg river (modern Rabat area); Berber tribes south of this line remained independent',
+      'Tingis (Tangier) served as the provincial capital of Mauretania Tingitana, connected to Spain by sea routes',
+      'Christianity spread through Roman Morocco: early bishops attended councils, and the Donatist heresy had strong roots in North Africa',
+      'Vandals swept through in 429 AD, ending Roman control. Berber tribes quickly reclaimed the interior territories Rome had administered',
+    ],
   },
   {
-    era: '1244',
-    title: 'Marinid Dynasty',
-    detail: 'The Marinid Berbers succeeded the Almohads and made Fes their capital. They are remembered as great patrons of art and architecture, building the Bou Inania and Attarine madrasas in Fes, and the Chellah necropolis in Rabat. Their reign saw Fes become one of the Islamic world great intellectual centers.',
+    era: 'Islamic Conquest & the Idrisids',
+    period: '682 -- 974 AD',
     icon: BookOpen,
+    color: 'var(--color-gold)',
+    events: [
+      'Uqba ibn Nafi led the first Arab raid into Morocco in 682 AD, reportedly riding his horse into the Atlantic and declaring he had reached the end of the land',
+      'Musa ibn Nusayr completed the conquest by 710 AD. His Berber lieutenant, Tariq ibn Ziyad, crossed to Spain in 711 with 7,000 troops, giving his name to Gibraltar (Jabal Tariq)',
+      'Berber revolts against Arab taxation and racial discrimination erupted in 740 AD, establishing independent Berber states across Morocco',
+      'Idris I, a descendant of the Prophet Muhammad fleeing Abbasid persecution, arrived in Volubilis in 788 AD. Local Awraba Berbers proclaimed him imam, founding Morocco\'s first Islamic dynasty',
+      'Idris II founded Fes in 808 AD, establishing it as the kingdom\'s capital. Refugees from Cordoba and Kairouan brought Andalusian and Tunisian culture, making Fes a center of learning',
+      'The Qarawiyyin Mosque, founded in 859 AD by Fatima al-Fihri, evolved into one of the world\'s oldest continuously operating universities',
+    ],
   },
   {
-    era: '1549',
-    title: 'Saadian Dynasty',
-    detail: 'The Saadians, an Arab dynasty from the Draa Valley, defeated the Wattasids and repelled Portuguese invaders at the Battle of the Three Kings (1578). Sultan Ahmad al-Mansur built the lavish El Badi Palace in Marrakech and expanded trade with England and the Ottoman Empire.',
+    era: 'The Almoravids',
+    period: '1040 -- 1147',
+    icon: Swords,
+    color: 'var(--color-accent)',
+    events: [
+      'Abdallah ibn Yasin, a Malikite scholar, united Sanhaja Berber tribes in a ribat (religious-military camp) in the western Sahara around 1040',
+      'Yusuf ibn Tashfin captured Aghmat in 1058, then founded Marrakech in 1062 as the Almoravid capital, building the first khettara irrigation system',
+      'By 1085, Almoravid territory stretched from Senegal to central Spain. Ibn Tashfin defeated Alfonso VI of Castile at the Battle of Sagrajas (1086)',
+      'Almoravids introduced Andalusian art and architecture to Morocco. Ali ibn Yusuf built the first walls of Marrakech and the Ben Youssef Mosque (1126)',
+      'The Almoravid era linked sub-Saharan gold routes to Mediterranean trade, making Morocco a crossroads of African and European commerce',
+    ],
+  },
+  {
+    era: 'The Almohad Golden Age',
+    period: '1121 -- 1269',
     icon: Crown,
+    color: 'var(--color-gold)',
+    events: [
+      'Ibn Tumart, a Masmuda Berber from the Anti-Atlas, launched a puritanical reform movement against the Almoravids around 1121, proclaiming himself the Mahdi',
+      'Abd al-Mu\'min conquered Marrakech in 1147, destroying Almoravid palaces. He unified the entire Maghreb from Libya to Morocco under one state for the first and only time',
+      'Yaqub al-Mansur (r. 1184-1199) built the Hassan Tower in Rabat (intended as the world\'s largest minaret at 86m, left unfinished at 44m), the Koutoubia Mosque in Marrakech, and the Giralda in Seville',
+      'The Almohad empire was the largest Berber state in history, controlling Morocco, Algeria, Tunisia, Libya, and Muslim Spain',
+      'Defeat at Las Navas de Tolosa (1212) against a Christian coalition began the Almohad decline. Provincial governors declared independence, fragmenting the empire',
+    ],
   },
   {
-    era: '1631',
-    title: 'Alaouite Dynasty Begins',
-    detail: 'The Alaouite dynasty, claiming descent from the Prophet Muhammad, seized power and continues to rule Morocco today under King Mohammed VI. Sultan Moulay Ismail (r. 1672-1727) made Meknes his grand capital, building massive walls, gates, and the Royal Stables.',
+    era: 'Marinids & Wattasids',
+    period: '1244 -- 1554',
+    icon: Building,
+    color: 'var(--color-accent)',
+    events: [
+      'The Zenata Berber Marinids captured Fes in 1248 and Marrakech in 1269, making Fes their capital and building Fes el-Jdid (New Fes) in 1276',
+      'Abu Inan Faris (r. 1348-1358) built the Bou Inania Madrasa in Fes, a masterpiece of Marinid carved stucco, zellij tilework, and cedarwood',
+      'Marinids established 14 madrasas in Fes alone, transforming the city into the intellectual capital of the western Islamic world',
+      'The Black Death devastated Morocco from 1348, killing an estimated one-third of the population and weakening Marinid authority',
+      'The Wattasids, Marinid viziers, seized power in 1472 but controlled only northern Morocco. Portugal and Spain captured coastal cities: Ceuta (1415), Tangier (1471), Agadir (1505)',
+    ],
+  },
+  {
+    era: 'The Saadian Dynasty',
+    period: '1549 -- 1659',
+    icon: Star,
+    color: 'var(--color-gold)',
+    events: [
+      'The Saadians, an Arab sharif family from the Draa Valley, rose to power by leading jihad against Portuguese occupation, recapturing Agadir in 1541',
+      'Ahmed al-Mansur (r. 1578-1603) funded his reign with ransom from the Battle of the Three Kings (1578), where Portuguese King Sebastian I died invading Morocco',
+      'Al-Mansur built the El Badi Palace in Marrakech (1578-1593) with Italian marble, Sudanese gold, and Irish crystal. He also constructed the Saadian Tombs',
+      'In 1591, al-Mansur sent 4,000 troops across the Sahara to conquer the Songhai Empire, seizing Timbuktu and controlling trans-Saharan gold and salt trade',
+      'After al-Mansur\'s death in 1603, his sons fought a civil war that split Morocco into rival statelets for decades',
+    ],
+  },
+  {
+    era: 'The Alaouite Dynasty',
+    period: '1631 -- Present',
     icon: Crown,
+    color: 'var(--color-accent)',
+    events: [
+      'Moulay Rashid (r. 1666-1672) unified Morocco and established the Alaouite dynasty, which claims descent from the Prophet Muhammad through Ali ibn Abi Talib',
+      'Moulay Ismail (r. 1672-1727) built Meknes as his capital with 40 km of walls, 20 gates, and vast royal stables. His army of 150,000 slave soldiers (the Abid al-Bukhari) maintained iron control',
+      'Mohammed III (r. 1757-1790) built Essaouira as a trade port, was the first head of state to recognize American independence (1777), and signed the Treaty of Marrakesh with the United States in 1786',
+      'The 19th century brought European pressure: France invaded Algeria (1830), Spain attacked Tetouan (1860), and the Conference of Madrid (1880) gave European powers economic privileges in Morocco',
+      'Sultan Abdelaziz\'s weak rule and European debt led to the Algeciras Conference (1906), where France and Spain divided Morocco into zones of influence',
+    ],
   },
   {
-    era: '1912',
-    title: 'French & Spanish Protectorate',
-    detail: 'The Treaty of Fez established the French protectorate over most of Morocco, while Spain controlled the Rif and parts of the Sahara. Marshal Lyautey modernized infrastructure while preserving medinas. Moroccan resistance continued through the Rif War (1921-1926) led by Abd el-Krim.',
+    era: 'The Colonial Period',
+    period: '1912 -- 1956',
     icon: Flag,
+    color: 'var(--color-gold)',
+    events: [
+      'The Treaty of Fes (March 30, 1912) established a French protectorate. Marshal Lyautey became the first Resident-General, building nouvelle villes alongside traditional medinas',
+      'Spain controlled a northern zone (capital: Tetouan), the Ifni enclave, and the Western Sahara. Tangier became an international zone in 1923',
+      'Abdelkrim al-Khattabi led the Rif War (1921-1926), defeating Spain at the Battle of Annual (1921) where 8,000 Spanish soldiers died. He established the Republic of the Rif before a combined Franco-Spanish force of 250,000 crushed his resistance',
+      'The Istiqlal (Independence) Party formed in 1944, issuing the Independence Manifesto on January 11, 1944. France exiled Sultan Mohammed V to Madagascar in August 1953',
+      'Mohammed V\'s exile united Moroccans across class and tribal lines. Armed resistance, international pressure, and France\'s Algerian war forced negotiations. Mohammed V returned on November 16, 1955',
+      'Morocco declared independence on March 2, 1956. Mohammed V became king, and Morocco joined the United Nations on November 12, 1956',
+    ],
   },
   {
-    era: '1956',
-    title: 'Independence',
-    detail: 'Sultan Mohammed V led the independence movement and on March 2, 1956, Morocco regained sovereignty from France. Spain relinquished its northern protectorate shortly after. Mohammed V became king, and Morocco embarked on building a modern nation-state.',
+    era: 'Modern Morocco',
+    period: '1956 -- Present',
     icon: Flag,
+    color: 'var(--color-accent)',
+    events: [
+      'Hassan II succeeded his father in 1961 and ruled until 1999. He survived two assassination attempts (1971 at Skhirat and 1972 when fighter jets attacked his Boeing 727)',
+      'The Green March (November 6, 1975): 350,000 unarmed Moroccan civilians marched into Spanish Sahara, leading Spain to cede the territory in the Madrid Accords',
+      'The "Years of Lead" (1960s-1990s) saw harsh repression of political opponents. The 1990s brought gradual liberalization, culminating in the Equity and Reconciliation Commission (2004)',
+      'Mohamed VI ascended the throne on July 23, 1999. His reign brought the Mudawwana family code reform (2004), the new constitution (2011), and massive infrastructure investment',
+      'Morocco launched Africa\'s first high-speed rail (Al Boraq, 2018), the Noor Ouarzazate Solar Complex (world\'s largest concentrated solar plant), and won the bid to co-host the 2030 FIFA World Cup',
+    ],
   },
-  {
-    era: '1999-Present',
-    title: 'Modern Morocco',
-    detail: 'King Mohammed VI initiated sweeping reforms including the Mudawwana (family code), the 2011 constitutional reform recognizing Amazigh identity, and major infrastructure projects like the Tangier-Med port and Africa first high-speed railway. Morocco today blends ancient traditions with rapid modernization.',
-    icon: Sparkles,
-  },
-] as const;
+];
 
 /* ═══════════════════════════════════════════════════════════════
-   DATA: MOROCCAN DYNASTIES
-   ═══════════════════════════════════════════════════════════════ */
-
-const moroccanDynasties = [
-  { name: 'Idrisids', period: '788-974 AD', origin: 'Arab (Sharifian)', capital: 'Fes', legacy: 'Founded Fes, established Morocco first Islamic state, and built the University of al-Qarawiyyin. Unified the northern Moroccan tribes under a single Arab-Islamic polity.', icon: Crown },
-  { name: 'Almoravids', period: '1040-1147', origin: 'Sanhaja Berber (Saharan)', capital: 'Marrakech', legacy: 'Founded Marrakech, unified Morocco and Al-Andalus (Muslim Spain), spread Islam across West Africa, and built the Ben Youssef Mosque in Marrakech.', icon: Shield },
-  { name: 'Almohads', period: '1121-1269', origin: 'Masmuda Berber (Atlas)', capital: 'Marrakech', legacy: 'Created the largest Berber empire ever, built the Koutoubia Mosque, the Hassan Tower, and the Giralda. Championed a puritanical Islamic reform movement.', icon: Building },
-  { name: 'Marinids', period: '1244-1465', origin: 'Zenata Berber', capital: 'Fes', legacy: 'Great patrons of art and learning. Built the madrasas of Fes (Bou Inania, Attarine), the Chellah necropolis, and made Fes the intellectual heart of the Islamic West.', icon: BookOpen },
-  { name: 'Saadians', period: '1549-1659', origin: 'Arab (Sharifian)', capital: 'Marrakech', legacy: 'Defeated the Portuguese, won the legendary Battle of the Three Kings (1578), built the El Badi Palace and the Saadian Tombs in Marrakech. Expanded trans-Saharan trade.', icon: Sword },
-  { name: 'Alaouites', period: '1631-Present', origin: 'Arab (Sharifian)', capital: 'Rabat (modern)', legacy: 'The current ruling dynasty. Sultan Moulay Ismail built Meknes as a rival to Versailles. Mohammed V led independence. Mohammed VI modernized Morocco with democratic reforms.', icon: Star },
-] as const;
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: KEY HISTORICAL SITES
+   DATA: HISTORICAL SITES
    ═══════════════════════════════════════════════════════════════ */
 
 const historicalSites = [
-  { name: 'Volubilis', location: 'Near Meknes', period: 'Roman, 2nd-3rd Century AD', description: 'UNESCO World Heritage Site and Morocco best-preserved Roman ruins. Features stunning floor mosaics, a triumphal arch, basilica, and Capitol temple. The city was the administrative center of Mauretania Tingitana and later an Idrisid capital.', icon: Landmark },
-  { name: 'Chellah', location: 'Rabat', period: 'Roman & Marinid, 3rd-14th Century', description: 'A hauntingly beautiful necropolis combining Roman Sala Colonia ruins with a 14th-century Marinid royal burial ground. Features crumbling minarets, stork nests, fig trees, and a sacred pool. Reopened in 2024 after major restoration.', icon: Landmark },
-  { name: 'Ait Ben Haddou', location: 'Near Ouarzazate', period: 'Ksar, 17th Century', description: 'UNESCO-listed fortified village of earthen clay buildings along the old caravan route between the Sahara and Marrakech. A living example of pre-Saharan Moroccan architecture and a famous film location for Gladiator and Game of Thrones.', icon: Building },
-  { name: 'Fes el-Bali Medina', location: 'Fes', period: 'Founded 808 AD', description: 'The world largest car-free urban area and a UNESCO World Heritage Site. Home to the University of al-Qarawiyyin (founded 859), the oldest continually operating university. Over 9,000 narrow alleyways, 300 mosques, and countless artisan workshops.', icon: MapPin },
-  { name: 'Saadian Tombs', location: 'Marrakech', period: '16th Century', description: 'Magnificent mausoleum complex housing the tombs of the Saadian dynasty, sealed and forgotten for centuries until rediscovered by the French in 1917. Features intricate carved cedar, Italian Carrara marble, and zellige tilework.', icon: Crown },
-  { name: 'Koutoubia Mosque', location: 'Marrakech', period: 'Almohad, 1147-1199', description: 'The largest mosque in Marrakech with a 77-meter minaret that served as the model for the Giralda in Seville and the Hassan Tower in Rabat. A masterpiece of Almohad architecture visible from across the city.', icon: Building },
-  { name: 'Hassan Tower', location: 'Rabat', period: 'Almohad, 1195', description: 'An unfinished minaret intended for the world largest mosque, commissioned by Almohad Caliph Yaqub al-Mansur. The tower stands 44 meters tall (the planned 86 meters was never completed). Surrounded by 200 columns and the Mausoleum of Mohammed V.', icon: Landmark },
-  { name: 'Bab Mansour', location: 'Meknes', period: 'Alaouite, 1732', description: 'Considered the most beautiful gate in Morocco, built by Sultan Moulay Ismail. The massive horseshoe arch is decorated with elaborate zellige mosaics, carved marble columns recycled from Volubilis, and intricate stucco work.', icon: Building },
-] as const;
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: IMPERIAL CITIES THROUGH HISTORY
-   ═══════════════════════════════════════════════════════════════ */
-
-const imperialCities = [
   {
-    city: 'Fes',
-    founded: '808 AD',
-    dynasty: 'Idrisids',
-    highlights: 'Oldest imperial city, home to the University of al-Qarawiyyin (859 AD), the Bou Inania and Attarine madrasas, Chouara tanneries, and the world largest car-free urban zone. The medina contains over 9,000 streets and 300 mosques.',
-    icon: BookOpen,
-  },
-  {
-    city: 'Marrakech',
-    founded: '1062',
-    dynasty: 'Almoravids',
-    highlights: 'The "Red City" built by Yusuf ibn Tashfin. Home to the Koutoubia Mosque, Jemaa el-Fna square, the Saadian Tombs, El Badi Palace ruins, and the Ben Youssef Madrasa. The medina walls stretch for 19 kilometers.',
-    icon: Star,
-  },
-  {
-    city: 'Meknes',
-    founded: '1672 (as capital)',
-    dynasty: 'Alaouites',
-    highlights: 'Sultan Moulay Ismail grand capital, designed to rival Versailles. Features the monumental Bab Mansour gate, the Royal Stables (built for 12,000 horses), the Heri es-Souani granary, and 40 kilometers of defensive walls.',
-    icon: Crown,
-  },
-  {
-    city: 'Rabat',
-    founded: '1150 (Almohad fortress)',
-    dynasty: 'Almohads / Modern',
-    highlights: 'Morocco modern capital since 1912. Home to the Hassan Tower (unfinished Almohad minaret), the Mausoleum of Mohammed V, the Kasbah of the Udayas, the Chellah necropolis, and the Mohammed VI Museum of Modern and Contemporary Art.',
+    name: 'Volubilis',
+    location: 'Near Meknes',
+    era: 'Roman (3rd century BC -- 5th century AD)',
     icon: Landmark,
-  },
-];
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: HISTORY TRAVELER TIPS
-   ═══════════════════════════════════════════════════════════════ */
-
-const historyTravelerTips = [
-  'Hire a licensed guide at major sites like Volubilis and the Fes Medina. Their knowledge of history and context transforms a visit from sightseeing into a meaningful experience. Official guides carry government-issued ID cards.',
-  'Visit Volubilis early in the morning (opening time) or in the late afternoon. Midday heat makes the exposed ruins uncomfortable, and the light is best for photography at golden hour.',
-  'The Fes Medina is best explored on foot with a guide for your first visit. GPS and maps are unreliable in the narrow, winding alleys. Return on your own once you have your bearings.',
-  'Bring a flashlight or use your phone light when exploring the Saadian Tombs and some Marinid madrasas, as interior chambers can be dimly lit and the detailed craftsmanship deserves close inspection.',
-  'Check restoration schedules before visiting. Morocco has been actively restoring many historical sites, and some sections may be temporarily closed. The Chellah in Rabat reopened in 2024 after major restoration work.',
-  'Respect the cultural significance of religious sites. Non-Muslims cannot enter active mosques in Morocco (with the exception of the Hassan II Mosque in Casablanca), but you can admire their architecture from outside.',
-  'Combine history with food. Many historical cities have traditional restaurants in restored riads or palaces. Eating in a centuries-old building while surrounded by original zellige and stucco work is part of the experience.',
-  'Photography is generally permitted at archaeological sites and historical monuments, but always ask before photographing people. Some sites charge a small additional fee for camera or drone use.',
-  'Allow at least two full days each for Fes and Marrakech to properly explore their historical sites. Meknes and Rabat can each be covered in a full day. Volubilis requires about 2 to 3 hours.',
-  'Visit museums for deeper context. The Dar Batha Museum in Fes, the Museum of Moroccan Judaism in Casablanca, and the Marrakech Museum in the Ben Youssef complex all provide excellent historical background.',
-];
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: RELATED GUIDES
-   ═══════════════════════════════════════════════════════════════ */
-
-const relatedGuides = [
-  {
-    href: '/history',
-    title: 'Morocco History Overview',
-    description: 'A concise overview of Moroccan history from ancient times to the modern kingdom, covering all major periods and events.',
-    icon: BookOpen,
+    description:
+      'The best-preserved Roman archaeological site in Morocco, with intact mosaics depicting Orpheus, Hercules, and Bacchus. The triumphal arch of Caracalla (217 AD), the Capitoline temple, and dozens of olive oil presses reveal a prosperous provincial city. UNESCO World Heritage Site since 1997.',
+    entry: 'From 70 MAD',
+    tip: 'Visit early morning or late afternoon to avoid heat and crowds. Allow 2-3 hours.',
   },
   {
-    href: '/culture',
-    title: 'Moroccan Culture Guide',
-    description: 'Deep dive into Moroccan traditions, festivals, arts, music, and the rich cultural heritage that makes the kingdom unique.',
-    icon: Globe,
-  },
-  {
-    href: '/unesco',
-    title: 'UNESCO World Heritage Sites',
-    description: 'Explore Morocco nine UNESCO World Heritage Sites, from ancient medinas and Roman ruins to fortified villages and historic cities.',
-    icon: Landmark,
-  },
-  {
-    href: '/jewish-heritage',
-    title: 'Jewish Heritage in Morocco',
-    description: 'Discover the rich Jewish history of Morocco, from ancient mellahs and synagogues to the enduring legacy of Moroccan Jewish culture.',
-    icon: Heart,
-  },
-  {
-    href: '/architecture',
-    title: 'Moroccan Architecture Guide',
-    description: 'From riads and kasbahs to mosques and madrasas, explore the architectural traditions that define Morocco built heritage.',
+    name: 'Fes el-Bali',
+    location: 'Fes',
+    era: 'Idrisid -- Marinid (808 AD onward)',
     icon: Building,
+    description:
+      'The world\'s largest car-free urban zone and oldest continuously functioning medina. Founded by Idris II in 808 AD, it holds the Qarawiyyin University (859 AD), the Bou Inania Madrasa (1351-1356), the Chouara tanneries (11th century), and over 9,000 alleyways. UNESCO World Heritage Site since 1981.',
+    entry: 'Free to enter medina; guide from 300 MAD per half-day',
+    tip: 'Hire a licensed guide for your first visit. The medina is genuinely disorienting without one.',
+  },
+  {
+    name: 'Ait Benhaddou',
+    location: 'Near Ouarzazate',
+    era: 'Almoravid -- Saadian (11th -- 17th century)',
+    icon: Landmark,
+    description:
+      'A fortified ksar (village) of earthen buildings on a hillside along the former caravan route between Marrakech and the Sahara. The oldest structures date to the 11th century. Used as a filming location for Gladiator, Game of Thrones, and Lawrence of Arabia. UNESCO World Heritage Site since 1987.',
+    entry: 'Free; guided tours from 100 MAD',
+    tip: 'Cross the river to climb to the granary at the top for panoramic views of the valley.',
+  },
+  {
+    name: 'Chellah Necropolis',
+    location: 'Rabat',
+    era: 'Phoenician -- Roman -- Marinid (7th century BC -- 14th century AD)',
+    icon: Scroll,
+    description:
+      'A layered archaeological site spanning 2,000 years. Phoenician traders founded Sala Colonia here. Romans built a forum and port. The Marinids converted it into a royal necropolis in the 14th century, adding a mosque, madrasa, and garden. Storks nest on the crumbling minarets.',
+    entry: 'From 70 MAD',
+    tip: 'A peaceful escape from Rabat\'s bustle. The garden is especially atmospheric at sunset.',
+  },
+  {
+    name: 'Koutoubia Mosque',
+    location: 'Marrakech',
+    era: 'Almohad (1147-1199)',
+    icon: Building,
+    description:
+      'Built by the Almohad caliph Yaqub al-Mansur, the Koutoubia\'s 77-meter minaret set the architectural template for the Giralda in Seville and the Hassan Tower in Rabat. The name means "Mosque of the Booksellers," referencing the manuscript market that once surrounded it. Non-Muslims cannot enter, but the minaret dominates Marrakech\'s skyline.',
+    entry: 'Exterior only for non-Muslims',
+    tip: 'The minaret is most photogenic in golden hour light from the Jardin de la Koutoubia park.',
+  },
+  {
+    name: 'Saadian Tombs',
+    location: 'Marrakech',
+    era: 'Saadian (1578-1603)',
+    icon: Crown,
+    description:
+      'Built by Ahmed al-Mansur for his family, these tombs were sealed by the Alaouite Sultan Moulay Ismail and forgotten until 1917 when a French aerial survey rediscovered them. The Hall of Twelve Columns features Italian Carrara marble, gilded cedarwood muqarnas, and zellij tilework of extraordinary precision.',
+    entry: 'From 70 MAD',
+    tip: 'Arrive at opening time (9 AM) to avoid the narrow passages being packed with tour groups.',
   },
 ];
 
@@ -429,7 +439,7 @@ export default function MoroccoHistoryGuidePage() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(/images/hero-morocco.webp)',
+            backgroundImage: 'url(/images/hero-kasbahs.webp)',
           }}
         />
         <div className="absolute inset-0 hero-overlay" />
@@ -442,16 +452,16 @@ export default function MoroccoHistoryGuidePage() {
             <span className="text-white">History of Morocco</span>
           </nav>
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm text-white/90 text-sm mb-6">
-            <BookOpen className="w-4 h-4" />
+            <Scroll className="w-4 h-4" />
             History &amp; Heritage
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-display)] font-bold text-white mb-4">
-            History of Morocco
-            <br className="hidden md:block" /> Complete Guide 2026
+            History of Morocco:
+            <br className="hidden md:block" /> 12,000 Years of Empires &amp; Dynasties
           </h1>
           <p className="text-xl text-white/80 max-w-2xl">
-            From the oldest Homo sapiens fossils to the modern kingdom &mdash; 3,000 years
-            of dynasties, conquests, independence, and the historical sites that tell Morocco&apos;s story.
+            From the oldest Homo sapiens fossils on Earth to a modern kingdom co-hosting the 2030 World Cup.
+            The full story of Morocco&apos;s extraordinary past.
           </p>
         </div>
       </section>
@@ -463,64 +473,74 @@ export default function MoroccoHistoryGuidePage() {
         <div className="container-morocco max-w-4xl">
           <div className="prose-moroccan">
             <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
-              A Kingdom Forged by Millennia
+              Morocco: Where Africa, Europe, and the Islamic World Converge
             </h2>
             <div className="space-y-4 text-lg text-[var(--text-secondary)] leading-relaxed">
               <p>
-                Morocco stands at the crossroads of Africa, Europe, and the Middle East &mdash; a
-                geographic position that has shaped one of the richest and most layered histories
-                of any nation on earth. The territory of modern Morocco has been continuously inhabited
-                for over 300,000 years, making it home to the oldest known Homo sapiens fossils
-                ever discovered, unearthed at Jebel Irhoud in 2017.
+                Morocco occupies a unique geographic position at the northwest corner of Africa, separated
+                from Europe by just 14 kilometers at the Strait of Gibraltar. This location made it a
+                crossroads of civilizations for millennia. Phoenician traders, Roman colonists, Arab
+                conquerors, Berber empire-builders, Ottoman rivals, and European colonial powers all shaped
+                the territory that became the modern kingdom.
               </p>
               <p>
-                Phoenician traders established coastal outposts here a thousand years before Christ.
-                Rome built grand cities with mosaic floors and triumphal arches. Arab conquerors
-                brought Islam, and Berber dynasties forged empires that stretched from the Senegal
-                River to the gates of Paris. The Portuguese and Spanish carved out fortresses along
-                the coast, the French and Spanish imposed protectorates in the 20th century, and
-                Morocco emerged as an independent kingdom in 1956 under the leadership of Mohammed V.
+                The country&apos;s history stretches far deeper than most visitors realize. In 2017,
+                archaeologists at Jebel Irhoud reclassified fossils found there as the oldest known Homo
+                sapiens remains on Earth -- approximately 300,000 years old. From those Paleolithic origins
+                through Berber kingdoms, Roman provinces, Islamic dynasties, a colonial interlude, and a
+                hard-won independence, Morocco&apos;s story is one of continuous adaptation and fierce
+                cultural identity.
               </p>
               <p>
-                Today, this history is etched into every medina alleyway, every crumbling kasbah,
-                and every imperial gate. Understanding Morocco&apos;s past is the key to
-                appreciating the extraordinary cultural mosaic you encounter as a visitor &mdash;
-                from the Roman mosaics of Volubilis to the living medieval city of Fes el-Bali.
+                Today, Morocco stands as Africa&apos;s oldest monarchy. The ruling Alaouite dynasty has
+                held the throne since 1631 -- nearly 400 years of continuous rule. Understanding this
+                history transforms any visit: the Roman mosaics at Volubilis, the medieval madrasas of Fes,
+                the Almohad minaret dominating Marrakech, and the French-built nouvelle villes all become
+                chapters in a story you can walk through.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Quick History Facts ── */}
+      {/* ── Complete Timeline ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco">
+        <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <BookOpen className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Morocco History at a Glance
+            <Clock className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Complete Timeline of Moroccan History
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Key facts about Morocco&apos;s historical significance that every visitor should know.
+            Eleven eras that shaped the kingdom, from the Stone Age to the smartphone age.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { label: 'Human Habitation', value: '300,000+ Years', detail: 'Oldest Homo sapiens fossils found at Jebel Irhoud', icon: Globe },
-              { label: 'Major Dynasties', value: '7 Dynasties', detail: 'Idrisids through Alaouites, spanning 1,200+ years', icon: Crown },
-              { label: 'UNESCO Sites', value: '9 Listed', detail: 'Including Fes Medina, Volubilis, and Ait Ben Haddou', icon: Landmark },
-              { label: 'Independence', value: 'March 2, 1956', detail: 'From French & Spanish protectorate under Mohammed V', icon: Flag },
-            ].map((fact) => {
-              const FactIcon = fact.icon;
+          <div className="space-y-8">
+            {timelineEras.map((era) => {
+              const EraIcon = era.icon;
               return (
-                <div key={fact.label} className="card-moroccan p-6 text-center">
-                  <div className="w-12 h-12 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center mx-auto mb-4">
-                    <FactIcon className="w-6 h-6 text-[var(--color-accent)]" />
+                <div key={era.era} className="card-moroccan p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div
+                      className="w-10 h-10 rounded-full flex items-center justify-center shrink-0"
+                      style={{ backgroundColor: `${era.color}15` }}
+                    >
+                      <EraIcon className="w-5 h-5" style={{ color: era.color }} />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+                        {era.era}
+                      </h3>
+                      <span className="text-xs text-[var(--text-muted)]">{era.period}</span>
+                    </div>
                   </div>
-                  <p className="text-2xl font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)] mb-1">
-                    {fact.value}
-                  </p>
-                  <p className="text-sm font-medium text-[var(--text-primary)] mb-2">{fact.label}</p>
-                  <p className="text-xs text-[var(--text-muted)]">{fact.detail}</p>
+                  <ul className="space-y-3">
+                    {era.events.map((event, i) => (
+                      <li key={i} className="flex items-start gap-2 text-sm text-[var(--text-secondary)]">
+                        <CheckCircle className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
+                        <span>{event}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               );
             })}
@@ -528,214 +548,120 @@ export default function MoroccoHistoryGuidePage() {
         </div>
       </section>
 
-      {/* ── Historical Timeline ── */}
+      {/* ── Key Dynasties Deep Dive ── */}
       <section className="py-16 md:py-20">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Calendar className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Timeline of Moroccan History
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            From prehistoric origins to the modern kingdom &mdash; the defining moments that shaped Morocco.
-          </p>
-
-          <div className="card-moroccan p-6 md:p-8">
-            <div className="space-y-6">
-              {historicalTimeline.map((item) => {
-                const ItemIcon = item.icon;
-                return (
-                  <div key={item.era} className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent)] flex items-center justify-center shrink-0">
-                      <ItemIcon className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-3 mb-1">
-                        <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                          {item.title}
-                        </h3>
-                        <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-[var(--color-gold)]/10 text-[var(--color-gold)]">
-                          {item.era}
-                        </span>
-                      </div>
-                      <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{item.detail}</p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Moroccan Dynasties ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <Crown className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            The Great Moroccan Dynasties
+            Morocco&apos;s Ruling Dynasties at a Glance
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Six major dynasties that built, defended, and transformed the Kingdom of Morocco.
+            Seven dynasties, each defined by a founding vision and lasting monuments.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {moroccanDynasties.map((dynasty) => {
-              const DynIcon = dynasty.icon;
-              return (
-                <div key={dynasty.name} className="card-moroccan p-6">
-                  <div className="flex items-start gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                      <DynIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                    </div>
-                    <div>
-                      <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                        {dynasty.name}
-                      </h3>
-                      <p className="text-xs font-semibold text-[var(--color-gold)]">{dynasty.period}</p>
-                    </div>
-                  </div>
-                  <div className="flex flex-wrap gap-2 mb-3">
-                    <span className="text-xs px-2 py-0.5 rounded-full bg-[var(--color-accent)]/10 text-[var(--color-accent)]">
-                      Origin: {dynasty.origin}
-                    </span>
-                    <span className="text-xs px-2 py-0.5 rounded-full bg-[var(--color-gold)]/10 text-[var(--color-gold)]">
-                      Capital: {dynasty.capital}
-                    </span>
-                  </div>
-                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{dynasty.legacy}</p>
-                </div>
-              );
-            })}
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm text-left border-collapse">
+              <thead>
+                <tr className="border-b-2 border-[var(--color-accent)]/20">
+                  <th className="py-3 pr-4 font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Dynasty</th>
+                  <th className="py-3 pr-4 font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Period</th>
+                  <th className="py-3 pr-4 font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Capital</th>
+                  <th className="py-3 font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Legacy</th>
+                </tr>
+              </thead>
+              <tbody className="text-[var(--text-secondary)]">
+                <tr className="border-b border-[var(--surface-muted)]">
+                  <td className="py-3 pr-4 font-medium">Idrisids</td>
+                  <td className="py-3 pr-4">789 -- 974</td>
+                  <td className="py-3 pr-4">Fes</td>
+                  <td className="py-3">Founded Morocco&apos;s first Islamic state and the city of Fes. Built the Qarawiyyin (859 AD).</td>
+                </tr>
+                <tr className="border-b border-[var(--surface-muted)]">
+                  <td className="py-3 pr-4 font-medium">Almoravids</td>
+                  <td className="py-3 pr-4">1040 -- 1147</td>
+                  <td className="py-3 pr-4">Marrakech</td>
+                  <td className="py-3">Founded Marrakech (1062). Built an empire from Senegal to Spain. Introduced Andalusian art.</td>
+                </tr>
+                <tr className="border-b border-[var(--surface-muted)]">
+                  <td className="py-3 pr-4 font-medium">Almohads</td>
+                  <td className="py-3 pr-4">1121 -- 1269</td>
+                  <td className="py-3 pr-4">Marrakech</td>
+                  <td className="py-3">Built the Koutoubia, Hassan Tower, and Giralda. Largest Berber empire in history.</td>
+                </tr>
+                <tr className="border-b border-[var(--surface-muted)]">
+                  <td className="py-3 pr-4 font-medium">Marinids</td>
+                  <td className="py-3 pr-4">1244 -- 1465</td>
+                  <td className="py-3 pr-4">Fes</td>
+                  <td className="py-3">Built 14 madrasas in Fes. Created masterpieces of zellij and carved stucco.</td>
+                </tr>
+                <tr className="border-b border-[var(--surface-muted)]">
+                  <td className="py-3 pr-4 font-medium">Wattasids</td>
+                  <td className="py-3 pr-4">1472 -- 1554</td>
+                  <td className="py-3 pr-4">Fes</td>
+                  <td className="py-3">Weakened by Portuguese coastal conquests. Controlled only northern Morocco.</td>
+                </tr>
+                <tr className="border-b border-[var(--surface-muted)]">
+                  <td className="py-3 pr-4 font-medium">Saadians</td>
+                  <td className="py-3 pr-4">1549 -- 1659</td>
+                  <td className="py-3 pr-4">Marrakech</td>
+                  <td className="py-3">El Badi Palace, Saadian Tombs. Conquered Timbuktu (1591). Expelled the Portuguese.</td>
+                </tr>
+                <tr>
+                  <td className="py-3 pr-4 font-medium">Alaouites</td>
+                  <td className="py-3 pr-4">1631 -- present</td>
+                  <td className="py-3 pr-4">Rabat</td>
+                  <td className="py-3">Current ruling dynasty. Built Meknes. Led independence. Modernized the kingdom.</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
 
-      {/* ── Prehistoric & Ancient Morocco ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Globe className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Prehistoric &amp; Ancient Morocco
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Before the dynasties, Morocco was home to some of humanity&apos;s earliest communities.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[
-              { title: 'Jebel Irhoud Fossils', detail: 'In 2017, archaeologists at Jebel Irhoud (near Safi) discovered the remains of five Homo sapiens individuals dating to approximately 300,000 years ago. This discovery pushed back the known origin of our species by 100,000 years and proved that early humans were spread across Africa, not just East Africa as previously believed.', icon: Globe },
-              { title: 'Phoenician Settlements', detail: 'From around 1100 BC, Phoenician traders from Tyre and Sidon established settlements along Morocco Atlantic and Mediterranean coasts. Lixus (near Larache) became a major trading hub, while Mogador (Essaouira) served as a waypoint for voyages down the African coast. They introduced alphabetic writing, advanced metallurgy, and the famous Tyrian purple dye industry.', icon: Globe },
-              { title: 'Carthaginian Influence', detail: 'After the fall of Tyre to the Babylonians, Carthage (in modern Tunisia) inherited control of Morocco Phoenician settlements. The Carthaginian explorer Hanno the Navigator sailed down Morocco Atlantic coast around 500 BC, establishing colonies and recording encounters with gorillas. Carthaginian influence waned after the Punic Wars with Rome.', icon: Shield },
-              { title: 'Roman Mauretania Tingitana', detail: 'Rome annexed northern Morocco in 40 AD following the assassination of the last Berber client king, Ptolemy of Mauretania. The province of Mauretania Tingitana centered on Volubilis and included major settlements at Tingis (Tangier), Sala (Rabat), and Lixus. Rome brought roads, aqueducts, public baths, and olive oil production to the region.', icon: Landmark },
-            ].map((item) => {
-              const ItemIcon = item.icon;
-              return (
-                <div key={item.title} className="card-moroccan p-6">
-                  <div className="flex items-start gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                      <ItemIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                    </div>
-                    <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mt-2">
-                      {item.title}
-                    </h3>
-                  </div>
-                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{item.detail}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Colonial Era & Independence ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Flag className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Colonial Era &amp; Independence
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            How Morocco endured colonial rule and won back its sovereignty in the 20th century.
-          </p>
-
-          <div className="card-moroccan p-6 md:p-8">
-            <div className="space-y-6">
-              {[
-                { title: 'European Encroachment (19th Century)', detail: 'By the late 1800s, European powers competed for influence in Morocco. France and Spain signed treaties carving out spheres of influence, while Britain and Germany jockeyed for economic concessions. The Algeciras Conference of 1906 formalized international interest in Morocco, setting the stage for colonization.', icon: Globe },
-                { title: 'Treaty of Fez (1912)', detail: 'On March 30, 1912, Sultan Abdelhafid signed the Treaty of Fez, establishing the French protectorate over most of Morocco. Spain received the Rif region in the north and the Sidi Ifni enclave in the south. Marshal Hubert Lyautey became the first Resident-General and pursued a policy of preserving Morocco medinas while building modern Villes Nouvelles alongside them.', icon: Flag },
-                { title: 'The Rif War (1921-1926)', detail: 'Abd el-Krim, a brilliant Riffian Berber leader, united the Rif tribes and inflicted devastating defeats on the Spanish army, including the Battle of Annual (1921) where 8,000 Spanish soldiers perished. His Republic of the Rif was eventually crushed by a combined French-Spanish force of 250,000 troops. Abd el-Krim is revered as a hero of anti-colonial resistance.', icon: Sword },
-                { title: 'Nationalist Movement & Exile of Mohammed V', detail: 'The Istiqlal (Independence) Party, founded in 1944, demanded full sovereignty. When Sultan Mohammed V openly supported the nationalists, France exiled him to Madagascar in 1953. His exile backfired spectacularly, galvanizing nationwide resistance and making Mohammed V a symbol of Moroccan independence.', icon: Users },
-                { title: 'Independence Day: March 2, 1956', detail: 'Faced with mounting unrest, France agreed to Moroccan independence. Mohammed V returned from exile in triumph on November 16, 1955, and on March 2, 1956, Morocco formally regained its sovereignty. Spain relinquished its northern zone the following month. Mohammed V became the first king of independent Morocco.', icon: Star },
-              ].map((item) => {
-                const ItemIcon = item.icon;
-                return (
-                  <div key={item.title} className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent)] flex items-center justify-center shrink-0">
-                      <ItemIcon className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
-                        {item.title}
-                      </h3>
-                      <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{item.detail}</p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          <div className="mt-8 card-moroccan p-6 bg-[var(--color-accent)]/5">
-            <div className="flex items-start gap-3">
-              <Lightbulb className="w-5 h-5 text-[var(--color-gold)] mt-1 shrink-0" />
-              <div>
-                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                  Lyautey&apos;s Legacy: Why Morocco&apos;s Medinas Survived
-                </h3>
-                <p className="text-sm text-[var(--text-secondary)]">
-                  Unlike other colonial administrators who demolished historic quarters, Marshal Lyautey
-                  ordered that Morocco&apos;s ancient medinas be preserved intact while building modern
-                  European-style &ldquo;Villes Nouvelles&rdquo; (new cities) alongside them. This policy
-                  is the reason cities like Fes, Marrakech, and Meknes still have their medieval urban
-                  fabric &mdash; and why so many Moroccan medinas are UNESCO World Heritage Sites today.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Key Historical Sites to Visit ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco max-w-4xl">
+      {/* ── Historical Sites to Visit ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+        <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <MapPin className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Key Historical Sites to Visit
+            Historical Sites You Can Visit Today
           </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            The essential historical landmarks where you can experience Morocco&apos;s layered past firsthand.
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-4">
+            Walk through 2,000 years of history at these accessible archaeological and architectural landmarks.
+          </p>
+          <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
+            <Info className="w-3.5 h-3.5 inline mr-1" />
+            Entry prices are starting prices and may change seasonally. Confirm current rates locally.
           </p>
 
-          <div className="space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {historicalSites.map((site) => {
               const SiteIcon = site.icon;
               return (
                 <div key={site.name} className="card-moroccan p-6">
-                  <div className="flex items-start gap-4">
+                  <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
                       <SiteIcon className="w-5 h-5 text-[var(--color-accent)]" />
                     </div>
                     <div>
-                      <div className="flex flex-wrap items-center gap-3 mb-1">
-                        <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                          {site.name}
-                        </h3>
-                        <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-[var(--color-gold)]/10 text-[var(--color-gold)]">
-                          {site.period}
-                        </span>
-                      </div>
-                      <p className="text-xs text-[var(--text-muted)] mb-2">{site.location}</p>
-                      <p className="text-sm text-[var(--text-secondary)]">{site.description}</p>
+                      <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+                        {site.name}
+                      </h3>
+                      <span className="text-xs text-[var(--text-muted)]">{site.era}</span>
+                    </div>
+                  </div>
+                  <p className="text-sm text-[var(--text-secondary)] mb-4">{site.description}</p>
+                  <div className="space-y-2 text-xs text-[var(--text-muted)]">
+                    <div className="flex items-center gap-2">
+                      <MapPin className="w-3 h-3 text-[var(--color-accent)]" />
+                      <span>{site.location}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Sparkles className="w-3 h-3 text-[var(--color-accent)]" />
+                      <span>{site.entry}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <ShieldCheck className="w-3 h-3 text-[var(--color-accent)]" />
+                      <span>{site.tip}</span>
                     </div>
                   </div>
                 </div>
@@ -745,141 +671,378 @@ export default function MoroccoHistoryGuidePage() {
         </div>
       </section>
 
-      {/* ── Modern Morocco ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Sparkles className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Modern Morocco
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            How the kingdom has transformed since independence while preserving its heritage.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[
-              { title: 'The Years of Lead (1961-1999)', detail: 'Under King Hassan II, Morocco experienced political repression known as the "Years of Lead" (Les Annees de Plomb). Political dissidents were imprisoned or disappeared. The Equity and Reconciliation Commission (IER), established in 2004 by Mohammed VI, investigated these abuses and compensated victims, making Morocco one of the few Arab states to formally address past human rights violations.', icon: Users },
-              { title: 'The Green March (1975)', detail: 'King Hassan II organized the Green March, in which 350,000 unarmed Moroccan civilians peacefully marched into the Spanish Sahara to assert Morocco territorial claim. The event led to the Madrid Accords and Spain withdrawal. The Western Sahara question remains unresolved and is a defining issue of modern Moroccan diplomacy.', icon: Flag },
-              { title: 'Constitutional Reforms (2011)', detail: 'In response to the Arab Spring, King Mohammed VI introduced a new constitution that strengthened parliament, recognized Amazigh (Berber) as an official language alongside Arabic, enshrined gender equality, and established regional governance. The reforms represented a significant step toward democratic monarchy.', icon: CheckCircle },
-              { title: 'Infrastructure & Economy', detail: 'Modern Morocco has invested heavily in infrastructure: the Tangier-Med port (Africa largest), the Al Boraq high-speed railway (Africa first, connecting Tangier to Casablanca), renewable energy projects like the Noor-Ouarzazate solar complex (world largest concentrated solar plant), and the hosting of the 2030 FIFA World Cup alongside Spain and Portugal.', icon: Star },
-            ].map((item) => {
-              const ItemIcon = item.icon;
-              return (
-                <div key={item.title} className="card-moroccan p-6">
-                  <div className="flex items-start gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                      <ItemIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                    </div>
-                    <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mt-2">
-                      {item.title}
-                    </h3>
-                  </div>
-                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{item.detail}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── FAQ Section ── */}
+      {/* ── Key Figures Section ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <MessageCircle className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Frequently Asked Questions
+            <Users className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Figures Who Shaped Morocco
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Answers to the most common questions about the history of Morocco.
+            Kings, scholars, warriors, and reformers whose decisions echo across centuries.
           </p>
 
-          <div className="space-y-4">
-            {faqJsonLd.mainEntity.map((faq, i) => (
-              <div key={i} className="card-moroccan p-6">
-                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                  {faq.name}
-                </h3>
-                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                  {faq.acceptedAnswer.text}
-                </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
+                Idris I (745 -- 791)
+              </h3>
+              <p className="text-xs text-[var(--text-muted)] mb-2">Founder of the Idrisid Dynasty</p>
+              <p className="text-sm text-[var(--text-secondary)]">
+                A great-grandson of the Prophet Muhammad, Idris fled the Abbasid massacre at Fakhkh (786) near Mecca.
+                He reached Volubilis, where the Awraba Berbers recognized his religious authority and proclaimed him
+                imam in 789. He unified local tribes and laid the foundation for the first Moroccan Islamic state
+                before his assassination by an Abbasid agent in 791.
+              </p>
+            </div>
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
+                Yusuf ibn Tashfin (c. 1009 -- 1106)
+              </h3>
+              <p className="text-xs text-[var(--text-muted)] mb-2">Almoravid Empire Builder</p>
+              <p className="text-sm text-[var(--text-secondary)]">
+                A Sanhaja Berber commander who founded Marrakech in 1062 and built an empire from the Senegal
+                River to central Spain. His victory at Sagrajas (1086) against Alfonso VI of Castile saved
+                Muslim Spain from Christian reconquest for another four centuries. He lived ascetically despite
+                ruling one of the era&apos;s wealthiest states.
+              </p>
+            </div>
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
+                Ahmed al-Mansur (1549 -- 1603)
+              </h3>
+              <p className="text-xs text-[var(--text-muted)] mb-2">The Saadian &quot;Golden&quot; Sultan</p>
+              <p className="text-sm text-[var(--text-secondary)]">
+                Called &quot;al-Dhahabi&quot; (the Golden) for his vast wealth, al-Mansur financed his reign with
+                Portuguese ransom money and Saharan gold. He sent an army across the desert to conquer the Songhai
+                Empire in 1591, making Morocco a transatlantic power. His El Badi Palace in Marrakech was one of
+                the most lavish buildings of the 16th century.
+              </p>
+            </div>
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
+                Mohammed V (1909 -- 1961)
+              </h3>
+              <p className="text-xs text-[var(--text-muted)] mb-2">Father of Independence</p>
+              <p className="text-sm text-[var(--text-secondary)]">
+                Sultan since 1927, Mohammed V became the symbol of Moroccan resistance when France exiled him to
+                Madagascar in 1953. His forced removal galvanized the independence movement, uniting nationalists,
+                tribal leaders, and ordinary citizens. He returned in triumph on November 16, 1955, and led
+                Morocco to full independence on March 2, 1956, becoming its first modern king.
+              </p>
+            </div>
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
+                Abdelkrim al-Khattabi (1882 -- 1963)
+              </h3>
+              <p className="text-xs text-[var(--text-muted)] mb-2">Rif War Hero &amp; Anti-Colonial Leader</p>
+              <p className="text-sm text-[var(--text-secondary)]">
+                A Rifian Berber leader who inflicted one of colonial history&apos;s worst defeats on Spain at the Battle
+                of Annual (1921). He established the Republic of the Rif with a constitution, judicial system, and
+                modernizing reforms. It took a combined Franco-Spanish force of 250,000 troops and chemical
+                weapons (mustard gas) to defeat him in 1926. He remains a hero across North Africa.
+              </p>
+            </div>
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
+                Fatima al-Fihri (c. 800 -- 880)
+              </h3>
+              <p className="text-xs text-[var(--text-muted)] mb-2">Founder of the Qarawiyyin</p>
+              <p className="text-sm text-[var(--text-secondary)]">
+                A Tunisian-born woman whose family settled in Fes. She used her inheritance to build the Qarawiyyin
+                Mosque in 859 AD. It evolved into one of the world&apos;s oldest continuously operating universities,
+                predating both Oxford (1096) and Bologna (1088). Scholars like Ibn Khaldun and Maimonides studied
+                within its walls.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Gallery Section ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+        <div className="container-morocco">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
+            Morocco Through the Ages
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              { src: '/images/hero-kasbahs.webp', alt: 'Ancient mud-brick kasbahs along the former caravan route in southern Morocco', label: 'Kasbah Heritage' },
+              { src: '/images/hero-fes.webp', alt: 'The medieval medina of Fes Morocco founded in 808 AD by Idris II', label: 'Medieval Fes el-Bali' },
+              { src: '/images/hero-marrakech.webp', alt: 'Marrakech Morocco founded by the Almoravids in 1062 AD', label: 'Imperial Marrakech' },
+            ].map((img) => (
+              <div key={img.label} className="relative h-72 rounded-xl overflow-hidden">
+                <img src={img.src} alt={img.alt} className="w-full h-full object-cover" loading="lazy" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                <p className="absolute bottom-4 left-4 text-white text-sm font-medium">{img.label}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── Related Guides ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco">
+      {/* ── Practical Tips for History Lovers ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Compass className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Related Morocco Guides
+            <ShieldCheck className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Practical Tips for History-Focused Travel
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Continue exploring Moroccan heritage, culture, and architecture with these essential guides.
+            Make the most of Morocco&apos;s historical sites with these recommendations.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {relatedGuides.map((guide) => {
-              const GuideIcon = guide.icon;
-              return (
-                <Link key={guide.href} href={guide.href} className="group">
-                  <div className="card-moroccan p-5 h-full transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1">
-                    <div className="flex items-start gap-3 mb-3">
-                      <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                        <GuideIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                      </div>
-                      <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] group-hover:text-[var(--color-accent)] transition-colors mt-2">
-                        {guide.title}
-                      </h3>
-                    </div>
-                    <p className="text-sm text-[var(--text-secondary)] mb-3">{guide.description}</p>
-                    <span className="inline-flex items-center gap-1 text-sm font-medium text-[var(--color-accent)]">
-                      Read Guide <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                    </span>
-                  </div>
-                </Link>
-              );
-            })}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                Best History-Focused Itinerary
+              </h3>
+              <ul className="space-y-2 text-sm text-[var(--text-secondary)]">
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
+                  <span><strong>Days 1-2:</strong> Rabat -- Chellah, Hassan Tower, Mohammed V Mausoleum, Kasbah of the Udayas</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
+                  <span><strong>Day 3:</strong> Meknes and Volubilis -- Moulay Ismail&apos;s granaries, Roman mosaics</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
+                  <span><strong>Days 4-5:</strong> Fes -- Qarawiyyin, Bou Inania Madrasa, tanneries, Jewish mellah</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
+                  <span><strong>Days 6-7:</strong> Marrakech -- Koutoubia, Saadian Tombs, Ben Youssef Madrasa, Bahia Palace</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
+                  <span><strong>Day 8:</strong> Ait Benhaddou and Ouarzazate -- kasbahs and Saharan caravan history</span>
+                </li>
+              </ul>
+            </div>
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                Essential Advice
+              </h3>
+              <ul className="space-y-2 text-sm text-[var(--text-secondary)]">
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
+                  <span>Hire licensed guides at Fes medina and Volubilis. Self-guiding misses most of the context.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
+                  <span>Non-Muslims cannot enter active mosques in Morocco (except the Hassan II Mosque in Casablanca).</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
+                  <span>April-May and September-October are ideal for outdoor sites. Summer heat at Volubilis and kasbahs reaches 45 C.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
+                  <span>Carry cash for entry fees. Most historical sites do not accept cards. ATMs are widely available in cities.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
+                  <span>Read before you go: &quot;Morocco: From Empire to Independence&quot; by C.R. Pennell is the best single-volume history.</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ── Final CTA ── */}
+      {/* ── FAQ Section ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
-        <div className="container-morocco max-w-3xl text-center">
-          <Landmark className="w-12 h-12 text-[var(--color-accent)] mx-auto mb-6" />
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
-            Walk Through 3,000 Years of History
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
+            Frequently Asked Questions
           </h2>
-          <p className="text-lg text-[var(--text-secondary)] mb-8 max-w-2xl mx-auto">
-            From the Roman mosaics of Volubilis to the bustling medieval medina of Fes, from the
-            Saadian Tombs of Marrakech to the grand gates of Meknes &mdash; Morocco&apos;s history
-            is not locked behind museum glass. It is alive in every city, every kasbah, and every
-            conversation. Come and walk through it.
+
+          <div className="space-y-6">
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                How old is Morocco as a country?
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                Morocco was founded as a unified Islamic state in 789 AD by Idris I, making it one of the oldest
+                kingdoms in the world. Human habitation goes back much further -- the Jebel Irhoud fossils are
+                approximately 300,000 years old, the oldest known Homo sapiens remains on Earth. The modern
+                kingdom gained independence from France on March 2, 1956.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                What are the major dynasties of Morocco?
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                Seven major dynasties ruled Morocco: the Idrisids (789-974), Almoravids (1040-1147),
+                Almohads (1121-1269), Marinids (1244-1465), Wattasids (1472-1554), Saadians (1549-1659),
+                and the Alaouites (1631-present). The Almoravids and Almohads were Berber dynasties that built
+                empires stretching from the Sahara to Spain.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                Can you visit Roman ruins in Morocco?
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                Yes. Volubilis, near Meknes, is a UNESCO World Heritage Site with intact mosaics, a triumphal arch,
+                basilica, and olive presses. Entry costs from 70 MAD. Other Roman sites include Lixus (near Larache),
+                Banasa (near Kenitra), and Sala Colonia within the Chellah necropolis in Rabat.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                What was the Green March of 1975?
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                King Hassan II organized 350,000 unarmed Moroccan civilians to march into the Spanish-controlled
+                Western Sahara on November 6, 1975. This peaceful mass mobilization pressured Spain to sign the
+                Madrid Accords on November 14, ceding the territory. The Green March is one of Morocco&apos;s most
+                important national holidays, celebrated every November 6.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                Who were the Berbers in ancient Morocco?
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                The Berbers, or Amazigh (&quot;free people&quot;), are the indigenous inhabitants of North Africa. They
+                established the Kingdom of Mauretania by the 3rd century BC. Berber leaders like Jugurtha waged
+                war against Rome, and Berber dynasties -- the Almoravids and Almohads -- built empires spanning
+                from Spain to Senegal. Today, 40-50% of Morocco&apos;s population identifies as Amazigh.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                How long did France control Morocco?
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                France established its protectorate on March 30, 1912, through the Treaty of Fes. Spain simultaneously
+                controlled a northern zone and the Ifni enclave. French rule lasted 44 years, ending when Morocco
+                declared independence on March 2, 1956. The French period left a permanent imprint through urban
+                planning, road networks, and the French language, which remains widely spoken.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                What are the best historical sites to visit in Morocco?
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                Top picks: Volubilis (Roman ruins), Fes el-Bali (oldest functioning medina, founded 808 AD), Ait
+                Benhaddou (UNESCO kasbah), the Koutoubia Mosque in Marrakech (1147), the Hassan Tower in Rabat
+                (1195), the Chellah necropolis in Rabat (Phoenician-Roman-Marinid layers), and the Saadian Tombs
+                in Marrakech (1578-1603). Allow at least a week to cover the major sites.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                What happened during Morocco&apos;s independence movement?
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                The Istiqlal Party issued its Independence Manifesto on January 11, 1944. Tensions escalated when
+                France exiled Sultan Mohammed V to Madagascar in August 1953. This unified Moroccans across class
+                and tribal lines. Armed resistance, international pressure, and France&apos;s draining Algerian War
+                forced negotiations. Mohammed V returned on November 16, 1955, and Morocco declared independence
+                on March 2, 1956.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Related Guides ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
+            Continue Exploring Morocco
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Link href="/morocco-berber-culture" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
+              <Globe className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
+                Berber Culture Guide
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] mb-3">
+                The indigenous Amazigh people who founded dynasties, built kasbahs, and shaped Moroccan identity.
+              </p>
+              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
+                Read more <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
+            <Link href="/morocco-culture-guide" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
+              <BookOpen className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
+                Morocco Culture Guide
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] mb-3">
+                Customs, etiquette, social norms, and cultural insights for a deeper understanding of Moroccan life.
+              </p>
+              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
+                Read more <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
+            <Link href="/fes" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
+              <Building className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
+                Fes City Guide
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] mb-3">
+                Explore the world&apos;s oldest functioning medina, founded in 808 AD. Madrasas, tanneries, and souks.
+              </p>
+              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
+                Read more <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
+            <Link href="/marrakech" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
+              <Landmark className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
+                Marrakech City Guide
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] mb-3">
+                The Almoravid capital founded in 1062. Koutoubia, Saadian Tombs, Bahia Palace, and Jemaa el-Fna.
+              </p>
+              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
+                Read more <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA Section ── */}
+      <section className="py-16 md:py-20 bg-[var(--color-accent)]">
+        <div className="container-morocco text-center">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-white mb-4">
+            Walk Through 12,000 Years of History
+          </h2>
+          <p className="text-lg text-white/80 max-w-2xl mx-auto mb-8">
+            Roman mosaics, Almohad minarets, Marinid madrasas, Saadian tombs. Morocco&apos;s past is not behind
+            glass in a museum -- it surrounds you in every city and every landscape.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/history"
-              className="inline-flex items-center gap-2 px-8 py-3 bg-[var(--color-accent)] text-white rounded-lg font-semibold hover:bg-[var(--color-accent)]/90 transition-colors"
+              href="/fes"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[var(--color-accent)] rounded-lg font-semibold hover:bg-white/90 transition-colors"
             >
-              Explore Morocco History
-              <ArrowRight className="w-4 h-4" />
+              <Building className="w-5 h-5" />
+              Explore Fes
             </Link>
             <Link
-              href="/culture"
-              className="inline-flex items-center gap-2 px-8 py-3 border-2 border-[var(--color-accent)] text-[var(--color-accent)] rounded-lg font-semibold hover:bg-[var(--color-accent)]/5 transition-colors"
+              href="/morocco-berber-culture"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 text-white border border-white/30 rounded-lg font-semibold hover:bg-white/20 transition-colors"
             >
-              Moroccan Culture Guide
-              <ArrowRight className="w-4 h-4" />
+              <Globe className="w-5 h-5" />
+              Discover Berber Heritage
             </Link>
           </div>
-          <p className="text-xs text-[var(--text-muted)] mt-8">
-            <Info className="w-3 h-3 inline mr-1" />
-            Historical dates and details are based on widely accepted scholarship as of March 2026.
-            Some dates, especially for early periods, are approximate. Site opening hours and entry fees
-            may vary by season. Seasonal pricing can vary.
-          </p>
         </div>
       </section>
     </>

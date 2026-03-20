@@ -2900,6 +2900,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['morocco halal travel', 'muslim travel morocco', 'halal food morocco', 'mosques in morocco', 'islamic tourism morocco'],
       priority: 9,
     },
+    {
+      title: 'Morocco Cooking Classes Guide 2026',
+      description: 'Best cooking classes in Morocco — Marrakech, Fez, Essaouira with real school names, prices, dishes, and booking tips.',
+      type: 'page',
+      url: '/morocco-cooking-classes',
+      tags: ['cooking', 'classes', 'tagine', 'food', 'workshop'],
+      keywords: ['morocco cooking class', 'marrakech cooking class', 'moroccan cooking workshop', 'learn to cook tagine'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Surfing Guide 2026',
+      description: 'Complete surf guide for Morocco — Taghazout, Imsouane, Essaouira, Dakhla surf spots, camps, equipment, seasons, and kitesurfing.',
+      type: 'page',
+      url: '/morocco-surf-guide',
+      tags: ['surfing', 'surf camps', 'taghazout', 'waves', 'kitesurfing'],
+      keywords: ['surfing morocco', 'best surf spots morocco', 'taghazout surf', 'morocco surf camp', 'imsouane surf'],
+      priority: 9,
+    },
+    {
+      title: 'History of Morocco Guide 2026',
+      description: 'Complete history of Morocco — from prehistoric cave paintings through Berber kingdoms, Islamic dynasties, French protectorate, to modern day.',
+      type: 'page',
+      url: '/morocco-history-guide',
+      tags: ['history', 'dynasties', 'timeline', 'heritage', 'culture'],
+      keywords: ['history of morocco', 'morocco history', 'moroccan dynasties', 'morocco timeline', 'ancient morocco'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

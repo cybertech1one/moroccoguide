@@ -390,6 +390,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-desert-camping',
     '/morocco-digital-nomad',
     '/morocco-muslim-travel',
+    '/morocco-cooking-classes',
+    '/morocco-surf-guide',
+    '/morocco-history-guide',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
