@@ -397,6 +397,48 @@ export function generateFAQSchema(faqs: FAQItem[]): WithContext<FAQPage> {
   };
 }
 
+/* ─── SiteNavigationElement Schema ─── */
+const siteNavigationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SiteNavigationElement',
+  name: 'Main Navigation',
+  hasPart: [
+    { '@type': 'SiteNavigationElement', name: 'Destinations', url: `${BASE_URL}/cities` },
+    { '@type': 'SiteNavigationElement', name: 'Things to Do', url: `${BASE_URL}/things-to-do-morocco` },
+    { '@type': 'SiteNavigationElement', name: 'Travel Tips', url: `${BASE_URL}/morocco-travel-tips` },
+    { '@type': 'SiteNavigationElement', name: 'Budget Guide', url: `${BASE_URL}/morocco-budget-travel` },
+    { '@type': 'SiteNavigationElement', name: 'Food & Cuisine', url: `${BASE_URL}/morocco-food-tour` },
+    { '@type': 'SiteNavigationElement', name: 'Sahara Desert', url: `${BASE_URL}/morocco-sahara-guide` },
+    { '@type': 'SiteNavigationElement', name: 'Riads Guide', url: `${BASE_URL}/morocco-riads-guide` },
+    { '@type': 'SiteNavigationElement', name: 'Itineraries', url: `${BASE_URL}/morocco-7-day-itinerary` },
+    { '@type': 'SiteNavigationElement', name: 'Adventure Tours', url: `${BASE_URL}/morocco-adventure-tours` },
+    { '@type': 'SiteNavigationElement', name: 'Trip Planner', url: `${BASE_URL}/trip-planner` },
+  ],
+};
+
+/* ─── ItemList Schema — Top Guides for Rich Snippets ─── */
+const topGuidesListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Top Morocco Travel Guides',
+  description: 'Our most comprehensive guides to help you plan your Morocco trip.',
+  numberOfItems: 12,
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Morocco Budget Travel Guide', url: `${BASE_URL}/morocco-budget-travel` },
+    { '@type': 'ListItem', position: 2, name: 'Morocco 7-Day Itinerary', url: `${BASE_URL}/morocco-7-day-itinerary` },
+    { '@type': 'ListItem', position: 3, name: 'Morocco Food Tours', url: `${BASE_URL}/morocco-food-tour` },
+    { '@type': 'ListItem', position: 4, name: 'Morocco Riads Guide', url: `${BASE_URL}/morocco-riads-guide` },
+    { '@type': 'ListItem', position: 5, name: 'Sahara Desert Guide', url: `${BASE_URL}/morocco-sahara-guide` },
+    { '@type': 'ListItem', position: 6, name: 'Morocco Shopping Guide', url: `${BASE_URL}/morocco-shopping-guide` },
+    { '@type': 'ListItem', position: 7, name: 'Morocco Trekking Guide', url: `${BASE_URL}/morocco-trekking-guide` },
+    { '@type': 'ListItem', position: 8, name: 'Morocco Train Travel', url: `${BASE_URL}/morocco-train-travel` },
+    { '@type': 'ListItem', position: 9, name: 'Morocco Spa & Wellness', url: `${BASE_URL}/morocco-spa-wellness` },
+    { '@type': 'ListItem', position: 10, name: 'Morocco Photography Guide', url: `${BASE_URL}/morocco-photography-guide` },
+    { '@type': 'ListItem', position: 11, name: 'Morocco Adventure Tours', url: `${BASE_URL}/morocco-adventure-tours` },
+    { '@type': 'ListItem', position: 12, name: 'Morocco 2-Week Itinerary', url: `${BASE_URL}/morocco-2-week-itinerary` },
+  ],
+};
+
 /* ─── Homepage BreadcrumbList ─── */
 const homeBreadcrumbSchema: WithContext<BreadcrumbList> = {
   '@context': 'https://schema.org',
@@ -443,6 +485,18 @@ export default function SEOJsonLd() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(homeBreadcrumbSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(siteNavigationSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(topGuidesListSchema),
         }}
       />
       {touristDestinations.map((destination, index) => (

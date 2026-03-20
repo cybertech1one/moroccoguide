@@ -2792,6 +2792,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['morocco adventure tours', 'adventure travel morocco', 'morocco adventure holidays', 'best adventure activities morocco'],
       priority: 9,
     },
+    {
+      title: 'Morocco Romantic Getaway Guide 2026',
+      description: 'Plan the perfect romantic trip to Morocco — luxury riads, sunset camel rides, couples spa, desert camps, and romantic dining in Marrakech, Fez, and Essaouira.',
+      type: 'page',
+      url: '/morocco-romantic-getaway',
+      tags: ['romantic', 'couples', 'honeymoon', 'luxury', 'getaway'],
+      keywords: ['romantic morocco', 'couples trip morocco', 'morocco romantic getaway', 'honeymoon destinations morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Trekking Guide 2026',
+      description: 'Complete trekking guide for Morocco — Toubkal summit, M\'Goun traverse, Jebel Saghro, Rif trails, day hikes, gear lists, guides, and seasonal advice.',
+      type: 'page',
+      url: '/morocco-trekking-guide',
+      tags: ['trekking', 'hiking', 'toubkal', 'atlas', 'mountains'],
+      keywords: ['trekking in morocco', 'morocco hiking', 'toubkal trek', 'atlas mountains trekking', 'best hikes in morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Cultural Festivals Guide 2026',
+      description: 'Complete guide to Morocco\'s festivals — Gnaoua, Fez Sacred Music, Rose Festival, Mawazine, Imilchil, religious holidays, and month-by-month calendar.',
+      type: 'page',
+      url: '/morocco-cultural-festivals',
+      tags: ['festivals', 'events', 'music', 'culture', 'calendar'],
+      keywords: ['morocco festivals', 'festivals in morocco', 'gnaoua festival', 'fez festival sacred music', 'rose festival morocco'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
