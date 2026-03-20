@@ -299,6 +299,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/day-trips-from-casablanca',
     '/morocco-car-rental',
     '/morocco-packing-list',
+    '/day-trips-from-tangier',
+    '/morocco-pottery-guide',
+    '/fes-vs-marrakech',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

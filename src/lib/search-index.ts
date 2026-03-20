@@ -2081,6 +2081,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['Morocco packing list', 'what to pack Morocco', 'packing for Morocco trip', 'Morocco travel essentials'],
       priority: 9,
     },
+    {
+      title: 'Day Trips from Tangier',
+      description: '11 best day trips from Tangier — Chefchaouen, Asilah, Tetouan, Cap Spartel, Ceuta, Akchour waterfalls, Gibraltar ferry, and more.',
+      type: 'page',
+      url: '/day-trips-from-tangier',
+      tags: ['day trips', 'Tangier', 'excursions', 'northern Morocco'],
+      keywords: ['day trips from Tangier', 'Tangier excursions', 'best day trips Tangier', 'Chefchaouen from Tangier'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Pottery & Ceramics Guide',
+      description: 'Complete guide to Moroccan pottery — Fes blue-and-white, Safi polychrome, Tamegroute green, workshops, prices, and authenticity tips.',
+      type: 'page',
+      url: '/morocco-pottery-guide',
+      tags: ['pottery', 'ceramics', 'crafts', 'shopping', 'artisans'],
+      keywords: ['Moroccan pottery', 'Morocco ceramics guide', 'Fes pottery', 'buy pottery Morocco', 'Moroccan tiles'],
+      priority: 9,
+    },
+    {
+      title: 'Fes vs Marrakech — Which City to Visit',
+      description: 'Fes vs Marrakech comparison — medinas, food, riads, shopping, costs, and day trips to help you decide which Moroccan city to visit.',
+      type: 'page',
+      url: '/fes-vs-marrakech',
+      tags: ['comparison', 'Fes', 'Marrakech', 'travel planning'],
+      keywords: ['Fes vs Marrakech', 'Marrakech or Fes', 'should I visit Fes or Marrakech', 'best city Morocco'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
