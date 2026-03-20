@@ -2846,6 +2846,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['backpacking morocco', 'morocco backpacking guide', 'backpacking morocco budget', 'morocco hostel guide'],
       priority: 9,
     },
+    {
+      title: 'Best Time to Visit Morocco 2026',
+      description: 'Month-by-month guide to visiting Morocco — temperatures, rainfall, crowd levels, festivals, prices by season, and what to pack for every climate zone.',
+      type: 'page',
+      url: '/morocco-best-time-visit',
+      tags: ['best time', 'weather', 'climate', 'seasons', 'when to go'],
+      keywords: ['best time to visit morocco', 'when to go to morocco', 'morocco weather by month', 'best month to visit morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Architecture Guide 2026',
+      description: 'Deep dive into Moroccan architecture — Moorish, Berber, Art Deco, and modern styles, zellige tiles, kasbahs, iconic buildings, and architecture tours.',
+      type: 'page',
+      url: '/morocco-architecture-guide',
+      tags: ['architecture', 'design', 'zellige', 'kasbahs', 'buildings'],
+      keywords: ['moroccan architecture', 'morocco architecture styles', 'islamic architecture morocco', 'riad architecture', 'zellige tiles'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco with Kids & Family Guide 2026',
+      description: 'Complete family travel guide for Morocco — kid-friendly activities by age, family riads, food for picky eaters, health tips, transport, and budget breakdowns.',
+      type: 'page',
+      url: '/morocco-kids-family',
+      tags: ['family', 'kids', 'children', 'family holiday', 'family travel'],
+      keywords: ['morocco with kids', 'family holiday morocco', 'is morocco good for families', 'family friendly morocco'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

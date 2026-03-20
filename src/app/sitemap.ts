@@ -384,6 +384,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-road-trips',
     '/morocco-scams-safety',
     '/morocco-backpacking',
+    '/morocco-best-time-visit',
+    '/morocco-architecture-guide',
+    '/morocco-kids-family',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
