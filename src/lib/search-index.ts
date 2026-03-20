@@ -2513,6 +2513,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['5 star hotels morocco', 'luxury hotel morocco', 'morocco 5 star resorts', 'five star hotels morocco', 'best luxury hotels morocco'],
       priority: 9,
     },
+    {
+      title: 'Essential Moroccan Darija Phrases for Travelers',
+      description: 'Learn essential Darija phrases — greetings, shopping, restaurant, directions, numbers, emergency phrases, plus Amazigh and French basics.',
+      type: 'page',
+      url: '/morocco-darija-phrases',
+      tags: ['darija', 'language', 'phrases', 'Arabic', 'communication'],
+      keywords: ['darija phrases', 'Moroccan Arabic phrases', 'moroccan language', 'shukran bzaf', 'useful Arabic Morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Vaccinations & Health Guide — Shots, Travel Health & Medical Tips',
+      description: 'Complete Morocco health guide — required vaccinations, recommended shots, pharmacies, hospitals, water safety, banned medications, and travel insurance.',
+      type: 'page',
+      url: '/morocco-vaccinations-guide',
+      tags: ['vaccinations', 'health', 'medical', 'travel health', 'pharmacies'],
+      keywords: ['morocco vaccinations', 'shots for morocco', 'injections for morocco', 'morocco healthcare tourists', 'vaccinations needed morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Flowers of Morocco Guide — Rose Valley, Wildflowers & Gardens',
+      description: 'Complete guide to Moroccan flowers — Damask roses, Rose Valley festival, wildflower seasons, best gardens, bloom calendar, and photography spots.',
+      type: 'page',
+      url: '/morocco-flowers-guide',
+      tags: ['flowers', 'roses', 'gardens', 'nature', 'Rose Valley'],
+      keywords: ['flowers of morocco', 'morocco national flower', 'Rose Valley Morocco', 'Morocco rose festival', 'wildflowers morocco'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

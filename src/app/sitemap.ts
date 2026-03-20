@@ -347,6 +347,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/volubilis-guide',
     '/morocco-palaces-guide',
     '/morocco-5-star-hotels',
+    '/morocco-darija-phrases',
+    '/morocco-vaccinations-guide',
+    '/morocco-flowers-guide',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
