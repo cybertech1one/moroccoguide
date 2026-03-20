@@ -2990,6 +2990,24 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['moroccan crafts', 'morocco artisans', 'moroccan handicrafts', 'traditional moroccan crafts', 'zellige tilework'],
       priority: 9,
     },
+    {
+      title: 'Morocco Pet Travel Guide 2026',
+      description: 'Traveling to Morocco with pets — import requirements, airline policies, pet-friendly hotels, veterinary clinics, and cultural attitudes toward animals.',
+      type: 'page',
+      url: '/morocco-pet-travel',
+      tags: ['pets', 'dogs', 'travel requirements', 'pet-friendly', 'veterinary'],
+      keywords: ['morocco pet travel', 'traveling with dog morocco', 'morocco pet import requirements', 'pet friendly morocco hotels'],
+      priority: 9,
+    },
+    {
+      title: 'Best Photography Spots in Morocco 2026',
+      description: 'Top 25 photography locations in Morocco — Chefchaouen, Ait Benhaddou, Sahara dunes, Fes tanneries, and more with best times, gear tips, and drone rules.',
+      type: 'page',
+      url: '/morocco-photography-spots',
+      tags: ['photography', 'Instagram', 'photo locations', 'camera', 'travel photography'],
+      keywords: ['morocco photography spots', 'instagram morocco', 'best photos morocco', 'morocco photo locations', 'chefchaouen photography'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

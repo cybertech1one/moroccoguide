@@ -400,6 +400,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-festivals-calendar',
     '/morocco-wildlife-nature',
     '/morocco-crafts-artisans',
+    '/morocco-pet-travel',
+    '/morocco-photography-spots',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
