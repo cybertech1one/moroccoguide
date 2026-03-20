@@ -387,6 +387,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-best-time-visit',
     '/morocco-architecture-guide',
     '/morocco-kids-family',
+    '/morocco-desert-camping',
+    '/morocco-digital-nomad',
+    '/morocco-muslim-travel',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

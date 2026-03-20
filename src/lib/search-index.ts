@@ -2873,6 +2873,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['morocco with kids', 'family holiday morocco', 'is morocco good for families', 'family friendly morocco'],
       priority: 9,
     },
+    {
+      title: 'Morocco Desert Camping Guide 2026',
+      description: 'Complete guide to desert camping in Morocco — bivouac, glamping, luxury camps, Erg Chebbi vs Erg Chigaga vs Agafay, camp timelines, and booking tips.',
+      type: 'page',
+      url: '/morocco-desert-camping',
+      tags: ['desert', 'camping', 'glamping', 'sahara', 'bivouac'],
+      keywords: ['desert camping morocco', 'sahara desert camp', 'morocco glamping', 'luxury desert camp morocco', 'erg chebbi camp'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Digital Nomad Guide 2026',
+      description: 'Complete digital nomad guide for Morocco — best cities, coworking spaces, wifi speeds, cost of living, visa info, SIM cards, and co-living options.',
+      type: 'page',
+      url: '/morocco-digital-nomad',
+      tags: ['digital nomad', 'remote work', 'coworking', 'wifi', 'long stay'],
+      keywords: ['digital nomad morocco', 'remote work morocco', 'coworking morocco', 'best cities digital nomads morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Muslim Travel Guide 2026',
+      description: 'Guide for Muslim travelers to Morocco — halal food, prayer facilities, Islamic heritage sites, Ramadan travel, Sufi culture, and modest fashion.',
+      type: 'page',
+      url: '/morocco-muslim-travel',
+      tags: ['muslim travel', 'halal', 'islamic', 'mosques', 'ramadan'],
+      keywords: ['morocco halal travel', 'muslim travel morocco', 'halal food morocco', 'mosques in morocco', 'islamic tourism morocco'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
