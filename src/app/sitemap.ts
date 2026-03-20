@@ -359,6 +359,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-expat-guide',
     '/morocco-sim-card-guide',
     '/morocco-unesco-sites',
+    '/morocco-3-day-itinerary',
+    '/morocco-solo-female-travel',
+    '/morocco-fishing-guide',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

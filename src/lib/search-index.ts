@@ -2621,6 +2621,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['unesco morocco sites', 'world heritage sites morocco', 'UNESCO sites Morocco', 'morocco heritage sites', 'cultural heritage morocco'],
       priority: 9,
     },
+    {
+      title: 'Morocco 3-Day Itinerary — Best Short Trip Plans',
+      description: 'Three detailed 3-day itineraries — Marrakech immersion, Fes cultural deep dive, and Marrakech + Desert escape with hourly schedules and budgets.',
+      type: 'page',
+      url: '/morocco-3-day-itinerary',
+      tags: ['itinerary', '3 days', 'short trip', 'planning', 'budget'],
+      keywords: ['morocco itinerary 3 days', '3 days in morocco', 'morocco 3 day trip', 'short trip morocco', 'weekend morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Solo Female Travel in Morocco — Safety, What to Wear & Practical Guide',
+      description: 'Complete solo female travel guide — safety tips, what to wear by setting, best cities, accommodation, transport, cultural tips, and itinerary suggestions.',
+      type: 'page',
+      url: '/morocco-solo-female-travel',
+      tags: ['solo female', 'women travel', 'safety', 'dress code', 'solo'],
+      keywords: ['solo female travel morocco', 'marrakech solo female travel', 'what to wear morocco women', 'is morocco safe for women'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Fishing Guide — Deep Sea, Sport & River Fishing',
+      description: 'Complete fishing guide — deep sea charters, sport fishing, river trout, best spots, species, seasons, licensing, and traditional fishing villages.',
+      type: 'page',
+      url: '/morocco-fishing-guide',
+      tags: ['fishing', 'deep sea', 'sport fishing', 'angling', 'outdoor'],
+      keywords: ['fishing morocco', 'deep sea fishing morocco', 'sport fishing morocco', 'fishing spots morocco'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
