@@ -2567,6 +2567,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['ifrane morocco', 'ifrane tours', 'ifrane alpine architecture', 'ifrane Switzerland Morocco', 'ifrane cedar forest'],
       priority: 9,
     },
+    {
+      title: 'Morocco Nature & Cultural Tours — Best Guided Experiences',
+      description: 'Complete guide to nature and cultural tours in Morocco — birdwatching, Atlas trekking, desert expeditions, medina tours, artisan workshops, and itineraries.',
+      type: 'page',
+      url: '/morocco-nature-tours',
+      tags: ['nature tours', 'cultural tours', 'guided tours', 'private tours', 'packages'],
+      keywords: ['nature tours morocco', 'cultural tours morocco', 'guided tours morocco', 'private tours morocco', 'morocco tour packages'],
+      priority: 9,
+    },
+    {
+      title: 'Dakhla Travel Guide — Kitesurfing Paradise & Desert Lagoon',
+      description: 'Complete Dakhla guide — world-class kitesurfing, lagoon, White Dune, Dragon Island, flamingos, seafood, accommodation, and getting there.',
+      type: 'page',
+      url: '/dakhla-guide',
+      tags: ['dakhla', 'kitesurfing', 'lagoon', 'wind sports', 'desert coast'],
+      keywords: ['dakhla morocco', 'dakhla kitesurfing', 'dakhla lagoon', 'dakhla travel guide', 'things to do dakhla'],
+      priority: 9,
+    },
+    {
+      title: 'Wild Camping in Morocco — Legal, Best Spots & Overlanding Tips',
+      description: 'Complete wild camping guide — legality, best spots by region, overlanding routes, essential gear, safety, leave no trace, and van life tips.',
+      type: 'page',
+      url: '/morocco-wild-camping',
+      tags: ['wild camping', 'camping', 'overlanding', 'van life', 'outdoor'],
+      keywords: ['wild camping morocco', 'camping in morocco', 'free camping morocco', 'overlanding morocco', 'camping spots morocco'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

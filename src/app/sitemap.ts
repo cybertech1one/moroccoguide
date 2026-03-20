@@ -353,6 +353,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-spring-guide',
     '/morocco-outdoor-activities',
     '/ifrane-guide',
+    '/morocco-nature-tours',
+    '/dakhla-guide',
+    '/morocco-wild-camping',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
