@@ -290,6 +290,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-film-locations',
     '/morocco-sahara-overnight',
     '/morocco-spice-guide',
+    '/morocco-berber-guide',
+    '/morocco-waterfalls',
+    '/day-trips-from-marrakech',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

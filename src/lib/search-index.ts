@@ -2000,6 +2000,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['Morocco spices', 'Moroccan spice guide', 'buying spices Morocco', 'ras el hanout guide'],
       priority: 9,
     },
+    {
+      title: 'Morocco Berber Guide',
+      description: 'Amazigh/Berber culture guide — villages to visit, traditional crafts, cuisine, music, festivals, homestays, and etiquette.',
+      type: 'page',
+      url: '/morocco-berber-guide',
+      tags: ['Berber', 'Amazigh', 'culture', 'villages'],
+      keywords: ['Berber culture Morocco', 'Amazigh people Morocco', 'Berber village visit', 'Berber traditions'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Waterfalls',
+      description: 'Best waterfalls in Morocco — Ouzoud Falls, Akchour, Paradise Valley, Setti Fatma, hiking info, and swimming spots.',
+      type: 'page',
+      url: '/morocco-waterfalls',
+      tags: ['waterfalls', 'nature', 'hiking', 'swimming'],
+      keywords: ['Morocco waterfalls', 'Ouzoud Falls Morocco', 'Akchour waterfalls', 'best waterfalls Morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Day Trips from Marrakech',
+      description: '12 best day trips from Marrakech — Ouzoud Falls, Essaouira, Ait Ben Haddou, Ourika Valley, distances, costs, and tips.',
+      type: 'page',
+      url: '/day-trips-from-marrakech',
+      tags: ['day trips', 'Marrakech', 'excursions', 'tours'],
+      keywords: ['day trips from Marrakech', 'Marrakech excursions', 'best day trips Marrakech', 'Marrakech day tour'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
