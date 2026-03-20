@@ -2783,6 +2783,15 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['riad morocco', 'best riads in morocco', 'what is a riad', 'riads in marrakech', 'riads in fez'],
       priority: 9,
     },
+    {
+      title: 'Morocco Adventure Tours Guide 2026',
+      description: 'Complete guide to adventure tours in Morocco — trekking, sandboarding, surfing, camel trekking, rock climbing, paragliding, and multi-day itineraries.',
+      type: 'page',
+      url: '/morocco-adventure-tours',
+      tags: ['adventure', 'trekking', 'surfing', 'outdoor', 'extreme sports'],
+      keywords: ['morocco adventure tours', 'adventure travel morocco', 'morocco adventure holidays', 'best adventure activities morocco'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

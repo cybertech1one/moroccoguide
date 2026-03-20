@@ -377,6 +377,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-shopping-guide',
     '/morocco-2-week-itinerary',
     '/morocco-riads-guide',
+    '/morocco-adventure-tours',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
