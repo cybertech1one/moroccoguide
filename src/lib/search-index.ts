@@ -2675,6 +2675,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['morocco regions', 'regions of morocco', 'moroccan regions', 'morocco geography', 'morocco map regions'],
       priority: 9,
     },
+    {
+      title: 'Morocco Budget Travel Guide 2026',
+      description: 'Complete budget travel guide for Morocco with daily cost breakdowns, cheap cities, street food prices, transport savings, and money-saving tips.',
+      type: 'page',
+      url: '/morocco-budget-travel',
+      tags: ['budget', 'cheap travel', 'backpacking', 'money saving', 'costs'],
+      keywords: ['morocco cheap travel', 'morocco on a budget', 'how much to go to morocco', 'morocco budget travel', 'cheap morocco holidays'],
+      priority: 9,
+    },
+    {
+      title: 'Al Hoceima Travel Guide 2026',
+      description: 'Complete guide to Al Hoceima — Mediterranean beaches, Rif Mountains, national park, water sports, Amazigh culture, seafood, and practical travel tips.',
+      type: 'page',
+      url: '/al-hoceima-guide',
+      tags: ['al hoceima', 'rif', 'mediterranean', 'beaches', 'national park'],
+      keywords: ['al hoceima', 'things to do in al hoceima', 'al hoceima beach', 'al hoceima morocco', 'al hoceima national park'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Food Tours Guide 2026',
+      description: 'Ultimate guide to food tours in Morocco — Marrakech, Fez, Casablanca, Essaouira street food, cooking classes, market experiences, and regional specialties.',
+      type: 'page',
+      url: '/morocco-food-tour',
+      tags: ['food tour', 'street food', 'cooking class', 'cuisine', 'markets'],
+      keywords: ['morocco food tour', 'moroccan food tour', 'marrakech food tour', 'moroccan street food', 'best food in morocco'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

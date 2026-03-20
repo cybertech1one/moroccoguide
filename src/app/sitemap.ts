@@ -365,6 +365,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-berber-culture',
     '/morocco-hammam-guide',
     '/morocco-regions-guide',
+    '/morocco-budget-travel',
+    '/al-hoceima-guide',
+    '/morocco-food-tour',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
