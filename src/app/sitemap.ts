@@ -323,6 +323,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-internet-guide',
     '/morocco-cooking-experience',
     '/morocco-photography-locations',
+    '/morocco-water-guide',
+    '/morocco-airport-guide',
+    '/morocco-art-scene',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

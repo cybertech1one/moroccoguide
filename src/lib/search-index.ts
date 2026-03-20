@@ -2297,6 +2297,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['Morocco photography locations', 'best places photograph Morocco', 'Morocco photo guide', 'photography spots Morocco'],
       priority: 9,
     },
+    {
+      title: 'Morocco Drinking Water Guide',
+      description: 'Is tap water safe in Morocco? Bottled water brands, purification options, ice safety, desert hydration, and sustainable choices.',
+      type: 'page',
+      url: '/morocco-water-guide',
+      tags: ['water', 'health', 'safety', 'travel tips'],
+      keywords: ['tap water Morocco', 'drinking water Morocco', 'Morocco water safety', 'bottled water Morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Airport Guide',
+      description: 'Complete guide to Morocco airports — 9 airports, transport to city, budget airlines, facilities, arrival and departure tips.',
+      type: 'page',
+      url: '/morocco-airport-guide',
+      tags: ['airports', 'flights', 'transport', 'arrival', 'airlines'],
+      keywords: ['Morocco airports', 'best airport Morocco', 'Morocco airport guide', 'fly into Morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Art Scene',
+      description: 'Morocco contemporary art guide — galleries, street art, traditional arts, festivals, famous artists, and art hotels.',
+      type: 'page',
+      url: '/morocco-art-scene',
+      tags: ['art', 'galleries', 'culture', 'contemporary', 'museums'],
+      keywords: ['Morocco art scene', 'Moroccan contemporary art', 'art galleries Morocco', 'Marrakech art'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
