@@ -317,6 +317,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-zellige-tiles',
     '/essaouira-vs-agadir',
     '/morocco-train-guide',
+    '/morocco-bus-guide',
+    '/morocco-henna-guide',
+    '/morocco-romantic-getaways',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

@@ -2243,6 +2243,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['Morocco train guide', 'trains in Morocco', 'ONCF Morocco', 'Al Boraq train', 'Morocco rail travel'],
       priority: 9,
     },
+    {
+      title: 'Morocco Bus Travel Guide',
+      description: 'Complete guide to bus travel in Morocco — CTM, Supratours, local buses, routes, prices, stations, and grand taxis.',
+      type: 'page',
+      url: '/morocco-bus-guide',
+      tags: ['buses', 'transport', 'CTM', 'Supratours', 'travel'],
+      keywords: ['Morocco bus travel', 'CTM bus Morocco', 'Supratours Morocco', 'bus routes Morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Henna Guide',
+      description: 'Guide to henna in Morocco — history, design styles, where to get henna, safe vs black henna, prices, and wedding traditions.',
+      type: 'page',
+      url: '/morocco-henna-guide',
+      tags: ['henna', 'culture', 'crafts', 'traditions', 'beauty'],
+      keywords: ['henna Morocco', 'Moroccan henna guide', 'getting henna Morocco', 'henna Marrakech'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Romantic Getaways',
+      description: 'Most romantic destinations in Morocco — riad stays, desert glamping, sunset camel rides, rooftop dining, and couple itineraries.',
+      type: 'page',
+      url: '/morocco-romantic-getaways',
+      tags: ['romantic', 'couples', 'honeymoon', 'luxury', 'getaways'],
+      keywords: ['romantic getaways Morocco', 'romantic Morocco trip', 'couples vacation Morocco', 'romantic riad Morocco'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
