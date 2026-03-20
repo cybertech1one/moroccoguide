@@ -281,6 +281,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-riad-experience',
     '/morocco-language-basics',
     '/morocco-cooking-classes-guide',
+    '/morocco-camel-trekking',
+    '/morocco-atlas-guide',
+    '/morocco-medina-tips',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

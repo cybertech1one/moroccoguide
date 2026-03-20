@@ -1919,6 +1919,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['Morocco cooking class', 'Moroccan cooking experience', 'cooking class Marrakech', 'learn Moroccan food'],
       priority: 9,
     },
+    {
+      title: 'Morocco Camel Trekking',
+      description: 'Sahara camel trek guide — sunset rides, overnight treks, best locations (Merzouga, M\'Hamid, Zagora), ethics, and packing tips.',
+      type: 'page',
+      url: '/morocco-camel-trekking',
+      tags: ['camel', 'Sahara', 'desert', 'trekking'],
+      keywords: ['Morocco camel trek', 'camel ride Sahara', 'desert camel experience', 'Merzouga camel tour'],
+      priority: 9,
+    },
+    {
+      title: 'Atlas Mountains Guide',
+      description: 'Atlas Mountains Morocco — High/Middle/Anti-Atlas, Toubkal, Imlil, Ourika Valley, Ouzoud Falls, trekking, and day trips.',
+      type: 'page',
+      url: '/morocco-atlas-guide',
+      tags: ['Atlas', 'mountains', 'trekking', 'nature'],
+      keywords: ['Atlas Mountains Morocco', 'Atlas Mountains trekking', 'things to do Atlas', 'Atlas day trip'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Medina Tips',
+      description: 'How to navigate Moroccan medinas — layout explained, navigation strategies, dealing with touts, best medinas, and safety tips.',
+      type: 'page',
+      url: '/morocco-medina-tips',
+      tags: ['medina', 'navigation', 'tips', 'safety'],
+      keywords: ['navigating Moroccan medina', 'medina tips Morocco', 'how not get lost medina', 'Morocco old town guide'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
