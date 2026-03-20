@@ -278,6 +278,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-sustainable-travel',
     '/morocco-history-guide',
     '/morocco-argan-oil',
+    '/morocco-riad-experience',
+    '/morocco-language-basics',
+    '/morocco-cooking-classes-guide',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

@@ -1892,6 +1892,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['Morocco argan oil', 'argan oil buying guide', 'argan cooperatives Morocco', 'best argan oil Morocco'],
       priority: 9,
     },
+    {
+      title: 'Morocco Riad Experience',
+      description: 'What is a riad? Complete guide to staying in Moroccan riads — architecture, riad vs hotel, etiquette, types, best riads by city.',
+      type: 'page',
+      url: '/morocco-riad-experience',
+      tags: ['riads', 'accommodation', 'culture', 'experience'],
+      keywords: ['what is a riad Morocco', 'staying in a riad', 'riad vs hotel Morocco', 'Moroccan riad experience'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Language Basics',
+      description: '50+ essential Darija phrases for tourists — greetings, numbers, shopping, dining, transport, and pronunciation guide.',
+      type: 'page',
+      url: '/morocco-language-basics',
+      tags: ['language', 'Darija', 'phrases', 'Arabic'],
+      keywords: ['Moroccan Arabic phrases', 'basic Darija tourists', 'useful Arabic Morocco', 'Morocco language guide'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Cooking Classes Guide',
+      description: 'Complete guide to Moroccan cooking classes — types, top schools by city, dishes you\'ll learn, market visits, and booking tips.',
+      type: 'page',
+      url: '/morocco-cooking-classes-guide',
+      tags: ['cooking', 'food', 'classes', 'experience'],
+      keywords: ['Morocco cooking class', 'Moroccan cooking experience', 'cooking class Marrakech', 'learn Moroccan food'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
