@@ -2405,6 +2405,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['Moroccan wedding traditions', 'Morocco wedding customs', 'Moroccan henna ceremony', 'traditional Moroccan wedding'],
       priority: 9,
     },
+    {
+      title: 'Moroccan Mint Tea Guide — Culture, Ceremony & Recipes',
+      description: 'Complete guide to Moroccan mint tea — history, pouring ceremony, ingredients, regional variations, tea etiquette, best cafés, and how to make atay.',
+      type: 'page',
+      url: '/morocco-mint-tea-guide',
+      tags: ['mint tea', 'atay', 'culture', 'ceremony', 'hospitality'],
+      keywords: ['Moroccan mint tea', 'Morocco tea ceremony', 'how to make Moroccan tea', 'atay Morocco', 'tea culture'],
+      priority: 9,
+    },
+    {
+      title: 'Atlas Mountains Guide — Hiking, Villages, Toubkal & Activities',
+      description: 'Complete Atlas Mountains guide — High Atlas, Mount Toubkal, Imlil, Ourika Valley, Berber villages, trekking routes, and accommodation.',
+      type: 'page',
+      url: '/morocco-atlas-mountains',
+      tags: ['atlas mountains', 'hiking', 'Toubkal', 'trekking', 'Berber villages'],
+      keywords: ['Atlas Mountains Morocco guide', 'Mount Toubkal', 'Atlas Mountains hiking', 'Berber villages Atlas'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Nightlife Guide — Bars, Clubs & Live Music',
+      description: 'Complete Morocco nightlife guide — best bars, clubs, rooftop lounges, live Gnawa music, dress codes, and safety tips by city.',
+      type: 'page',
+      url: '/morocco-nightlife-guide',
+      tags: ['nightlife', 'bars', 'clubs', 'music', 'entertainment'],
+      keywords: ['Morocco nightlife guide', 'Marrakech nightlife', 'Casablanca clubs', 'bars in Morocco', 'rooftop bars Morocco'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
