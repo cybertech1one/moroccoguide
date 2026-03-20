@@ -320,6 +320,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-bus-guide',
     '/morocco-henna-guide',
     '/morocco-romantic-getaways',
+    '/morocco-internet-guide',
+    '/morocco-cooking-experience',
+    '/morocco-photography-locations',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

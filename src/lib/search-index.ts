@@ -2270,6 +2270,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['romantic getaways Morocco', 'romantic Morocco trip', 'couples vacation Morocco', 'romantic riad Morocco'],
       priority: 9,
     },
+    {
+      title: 'Morocco Internet & WiFi Guide',
+      description: 'Stay connected in Morocco — SIM cards, eSIM, WiFi quality, data plans, coworking spaces, and rural connectivity tips.',
+      type: 'page',
+      url: '/morocco-internet-guide',
+      tags: ['internet', 'WiFi', 'SIM card', 'connectivity', 'digital nomad'],
+      keywords: ['internet Morocco', 'Morocco WiFi guide', 'SIM card Morocco', 'eSIM Morocco', 'staying connected Morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Cooking Experience',
+      description: 'Best cooking classes in Morocco — tagine, couscous, pastilla, market tours, riad classes, and farm-to-table experiences.',
+      type: 'page',
+      url: '/morocco-cooking-experience',
+      tags: ['cooking', 'food', 'classes', 'experience', 'cuisine'],
+      keywords: ['cooking class Morocco', 'Moroccan cooking experience', 'learn Moroccan food', 'Marrakech cooking class'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Photography Locations',
+      description: 'Best photography locations in Morocco — architecture, landscapes, streets, cultural scenes, gear tips, etiquette, and drone rules.',
+      type: 'page',
+      url: '/morocco-photography-locations',
+      tags: ['photography', 'locations', 'camera', 'travel', 'Instagram'],
+      keywords: ['Morocco photography locations', 'best places photograph Morocco', 'Morocco photo guide', 'photography spots Morocco'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
