@@ -302,6 +302,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/day-trips-from-tangier',
     '/morocco-pottery-guide',
     '/fes-vs-marrakech',
+    '/morocco-leather-guide',
+    '/morocco-desert-glamping',
+    '/morocco-public-holidays',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

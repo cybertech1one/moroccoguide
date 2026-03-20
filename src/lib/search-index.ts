@@ -2108,6 +2108,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['Fes vs Marrakech', 'Marrakech or Fes', 'should I visit Fes or Marrakech', 'best city Morocco'],
       priority: 9,
     },
+    {
+      title: 'Morocco Leather Goods Guide',
+      description: 'Complete guide to Moroccan leather — Fes tanneries, babouches, poufs, bags, quality tests, fair prices, and bargaining tips.',
+      type: 'page',
+      url: '/morocco-leather-guide',
+      tags: ['leather', 'tanneries', 'crafts', 'shopping', 'Fes'],
+      keywords: ['Moroccan leather', 'Fes tannery', 'Morocco leather goods', 'buy leather Morocco', 'babouche slippers'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Desert Glamping Guide',
+      description: 'Luxury desert glamping in Morocco — Erg Chebbi, Erg Chigaga, Agafay camps, camp types, prices, activities, and what to pack.',
+      type: 'page',
+      url: '/morocco-desert-glamping',
+      tags: ['glamping', 'desert', 'luxury', 'Sahara', 'camping'],
+      keywords: ['Morocco desert glamping', 'luxury desert camp Morocco', 'Sahara glamping', 'Merzouga luxury camp'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Public Holidays 2025 & 2026',
+      description: 'Complete guide to Morocco public holidays — fixed national holidays, Islamic holidays, impact on travelers, and 2025-2026 calendar.',
+      type: 'page',
+      url: '/morocco-public-holidays',
+      tags: ['holidays', 'calendar', 'festivals', 'planning', 'culture'],
+      keywords: ['Morocco public holidays', 'Moroccan holidays 2026', 'Morocco national holidays', 'Eid Morocco', 'Throne Day'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
