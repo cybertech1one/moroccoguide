@@ -1865,6 +1865,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['Morocco World Cup 2030', 'FIFA 2030 Morocco', 'World Cup Morocco travel', '2030 host cities Morocco'],
       priority: 9,
     },
+    {
+      title: 'Sustainable Travel Morocco',
+      description: 'Eco-friendly travel in Morocco — eco-lodges, community tourism, responsible desert visits, ethical animal encounters, and green transport.',
+      type: 'page',
+      url: '/morocco-sustainable-travel',
+      tags: ['eco-tourism', 'sustainable', 'responsible', 'green'],
+      keywords: ['sustainable travel Morocco', 'eco-friendly Morocco', 'responsible travel Morocco', 'green tourism Morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco History Guide',
+      description: 'History of Morocco — ancient dynasties, Roman ruins, Arab conquest, French protectorate, independence, and must-visit historical sites.',
+      type: 'page',
+      url: '/morocco-history-guide',
+      tags: ['history', 'culture', 'dynasties', 'heritage'],
+      keywords: ['Morocco history', 'history of Morocco', 'Moroccan dynasties', 'Morocco historical sites'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Argan Oil Guide',
+      description: 'Complete argan oil buying guide — cosmetic vs culinary, cooperatives to visit, how to spot fakes, prices, and health benefits.',
+      type: 'page',
+      url: '/morocco-argan-oil',
+      tags: ['argan oil', 'shopping', 'beauty', 'souvenirs'],
+      keywords: ['Morocco argan oil', 'argan oil buying guide', 'argan cooperatives Morocco', 'best argan oil Morocco'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

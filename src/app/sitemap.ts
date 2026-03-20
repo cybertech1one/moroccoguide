@@ -275,6 +275,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-tea-culture',
     '/morocco-nightlife',
     '/morocco-world-cup-2030',
+    '/morocco-sustainable-travel',
+    '/morocco-history-guide',
+    '/morocco-argan-oil',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
