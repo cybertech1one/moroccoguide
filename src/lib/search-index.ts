@@ -2162,6 +2162,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['surfing Morocco', 'Morocco surf guide', 'best surf spots Morocco', 'Taghazout surfing', 'surf camp Morocco'],
       priority: 9,
     },
+    {
+      title: 'Museums in Morocco',
+      description: 'Best museums in Morocco — Marrakech, Fes, Rabat, Casablanca, and Tangier museums with prices, hours, and visitor tips.',
+      type: 'page',
+      url: '/morocco-museums',
+      tags: ['museums', 'culture', 'art', 'history', 'attractions'],
+      keywords: ['Morocco museums', 'best museums Morocco', 'Marrakech museums', 'Rabat museums', 'YSL Museum'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco All-Inclusive Holidays',
+      description: 'Guide to all-inclusive holidays in Morocco — best resorts, destinations, package types, prices, and booking tips.',
+      type: 'page',
+      url: '/morocco-all-inclusive',
+      tags: ['all-inclusive', 'resorts', 'holidays', 'packages', 'Agadir'],
+      keywords: ['Morocco all inclusive', 'all inclusive holidays Morocco', 'Morocco package holidays', 'Agadir all inclusive'],
+      priority: 9,
+    },
+    {
+      title: 'Marrakech vs Casablanca — Which City to Visit',
+      description: 'Marrakech vs Casablanca comparison — culture, food, nightlife, shopping, costs, and which city suits your travel style.',
+      type: 'page',
+      url: '/marrakech-vs-casablanca',
+      tags: ['comparison', 'Marrakech', 'Casablanca', 'travel planning'],
+      keywords: ['Marrakech vs Casablanca', 'Casablanca or Marrakech', 'Marrakech Casablanca comparison'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

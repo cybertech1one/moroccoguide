@@ -308,6 +308,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-olive-oil',
     '/morocco-yoga-retreats',
     '/morocco-surfing-guide',
+    '/morocco-museums',
+    '/morocco-all-inclusive',
+    '/marrakech-vs-casablanca',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
