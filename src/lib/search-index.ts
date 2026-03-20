@@ -2945,6 +2945,15 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['moroccan carpet buying guide', 'beni ourain rug', 'morocco carpet prices', 'berber rug morocco', 'how to buy moroccan carpet'],
       priority: 9,
     },
+    {
+      title: 'Destination Weddings in Morocco Guide 2026',
+      description: 'Complete Morocco wedding planning guide — venues, traditions, legal requirements, budget breakdown, planners, and best season for destination weddings.',
+      type: 'page',
+      url: '/morocco-wedding-guide',
+      tags: ['wedding', 'destination wedding', 'venues', 'traditions', 'planning'],
+      keywords: ['morocco wedding', 'destination wedding morocco', 'marrakech wedding venue', 'moroccan wedding traditions', 'morocco wedding planner'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

@@ -5,7 +5,6 @@ import {
   Home,
   MapPin,
   Star,
-  Heart,
   Clock,
   Info,
   ArrowRight,
@@ -17,7 +16,6 @@ import {
   Building,
   Award,
   BookOpen,
-  Crown,
   Compass,
   Map,
   Landmark,
@@ -25,8 +23,18 @@ import {
   ShoppingBag,
   Eye,
   Footprints,
-  CircleDot,
   Layers,
+  Navigation,
+  MessageCircle,
+  Sun,
+  Moon,
+  ThumbsUp,
+  CircleAlert,
+  Smartphone,
+  Camera,
+  Coffee,
+  HandCoins,
+  Scale,
 } from 'lucide-react';
 
 /* ═══════════════════════════════════════════════════════════════
@@ -40,51 +48,51 @@ const BASE_URL = 'https://citytoursmorocco.com';
    ═══════════════════════════════════════════════════════════════ */
 
 export const metadata: Metadata = {
-  title: 'What Is a Medina? Complete Guide to Morocco\'s Historic Walled Cities 2026',
+  title: 'How to Navigate Moroccan Medinas — Complete Survival Guide 2026',
   description:
-    'Discover what a medina is and explore Morocco\'s best historic walled cities. From Fes el-Bali to Marrakech, learn about medina architecture, UNESCO heritage sites, navigation tips, souks, riads, and the culture of Moroccan medinas.',
+    'Master Morocco\'s ancient medinas with this complete guide. Navigate Fes el-Bali, Marrakech, Chefchaouen, and more. Haggling tips, fair prices, safety advice, dealing with touts, and why getting lost is the best part.',
   keywords: [
-    'what is a medina',
-    'medina meaning',
-    'medina morocco',
-    'moroccan medina',
-    'medinas morocco',
-    'what is a medina in morocco',
+    'moroccan medina guide',
+    'navigate medina morocco',
+    'medina tips',
     'best medinas morocco',
-    'morocco old city',
-    'fes medina',
-    'marrakech medina',
-    'moroccan walled city',
-    'medina architecture',
+    'fes medina navigation',
+    'marrakech medina guide',
+    'morocco souk guide',
+    'haggling morocco',
+    'medina safety tips',
+    'fes el bali guide',
+    'chefchaouen medina',
+    'essaouira medina',
+    'morocco medina architecture',
+    'dealing with touts morocco',
+    'faux guides morocco',
+    'medina shopping tips',
     'UNESCO medina morocco',
-    'navigating moroccan medina',
-    'medina souks morocco',
-    'riad medina morocco',
-    'morocco historic cities',
-    'medina gates bab morocco',
-    'medina vs ville nouvelle',
-    'fondouk morocco',
+    'morocco old city guide',
+    'medina navigation app',
+    'getting lost medina morocco',
   ],
   openGraph: {
-    title: 'What Is a Medina? Complete Guide to Morocco\'s Historic Walled Cities 2026',
+    title: 'How to Navigate Moroccan Medinas — Complete Survival Guide 2026',
     description:
-      'Everything you need to know about Moroccan medinas. History, architecture, UNESCO sites, the best medinas ranked, navigation tips, shopping, safety, and cultural insights.',
+      'Master Morocco\'s ancient medinas. Navigate Fes el-Bali, haggle in Marrakech souks, dodge touts, and discover why getting lost is the best part. Prices, safety tips, and local strategies.',
     url: `${BASE_URL}/morocco-medina-guide`,
     images: [
       {
-        url: `${BASE_URL}/images/hero-fes-medina.webp`,
+        url: `${BASE_URL}/images/hero-medina.webp`,
         width: 1200,
         height: 630,
-        alt: 'Aerial view of the Fes el-Bali medina with its dense maze of narrow streets, minarets, and traditional architecture',
+        alt: 'Narrow alleyway inside a Moroccan medina with sunlight filtering through latticed windows',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'What Is a Medina? Guide to Morocco\'s Historic Walled Cities',
+    title: 'How to Navigate Moroccan Medinas — Complete Survival Guide 2026',
     description:
-      'From Fes el-Bali to Chefchaouen: discover the meaning of medina, explore Morocco\'s best historic walled cities, and learn how to navigate their ancient streets like a local.',
-    images: [`${BASE_URL}/images/hero-fes-medina.webp`],
+      'Navigate Fes el-Bali, haggle in Marrakech souks, and survive Morocco\'s ancient walled cities. Fair prices, safety tips, and local know-how.',
+    images: [`${BASE_URL}/images/hero-medina.webp`],
   },
   alternates: { canonical: `${BASE_URL}/morocco-medina-guide` },
 };
@@ -93,15 +101,15 @@ export const metadata: Metadata = {
    JSON-LD STRUCTURED DATA
    ═══════════════════════════════════════════════════════════════ */
 
-const jsonLd = {
+const jsonLdTravel = {
   '@context': 'https://schema.org',
   '@type': 'TravelGuide',
   '@id': `${BASE_URL}/morocco-medina-guide`,
-  name: 'What Is a Medina? Complete Guide to Morocco\'s Historic Walled Cities 2026',
+  name: 'How to Navigate Moroccan Medinas — Complete Survival Guide 2026',
   description:
-    'Comprehensive guide to Moroccan medinas covering history, architecture, UNESCO heritage sites, best medinas ranked, navigation tips, safety, shopping, and cultural insights.',
+    'Complete guide to navigating Morocco\'s historic medinas. Covers Fes el-Bali, Marrakech, Chefchaouen, Essaouira, Meknes, Tetouan, and Tangier. Includes shopping tips, fair prices, safety advice, and dealing with touts.',
   url: `${BASE_URL}/morocco-medina-guide`,
-  image: `${BASE_URL}/images/hero-fes-medina.webp`,
+  image: `${BASE_URL}/images/hero-medina.webp`,
   author: {
     '@type': 'Organization',
     name: 'CityGuide Morocco',
@@ -128,314 +136,218 @@ const jsonLd = {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Morocco Medina Guide', item: `${BASE_URL}/morocco-medina-guide` },
+      { '@type': 'ListItem', position: 2, name: 'Moroccan Medina Guide', item: `${BASE_URL}/morocco-medina-guide` },
     ],
   },
 };
 
-const faqJsonLd = {
+const faqItems = [
+  {
+    question: 'Is it safe to walk through a Moroccan medina at night?',
+    answer:
+      'Main thoroughfares in Marrakech and Fes stay active until 22:00-23:00 and are generally safe. Side alleys empty out after sunset, so stick to lit routes. Chefchaouen and Essaouira feel safe even later because foot traffic remains steady. Avoid poorly lit dead-end derbs after dark anywhere.',
+  },
+  {
+    question: 'Do I need a guide to navigate the Fes medina?',
+    answer:
+      'Fes el-Bali has over 9,000 alleys, so a licensed guide helps enormously on your first visit. Official guides carry government-issued ID cards and charge from 300 MAD for a half-day tour. After one guided walk, you will recognize enough landmarks to explore sections on your own.',
+  },
+  {
+    question: 'What is the best GPS app for medina navigation?',
+    answer:
+      'Maps.me works best inside medinas because it uses OpenStreetMap data that includes narrow alleys not shown on Google Maps. Download the offline Morocco map before you arrive. Google Maps works reasonably well in Marrakech and Essaouira but loses accuracy in the deep lanes of Fes.',
+  },
+  {
+    question: 'How much should I pay for a leather bag in the Fes medina?',
+    answer:
+      'A genuine leather crossbody bag should cost from 150-350 MAD depending on size and quality. The first price quoted will be 2-3 times higher. A large travel bag runs from 400-800 MAD. Always check the smell and feel — real leather smells of tannery, not chemicals. Ask to see unfinished pieces to verify authenticity.',
+  },
+  {
+    question: 'Are Moroccan medinas accessible for wheelchair users?',
+    answer:
+      'Most medinas are not wheelchair-friendly due to narrow lanes, uneven cobblestones, and frequent steps. Essaouira is the most accessible, with flatter terrain and wider main streets. Marrakech&apos;s Jemaa el-Fnaa square is accessible, but the souk alleys are tight. Riads often have stairs with no lift.',
+  },
+  {
+    question: 'Can I take photos inside the medina?',
+    answer:
+      'General street photography is fine. Avoid photographing people directly without asking — a nod or gesture goes a long way. Never photograph military or police buildings. Some shopkeepers enjoy posing; others expect a small tip (from 5-10 MAD). The tanneries in Fes charge from 20 MAD for rooftop photography access.',
+  },
+  {
+    question: 'What is the difference between a medina and a souk?',
+    answer:
+      'A medina is the entire old walled city, including residential neighborhoods, mosques, schools, and markets. A souk is specifically the commercial marketplace within the medina. Souks are organized by trade — you will find a souk for spices, one for leather, one for metalwork, and so on. Every medina contains souks, but the souk is only one part of the medina.',
+  },
+] as const;
+
+const jsonLdFaq = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What is a medina?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A medina (from the Arabic word "madina" meaning "city") is the historic walled quarter of a North African city. In Morocco, medinas are the original urban cores dating back centuries, characterized by narrow winding streets, traditional architecture, souks (markets), mosques, riads (courtyard houses), and fondouks (caravanserais). They are surrounded by defensive walls with monumental gates called "babs."',
-      },
+  mainEntity: faqItems.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
     },
-    {
-      '@type': 'Question',
-      name: 'What does medina mean?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The word "medina" comes from the Arabic "madina" (مدينة), which simply means "city." In modern usage, particularly in Morocco and North Africa, it refers specifically to the old, historic walled part of a city, as opposed to the "ville nouvelle" (new city) built during the French colonial period.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Which Moroccan medinas are UNESCO World Heritage Sites?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Four Moroccan medinas hold UNESCO World Heritage status: Fes el-Bali (inscribed 1981), the Medina of Marrakech (1985), the Medina of Essaouira (2001), and the Medina of Tetouan (1997). The historic city of Meknes (2001) and Rabat (2012) are also UNESCO-listed for their broader urban heritage.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is it safe to walk in a Moroccan medina?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes, Moroccan medinas are generally safe for visitors. Exercise normal precautions: keep valuables secure, be aware of your surroundings, and stay on lit streets after dark. The biggest risks are getting lost (which is part of the experience) and minor scams targeting tourists. Most locals are genuinely helpful if you ask for directions.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is the best medina to visit in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Fes el-Bali is widely considered the most impressive medina in Morocco and the largest car-free urban area in the world. For first-time visitors, Marrakech offers the most accessible medina experience. Chefchaouen has the most photogenic medina with its blue-washed walls. Essaouira offers a relaxed, easy-to-navigate coastal medina.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is the difference between a medina and a ville nouvelle?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The medina is the original historic walled city with narrow streets, traditional architecture, and a medieval urban layout. The ville nouvelle ("new city") was built by the French during the colonial period (1912-1956) with wide boulevards, European-style buildings, and a modern grid layout. Most Moroccan cities have both, connected but architecturally distinct.',
-      },
-    },
-  ],
+  })),
 };
 
 /* ═══════════════════════════════════════════════════════════════
-   DATA: BEST MEDINAS RANKED
+   DATA: TOP MEDINAS RANKED
    ═══════════════════════════════════════════════════════════════ */
 
-const bestMedinas = [
+const topMedinas = [
   {
     rank: 1,
     name: 'Fes el-Bali',
     city: 'Fes',
-    icon: Crown,
     unesco: true,
     unescoYear: 1981,
-    founded: '9th century',
+    icon: Award,
+    population: '~156,000 residents',
+    size: '280 hectares, 9,400+ alleys',
+    difficulty: 'Expert — easiest to get lost',
     description:
-      'The world\'s largest car-free urban area and the most complete medieval city in the Arab world. Fes el-Bali is home to over 9,000 alleyways, the oldest university on Earth (University of al-Qarawiyyin, founded 859 AD), and the famous tanneries. Over 150,000 people live and work within its walls. Walking here feels like stepping into the Middle Ages.',
-    highlights: ['Largest car-free urban zone in the world', 'Al-Qarawiyyin University (founded 859 AD)', 'Chouara tanneries', 'Over 9,000 winding alleyways'],
+      'The largest car-free urban zone on Earth. Founded in the 9th century, Fes el-Bali packs 9,400 lanes, 350 mosques, and the world\'s oldest university (al-Qarawiyyin, est. 859 CE) into 280 hectares. The Chouara tannery, visible from surrounding rooftops, has operated since the 11th century. Mule trains still deliver goods because no vehicle can fit through most passages.',
+    mustSee: ['Chouara Tannery', 'Bou Inania Madrasa', 'Al-Qarawiyyin Mosque', 'Nejjarine Fondouk'],
   },
   {
     rank: 2,
-    name: 'Medina of Marrakech',
+    name: 'Marrakech Medina',
     city: 'Marrakech',
-    icon: Star,
     unesco: true,
     unescoYear: 1985,
-    founded: '11th century',
+    icon: Star,
+    population: '~600,000 residents',
+    size: '600 hectares',
+    difficulty: 'Moderate — major routes are clear',
     description:
-      'The most visited medina in Morocco and the heart of the Red City. Centered around the iconic Jemaa el-Fnaa square, the Marrakech medina is a sensory overload of souks, street performers, mosques, and palaces. It is more open and navigable than Fes, making it ideal for first-time visitors to Morocco.',
-    highlights: ['Jemaa el-Fnaa square (UNESCO Masterpiece)', 'Koutoubia Mosque', 'Bahia Palace & El Badi Palace', 'Most extensive souk network'],
+      'The most visited medina in Morocco. Jemaa el-Fnaa square anchors the entire layout — if you are lost, ask anyone for "la place" and they will point you the right way. The souks radiate north from the square in a roughly grid-like pattern. Better signposted than Fes, with wider main arteries. The dye souk (Souk Sebbaghine) and spice square (Rahba Kedima) are standout sections.',
+    mustSee: ['Jemaa el-Fnaa', 'Bahia Palace', 'Koutoubia Mosque', 'Souk Sebbaghine (Dyers\' Souk)'],
   },
   {
     rank: 3,
-    name: 'Medina of Chefchaouen',
+    name: 'Chefchaouen Medina',
     city: 'Chefchaouen',
-    icon: Eye,
     unesco: false,
-    unescoYear: null,
-    founded: '15th century (1471)',
+    unescoYear: 0,
+    icon: Eye,
+    population: '~42,000 residents',
+    size: 'Compact — walkable in 2 hours',
+    difficulty: 'Easy — small and well-signed',
     description:
-      'The legendary Blue Pearl of Morocco. Chefchaouen\'s medina is famous for its blue-washed walls and buildings, originally painted by Jewish refugees in the 1930s who used the color to symbolize the sky and heaven. Small, compact, and easy to navigate on foot, it is one of the most photographed places in all of Africa.',
-    highlights: ['Iconic blue-washed walls and stairways', 'Compact and easy to explore', 'Ras el-Maa waterfall at the edge', 'Rif Mountain backdrop'],
+      'The "Blue Pearl" of Morocco. Nearly every wall and staircase is painted in shades of blue, from powder to cobalt. Founded in 1471 as a fortress against Portuguese invaders, the medina sits on a hillside beneath the Rif Mountains. Plaza Uta el-Hammam serves as the central square. The Kasbah museum (from 60 MAD) anchors the layout, and the Ras el-Maa waterfall at the eastern edge is where locals still wash laundry.',
+    mustSee: ['Plaza Uta el-Hammam', 'Kasbah Museum', 'Ras el-Maa Waterfall', 'Blue-painted streets'],
   },
   {
     rank: 4,
-    name: 'Medina of Essaouira',
+    name: 'Essaouira Medina',
     city: 'Essaouira',
-    icon: Compass,
     unesco: true,
     unescoYear: 2001,
-    founded: '18th century (1760s)',
+    icon: Compass,
+    population: '~77,000 residents',
+    size: 'Compact — grid layout',
+    difficulty: 'Easy — logical street grid',
     description:
-      'A coastal medina unlike any other in Morocco. Designed by French architect Theodore Cornut for Sultan Mohammed III, Essaouira\'s medina blends Moroccan and European influences. The straight streets are easier to navigate than other medinas, the Atlantic breeze keeps things cool, and the laid-back atmosphere is a welcome change from the intensity of Fes or Marrakech.',
-    highlights: ['Atlantic coast setting with sea ramparts', 'Grid-like layout, easy navigation', 'Portuguese-Moroccan fortifications', 'Gnaoua music heritage'],
+      'The most navigable medina in Morocco. French military architect Théodore Cornut designed it in the 18th century with a rational grid plan — rare for a Moroccan medina. Two main streets (Avenue de l\'Istiqlal and Avenue Mohammed Zerktouni) cross the center. The port, ramparts, and ocean serve as unmissable orientation points. Wind is constant; Essaouira means "little fortress."',
+    mustSee: ['Skala de la Ville (ramparts)', 'Port and fish market', 'Mellah (Jewish Quarter)', 'Galerie Damgaard'],
   },
   {
     rank: 5,
-    name: 'Medina of Tetouan',
-    city: 'Tetouan',
-    icon: Landmark,
+    name: 'Meknes Medina',
+    city: 'Meknes',
     unesco: true,
-    unescoYear: 1997,
-    founded: '15th century',
+    unescoYear: 1996,
+    icon: Landmark,
+    population: '~550,000 (city)',
+    size: 'Large — fewer tourists',
+    difficulty: 'Moderate — less signage',
     description:
-      'The most Andalusian medina in Morocco. Built by Moorish refugees expelled from Spain in the 15th century, Tetouan\'s medina has a distinctly Spanish-Moorish architectural style with whitewashed walls, ornate balconies, and tiled plazas. It is one of the smallest and most intimate UNESCO-listed medinas, receiving far fewer tourists than Fes or Marrakech.',
-    highlights: ['Andalusian-Moorish architecture', 'Whitewashed buildings with ornate balconies', 'Least touristy UNESCO medina', 'Spanish-influenced craft traditions'],
+      'Meknes was Sultan Moulay Ismail\'s imperial capital in the 17th century, and the medina reflects that ambition. Bab Mansour, the grandest gate in Morocco, marks the entrance. The medina is less touristy than Fes or Marrakech, which means lower prices and more genuine interactions. The Heri es-Souani granaries and the underground prison of Christian slaves are unique to Meknes.',
+    mustSee: ['Bab Mansour gate', 'Heri es-Souani (Royal Granaries)', 'Mausoleum of Moulay Ismail', 'Place el-Hedim'],
   },
   {
     rank: 6,
-    name: 'Medina of Meknes',
-    city: 'Meknes',
-    icon: Building,
+    name: 'Tetouan Medina',
+    city: 'Tetouan',
     unesco: true,
-    unescoYear: 1996,
-    founded: '11th century',
+    unescoYear: 1997,
+    icon: Building,
+    population: '~380,000 (city)',
+    size: 'Medium — Andalusian influences',
+    difficulty: 'Moderate — labyrinthine',
     description:
-      'The imperial city medina that most visitors overlook. Meknes was the capital of Sultan Moulay Ismail in the 17th century, and the medina reflects his ambition: monumental gates, vast royal granaries, and an enormous palace complex. The Bab Mansour gate is widely considered the most beautiful gateway in all of Morocco.',
-    highlights: ['Bab Mansour, Morocco\'s finest gate', 'Royal granaries of Moulay Ismail', 'Less crowded than Fes or Marrakech', 'Excellent food scene in the medina'],
+      'A strong Andalusian character sets Tetouan apart. Refugees from Spanish Reconquista Granada rebuilt this medina in the 15th century, and the Spanish-Moorish architecture remains. White-washed walls, wrought-iron balconies, and tiled courtyards feel more Andalusian than North African. The medina has seven historic gates and the Royal Palace sits at its heart.',
+    mustSee: ['Bab Okla', 'Royal Palace exterior', 'Ethnographic Museum', 'Artisan school (Dar Sanaa)'],
   },
   {
     rank: 7,
-    name: 'Medina of Rabat',
-    city: 'Rabat',
-    icon: Shield,
-    unesco: true,
-    unescoYear: 2012,
-    founded: '12th century',
-    description:
-      'The capital city\'s medina is clean, orderly, and surprisingly calm. Smaller than Fes or Marrakech, Rabat\'s medina runs along the Bou Regreg river and features the atmospheric Kasbah of the Udayas with its blue-and-white Andalusian streets. It is the most accessible and least overwhelming medina for first-time visitors.',
-    highlights: ['Kasbah of the Udayas', 'Clean and well-maintained streets', 'River and ocean views', 'Most peaceful major medina'],
-  },
-  {
-    rank: 8,
-    name: 'Medina of Tangier',
+    name: 'Tangier Medina',
     city: 'Tangier',
-    icon: Compass,
     unesco: false,
-    unescoYear: null,
-    founded: 'Ancient (Phoenician era)',
+    unescoYear: 0,
+    icon: Map,
+    population: '~1.1 million (city)',
+    size: 'Medium — perched on a hill',
+    difficulty: 'Moderate — steep terrain',
     description:
-      'Where Africa meets Europe. Tangier\'s medina sits on a hill overlooking the Strait of Gibraltar, and on a clear day, you can see Spain from the ramparts. The kasbah at the top houses a museum of Moroccan arts. The medina has a cosmopolitan history, having been an international zone that attracted artists, writers, and spies throughout the 20th century.',
-    highlights: ['Views of Spain across the Strait', 'Kasbah Museum of Moroccan Arts', 'Literary heritage (Bowles, Burroughs)', 'Petit Socco historic square'],
+      'Tangier\'s medina perches on a cliff above the Strait of Gibraltar. The Kasbah at the summit offers views across to Spain on clear days. The Petit Socco (Souk Dakhli) was the social hub of the "International Zone" era when writers like Paul Bowles and William Burroughs made Tangier their home. The Grand Socco connects the medina to the Ville Nouvelle.',
+    mustSee: ['Kasbah Museum', 'Petit Socco', 'Grand Socco', 'American Legation Museum'],
   },
-];
+] as const;
 
 /* ═══════════════════════════════════════════════════════════════
-   DATA: MEDINA ARCHITECTURE ELEMENTS
+   DATA: MEDINA LAYOUT ELEMENTS
    ═══════════════════════════════════════════════════════════════ */
 
-const architectureElements = [
+const medinaElements = [
+  {
+    name: 'Derb',
+    icon: Footprints,
+    description: 'A narrow residential lane, often a dead end. Derbs branch off main arteries and lead to clusters of homes. In Fes, some are barely shoulder-width. Locals know every turn in their derb — it functions as a micro-neighborhood.',
+  },
+  {
+    name: 'Fondouk',
+    icon: Building,
+    description: 'A historic caravanserai — a two-story building with an open courtyard where traders stored goods and animals on the ground floor and slept upstairs. Today many serve as workshops for artisans. The Nejjarine Fondouk in Fes is now a woodworking museum.',
+  },
+  {
+    name: 'Souk',
+    icon: ShoppingBag,
+    description: 'The commercial marketplace. Souks are organized by trade: spices, leather, textiles, metalwork, carpets, pottery. In Marrakech, each souk section has its own name. Souk Smarine is the main covered artery. Souk el-Attarine sells spices and perfumes.',
+  },
+  {
+    name: 'Jemaa (Mosque)',
+    icon: Landmark,
+    description: 'Every neighborhood has a mosque, and the main Friday mosque (jemaa) anchors the medina. The minaret is the tallest structure and serves as your best compass. Non-Muslims cannot enter most mosques in Morocco, but the architecture is visible from the street.',
+  },
   {
     name: 'Riad',
-    icon: Building,
-    description:
-      'A traditional Moroccan house built around a central courtyard (often with a fountain and garden). The word "riad" comes from the Arabic for "garden." Riads have no exterior windows; all rooms face inward for privacy and coolness. Today, many have been converted into boutique guesthouses.',
-    funFact: 'There are estimated to be over 3,000 riads in the Fes medina alone.',
-  },
-  {
-    name: 'Fondouk (Caravanserai)',
     icon: Layers,
-    description:
-      'A historic inn and trading post built around a courtyard, originally designed to house traveling merchants and their animals. The ground floor stored goods and animals; upper floors had sleeping rooms. Many fondouks in Fes and Marrakech date back 500+ years and are now artisan workshops.',
-    funFact: 'Fes el-Bali has over 175 fondouks, making it the city with the most in the world.',
-  },
-  {
-    name: 'Hammam',
-    icon: CircleDot,
-    description:
-      'The traditional public bathhouse found in every medina neighborhood. Hammams have been central to Moroccan social life for over a millennium. They consist of heated rooms of increasing temperature and are used for bathing, socializing, and ritual purification before Friday prayers.',
-    funFact: 'Every mosque in a medina was traditionally built with a hammam, a bakery, and a fountain nearby.',
-  },
-  {
-    name: 'Mosque & Minaret',
-    icon: Landmark,
-    description:
-      'The spiritual anchors of every medina. Neighborhood mosques (jama) dot the medina at close intervals so that no one lives more than a few minutes\' walk from one. The minaret is the most visible architectural feature, and the call to prayer echoes through the narrow streets five times daily.',
-    funFact: 'The Fes medina alone contains over 300 mosques. Non-Muslims may not enter mosques in Morocco (except Hassan II in Casablanca).',
-  },
-  {
-    name: 'Souk (Market)',
-    icon: ShoppingBag,
-    description:
-      'The commercial arteries of the medina. Souks are organized by trade: leatherworkers in one area, spice merchants in another, weavers in a third. This guild-based system has persisted for centuries. The covered souks provide shade and create a labyrinthine shopping experience unlike anything in the modern world.',
-    funFact: 'The Marrakech souks contain over 3,000 shops spread across dozens of interconnected alleyways.',
+    description: 'A traditional house built around an interior courtyard with a garden or fountain. The exterior walls are blank — all beauty faces inward. Thousands of riads in Fes and Marrakech have been converted into guesthouses, and sleeping inside the medina is the best way to experience it.',
   },
   {
     name: 'Bab (Gate)',
-    icon: Compass,
-    description:
-      'The monumental gates that pierce the medina walls and control access to the city. Babs were both defensive structures and works of art, often decorated with intricate zellige tilework, carved plaster, and Arabic calligraphy. Major gates were closed at night for security well into the 20th century.',
-    funFact: 'The Bab Mansour in Meknes, completed in 1732, is widely regarded as the most beautiful gate in North Africa.',
+    icon: Award,
+    description: 'The monumental gates in the medina walls. Fes has 14 historic gates. Bab Boujloud (the blue gate) is the most photographed. Gates serve as major orientation landmarks — when giving or receiving directions, gates are the primary reference points.',
   },
-];
+] as const;
 
 /* ═══════════════════════════════════════════════════════════════
-   DATA: NAVIGATION TIPS
+   DATA: SOUK PRICE GUIDE
    ═══════════════════════════════════════════════════════════════ */
 
-const navigationTips = [
-  {
-    title: 'Download an Offline Map',
-    icon: Map,
-    description:
-      'Google Maps and Maps.me both offer offline maps that work surprisingly well inside medinas. Download the city map before entering. GPS works even without data, so you can track your location in real time.',
-  },
-  {
-    title: 'Follow the Flow of People',
-    icon: Users,
-    description:
-      'Major medina arteries carry a steady flow of foot traffic. If you are lost, follow the crowd heading in one direction: it usually leads to a main gate, a major square, or a souk entrance. Walking against the flow takes you deeper into residential quarters.',
-  },
-  {
-    title: 'Use Landmarks, Not Street Names',
-    icon: Landmark,
-    description:
-      'Most medina streets do not have visible names. Navigate by landmarks: mosques, fountains, fondouks, and gates. Tell your riad host to give you landmark-based directions. "Turn left at the green mosque, then right at the fountain" is more useful than any address.',
-  },
-  {
-    title: 'Remember the Minaret Trick',
-    icon: Eye,
-    description:
-      'Minarets are visible above the rooftops from almost anywhere in a medina. Identify the minaret closest to your riad or hotel and use it as a compass. When lost, look up and orient yourself relative to that tower.',
-  },
-  {
-    title: 'Getting Lost Is Part of It',
-    icon: Compass,
-    description:
-      'Every experienced Morocco traveler will tell you: getting lost in the medina is not a problem but a feature. The best discoveries happen when you wander off the main paths. If you truly cannot find your way, ask a shopkeeper (not a street guide) for directions.',
-  },
-  {
-    title: 'Beware of Unofficial Guides',
-    icon: AlertTriangle,
-    description:
-      'People offering to "help" you find your way for free rarely are. A polite "la shukran" (no thank you) is enough. If you want a guide, hire an official one through your riad or the tourist office. Official guides carry ID cards and charge from 300 MAD for a half-day.',
-  },
-];
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: WHAT TO BUY IN THE MEDINA
-   ═══════════════════════════════════════════════════════════════ */
-
-const whatToBuy = [
-  { item: 'Leather goods (bags, slippers, belts)', price: 'From 80 MAD for babouche slippers', where: 'Leather souks, especially in Fes' },
-  { item: 'Handwoven Berber rugs and carpets', price: 'From 500 MAD for small rugs', where: 'Carpet souks in Marrakech and Fes' },
-  { item: 'Zellige tiles and ceramics', price: 'From 30 MAD per tile', where: 'Pottery souks, especially Fes and Safi' },
-  { item: 'Argan oil (cosmetic or culinary)', price: 'From 80 MAD per bottle', where: 'Herbalists and women\'s cooperatives' },
-  { item: 'Spices (saffron, ras el hanout, cumin)', price: 'From 20 MAD per bag', where: 'Spice souks in any medina' },
-  { item: 'Brass and copper lanterns', price: 'From 150 MAD for small lanterns', where: 'Metalwork souks, Marrakech and Fes' },
-  { item: 'Traditional Moroccan clothing (djellaba, kaftan)', price: 'From 200 MAD for a djellaba', where: 'Textile souks throughout Morocco' },
-  { item: 'Thuya wood carvings and boxes', price: 'From 50 MAD for small boxes', where: 'Essaouira medina (specialty)' },
-  { item: 'Hand-painted pottery and tagines', price: 'From 60 MAD for decorative tagines', where: 'Pottery souks in Fes and Safi' },
-  { item: 'Traditional jewelry (silver, amber, coral)', price: 'From 100 MAD for simple silver pieces', where: 'Jewelry souks, especially Tiznit and Essaouira' },
-];
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: MEDINA VS VILLE NOUVELLE
-   ═══════════════════════════════════════════════════════════════ */
-
-const medinaVsVilleNouvelle = [
-  {
-    aspect: 'History',
-    medina: 'Centuries old, some dating to the 9th century. Organic growth over generations following Islamic urban planning principles.',
-    villeNouvelle: 'Built during French colonial period (1912-1956). Planned modern cities with European design principles.',
-  },
-  {
-    aspect: 'Street Layout',
-    medina: 'Narrow, winding alleyways designed for pedestrians and donkeys. No grid pattern. Dead ends are common.',
-    villeNouvelle: 'Wide boulevards, traffic circles, and a grid layout designed for cars. Tree-lined avenues and sidewalks.',
-  },
-  {
-    aspect: 'Architecture',
-    medina: 'Riads, fondouks, mosques, hammams. Earthen and stone construction. Interior courtyards. Low-rise buildings.',
-    villeNouvelle: 'Art Deco, modernist, and contemporary buildings. Balconies, storefronts, apartment blocks. Multi-story construction.',
-  },
-  {
-    aspect: 'Commerce',
-    medina: 'Traditional souks organized by trade guilds. Bargaining expected. Artisan workshops. No fixed prices.',
-    villeNouvelle: 'Modern shops, supermarkets, cafes, restaurants. Fixed prices. International brands. ATMs and banks.',
-  },
-  {
-    aspect: 'Atmosphere',
-    medina: 'Dense, sensory-rich, chaotic, and deeply atmospheric. The sounds, smells, and colors are overwhelming in the best way.',
-    villeNouvelle: 'Calmer, more familiar to Western visitors. Restaurants, hotels with modern amenities, and a more relaxed pace.',
-  },
-  {
-    aspect: 'Where to Stay',
-    medina: 'Riads and traditional guesthouses. Intimate settings with courtyard gardens. From 300 MAD per night.',
-    villeNouvelle: 'Hotels (budget to luxury), serviced apartments. Modern amenities, air conditioning, parking. From 400 MAD per night.',
-  },
-];
+const soukPrices = [
+  { item: 'Leather babouche slippers', fairPrice: 'From 80-150 MAD', startPrice: '300-500 MAD', category: 'Leather' },
+  { item: 'Handwoven wool carpet (small)', fairPrice: 'From 500-1,500 MAD', startPrice: '2,000-5,000 MAD', category: 'Textiles' },
+  { item: 'Ceramic tagine (decorative)', fairPrice: 'From 60-120 MAD', startPrice: '200-400 MAD', category: 'Pottery' },
+  { item: 'Silver Berber ring', fairPrice: 'From 50-200 MAD', startPrice: '200-800 MAD', category: 'Jewelry' },
+  { item: 'Argan oil (1 liter, cosmetic)', fairPrice: 'From 200-350 MAD', startPrice: '500-800 MAD', category: 'Beauty' },
+  { item: 'Brass lantern (medium)', fairPrice: 'From 150-400 MAD', startPrice: '500-1,200 MAD', category: 'Metalwork' },
+  { item: 'Spice mix (100g ras el hanout)', fairPrice: 'From 20-40 MAD', startPrice: '80-150 MAD', category: 'Spices' },
+  { item: 'Leather crossbody bag', fairPrice: 'From 150-350 MAD', startPrice: '500-1,000 MAD', category: 'Leather' },
+] as const;
 
 /* ═══════════════════════════════════════════════════════════════
    PAGE COMPONENT
@@ -444,460 +356,754 @@ const medinaVsVilleNouvelle = [
 export default function MoroccoMedinaGuidePage() {
   return (
     <>
+      {/* JSON-LD */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdTravel) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
       />
 
-      {/* ── Hero Section ── */}
-      <section className="relative py-20 md:py-28 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(/images/hero-fes-medina.webp)',
-          }}
-        />
-        <div className="absolute inset-0 hero-overlay" />
+      {/* ── Hero + Breadcrumbs ── */}
+      <section className="relative min-h-[60vh] flex items-end pb-16">
+        <div className="absolute inset-0">
+          <img
+            src="/images/hero-medina.webp"
+            alt="Sunlit alleyway inside Fes el-Bali medina with carved plaster walls and wooden lattice windows"
+            className="w-full h-full object-cover"
+          />
+          <div className="hero-overlay" />
+        </div>
         <div className="container-morocco relative z-10">
-          <nav className="flex items-center gap-2 text-sm text-white/60 mb-8" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-white transition-colors">
-              <Home className="w-3.5 h-3.5" />
+          <nav className="flex items-center gap-1 text-sm text-white/80 mb-6" aria-label="Breadcrumb">
+            <Link href="/" className="hover:text-white flex items-center gap-1">
+              <Home className="w-3.5 h-3.5" /> Home
             </Link>
             <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-white">Morocco Medina Guide</span>
+            <span className="text-white font-medium">Moroccan Medina Guide</span>
           </nav>
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm text-white/90 text-sm mb-6">
-            <Landmark className="w-4 h-4" />
-            History &amp; Culture
-          </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-display)] font-bold text-white mb-4">
-            What Is a Medina?
-            <br className="hidden md:block" /> Morocco&apos;s Historic Walled Cities
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-display)] font-bold text-white mb-4 max-w-4xl">
+            How to Navigate Moroccan Medinas
           </h1>
-          <p className="text-xl text-white/80 max-w-2xl">
-            The complete guide to understanding, exploring, and falling in love with
-            Morocco&apos;s ancient medinas &mdash; from Fes el-Bali to Chefchaouen&apos;s Blue Pearl.
+          <p className="text-lg md:text-xl text-white/90 max-w-3xl font-[family-name:var(--font-heading)]">
+            A complete survival guide to Morocco&apos;s ancient walled cities — from the 9,400 alleys of Fes el-Bali
+            to the blue lanes of Chefchaouen. Practical navigation tips, fair prices, safety strategies, and
+            why getting lost is half the point.
           </p>
         </div>
       </section>
 
-      <div className="zellige-border" />
-
-      {/* ── Introduction: What Is a Medina? ── */}
+      {/* ── What Is a Medina ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
-          <div className="prose-moroccan">
-            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
-              Medina Meaning: The Arabic Word for City
-            </h2>
-            <div className="space-y-4 text-lg text-[var(--text-secondary)] leading-relaxed">
-              <p>
-                The word <strong>medina</strong> comes from the Arabic <em>madina</em> (مدينة),
-                which simply means &quot;city.&quot; In Morocco and across North Africa, the term has
-                taken on a more specific meaning: it refers to the <strong>historic walled quarter</strong> of
-                a city, the original urban core where people have lived, traded, and worshipped for
-                centuries before the modern era.
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Landmark className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            What Is a Medina?
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-10">
+            The Arabic word &quot;medina&quot; simply means &quot;city.&quot; In Morocco, it refers specifically to the
+            historic walled quarter — the original urban core that existed before French colonial-era expansion.
+          </p>
+
+          <div className="prose max-w-none">
+            <div className="card-moroccan p-6 mb-6">
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4">
+                Morocco has more UNESCO-listed medinas than any other country. Four of them — Fes (1981),
+                Marrakech (1985), Meknes (1996), and Essaouira (2001) — hold individual World Heritage status.
+                Tetouan (1997) earned its listing for preserving the strongest Andalusian architectural character
+                outside Spain. These designations protect structures dating back to the 9th century.
               </p>
-              <p>
-                A Moroccan medina is not a museum or a tourist attraction built for visitors. It is
-                a living, breathing city-within-a-city where hundreds of thousands of people go about
-                their daily lives. In the medina of Fes alone, over 150,000 residents live and work
-                within walls first constructed in the 9th century. Children go to school through the
-                same alleyways their great-grandparents used. Artisans practice crafts in workshops
-                that have not changed in 500 years.
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4">
+                Medinas are not museums. They are living cities. Hundreds of thousands of people are born, work,
+                eat, pray, and die inside these walls. Fes el-Bali alone houses roughly 156,000 residents. The
+                density forces a vertical building style — houses stack three or four stories above lanes that
+                narrow to less than a meter in places.
               </p>
-              <p>
-                For travelers, stepping into a Moroccan medina is the closest thing to time travel
-                that exists. The narrow winding streets, the call to prayer echoing off ancient walls,
-                the smell of spices and cedar wood, the sound of hammers on copper &mdash; these are
-                sensory experiences that no photograph or video can prepare you for. This guide will
-                help you understand, navigate, and deeply appreciate these extraordinary places.
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                The walls served a defensive purpose. Each medina was a fortified city with gates (babs) that
+                closed at night. Guard towers punctuated the perimeter. Today the walls remain, but the gates
+                stay open around the clock. The walls now serve as the clearest orientation tool you have —
+                when in doubt, walk toward the wall, and you will find a gate that connects to the modern city.
               </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
+            <div className="card-moroccan p-5 text-center">
+              <Award className="w-8 h-8 text-[var(--color-gold)] mx-auto mb-2" />
+              <p className="text-2xl font-bold text-[var(--text-primary)]">5</p>
+              <p className="text-xs text-[var(--text-secondary)]">UNESCO World Heritage Medinas</p>
+            </div>
+            <div className="card-moroccan p-5 text-center">
+              <Building className="w-8 h-8 text-[var(--color-gold)] mx-auto mb-2" />
+              <p className="text-2xl font-bold text-[var(--text-primary)]">9th Century</p>
+              <p className="text-xs text-[var(--text-secondary)]">Oldest medina foundations</p>
+            </div>
+            <div className="card-moroccan p-5 text-center">
+              <Users className="w-8 h-8 text-[var(--color-gold)] mx-auto mb-2" />
+              <p className="text-2xl font-bold text-[var(--text-primary)]">1M+</p>
+              <p className="text-xs text-[var(--text-secondary)]">People living inside medinas today</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── History of Moroccan Medinas ── */}
+      {/* ── Ranking the Best Medinas ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+        <div className="container-morocco">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Star className="w-8 h-8 inline-block text-[var(--color-gold)] mr-2" />
+            The 7 Best Medinas in Morocco, Ranked
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Each medina has a distinct character. Fes is labyrinthine and raw. Marrakech is theatrical. Chefchaouen
+            is photogenic. Essaouira is breezy and easy to navigate. Here is how they compare.
+          </p>
+
+          <div className="space-y-6">
+            {topMedinas.map((medina) => {
+              const MedinaIcon = medina.icon;
+              return (
+                <div key={medina.rank} className="card-moroccan p-6">
+                  <div className="flex flex-col md:flex-row md:items-start gap-4">
+                    <div className="flex items-center gap-3 md:min-w-[200px]">
+                      <span className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--color-accent)]">
+                        #{medina.rank}
+                      </span>
+                      <div>
+                        <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+                          {medina.name}
+                        </h3>
+                        <p className="text-xs text-[var(--text-muted)]">{medina.city}</p>
+                      </div>
+                      <MedinaIcon className="w-6 h-6 text-[var(--color-gold)] ml-auto md:ml-2" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-3">
+                        {medina.description}
+                      </p>
+                      <div className="flex flex-wrap gap-3 text-xs text-[var(--text-muted)] mb-3">
+                        <span className="flex items-center gap-1">
+                          <Users className="w-3 h-3" /> {medina.population}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Map className="w-3 h-3" /> {medina.size}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Compass className="w-3 h-3" /> {medina.difficulty}
+                        </span>
+                        {medina.unesco && (
+                          <span className="flex items-center gap-1 text-[var(--color-gold)] font-semibold">
+                            <Award className="w-3 h-3" /> UNESCO {medina.unescoYear}
+                          </span>
+                        )}
+                      </div>
+                      <div className="flex flex-wrap gap-2">
+                        {medina.mustSee.map((sight) => (
+                          <span key={sight} className="text-xs px-2 py-1 bg-[var(--surface-muted)] rounded-full text-[var(--text-secondary)]">
+                            {sight}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── How Medinas Are Organized ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Layers className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            How Medinas Are Organized
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Medinas look chaotic, but they follow a logical structure. Understanding the building blocks
+            makes navigation far easier.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {medinaElements.map((element) => {
+              const ElementIcon = element.icon;
+              return (
+                <div key={element.name} className="card-moroccan p-5">
+                  <div className="w-10 h-10 rounded-full bg-[var(--surface-muted)] flex items-center justify-center mb-3">
+                    <ElementIcon className="w-5 h-5 text-[var(--color-accent)]" />
+                  </div>
+                  <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                    {element.name}
+                  </h3>
+                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{element.description}</p>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="card-moroccan p-6 mt-8 zellige-border">
+            <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+              <Info className="w-5 h-5 inline text-[var(--color-accent)] mr-1" />
+              The Hierarchy of Space
+            </h3>
+            <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+              Every medina follows a concentric hierarchy. The Friday mosque sits at the center. Surrounding it are
+              the primary souks selling high-value goods (gold, silk, spices). As you move outward, you hit secondary
+              souks (leather, pottery, woodwork). Beyond those lie the residential derbs. The periphery holds
+              workshops producing noise, smoke, or smell — tanneries, dye works, and blacksmiths. The city walls
+              form the final ring. This layout has not changed in a thousand years.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Navigation Tips ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <BookOpen className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            A Brief History of Moroccan Medinas
+            <Navigation className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Navigation Tips That Actually Work
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            From the founding of Fes in 789 AD to the UNESCO protections of today, Moroccan medinas have witnessed over a millennium of continuous urban life.
+            Forget Google Maps in the deep medina. These are the strategies that actually keep you oriented.
           </p>
 
           <div className="space-y-6">
             <div className="card-moroccan p-6">
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                <Clock className="w-4 h-4 inline mr-2 text-[var(--color-accent)]" />
-                Foundation Period (8th-11th Century)
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                <Landmark className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
+                1. Use Minarets as Compass Points
               </h3>
               <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                Morocco&apos;s earliest medinas were founded during the Islamic expansion of North Africa.
-                Fes was established by Idris I in 789 AD, and its medina (Fes el-Bali) grew rapidly as
-                refugees from Cordoba and Kairouan settled there, bringing Andalusian and Tunisian
-                architectural traditions. Marrakech was founded in 1070 by the Almoravid dynasty as
-                a military garrison that quickly became a trading hub. These early medinas followed
-                Islamic urban planning principles: the mosque at the center, souks radiating outward,
-                residential quarters arranged by tribal and ethnic affiliation.
+                Minarets are the tallest structures in any medina. In Marrakech, the Koutoubia minaret (77 meters)
+                is visible from almost anywhere in the medina. In Fes, the Karaouine minaret helps orient the central
+                quarter. Pick the nearest minaret and note which direction it sits relative to your riad. That is
+                your anchor point all day.
               </p>
             </div>
 
             <div className="card-moroccan p-6">
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                <Clock className="w-4 h-4 inline mr-2 text-[var(--color-accent)]" />
-                Golden Age (12th-16th Century)
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                <Smartphone className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
+                2. Download Maps.me Before You Arrive
               </h3>
               <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                Under the Almohad, Marinid, and Saadian dynasties, Moroccan medinas reached their
-                architectural peak. The Marinids built the stunning madrasas (Koranic schools) of Fes,
-                including the Bou Inania and Al-Attarine, which remain masterpieces of Islamic art.
-                The Saadians adorned Marrakech with the El Badi Palace and the exquisite Saadian Tombs.
-                The medina walls were strengthened, monumental gates were built, and the souk system was
-                formalized into the guild-based organization still visible today.
+                Maps.me uses OpenStreetMap data, which community volunteers have mapped down to individual derbs.
+                It works offline. Download the Morocco map on airport Wi-Fi. Google Maps is adequate for Marrakech
+                and Essaouira but misses hundreds of alleys in Fes. Pin your riad location on the first day — that
+                blue dot will save you repeatedly.
               </p>
             </div>
 
             <div className="card-moroccan p-6">
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                <Clock className="w-4 h-4 inline mr-2 text-[var(--color-accent)]" />
-                Colonial Period &amp; the Birth of the Ville Nouvelle (1912-1956)
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                <MessageCircle className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
+                3. Ask Shopkeepers, Not Passersby
               </h3>
               <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                When France established its protectorate over Morocco in 1912, French administrator
-                Hubert Lyautey made a pivotal decision: rather than demolishing the medinas, he ordered
-                new European-style cities (villes nouvelles) to be built alongside them. This decision
-                preserved Morocco&apos;s medinas intact while other North African cities saw their historic
-                centers destroyed. The medinas became the &quot;old city&quot; while the ville nouvelle became
-                the &quot;new city&quot; &mdash; a duality that defines every major Moroccan city today.
+                A person walking through the medina might give you directions to lure you to their shop. A shopkeeper
+                sitting at their stall has no reason to mislead you — they are already at work. Ask them. Use the
+                name of the nearest major landmark: &quot;Bab Boujloud?&quot; or &quot;Jemaa el-Fnaa?&quot; They will point the way.
+                Shopkeepers near your riad will start recognizing you by day two.
               </p>
             </div>
 
             <div className="card-moroccan p-6">
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                <Clock className="w-4 h-4 inline mr-2 text-[var(--color-accent)]" />
-                Modern Revival &amp; UNESCO Protection (1980s-Present)
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                <Users className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
+                4. Hire a Licensed Guide for Day One
               </h3>
               <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                By the late 20th century, many medinas had fallen into disrepair as wealthier residents
-                moved to the ville nouvelle. UNESCO inscriptions (Fes in 1981, Marrakech in 1985) brought
-                international attention and funding. The riad renovation movement, driven by both Moroccan
-                and foreign investors, has transformed thousands of crumbling courtyard houses into
-                boutique guesthouses. Today, Morocco&apos;s medinas are experiencing a renaissance, balancing
-                preservation with the needs of modern residents and the growing tourism industry.
+                A half-day guided tour costs from 300 MAD in Fes and from 250 MAD in Marrakech. Official guides
+                carry a government-issued laminated ID card with photo and license number. They will show you the
+                main arteries, key gates, and your riad&apos;s location relative to major landmarks. After that
+                initial orientation, navigating solo becomes dramatically easier. Book through your riad or at the
+                official tourism office (ONMT) near the medina entrance.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                <Camera className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
+                5. Photograph Turns, Not Just Sights
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                When you leave your riad, take a photo at every turn for the first three or four intersections.
+                Photograph distinctive doorways, painted walls, or shop signs. On the way back, swipe through your
+                photos in reverse order. This trick is more reliable than any map in the deep derbs of Fes where
+                GPS accuracy drops to 20-50 meters.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                <Coffee className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
+                6. Follow the Flow of Traffic
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                In the morning, foot traffic flows inward — toward the souks and mosques. In the evening, it flows
+                outward — toward the gates and the modern city. Donkeys and mule carts always travel along main
+                arteries, never through residential derbs. If you hear &quot;balak! balak!&quot; (move aside), step
+                against the wall and let the animal pass, then follow its route — it is on a main road.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Architecture Elements ── */}
+      {/* ── Dealing with Touts and Faux Guides ── */}
       <section className="py-16 md:py-20">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Building className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Medina Architecture: Key Elements
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Every medina is built from the same architectural vocabulary. Understanding these elements transforms a confusing maze into a readable urban landscape.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {architectureElements.map((element) => {
-              const ElementIcon = element.icon;
-              return (
-                <div key={element.name} className="card-moroccan p-6">
-                  <div className="w-10 h-10 rounded-full bg-[var(--surface-muted)] flex items-center justify-center mb-3">
-                    <ElementIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                  </div>
-                  <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                    {element.name}
-                  </h3>
-                  <p className="text-sm text-[var(--text-secondary)] mb-3 leading-relaxed">{element.description}</p>
-                  <div className="flex items-start gap-2 p-3 bg-[var(--surface-muted)] rounded-lg">
-                    <Info className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
-                    <p className="text-xs text-[var(--text-muted)]">{element.funFact}</p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Best Medinas Ranked ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Award className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Best Medinas in Morocco: Ranked
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-4">
-            Every Moroccan medina has its own character and charm. Here are the eight finest, ranked by historical significance, architectural beauty, and visitor experience.
-          </p>
-          <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
-            <Info className="w-3.5 h-3.5 inline mr-1" />
-            Official guide prices start from 300 MAD for a half-day. Seasonal pricing may apply during peak tourist months (October-April).
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {bestMedinas.map((medina) => {
-              const MedinaIcon = medina.icon;
-              return (
-                <div key={medina.rank} className="card-moroccan p-6">
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                      <span className="text-sm font-bold text-[var(--color-accent)]">#{medina.rank}</span>
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                        {medina.name}
-                      </h3>
-                      <div className="flex items-center gap-3 text-sm text-[var(--text-muted)]">
-                        <span className="flex items-center gap-1">
-                          <MapPin className="w-3.5 h-3.5" />
-                          {medina.city}
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <MedinaIcon className="w-3.5 h-3.5" />
-                          Founded {medina.founded}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  {medina.unesco && (
-                    <div className="inline-block px-2 py-0.5 text-xs font-medium rounded bg-[var(--color-gold)]/10 text-[var(--color-gold)] mb-3">
-                      UNESCO World Heritage ({medina.unescoYear})
-                    </div>
-                  )}
-                  <p className="text-sm text-[var(--text-secondary)] mb-4">{medina.description}</p>
-                  <div className="grid grid-cols-2 gap-2">
-                    {medina.highlights.map((highlight, i) => (
-                      <div key={i} className="flex items-start gap-1.5 text-xs text-[var(--text-muted)]">
-                        <CheckCircle className="w-3 h-3 mt-0.5 shrink-0 text-[var(--color-gold)]" />
-                        {highlight}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Navigating a Medina ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Footprints className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            How to Navigate a Moroccan Medina
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            The labyrinthine streets of a medina can feel disorienting at first. These tips will help you find your way with confidence.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {navigationTips.map((tip) => {
-              const TipIcon = tip.icon;
-              return (
-                <div key={tip.title} className="card-moroccan p-5">
-                  <div className="w-10 h-10 rounded-full bg-[var(--surface-muted)] flex items-center justify-center mb-3">
-                    <TipIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                  </div>
-                  <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                    {tip.title}
-                  </h3>
-                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{tip.description}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Safety in Medinas ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <ShieldCheck className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Safety in Moroccan Medinas
+            <Shield className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Dealing with Touts and Faux Guides
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Moroccan medinas are generally safe for visitors. Here is what to watch for and how to stay comfortable.
+            Morocco passed Law 05-12 in 2014, making unlicensed guiding illegal with fines up to 10,000 MAD.
+            Enforcement is improving, but faux guides still operate, especially near Bab Boujloud in Fes and
+            Jemaa el-Fnaa in Marrakech.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="card-moroccan p-5">
               <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <ShieldCheck className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Pickpockets &amp; Petty Theft
+                <CheckCircle className="w-4 h-4 inline mr-1 text-green-600" />
+                Walk with Purpose
               </h3>
               <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                As with any busy tourist area, be aware of your belongings. Use a cross-body bag,
-                keep phones in front pockets, and avoid flashing expensive jewelry or electronics.
-                Crowded souks are where pickpockets are most active.
+                Touts target people who look lost or hesitant. Walk at a steady pace, eyes forward, even if you
+                have no idea where you are going. A confident stride is your best deterrent. Stopping to stare at
+                a map marks you as a target.
               </p>
             </div>
 
             <div className="card-moroccan p-5">
               <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <AlertTriangle className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Common Scams to Avoid
+                <CheckCircle className="w-4 h-4 inline mr-1 text-green-600" />
+                Say &quot;La, shukran&quot; and Keep Moving
               </h3>
               <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Unofficial &quot;guides&quot; who lead you to shops for commission, henna artists who grab
-                your hand and demand payment, and &quot;closed mosque&quot; diversion scams are the most
-                common. A confident &quot;la shukran&quot; (no thank you) handles most situations.
+                &quot;La, shukran&quot; means &quot;No, thank you&quot; in Darija. Say it once, firmly, without
+                stopping. Do not engage in conversation — the moment you respond to &quot;Where are you from?&quot;
+                the interaction becomes harder to end. Silence works too.
               </p>
             </div>
 
             <div className="card-moroccan p-5">
               <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <Clock className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Walking After Dark
+                <CheckCircle className="w-4 h-4 inline mr-1 text-green-600" />
+                Never Follow a &quot;Shortcut&quot;
               </h3>
               <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Main medina thoroughfares remain busy and well-lit until late evening. Narrow
-                residential side streets can be dark and deserted after 9-10 PM. Stick to main
-                routes after dark, or use your phone flashlight if navigating back to your riad.
+                A common approach: someone tells you the way ahead is closed and offers an alternative route.
+                The route always passes through a relative&apos;s shop. The way ahead is almost never actually
+                closed. Keep walking. If it genuinely is blocked (construction happens), backtrack to the last
+                main artery.
               </p>
             </div>
 
             <div className="card-moroccan p-5">
               <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <Heart className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                The Medina Is Welcoming
+                <CheckCircle className="w-4 h-4 inline mr-1 text-green-600" />
+                Agree on a Price Before Accepting Help
               </h3>
               <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Despite the warnings, the vast majority of interactions in the medina are positive.
-                Moroccans are famously hospitable. Shopkeepers will invite you for tea, children
-                will wave and say hello, and locals will often go out of their way to help you
-                find your destination.
+                If someone walks you to your riad, they may ask for payment afterward. This is fair — they provided
+                a service. But agree on a price first. From 10-20 MAD is reasonable for a short walk. If they refuse
+                to name a price upfront, they will likely demand from 100-200 MAD at the end.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-5">
+              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                <CircleAlert className="w-4 h-4 inline mr-1 text-amber-600" />
+                Verify Guide Credentials
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                Licensed guides carry a laminated card with their photo, name, and license number issued by the
+                Ministry of Tourism. Ask to see it. If they cannot produce one, they are not official. Report
+                persistent faux guides to the Tourist Police (Brigade Touristique) — there is a station near
+                every major medina entrance.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-5">
+              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                <CircleAlert className="w-4 h-4 inline mr-1 text-amber-600" />
+                The &quot;Tannery Viewing&quot; Hustle
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                In Fes, men near Chouara Tannery will insist on &quot;guiding&quot; you to a rooftop terrace for
+                free, then pressure you to buy leather goods at inflated prices. You can access tannery viewpoints
+                independently from several leather shops around the perimeter. Tip from 10-20 MAD if you enter a
+                shop just for the view.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── What to Buy in the Medina ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <ShoppingBag className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            What to Buy in a Moroccan Medina
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-4">
-            The souks of Morocco&apos;s medinas are treasure troves of handmade goods. Here are the best purchases with starting prices.
-          </p>
-          <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
-            <Info className="w-3.5 h-3.5 inline mr-1" />
-            Prices are starting points. Bargaining is expected in all souks. Seasonal pricing can change, and prices may be higher in heavily touristed medinas like Marrakech.
-          </p>
-          <div className="max-w-4xl mx-auto">
-            <div className="card-moroccan overflow-hidden">
-              <div className="grid grid-cols-3 gap-0 bg-[var(--color-accent)] text-white text-sm font-medium">
-                <div className="p-3 px-4">Item</div>
-                <div className="p-3 px-4">Starting Price</div>
-                <div className="p-3 px-4">Where to Buy</div>
-              </div>
-              {whatToBuy.map((item, i) => (
-                <div
-                  key={item.item}
-                  className={`grid grid-cols-3 gap-0 text-sm ${i % 2 === 0 ? 'bg-white' : 'bg-[var(--surface-muted)]'}`}
-                >
-                  <div className="p-3 px-4 font-medium text-[var(--text-primary)]">{item.item}</div>
-                  <div className="p-3 px-4 text-[var(--color-accent)] font-semibold">{item.price}</div>
-                  <div className="p-3 px-4 text-[var(--text-muted)]">{item.where}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Medina vs Ville Nouvelle ── */}
+      {/* ── Shopping in the Medina ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <CircleDot className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Medina vs. Ville Nouvelle: Two Cities in One
+            <ShoppingBag className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Shopping in the Medina: A Haggling Survival Kit
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Every major Moroccan city has two faces: the ancient medina and the colonial-era ville nouvelle. Understanding the difference helps you plan your visit.
+            Haggling is expected in every souk. Fixed prices exist only in government-run Ensemble Artisanal
+            cooperatives and some modern shops. Everything else is negotiable. Seasonal pricing can change.
           </p>
-          <div className="max-w-5xl mx-auto space-y-6">
-            {medinaVsVilleNouvelle.map((item) => (
-              <div key={item.aspect} className="card-moroccan p-6">
-                <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4">
-                  {item.aspect}
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="bg-[var(--surface-muted)] p-4 rounded-lg">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Landmark className="w-4 h-4 text-[var(--color-accent)]" />
-                      <span className="text-sm font-semibold text-[var(--color-accent)]">Medina (Old City)</span>
-                    </div>
-                    <p className="text-sm text-[var(--text-secondary)]">{item.medina}</p>
-                  </div>
-                  <div className="bg-[var(--surface-muted)] p-4 rounded-lg">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Building className="w-4 h-4 text-[var(--color-gold)]" />
-                      <span className="text-sm font-semibold text-[var(--color-gold)]">Ville Nouvelle (New City)</span>
-                    </div>
-                    <p className="text-sm text-[var(--text-secondary)]">{item.villeNouvelle}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
+
+          {/* Price Guide Table */}
+          <div className="card-moroccan overflow-hidden mb-8">
+            <div className="p-4 bg-[var(--color-accent)] text-white">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold flex items-center gap-2">
+                <Scale className="w-5 h-5" />
+                Fair Price Guide — What You Should Actually Pay
+              </h3>
+            </div>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b border-[var(--border-primary)]">
+                    <th className="text-left p-3 font-[family-name:var(--font-heading)] text-[var(--text-primary)]">Item</th>
+                    <th className="text-left p-3 font-[family-name:var(--font-heading)] text-[var(--text-primary)]">Category</th>
+                    <th className="text-left p-3 font-[family-name:var(--font-heading)] text-[var(--text-primary)]">Opening Ask</th>
+                    <th className="text-left p-3 font-[family-name:var(--font-heading)] text-[var(--color-accent)]">Fair Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {soukPrices.map((item) => (
+                    <tr key={item.item} className="border-b border-[var(--border-primary)] last:border-0">
+                      <td className="p-3 text-[var(--text-secondary)]">{item.item}</td>
+                      <td className="p-3 text-[var(--text-muted)] text-xs">{item.category}</td>
+                      <td className="p-3 text-[var(--text-muted)] line-through">{item.startPrice}</td>
+                      <td className="p-3 text-[var(--color-accent)] font-semibold">{item.fairPrice}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          {/* Haggling Steps */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="card-moroccan p-5">
+              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                <HandCoins className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
+                Step 1: Browse Without Showing Interest
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                Walk through the souk section first. Touch items casually. Do not ask prices immediately — this
+                signals high interest and raises the starting price. Compare the same item across 3-4 shops before
+                you start negotiating.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-5">
+              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                <HandCoins className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
+                Step 2: Counter at 30-40% of the First Price
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                The seller&apos;s first price is typically 2-4 times the real value. Start your counter at
+                30-40% of their ask. They will act shocked. This is theater. The final price usually lands at
+                50-60% of the original quote. If a vendor accepts your first counter immediately, you bid too high.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-5">
+              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                <HandCoins className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
+                Step 3: The Walk-Away Move
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                Once you have exchanged two or three counter-offers, politely say &quot;that is my best price&quot;
+                and begin to leave. If they call you back, you are close to a fair deal. If they let you go,
+                your price was genuinely too low — or you can find the same item cheaper at another stall.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-5">
+              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                <HandCoins className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
+                Step 4: Pay Cash in Small Bills
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                Always carry small denominations (20 and 50 MAD notes). Pulling out a 200 MAD note to pay for a
+                60 MAD item makes the seller less likely to give change easily, and it signals you have more to spend.
+                Keep your main cash hidden in a front pocket or money belt; keep negotiation cash in a separate,
+                easily accessible pocket.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ── How Medinas Are Changing ── */}
+      {/* ── Safety Tips ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Layers className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            How Moroccan Medinas Are Changing
+            <ShieldCheck className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Medina Safety: Practical Advice
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Morocco&apos;s medinas are not frozen in time. They are evolving spaces where tradition meets modernity in fascinating and sometimes contentious ways.
+            Moroccan medinas are generally safe. Violent crime against tourists is rare. The real risks are
+            petty theft, scams, and the occasional twisted ankle on uneven cobblestones.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="card-moroccan p-5">
+              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                <AlertTriangle className="w-4 h-4 inline mr-1 text-amber-600" />
+                Pickpocket Prevention
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                Pickpockets work crowded areas: Jemaa el-Fnaa at sunset, Bab Boujloud entrance during peak hours,
+                and any bus station adjacent to a medina gate. Use a crossbody bag worn in front. Keep your phone
+                in a zipped pocket. Leave your passport at the riad — carry a photocopy instead. The most common
+                theft method is a quick hand into an open bag or back pocket.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-5">
+              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                <AlertTriangle className="w-4 h-4 inline mr-1 text-amber-600" />
+                Common Scams to Recognize
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                The &quot;free&quot; henna artist who grabs your hand and demands from 200 MAD after. The
+                mint-sprig-in-your-pocket trick (a &quot;gift&quot; that requires payment). The &quot;my uncle&apos;s
+                shop&quot; detour that adds a commission to your purchase price. Restaurant menus without prices where
+                the bill is double what you expect. Always confirm prices before accepting any service.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-5">
+              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                <Moon className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
+                Night Navigation
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                Main medina arteries stay lit and active until around 22:00-23:00. Side alleys go dark earlier.
+                Always carry a phone with a flashlight. In Fes, memorize the route from the nearest main artery
+                to your riad during daylight. Marrakech&apos;s medina is safer at night because more restaurants
+                and shops stay open late. Chefchaouen and Essaouira both feel safe well into the evening.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-5">
+              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                <ShieldCheck className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
+                Tourist Police
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                Morocco operates a dedicated Tourist Police (Brigade Touristique) in all major cities. Officers speak
+                French and often English. Stations are near main medina entrances — Bab Boujloud in Fes, Place
+                Jemaa el-Fnaa in Marrakech. They handle complaints about unlicensed guides, overcharging, and
+                harassment. The emergency number is 19 (police) or 190 (from a mobile).
+              </p>
+            </div>
+
+            <div className="card-moroccan p-5">
+              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                <Footprints className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
+                Watch Your Step
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                Medina lanes are paved with uneven stones, sometimes slick with water or oil from nearby workshops.
+                Open drainage channels run along some alleys. Wear shoes with good grip — sandals and flip-flops
+                are a bad idea on steep Tangier or Chefchaouen lanes. Watch for mule droppings, especially
+                in the Fes medina where animal transport is still common.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-5">
+              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                <DollarSign className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
+                Carrying Money Safely
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                Split your cash between two locations: a money belt under your clothes for reserves, and a pocket
+                with small bills for shopping and tips. ATMs are located outside the medina gates and in the Ville
+                Nouvelle. BMCE and Attijariwafa banks accept most international cards. Avoid changing money with
+                street changers — the rates are worse than banks, and short-changing is common.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Getting Lost ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Compass className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Getting Lost Is Part of the Experience
+          </h2>
+
+          <div className="card-moroccan p-6 zellige-border">
+            <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4">
+              Every traveler who has spent a day in Fes el-Bali has been lost at least once. The medina defeats GPS.
+              It defeats maps. It defeats your sense of direction. And that is exactly the point.
+            </p>
+            <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4">
+              The best discoveries in a medina happen off-route. A wrong turn in Fes led me to a 600-year-old
+              fondouk where a coppersmith was hammering trays the same way his great-grandfather did. A dead-end
+              derb in Marrakech opened onto a tiny square where three old men were playing cards under a fig tree.
+              These moments do not appear on any itinerary.
+            </p>
+            <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4">
+              The medina rewards patience. When you realize you are lost, stop. Buy a glass of mint tea from the
+              nearest cafe (from 10 MAD). Sit down. Watch the street for five minutes. The rhythm of the medina will
+              reassert itself. A familiar-looking shop sign. The sound of the call to prayer from a minaret you
+              recognize. The smell of the tannery drifting from a known direction. Orientation returns.
+            </p>
+            <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+              If you are genuinely stuck, the failsafe method is simple: walk downhill. Most medinas slope toward
+              the main gate and commercial center. In Fes, downhill leads toward Rcif and the Bou Inania area. In
+              Tangier, downhill leads toward the port. Gravity is a better guide than any app.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
+            <div className="card-moroccan p-5 text-center">
+              <ThumbsUp className="w-8 h-8 text-[var(--color-accent)] mx-auto mb-2" />
+              <p className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Walk Downhill</p>
+              <p className="text-xs text-[var(--text-secondary)]">Gravity leads to main streets and gates</p>
+            </div>
+            <div className="card-moroccan p-5 text-center">
+              <Coffee className="w-8 h-8 text-[var(--color-accent)] mx-auto mb-2" />
+              <p className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Stop for Tea</p>
+              <p className="text-xs text-[var(--text-secondary)]">Pause, reorient, ask the cafe owner</p>
+            </div>
+            <div className="card-moroccan p-5 text-center">
+              <Eye className="w-8 h-8 text-[var(--color-accent)] mx-auto mb-2" />
+              <p className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Follow Sound</p>
+              <p className="text-xs text-[var(--text-secondary)]">Crowds, traffic, and call to prayer signal main routes</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Best Times to Visit ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Clock className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Best Times to Visit a Medina
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            The same medina feels like a different place at 7 AM versus 7 PM. Timing shapes your entire experience.
           </p>
 
           <div className="space-y-6">
             <div className="card-moroccan p-6">
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                The Riad Renovation Boom
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                Since the early 2000s, thousands of crumbling medina houses have been purchased and restored as boutique guesthouses. This has saved many historic buildings from collapse but has also raised property prices. The best riad renovations respect traditional methods and employ local artisans. Riad stays start from 300 MAD per night.
-              </p>
+              <div className="flex items-start gap-3">
+                <Sun className="w-6 h-6 text-[var(--color-gold)] mt-1 shrink-0" />
+                <div>
+                  <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                    Early Morning (7:00-9:00)
+                  </h3>
+                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                    The medina at dawn is a different world. Shops are shuttered. Locals sweep their stoops and head to
+                    the mosque for Fajr prayer. Light angles through narrow lanes and hits walls that are invisible by
+                    midday. Photographers: this is your window. Deliveries arrive by mule and handcart — the logistics
+                    of the medina are visible only at this hour.
+                  </p>
+                </div>
+              </div>
             </div>
 
             <div className="card-moroccan p-6">
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                Infrastructure Modernization
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                Moroccan authorities are investing in medina infrastructure: improved sewage, electrical wiring, street lighting, and emergency access. The Fes medina has received significant World Bank funding for structural restoration. Solar panels are appearing on rooftops, and fiber-optic internet now reaches many medina businesses.
-              </p>
+              <div className="flex items-start gap-3">
+                <Sun className="w-6 h-6 text-amber-500 mt-1 shrink-0" />
+                <div>
+                  <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                    Mid-Morning (9:00-12:00)
+                  </h3>
+                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                    Peak shopping hours. Souks are fully open. Tour groups fill the main arteries. This is the best
+                    time for haggling because shopkeepers are fresh and competitive. Spice stalls are at their most
+                    aromatic. The main souks in Marrakech get genuinely crowded by 11:00 — arrive before 10:00 for a
+                    calmer experience.
+                  </p>
+                </div>
+              </div>
             </div>
 
             <div className="card-moroccan p-6">
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                The Artisan Economy Under Pressure
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                Traditional medina crafts face competition from cheap factory-made imports. Young Moroccans increasingly prefer modern careers over craft apprenticeships. Government programs and NGOs are working to preserve these traditions. When you buy handmade goods in the medina, you directly support this living heritage.
-              </p>
+              <div className="flex items-start gap-3">
+                <Clock className="w-6 h-6 text-[var(--text-muted)] mt-1 shrink-0" />
+                <div>
+                  <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                    Early Afternoon (12:00-15:00)
+                  </h3>
+                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                    Many shops close for lunch and Dhuhr prayer. Summer temperatures in Marrakech and Fes can hit
+                    40-45°C, and the medina becomes a furnace. This is rest time. Eat lunch at a medina restaurant,
+                    retreat to your riad, or visit an indoor attraction like a museum or madrasa. The Bou Inania Madrasa
+                    in Fes (from 70 MAD) is cool and empty at this hour.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <div className="flex items-start gap-3">
+                <Sun className="w-6 h-6 text-orange-500 mt-1 shrink-0" />
+                <div>
+                  <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                    Late Afternoon (15:00-18:00)
+                  </h3>
+                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                    The medina wakes up again. Shops reopen. The light turns golden — the walls of Marrakech glow pink,
+                    the blue of Chefchaouen deepens. Shopkeepers are more willing to negotiate toward the end of the
+                    day, especially if sales have been slow. This is arguably the single best window to explore.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <div className="flex items-start gap-3">
+                <Moon className="w-6 h-6 text-indigo-400 mt-1 shrink-0" />
+                <div>
+                  <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                    Evening (18:00-22:00)
+                  </h3>
+                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                    Jemaa el-Fnaa in Marrakech transforms after sunset into a massive outdoor food market — rows of
+                    stalls selling grilled meats, snail soup, fresh juice, and pastries. A full dinner from a stall
+                    costs from 40-80 MAD. In Fes, the evening is quieter; locals gather at cafes near Bab Boujloud.
+                    Chefchaouen&apos;s plaza fills with families and cats. Ramadan shifts everything — the medina empties
+                    by day and surges after iftar (sunset meal).
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="card-moroccan p-6 bg-amber-50">
+              <div className="flex items-start gap-3">
+                <Info className="w-6 h-6 text-[var(--color-accent)] mt-1 shrink-0" />
+                <div>
+                  <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                    Seasonal Note
+                  </h3>
+                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                    October through April is the best season for medina exploration. Temperatures are mild (15-25°C).
+                    July and August in Fes and Marrakech are brutal — shade is limited, and the stone walls radiate
+                    heat. Chefchaouen stays cooler year-round due to its mountain altitude (600m). Essaouira stays
+                    breezy with Atlantic winds. During Ramadan (dates shift annually), many restaurants close during
+                    daylight hours, but the post-iftar atmosphere is extraordinary. Seasonal pricing can change.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -907,103 +1113,19 @@ export default function MoroccoMedinaGuidePage() {
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
+            <BookOpen className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
             Frequently Asked Questions
           </h2>
 
           <div className="space-y-6">
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                What is a medina?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                A medina is the historic walled quarter of a North African city. The word comes from
-                the Arabic &quot;madina,&quot; meaning &quot;city.&quot; In Morocco, medinas are the original urban cores
-                dating back centuries, characterized by narrow winding streets, traditional architecture
-                including riads, fondouks, hammams, and mosques, bustling souks, and monumental gates
-                called babs. They are living cities where hundreds of thousands of people still reside.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                What does medina mean?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                The word &quot;medina&quot; derives from the Arabic &quot;madina&quot; (مدينة), which translates
-                literally as &quot;city.&quot; The name Medina in Saudi Arabia (Al-Madinah al-Munawwarah,
-                &quot;The Radiant City&quot;) is perhaps the most famous use of the word. In Morocco and
-                the broader Maghreb region, &quot;medina&quot; has come to refer specifically to the old,
-                historic walled part of a city, distinguishing it from the newer districts built
-                during and after the colonial period.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                Which Moroccan medinas are UNESCO World Heritage Sites?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                Four Moroccan medinas hold UNESCO World Heritage status: Fes el-Bali (inscribed 1981),
-                the Medina of Marrakech (1985), the Medina of Essaouira (2001), and the Medina of
-                Tetouan (1997). The historic city of Meknes (1996) and Rabat: Modern Capital and
-                Historic City (2012) are also UNESCO-listed, bringing the total to six cities with
-                UNESCO recognition for their medina heritage.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                Is it safe to walk in a Moroccan medina?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                Yes. Moroccan medinas are generally safe for visitors, including solo travelers and
-                women. Take the same precautions you would in any busy urban area: keep valuables
-                secure, stay on main streets after dark, and politely decline offers from unofficial
-                guides. The biggest &quot;danger&quot; in a medina is getting lost, which is part of the charm.
-                If you need help, shopkeepers and café owners are almost always willing to point you
-                in the right direction.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                What is the best medina to visit in Morocco?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                It depends on what you are looking for. Fes el-Bali is the most historically impressive
-                and the largest car-free urban area in the world. Marrakech offers the most energetic
-                and accessible medina experience. Chefchaouen has the most photogenic medina with its
-                blue-painted walls. Essaouira offers the most relaxed and navigable coastal medina.
-                For off-the-beaten-path experiences, Tetouan and Meknes are excellent.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                What is the difference between a medina and a ville nouvelle?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                The medina is the original historic walled city with narrow streets, traditional
-                architecture, and a medieval urban layout. The ville nouvelle (&quot;new city&quot;) was built
-                by the French during Morocco&apos;s colonial period (1912-1956) with wide boulevards,
-                European-style buildings, and a modern grid layout. Most Moroccan cities have both
-                side by side, connected by gates and main roads but architecturally and culturally
-                distinct worlds.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                How much time should I spend exploring a medina?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                For the major medinas (Fes, Marrakech), dedicate at least a full day, ideally two.
-                A half-day guided tour gives you an overview, but the real magic happens when you
-                wander on your own. For smaller medinas (Chefchaouen, Essaouira, Rabat), half a day
-                is enough for a thorough exploration. Budget extra time for shopping in the souks,
-                as bargaining takes longer than you expect.
-              </p>
-            </div>
+            {faqItems.map((faq) => (
+              <div key={faq.question} className="card-moroccan p-6">
+                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                  {faq.question}
+                </h3>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -1014,50 +1136,77 @@ export default function MoroccoMedinaGuidePage() {
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
             Related Guides
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Link href="/fes-medina-guide" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
-              <Crown className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Fes Medina Guide
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Navigate the world&apos;s largest car-free urban area. Tanneries, madrasas, and the soul of Morocco.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-            <Link href="/marrakech-medina-guide" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
-              <Star className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Marrakech Medina Guide
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Jemaa el-Fnaa, the souks, palaces, and the sensory overload of the Red City&apos;s heart.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-            <Link href="/morocco-markets-guide" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Link href="/morocco-haggling-guide" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
               <ShoppingBag className="w-8 h-8 text-[var(--color-accent)] mb-3" />
               <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Morocco Markets Guide
+                Morocco Haggling Guide
               </h3>
               <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Master the art of souk shopping. Bargaining tips, best buys, and market etiquette.
+                Advanced bargaining strategies, price benchmarks for 50+ items, and the psychology behind souk negotiations.
               </p>
               <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
                 Read more <ArrowRight className="w-3.5 h-3.5" />
               </span>
             </Link>
-            <Link href="/morocco-culture-guide" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
-              <BookOpen className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+            <Link href="/morocco-souk-guide" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
+              <Map className="w-8 h-8 text-[var(--color-accent)] mb-3" />
               <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Morocco Culture Guide
+                Morocco Souk Guide
               </h3>
               <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Customs, etiquette, traditions, and the cultural insights that transform your trip.
+                City-by-city breakdown of the best souks, what to buy in each one, and how to spot genuine craftsmanship.
+              </p>
+              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
+                Read more <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
+            <Link href="/safety" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
+              <Shield className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
+                Morocco Safety Guide
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] mb-3">
+                Comprehensive safety tips covering scams, transport, health, solo female travel, and emergency contacts.
+              </p>
+              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
+                Read more <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+            <Link href="/fes-guide" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
+              <Landmark className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
+                Fes City Guide
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] mb-3">
+                Complete guide to Fes — the world&apos;s largest car-free urban zone, tanneries, madrasas, and street food.
+              </p>
+              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
+                Read more <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
+            <Link href="/marrakech" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
+              <Star className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
+                Marrakech Guide
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] mb-3">
+                Jemaa el-Fnaa, Bahia Palace, the souks, riads, and day trips. Everything for your Marrakech visit.
+              </p>
+              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
+                Read more <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
+            <Link href="/chefchaouen" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
+              <Eye className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
+                Chefchaouen Guide
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] mb-3">
+                The Blue Pearl of Morocco — how to get there, where to stay, photography spots, and hiking routes.
               </p>
               <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
                 Read more <ArrowRight className="w-3.5 h-3.5" />
@@ -1071,15 +1220,16 @@ export default function MoroccoMedinaGuidePage() {
       <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
         <div className="container-morocco text-center">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
-            Ready to Explore Morocco&apos;s Medinas?
+            Ready to Step Inside the Medina?
           </h2>
           <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto mb-8">
-            Start planning your journey through Morocco&apos;s historic walled cities. From the ancient
-            alleyways of Fes to the blue streets of Chefchaouen, the medina awaits.
+            The alleys are waiting. Start with the medina that matches your comfort level — Essaouira for easy
+            navigation, Marrakech for energy, Fes for the ultimate challenge. Pack light shoes, small bills,
+            and your curiosity.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/fes"
+              href="/fes-guide"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[var(--color-accent)] text-white font-semibold hover:opacity-90 transition-opacity"
             >
               <MapPin className="w-4 h-4" />
@@ -1091,6 +1241,13 @@ export default function MoroccoMedinaGuidePage() {
             >
               <MapPin className="w-4 h-4" />
               Explore Marrakech
+            </Link>
+            <Link
+              href="/chefchaouen"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border-2 border-[var(--color-accent)] text-[var(--color-accent)] font-semibold hover:bg-[var(--color-accent)] hover:text-white transition-colors"
+            >
+              <MapPin className="w-4 h-4" />
+              Explore Chefchaouen
             </Link>
           </div>
         </div>

@@ -395,6 +395,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-history-guide',
     '/morocco-beaches-guide',
     '/morocco-carpet-buying',
+    '/morocco-wedding-guide',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

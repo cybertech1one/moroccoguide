@@ -3,29 +3,30 @@ import Link from 'next/link';
 import {
   ChevronRight,
   Home,
+  MapPin,
+  Star,
+  Heart,
+  Clock,
   Info,
   ArrowRight,
-  Globe,
-  CheckCircle,
-  Clock,
-  BookOpen,
-  Users,
-  Lightbulb,
   Sparkles,
-  MapPin,
-  Compass,
-  Heart,
+  CheckCircle,
+  Users,
+  BookOpen,
+  Crown,
   Coffee,
   Leaf,
   GlassWater,
   Store,
-  HandHeart,
-  Star,
-  ThermometerSun,
-  Flame,
-  ListChecks,
-  MessageCircle,
   ShoppingBag,
+  Flame,
+  Globe,
+  CircleDot,
+  HandHeart,
+  MessageCircle,
+  ThermometerSun,
+  ListChecks,
+  UtensilsCrossed,
 } from 'lucide-react';
 
 /* ═══════════════════════════════════════════════════════════════
@@ -39,48 +40,49 @@ const BASE_URL = 'https://citytoursmorocco.com';
    ═══════════════════════════════════════════════════════════════ */
 
 export const metadata: Metadata = {
-  title: 'Moroccan Mint Tea Guide 2026 | Tea Culture, Recipe & Ceremony Etiquette',
+  title: 'Moroccan Mint Tea Guide 2026 | Atay Culture, Ceremony & Best Tea Houses',
   description:
-    'Complete guide to Moroccan mint tea and Morocco tea culture in 2026. Learn how to make Moroccan tea step by step, tea ceremony etiquette, regional variations, best tea houses by city, tea ingredients, and where to buy authentic Moroccan tea supplies.',
+    'Complete guide to Moroccan mint tea (atay). Learn the tea ceremony, three-glass tradition, preparation steps, etiquette, regional variations like saffron and shiba tea, plus the best rooftop tea houses in Marrakech, Fes, and Chefchaouen.',
   keywords: [
-    'Moroccan mint tea',
-    'Morocco tea culture',
-    'how to make Moroccan tea',
-    'mint tea Morocco',
-    'Moroccan tea ceremony',
-    'Moroccan tea recipe',
-    'atay Morocco',
-    'gunpowder green tea Morocco',
-    'Moroccan tea etiquette',
-    'best tea houses Morocco',
-    'Moroccan mint tea recipe',
-    'Morocco tea traditions',
-    'Berber whiskey Morocco',
-    'Moroccan tea set',
-    'mint tea Marrakech',
-    'Morocco tea history',
-    'traditional Moroccan tea',
+    'moroccan mint tea',
+    'atay morocco',
+    'moroccan tea ceremony',
+    'mint tea culture morocco',
+    'how to make moroccan tea',
+    'moroccan tea etiquette',
+    'three glasses tea morocco',
+    'gunpowder tea morocco',
+    'berrad moroccan teapot',
+    'moroccan tea glasses',
+    'best tea houses morocco',
+    'saffron tea morocco',
+    'shiba wormwood tea',
+    'louiza verbena tea morocco',
+    'moroccan tea recipe',
+    'moroccan tea set',
+    'moroccan tea history',
+    'moroccan hospitality tea',
   ],
   openGraph: {
-    title: 'Moroccan Mint Tea Guide 2026 | Tea Culture, Recipe & Ceremony Etiquette',
+    title: 'Moroccan Mint Tea Guide 2026 | Atay Culture, Ceremony & Best Tea Houses',
     description:
-      'Everything about Moroccan mint tea: history, ceremony etiquette, step-by-step recipe, regional variations, best tea houses, and where to buy authentic tea supplies.',
+      'Master Moroccan mint tea culture. From the three-glass tradition to the best rooftop tea houses. Complete guide to atay: history, ceremony, etiquette, variations, and where to drink.',
     url: `${BASE_URL}/morocco-tea-culture`,
     images: [
       {
-        url: `${BASE_URL}/images/hero-morocco.webp`,
+        url: `${BASE_URL}/images/hero-tea.webp`,
         width: 1200,
         height: 630,
-        alt: 'Traditional Moroccan mint tea being poured from a silver teapot into ornate glasses',
+        alt: 'Traditional Moroccan mint tea being poured from a silver berrad into ornate tea glasses on a brass tray',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Moroccan Mint Tea Guide 2026 | Culture, Recipe & Etiquette',
+    title: 'Moroccan Mint Tea Guide 2026 | Culture, Ceremony & Tea Houses',
     description:
-      'History, ceremony etiquette, step-by-step recipe, regional variations, best tea houses & where to buy supplies. Your complete guide to mint tea in Morocco.',
-    images: [`${BASE_URL}/images/hero-morocco.webp`],
+      'Everything about Moroccan mint tea. The three-glass tradition, ceremony steps, regional variations, and the best tea houses across Morocco.',
+    images: [`${BASE_URL}/images/hero-tea.webp`],
   },
   alternates: { canonical: `${BASE_URL}/morocco-tea-culture` },
 };
@@ -93,11 +95,11 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'TravelGuide',
   '@id': `${BASE_URL}/morocco-tea-culture`,
-  name: 'Moroccan Mint Tea Guide 2026 | Tea Culture, Recipe & Ceremony Etiquette',
+  name: 'Moroccan Mint Tea Guide 2026 | Atay Culture, Ceremony & Best Tea Houses',
   description:
-    'Complete guide to Moroccan mint tea culture in 2026, covering the history of tea in Morocco, ceremony etiquette, how to make mint tea step by step, regional variations, best tea houses by city, tea ingredients, social customs, and where to buy authentic supplies.',
+    'Complete guide to Moroccan mint tea culture, ceremony etiquette, preparation methods, regional variations, and the best tea houses across Morocco.',
   url: `${BASE_URL}/morocco-tea-culture`,
-  image: `${BASE_URL}/images/hero-morocco.webp`,
+  image: `${BASE_URL}/images/hero-tea.webp`,
   author: {
     '@type': 'Organization',
     name: 'CityGuide Morocco',
@@ -108,8 +110,8 @@ const jsonLd = {
     name: 'CityGuide Morocco',
     url: BASE_URL,
   },
-  datePublished: '2026-03-19',
-  dateModified: '2026-03-19',
+  datePublished: '2026-03-20',
+  dateModified: '2026-03-20',
   mainEntityOfPage: `${BASE_URL}/morocco-tea-culture`,
   isPartOf: {
     '@type': 'WebSite',
@@ -135,18 +137,26 @@ const faqJsonLd = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What type of tea is used in Moroccan mint tea?',
+      name: 'What is Moroccan mint tea called?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Moroccan mint tea is made with Chinese gunpowder green tea (rolled into small pellets), fresh spearmint (nana), and generous amounts of white sugar. The gunpowder tea provides a strong, slightly bitter base, while the fresh mint adds a cooling, aromatic flavor. Some regions also add other herbs like wormwood (shiba) or lemon verbena (louiza) for variety.',
+        text: 'Moroccan mint tea is called "atay" (also spelled "attay" or "atai") in Darija, the Moroccan Arabic dialect. The full name is "atay b\'naanaa" meaning tea with mint. In the Amazigh (Berber) language, it is called "atay."',
       },
     },
     {
       '@type': 'Question',
-      name: 'Why is Moroccan tea poured from a height?',
+      name: 'Why do Moroccans pour tea from a height?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Pouring Moroccan tea from a height of 30 to 50 centimeters (about 12 to 20 inches) serves both practical and ceremonial purposes. The height aerates the tea, creating a light froth on top that enhances the flavor and indicates the tea has been properly mixed. It also cools the tea slightly, making it drinkable sooner. The graceful, skillful pour is a sign of the host hospitality and mastery of the tea ritual.',
+        text: 'Pouring from a height of 30-50 cm serves two purposes. It aerates the tea, creating a light foam on top that Moroccans call "the crown" (rezza). It also cools the tea slightly so guests can drink it sooner. The skill of pouring without spilling is a mark of a good host.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What does the three glasses of tea tradition mean?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The Moroccan proverb says: "The first glass is gentle as life, the second is strong as love, the third is bitter as death." Each successive glass grows stronger as the tea steeps longer. Accepting all three glasses signals respect for the host. Leaving after just one can be considered rude.',
       },
     },
     {
@@ -154,266 +164,273 @@ const faqJsonLd = {
       name: 'Is it rude to refuse tea in Morocco?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes, refusing tea in Morocco is considered impolite, as offering tea is a fundamental gesture of hospitality and welcome. You should accept at least one glass. If you truly cannot drink tea for health reasons, explain politely and your host will understand. In shops and markets, accepting tea does not obligate you to buy anything; it is simply part of the social ritual.',
+        text: 'Refusing tea outright can be considered impolite, since offering tea is a deep expression of hospitality. If you genuinely cannot drink it, accept the glass and hold it without drinking — that is generally understood. In shops and medinas, accepting tea does not obligate you to buy anything, despite what some vendors may imply.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How many glasses of Moroccan tea should I drink?',
+      name: 'What type of tea is used in Moroccan mint tea?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Traditionally, three glasses of tea are served, each with its own meaning: the first glass is "gentle as life," the second is "strong as love," and the third is "bitter as death." Drinking all three is considered respectful and shows appreciation for your host hospitality. However, drinking at least one glass is the minimum expectation. After three glasses, you can politely decline more.',
+        text: 'Moroccans use Chinese gunpowder green tea, specifically the grade known as "special gunpowder" or "3505." The tightly rolled pellets unfurl during brewing. The most prized brand is "Sultan" (green box), followed by "Menara." Loose leaf is always used — never tea bags.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can I buy authentic Moroccan tea supplies to take home?',
+      name: 'How much sugar is in Moroccan tea?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Absolutely. Moroccan souks and spice markets sell gunpowder green tea, dried mint, sugar cones, and traditional tea sets including silver or brass teapots (berrad), ornate glasses, and serving trays. The best places to buy are the spice souks in Marrakech, Fes, and Meknes. Expect to haggle for teapots and glassware. Loose tea and mint are sold by weight at very affordable prices, typically from 20 to 80 MAD per 100 grams depending on quality.',
+        text: 'Traditional Moroccan tea is very sweet — typically 4 to 6 large sugar cones or the equivalent of 8-12 teaspoons per pot. In southern Morocco, tea tends to be sweeter still. You can request "atay bla sukkar" (tea without sugar) or "shwiya dial sukkar" (a little sugar), though some traditionalists may find this unusual.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What is the difference between Moroccan tea in the north and south?',
+      name: 'Where can I buy an authentic Moroccan tea set?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Northern Moroccan tea (around Tangier and the Rif region) tends to be lighter with less sugar and sometimes includes wormwood (shiba) for a slightly bitter, herbal flavor. Southern Moroccan tea, especially in the Sahara and Draa Valley, is typically much sweeter and stronger, often made with more sugar and saffron. In the Atlas Mountains, Amazigh (Berber) communities may add wild herbs like thyme, sage, or pennyroyal. Coastal cities like Essaouira sometimes use lemon verbena (louiza) or orange blossom water.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does a traditional Moroccan tea ceremony take?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A traditional Moroccan tea ceremony typically takes between 20 and 45 minutes, though it can extend much longer during social gatherings. The preparation itself takes about 10 minutes, and each round of three glasses is savored slowly with conversation. In a carpet shop or during business negotiations, tea may be served multiple times over an hour or more. The key is never to rush the ceremony; it is a time for connection and relaxation.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Why is Moroccan mint tea called Berber whiskey?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Moroccan mint tea is humorously nicknamed "Berber whiskey" (or "Moroccan whiskey") because it is the national drink of Morocco, consumed with the same frequency and social importance that alcohol might hold in other cultures. Since Morocco is a Muslim-majority country where most people do not drink alcohol, mint tea fills the role of the social beverage. The nickname is used lightheartedly by Moroccans themselves and reflects the central role tea plays in daily life and hospitality.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can I make Moroccan mint tea at home without a traditional teapot?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes, you can make Moroccan mint tea at home using any small teapot or even a saucepan. The key ingredients are Chinese gunpowder green tea, fresh spearmint leaves, and sugar. Steep the tea, add mint and sugar, and let it simmer briefly. While a traditional berrad (Moroccan teapot) helps with the iconic high pour, you can approximate the effect by pouring from a regular teapot held at a height into glasses. The flavor will be authentic as long as you use the right tea and fresh mint.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is Moroccan tea served with food?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Moroccan tea is served throughout the day and accompanies nearly every social interaction. It is commonly served with Moroccan pastries like msemen (flatbread), baghrir (semolina pancakes), chebakia (sesame cookies), or kaab el ghazal (gazelle horns). Tea is served before meals as a welcome, after meals as a digestif, during business meetings, and when guests visit. It is essentially the universal Moroccan beverage for any occasion.',
+        text: 'The best places are the metalworkers\' souks (souk haddadine) in Fes and Marrakech. A basic berrad (teapot) starts from 80 MAD. A full set with tray and 6 glasses starts from 250 MAD. For high-quality hand-engraved sets, expect from 500 MAD to 3,000 MAD. Always negotiate — start at 40% of the asking price.',
       },
     },
   ],
 };
 
 /* ═══════════════════════════════════════════════════════════════
-   DATA: TEA HISTORY TIMELINE
+   DATA: TEA VARIATIONS
    ═══════════════════════════════════════════════════════════════ */
 
-const teaHistory = [
+const teaVariations = [
   {
-    era: '18th Century',
-    title: 'Tea Arrives in Morocco',
-    detail: 'British merchants introduced Chinese green tea to Morocco through the port of Mogador (modern-day Essaouira) and Tangier. Initially, tea was a luxury reserved for the royal court and wealthy merchants in cities like Fes and Marrakech.',
-    icon: Globe,
+    name: 'Atay b\'naanaa (Classic Mint Tea)',
+    icon: Leaf,
+    region: 'All Morocco',
+    description:
+      'The standard. Chinese gunpowder green tea with fresh spearmint (naanaa) and sugar. Served everywhere from royal palaces to roadside stalls. The mint should be fresh and abundant — at least one large handful per pot.',
+    season: 'Year-round',
   },
   {
-    era: '19th Century',
-    title: 'Tea Becomes a National Drink',
-    detail: 'During the reign of Sultan Moulay Hassan I, tea became widely available across Morocco. The combination of gunpowder green tea with local spearmint and sugar created the signature Moroccan blend. Tea drinking spread from the elite to all social classes.',
-    icon: Users,
+    name: 'Atay b\'shiba (Wormwood Tea)',
+    icon: Sparkles,
+    region: 'Southern Morocco, Sahara',
+    description:
+      'Made with artemisia (wormwood) instead of or alongside mint. Intensely bitter and aromatic. Saharan nomads and Tuareg communities favor shiba for its digestive properties. Common in Zagora, Merzouga, and across the Draa Valley.',
+    season: 'Year-round, especially winter',
   },
   {
-    era: 'Early 20th Century',
-    title: 'Tea Ceremony Traditions Solidify',
-    detail: 'The ritualized tea ceremony became a cornerstone of Moroccan hospitality. Silver teapots, ornate glasses, and brass trays became essential household items. The art of pouring from a height was refined and became a point of pride for hosts.',
-    icon: Star,
+    name: 'Atay b\'louiza (Lemon Verbena Tea)',
+    icon: GlassWater,
+    region: 'Northern Morocco, Rif',
+    description:
+      'Lemon verbena (louiza) gives the tea a citrusy, floral taste. Popular in Chefchaouen, Tetouan, and the Rif mountains. Often served without green tea as a standalone herbal infusion. Moroccans drink it before bed for its calming effects.',
+    season: 'Spring & Summer',
   },
   {
-    era: 'Modern Day',
-    title: 'An Enduring Cultural Icon',
-    detail: 'Today, Morocco imports more green tea per capita than almost any country on earth. Mint tea remains the national drink, consumed from breakfast to late evening. Traditional tea houses coexist with modern cafes, and the ceremony continues to bring families and communities together.',
-    icon: Heart,
+    name: 'Atay b\'zaafaran (Saffron Tea)',
+    icon: Crown,
+    region: 'Taliouine, Anti-Atlas',
+    description:
+      'Saffron from Taliouine — the world\'s second-largest saffron producer — steeped with green tea and mint. The liquid turns golden. Expensive to make authentically, but Taliouine cafes serve it from 15 MAD per glass. A specialty of the Souss-Massa region.',
+    season: 'Autumn harvest, served year-round',
   },
-];
+  {
+    name: 'Atay b\'zaatar (Thyme Tea)',
+    icon: Flame,
+    region: 'Middle Atlas, Rural areas',
+    description:
+      'Wild thyme from the Atlas mountains brewed alone or blended into mint tea. Berber communities in Ifrane, Azrou, and the Ziz Valley drink thyme tea as a cold remedy. The thyme grows wild above 1,500 meters.',
+    season: 'Winter & cold months',
+  },
+  {
+    name: 'Atay b\'fliyou (Pennyroyal Tea)',
+    icon: CircleDot,
+    region: 'Fes, Meknes, Middle Atlas',
+    description:
+      'Pennyroyal mint (fliyou) has a stronger, almost peppery flavor compared to spearmint. Common in Fes households and in the surrounding countryside. Many Fassis consider fliyou superior to regular mint for tea.',
+    season: 'Year-round',
+  },
+] as const;
 
 /* ═══════════════════════════════════════════════════════════════
-   DATA: TEA CEREMONY ETIQUETTE
-   ═══════════════════════════════════════════════════════════════ */
-
-const ceremonyEtiquette = [
-  'Always accept at least one glass of tea when offered. Refusing is considered disrespectful to the host.',
-  'Tea is traditionally poured by the male head of the household or the most honored guest. Do not pour your own tea.',
-  'Hold the glass by the rim with your thumb and forefinger. The glass will be hot at the bottom.',
-  'Sip slowly and savor the tea. Rushing through tea is seen as dismissive of the host hospitality.',
-  'The traditional serving is three glasses. Each has meaning: gentle as life, strong as love, bitter as death.',
-  'Compliment the tea with phrases like "Bneen" (delicious) or "Zween bezef" (very nice). Hosts take pride in their tea.',
-  'If offered more tea after three glasses, you may politely decline by placing your hand over the glass.',
-  'Never blow on hot tea to cool it. Instead, pour a small amount from your glass into the saucer and back.',
-  'In shops and carpet sellers, accepting tea is social protocol. It does not obligate you to purchase anything.',
-  'Wait for the host to drink first before taking your first sip, as a sign of respect.',
-];
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: HOW TO MAKE TEA (STEP BY STEP)
-   ═══════════════════════════════════════════════════════════════ */
-
-const teaRecipeSteps = [
-  { step: 1, title: 'Rinse the Teapot', detail: 'Rinse your Moroccan teapot (berrad) with boiling water to warm it. This helps maintain the brewing temperature and ensures a clean flavor. Swirl the water and discard it.' },
-  { step: 2, title: 'Add the Green Tea', detail: 'Add 1 to 2 tablespoons of Chinese gunpowder green tea to the warmed teapot. The tightly rolled pellets will unfurl as they steep, releasing a robust, slightly smoky flavor.' },
-  { step: 3, title: 'First Rinse of the Tea', detail: 'Pour a small amount of boiling water over the tea leaves, swirl gently for 15 seconds, then pour off the water. This "washing" step removes bitterness and dust from the tea leaves while preserving the flavor.' },
-  { step: 4, title: 'Add Boiling Water', detail: 'Fill the teapot with boiling water (about 4 cups or 1 liter). Let the tea steep for 2 to 3 minutes. The water should be at a full rolling boil when you add it.' },
-  { step: 5, title: 'Add Fresh Mint and Sugar', detail: 'Pack a generous handful of fresh spearmint (nana) into the teapot. Add sugar to taste, typically 4 to 6 sugar cubes or 3 to 4 tablespoons. Moroccans use white sugar; the amount varies by region and preference.' },
-  { step: 6, title: 'Steep and Stir', detail: 'Place the teapot on low heat for 2 to 3 minutes, allowing the sugar to dissolve and the mint to infuse. Do not let it boil vigorously, as this will make the tea bitter and destroy the mint freshness.' },
-  { step: 7, title: 'Test the Flavor', detail: 'Pour a small glass of tea, taste it, and pour it back into the teapot. Repeat 2 to 3 times. This mixing process ensures consistent flavor and helps the Moroccan say the tea has been "married" (the flavors are fully combined).' },
-  { step: 8, title: 'Pour from a Height', detail: 'Hold the teapot high (30 to 50 cm above the glass) and pour in a steady stream. This aerates the tea, creates the signature frothy top, and slightly cools the liquid. Practice makes perfect; start at a lower height and increase gradually.' },
-];
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: REGIONAL VARIATIONS
-   ═══════════════════════════════════════════════════════════════ */
-
-const regionalVariations = [
-  { region: 'Marrakech & Central Morocco', style: 'Classic Mint Tea', detail: 'The standard Moroccan mint tea with a strong, sweet profile. Uses generous amounts of sugar and fresh spearmint. Often served with almond-stuffed pastries.', icon: Coffee },
-  { region: 'Tangier & Northern Rif', style: 'Shiba (Wormwood) Tea', detail: 'In the north, tea is lighter and sometimes includes shiba (wormwood) alongside or instead of mint, giving a distinctive bitter herbal taste. Less sugar is used compared to the south.', icon: Leaf },
-  { region: 'Fes & Meknes', style: 'Orange Blossom Tea', detail: 'The imperial cities occasionally add orange blossom water (mazhar) to mint tea for a fragrant, floral twist. This refined variation reflects the sophisticated culinary traditions of Fes.', icon: Sparkles },
-  { region: 'Atlas Mountains (Berber)', style: 'Wild Herb Tea', detail: 'Amazigh communities in the High Atlas and Middle Atlas brew tea with wild mountain herbs such as thyme (zaatar), sage (salmia), pennyroyal (fliyou), and sometimes lavender gathered from the hillsides.', icon: ThermometerSun },
-  { region: 'Sahara & Southern Morocco', style: 'Desert Tea', detail: 'Saharan tea is extremely sweet and strong, brewed longer over a charcoal fire. In Tuareg tradition, three rounds are served, each progressively sweeter. Saffron threads are sometimes added for color and aroma.', icon: Flame },
-  { region: 'Essaouira & Atlantic Coast', style: 'Louiza (Verbena) Tea', detail: 'Coastal towns favor lemon verbena (louiza) tea, served hot or cold. This caffeine-free herbal infusion is prized for its digestive properties and refreshing citrus aroma, perfect for seaside afternoons.', icon: GlassWater },
-];
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: BEST TEA HOUSES BY CITY
-   ═══════════════════════════════════════════════════════════════ */
-
-const bestTeaHouses = [
-  { city: 'Marrakech', name: 'Le Jardin', location: 'Medina, Souk Sidi Abdelaziz', highlight: 'Lush garden courtyard setting with traditional mint tea served alongside Moroccan pastries. A peaceful oasis in the bustling medina.' },
-  { city: 'Marrakech', name: 'Nomad', location: 'Derb Aarjaan, Medina', highlight: 'Rooftop terrace with panoramic views of the medina. Modern Moroccan cuisine paired with traditional tea service.' },
-  { city: 'Fes', name: 'Cafe Clock', location: 'Derb el Magana, Fes el-Bali', highlight: 'Cultural cafe known for storytelling events, live music, and excellent mint tea. A meeting point for travelers and locals alike.' },
-  { city: 'Fes', name: 'Riad Fes Maya Lounge', location: 'Derb Bennis, Zarbatana', highlight: 'Elegant riad with an ornate tea salon serving tea in traditional silver service with handmade sweets.' },
-  { city: 'Chefchaouen', name: 'Cafe Aladdin', location: 'Place Uta el-Hammam', highlight: 'Terrace overlooking the blue medina main square. Enjoy mint tea while watching the town come alive below.' },
-  { city: 'Essaouira', name: 'Taros Cafe', location: 'Place Moulay Hassan', highlight: 'Rooftop lounge overlooking the port. Known for louiza (verbena) tea and sea-breeze afternoons with live Gnawa music.' },
-  { city: 'Tangier', name: 'Cafe Hafa', location: 'Avenue Hafa, Marshan', highlight: 'Legendary cliffside cafe overlooking the Strait of Gibraltar. Unchanged since 1921, frequented by the Rolling Stones and Paul Bowles. Simple mint tea with stunning views.' },
-  { city: 'Casablanca', name: 'Rick\'s Cafe', location: 'Boulevard Sour Jdid, Old Medina', highlight: 'Inspired by the classic film, offering traditional Moroccan tea in an Art Deco atmosphere with live piano music.' },
-];
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: TEA INGREDIENTS & TYPES
-   ═══════════════════════════════════════════════════════════════ */
-
-const teaIngredients = [
-  { name: 'Gunpowder Green Tea', arabic: 'Atay', description: 'Chinese green tea rolled into small pellets that resemble gunpowder. The tightly rolled leaves produce a strong, slightly smoky brew. Morocco is one of the world\'s largest importers of Chinese gunpowder tea.', icon: Leaf },
-  { name: 'Fresh Spearmint', arabic: 'Nana', description: 'Fresh spearmint (Mentha spicata) is the signature herb in Moroccan tea. It must be fresh, never dried. Moroccans buy bunches daily from markets. The mint adds a cooling, aromatic quality that defines the drink.', icon: Leaf },
-  { name: 'White Sugar', arabic: 'Sukkar', description: 'Moroccan tea is traditionally very sweet. White sugar loaves (pain de sucre) are broken into chunks and added generously. The sugar balances the bitterness of the green tea and enhances the mint flavor.', icon: Star },
-  { name: 'Wormwood', arabic: 'Shiba', description: 'Used primarily in northern Morocco, dried wormwood adds a distinctive bitter, medicinal flavor. It is believed to aid digestion and is often mixed with mint or used as a substitute in winter months.', icon: Leaf },
-  { name: 'Lemon Verbena', arabic: 'Louiza', description: 'Popular in coastal regions, especially Essaouira. This fragrant herb produces a caffeine-free, citrusy infusion served hot or cold. Widely used as a calming evening tea.', icon: Leaf },
-  { name: 'Saffron', arabic: 'Zaafrane', description: 'Added to tea in the Taliouine region and parts of the Sahara, Moroccan saffron gives the tea a golden color and a subtle, earthy flavor. Morocco is one of the world\'s largest saffron producers.', icon: Sparkles },
-];
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: TEA EXPERIENCES
+   DATA: BEST TEA EXPERIENCES BY CITY
    ═══════════════════════════════════════════════════════════════ */
 
 const teaExperiences = [
-  { title: 'Tea Ceremony Workshop', detail: 'Join a hands-on workshop in Marrakech or Fes where a local host teaches you the art of preparing and pouring traditional mint tea. Learn to balance the flavors and master the high pour. Workshops typically last 1 to 2 hours and cost from 150 to 300 MAD.', icon: Coffee },
-  { title: 'Desert Tea with Nomads', detail: 'Experience authentic Saharan tea brewed over a charcoal fire by Tuareg or Amazigh nomads in the Merzouga or Zagora desert. Three rounds are served under the stars. Often included in overnight desert camp experiences.', icon: Flame },
-  { title: 'Tea and Cooking Class', detail: 'Many riads offer combined Moroccan cooking classes and tea ceremonies. Learn to make tagine, couscous, and mint tea in a single session. Available in most major cities, typically from 300 to 600 MAD per person.', icon: ListChecks },
-  { title: 'Tea Tasting at a Spice Market', detail: 'Spice merchants in the souks of Fes and Marrakech offer tea tastings with different blends: classic mint, saffron, orange blossom, verbena, and wild herb varieties. A great way to discover regional differences before buying.', icon: ShoppingBag },
-  { title: 'Berber Family Tea Visit', detail: 'Community-based tourism programs in the Atlas Mountains let you visit a Berber family in their home. Share tea made with wild mountain herbs, learn about daily life, and experience authentic Amazigh hospitality. From 100 to 200 MAD per person.', icon: HandHeart },
-  { title: 'Historic Cafe Tea Trail', detail: 'Follow a self-guided tea trail visiting legendary cafes like Cafe Hafa in Tangier, Cafe Clock in Fes, and the rooftop terraces of Marrakech. Each cafe has its own story, atmosphere, and tea style.', icon: MapPin },
-];
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: TEA HEALTH BENEFITS
-   ═══════════════════════════════════════════════════════════════ */
-
-const teaHealthBenefits = [
-  { benefit: 'Digestive Aid', detail: 'Moroccan mint tea is traditionally consumed after meals to aid digestion. The combination of spearmint and warm water helps soothe the stomach, reduce bloating, and ease discomfort after heavy meals like tagine or couscous.', icon: Heart },
-  { benefit: 'Antioxidant Properties', detail: 'Green tea is rich in catechins and polyphenols, powerful antioxidants that help protect cells from damage. Regular consumption of gunpowder green tea may support cardiovascular health and immune function.', icon: Leaf },
-  { benefit: 'Mental Alertness', detail: 'The natural caffeine in green tea provides a gentle energy boost without the jitteriness of coffee. Combined with the calming effect of mint, Moroccan tea offers a balanced alertness that Moroccans rely on throughout the day.', icon: Lightbulb },
-  { benefit: 'Stress Relief & Relaxation', detail: 'The tea ceremony itself is meditative. The slow preparation, the social connection, and the warm, aromatic beverage all contribute to reducing stress. Lemon verbena (louiza) tea is especially prized for its calming properties.', icon: Sparkles },
-  { benefit: 'Hydration in Hot Climate', detail: 'Despite being a hot drink, Moroccan tea helps with hydration in the desert climate. The warmth induces light perspiration, which cools the body. The sugar provides quick energy, essential in Morocco heat.', icon: ThermometerSun },
-  { benefit: 'Respiratory Support', detail: 'Fresh mint has natural decongestant properties. Inhaling the steam from a glass of fresh mint tea can help clear nasal passages, making it a popular remedy during cold and flu season in Morocco.', icon: GlassWater },
-];
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: TEA VOCABULARY
-   ═══════════════════════════════════════════════════════════════ */
-
-const teaVocabulary = [
-  { darija: 'Atay', pronunciation: 'ah-TAY', english: 'Tea' },
-  { darija: 'Atay b\'nana', pronunciation: 'ah-TAY b-NA-na', english: 'Tea with mint' },
-  { darija: 'Nana', pronunciation: 'NA-na', english: 'Spearmint / mint' },
-  { darija: 'Berrad', pronunciation: 'BEAR-rad', english: 'Teapot' },
-  { darija: 'Kisan', pronunciation: 'KEE-san', english: 'Tea glasses' },
-  { darija: 'Siniya', pronunciation: 'see-NEE-ya', english: 'Serving tray' },
-  { darija: 'Sukkar', pronunciation: 'SOO-kar', english: 'Sugar' },
-  { darija: 'Shiba', pronunciation: 'SHEE-ba', english: 'Wormwood herb' },
-  { darija: 'Louiza', pronunciation: 'loo-EE-za', english: 'Lemon verbena' },
-  { darija: 'Bneen', pronunciation: 'b-NEEN', english: 'Delicious (to compliment tea)' },
-  { darija: 'Afak, atay', pronunciation: 'ah-FAHK, ah-TAY', english: 'Tea, please' },
-  { darija: 'Shukran, baraka', pronunciation: 'SHOO-kran, ba-RA-ka', english: 'Thank you, enough (to decline more)' },
-];
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: WHERE TO BUY TEA SUPPLIES
-   ═══════════════════════════════════════════════════════════════ */
-
-const teaSupplyGuide = [
-  { item: 'Gunpowder Green Tea', where: 'Spice souks in any Moroccan city', price: 'from 20-80 MAD per 100g', tip: 'Ask for "atay Chinois" (Chinese tea). Higher grades have tighter, more uniform pellets. Taste before buying if offered.' },
-  { item: 'Traditional Teapot (Berrad)', where: 'Metalwork souks in Fes, Marrakech, Meknes', price: 'from 80-500 MAD', tip: 'Silver-plated pots are decorative; stainless steel versions are more practical for daily use. Haggle starting at 40% of the asking price.' },
-  { item: 'Ornate Tea Glasses', where: 'Glassware shops throughout medinas', price: 'from 5-30 MAD per glass', tip: 'Sold individually or in sets of 6 or 12. Hand-painted glasses with gold trim are popular souvenirs. Wrap carefully for transport.' },
-  { item: 'Silver Serving Tray', where: 'Artisan workshops in Fes and Marrakech', price: 'from 100-800 MAD', tip: 'Engraved brass trays are more affordable than silver. Look for the maker mark for authentic handmade pieces.' },
-  { item: 'Sugar Cones (Pain de Sucre)', where: 'Grocery stores and souks nationwide', price: 'from 8-15 MAD each', tip: 'The traditional cone-shaped white sugar. Break into chunks with a special hammer. A unique, affordable souvenir.' },
-  { item: 'Dried Herbs (Shiba, Louiza)', where: 'Herboriste (herbalist) shops in medinas', price: 'from 10-40 MAD per bunch', tip: 'Dried herbs travel well. Ask the herbalist for recommendations on blends. Louiza makes excellent caffeine-free evening tea.' },
-];
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: RELATED GUIDES
-   ═══════════════════════════════════════════════════════════════ */
-
-const relatedGuides = [
   {
-    href: '/cuisine',
-    title: 'Moroccan Cuisine Guide',
-    description: 'Explore the rich flavors of Moroccan cooking from tagines and couscous to pastilla, harira, and street food favorites.',
-    icon: Coffee,
-  },
-  {
-    href: '/culture',
-    title: 'Moroccan Culture Guide',
-    description: 'Deep dive into Moroccan traditions, festivals, arts, music, and the rich cultural heritage of the kingdom.',
-    icon: Globe,
-  },
-  {
-    href: '/morocco-food-guide',
-    title: 'Morocco Food Guide',
-    description: 'Complete guide to Moroccan dishes, regional specialties, street food, and the best restaurants across the country.',
+    city: 'Marrakech',
     icon: Star,
+    spots: [
+      {
+        name: 'Nomad Restaurant Rooftop',
+        location: 'Derb Aarjane, Medina',
+        price: 'from 35 MAD per glass',
+        note: 'Panoramic terrace overlooking the spice souk. Their tea includes fresh orange blossom water.',
+      },
+      {
+        name: 'Le Jardin Secret Tea Pavilion',
+        location: 'Mouassine Quarter',
+        price: 'from 40 MAD per pot',
+        note: 'Drink tea surrounded by a restored 16th-century Islamic garden. The garden entry is from 80 MAD.',
+      },
+      {
+        name: 'Cafe des Epices',
+        location: 'Place Rahba Kedima',
+        price: 'from 20 MAD per glass',
+        note: 'Three-story terrace above the spice square. A Marrakech institution since 2005. Arrive before 11 AM to grab a top-floor seat.',
+      },
+    ],
   },
   {
-    href: '/etiquette',
-    title: 'Morocco Etiquette Guide',
-    description: 'Essential tips on Moroccan customs, greetings, dress code, tipping, haggling, and respectful travel behavior.',
-    icon: Heart,
-  },
-  {
-    href: '/recipes',
-    title: 'Moroccan Recipes',
-    description: 'Authentic Moroccan recipes you can recreate at home, from classic tagines to traditional pastries and mint tea.',
+    city: 'Fes',
     icon: BookOpen,
+    spots: [
+      {
+        name: 'Cafe Clock',
+        location: 'Derb el Magana, Fes el-Bali',
+        price: 'from 25 MAD per glass',
+        note: 'Cultural cafe with live Gnawa music on Sundays. Try their camel burger paired with classic atay.',
+      },
+      {
+        name: 'Riad Fes Rooftop',
+        location: 'Derb Ben Slimane, Zerbatna',
+        price: 'from 50 MAD per pot',
+        note: 'A five-star riad with a rooftop that looks directly onto the Qarawiyyin Mosque. Tea service includes cornes de gazelle pastries.',
+      },
+      {
+        name: 'Palais de Fes Dar Tazi',
+        location: 'Near Bab Bou Jeloud',
+        price: 'from 30 MAD per pot',
+        note: 'Enormous palace terrace with views of the medina. Less touristy than rooftop cafes near the tanneries.',
+      },
+    ],
   },
-];
+  {
+    city: 'Chefchaouen',
+    icon: MapPin,
+    spots: [
+      {
+        name: 'Cafe Hafa (Chefchaouen)',
+        location: 'Near Ras El Maa waterfall',
+        price: 'from 12 MAD per glass',
+        note: 'A simple terrace cafe where locals drink louiza (verbena) tea while watching the river. No frills, just peace.',
+      },
+      {
+        name: 'Hotel Casa Hassan Terrace',
+        location: 'Rue Targhi, Medina',
+        price: 'from 20 MAD per glass',
+        note: 'Blue-washed terrace overlooking the medina rooftops. The tea here comes with homemade almond cookies.',
+      },
+    ],
+  },
+  {
+    city: 'Essaouira',
+    icon: Globe,
+    spots: [
+      {
+        name: 'Taros Cafe',
+        location: 'Place Moulay Hassan',
+        price: 'from 25 MAD per glass',
+        note: 'Rooftop bar and cafe overlooking the port. Live Gnawa music most evenings. Their mint tea uses fresh-cut mint from the garden.',
+      },
+      {
+        name: 'Ocean Vagabond',
+        location: 'Beach Promenade',
+        price: 'from 20 MAD per glass',
+        note: 'Beachfront cafe where surfers drink post-session tea. Ocean views and a relaxed vibe.',
+      },
+    ],
+  },
+  {
+    city: 'Tangier',
+    icon: Coffee,
+    spots: [
+      {
+        name: 'Cafe Hafa',
+        location: 'Avenue Hafa, Marshan',
+        price: 'from 15 MAD per glass',
+        note: 'Clinging to the cliff above the Strait of Gibraltar. Rolling Stones, Paul Bowles, and Jack Kerouac all drank tea here. Open since 1921.',
+      },
+      {
+        name: 'Gran Cafe de Paris',
+        location: 'Place de France',
+        price: 'from 20 MAD per glass',
+        note: 'Art deco interior from the international zone era. Order tea with msemen and watch the Petit Socco bustle.',
+      },
+    ],
+  },
+] as const;
+
+/* ═══════════════════════════════════════════════════════════════
+   DATA: TEA & FOOD PAIRINGS
+   ═══════════════════════════════════════════════════════════════ */
+
+const teaPairings = [
+  {
+    food: 'Msemen',
+    description: 'Square layered flatbread, crispy outside, chewy inside. Drizzle with honey or stuff with kefta. The buttery richness cuts through the tea\'s sweetness.',
+    price: 'from 3 MAD per piece',
+  },
+  {
+    food: 'Baghrir',
+    description: 'Thousand-hole semolina pancakes soaked in butter and honey. The spongy texture absorbs the honey perfectly. A breakfast staple across Morocco.',
+    price: 'from 3 MAD per piece',
+  },
+  {
+    food: 'Chebakia',
+    description: 'Flower-shaped fried pastry coated in honey and sesame seeds. Traditionally made for Ramadan. Intensely sweet — the tea balances it.',
+    price: 'from 5 MAD per piece',
+  },
+  {
+    food: 'Cornes de Gazelle (Kaab el Ghzal)',
+    description: 'Crescent-shaped almond paste pastries dusted with powdered sugar. Fes is the capital of this pastry. Delicate, fragrant with orange blossom water.',
+    price: 'from 8 MAD per piece',
+  },
+  {
+    food: 'Sellou (Sfouf)',
+    description: 'A dense mixture of roasted flour, almonds, sesame, butter, and honey. High-energy, served during Ramadan and after childbirth. Crumbly and nutty alongside tea.',
+    price: 'from 40 MAD per 250g',
+  },
+  {
+    food: 'Briwat',
+    description: 'Triangular filo pastry stuffed with almond paste or ground meat. The sweet version pairs best with unsweetened or lightly sweetened tea.',
+    price: 'from 5 MAD per piece',
+  },
+] as const;
+
+/* ═══════════════════════════════════════════════════════════════
+   DATA: TEA SET SHOPPING GUIDE
+   ═══════════════════════════════════════════════════════════════ */
+
+const teaSetItems = [
+  {
+    item: 'Berrad (Teapot)',
+    material: 'Stainless steel or silver-plated',
+    priceRange: 'from 80 MAD (basic) to 2,000 MAD (hand-engraved silver)',
+    tip: 'Look for a tight-fitting lid and a long curved spout. The best berrad have a welded (not glued) handle.',
+  },
+  {
+    item: 'Tea Glasses (Kseysat)',
+    material: 'Painted glass with gold or colored designs',
+    priceRange: 'from 10 MAD each to 50 MAD for hand-painted',
+    tip: 'Buy a set of 6 or 12. Check that the painted designs are under a glaze — cheap glasses lose their paint after a few washes.',
+  },
+  {
+    item: 'Tea Tray (Siniya)',
+    material: 'Brass, copper, or silver',
+    priceRange: 'from 100 MAD (brass) to 1,500 MAD (engraved silver)',
+    tip: 'Round trays are traditional. Look for hand-hammered geometric patterns. Heavier trays are generally better quality.',
+  },
+  {
+    item: 'Sugar Cone (Qalib Sukkar)',
+    material: 'Compressed white sugar',
+    priceRange: 'from 15 MAD per cone',
+    tip: 'Moroccans break pieces off the cone with a special hammer. Sugar cones are sold at every grocery store (hanout).',
+  },
+  {
+    item: 'Complete Tea Set',
+    material: 'Berrad + 6 glasses + tray',
+    priceRange: 'from 250 MAD (basic) to 3,000 MAD (artisan)',
+    tip: 'The metalworkers\' souk in Fes (Seffarine Square) and Marrakech (near Place Jemaa el-Fna) have the best selection. Always negotiate.',
+  },
+] as const;
 
 /* ═══════════════════════════════════════════════════════════════
    PAGE COMPONENT
@@ -422,6 +439,7 @@ const relatedGuides = [
 export default function MoroccoTeaCulturePage() {
   return (
     <>
+      {/* JSON-LD */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -432,330 +450,215 @@ export default function MoroccoTeaCulturePage() {
       />
 
       {/* ── Hero Section ── */}
-      <section className="relative py-20 md:py-28 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(/images/hero-morocco.webp)',
-          }}
-        />
-        <div className="absolute inset-0 hero-overlay" />
-        <div className="container-morocco relative z-10">
-          <nav className="flex items-center gap-2 text-sm text-white/60 mb-8" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-white transition-colors">
-              <Home className="w-3.5 h-3.5" />
+      <section className="relative min-h-[60vh] flex items-center justify-center bg-gradient-to-br from-[#2D1810] via-[#4A2C1A] to-[#1a0f08]">
+        <div className="hero-overlay absolute inset-0" />
+        <div className="relative z-10 container-morocco text-center py-20 md:py-28">
+          {/* Breadcrumbs */}
+          <nav aria-label="Breadcrumb" className="flex justify-center items-center gap-1.5 text-white/70 text-sm mb-8">
+            <Link href="/" className="hover:text-white transition-colors flex items-center gap-1">
+              <Home className="w-3.5 h-3.5" /> Home
             </Link>
             <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-white">Moroccan Tea Culture</span>
+            <span className="text-white font-medium">Moroccan Tea Culture</span>
           </nav>
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm text-white/90 text-sm mb-6">
-            <Coffee className="w-4 h-4" />
-            Tea Culture &amp; Traditions
-          </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-display)] font-bold text-white mb-4">
+
+          <h1 className="text-4xl md:text-6xl font-[family-name:var(--font-display)] font-bold text-white mb-6 leading-tight">
             Moroccan Mint Tea
-            <br className="hidden md:block" /> Culture Guide 2026
+            <span className="block text-[var(--color-gold)] mt-2">Culture, Ceremony &amp; Where to Drink</span>
           </h1>
-          <p className="text-xl text-white/80 max-w-2xl">
-            History, ceremony etiquette, step-by-step recipe, regional variations, best tea houses,
-            and everything you need to know about Morocco&apos;s beloved national drink.
+
+          <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed font-[family-name:var(--font-heading)]">
+            Tea is Morocco&apos;s national drink, its social glue, and its most universal act of welcome.
+            This guide covers everything: history, preparation, the three-glass tradition, regional
+            variations, the best tea houses by city, and how to brew authentic atay at home.
           </p>
-        </div>
-      </section>
 
-      <div className="zellige-border" />
-
-      {/* ── Introduction ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco max-w-4xl">
-          <div className="prose-moroccan">
-            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
-              More Than a Drink &mdash; A Way of Life
-            </h2>
-            <div className="space-y-4 text-lg text-[var(--text-secondary)] leading-relaxed">
-              <p>
-                In Morocco, mint tea is far more than a simple beverage. Known as &ldquo;atay
-                b&apos;nana&rdquo; (tea with mint), it is the cornerstone of Moroccan hospitality,
-                a symbol of friendship, and a daily ritual that brings families, friends, and even
-                strangers together. From the bustling souks of Marrakech to the quiet villages of
-                the Atlas Mountains, the sound of tea being poured and the fragrance of fresh mint
-                are constants of Moroccan life.
-              </p>
-              <p>
-                Affectionately nicknamed &ldquo;Berber whiskey&rdquo; for its central role in a
-                culture that largely abstains from alcohol, Moroccan mint tea is prepared with Chinese
-                gunpowder green tea, generous handfuls of fresh spearmint, and white sugar. The
-                ritualized preparation and the iconic high pour transform a simple drink into an art
-                form that has been perfected over centuries.
-              </p>
-              <p>
-                Whether you are being welcomed into a Moroccan home, negotiating in a carpet shop,
-                or resting at a cliffside cafe overlooking the Strait of Gibraltar, understanding
-                Moroccan tea culture will deepen your connection to this warm and generous country.
-              </p>
-            </div>
+          <div className="flex flex-wrap justify-center gap-4 mt-8 text-sm text-white/80">
+            <span className="flex items-center gap-1.5 bg-white/10 px-4 py-2 rounded-full">
+              <Clock className="w-4 h-4" /> 12 min read
+            </span>
+            <span className="flex items-center gap-1.5 bg-white/10 px-4 py-2 rounded-full">
+              <MapPin className="w-4 h-4" /> 5 cities covered
+            </span>
+            <span className="flex items-center gap-1.5 bg-white/10 px-4 py-2 rounded-full">
+              <Star className="w-4 h-4" /> 6 tea variations
+            </span>
           </div>
         </div>
       </section>
 
-      {/* ── Quick Tea Facts ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Coffee className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Moroccan Tea at a Glance
+      {/* ── Introduction: Significance of Moroccan Tea ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-10">
+            <Coffee className="w-8 h-8 inline mr-2 text-[var(--color-accent)]" />
+            The Significance of Moroccan Mint Tea
           </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Essential facts about Morocco&apos;s national drink that every visitor should know.
-          </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { label: 'National Drink', value: 'Mint Tea', detail: 'Consumed by every social class, all day long', icon: Coffee },
-              { label: 'Key Ingredients', value: '3 Essentials', detail: 'Gunpowder green tea, fresh spearmint, sugar', icon: Leaf },
-              { label: 'Serving Tradition', value: '3 Glasses', detail: '"Gentle as life, strong as love, bitter as death"', icon: GlassWater },
-              { label: 'Daily Consumption', value: 'All Day', detail: 'From breakfast through late evening gatherings', icon: Clock },
-            ].map((fact) => {
-              const FactIcon = fact.icon;
-              return (
-                <div key={fact.label} className="card-moroccan p-6 text-center">
-                  <div className="w-12 h-12 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center mx-auto mb-4">
-                    <FactIcon className="w-6 h-6 text-[var(--color-accent)]" />
-                  </div>
-                  <p className="text-2xl font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)] mb-1">
-                    {fact.value}
-                  </p>
-                  <p className="text-sm font-medium text-[var(--text-primary)] mb-2">{fact.label}</p>
-                  <p className="text-xs text-[var(--text-muted)]">{fact.detail}</p>
-                </div>
-              );
-            })}
+          <div className="prose-custom space-y-5 text-[var(--text-secondary)]">
+            <p className="text-base leading-relaxed">
+              Moroccans call it <strong>&quot;atay&quot;</strong> (also written &quot;attay&quot;). It is far more than a beverage.
+              Atay is the first thing a host offers a guest. It accompanies every business negotiation, family gathering, and
+              afternoon break. Refusing a glass signals distrust. Accepting it — even from a stranger — opens a door to conversation,
+              commerce, and friendship.
+            </p>
+            <p className="text-base leading-relaxed">
+              Morocco imports more Chinese green tea than any other country on the African continent. In 2024, Morocco purchased
+              over 77,000 tonnes of tea, almost all of it Chinese gunpowder green. Per capita, Moroccans drink more tea than the
+              British. The country has no native tea plants; every gram is imported. Yet tea has become so central to Moroccan
+              identity that many visitors assume it originated here.
+            </p>
+            <p className="text-base leading-relaxed">
+              Walk through any medina at 4 PM and you will see it everywhere: men sitting on low stools outside cafes, shopkeepers
+              pouring from dented steel teapots, families gathered on terraces. The ritual crosses every class boundary. A
+              construction worker and a bank director drink the same tea, prepared the same way, from the same style of small
+              painted glass.
+            </p>
+          </div>
+
+          <div className="card-moroccan p-6 mt-8 bg-[var(--surface-muted)]">
+            <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3 flex items-center gap-2">
+              <Info className="w-5 h-5 text-[var(--color-accent)]" />
+              Quick Facts About Moroccan Tea
+            </h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-[var(--text-secondary)]">
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
+                Morocco is the world&apos;s largest importer of Chinese green tea
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
+                Average Moroccan household spends 5-8% of food budget on tea and sugar
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
+                Mint tea is the unofficial national drink — no law declares it, everyone knows it
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
+                Tea preparation is traditionally a male task in Moroccan households
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
+                The word &quot;atay&quot; derives from the Mandarin Chinese word &quot;cha&quot; via trade routes
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
+                A standard pot serves 3-4 people with 3 rounds each
+              </li>
+            </ul>
           </div>
         </div>
       </section>
 
-      {/* ── History of Moroccan Tea ── */}
-      <section className="py-16 md:py-20">
+      {/* ── History of Tea in Morocco ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
         <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <BookOpen className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-10">
+            <BookOpen className="w-8 h-8 inline mr-2 text-[var(--color-accent)]" />
             History of Tea in Morocco
           </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            How a Chinese import became the heart and soul of Moroccan hospitality.
-          </p>
 
-          <div className="card-moroccan p-6 md:p-8">
-            <div className="space-y-6">
-              {teaHistory.map((item) => {
-                const ItemIcon = item.icon;
-                return (
-                  <div key={item.era} className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent)] flex items-center justify-center shrink-0">
-                      <ItemIcon className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-3 mb-1">
-                        <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                          {item.title}
-                        </h3>
-                        <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-[var(--color-gold)]/10 text-[var(--color-gold)]">
-                          {item.era}
-                        </span>
-                      </div>
-                      <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{item.detail}</p>
-                    </div>
-                  </div>
-                );
-              })}
+          <div className="space-y-6">
+            <div className="card-moroccan p-6">
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                18th Century: Tea Arrives
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                Tea reached Morocco through British merchants in the mid-1700s. Britain, looking for new markets for its surplus
+                Chinese tea stocks, traded gunpowder green tea through the ports of Mogador (modern Essaouira) and Tangier.
+                The Alaouite sultan Moulay Ismail (reigned 1672-1727) reportedly received tea as a diplomatic gift, though it
+                did not become widespread until decades later. By the 1750s, the Moroccan elite in Fes and Meknes had adopted
+                the drink.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                19th Century: Tea Goes Mainstream
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                During the Crimean War (1853-1856), British tea merchants lost their Baltic trade routes and redirected massive
+                quantities of tea to Morocco and other North African markets. Prices dropped. Tea spread from royal courts to
+                merchants, then to rural villages. Moroccans began adding fresh mint and large amounts of sugar — innovations that
+                made the drink distinctly their own. By 1900, tea had replaced other beverages in most of the country.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                20th Century to Present
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                Under the French Protectorate (1912-1956), tea consumption continued to grow despite colonial attempts to tax it
+                heavily. After independence, tea became intertwined with Moroccan national identity. Today, Morocco is the
+                single largest destination for Chinese gunpowder green tea exports. The country imports tea duty-free, keeping
+                prices low. A box of quality gunpowder tea costs from 15 MAD (about $1.50) at any neighborhood hanout (corner store).
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Tea Ceremony Etiquette ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <HandHeart className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Tea Ceremony Etiquette
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            The unwritten rules of the Moroccan tea ritual that every visitor should follow.
-          </p>
-
-          <div className="card-moroccan p-6 md:p-8">
-            <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-6">
-              <CheckCircle className="w-5 h-5 inline-block text-[var(--color-gold)] mr-2" />
-              Essential Tea Etiquette Rules
-            </h3>
-            <div className="space-y-3">
-              {ceremonyEtiquette.map((rule, i) => (
-                <div key={i} className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0 mt-0.5">
-                    <CheckCircle className="w-3.5 h-3.5 text-[var(--color-gold)]" />
-                  </div>
-                  <p className="text-sm text-[var(--text-secondary)]">{rule}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── How to Make Moroccan Mint Tea ── */}
+      {/* ── How Moroccan Tea Is Made ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <ListChecks className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            How to Make Moroccan Mint Tea
+            <Flame className="w-8 h-8 inline mr-2 text-[var(--color-accent)]" />
+            How Moroccan Tea Is Made
           </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Follow these eight steps to prepare authentic Moroccan mint tea like a local.
-          </p>
-
-          <div className="card-moroccan p-6 md:p-8">
-            <div className="space-y-6">
-              {teaRecipeSteps.map((s) => (
-                <div key={s.step} className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[var(--color-accent)] flex items-center justify-center shrink-0">
-                    <span className="text-sm font-bold text-white">{s.step}</span>
-                  </div>
-                  <div>
-                    <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
-                      {s.title}
-                    </h3>
-                    <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{s.detail}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="mt-8 card-moroccan p-6 bg-[var(--color-accent)]/5">
-            <div className="flex items-start gap-3">
-              <Lightbulb className="w-5 h-5 text-[var(--color-gold)] mt-1 shrink-0" />
-              <div>
-                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                  Pro Tip: The Perfect Pour
-                </h3>
-                <p className="text-sm text-[var(--text-secondary)]">
-                  The high pour is the signature of Moroccan tea service. Start with the spout close
-                  to the glass and gradually raise the teapot as you pour. The stream should be thin
-                  and steady. If you spill, pour it back and try again &mdash; even experienced
-                  Moroccans sometimes miss. The frothy top (called &ldquo;the crown&rdquo;) is a
-                  sign of well-prepared tea.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Regional Variations ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <MapPin className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Regional Tea Variations Across Morocco
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            From the sweet desert brews to the herbal Atlas Mountain blends, tea varies across the kingdom.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {regionalVariations.map((item) => {
-              const ItemIcon = item.icon;
-              return (
-                <div key={item.region} className="card-moroccan p-6">
-                  <div className="flex items-start gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                      <ItemIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                    </div>
-                    <div>
-                      <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                        {item.region}
-                      </h3>
-                      <p className="text-xs font-semibold text-[var(--color-gold)]">{item.style}</p>
-                    </div>
-                  </div>
-                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{item.detail}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Tea Ingredients & Types ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Leaf className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Tea Ingredients &amp; Types
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            The essential ingredients and herbs used in Moroccan tea, from the classic to the regional.
-          </p>
-
-          <div className="card-moroccan p-6 md:p-8">
-            <div className="space-y-4">
-              {teaIngredients.map((item) => {
-                const ItemIcon = item.icon;
-                return (
-                  <div key={item.name} className="flex items-start gap-4 p-4 bg-[var(--surface-muted)] rounded-lg">
-                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                      <ItemIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-3 mb-1">
-                        <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                          {item.name}
-                        </h3>
-                        <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-[var(--color-gold)]/10 text-[var(--color-gold)] italic">
-                          {item.arabic}
-                        </span>
-                      </div>
-                      <p className="text-sm text-[var(--text-secondary)]">{item.description}</p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Best Tea Houses by City ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Store className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Best Tea Houses &amp; Cafes in Morocco
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Iconic tea houses and cafes across Morocco where you can experience the finest tea culture.
+          <p className="text-center text-[var(--text-secondary)] mb-10 max-w-2xl mx-auto">
+            The preparation method has remained essentially unchanged for 200 years. Every step matters.
           </p>
 
           <div className="space-y-4">
-            {bestTeaHouses.map((house) => (
-              <div key={`${house.city}-${house.name}`} className="card-moroccan p-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                    <MapPin className="w-5 h-5 text-[var(--color-accent)]" />
-                  </div>
-                  <div>
-                    <div className="flex flex-wrap items-center gap-3 mb-1">
-                      <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                        {house.name}
-                      </h3>
-                      <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-[var(--color-gold)]/10 text-[var(--color-gold)]">
-                        {house.city}
-                      </span>
-                    </div>
-                    <p className="text-xs text-[var(--text-muted)] mb-2">{house.location}</p>
-                    <p className="text-sm text-[var(--text-secondary)]">{house.highlight}</p>
-                  </div>
+            {[
+              {
+                step: 1,
+                title: 'Rinse the Tea',
+                detail:
+                  'Add 1-2 tablespoons of Chinese gunpowder green tea to the berrad (teapot). Pour a small amount of boiling water over the leaves. Swirl for 10 seconds, then discard this first water. This removes dust and bitterness. Moroccans call this step "washing the tea."',
+              },
+              {
+                step: 2,
+                title: 'First Brew',
+                detail:
+                  'Fill the berrad with boiling water. Place on low heat (traditionally a kanoun charcoal brazier, now usually a gas flame) for 3-5 minutes. The tea should simmer gently — never a rolling boil.',
+              },
+              {
+                step: 3,
+                title: 'Add Mint and Sugar',
+                detail:
+                  'Pack a large handful of fresh spearmint (naanaa) into the pot. Add sugar — traditionally 4-6 large chunks broken from a sugar cone (qalib). Push the mint below the surface with a long spoon. Return to heat for 2-3 minutes.',
+              },
+              {
+                step: 4,
+                title: 'The Taste Test',
+                detail:
+                  'Pour a glass, taste it, and pour it back into the pot. Repeat. This step, called "turning" the tea, mixes the sugar and aerates the liquid. The host adjusts sugar and mint at this stage. This back-and-forth may happen 3-4 times.',
+              },
+              {
+                step: 5,
+                title: 'The High Pour',
+                detail:
+                  'Hold the berrad high — 30 to 50 centimeters above the glass — and pour in a steady stream. The height creates a layer of foam (rezza, "the crown") on top. A perfect pour fills the glass without spilling a drop. This is the signature move.',
+              },
+              {
+                step: 6,
+                title: 'Serve and Repeat',
+                detail:
+                  'Serve the first round. The pot stays on low heat. For the second and third rounds, add more boiling water, fresh mint if needed, and additional sugar. Each round grows stronger as the tea leaves continue to steep.',
+              },
+            ].map((s) => (
+              <div key={s.step} className="card-moroccan p-5 flex gap-4 items-start">
+                <div className="w-10 h-10 rounded-full bg-[var(--color-accent)] text-white flex items-center justify-center font-bold text-lg shrink-0">
+                  {s.step}
+                </div>
+                <div>
+                  <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
+                    {s.title}
+                  </h3>
+                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{s.detail}</p>
                 </div>
               </div>
             ))}
@@ -763,215 +666,387 @@ export default function MoroccoTeaCulturePage() {
         </div>
       </section>
 
-      {/* ── Tea & Social Customs ── */}
-      <section className="py-16 md:py-20">
+      {/* ── Tea Etiquette ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Users className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Tea &amp; Social Customs
+            <HandHeart className="w-8 h-8 inline mr-2 text-[var(--color-accent)]" />
+            Tea Etiquette in Morocco
           </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            How mint tea weaves through every aspect of Moroccan daily life and social interaction.
+          <p className="text-center text-[var(--text-secondary)] mb-10 max-w-2xl mx-auto">
+            The rules are unwritten but deeply felt. Getting them right earns respect.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[
-              { title: 'Welcoming Guests', detail: 'The first thing a Moroccan host does when you arrive is prepare tea. It is offered before any conversation about business or purpose. Refusing is considered a rejection of the host hospitality and should be avoided.', icon: HandHeart },
-              { title: 'Business & Negotiations', detail: 'In carpet shops, real estate dealings, and business meetings, tea is served as a social lubricant. Multiple rounds may be poured during lengthy negotiations. Accepting tea is part of the relationship-building process.', icon: MessageCircle },
-              { title: 'Family Gatherings', detail: 'Evenings in Moroccan homes revolve around tea. After dinner, the family gathers in the salon for tea and conversation. It is the glue that holds family time together, often accompanied by pastries and sweets.', icon: Heart },
-              { title: 'Religious & Festive Occasions', detail: 'Tea is central to celebrations including Ramadan iftars, Eid al-Fitr, weddings, and religious holidays. Special blends with saffron, orange blossom, or rose water may be prepared for these occasions.', icon: Star },
-              { title: 'Street & Cafe Culture', detail: 'Moroccan cafes are social hubs where men (and increasingly women) gather to drink tea, play cards, and watch football. A glass of mint tea at a cafe costs from 5 to 15 MAD and can accompany hours of socializing.', icon: Store },
-              { title: 'Gender & Tea Service', detail: 'Traditionally, the male head of the household prepares and pours tea in the presence of guests. However, women often prepare the tea in the kitchen. In modern urban households, anyone may serve, and women commonly pour tea for guests.', icon: Users },
-            ].map((item) => {
-              const ItemIcon = item.icon;
-              return (
-                <div key={item.title} className="card-moroccan p-6">
-                  <div className="flex items-start gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                      <ItemIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                    </div>
-                    <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mt-2">
-                      {item.title}
-                    </h3>
-                  </div>
-                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{item.detail}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3 flex items-center gap-2">
+                <Users className="w-5 h-5 text-[var(--color-accent)]" />
+                The Three-Glass Tradition
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-3">
+                A famous Moroccan proverb defines the three rounds:
+              </p>
+              <ul className="text-sm text-[var(--text-secondary)] space-y-2">
+                <li className="flex items-start gap-2">
+                  <span className="font-bold text-[var(--color-gold)] shrink-0">1st glass:</span>
+                  &quot;Gentle as life&quot; — light, fresh, fragrant
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="font-bold text-[var(--color-gold)] shrink-0">2nd glass:</span>
+                  &quot;Strong as love&quot; — deeper, more concentrated
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="font-bold text-[var(--color-gold)] shrink-0">3rd glass:</span>
+                  &quot;Bitter as death&quot; — intense, heavily steeped
+                </li>
+              </ul>
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed mt-3">
+                Drinking all three signals that you value the host&apos;s company. Leaving after one glass can suggest impatience.
+              </p>
+            </div>
 
-      {/* ── Tea Experiences ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Sparkles className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Tea Experiences for Visitors
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Immersive tea experiences that let you dive deeper into Morocco&apos;s tea culture.
-          </p>
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3 flex items-center gap-2">
+                <MessageCircle className="w-5 h-5 text-[var(--color-accent)]" />
+                Accepting and Refusing
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                Always accept the first glass. Hold it in your right hand. If you cannot drink more, place your hand over your glass
+                or leave it untouched — the host will understand. Outright verbal refusal is considered rude in most contexts.
+                In carpet shops and medina stores, vendors offer tea to build rapport. Accepting does not obligate you to buy
+                anything, despite what they may suggest.
+              </p>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {teaExperiences.map((item) => {
-              const ItemIcon = item.icon;
-              return (
-                <div key={item.title} className="card-moroccan p-6">
-                  <div className="flex items-start gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                      <ItemIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                    </div>
-                    <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mt-2">
-                      {item.title}
-                    </h3>
-                  </div>
-                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{item.detail}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3 flex items-center gap-2">
+                <Crown className="w-5 h-5 text-[var(--color-accent)]" />
+                Who Prepares the Tea
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                In traditional households, the male head of the family prepares and pours the tea — it is considered an
+                honor and a demonstration of hospitality. Women typically prepare food, but the tea ceremony belongs to
+                the host, male or female, who sits closest to the tray. Guests never pour their own tea.
+              </p>
+            </div>
 
-      {/* ── Where to Buy Tea Supplies ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <ShoppingBag className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Where to Buy Moroccan Tea Supplies
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Take the taste of Morocco home with you. Here is what to buy and where to find it.
-          </p>
-
-          <div className="card-moroccan p-6 md:p-8">
-            <div className="space-y-4">
-              {teaSupplyGuide.map((item) => (
-                <div key={item.item} className="flex items-start gap-4 p-4 bg-[var(--surface-muted)] rounded-lg">
-                  <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                    <ShoppingBag className="w-5 h-5 text-[var(--color-accent)]" />
-                  </div>
-                  <div>
-                    <div className="flex flex-wrap items-center gap-3 mb-1">
-                      <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                        {item.item}
-                      </h3>
-                      <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-[var(--color-gold)]/10 text-[var(--color-gold)]">
-                        {item.price}
-                      </span>
-                    </div>
-                    <p className="text-xs text-[var(--text-muted)] mb-1">{item.where}</p>
-                    <p className="text-sm text-[var(--text-secondary)]">{item.tip}</p>
-                  </div>
-                </div>
-              ))}
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3 flex items-center gap-2">
+                <ThermometerSun className="w-5 h-5 text-[var(--color-accent)]" />
+                Drinking Technique
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                Hold the glass at the rim between thumb and forefinger — it is too hot to wrap your hand around. Sip
+                slowly. Slurping is acceptable and even common; it aerates the tea and cools it. Set the glass on the
+                tray between sips, not on the floor or furniture. When finished, turn the glass upside down on the tray.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Tea Health Benefits ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+      {/* ── Tea Variations ── */}
+      <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Heart className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Health Benefits of Moroccan Tea
+            <Leaf className="w-8 h-8 inline mr-2 text-[var(--color-accent)]" />
+            Regional Tea Variations
           </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Beyond taste and tradition, Moroccan mint tea offers genuine health benefits.
+          <p className="text-center text-[var(--text-secondary)] mb-10 max-w-2xl mx-auto">
+            Mint tea dominates, but Morocco has a rich tradition of herbal infusions that vary by region and season.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {teaHealthBenefits.map((item) => {
-              const ItemIcon = item.icon;
-              return (
-                <div key={item.benefit} className="card-moroccan p-6">
-                  <div className="flex items-start gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                      <ItemIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                    </div>
-                    <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mt-2">
-                      {item.benefit}
-                    </h3>
-                  </div>
-                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{item.detail}</p>
+            {teaVariations.map((tea) => (
+              <div key={tea.name} className="card-moroccan p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <tea.icon className="w-6 h-6 text-[var(--color-accent)]" />
+                  <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+                    {tea.name}
+                  </h3>
                 </div>
-              );
-            })}
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-3">{tea.description}</p>
+                <div className="flex flex-wrap gap-3 text-xs text-[var(--text-secondary)]">
+                  <span className="flex items-center gap-1 bg-[var(--surface-muted)] px-2.5 py-1 rounded-full">
+                    <MapPin className="w-3 h-3 text-[var(--color-gold)]" /> {tea.region}
+                  </span>
+                  <span className="flex items-center gap-1 bg-[var(--surface-muted)] px-2.5 py-1 rounded-full">
+                    <Clock className="w-3 h-3 text-[var(--color-gold)]" /> {tea.season}
+                  </span>
+                </div>
+              </div>
+            ))}
           </div>
+        </div>
+      </section>
 
-          <div className="mt-8 card-moroccan p-6 bg-[var(--color-accent)]/5">
-            <div className="flex items-start gap-3">
-              <Lightbulb className="w-5 h-5 text-[var(--color-gold)] mt-1 shrink-0" />
-              <div>
-                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                  A Note on Sugar Content
+      {/* ── Best Tea Experiences by City ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <MapPin className="w-8 h-8 inline mr-2 text-[var(--color-accent)]" />
+            Best Tea Experiences by City
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] mb-10 max-w-2xl mx-auto">
+            Rooftop terraces, historic cafes, and hidden riad ceremonies. These are the places Moroccans and travelers go for the best glass of atay.
+          </p>
+
+          <div className="space-y-8">
+            {teaExperiences.map((city) => (
+              <div key={city.city} className="card-moroccan p-6">
+                <h3 className="text-xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-5 flex items-center gap-2">
+                  <city.icon className="w-6 h-6 text-[var(--color-accent)]" />
+                  {city.city}
                 </h3>
-                <p className="text-sm text-[var(--text-secondary)]">
-                  Traditional Moroccan mint tea is very sweet, often containing 4 to 6 sugar cubes per
-                  pot. While the antioxidants and mint provide health benefits, be mindful of the sugar
-                  intake, especially if you are drinking several glasses per day. In modern Morocco, it
-                  is perfectly acceptable to request &ldquo;atay bla sukkar&rdquo; (tea without sugar)
-                  or &ldquo;shwiya sukkar&rdquo; (a little sugar).
+                <div className="space-y-4">
+                  {city.spots.map((spot) => (
+                    <div key={spot.name} className="border-l-3 border-[var(--color-gold)] pl-4">
+                      <h4 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+                        {spot.name}
+                      </h4>
+                      <p className="text-xs text-[var(--color-accent)] mb-1">{spot.location} &middot; {spot.price}</p>
+                      <p className="text-sm text-[var(--text-secondary)]">{spot.note}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Tea & Food Pairings ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <UtensilsCrossed className="w-8 h-8 inline mr-2 text-[var(--color-accent)]" />
+            Tea &amp; Food Pairings
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] mb-10 max-w-2xl mx-auto">
+            Moroccan tea is almost never drunk alone. These are the traditional accompaniments.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {teaPairings.map((pair) => (
+              <div key={pair.food} className="card-moroccan p-5">
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+                    {pair.food}
+                  </h3>
+                  <span className="text-xs text-[var(--color-gold)] font-medium">{pair.price}</span>
+                </div>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{pair.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Buying Moroccan Tea Sets ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <ShoppingBag className="w-8 h-8 inline mr-2 text-[var(--color-accent)]" />
+            Buying a Moroccan Tea Set
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] mb-10 max-w-2xl mx-auto">
+            A tea set makes one of the best souvenirs from Morocco. Here is what to look for and what to pay.
+          </p>
+
+          <div className="space-y-4">
+            {teaSetItems.map((item) => (
+              <div key={item.item} className="card-moroccan p-5">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+                  <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+                    <Store className="w-4 h-4 inline mr-1.5 text-[var(--color-accent)]" />
+                    {item.item}
+                  </h3>
+                  <span className="text-xs text-[var(--color-gold)] font-medium mt-1 md:mt-0">{item.priceRange}</span>
+                </div>
+                <p className="text-sm text-[var(--text-secondary)] mb-2">
+                  <span className="font-medium">Material:</span> {item.material}
+                </p>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                  <span className="font-medium">Tip:</span> {item.tip}
                 </p>
               </div>
-            </div>
+            ))}
+          </div>
+
+          <div className="card-moroccan p-5 mt-6 border-l-4 border-[var(--color-gold)]">
+            <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 flex items-center gap-2">
+              <Info className="w-4 h-4 text-[var(--color-accent)]" />
+              Bargaining Tips
+            </h3>
+            <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+              Start at 40% of the asking price and work up from there. Vendors in tourist areas inflate by 200-300%.
+              The best deals are in the metalworkers&apos; souks (souk haddadine) rather than shops near major tourist
+              sites. Seffarine Square in Fes has the highest quality. Check that teapot lids sit tightly, that spouts
+              do not drip, and that glass paint is properly sealed under a glaze. Seasonal pricing can change — prices
+              rise during peak tourist season (March-May, September-November).
+            </p>
           </div>
         </div>
       </section>
 
-      {/* ── Tea Vocabulary ── */}
+      {/* ── How to Make Moroccan Tea at Home ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <MessageCircle className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Essential Tea Vocabulary in Darija
+            <ListChecks className="w-8 h-8 inline mr-2 text-[var(--color-accent)]" />
+            How to Make Moroccan Tea at Home
           </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Useful Moroccan Arabic words and phrases related to tea that will impress your hosts.
+          <p className="text-center text-[var(--text-secondary)] mb-10 max-w-2xl mx-auto">
+            You do not need a berrad. Any small stainless steel teapot will work. Here is the method.
           </p>
 
-          <div className="card-moroccan p-6 md:p-8">
-            <div className="space-y-3">
-              {teaVocabulary.map((phrase) => (
-                <div key={phrase.darija} className="flex items-center gap-4 p-3 bg-[var(--surface-muted)] rounded-lg">
-                  <div className="min-w-[160px]">
-                    <p className="text-base font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)]">
-                      {phrase.darija}
-                    </p>
-                    <p className="text-xs text-[var(--text-muted)] italic">{phrase.pronunciation}</p>
-                  </div>
-                  <p className="text-sm text-[var(--text-secondary)]">{phrase.english}</p>
-                </div>
-              ))}
+          <div className="card-moroccan p-6">
+            <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4">
+              Ingredients (serves 4)
+            </h3>
+            <ul className="text-sm text-[var(--text-secondary)] space-y-2 mb-6">
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
+                2 tablespoons Chinese gunpowder green tea (look for &quot;special gunpowder&quot; or &quot;3505&quot; grade)
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
+                1 large bunch fresh spearmint (about 30 grams — do not use peppermint)
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
+                6-8 tablespoons white sugar (adjust to taste; traditional is very sweet)
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
+                1 liter boiling water
+              </li>
+            </ul>
+
+            <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4">
+              Method
+            </h3>
+            <ol className="text-sm text-[var(--text-secondary)] space-y-3">
+              <li className="flex items-start gap-3">
+                <span className="w-6 h-6 rounded-full bg-[var(--color-accent)] text-white flex items-center justify-center text-xs font-bold shrink-0">1</span>
+                <span>Rinse the tea: add gunpowder green tea to your pot, pour 100 ml boiling water, swirl for 10 seconds, discard the water. Keep the leaves.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="w-6 h-6 rounded-full bg-[var(--color-accent)] text-white flex items-center justify-center text-xs font-bold shrink-0">2</span>
+                <span>Add 1 liter of boiling water to the rinsed leaves. Place on medium-low heat and let it simmer (not boil) for 4 minutes.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="w-6 h-6 rounded-full bg-[var(--color-accent)] text-white flex items-center justify-center text-xs font-bold shrink-0">3</span>
+                <span>Stuff the mint into the pot. Add the sugar. Push the mint below the waterline with a spoon. Return to heat for 2-3 minutes.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="w-6 h-6 rounded-full bg-[var(--color-accent)] text-white flex items-center justify-center text-xs font-bold shrink-0">4</span>
+                <span>Pour a glass, taste, pour it back into the pot. Repeat 2-3 times. Adjust sugar if needed.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="w-6 h-6 rounded-full bg-[var(--color-accent)] text-white flex items-center justify-center text-xs font-bold shrink-0">5</span>
+                <span>Pour from as high as you comfortably can into small glasses. The foam on top means you did it right.</span>
+              </li>
+            </ol>
+
+            <div className="mt-6 p-4 bg-[var(--surface-muted)] rounded-lg">
+              <p className="text-sm text-[var(--text-secondary)]">
+                <Sparkles className="w-4 h-4 inline mr-1 text-[var(--color-gold)]" />
+                <strong>Pro tip:</strong> For the closest authentic taste, find Chinese gunpowder green tea at an Asian grocery
+                store or online. Moroccan brands like Sultan or Menara are available on Amazon. Do not substitute with Japanese
+                or Indian green teas — the flavor profile is completely different.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* ── FAQ Section ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
         <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <BookOpen className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
             Frequently Asked Questions
           </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Answers to the most common questions about Moroccan mint tea and tea culture.
-          </p>
 
-          <div className="space-y-4">
-            {faqJsonLd.mainEntity.map((faq, i) => (
-              <div key={i} className="card-moroccan p-6">
-                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                  {faq.name}
-                </h3>
-                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                  {faq.acceptedAnswer.text}
-                </p>
-              </div>
-            ))}
+          <div className="space-y-6">
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                What is Moroccan mint tea called?
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                It is called &quot;atay&quot; (also spelled &quot;attay&quot; or &quot;atai&quot;) in Darija, the Moroccan Arabic
+                dialect. The full name is &quot;atay b&apos;naanaa,&quot; meaning tea with mint. In Amazigh (Berber) languages,
+                the word is also &quot;atay.&quot; Moroccans rarely call it &quot;Moroccan mint tea&quot; — that is a tourist term.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                Why do Moroccans pour tea from a height?
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                The high pour does two things. It aerates the tea, creating a delicate foam on top that Moroccans call
+                &quot;rezza&quot; (the crown). It also cools the liquid slightly, since the glasses have no handles and the tea is
+                scalding hot. A smooth, foam-topped pour without spilling a drop is a point of pride for the host.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                What does the three glasses of tea tradition mean in Morocco?
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                A Moroccan proverb defines the three rounds: &quot;The first glass is gentle as life, the second is strong as love,
+                the third is bitter as death.&quot; Each glass grows more concentrated as the leaves continue to steep. The tradition
+                is about spending time together — rushing through tea is considered disrespectful.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                Is it rude to refuse tea in Morocco?
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                A flat refusal can come across as cold, since offering tea is a genuine gesture of hospitality. The polite
+                approach is to accept the glass, take a small sip, and then set it down. If you truly cannot drink it (for health
+                or dietary reasons), explain briefly and most Moroccans will understand. In shops, tea is often a sales tactic,
+                but accepting it never obligates you to purchase anything.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                What type of tea is used in Moroccan mint tea?
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                Chinese gunpowder green tea — specifically the &quot;3505&quot; or &quot;special gunpowder&quot; grade. The tea leaves
+                are rolled into small pellets that unfurl when brewed. The most popular brands in Morocco are Sultan (green box)
+                and Menara. Loose leaf only — Moroccans never use tea bags for atay.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                How much sugar is in traditional Moroccan tea?
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                A standard pot contains 4-6 large chunks of sugar cone, roughly equivalent to 8-12 teaspoons. Southern
+                Morocco uses even more. You can request &quot;atay bla sukkar&quot; (without sugar) or &quot;shwiya dial sukkar&quot;
+                (a little sugar). Many modern Moroccan cafes now offer reduced-sugar options as health awareness grows.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                Where can I buy an authentic Moroccan tea set?
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                Head to the metalworkers&apos; souk (souk haddadine) in Fes or Marrakech. Seffarine Square in Fes is the
+                historic center of metalwork. A basic set (berrad, 6 glasses, tray) starts from 250 MAD. Artisan hand-engraved
+                sets run from 500 MAD to 3,000 MAD. Always negotiate — start at 40% of the asking price and expect to settle
+                around 60%. Seasonal pricing can change during peak tourist months.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -979,74 +1054,74 @@ export default function MoroccoTeaCulturePage() {
       {/* ── Related Guides ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Compass className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Related Morocco Guides
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
+            Continue Exploring Morocco
           </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Continue exploring Moroccan culture, cuisine, and traditions with these essential guides.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {relatedGuides.map((guide) => {
-              const GuideIcon = guide.icon;
-              return (
-                <Link key={guide.href} href={guide.href} className="group">
-                  <div className="card-moroccan p-5 h-full transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1">
-                    <div className="flex items-start gap-3 mb-3">
-                      <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                        <GuideIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                      </div>
-                      <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] group-hover:text-[var(--color-accent)] transition-colors mt-2">
-                        {guide.title}
-                      </h3>
-                    </div>
-                    <p className="text-sm text-[var(--text-secondary)] mb-3">{guide.description}</p>
-                    <span className="inline-flex items-center gap-1 text-sm font-medium text-[var(--color-accent)]">
-                      Read Guide <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                    </span>
-                  </div>
-                </Link>
-              );
-            })}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Link href="/cuisine" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
+              <UtensilsCrossed className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
+                Moroccan Cuisine Guide
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] mb-3">
+                From tagine to couscous, pastilla to harira. The complete guide to Moroccan food, street eats, and dining etiquette.
+              </p>
+              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
+                Read more <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
+            <Link href="/morocco-food-guide" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
+              <Heart className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
+                Street Food &amp; Food Tours
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] mb-3">
+                Best street food stalls, food markets, and guided food tours across Marrakech, Fes, Casablanca, and Essaouira.
+              </p>
+              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
+                Read more <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
+            <Link href="/etiquette" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
+              <Globe className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
+                Morocco Etiquette Guide
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] mb-3">
+                Social customs, tipping norms, dress codes, and cultural do&apos;s and don&apos;ts for visitors to Morocco.
+              </p>
+              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
+                Read more <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* ── Final CTA ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
-        <div className="container-morocco max-w-3xl text-center">
-          <Coffee className="w-12 h-12 text-[var(--color-accent)] mx-auto mb-6" />
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
-            Experience the Magic of Moroccan Tea
+      {/* ── CTA Section ── */}
+      <section className="py-16 md:py-20 bg-gradient-to-br from-[#2D1810] via-[#4A2C1A] to-[#1a0f08] text-white">
+        <div className="container-morocco text-center max-w-3xl">
+          <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold mb-6">
+            Ready to Experience Moroccan Tea Culture?
           </h2>
-          <p className="text-lg text-[var(--text-secondary)] mb-8 max-w-2xl mx-auto">
-            From the first sip of freshly poured mint tea to the warmth of a shared ceremony
-            with strangers who become friends, Moroccan tea culture is an experience that stays
-            with you long after you leave. Accept every glass offered, savor the moment, and
-            let the ritual connect you to centuries of tradition.
+          <p className="text-lg text-white/90 mb-8 leading-relaxed">
+            From a roadside glass in the Atlas Mountains to a silver-service ceremony in a Marrakech riad,
+            tea is the thread that ties every Moroccan experience together. Plan your trip and taste it for yourself.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-wrap justify-center gap-4">
             <Link
-              href="/cuisine"
-              className="inline-flex items-center gap-2 px-8 py-3 bg-[var(--color-accent)] text-white rounded-lg font-semibold hover:bg-[var(--color-accent)]/90 transition-colors"
+              href="/cities"
+              className="inline-flex items-center gap-2 bg-[var(--color-gold)] text-white px-8 py-3.5 rounded-lg font-bold hover:opacity-90 transition-opacity"
             >
-              Explore Moroccan Cuisine
-              <ArrowRight className="w-4 h-4" />
+              Explore Cities <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
-              href="/culture"
-              className="inline-flex items-center gap-2 px-8 py-3 border-2 border-[var(--color-accent)] text-[var(--color-accent)] rounded-lg font-semibold hover:bg-[var(--color-accent)]/5 transition-colors"
+              href="/best-time-visit-morocco"
+              className="inline-flex items-center gap-2 border-2 border-white/30 text-white px-8 py-3.5 rounded-lg font-bold hover:bg-white/10 transition-colors"
             >
-              Moroccan Culture Guide
-              <ArrowRight className="w-4 h-4" />
+              Best Time to Visit
             </Link>
           </div>
-          <p className="text-xs text-[var(--text-muted)] mt-8">
-            <Info className="w-3 h-3 inline mr-1" />
-            Tea customs and prices may vary by region and season. Prices listed are approximate as of March 2026
-            and may change. Seasonal pricing can vary.
-          </p>
         </div>
       </section>
     </>
