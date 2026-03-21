@@ -1223,48 +1223,93 @@ export default function MoroccoTippingGuidePage() {
         </div>
       </section>
 
-      {/* ── Related Pages ── */}
+      {/* ── Related Guides ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
-            Continue Exploring Morocco
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            Related Guides
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Link href="/money" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
-              <Banknote className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Explore more practical guides to help you plan your Morocco trip with confidence.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Link href="/morocco-money-guide" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
+              <Banknote className="w-7 h-7 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
                 Morocco Money Guide
               </h3>
               <p className="text-sm text-[var(--text-secondary)] mb-3">
-                ATMs, currency exchange, cards vs cash, and everything about money in Morocco.
+                ATMs, currency exchange, cards vs cash, and managing your travel budget in dirhams.
               </p>
               <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
+                Read guide <ArrowRight className="w-3.5 h-3.5" />
               </span>
             </Link>
-            <Link href="/haggling" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
-              <HandCoins className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Haggling &amp; Bargaining Guide
+            <Link href="/morocco-etiquette" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
+              <BookOpen className="w-7 h-7 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
+                Morocco Etiquette Guide
               </h3>
               <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Master the art of negotiation in Moroccan souks with our step-by-step guide.
+                Cultural do&apos;s and don&apos;ts, dress codes, greetings, and social customs for travelers.
               </p>
               <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
+                Read guide <ArrowRight className="w-3.5 h-3.5" />
               </span>
             </Link>
-            <Link href="/safety" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
-              <ShieldCheck className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Morocco Safety Guide
+            <Link href="/morocco-first-time" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
+              <Compass className="w-7 h-7 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
+                First Time in Morocco
               </h3>
               <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Comprehensive safety advice for traveling in Morocco, from scams to health tips.
+                Everything first-time visitors need to know, from arrival to navigating the medinas.
               </p>
               <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
+                Read guide <ArrowRight className="w-3.5 h-3.5" />
               </span>
+            </Link>
+            <Link href="/morocco-budget-calculator" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
+              <DollarSign className="w-7 h-7 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
+                Morocco Budget Calculator
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] mb-3">
+                Estimate your total trip cost including accommodation, food, transport, and tips.
+              </p>
+              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
+                Read guide <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA Section ── */}
+      <section className="py-16 md:py-20 bg-[var(--color-accent)]">
+        <div className="container-morocco text-center">
+          <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-white mb-4">
+            Ready to Explore Morocco?
+          </h2>
+          <p className="text-lg text-white/80 max-w-2xl mx-auto mb-8">
+            Now that you know how to tip with confidence, start planning the rest of your
+            Moroccan adventure. From desert tours to medina walks, our guides cover
+            every detail you need for a smooth trip.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              href="/morocco-first-time"
+              className="inline-flex items-center gap-2 bg-white text-[var(--color-accent)] px-6 py-3 rounded-lg font-[family-name:var(--font-heading)] font-bold hover:bg-white/90 transition-colors"
+            >
+              Plan Your First Trip
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link
+              href="/morocco-budget-guide"
+              className="inline-flex items-center gap-2 border-2 border-white text-white px-6 py-3 rounded-lg font-[family-name:var(--font-heading)] font-bold hover:bg-white/10 transition-colors"
+            >
+              Calculate Your Budget
+              <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>

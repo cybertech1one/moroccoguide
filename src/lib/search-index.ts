@@ -3332,6 +3332,24 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['morocco car rental', 'rent a car morocco', 'driving in morocco', 'morocco road trip car', 'morocco car hire prices'],
       priority: 9,
     },
+    {
+      title: 'Atlas Mountains Day Trips from Marrakech 2026',
+      description: 'Best Atlas day trips from Marrakech — Imlil, Ourika Valley, Oukaimeden, Toubkal base camp, Berber villages, with travel times, costs, and difficulty levels.',
+      type: 'page',
+      url: '/morocco-atlas-day-trips',
+      tags: ['Atlas Mountains', 'day trips', 'Marrakech', 'Imlil', 'Ourika Valley'],
+      keywords: ['atlas mountains day trip', 'marrakech day trips', 'imlil day trip', 'ourika valley trip', 'atlas mountains from marrakech'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Medical Tourism Guide 2026',
+      description: 'Complete medical tourism guide for Morocco — dental, cosmetic surgery, fertility, eye surgery, top clinics, cost comparisons, and patient journey planning.',
+      type: 'page',
+      url: '/morocco-medical-tourism',
+      tags: ['medical tourism', 'dental tourism', 'cosmetic surgery', 'clinics', 'healthcare'],
+      keywords: ['morocco medical tourism', 'morocco dental tourism', 'morocco cosmetic surgery', 'morocco hair transplant', 'morocco fertility treatment'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
