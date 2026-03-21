@@ -3395,6 +3395,24 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['morocco road trip', 'driving in morocco', 'morocco car rental', 'morocco road trip route', 'morocco self drive'],
       priority: 9,
     },
+    {
+      title: 'Morocco Camel Riding Guide — Best Rides, Prices & Ethical Tips',
+      description: 'Complete camel riding guide — Merzouga, Zagora, Agafay, Essaouira rides, sunrise vs sunset, overnight camps, ethical operators, and pricing.',
+      type: 'page',
+      url: '/morocco-camel-riding',
+      tags: ['camel', 'desert', 'adventure', 'Sahara', 'experience'],
+      keywords: ['morocco camel riding', 'camel trek morocco', 'merzouga camel ride', 'sahara camel tour', 'morocco camel price'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Hiking Trails Guide — 15 Best Hikes by Difficulty',
+      description: 'Best hiking trails in Morocco — Toubkal summit, M\'Goun traverse, Jebel Saghro, day hikes, gear checklist, refuges, and seasonal guide.',
+      type: 'page',
+      url: '/morocco-hiking-trails',
+      tags: ['hiking', 'trekking', 'trails', 'mountains', 'outdoors'],
+      keywords: ['morocco hiking trails', 'best hikes morocco', 'toubkal trek', 'morocco trekking', 'atlas mountains hike'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

@@ -445,6 +445,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-hammam-etiquette',
     '/morocco-rug-buying',
     '/morocco-road-trip',
+    '/morocco-camel-riding',
+    '/morocco-hiking-trails',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
