@@ -449,6 +449,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-pottery-ceramics',
     '/morocco-5-day-itinerary',
     '/morocco-winter-travel',
+    '/morocco-summer-travel',
+    '/morocco-gardens',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

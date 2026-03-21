@@ -3431,6 +3431,24 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['morocco winter travel', 'morocco in winter', 'morocco december', 'morocco january', 'skiing morocco'],
       priority: 9,
     },
+    {
+      title: 'Morocco Summer Travel Guide — Beat the Heat, Beaches & Festivals',
+      description: 'Summer travel guide — coastal escapes, mountain retreats, summer festivals, water activities, night markets, and health tips for hot weather.',
+      type: 'page',
+      url: '/morocco-summer-travel',
+      tags: ['summer', 'seasonal', 'beaches', 'festivals', 'heat'],
+      keywords: ['morocco summer travel', 'morocco in summer', 'morocco july', 'morocco august', 'morocco summer heat'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Gardens Guide — Majorelle, Menara, Secret Gardens & More',
+      description: 'Complete guide to Morocco\'s gardens — Jardin Majorelle, Menara, Le Jardin Secret, Jnan Sbil, Islamic garden design, visiting tips, and combined tours.',
+      type: 'page',
+      url: '/morocco-gardens',
+      tags: ['gardens', 'parks', 'nature', 'Majorelle', 'Marrakech'],
+      keywords: ['morocco gardens', 'jardin majorelle', 'menara gardens', 'marrakech gardens', 'morocco parks'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

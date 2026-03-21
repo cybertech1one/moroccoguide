@@ -3,803 +3,691 @@ import Link from 'next/link';
 import {
   ChevronRight,
   Home,
+  MapPin,
+  Star,
+  Clock,
   Info,
   ArrowRight,
-  Globe,
-  CheckCircle,
-  Clock,
-  BookOpen,
-  Users,
-  Lightbulb,
-  Sparkles,
-  MapPin,
-  Compass,
-  Heart,
-  Landmark,
-  Building,
-  Star,
-  Calendar,
-  MessageCircle,
   Camera,
+  ShieldCheck,
+  DollarSign,
+  CheckCircle,
+  AlertTriangle,
+  Users,
+  Building,
+  Award,
+  BookOpen,
+  Crown,
+  MessageCircleQuestion,
   Ticket,
+  Globe,
+  Landmark,
+  Palette,
   Frame,
   Eye,
-  Palette,
+  CalendarDays,
+  Lightbulb,
+  Compass,
+  GalleryHorizontalEnd,
 } from 'lucide-react';
 
-/* ═══════════════════════════════════════════════════════════════
-   CONSTANTS
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   CONSTANTS & BASE URL
+   ================================================================ */
 
 const BASE_URL = 'https://citytoursmorocco.com';
+const PAGE_URL = `${BASE_URL}/morocco-museums`;
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    SEO METADATA
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 export const metadata: Metadata = {
-  title: 'Best Museums in Morocco 2026 | Marrakech, Fes, Rabat & More',
+  title: 'Morocco Museums Guide 2026 | 10 Best Museums, Tickets & Hours',
   description:
-    'Complete guide to the best museums in Morocco in 2026. Discover top museums in Marrakech, Fes, Rabat, Casablanca, and Tangier including the Yves Saint Laurent Museum, MACMA, Mohammed VI Museum, Dar Si Said, and more. Ticket prices, hours, and tips.',
+    'Complete guide to Morocco\'s best museums in 2026. Museum of Moroccan Judaism, MACMA Marrakech, Dar Batha Fes, Kasbah Museum Tangier, Yves Saint Laurent Museum, Museum Mohammed VI Rabat — opening hours, ticket prices from 10 MAD, photography rules, museum passes, and organized tours.',
   keywords: [
-    'Morocco museums',
-    'best museums in Morocco',
-    'Marrakech museums',
-    'Fes museums',
-    'Rabat museums',
+    'Morocco museums guide',
+    'best museums Morocco',
     'Yves Saint Laurent Museum Marrakech',
+    'Museum Mohammed VI Rabat',
+    'Dar Batha Museum Fes',
     'MACMA Marrakech',
-    'Mohammed VI Museum Rabat',
-    'Dar Si Said Museum',
-    'Maison de la Photographie Marrakech',
-    'Museum of Confluences Marrakech',
-    'Batha Museum Fes',
     'Kasbah Museum Tangier',
+    'Berber Museum Marrakech',
+    'Dar Si Said Museum',
+    'Nejjarine Museum Fes',
+    'Museum of Moroccan Judaism',
+    'Fondation Jardin Majorelle',
+    'Morocco museum ticket prices 2026',
+    'Morocco museum opening hours',
+    'Morocco museum pass',
+    'Morocco museum photography rules',
     'Morocco art museums',
     'Morocco history museums',
-    'museum passes Morocco',
-    'Casablanca museums',
-    'Tangier museums',
+    'Morocco cultural museums',
+    'museums in Marrakech',
   ],
   openGraph: {
-    title: 'Best Museums in Morocco 2026 | Marrakech, Fes, Rabat & More',
+    title: 'Morocco Museums Guide 2026 | 10 Best Museums, Tickets & Hours',
     description:
-      'Explore Morocco finest museums: contemporary art at MACMA, haute couture at Yves Saint Laurent, Berber heritage at Dar Si Said, and modern art at the Mohammed VI Museum. Complete guide with prices, hours, and insider tips.',
-    url: `${BASE_URL}/morocco-museums`,
+      'Explore Morocco\'s top 10 museums with up-to-date opening hours, ticket prices, photography rules, museum passes, and organized tour options. From Marrakech\'s Yves Saint Laurent Museum to Fes\'s Dar Batha and Rabat\'s Museum Mohammed VI.',
+    url: PAGE_URL,
     images: [
       {
-        url: `${BASE_URL}/images/hero-morocco.webp`,
+        url: `${BASE_URL}/images/hero-culture.webp`,
         width: 1200,
         height: 630,
-        alt: 'Interior of a beautifully decorated Moroccan museum with intricate zellige tilework and carved plaster',
+        alt: 'Interior of a Moroccan museum with traditional zellige tilework and carved cedar displays',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Museums in Morocco 2026 | Complete Guide',
+    title: 'Morocco Museums Guide 2026 | Best Museums, Tickets & Tours',
     description:
-      'Top museums in Marrakech, Fes, Rabat, Casablanca & Tangier. Ticket prices, opening hours, photography rules & insider tips for 2026.',
-    images: [`${BASE_URL}/images/hero-morocco.webp`],
+      'Top 10 Morocco museums with opening hours, ticket prices from 10 MAD, photography rules, museum passes, and tour recommendations for Marrakech, Fes, Rabat, Tangier & Casablanca.',
+    images: [`${BASE_URL}/images/hero-culture.webp`],
   },
-  alternates: { canonical: `${BASE_URL}/morocco-museums` },
+  alternates: { canonical: PAGE_URL },
 };
 
-/* ═══════════════════════════════════════════════════════════════
-   JSON-LD STRUCTURED DATA
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   JSON-LD: TravelGuide + FAQPage
+   ================================================================ */
 
-const jsonLd = {
+const faqItems = [
+  {
+    q: 'What is the best museum in Morocco for first-time visitors?',
+    a: 'The Yves Saint Laurent Museum in Marrakech is the most visitor-friendly museum in Morocco. It has clear English signage, modern climate-controlled galleries, an on-site cafe, and a well-stocked bookshop. Tickets cost from 30 MAD for Moroccan residents and from 100 MAD for international visitors. Allow 90 minutes for a full visit.',
+  },
+  {
+    q: 'How much do museum tickets cost in Morocco?',
+    a: 'Museum ticket prices in Morocco range from 10 MAD at smaller national museums to 100 MAD at privately operated institutions like the Yves Saint Laurent Museum. Most national museums managed by the Fondation Nationale des Musees charge from 20 MAD to 70 MAD. Children under 12 often enter free. Student discounts are available at many locations with a valid student ID. Seasonal pricing can change.',
+  },
+  {
+    q: 'Is there a museum pass for Morocco?',
+    a: 'Morocco does not have a single nationwide museum pass comparable to those in Europe. However, the Fondation Nationale des Musees manages several museums across Marrakech, Rabat, and other cities. Some cities offer combined tickets for nearby attractions. In Marrakech, you can buy a combined ticket for Jardin Majorelle, the Berber Museum, and the Yves Saint Laurent Museum from 180 MAD.',
+  },
+  {
+    q: 'Can I take photos inside Moroccan museums?',
+    a: 'Photography policies vary by museum. Most national museums allow personal photography without flash for free. The Yves Saint Laurent Museum prohibits photography inside exhibition galleries. Dar Batha and Dar Si Said allow photography in courtyard areas. Tripods and professional equipment require prior authorization at all museums. Always check the posted rules at the entrance.',
+  },
+  {
+    q: 'What are typical museum opening hours in Morocco?',
+    a: 'Most Moroccan museums open from 9:00 or 10:00 AM to 5:00 or 6:00 PM. Many close on Tuesdays rather than Mondays. During Ramadan, hours are typically shortened to 10:00 AM - 3:00 PM. Friday hours may include a midday break from 12:00 to 2:30 PM at some locations. Major museums like the Museum Mohammed VI in Rabat stay open until 7:00 PM.',
+  },
+  {
+    q: 'Are Moroccan museums accessible for visitors with disabilities?',
+    a: 'Accessibility varies widely. Newer museums like the Yves Saint Laurent Museum and Museum Mohammed VI in Rabat are fully wheelchair accessible with ramps, elevators, and accessible restrooms. Older museums housed in historic buildings, such as Dar Batha in Fes and the Kasbah Museum in Tangier, have uneven floors, narrow doorways, and staircases that present challenges. Call ahead to confirm specific accessibility needs.',
+  },
+  {
+    q: 'What is the best day and time to visit museums in Morocco?',
+    a: 'Weekday mornings between 9:00 and 11:00 AM offer the smallest crowds. Avoid Saturdays and Sundays at popular museums like the Yves Saint Laurent Museum, which can draw long queues. Wednesday and Thursday mornings are consistently the quietest across most Moroccan museums. Arrive within the first 30 minutes of opening for the most comfortable experience.',
+  },
+  {
+    q: 'Are guided museum tours available in Morocco?',
+    a: 'Yes. Most major museums offer guided tours in Arabic, French, and English. Official guides at national museums charge from 100 MAD to 200 MAD per group. Private tour companies offer multi-museum city tours that combine 3-4 museums with transport and lunch from 500 MAD per person. Audio guides are available at the Yves Saint Laurent Museum and Museum Mohammed VI.',
+  },
+];
+
+const jsonLdTravel = {
   '@context': 'https://schema.org',
   '@type': 'TravelGuide',
-  '@id': `${BASE_URL}/morocco-museums`,
-  name: 'Best Museums in Morocco 2026 | Marrakech, Fes, Rabat & More',
+  '@id': PAGE_URL,
+  name: 'Morocco Museums Guide 2026',
   description:
-    'Complete guide to the best museums in Morocco covering Marrakech, Fes, Rabat, Casablanca, and Tangier. Includes art museums, history museums, ethnographic collections, photography galleries, ticket prices, opening hours, and practical visitor tips.',
-  url: `${BASE_URL}/morocco-museums`,
-  image: `${BASE_URL}/images/hero-morocco.webp`,
-  author: {
-    '@type': 'Organization',
-    name: 'CityGuide Morocco',
-    url: BASE_URL,
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'CityGuide Morocco',
-    url: BASE_URL,
-  },
-  datePublished: '2026-03-19',
-  dateModified: '2026-03-19',
-  mainEntityOfPage: `${BASE_URL}/morocco-museums`,
-  isPartOf: {
-    '@type': 'WebSite',
-    name: 'CityGuide Morocco',
-    url: BASE_URL,
-  },
-  about: {
-    '@type': 'Country',
-    name: 'Morocco',
-  },
+    'Complete guide to the best museums in Morocco covering ticket prices, opening hours, photography rules, museum passes, and organized tours across Marrakech, Fes, Rabat, Tangier, and Casablanca.',
+  url: PAGE_URL,
+  image: `${BASE_URL}/images/hero-culture.webp`,
+  author: { '@type': 'Organization', name: 'City Tours Morocco', url: BASE_URL },
+  publisher: { '@type': 'Organization', name: 'City Tours Morocco', url: BASE_URL },
+  datePublished: '2026-03-21',
+  dateModified: '2026-03-21',
+  mainEntityOfPage: PAGE_URL,
+  about: { '@type': 'Country', name: 'Morocco' },
   breadcrumb: {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Museums in Morocco', item: `${BASE_URL}/morocco-museums` },
+      { '@type': 'ListItem', position: 2, name: 'Morocco Museums Guide', item: PAGE_URL },
     ],
   },
 };
 
-const faqJsonLd = {
+const jsonLdFaq = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What is the best museum in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The Mohammed VI Museum of Modern and Contemporary Art in Rabat is widely considered Morocco most important museum, housing a world-class collection of Moroccan and international art. In Marrakech, the Yves Saint Laurent Museum (Musee YSL) and MACMA (Museum of African Contemporary Art Al Maaden) are the most acclaimed. For traditional Moroccan arts, Dar Si Said Museum in Marrakech and the Batha Museum in Fes are essential visits.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much do museums cost in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Museum admission prices in Morocco typically range from 10 MAD to 100 MAD (approximately 1 to 10 USD). Government-run museums like Dar Si Said or the Batha Museum charge from 10 to 20 MAD. Private museums like the Yves Saint Laurent Museum cost from 100 MAD, and MACMA charges from 60 MAD. Many museums offer reduced rates for students and Moroccan nationals, and some are free on certain days or for children under 12.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Are museums in Morocco open on Fridays?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Most museums in Morocco are open on Fridays, but many government-run museums close on Tuesdays instead. Private museums like the Yves Saint Laurent Museum and MACMA are generally open daily. However, some museums may close for Friday prayers between noon and 2:30 PM or adjust their hours during Ramadan. Always check the specific museum schedule before visiting, especially during religious holidays.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can you take photos inside Moroccan museums?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Photography policies vary by museum. Most government-run museums allow photography without flash for free or for a small additional fee (from 10 MAD). The Yves Saint Laurent Museum permits photography in most areas but restricts it in temporary exhibition halls. MACMA generally allows photography. Tripods and professional equipment usually require prior permission. Video recording may require a separate fee. Always check at the ticket counter before photographing.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What museums are in Marrakech?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Marrakech has the richest museum scene in Morocco. Key museums include MACMA (Museum of African Contemporary Art Al Maaden), Yves Saint Laurent Museum (Musee YSL), Dar Si Said Museum of Moroccan Arts, Maison de la Photographie, Museum of Confluences (Dar el Bacha), the Berber Museum at Jardin Majorelle, Marrakech Museum in the Ben Youssef complex, and the Orientalist Museum. Together they cover contemporary art, fashion, traditional crafts, photography, and Berber culture.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is there a museum pass for Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Morocco does not have a single nationwide museum pass. However, the Foundation Nationale des Musees (FNM) manages many major museums and occasionally offers combined tickets or promotional pricing. In Marrakech, visiting the Jardin Majorelle and Yves Saint Laurent Museum together offers a combined ticket from 180 MAD. Some cities offer tourist passes that include museum entries alongside other attractions. Check locally at tourist offices for current combo deals.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is the oldest museum in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The Archaeological Museum of Rabat, founded in 1932 during the French protectorate, is one of Morocco oldest museums. It houses artifacts spanning from prehistory to the Islamic era, including exceptional Roman bronzes from Volubilis. The Dar Batha Museum in Fes, established in 1915 in a 19th-century palace, is another of Morocco earliest museum institutions and displays traditional Fassi arts and crafts.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What are the best museums for kids in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'For families with children, the Berber Museum at Jardin Majorelle in Marrakech combines a beautiful garden with an accessible collection. The Borj Nord Arms Museum in Fes fascinates children with its displays of historic weapons and armor. The Archaeological Museum in Rabat has tangible artifacts that engage young visitors. MACMA in Marrakech offers family-friendly contemporary art in a spacious modern building. The Kasbah Museum in Tangier, set in a fortress, also captures children imagination.',
-      },
-    },
-  ],
+  mainEntity: faqItems.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
 };
 
-/* ═══════════════════════════════════════════════════════════════
-   DATA: MARRAKECH MUSEUMS
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   DATA: TOP 10 MUSEUMS
+   ================================================================ */
 
-const marrakechMuseums = [
-  {
-    name: 'MACMA (Museum of African Contemporary Art Al Maaden)',
-    description: 'Morocco premier contemporary art museum, MACMA houses a rotating collection of African and international modern art across a striking modernist building. The permanent collection features works by leading Moroccan and pan-African artists, while temporary exhibitions bring world-class contemporary art to Marrakech. The museum also hosts artist residencies and cultural events.',
-    price: 'from 60 MAD',
-    hours: 'Daily 10:00-18:00',
-    highlight: 'Largest contemporary art collection in North Africa',
-    icon: Palette,
-  },
+const museums = [
   {
     name: 'Yves Saint Laurent Museum (Musee YSL)',
-    description: 'Designed by Studio KO, this stunning museum celebrates the legendary French fashion designer who found deep inspiration in Morocco. The permanent exhibition displays a rotating selection of YSL haute couture garments, accessories, and sketches. The building itself is a masterpiece of contemporary architecture with a facade inspired by the warp and weft of fabric.',
-    price: 'from 100 MAD',
-    hours: 'Daily 10:00-18:00 (closed Wednesdays)',
-    highlight: 'Iconic fashion and architecture combined',
-    icon: Star,
+    city: 'Marrakech',
+    icon: Palette,
+    category: 'Fashion & Design',
+    price: 'From 100 MAD (international), from 30 MAD (residents)',
+    hours: '10:00 AM - 6:00 PM, closed Wednesdays',
+    photo: 'No photography inside exhibition galleries. Exterior and cafe photos allowed.',
+    highlight: 'Rotating exhibitions of YSL haute couture alongside permanent displays of 5,000+ garments and 15,000 accessories.',
+    description:
+      'Opened in 2017, this striking terracotta-and-concrete building designed by Studio KO houses the legacy of Yves Saint Laurent, who drew deep inspiration from Marrakech. The permanent collection traces his career from the 1960s through the 1990s. Temporary exhibitions rotate every few months. The building itself is a work of art — its facade references the weave of fabric. An on-site cafe serves Moroccan-French fusion dishes in a courtyard garden.',
+    tip: 'Buy the combined ticket with Jardin Majorelle and the Berber Museum from 180 MAD to save money and skip separate queues.',
   },
   {
-    name: 'Dar Si Said Museum of Moroccan Arts',
-    description: 'Housed in a beautifully restored 19th-century palace, Dar Si Said showcases the finest examples of traditional Moroccan craftsmanship. The collection spans carved cedarwood, Berber jewelry, ceramic arts, weaving, leatherwork, and zellige tilework. The palace courtyard with its central fountain and carved stucco is itself a masterpiece.',
-    price: 'from 20 MAD',
-    hours: 'Wed-Mon 9:00-17:00 (closed Tuesdays)',
-    highlight: 'Finest collection of traditional Moroccan woodwork',
+    name: 'Museum Mohammed VI of Modern & Contemporary Art',
+    city: 'Rabat',
     icon: Frame,
+    category: 'Modern & Contemporary Art',
+    price: 'From 40 MAD (adults), from 20 MAD (students)',
+    hours: '10:00 AM - 7:00 PM, closed Tuesdays',
+    photo: 'Photography allowed without flash. No tripods.',
+    highlight: 'Morocco\'s first large-scale national art museum with rotating exhibitions of Moroccan and international contemporary artists.',
+    description:
+      'Inaugurated by King Mohammed VI in 2014, this is the largest museum built in Morocco in over a century. The 12,000 square meter building hosts major temporary exhibitions featuring both Moroccan and international artists. Past shows have included works by Giacometti, African contemporary photography, and retrospectives of major Moroccan painters like Mohamed Melehi and Farid Belkahia. The building stands on the grand Avenue Moulay Hassan in central Rabat.',
+    tip: 'Check the museum website before visiting — exhibitions change frequently and some shows sell out on weekends.',
   },
   {
-    name: 'Maison de la Photographie',
-    description: 'This intimate riad-museum displays a remarkable collection of vintage photographs documenting Moroccan life from the 1870s to the 1950s. Spread over three floors, the images capture tribespeople, landscapes, souks, and daily life across Morocco during the pre-protectorate and protectorate eras. The rooftop terrace offers stunning views over the medina.',
-    price: 'from 50 MAD',
-    hours: 'Daily 9:30-19:00',
-    highlight: 'Rare historical photographs with rooftop medina views',
-    icon: Camera,
-  },
-  {
-    name: 'Museum of Confluences (Dar el Bacha)',
-    description: 'Opened in 2017 within the magnificently restored Dar el Bacha palace, this museum explores the cultural encounters between Morocco and the world. The palace once hosted Winston Churchill, Charlie Chaplin, and other luminaries. The architecture alone is worth the visit, with lavish zellige, carved plaster, and painted cedarwood ceilings.',
-    price: 'from 50 MAD',
-    hours: 'Wed-Mon 10:00-18:00 (closed Tuesdays)',
-    highlight: 'Stunning palace architecture and cultural history',
+    name: 'Dar Batha Museum',
+    city: 'Fes',
     icon: Building,
+    category: 'Arts & Crafts Heritage',
+    price: 'From 20 MAD',
+    hours: '9:00 AM - 5:00 PM, closed Tuesdays',
+    photo: 'Photography allowed in courtyards and gardens. No flash inside galleries.',
+    highlight: 'Outstanding collection of Fassi ceramics, including the distinctive blue-and-white pottery unique to Fes.',
+    description:
+      'Housed in a 19th-century Hispano-Moorish summer palace built by Sultan Moulay Hassan I, Dar Batha displays traditional arts and crafts from the Fes region. The ceramics gallery features hundreds of pieces of the famous blue-and-white Fassi pottery that has been produced in the city for centuries. Additional rooms showcase carved wood, wrought iron, embroidered fabrics, and Berber carpets. The Andalusian garden with its fountain and mature trees is worth the admission price alone.',
+    tip: 'Combine with a walk through the Fes medina. The museum sits at the edge of Fes el-Bali near Bab Boujloud, the iconic blue gate.',
+  },
+  {
+    name: 'Kasbah Museum (Musee de la Kasbah)',
+    city: 'Tangier',
+    icon: Landmark,
+    category: 'Archaeology & History',
+    price: 'From 20 MAD',
+    hours: '9:00 AM - 4:00 PM (winter), 9:00 AM - 6:00 PM (summer), closed Tuesdays',
+    photo: 'Photography allowed without flash.',
+    highlight: 'Roman mosaics from Volubilis and artifacts tracing Tangier\'s history from Phoenician settlement to modern port city.',
+    description:
+      'Set inside the former sultan\'s palace — Dar el Makhzen — at the highest point of the Tangier medina, this museum covers millennia of history through its archaeological collections. The Roman mosaic depicting Venus is the centerpiece. Additional exhibits include Phoenician and Carthaginian artifacts, Islamic-era pottery, historic maps, and weaponry. The palace itself, with its painted wooden ceilings and marble courtyards, provides an atmospheric setting. Gardens behind the palace offer panoramic views of the Strait of Gibraltar.',
+    tip: 'Visit on a clear day to see Spain from the palace gardens. The view across the Strait of Gibraltar is one of the best in the city.',
+  },
+  {
+    name: 'MACMA (Museum of African Contemporary Art Al Maaden)',
+    city: 'Marrakech',
+    icon: GalleryHorizontalEnd,
+    category: 'Contemporary African Art',
+    price: 'From 60 MAD',
+    hours: '10:00 AM - 6:00 PM, closed Mondays',
+    photo: 'Photography policies vary by exhibition. Ask at reception.',
+    highlight: 'Cutting-edge contemporary art from across the African continent in a purpose-built gallery space.',
+    description:
+      'Located in the Al Maaden development south of central Marrakech, MACMA is dedicated to contemporary and modern art from across Africa. The collection spans painting, sculpture, photography, and multimedia installations. The museum hosts rotating exhibitions that feature both established African artists and emerging talent. The sleek, minimalist architecture contrasts deliberately with the surrounding red-earth landscape of Marrakech. A sculpture garden and reading room complement the galleries.',
+    tip: 'MACMA is outside the medina. Take a taxi from Jemaa el-Fnaa (from 40 MAD) or combine with a visit to the nearby Royal Palm golf course.',
+  },
+  {
+    name: 'Museum of Moroccan Judaism',
+    city: 'Casablanca',
+    icon: BookOpen,
+    category: 'Religious & Cultural Heritage',
+    price: 'From 20 MAD (donations welcome)',
+    hours: '10:00 AM - 5:00 PM, Monday to Friday, closed weekends',
+    photo: 'Photography allowed with permission from staff.',
+    highlight: 'The only museum in the Arab world dedicated to Jewish heritage, documenting centuries of Jewish life in Morocco.',
+    description:
+      'Opened in 1997 in the Oasis neighborhood of Casablanca, this museum preserves and presents the rich history of Morocco\'s Jewish community, which once numbered over 250,000 people. Exhibits include ceremonial objects, Torah scrolls, traditional clothing, photographs, and documents tracing Jewish life from antiquity through the present. The museum also covers the mellah (Jewish quarter) history across Moroccan cities. It stands as a testament to Morocco\'s tradition of religious coexistence and pluralism.',
+    tip: 'The museum is small but deeply moving. Allow 45-60 minutes. Staff are knowledgeable and happy to share stories about Jewish-Moroccan heritage.',
   },
   {
     name: 'Berber Museum (Musee Berbere)',
-    description: 'Located within the iconic Jardin Majorelle, the Berber Museum occupies the former studio of Jacques Majorelle. The collection of over 600 objects celebrates Amazigh (Berber) culture through jewelry, textiles, costumes, pottery, and ritual objects from across Morocco Amazigh regions. Each piece tells the story of a living cultural heritage.',
-    price: 'from 30 MAD (garden entry separate)',
-    hours: 'Daily 8:00-18:00 (summer until 18:30)',
-    highlight: 'Essential Amazigh heritage collection in Majorelle Garden',
-    icon: Heart,
-  },
-] as const;
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: FES MUSEUMS
-   ═══════════════════════════════════════════════════════════════ */
-
-const fesMuseums = [
-  {
-    name: 'Batha Museum (Musee Dar Batha)',
-    description: 'Set in a 19th-century Hispano-Moorish palace built by Sultan Moulay Hassan I, Dar Batha displays the artistic heritage of Fes. Its collections include the celebrated Fassi blue ceramics, Berber carpets, embroidery, carved wood, wrought iron, and Moroccan coins. The Andalusian garden with its towering cypress trees is a peaceful retreat.',
-    price: 'from 20 MAD',
-    hours: 'Wed-Mon 9:00-17:00 (closed Tuesdays)',
-    highlight: 'Famous blue-and-white Fassi ceramics collection',
-    icon: Palette,
+    city: 'Marrakech',
+    icon: Users,
+    category: 'Ethnography & Amazigh Culture',
+    price: 'From 30 MAD (included in Majorelle combined ticket from 180 MAD)',
+    hours: '9:00 AM - 6:00 PM daily (shorter hours in winter)',
+    photo: 'Photography allowed without flash.',
+    highlight: 'Over 600 Amazigh artifacts including jewelry, textiles, carpets, weapons, and costumes from across Morocco\'s Berber regions.',
+    description:
+      'Located within the Jardin Majorelle compound, the Berber Museum occupies the former studio of painter Jacques Majorelle. The collection, curated by Pierre Berge and Yves Saint Laurent, showcases the diversity of Amazigh (Berber) cultures across Morocco\'s mountains, deserts, and coasts. Displays are organized by region and include intricate silver jewelry from the Anti-Atlas, hand-loomed carpets from the Middle Atlas, painted wooden doors from the Draa Valley, and ceremonial costumes worn during harvest festivals.',
+    tip: 'Buy the combined ticket with Jardin Majorelle and the YSL Museum. Visit the Berber Museum first when it opens, then walk through the garden as it fills with visitors.',
   },
   {
-    name: 'Borj Nord Arms Museum',
-    description: 'Housed in a 16th-century Saadian fortress overlooking the Fes medina, the Borj Nord displays over 8,000 weapons and armaments spanning Moroccan military history from prehistory to the 20th century. The collection includes swords, rifles, cannons, and the famous 5-meter-long cannon used at the Battle of the Three Kings in 1578. The rooftop offers panoramic views.',
-    price: 'from 20 MAD',
-    hours: 'Wed-Mon 9:00-17:00 (closed Tuesdays)',
-    highlight: 'Historic weapons and panoramic views over Fes medina',
+    name: 'Dar Si Said Museum (Museum of Moroccan Arts)',
+    city: 'Marrakech',
+    icon: Crown,
+    category: 'Decorative Arts & Woodcraft',
+    price: 'From 20 MAD',
+    hours: '9:00 AM - 5:00 PM, closed Tuesdays',
+    photo: 'Photography allowed without flash.',
+    highlight: 'Stunning collection of carved cedarwood, Berber doors, marble basins, and weapons in a 19th-century palace.',
+    description:
+      'Built in the late 19th century by Si Said, brother of the grand vizier Ba Ahmed, this palace-turned-museum displays traditional Moroccan woodcraft, metalwork, and decorative arts. The cedarwood carvings are exceptional — intricately geometric panels, mashrabiya screens, and painted ceiling beams demonstrate the skill of Moroccan master craftsmen. The central courtyard with its riad garden and marble fountain provides a quiet retreat from the bustling medina streets outside.',
+    tip: 'Dar Si Said is a 10-minute walk from Dar el Bacha and a 15-minute walk from Jemaa el-Fnaa. Visit both in a single morning museum circuit.',
+  },
+  {
+    name: 'Nejjarine Museum of Wooden Arts & Crafts',
+    city: 'Fes',
+    icon: Award,
+    category: 'Woodcraft & Traditional Arts',
+    price: 'From 20 MAD',
+    hours: '10:00 AM - 5:00 PM, closed Fridays',
+    photo: 'Photography allowed. No flash.',
+    highlight: 'Three floors of traditional wooden tools, instruments, and artisan objects housed in a restored 18th-century caravanserai.',
+    description:
+      'The restored Nejjarine Fondouk — an 18th-century merchants\' inn — is one of the architectural jewels of the Fes medina. The museum displays wooden objects organized across three floors: musical instruments, artisan tools, household objects, and architectural elements. The building itself, with its carved cedar balconies, zellige tilework, and central fountain, is as much the attraction as the collection inside. The rooftop terrace offers views across the medina rooftops to the Merenid tombs and surrounding hills.',
+    tip: 'The rooftop terrace alone justifies the entry fee. Time your visit for late afternoon when the golden light over the medina is at its best.',
+  },
+  {
+    name: 'Fondation Jardin Majorelle',
+    city: 'Marrakech',
     icon: Eye,
-  },
-  {
-    name: 'Dar Batha Palace Collections',
-    description: 'Beyond the main Batha Museum, the Dar Batha complex houses rotating exhibitions of contemporary Moroccan art alongside its permanent ethnographic collection. The palace rooms display traditional Fassi domestic life, including reconstructed reception rooms with original furnishings, stucco work, and zellige.',
-    price: 'from 20 MAD',
-    hours: 'Wed-Mon 9:00-17:00 (closed Tuesdays)',
-    highlight: 'Traditional Fassi palace rooms and rotating exhibitions',
-    icon: Building,
-  },
-] as const;
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: RABAT MUSEUMS
-   ═══════════════════════════════════════════════════════════════ */
-
-const rabatMuseums = [
-  {
-    name: 'Mohammed VI Museum of Modern and Contemporary Art',
-    description: 'Morocco flagship art museum, opened in 2014, is the first institution of its kind in North Africa. The museum houses an impressive collection of Moroccan modern and contemporary art, with works by Hassan El Glaoui, Mohamed Melehi, Farid Belkahia, and many others. Temporary exhibitions feature international artists, making it a world-class cultural destination.',
-    price: 'from 40 MAD',
-    hours: 'Wed-Mon 10:00-18:00 (closed Tuesdays)',
-    highlight: 'North Africa first modern art museum',
-    icon: Palette,
-  },
-  {
-    name: 'Archaeological Museum of Rabat',
-    description: 'Founded in 1932, this museum houses Morocco most important archaeological collections. Highlights include exceptional Roman bronzes from Volubilis (the marble-like bust of Juba II and the bronze dog), prehistoric tools from across Morocco, and Islamic-era ceramics and coins. The collection traces human presence in Morocco from the earliest stone tools to the medieval period.',
-    price: 'from 20 MAD',
-    hours: 'Wed-Mon 9:00-16:30 (closed Tuesdays)',
-    highlight: 'Volubilis Roman bronzes and prehistoric artifacts',
-    icon: Landmark,
-  },
-  {
-    name: 'Oudayas Museum (Museum of the Kasbah)',
-    description: 'Situated within the 17th-century Oudayas Kasbah overlooking the Atlantic Ocean and the Bou Regreg river, this museum occupies a former palace built by Sultan Moulay Ismail. The collection focuses on Moroccan arts and crafts including jewelry, musical instruments, ceramics, carpets, and manuscripts. The adjacent Andalusian garden is a serene highlight.',
-    price: 'from 10 MAD',
-    hours: 'Wed-Mon 9:00-17:00 (closed Tuesdays)',
-    highlight: 'Oceanside kasbah setting with Andalusian garden',
-    icon: MapPin,
+    category: 'Botanical Garden & Art',
+    price: 'From 70 MAD (garden), from 180 MAD (combined with Berber Museum & YSL)',
+    hours: '9:00 AM - 6:00 PM daily (shorter hours Oct-Apr)',
+    photo: 'Photography allowed in the garden. No professional equipment without permit.',
+    highlight: 'Iconic cobalt-blue villa surrounded by 300+ plant species from five continents, originally created by artist Jacques Majorelle in the 1920s.',
+    description:
+      'Jacques Majorelle spent 40 years creating this botanical garden, and Yves Saint Laurent and Pierre Berge rescued it from developers in 1980. The garden features towering bamboo groves, bougainvillea, cacti, palms, and water features surrounding the villa painted in the trademark Majorelle Blue. While not strictly a museum, it functions as a living art installation and houses the Berber Museum within its grounds. The on-site boutique sells officially licensed Majorelle and YSL products.',
+    tip: 'Arrive right at opening to photograph the garden without crowds. By 11:00 AM, tour groups arrive in numbers and pathways become congested.',
   },
 ] as const;
 
-/* ═══════════════════════════════════════════════════════════════
-   DATA: CASABLANCA & TANGIER MUSEUMS
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   DATA: MUSEUM VISITOR TIPS
+   ================================================================ */
 
-const otherCityMuseums = [
+const visitorTips = [
   {
-    city: 'Casablanca',
-    museums: [
-      {
-        name: 'Villa des Arts',
-        description: 'A 1930s Art Deco villa converted into a contemporary art space managed by the Fondation ONA. The museum hosts rotating exhibitions of Moroccan and international contemporary art. The elegant architecture of the villa itself reflects Casablanca Art Deco heritage, and the intimate galleries create an engaging viewing experience.',
-        price: 'from 20 MAD',
-        hours: 'Tue-Sat 9:00-19:00 (closed Sundays & Mondays)',
-        icon: Palette,
-      },
-      {
-        name: 'Abderrahman Slaoui Foundation Museum',
-        description: 'Housed in a stunning 1940s Art Deco building, this private museum displays the personal collection of the late Abderrahman Slaoui. Highlights include a remarkable collection of vintage Moroccan travel posters, jewelry, decorative arts, and ceramics. The Art Deco interior with its stained glass and ironwork is an attraction in its own right.',
-        price: 'from 20 MAD',
-        hours: 'Mon-Sat 10:00-18:00 (closed Sundays)',
-        icon: Frame,
-      },
-    ],
+    title: 'Dress Modestly',
+    icon: ShieldCheck,
+    text: 'Morocco is a Muslim-majority country. Cover shoulders and knees when visiting museums, especially those housed in religious or historic buildings. Shoes are kept on in most museums, unlike mosques.',
   },
   {
-    city: 'Tangier',
-    museums: [
-      {
-        name: 'Kasbah Museum (Dar el Makhzen)',
-        description: 'Occupying the former sultan palace in the Tangier Kasbah, this museum spans Moroccan history from prehistoric times through the Islamic era. Collections include Roman mosaics from Volubilis, Phoenician pottery, medieval maps, traditional textiles, and a stunning full-size replica of a Moroccan reception room. The palace courtyard features a centuries-old fig tree.',
-        price: 'from 20 MAD',
-        hours: 'Wed-Mon 10:00-18:00 (closed Tuesdays)',
-        icon: Landmark,
-      },
-      {
-        name: 'American Legation Museum',
-        description: 'The only U.S. National Historic Landmark located outside the United States, this 1821 building commemorates Morocco being the first country to recognize American independence in 1777. The museum displays documents, paintings, photographs, and artifacts chronicling the 250-year diplomatic relationship between Morocco and the United States.',
-        price: 'from 20 MAD',
-        hours: 'Mon-Fri 10:00-13:00 & 15:00-17:00',
-        icon: Globe,
-      },
-    ],
-  },
-] as const;
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: MUSEUM TYPES
-   ═══════════════════════════════════════════════════════════════ */
-
-const museumTypes = [
-  {
-    type: 'Contemporary & Modern Art',
-    description: 'Morocco contemporary art scene has exploded in recent decades. MACMA in Marrakech leads the way with pan-African contemporary art, while the Mohammed VI Museum in Rabat showcases Moroccan modernists who blended Western techniques with Islamic motifs. Villa des Arts in Casablanca focuses on emerging talent.',
-    examples: 'MACMA, Mohammed VI Museum, Villa des Arts',
-    icon: Palette,
+    title: 'Carry Cash in Small Bills',
+    icon: DollarSign,
+    text: 'Many smaller museums accept cash only. Carry denominations of 20, 50, and 100 MAD. Larger museums like the YSL Museum and Museum Mohammed VI accept credit cards.',
   },
   {
-    type: 'History & Archaeology',
-    description: 'From Roman bronzes to medieval manuscripts, Morocco history museums trace millennia of civilization. The Archaeological Museum in Rabat holds the finest Roman artifacts, while the Kasbah Museum in Tangier covers the breadth of Moroccan history from prehistory to the modern era.',
-    examples: 'Archaeological Museum Rabat, Kasbah Museum Tangier, Borj Nord Fes',
-    icon: Landmark,
+    title: 'Check Closure Days Before You Go',
+    icon: CalendarDays,
+    text: 'Most museums close on Tuesdays, but some close on Mondays, Fridays, or weekends instead. During Ramadan and national holidays, hours change without much advance notice.',
   },
   {
-    type: 'Ethnographic & Traditional Arts',
-    description: 'Ethnographic museums preserve the living heritage of Morocco diverse cultures. Dar Si Said in Marrakech is the crown jewel of traditional craftsmanship, while the Batha Museum in Fes specializes in Fassi artisanal traditions. The Berber Museum at Majorelle celebrates Amazigh culture.',
-    examples: 'Dar Si Said, Batha Museum, Berber Museum, Oudayas Museum',
-    icon: Heart,
+    title: 'Hire a Licensed Guide',
+    icon: Compass,
+    text: 'Official guides at museum entrances enhance the experience significantly. Expect to pay from 100 MAD to 200 MAD per group. Guides speak Arabic, French, and usually English or Spanish.',
   },
   {
-    type: 'Photography & Visual Arts',
-    description: 'The Maison de la Photographie in Marrakech pioneered the photography museum concept in Morocco, displaying vintage images from the 1870s to 1950s. Private galleries in Marrakech and Tangier increasingly host photographic exhibitions exploring contemporary Moroccan identity.',
-    examples: 'Maison de la Photographie, MACMA galleries',
+    title: 'Protect Your Camera',
     icon: Camera,
+    text: 'Museum interiors are dim. Use a camera with good low-light performance or a smartphone with night mode. Flash is prohibited in nearly every museum to protect artifacts and artworks.',
   },
   {
-    type: 'Fashion & Design',
-    description: 'The Yves Saint Laurent Museum in Marrakech brought fashion into Morocco museum landscape. The museum celebrates the intersection of Moroccan culture and haute couture, displaying how Morocco colors, patterns, and light shaped one of the 20th century greatest designers.',
-    examples: 'Yves Saint Laurent Museum, Museum of Confluences',
-    icon: Star,
-  },
-] as const;
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: PRACTICAL TIPS
-   ═══════════════════════════════════════════════════════════════ */
-
-const practicalTips = [
-  'Most government-run museums in Morocco close on Tuesdays. Private museums like the YSL Museum and MACMA are generally open daily. Always check specific schedules before visiting.',
-  'Standard opening hours for most museums are 9:00 or 10:00 to 17:00 or 18:00. During Ramadan, hours are typically shortened, often closing by 15:00 or 16:00. Summer hours may extend until 18:30 or 19:00.',
-  'Photography without flash is permitted in most museums, sometimes for a small additional fee (from 10 MAD). Tripods and professional equipment generally require prior authorization. Ask at the ticket desk.',
-  'Student discounts are widely available at government museums. Bring an international student card (ISIC) for reduced admission, often 50 percent off standard prices.',
-  'Guided tours are available at major museums like the Mohammed VI Museum and MACMA. English-speaking guides can be arranged at the ticket counter or booked in advance for from 100 MAD.',
-  'Museum gift shops, particularly at the YSL Museum and MACMA, offer high-quality books, prints, and Moroccan design objects that make excellent souvenirs beyond the souk.',
-  'Visit popular museums like the YSL Museum early in the morning (10:00 opening) or in the last two hours before closing to avoid tour group crowds.',
-  'Combine the Berber Museum with Jardin Majorelle and the YSL Museum for a half-day cultural experience in the Gueliz district of Marrakech.',
-] as const;
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: BEST MUSEUMS BY INTEREST
-   ═══════════════════════════════════════════════════════════════ */
-
-const bestByInterest = [
-  { interest: 'Art Lovers', museums: 'MACMA (Marrakech), Mohammed VI Museum (Rabat), Villa des Arts (Casablanca)', reason: 'World-class contemporary and modern art collections spanning Moroccan and international artists.', icon: Palette },
-  { interest: 'History Buffs', museums: 'Archaeological Museum (Rabat), Kasbah Museum (Tangier), Borj Nord (Fes)', reason: 'Trace Morocco story from prehistoric cave dwellers to Roman colonists to Islamic dynasties.', icon: BookOpen },
-  { interest: 'Fashion & Design', museums: 'Yves Saint Laurent Museum (Marrakech), Museum of Confluences (Marrakech)', reason: 'Haute couture, design innovation, and the cultural cross-pollination between Morocco and Europe.', icon: Star },
-  { interest: 'Photography', museums: 'Maison de la Photographie (Marrakech), Slaoui Foundation (Casablanca)', reason: 'Vintage and contemporary photography documenting Moroccan life across the centuries.', icon: Camera },
-  { interest: 'Moroccan Crafts', museums: 'Dar Si Said (Marrakech), Batha Museum (Fes), Oudayas Museum (Rabat)', reason: 'Zellige, cedarwood carving, Berber jewelry, ceramics, and traditional textiles at their finest.', icon: Heart },
-  { interest: 'Families with Kids', museums: 'Berber Museum (Marrakech), Borj Nord (Fes), Kasbah Museum (Tangier)', reason: 'Interactive displays, fortress settings, and tangible artifacts that captivate young visitors.', icon: Users },
-] as const;
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: RELATED GUIDES
-   ═══════════════════════════════════════════════════════════════ */
-
-const relatedGuides = [
-  {
-    href: '/culture',
-    title: 'Moroccan Culture Guide',
-    description: 'Deep dive into Moroccan traditions, festivals, arts, music, and the rich cultural heritage that makes the kingdom unique.',
-    icon: Globe,
-  },
-  {
-    href: '/history',
-    title: 'Morocco History Overview',
-    description: 'A concise overview of Moroccan history from ancient times to the modern kingdom, covering all major periods and events.',
-    icon: BookOpen,
-  },
-  {
-    href: '/morocco-history-guide',
-    title: 'Complete History Guide',
-    description: 'In-depth guide to 3,000 years of Moroccan dynasties, conquests, independence, and the historical sites that tell the story.',
-    icon: Landmark,
-  },
-  {
-    href: '/attractions',
-    title: 'Morocco Attractions',
-    description: 'Discover the top attractions across Morocco, from ancient medinas and imperial cities to natural wonders and coastal towns.',
-    icon: MapPin,
-  },
-  {
-    href: '/architecture',
-    title: 'Moroccan Architecture Guide',
-    description: 'From riads and kasbahs to mosques and madrasas, explore the architectural traditions that define Morocco built heritage.',
-    icon: Building,
+    title: 'Leave Large Bags at the Entrance',
+    icon: AlertTriangle,
+    text: 'Backpacks and large bags must be checked at the cloakroom in most museums. Carry a small crossbody bag for valuables. Lockers are available at the YSL Museum and Museum Mohammed VI.',
   },
 ];
 
-/* ═══════════════════════════════════════════════════════════════
-   PAGE COMPONENT
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   DATA: MUSEUM TOURS
+   ================================================================ */
+
+const museumTours = [
+  {
+    title: 'Marrakech Museum Circuit',
+    duration: 'Full day (7-8 hours)',
+    price: 'From 500 MAD per person',
+    includes: 'Yves Saint Laurent Museum, Berber Museum, Jardin Majorelle, Dar Si Said, lunch in medina',
+    description: 'The most popular museum tour covers four museums and a garden in a single day with transport between sites and a licensed English-speaking guide.',
+  },
+  {
+    title: 'Fes Arts & Crafts Tour',
+    duration: 'Half day (4-5 hours)',
+    price: 'From 350 MAD per person',
+    includes: 'Dar Batha Museum, Nejjarine Museum, medina artisan workshops, mint tea',
+    description: 'Combines two museums with visits to active artisan workshops in the Fes medina where craftspeople produce the same objects displayed in museum cases.',
+  },
+  {
+    title: 'Rabat Cultural Day Tour',
+    duration: 'Full day (6-7 hours)',
+    price: 'From 450 MAD per person',
+    includes: 'Museum Mohammed VI, Kasbah des Oudaias, Hassan Tower, Chellah ruins',
+    description: 'Covers Rabat\'s headline cultural sites including the modern art museum, the 12th-century Hassan Tower, and the Roman-Islamic ruins at Chellah.',
+  },
+  {
+    title: 'Multi-City Museum Tour',
+    duration: '3-4 days',
+    price: 'From 3,500 MAD per person',
+    includes: 'Museums in Marrakech, Fes, Rabat, transport between cities, accommodation, meals',
+    description: 'A dedicated cultural itinerary linking the major museum cities by private car or train with overnight stays and a specialized art-and-history guide.',
+  },
+];
+
+/* ================================================================
+   COMPONENT
+   ================================================================ */
 
 export default function MoroccoMuseumsPage() {
   return (
     <>
+      {/* JSON-LD */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdTravel) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
       />
 
-      {/* ── Hero Section ── */}
-      <section className="relative py-20 md:py-28 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(/images/hero-morocco.webp)',
-          }}
+      {/* ── Hero ── */}
+      <section className="relative h-[55vh] min-h-[420px] flex items-center justify-center overflow-hidden">
+        <img
+          src="/images/hero-culture.webp"
+          alt="Ornate interior of a Moroccan museum with zellige tilework, carved plaster, and cedarwood ceilings"
+          className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 hero-overlay" />
-        <div className="container-morocco relative z-10">
-          <nav className="flex items-center gap-2 text-sm text-white/60 mb-8" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-white transition-colors">
-              <Home className="w-3.5 h-3.5" />
-            </Link>
-            <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-white">Museums in Morocco</span>
-          </nav>
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm text-white/90 text-sm mb-6">
-            <Landmark className="w-4 h-4" />
-            Art &amp; Culture
-          </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-display)] font-bold text-white mb-4">
-            Best Museums in Morocco
-            <br className="hidden md:block" /> Complete Guide 2026
+        <div className="hero-overlay" />
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-display)] font-bold text-white mb-4 drop-shadow-lg">
+            Morocco Museums Guide 2026
           </h1>
-          <p className="text-xl text-white/80 max-w-2xl">
-            From contemporary art at MACMA to the haute couture of Yves Saint Laurent, from Roman bronzes in Rabat
-            to Berber jewelry in Marrakech &mdash; discover Morocco&apos;s extraordinary museum scene.
+          <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto font-[family-name:var(--font-heading)]">
+            10 unmissable museums across Marrakech, Fes, Rabat, Tangier &amp; Casablanca — with up-to-date ticket prices, opening hours, and insider tips
           </p>
         </div>
       </section>
 
-      <div className="zellige-border" />
+      {/* ── Breadcrumbs ── */}
+      <nav aria-label="Breadcrumb" className="bg-[var(--surface-muted)] border-b border-[var(--border-light)]">
+        <div className="container-morocco py-3">
+          <ol className="flex items-center gap-2 text-sm text-[var(--text-secondary)]">
+            <li>
+              <Link href="/" className="hover:text-[var(--color-accent)] transition-colors flex items-center gap-1">
+                <Home className="w-3.5 h-3.5" /> Home
+              </Link>
+            </li>
+            <ChevronRight className="w-3.5 h-3.5" />
+            <li className="text-[var(--text-primary)] font-medium">Morocco Museums Guide</li>
+          </ol>
+        </div>
+      </nav>
 
-      {/* ── Introduction ── */}
+      {/* ── Intro Section ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
-          <div className="prose-moroccan">
-            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
-              A Kingdom of Art, History &amp; Heritage
-            </h2>
-            <div className="space-y-4 text-lg text-[var(--text-secondary)] leading-relaxed">
-              <p>
-                Morocco may be famous for its souks, medinas, and mountain landscapes, but the kingdom&apos;s
-                museum scene has undergone a remarkable transformation in recent years. From the opening of
-                North Africa&apos;s first modern art museum in Rabat to the architectural triumph of the
-                Yves Saint Laurent Museum in Marrakech, Morocco is now a serious destination for art and
-                culture enthusiasts.
-              </p>
-              <p>
-                The country&apos;s museums span an extraordinary range: world-class contemporary art galleries
-                sit alongside 19th-century palaces filled with traditional craftsmanship. Fortress museums
-                display medieval weapons while photography galleries document a vanishing way of life. Roman
-                bronzes stand beside Berber jewelry, and haute couture shares space with zellige tilework.
-              </p>
-              <p>
-                Whether you&apos;re an art lover, history buff, architecture enthusiast, or simply looking
-                for a cool retreat from the medina heat, Morocco&apos;s museums offer some of the most
-                rewarding experiences the kingdom has to offer. This guide covers the best museums across
-                five major cities, with practical information on tickets, hours, and how to make the most
-                of your visits.
-              </p>
-            </div>
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Landmark className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Why Visit Museums in Morocco
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-8">
+            Morocco&apos;s museums hold keys to understanding a civilization shaped by Amazigh, Arab, Andalusian, Jewish, and French influences across three millennia.
+          </p>
+
+          <div className="prose prose-lg max-w-none">
+            <p className="text-[var(--text-secondary)] leading-relaxed mb-6">
+              From Roman mosaics unearthed at Volubilis to 21st-century installations by contemporary African artists, Morocco&apos;s museum landscape spans an extraordinary range of eras and disciplines. The country&apos;s museum infrastructure has expanded rapidly since 2014, when the Fondation Nationale des Musees was established to modernize galleries, improve conservation standards, and bring international exhibitions to Moroccan cities.
+            </p>
+            <p className="text-[var(--text-secondary)] leading-relaxed mb-6">
+              Today there are world-class institutions in five cities. Marrakech leads with the Yves Saint Laurent Museum, the Berber Museum, Dar Si Said, and MACMA. Fes preserves its artisan heritage at Dar Batha and the Nejjarine Museum. Rabat made headlines with the Museum Mohammed VI of Modern and Contemporary Art. Tangier showcases archaeology at the Kasbah Museum. And Casablanca houses the only museum of Jewish heritage in the Arab world.
+            </p>
+            <p className="text-[var(--text-secondary)] leading-relaxed">
+              This guide covers the 10 best museums in Morocco for 2026, with current ticket prices, opening hours, photography policies, and practical tips to help you plan a culturally rich itinerary.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+            {[
+              { label: 'Cities Covered', value: '5', icon: MapPin },
+              { label: 'Museums Listed', value: '10', icon: Building },
+              { label: 'Tickets From', value: '10 MAD', icon: Ticket },
+              { label: 'Tour Options', value: '4', icon: Globe },
+            ].map((stat) => {
+              const StatIcon = stat.icon;
+              return (
+                <div key={stat.label} className="card-moroccan p-4 text-center">
+                  <StatIcon className="w-6 h-6 text-[var(--color-accent)] mx-auto mb-2" />
+                  <p className="text-2xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">{stat.value}</p>
+                  <p className="text-xs text-[var(--text-secondary)]">{stat.label}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* ── Museum Stats at a Glance ── */}
+      {/* ── Top 10 Museums ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Landmark className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Morocco Museums at a Glance
+            <Star className="w-8 h-8 inline-block text-[var(--color-gold)] mr-2" />
+            Top 10 Museums in Morocco
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Key facts about the Moroccan museum landscape that every visitor should know.
+            Each museum listed below has been selected for its collection quality, cultural significance, visitor experience, and practical accessibility.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { label: 'Major Museums', value: '30+ Nationwide', detail: 'Across Marrakech, Fes, Rabat, Casablanca, and Tangier', icon: Building },
-              { label: 'Admission Range', value: '10-100 MAD', detail: 'Government museums from 10 MAD, private from 50-100 MAD', icon: Ticket },
-              { label: 'Closed Day', value: 'Tuesdays', detail: 'Most government museums close on Tuesdays, not Mondays', icon: Calendar },
-              { label: 'Museum Capital', value: 'Marrakech', detail: 'Home to 8+ major museums including MACMA and YSL', icon: Star },
-            ].map((fact) => {
-              const FactIcon = fact.icon;
-              return (
-                <div key={fact.label} className="card-moroccan p-6 text-center">
-                  <div className="w-12 h-12 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center mx-auto mb-4">
-                    <FactIcon className="w-6 h-6 text-[var(--color-accent)]" />
-                  </div>
-                  <p className="text-2xl font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)] mb-1">
-                    {fact.value}
-                  </p>
-                  <p className="text-sm font-medium text-[var(--text-primary)] mb-2">{fact.label}</p>
-                  <p className="text-xs text-[var(--text-muted)]">{fact.detail}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Marrakech Museums ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <MapPin className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Marrakech Museums
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Morocco&apos;s museum capital boasts the richest and most diverse collection of museums in the country.
-          </p>
-
-          <div className="space-y-4">
-            {marrakechMuseums.map((museum) => {
+          <div className="space-y-8">
+            {museums.map((museum, idx) => {
               const MuseumIcon = museum.icon;
               return (
-                <div key={museum.name} className="card-moroccan p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                      <MuseumIcon className="w-5 h-5 text-[var(--color-accent)]" />
+                <div key={museum.name} className="card-moroccan p-6 md:p-8">
+                  <div className="flex flex-col md:flex-row md:items-start gap-6">
+                    <div className="flex items-center justify-center w-14 h-14 rounded-full bg-[var(--color-accent)]/10 shrink-0">
+                      <span className="text-xl font-[family-name:var(--font-display)] font-bold text-[var(--color-accent)]">{idx + 1}</span>
                     </div>
-                    <div>
-                      <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2 mb-1">
+                        <MuseumIcon className="w-5 h-5 text-[var(--color-accent)]" />
+                        <span className="text-xs font-[family-name:var(--font-heading)] text-[var(--color-gold)] uppercase tracking-wider">{museum.category}</span>
+                      </div>
+                      <h3 className="text-xl md:text-2xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-1">
                         {museum.name}
                       </h3>
-                      <div className="flex flex-wrap gap-2 mb-3">
-                        <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-[var(--color-gold)]/10 text-[var(--color-gold)]">
-                          {museum.price}
-                        </span>
-                        <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-[var(--color-accent)]/10 text-[var(--color-accent)]">
-                          {museum.hours}
-                        </span>
-                      </div>
-                      <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-2">{museum.description}</p>
-                      <p className="text-xs text-[var(--color-accent)] font-medium">
-                        <CheckCircle className="w-3 h-3 inline mr-1" />
-                        {museum.highlight}
+                      <p className="text-sm text-[var(--text-secondary)] mb-4 flex items-center gap-1">
+                        <MapPin className="w-3.5 h-3.5 text-[var(--color-accent)]" /> {museum.city}
                       </p>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
 
-      {/* ── Fes Museums ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <MapPin className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Fes Museums
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            The spiritual and intellectual capital of Morocco, Fes houses museums that reflect centuries of artisanal mastery.
-          </p>
+                      <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4">{museum.description}</p>
 
-          <div className="space-y-4">
-            {fesMuseums.map((museum) => {
-              const MuseumIcon = museum.icon;
-              return (
-                <div key={museum.name} className="card-moroccan p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                      <MuseumIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                    </div>
-                    <div>
-                      <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
-                        {museum.name}
-                      </h3>
-                      <div className="flex flex-wrap gap-2 mb-3">
-                        <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-[var(--color-gold)]/10 text-[var(--color-gold)]">
-                          {museum.price}
-                        </span>
-                        <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-[var(--color-accent)]/10 text-[var(--color-accent)]">
-                          {museum.hours}
-                        </span>
+                      <div className="bg-[var(--surface-muted)] rounded-lg p-4 mb-4">
+                        <p className="text-sm font-[family-name:var(--font-heading)] font-semibold text-[var(--text-primary)] mb-2">
+                          <Star className="w-4 h-4 inline-block text-[var(--color-gold)] mr-1" />
+                          Highlight
+                        </p>
+                        <p className="text-sm text-[var(--text-secondary)]">{museum.highlight}</p>
                       </div>
-                      <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-2">{museum.description}</p>
-                      <p className="text-xs text-[var(--color-accent)] font-medium">
-                        <CheckCircle className="w-3 h-3 inline mr-1" />
-                        {museum.highlight}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
 
-      {/* ── Rabat Museums ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <MapPin className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Rabat Museums
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            The capital city is home to Morocco&apos;s flagship national museums and finest archaeological collections.
-          </p>
-
-          <div className="space-y-4">
-            {rabatMuseums.map((museum) => {
-              const MuseumIcon = museum.icon;
-              return (
-                <div key={museum.name} className="card-moroccan p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                      <MuseumIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                    </div>
-                    <div>
-                      <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
-                        {museum.name}
-                      </h3>
-                      <div className="flex flex-wrap gap-2 mb-3">
-                        <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-[var(--color-gold)]/10 text-[var(--color-gold)]">
-                          {museum.price}
-                        </span>
-                        <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-[var(--color-accent)]/10 text-[var(--color-accent)]">
-                          {museum.hours}
-                        </span>
-                      </div>
-                      <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-2">{museum.description}</p>
-                      <p className="text-xs text-[var(--color-accent)] font-medium">
-                        <CheckCircle className="w-3 h-3 inline mr-1" />
-                        {museum.highlight}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Casablanca & Tangier Museums ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <MapPin className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Casablanca &amp; Tangier Museums
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Morocco&apos;s economic capital and northern gateway each offer distinctive museum experiences.
-          </p>
-
-          {otherCityMuseums.map((cityGroup) => (
-            <div key={cityGroup.city} className="mb-8 last:mb-0">
-              <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4">
-                <Building className="w-5 h-5 inline mr-2 text-[var(--color-accent)]" />
-                {cityGroup.city}
-              </h3>
-              <div className="space-y-4">
-                {cityGroup.museums.map((museum) => {
-                  const MuseumIcon = museum.icon;
-                  return (
-                    <div key={museum.name} className="card-moroccan p-6">
-                      <div className="flex items-start gap-4">
-                        <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                          <MuseumIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                        </div>
-                        <div>
-                          <h4 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
-                            {museum.name}
-                          </h4>
-                          <div className="flex flex-wrap gap-2 mb-3">
-                            <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-[var(--color-gold)]/10 text-[var(--color-gold)]">
-                              {museum.price}
-                            </span>
-                            <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-[var(--color-accent)]/10 text-[var(--color-accent)]">
-                              {museum.hours}
-                            </span>
+                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
+                        <div className="flex items-start gap-2">
+                          <Ticket className="w-4 h-4 text-[var(--color-accent)] mt-0.5 shrink-0" />
+                          <div>
+                            <p className="text-xs font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Tickets</p>
+                            <p className="text-xs text-[var(--text-secondary)]">{museum.price}</p>
                           </div>
-                          <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{museum.description}</p>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <Clock className="w-4 h-4 text-[var(--color-accent)] mt-0.5 shrink-0" />
+                          <div>
+                            <p className="text-xs font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Hours</p>
+                            <p className="text-xs text-[var(--text-secondary)]">{museum.hours}</p>
+                          </div>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <Camera className="w-4 h-4 text-[var(--color-accent)] mt-0.5 shrink-0" />
+                          <div>
+                            <p className="text-xs font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Photography</p>
+                            <p className="text-xs text-[var(--text-secondary)]">{museum.photo}</p>
+                          </div>
                         </div>
                       </div>
+
+                      <div className="flex items-start gap-2 bg-[#C4960C]/10 rounded-lg p-3">
+                        <Lightbulb className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
+                        <p className="text-xs text-[var(--text-secondary)]">
+                          <span className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Insider Tip:</span>{' '}
+                          {museum.tip}
+                        </p>
+                      </div>
                     </div>
-                  );
-                })}
-              </div>
-            </div>
-          ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
 
-      {/* ── Museum Types ── */}
+      {/* ── Ticket Prices Overview ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Sparkles className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Types of Museums in Morocco
+            <DollarSign className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Museum Ticket Prices at a Glance
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Understanding the different museum categories helps you plan visits around your interests.
+            Budget from 100 to 300 MAD per day for museum visits depending on how many you plan to see. Seasonal pricing can change during peak tourist months.
+          </p>
+
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b-2 border-[var(--color-accent)]">
+                  <th className="text-left py-3 px-4 font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Museum</th>
+                  <th className="text-left py-3 px-4 font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">City</th>
+                  <th className="text-left py-3 px-4 font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { museum: 'Yves Saint Laurent Museum', city: 'Marrakech', price: 'From 100 MAD' },
+                  { museum: 'Fondation Jardin Majorelle', city: 'Marrakech', price: 'From 70 MAD' },
+                  { museum: 'MACMA', city: 'Marrakech', price: 'From 60 MAD' },
+                  { museum: 'Museum Mohammed VI', city: 'Rabat', price: 'From 40 MAD' },
+                  { museum: 'Berber Museum', city: 'Marrakech', price: 'From 30 MAD' },
+                  { museum: 'Dar Batha Museum', city: 'Fes', price: 'From 20 MAD' },
+                  { museum: 'Dar Si Said Museum', city: 'Marrakech', price: 'From 20 MAD' },
+                  { museum: 'Kasbah Museum', city: 'Tangier', price: 'From 20 MAD' },
+                  { museum: 'Nejjarine Museum', city: 'Fes', price: 'From 20 MAD' },
+                  { museum: 'Museum of Moroccan Judaism', city: 'Casablanca', price: 'From 20 MAD' },
+                ].map((row) => (
+                  <tr key={row.museum} className="border-b border-[var(--border-light)] hover:bg-[var(--surface-muted)] transition-colors">
+                    <td className="py-3 px-4 text-[var(--text-primary)] font-medium">{row.museum}</td>
+                    <td className="py-3 px-4 text-[var(--text-secondary)]">{row.city}</td>
+                    <td className="py-3 px-4 text-[var(--color-accent)] font-[family-name:var(--font-heading)] font-bold">{row.price}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div className="card-moroccan p-5 mt-8">
+            <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 flex items-center gap-2">
+              <Info className="w-4 h-4 text-[var(--color-accent)]" />
+              Combined Tickets &amp; Discounts
+            </h3>
+            <ul className="space-y-2 text-sm text-[var(--text-secondary)]">
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
+                <span><strong>Marrakech Combined Ticket:</strong> Jardin Majorelle + Berber Museum + YSL Museum from 180 MAD (saves from 20 MAD vs. individual tickets)</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
+                <span><strong>Student Discount:</strong> Valid international student ID gets 50% off at most national museums</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
+                <span><strong>Children:</strong> Under 12 free at most museums. Under 6 free at all museums.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
+                <span><strong>Moroccan Residents:</strong> Reduced rates at most museums with valid CIN or residence permit</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Photography Rules ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Camera className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Photography Rules in Moroccan Museums
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Knowing the rules in advance prevents awkward encounters with security staff and protects valuable collections.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {museumTypes.map((mt) => {
-              const TypeIcon = mt.icon;
+            <div className="card-moroccan p-5">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3 flex items-center gap-2">
+                <CheckCircle className="w-5 h-5 text-green-600" />
+                Generally Allowed
+              </h3>
+              <ul className="space-y-2 text-sm text-[var(--text-secondary)]">
+                <li>Personal photography with smartphones and compact cameras</li>
+                <li>Photographing building exteriors, courtyards, and gardens</li>
+                <li>Natural light photography without flash</li>
+                <li>Sharing images on personal social media accounts</li>
+              </ul>
+            </div>
+            <div className="card-moroccan p-5">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3 flex items-center gap-2">
+                <AlertTriangle className="w-5 h-5 text-amber-600" />
+                Usually Restricted
+              </h3>
+              <ul className="space-y-2 text-sm text-[var(--text-secondary)]">
+                <li>Flash photography (damages pigments, dyes, and textiles)</li>
+                <li>Tripods and professional lighting equipment</li>
+                <li>Video recording in some galleries</li>
+                <li>Commercial photography without written authorization</li>
+                <li>Photography of temporary exhibitions (varies by loan agreements)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="card-moroccan p-5 mt-6 zellige-border">
+            <p className="text-sm text-[var(--text-secondary)]">
+              <Info className="w-4 h-4 inline-block text-[var(--color-accent)] mr-1" />
+              <strong>Note on the YSL Museum:</strong> Photography is strictly prohibited inside the main exhibition galleries to protect the delicate fabrics. You may photograph the exterior architecture, the Pierre Berge auditorium entrance, and the cafe courtyard. Staff will ask you to put your phone away if you raise it in the galleries.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Visitor Tips ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Lightbulb className="w-8 h-8 inline-block text-[var(--color-gold)] mr-2" />
+            Practical Tips for Museum Visitors
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Small preparations that make a measurable difference in the quality of your museum experience.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {visitorTips.map((tip) => {
+              const TipIcon = tip.icon;
               return (
-                <div key={mt.type} className="card-moroccan p-6">
-                  <div className="flex items-start gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                      <TypeIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                    </div>
-                    <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mt-2">
-                      {mt.type}
-                    </h3>
-                  </div>
-                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-3">{mt.description}</p>
-                  <p className="text-xs text-[var(--color-gold)] font-medium">
-                    <Star className="w-3 h-3 inline mr-1" />
-                    Key museums: {mt.examples}
-                  </p>
+                <div key={tip.title} className="card-moroccan p-5">
+                  <TipIcon className="w-6 h-6 text-[var(--color-accent)] mb-3" />
+                  <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                    {tip.title}
+                  </h3>
+                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{tip.text}</p>
                 </div>
               );
             })}
@@ -807,142 +695,224 @@ export default function MoroccoMuseumsPage() {
         </div>
       </section>
 
-      {/* ── Museum Passes & Combo Tickets ── */}
+      {/* ── Museum Tours ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Ticket className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Museum Passes &amp; Combo Tickets
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            How to save money and maximize your museum visits across Morocco.
-          </p>
-
-          <div className="card-moroccan p-6 md:p-8">
-            <div className="space-y-6">
-              {[
-                { title: 'Majorelle + YSL Combined Ticket', detail: 'The most popular combo ticket in Morocco bundles Jardin Majorelle, the Berber Museum, and the Yves Saint Laurent Museum for from 180 MAD. This saves approximately 20 percent compared to buying each ticket separately and allows you to explore the entire Gueliz cultural district in a half day.', icon: Ticket },
-                { title: 'Foundation Nationale des Musees (FNM)', detail: 'The FNM manages many of Morocco major museums including the Mohammed VI Museum, Dar Si Said, and the Kasbah Museum in Tangier. While no formal multi-museum pass exists, FNM museums typically share consistent pricing (from 20 MAD) and a uniform Tuesday closure day.', icon: Building },
-                { title: 'City Tourist Passes', detail: 'Some cities offer tourist passes that include museum entries alongside other attractions. Check at local tourist offices (Offices du Tourisme) in Marrakech, Fes, and Rabat for current offerings. These passes are not always well-advertised but can offer significant savings for multi-day visits.', icon: Globe },
-                { title: 'Student & Group Discounts', detail: 'Government museums offer 50 percent discounts for students with valid ISIC cards. Group rates (typically 10 or more visitors) are available at most museums. Children under 12 often enter free. Moroccan nationals pay reduced rates at all government-run institutions.', icon: Users },
-              ].map((item) => {
-                const ItemIcon = item.icon;
-                return (
-                  <div key={item.title} className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent)] flex items-center justify-center shrink-0">
-                      <ItemIcon className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
-                        {item.title}
-                      </h3>
-                      <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{item.detail}</p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          <div className="mt-8 card-moroccan p-6 bg-[var(--color-accent)]/5">
-            <div className="flex items-start gap-3">
-              <Lightbulb className="w-5 h-5 text-[var(--color-gold)] mt-1 shrink-0" />
-              <div>
-                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                  Budget Tip: Free Museum Days
-                </h3>
-                <p className="text-sm text-[var(--text-secondary)]">
-                  Some museums offer free admission on certain days, particularly during national holidays
-                  and cultural events. The Mohammed VI Museum in Rabat has occasionally offered free entry
-                  on International Museum Day (May 18). Check locally for current free admission schedules,
-                  as these can change seasonally.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Best Museums by Interest ── */}
-      <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <Compass className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Best Museums by Interest
+            Organized Museum Tours
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Tailored recommendations based on what you&apos;re most passionate about.
+            Guided tours link museums with walking commentary, transport, and meals so you can focus on the art and history rather than logistics.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {bestByInterest.map((item) => {
-              const IntIcon = item.icon;
-              return (
-                <div key={item.interest} className="card-moroccan p-6">
-                  <div className="flex items-start gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                      <IntIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                    </div>
-                    <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mt-2">
-                      {item.interest}
-                    </h3>
-                  </div>
-                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-2">{item.reason}</p>
-                  <p className="text-xs text-[var(--color-gold)] font-medium">
-                    <Star className="w-3 h-3 inline mr-1" />
-                    {item.museums}
-                  </p>
+          <div className="space-y-6">
+            {museumTours.map((tour) => (
+              <div key={tour.title} className="card-moroccan p-6">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
+                  <h3 className="text-lg font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+                    {tour.title}
+                  </h3>
+                  <span className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--color-accent)]">
+                    {tour.price}
+                  </span>
                 </div>
-              );
-            })}
+                <p className="text-sm text-[var(--text-secondary)] mb-3">{tour.description}</p>
+                <div className="flex flex-col sm:flex-row gap-4 text-xs text-[var(--text-secondary)]">
+                  <span className="flex items-center gap-1">
+                    <Clock className="w-3.5 h-3.5 text-[var(--color-accent)]" />
+                    {tour.duration}
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <CheckCircle className="w-3.5 h-3.5 text-[var(--color-gold)]" />
+                    {tour.includes}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="card-moroccan p-5 mt-8 zellige-border">
+            <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+              Booking a Museum Tour
+            </h3>
+            <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+              Book through your riad or hotel reception for the best local rates. Online platforms charge from 10-20% more than booking directly with a guide. For multi-city tours, book at least two weeks in advance during peak season (October through April). Group rates are available for parties of 4 or more. Seasonal pricing can change during holidays and festival periods.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* ── Practical Tips ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco max-w-4xl">
+      {/* ── Museums by City ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Clock className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Practical Visitor Tips
+            <MapPin className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Museums by City
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Essential information on hours, tickets, photography, and making the most of your museum visits.
+            Plan your museum itinerary based on which cities you are visiting.
           </p>
 
-          <div className="card-moroccan p-6 md:p-8">
-            <div className="space-y-4">
-              {practicalTips.map((tip, i) => (
-                <div key={i} className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[var(--color-accent)] shrink-0 mt-0.5" />
-                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{tip}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                city: 'Marrakech',
+                count: '5 museums',
+                museums: ['Yves Saint Laurent Museum', 'Berber Museum', 'Dar Si Said', 'MACMA', 'Fondation Jardin Majorelle'],
+                note: 'The museum capital of Morocco. Two full days needed to cover all five properly.',
+              },
+              {
+                city: 'Fes',
+                count: '2 museums',
+                museums: ['Dar Batha Museum', 'Nejjarine Museum of Wooden Arts'],
+                note: 'Both museums sit inside the medina. Combine with artisan workshop visits for a full cultural day.',
+              },
+              {
+                city: 'Rabat',
+                count: '1 museum',
+                museums: ['Museum Mohammed VI of Modern & Contemporary Art'],
+                note: 'Morocco\'s premier contemporary art institution. Pair with the Kasbah des Oudaias and Hassan Tower.',
+              },
+              {
+                city: 'Tangier',
+                count: '1 museum',
+                museums: ['Kasbah Museum (Dar el Makhzen)'],
+                note: 'Located at the highest point of the medina with views across the Strait of Gibraltar to Spain.',
+              },
+              {
+                city: 'Casablanca',
+                count: '1 museum',
+                museums: ['Museum of Moroccan Judaism'],
+                note: 'The only museum of Jewish heritage in the Arab world. Open weekdays only.',
+              },
+            ].map((city) => (
+              <div key={city.city} className="card-moroccan p-5">
+                <h3 className="text-lg font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-1">
+                  {city.city}
+                </h3>
+                <p className="text-xs text-[var(--color-accent)] font-[family-name:var(--font-heading)] font-bold mb-3">{city.count}</p>
+                <ul className="space-y-1 mb-3">
+                  {city.museums.map((m) => (
+                    <li key={m} className="text-sm text-[var(--text-secondary)] flex items-center gap-2">
+                      <CheckCircle className="w-3.5 h-3.5 text-[var(--color-gold)] shrink-0" />
+                      {m}
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-xs text-[var(--text-secondary)] italic">{city.note}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── What to Expect ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Eye className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            What to Expect Inside Moroccan Museums
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Moroccan museums differ from their European and North American counterparts in several ways worth knowing before your first visit.
+          </p>
+
+          <div className="space-y-6">
+            {[
+              {
+                title: 'Historic Buildings as Exhibition Spaces',
+                text: 'Many Moroccan museums are housed in former palaces, riads, and caravanserais rather than purpose-built gallery buildings. This means uneven floors, narrow doorways, low ceilings in some rooms, and staircases without handrails. The architecture itself is part of the experience — carved plaster walls, painted cedarwood ceilings, and zellige tilework surround the exhibits.',
+              },
+              {
+                title: 'Signage and Labels',
+                text: 'Museum labels are typically in Arabic and French. English signage has improved at major institutions like the YSL Museum and Museum Mohammed VI but remains limited at smaller national museums. Hiring a guide or downloading a museum app before your visit compensates for the language gap.',
+              },
+              {
+                title: 'Climate Control',
+                text: 'Newer museums like the YSL Museum and Museum Mohammed VI are fully climate-controlled. Older palace museums rely on thick walls and natural ventilation, which keeps rooms cool in summer but can feel cold in winter. Bring a light layer from November through March.',
+              },
+              {
+                title: 'Pace and Atmosphere',
+                text: 'Moroccan museums tend to be quieter and less crowded than major European institutions outside of weekend peak hours. You can often stand in front of a major piece without anyone else in the room. The experience is contemplative rather than rushed.',
+              },
+            ].map((item) => (
+              <div key={item.title} className="card-moroccan p-6">
+                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">{item.title}</h3>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Best Time to Visit ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <CalendarDays className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Best Time to Visit Morocco&apos;s Museums
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Timing your museum visits around seasons, holidays, and weekly patterns can make the difference between a crowded lobby and a private viewing.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              {
+                season: 'October - March (Peak Tourist Season)',
+                icon: Star,
+                details: 'The most popular months for visiting Morocco. Museums are busiest on weekends and during Christmas/New Year. Weekday mornings remain manageable. Shorter daylight hours mean museums close earlier (4:00 or 5:00 PM at most locations). Indoor museums are ideal during occasional rainy days.',
+              },
+              {
+                season: 'April - June (Shoulder Season)',
+                icon: CheckCircle,
+                details: 'The sweet spot for museum visits. Pleasant weather, moderate crowds, and full operating hours. Gardens at Jardin Majorelle and Dar Batha are in bloom. Ramadan may fall in this period — check dates as museum hours shorten during the holy month.',
+              },
+              {
+                season: 'July - September (Summer)',
+                icon: AlertTriangle,
+                details: 'Interior cities like Marrakech and Fes reach 40-45 degrees Celsius. Air-conditioned museums become a welcome refuge from the heat. Visit museums during the hottest midday hours and save outdoor sightseeing for mornings and evenings. Tangier and Rabat are cooler coastal alternatives.',
+              },
+              {
+                season: 'During Ramadan',
+                icon: Info,
+                details: 'Most museums shorten their hours to 10:00 AM - 3:00 PM during Ramadan. Some smaller museums close entirely for the month. The YSL Museum and Museum Mohammed VI typically maintain adjusted schedules. Confirm hours directly with each museum before visiting during this period.',
+              },
+            ].map((period) => {
+              const PeriodIcon = period.icon;
+              return (
+                <div key={period.season} className="card-moroccan p-5">
+                  <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 flex items-center gap-2">
+                    <PeriodIcon className="w-4 h-4 text-[var(--color-gold)] shrink-0" />
+                    {period.season}
+                  </h3>
+                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{period.details}</p>
                 </div>
-              ))}
-            </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* ── FAQ Section ── */}
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-20 moroccan-pattern bg-[var(--surface-muted)]">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <MessageCircle className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            <MessageCircleQuestion className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
             Frequently Asked Questions
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Answers to the most common questions about visiting museums in Morocco.
+            Answers to the questions travelers ask most about visiting museums in Morocco.
           </p>
 
-          <div className="space-y-4">
-            {faqJsonLd.mainEntity.map((faq, i) => (
-              <div key={i} className="card-moroccan p-6">
-                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                  {faq.name}
+          <div className="space-y-6">
+            {faqItems.map((faq) => (
+              <div key={faq.q} className="card-moroccan p-6">
+                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                  {faq.q}
                 </h3>
-                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                  {faq.acceptedAnswer.text}
-                </p>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{faq.a}</p>
               </div>
             ))}
           </div>
@@ -950,35 +920,49 @@ export default function MoroccoMuseumsPage() {
       </section>
 
       {/* ── Related Guides ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+      <section className="py-16 md:py-20">
         <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Compass className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Related Morocco Guides
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
+            Related Travel Guides
           </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Continue exploring Moroccan culture, history, and architecture with these essential guides.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {relatedGuides.map((guide) => {
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                title: 'Moroccan Architecture Guide',
+                description: 'Riads, kasbahs, mosques, and medersas — the architectural traditions that shape Morocco\'s built environment.',
+                href: '/architecture',
+                icon: Building,
+              },
+              {
+                title: 'Morocco Culture Guide',
+                description: 'Festivals, music, art, literature, and the cultural customs that define Moroccan identity.',
+                href: '/culture',
+                icon: BookOpen,
+              },
+              {
+                title: 'Berber Culture & Heritage',
+                description: 'The Amazigh people, their language, traditions, crafts, and regions across Morocco.',
+                href: '/berber-culture',
+                icon: Users,
+              },
+              {
+                title: 'Morocco Etiquette Guide',
+                description: 'Dress codes, tipping, greetings, and social customs for respectful cultural engagement.',
+                href: '/etiquette',
+                icon: ShieldCheck,
+              },
+            ].map((guide) => {
               const GuideIcon = guide.icon;
               return (
-                <Link key={guide.href} href={guide.href} className="group">
-                  <div className="card-moroccan p-5 h-full transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1">
-                    <div className="flex items-start gap-3 mb-3">
-                      <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                        <GuideIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                      </div>
-                      <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] group-hover:text-[var(--color-accent)] transition-colors mt-2">
-                        {guide.title}
-                      </h3>
-                    </div>
-                    <p className="text-sm text-[var(--text-secondary)] mb-3">{guide.description}</p>
-                    <span className="inline-flex items-center gap-1 text-sm font-medium text-[var(--color-accent)]">
-                      Read Guide <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                    </span>
-                  </div>
+                <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                  <GuideIcon className="w-8 h-8 text-[var(--color-accent)] mb-3 group-hover:text-[var(--color-primary)] transition-colors" />
+                  <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                    {guide.title}
+                  </h3>
+                  <p className="text-sm text-[var(--text-secondary)]">{guide.description}</p>
+                  <span className="inline-flex items-center gap-1 mt-3 text-sm text-[var(--color-accent)] font-medium">
+                    Read Guide <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
                 </Link>
               );
             })}
@@ -986,41 +970,55 @@ export default function MoroccoMuseumsPage() {
         </div>
       </section>
 
-      {/* ── Final CTA ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
-        <div className="container-morocco max-w-3xl text-center">
-          <Landmark className="w-12 h-12 text-[var(--color-accent)] mx-auto mb-6" />
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
-            Discover Morocco Through Its Museums
+      {/* ── More Cultural Resources ── */}
+      <section className="py-12 md:py-16 bg-[var(--surface-muted)]">
+        <div className="container-morocco">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold text-center mb-8" style={{ color: 'var(--text-primary)' }}>
+            More Cultural Resources
           </h2>
-          <p className="text-lg text-[var(--text-secondary)] mb-8 max-w-2xl mx-auto">
-            From the contemporary galleries of MACMA to the Roman bronzes of Rabat, from YSL&apos;s haute couture
-            to the Berber treasures of Dar Si Said &mdash; Morocco&apos;s museums unlock layers of history,
-            art, and culture that the souks and medinas only hint at. Step inside and see the kingdom
-            from a new perspective.
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { href: '/crafts', title: 'Moroccan Crafts Guide', desc: 'Pottery, woodwork, metalwork, leatherwork, and textile traditions by region and technique.' },
+              { href: '/cooking-classes', title: 'Cooking Classes', desc: 'Learn to make tagine, couscous, pastilla, and more in hands-on classes across Morocco.' },
+              { href: '/marrakech', title: 'Marrakech City Guide', desc: 'Complete guide to Marrakech including medina, souks, palaces, gardens, and dining.' },
+              { href: '/fes', title: 'Fes City Guide', desc: 'Navigate the world\'s largest car-free urban area with our in-depth Fes guide.' },
+              { href: '/rabat', title: 'Rabat City Guide', desc: 'Morocco\'s capital city with its blend of historic monuments and modern cultural institutions.' },
+              { href: '/tangier', title: 'Tangier City Guide', desc: 'Gateway between Europe and Africa with a rich artistic and literary heritage.' },
+            ].map((guide) => (
+              <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-base mb-2 group-hover:text-[var(--color-accent)] transition-colors" style={{ color: 'var(--text-primary)' }}>
+                  {guide.title}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{guide.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA ── */}
+      <section className="py-16 md:py-20 bg-gradient-to-br from-[#A0522D] to-[#7a3e22] text-white">
+        <div className="container-morocco text-center max-w-3xl">
+          <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold mb-4">
+            Plan Your Morocco Museum Tour
+          </h2>
+          <p className="text-lg text-white/90 mb-8 font-[family-name:var(--font-heading)]">
+            From Roman mosaics in Tangier to contemporary African art in Marrakech, Morocco&apos;s museums reveal a civilization of extraordinary depth. Let us help you build the itinerary.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/culture"
-              className="inline-flex items-center gap-2 px-8 py-3 bg-[var(--color-accent)] text-white rounded-lg font-semibold hover:bg-[var(--color-accent)]/90 transition-colors"
+              href="/contact"
+              className="inline-flex items-center justify-center gap-2 bg-white text-[#A0522D] px-8 py-3.5 rounded-lg font-[family-name:var(--font-heading)] font-bold hover:bg-white/90 transition-colors"
             >
-              Moroccan Culture Guide
-              <ArrowRight className="w-4 h-4" />
+              Get a Custom Itinerary <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
-              href="/morocco-history-guide"
-              className="inline-flex items-center gap-2 px-8 py-3 border-2 border-[var(--color-accent)] text-[var(--color-accent)] rounded-lg font-semibold hover:bg-[var(--color-accent)]/5 transition-colors"
+              href="/culture"
+              className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-3.5 rounded-lg font-[family-name:var(--font-heading)] font-bold hover:bg-white/10 transition-colors"
             >
-              History of Morocco
-              <ArrowRight className="w-4 h-4" />
+              Explore Culture Guide <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
-          <p className="text-xs text-[var(--text-muted)] mt-8">
-            <Info className="w-3 h-3 inline mr-1" />
-            Museum opening hours, ticket prices, and policies are based on information available as of March 2026.
-            Hours may vary during Ramadan, national holidays, and summer months. Seasonal pricing can vary.
-            Always confirm details directly with each museum before visiting.
-          </p>
         </div>
       </section>
     </>
