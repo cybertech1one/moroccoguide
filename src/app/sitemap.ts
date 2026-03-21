@@ -420,6 +420,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-rock-climbing',
     '/morocco-birdwatching',
     '/morocco-mountain-biking',
+    '/morocco-paragliding',
+    '/morocco-horse-riding',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

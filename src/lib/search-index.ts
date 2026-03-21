@@ -3170,6 +3170,24 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['morocco mountain biking', 'atlas mountains biking', 'morocco cycling', 'fatbiking sahara', 'morocco bike tours'],
       priority: 9,
     },
+    {
+      title: 'Morocco Paragliding Guide 2026',
+      description: 'Paragliding in Morocco — Aguergour, Tizi n\'Test, Dades Valley launch sites, tandem flights, schools, XC flying, and seasonal conditions.',
+      type: 'page',
+      url: '/morocco-paragliding',
+      tags: ['paragliding', 'adventure', 'Atlas Mountains', 'flying', 'extreme sports'],
+      keywords: ['morocco paragliding', 'paragliding marrakech', 'tandem flight morocco', 'aguergour paragliding', 'morocco flying'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Horse Riding Guide 2026',
+      description: 'Horse riding in Morocco — Barb horses, beach rides, Atlas treks, Tbourida Fantasia, riding schools, and multi-day equestrian tours.',
+      type: 'page',
+      url: '/morocco-horse-riding',
+      tags: ['horse riding', 'equestrian', 'Barb horse', 'Tbourida', 'adventure'],
+      keywords: ['morocco horse riding', 'horseback riding morocco', 'barb horse morocco', 'tbourida fantasia', 'essaouira beach ride'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
