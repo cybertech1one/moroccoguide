@@ -3026,6 +3026,24 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['morocco senior travel', 'morocco for older travelers', 'senior tour morocco', 'morocco retirement travel'],
       priority: 9,
     },
+    {
+      title: 'Best Souks & Markets in Morocco 2026',
+      description: 'Complete Morocco souks guide — best markets by city, specialty souks, weekly rural markets, shopping tips, fair prices, and haggling advice.',
+      type: 'page',
+      url: '/morocco-market-souks',
+      tags: ['souks', 'markets', 'shopping', 'handicrafts', 'bargaining'],
+      keywords: ['morocco souks', 'best markets morocco', 'moroccan souk guide', 'marrakech souk', 'fes souk shopping'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Coastal Towns Guide 2026',
+      description: 'Best coastal towns in Morocco — Atlantic and Mediterranean seaside destinations, beach towns, water sports, seafood, and accommodation guide.',
+      type: 'page',
+      url: '/morocco-coastal-towns',
+      tags: ['coastal', 'beach towns', 'Atlantic', 'Mediterranean', 'seaside'],
+      keywords: ['morocco coastal towns', 'morocco seaside destinations', 'best beach towns morocco', 'morocco atlantic coast'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

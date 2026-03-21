@@ -404,6 +404,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-photography-spots',
     '/morocco-wine-guide',
     '/morocco-senior-travel',
+    '/morocco-market-souks',
+    '/morocco-coastal-towns',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
