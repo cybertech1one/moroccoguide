@@ -337,7 +337,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-wedding-traditions',
     '/morocco-mint-tea-guide',
     '/morocco-atlas-mountains',
-    '/morocco-nightlife-guide',
     '/morocco-ski-resorts',
     '/morocco-wildlife-guide',
     '/ouarzazate-guide',
@@ -432,6 +431,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-sunset-spots',
     '/morocco-sahara-stargazing',
     '/morocco-mint-tea',
+    '/morocco-waterfall-hikes',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

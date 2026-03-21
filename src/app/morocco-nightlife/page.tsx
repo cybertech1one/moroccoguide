@@ -30,186 +30,148 @@ import {
   Volume2,
   Glasses,
   Flame,
+  UtensilsCrossed,
+  Lamp,
+  MessageCircleQuestion,
 } from 'lucide-react';
 
-/* ═══════════════════════════════════════════════════════════════
-   CONSTANTS
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   CONSTANTS & BASE URL
+   ================================================================ */
 
 const BASE_URL = 'https://citytoursmorocco.com';
+const PAGE_URL = `${BASE_URL}/morocco-nightlife`;
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    SEO METADATA
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 export const metadata: Metadata = {
-  title: 'Morocco Nightlife 2026 | Best Bars, Clubs, Live Music & Party Guide',
+  title: 'Morocco Nightlife 2026 | Best Bars, Clubs, Live Music & Rooftop Lounges',
   description:
-    'Discover Morocco nightlife: rooftop bars in Marrakech, nightclubs in Casablanca, live music in Essaouira, and beach clubs in Agadir. Alcohol laws, dress codes, safety tips, and costs in MAD.',
+    'Complete guide to Morocco nightlife: rooftop bars in Marrakech, nightclubs in Casablanca, live Gnawa music in Essaouira, jazz bars in Rabat, beach clubs in Agadir, Jemaa el-Fnaa after dark. Alcohol laws, dress codes, safety tips, and realistic costs in MAD.',
   keywords: [
     'Morocco nightlife',
     'best bars Morocco',
     'Marrakech nightlife',
-    'Morocco party scene',
     'Casablanca nightclubs',
-    'Morocco bars and clubs',
+    'Morocco rooftop bars',
     'Marrakech rooftop bars',
     'Tangier nightlife',
     'Agadir nightlife',
     'Essaouira live music',
+    'Rabat nightlife',
     'Morocco alcohol laws',
     'Morocco nightlife guide 2026',
     'best clubs Marrakech',
-    'Morocco DJ scene',
-    'Casablanca bars',
+    'Jemaa el-Fnaa at night',
+    'Morocco late night dining',
+    'Gnawa music Morocco',
+    'Morocco dress code nightlife',
     'Morocco nightlife safety',
-    'Marrakech party guide',
-    'Morocco going out guide',
-    'Morocco drinks prices',
-    'where to party Morocco',
+    'Morocco DJ clubs',
+    'Morocco jazz bars',
   ],
   openGraph: {
-    title: 'Morocco Nightlife 2026 | Best Bars, Clubs, Live Music & Party Guide',
+    title: 'Morocco Nightlife 2026 | Best Bars, Clubs, Live Music & Rooftop Lounges',
     description:
-      'The definitive guide to Morocco nightlife. Rooftop bars, nightclubs, live music venues, alcohol laws, dress codes, safety tips, and costs across every major city.',
-    url: `${BASE_URL}/morocco-nightlife`,
+      'The definitive guide to Morocco after dark. Rooftop bars, nightclubs, live Gnawa music, jazz venues, late-night dining, cultural shows, alcohol laws, dress codes, and costs across every major city.',
+    url: PAGE_URL,
     images: [
       {
         url: `${BASE_URL}/images/hero-marrakech.webp`,
         width: 1200,
         height: 630,
-        alt: 'Vibrant rooftop bar scene in Marrakech with lantern-lit terrace overlooking the medina at night',
+        alt: 'Lantern-lit rooftop bar terrace in Marrakech overlooking the medina at night',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Morocco Nightlife 2026 | Best Bars, Clubs & Live Music',
+    title: 'Morocco Nightlife 2026 | Bars, Clubs & Live Music Guide',
     description:
-      'Rooftop bars, nightclubs, Gnawa music, beach parties, and everything you need to know about going out in Morocco.',
+      'Rooftop bars, nightclubs, Gnawa music, late-night dining, and everything you need for going out in Morocco.',
     images: [`${BASE_URL}/images/hero-marrakech.webp`],
   },
-  alternates: { canonical: `${BASE_URL}/morocco-nightlife` },
+  alternates: { canonical: PAGE_URL },
 };
 
-/* ═══════════════════════════════════════════════════════════════
-   JSON-LD STRUCTURED DATA
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   JSON-LD: TravelGuide + FAQPage
+   ================================================================ */
 
-const jsonLd = {
+const faqItems = [
+  {
+    q: 'Is alcohol available in Morocco?',
+    a: 'Yes. Morocco is a Muslim-majority country, but alcohol is legal and widely available in licensed bars, hotels, restaurants, nightclubs, and certain supermarkets (Carrefour, Acima, Marjane). Drinking in public spaces or on the street is illegal. International hotels, rooftop bars, and nightclubs serve beer, wine, spirits, and cocktails. Moroccan wine from the Meknes region and beers like Flag Speciale and Casablanca Beer are popular and affordable.',
+  },
+  {
+    q: 'What time do nightclubs close in Morocco?',
+    a: 'Most nightclubs stay open until 3:00-4:00 AM on weekends (Thursday, Friday, Saturday). On weekdays, clubs typically close by 2:00 AM. Rooftop bars and cocktail lounges close between midnight and 1:00 AM. During Ramadan, many venues shut entirely or run reduced hours. Peak club hours are 11:00 PM to 2:00 AM; arriving before 11:00 PM means the venue may be nearly empty.',
+  },
+  {
+    q: 'What should I wear to go out in Morocco?',
+    a: 'Dress codes vary by venue. Upscale rooftop bars and hotel lounges expect smart casual: collared shirts or blouses, tailored trousers or dresses, closed-toe shoes. Nightclubs in Marrakech and Casablanca enforce stricter codes and will turn away anyone in shorts, flip-flops, or sportswear. Beach clubs in Agadir are relaxed during the day but expect different attire for evening hours. When unsure, dress a level smarter than you think necessary.',
+  },
+  {
+    q: 'Is Morocco nightlife safe for tourists?',
+    a: 'Morocco nightlife is generally safe, especially at hotel bars, established nightclubs, and tourist-oriented venues. Standard precautions apply: use official petit taxis or ride-hailing apps (inDrive, Careem), avoid walking alone through unfamiliar areas after midnight, keep valuables minimal and secure, and drink responsibly. Women traveling in groups will find the atmosphere most comfortable at international hotel bars and upscale venues.',
+  },
+  {
+    q: 'How much does a night out cost in Morocco?',
+    a: 'Morocco offers good value. A local beer costs from 25-40 MAD at a standard bar and from 50-80 MAD at an upscale venue. Cocktails range from 60-150 MAD. Nightclub cover charges run from 100-300 MAD, often including one drink. A full night out with drinks, club entry, and taxi typically costs from 300-800 MAD per person. VIP table service at premium Marrakech clubs starts from 2,000 MAD. Seasonal pricing can change during peak tourist months.',
+  },
+  {
+    q: 'Does nightlife change during Ramadan?',
+    a: 'Yes, significantly. During Ramadan, most bars and nightclubs close entirely or operate with very limited hours. Some international hotel bars stay open for non-Muslim guests but are much quieter. After iftar (the evening meal breaking the fast), cities come alive with a different kind of energy: street food, family gatherings, and festive markets. If nightlife is a priority for your trip, plan around Ramadan. The dates shift each year following the Islamic lunar calendar.',
+  },
+  {
+    q: 'What is the best night of the week to go out in Morocco?',
+    a: 'Thursday and Friday nights are the biggest nights out. The Moroccan weekend starts on Friday, so Thursday night functions like a Western Friday night. Saturday is also lively in tourist-heavy cities like Marrakech and Agadir. In Casablanca, Wednesday nights can be surprisingly active. Sunday through Tuesday is quieter, though hotel bars remain open.',
+  },
+  {
+    q: 'Can I experience nightlife in Morocco without drinking alcohol?',
+    a: 'Absolutely. Many of Morocco\'s best after-dark experiences are alcohol-free. Jemaa el-Fnaa in Marrakech is one of the world\'s great night spectacles with food stalls, musicians, and storytellers. Cultural shows, rooftop cafes serving mint tea, late-night restaurants, and night markets are all entirely non-alcoholic. Gnawa music performances in Essaouira and jazz evenings in Rabat are about the music, not the drinks. Morocco is one of the few destinations where nightlife and sobriety coexist naturally.',
+  },
+];
+
+const jsonLdTravel = {
   '@context': 'https://schema.org',
   '@type': 'TravelGuide',
-  '@id': `${BASE_URL}/morocco-nightlife`,
-  name: 'Morocco Nightlife 2026 | Best Bars, Clubs, Live Music & Party Guide',
+  '@id': PAGE_URL,
+  name: 'Morocco Nightlife Guide 2026',
   description:
-    'The definitive guide to Morocco nightlife. Rooftop bars in Marrakech, nightclubs in Casablanca, live Gnawa music in Essaouira, beach clubs in Agadir, alcohol laws, dress codes, safety tips, and costs.',
-  url: `${BASE_URL}/morocco-nightlife`,
+    'Complete guide to Morocco nightlife covering rooftop bars, nightclubs, live Gnawa music, jazz bars, late-night dining, cultural shows, alcohol laws, dress codes, safety tips, and costs.',
+  url: PAGE_URL,
   image: `${BASE_URL}/images/hero-marrakech.webp`,
-  author: {
-    '@type': 'Organization',
-    name: 'CityGuide Morocco',
-    url: BASE_URL,
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'CityGuide Morocco',
-    url: BASE_URL,
-  },
-  datePublished: '2026-03-19',
-  dateModified: '2026-03-19',
-  mainEntityOfPage: `${BASE_URL}/morocco-nightlife`,
-  isPartOf: {
-    '@type': 'WebSite',
-    name: 'CityGuide Morocco',
-    url: BASE_URL,
-  },
-  about: {
-    '@type': 'Country',
-    name: 'Morocco',
-  },
+  author: { '@type': 'Organization', name: 'City Tours Morocco', url: BASE_URL },
+  publisher: { '@type': 'Organization', name: 'City Tours Morocco', url: BASE_URL },
+  datePublished: '2026-03-21',
+  dateModified: '2026-03-21',
+  mainEntityOfPage: PAGE_URL,
+  about: { '@type': 'Country', name: 'Morocco' },
   breadcrumb: {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Morocco Nightlife', item: `${BASE_URL}/morocco-nightlife` },
+      { '@type': 'ListItem', position: 2, name: 'Morocco Nightlife', item: PAGE_URL },
     ],
   },
 };
 
-const faqJsonLd = {
+const jsonLdFaq = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'Is alcohol available in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. Morocco is a Muslim-majority country, but alcohol is legal and widely available in licensed bars, hotels, restaurants, nightclubs, and supermarkets (Carrefour, Acima). You cannot drink alcohol on the street or in public spaces. Most international hotels, rooftop bars, and nightclubs serve beer, wine, spirits, and cocktails. Moroccan wine and beer (Flag Speciale, Casablanca Beer) are popular and affordable.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What time do nightclubs close in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Most nightclubs in Morocco stay open until 3:00-4:00 AM on weekends (Thursday, Friday, Saturday). On weekdays, clubs typically close by 2:00 AM. Rooftop bars and cocktail lounges usually close between midnight and 1:00 AM. During Ramadan, many venues close or operate with reduced hours. Peak hours at clubs are typically 11:00 PM to 2:00 AM.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is the best night of the week to go out in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Thursday and Friday nights are the biggest nights out in Morocco. The Moroccan weekend begins on Friday, so Thursday night is the equivalent of a Western Friday night. Saturday nights are also busy, especially in tourist-heavy cities like Marrakech and Agadir. Wednesday can also be lively in Casablanca. Sunday through Tuesday tends to be quieter at most venues.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What should I wear to go out in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Dress codes in Morocco vary by venue. Upscale rooftop bars and hotel lounges expect smart casual: collared shirts or blouses, tailored trousers or dresses, and closed-toe shoes. Nightclubs enforce stricter dress codes, especially in Marrakech and Casablanca, and often refuse entry in shorts, flip-flops, or sportswear. Beach clubs in Agadir are more relaxed. When in doubt, dress slightly smarter than you think necessary.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is Morocco nightlife safe?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Morocco nightlife is generally safe, especially in hotel bars, established nightclubs, and tourist-oriented venues. Use standard precautions: take official taxis (petit taxi) or ride-hailing apps, avoid walking alone through unfamiliar areas late at night, keep valuables secure, and drink responsibly. Women should be aware that some local bars are male-dominated; international hotel bars and upscale venues are more comfortable for mixed groups. Stick to well-known, reputable venues.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does a night out cost in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Morocco nightlife offers good value. A local beer costs from 25-40 MAD at a standard bar and from 50-80 MAD at an upscale venue. Cocktails range from 80-150 MAD at rooftop bars. Nightclub cover charges range from 100-300 MAD, often including a drink. A full night out with drinks and transport typically costs from 300-800 MAD per person. VIP table service at premium clubs starts from 2,000 MAD.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Does nightlife change during Ramadan in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes, significantly. During Ramadan, many bars and nightclubs close entirely or operate with very limited hours. Some international hotel bars remain open for non-Muslim guests but are much quieter. After iftar (the evening meal breaking the fast), cities come alive with a different energy: street food, family gatherings, and festive markets. If nightlife is a priority, avoid visiting during Ramadan. Check the Islamic calendar as dates change each year.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is the legal drinking age in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The legal drinking age in Morocco is 18. Most upscale bars, nightclubs, and hotel venues check ID, especially for younger-looking guests. Moroccan national ID or a passport is accepted. Note that while the legal age is 18, many premium nightclubs in Marrakech and Casablanca enforce a minimum age of 21 for entry, particularly on busy weekend nights.',
-      },
-    },
-  ],
+  mainEntity: faqItems.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
 };
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    DATA: NIGHTLIFE BY CITY
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 const nightlifeCities = [
   {
@@ -218,12 +180,12 @@ const nightlifeCities = [
     vibe: 'Glamorous, International, Rooftop Culture',
     image: '/images/hero-marrakech.webp',
     description:
-      'Marrakech is the undisputed nightlife capital of Morocco. The scene revolves around glamorous rooftop bars with Atlas Mountain views, high-energy nightclubs that attract international DJs, and intimate cocktail lounges hidden inside restored riads. The city draws a cosmopolitan crowd of tourists, expats, and wealthy Moroccans, creating an atmosphere unlike anywhere else in North Africa. Start the evening on a lantern-lit rooftop overlooking Jemaa el-Fnaa, then move to the Hivernage district where the clubs pulse until the early hours.',
+      'Marrakech is the undisputed nightlife capital of Morocco. The scene revolves around glamorous rooftop bars with Atlas Mountain views, high-energy nightclubs that book international DJs, and intimate cocktail lounges hidden inside restored riads. The city draws a cosmopolitan crowd of tourists, expats, and wealthy Moroccans, creating an atmosphere unlike anywhere else in North Africa. Start the evening on a lantern-lit rooftop above Jemaa el-Fnaa, then move to the Hivernage district where clubs pulse until 4:00 AM.',
     topVenues: [
-      'Le Salama Rooftop - iconic medina views, cocktails, and live DJs',
-      'Theatro Marrakech - largest nightclub, former theater, world-class DJs',
-      'Barometre - stylish cocktail bar in Gueliz, craft cocktails',
-      'Cafe Arabe - rooftop terrace, Moroccan-Italian fusion, wine list',
+      'Le Salama Rooftop - iconic medina views, cocktails, weekend DJs',
+      'Theatro Marrakech - former theater turned mega-club, world-class DJs',
+      'Barometre - craft cocktail bar in Gueliz, creative mixology',
+      'Cafe Arabe - rooftop terrace, Moroccan-Italian fusion, excellent wine list',
       'So Lounge (Sofitel) - upscale lounge with live music and premium spirits',
     ],
     peakNights: 'Thursday, Friday, Saturday',
@@ -233,16 +195,16 @@ const nightlifeCities = [
   {
     city: 'Casablanca',
     icon: Building,
-    vibe: 'Cosmopolitan, Business-Class, Underground',
+    vibe: 'Cosmopolitan, Urban, Underground',
     image: '/images/hero-casablanca.webp',
     description:
-      'Casablanca is Morocco\'s most cosmopolitan city and its nightlife reflects a sophisticated, urban energy. The city has the country\'s most diverse bar and club scene, from sleek hotel rooftop lounges with Atlantic Ocean views to underground DJ nights and live jazz bars. Casablanca\'s nightlife is less tourist-focused than Marrakech, attracting a well-dressed local crowd of young professionals. The Corniche along the coast and the Maarif district downtown are the two main nightlife zones. Expect later starts and later finishes than other Moroccan cities.',
+      'Casablanca has Morocco\'s most diverse bar and club scene, driven by a sophisticated local crowd of young professionals rather than tourists. Sleek hotel rooftop lounges with Atlantic Ocean views sit alongside underground DJ nights and live jazz bars. The Corniche along the coast and the Maarif district downtown are the two main nightlife zones. Casablanca starts later and finishes later than other Moroccan cities. The city\'s wine bars and jazz clubs rival anything you would find in a European capital.',
     topVenues: [
-      'Sky 28 (Twin Center) - highest rooftop bar in Morocco, panoramic city views',
+      'Sky 28 (Twin Center) - highest rooftop bar in Morocco, panoramic views',
       'Le Cabestan - oceanfront restaurant and lounge on the Corniche',
-      'Ain Diab clubs - cluster of beach clubs and nightclubs along the coast',
       'La Bodega - lively tapas bar with Latin music and sangria',
-      'L\'Atelier du Vin - sophisticated wine bar with Moroccan and French wines',
+      'L\'Atelier du Vin - sophisticated wine bar with Moroccan and French selections',
+      'Ain Diab beach clubs - cluster of nightclubs along the coast',
     ],
     peakNights: 'Wednesday, Thursday, Friday',
     bestArea: 'Corniche / Ain Diab (beach clubs), Maarif (downtown bars)',
@@ -251,13 +213,13 @@ const nightlifeCities = [
   {
     city: 'Tangier',
     icon: Globe,
-    vibe: 'Bohemian, Cultural, Mediterranean Chic',
+    vibe: 'Bohemian, Literary, Mediterranean Chic',
     image: '/images/hero-tangier.webp',
     description:
-      'Tangier has a legendary nightlife heritage. This was the city of Paul Bowles, William Burroughs, and the Beat Generation, where artists and writers drank absinthe in smoky bars overlooking the Strait of Gibraltar. Today, Tangier\'s nightlife scene is undergoing a renaissance. New cocktail bars and rooftop lounges sit alongside historic literary haunts in the old kasbah. The Mediterranean coast provides a stunning backdrop for sunset drinks. The crowd is an intriguing mix of Moroccan creatives, Spanish visitors crossing the strait, and international artists drawn by the city\'s bohemian energy.',
+      'Tangier has a legendary nightlife heritage. This was the city of Paul Bowles, William Burroughs, and the Beat Generation, where artists drank absinthe in smoky bars overlooking the Strait of Gibraltar. Today, new cocktail bars and rooftop lounges sit alongside historic literary haunts in the old kasbah. The Mediterranean coast provides a stunning backdrop for sunset drinks. The crowd is an intriguing mix of Moroccan creatives, Spanish visitors from across the strait, and international artists drawn by the city\'s bohemian history.',
     topVenues: [
       'El Morocco Club - elegant cocktail bar in a restored medina mansion',
-      'Cafe Hafa - legendary cliffside terrace where the Rolling Stones drank mint tea',
+      'Cafe Hafa - legendary cliffside terrace, the Rolling Stones drank tea here',
       'Le Salon Bleu - atmospheric rooftop bar with kasbah and sea views',
       'La Terrasse des Paresseux - sunset drinks overlooking the port',
       'Numero Uno - modern cocktail lounge in the new city',
@@ -272,7 +234,7 @@ const nightlifeCities = [
     vibe: 'Beachfront, Resort, All-Night Parties',
     image: '/images/hero-agadir.webp',
     description:
-      'Agadir is Morocco\'s beach party capital. Rebuilt after the devastating 1960 earthquake, the city has a modern resort feel with a long stretch of Atlantic beach lined with hotels, restaurants, and nightlife venues. The scene is more relaxed and resort-oriented than Marrakech or Casablanca. Beach clubs play music through the afternoon into sunset, then the action moves to the clubs in the Secteur Touristique that pump until dawn. European charter tourists, young Moroccans from the south, and surfers create a fun, unpretentious crowd. Agadir has Morocco\'s most permissive nightlife atmosphere.',
+      'Agadir is Morocco\'s beach party capital. Rebuilt after the 1960 earthquake, the city has a modern resort feel with a long Atlantic beach lined with hotels, restaurants, and nightlife venues. Beach clubs play music through the afternoon into sunset, then the action shifts to the clubs in the Secteur Touristique that go until dawn. European charter tourists, young Moroccans from the south, and surfers create a fun, unpretentious crowd. Agadir has Morocco\'s most relaxed and permissive nightlife atmosphere.',
     topVenues: [
       'Papagayo - large nightclub on the beach strip, resident DJs',
       'So Lounge Agadir - upscale beach club to nightclub transition',
@@ -290,23 +252,41 @@ const nightlifeCities = [
     vibe: 'Live Music, Bohemian, Laid-Back',
     image: '/images/hero-essaouira.webp',
     description:
-      'Essaouira is not about nightclubs. This windswept coastal town is the spiritual home of Gnawa music, a hypnotic fusion of sub-Saharan African rhythms, Berber traditions, and Sufi mysticism. The nightlife here centers on live music in intimate venues, rooftop bars above the medina walls, and casual beachfront gatherings. The annual Gnawa World Music Festival (June) transforms the entire town into an open-air concert. Year-round, you can find Gnawa musicians performing in small restaurants and riads. Essaouira attracts musicians, surfers, and travelers who prefer culture and authenticity over bottle service.',
+      'Essaouira is not about nightclubs. This windswept coastal town is the spiritual home of Gnawa music, a hypnotic fusion of sub-Saharan African rhythms, Berber traditions, and Sufi mysticism. Nightlife centers on live music in intimate venues, rooftop bars above the medina walls, and casual beachfront gatherings. The annual Gnawa World Music Festival (June) transforms the entire town into an open-air concert. Year-round, Gnawa musicians perform in small restaurants and riads. This town attracts musicians, surfers, and travelers who prefer culture and authenticity over bottle service.',
     topVenues: [
       'Taros Cafe - rooftop bar overlooking the port, live music nightly',
-      'Gnawa music venues - small restaurants in the medina with nightly performances',
+      'Gnawa music venues - small medina restaurants with nightly performances',
       'Beach bonfires - informal gatherings with drums and guitars at sunset',
       'Le Patio - courtyard wine bar in a restored riad',
-      'Ocean Vagabond - beachfront cafe and bar, sunset cocktails with live music',
+      'Ocean Vagabond - beachfront cafe with sunset cocktails and live music',
     ],
     peakNights: 'Friday, Saturday (June festival is every night)',
-    bestArea: 'Medina (rooftop bars), Port area (Taros), Beach (sunset gatherings)',
+    bestArea: 'Medina (rooftop bars), Port area (Taros), Beach (sunset)',
     priceRange: 'From 30 MAD (beer) to 90 MAD (cocktails)',
+  },
+  {
+    city: 'Rabat',
+    icon: Award,
+    vibe: 'Refined, Jazz-Focused, Cultural Capital',
+    image: '/images/hero-rabat.webp',
+    description:
+      'Rabat, Morocco\'s capital, has a quieter but more refined after-dark scene. The city is known for jazz bars, wine lounges, and cultural events rather than thumping nightclubs. The Agdal and Hassan neighborhoods have upscale cocktail spots frequented by diplomats and government officials. Rabat hosts the Jazzablanca-affiliated jazz nights and the annual Mawazine festival (June), one of the largest music festivals in Africa. The pace is slower than Marrakech or Casablanca, but the quality is high and the crowds are discerning.',
+    topVenues: [
+      'Le Dhow - floating restaurant and lounge on the Bou Regreg river',
+      'Hotel La Tour Hassan bar - elegant hotel lounge, classic cocktails',
+      'Amnesia Club - one of Rabat\'s few dedicated nightclubs',
+      'Villa Mandarine bar - boutique hotel garden bar with live jazz evenings',
+      'Cafe Maure (Kasbah des Oudaias) - sunset tea terrace above the river',
+    ],
+    peakNights: 'Thursday, Friday',
+    bestArea: 'Agdal (lounges), Hassan (hotel bars), Kasbah des Oudaias (sunset)',
+    priceRange: 'From 35 MAD (beer) to 110 MAD (cocktails)',
   },
 ];
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    DATA: TOP ROOFTOP BARS
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 const rooftopBars = [
   {
@@ -314,78 +294,165 @@ const rooftopBars = [
     city: 'Marrakech',
     icon: Star,
     price: 'From 80 MAD per cocktail',
-    description: 'Perched above Jemaa el-Fnaa, Le Salama is the most famous rooftop bar in Morocco. The terrace offers a panoramic view of the square\'s nightly spectacle, the Koutoubia minaret, and the Atlas Mountains. Brass lanterns, low seating, and live DJ sets on weekends create an atmosphere of sophisticated Moroccan glamour. Arrive before sunset to secure the best table.',
+    description:
+      'Perched above Jemaa el-Fnaa, Le Salama is the most famous rooftop bar in Morocco. The terrace offers a panoramic view of the square\'s nightly spectacle, the Koutoubia minaret, and the Atlas Mountains. Brass lanterns, low seating, and live DJ sets on weekends. Arrive before sunset to secure the best table.',
   },
   {
     name: 'Sky 28',
     city: 'Casablanca',
     icon: Building,
     price: 'From 100 MAD per cocktail',
-    description: 'Located on the 28th floor of the Twin Center tower, Sky 28 is the highest bar in Morocco. The 360-degree views of Casablanca\'s skyline and the Atlantic Ocean are unmatched. The interior is sleek and modern, with a cocktail menu that rivals any European capital. A dress code is enforced. Best visited on a clear evening when the city lights stretch to the horizon.',
+    description:
+      'On the 28th floor of the Twin Center, Sky 28 is Morocco\'s highest bar. 360-degree views of Casablanca\'s skyline and the Atlantic. Sleek interior, cocktail menu rivaling European capitals. Dress code enforced. Best on clear evenings when city lights stretch to the horizon.',
   },
   {
     name: 'Le Salon Bleu',
     city: 'Tangier',
     icon: Globe,
     price: 'From 60 MAD per cocktail',
-    description: 'A beautifully restored mansion in the Tangier kasbah with a rooftop terrace that overlooks the Strait of Gibraltar. On clear evenings, you can see the lights of Spain across the water. The decor is a blend of Moroccan and Andalusian aesthetics, with blue and white tilework and candlelit tables. The cocktail list features Moroccan-inspired mixes with fresh mint, orange blossom, and local spirits.',
+    description:
+      'Restored kasbah mansion with a rooftop terrace overlooking the Strait of Gibraltar. On clear evenings, Spain is visible across the water. Blue and white tilework, candlelit tables, Moroccan-inspired cocktails with fresh mint and orange blossom.',
   },
   {
     name: 'Cafe Arabe',
     city: 'Marrakech',
     icon: Coffee,
     price: 'From 70 MAD per cocktail',
-    description: 'A multi-level restaurant and bar in the heart of the Marrakech medina with a stunning rooftop terrace. The view sweeps across the rooftops to the Koutoubia and the Atlas beyond. The wine list features excellent Moroccan labels, and the cocktails are crafted with care. More refined and less party-focused than Le Salama, this is ideal for a sophisticated evening drink.',
+    description:
+      'Multi-level restaurant and bar in the Marrakech medina with a rooftop sweeping to the Koutoubia and Atlas. Excellent Moroccan wine list. More refined and less party-focused than Le Salama, ideal for a sophisticated evening drink and real conversation.',
   },
   {
     name: 'Taros Cafe',
     city: 'Essaouira',
     icon: Music,
     price: 'From 50 MAD per cocktail',
-    description: 'Essaouira\'s most iconic bar occupies a prime position above the old port. The rooftop terrace catches the Atlantic breeze and offers sunset views that draw visitors back night after night. Live Gnawa music, jazz, and acoustic performances are regular features. The atmosphere is bohemian, welcoming, and distinctly Essaouiran. Come for sunset, stay for the music.',
+    description:
+      'Essaouira\'s most iconic bar above the old port. The rooftop catches Atlantic breezes with sunset views that draw visitors back nightly. Live Gnawa, jazz, and acoustic performances. Bohemian, welcoming, distinctly Essaouiran. Come for sunset, stay for the music.',
+  },
+  {
+    name: 'Le Dhow',
+    city: 'Rabat',
+    icon: Award,
+    price: 'From 70 MAD per cocktail',
+    description:
+      'Traditional dhow boat converted into a floating bar on the Bou Regreg river between Rabat and Sale. Open deck views of both cities as the sun sets behind the Kasbah des Oudaias. Cocktails, Moroccan wines, and seafood. Completely unique in Morocco.',
   },
 ];
 
-/* ═══════════════════════════════════════════════════════════════
-   DATA: ALCOHOL LAWS & CULTURAL CONSIDERATIONS
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   DATA: JEMAA EL-FNAA AT NIGHT
+   ================================================================ */
+
+const jemaaExperiences = [
+  {
+    title: 'Food Stalls',
+    icon: UtensilsCrossed,
+    description:
+      'After sunset, over 100 food stalls set up in the square. Grilled meats, snail soup, harira, fresh-squeezed orange juice, and Moroccan pastries. A full meal costs from 30-80 MAD. Stall numbers 1, 14, and 31 are long-standing favorites among locals. Look for the stalls with the most Moroccan diners, not the ones with the most aggressive touts.',
+  },
+  {
+    title: 'Musicians & Gnawa Circles',
+    icon: Music,
+    description:
+      'Gnawa musicians form circles in the square and play well into the night. The guembri bass, krakebs castanets, and call-and-response chanting create an atmosphere that has drawn visitors for centuries. Drop from 10-20 MAD into the collection if you stay and listen. Halqa (street performer circles) feature comedians, acrobats, and storytellers performing in Darija.',
+  },
+  {
+    title: 'Henna Artists & Fortune Tellers',
+    icon: Sparkles,
+    description:
+      'Henna artists work the edges of the square offering hand and foot designs. Negotiate the price before sitting down; expect from 50-150 MAD for detailed work. Fortune tellers, herbalists, and tooth-pullers add to the carnival atmosphere that earned the square its UNESCO recognition.',
+  },
+  {
+    title: 'Snake Charmers & Storytellers',
+    icon: Globe,
+    description:
+      'Snake charmers operate in the late afternoon and early evening. Be aware they will place a snake on you for a photo and demand payment. The halaiqis (storytellers) perform in Darija; even without understanding the language, watching the crowd react is part of the experience.',
+  },
+];
+
+/* ================================================================
+   DATA: LATE-NIGHT DINING
+   ================================================================ */
+
+const lateNightDining = [
+  {
+    city: 'Marrakech',
+    icon: Star,
+    spots: [
+      'Jemaa el-Fnaa food stalls - open until midnight, from 30 MAD',
+      'Cafe de France - overlooks the square, open late, mint tea and snacks',
+      'Comptoir Darna - dinner with live belly dance show, open until 1:00 AM',
+      'Al Fassia Aguedal - upscale Moroccan cuisine, last seating 10:30 PM',
+    ],
+  },
+  {
+    city: 'Casablanca',
+    icon: Building,
+    spots: [
+      'Rick\'s Cafe - Bogart-themed restaurant, dinner until 11:00 PM',
+      'La Sqala - courtyard dining inside old Portuguese fortress, until 11:00 PM',
+      'Corniche seafood restaurants - many open past midnight on weekends',
+      'Maarif district sandwich shops and rotisseries - open until 2:00 AM',
+    ],
+  },
+  {
+    city: 'Tangier',
+    icon: Globe,
+    spots: [
+      'El Morocco Club - dinner and drinks in a restored palace, until midnight',
+      'Populaire Saveur de Poisson - legendary fixed-menu fish restaurant, book ahead',
+      'Grand Socco street food vendors - late-night msemmen and harira',
+      'Marina Bay restaurants - seafood with port views, open until midnight',
+    ],
+  },
+];
+
+/* ================================================================
+   DATA: ALCOHOL & CULTURAL CONSIDERATIONS
+   ================================================================ */
 
 const culturalTips = [
   {
     title: 'Alcohol Is Legal but Regulated',
     icon: Wine,
-    content: 'Morocco is a Muslim-majority country where alcohol is legal for non-Muslims and is widely available in licensed hotels, bars, restaurants, nightclubs, and select supermarkets (Carrefour, Acima, Marjane). Drinking in public spaces, on the street, or near mosques is illegal and disrespectful. Alcohol is not served in most medina restaurants unless they hold a license. International hotel bars are always the safest and most comfortable option.',
+    content:
+      'Morocco is a Muslim-majority country where alcohol is legal for non-Muslims and widely available in licensed hotels, bars, restaurants, nightclubs, and select supermarkets (Carrefour, Acima, Marjane). Drinking on the street, in public spaces, or near mosques is illegal and disrespectful. Medina restaurants rarely serve alcohol unless licensed. International hotel bars are always the safest, most comfortable option.',
   },
   {
     title: 'Respect Ramadan',
     icon: Moon,
-    content: 'During Ramadan, most bars and nightclubs close or operate with severely reduced hours. Some international hotel bars remain open for non-Muslim guests but expect a much quieter atmosphere. Drinking or eating openly in public during daylight hours of Ramadan is considered deeply disrespectful. If you want a vibrant nightlife scene, plan your trip outside of Ramadan. Dates change each year following the Islamic lunar calendar.',
+    content:
+      'During Ramadan, most bars and nightclubs close or run severely reduced hours. Some international hotel bars stay open for non-Muslim guests but are much quieter. Drinking or eating openly in public during daylight hours of Ramadan is deeply disrespectful. If you want a lively nightlife scene, plan your trip outside Ramadan. Dates change each year following the Islamic lunar calendar.',
   },
   {
     title: 'Moroccan Wine and Beer',
     icon: Glasses,
-    content: 'Morocco has a growing wine industry, particularly in the Meknes and Atlas foothills regions. Labels like Chateau Roslane, Domaine de la Zouina, and Medaillon are excellent. Flag Speciale and Casablanca Beer are the most popular local beers. Try Moroccan rose wine, which pairs beautifully with tagine. Prices for local wine and beer are significantly cheaper than imported options. A good Moroccan red wine costs from 150-300 MAD per bottle at a restaurant.',
+    content:
+      'Morocco has a growing wine industry, especially in the Meknes and Atlas foothills regions. Labels like Chateau Roslane, Domaine de la Zouina, and Medaillon are excellent. Flag Speciale and Casablanca Beer are the most popular local beers. Try Moroccan rose wine with tagine. A good Moroccan red costs from 150-300 MAD per bottle at a restaurant, significantly less than imported alternatives.',
   },
   {
     title: 'Dress Code Awareness',
     icon: Users,
-    content: 'Dress codes vary widely. Upscale hotel bars and rooftop lounges expect smart casual attire. Nightclubs in Marrakech and Casablanca enforce strict dress codes and will refuse entry to anyone in shorts, sandals, flip-flops, or sportswear. Beach clubs in Agadir are more relaxed during the day but expect a change of clothing for the evening transition. Women will find the atmosphere most comfortable at international hotel bars and established upscale venues.',
+    content:
+      'Dress codes vary widely. Upscale hotel bars and rooftop lounges expect smart casual. Nightclubs in Marrakech and Casablanca enforce strict dress codes and will refuse entry in shorts, sandals, flip-flops, or sportswear. Beach clubs in Agadir are relaxed during the day but expect a change of clothing for the evening. Women will find the atmosphere most comfortable at international hotel bars and established upscale venues.',
   },
   {
     title: 'Safety and Transport at Night',
     icon: ShieldCheck,
-    content: 'Always arrange transport before going out. Use official petit taxis (metered, city-only), your hotel\'s car service, or ride-hailing apps like inDrive or Careem. Avoid unofficial taxis late at night. Keep valuables minimal and secure. Stick to well-known, reputable venues and avoid deserted areas. Women traveling in groups will feel safer than solo. Most hotel staff can recommend trusted drivers for late-night returns.',
+    content:
+      'Always arrange transport before going out. Use official petit taxis (metered, city-only), your hotel\'s car service, or ride-hailing apps like inDrive or Careem. Avoid unofficial taxis late at night. Keep valuables minimal and secure. Stick to well-known, reputable venues and avoid deserted areas. Women traveling in groups feel safer than solo. Most hotel staff can recommend trusted drivers for late-night returns.',
   },
   {
-    title: 'Interactions and Local Customs',
+    title: 'Local Customs and PDA',
     icon: Heart,
-    content: 'Public displays of affection are frowned upon in Moroccan culture regardless of the venue. While rooftop bars and nightclubs are more relaxed, maintain cultural awareness. Avoid overintoxication in public, which is seen as disrespectful. Tipping bar staff from 10-20 MAD per round is appreciated. Some local bars are predominantly male spaces; international hotel venues are more mixed and comfortable for all travelers.',
+    content:
+      'Public displays of affection are frowned upon regardless of venue. While rooftop bars and nightclubs are more relaxed, maintain cultural awareness. Overintoxication in public is seen as disrespectful. Tipping bar staff from 10-20 MAD per round is appreciated. Some local bars are predominantly male spaces; international hotel venues are more mixed and comfortable for all travelers.',
   },
 ];
 
-/* ═══════════════════════════════════════════════════════════════
-   DATA: NIGHTLIFE COSTS
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   DATA: NIGHTLIFE COST BREAKDOWN
+   ================================================================ */
 
 const costBreakdown = [
   { item: 'Local beer (Flag Speciale, 33cl)', budget: 'From 25-40 MAD', upscale: 'From 50-80 MAD' },
@@ -398,103 +465,58 @@ const costBreakdown = [
   { item: 'Late-night taxi (city center)', budget: 'From 20-50 MAD', upscale: 'From 50-100 MAD' },
 ];
 
-/* ═══════════════════════════════════════════════════════════════
-   DATA: FAQ
-   ═══════════════════════════════════════════════════════════════ */
-
-const faqs = [
-  {
-    question: 'Is alcohol available in Morocco?',
-    answer:
-      'Yes. Morocco is a Muslim-majority country, but alcohol is legal and widely available in licensed bars, hotels, restaurants, nightclubs, and supermarkets (Carrefour, Acima, Marjane). You cannot drink alcohol on the street or in public spaces. Most international hotels, rooftop bars, and nightclubs serve beer, wine, spirits, and cocktails. Moroccan wine (from the Meknes region) and beer (Flag Speciale, Casablanca Beer) are popular and affordable.',
-  },
-  {
-    question: 'What time do nightclubs close in Morocco?',
-    answer:
-      'Most nightclubs stay open until 3:00-4:00 AM on weekends (Thursday, Friday, Saturday nights). On weekdays, clubs typically close by 2:00 AM. Rooftop bars and cocktail lounges usually close between midnight and 1:00 AM. During Ramadan, many venues close entirely or operate with significantly reduced hours. Peak hours at clubs are typically 11:00 PM to 2:00 AM; arriving before 11:00 PM means you may find the venue nearly empty.',
-  },
-  {
-    question: 'What is the best night of the week to go out in Morocco?',
-    answer:
-      'Thursday and Friday nights are the biggest nights out. The Moroccan weekend begins on Friday, so Thursday night is the equivalent of a Western Friday night and is often the busiest. Saturday nights are also lively, especially in tourist-heavy cities like Marrakech and Agadir. In Casablanca, Wednesday nights can also be surprisingly active. Sunday through Tuesday tends to be quieter, though hotel bars remain open.',
-  },
-  {
-    question: 'What should I wear to go out in Morocco?',
-    answer:
-      'Dress codes vary by venue. Upscale rooftop bars and hotel lounges expect smart casual: collared shirts or blouses, tailored trousers or dresses, and closed-toe shoes. Nightclubs in Marrakech and Casablanca enforce stricter dress codes and will refuse entry to anyone wearing shorts, flip-flops, or sportswear. Beach clubs in Agadir are more relaxed during daytime but expect a wardrobe change for evening. When in doubt, dress a level smarter than you think necessary.',
-  },
-  {
-    question: 'Is Morocco nightlife safe?',
-    answer:
-      'Morocco nightlife is generally safe, particularly in hotel bars, established nightclubs, and tourist-oriented venues. Use standard precautions: take official petit taxis or ride-hailing apps, avoid walking alone through unfamiliar areas late at night, keep valuables minimal and secure, and drink responsibly. Women traveling in groups will feel most comfortable; international hotel bars and upscale venues offer the most welcoming mixed-gender atmosphere. Avoid unlicensed or unknown establishments.',
-  },
-  {
-    question: 'How much does a night out cost in Morocco?',
-    answer:
-      'Morocco nightlife offers excellent value compared to Europe. A local beer costs from 25-40 MAD at a standard bar and from 50-80 MAD at an upscale venue. Cocktails range from 60-150 MAD depending on the venue. Nightclub cover charges range from 100-300 MAD, often including one drink. A complete night out with several drinks, club entry, and taxi transport typically costs from 300-800 MAD per person. VIP table service at premium Marrakech clubs starts from 2,000 MAD.',
-  },
-  {
-    question: 'Does nightlife change during Ramadan in Morocco?',
-    answer:
-      'Yes, dramatically. During Ramadan, most bars and nightclubs close entirely or operate with very limited hours. Some international hotel bars remain open for non-Muslim guests but are much quieter. After iftar (the evening meal breaking the fast), cities come alive with a different energy: street food, family gatherings, and festive markets replace the bar scene. If nightlife is a major part of your travel plans, avoid visiting during Ramadan. Check the Islamic calendar as the dates shift each year.',
-  },
-  {
-    question: 'What is the legal drinking age in Morocco?',
-    answer:
-      'The legal drinking age in Morocco is 18 years old. Most upscale bars, nightclubs, and hotel venues check ID, especially for younger-looking guests. A valid passport or Moroccan national ID is accepted. Note that while the legal age is 18, many premium nightclubs in Marrakech and Casablanca enforce a higher minimum age of 21 for entry, particularly on busy weekend nights. Always carry a form of photo identification when going out.',
-  },
-];
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: BEST NIGHTS & TIMING
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   DATA: TIMING YOUR NIGHT
+   ================================================================ */
 
 const nightTiming = [
   {
     period: 'Sunset (6:00 - 8:00 PM)',
     icon: Sunset,
-    description: 'Golden hour drinks on a rooftop bar or beach club. This is when Marrakech rooftops, Essaouira\'s Taros Cafe, and Agadir beach bars are at their most magical. Arrive early to secure the best seats.',
+    description:
+      'Golden hour drinks on a rooftop bar or beach club. Marrakech rooftops, Essaouira\'s Taros Cafe, and Agadir beach bars are at their most magical during this window. Arrive early to claim the best seats; popular terraces fill up 30 minutes before sunset.',
   },
   {
     period: 'Evening (8:00 - 10:30 PM)',
     icon: Coffee,
-    description: 'Dinner and cocktails at restaurant-bars. Many venues offer live music during this window. Moroccan diners eat late, so restaurants are buzzing at 9:00-10:00 PM. Wine bars and cocktail lounges peak during this period.',
+    description:
+      'Dinner and cocktails at restaurant-bars. Many venues offer live music during this window. Moroccan diners eat late, so restaurants buzz at 9:00-10:00 PM. Wine bars and cocktail lounges peak during this period. Cultural shows and belly dance performances start at most venues around 9:00 PM.',
   },
   {
     period: 'Late Night (10:30 PM - 1:00 AM)',
     icon: Moon,
-    description: 'Nightclubs start filling up around 11:00 PM. DJ sets begin at most venues. The transition from bar to club typically happens around midnight. Cover charges are often waived or reduced before 11:00 PM at some clubs.',
+    description:
+      'Nightclubs start filling around 11:00 PM. DJ sets kick off at most venues. The transition from bar to club typically happens around midnight. Some clubs waive or reduce cover charges before 11:00 PM. Jemaa el-Fnaa food stalls wind down around midnight.',
   },
   {
     period: 'Peak Hours (1:00 - 4:00 AM)',
     icon: Flame,
-    description: 'The main event. From 1:00 AM, clubs in Marrakech, Casablanca, and Agadir hit full energy. International DJs at venues like Theatro perform their prime sets. This is when the dance floors are packed and the atmosphere is electric.',
+    description:
+      'The main event. From 1:00 AM, clubs in Marrakech, Casablanca, and Agadir hit full energy. International DJs at venues like Theatro perform their prime sets. Dance floors are packed and the atmosphere is electric. This is when Morocco\'s party scene truly comes alive.',
   },
 ];
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    PAGE COMPONENT
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 export default function MoroccoNightlifePage() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdTravel) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
       />
 
       {/* ── Hero Section ── */}
       <section className="relative py-20 md:py-28 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(/images/hero-marrakech.webp)',
-          }}
+          style={{ backgroundImage: 'url(/images/hero-marrakech.webp)' }}
         />
         <div className="absolute inset-0 hero-overlay" />
         <div className="container-morocco relative z-10">
@@ -514,8 +536,9 @@ export default function MoroccoNightlifePage() {
             <br className="hidden md:block" /> Bars, Clubs &amp; Live Music
           </h1>
           <p className="text-xl text-white/80 max-w-2xl">
-            From lantern-lit rooftop bars overlooking ancient medinas to world-class nightclubs
-            with international DJs. The complete guide to going out in Morocco.
+            From lantern-lit rooftop bars above ancient medinas to world-class nightclubs
+            with international DJs and Gnawa rhythms on Atlantic terraces. The complete guide
+            to going out after dark in Morocco.
           </p>
         </div>
       </section>
@@ -527,31 +550,25 @@ export default function MoroccoNightlifePage() {
         <div className="container-morocco max-w-4xl">
           <div className="prose-moroccan">
             <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
-              Understanding Morocco&apos;s Nightlife Scene
+              Morocco After Dark: What to Expect
             </h2>
             <div className="space-y-4 text-lg text-[var(--text-secondary)] leading-relaxed">
               <p>
-                Morocco&apos;s nightlife defies the expectations many visitors arrive with. While
-                this is a Muslim-majority country with deep religious traditions, it is also a
-                place where rooftop cocktail bars glow above ancient medinas, where world-class
-                DJs play to packed nightclubs until 4:00 AM, and where Gnawa musicians channel
-                centuries of spiritual tradition through hypnotic live performances. The nightlife
-                scene is vibrant, varied, and growing more sophisticated every year.
+                Morocco&apos;s nightlife defies the expectations most visitors arrive with. This is a
+                Muslim-majority country with deep religious traditions, but it is also a place where
+                rooftop cocktail bars glow above ancient medinas, world-class DJs play to packed
+                nightclubs until 4:00 AM, and Gnawa musicians channel centuries of spiritual tradition
+                through hypnotic live performances. The scene is growing more sophisticated every year,
+                and genuinely different from anything in Europe or the Americas.
               </p>
               <p>
-                Each city offers a completely different after-dark experience. Marrakech is the
-                glamour capital, where rooftop bars and mega-clubs cater to an international jet
-                set. Casablanca has the most cosmopolitan and locally-driven scene, with wine
-                bars, jazz clubs, and underground DJ nights. Tangier channels its bohemian literary
-                heritage through atmospheric bars overlooking the Mediterranean. Agadir is pure
-                beach-party energy. And Essaouira is the soul of Morocco&apos;s music scene, where
-                Gnawa rhythms fill the Atlantic-facing terraces nightly.
-              </p>
-              <p>
-                This guide covers everything you need to know: the best bars, clubs, and live
-                music venues in every major city, alcohol laws and availability, dress codes,
-                safety tips, cultural considerations, the best nights of the week, realistic
-                costs, and answers to the most frequently asked questions about Morocco nightlife.
+                Each city offers a different after-dark experience. Marrakech is the glamour capital
+                with rooftop bars and mega-clubs. Casablanca has the most cosmopolitan scene with wine
+                bars, jazz clubs, and underground DJ nights. Tangier channels bohemian literary heritage
+                through atmospheric bars overlooking the Mediterranean. Agadir is beach-party energy.
+                Essaouira is the soul of Morocco&apos;s music scene. And Rabat surprises with refined
+                jazz bars and wine lounges. This guide covers venues, alcohol laws, dress codes, safety
+                tips, late-night dining, Jemaa el-Fnaa after dark, cultural shows, costs, and FAQs.
               </p>
             </div>
           </div>
@@ -566,12 +583,10 @@ export default function MoroccoNightlifePage() {
             Nightlife by City
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-4">
-            Every Moroccan city has its own after-dark personality. Here is what to expect
-            in each major destination.
+            Every Moroccan city has its own after-dark personality. Here is what to expect in each major destination.
           </p>
           <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
-            <Info className="w-3.5 h-3.5 inline mr-1" />
-            Venue availability and prices may vary by season. Seasonal pricing can change, especially during peak tourist months and holidays.
+            <Info className="w-3.5 h-3.5 inline mr-1" />Venue availability and prices vary by season. Seasonal pricing can change during peak months.
           </p>
 
           <div className="space-y-10">
@@ -607,7 +622,9 @@ export default function MoroccoNightlifePage() {
                           Peak: {city.peakNights}
                         </span>
                       </div>
-                      <p className="text-sm text-[var(--text-secondary)] mb-4 leading-relaxed">{city.description}</p>
+                      <p className="text-sm text-[var(--text-secondary)] mb-4 leading-relaxed">
+                        {city.description}
+                      </p>
                       <div className="mb-3">
                         <h4 className="text-xs font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 uppercase tracking-wide">
                           Top Venues
@@ -634,7 +651,7 @@ export default function MoroccoNightlifePage() {
         </div>
       </section>
 
-      {/* ── Top Rooftop Bars ── */}
+      {/* ── Rooftop Bars ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
@@ -642,8 +659,8 @@ export default function MoroccoNightlifePage() {
             Best Rooftop Bars in Morocco
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Rooftop bars are the signature Morocco nightlife experience. Lantern-lit terraces
-            above ancient medinas, Atlas Mountain sunsets, and cocktails crafted with local ingredients.
+            Lantern-lit terraces above ancient medinas, mountain sunsets, and cocktails crafted
+            with local ingredients. The signature Morocco nightlife experience.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -678,7 +695,141 @@ export default function MoroccoNightlifePage() {
         </div>
       </section>
 
-      {/* ── Best Nights & Timing ── */}
+      {/* ── Jemaa el-Fnaa at Night ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Lamp className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Jemaa el-Fnaa After Dark
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Morocco&apos;s most famous night spectacle requires no drinks. The UNESCO-recognized
+            square transforms every evening into an open-air carnival of food, music, and performance.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {jemaaExperiences.map((exp) => {
+              const ExpIcon = exp.icon;
+              return (
+                <div key={exp.title} className="card-moroccan p-5">
+                  <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                    <ExpIcon className="w-4 h-4 inline mr-2 text-[var(--color-accent)]" />
+                    {exp.title}
+                  </h3>
+                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                    {exp.description}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="mt-8 card-moroccan p-5 bg-[var(--color-accent)]/5 border-l-4 border-[var(--color-accent)]">
+            <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+              <Info className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
+              <strong>Timing tip:</strong> Jemaa el-Fnaa peaks between 8:00 and 11:00 PM. Arrive
+              before sunset to watch the transformation from daytime market to nighttime spectacle.
+              The food stalls wind down around midnight. Pair this with a rooftop bar visit at Le
+              Salama or Cafe de France for the overhead view before descending into the square itself.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Live Music & Gnawa ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Volume2 className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Live Music &amp; Cultural Shows
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">One of the most authentic and captivating live music scenes in Africa and the Arab world.</p>
+
+          <div className="space-y-6">
+            <div className="card-moroccan p-6">
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                <Music className="w-5 h-5 inline mr-2 text-[var(--color-accent)]" />
+                Gnawa Music
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] mb-3 leading-relaxed">
+                Gnawa is Morocco&apos;s most distinctive musical tradition. Originating from
+                sub-Saharan African spiritual practices blended with Berber and Sufi traditions,
+                Gnawa features hypnotic rhythms played on the guembri (a three-stringed bass lute),
+                krakebs (iron castanets), and call-and-response chanting that can last for hours.
+                The best places to experience live Gnawa are Essaouira (the spiritual home), Marrakech
+                (Jemaa el-Fnaa and riad performances), and the annual Gnawa World Music Festival in June.
+              </p>
+              <div className="flex items-start gap-1.5 p-2 bg-[var(--surface-muted)] rounded-lg text-xs">
+                <Award className="w-3 h-3 mt-0.5 text-[var(--color-gold)] shrink-0" />
+                <span className="text-[var(--text-secondary)] italic">
+                  The Gnawa World Music Festival in Essaouira (June) draws 500,000+ visitors
+                  for free outdoor concerts. One of the most extraordinary music events in Africa.
+                </span>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="card-moroccan p-6">
+                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                  <Music className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
+                  Andalusian Classical Music
+                </h3>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                  The elegant counterpart to Gnawa, Andalusian classical music traces its roots to
+                  medieval Moorish Spain. Performed with oud, violin, and percussion, this refined
+                  tradition is best experienced in Fes and Tetouan. Several upscale restaurants in the
+                  Fes medina feature live Andalusian ensembles during dinner. The sacred music festival
+                  in Fes (June) is a world-renowned celebration of this art form.
+                </p>
+              </div>
+
+              <div className="card-moroccan p-6">
+                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                  <Music className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
+                  Modern DJ &amp; Electronic Scene
+                </h3>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                  Morocco has a growing electronic music scene centered in Marrakech and Casablanca.
+                  Theatro Marrakech hosts international DJs from Europe and the Middle East. The Oasis
+                  Festival near Marrakech has become one of North Africa&apos;s premier electronic music
+                  events. Local Moroccan DJs blend traditional rhythms with house, techno, and Afrobeats,
+                  creating a sound unique to the region.
+                </p>
+              </div>
+
+              <div className="card-moroccan p-6">
+                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                  <Heart className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
+                  Dinner Shows &amp; Cultural Performances
+                </h3>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                  Several Marrakech restaurants combine dinner with live entertainment. Comptoir Darna
+                  features belly dance and live music nightly. Chez Ali offers a large-scale fantasia
+                  show with horseback acrobatics, fire dancers, and traditional musicians under a tent
+                  complex outside the city (from 400 MAD including dinner). These shows are tourist-oriented
+                  but genuinely entertaining. Seasonal pricing can change during peak months.
+                </p>
+              </div>
+
+              <div className="card-moroccan p-6">
+                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                  <Award className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
+                  Jazz &amp; Contemporary
+                </h3>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                  Rabat and Casablanca have developing jazz scenes. The Mawazine festival in Rabat (June)
+                  brings international headliners and draws millions of attendees, making it one of the
+                  largest music festivals on the planet. Throughout the year, hotel bars in both cities
+                  host live jazz evenings. Villa Mandarine in Rabat and L&apos;Atelier du Vin in
+                  Casablanca are reliable spots for weekend jazz sets.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Timing Your Night ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
@@ -686,8 +837,7 @@ export default function MoroccoNightlifePage() {
             When to Go Out: Timing Your Night
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Moroccan nightlife follows its own rhythm. Understanding the timing is key to
-            having the best experience.
+            Moroccan nightlife follows its own rhythm. Understanding the timing is key to getting the best experience.
           </p>
 
           <div className="space-y-6">
@@ -713,8 +863,43 @@ export default function MoroccoNightlifePage() {
         </div>
       </section>
 
-      {/* ── Alcohol Laws & Cultural Considerations ── */}
+      {/* ── Late-Night Dining ── */}
       <section className="py-16 md:py-20">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <UtensilsCrossed className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Late-Night Dining
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Morocco eats late. Dinner at 10:00 PM is normal, and finding food after midnight is easier than in most European cities.
+          </p>
+
+          <div className="space-y-6">
+            {lateNightDining.map((city) => {
+              const CityIcon = city.icon;
+              return (
+                <div key={city.city} className="card-moroccan p-6">
+                  <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                    <CityIcon className="w-5 h-5 inline mr-2 text-[var(--color-accent)]" />
+                    {city.city}
+                  </h3>
+                  <div className="space-y-2">
+                    {city.spots.map((spot, i) => (
+                      <div key={i} className="flex items-start gap-2 text-sm text-[var(--text-secondary)]">
+                        <CheckCircle className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
+                        {spot}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Alcohol Laws & Cultural Considerations ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
             <AlertTriangle className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
@@ -741,7 +926,7 @@ export default function MoroccoNightlifePage() {
       </section>
 
       {/* ── Cost Breakdown ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+      <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <Wallet className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
@@ -751,8 +936,7 @@ export default function MoroccoNightlifePage() {
             Realistic prices for drinks, cover charges, and transport across Morocco.
           </p>
           <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
-            <Info className="w-3.5 h-3.5 inline mr-1" />
-            Prices are in Moroccan Dirhams (MAD). 1 USD is approximately 10 MAD, 1 EUR approximately 11 MAD. Seasonal pricing can change.
+            <Info className="w-3.5 h-3.5 inline mr-1" />Prices in MAD. 1 USD ~ 10 MAD, 1 EUR ~ 11 MAD. Seasonal pricing can change.
           </p>
 
           <div className="card-moroccan overflow-hidden">
@@ -780,74 +964,6 @@ export default function MoroccoNightlifePage() {
         </div>
       </section>
 
-      {/* ── Live Music & Gnawa ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Volume2 className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Live Music &amp; the Gnawa Tradition
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Morocco&apos;s live music scene is one of the most authentic and captivating in
-            all of Africa and the Arab world.
-          </p>
-
-          <div className="space-y-6">
-            <div className="card-moroccan p-6">
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                <Music className="w-5 h-5 inline mr-2 text-[var(--color-accent)]" />
-                Gnawa Music
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3 leading-relaxed">
-                Gnawa music is Morocco&apos;s most distinctive and powerful musical tradition. Originating
-                from sub-Saharan African spiritual practices blended with Berber and Sufi traditions,
-                Gnawa features hypnotic rhythms played on the guembri (a three-stringed bass lute),
-                krakebs (iron castanets), and call-and-response chanting that can continue for hours.
-                The best places to experience live Gnawa are Essaouira (the spiritual home), Marrakech
-                (Jemaa el-Fnaa and riad performances), and the annual Gnawa World Music Festival in June.
-              </p>
-              <div className="flex items-start gap-1.5 p-2 bg-[var(--surface-muted)] rounded-lg text-xs">
-                <Award className="w-3 h-3 mt-0.5 text-[var(--color-gold)] shrink-0" />
-                <span className="text-[var(--text-secondary)] italic">
-                  The Gnawa World Music Festival in Essaouira (June) is one of the most extraordinary
-                  music events in Africa, drawing 500,000+ visitors for free outdoor concerts.
-                </span>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="card-moroccan p-6">
-                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                  <Music className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                  Andalusian Classical Music
-                </h3>
-                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                  The elegant counterpart to Gnawa, Andalusian classical music traces its roots to
-                  medieval Moorish Spain. Performed with oud, violin, and percussion, this refined
-                  tradition is best experienced in Fes and Tetouan. Several upscale restaurants in
-                  Fes medina feature live Andalusian ensembles during dinner service. The sacred music
-                  festival in Fes (June) is a world-renowned celebration of this art form.
-                </p>
-              </div>
-
-              <div className="card-moroccan p-6">
-                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                  <Music className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                  Modern DJ &amp; Electronic Scene
-                </h3>
-                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                  Morocco has a growing electronic music scene centered in Marrakech and Casablanca.
-                  Venues like Theatro Marrakech host international DJs from Europe and the Middle East.
-                  The Oasis Festival (held near Marrakech) has become one of North Africa&apos;s premier
-                  electronic music events. Local Moroccan DJs increasingly blend traditional rhythms
-                  with house, techno, and Afrobeats, creating a sound unique to the region.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ── Essential Safety Tips ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco max-w-4xl">
@@ -865,23 +981,23 @@ export default function MoroccoNightlifePage() {
               <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
                 Always arrange your return transport before heading out. Ask your hotel to arrange a
                 trusted driver, use ride-hailing apps like inDrive or Careem, or take official petit
-                taxis (always insist the meter is running). Avoid unofficial cars and never accept rides
-                from strangers. Late-night taxi fares are higher but should still use the meter. Save
-                your hotel&apos;s phone number and address in your phone in case of emergencies.
+                taxis (insist the meter runs). Avoid unofficial cars and never accept rides from
+                strangers. Late-night fares are higher but should still be metered. Save your
+                hotel&apos;s phone number and address in your phone.
               </p>
             </div>
 
             <div className="card-moroccan p-5">
               <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
                 <DollarSign className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Manage Your Cash Carefully
+                Manage Your Cash
               </h3>
               <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
                 Carry only the cash you plan to spend. Leave passports, extra cards, and large amounts
-                of money in your hotel safe. Many upscale bars and clubs accept credit cards, but smaller
-                venues and taxis are cash-only. ATMs are widely available in Gueliz (Marrakech), Maarif
-                (Casablanca), and the Ville Nouvelle in other cities. Avoid using ATMs in quiet or poorly
-                lit areas late at night.
+                in your hotel safe. Many upscale bars and clubs accept credit cards, but smaller venues
+                and taxis are cash-only. ATMs are available in Gueliz (Marrakech), Maarif (Casablanca),
+                and the Ville Nouvelle of other cities. Avoid using ATMs in quiet or poorly lit areas
+                after dark.
               </p>
             </div>
 
@@ -893,9 +1009,9 @@ export default function MoroccoNightlifePage() {
               <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
                 Going out in a group is always safer, particularly for women travelers. Stick to
                 well-established venues and avoid wandering through unfamiliar neighborhoods late at
-                night. The medina streets can be confusing and poorly lit after dark. If you get
-                separated from your group, head to the nearest hotel or well-lit commercial area and
-                call a taxi from there. International hotel bars are safe havens if you feel uncomfortable.
+                night. Medina streets can be confusing and poorly lit after dark. If separated from your
+                group, head to the nearest hotel or well-lit commercial area and call a taxi. International
+                hotel bars are safe havens if you feel uncomfortable.
               </p>
             </div>
 
@@ -905,11 +1021,11 @@ export default function MoroccoNightlifePage() {
                 Watch Your Drinks
               </h3>
               <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                As in any nightlife destination worldwide, never leave drinks unattended and always
-                watch your glass being poured. If you feel unusually ill after a single drink, seek
-                help immediately. Established hotel bars and reputable nightclubs are the safest
-                environments. Drink responsibly, as public intoxication is not only culturally
-                frowned upon but can attract unwanted attention and leave you vulnerable.
+                As in any nightlife destination, never leave drinks unattended and always watch your
+                glass being poured. If you feel unusually ill after a single drink, seek help immediately.
+                Established hotel bars and reputable nightclubs are the safest environments. Drink
+                responsibly; public intoxication is culturally frowned upon and can attract unwanted
+                attention.
               </p>
             </div>
 
@@ -919,11 +1035,11 @@ export default function MoroccoNightlifePage() {
                 Know Key Phone Numbers
               </h3>
               <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Save these in your phone before going out: Tourist Police (dial 19), Ambulance (15),
-                and your hotel&apos;s front desk number. Morocco&apos;s Tourist Police are specifically
-                trained to assist visitors and operate in all major tourist areas. They are generally
-                helpful and many speak French and some English. Your hotel concierge is also an excellent
-                resource and can intervene on your behalf if needed.
+                Save these before going out: Tourist Police (dial 19), Ambulance (15), and your
+                hotel&apos;s front desk number. Morocco&apos;s Tourist Police are trained to assist
+                visitors and operate in all major tourist areas. They are generally helpful and many
+                speak French and some English. Your hotel concierge is also an excellent resource and
+                can intervene on your behalf if needed.
               </p>
             </div>
 
@@ -934,53 +1050,41 @@ export default function MoroccoNightlifePage() {
               </h3>
               <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
                 Cannabis (kif) is illegal in Morocco despite its visibility in some areas. Possession
-                can result in serious legal consequences. Public drunkenness can also lead to police
-                attention. Same-sex relationships are criminalized under Moroccan law, and LGBTQ+
-                travelers should exercise discretion in all public settings. Know and respect local
-                laws to ensure a safe and enjoyable experience.
+                can result in serious legal consequences. Public drunkenness can lead to police attention.
+                Same-sex relationships are criminalized under Moroccan law, and LGBTQ+ travelers should
+                exercise discretion in all public settings. The legal drinking age is 18, though many
+                premium clubs enforce a minimum of 21 on busy nights.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── What to Expect: Your First Night Out ── */}
+      {/* ── First Night Out ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <Globe className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
             What to Expect on Your First Night Out
           </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            First-time visitors to Morocco&apos;s nightlife scene should know what to expect
-            so they can relax and enjoy the experience fully.
-          </p>
-
-          <div className="prose-moroccan">
+          <div className="prose-moroccan mt-8">
             <div className="space-y-4 text-sm text-[var(--text-secondary)] leading-relaxed">
               <p>
                 Morocco&apos;s nightlife operates on a later schedule than most Western countries.
                 Moroccans eat dinner late, often at 9:00 or 10:00 PM, and the bar scene does not
-                truly begin until 10:00-11:00 PM. Nightclubs remain nearly empty until midnight
-                and hit peak energy between 1:00 and 3:00 AM. If you arrive at a club at 10:00 PM
-                expecting it to be busy, you will be disappointed. Plan accordingly and start your
-                evening at a rooftop bar or cocktail lounge before transitioning to clubs later.
+                begin until 10:00-11:00 PM. Nightclubs remain nearly empty until midnight and hit
+                peak energy between 1:00 and 3:00 AM. If you arrive at a club at 10:00 PM expecting
+                it to be full, you will be the only person on the dance floor. Start at a rooftop
+                bar or cocktail lounge before transitioning to clubs later in the night.
               </p>
               <p>
-                The atmosphere at upscale venues is generally welcoming and international. Hotel
-                bars attract a mix of travelers and well-to-do locals. Nightclubs in Marrakech
-                and Casablanca draw a well-dressed crowd that takes appearance seriously.
-                Expect door policies at popular clubs: bouncers may refuse entry based on dress
-                code or capacity. Arriving with hotel-booked reservations or as part of a mixed
-                group generally makes entry smoother. Cover charges typically include one drink.
-              </p>
-              <p>
-                Smoking is common in many Moroccan bars and some nightclub areas. While regulations
-                exist, enforcement is inconsistent. If you prefer a smoke-free environment, rooftop
-                bars and outdoor terraces are your best option. Most international hotel bars maintain
-                non-smoking indoor areas. The energy in Moroccan nightlife is genuinely warm and
-                social. Moroccans are naturally hospitable, and you may find yourself invited to join
-                tables, offered drinks, or drawn into animated conversations. Enjoy the spontaneity.
+                Expect door policies at popular clubs: bouncers may refuse entry based on dress code
+                or capacity. Arriving with a hotel-booked reservation or as part of a mixed group
+                makes entry smoother. Cover charges typically include one drink. Smoking is common in
+                many bars and some club areas. If you prefer smoke-free, rooftop terraces and hotel
+                bars are your best bet. The energy in Moroccan nightlife is genuinely warm. Moroccans
+                are naturally hospitable, and you may find yourself invited to join tables or drawn
+                into animated conversations. Embrace the spontaneity; it is part of the culture.
               </p>
             </div>
           </div>
@@ -991,16 +1095,17 @@ export default function MoroccoNightlifePage() {
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
+            <MessageCircleQuestion className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
             Frequently Asked Questions
           </h2>
 
           <div className="space-y-6">
-            {faqs.map((faq, index) => (
+            {faqItems.map((faq, index) => (
               <div key={index} className="card-moroccan p-6">
                 <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                  {faq.question}
+                  {faq.q}
                 </h3>
-                <p className="text-sm text-[var(--text-secondary)]">{faq.answer}</p>
+                <p className="text-sm text-[var(--text-secondary)]">{faq.a}</p>
               </div>
             ))}
           </div>
@@ -1013,62 +1118,50 @@ export default function MoroccoNightlifePage() {
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
             Related Guides
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            <Link href="/nightlife" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
-              <Moon className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Link href="/morocco-restaurants" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
+              <UtensilsCrossed className="w-8 h-8 text-[var(--color-accent)] mb-3" />
               <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Nightlife Overview
+                Morocco Restaurants
               </h3>
               <p className="text-sm text-[var(--text-secondary)] mb-3">
-                The complete overview of nightlife across all Moroccan destinations.
+                The best restaurants in every major city, from street food to fine dining.
               </p>
               <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
                 Read more <ArrowRight className="w-3.5 h-3.5" />
               </span>
             </Link>
-            <Link href="/morocco-nightlife-guide" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
+            <Link href="/morocco-riads-guide" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
+              <Building className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
+                Morocco Riads Guide
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] mb-3">
+                Find the perfect riad with rooftop terraces, courtyards, and authentic Moroccan style.
+              </p>
+              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
+                Read more <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
+            <Link href="/morocco-safety-tips" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
+              <ShieldCheck className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
+                Safety Tips
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] mb-3">
+                Essential safety advice for travelers in Morocco, from scams to transport.
+              </p>
+              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
+                Read more <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
+            <Link href="/morocco-marrakech" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
               <Star className="w-8 h-8 text-[var(--color-accent)] mb-3" />
               <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Nightlife Guide
+                Marrakech Guide
               </h3>
               <p className="text-sm text-[var(--text-secondary)] mb-3">
-                In-depth tips and recommendations for the best nights out in Morocco.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-            <Link href="/music" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
-              <Music className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Music Guide
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Gnawa, Andalusian, Chaabi, and modern Moroccan music traditions.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-            <Link href="/wine" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
-              <Wine className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Wine Guide
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Moroccan wine regions, vineyards, tastings, and the best local labels.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-            <Link href="/morocco-luxury-travel" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
-              <Sparkles className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Luxury Travel
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                5-star hotels, private experiences, and VIP itineraries across Morocco.
+                Complete guide to Marrakech: medina, souks, riads, restaurants, and day trips.
               </p>
               <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
                 Read more <ArrowRight className="w-3.5 h-3.5" />
@@ -1078,7 +1171,7 @@ export default function MoroccoNightlifePage() {
         </div>
       </section>
 
-      {/* ── CTA Section ── */}
+      {/* ── CTA ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
         <div className="container-morocco max-w-3xl text-center">
           <Music className="w-12 h-12 text-[var(--color-accent)] mx-auto mb-6" />
@@ -1086,24 +1179,17 @@ export default function MoroccoNightlifePage() {
             Ready to Experience Morocco After Dark?
           </h2>
           <p className="text-lg text-[var(--text-secondary)] mb-8">
-            From rooftop cocktails above the medina to Gnawa rhythms on the Atlantic coast,
-            Morocco&apos;s nightlife scene is as rich and diverse as the country itself. Start
-            planning your nights out today.
+            From rooftop cocktails above the medina to Gnawa rhythms on the Atlantic coast.
+            Start planning your nights out today.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href="/nightlife"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--color-accent)] text-white rounded-lg hover:bg-[var(--color-accent)]/90 transition-colors font-[family-name:var(--font-heading)] font-semibold"
-            >
-              <Moon className="w-4 h-4" />
-              Explore Nightlife
+            <Link href="/morocco-marrakech" className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--color-accent)] text-white rounded-lg hover:bg-[var(--color-accent)]/90 transition-colors font-[family-name:var(--font-heading)] font-semibold">
+              <Star className="w-4 h-4" />
+              Explore Marrakech
             </Link>
-            <Link
-              href="/music"
-              className="inline-flex items-center gap-2 px-6 py-3 border border-[var(--color-accent)] text-[var(--color-accent)] rounded-lg hover:bg-[var(--color-accent)]/5 transition-colors font-[family-name:var(--font-heading)] font-semibold"
-            >
-              <Music className="w-4 h-4" />
-              Music Guide
+            <Link href="/morocco-restaurants" className="inline-flex items-center gap-2 px-6 py-3 border border-[var(--color-accent)] text-[var(--color-accent)] rounded-lg hover:bg-[var(--color-accent)]/5 transition-colors font-[family-name:var(--font-heading)] font-semibold">
+              <UtensilsCrossed className="w-4 h-4" />
+              Restaurant Guide
             </Link>
           </div>
         </div>

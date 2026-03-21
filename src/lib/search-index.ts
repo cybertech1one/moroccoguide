@@ -2424,15 +2424,6 @@ export function buildSearchIndex(): SearchItem[] {
       priority: 9,
     },
     {
-      title: 'Morocco Nightlife Guide — Bars, Clubs & Live Music',
-      description: 'Complete Morocco nightlife guide — best bars, clubs, rooftop lounges, live Gnawa music, dress codes, and safety tips by city.',
-      type: 'page',
-      url: '/morocco-nightlife-guide',
-      tags: ['nightlife', 'bars', 'clubs', 'music', 'entertainment'],
-      keywords: ['Morocco nightlife guide', 'Marrakech nightlife', 'Casablanca clubs', 'bars in Morocco', 'rooftop bars Morocco'],
-      priority: 9,
-    },
-    {
       title: 'Morocco Ski Resorts Guide — Oukaimeden, Michlifen & Atlas Skiing',
       description: 'Complete guide to skiing in Morocco — Oukaimeden, Michlifen, lift passes, equipment rental, ski season, accommodation, and combining skiing with Marrakech.',
       type: 'page',
@@ -3276,6 +3267,15 @@ export function buildSearchIndex(): SearchItem[] {
       url: '/morocco-mint-tea',
       tags: ['mint tea', 'atay', 'tea culture', 'Moroccan traditions', 'tea houses'],
       keywords: ['moroccan mint tea', 'atay nana', 'morocco tea culture', 'mint tea recipe', 'best tea houses morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Waterfall Hikes Guide 2026',
+      description: 'Best waterfall hikes in Morocco — Ouzoud Falls, Akchour, Paradise Valley, Setti Fatma trails with difficulty levels, seasons, and practical tips.',
+      type: 'page',
+      url: '/morocco-waterfall-hikes',
+      tags: ['waterfalls', 'hiking', 'Ouzoud', 'Akchour', 'nature'],
+      keywords: ['morocco waterfall hikes', 'ouzoud falls hike', 'akchour waterfall', 'paradise valley morocco', 'setti fatma waterfalls'],
       priority: 9,
     },
   ];
