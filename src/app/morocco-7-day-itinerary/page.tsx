@@ -5,1089 +5,1059 @@ import {
   Home,
   MapPin,
   Star,
-  Heart,
   Clock,
   Info,
   ArrowRight,
-  Sparkles,
-  ShieldCheck,
+  Sun,
+  Moon,
+  Mountain,
+  Compass,
   DollarSign,
   CheckCircle,
+  AlertTriangle,
   Users,
   Building,
-  Utensils,
-  Gem,
-  Mountain,
-  Sun,
-  Calendar,
-  Compass,
   Camera,
-  Tent,
-  Globe,
-  Landmark,
-  Award,
-  BookOpen,
-  Crown,
+  Utensils,
+  Bus,
+  BedDouble,
+  Luggage,
+  CalendarDays,
+  Sunrise,
+  Sunset,
+  MessageCircleQuestion,
+  Banknote,
+  ShieldCheck,
+  Footprints,
+  Map,
 } from 'lucide-react';
 
-/* ═══════════════════════════════════════════════════════════════
-   CONSTANTS
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   CONSTANTS & BASE URL
+   ================================================================ */
 
 const BASE_URL = 'https://citytoursmorocco.com';
+const PAGE_URL = `${BASE_URL}/morocco-7-day-itinerary`;
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    SEO METADATA
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 export const metadata: Metadata = {
-  title: 'Morocco 7-Day Itinerary 2026 | One Week from Marrakech to Fez via Sahara',
+  title: 'Morocco 7-Day Itinerary 2026 | Marrakech, Sahara Desert & Fes Route',
   description:
-    'The perfect 7-day Morocco itinerary covering Marrakech, Atlas Mountains, Sahara Desert, Todra Gorge, and Fez. Day-by-day plan with budget breakdown, packing tips, transport options, and customizable route variations for one week in Morocco.',
+    'Day-by-day Morocco 7-day itinerary covering Marrakech, Atlas Mountains, Ait Benhaddou, Sahara Desert camel trek, and Fes medina. Budget, mid-range & luxury options with daily plans, accommodation picks, transport, and costs from 4,500 MAD.',
   keywords: [
-    '7 days in morocco',
-    'morocco 7 day itinerary',
-    'one week morocco itinerary',
-    'morocco itinerary 7 days',
-    'week in morocco',
-    'marrakech to fez itinerary',
-    'morocco one week trip',
-    'morocco 7 day tour',
-    'morocco travel itinerary',
-    'best morocco itinerary',
-    'morocco trip planner',
-    'morocco road trip 7 days',
-    'sahara desert itinerary morocco',
-    'marrakech to sahara to fez',
-    'morocco week holiday',
-    'morocco travel plan 2026',
+    'Morocco 7 day itinerary',
+    '7 days in Morocco',
+    'Morocco one week itinerary',
+    'Marrakech to Fes itinerary',
+    'Morocco Sahara desert itinerary',
+    'Morocco trip plan 7 days',
+    'Morocco travel itinerary 2026',
+    'Marrakech Sahara Fes route',
+    'Morocco week trip plan',
+    'best Morocco itinerary 7 days',
+    'Morocco road trip itinerary',
+    'Atlas Mountains day trip',
+    'Ait Benhaddou visit',
+    'Merzouga camel trek',
+    'Fes medina guide',
+    'Morocco budget itinerary',
+    'Morocco luxury itinerary',
   ],
   openGraph: {
-    title: 'Morocco 7-Day Itinerary 2026 | One Week from Marrakech to Fez via Sahara',
+    title: 'Morocco 7-Day Itinerary 2026 | Marrakech, Sahara Desert & Fes Route',
     description:
-      'Complete day-by-day guide for 7 days in Morocco. Marrakech medina, Atlas Mountains, Sahara camel trek, Todra Gorge, and Fez. Budget breakdown, packing tips, and customizable routes included.',
-    url: `${BASE_URL}/morocco-7-day-itinerary`,
+      'Complete day-by-day Morocco itinerary: Marrakech souks, Atlas Mountains, Ait Benhaddou kasbah, Sahara Desert overnight camp, and Fes medina. Three budget tiers with accommodation, meals, and transport details.',
+    url: PAGE_URL,
     images: [
       {
-        url: `${BASE_URL}/images/hero-morocco.webp`,
+        url: `${BASE_URL}/images/hero-marrakech.webp`,
         width: 1200,
         height: 630,
-        alt: 'Panoramic view of Morocco showing desert dunes, ancient medinas, and Atlas Mountains for a 7-day itinerary',
+        alt: 'Panoramic view of Marrakech medina with Atlas Mountains in the background',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Morocco 7-Day Itinerary 2026 | Marrakech to Fez via Sahara',
+    title: 'Morocco 7-Day Itinerary 2026 | Marrakech, Sahara & Fes',
     description:
-      'Day-by-day one-week Morocco itinerary with Marrakech, Atlas Mountains, Sahara Desert, Todra Gorge, and Fez. Budget, packing, and route variations included.',
-    images: [`${BASE_URL}/images/hero-morocco.webp`],
+      'Day-by-day 7-day Morocco route: Marrakech, Atlas Mountains, Sahara Desert camel trek, and Fes. Budget, mid-range & luxury breakdowns with costs from 4,500 MAD.',
+    images: [`${BASE_URL}/images/hero-marrakech.webp`],
   },
-  alternates: { canonical: `${BASE_URL}/morocco-7-day-itinerary` },
+  alternates: { canonical: PAGE_URL },
 };
 
-/* ═══════════════════════════════════════════════════════════════
-   JSON-LD STRUCTURED DATA
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   JSON-LD: TravelGuide + FAQPage
+   ================================================================ */
 
-const jsonLd = {
+const faqItems = [
+  {
+    q: 'Is 7 days enough for Morocco?',
+    a: 'Seven days is enough to cover the classic Marrakech-Sahara-Fes route at a comfortable pace. You will have two full days in Marrakech, a day crossing the Atlas Mountains and visiting Ait Benhaddou, a night in the Sahara Desert, and two days exploring Fes. If you want to add coastal cities like Essaouira or Chefchaouen, consider a 10-day itinerary instead.',
+  },
+  {
+    q: 'How much does a 7-day Morocco trip cost?',
+    a: 'A budget 7-day trip costs from 4,500 MAD per person (roughly 450 USD) covering hostels, street food, and shared transport. Mid-range travelers spend from 12,000 MAD per person with riad accommodation, private transport, and restaurant meals. Luxury trips run from 25,000 MAD per person with boutique riads, private guides, and fine dining. Seasonal pricing can change.',
+  },
+  {
+    q: 'Should I book a tour or travel independently for 7 days in Morocco?',
+    a: 'The Marrakech-to-Fes desert route is best done with a private driver or group tour because public transport between the Atlas Mountains, Ait Benhaddou, and the Sahara is limited and time-consuming. Marrakech and Fes are easy to explore independently on foot. Many travelers book a 3-day desert tour for the middle section and handle the cities on their own.',
+  },
+  {
+    q: 'What is the best time of year for a 7-day Morocco trip?',
+    a: 'March to May and September to November offer the best weather for this route. Summers (June-August) bring extreme heat in the desert with temperatures above 45 degrees Celsius. Winter (December-February) can be cold in the Atlas and desert at night but is pleasant in the cities. Ramadan dates shift yearly and affect restaurant hours.',
+  },
+  {
+    q: 'Is it safe to travel from Marrakech to Fes through the desert?',
+    a: 'Yes. The Marrakech-Sahara-Fes route is the most popular tourist circuit in Morocco and is well-traveled year-round. Roads are paved and in good condition. Hiring a reputable driver or joining an organized tour adds a layer of security. Solo female travelers regularly complete this route without issues.',
+  },
+  {
+    q: 'Can I do the 7-day itinerary in reverse, starting from Fes?',
+    a: 'Absolutely. The Fes-Sahara-Marrakech direction works equally well. Some travelers prefer ending in Marrakech because it has more evening entertainment and shopping for last-day souvenirs. The mountain passes and scenery are equally impressive in both directions.',
+  },
+  {
+    q: 'What should I pack for a 7-day Morocco trip?',
+    a: 'Pack layers for temperature swings between hot days and cold desert nights. Bring comfortable walking shoes for medina cobblestones, a scarf for sun and wind protection, sunscreen, a headlamp for the desert camp, and a small daypack. Women may want a loose shawl for covering shoulders at mosques and rural areas.',
+  },
+  {
+    q: 'Do I need a visa for Morocco?',
+    a: 'Citizens of the US, UK, EU, Canada, Australia, and many other countries receive a 90-day visa-free entry on arrival. Your passport must be valid for at least six months beyond your travel dates. Check the Moroccan consulate website for the full list of visa-exempt nationalities before booking.',
+  },
+];
+
+const jsonLdTravel = {
   '@context': 'https://schema.org',
   '@type': 'TravelGuide',
-  '@id': `${BASE_URL}/morocco-7-day-itinerary`,
-  name: 'Morocco 7-Day Itinerary 2026 | One Week from Marrakech to Fez via Sahara',
+  '@id': PAGE_URL,
+  name: 'Morocco 7-Day Itinerary 2026 — Marrakech, Sahara Desert & Fes',
   description:
-    'Complete day-by-day guide for spending 7 days in Morocco. Covers Marrakech, Atlas Mountains, Sahara Desert, Todra Gorge, and Fez with budget breakdown, packing tips, and customizable route variations.',
-  url: `${BASE_URL}/morocco-7-day-itinerary`,
-  image: `${BASE_URL}/images/hero-morocco.webp`,
-  author: {
-    '@type': 'Organization',
-    name: 'CityGuide Morocco',
-    url: BASE_URL,
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'CityGuide Morocco',
-    url: BASE_URL,
-  },
-  datePublished: '2026-03-20',
-  dateModified: '2026-03-20',
-  mainEntityOfPage: `${BASE_URL}/morocco-7-day-itinerary`,
-  isPartOf: {
-    '@type': 'WebSite',
-    name: 'CityGuide Morocco',
-    url: BASE_URL,
-  },
-  about: {
-    '@type': 'Country',
-    name: 'Morocco',
-  },
+    'Complete day-by-day 7-day Morocco itinerary covering Marrakech, Atlas Mountains, Ait Benhaddou, Sahara Desert, and Fes with budget, mid-range, and luxury options.',
+  url: PAGE_URL,
+  image: `${BASE_URL}/images/hero-marrakech.webp`,
+  author: { '@type': 'Organization', name: 'City Tours Morocco', url: BASE_URL },
+  publisher: { '@type': 'Organization', name: 'City Tours Morocco', url: BASE_URL },
+  datePublished: '2026-03-21',
+  dateModified: '2026-03-21',
+  mainEntityOfPage: PAGE_URL,
+  about: { '@type': 'Country', name: 'Morocco' },
   breadcrumb: {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Morocco 7-Day Itinerary', item: `${BASE_URL}/morocco-7-day-itinerary` },
+      { '@type': 'ListItem', position: 2, name: '7-Day Morocco Itinerary', item: PAGE_URL },
     ],
   },
 };
 
-const faqJsonLd = {
+const jsonLdFaq = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'How much does a 7-day trip to Morocco cost?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A budget 7-day Morocco trip costs from 4,500 to 6,500 MAD (approximately 450 to 650 USD) per person. This includes budget riads, local food, shared transport, and a Sahara desert tour. Mid-range travelers should budget from 8,000 to 14,000 MAD (800 to 1,400 USD) for private transport, nicer riads, and guided tours. Luxury trips can exceed 25,000 MAD per person. Prices vary seasonally and are subject to change.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is the best time of year to visit Morocco for 7 days?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The best time for a one-week Morocco itinerary is spring (March to May) or autumn (September to November). Temperatures are comfortable for both city sightseeing and desert excursions, typically 20 to 28 degrees Celsius. Summer (June to August) brings extreme heat in the Sahara and Marrakech, exceeding 40 degrees. Winter (December to February) is mild but Atlas Mountain passes may have snow.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can I do Morocco in 7 days without a tour?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes, you can explore Morocco independently for 7 days. Use CTM or Supratours buses between cities, book riads directly, and hire local guides for the Sahara desert tour (which is the one part most travelers book as a package). Independent travel gives more flexibility and typically costs less, though you will need to arrange your own Sahara logistics since self-driving in the desert is not recommended.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is 7 days enough for Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Seven days is enough for a rewarding Morocco trip covering the classic Marrakech to Fez route via the Sahara Desert. You will see imperial cities, mountains, desert, and gorges. However, you will need to be efficient with your time. If you want to add coastal destinations like Essaouira or Chefchaouen, consider extending to 10 to 14 days for a more relaxed pace.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Should I start my 7-day Morocco itinerary in Marrakech or Fez?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Most travelers start in Marrakech because it has more international flight connections and the route flows naturally east toward the Sahara and then north to Fez. Starting in Fez works equally well if you find cheaper flights there. The Marrakech-to-Fez direction means you end in a calmer city after the adventure of the desert, which many travelers prefer.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do I need a visa for a 7-day trip to Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Citizens of the USA, UK, EU, Canada, Australia, and many other countries do not need a visa for stays up to 90 days in Morocco. You only need a valid passport with at least six months validity remaining. Check the Moroccan consulate website for your specific nationality, as visa requirements can change.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What should I pack for one week in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Pack lightweight layers for temperature swings between hot days and cool desert nights. Essentials include comfortable walking shoes, a scarf or shawl for mosque visits, sunscreen, a warm jacket for Sahara nights and Atlas Mountain elevations, and a daypack. Women should bring modest clothing covering shoulders and knees for medina visits. A headlamp is useful for the desert bivouac.',
-      },
-    },
-  ],
+  mainEntity: faqItems.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
 };
 
-/* ═══════════════════════════════════════════════════════════════
-   DATA: AT-A-GLANCE OVERVIEW
-   ═══════════════════════════════════════════════════════════════ */
-
-const tripOverview = [
-  { label: 'Duration', value: '7 days / 6 nights', icon: Calendar },
-  { label: 'Route', value: 'Marrakech - Sahara - Fez', icon: Compass },
-  { label: 'Budget (mid-range)', value: 'From 8,000 MAD per person', icon: DollarSign },
-  { label: 'Best Season', value: 'March-May / Sep-Nov', icon: Sun },
-  { label: 'Transport', value: 'Private car, bus, or tour', icon: Globe },
-  { label: 'Difficulty', value: 'Easy to moderate', icon: Mountain },
-] as const;
-
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    DATA: DAILY ITINERARY
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
-const dailyItinerary = [
+const itineraryDays = [
   {
-    day: 1,
-    title: 'Arrive in Marrakech',
-    subtitle: 'Medina, Jemaa el-Fnaa & Riad Check-in',
-    icon: Landmark,
-    image: '/images/hero-marrakech.webp',
-    imageAlt: 'Jemaa el-Fnaa square in Marrakech at sunset with bustling market stalls and street performers',
-    description:
-      'Arrive at Marrakech Menara Airport and transfer to your riad in the medina. After settling in, begin exploring the UNESCO-listed medina on foot. The narrow, winding alleyways lead to hidden courtyards, artisan workshops, and centuries-old mosques.',
-    highlights: [
-      'Check into a traditional riad with a courtyard and rooftop terrace',
-      'Walk to Jemaa el-Fnaa square for the legendary evening spectacle',
-      'Sample street food: snail soup, fresh-squeezed orange juice, grilled meats',
-      'Watch snake charmers, musicians, and storytellers as the square comes alive at dusk',
-      'Wander the northern souks near the square for a first taste of Moroccan shopping',
-    ],
-    tips: 'Arrive before 4 PM if possible to enjoy the golden hour on the square. Pre-arrange airport pickup through your riad (from 100 MAD) to avoid taxi hassles.',
-    budget: 'Riad from 300 MAD, street food dinner from 50 MAD, airport transfer from 100 MAD',
+    day: '1',
+    title: 'Arrive in Marrakech & Explore the Medina',
+    location: 'Marrakech',
+    icon: MapPin,
+    morning: {
+      title: 'Arrival & Check-In',
+      description:
+        'Fly into Marrakech Menara Airport (RAK). Most international flights arrive by midday. A taxi from the airport to the medina costs from 70 MAD (agree on the price before getting in). Check into your riad in the medina — the Derb Dabachi and Riad Zitoun areas put you within walking distance of everything. Settle in, drink the welcome mint tea your host offers, and get your bearings from the rooftop terrace.',
+    },
+    afternoon: {
+      title: 'Jemaa el-Fnaa & Souk Circuit',
+      description:
+        'Walk to Jemaa el-Fnaa, the main square that transforms hourly. By late afternoon the food stalls start firing up and musicians gather. Before the crowds peak, duck into the northern souks: the dyers souk (Souk Sebbaghine), the leather goods alley, and the spice stalls along Rahba Kedima. Haggling is expected — start at 40% of the asking price and meet somewhere in the middle. End the evening with dinner at the food stalls in the square (a full meal costs from 40 MAD) or at a rooftop restaurant overlooking the chaos below.',
+    },
+    meals: 'Street food dinner at Jemaa el-Fnaa from 40 MAD. Rooftop restaurants from 120 MAD.',
+    budgetStay: 'Hostel dorm in the medina from 80 MAD per night (Hostel Kif Kif, Rodamon Riad)',
+    midStay: 'Traditional riad from 400 MAD per night (Riad Dar Zaman, Riad BE)',
+    luxuryStay: 'Boutique riad from 1,500 MAD per night (La Mamounia, Royal Mansour)',
   },
   {
-    day: 2,
-    title: 'Full Day in Marrakech',
-    subtitle: 'Bahia Palace, Saadian Tombs, Souks & Hammam',
-    icon: Crown,
-    image: '/images/hero-bahia-palace.webp',
-    imageAlt: 'Ornate tilework and carved stucco details inside Bahia Palace in Marrakech',
-    description:
-      'Dedicate your second day to Marrakech\'s major monuments and the sensory overload of the souks. This city rewards slow exploration, so take your time getting lost in the medina\'s labyrinthine streets.',
-    highlights: [
-      'Visit Bahia Palace for stunning zellige tilework and painted cedarwood ceilings',
-      'Explore the Saadian Tombs, hidden for centuries and rediscovered in 1917',
-      'Get lost in the color-coded souks: leather, spices, carpets, metalwork, textiles',
-      'Visit Ben Youssef Madrasa, a masterpiece of Moorish architecture',
-      'End the day with a traditional hammam experience for total relaxation',
-    ],
-    tips: 'Visit monuments early morning (opening at 9 AM) to beat the crowds. A local guide costs from 300 MAD for a half-day medina tour and can save hours of getting lost.',
-    budget: 'Bahia Palace from 70 MAD, Saadian Tombs from 70 MAD, hammam from 150 MAD, lunch from 60 MAD',
-  },
-  {
-    day: 3,
-    title: 'Atlas Mountains & Drive to Sahara',
-    subtitle: 'High Atlas Pass, Ait Benhaddou & Ouarzazate',
-    icon: Mountain,
-    image: '/images/hero-ait-benhaddou-sunset.webp',
-    imageAlt: 'UNESCO World Heritage Site Ait Benhaddou kasbah with Atlas Mountains in the background',
-    description:
-      'Leave Marrakech early and cross the spectacular Tizi n\'Tichka pass at 2,260 meters. The winding road through the High Atlas offers breathtaking panoramas. Stop at the UNESCO-listed Ait Benhaddou kasbah, then continue to the Dades Valley.',
-    highlights: [
-      'Cross Tizi n\'Tichka, the highest paved pass in North Africa at 2,260m',
-      'Stop at Berber villages and roadside stalls selling minerals and fossils',
-      'Explore Ait Benhaddou, the film-set kasbah featured in Gladiator and Game of Thrones',
-      'Pass through Ouarzazate, the "Gateway to the Sahara"',
-      'Drive the stunning Road of a Thousand Kasbahs through the Dades Valley',
-    ],
-    tips: 'This is a long driving day (roughly 6 to 8 hours depending on stops). If self-driving, leave Marrakech by 7 AM. Most Sahara tours include this route with hotel pickup.',
-    budget: 'Ait Benhaddou guide from 100 MAD, lunch en route from 50 MAD, overnight Dades or Tinghir from 250 MAD',
-  },
-  {
-    day: 4,
-    title: 'Sahara Desert Experience',
-    subtitle: 'Camel Trek, Sunset & Overnight Bivouac at Erg Chebbi',
-    icon: Tent,
-    image: '/images/hero-camel-caravan-sahara.webp',
-    imageAlt: 'Camel caravan crossing golden sand dunes at sunset in the Sahara Desert near Merzouga',
-    description:
-      'The highlight of any Morocco trip: riding camels into the Sahara Desert. Continue from the Dades or Todra area to Merzouga, where the towering Erg Chebbi dunes reach 150 meters high. In the late afternoon, mount your camel and trek into the sea of golden sand.',
-    highlights: [
-      'Arrive at Merzouga and meet your desert guides at the edge of Erg Chebbi',
-      'Ride camels for 90 minutes into the heart of the dunes at golden hour',
-      'Watch one of the most spectacular sunsets of your life from a dune summit',
-      'Enjoy a traditional Berber dinner under a blanket of stars in a desert bivouac',
-      'Experience absolute silence and a sky filled with thousands of visible stars',
-      'Optional: sandboarding on the dunes, or wake for sunrise over the Sahara',
-    ],
-    tips: 'Luxury desert camps have private tents with real beds and en-suite bathrooms (from 800 MAD per person). Basic bivouacs start from 250 MAD. Bring a warm layer as desert nights drop to near freezing in winter.',
-    budget: 'Desert tour with camel trek and bivouac from 350 MAD (basic) to 1,500 MAD (luxury camp)',
-  },
-  {
-    day: 5,
-    title: 'Todra Gorge & Drive to Fez',
-    subtitle: 'Canyon Hike, Berber Villages & Midelt Stop',
-    icon: Compass,
-    image: '/images/hero-todra-gorge-canyon.webp',
-    imageAlt: 'Towering red canyon walls of Todra Gorge with narrow passage and clear river below',
-    description:
-      'After a magical Sahara sunrise, ride camels back and begin the journey north toward Fez. Stop at the dramatic Todra Gorge, where 300-meter canyon walls narrow to just 10 meters apart. The drive passes through ever-changing landscapes, from palm oases to cedar forests.',
-    highlights: [
-      'Catch sunrise over the Sahara dunes before departing Merzouga',
-      'Walk through the dramatic narrow passage of Todra Gorge',
-      'Pass through the Ziz Valley with its ancient palm groves and red kasbahs',
-      'Stop in Midelt, the "apple capital" at the foot of Jebel Ayachi',
-      'Cross the Middle Atlas with possible Barbary macaque sightings near Ifrane',
-      'Arrive in Fez by evening and check into a medina riad',
-    ],
-    tips: 'This is another long driving day (approximately 8 to 9 hours). Most organized tours break this journey with generous stops. If driving independently, consider an overnight in Midelt to split the journey.',
-    budget: 'Todra Gorge free entry, lunch in Midelt from 40 MAD, Fez riad from 300 MAD',
-  },
-  {
-    day: 6,
-    title: 'Full Day in Fez',
-    subtitle: 'Fes el-Bali Medina, Tanneries, Bou Inania & Dar Batha',
+    day: '2',
+    title: 'Marrakech Deep Dive — Palaces, Gardens & Hammam',
+    location: 'Marrakech',
     icon: Building,
-    image: '/images/hero-fes-medina.webp',
-    imageAlt: 'Labyrinthine alleyways of the Fes el-Bali medina with artisan workshops and colorful goods',
-    description:
-      'Fez is Morocco\'s spiritual and cultural capital, home to the world\'s oldest university and the largest car-free urban area on Earth. The Fes el-Bali medina is a UNESCO World Heritage Site with over 9,000 alleyways, and getting happily lost is part of the experience.',
-    highlights: [
-      'Hire a local guide to navigate the labyrinthine Fes el-Bali medina',
-      'Visit the Chouara tanneries from a leather shop terrace for the iconic view',
-      'Explore Bou Inania Madrasa, a masterpiece of Marinid-era Islamic architecture',
-      'Visit Dar Batha Museum for its collection of Fassi ceramics and woodwork',
-      'Walk past the Al-Qarawiyyin University, founded in 859 AD',
-      'Shop for Fez specialties: blue ceramics, embroidered fabrics, and brass lanterns',
-      'Enjoy a traditional Fassi dinner with pastilla and slow-cooked tangia',
-    ],
-    tips: 'A medina guide is highly recommended in Fez (from 350 MAD for a full day). The medina GPS can be unreliable. Visit the tanneries in the morning when the light is best for photos. Carry a sprig of mint offered by the leather shop to counter the smell.',
-    budget: 'Bou Inania from 30 MAD, Dar Batha from 20 MAD, guide from 350 MAD, lunch from 60 MAD',
+    morning: {
+      title: 'Bahia Palace & Saadian Tombs',
+      description:
+        'Start early at Bahia Palace (entry from 70 MAD), a 19th-century masterpiece of carved cedarwood, painted ceilings, and courtyard gardens. It opens at 9:00, and the first hour is the quietest. From there, walk 10 minutes south to the Saadian Tombs (entry from 70 MAD), rediscovered in 1917 after being sealed for centuries. The Italian Carrara marble mausoleum of Sultan Ahmed al-Mansour is the highlight. If time allows, detour to the Mellah (Jewish quarter) and the Lazama Synagogue.',
+    },
+    afternoon: {
+      title: 'Jardin Majorelle, YSL Museum & Hammam',
+      description:
+        'Take a taxi (from 20 MAD) to Jardin Majorelle in Gueliz (entry from 70 MAD). The cobalt-blue villa and cactus gardens take about an hour. The adjacent Yves Saint Laurent Museum (from 100 MAD) is worth it for the architecture alone. Return to the medina by mid-afternoon and book a hammam session — a public hammam scrub costs from 50 MAD, or splurge on a luxury spa treatment from 500 MAD at Heritage Spa or Les Bains de Marrakech. Your skin will thank you before the desert days ahead.',
+    },
+    meals: 'Breakfast at riad (included). Lunch at Cafe Clock from 80 MAD. Dinner at Nomad from 150 MAD.',
+    budgetStay: 'Same hostel as Day 1',
+    midStay: 'Same riad as Day 1',
+    luxuryStay: 'Same luxury riad as Day 1',
   },
   {
-    day: 7,
-    title: 'Departure or Chefchaouen Extension',
-    subtitle: 'Last Fez Exploration & Optional Blue City Side Trip',
-    icon: Globe,
-    image: '/images/hero-fes.webp',
-    imageAlt: 'Panoramic view of the Fez medina skyline with minarets and traditional rooftops',
-    description:
-      'Your final day offers flexibility. If departing from Fez, spend the morning exploring the Ville Nouvelle, Borj Nord viewpoint, or picking up last-minute souvenirs. Alternatively, if your schedule allows, take a day trip or extend your stay to visit Chefchaouen, the famous Blue City.',
-    highlights: [
-      'Visit the Borj Nord fortress for panoramic views over the entire medina',
-      'Browse the Mellah (Jewish quarter) for antique shops and Fez\'s oldest synagogue',
-      'Enjoy a leisurely breakfast on a riad rooftop terrace overlooking the medina',
-      'Optional: 4-hour drive to Chefchaouen for the iconic blue-washed streets',
-      'Transfer to Fez-Saiss Airport or Fez train station for onward travel',
-    ],
-    tips: 'Flights from Fez connect to major European hubs. The train to Casablanca takes about 4 hours (from 165 MAD). If extending to Chefchaouen, plan at least one overnight to enjoy the town properly.',
-    budget: 'Borj Nord from 20 MAD, taxi to airport from 100 MAD, Chefchaouen bus from 75 MAD',
+    day: '3',
+    title: 'Atlas Mountains & Ait Benhaddou Kasbah',
+    location: 'High Atlas / Ouarzazate',
+    icon: Mountain,
+    morning: {
+      title: 'Cross the Tizi n\'Tichka Pass',
+      description:
+        'Leave Marrakech by 7:30 AM. The drive over the Tizi n\'Tichka pass (2,260 meters) takes about 3.5 hours and is one of the most scenic roads in North Africa. The highway winds through Berber villages, argan tree forests, and rust-red gorges. Your driver will stop at a panoramic viewpoint near the summit. On the descent toward Ouarzazate, the landscape shifts from green valleys to dry, dramatic desert terrain. Shared group tours from Marrakech cost from 350 MAD per person; private drivers from 1,200 MAD for the vehicle.',
+    },
+    afternoon: {
+      title: 'Ait Benhaddou & Overnight Near Ouarzazate',
+      description:
+        'Arrive at Ait Benhaddou, the UNESCO-listed fortified ksar (village) used as a filming location for Gladiator, Game of Thrones, and Lawrence of Arabia. Cross the shallow river on foot (or via a footbridge in high water) and climb through the tiered mudbrick houses to the granary at the top for a full panorama of the palm-lined valley. Entry is free, though a local guide (from 100 MAD) adds context about Berber architecture and film history. Continue to your overnight stop near Ouarzazate or in the Dades Valley, depending on your route.',
+    },
+    meals: 'Lunch at a roadside restaurant near Tichka from 60 MAD (tagine and bread). Dinner at your guesthouse from 100 MAD.',
+    budgetStay: 'Guesthouse near Ait Benhaddou from 150 MAD per night',
+    midStay: 'Kasbah hotel from 500 MAD per night (Kasbah Ellouze, Dar Daif)',
+    luxuryStay: 'Boutique kasbah from 1,800 MAD per night (Kasbah Tamadot, Ksar Ighnda)',
+  },
+  {
+    day: '4',
+    title: 'Sahara Desert — Dunes, Camels & Desert Camp',
+    location: 'Merzouga / Erg Chebbi',
+    icon: Sun,
+    morning: {
+      title: 'Drive Through Todra Gorge to Merzouga',
+      description:
+        'An early start for the long drive east (6-7 hours with stops). The route passes through the Dades Valley and optionally through Todra Gorge, where 300-meter limestone cliffs tower over a narrow canyon with a river running through it. A 30-minute walk into the gorge is enough to appreciate the scale. Continue through Tinghir and Errachidia, watching the landscape flatten into hammada (rocky desert) before the first golden dunes of Erg Chebbi appear near Merzouga.',
+    },
+    afternoon: {
+      title: 'Camel Trek & Overnight Desert Camp',
+      description:
+        'Arrive in Merzouga by mid-afternoon. After refreshments at a hotel on the edge of the dunes, mount your camel for the trek into Erg Chebbi. The ride to camp takes 60-90 minutes, winding between dunes that reach up to 150 meters high. At camp, climb a dune for sunset — the light turns the sand from gold to deep orange to purple. After dark, dinner is served in a Berber tent (usually tagine, couscous, and fruit). Drum music and stargazing follow. The Sahara sky, free of light pollution, is staggering.',
+    },
+    meals: 'Lunch en route from 60 MAD. Dinner at desert camp (included with camp booking).',
+    budgetStay: 'Shared desert camp from 250 MAD per person (basic tents, shared facilities)',
+    midStay: 'Private tent at a mid-range camp from 600 MAD per person (en-suite bathroom, hot shower)',
+    luxuryStay: 'Luxury desert camp from 2,500 MAD per person (heated tent, private terrace, full-course dinner)',
+  },
+  {
+    day: '5',
+    title: 'Sahara Sunrise & Drive to Fes',
+    location: 'Merzouga to Fes',
+    icon: Sunrise,
+    morning: {
+      title: 'Desert Sunrise & Departure',
+      description:
+        'Wake before dawn — your camp host will knock on your tent around 5:30 AM. Climb the nearest high dune and watch the sunrise paint the Sahara in pinks and golds. This is the single most photographed moment on the entire route. After breakfast at camp, ride the camels back to Merzouga. Shower and change at a hotel near the dunes, then begin the long drive north toward Fes.',
+    },
+    afternoon: {
+      title: 'Midelt & the Middle Atlas',
+      description:
+        'The drive from Merzouga to Fes takes 7-8 hours via Errachidia and Midelt. It is long but the scenery shifts constantly: flat desert gives way to cedar forests and the green Middle Atlas highlands. Stop in Midelt for lunch — this small mountain town is known for apple orchards and fossils. The Zad Pass (2,178 meters) near Ifrane offers a surprising landscape of European-style forests. If you spot Barbary macaques near Azrou, a quick stop is worth it. Arrive in Fes by early evening.',
+    },
+    meals: 'Breakfast at desert camp (included). Lunch in Midelt from 60 MAD. Dinner in Fes medina from 100 MAD.',
+    budgetStay: 'Hostel in Fes medina from 80 MAD per night (Funky Fes, Dar Bouali)',
+    midStay: 'Traditional riad in Fes from 400 MAD per night (Riad Fes Maya, Riad Laaroussa)',
+    luxuryStay: 'Palace riad from 2,000 MAD per night (Palais Faraj, Riad Fes)',
+  },
+  {
+    day: '6',
+    title: 'Fes Medina — Tanneries, Madrasas & Crafts',
+    location: 'Fes',
+    icon: Compass,
+    morning: {
+      title: 'Bou Inania Medersa & Fes el-Bali',
+      description:
+        'Hire a local guide (from 300 MAD for a half-day) for your first plunge into Fes el-Bali, the largest car-free urban zone in the world. Start at Bab Boujloud (the Blue Gate) and walk to Bou Inania Medersa (entry from 30 MAD), a 14th-century theological school with intricate stucco, cedarwood, and zellige tilework. Continue deeper into the medina past the Attarine Medersa and the Kairaouine Mosque — the oldest continuously operating university in the world, founded in 859 AD. Non-Muslims cannot enter the mosque but can admire the courtyard through the open doors.',
+    },
+    afternoon: {
+      title: 'Chouara Tanneries & Artisan Quarter',
+      description:
+        'Navigate to the Chouara Tanneries, where leather has been dyed using the same methods since the 11th century. View from a leather shop terrace above — vendors offer sprigs of mint to counter the smell. The sight of workers knee-deep in vats of saffron-yellow, poppy-red, and indigo dye is unforgettable. After the tanneries, wander through the coppersmith and woodworking quarters. Fes is the best city in Morocco for artisan shopping: hand-painted ceramics, embroidered leather, and brass lanterns. End the day with a traditional pastilla (pigeon or chicken pie) at a medina restaurant.',
+    },
+    meals: 'Breakfast at riad (included). Lunch at Cafe Clock Fes from 80 MAD. Dinner at The Ruined Garden from 150 MAD.',
+    budgetStay: 'Same hostel as Day 5',
+    midStay: 'Same riad as Day 5',
+    luxuryStay: 'Same palace riad as Day 5',
+  },
+  {
+    day: '7',
+    title: 'Fes Pottery, Panoramic Views & Departure',
+    location: 'Fes',
+    icon: Camera,
+    morning: {
+      title: 'Fes Pottery Quarter & Merenid Tombs',
+      description:
+        'Take a taxi (from 15 MAD) to the Fes pottery cooperative in the Ain Nokbi neighborhood. Watch artisans hand-paint geometric and floral patterns onto plates, bowls, and tiles using techniques unchanged for centuries. Prices are fixed and fair, and they ship internationally. From there, drive up to the Merenid Tombs on the hill above the medina. The tombs themselves are ruined, but the panoramic view of Fes el-Bali spread below — a sea of white buildings, green-tiled minarets, and satellite dishes — is the best in the city. Morning light is ideal for photographs.',
+    },
+    afternoon: {
+      title: 'Last Shopping & Departure',
+      description:
+        'Return to the medina for final purchases. The Talaa Kebira street has the highest concentration of shops. Moroccan saffron (check for authenticity — real saffron has thin red threads, no yellow), argan oil, preserved lemons, and ceramic tagines make excellent gifts. If flying out of Fes-Saiss Airport (FEZ), it is 25 minutes from the medina by taxi (from 120 MAD). If continuing to Chefchaouen, shared taxis (grands taxis) depart from the gare routiere and take about 4 hours (from 75 MAD per seat).',
+    },
+    meals: 'Breakfast at riad (included). Lunch in medina from 60 MAD.',
+    budgetStay: 'N/A — departure day',
+    midStay: 'N/A — departure day',
+    luxuryStay: 'N/A — departure day',
   },
 ] as const;
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    DATA: BUDGET BREAKDOWN
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
-const budgetBreakdown = [
-  { category: 'Accommodation (6 nights)', budget: 'From 1,500 MAD', midRange: 'From 3,000 MAD', luxury: 'From 7,000 MAD', icon: Building },
-  { category: 'Food & Drinks (7 days)', budget: 'From 700 MAD', midRange: 'From 1,500 MAD', luxury: 'From 3,500 MAD', icon: Utensils },
-  { category: 'Transport (all routes)', budget: 'From 800 MAD', midRange: 'From 2,500 MAD', luxury: 'From 5,000 MAD', icon: Compass },
-  { category: 'Sahara Desert Tour', budget: 'From 350 MAD', midRange: 'From 800 MAD', luxury: 'From 2,500 MAD', icon: Tent },
-  { category: 'Entrance Fees & Guides', budget: 'From 400 MAD', midRange: 'From 800 MAD', luxury: 'From 1,500 MAD', icon: Landmark },
-  { category: 'Shopping & Extras', budget: 'From 300 MAD', midRange: 'From 800 MAD', luxury: 'From 2,500 MAD', icon: Gem },
+const budgetTiers = [
+  {
+    tier: 'Budget',
+    icon: Banknote,
+    perDay: 'from 650 MAD / day',
+    total: 'from 4,500 MAD total',
+    color: 'text-green-700',
+    bg: 'bg-green-50',
+    details: [
+      'Hostels and basic guesthouses',
+      'Street food and market meals',
+      'Shared desert tour (3-day Marrakech to Fes)',
+      'Shared taxis and buses between cities',
+      'Self-guided medina walks',
+      'Basic shared desert camp',
+    ],
+  },
+  {
+    tier: 'Mid-Range',
+    icon: Star,
+    perDay: 'from 1,700 MAD / day',
+    total: 'from 12,000 MAD total',
+    color: 'text-[var(--color-accent)]',
+    bg: 'bg-orange-50',
+    details: [
+      'Traditional riads with breakfast included',
+      'Restaurant meals and cafe lunches',
+      'Private driver for desert segment',
+      'Domestic flights or private transfers',
+      'Half-day guided tours in each city',
+      'Private tent desert camp with en-suite',
+    ],
+  },
+  {
+    tier: 'Luxury',
+    icon: Building,
+    perDay: 'from 3,500 MAD / day',
+    total: 'from 25,000 MAD total',
+    color: 'text-[var(--color-gold)]',
+    bg: 'bg-amber-50',
+    details: [
+      'Boutique palace riads and 5-star hotels',
+      'Fine dining at top restaurants',
+      'Private vehicle with English-speaking guide',
+      'VIP airport transfers',
+      'Private guided tours with local historians',
+      'Luxury desert camp with heated tents',
+    ],
+  },
 ] as const;
 
-/* ═══════════════════════════════════════════════════════════════
-   DATA: PACKING ESSENTIALS
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   DATA: ESSENTIAL PACKING LIST
+   ================================================================ */
 
 const packingEssentials = [
-  { item: 'Comfortable walking shoes', reason: 'Medina streets are uneven cobblestones and can be slippery', icon: CheckCircle },
-  { item: 'Light layers & warm jacket', reason: 'Desert nights drop to near freezing; Atlas passes are cool even in summer', icon: Sun },
-  { item: 'Scarf or shawl', reason: 'Useful for sun protection, mosque visits, and as a sand shield in the desert', icon: ShieldCheck },
-  { item: 'Sunscreen & sunglasses', reason: 'Intense Moroccan sun, especially in the desert and mountains', icon: Sun },
-  { item: 'Daypack (20-30L)', reason: 'Carry water, camera, and layers during day trips and the camel trek', icon: Compass },
-  { item: 'Headlamp or flashlight', reason: 'Essential for the desert bivouac and navigating dark medina alleyways', icon: Star },
-  { item: 'Modest clothing', reason: 'Cover shoulders and knees in medinas and religious sites as a sign of respect', icon: Heart },
-  { item: 'Reusable water bottle', reason: 'Refill at riads and restaurants to reduce plastic waste', icon: CheckCircle },
+  { item: 'Comfortable walking shoes', note: 'Medina cobblestones are uneven' },
+  { item: 'Light layers + warm jacket', note: 'Desert nights drop to 5-10 degrees Celsius' },
+  { item: 'Sunscreen SPF 50+', note: 'UV is strong, especially at altitude and in the desert' },
+  { item: 'Scarf or shawl', note: 'Sun protection, sand cover, and cultural respect' },
+  { item: 'Headlamp or small flashlight', note: 'Desert camps and dark medina alleys at night' },
+  { item: 'Reusable water bottle', note: 'Refill at riads to reduce plastic waste' },
+  { item: 'Power adapter (Type C/E)', note: 'Morocco uses European-style plugs' },
+  { item: 'Cash in small denominations', note: 'Many medina shops and taxis are cash-only' },
 ] as const;
 
-/* ═══════════════════════════════════════════════════════════════
-   DATA: ROUTE VARIATIONS
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   DATA: TRANSPORT OPTIONS
+   ================================================================ */
 
-const routeVariations = [
+const transportOptions = [
   {
-    name: 'Beach & Coast Version',
-    icon: Sun,
-    description: 'Replace Days 3 and 4 with Essaouira (coastal town, 3 hours from Marrakech). Spend two days surfing, exploring the medina, and eating fresh seafood. Then fly from Marrakech to Fez for Days 6 and 7.',
-    bestFor: 'Surfers, beach lovers, and those who prefer ocean over desert',
+    mode: 'Private Driver',
+    cost: 'from 1,200 MAD per day',
+    best: 'Flexible schedule, door-to-door, commentary from a local',
+    note: 'Book through your riad or a reputable agency. Agree on price, route, and stops in advance.',
   },
   {
-    name: 'Culture & Cities Version',
-    icon: Landmark,
-    description: 'Skip the Sahara and spend extra days in Marrakech (3 days), Rabat (1 day), Meknes and Volubilis (1 day), then Fez (2 days). This covers three of Morocco\'s four imperial cities plus Roman ruins.',
-    bestFor: 'History buffs, museum lovers, and travelers who prefer cities',
+    mode: 'Group Desert Tour (3 days)',
+    cost: 'from 900 MAD per person',
+    best: 'Budget-friendly, social, no planning required',
+    note: 'Runs daily from Marrakech to Fes (or reverse). Typically 15-person minibus.',
   },
   {
-    name: 'Adventure & Outdoors Version',
-    icon: Mountain,
-    description: 'Add a Toubkal Base Camp trek on Day 3, then head to the Sahara for sandboarding and overnight camping. Include rock climbing at Todra Gorge on Day 5. Swap Fez city touring for a mountain bike ride through Ifrane cedar forests.',
-    bestFor: 'Active travelers, hikers, and outdoor enthusiasts seeking adrenaline',
-  },
-] as const;
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: ACCOMMODATION TIPS
-   ═══════════════════════════════════════════════════════════════ */
-
-const accommodationTips = [
-  {
-    type: 'Traditional Riads',
-    icon: Heart,
-    description:
-      'Stay in a converted courtyard house in the medina. Riads offer rooftop terraces, traditional Moroccan breakfasts, and an authentic experience. Many are family-run with exceptional hospitality. Book directly for better rates.',
-    priceRange: 'From 200 MAD (budget) to 2,000 MAD (luxury) per night',
-    bestFor: 'Atmosphere, culture, and central medina location',
+    mode: 'CTM / Supratours Bus',
+    cost: 'from 100-250 MAD per route',
+    best: 'Comfortable, air-conditioned, reliable schedules',
+    note: 'Best for Marrakech-Ouarzazate or Fes-Marrakech direct. Does not serve desert camps.',
   },
   {
-    type: 'Desert Bivouac Camps',
-    icon: Tent,
-    description:
-      'Overnight in the Sahara ranges from basic nomad-style tents with shared facilities to luxury glamping with private bathrooms, heated pools, and gourmet dining. Even basic camps provide an unforgettable stargazing experience.',
-    priceRange: 'From 250 MAD (basic) to 2,500 MAD (luxury) per person per night',
-    bestFor: 'The ultimate desert experience on Day 4',
+    mode: 'Grand Taxi',
+    cost: 'from 50-150 MAD per seat',
+    best: 'Faster than buses for medium distances',
+    note: 'Shared taxis depart when full (6 passengers). Pay for extra seats for more space.',
   },
   {
-    type: 'Guesthouses & Kasbahs',
-    icon: Building,
-    description:
-      'Along the southern route, converted kasbahs and small guesthouses offer character-filled stays in the Dades Valley, Todra Gorge, and Ouarzazate. Expect thick earthen walls, terraces with mountain views, and home-cooked Berber meals.',
-    priceRange: 'From 150 MAD to 800 MAD per night',
-    bestFor: 'Scenic stops between Marrakech and the desert',
-  },
-  {
-    type: 'Hotels & Hostels',
-    icon: Users,
-    description:
-      'Modern hotels are available in the Ville Nouvelle areas of Marrakech and Fez. Hostels with dormitory beds offer the cheapest option. Both lack medina charm but provide reliable Wi-Fi, air conditioning, and familiar amenities.',
-    priceRange: 'From 80 MAD (hostel dorm) to 1,500 MAD (4-star hotel) per night',
-    bestFor: 'Budget travelers and those who prefer modern comforts',
+    mode: 'Domestic Flight',
+    cost: 'from 400 MAD one-way',
+    best: 'Skip the long Fes-Marrakech return drive',
+    note: 'Royal Air Maroc and Air Arabia fly Fes-Marrakech in 1 hour.',
   },
 ] as const;
 
-/* ═══════════════════════════════════════════════════════════════
-   DATA: MUST-TRY FOODS
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   COMPONENT
+   ================================================================ */
 
-const mustTryFoods = [
-  {
-    name: 'Tagine',
-    description: 'Slow-cooked stew in a conical clay pot. Try chicken with preserved lemons and olives in Marrakech, and lamb with prunes in Fez.',
-    where: 'Everywhere along the route',
-    price: 'From 40 MAD in local spots, from 100 MAD in tourist restaurants',
-    icon: Utensils,
-  },
-  {
-    name: 'Pastilla (B\'stilla)',
-    description: 'Sweet and savory pie with pigeon or chicken, almonds, cinnamon, and flaky warqa pastry. A Fassi specialty you must try on Day 6 in Fez.',
-    where: 'Fez is the birthplace, available across Morocco',
-    price: 'From 50 MAD per portion',
-    icon: Award,
-  },
-  {
-    name: 'Tanjia',
-    description: 'Marrakech\'s answer to slow cooking: spiced meat sealed in an earthenware jug and cooked for hours in the embers of a hammam furnace.',
-    where: 'Marrakech only (Day 1-2)',
-    price: 'From 80 MAD per person',
-    icon: Utensils,
-  },
-  {
-    name: 'Berber Omelette',
-    description: 'A hearty breakfast of eggs cooked with tomatoes, peppers, onions, and spices in a tagine dish. The perfect fuel before a long day of exploration.',
-    where: 'Riads and cafes throughout the route',
-    price: 'From 25 MAD',
-    icon: Sun,
-  },
-  {
-    name: 'Mint Tea & Street Snacks',
-    description: 'Sweet mint tea is served everywhere. Pair it with msemen (layered flatbread), fresh orange juice (from 5 MAD), and snail soup at Jemaa el-Fnaa.',
-    where: 'Every city and roadside stop',
-    price: 'Tea from 10 MAD, snacks from 5 MAD',
-    icon: Star,
-  },
-  {
-    name: 'Mechoui',
-    description: 'Whole lamb slow-roasted in an underground clay oven until the meat falls off the bone. A communal feast best experienced in the Marrakech mechoui alley near Jemaa el-Fnaa.',
-    where: 'Marrakech mechoui alley (Day 1-2)',
-    price: 'From 60 MAD per portion',
-    icon: Crown,
-  },
-] as const;
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: CROSS-LINKS
-   ═══════════════════════════════════════════════════════════════ */
-
-const relatedGuides = [
-  { title: 'Morocco 3-Day Itinerary', href: '/morocco-3-day-itinerary', icon: Calendar, description: 'Short on time? Our 3-day itinerary covers Marrakech highlights.' },
-  { title: 'Morocco 10-Day Itinerary', href: '/morocco-itinerary-10-days', icon: Compass, description: 'Extend to 10 days and add Essaouira or Chefchaouen.' },
-  { title: 'Morocco Budget Guide', href: '/morocco-budget-guide', icon: DollarSign, description: 'How to travel Morocco on a tight budget with tips and costs.' },
-  { title: 'Sahara Desert Guide', href: '/morocco-sahara-guide', icon: Tent, description: 'Everything about Sahara tours, desert camps, and camel treks.' },
-  { title: 'Morocco Packing List', href: '/morocco-packing-list', icon: CheckCircle, description: 'Complete packing guide for every season and activity.' },
-  { title: 'Things to Do in Marrakech', href: '/things-to-do-marrakech', icon: Star, description: 'Full guide to Marrakech attractions, food, and experiences.' },
-  { title: 'Things to Do in Fez', href: '/things-to-do-fes', icon: Building, description: 'Explore the world\'s largest car-free medina and Fassi culture.' },
-  { title: 'Morocco Travel Tips', href: '/morocco-travel-tips', icon: Info, description: 'First-timer tips for safety, money, language, and culture.' },
-] as const;
-
-/* ═══════════════════════════════════════════════════════════════
-   PAGE COMPONENT
-   ═══════════════════════════════════════════════════════════════ */
-
-export default function Morocco7DayItineraryPage() {
+export default function Morocco7DayItinerary() {
   return (
     <>
+      {/* ── JSON-LD ─────────────────────────────────────────────── */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdTravel) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
       />
 
-      {/* ── Hero Section ── */}
-      <section className="relative py-20 md:py-28 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(/images/hero-morocco.webp)',
-          }}
-        />
-        <div className="absolute inset-0 hero-overlay" />
-        <div className="container-morocco relative z-10">
-          <nav className="flex items-center gap-2 text-sm text-white/60 mb-8" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-white transition-colors">
-              <Home className="w-3.5 h-3.5" />
-            </Link>
-            <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-white">Morocco 7-Day Itinerary</span>
-          </nav>
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm text-white/90 text-sm mb-6">
-            <Compass className="w-4 h-4" />
-            7-Day Travel Itinerary
-          </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-display)] font-bold text-white mb-4">
-            Morocco 7-Day Itinerary:
-            <br className="hidden md:block" /> Marrakech to Fez via Sahara
-          </h1>
-          <p className="text-lg md:text-xl text-white/80 max-w-3xl mb-8 font-[family-name:var(--font-heading)]">
-            The ultimate one-week Morocco route covering ancient medinas, soaring Atlas Mountain passes, golden Sahara dunes, dramatic gorges, and centuries of history. Day-by-day plan with budget, tips, and flexible route options.
-          </p>
-          <div className="flex flex-wrap gap-4 text-sm text-white/70">
-            <span className="flex items-center gap-1.5"><Calendar className="w-4 h-4" /> Updated March 2026</span>
-            <span className="flex items-center gap-1.5"><Clock className="w-4 h-4" /> 20 min read</span>
-            <span className="flex items-center gap-1.5"><MapPin className="w-4 h-4" /> Marrakech to Fez</span>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Trip At-a-Glance ── */}
-      <section className="py-12 bg-[#FAF8F5]">
-        <div className="container-morocco">
-          <h2 className="text-2xl md:text-3xl font-[family-name:var(--font-display)] font-bold text-gray-900 mb-8 text-center">
-            Your Week in Morocco at a Glance
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {tripOverview.map((item) => (
-              <div key={item.label} className="card-moroccan p-4 text-center">
-                <item.icon className="w-6 h-6 mx-auto mb-2 text-[var(--color-accent)]" />
-                <p className="text-xs text-gray-500 uppercase tracking-wide mb-1 font-[family-name:var(--font-heading)]">{item.label}</p>
-                <p className="text-sm font-semibold text-gray-900">{item.value}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Introduction ── */}
-      <section className="py-12 md:py-16">
-        <div className="container-morocco max-w-4xl">
-          <div className="card-moroccan p-6 md:p-8">
-            <div className="flex items-start gap-3 mb-4">
-              <Info className="w-6 h-6 text-[var(--color-accent)] flex-shrink-0 mt-1" />
-              <h2 className="text-2xl md:text-3xl font-[family-name:var(--font-display)] font-bold text-gray-900">
-                Why This 7-Day Morocco Itinerary Works
-              </h2>
-            </div>
-            <div className="prose prose-lg max-w-none text-gray-700 space-y-4">
-              <p>
-                This classic Marrakech-to-Fez route is the most popular week-long itinerary in Morocco for good reason. It threads together the country&apos;s greatest highlights in a logical geographic arc: start in the vibrant south, cross the dramatic Atlas Mountains, dip into the Sahara Desert for a once-in-a-lifetime night under the stars, wind through jaw-dropping gorges, and finish in the medieval labyrinth of Fez.
-              </p>
-              <p>
-                The route avoids backtracking because you fly into Marrakech and out of Fez (or take a train back), making every travel day double as a sightseeing day. Whether you are a first-time visitor or returning for a deeper dive, this one-week Morocco itinerary balances culture, adventure, and relaxation without feeling rushed.
-              </p>
-              <p className="text-sm text-gray-500 italic">
-                Note: All prices listed are approximate and based on 2026 rates. Seasonal pricing, inflation, and exchange rate fluctuations can affect costs. Always confirm current prices before booking.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Route Map Overview ── */}
-      <section className="py-8 bg-[#FAF8F5]">
-        <div className="container-morocco max-w-4xl">
-          <div className="card-moroccan p-6 zellige-border">
-            <h3 className="text-xl font-[family-name:var(--font-display)] font-bold text-gray-900 mb-4 flex items-center gap-2">
-              <MapPin className="w-5 h-5 text-[var(--color-accent)]" />
-              Route Overview
-            </h3>
-            <div className="flex flex-wrap items-center gap-2 text-sm text-gray-700">
-              <span className="font-semibold text-[var(--color-accent)]">Marrakech</span>
-              <ArrowRight className="w-4 h-4 text-gray-400" />
-              <span>Tizi n&apos;Tichka Pass</span>
-              <ArrowRight className="w-4 h-4 text-gray-400" />
-              <span>Ait Benhaddou</span>
-              <ArrowRight className="w-4 h-4 text-gray-400" />
-              <span>Dades Valley</span>
-              <ArrowRight className="w-4 h-4 text-gray-400" />
-              <span className="font-semibold text-[var(--color-accent)]">Merzouga (Sahara)</span>
-              <ArrowRight className="w-4 h-4 text-gray-400" />
-              <span>Todra Gorge</span>
-              <ArrowRight className="w-4 h-4 text-gray-400" />
-              <span>Midelt</span>
-              <ArrowRight className="w-4 h-4 text-gray-400" />
-              <span>Ifrane</span>
-              <ArrowRight className="w-4 h-4 text-gray-400" />
-              <span className="font-semibold text-[var(--color-accent)]">Fez</span>
-            </div>
-            <p className="mt-3 text-sm text-gray-500">Total driving distance: approximately 1,100 km over 7 days</p>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Day-by-Day Itinerary ── */}
-      <section className="py-12 md:py-16">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-gray-900 mb-10 text-center">
-            Day-by-Day Morocco Itinerary
-          </h2>
-          <div className="space-y-10">
-            {dailyItinerary.map((day) => (
-              <article key={day.day} className="card-moroccan overflow-hidden" id={`day-${day.day}`}>
-                <div className="relative h-56 md:h-64">
-                  <img
-                    src={day.image}
-                    alt={day.imageAlt}
-                    className="w-full h-full object-cover"
-                    loading={day.day <= 2 ? 'eager' : 'lazy'}
-                    width={800}
-                    height={400}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--color-accent)] text-white text-sm font-bold mb-2">
-                      <day.icon className="w-4 h-4" />
-                      Day {day.day}
-                    </div>
-                    <h3 className="text-2xl md:text-3xl font-[family-name:var(--font-display)] font-bold text-white">
-                      {day.title}
-                    </h3>
-                    <p className="text-white/80 text-sm font-[family-name:var(--font-heading)]">{day.subtitle}</p>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <p className="text-gray-700 mb-4 leading-relaxed">{day.description}</p>
-                  <h4 className="font-[family-name:var(--font-heading)] font-semibold text-gray-900 mb-3 flex items-center gap-2">
-                    <Sparkles className="w-4 h-4 text-[var(--color-gold)]" />
-                    Highlights
-                  </h4>
-                  <ul className="space-y-2 mb-5">
-                    {day.highlights.map((highlight, i) => (
-                      <li key={i} className="flex items-start gap-2 text-gray-700 text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
-                        <span>{highlight}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="flex flex-col sm:flex-row gap-4 pt-4 border-t border-gray-100">
-                    <div className="flex-1">
-                      <p className="text-xs uppercase tracking-wide text-gray-500 mb-1 font-[family-name:var(--font-heading)]">
-                        <ShieldCheck className="w-3.5 h-3.5 inline mr-1" />Insider Tip
-                      </p>
-                      <p className="text-sm text-gray-600">{day.tips}</p>
-                    </div>
-                    <div className="flex-1">
-                      <p className="text-xs uppercase tracking-wide text-gray-500 mb-1 font-[family-name:var(--font-heading)]">
-                        <DollarSign className="w-3.5 h-3.5 inline mr-1" />Day Budget
-                      </p>
-                      <p className="text-sm text-gray-600">{day.budget}</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Budget Breakdown ── */}
-      <section className="py-12 md:py-16 bg-[#FAF8F5]">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-gray-900 mb-4 text-center">
-            7-Day Morocco Budget Breakdown
-          </h2>
-          <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto font-[family-name:var(--font-heading)]">
-            How much does one week in Morocco cost? Here is a realistic breakdown per person based on 2026 prices. Seasonal pricing can change, so always confirm current rates.
-          </p>
-          <div className="card-moroccan overflow-hidden">
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="bg-[var(--color-accent)] text-white">
-                    <th className="text-left p-4 font-[family-name:var(--font-heading)]">Category</th>
-                    <th className="text-center p-4 font-[family-name:var(--font-heading)]">Budget</th>
-                    <th className="text-center p-4 font-[family-name:var(--font-heading)]">Mid-Range</th>
-                    <th className="text-center p-4 font-[family-name:var(--font-heading)]">Luxury</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {budgetBreakdown.map((row, i) => (
-                    <tr key={row.category} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                      <td className="p-4 font-medium text-gray-900 flex items-center gap-2">
-                        <row.icon className="w-4 h-4 text-[var(--color-accent)]" />
-                        {row.category}
-                      </td>
-                      <td className="p-4 text-center text-gray-700">{row.budget}</td>
-                      <td className="p-4 text-center text-gray-700">{row.midRange}</td>
-                      <td className="p-4 text-center text-gray-700">{row.luxury}</td>
-                    </tr>
-                  ))}
-                  <tr className="bg-[var(--color-accent)]/10 font-bold">
-                    <td className="p-4 text-gray-900">Total (per person)</td>
-                    <td className="p-4 text-center text-gray-900">From 4,050 MAD</td>
-                    <td className="p-4 text-center text-gray-900">From 9,400 MAD</td>
-                    <td className="p-4 text-center text-gray-900">From 22,000 MAD</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <p className="text-xs text-gray-500 text-center mt-4 italic">
-            Prices are per person in Moroccan Dirhams (MAD). 1 USD is approximately 10 MAD. International flights not included. Prices reflect 2026 estimates and are subject to seasonal variation.
-          </p>
-        </div>
-      </section>
-
-      {/* ── Packing Tips ── */}
-      <section className="py-12 md:py-16">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-gray-900 mb-4 text-center">
-            What to Pack for 7 Days in Morocco
-          </h2>
-          <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto font-[family-name:var(--font-heading)]">
-            Morocco&apos;s diverse terrain means you will experience medina heat, mountain cool, and desert extremes all in one week. Pack smart with these essentials.
-          </p>
-          <div className="grid md:grid-cols-2 gap-4">
-            {packingEssentials.map((item) => (
-              <div key={item.item} className="card-moroccan p-5 flex items-start gap-4">
-                <item.icon className="w-5 h-5 text-[var(--color-accent)] flex-shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="font-[family-name:var(--font-heading)] font-semibold text-gray-900 mb-1">{item.item}</h4>
-                  <p className="text-sm text-gray-600">{item.reason}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="mt-6 text-center">
-            <Link
-              href="/morocco-packing-list"
-              className="inline-flex items-center gap-2 text-[var(--color-accent)] font-semibold hover:underline"
-            >
-              View our complete Morocco packing list <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Route Variations ── */}
-      <section className="py-12 md:py-16 bg-[#FAF8F5]">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-gray-900 mb-4 text-center">
-            How to Customize Your Week in Morocco
-          </h2>
-          <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto font-[family-name:var(--font-heading)]">
-            The classic Marrakech-to-Fez route is just one way to spend 7 days in Morocco. Here are three alternative versions depending on your travel style.
-          </p>
-          <div className="grid md:grid-cols-3 gap-6">
-            {routeVariations.map((variant) => (
-              <div key={variant.name} className="card-moroccan p-6">
-                <variant.icon className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-                <h3 className="text-lg font-[family-name:var(--font-display)] font-bold text-gray-900 mb-2">{variant.name}</h3>
-                <p className="text-sm text-gray-700 mb-3">{variant.description}</p>
-                <p className="text-xs text-[var(--color-accent)] font-semibold uppercase tracking-wide">
-                  <Users className="w-3.5 h-3.5 inline mr-1" />
-                  {variant.bestFor}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Transport Options ── */}
-      <section className="py-12 md:py-16">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-gray-900 mb-8 text-center">
-            Getting Around: Transport Options
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="card-moroccan p-6 text-center">
-              <Award className="w-8 h-8 text-[var(--color-gold)] mx-auto mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-display)] font-bold text-gray-900 mb-2">Organized Tour</h3>
-              <p className="text-sm text-gray-700 mb-3">
-                The easiest option. A driver picks you up from your riad and handles all logistics for the Marrakech-to-Fez route including the Sahara. Typically 3 to 4 days, with free days in each city.
-              </p>
-              <p className="text-sm font-semibold text-[var(--color-accent)]">From 2,500 MAD per person (shared)</p>
-            </div>
-            <div className="card-moroccan p-6 text-center">
-              <Compass className="w-8 h-8 text-[var(--color-gold)] mx-auto mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-display)] font-bold text-gray-900 mb-2">Self-Drive Rental</h3>
-              <p className="text-sm text-gray-700 mb-3">
-                Maximum flexibility. Rent a car in Marrakech and drop off in Fez. Mountain roads are paved but winding. International license required. Do not self-drive in the Sahara sand dunes.
-              </p>
-              <p className="text-sm font-semibold text-[var(--color-accent)]">From 300 MAD per day plus fuel</p>
-            </div>
-            <div className="card-moroccan p-6 text-center">
-              <Globe className="w-8 h-8 text-[var(--color-gold)] mx-auto mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-display)] font-bold text-gray-900 mb-2">Buses & Shared Transport</h3>
-              <p className="text-sm text-gray-700 mb-3">
-                CTM and Supratours buses connect major cities. Combine bus travel for city-to-city legs with a group Sahara tour from Merzouga. The most budget-friendly option.
-              </p>
-              <p className="text-sm font-semibold text-[var(--color-accent)]">From 80 MAD per bus leg</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Essential Tips ── */}
-      <section className="py-12 md:py-16 bg-[#FAF8F5]">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-gray-900 mb-8 text-center">
-            Essential Tips for Your 7-Day Morocco Trip
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="card-moroccan p-5">
-              <h4 className="font-[family-name:var(--font-heading)] font-semibold text-gray-900 mb-2 flex items-center gap-2">
-                <DollarSign className="w-5 h-5 text-[var(--color-accent)]" />
-                Money & Bargaining
-              </h4>
-              <p className="text-sm text-gray-700">
-                Carry cash in Moroccan Dirhams (MAD). ATMs are available in all cities but scarce in the desert and small towns. Bargaining is expected in souks: start at 30 to 40 percent of the asking price and meet in the middle. Fixed-price shops exist in the Ville Nouvelle areas.
-              </p>
-            </div>
-            <div className="card-moroccan p-5">
-              <h4 className="font-[family-name:var(--font-heading)] font-semibold text-gray-900 mb-2 flex items-center gap-2">
-                <ShieldCheck className="w-5 h-5 text-[var(--color-accent)]" />
-                Safety & Scams
-              </h4>
-              <p className="text-sm text-gray-700">
-                Morocco is generally safe for tourists. Common scams include fake guides, henna traps, and overpriced taxis. Use the meter or agree on a price before getting in. Be firm but polite when declining persistent sellers in the medinas.
-              </p>
-            </div>
-            <div className="card-moroccan p-5">
-              <h4 className="font-[family-name:var(--font-heading)] font-semibold text-gray-900 mb-2 flex items-center gap-2">
-                <Camera className="w-5 h-5 text-[var(--color-accent)]" />
-                Photography Etiquette
-              </h4>
-              <p className="text-sm text-gray-700">
-                Always ask before photographing locals, especially women and market workers. Some performers at Jemaa el-Fnaa will demand tips if you photograph them. Drones require government permission and are restricted near military areas and royal palaces.
-              </p>
-            </div>
-            <div className="card-moroccan p-5">
-              <h4 className="font-[family-name:var(--font-heading)] font-semibold text-gray-900 mb-2 flex items-center gap-2">
-                <BookOpen className="w-5 h-5 text-[var(--color-accent)]" />
-                Language Basics
-              </h4>
-              <p className="text-sm text-gray-700">
-                Arabic and Tamazight are official languages. French is widely spoken. English is common in tourist areas. Learn a few words: &quot;Salam&quot; (hello), &quot;Shukran&quot; (thank you), &quot;La&quot; (no), &quot;Bslama&quot; (goodbye). Locals appreciate any effort to speak Arabic or Tamazight.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Where to Stay ── */}
-      <section className="py-12 md:py-16">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-gray-900 mb-4 text-center">
-            Where to Stay: Accommodation Guide
-          </h2>
-          <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto font-[family-name:var(--font-heading)]">
-            Your 7-day Morocco itinerary includes 6 nights across different accommodation types. Here is what to expect at each stage of the journey.
-          </p>
-          <div className="grid md:grid-cols-2 gap-5">
-            {accommodationTips.map((acc) => (
-              <div key={acc.type} className="card-moroccan p-5">
-                <div className="flex items-center gap-3 mb-3">
-                  <acc.icon className="w-6 h-6 text-[var(--color-accent)]" />
-                  <h3 className="font-[family-name:var(--font-heading)] font-bold text-gray-900">{acc.type}</h3>
-                </div>
-                <p className="text-sm text-gray-700 mb-3">{acc.description}</p>
-                <div className="flex flex-col gap-1 text-xs text-gray-500">
-                  <span className="flex items-center gap-1">
-                    <DollarSign className="w-3.5 h-3.5" /> {acc.priceRange}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Star className="w-3.5 h-3.5" /> Best for: {acc.bestFor}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Must-Try Foods ── */}
-      <section className="py-12 md:py-16 bg-[#FAF8F5]">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-gray-900 mb-4 text-center">
-            Must-Try Foods During Your Week
-          </h2>
-          <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto font-[family-name:var(--font-heading)]">
-            Moroccan cuisine is one of the highlights of any trip. Here are the dishes you absolutely cannot miss during your 7 days. Prices may vary by season and location.
-          </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {mustTryFoods.map((food) => (
-              <div key={food.name} className="card-moroccan p-5">
-                <div className="flex items-center gap-2 mb-2">
-                  <food.icon className="w-5 h-5 text-[var(--color-gold)]" />
-                  <h3 className="font-[family-name:var(--font-heading)] font-bold text-gray-900">{food.name}</h3>
-                </div>
-                <p className="text-sm text-gray-700 mb-2">{food.description}</p>
-                <p className="text-xs text-gray-500">
-                  <MapPin className="w-3 h-3 inline mr-1" />{food.where}
-                </p>
-                <p className="text-xs text-[var(--color-accent)] font-semibold mt-1">{food.price}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Quick Reference Table ── */}
-      <section className="py-12 md:py-16">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-gray-900 mb-4 text-center">
-            7-Day Quick Reference
-          </h2>
-          <p className="text-center text-gray-600 mb-8 font-[family-name:var(--font-heading)]">
-            A handy summary of each day at a glance. Save or screenshot this for your trip.
-          </p>
-          <div className="card-moroccan overflow-hidden">
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="bg-[var(--color-accent)] text-white">
-                    <th className="text-left p-3 font-[family-name:var(--font-heading)]">Day</th>
-                    <th className="text-left p-3 font-[family-name:var(--font-heading)]">Location</th>
-                    <th className="text-left p-3 font-[family-name:var(--font-heading)]">Top Highlight</th>
-                    <th className="text-left p-3 font-[family-name:var(--font-heading)]">Sleep</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="bg-white">
-                    <td className="p-3 font-bold text-[var(--color-accent)]">1</td>
-                    <td className="p-3 text-gray-900">Marrakech</td>
-                    <td className="p-3 text-gray-700">Jemaa el-Fnaa square at sunset</td>
-                    <td className="p-3 text-gray-600">Riad in medina</td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="p-3 font-bold text-[var(--color-accent)]">2</td>
-                    <td className="p-3 text-gray-900">Marrakech</td>
-                    <td className="p-3 text-gray-700">Bahia Palace and souks</td>
-                    <td className="p-3 text-gray-600">Riad in medina</td>
-                  </tr>
-                  <tr className="bg-white">
-                    <td className="p-3 font-bold text-[var(--color-accent)]">3</td>
-                    <td className="p-3 text-gray-900">Atlas to Dades</td>
-                    <td className="p-3 text-gray-700">Ait Benhaddou kasbah</td>
-                    <td className="p-3 text-gray-600">Guesthouse in Dades</td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="p-3 font-bold text-[var(--color-accent)]">4</td>
-                    <td className="p-3 text-gray-900">Sahara Desert</td>
-                    <td className="p-3 text-gray-700">Camel trek and star bivouac</td>
-                    <td className="p-3 text-gray-600">Desert camp</td>
-                  </tr>
-                  <tr className="bg-white">
-                    <td className="p-3 font-bold text-[var(--color-accent)]">5</td>
-                    <td className="p-3 text-gray-900">Todra to Fez</td>
-                    <td className="p-3 text-gray-700">Todra Gorge canyon walk</td>
-                    <td className="p-3 text-gray-600">Riad in Fez</td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="p-3 font-bold text-[var(--color-accent)]">6</td>
-                    <td className="p-3 text-gray-900">Fez</td>
-                    <td className="p-3 text-gray-700">Medina, tanneries, and Bou Inania</td>
-                    <td className="p-3 text-gray-600">Riad in Fez</td>
-                  </tr>
-                  <tr className="bg-white">
-                    <td className="p-3 font-bold text-[var(--color-accent)]">7</td>
-                    <td className="p-3 text-gray-900">Fez / Depart</td>
-                    <td className="p-3 text-gray-700">Borj Nord viewpoint or Chefchaouen</td>
-                    <td className="p-3 text-gray-600">Departure</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── FAQ Section ── */}
-      <section className="py-12 md:py-16">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-gray-900 mb-8 text-center">
-            Frequently Asked Questions
-          </h2>
-          <div className="space-y-4">
-            {faqJsonLd.mainEntity.map((faq, i) => (
-              <details key={i} className="card-moroccan group" open={i === 0}>
-                <summary className="p-5 cursor-pointer flex items-start gap-3 list-none [&::-webkit-details-marker]:hidden">
-                  <Info className="w-5 h-5 text-[var(--color-accent)] flex-shrink-0 mt-0.5" />
-                  <span className="font-[family-name:var(--font-heading)] font-semibold text-gray-900 flex-1">
-                    {faq.name}
-                  </span>
-                  <ChevronRight className="w-5 h-5 text-gray-400 transition-transform group-open:rotate-90 flex-shrink-0" />
-                </summary>
-                <div className="px-5 pb-5 pl-12">
-                  <p className="text-sm text-gray-700 leading-relaxed">{faq.acceptedAnswer.text}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Related Guides ── */}
-      <section className="py-12 md:py-16 bg-[#FAF8F5]">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-gray-900 mb-4 text-center">
-            Continue Planning Your Morocco Trip
-          </h2>
-          <p className="text-center text-gray-600 mb-8 font-[family-name:var(--font-heading)]">
-            Explore more guides to make your one-week Morocco itinerary even better.
-          </p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {relatedGuides.map((guide) => (
-              <Link key={guide.href} href={guide.href} className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
-                <guide.icon className="w-6 h-6 text-[var(--color-accent)] mb-2 group-hover:scale-110 transition-transform" />
-                <h3 className="font-[family-name:var(--font-heading)] font-semibold text-gray-900 mb-1 group-hover:text-[var(--color-accent)] transition-colors text-sm">
-                  {guide.title}
-                </h3>
-                <p className="text-xs text-gray-600">{guide.description}</p>
+      <main className="min-h-screen bg-[#FAF8F5]">
+        {/* ── HERO ──────────────────────────────────────────────── */}
+        <section className="relative h-[55vh] min-h-[420px]">
+          <img
+            src="/images/hero-marrakech.webp"
+            alt="Marrakech medina rooftops at golden hour with Atlas Mountains on the horizon"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+          <div className="hero-overlay absolute inset-0" />
+          <div className="container-morocco relative z-10 flex h-full flex-col justify-end pb-12">
+            {/* Breadcrumbs */}
+            <nav aria-label="Breadcrumb" className="mb-4 flex items-center gap-1 text-sm text-white/80">
+              <Link href="/" className="flex items-center gap-1 hover:text-white">
+                <Home className="h-3.5 w-3.5" /> Home
               </Link>
+              <ChevronRight className="h-3.5 w-3.5" />
+              <span className="text-white">7-Day Morocco Itinerary</span>
+            </nav>
+            <h1 className="font-[family-name:var(--font-display)] text-4xl leading-tight text-white md:text-5xl lg:text-6xl">
+              Morocco 7-Day Itinerary
+            </h1>
+            <p className="mt-3 max-w-2xl font-[family-name:var(--font-heading)] text-lg text-white/90 md:text-xl">
+              Marrakech, Atlas Mountains, Sahara Desert &amp; Fes — a complete week covering Morocco&apos;s most iconic route with daily plans for every budget.
+            </p>
+          </div>
+        </section>
+
+        {/* ── INTRO ─────────────────────────────────────────────── */}
+        <section className="container-morocco py-14">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="font-[family-name:var(--font-display)] text-3xl text-[var(--color-accent)]">
+              One Week, Four Worlds
+            </h2>
+            <div className="mt-5 space-y-4 font-[family-name:var(--font-heading)] text-gray-700 leading-relaxed">
+              <p>
+                The Marrakech-to-Fes loop is Morocco&apos;s most popular route for good reason. In seven days you move from the sensory overload of Marrakech&apos;s souks through the snow-capped High Atlas, across the Hollywood-famous kasbah of Ait Benhaddou, into the golden dunes of the Sahara, and finally into the ancient scholarly city of Fes. Each day delivers a completely different landscape and cultural experience.
+              </p>
+              <p>
+                This itinerary works in either direction. We start in Marrakech because most international flights land there, but the Fes-first version is equally valid. Every day includes morning and afternoon plans, meal suggestions, and accommodation picks across three budget tiers. Seasonal pricing can change, so treat all costs as starting points.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ── ROUTE OVERVIEW ────────────────────────────────────── */}
+        <section className="bg-white py-14">
+          <div className="container-morocco">
+            <div className="mx-auto max-w-3xl text-center">
+              <Map className="mx-auto h-10 w-10 text-[var(--color-accent)]" />
+              <h2 className="mt-4 font-[family-name:var(--font-display)] text-3xl text-[var(--color-accent)]">
+                Route Overview
+              </h2>
+              <p className="mt-3 font-[family-name:var(--font-heading)] text-gray-600">
+                Total driving distance: approximately 1,100 km across 7 days
+              </p>
+            </div>
+
+            <div className="zellige-border mt-10 rounded-2xl bg-[#FAF8F5] p-8">
+              <div className="grid gap-4 md:grid-cols-6">
+                {[
+                  { label: 'Day 1-2', city: 'Marrakech', km: 'Start' },
+                  { label: 'Day 3', city: 'Atlas / Ait Benhaddou', km: '185 km' },
+                  { label: 'Day 4', city: 'Merzouga / Sahara', km: '360 km' },
+                  { label: 'Day 5', city: 'Drive to Fes', km: '460 km' },
+                  { label: 'Day 6', city: 'Fes Medina', km: 'On foot' },
+                  { label: 'Day 7', city: 'Fes & Depart', km: 'End' },
+                ].map((stop, i) => (
+                  <div key={i} className="flex flex-col items-center text-center">
+                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-accent)] text-sm font-bold text-white">
+                      {stop.label.replace('Day ', '')}
+                    </span>
+                    <p className="mt-2 font-[family-name:var(--font-heading)] text-sm font-semibold text-gray-800">
+                      {stop.city}
+                    </p>
+                    <p className="mt-1 text-xs text-gray-500">{stop.km}</p>
+                    {i < 5 && (
+                      <ArrowRight className="mt-2 h-4 w-4 text-[var(--color-gold)] md:hidden" />
+                    )}
+                  </div>
+                ))}
+              </div>
+              <p className="mt-6 text-center font-[family-name:var(--font-heading)] text-sm text-gray-500">
+                The route crosses two major mountain passes: Tizi n&apos;Tichka (2,260m) and Zad Pass (2,178m). All roads are paved and regularly maintained.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ── DAY-BY-DAY ITINERARY ──────────────────────────────── */}
+        <section className="container-morocco py-14">
+          <div className="text-center">
+            <CalendarDays className="mx-auto h-10 w-10 text-[var(--color-accent)]" />
+            <h2 className="mt-4 font-[family-name:var(--font-display)] text-3xl text-[var(--color-accent)]">
+              Day-by-Day Itinerary
+            </h2>
+            <p className="mt-2 font-[family-name:var(--font-heading)] text-gray-600">
+              Detailed morning and afternoon plans with meal and accommodation picks
+            </p>
+          </div>
+
+          <div className="mt-10 space-y-10">
+            {itineraryDays.map((day) => {
+              const DayIcon = day.icon;
+              return (
+                <div key={day.day} className="card-moroccan overflow-hidden rounded-2xl">
+                  {/* Day Header */}
+                  <div className="moroccan-pattern bg-[var(--color-accent)] px-6 py-5">
+                    <div className="flex items-center gap-3">
+                      <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white/20 text-xl font-bold text-white">
+                        {day.day}
+                      </span>
+                      <div>
+                        <h3 className="font-[family-name:var(--font-display)] text-xl text-white md:text-2xl">
+                          Day {day.day}: {day.title}
+                        </h3>
+                        <p className="mt-0.5 flex items-center gap-1 text-sm text-white/80">
+                          <DayIcon className="h-3.5 w-3.5" /> {day.location}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="p-6">
+                    {/* Morning */}
+                    <div className="flex gap-4">
+                      <div className="flex flex-col items-center">
+                        <Sunrise className="h-5 w-5 text-[var(--color-gold)]" />
+                        <div className="mt-1 h-full w-px bg-[var(--color-gold)]/30" />
+                      </div>
+                      <div className="pb-6">
+                        <h4 className="font-[family-name:var(--font-heading)] text-lg font-semibold text-gray-800">
+                          Morning: {day.morning.title}
+                        </h4>
+                        <p className="mt-2 font-[family-name:var(--font-heading)] text-gray-600 leading-relaxed">
+                          {day.morning.description}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Afternoon */}
+                    <div className="flex gap-4">
+                      <div className="flex flex-col items-center">
+                        <Sunset className="h-5 w-5 text-[var(--color-accent)]" />
+                      </div>
+                      <div className="pb-4">
+                        <h4 className="font-[family-name:var(--font-heading)] text-lg font-semibold text-gray-800">
+                          Afternoon: {day.afternoon.title}
+                        </h4>
+                        <p className="mt-2 font-[family-name:var(--font-heading)] text-gray-600 leading-relaxed">
+                          {day.afternoon.description}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Meals & Accommodation */}
+                    <div className="mt-4 grid gap-3 border-t border-gray-100 pt-4 md:grid-cols-2">
+                      <div>
+                        <p className="flex items-center gap-2 text-sm font-semibold text-gray-700">
+                          <Utensils className="h-4 w-4 text-[var(--color-accent)]" /> Meals
+                        </p>
+                        <p className="mt-1 text-sm text-gray-600">{day.meals}</p>
+                      </div>
+                      <div>
+                        <p className="flex items-center gap-2 text-sm font-semibold text-gray-700">
+                          <BedDouble className="h-4 w-4 text-[var(--color-accent)]" /> Where to Stay
+                        </p>
+                        <div className="mt-1 space-y-1 text-sm text-gray-600">
+                          <p><span className="font-medium text-green-700">Budget:</span> {day.budgetStay}</p>
+                          <p><span className="font-medium text-[var(--color-accent)]">Mid-Range:</span> {day.midStay}</p>
+                          <p><span className="font-medium text-[var(--color-gold)]">Luxury:</span> {day.luxuryStay}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+
+        {/* ── BUDGET BREAKDOWN ──────────────────────────────────── */}
+        <section className="bg-white py-14">
+          <div className="container-morocco">
+            <div className="text-center">
+              <DollarSign className="mx-auto h-10 w-10 text-[var(--color-accent)]" />
+              <h2 className="mt-4 font-[family-name:var(--font-display)] text-3xl text-[var(--color-accent)]">
+                Budget Breakdown
+              </h2>
+              <p className="mt-2 font-[family-name:var(--font-heading)] text-gray-600">
+                Three tiers for every travel style. Seasonal pricing can change.
+              </p>
+            </div>
+
+            <div className="mt-10 grid gap-6 md:grid-cols-3">
+              {budgetTiers.map((tier) => {
+                const TierIcon = tier.icon;
+                return (
+                  <div key={tier.tier} className={`card-moroccan rounded-2xl ${tier.bg} p-6`}>
+                    <div className="flex items-center gap-3">
+                      <TierIcon className={`h-7 w-7 ${tier.color}`} />
+                      <h3 className={`font-[family-name:var(--font-display)] text-xl ${tier.color}`}>
+                        {tier.tier}
+                      </h3>
+                    </div>
+                    <p className="mt-3 font-[family-name:var(--font-heading)] text-2xl font-bold text-gray-800">
+                      {tier.perDay}
+                    </p>
+                    <p className="text-sm text-gray-500">{tier.total} (7 days)</p>
+                    <ul className="mt-4 space-y-2">
+                      {tier.details.map((d, i) => (
+                        <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
+                          <CheckCircle className={`mt-0.5 h-4 w-4 flex-shrink-0 ${tier.color}`} />
+                          {d}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* ── TRANSPORT OPTIONS ─────────────────────────────────── */}
+        <section className="container-morocco py-14">
+          <div className="text-center">
+            <Bus className="mx-auto h-10 w-10 text-[var(--color-accent)]" />
+            <h2 className="mt-4 font-[family-name:var(--font-display)] text-3xl text-[var(--color-accent)]">
+              Getting Around
+            </h2>
+            <p className="mt-2 font-[family-name:var(--font-heading)] text-gray-600">
+              Transport options for each segment of the route
+            </p>
+          </div>
+
+          <div className="mt-10 space-y-4">
+            {transportOptions.map((t, i) => (
+              <div key={i} className="card-moroccan rounded-xl p-5">
+                <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+                  <div>
+                    <h3 className="font-[family-name:var(--font-heading)] text-lg font-semibold text-gray-800">
+                      {t.mode}
+                    </h3>
+                    <p className="mt-1 text-sm text-gray-600">{t.best}</p>
+                  </div>
+                  <span className="inline-block rounded-full bg-[var(--color-accent)]/10 px-4 py-1.5 text-sm font-semibold text-[var(--color-accent)]">
+                    {t.cost}
+                  </span>
+                </div>
+                <p className="mt-2 flex items-start gap-2 text-sm text-gray-500">
+                  <Info className="mt-0.5 h-4 w-4 flex-shrink-0" /> {t.note}
+                </p>
+              </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* ── Final CTA ── */}
-      <section className="py-16 md:py-20 moroccan-pattern">
-        <div className="container-morocco text-center max-w-3xl">
-          <Sparkles className="w-10 h-10 text-[var(--color-gold)] mx-auto mb-4" />
-          <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-gray-900 mb-4">
-            Ready for Your 7 Days in Morocco?
-          </h2>
-          <p className="text-lg text-gray-700 mb-8 font-[family-name:var(--font-heading)]">
-            From the bustling souks of Marrakech to the silent vastness of the Sahara and the ancient medina of Fez, your perfect week in Morocco awaits. Start planning today and create memories that last a lifetime.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href="/things-to-do-marrakech"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--color-accent)] text-white rounded-lg font-semibold hover:bg-[var(--color-accent)]/90 transition-colors"
-            >
-              <MapPin className="w-5 h-5" />
-              Explore Marrakech
-            </Link>
-            <Link
-              href="/morocco-sahara-guide"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[var(--color-accent)] border-2 border-[var(--color-accent)] rounded-lg font-semibold hover:bg-[var(--color-accent)]/5 transition-colors"
-            >
-              <Tent className="w-5 h-5" />
-              Sahara Desert Guide
-            </Link>
+        {/* ── PACKING ESSENTIALS ────────────────────────────────── */}
+        <section className="bg-white py-14">
+          <div className="container-morocco">
+            <div className="text-center">
+              <Luggage className="mx-auto h-10 w-10 text-[var(--color-accent)]" />
+              <h2 className="mt-4 font-[family-name:var(--font-display)] text-3xl text-[var(--color-accent)]">
+                Packing Essentials
+              </h2>
+              <p className="mt-2 font-[family-name:var(--font-heading)] text-gray-600">
+                What to bring for a week across mountains, desert, and medinas
+              </p>
+            </div>
+
+            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {packingEssentials.map((p, i) => (
+                <div key={i} className="card-moroccan rounded-xl p-4">
+                  <p className="flex items-center gap-2 font-[family-name:var(--font-heading)] font-semibold text-gray-800">
+                    <CheckCircle className="h-4 w-4 text-[var(--color-accent)]" />
+                    {p.item}
+                  </p>
+                  <p className="mt-1 text-sm text-gray-500">{p.note}</p>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        {/* ── PRACTICAL TIPS ────────────────────────────────────── */}
+        <section className="container-morocco py-14">
+          <div className="text-center">
+            <ShieldCheck className="mx-auto h-10 w-10 text-[var(--color-accent)]" />
+            <h2 className="mt-4 font-[family-name:var(--font-display)] text-3xl text-[var(--color-accent)]">
+              Practical Tips for the Route
+            </h2>
+          </div>
+
+          <div className="mx-auto mt-10 max-w-3xl space-y-5">
+            {[
+              {
+                icon: Banknote,
+                title: 'Money & Cash',
+                text: 'ATMs are available in Marrakech, Ouarzazate, and Fes but not in Merzouga or small mountain villages. Withdraw enough dirhams before leaving Marrakech to cover the desert segment. Most riads accept cards; desert camps and roadside restaurants typically do not.',
+              },
+              {
+                icon: Clock,
+                title: 'Timing & Pace',
+                text: 'Days 3, 4, and 5 involve long drives (5-8 hours each). If you get carsick, sit in the front seat and bring motion-sickness medication. The drives are scenic and include planned stops, but they are tiring. The city days (1, 2, 6, 7) are walking-heavy — expect 15,000 to 20,000 steps each day in the medinas.',
+              },
+              {
+                icon: AlertTriangle,
+                title: 'Scam Awareness',
+                text: 'Common tactics: "The road is closed, I will show you another way" (it is not closed), fake guides at medina entrances, and carpet shop invitations disguised as tea offers. Stay polite but firm. A clear "la, shukran" (no, thank you) works in most situations.',
+              },
+              {
+                icon: Users,
+                title: 'Solo vs. Group Travel',
+                text: 'Solo travelers can join shared 3-day desert tours from Marrakech to Fes starting from 900 MAD. Groups of 3-4 save money by splitting a private driver. Couples often find mid-range private tours the best value at from 2,500 MAD per person for the desert segment.',
+              },
+              {
+                icon: Moon,
+                title: 'Desert Night Temperatures',
+                text: 'The Sahara drops sharply at night, sometimes to 5 degrees Celsius in winter. Luxury camps provide blankets and heating; basic camps may not. Bring a warm layer even if daytime temperatures are in the 30s.',
+              },
+              {
+                icon: Footprints,
+                title: 'Walking in the Medina',
+                text: 'Both Marrakech and Fes medinas have narrow, winding streets with no sidewalks. Mopeds and donkeys share the path with pedestrians. Step aside when you hear "balek!" (watch out). Flat, closed-toe shoes with good grip are essential on the polished stone surfaces.',
+              },
+            ].map((tip, i) => {
+              const TipIcon = tip.icon;
+              return (
+                <div key={i} className="flex gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-accent)]/10">
+                      <TipIcon className="h-5 w-5 text-[var(--color-accent)]" />
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="font-[family-name:var(--font-heading)] font-semibold text-gray-800">
+                      {tip.title}
+                    </h3>
+                    <p className="mt-1 font-[family-name:var(--font-heading)] text-sm text-gray-600 leading-relaxed">
+                      {tip.text}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+
+        {/* ── FOOD ALONG THE ROUTE ──────────────────────────────── */}
+        <section className="bg-white py-14">
+          <div className="container-morocco">
+            <div className="text-center">
+              <Utensils className="mx-auto h-10 w-10 text-[var(--color-accent)]" />
+              <h2 className="mt-4 font-[family-name:var(--font-display)] text-3xl text-[var(--color-accent)]">
+                What to Eat Along the Route
+              </h2>
+              <p className="mt-2 font-[family-name:var(--font-heading)] text-gray-600">
+                Regional specialties to try at each stop
+              </p>
+            </div>
+
+            <div className="mx-auto mt-10 max-w-3xl space-y-6">
+              {[
+                {
+                  city: 'Marrakech',
+                  dishes: [
+                    { name: 'Tanjia', desc: 'Slow-cooked lamb or beef in an urn buried in hot ashes. A Marrakech-only specialty. Order at Chez Lamine near Jemaa el-Fnaa from 60 MAD.' },
+                    { name: 'Snail soup (Babbouche)', desc: 'Ladled from giant pots in the square. Locals swear by it as a digestive aid. From 5 MAD per cup.' },
+                    { name: 'Msemen with amlou', desc: 'Flaky flatbread dipped in a paste of argan oil, almonds, and honey. The best breakfast in the city, from 10 MAD.' },
+                  ],
+                },
+                {
+                  city: 'Atlas & Ouarzazate',
+                  dishes: [
+                    { name: 'Berber tagine', desc: 'Chicken or lamb slow-cooked with preserved lemons and olives in a clay pot. Roadside restaurants serve generous portions from 50 MAD.' },
+                    { name: 'Berber omelette', desc: 'Eggs, tomatoes, onions, and cumin cooked in a tagine. A hearty mountain lunch from 30 MAD.' },
+                  ],
+                },
+                {
+                  city: 'Sahara Desert',
+                  dishes: [
+                    { name: 'Medfouna', desc: 'Called "Berber pizza" — a flatbread stuffed with spiced meat, onions, and almonds, baked in sand. A desert-region specialty from 40 MAD.' },
+                    { name: 'Desert camp dinner', desc: 'Most camps serve vegetable tagine, couscous, salads, and seasonal fruit. Meals are included in your camp booking.' },
+                  ],
+                },
+                {
+                  city: 'Fes',
+                  dishes: [
+                    { name: 'Pastilla (b\'stilla)', desc: 'A layered pie of shredded pigeon or chicken, almonds, eggs, and cinnamon wrapped in warqa pastry and dusted with powdered sugar. Fes is the home of this dish. From 80 MAD at The Ruined Garden.' },
+                    { name: 'Harira', desc: 'Thick tomato-based soup with lentils, chickpeas, and lamb. Eaten daily during Ramadan but available year-round at medina stalls from 10 MAD.' },
+                    { name: 'Mechoui', desc: 'Whole lamb slow-roasted in a clay pit until the meat falls off the bone. Sold by weight at specialist stalls near Bab Boujloud from 80 MAD per portion.' },
+                  ],
+                },
+              ].map((city, i) => (
+                <div key={i} className="card-moroccan rounded-xl p-5">
+                  <h3 className="flex items-center gap-2 font-[family-name:var(--font-heading)] text-lg font-semibold text-gray-800">
+                    <MapPin className="h-4 w-4 text-[var(--color-accent)]" /> {city.city}
+                  </h3>
+                  <div className="mt-3 space-y-3">
+                    {city.dishes.map((dish, j) => (
+                      <div key={j} className="border-l-2 border-[var(--color-gold)]/30 pl-4">
+                        <p className="font-[family-name:var(--font-heading)] text-sm font-semibold text-[var(--color-accent)]">
+                          {dish.name}
+                        </p>
+                        <p className="mt-0.5 text-sm text-gray-600">{dish.desc}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── DAY-BY-DAY COST TABLE ─────────────────────────────── */}
+        <section className="container-morocco py-14">
+          <div className="text-center">
+            <Banknote className="mx-auto h-10 w-10 text-[var(--color-accent)]" />
+            <h2 className="mt-4 font-[family-name:var(--font-display)] text-3xl text-[var(--color-accent)]">
+              Daily Cost Summary
+            </h2>
+            <p className="mt-2 font-[family-name:var(--font-heading)] text-gray-600">
+              Estimated per-person spending by day (mid-range tier). Seasonal pricing can change.
+            </p>
+          </div>
+
+          <div className="mx-auto mt-10 max-w-3xl overflow-x-auto">
+            <table className="w-full text-left text-sm">
+              <thead>
+                <tr className="border-b-2 border-[var(--color-accent)]/20">
+                  <th className="pb-3 pr-4 font-[family-name:var(--font-heading)] font-semibold text-gray-800">Day</th>
+                  <th className="pb-3 pr-4 font-[family-name:var(--font-heading)] font-semibold text-gray-800">Accommodation</th>
+                  <th className="pb-3 pr-4 font-[family-name:var(--font-heading)] font-semibold text-gray-800">Meals</th>
+                  <th className="pb-3 pr-4 font-[family-name:var(--font-heading)] font-semibold text-gray-800">Transport</th>
+                  <th className="pb-3 font-[family-name:var(--font-heading)] font-semibold text-gray-800">Activities</th>
+                </tr>
+              </thead>
+              <tbody className="font-[family-name:var(--font-heading)] text-gray-600">
+                {[
+                  { day: '1', acc: 'from 400', meals: 'from 200', transport: 'from 70', act: 'Free (souks)' },
+                  { day: '2', acc: 'from 400', meals: 'from 310', transport: 'from 40', act: 'from 310' },
+                  { day: '3', acc: 'from 500', meals: 'from 160', transport: 'from 600', act: 'from 100' },
+                  { day: '4', acc: 'from 600', meals: 'from 120', transport: 'Included', act: 'Included' },
+                  { day: '5', acc: 'from 400', meals: 'from 160', transport: 'Included', act: 'Free (drive)' },
+                  { day: '6', acc: 'from 400', meals: 'from 310', transport: 'from 30', act: 'from 330' },
+                  { day: '7', acc: 'N/A', meals: 'from 140', transport: 'from 135', act: 'Free (pottery)' },
+                ].map((row, i) => (
+                  <tr key={i} className="border-b border-gray-100">
+                    <td className="py-3 pr-4 font-semibold text-gray-800">Day {row.day}</td>
+                    <td className="py-3 pr-4">{row.acc} MAD</td>
+                    <td className="py-3 pr-4">{row.meals} MAD</td>
+                    <td className="py-3 pr-4">{row.transport} MAD</td>
+                    <td className="py-3">{row.act} MAD</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <p className="mt-4 text-center text-xs text-gray-500">
+              All figures are per person in Moroccan Dirhams (MAD). Transport costs for Days 3-5 assume a shared 3-day desert tour. Private driver rates differ.
+            </p>
+          </div>
+        </section>
+
+        {/* ── BEST TIME TO GO ───────────────────────────────────── */}
+        <section className="bg-white py-14">
+          <div className="container-morocco">
+            <div className="mx-auto max-w-3xl">
+              <div className="text-center">
+                <Sun className="mx-auto h-10 w-10 text-[var(--color-gold)]" />
+                <h2 className="mt-4 font-[family-name:var(--font-display)] text-3xl text-[var(--color-accent)]">
+                  Best Time to Travel This Route
+                </h2>
+              </div>
+
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                {[
+                  {
+                    season: 'Spring (Mar-May)',
+                    verdict: 'Ideal',
+                    desc: 'Warm days, cool nights, wildflowers in the Atlas. Comfortable desert temperatures around 25-30 degrees Celsius.',
+                  },
+                  {
+                    season: 'Autumn (Sep-Nov)',
+                    verdict: 'Ideal',
+                    desc: 'Similar to spring with fewer crowds. October is arguably the single best month for this route.',
+                  },
+                  {
+                    season: 'Summer (Jun-Aug)',
+                    verdict: 'Hot',
+                    desc: 'Desert temperatures exceed 45 degrees Celsius. Marrakech hits 40+. Possible but exhausting. Limit outdoor time to mornings and evenings.',
+                  },
+                  {
+                    season: 'Winter (Dec-Feb)',
+                    verdict: 'Cool',
+                    desc: 'Cities are pleasant at 15-20 degrees. Atlas passes can have snow. Desert nights drop below 5 degrees. Warm layers are essential.',
+                  },
+                ].map((s, i) => (
+                  <div key={i} className="card-moroccan rounded-xl p-5">
+                    <div className="flex items-center justify-between">
+                      <h3 className="font-[family-name:var(--font-heading)] font-semibold text-gray-800">
+                        {s.season}
+                      </h3>
+                      <span className={`rounded-full px-3 py-0.5 text-xs font-bold ${
+                        s.verdict === 'Ideal'
+                          ? 'bg-green-100 text-green-700'
+                          : s.verdict === 'Hot'
+                            ? 'bg-red-100 text-red-700'
+                            : 'bg-blue-100 text-blue-700'
+                      }`}>
+                        {s.verdict}
+                      </span>
+                    </div>
+                    <p className="mt-2 text-sm text-gray-600">{s.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── FAQ ───────────────────────────────────────────────── */}
+        <section className="container-morocco py-14">
+          <div className="text-center">
+            <MessageCircleQuestion className="mx-auto h-10 w-10 text-[var(--color-accent)]" />
+            <h2 className="mt-4 font-[family-name:var(--font-display)] text-3xl text-[var(--color-accent)]">
+              Frequently Asked Questions
+            </h2>
+          </div>
+
+          <div className="mx-auto mt-10 max-w-3xl space-y-6">
+            {faqItems.map((faq, i) => (
+              <div key={i} className="card-moroccan rounded-xl p-5">
+                <h3 className="font-[family-name:var(--font-heading)] text-lg font-semibold text-gray-800">
+                  {faq.q}
+                </h3>
+                <p className="mt-2 font-[family-name:var(--font-heading)] text-sm text-gray-600 leading-relaxed">
+                  {faq.a}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ── RELATED GUIDES ────────────────────────────────────── */}
+        <section className="bg-white py-14">
+          <div className="container-morocco">
+            <h2 className="text-center font-[family-name:var(--font-display)] text-3xl text-[var(--color-accent)]">
+              Related Guides
+            </h2>
+            <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                {
+                  href: '/morocco-10-day-itinerary',
+                  title: '10-Day Morocco Itinerary',
+                  desc: 'Add Essaouira, Chefchaouen, or the Dades Valley for a deeper exploration of the country.',
+                  icon: CalendarDays,
+                },
+                {
+                  href: '/morocco-first-time',
+                  title: 'First Time in Morocco',
+                  desc: 'Everything first-timers need to know about culture, safety, etiquette, and expectations.',
+                  icon: Compass,
+                },
+                {
+                  href: '/morocco-budget-calculator',
+                  title: 'Morocco Budget Calculator',
+                  desc: 'Calculate your exact trip costs with our interactive budget planning tool.',
+                  icon: DollarSign,
+                },
+                {
+                  href: '/morocco-desert-tours',
+                  title: 'Sahara Desert Tours',
+                  desc: 'Compare desert tour operators, routes, camp tiers, and camel trek options.',
+                  icon: Sun,
+                },
+              ].map((guide, i) => {
+                const GuideIcon = guide.icon;
+                return (
+                  <Link
+                    key={i}
+                    href={guide.href}
+                    className="card-moroccan group rounded-xl p-5 transition-shadow hover:shadow-lg"
+                  >
+                    <GuideIcon className="h-7 w-7 text-[var(--color-accent)] transition-transform group-hover:scale-110" />
+                    <h3 className="mt-3 font-[family-name:var(--font-heading)] font-semibold text-gray-800 group-hover:text-[var(--color-accent)]">
+                      {guide.title}
+                    </h3>
+                    <p className="mt-1 text-sm text-gray-500">{guide.desc}</p>
+                    <span className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-[var(--color-accent)]">
+                      Read guide <ArrowRight className="h-3.5 w-3.5" />
+                    </span>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* ── CTA ───────────────────────────────────────────────── */}
+        <section className="moroccan-pattern bg-[var(--color-accent)] py-16">
+          <div className="container-morocco text-center">
+            <h2 className="font-[family-name:var(--font-display)] text-3xl text-white md:text-4xl">
+              Ready to Book Your 7-Day Morocco Adventure?
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl font-[family-name:var(--font-heading)] text-lg text-white/90">
+              From the labyrinthine souks of Marrakech to the silence of the Sahara at dawn, seven days in Morocco will reshape how you think about travel. Start planning your route today.
+            </p>
+            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <Link
+                href="/morocco-desert-tours"
+                className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-3 font-[family-name:var(--font-heading)] font-semibold text-[var(--color-accent)] shadow-lg transition-transform hover:scale-105"
+              >
+                <Compass className="h-5 w-5" /> Browse Desert Tours
+              </Link>
+              <Link
+                href="/morocco-budget-calculator"
+                className="inline-flex items-center gap-2 rounded-lg border-2 border-white px-8 py-3 font-[family-name:var(--font-heading)] font-semibold text-white transition-colors hover:bg-white hover:text-[var(--color-accent)]"
+              >
+                <DollarSign className="h-5 w-5" /> Calculate Your Budget
+              </Link>
+            </div>
+          </div>
+        </section>
+      </main>
     </>
   );
 }

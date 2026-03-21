@@ -15,1121 +15,1080 @@ import {
   AlertTriangle,
   Users,
   Building,
+  Award,
   BookOpen,
+  MessageCircleQuestion,
+  HandHeart,
+  TreeDeciduous,
   GraduationCap,
   Globe,
-  Leaf,
-  HandHeart,
-  Hammer,
-  Sprout,
   FileText,
-  Calendar,
-  MessageCircle,
-  HelpCircle,
-  CircleDot,
-  Lightbulb,
-  Ban,
-  Award,
+  Compass,
+  Leaf,
+  Dog,
+  HandCoins,
+  CircleAlert,
+  Scale,
+  CalendarDays,
+  Briefcase,
 } from 'lucide-react';
 
-/* ═══════════════════════════════════════════════════════════════
-   CONSTANTS
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   CONSTANTS & BASE URL
+   ================================================================ */
 
 const BASE_URL = 'https://citytoursmorocco.com';
+const PAGE_URL = `${BASE_URL}/morocco-volunteering`;
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    SEO METADATA
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 export const metadata: Metadata = {
-  title: 'Volunteering in Morocco 2026 | Ethical Opportunities & Programs Guide',
+  title: 'Volunteering in Morocco 2026 | Ethical Programs, Teaching, Wildlife & Community Projects',
   description:
-    'Complete guide to ethical volunteering in Morocco. Teaching English, conservation, women\'s cooperatives, organic farming, and construction projects. Visa requirements, costs from 2,000 MAD/week, top organizations, and how to avoid voluntourism traps.',
+    'Complete guide to volunteering in Morocco. Ethical volunteering principles, teaching English programs, animal welfare sanctuaries, environmental projects, women\'s cooperatives, reputable organizations like Peace Corps and Workaway, visa requirements, costs, and how to make a genuine impact.',
   keywords: [
-    'volunteering morocco',
-    'volunteer programs morocco',
-    'ethical volunteering morocco',
-    'teach english morocco',
-    'volunteer teaching morocco',
-    'morocco volunteer opportunities',
-    'conservation volunteering morocco',
-    'women cooperatives morocco volunteer',
-    'organic farming morocco',
-    'wwoof morocco',
-    'volunteer visa morocco',
-    'volunteer costs morocco',
-    'ethical volunteer abroad morocco',
-    'volunteer marrakech',
-    'volunteer fes',
-    'volunteer atlas mountains',
-    'morocco volunteer organizations',
-    'voluntourism morocco',
-    'gap year morocco',
-    'community development morocco',
+    'volunteering in Morocco',
+    'Morocco volunteer programs',
+    'teach English Morocco',
+    'ethical volunteering Morocco',
+    'voluntourism Morocco',
+    'animal welfare Morocco',
+    'Morocco environmental volunteering',
+    'women cooperatives Morocco',
+    'Peace Corps Morocco',
+    'Workaway Morocco',
+    'AIESEC Morocco',
+    'volunteer visa Morocco',
+    'impact tourism Morocco',
+    'community projects Morocco',
+    'volunteer teaching Morocco 2026',
+    'Morocco volunteer costs',
+    'responsible volunteering Africa',
+    'Morocco charity work',
   ],
   openGraph: {
-    title: 'Volunteering in Morocco 2026 | Ethical Opportunities & Programs Guide',
+    title: 'Volunteering in Morocco 2026 | Ethical Programs, Teaching, Wildlife & Community Projects',
     description:
-      'Find ethical volunteer programs across Morocco. Teaching, conservation, organic farming, and community development. Costs, visa info, and how to make a real impact.',
-    url: `${BASE_URL}/morocco-volunteering`,
+      'How to volunteer responsibly in Morocco: ethical principles, teaching and language programs, animal welfare, tree planting and beach cleanups, women\'s cooperatives, trusted organizations, visa rules, and real costs.',
+    url: PAGE_URL,
     images: [
       {
-        url: `${BASE_URL}/images/hero-volunteering.webp`,
+        url: `${BASE_URL}/images/hero-morocco.webp`,
         width: 1200,
         height: 630,
-        alt: 'Volunteers working alongside local Moroccan community members in a rural Atlas Mountains village',
+        alt: 'Volunteers working with a women\'s cooperative in rural Morocco',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Volunteering in Morocco 2026 | Ethical Programs & Opportunities',
+    title: 'Volunteering in Morocco 2026 | Ethical Programs & Community Projects',
     description:
-      'Ethical volunteer programs in Morocco: teaching, conservation, farming, women\'s cooperatives. Costs from 2,000 MAD/week, visa info, and real impact tips.',
-    images: [`${BASE_URL}/images/hero-volunteering.webp`],
+      'Ethical volunteering in Morocco: teaching English, animal welfare, environmental projects, women\'s cooperatives, reputable organizations, visa info, and costs.',
+    images: [`${BASE_URL}/images/hero-morocco.webp`],
   },
-  alternates: { canonical: `${BASE_URL}/morocco-volunteering` },
+  alternates: { canonical: PAGE_URL },
 };
 
-/* ═══════════════════════════════════════════════════════════════
-   JSON-LD STRUCTURED DATA — TRAVEL GUIDE
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   JSON-LD: TravelGuide + FAQPage
+   ================================================================ */
 
-const jsonLdGuide = {
+const faqItems = [
+  {
+    q: 'Do I need a special visa to volunteer in Morocco?',
+    a: 'Most nationalities receive a 90-day tourist visa on arrival, which covers short-term volunteer placements. However, a tourist visa technically does not authorize work. For formal programs lasting over 90 days or involving paid positions, you need a work permit or student visa arranged through the sponsoring organization. Peace Corps and similar government-backed programs handle visa paperwork on your behalf. Always confirm visa requirements with the Moroccan consulate in your country before departure.',
+  },
+  {
+    q: 'How much does it cost to volunteer in Morocco?',
+    a: 'Costs vary widely. Workaway and similar platforms charge an annual membership fee of from 50 USD, and hosts provide free room and board in exchange for 4-5 hours of work per day. Organized volunteer programs through agencies charge from 200 to 800 USD per week, which typically covers accommodation, meals, and project costs. Budget for personal expenses, travel insurance, flights, and local transport separately. Seasonal pricing can change based on demand.',
+  },
+  {
+    q: 'What are the red flags of unethical volunteer programs?',
+    a: 'Watch out for programs that let you work with vulnerable children without background checks, orphanages that recruit children to attract volunteer fees, organizations that charge high fees with no transparency about where the money goes, projects that replace local workers with unskilled foreigners, and any program that guarantees placements without an application or interview process. If a program feels more like a tourist attraction than a working project, it probably is.',
+  },
+  {
+    q: 'Can I volunteer in Morocco without speaking French or Arabic?',
+    a: 'Yes, especially in English-teaching programs where your native English is the skill being offered. Many international organizations operate in English internally. That said, learning basic Darija (Moroccan Arabic) or French phrases goes a long way in daily life and shows respect. Programs in tourist cities like Marrakech and Essaouira have more English speakers, while rural placements benefit greatly from some French.',
+  },
+  {
+    q: 'How long should I volunteer in Morocco to make a real impact?',
+    a: 'A minimum of four weeks is recommended for most programs. Two-week placements are common but often benefit the volunteer more than the community. Teaching programs typically request a three-month commitment because students need consistency. Environmental projects like tree planting can be meaningful in shorter stints. The longer you stay, the deeper your cultural integration and the more useful you become to the project.',
+  },
+  {
+    q: 'Is it safe to volunteer in rural Morocco as a solo traveler?',
+    a: 'Rural Morocco is generally very safe, and communities tend to be protective of volunteers. Reputable organizations vet host families and provide emergency contacts. Solo women volunteers should follow the same precautions as solo female travelers: dress modestly in conservative areas, inform your coordinator of your whereabouts, and carry a local SIM card. Most volunteers report that rural communities are incredibly welcoming.',
+  },
+  {
+    q: 'What qualifications do I need to teach English in Morocco?',
+    a: 'Formal teaching positions at language schools require a TEFL, TESOL, or CELTA certificate and often a bachelor\'s degree. Volunteer teaching programs are less strict -- being a native or fluent English speaker is usually sufficient. Having classroom experience or a TEFL certification strengthens your application and makes you more effective. Some programs provide on-site training before you begin.',
+  },
+  {
+    q: 'Can I combine volunteering with traveling around Morocco?',
+    a: 'Absolutely. Many volunteers work weekdays and explore on weekends. Workaway hosts typically give two days off per week. Organized programs often include cultural excursions. A common approach is to volunteer for four to eight weeks in one location, then spend two to three weeks traveling independently afterward. Just be transparent with your program about your travel plans and honor your commitment dates.',
+  },
+];
+
+const jsonLdTravel = {
   '@context': 'https://schema.org',
   '@type': 'TravelGuide',
-  '@id': `${BASE_URL}/morocco-volunteering`,
-  name: 'Volunteering in Morocco 2026 | Ethical Opportunities & Programs Guide',
+  '@id': PAGE_URL,
+  name: 'Volunteering in Morocco 2026 - Ethical Programs, Teaching, Wildlife & Community Projects',
   description:
-    'Complete guide to ethical volunteering in Morocco. Teaching English, conservation, women\'s cooperatives, organic farming, and construction projects.',
-  url: `${BASE_URL}/morocco-volunteering`,
-  image: `${BASE_URL}/images/hero-volunteering.webp`,
-  author: {
-    '@type': 'Organization',
-    name: 'CityGuide Morocco',
-    url: BASE_URL,
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'CityGuide Morocco',
-    url: BASE_URL,
-  },
-  datePublished: '2026-03-20',
-  dateModified: '2026-03-20',
-  mainEntityOfPage: `${BASE_URL}/morocco-volunteering`,
-  isPartOf: {
-    '@type': 'WebSite',
-    name: 'CityGuide Morocco',
-    url: BASE_URL,
-  },
-  about: {
-    '@type': 'Country',
-    name: 'Morocco',
-  },
+    'Complete guide to volunteering in Morocco covering ethical principles, teaching English, animal welfare, environmental projects, women\'s cooperatives, reputable organizations, visa requirements, and costs.',
+  url: PAGE_URL,
+  image: `${BASE_URL}/images/hero-morocco.webp`,
+  author: { '@type': 'Organization', name: 'City Tours Morocco', url: BASE_URL },
+  publisher: { '@type': 'Organization', name: 'City Tours Morocco', url: BASE_URL },
+  datePublished: '2026-03-21',
+  dateModified: '2026-03-21',
+  mainEntityOfPage: PAGE_URL,
+  about: { '@type': 'Country', name: 'Morocco' },
   breadcrumb: {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Volunteering in Morocco', item: `${BASE_URL}/morocco-volunteering` },
+      { '@type': 'ListItem', position: 2, name: 'Volunteering in Morocco', item: PAGE_URL },
     ],
   },
 };
-
-/* ═══════════════════════════════════════════════════════════════
-   JSON-LD STRUCTURED DATA — FAQ PAGE
-   ═══════════════════════════════════════════════════════════════ */
 
 const jsonLdFaq = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'Do I need a special visa to volunteer in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Most volunteers enter Morocco on a standard 90-day tourist visa, which does not require advance application for citizens of the US, EU, UK, Canada, and Australia. For placements longer than 90 days, you must leave the country and re-enter or apply for a long-stay visa through the Moroccan consulate. Paid volunteer positions technically require a work permit, but most short-term unpaid programs operate under the tourist visa.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does it cost to volunteer in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Costs vary widely. Third-party placement organizations charge from 2,000 MAD to 8,000 MAD per week, which typically covers accommodation and meals. Direct placements with local NGOs may only cost accommodation (from 800 MAD/week in shared housing). WWOOF farm stays are often free in exchange for 4-5 hours of daily work. Budget an additional 2,000-4,000 MAD per month for personal expenses, transport, and SIM cards.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is the best time of year to volunteer in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Spring (March-May) and autumn (September-November) offer the most comfortable weather. Summer volunteering works for coastal or mountain programs but is too hot for desert or inland placements. Winter is ideal for Sahara-edge conservation projects. Teaching programs generally follow the Moroccan school calendar (September-June), with breaks in summer and during Ramadan.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do I need to speak Arabic or French to volunteer in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Not necessarily. Many organizations operate in English, especially teaching programs. However, basic French opens doors in cities, and even a few Darija (Moroccan Arabic) phrases build trust in rural communities. Conservation and farming programs often rely more on physical work than language. Most reputable organizations provide orientation sessions covering essential local phrases.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How can I tell if a volunteer program is ethical?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Look for programs that prioritize community needs over volunteer experiences, employ local staff in leadership roles, require minimum commitments (2+ weeks), do not involve orphanage visits, have transparent finances, and can articulate measurable outcomes. Red flags include programs that accept anyone with no screening, charge high fees with no clarity on where money goes, feature orphanage tourism, or allow short stays of just a few days for impact projects.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can I volunteer in Morocco as a solo female traveler?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. Morocco hosts thousands of solo female volunteers each year. Reputable programs provide accommodation, airport pickup, and local orientation. Women\'s cooperatives actively seek female volunteers. Dress modestly (covering shoulders and knees), especially in rural areas. Organizations like the Peace Corps and established NGOs have strong safety protocols and 24/7 support contacts for all volunteers.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What qualifications do I need to teach English in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'For volunteer teaching, a TEFL/TESOL certificate is preferred but not always required. Native or near-native English proficiency is essential. Some programs accept volunteers with just a high school diploma, while others require a bachelor\'s degree. A TEFL certificate (from 1,500 MAD for online courses) significantly strengthens your application and your classroom effectiveness. Prior teaching experience helps but is rarely mandatory for volunteer placements.',
-      },
-    },
-  ],
+  mainEntity: faqItems.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
 };
 
-/* ═══════════════════════════════════════════════════════════════
-   DATA: VOLUNTEER TYPES
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   DATA: VOLUNTEER CATEGORIES
+   ================================================================ */
 
-const volunteerTypes = [
+const volunteerCategories = [
   {
-    title: 'Teaching English & Education',
+    title: 'Teaching English & French',
     icon: GraduationCap,
-    duration: '4-12 weeks minimum',
-    regions: 'Marrakech, Fes, Rabat, rural Atlas villages',
-    cost: 'From 2,500 MAD/week (placement organizations)',
     description:
-      'Morocco has a growing demand for English instruction, particularly in rural areas where public schools lack qualified teachers. Volunteers teach conversational English to children aged 6-16 in community centers, public schools, and after-school programs. Some placements focus on adult literacy or women\'s education programs in areas where girls historically had limited access to schooling.',
-    tasks: [
-      'Plan and deliver 3-4 hours of English lessons daily',
-      'Create learning materials and visual aids',
-      'Organize cultural exchange activities and language games',
-      'Assist with exam preparation for older students',
-    ],
-    requirements: 'TEFL certificate preferred. Minimum 4-week commitment. Native or near-native English.',
+      'Language education is Morocco\'s most in-demand volunteer skill. Rural schools often have one overworked teacher for dozens of students, and conversational practice with a native speaker makes a measurable difference. Programs range from formal classroom teaching to informal conversation clubs in community centers.',
+    locations: 'Marrakech, Fes, Rabat, Atlas Mountain villages, Rif region',
+    commitment: 'Minimum 4 weeks recommended, 3 months ideal',
+    cost: 'From 0 MAD with Workaway (free room/board) to from 3,000 MAD/week with organized programs',
+    skills: 'Native or fluent English/French, TEFL certificate preferred but not always required',
+  },
+  {
+    title: 'Animal Welfare & Sanctuaries',
+    icon: Dog,
+    description:
+      'Morocco has a significant stray animal population, and several organizations run spay/neuter campaigns, rescue operations, and sanctuary care. Donkey and mule welfare is a particular focus because these working animals are essential to daily life in medinas and mountain villages but often lack veterinary care.',
+    locations: 'Marrakech, Essaouira, Tangier, Chefchaouen, rural Atlas',
+    commitment: 'Minimum 2 weeks, ongoing positions available',
+    cost: 'From 1,500 MAD/week with most organizations covering accommodation',
+    skills: 'No formal qualifications needed; veterinary students especially welcome',
   },
   {
     title: 'Environmental Conservation',
-    icon: Leaf,
-    duration: '2-8 weeks',
-    regions: 'Souss-Massa, High Atlas, Rif Mountains, Sahara edge',
-    cost: 'From 2,000 MAD/week',
+    icon: TreeDeciduous,
     description:
-      'Conservation projects tackle deforestation, wildlife protection, and water management across Morocco\'s diverse ecosystems. The High Atlas cedar forests, Souss-Massa National Park (home to the endangered Northern Bald Ibis), and anti-desertification projects along the Sahara edge all accept volunteers. Work is physical, outdoors, and rewarding.',
-    tasks: [
-      'Plant native tree species (cedar, argan, cork oak)',
-      'Monitor wildlife populations and nesting sites',
-      'Build erosion barriers and irrigation channels',
-      'Conduct environmental education workshops in local schools',
-    ],
-    requirements: 'Good physical fitness. Outdoor experience helpful. Minimum 2-week commitment.',
+      'Morocco faces deforestation, water scarcity, and coastal erosion. Volunteer projects include tree planting in the Atlas Mountains, beach cleanup campaigns along the Atlantic coast, water conservation education, and supporting sustainable agriculture. The High Atlas Foundation runs large-scale reforestation programs.',
+    locations: 'High Atlas, Souss-Massa, Atlantic coast, Anti-Atlas',
+    commitment: 'Minimum 1 week for cleanups, 4+ weeks for planting programs',
+    cost: 'From 500 MAD/week for organized programs, some offer free placement',
+    skills: 'Physical fitness for outdoor work; agricultural knowledge is a bonus',
   },
   {
-    title: 'Construction & Infrastructure',
-    icon: Hammer,
-    duration: '2-6 weeks',
-    regions: 'Rural High Atlas, Rif, Anti-Atlas communities',
-    cost: 'From 3,000 MAD/week',
+    title: 'Women\'s Empowerment & Cooperatives',
+    icon: Users,
     description:
-      'Rural Moroccan communities, particularly in mountainous regions, need help building and maintaining schools, community centers, water systems, and housing. After the 2023 Al Haouz earthquake, several organizations coordinate ongoing reconstruction in affected Atlas Mountain villages. These projects prioritize local labor and use volunteers as supplementary hands, not replacements.',
-    tasks: [
-      'Assist with masonry, painting, and basic carpentry',
-      'Help install water tanks and solar panels',
-      'Support earthquake reconstruction under local supervision',
-      'Maintain school buildings and community facilities',
-    ],
-    requirements: 'Physical fitness essential. Construction experience valued but not required. Minimum 2-week stay.',
+      'Women\'s cooperatives across Morocco produce argan oil, saffron, carpets, and handicrafts. Volunteers help with business skills training, marketing, English instruction, website development, and product design. These cooperatives give women in conservative rural areas economic independence and decision-making power.',
+    locations: 'Essaouira region (argan), Ouarzazate (saffron), Middle Atlas (carpets), Chefchaouen',
+    commitment: 'Minimum 4 weeks to build trust and deliver results',
+    cost: 'From 0 MAD with some cooperatives offering room and meals, to from 2,000 MAD/week',
+    skills: 'Business, marketing, digital skills, teaching; French language highly valued',
   },
   {
-    title: 'Women\'s Cooperatives',
-    icon: HandHeart,
-    duration: '4-12 weeks',
-    regions: 'Essaouira, Taroudant, Ouarzazate, Tiznit',
-    cost: 'From 1,500 MAD/week (often lower through direct placement)',
+    title: 'Construction & Community Development',
+    icon: Building,
     description:
-      'Morocco\'s argan oil cooperatives, weaving collectives, and saffron cooperatives provide income and independence for rural women. Volunteers contribute business skills, marketing knowledge, English instruction, and help develop fair-trade supply chains. This is one of the most impactful and ethical forms of volunteering in Morocco because the cooperatives themselves define what help they need.',
-    tasks: [
-      'Teach business English and basic computer skills',
-      'Help develop websites, social media, and marketing materials',
-      'Assist with product photography and e-commerce setup',
-      'Support literacy programs for cooperative members',
-    ],
-    requirements: 'Female volunteers preferred for some cooperatives. Business/marketing skills valuable. Minimum 4 weeks.',
+      'Rural communities in the Atlas Mountains and eastern Morocco need help building schools, community centers, water systems, and solar installations. These projects pair volunteers with local builders, so you work alongside Moroccan craftsmen rather than replacing them. Prior construction experience makes you more useful, but many programs train beginners.',
+    locations: 'High Atlas villages, Draa-Tafilalet, Oriental region',
+    commitment: 'Minimum 2 weeks, with 4-8 weeks preferred',
+    cost: 'From 1,000 MAD/week including basic accommodation and meals',
+    skills: 'Construction experience welcome; physical fitness required',
   },
   {
-    title: 'Organic Farming & Permaculture',
-    icon: Sprout,
-    duration: '2-12 weeks',
-    regions: 'Ourika Valley, Chefchaouen, Rif Mountains, Souss plains',
-    cost: 'Free to from 500 MAD/week (WWOOF exchanges)',
+    title: 'Healthcare & Public Health',
+    icon: Heart,
     description:
-      'Morocco\'s organic farming movement is expanding rapidly. WWOOF (World Wide Opportunities on Organic Farms) connects volunteers with host farms across the country. Work includes olive harvesting (October-December), permaculture garden development, beekeeping, and medicinal herb cultivation. You live with farm families and eat what you grow.',
-    tasks: [
-      'Plant, weed, harvest, and process organic crops',
-      'Build and maintain permaculture systems (composting, rainwater collection)',
-      'Help with olive and argan harvesting during season',
-      'Assist with beekeeping and honey production',
-    ],
-    requirements: 'No experience needed for most farms. 4-5 hours of work per day in exchange for room and board.',
+      'Medical volunteering in Morocco is restricted to qualified professionals. Licensed doctors, nurses, dentists, and pharmacists can join medical missions or work in rural clinics where healthcare access is limited. Non-medical volunteers can support public health education campaigns covering hygiene, nutrition, and maternal health.',
+    locations: 'Rural clinics nationwide, Rabat, Casablanca (hospital programs)',
+    commitment: 'Minimum 4 weeks for clinical work, 2 weeks for health education',
+    cost: 'From 2,500 MAD/week through medical volunteer organizations',
+    skills: 'Medical degree or nursing qualification required for clinical work; French essential',
   },
-] as const;
+];
 
-/* ═══════════════════════════════════════════════════════════════
-   DATA: TOP ORGANIZATIONS
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   DATA: REPUTABLE ORGANIZATIONS
+   ================================================================ */
 
-const topOrganizations = [
+const organizations = [
   {
-    name: 'Volunteer Morocco (local NGO)',
-    focus: 'Teaching, community development',
-    location: 'Rabat, Fes, Marrakech',
-    cost: 'From 3,000 MAD/week',
-    commitment: '2 weeks minimum',
-    rating: 4.6,
-    note: 'Moroccan-founded organization. Fees go directly to local communities. Provides homestay accommodation and daily meals.',
+    name: 'Peace Corps Morocco',
+    type: 'Government program (US)',
+    description: 'Two-year commitment with full language training, living stipend, and post-service benefits. Sectors include youth development, health, and environment. Highly competitive application process.',
+    cost: 'Fully funded (stipend, housing, insurance provided)',
+    website: 'peacecorps.gov',
   },
   {
-    name: 'WWOOF Morocco',
-    focus: 'Organic farming, permaculture',
-    location: '40+ farms nationwide',
-    cost: 'Free (exchange for 4-5 hrs work/day)',
-    commitment: '1 week minimum',
-    rating: 4.5,
-    note: 'Annual membership from 250 MAD. Direct connection with farm hosts. No middleman fees. Accommodation and meals included.',
+    name: 'Workaway',
+    type: 'Work exchange platform',
+    description: 'Connects volunteers with hosts across Morocco. Typical arrangement: 4-5 hours of work per day in exchange for free room and board. Hosts include farms, hostels, language schools, and cooperatives. Read reviews carefully.',
+    cost: 'From 50 USD annual membership; free room and board from hosts',
+    website: 'workaway.info',
+  },
+  {
+    name: 'AIESEC Morocco',
+    type: 'International youth organization',
+    description: 'Offers 6-8 week volunteer projects for young people aged 18-30. Projects focus on education, environment, and social impact. Includes cultural integration activities and leadership development.',
+    cost: 'From 2,000 MAD program fee plus personal expenses',
+    website: 'aiesec.org',
   },
   {
     name: 'High Atlas Foundation',
-    focus: 'Tree planting, community development, women\'s empowerment',
-    location: 'High Atlas region, Marrakech',
-    cost: 'From 2,000 MAD/week',
-    commitment: '2 weeks minimum',
-    rating: 4.7,
-    note: 'Founded by former Peace Corps volunteers. Strong local partnerships. Has planted over 3 million trees. Transparent finances.',
+    type: 'Moroccan-American NGO',
+    description: 'Focused on sustainable development in rural Morocco. Projects include tree planting (over 4 million trees planted), women\'s cooperatives, and youth education. One of the most established organizations in the country.',
+    cost: 'Varies by program; some accept remote volunteers',
+    website: 'highatlasfoundation.org',
   },
   {
-    name: 'Education For All (EFA)',
-    focus: 'Girls\' education, boarding houses',
-    location: 'High Atlas Mountains',
-    cost: 'Varies by role',
-    commitment: '4 weeks minimum',
-    rating: 4.8,
-    note: 'Operates boarding houses enabling rural girls to attend secondary school. Volunteer roles include teaching, mentoring, and fundraising support.',
+    name: 'SPANA (Society for the Protection of Animals Abroad)',
+    type: 'International animal welfare charity',
+    description: 'Operates veterinary clinics for working animals across Morocco, focusing on donkeys, mules, and horses. Accepts qualified veterinary volunteers and fundraising supporters.',
+    cost: 'Funded positions for qualified vets; fundraising volunteers work remotely',
+    website: 'spana.org',
   },
   {
-    name: 'Association Ribat Al Fath',
-    focus: 'Cultural heritage, youth programs',
-    location: 'Rabat',
-    cost: 'From 1,500 MAD/week',
-    commitment: '3 weeks minimum',
-    rating: 4.4,
-    note: 'Moroccan cultural association with youth education and heritage preservation programs. Provides cultural immersion alongside volunteer work.',
+    name: 'WorldPackers',
+    type: 'Work exchange platform',
+    description: 'Similar to Workaway with a strong Morocco presence. Hosts include eco-lodges, surf camps, hostels, and NGOs. The platform verifies hosts and provides travel insurance partnerships.',
+    cost: 'From 50 USD annual membership; free room and board from hosts',
+    website: 'worldpackers.com',
   },
-  {
-    name: 'Morocco Animal Aid',
-    focus: 'Animal welfare, veterinary outreach',
-    location: 'Tangier, northern Morocco',
-    cost: 'From 2,500 MAD/week',
-    commitment: '2 weeks minimum',
-    rating: 4.5,
-    note: 'Focuses on stray animal care, spay/neuter campaigns, and veterinary outreach in rural areas. Welcomes volunteers with and without veterinary experience.',
-  },
-] as const;
+];
 
-/* ═══════════════════════════════════════════════════════════════
-   DATA: ETHICAL RED FLAGS & GREEN FLAGS
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   DATA: ETHICAL VOLUNTEERING PRINCIPLES
+   ================================================================ */
+
+const ethicalPrinciples = [
+  {
+    title: 'Supplement, Never Replace Local Workers',
+    text: 'Your role is to add capacity, not take jobs from Moroccans. Good programs hire local staff for core operations and use volunteers for supplementary tasks like language practice, skills transfer, or extra hands during peak periods.',
+    icon: Scale,
+  },
+  {
+    title: 'Long-Term Commitment Over Short Stays',
+    text: 'One volunteer staying three months creates more impact than six volunteers staying two weeks each. Short placements create a revolving door that disrupts continuity for students, patients, and communities.',
+    icon: CalendarDays,
+  },
+  {
+    title: 'Skills-Based Contributions',
+    text: 'Bring something the community actually needs. Teaching, medical skills, IT, marketing, and trades are valuable. Unskilled labor is abundant locally. If you lack specific skills, focus on programs where your cultural exchange itself is the contribution.',
+    icon: Briefcase,
+  },
+  {
+    title: 'Financial Transparency',
+    text: 'Know where your program fees go. Ethical organizations publish their financials or break down costs upon request. At least 80% of your fee should go directly to the project. If an organization cannot explain its fee structure, walk away.',
+    icon: HandCoins,
+  },
+  {
+    title: 'Community-Led Development',
+    text: 'The best programs are designed by the communities they serve, not by outsiders. Local leaders should be making decisions about project priorities. Volunteers who arrive with a savior complex do more harm than good.',
+    icon: Users,
+  },
+  {
+    title: 'Do No Harm with Children',
+    text: 'Never volunteer with orphanages unless the organization is working to reunite children with families. Short-term attachments with rotating volunteers cause psychological damage. Any program working with children must require background checks.',
+    icon: ShieldCheck,
+  },
+];
+
+/* ================================================================
+   DATA: VOLUNTOURISM RED FLAGS
+   ================================================================ */
 
 const redFlags = [
-  'Orphanage visits or short-term childcare placements',
-  'No screening process — anyone can sign up instantly',
-  'Fees above 8,000 MAD/week with no transparency on spending',
-  'Programs lasting only 1-3 days marketed as "impact" experiences',
-  'No local staff in leadership or decision-making roles',
-  'Photos of volunteers surrounded by children used as marketing',
-  'No stated long-term goals, outcomes, or community partnerships',
-  'Organization cannot explain what happens when volunteers leave',
-] as const;
+  'No application process, interview, or background check required',
+  'Orphanage visits marketed as a tourist activity with drop-in access',
+  'Program fees exceeding from 5,000 MAD per week with no financial transparency',
+  'Volunteers performing work that unskilled local workers could do for fair wages',
+  'Organization uses poverty-focused marketing with photos of sad children',
+  'No local staff in leadership positions within the organization',
+  'Guaranteed placement regardless of skills, experience, or suitability',
+  'Program promises a life-changing experience for the volunteer rather than the community',
+];
 
-const greenFlags = [
-  'Local staff lead projects; volunteers play supporting roles',
-  'Minimum commitment of 2+ weeks required',
-  'Clear, published breakdown of where fees go',
-  'Program existed before international volunteers arrived',
-  'Community members were consulted about volunteer involvement',
-  'Skills-based roles that match actual community needs',
-  'Follow-up reporting on project outcomes and impact',
-  'Background checks or references required for working with children',
-] as const;
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: BEST REGIONS
-   ═══════════════════════════════════════════════════════════════ */
-
-const bestRegions = [
-  {
-    region: 'High Atlas Mountains',
-    types: 'Teaching, construction, conservation, earthquake recovery',
-    description:
-      'Rural Amazigh (Berber) communities in the Atlas Mountains have the greatest need for volunteer support. Post-earthquake reconstruction continues in many villages. Schools lack resources, and deforestation threatens cedar forests. Accommodation is basic — expect shared rooms in village guesthouses.',
-    bestFor: 'Hands-on physical work, cultural immersion, mountain lovers',
-  },
-  {
-    region: 'Marrakech & Surrounds',
-    types: 'Teaching, women\'s cooperatives, community centers',
-    description:
-      'The Marrakech region offers the most structured volunteer programs with reliable infrastructure. Urban placements in community centers and schools operate on predictable schedules. The Ourika Valley (45 minutes away) provides rural placements with easy city access on weekends.',
-    bestFor: 'First-time volunteers, those wanting urban amenities nearby',
-  },
-  {
-    region: 'Fes & Middle Atlas',
-    types: 'Teaching, cultural heritage, cedar forest conservation',
-    description:
-      'Fes-based programs focus on education in the medina\'s community centers and cultural preservation of traditional crafts. The nearby Middle Atlas offers cedar reforestation projects and Barbary macaque conservation in Ifrane National Park.',
-    bestFor: 'Culture enthusiasts, conservation volunteers, longer-term stays',
-  },
-  {
-    region: 'Souss-Massa & Anti-Atlas',
-    types: 'Conservation, organic farming, women\'s argan cooperatives',
-    description:
-      'The Souss-Massa region around Agadir and Taroudant is the heartland of argan oil production and home to crucial conservation projects protecting the Northern Bald Ibis. Women\'s argan cooperatives actively seek volunteers for marketing and business development.',
-    bestFor: 'Conservation-minded volunteers, agriculture lovers, longer stays',
-  },
-  {
-    region: 'Rif Mountains & Northern Coast',
-    types: 'Organic farming, animal welfare, environmental cleanup',
-    description:
-      'The Rif region around Chefchaouen hosts organic farms and permaculture projects. Tangier-based animal welfare organizations need consistent volunteer support. Beach and mountain cleanup initiatives operate seasonally along the Mediterranean coast.',
-    bestFor: 'Farming enthusiasts, animal lovers, independent travelers',
-  },
-] as const;
-
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    DATA: COST BREAKDOWN
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 const costBreakdown = [
-  { item: 'Program fee (placement org)', range: 'From 2,000-8,000 MAD/week', note: 'Covers accommodation + meals' },
-  { item: 'Direct NGO placement', range: 'From 800-2,000 MAD/week', note: 'Accommodation only; meals separate' },
-  { item: 'WWOOF farm stays', range: 'Free + 250 MAD annual membership', note: '4-5 hours work/day, room & board included' },
-  { item: 'Personal expenses', range: 'From 2,000-4,000 MAD/month', note: 'SIM card, transport, snacks, toiletries' },
-  { item: 'Local transport', range: 'From 500-1,500 MAD/month', note: 'Buses, grands taxis for weekend trips' },
-  { item: 'Travel insurance', range: 'From 400-800 MAD/month', note: 'Essential; confirm volunteer work is covered' },
-  { item: 'TEFL certificate (if needed)', range: 'From 1,500 MAD (online)', note: 'One-time cost; in-person courses cost more' },
-  { item: 'Visa extension (if needed)', range: 'From 500 MAD', note: 'For stays beyond 90 days' },
-] as const;
+  { item: 'Work exchange platform membership', range: 'From 400 MAD/year', notes: 'Workaway, WorldPackers -- covers listing access' },
+  { item: 'Organized program fee (budget)', range: 'From 1,500 MAD/week', notes: 'Basic accommodation, meals, project costs' },
+  { item: 'Organized program fee (mid-range)', range: 'From 3,000 MAD/week', notes: 'Better accommodation, cultural activities, airport pickup' },
+  { item: 'Organized program fee (premium)', range: 'From 6,000 MAD/week', notes: 'Private room, excursions, in-country support, training' },
+  { item: 'Travel insurance (volunteer coverage)', range: 'From 300 MAD/month', notes: 'Must cover volunteer activities, not just tourism' },
+  { item: 'Local SIM card + data plan', range: 'From 50 MAD/month', notes: 'Maroc Telecom, Orange, or Inwi' },
+  { item: 'Personal spending money', range: 'From 1,500 MAD/week', notes: 'Weekend travel, dining out, souvenirs, transport' },
+  { item: 'TEFL certification (online)', range: 'From 1,500 MAD one-time', notes: 'If needed for teaching placements' },
+];
 
-/* ═══════════════════════════════════════════════════════════════
-   PAGE COMPONENT
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   MAIN COMPONENT
+   ================================================================ */
 
 export default function MoroccoVolunteeringPage() {
   return (
     <>
-      {/* ── JSON-LD ── */}
+      {/* JSON-LD */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGuide) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdTravel) }}
       />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
       />
 
-      <main className="min-h-screen bg-[#FAF8F5]">
-        {/* ── HERO SECTION ── */}
-        <section className="relative h-[55vh] min-h-[420px]">
-          <div className="hero-overlay absolute inset-0 z-10" />
-          <img
-            src="/images/hero-volunteering.webp"
-            alt="Volunteers planting trees alongside Moroccan community members in the High Atlas Mountains"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-          <div className="relative z-20 h-full flex flex-col justify-end pb-12">
-            <div className="container-morocco">
-              <nav className="flex items-center gap-2 text-white/80 text-sm mb-4 font-[family-name:var(--font-heading)]" aria-label="Breadcrumb">
-                <Link href="/" className="hover:text-white flex items-center gap-1">
-                  <Home className="w-4 h-4" /> Home
-                </Link>
-                <ChevronRight className="w-4 h-4" />
-                <span className="text-white">Volunteering in Morocco</span>
-              </nav>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white font-[family-name:var(--font-display)] mb-4">
-                Volunteering in Morocco
-              </h1>
-              <p className="text-lg md:text-xl text-white/90 max-w-2xl font-[family-name:var(--font-heading)]">
-                Ethical opportunities to teach, conserve, build, and grow — a practical guide
-                to making a real impact in Moroccan communities.
-              </p>
-            </div>
-          </div>
-        </section>
+      {/* ── Hero ── */}
+      <section className="relative h-[60vh] min-h-[420px] flex items-end">
+        <img
+          src="/images/hero-morocco.webp"
+          alt="Volunteers working alongside local Moroccans on a community project in the Atlas Mountains"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="hero-overlay" />
+        <div className="container-morocco relative z-10 pb-12 md:pb-16">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-display)] font-bold text-white mb-4 drop-shadow-lg">
+            Volunteering in Morocco
+          </h1>
+          <p className="text-lg md:text-xl text-white/90 max-w-2xl drop-shadow">
+            How to give back responsibly -- teaching, animal welfare, reforestation,
+            women&apos;s cooperatives, and the organizations that do it right.
+          </p>
+        </div>
+      </section>
 
-        {/* ── INTRO SECTION ── */}
-        <section className="container-morocco py-12">
-          <div className="max-w-4xl mx-auto">
-            <div className="card-moroccan p-8">
-              <div className="flex items-start gap-4">
-                <Globe className="w-8 h-8 text-[#A0522D] flex-shrink-0 mt-1" />
-                <div>
-                  <h2 className="text-2xl font-bold font-[family-name:var(--font-display)] text-gray-900 mb-4">
-                    Why Volunteer in Morocco?
-                  </h2>
-                  <p className="text-gray-700 leading-relaxed mb-4 font-[family-name:var(--font-heading)]">
-                    Morocco sits at the crossroads of Africa, Europe, and the Arab world. Its rural communities
-                    face real challenges — limited access to education, deforestation accelerated by climate change,
-                    and economic pressures driving youth migration to cities. At the same time, Morocco has a
-                    strong tradition of mutual aid (<span className="italic">ta&apos;awun</span>) and community
-                    solidarity that makes it one of the most welcoming countries for international volunteers.
-                  </p>
-                  <p className="text-gray-700 leading-relaxed mb-4 font-[family-name:var(--font-heading)]">
-                    The 2023 Al Haouz earthquake intensified the need for skilled volunteers in Atlas Mountain
-                    communities. Reconstruction, education, and women&apos;s economic empowerment remain top
-                    priorities. Organic farming and conservation projects continue to expand as Morocco invests
-                    in sustainable development through its national green strategy.
-                  </p>
-                  <p className="text-gray-700 leading-relaxed font-[family-name:var(--font-heading)]">
-                    This guide covers the five main types of volunteering, how to find ethical programs, what
-                    it costs, visa logistics, and which regions offer the strongest opportunities. Every
-                    recommendation prioritizes organizations that put community needs first.
-                  </p>
-                </div>
+      {/* ── Breadcrumbs ── */}
+      <nav className="bg-[var(--surface-muted)] border-b border-[var(--border-default)]">
+        <div className="container-morocco py-3 flex items-center gap-2 text-sm text-[var(--text-secondary)]">
+          <Link href="/" className="hover:text-[var(--color-accent)] transition-colors">
+            <Home className="w-4 h-4" />
+          </Link>
+          <ChevronRight className="w-3.5 h-3.5" />
+          <span className="text-[var(--text-primary)] font-medium">Volunteering in Morocco</span>
+        </div>
+      </nav>
+
+      {/* ── Intro Section ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco max-w-4xl">
+          <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-6">
+            Morocco attracts thousands of international volunteers every year, drawn by the country&apos;s
+            accessible location, diverse communities, and genuine need for support in education,
+            environmental conservation, and social development. But volunteering abroad carries real
+            responsibility. Done well, it creates lasting benefit for Moroccan communities and
+            transformative experiences for participants. Done poorly, it exploits the people it claims
+            to help.
+          </p>
+          <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-6">
+            This guide covers how to volunteer ethically in Morocco, which programs and organizations
+            have strong track records, what it actually costs, and how to ensure your time and skills
+            create genuine impact rather than just good photos for social media.
+          </p>
+
+          <div className="card-moroccan p-6 mt-8">
+            <div className="flex items-start gap-3">
+              <Info className="w-6 h-6 text-[var(--color-accent)] shrink-0 mt-0.5" />
+              <div>
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
+                  Before You Apply
+                </h3>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                  Research any organization thoroughly before committing money or time. Read reviews from
+                  past volunteers on independent platforms, ask for references, and confirm that the
+                  program has legitimate local partnerships. The information in this guide is current as
+                  of early 2026, but organizations and costs change. Seasonal pricing can change based
+                  on demand and program availability.
+                </p>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* ── ETHICAL VOLUNTEERING WARNING ── */}
-        <section className="container-morocco pb-12">
-          <div className="max-w-4xl mx-auto">
-            <div className="zellige-border p-8 bg-amber-50 rounded-xl">
-              <div className="flex items-start gap-4">
-                <AlertTriangle className="w-8 h-8 text-amber-600 flex-shrink-0 mt-1" />
-                <div>
-                  <h2 className="text-2xl font-bold font-[family-name:var(--font-display)] text-gray-900 mb-4">
-                    The Voluntourism Problem — Read This First
-                  </h2>
-                  <p className="text-gray-700 leading-relaxed mb-4 font-[family-name:var(--font-heading)]">
-                    Not all volunteer programs benefit communities. &quot;Voluntourism&quot; — short-term, unskilled
-                    placements designed to make travelers feel good — can actively harm the people it claims to
-                    help. Orphanage tourism has been linked to child trafficking and the deliberate
-                    separation of children from families to attract donations. Morocco has seen a rise in
-                    pay-to-volunteer schemes where most fees go to middleman agencies, not to the communities
-                    that need help.
-                  </p>
-                  <p className="text-gray-700 leading-relaxed font-[family-name:var(--font-heading)]">
-                    Before signing up for any program, ask hard questions: Where does my money go? Would a
-                    local person be better suited for this role? What happens to the project when I leave?
-                    Does the community actually want this help? The sections below will help you distinguish
-                    ethical programs from exploitative ones.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+      {/* ── Ethical Volunteering Principles ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+        <div className="container-morocco">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <ShieldCheck className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Ethical Volunteering Principles
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            These six principles separate meaningful volunteering from voluntourism that does more harm than good.
+          </p>
 
-        {/* ── RED FLAGS & GREEN FLAGS ── */}
-        <section className="container-morocco pb-16">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold font-[family-name:var(--font-display)] text-gray-900 mb-8 text-center">
-              How to Spot Ethical vs. Harmful Programs
-            </h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              {/* Red Flags */}
-              <div className="card-moroccan p-6 border-red-200 bg-red-50/50">
-                <div className="flex items-center gap-3 mb-4">
-                  <Ban className="w-6 h-6 text-red-600" />
-                  <h3 className="text-xl font-bold font-[family-name:var(--font-display)] text-red-800">
-                    Red Flags — Walk Away
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {ethicalPrinciples.map((principle) => {
+              const PrincipleIcon = principle.icon;
+              return (
+                <div key={principle.title} className="card-moroccan p-6">
+                  <PrincipleIcon className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+                  <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                    {principle.title}
                   </h3>
+                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{principle.text}</p>
                 </div>
-                <ul className="space-y-3">
-                  {redFlags.map((flag, i) => (
-                    <li key={i} className="flex items-start gap-2 text-gray-700 font-[family-name:var(--font-heading)]">
-                      <AlertTriangle className="w-4 h-4 text-red-500 flex-shrink-0 mt-1" />
-                      <span className="text-sm">{flag}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
 
-              {/* Green Flags */}
-              <div className="card-moroccan p-6 border-green-200 bg-green-50/50">
-                <div className="flex items-center gap-3 mb-4">
-                  <ShieldCheck className="w-6 h-6 text-green-600" />
-                  <h3 className="text-xl font-bold font-[family-name:var(--font-display)] text-green-800">
-                    Green Flags — Good Signs
-                  </h3>
-                </div>
-                <ul className="space-y-3">
-                  {greenFlags.map((flag, i) => (
-                    <li key={i} className="flex items-start gap-2 text-gray-700 font-[family-name:var(--font-heading)]">
-                      <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-1" />
-                      <span className="text-sm">{flag}</span>
-                    </li>
-                  ))}
-                </ul>
+      {/* ── Red Flags Section ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <AlertTriangle className="w-8 h-8 inline-block text-red-600 mr-2" />
+            Voluntourism Red Flags
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            If you encounter any of these warning signs, reconsider the program. Unethical volunteer
+            operations exist in Morocco just as they do in every popular volunteer destination.
+          </p>
+
+          <div className="card-moroccan p-6 border-l-4 border-l-red-500">
+            <ul className="space-y-4">
+              {redFlags.map((flag) => (
+                <li key={flag} className="flex items-start gap-3">
+                  <CircleAlert className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
+                  <span className="text-sm text-[var(--text-secondary)] leading-relaxed">{flag}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="mt-8 card-moroccan p-6 bg-amber-50">
+            <div className="flex items-start gap-3">
+              <AlertTriangle className="w-6 h-6 text-amber-600 shrink-0 mt-0.5" />
+              <div>
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
+                  A Note on Orphanage Volunteering
+                </h3>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                  Morocco has an orphanage volunteering industry that deserves scrutiny. UNICEF and child
+                  welfare experts agree that short-term orphanage visits by untrained volunteers harm
+                  children psychologically. Some facilities actively recruit children from poor families
+                  to fill beds and attract donor funding. If you want to support vulnerable children in
+                  Morocco, donate to established Moroccan child welfare organizations or volunteer with
+                  after-school programs that maintain consistent staffing.
+                </p>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* ── TYPES OF VOLUNTEERING ── */}
-        <section className="moroccan-pattern py-16">
-          <div className="container-morocco">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-display)] text-gray-900 mb-4">
-                5 Types of Volunteering in Morocco
-              </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto font-[family-name:var(--font-heading)]">
-                Each category addresses a genuine need. Choose based on your skills, time commitment, and the
-                kind of impact you want to make.
-              </p>
-            </div>
+      {/* ── Volunteer Categories ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+        <div className="container-morocco">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <HandHeart className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Types of Volunteer Programs
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Morocco offers volunteer opportunities across education, conservation, animal welfare,
+            community development, and healthcare. Here is what each sector involves.
+          </p>
 
-            <div className="space-y-8 max-w-4xl mx-auto">
-              {volunteerTypes.map((type, index) => {
-                const Icon = type.icon;
-                return (
-                  <div key={index} className="card-moroccan p-8">
-                    <div className="flex items-start gap-4 mb-4">
-                      <div className="w-12 h-12 rounded-full bg-[#A0522D]/10 flex items-center justify-center flex-shrink-0">
-                        <Icon className="w-6 h-6 text-[#A0522D]" />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-2xl font-bold font-[family-name:var(--font-display)] text-gray-900">
-                          {index + 1}. {type.title}
-                        </h3>
-                        <div className="flex flex-wrap gap-4 mt-2 text-sm text-gray-600 font-[family-name:var(--font-heading)]">
-                          <span className="flex items-center gap-1">
-                            <Clock className="w-4 h-4" /> {type.duration}
-                          </span>
-                          <span className="flex items-center gap-1">
-                            <MapPin className="w-4 h-4" /> {type.regions}
-                          </span>
-                          <span className="flex items-center gap-1">
-                            <DollarSign className="w-4 h-4" /> {type.cost}
-                          </span>
+          <div className="space-y-8">
+            {volunteerCategories.map((cat) => {
+              const CatIcon = cat.icon;
+              return (
+                <div key={cat.title} className="card-moroccan p-6 md:p-8">
+                  <div className="flex items-start gap-4">
+                    <CatIcon className="w-10 h-10 text-[var(--color-accent)] shrink-0 mt-1" />
+                    <div className="flex-1">
+                      <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                        {cat.title}
+                      </h3>
+                      <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4">
+                        {cat.description}
+                      </p>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div className="flex items-start gap-2">
+                          <MapPin className="w-4 h-4 text-[var(--color-gold)] shrink-0 mt-0.5" />
+                          <div>
+                            <span className="text-xs font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Locations</span>
+                            <p className="text-xs text-[var(--text-secondary)]">{cat.locations}</p>
+                          </div>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <Clock className="w-4 h-4 text-[var(--color-gold)] shrink-0 mt-0.5" />
+                          <div>
+                            <span className="text-xs font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Commitment</span>
+                            <p className="text-xs text-[var(--text-secondary)]">{cat.commitment}</p>
+                          </div>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <DollarSign className="w-4 h-4 text-[var(--color-gold)] shrink-0 mt-0.5" />
+                          <div>
+                            <span className="text-xs font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Cost</span>
+                            <p className="text-xs text-[var(--text-secondary)]">{cat.cost}</p>
+                          </div>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <Award className="w-4 h-4 text-[var(--color-gold)] shrink-0 mt-0.5" />
+                          <div>
+                            <span className="text-xs font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Skills Needed</span>
+                            <p className="text-xs text-[var(--text-secondary)]">{cat.skills}</p>
+                          </div>
                         </div>
                       </div>
                     </div>
-
-                    <p className="text-gray-700 leading-relaxed mb-4 font-[family-name:var(--font-heading)]">
-                      {type.description}
-                    </p>
-
-                    <div className="mb-4">
-                      <h4 className="font-semibold text-gray-900 mb-2 font-[family-name:var(--font-heading)]">
-                        Typical daily tasks:
-                      </h4>
-                      <ul className="grid sm:grid-cols-2 gap-2">
-                        {type.tasks.map((task, ti) => (
-                          <li key={ti} className="flex items-start gap-2 text-sm text-gray-600 font-[family-name:var(--font-heading)]">
-                            <CircleDot className="w-4 h-4 text-[#C4960C] flex-shrink-0 mt-0.5" />
-                            {task}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <div className="bg-[#FAF8F5] rounded-lg p-3 flex items-start gap-2">
-                      <Info className="w-4 h-4 text-[#A0522D] flex-shrink-0 mt-0.5" />
-                      <span className="text-sm text-gray-700 font-[family-name:var(--font-heading)]">
-                        <strong>Requirements:</strong> {type.requirements}
-                      </span>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        {/* ── TOP ORGANIZATIONS ── */}
-        <section className="container-morocco py-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-display)] text-gray-900 mb-4">
-              6 Reputable Organizations
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto font-[family-name:var(--font-heading)]">
-              These organizations have track records of community-centered work, transparent finances,
-              and genuine impact. Seasonal pricing can change — contact each directly for current rates.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {topOrganizations.map((org, index) => (
-              <div key={index} className="card-moroccan p-6">
-                <div className="flex items-start justify-between mb-3">
-                  <h3 className="text-lg font-bold font-[family-name:var(--font-display)] text-gray-900 pr-2">
-                    {org.name}
-                  </h3>
-                  <div className="flex items-center gap-1 bg-[#C4960C]/10 px-2 py-1 rounded text-sm flex-shrink-0">
-                    <Star className="w-4 h-4 text-[#C4960C] fill-[#C4960C]" />
-                    <span className="font-semibold text-[#C4960C]">{org.rating}</span>
                   </div>
                 </div>
-                <div className="space-y-2 mb-4">
-                  <div className="flex items-center gap-2 text-sm text-gray-600 font-[family-name:var(--font-heading)]">
-                    <Heart className="w-4 h-4 text-[#A0522D]" /> {org.focus}
-                  </div>
-                  <div className="flex items-center gap-2 text-sm text-gray-600 font-[family-name:var(--font-heading)]">
-                    <MapPin className="w-4 h-4 text-[#A0522D]" /> {org.location}
-                  </div>
-                  <div className="flex items-center gap-2 text-sm text-gray-600 font-[family-name:var(--font-heading)]">
-                    <DollarSign className="w-4 h-4 text-[#A0522D]" /> {org.cost}
-                  </div>
-                  <div className="flex items-center gap-2 text-sm text-gray-600 font-[family-name:var(--font-heading)]">
-                    <Calendar className="w-4 h-4 text-[#A0522D]" /> {org.commitment}
-                  </div>
-                </div>
-                <p className="text-sm text-gray-700 font-[family-name:var(--font-heading)] bg-[#FAF8F5] rounded-lg p-3">
-                  {org.note}
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* ── VISA & LOGISTICS ── */}
-        <section className="bg-white py-16">
-          <div className="container-morocco">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-display)] text-gray-900 mb-8 text-center">
-                Visa Requirements & Logistics
-              </h2>
+      {/* ── Teaching English Deep Dive ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <GraduationCap className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Teaching English in Morocco
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            English teaching is Morocco&apos;s highest-demand volunteer category. The Moroccan government
+            has prioritized English language education, and demand far outpaces supply in rural areas.
+          </p>
 
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="card-moroccan p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <FileText className="w-6 h-6 text-[#A0522D]" />
-                    <h3 className="text-xl font-bold font-[family-name:var(--font-display)] text-gray-900">
-                      Visa Rules
-                    </h3>
-                  </div>
-                  <ul className="space-y-3 font-[family-name:var(--font-heading)]">
-                    <li className="flex items-start gap-2 text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
-                      Citizens of the US, EU, UK, Canada, Australia, and 60+ other countries get visa-free entry for 90 days
-                    </li>
-                    <li className="flex items-start gap-2 text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
-                      No special &quot;volunteer visa&quot; exists — most programs operate under the tourist visa
-                    </li>
-                    <li className="flex items-start gap-2 text-sm text-gray-700">
-                      <AlertTriangle className="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5" />
-                      Stays beyond 90 days require leaving and re-entering, or a long-stay visa from your home country
-                    </li>
-                    <li className="flex items-start gap-2 text-sm text-gray-700">
-                      <AlertTriangle className="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5" />
-                      Paid volunteer positions technically require a work permit — consult your organization
-                    </li>
-                    <li className="flex items-start gap-2 text-sm text-gray-700">
-                      <Info className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
-                      Register with your embassy upon arrival for stays longer than 30 days
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="card-moroccan p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <ShieldCheck className="w-6 h-6 text-[#A0522D]" />
-                    <h3 className="text-xl font-bold font-[family-name:var(--font-display)] text-gray-900">
-                      Insurance & Health
-                    </h3>
-                  </div>
-                  <ul className="space-y-3 font-[family-name:var(--font-heading)]">
-                    <li className="flex items-start gap-2 text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
-                      Travel insurance is essential — confirm your policy covers volunteer work specifically
-                    </li>
-                    <li className="flex items-start gap-2 text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
-                      World Nomads and SafetyWing offer policies that cover volunteer activities from 400 MAD/month
-                    </li>
-                    <li className="flex items-start gap-2 text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
-                      No mandatory vaccinations, but hepatitis A, typhoid, and tetanus boosters are recommended
-                    </li>
-                    <li className="flex items-start gap-2 text-sm text-gray-700">
-                      <AlertTriangle className="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5" />
-                      Rural areas may be hours from the nearest hospital — carry a first-aid kit
-                    </li>
-                    <li className="flex items-start gap-2 text-sm text-gray-700">
-                      <Info className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
-                      Pharmacies in Moroccan cities are well-stocked and affordable
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── COST BREAKDOWN ── */}
-        <section className="container-morocco py-16">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-display)] text-gray-900 mb-4 text-center">
-              What Volunteering in Morocco Actually Costs
-            </h2>
-            <p className="text-gray-600 text-center mb-8 max-w-2xl mx-auto font-[family-name:var(--font-heading)]">
-              Budget estimates for 2026. Seasonal pricing can change — always confirm current rates
-              with your chosen organization.
-            </p>
-
-            <div className="card-moroccan overflow-hidden">
-              <div className="overflow-x-auto">
-                <table className="w-full text-sm">
-                  <thead>
-                    <tr className="bg-[#A0522D] text-white">
-                      <th className="text-left p-4 font-[family-name:var(--font-heading)] font-semibold">Expense</th>
-                      <th className="text-left p-4 font-[family-name:var(--font-heading)] font-semibold">Cost Range</th>
-                      <th className="text-left p-4 font-[family-name:var(--font-heading)] font-semibold">Notes</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {costBreakdown.map((row, i) => (
-                      <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-[#FAF8F5]'}>
-                        <td className="p-4 font-[family-name:var(--font-heading)] font-medium text-gray-900">{row.item}</td>
-                        <td className="p-4 font-[family-name:var(--font-heading)] text-[#A0522D] font-semibold">{row.range}</td>
-                        <td className="p-4 font-[family-name:var(--font-heading)] text-gray-600">{row.note}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
+          <div className="space-y-6">
+            <div className="card-moroccan p-6">
+              <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                Where the Need Is Greatest
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                Urban areas like Rabat and Casablanca have established language schools and a pool of
+                qualified Moroccan English teachers. The real gap is in rural Atlas Mountain villages,
+                small towns in the Rif, and Saharan-edge communities where students may have one or
+                two hours of English instruction per week from a teacher who is not fluent themselves.
+                Your presence in these places creates opportunities that students simply would not have
+                otherwise.
+              </p>
             </div>
 
-            <div className="mt-6 bg-[#C4960C]/10 rounded-xl p-5 flex items-start gap-3">
-              <Lightbulb className="w-5 h-5 text-[#C4960C] flex-shrink-0 mt-0.5" />
-              <p className="text-sm text-gray-700 font-[family-name:var(--font-heading)]">
-                <strong>Budget tip:</strong> A WWOOF farm stay is the most affordable option — you work 4-5 hours
-                daily in exchange for free room and board. Combined with a 250 MAD annual membership, you can
-                volunteer in Morocco for months spending only on personal expenses and transport.
+            <div className="card-moroccan p-6">
+              <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                What a Typical Day Looks Like
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                Morning classes usually run from 9:00 to 12:00, often with two different groups.
+                Afternoons might include lesson planning, one-on-one tutoring, or conversation clubs.
+                Some programs add after-school activities: sports, art, or technology workshops. Weekends
+                are free. In rural placements, expect to eat meals with your host family and become a
+                visible member of the community.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                Getting Qualified
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                A TEFL certificate (from 1,500 MAD for an online course) dramatically improves your
+                teaching effectiveness and your application strength. The certificate teaches classroom
+                management, lesson planning, and techniques for teaching grammar to non-native speakers.
+                The 120-hour TEFL is standard. CELTA from Cambridge is the gold standard but costs
+                significantly more. Some programs provide 1-2 weeks of in-country training before
+                placing you in a classroom.
               </p>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* ── DAILY LIFE AS A VOLUNTEER ── */}
-        <section className="bg-white py-16">
-          <div className="container-morocco">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-display)] text-gray-900 mb-8 text-center">
-                Daily Life as a Volunteer
-              </h2>
+      {/* ── Women's Cooperatives Deep Dive ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Users className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Women&apos;s Cooperatives &amp; Empowerment
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Morocco&apos;s cooperative movement has given thousands of rural women economic independence.
+            Volunteers with business and digital skills are especially valuable.
+          </p>
 
-              <div className="grid md:grid-cols-3 gap-6">
-                <div className="card-moroccan p-6 text-center">
-                  <Users className="w-8 h-8 text-[#A0522D] mx-auto mb-3" />
-                  <h3 className="text-lg font-bold font-[family-name:var(--font-display)] text-gray-900 mb-2">
-                    Accommodation
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="card-moroccan p-5">
+              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 flex items-center gap-2">
+                <Leaf className="w-4 h-4 text-[var(--color-gold)] shrink-0" />
+                Argan Oil Cooperatives
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                Concentrated in the Souss-Massa region between Essaouira and Agadir, these cooperatives
+                employ women to crack, press, and package argan oil. Volunteers help with marketing,
+                building online sales channels, and teaching basic business English to cooperative
+                members who interact with international buyers.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-5">
+              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 flex items-center gap-2">
+                <Star className="w-4 h-4 text-[var(--color-gold)] shrink-0" />
+                Saffron Cooperatives
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                The Taliouine region produces Morocco&apos;s prized saffron. Women harvest the delicate
+                stigmas each October and November. Year-round, volunteers help with packaging design,
+                export documentation, fair trade certification processes, and teaching digital literacy
+                to cooperative leaders.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-5">
+              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 flex items-center gap-2">
+                <Award className="w-4 h-4 text-[var(--color-gold)] shrink-0" />
+                Carpet &amp; Textile Cooperatives
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                Amazigh women in the Middle Atlas and Ouarzazate regions weave carpets using techniques
+                passed down for generations. Volunteers with photography, social media, and e-commerce
+                skills help cooperatives sell directly to international markets rather than through
+                middlemen who take the majority of the profit.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-5">
+              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 flex items-center gap-2">
+                <BookOpen className="w-4 h-4 text-[var(--color-gold)] shrink-0" />
+                Literacy &amp; Education Programs
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                Adult literacy rates among rural Moroccan women remain lower than the national average.
+                Several NGOs run literacy classes where volunteers teach basic reading, writing, and
+                arithmetic alongside life skills. French literacy is the primary focus, but Arabic and
+                English classes also exist.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Environmental Projects ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <TreeDeciduous className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Environmental &amp; Conservation Projects
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Morocco&apos;s environmental challenges -- deforestation, plastic pollution, water scarcity --
+            create meaningful opportunities for volunteers with a passion for conservation.
+          </p>
+
+          <div className="space-y-6">
+            <div className="card-moroccan p-6">
+              <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3 flex items-center gap-2">
+                <TreeDeciduous className="w-5 h-5 text-[var(--color-gold)]" />
+                Reforestation in the Atlas Mountains
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-3">
+                Morocco has lost an estimated 75% of its forest cover over the past century. The High
+                Atlas Foundation and other organizations run tree-planting campaigns that have put
+                millions of fruit and nut trees into the ground. Volunteers dig planting holes, prepare
+                seedlings, and work alongside local farmers who will tend the trees long-term. Almond,
+                walnut, carob, and olive trees provide both environmental and economic benefits.
+              </p>
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                Physical fitness matters for this work. Planting happens at altitudes above 1,500
+                meters, often on steep terrain. The work is rewarding but tiring. Most programs provide
+                accommodation in village guesthouses and meals prepared by local families.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3 flex items-center gap-2">
+                <Globe className="w-5 h-5 text-[var(--color-gold)]" />
+                Beach Cleanups &amp; Marine Conservation
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                Morocco&apos;s 3,500 km of Atlantic and Mediterranean coastline faces serious plastic
+                pollution. Volunteer-led beach cleanups operate regularly in Essaouira, Taghazout,
+                Legzira, and around Tangier. Some organizations combine cleanup efforts with educational
+                programs in coastal schools. The Surf Rider Foundation Morocco coordinates some of the
+                largest annual cleanup events. Marine conservation projects near Dakhla and
+                Souss-Massa National Park focus on protecting sea turtle nesting sites and monitoring
+                coastal ecosystems.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3 flex items-center gap-2">
+                <Leaf className="w-5 h-5 text-[var(--color-gold)]" />
+                Sustainable Agriculture &amp; Permaculture
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                Several farms and eco-projects across Morocco welcome volunteers interested in
+                permaculture, organic farming, and water-efficient agriculture. Workaway and
+                WorldPackers list dozens of such hosts, from small farms near Chefchaouen to larger
+                operations in the Souss Valley. Volunteers learn traditional Moroccan irrigation
+                methods (khettara systems), composting, and crop rotation while contributing labor
+                during planting and harvest seasons.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Reputable Organizations ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+        <div className="container-morocco">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Award className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Reputable Organizations
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            These organizations have established track records in Morocco. Research each one
+            independently before committing -- even reputable organizations have programs that
+            work better than others.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {organizations.map((org) => (
+              <div key={org.name} className="card-moroccan p-6">
+                <div className="flex items-center gap-2 mb-1">
+                  <Globe className="w-5 h-5 text-[var(--color-accent)]" />
+                  <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+                    {org.name}
                   </h3>
-                  <p className="text-sm text-gray-700 font-[family-name:var(--font-heading)]">
-                    Most programs provide shared accommodation — homestays with local families, volunteer houses,
-                    or guesthouses. Expect basic but comfortable rooms. Homestays offer the deepest cultural
-                    immersion and usually include breakfast and dinner. Hot water and Wi-Fi availability varies
-                    in rural areas.
-                  </p>
                 </div>
-
-                <div className="card-moroccan p-6 text-center">
-                  <Clock className="w-8 h-8 text-[#A0522D] mx-auto mb-3" />
-                  <h3 className="text-lg font-bold font-[family-name:var(--font-display)] text-gray-900 mb-2">
-                    Typical Schedule
-                  </h3>
-                  <p className="text-sm text-gray-700 font-[family-name:var(--font-heading)]">
-                    Work hours are usually 8:00-13:00 or 9:00-14:00, five days a week. Afternoons are free for
-                    language study, exploring, or rest. Teaching programs sometimes split into morning and late
-                    afternoon sessions. Weekends are yours — most volunteers use them to travel to nearby cities
-                    or hike in the mountains.
-                  </p>
-                </div>
-
-                <div className="card-moroccan p-6 text-center">
-                  <MessageCircle className="w-8 h-8 text-[#A0522D] mx-auto mb-3" />
-                  <h3 className="text-lg font-bold font-[family-name:var(--font-display)] text-gray-900 mb-2">
-                    Cultural Integration
-                  </h3>
-                  <p className="text-sm text-gray-700 font-[family-name:var(--font-heading)]">
-                    Sharing mint tea with colleagues is a daily ritual — never refuse the first glass. Friday is the
-                    holy day; some programs take Fridays off instead of Sundays. Dress modestly, especially in rural areas
-                    (cover shoulders and knees). Learn basic Darija greetings: &quot;Salam&quot; (hello),
-                    &quot;Shukran&quot; (thank you), &quot;Labas&quot; (how are you). Ramadan affects schedules
-                    significantly.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── BEST REGIONS ── */}
-        <section className="container-morocco py-16">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-display)] text-gray-900 mb-4 text-center">
-              Best Regions for Volunteering
-            </h2>
-            <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto font-[family-name:var(--font-heading)]">
-              Morocco&apos;s geography ranges from coastal plains to 4,000-meter peaks. Each region offers
-              distinct volunteer opportunities and living conditions.
-            </p>
-
-            <div className="space-y-6">
-              {bestRegions.map((region, index) => (
-                <div key={index} className="card-moroccan p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-[#C4960C]/10 flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-5 h-5 text-[#C4960C]" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold font-[family-name:var(--font-display)] text-gray-900 mb-1">
-                        {region.region}
-                      </h3>
-                      <p className="text-sm text-[#A0522D] font-semibold mb-3 font-[family-name:var(--font-heading)]">
-                        {region.types}
-                      </p>
-                      <p className="text-gray-700 text-sm leading-relaxed mb-3 font-[family-name:var(--font-heading)]">
-                        {region.description}
-                      </p>
-                      <div className="bg-[#FAF8F5] rounded-lg px-3 py-2 inline-flex items-center gap-2">
-                        <Award className="w-4 h-4 text-[#C4960C]" />
-                        <span className="text-sm font-medium text-gray-700 font-[family-name:var(--font-heading)]">
-                          Best for: {region.bestFor}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── PACKING & PREPARATION ── */}
-        <section className="bg-white py-16">
-          <div className="container-morocco">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-display)] text-gray-900 mb-8 text-center">
-                Preparing for Your Placement
-              </h2>
-
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="card-moroccan p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <BookOpen className="w-6 h-6 text-[#A0522D]" />
-                    <h3 className="text-xl font-bold font-[family-name:var(--font-display)] text-gray-900">
-                      Before You Go
-                    </h3>
-                  </div>
-                  <ul className="space-y-3 font-[family-name:var(--font-heading)]">
-                    <li className="flex items-start gap-2 text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 text-[#A0522D] flex-shrink-0 mt-0.5" />
-                      Research your organization thoroughly — read reviews from past volunteers, not just the website
-                    </li>
-                    <li className="flex items-start gap-2 text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 text-[#A0522D] flex-shrink-0 mt-0.5" />
-                      Start learning basic French or Darija — even 20 phrases make a huge difference
-                    </li>
-                    <li className="flex items-start gap-2 text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 text-[#A0522D] flex-shrink-0 mt-0.5" />
-                      Get a TEFL certificate if teaching (online courses available from 1,500 MAD)
-                    </li>
-                    <li className="flex items-start gap-2 text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 text-[#A0522D] flex-shrink-0 mt-0.5" />
-                      Purchase travel insurance that explicitly covers volunteer activities
-                    </li>
-                    <li className="flex items-start gap-2 text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 text-[#A0522D] flex-shrink-0 mt-0.5" />
-                      Prepare teaching materials, art supplies, or tools relevant to your placement
-                    </li>
-                    <li className="flex items-start gap-2 text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 text-[#A0522D] flex-shrink-0 mt-0.5" />
-                      Download offline maps and translation apps — rural Morocco has patchy cell coverage
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="card-moroccan p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <Building className="w-6 h-6 text-[#A0522D]" />
-                    <h3 className="text-xl font-bold font-[family-name:var(--font-display)] text-gray-900">
-                      Essential Packing List
-                    </h3>
-                  </div>
-                  <ul className="space-y-3 font-[family-name:var(--font-heading)]">
-                    <li className="flex items-start gap-2 text-sm text-gray-700">
-                      <CircleDot className="w-4 h-4 text-[#C4960C] flex-shrink-0 mt-0.5" />
-                      Modest clothing covering shoulders and knees (essential in rural areas)
-                    </li>
-                    <li className="flex items-start gap-2 text-sm text-gray-700">
-                      <CircleDot className="w-4 h-4 text-[#C4960C] flex-shrink-0 mt-0.5" />
-                      Sturdy work boots or hiking shoes (for construction, farming, or conservation)
-                    </li>
-                    <li className="flex items-start gap-2 text-sm text-gray-700">
-                      <CircleDot className="w-4 h-4 text-[#C4960C] flex-shrink-0 mt-0.5" />
-                      Headlamp or flashlight (power outages happen in rural Morocco)
-                    </li>
-                    <li className="flex items-start gap-2 text-sm text-gray-700">
-                      <CircleDot className="w-4 h-4 text-[#C4960C] flex-shrink-0 mt-0.5" />
-                      First-aid kit with any prescription medications (pharmacies are in cities only)
-                    </li>
-                    <li className="flex items-start gap-2 text-sm text-gray-700">
-                      <CircleDot className="w-4 h-4 text-[#C4960C] flex-shrink-0 mt-0.5" />
-                      Reusable water bottle with filter (safe tap water is not guaranteed everywhere)
-                    </li>
-                    <li className="flex items-start gap-2 text-sm text-gray-700">
-                      <CircleDot className="w-4 h-4 text-[#C4960C] flex-shrink-0 mt-0.5" />
-                      Sunscreen (SPF 50+), hat, and sunglasses — UV intensity is high year-round
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              {/* Practical Tips Row */}
-              <div className="grid md:grid-cols-3 gap-6 mt-6">
-                <div className="card-moroccan p-5">
-                  <h4 className="text-sm font-[family-name:var(--font-heading)] font-bold text-gray-900 mb-2 flex items-center gap-2">
-                    <Globe className="w-4 h-4 text-[#A0522D]" /> Learn Basic Darija
-                  </h4>
-                  <p className="text-xs text-gray-600 leading-relaxed font-[family-name:var(--font-heading)]">
-                    &quot;Salam&quot; (hello), &quot;Shukran&quot; (thank you), &quot;La bas?&quot; (how are you?),
-                    &quot;Bismillah&quot; (said before eating). Your host community will appreciate the effort.
-                  </p>
-                </div>
-                <div className="card-moroccan p-5">
-                  <h4 className="text-sm font-[family-name:var(--font-heading)] font-bold text-gray-900 mb-2 flex items-center gap-2">
-                    <Heart className="w-4 h-4 text-[#A0522D]" /> Respect Ramadan
-                  </h4>
-                  <p className="text-xs text-gray-600 leading-relaxed font-[family-name:var(--font-heading)]">
-                    Do not eat, drink, or smoke in public during fasting hours. Programs adjust schedules during
-                    Ramadan. Many volunteers find the communal iftar meals to be a highlight of their stay.
-                  </p>
-                </div>
-                <div className="card-moroccan p-5">
-                  <h4 className="text-sm font-[family-name:var(--font-heading)] font-bold text-gray-900 mb-2 flex items-center gap-2">
-                    <BookOpen className="w-4 h-4 text-[#A0522D]" /> Document Responsibly
-                  </h4>
-                  <p className="text-xs text-gray-600 leading-relaxed font-[family-name:var(--font-heading)]">
-                    Always ask permission before photographing people, especially children. Never post images of
-                    vulnerable individuals without consent. Your host community are partners, not social media props.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── FAQ SECTION ── */}
-        <section className="container-morocco py-16">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-display)] text-gray-900 mb-8 text-center">
-              Frequently Asked Questions
-            </h2>
-
-            <div className="space-y-4">
-              {jsonLdFaq.mainEntity.map((faq, index) => (
-                <div key={index} className="card-moroccan p-6">
-                  <div className="flex items-start gap-3">
-                    <HelpCircle className="w-5 h-5 text-[#A0522D] flex-shrink-0 mt-0.5" />
-                    <div>
-                      <h3 className="text-lg font-bold font-[family-name:var(--font-display)] text-gray-900 mb-2">
-                        {faq.name}
-                      </h3>
-                      <p className="text-gray-700 text-sm leading-relaxed font-[family-name:var(--font-heading)]">
-                        {faq.acceptedAnswer.text}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── RELATED GUIDES ── */}
-        <section className="bg-white py-16">
-          <div className="container-morocco">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold font-[family-name:var(--font-display)] text-gray-900 mb-8 text-center">
-                Related Guides
-              </h2>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                {[
-                  { title: 'Budget Travel Morocco', href: '/budget-travel', desc: 'Stretch your MAD further with our complete budget guide.' },
-                  { title: 'Morocco Safety Guide', href: '/safety', desc: 'Health, safety, and emergency contacts for travelers and volunteers.' },
-                  { title: 'Morocco Language Guide', href: '/language', desc: 'Essential Darija, French, and Amazigh phrases for daily life.' },
-                  { title: 'Packing for Morocco', href: '/packing', desc: 'Season-by-season packing advice and clothing tips.' },
-                  { title: 'Health & Vaccinations', href: '/health', desc: 'Medical prep, insurance, and staying healthy in Morocco.' },
-                  { title: 'Morocco Transport Guide', href: '/transport', desc: 'Buses, trains, grands taxis — getting around affordably.' },
-                ].map((guide, i) => (
-                  <Link key={i} href={guide.href} className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
-                    <h3 className="font-bold font-[family-name:var(--font-display)] text-gray-900 group-hover:text-[#A0522D] transition-colors mb-2">
-                      {guide.title}
-                    </h3>
-                    <p className="text-sm text-gray-600 font-[family-name:var(--font-heading)] mb-3">
-                      {guide.desc}
-                    </p>
-                    <span className="text-[#A0522D] text-sm font-semibold flex items-center gap-1 font-[family-name:var(--font-heading)]">
-                      Read guide <ArrowRight className="w-4 h-4" />
-                    </span>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── CTA SECTION ── */}
-        <section className="moroccan-pattern py-16">
-          <div className="container-morocco">
-            <div className="max-w-3xl mx-auto text-center">
-              <div className="card-moroccan p-10">
-                <HandHeart className="w-12 h-12 text-[#A0522D] mx-auto mb-4" />
-                <h2 className="text-3xl font-bold font-[family-name:var(--font-display)] text-gray-900 mb-4">
-                  Ready to Make a Difference?
-                </h2>
-                <p className="text-gray-700 font-[family-name:var(--font-heading)] mb-6 max-w-xl mx-auto">
-                  Start by researching organizations that align with your skills and values. The best
-                  volunteer experiences happen when you commit enough time to truly understand the community
-                  and contribute something meaningful. Morocco is waiting — bring your skills, your patience,
-                  and an open mind.
+                <p className="text-xs text-[var(--color-accent)] font-medium mb-3">{org.type}</p>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-3">
+                  {org.description}
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link
-                    href="/budget-travel"
-                    className="inline-flex items-center justify-center gap-2 bg-[#A0522D] text-white px-6 py-3 rounded-lg hover:bg-[#8B4726] transition-colors font-[family-name:var(--font-heading)] font-semibold"
-                  >
-                    Plan Your Budget <ArrowRight className="w-4 h-4" />
-                  </Link>
-                  <Link
-                    href="/safety"
-                    className="inline-flex items-center justify-center gap-2 border-2 border-[#A0522D] text-[#A0522D] px-6 py-3 rounded-lg hover:bg-[#A0522D] hover:text-white transition-colors font-[family-name:var(--font-heading)] font-semibold"
-                  >
-                    Safety Guide <ShieldCheck className="w-4 h-4" />
-                  </Link>
+                <div className="flex items-center gap-2 text-xs text-[var(--text-secondary)]">
+                  <DollarSign className="w-3.5 h-3.5 text-[var(--color-gold)]" />
+                  <span>{org.cost}</span>
                 </div>
+                <p className="text-xs text-[var(--color-accent)] mt-2">{org.website}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Visa & Legal Section ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <FileText className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Visa &amp; Legal Requirements
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Understanding Morocco&apos;s visa rules is essential before booking a volunteer placement.
+            The legal framework for volunteering sits in a gray area that you should navigate carefully.
+          </p>
+
+          <div className="space-y-6">
+            <div className="card-moroccan p-6">
+              <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 flex items-center gap-2">
+                <CheckCircle className="w-5 h-5 text-[var(--color-gold)]" />
+                Tourist Visa (Up to 90 Days)
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                Citizens of the US, EU, UK, Canada, Australia, and many other countries receive a
+                90-day tourist visa stamp on arrival. No advance application needed. This covers most
+                short-term volunteer placements, though technically a tourist visa does not authorize
+                any form of work. Most volunteer organizations operate within this gray area for
+                unpaid, short-term placements. Keep your passport valid for at least six months beyond
+                your entry date.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 flex items-center gap-2">
+                <CheckCircle className="w-5 h-5 text-[var(--color-gold)]" />
+                Extending Beyond 90 Days
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                If your volunteer commitment exceeds 90 days, you have two options. First, exit and
+                re-enter Morocco (a trip to Spain, Portugal, or the Canary Islands resets your 90-day
+                clock in most cases). Second, apply for a visa extension at the local prefecture, which
+                requires documentation from your sponsoring organization. Peace Corps volunteers receive
+                a special status visa handled entirely by the program. For long-term teaching positions
+                at language schools, a work contract and work permit are required.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 flex items-center gap-2">
+                <CheckCircle className="w-5 h-5 text-[var(--color-gold)]" />
+                Insurance Requirements
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                Standard travel insurance does not cover volunteer activities. You need a policy that
+                explicitly covers volunteer work, manual labor (if applicable), and emergency medical
+                evacuation. World Nomads and SafetyWing both offer volunteer-specific coverage starting
+                from 300 MAD per month. Confirm that your policy covers Morocco specifically and that
+                it includes repatriation coverage. Seasonal pricing can change, so get quotes before
+                your departure date.
+              </p>
             </div>
           </div>
-        </section>
-      </main>
+        </div>
+      </section>
+
+      {/* ── Cost Breakdown ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <HandCoins className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            What It Actually Costs
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Volunteering in Morocco is not free, but it can be remarkably affordable compared to
+            volunteer programs in other countries. Here is a realistic breakdown.
+          </p>
+
+          <div className="card-moroccan overflow-hidden">
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="bg-[var(--color-accent)]/10">
+                    <th className="text-left p-4 font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Expense</th>
+                    <th className="text-left p-4 font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Cost</th>
+                    <th className="text-left p-4 font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] hidden md:table-cell">Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {costBreakdown.map((row) => (
+                    <tr key={row.item} className="border-t border-[var(--border-default)]">
+                      <td className="p-4 text-[var(--text-primary)]">{row.item}</td>
+                      <td className="p-4 text-[var(--color-accent)] font-medium whitespace-nowrap">{row.range}</td>
+                      <td className="p-4 text-[var(--text-secondary)] hidden md:table-cell">{row.notes}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div className="mt-8 card-moroccan p-6">
+            <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+              Budget vs. Premium: What You Get
+            </h3>
+            <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4">
+              Work exchange platforms like Workaway offer the cheapest path: from 400 MAD per year for
+              membership, and hosts provide free accommodation and meals. You work 4-5 hours daily and
+              arrange everything independently. This requires self-motivation and comfort with
+              uncertainty.
+            </p>
+            <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+              Organized programs charge more but handle logistics: airport pickup, accommodation,
+              meals, project placement, in-country support, and often cultural activities on weekends.
+              For first-time volunteers or those who want structure, the premium is worth paying. A
+              realistic all-in budget for a four-week organized program is from 15,000 to 30,000 MAD
+              including flights, insurance, and personal spending. Seasonal pricing can change based
+              on program demand.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Combining Travel & Volunteering ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Compass className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Combining Travel with Volunteering
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            The most rewarding Morocco trips blend meaningful contribution with genuine exploration.
+            Here are practical approaches to doing both well.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="card-moroccan p-5">
+              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 flex items-center gap-2">
+                <CalendarDays className="w-4 h-4 text-[var(--color-gold)] shrink-0" />
+                The 6+2 Model
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                Volunteer for six weeks in one location, then travel independently for two weeks.
+                This gives you enough time to create real impact, build relationships with local
+                people, and then explore Morocco with a much deeper understanding than a typical
+                tourist.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-5">
+              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-[var(--color-gold)] shrink-0" />
+                Weekend Exploration
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                Most programs give you weekends off. Use them strategically. If you are volunteering
+                in Marrakech, the Atlas Mountains are a 90-minute drive. From Essaouira, day trips to
+                Sidi Kaouki or argan cooperatives are easy. From Fes, Meknes and Volubilis are an
+                hour away by train or grand taxi.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-5">
+              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 flex items-center gap-2">
+                <Globe className="w-4 h-4 text-[var(--color-gold)] shrink-0" />
+                Multi-Site Volunteering
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                Some Workaway hosts allow you to split your time. Spend four weeks at a farm near
+                Chefchaouen, then move to a hostel in Essaouira for another three weeks. This works
+                best when you arrange it in advance and complete your full commitment at each location
+                before moving on.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-5">
+              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 flex items-center gap-2">
+                <Heart className="w-4 h-4 text-[var(--color-gold)] shrink-0" />
+                Impact Tourism
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                If a full volunteer commitment does not fit your schedule, consider impact tourism:
+                booking tours that directly benefit communities, buying from cooperatives, eating at
+                social enterprises, and choosing accommodations that employ and train local staff. Your
+                spending choices can create positive impact even without a formal placement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── FAQ Section ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <MessageCircleQuestion className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Frequently Asked Questions
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Real questions from travelers planning to volunteer in Morocco.
+          </p>
+
+          <div className="space-y-6">
+            {faqItems.map((faq) => (
+              <div key={faq.q} className="card-moroccan p-6">
+                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                  {faq.q}
+                </h3>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Related Guides ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
+            Related Travel Guides
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                title: 'Digital Nomad Guide',
+                description: 'Remote work visas, coworking spaces, internet speeds, and the best cities for digital nomads in Morocco.',
+                href: '/morocco-digital-nomad',
+                icon: Globe,
+              },
+              {
+                title: 'Solo Travel Guide',
+                description: 'Safety tips, accommodation, transport, and itineraries for solo travelers exploring Morocco independently.',
+                href: '/morocco-solo-travel',
+                icon: Compass,
+              },
+              {
+                title: 'Berber Culture Guide',
+                description: 'Amazigh heritage, traditions, languages, architecture, and how to experience Berber culture respectfully.',
+                href: '/morocco-berber-culture',
+                icon: Users,
+              },
+              {
+                title: 'Visa & Entry Guide',
+                description: 'Visa requirements by nationality, border crossing procedures, extensions, and residency permits.',
+                href: '/morocco-visa-guide',
+                icon: FileText,
+              },
+            ].map((guide) => {
+              const GuideIcon = guide.icon;
+              return (
+                <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                  <GuideIcon className="w-8 h-8 text-[var(--color-accent)] mb-3 group-hover:text-[var(--color-primary)] transition-colors" />
+                  <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                    {guide.title}
+                  </h3>
+                  <p className="text-sm text-[var(--text-secondary)]">{guide.description}</p>
+                  <span className="inline-flex items-center gap-1 mt-3 text-sm text-[var(--color-accent)] font-medium">
+                    Read Guide <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA Section ── */}
+      <section className="py-16 md:py-20 moroccan-pattern">
+        <div className="container-morocco text-center max-w-3xl">
+          <Star className="w-10 h-10 text-[var(--color-gold)] mx-auto mb-4" />
+          <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
+            Ready to Make a Difference in Morocco?
+          </h2>
+          <p className="text-lg text-[var(--text-secondary)] mb-8 leading-relaxed">
+            The best volunteer experiences start with honest self-assessment. Ask yourself what skills
+            you actually bring, how long you can genuinely commit, and what the community needs rather
+            than what would look good on your resume. Morocco rewards volunteers who show up with
+            humility, patience, and a willingness to learn as much as they teach.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/morocco-solo-travel"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[var(--color-accent)] text-white font-[family-name:var(--font-heading)] font-bold rounded-lg hover:bg-[var(--color-accent)]/90 transition-colors"
+            >
+              <Compass className="w-5 h-5" />
+              Solo Travel Guide
+            </Link>
+            <Link
+              href="/morocco-visa-guide"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-[var(--color-accent)] text-[var(--color-accent)] font-[family-name:var(--font-heading)] font-bold rounded-lg hover:bg-[var(--color-accent)] hover:text-white transition-colors"
+            >
+              <FileText className="w-5 h-5" />
+              Visa Requirements
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
