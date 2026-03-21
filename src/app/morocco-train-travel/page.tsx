@@ -1,34 +1,10 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import {
-  ChevronRight,
-  Home,
-  ArrowRight,
-  MapPin,
-  Clock,
-  Star,
-  CheckCircle,
-  Globe,
-  BookOpen,
-  Luggage,
-  Users,
-  Zap,
-  Train,
-  Ticket,
-  Info,
-  Timer,
-  CreditCard,
-  Wifi,
-  ShieldCheck,
-  HelpCircle,
-  DollarSign,
-  Utensils,
-  Building,
-  Sparkles,
-  Moon,
-  ArrowLeftRight,
-  Award,
-  Landmark,
+  ChevronRight, Home, ArrowRight, MapPin, Clock, Star, CheckCircle, Globe,
+  BookOpen, Luggage, Users, Zap, Train, Ticket, Info, Timer, CreditCard,
+  Wifi, ShieldCheck, HelpCircle, DollarSign, Utensils, Building, Sparkles,
+  Moon, ArrowLeftRight, Award, Landmark, Mountain, Navigation, AlertTriangle,
 } from 'lucide-react';
 
 /* ═══════════════════════════════════════════════════════════════
@@ -44,7 +20,7 @@ const BASE_URL = 'https://citytoursmorocco.com';
 export const metadata: Metadata = {
   title: 'Morocco Train Travel 2026 | ONCF Routes, Al Boraq High-Speed & Ticket Guide',
   description:
-    'Complete guide to Morocco train travel. ONCF Morocco rail network, Al Boraq high-speed train, Marrakech to Fez train, morocco train tickets and schedule, ticket classes, station guides, night trains, train vs bus comparison, and budget tips for 2026.',
+    'Complete guide to Morocco train travel. ONCF rail network, Al Boraq high-speed train Tangier to Casablanca, Marrakech to Fez train, ticket classes, booking tips, station guides, scenic routes, overnight trains, rail passes, luggage rules, and combining train with bus and taxi for 2026.',
   keywords: [
     'morocco train',
     'ONCF morocco',
@@ -64,11 +40,14 @@ export const metadata: Metadata = {
     'Morocco train first class',
     'Morocco train second class',
     'Morocco train stations',
+    'Morocco scenic train routes',
+    'morocco train luggage',
+    'ONCF carte fidilite',
   ],
   openGraph: {
     title: 'Morocco Train Travel 2026 | ONCF Routes, Al Boraq & Booking Guide',
     description:
-      'Everything you need to know about train travel in Morocco. ONCF network, Al Boraq high-speed rail, routes, schedules, ticket classes, night trains, and practical tips.',
+      'Everything you need to know about train travel in Morocco. ONCF network, Al Boraq high-speed rail, routes, schedules, ticket classes, scenic journeys, overnight trains, and practical tips.',
     url: `${BASE_URL}/morocco-train-travel`,
     images: [
       {
@@ -83,7 +62,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Morocco Train Travel 2026 | ONCF & Al Boraq Guide',
     description:
-      'ONCF routes, Al Boraq high-speed train, ticket classes, booking tips, night trains, and station guide for Morocco rail travel.',
+      'ONCF routes, Al Boraq high-speed train, ticket classes, booking tips, scenic routes, overnight trains, and station guide for Morocco rail travel.',
     images: [`${BASE_URL}/images/hero-morocco.webp`],
   },
   alternates: { canonical: `${BASE_URL}/morocco-train-travel` },
@@ -99,7 +78,7 @@ const jsonLd = {
   '@id': `${BASE_URL}/morocco-train-travel`,
   name: 'Morocco Train Travel 2026 | ONCF Routes, Al Boraq & Booking Guide',
   description:
-    'Comprehensive guide to train travel in Morocco covering the ONCF rail network, Al Boraq high-speed service, routes, timetables, ticket classes, night trains, train vs bus comparison, booking strategies, station guides, and budget tips.',
+    'Comprehensive guide to train travel in Morocco covering the ONCF rail network, Al Boraq high-speed service, routes, timetables, ticket classes, scenic journeys, overnight trains, train vs bus comparison, booking strategies, station guides, luggage rules, and combining rail with bus and taxi.',
   url: `${BASE_URL}/morocco-train-travel`,
   image: `${BASE_URL}/images/hero-morocco.webp`,
   author: { '@type': 'Organization', name: 'CityGuide Morocco', url: BASE_URL },
@@ -127,7 +106,7 @@ const faqJsonLd = {
       name: 'How do I buy Morocco train tickets?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'You can buy ONCF train tickets online at oncf.ma, through the ONCF mobile app (iOS and Android), at station ticket counters, or at self-service kiosks in larger stations. Online bookings accept international credit cards and generate e-tickets you can show on your phone. For Al Boraq high-speed trains, advance booking is recommended.',
+        text: 'You can buy ONCF train tickets online at oncf.ma, through the ONCF mobile app (iOS and Android), at station ticket counters, or at self-service kiosks in larger stations. Online bookings accept international credit cards and generate e-tickets you can show on your phone. For Al Boraq high-speed trains, advance booking is recommended as fares increase closer to departure.',
       },
     },
     {
@@ -186,6 +165,22 @@ const faqJsonLd = {
         text: 'Yes, passengers can bring luggage on Moroccan trains at no extra charge. Overhead racks accommodate standard suitcases and backpacks. There is no strict weight limit, but you must be able to lift your bags onto the racks. Al Boraq trains have dedicated luggage storage areas at the end of each carriage.',
       },
     },
+    {
+      '@type': 'Question',
+      name: 'What are the most scenic train routes in Morocco?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The Fez to Oujda route through the Taza Gorge is considered the most scenic, passing through dramatic mountain terrain and the Rif foothills. The Casablanca to Fez corridor offers pastoral views of rolling farmland and the Saiss plain. The Tangier to Asilah segment on the conventional line hugs the Atlantic coast. Al Boraq offers brief ocean panoramas north of Kenitra.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is there a rail pass for Morocco?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'ONCF does not offer an unlimited rail pass like Europe\'s Eurail. The Carte Fidilite loyalty card is the closest alternative, offering up to 30% discount on regular fares for frequent travelers. Enrollment is free at any ONCF ticket counter. For most tourists spending 1-2 weeks in Morocco, buying individual tickets is more practical and cost-effective.',
+      },
+    },
   ],
 };
 
@@ -208,11 +203,12 @@ const majorRoutes = [
   { route: 'Tangier to Casablanca (Al Boraq)', duration: '2h 10min', frequency: '12+ daily', price: 'From 149 MAD (economy)', stops: 'Tangier Ville - Kenitra - Rabat Agdal - Casa Voyageurs', highlight: 'High-speed at 320 km/h — the fastest train in Africa' },
   { route: 'Marrakech to Casablanca', duration: '2h 40min', frequency: '10+ daily', price: 'From 100 MAD (2nd class)', stops: 'Marrakech - Settat - Casa Voyageurs', highlight: 'Most popular tourist route with frequent departures' },
   { route: 'Casablanca to Rabat', duration: '50min - 1h', frequency: '30+ daily (shuttle)', price: 'From 50 MAD (2nd class)', stops: 'Casa Voyageurs - Casa Port - Mohammedia - Rabat Ville', highlight: 'Ultra-frequent shuttle service, runs every 30 minutes' },
-  { route: 'Casablanca to Fes', duration: '3h 30min', frequency: '8+ daily', price: 'From 130 MAD (2nd class)', stops: 'Casa Voyageurs - Rabat - Meknes - Fes', highlight: 'Scenic route through inland Morocco' },
+  { route: 'Casablanca to Fes', duration: '3h 30min', frequency: '8+ daily', price: 'From 130 MAD (2nd class)', stops: 'Casa Voyageurs - Rabat - Meknes - Fes', highlight: 'Scenic route through inland Morocco with pastoral views' },
   { route: 'Marrakech to Fes (via Casablanca)', duration: '~7h (transfer)', frequency: '8+ daily (each leg)', price: 'From 200 MAD (2nd class)', stops: 'Marrakech - Casa Voyageurs - Rabat - Meknes - Fes', highlight: 'No direct service — transfer at Casablanca Voyageurs' },
   { route: 'Fes to Meknes', duration: '45min', frequency: '8+ daily', price: 'From 30 MAD (2nd class)', stops: 'Fes - Meknes', highlight: 'Quick hop between two imperial cities' },
   { route: 'Rabat to Fes', duration: '2h 30min', frequency: '8+ daily', price: 'From 100 MAD (2nd class)', stops: 'Rabat Ville - Meknes - Fes', highlight: 'Direct route linking the capital to the cultural heart' },
   { route: 'Casablanca to Oujda', duration: '9h - 10h', frequency: '2 daily', price: 'From 200 MAD (2nd class)', stops: 'Casa - Fes - Taza - Oujda', highlight: 'Longest ONCF route — overnight departure available' },
+  { route: 'Fes to Oujda', duration: '5h - 6h', frequency: '3 daily', price: 'From 120 MAD (2nd class)', stops: 'Fes - Taza - Taourirt - Oujda', highlight: 'Dramatic scenery through the Taza Gorge and Rif foothills' },
 ] as const;
 
 /* ═══════════════════════════════════════════════════════════════
@@ -236,7 +232,7 @@ const bookingMethods = [
   { method: 'Station Ticket Counters', detail: 'Open from early morning at all stations. Pay with MAD cash or card. Staff speak French and sometimes basic English.', icon: Building },
   { method: 'Self-Service Kiosks', detail: 'Found at larger stations like Casa Voyageurs, Rabat Ville, and Marrakech. Accept cards and dispense printed tickets quickly.', icon: Ticket },
   { method: 'Walk-Up for Conventional Trains', detail: 'Regular ONCF services rarely sell out except during Eid and summer holidays. You can buy tickets minutes before departure for most conventional routes.', icon: CheckCircle },
-  { method: 'Carte Fidilite Loyalty Card', detail: 'Frequent travelers can enroll at any ticket counter for the ONCF loyalty program offering discounts of up to 30% on regular routes.', icon: Sparkles },
+  { method: 'Carte Fidilite Loyalty Card', detail: 'Frequent travelers can enroll for free at any ticket counter. The ONCF loyalty program offers discounts of up to 30% on regular routes after qualifying trips.', icon: Sparkles },
 ] as const;
 
 /* ═══════════════════════════════════════════════════════════════
@@ -255,6 +251,17 @@ const keyStations = [
 ] as const;
 
 /* ═══════════════════════════════════════════════════════════════
+   DATA: SCENIC ROUTES
+   ═══════════════════════════════════════════════════════════════ */
+
+const scenicRoutes = [
+  { name: 'Fes to Oujda via Taza Gorge', description: 'The most dramatic rail scenery in Morocco. The train threads through the narrow Taza Corridor between the Rif and Middle Atlas mountains, passing steep gorges, terraced hillsides, and remote Berber villages. Sit on the left side heading east for the best views.', duration: '5-6 hours', bestSeat: 'Left side (eastbound)' },
+  { name: 'Casablanca to Fes (Inland Corridor)', description: 'After leaving Rabat, the landscape opens into rolling wheat fields, olive groves, and the fertile Saiss plain. Near Meknes, you pass ancient Roman ruins at Volubilis in the distance and hills dotted with cedar and cork oak forests.', duration: '3.5 hours', bestSeat: 'Either side' },
+  { name: 'Tangier to Asilah (Conventional)', description: 'The short conventional train ride south from Tangier hugs the Atlantic coastline, offering sweeping ocean views, sandy beaches, and whitewashed fishing villages. This stretch is brief but strikingly beautiful, especially at sunset.', duration: '45 minutes', bestSeat: 'Right side (southbound)' },
+  { name: 'Al Boraq: North of Kenitra', description: 'The high-speed line between Tangier and Kenitra passes through eucalyptus forests and offers brief but memorable views of the Atlantic Ocean. At 320 km/h the scenery moves fast, but the coastal panoramas north of Kenitra are a highlight.', duration: '1 hour (Tangier-Kenitra segment)', bestSeat: 'Right side (southbound)' },
+] as const;
+
+/* ═══════════════════════════════════════════════════════════════
    DATA: TRAIN VS BUS
    ═══════════════════════════════════════════════════════════════ */
 
@@ -264,7 +271,7 @@ const trainVsBus = [
   { factor: 'Price', train: 'Slightly higher (from 30 MAD short trips)', bus: 'Usually cheaper (CTM from 25 MAD short trips)' },
   { factor: 'Network', train: 'Limited to major cities on rail lines', bus: 'Reaches Chefchaouen, Essaouira, Ouarzazate, Sahara' },
   { factor: 'Reliability', train: 'Generally punctual (Al Boraq very reliable)', bus: 'Subject to road traffic and delays' },
-  { factor: 'Scenery', train: 'Good views, especially Fes-Meknes corridor', bus: 'Mountain passes and coastal roads can be spectacular' },
+  { factor: 'Scenery', train: 'Good views, especially Fes-Oujda corridor', bus: 'Mountain passes and coastal roads can be spectacular' },
 ] as const;
 
 /* ═══════════════════════════════════════════════════════════════
@@ -278,6 +285,17 @@ const budgetTips = [
   { tip: 'Combine Train and Bus', detail: 'Take the train for major city hops and switch to CTM or Supratours buses for off-network destinations like Chefchaouen or Essaouira.' },
   { tip: 'Avoid Holiday Surcharges', detail: 'Prices can spike during Eid and summer. Travel mid-week and outside peak periods for the lowest fares.' },
   { tip: 'Pack Your Own Food', detail: 'Station and onboard food is reasonably priced but bringing your own snacks and water saves 30-50 MAD per trip on longer journeys.' },
+] as const;
+
+/* ═══════════════════════════════════════════════════════════════
+   DATA: COMBINING TRAIN WITH OTHER TRANSPORT
+   ═══════════════════════════════════════════════════════════════ */
+
+const trainCombinations = [
+  { destination: 'Chefchaouen', strategy: 'Train to Fes or Tangier, then CTM/Supratours bus (4h from Fes, 3h from Tangier). Supratours buses depart from outside the train stations.', trainLeg: 'Any route to Fes or Tangier', busDetail: 'From 75 MAD (CTM or Supratours)' },
+  { destination: 'Essaouira', strategy: 'Train to Marrakech, then Supratours bus (2.5h) or grand taxi (2h). Supratours terminal is near Marrakech train station.', trainLeg: 'Any route to Marrakech', busDetail: 'From 80 MAD (Supratours) or from 100 MAD (grand taxi)' },
+  { destination: 'Ouarzazate & Ait Benhaddou', strategy: 'Train to Marrakech, then CTM bus over the Tizi n\'Tichka pass (4h) or hire a grand taxi. The mountain road is spectacular.', trainLeg: 'Any route to Marrakech', busDetail: 'From 100 MAD (CTM bus)' },
+  { destination: 'Merzouga & Sahara Desert', strategy: 'Train to Fes or Marrakech, then overnight bus to Errachidia/Rissani, followed by a local taxi or tour transfer to Merzouga.', trainLeg: 'Any route to Fes or Marrakech', busDetail: 'From 180 MAD (CTM, 10-12 hours)' },
 ] as const;
 
 /* ═══════════════════════════════════════════════════════════════
@@ -329,7 +347,7 @@ export default function MoroccoTrainTravelPage() {
           </h1>
           <p className="text-xl text-white/80 max-w-2xl">
             Everything you need to know about ONCF Morocco trains, the Al Boraq high-speed service,
-            morocco train tickets, schedules, routes from Marrakech to Fez, and practical tips for riding the rails.
+            routes, morocco train tickets, schedules, scenic journeys, and practical tips for riding the rails.
           </p>
         </div>
       </section>
@@ -348,7 +366,8 @@ export default function MoroccoTrainTravelPage() {
                 Morocco&apos;s railway network is one of the best in Africa and offers travelers a comfortable,
                 affordable, and scenic way to connect the country&apos;s major cities. Operated by <strong>ONCF
                 (Office National des Chemins de Fer)</strong>, the rail system links Tangier in the north to
-                Marrakech in the south, with key stops in Casablanca, Rabat, Meknes, Fes, and beyond.
+                Marrakech in the south, with key stops in Casablanca, Rabat, Meknes, Fes, and beyond to
+                Oujda near the Algerian border.
               </p>
               <p>
                 The crown jewel is the <strong>Al Boraq high-speed train</strong> &mdash; Africa&apos;s first
@@ -357,11 +376,10 @@ export default function MoroccoTrainTravelPage() {
                 nearly five hours by conventional train.
               </p>
               <p>
-                Whether you are planning a quick day trip from Casablanca to Rabat, a scenic ride through the
-                interior to Fes, the Marrakech to Fez train journey via Casablanca, or the full north-south
-                crossing from Tangier to Marrakech, this guide covers everything: the morocco train schedule,
-                routes, fares, booking strategies, station tips, night trains, a train versus bus comparison,
-                and the practical details that make train travel in Morocco smooth and enjoyable.
+                From a quick day trip on the Casablanca-Rabat shuttle to the full Marrakech to Fez train
+                journey via Casablanca, this guide covers the morocco train schedule, all major routes and
+                fares, booking strategies, station amenities, scenic corridors, overnight options, luggage
+                rules, and how to combine rail with bus and grand taxi to reach every corner of the country.
               </p>
             </div>
           </div>
@@ -662,8 +680,44 @@ export default function MoroccoTrainTravelPage() {
         </div>
       </section>
 
-      {/* ── Marrakech to Fez Train Deep Dive ── */}
+      {/* ── Scenic Routes ── */}
       <section className="py-16 md:py-20">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Mountain className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Most Scenic Train Routes
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Morocco&apos;s rail lines pass through surprisingly diverse landscapes. These routes offer the best
+            window-seat views on the network.
+          </p>
+          <div className="space-y-5">
+            {scenicRoutes.map((sr) => (
+              <div key={sr.name} className="card-moroccan p-6">
+                <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                  {sr.name}
+                </h3>
+                <p className="text-[var(--text-secondary)] leading-relaxed mb-3">
+                  {sr.description}
+                </p>
+                <div className="flex flex-wrap gap-4 text-sm">
+                  <span className="flex items-center gap-1.5 text-[var(--text-muted)]">
+                    <Clock className="w-4 h-4 text-[var(--color-accent)]" />
+                    {sr.duration}
+                  </span>
+                  <span className="flex items-center gap-1.5 text-[var(--text-muted)]">
+                    <Navigation className="w-4 h-4 text-[var(--color-accent)]" />
+                    Best seat: {sr.bestSeat}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Marrakech to Fez Train Deep Dive ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <Train className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
@@ -704,7 +758,7 @@ export default function MoroccoTrainTravelPage() {
       </section>
 
       {/* ── Night Trains ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+      <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <Moon className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
@@ -755,7 +809,7 @@ export default function MoroccoTrainTravelPage() {
       </section>
 
       {/* ── Train vs Bus ── */}
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <ArrowLeftRight className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
@@ -799,6 +853,54 @@ export default function MoroccoTrainTravelPage() {
                   Use trains for the main corridor cities (Tangier, Rabat, Casablanca, Meknes, Fes, Marrakech)
                   and switch to CTM or Supratours buses for destinations like Chefchaouen, Essaouira, Ouarzazate,
                   Merzouga, and the Sahara desert towns that the rail network does not reach.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Combining Train with Bus & Taxi ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Navigation className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Combining Train with Bus &amp; Grand Taxi
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            The ONCF rail network covers the main cities, but many popular destinations require a bus or grand
+            taxi connection. Here are the best multi-modal routes for reaching off-network towns.
+          </p>
+          <div className="grid md:grid-cols-2 gap-6">
+            {trainCombinations.map((combo) => (
+              <div key={combo.destination} className="card-moroccan p-6">
+                <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                  {combo.destination}
+                </h3>
+                <p className="text-sm text-[var(--text-secondary)] mb-3">{combo.strategy}</p>
+                <div className="space-y-1 text-sm">
+                  <div className="flex items-center gap-2 text-[var(--text-muted)]">
+                    <Train className="w-4 h-4 text-[var(--color-accent)] shrink-0" />
+                    <span><strong>Train leg:</strong> {combo.trainLeg}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-[var(--text-muted)]">
+                    <DollarSign className="w-4 h-4 text-[var(--color-accent)] shrink-0" />
+                    <span><strong>Onward:</strong> {combo.busDetail}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="card-moroccan p-6 mt-6 bg-[var(--color-gold)]/5 border-l-4 border-[var(--color-gold)]">
+            <div className="flex items-start gap-3">
+              <AlertTriangle className="w-6 h-6 text-[var(--color-gold)] mt-0.5 shrink-0" />
+              <div>
+                <p className="font-semibold text-[var(--text-primary)] mb-1">Supratours Tip</p>
+                <p className="text-sm text-[var(--text-secondary)]">
+                  Supratours is ONCF&apos;s own bus subsidiary. Their buses are timed to connect with train
+                  arrivals and depart from terminals next to or near major train stations. This makes
+                  Supratours the smoothest option for train-to-bus transfers. Book Supratours tickets at the
+                  train station or at supratours.ma. Prices may vary seasonally.
                 </p>
               </div>
             </div>
@@ -872,15 +974,15 @@ export default function MoroccoTrainTravelPage() {
         </div>
       </section>
 
-      {/* ── Budget Travel by Train ── */}
+      {/* ── Budget Travel & Rail Passes ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <DollarSign className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Budget Train Travel in Morocco
+            Budget Train Travel &amp; Rail Passes
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            How to save money on morocco train tickets and stretch your travel budget further.
+            How to save money on morocco train tickets, loyalty programs, and discount options.
           </p>
           <div className="grid md:grid-cols-2 gap-5">
             {budgetTips.map((bt) => (
@@ -896,12 +998,18 @@ export default function MoroccoTrainTravelPage() {
             <div className="flex items-start gap-3">
               <Sparkles className="w-6 h-6 text-[var(--color-gold)] mt-0.5 shrink-0" />
               <div>
-                <p className="font-semibold text-[var(--text-primary)] mb-1">Rail Pass Note</p>
-                <p className="text-sm text-[var(--text-secondary)]">
+                <p className="font-semibold text-[var(--text-primary)] mb-1">Rail Pass &amp; Carte Fidilite</p>
+                <p className="text-sm text-[var(--text-secondary)] mb-2">
                   ONCF does not currently offer an unlimited rail pass similar to European Eurail passes. The
-                  Carte Fidilite loyalty card is the closest equivalent, offering percentage discounts rather
-                  than unlimited travel. For most tourists visiting for 1-2 weeks, buying individual tickets
-                  is the most practical approach. Prices may change seasonally.
+                  <strong> Carte Fidilite</strong> loyalty card is the closest equivalent, offering percentage
+                  discounts of up to 30% rather than unlimited travel. Enrollment is free at any ONCF station
+                  ticket counter and requires a passport-sized photo.
+                </p>
+                <p className="text-sm text-[var(--text-secondary)]">
+                  There are also <strong>youth discounts</strong> (under 26) and <strong>senior discounts</strong> (over
+                  60) on conventional trains. Students with a valid Moroccan student card receive additional
+                  reductions. For most tourists visiting for 1-2 weeks, buying individual tickets per trip is
+                  the most practical and cost-effective approach. Prices may change seasonally.
                 </p>
               </div>
             </div>

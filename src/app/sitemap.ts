@@ -371,7 +371,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-desert-oasis',
     '/kasbah-tamadot-guide',
     '/morocco-photography-guide',
-    '/morocco-train-travel',
     '/morocco-7-day-itinerary',
     '/morocco-spa-wellness',
     '/morocco-shopping-guide',
@@ -419,6 +418,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-thermal-spas',
     '/morocco-architecture',
     '/morocco-rock-climbing',
+    '/morocco-birdwatching',
+    '/morocco-mountain-biking',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
