@@ -25,22 +25,28 @@ import {
   BadgeCheck,
   Compass,
   Phone,
+  Laptop,
+  GraduationCap,
+  Briefcase,
+  Building,
+  MessageCircleQuestion,
 } from 'lucide-react';
 
-/* ═══════════════════════════════════════════════════════════════
-   CONSTANTS
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   CONSTANTS & BASE URL
+   ================================================================ */
 
 const BASE_URL = 'https://citytoursmorocco.com';
+const PAGE_URL = `${BASE_URL}/morocco-visa-guide`;
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    SEO METADATA
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 export const metadata: Metadata = {
   title: 'Morocco Visa Guide 2026 | Requirements, Visa-Free Countries & How to Apply',
   description:
-    'Complete Morocco visa guide for 2026. Check if you need a visa, visa-free country list, passport requirements, how to apply, e-visa updates, transit visas, customs rules, overstaying penalties, and visa extensions. Everything you need to enter Morocco legally.',
+    'Complete Morocco visa guide for 2026. Visa-free country list (US, UK, EU, Canada, Australia), passport requirements, embassy applications, visa extensions at police HQ, digital nomad visa, work permits, student visas, overstay penalties, and customs rules.',
   keywords: [
     'Morocco visa requirements',
     'do I need a visa for Morocco',
@@ -58,20 +64,22 @@ export const metadata: Metadata = {
     'Morocco 90 day visa',
     'Morocco visa application',
     'Morocco border entry',
-    'Morocco visa guide',
+    'Morocco digital nomad visa',
+    'Morocco work permit',
+    'Morocco student visa',
     'Morocco immigration',
   ],
   openGraph: {
     title: 'Morocco Visa Guide 2026 | Requirements, Visa-Free Countries & How to Apply',
     description:
-      'Do you need a visa for Morocco? Complete 2026 guide covering visa-free countries, passport requirements, e-visa updates, customs, extensions, and overstaying penalties.',
-    url: `${BASE_URL}/morocco-visa-guide`,
+      'Do you need a visa for Morocco? Complete 2026 guide covering visa-free countries, passport requirements, embassy applications, digital nomad visa, work permits, student visas, extensions, and overstay penalties.',
+    url: PAGE_URL,
     images: [
       {
         url: `${BASE_URL}/images/hero-morocco.webp`,
         width: 1200,
         height: 630,
-        alt: 'Moroccan passport control area representing the comprehensive Morocco visa requirements guide',
+        alt: 'Morocco entry requirements and visa guide overview for international travelers',
       },
     ],
   },
@@ -79,130 +87,96 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Morocco Visa Guide 2026 | Complete Entry Requirements',
     description:
-      'Visa-free countries, passport rules, e-visa updates, customs, extensions & penalties. Everything you need to enter Morocco.',
+      'Visa-free countries, passport rules, digital nomad visa, work permits, student visas, extensions & penalties. Everything you need to enter Morocco.',
     images: [`${BASE_URL}/images/hero-morocco.webp`],
   },
-  alternates: { canonical: `${BASE_URL}/morocco-visa-guide` },
+  alternates: { canonical: PAGE_URL },
 };
 
-/* ═══════════════════════════════════════════════════════════════
-   JSON-LD STRUCTURED DATA
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   FAQ DATA
+   ================================================================ */
 
-const jsonLd = {
+const faqItems = [
+  {
+    q: 'Do I need a visa to visit Morocco as a US citizen?',
+    a: 'No. US citizens can enter Morocco visa-free and stay for up to 90 days within any 180-day period. You only need a valid passport with at least 6 months validity beyond your entry date and one blank page for the stamp. No pre-registration, no online form, no visa on arrival fee.',
+  },
+  {
+    q: 'How long can I stay in Morocco without a visa?',
+    a: 'Visa-free visitors from eligible countries (US, UK, EU, Canada, Australia, and others) receive a 90-day stay upon arrival. This 90-day clock starts the day your passport is stamped at immigration. If you need more time, apply for a visa extension at the nearest Surete Nationale (police station) before your 90 days expire.',
+  },
+  {
+    q: 'What happens if I overstay my 90 days in Morocco?',
+    a: 'Overstaying is a serious offense. Penalties include fines starting from 3,000 MAD, detention at exit, deportation at your own expense, a temporary or permanent ban on re-entering Morocco, and a permanent record in the Moroccan immigration system. Set a calendar reminder for 15 days before your limit and either leave or apply for an extension.',
+  },
+  {
+    q: 'Can I work remotely in Morocco on a tourist visa?',
+    a: 'Technically, the 90-day visa-free entry is for tourism only. Many digital nomads work remotely during their stay without issue, as Morocco has no specific enforcement against remote work for foreign employers. However, you cannot legally take employment with a Moroccan company on a tourist entry. For stays beyond 90 days or formal remote-work status, look into the developing digital nomad visa framework.',
+  },
+  {
+    q: 'How do I extend my visa in Morocco?',
+    a: 'Visit the nearest Surete Nationale (police station) or Bureau des Etrangers (Foreigners Office) at least 15 days before your 90-day period expires. Bring your passport, four passport photos, proof of accommodation, proof of finances, and a valid reason for extension. Processing takes from 1-4 weeks. Extensions are granted for an additional 90 days at the discretion of authorities.',
+  },
+  {
+    q: 'Do I need a transit visa for a layover in Casablanca?',
+    a: 'If you stay in the international transit zone at Mohammed V Airport without passing through immigration, you do not need a transit visa regardless of nationality. If you want to leave the airport during a long layover, you must clear immigration, which means you need to be from a visa-free country or hold a valid Moroccan visa.',
+  },
+  {
+    q: 'What documents do I need to apply for a Morocco visa at the embassy?',
+    a: 'You need a completed visa application form, two passport-sized photos on a white background, a passport valid for 6+ months, your flight itinerary, hotel booking or invitation letter, travel insurance, bank statements from the last 3 months, and an employment letter or proof of income. The standard visa fee is from 250-400 MAD equivalent in local currency.',
+  },
+  {
+    q: 'Can I do a border run to reset my 90-day Morocco stay?',
+    a: 'Some travelers exit to Spain (via Ceuta, Melilla, or ferry to Algeciras) and re-enter Morocco for a fresh 90-day period. This works but is not guaranteed indefinitely. Immigration officers can see your travel history, and frequent border runs may raise questions about your actual purpose of stay. For long-term plans, a visa extension or residency permit is the proper route.',
+  },
+];
+
+/* ================================================================
+   JSON-LD: TRAVEL GUIDE
+   ================================================================ */
+
+const jsonLdTravel = {
   '@context': 'https://schema.org',
   '@type': 'TravelGuide',
-  '@id': `${BASE_URL}/morocco-visa-guide`,
+  '@id': PAGE_URL,
   name: 'Morocco Visa Guide 2026 | Requirements, Visa-Free Countries & How to Apply',
   description:
-    'Complete guide to Morocco visa requirements in 2026, covering visa-free entry for 69+ countries, passport validity rules, how to apply for a Morocco visa, e-visa updates, transit visas, customs regulations, overstaying penalties, and visa extensions.',
-  url: `${BASE_URL}/morocco-visa-guide`,
+    'Complete guide to Morocco visa requirements in 2026 covering visa-free entry for 69+ countries, passport validity rules, embassy applications, visa extensions, digital nomad visa, work permits, student visas, overstay penalties, and customs regulations.',
+  url: PAGE_URL,
   image: `${BASE_URL}/images/hero-morocco.webp`,
-  author: {
-    '@type': 'Organization',
-    name: 'CityGuide Morocco',
-    url: BASE_URL,
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'CityGuide Morocco',
-    url: BASE_URL,
-  },
+  author: { '@type': 'Organization', name: 'City Tours Morocco', url: BASE_URL },
+  publisher: { '@type': 'Organization', name: 'City Tours Morocco', url: BASE_URL },
   datePublished: '2026-03-19',
-  dateModified: '2026-03-19',
-  mainEntityOfPage: `${BASE_URL}/morocco-visa-guide`,
-  isPartOf: {
-    '@type': 'WebSite',
-    name: 'CityGuide Morocco',
-    url: BASE_URL,
-  },
-  about: {
-    '@type': 'Country',
-    name: 'Morocco',
-  },
+  dateModified: '2026-03-21',
+  mainEntityOfPage: PAGE_URL,
+  about: { '@type': 'Country', name: 'Morocco' },
   breadcrumb: {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Morocco Visa Guide', item: `${BASE_URL}/morocco-visa-guide` },
+      { '@type': 'ListItem', position: 2, name: 'Morocco Visa Guide', item: PAGE_URL },
     ],
   },
 };
 
-const faqJsonLd = {
+/* ================================================================
+   JSON-LD: FAQ PAGE
+   ================================================================ */
+
+const jsonLdFaq = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'Do I need a visa to visit Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Citizens of 69+ countries including the US, UK, EU member states, Canada, Australia, Japan, and Brazil do not need a visa for stays up to 90 days. Your passport must be valid for at least 6 months beyond your entry date. Citizens of countries not on the visa-free list must apply for a visa at a Moroccan embassy or consulate before traveling.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long can I stay in Morocco without a visa?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Visa-free visitors can stay in Morocco for up to 90 days within a 180-day period. This is stamped in your passport on arrival. Overstaying is a serious offense that can result in fines from 3,000 MAD, detention, deportation, and a future entry ban. If you need more time, apply for a visa extension at the local police station (Surete Nationale) before your 90 days expire.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What passport requirements does Morocco have?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Your passport must be valid for at least 6 months beyond your date of entry into Morocco. It must have at least one blank page for the entry stamp. Machine-readable passports are required. Damaged or heavily worn passports may be refused at the border.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can I extend my visa in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes, you can apply for a visa extension at the nearest Surete Nationale (police station) or Bureau des Etrangers (Foreigners Office) before your 90-day visa-free period expires. You will need your passport, passport photos, proof of accommodation, proof of financial means, and a valid reason for extension. Extensions are typically granted for an additional 90 days. Apply at least 15 days before your current authorization expires.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Does Morocco have an e-visa system?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Morocco has been developing an electronic visa (e-visa) system. As of 2026, the e-visa portal is being rolled out for select nationalities that require a visa. Check the official Moroccan Ministry of Foreign Affairs website for the latest updates on eligible countries and the application process. Most Western travelers do not need any visa and can enter visa-free for 90 days.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What happens if I overstay my visa in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Overstaying your visa or visa-free period in Morocco is a serious offense. Penalties include fines starting from 3,000 MAD, detention at the airport or police station, deportation at your own expense, a ban on re-entering Morocco for a period determined by authorities, and a permanent record in the Moroccan immigration system. Always leave before your authorized stay expires or apply for an extension in advance.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do I need a transit visa for Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'If you are transiting through a Moroccan airport and staying in the international transit zone without passing through immigration, you generally do not need a transit visa regardless of your nationality. However, if you wish to leave the airport during a layover, you must meet the entry requirements for Morocco, which means either being from a visa-free country or having a valid Moroccan visa.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What can I bring into Morocco through customs?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Visitors can bring personal effects, one liter of alcohol, 200 cigarettes or 50 cigars, and up to 100,000 MAD equivalent in foreign currency without declaration. Amounts exceeding this must be declared. Prohibited items include drugs, weapons, drone cameras without prior authorization, and pornographic material. Prescription medications should be in original packaging with a doctor letter.',
-      },
-    },
-  ],
+  mainEntity: faqItems.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
 };
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    DATA: VISA-FREE COUNTRIES
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 const visaFreeRegions = [
   {
@@ -228,9 +202,9 @@ const visaFreeRegions = [
   },
 ];
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    DATA: PASSPORT REQUIREMENTS
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 const passportRequirements = [
   { rule: 'Six-Month Validity', detail: 'Your passport must be valid for at least 6 months beyond your date of entry into Morocco. Airlines may deny boarding if your passport expires within 6 months.', icon: Clock },
@@ -241,9 +215,9 @@ const passportRequirements = [
   { rule: 'Digital Copy Recommended', detail: 'Photograph or scan your passport data page and store it in cloud storage and on your phone. Keep a physical photocopy separate from the original passport.', icon: Phone },
 ];
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    DATA: VISA APPLICATION STEPS
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 const visaApplicationSteps = [
   { step: 1, title: 'Determine Your Visa Type', detail: 'Decide whether you need a short-stay visa (up to 90 days), long-stay visa (over 90 days), work visa, or student visa. Each has different requirements and processing times.' },
@@ -255,9 +229,9 @@ const visaApplicationSteps = [
   { step: 7, title: 'Collect Your Visa', detail: 'Once approved, collect your passport with the visa sticker from the embassy or consulate. Verify all details (name, dates, visa type) are correct before leaving. Some embassies offer postal return for an additional fee.' },
 ];
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    DATA: CUSTOMS ALLOWANCES
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 const customsAllowances = [
   { item: 'Alcohol', allowance: '1 liter of spirits or 1 bottle of wine', icon: Scale },
@@ -277,9 +251,9 @@ const prohibitedItems = [
   'Certain agricultural products, seeds, and live plants without phytosanitary certificates',
 ];
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    DATA: EXTENSION REQUIREMENTS
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 const extensionDocs = [
   'Valid passport with current entry stamp',
@@ -291,66 +265,27 @@ const extensionDocs = [
   'Copy of your return flight booking or onward travel itinerary',
 ];
 
-/* ═══════════════════════════════════════════════════════════════
-   DATA: RELATED GUIDES
-   ═══════════════════════════════════════════════════════════════ */
-
-const relatedGuides = [
-  {
-    href: '/visa',
-    title: 'Quick Visa Overview',
-    description: 'Condensed visa-free country list and entry requirements at a glance for quick reference.',
-    icon: Globe,
-  },
-  {
-    href: '/first-time',
-    title: 'First Time in Morocco',
-    description: 'Step-by-step guide for first-time visitors covering arrival, transport, money, and culture.',
-    icon: Compass,
-  },
-  {
-    href: '/morocco-travel-tips',
-    title: 'Morocco Travel Tips',
-    description: 'Over 55 practical tips on money, safety, transport, food, bargaining, and more for Morocco.',
-    icon: Lightbulb,
-  },
-  {
-    href: '/morocco-trip-cost',
-    title: 'Morocco Trip Cost Guide',
-    description: 'Detailed budget breakdown for Morocco covering accommodation, food, transport, and activities.',
-    icon: Banknote,
-  },
-  {
-    href: '/morocco-airports-guide',
-    title: 'Morocco Airports Guide',
-    description: 'Complete guide to all major Moroccan airports with transfer options, facilities, and tips.',
-    icon: Plane,
-  },
-];
-
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    PAGE COMPONENT
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 export default function MoroccoVisaGuidePage() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdTravel) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
       />
 
-      {/* ── Hero Section ── */}
+      {/* ── Hero ── */}
       <section className="relative py-20 md:py-28 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(/images/hero-morocco.webp)',
-          }}
+          style={{ backgroundImage: 'url(/images/hero-morocco.webp)' }}
         />
         <div className="absolute inset-0 hero-overlay" />
         <div className="container-morocco relative z-10">
@@ -370,8 +305,9 @@ export default function MoroccoVisaGuidePage() {
             <br className="hidden md:block" /> for 2026
           </h1>
           <p className="text-xl text-white/80 max-w-2xl">
-            Do you need a visa for Morocco? Complete guide to visa-free entry, passport requirements,
-            how to apply, customs rules, overstaying penalties, and visa extensions.
+            Do you need a visa for Morocco? Full breakdown of visa-free entry, passport requirements,
+            embassy applications, digital nomad considerations, work permits, student visas, extensions,
+            and overstay penalties.
           </p>
         </div>
       </section>
@@ -381,31 +317,27 @@ export default function MoroccoVisaGuidePage() {
       {/* ── Introduction ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
-          <div className="prose-moroccan">
-            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
-              Everything You Need to Enter Morocco
-            </h2>
-            <div className="space-y-4 text-lg text-[var(--text-secondary)] leading-relaxed">
-              <p>
-                Morocco welcomes over 14 million international visitors annually, and the country
-                has one of the most generous visa policies in Africa. Citizens of 69+ countries can
-                enter Morocco visa-free for stays up to 90 days, making it one of the easiest North
-                African destinations to visit.
-              </p>
-              <p>
-                However, understanding the entry requirements before you travel is essential. From
-                passport validity rules that trip up even seasoned travelers to customs regulations
-                that can cause problems if you are unaware, this guide covers every aspect of
-                entering and exiting Morocco legally in 2026.
-              </p>
-              <p>
-                Whether you are checking if your nationality qualifies for visa-free entry, need to
-                apply for a visa at an embassy, or want to understand the new e-visa system, this
-                comprehensive guide has you covered. We also cover what happens if you overstay,
-                how to extend your visa, transit rules, and exactly what you can and cannot bring
-                through Moroccan customs.
-              </p>
-            </div>
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
+            Everything You Need to Enter Morocco
+          </h2>
+          <div className="space-y-4 text-lg text-[var(--text-secondary)] leading-relaxed">
+            <p>
+              Morocco welcomes over 14 million international visitors annually and maintains one of
+              the most generous visa policies in Africa. Citizens of 69+ countries can enter visa-free
+              for stays up to 90 days, making it one of the easiest North African destinations to reach.
+            </p>
+            <p>
+              Still, the details matter. Passport validity rules trip up even seasoned travelers, customs
+              regulations catch people off guard, and the rules around working, studying, or staying
+              long-term are poorly documented online. This guide covers every scenario: short tourist
+              visits, embassy visa applications for restricted nationalities, extensions at police
+              headquarters, digital nomad stays, formal work permits, and student enrollment.
+            </p>
+            <p>
+              All information is current as of March 2026. Visa policies can change, so always verify
+              with your nearest Moroccan embassy or the official Ministry of Foreign Affairs website
+              before booking flights.
+            </p>
           </div>
         </div>
       </section>
@@ -505,74 +437,32 @@ export default function MoroccoVisaGuidePage() {
         </div>
       </section>
 
-      {/* ── Visa Requirements by Nationality ── */}
+      {/* ── Passport Requirements ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Users className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Visa Requirements by Nationality
+            <ShieldCheck className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Passport Requirements for Morocco
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Different nationalities have different entry requirements. Here is what applies to the
-            most common traveler groups visiting Morocco.
+            Even if you do not need a visa, your passport must meet these requirements to enter
+            Morocco. Check before you book your flights.
           </p>
 
-          <div className="space-y-6">
-            {[
-              {
-                nationality: 'US Citizens',
-                requirement: 'Visa-free for 90 days',
-                details: 'American citizens do not need a visa for tourist stays up to 90 days. Present a valid US passport with 6+ months validity at immigration. You will receive an entry stamp. No pre-registration or online form required.',
-                icon: Globe,
-              },
-              {
-                nationality: 'UK Citizens',
-                requirement: 'Visa-free for 90 days',
-                details: 'British passport holders enjoy visa-free entry for up to 90 days. Post-Brexit, this has not changed. Ensure your passport has at least 6 months validity and one blank page for the entry stamp.',
-                icon: Globe,
-              },
-              {
-                nationality: 'EU / Schengen Citizens',
-                requirement: 'Visa-free for 90 days',
-                details: 'All EU member state citizens can enter Morocco visa-free for up to 90 days. This includes citizens of non-EU Schengen countries like Switzerland, Norway, and Iceland. A valid national passport is required; national ID cards are not accepted.',
-                icon: Globe,
-              },
-              {
-                nationality: 'Canadian & Australian Citizens',
-                requirement: 'Visa-free for 90 days',
-                details: 'Both Canadian and Australian passport holders receive visa-free entry for 90 days. The same passport validity requirements apply: 6 months beyond entry date with at least one blank page.',
-                icon: Globe,
-              },
-              {
-                nationality: 'Indian, Pakistani & Bangladeshi Citizens',
-                requirement: 'Visa required before travel',
-                details: 'Citizens of India, Pakistan, and Bangladesh must obtain a visa from a Moroccan embassy or consulate before traveling. Required documents include flight booking, hotel reservations, bank statements, and travel insurance. Processing takes from 5-15 working days.',
-                icon: FileText,
-              },
-              {
-                nationality: 'Chinese Citizens',
-                requirement: 'Visa-free for group tours; visa required for individual travel',
-                details: 'Chinese citizens traveling as part of an organized tour group (minimum 5 people) through an authorized travel agency can enter Morocco visa-free. Individual Chinese travelers must apply for a visa at the Moroccan embassy in Beijing or the consulate in Shanghai.',
-                icon: FileText,
-              },
-            ].map((nat) => {
-              const NatIcon = nat.icon;
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {passportRequirements.map((req) => {
+              const ReqIcon = req.icon;
               return (
-                <div key={nat.nationality} className="card-moroccan p-6">
-                  <div className="flex items-start gap-4 mb-3">
+                <div key={req.rule} className="card-moroccan p-6">
+                  <div className="flex items-start gap-3 mb-3">
                     <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                      <NatIcon className="w-5 h-5 text-[var(--color-accent)]" />
+                      <ReqIcon className="w-5 h-5 text-[var(--color-accent)]" />
                     </div>
-                    <div>
-                      <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                        {nat.nationality}
-                      </h3>
-                      <span className={`text-sm font-semibold ${nat.requirement.includes('Visa-free') ? 'text-green-700' : 'text-amber-700'}`}>
-                        {nat.requirement}
-                      </span>
-                    </div>
+                    <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mt-2">
+                      {req.rule}
+                    </h3>
                   </div>
-                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{nat.details}</p>
+                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{req.detail}</p>
                 </div>
               );
             })}
@@ -588,7 +478,7 @@ export default function MoroccoVisaGuidePage() {
             How to Apply for a Morocco Visa
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            If your country requires a visa for Morocco, follow these steps to apply. Start the
+            If your country requires a visa for Morocco, follow these steps. Start the
             process at least 4-6 weeks before your planned travel date.
           </p>
 
@@ -629,45 +519,12 @@ export default function MoroccoVisaGuidePage() {
         </div>
       </section>
 
-      {/* ── Passport Requirements ── */}
+      {/* ── Entry & Exit Stamps ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <ShieldCheck className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Passport Requirements for Morocco
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Even if you do not need a visa, your passport must meet these requirements to enter
-            Morocco. Check before you book your flights.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {passportRequirements.map((req) => {
-              const ReqIcon = req.icon;
-              return (
-                <div key={req.rule} className="card-moroccan p-6">
-                  <div className="flex items-start gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                      <ReqIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                    </div>
-                    <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mt-2">
-                      {req.rule}
-                    </h3>
-                  </div>
-                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{req.detail}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Entry & Exit Stamps ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <Stamp className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Entry &amp; Exit Stamps
+            Entry &amp; Exit Procedures
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
             What to expect at Moroccan immigration when you arrive and depart.
@@ -684,15 +541,15 @@ export default function MoroccoVisaGuidePage() {
                 </h3>
               </div>
               <div className="space-y-3 text-sm text-[var(--text-secondary)]">
-                <p>When you arrive at a Moroccan airport or land border, you will go through immigration where an officer will:</p>
+                <p>At the immigration counter, an officer will:</p>
                 <div className="space-y-2">
                   {[
                     'Check your passport validity (6+ months required)',
                     'Verify you are from a visa-free country or have a valid visa',
                     'Stamp your passport with the entry date and a 90-day authorization',
-                    'You may be asked to fill out an arrival card (Fiche de Police) with your name, nationality, passport number, and accommodation address',
-                    'Occasionally you may be asked about the purpose of your visit and where you are staying',
-                    'Keep a record of your entry date as it determines your 90-day countdown',
+                    'Ask you to fill out a Fiche de Police (arrival card) with your name, nationality, passport number, and accommodation address',
+                    'Occasionally ask about the purpose of your visit and where you are staying',
+                    'Keep a record of your entry date -- it determines your 90-day countdown',
                   ].map((item, i) => (
                     <div key={i} className="flex items-start gap-2">
                       <CheckCircle className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
@@ -713,14 +570,14 @@ export default function MoroccoVisaGuidePage() {
                 </h3>
               </div>
               <div className="space-y-3 text-sm text-[var(--text-secondary)]">
-                <p>When leaving Morocco, you will pass through exit immigration where an officer will:</p>
+                <p>When leaving Morocco, exit immigration will:</p>
                 <div className="space-y-2">
                   {[
                     'Check your passport and verify you have not overstayed your 90-day authorization',
                     'Stamp your passport with the exit date',
-                    'If you have overstayed, you will be detained and may face fines, deportation proceedings, and a future entry ban',
-                    'You may be asked to show your boarding pass',
-                    'Ensure you have not packed more than 2,000 MAD in Moroccan currency (it is restricted for export)',
+                    'If you have overstayed, expect detention, fines, and possible deportation proceedings',
+                    'Ask to see your boarding pass',
+                    'Ensure you are not carrying more than 2,000 MAD in Moroccan currency (restricted for export)',
                     'Allow extra time at busy airports during holiday periods for exit processing',
                   ].map((item, i) => (
                     <div key={i} className="flex items-start gap-2">
@@ -735,8 +592,322 @@ export default function MoroccoVisaGuidePage() {
         </div>
       </section>
 
-      {/* ── Customs Regulations ── */}
+      {/* ── Visa Extensions ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Clock className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Visa Extensions at Police HQ
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Need to stay longer than 90 days? Here is how to legally extend your stay in Morocco.
+          </p>
+
+          <div className="card-moroccan p-6 md:p-8 mb-8">
+            <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+              Where to Apply
+            </h3>
+            <p className="text-sm text-[var(--text-secondary)] mb-6">
+              Visit the nearest Surete Nationale (national police headquarters) or Bureau des Etrangers
+              (Foreigners Office) in the city where you are staying. Major cities like Casablanca,
+              Marrakech, Rabat, Fes, and Tangier all have dedicated offices. Apply at least 15 days
+              before your current 90-day period expires. Do not wait until the last day -- processing
+              takes time and late applications complicate matters.
+            </p>
+
+            <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4">
+              Required Documents
+            </h3>
+            <div className="space-y-3">
+              {extensionDocs.map((doc, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0 mt-0.5">
+                    <CheckCircle className="w-3.5 h-3.5 text-[var(--color-gold)]" />
+                  </div>
+                  <p className="text-sm text-[var(--text-secondary)]">{doc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                Processing Time &amp; Cost
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                Extensions typically take from 1-4 weeks to process. There is no official fee for the
+                extension itself, but you will need to pay for passport photos, photocopies, and other
+                administrative costs totaling from 50-200 MAD. During the processing period, you will
+                receive a receipt (recepisse) that serves as temporary proof of your legal status.
+              </p>
+            </div>
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                Important Notes
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                Extensions are not guaranteed and are granted at the discretion of the authorities. Having
+                strong documentation (accommodation, finances, valid reason) significantly improves your
+                chances. If denied, you must leave Morocco before your original 90-day period expires.
+                For stays exceeding 180 days, you need to apply for a Carte de Sejour (residency permit).
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Digital Nomad Visa & Remote Work ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Laptop className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Digital Nomad Visa &amp; Remote Work
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Morocco has become a major hub for remote workers. Here is the legal landscape for
+            digital nomads as of 2026.
+          </p>
+
+          <div className="space-y-6">
+            <div className="card-moroccan p-6">
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                <Globe className="w-5 h-5 inline-block text-[var(--color-accent)] mr-2" />
+                Current Legal Status
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-3">
+                Morocco does not yet have a dedicated &ldquo;digital nomad visa&rdquo; like Portugal, Spain, or
+                the UAE. Remote workers from visa-free countries currently enter on the standard 90-day
+                tourist authorization. Many digital nomads work remotely for foreign employers or their own
+                businesses during this period without issue, as Moroccan authorities do not actively enforce
+                against remote work performed for companies outside Morocco.
+              </p>
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                The Moroccan government has signaled interest in creating a formal digital nomad framework,
+                recognizing cities like Marrakech, Essaouira, and Taghazout as growing remote-work
+                destinations. No official program has launched as of March 2026, but the conversation is
+                active at the policy level.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                <Clock className="w-5 h-5 inline-block text-[var(--color-accent)] mr-2" />
+                Staying Beyond 90 Days as a Remote Worker
+              </h3>
+              <div className="space-y-3 text-sm text-[var(--text-secondary)] leading-relaxed">
+                <p>
+                  Digital nomads who want to stay longer than 90 days have a few options:
+                </p>
+                <div className="space-y-2">
+                  {[
+                    'Apply for a visa extension at the local Surete Nationale (see section above). State your reason as continued tourism or personal reasons. Extensions are discretionary.',
+                    'Exit Morocco before 90 days, spend time in another country (Spain, Portugal, or elsewhere), and re-enter for a fresh 90-day period. Popular exits include the ferry to Spain or flights to the Canary Islands.',
+                    'Apply for a Carte de Sejour (residency permit) if you plan to stay 6+ months. This requires proof of income, accommodation, and health insurance. Processing is bureaucratic and can take weeks.',
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-start gap-2">
+                      <ArrowRight className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
+                      <span>{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                <Building className="w-5 h-5 inline-block text-[var(--color-accent)] mr-2" />
+                Coworking &amp; Nomad Infrastructure
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                Morocco has strong internet infrastructure in major cities. Fiber connections in
+                Casablanca and Rabat deliver 100+ Mbps. Coworking spaces operate in Marrakech (The Spot,
+                Kech Cowork), Essaouira (Sun Desk), Taghazout (Taghazout Cowork), Rabat, and Tangier.
+                Monthly coworking memberships run from 1,000-2,500 MAD. Many cafes and riads also offer
+                reliable Wi-Fi. The cost of living is significantly lower than Western Europe, with
+                comfortable monthly budgets starting from 8,000-12,000 MAD including rent, food, and
+                coworking. Seasonal pricing can change during peak tourist months.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-8 card-moroccan p-6 bg-[var(--color-accent)]/5">
+            <div className="flex items-start gap-3">
+              <Info className="w-5 h-5 text-[var(--color-gold)] mt-1 shrink-0" />
+              <div>
+                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                  Tax Considerations
+                </h3>
+                <p className="text-sm text-[var(--text-secondary)]">
+                  If you stay in Morocco for more than 183 days in a calendar year, you may become a
+                  Moroccan tax resident. This means your worldwide income could be subject to Moroccan
+                  taxation. Consult a tax professional familiar with both your home country and Moroccan
+                  tax law before committing to a long-term stay. Most digital nomads on 90-day rotations
+                  do not trigger tax residency.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Work Permits ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Briefcase className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Work Permits in Morocco
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Taking a job with a Moroccan employer requires a formal work permit. Here is how the
+            process works.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                Who Needs a Work Permit?
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                Any foreign national employed by a Moroccan company or organization must have a work
+                permit (Attestation de Travail). This applies to salaried positions, contract work,
+                internships exceeding 3 months, and freelance work billed to Moroccan clients. Remote
+                workers employed by foreign companies outside Morocco are in a gray area (see the
+                digital nomad section above).
+              </p>
+            </div>
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                Employer-Sponsored Process
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                The employer initiates the work permit application through ANAPEC (the national
+                employment agency). They must prove that no qualified Moroccan candidate is available
+                for the position. Once ANAPEC approves, the employer submits the permit application
+                to the Ministry of Labor. Processing takes from 4-8 weeks. The work permit is tied
+                to a specific employer and position.
+              </p>
+            </div>
+          </div>
+
+          <div className="card-moroccan p-6 md:p-8">
+            <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4">
+              Required Documents for Work Permits
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              {[
+                'Valid passport with 6+ months validity',
+                'Signed employment contract in French or Arabic',
+                'Employer registration documents (CNSS, patente)',
+                'Diploma or professional qualifications (apostilled)',
+                'Criminal background check from home country',
+                'Medical certificate from a Moroccan doctor',
+                'Four passport-sized photographs',
+                'Proof of accommodation in Morocco',
+              ].map((doc, i) => (
+                <div key={i} className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
+                  <p className="text-sm text-[var(--text-secondary)]">{doc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-6 card-moroccan p-6 bg-[var(--color-accent)]/5">
+            <div className="flex items-start gap-3">
+              <Lightbulb className="w-5 h-5 text-[var(--color-gold)] mt-1 shrink-0" />
+              <div>
+                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                  Carte de Sejour for Workers
+                </h3>
+                <p className="text-sm text-[var(--text-secondary)]">
+                  Once your work permit is approved, you apply for a Carte de Sejour (residency card)
+                  at the local Surete Nationale. The initial card is valid for 1 year and renewable.
+                  After continuous legal residence and employment in Morocco, you may be eligible for
+                  a 10-year residency card.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Student Visas ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <GraduationCap className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Student Visas for Morocco
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Studying at a Moroccan university or language school? Here is what you need for a student
+            visa and residency.
+          </p>
+
+          <div className="space-y-6">
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                Short Language Courses (Under 90 Days)
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                If you are from a visa-free country and your Arabic, Darija, or French language course
+                is shorter than 90 days, you can attend on your standard tourist entry. No student visa
+                is needed. Many language schools in Fes, Rabat, and Marrakech offer 2-12 week intensive
+                programs that fall within this window.
+              </p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                Long-Term University Enrollment
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4">
+                For degree programs or courses exceeding 90 days, you need a student visa obtained from
+                a Moroccan embassy before arrival. After entering Morocco, you apply for a student Carte
+                de Sejour at the local police. The student residency card is renewable annually for the
+                duration of your program.
+              </p>
+              <h4 className="text-sm font-[family-name:var(--font-heading)] font-semibold text-[var(--text-primary)] mb-3">
+                Documents for a Student Visa
+              </h4>
+              <div className="space-y-2">
+                {[
+                  'Acceptance letter from a recognized Moroccan educational institution',
+                  'Valid passport with 6+ months validity',
+                  'Completed visa application form',
+                  'Proof of financial means (bank statements, scholarship letter, or sponsor affidavit)',
+                  'Medical certificate and proof of health insurance',
+                  'Criminal background check from home country',
+                  'High school diploma or university transcripts (apostilled and translated into French or Arabic)',
+                  'Four passport-sized photographs on white background',
+                ].map((doc, i) => (
+                  <div key={i} className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
+                    <p className="text-sm text-[var(--text-secondary)]">{doc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                Popular Universities for International Students
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                Morocco has several universities that actively recruit international students.
+                Al Akhawayn University in Ifrane teaches in English. Mohammed V University in Rabat,
+                Universite Hassan II in Casablanca, and Universite Cadi Ayyad in Marrakech offer
+                programs in French and Arabic. Tuition for public universities is heavily subsidized,
+                with annual fees from 1,000-5,000 MAD for Moroccan and African students, and from
+                20,000-80,000 MAD for private institutions. Seasonal pricing can change.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Customs Regulations ── */}
+      <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <Scale className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
@@ -807,15 +978,15 @@ export default function MoroccoVisaGuidePage() {
       </section>
 
       {/* ── Overstaying Penalties ── */}
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <AlertTriangle className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Overstaying Penalties
+            Overstay Penalties
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
             Overstaying your authorized stay in Morocco is taken seriously. Understand the consequences
-            to avoid legal trouble.
+            before you let your 90 days slip.
           </p>
 
           <div className="card-moroccan p-6 md:p-8">
@@ -847,7 +1018,7 @@ export default function MoroccoVisaGuidePage() {
                   severity: 'Severe',
                 },
               ].map((item) => (
-                <div key={item.penalty} className="flex items-start gap-4 p-4 bg-[var(--surface-muted)] rounded-lg">
+                <div key={item.penalty} className="flex items-start gap-4 p-4 bg-white/50 rounded-lg">
                   <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 ${item.severity === 'Severe' ? 'bg-red-100' : item.severity === 'Serious' ? 'bg-amber-100' : 'bg-yellow-50'}`}>
                     <CircleAlert className={`w-5 h-5 ${item.severity === 'Severe' ? 'text-red-600' : item.severity === 'Serious' ? 'text-amber-600' : 'text-yellow-600'}`} />
                   </div>
@@ -876,214 +1047,9 @@ export default function MoroccoVisaGuidePage() {
                 </h3>
                 <p className="text-sm text-[var(--text-secondary)]">
                   Set a calendar reminder for 15 days before your 90-day limit. If you want to stay longer,
-                  apply for an extension well in advance (see below). Alternatively, exit Morocco before your
-                  90 days expire, spend time in another country, and re-enter for a fresh 90-day period. Note
-                  that frequent border runs may raise suspicion with immigration officers.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Visa Extensions ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Clock className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Visa Extensions in Morocco
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Need to stay longer than 90 days? Here is how to legally extend your stay in Morocco.
-          </p>
-
-          <div className="card-moroccan p-6 md:p-8 mb-8">
-            <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-              Where to Apply
-            </h3>
-            <p className="text-sm text-[var(--text-secondary)] mb-6">
-              Visit the nearest Surete Nationale (police station) or Bureau des Etrangers (Foreigners Office)
-              in the city where you are staying. Major cities like Casablanca, Marrakech, Rabat, Fes, and
-              Tangier all have dedicated offices for this purpose. Apply at least 15 days before your current
-              90-day period expires.
-            </p>
-
-            <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4">
-              Required Documents
-            </h3>
-            <div className="space-y-3">
-              {extensionDocs.map((doc, i) => (
-                <div key={i} className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0 mt-0.5">
-                    <CheckCircle className="w-3.5 h-3.5 text-[var(--color-gold)]" />
-                  </div>
-                  <p className="text-sm text-[var(--text-secondary)]">{doc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                Processing Time &amp; Cost
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                Extensions typically take from 1-4 weeks to process. There is no official fee for the
-                extension itself, but you may need to pay for passport photos, photocopies, and other
-                administrative costs totaling from 50-200 MAD. During the processing period, you will
-                receive a receipt that serves as temporary proof of your legal status.
-              </p>
-            </div>
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                Important Notes
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                Extensions are not guaranteed and are granted at the discretion of the authorities. Having
-                strong documentation (accommodation, finances, valid reason) significantly improves your
-                chances. If denied, you must leave Morocco before your original 90-day period expires.
-                For stays exceeding 180 days, you will need to apply for a Carte de Sejour (residency permit).
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Transit Visas ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Plane className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Transit Visas
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Transiting through a Moroccan airport? Here is what you need to know about transit
-            requirements.
-          </p>
-
-          <div className="card-moroccan p-6 md:p-8">
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                  Airside Transit (No Immigration)
-                </h3>
-                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                  If your connecting flight departs from the same terminal and you remain in the international
-                  transit zone without passing through Moroccan immigration, you generally do not need a transit
-                  visa regardless of your nationality. This applies at Mohammed V International Airport (Casablanca),
-                  which is the main hub for Royal Air Maroc connections.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                  Landside Transit (Leaving the Airport)
-                </h3>
-                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                  If you wish to leave the airport during a long layover &mdash; for example, to visit
-                  Casablanca during a 12-hour connection &mdash; you must pass through Moroccan immigration.
-                  This means you need to meet the standard entry requirements: either be from a visa-free
-                  country or hold a valid Moroccan visa. You will receive entry and exit stamps as normal.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                  Overnight Layovers
-                </h3>
-                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                  For overnight layovers at Casablanca Mohammed V Airport, some airlines (particularly Royal
-                  Air Maroc) offer complimentary hotel stays for connecting passengers. If this involves
-                  leaving the airport, you will need to clear immigration. Check with your airline about
-                  transit hotel arrangements and whether they assist with immigration formalities.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── E-Visa Updates ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <BadgeCheck className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            E-Visa Updates for 2026
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Morocco is modernizing its visa system. Here is the latest on the electronic visa program.
-          </p>
-
-          <div className="card-moroccan p-6 md:p-8">
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                  <Globe className="w-5 h-5 text-[var(--color-accent)]" />
-                </div>
-                <div>
-                  <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                    Current Status
-                  </h3>
-                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                    Morocco has been developing an electronic visa (e-visa) system to streamline the application
-                    process for nationalities that require a visa. As of 2026, the system is being progressively
-                    rolled out for select countries. The e-visa allows applicants to complete the entire visa
-                    application process online without visiting an embassy or consulate.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                  <FileText className="w-5 h-5 text-[var(--color-accent)]" />
-                </div>
-                <div>
-                  <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                    How It Works
-                  </h3>
-                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                    The e-visa process involves completing an online application form, uploading digital copies
-                    of your passport, photo, and supporting documents, paying the visa fee online, and receiving
-                    an electronic visa approval via email. The approved e-visa should be printed and presented
-                    at immigration on arrival. Processing times are typically shorter than embassy applications,
-                    averaging from 3-7 working days.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                  <AlertTriangle className="w-5 h-5 text-[var(--color-accent)]" />
-                </div>
-                <div>
-                  <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                    Important Caution
-                  </h3>
-                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                    Only use the official Moroccan government e-visa portal. Beware of third-party websites
-                    that charge inflated fees to process your application. The official portal is accessible
-                    through the Moroccan Ministry of Foreign Affairs website. If you are unsure whether your
-                    nationality is eligible for the e-visa, contact your nearest Moroccan embassy for
-                    confirmation.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-8 card-moroccan p-6 bg-[var(--color-accent)]/5">
-            <div className="flex items-start gap-3">
-              <Info className="w-5 h-5 text-[var(--color-gold)] mt-1 shrink-0" />
-              <div>
-                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                  Visa-Free Travelers: No E-Visa Needed
-                </h3>
-                <p className="text-sm text-[var(--text-secondary)]">
-                  If your country is on the visa-free list (US, UK, EU, Canada, Australia, etc.), you do not
-                  need to apply for an e-visa or any visa at all. Simply arrive with a valid passport and
-                  receive your 90-day entry stamp at immigration. The e-visa system is designed for nationalities
-                  that currently require a traditional embassy visa.
+                  apply for an extension well in advance. Alternatively, exit Morocco before your 90 days
+                  expire, spend time in another country, and re-enter for a fresh 90-day period. Note that
+                  frequent border runs may raise suspicion with immigration officers.
                 </p>
               </div>
             </div>
@@ -1095,7 +1061,7 @@ export default function MoroccoVisaGuidePage() {
       <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <BookOpen className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            <MessageCircleQuestion className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
             Frequently Asked Questions
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
@@ -1103,13 +1069,13 @@ export default function MoroccoVisaGuidePage() {
           </p>
 
           <div className="space-y-4">
-            {faqJsonLd.mainEntity.map((faq, i) => (
-              <div key={i} className="card-moroccan p-6">
+            {faqItems.map((faq) => (
+              <div key={faq.q} className="card-moroccan p-6">
                 <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                  {faq.name}
+                  {faq.q}
                 </h3>
                 <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                  {faq.acceptedAnswer.text}
+                  {faq.a}
                 </p>
               </div>
             ))}
@@ -1120,33 +1086,48 @@ export default function MoroccoVisaGuidePage() {
       {/* ── Related Guides ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Compass className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Related Morocco Guides
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
+            Related Travel Guides
           </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Continue planning your Morocco trip with these essential guides.
-          </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {relatedGuides.map((guide) => {
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                title: 'First Time in Morocco',
+                description: 'Step-by-step guide for first-time visitors covering arrival, transport, money, and culture.',
+                href: '/morocco-first-time',
+                icon: Compass,
+              },
+              {
+                title: 'Morocco Safety Tips',
+                description: 'Scam avoidance, ATM safety, solo travel advice, emergency numbers, and embassy contacts.',
+                href: '/morocco-safety-tips',
+                icon: Shield,
+              },
+              {
+                title: 'Digital Nomad Morocco',
+                description: 'Coworking spaces, internet speeds, cost of living, and the best cities for remote work.',
+                href: '/morocco-digital-nomad',
+                icon: Laptop,
+              },
+              {
+                title: 'Morocco Transport Guide',
+                description: 'Trains, buses, grand taxis, rental cars, and domestic flights across Morocco.',
+                href: '/morocco-transport',
+                icon: MapPin,
+              },
+            ].map((guide) => {
               const GuideIcon = guide.icon;
               return (
-                <Link key={guide.href} href={guide.href} className="group">
-                  <div className="card-moroccan p-5 h-full transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1">
-                    <div className="flex items-start gap-3 mb-3">
-                      <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                        <GuideIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                      </div>
-                      <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] group-hover:text-[var(--color-accent)] transition-colors mt-2">
-                        {guide.title}
-                      </h3>
-                    </div>
-                    <p className="text-sm text-[var(--text-secondary)] mb-3">{guide.description}</p>
-                    <span className="inline-flex items-center gap-1 text-sm font-medium text-[var(--color-accent)]">
-                      Read Guide <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                    </span>
-                  </div>
+                <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                  <GuideIcon className="w-8 h-8 text-[var(--color-accent)] mb-3 group-hover:text-[var(--color-primary)] transition-colors" />
+                  <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                    {guide.title}
+                  </h3>
+                  <p className="text-sm text-[var(--text-secondary)]">{guide.description}</p>
+                  <span className="inline-flex items-center gap-1 mt-3 text-sm text-[var(--color-accent)] font-medium">
+                    Read Guide <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
                 </Link>
               );
             })}
@@ -1163,22 +1144,22 @@ export default function MoroccoVisaGuidePage() {
           </h2>
           <p className="text-lg text-[var(--text-secondary)] mb-8 max-w-2xl mx-auto">
             Now that you understand the visa requirements, passport rules, and entry procedures,
-            you are ready to plan the rest of your Moroccan adventure. Check your passport validity,
-            confirm your visa status, and start exploring our destination guides.
+            you are ready to plan the rest of your trip. Check your passport validity, confirm your
+            visa status, and start exploring our destination guides.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/first-time"
+              href="/morocco-first-time"
               className="inline-flex items-center gap-2 px-8 py-3 bg-[var(--color-accent)] text-white rounded-lg font-semibold hover:bg-[var(--color-accent)]/90 transition-colors"
             >
               First Time in Morocco
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
-              href="/morocco-travel-tips"
+              href="/morocco-safety-tips"
               className="inline-flex items-center gap-2 px-8 py-3 border-2 border-[var(--color-accent)] text-[var(--color-accent)] rounded-lg font-semibold hover:bg-[var(--color-accent)]/5 transition-colors"
             >
-              55+ Travel Tips
+              Morocco Safety Tips
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

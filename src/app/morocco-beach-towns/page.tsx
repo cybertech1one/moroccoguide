@@ -5,493 +5,415 @@ import {
   Home,
   MapPin,
   Star,
-  Heart,
-  Info,
-  ArrowRight,
-  Sparkles,
-  ShieldCheck,
-  CheckCircle,
-  Users,
-  Gem,
-  Award,
-  BookOpen,
-  Crown,
   Waves,
   Sun,
   Wind,
-  Leaf,
-  Calendar,
-  Tag,
-  Globe,
-  Lightbulb,
-  Camera,
+  Clock,
+  Info,
+  ArrowRight,
   Compass,
-  Anchor,
-  Umbrella,
+  ShieldCheck,
   Thermometer,
-  CloudSun,
-  Navigation,
+  DollarSign,
+  CheckCircle,
+  Users,
+  Anchor,
+  Building,
+  Calendar,
+  MessageCircleQuestion,
+  Plane,
+  Bed,
+  Camera,
   Shell,
   Fish,
-  Utensils,
-  Bed,
-  Plane,
 } from 'lucide-react';
 
-/* ═══════════════════════════════════════════════════════════════
-   CONSTANTS
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   CONSTANTS & BASE URL
+   ================================================================ */
 
 const BASE_URL = 'https://citytoursmorocco.com';
+const PAGE_URL = `${BASE_URL}/morocco-beach-towns`;
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    SEO METADATA
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 export const metadata: Metadata = {
-  title: 'Top 10 Morocco Beach Towns 2026 | Best Coastal Towns & Seaside Destinations',
+  title: 'Best Beach Towns in Morocco 2026 | Essaouira, Taghazout, Asilah & More',
   description:
-    'Discover the best Morocco beach towns from Essaouira and Taghazout to Dakhla and Asilah. Complete guide to coastal towns with beaches, accommodation, water sports, dining, and travel tips for your beach holiday in Morocco.',
+    'Complete guide to Morocco\'s best beach towns. Essaouira for wind sports, Taghazout for surfing, Asilah for art, Mirleft for off-the-radar escapes, Dakhla for world-class kitesurfing, Oualidia for lagoon swimming, plus Legzira and Sidi Ifni. Atlantic vs Mediterranean coast, best season, accommodation, and how to get there.',
   keywords: [
     'Morocco beach towns',
-    'best coastal towns Morocco',
-    'Morocco seaside destinations',
-    'beach holiday Morocco',
-    'Essaouira beach town',
+    'best beaches Morocco',
+    'Essaouira beach guide',
     'Taghazout surf town',
-    'Agadir beach resort',
-    'Asilah coastal town',
-    'Dakhla Morocco',
-    'Oualidia lagoon town',
-    'Sidi Ifni beach',
-    'Mirleft Morocco',
-    'Saïdia beach resort',
-    'El Jadida coastal city',
-    'Morocco coastal holidays',
-    'seaside towns Morocco',
-    'Morocco beach vacation 2026',
-    'Atlantic coast Morocco towns',
-    'Morocco fishing villages',
-    'coastal Morocco travel guide',
+    'Asilah Morocco',
+    'Mirleft beach Morocco',
+    'Sidi Ifni Morocco',
+    'Dakhla kitesurfing',
+    'Legzira beach arches',
+    'Oualidia lagoon Morocco',
+    'Morocco Atlantic coast',
+    'Morocco Mediterranean coast',
+    'Morocco coastal towns 2026',
+    'Morocco beach holiday',
+    'surf towns Morocco',
+    'Morocco seaside accommodation',
+    'Morocco beach travel guide',
+    'family beach Morocco',
   ],
   openGraph: {
-    title: 'Top 10 Morocco Beach Towns 2026 | Best Coastal Towns & Seaside Destinations',
+    title: 'Best Beach Towns in Morocco 2026 | Essaouira, Taghazout, Asilah & More',
     description:
-      'From the windswept charm of Essaouira to the surf paradise of Taghazout. Explore Morocco\'s finest beach towns with accommodation, dining, water sports, and travel tips.',
-    url: `${BASE_URL}/morocco-beach-towns`,
+      'From the wind-battered Atlantic coast to the calm Mediterranean shores, Morocco has beach towns for every type of traveler. Surf breaks, artist enclaves, hidden coves, lagoon swimming, and world-class kitesurfing — all with Moroccan food and culture steps from the sand.',
+    url: PAGE_URL,
     images: [
       {
         url: `${BASE_URL}/images/hero-essaouira.webp`,
         width: 1200,
         height: 630,
-        alt: 'Charming Moroccan coastal town with whitewashed buildings overlooking the Atlantic Ocean',
+        alt: 'Blue fishing boats in the harbor of Essaouira with the fortified medina walls in the background',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Top 10 Morocco Beach Towns 2026 | Best Coastal Destinations',
+    title: 'Best Beach Towns in Morocco 2026 | Complete Coastal Guide',
     description:
-      'Essaouira, Taghazout, Agadir, Asilah, Dakhla, and 5 more incredible beach towns. Your complete guide to coastal Morocco.',
+      'Essaouira, Taghazout, Asilah, Mirleft, Dakhla, Oualidia, Legzira & Sidi Ifni — the definitive guide to Morocco\'s coastal towns with best seasons, activities, accommodation, and travel tips.',
     images: [`${BASE_URL}/images/hero-essaouira.webp`],
   },
-  alternates: { canonical: `${BASE_URL}/morocco-beach-towns` },
+  alternates: { canonical: PAGE_URL },
 };
 
-/* ═══════════════════════════════════════════════════════════════
-   JSON-LD STRUCTURED DATA
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   JSON-LD: TravelGuide + FAQPage
+   ================================================================ */
 
-const jsonLd = {
+const faqItems = [
+  {
+    q: 'What is the best beach town in Morocco for surfing?',
+    a: 'Taghazout is the undisputed surf capital. The town sits on a coastline with over a dozen breaks suited to all levels, from the gentle foam of Panoramas to the powerful barrels of Killer Point and Anchor Point. December through March delivers the biggest swells. Surf camps and board rentals start from 200 MAD per day.',
+  },
+  {
+    q: 'Is it safe to swim at Morocco\'s Atlantic beaches?',
+    a: 'Many Atlantic beaches have strong currents, undertow, and large waves. Stick to beaches with lifeguards on duty, especially Essaouira\'s main beach, Legzira (watch the tide), and Oualidia\'s lagoon, which is the safest swimming spot on the Atlantic coast. The Mediterranean side around Al Hoceima and Saidia has calmer, warmer water better suited to casual swimmers.',
+  },
+  {
+    q: 'When is the best time to visit Morocco\'s beach towns?',
+    a: 'June through September offers the warmest water and most sunshine. Essaouira and Taghazout stay windy year-round, making them ideal for wind sports even in winter. Dakhla is best from March to November for kitesurfing. Oualidia and Asilah are most pleasant from May through October. Avoid the Atlantic coast in January if you just want to sunbathe — water temperatures drop to 16-17 degrees Celsius.',
+  },
+  {
+    q: 'How do I get to Taghazout from Marrakech?',
+    a: 'Take a direct bus from Marrakech to Agadir (3.5 hours, from 80 MAD on CTM or Supratours). From Agadir, a grand taxi to Taghazout costs from 100 MAD per person (20 minutes). Alternatively, rent a car at Agadir airport — the drive from Marrakech to Taghazout takes about 3.5 hours via the toll motorway through Agadir.',
+  },
+  {
+    q: 'Can I find budget accommodation in Moroccan beach towns?',
+    a: 'Absolutely. Taghazout has hostels from 80 MAD per night and surf camp packages (board, lessons, accommodation, meals) from 500 MAD per day. Mirleft has guesthouses from 150 MAD. Sidi Ifni has basic hotels from 120 MAD. Essaouira has the widest range, from 100 MAD hostels to luxury riads at 2,000+ MAD. Seasonal pricing can change in July-August when rates across all towns rise 30-50 percent.',
+  },
+  {
+    q: 'Which Moroccan beach town is best for families with children?',
+    a: 'Oualidia. The protected lagoon has calm, shallow water that is ideal for young children. The town is quiet, uncrowded, and known for its oyster farms and fresh seafood. Essaouira is a strong second choice — the medina is walkable, camel rides are available on the beach, and there are plenty of family-friendly riads.',
+  },
+  {
+    q: 'Is Dakhla worth the long journey from northern Morocco?',
+    a: 'If you are into kitesurfing, windsurfing, or want a genuinely remote Atlantic experience, yes. Dakhla sits on a peninsula in the Saharan south with a massive lagoon that produces flat, warm water and consistent wind — arguably the best kite spot in Africa. Getting there requires a flight from Casablanca (2 hours) or a very long drive (18+ hours from Marrakech). Most visitors stay at all-inclusive kite camps.',
+  },
+  {
+    q: 'What is the difference between Morocco\'s Atlantic and Mediterranean coasts?',
+    a: 'The Atlantic coast is longer, wilder, and windier — perfect for surfing and wind sports but cold for swimming outside summer. The Mediterranean coast (from Tangier east to Saidia) has warmer, calmer water, smaller waves, and a more European beach-holiday feel. The Atlantic has more character and culture; the Mediterranean has more resort infrastructure and family-friendly beaches.',
+  },
+];
+
+const jsonLdTravel = {
   '@context': 'https://schema.org',
   '@type': 'TravelGuide',
-  '@id': `${BASE_URL}/morocco-beach-towns`,
-  name: 'Top 10 Morocco Beach Towns 2026 | Best Coastal Towns & Seaside Destinations',
+  '@id': PAGE_URL,
+  name: 'Best Beach Towns in Morocco 2026',
   description:
-    'Comprehensive guide to the best beach towns in Morocco covering Essaouira, Agadir, Taghazout, Asilah, Dakhla, Oualidia, Sidi Ifni, Mirleft, Saïdia, and El Jadida with accommodation, water sports, dining, and seasonal travel advice.',
-  url: `${BASE_URL}/morocco-beach-towns`,
+    'Complete guide to Morocco\'s best coastal towns including Essaouira, Taghazout, Asilah, Mirleft, Sidi Ifni, Dakhla, Legzira, and Oualidia. Covers Atlantic and Mediterranean coasts, activities, accommodation, best seasons, and getting there.',
+  url: PAGE_URL,
   image: `${BASE_URL}/images/hero-essaouira.webp`,
-  author: {
-    '@type': 'Organization',
-    name: 'CityGuide Morocco',
-    url: BASE_URL,
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'CityGuide Morocco',
-    url: BASE_URL,
-  },
-  datePublished: '2026-03-19',
-  dateModified: '2026-03-19',
-  mainEntityOfPage: `${BASE_URL}/morocco-beach-towns`,
-  isPartOf: {
-    '@type': 'WebSite',
-    name: 'CityGuide Morocco',
-    url: BASE_URL,
-  },
-  about: {
-    '@type': 'Country',
-    name: 'Morocco',
-  },
+  author: { '@type': 'Organization', name: 'City Tours Morocco', url: BASE_URL },
+  publisher: { '@type': 'Organization', name: 'City Tours Morocco', url: BASE_URL },
+  datePublished: '2026-03-21',
+  dateModified: '2026-03-21',
+  mainEntityOfPage: PAGE_URL,
+  about: { '@type': 'Country', name: 'Morocco' },
   breadcrumb: {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Morocco Beach Towns', item: `${BASE_URL}/morocco-beach-towns` },
+      { '@type': 'ListItem', position: 2, name: 'Morocco Beach Towns', item: PAGE_URL },
     ],
   },
 };
 
-const faqJsonLd = {
+const jsonLdFaq = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What are the best beach towns in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The best beach towns in Morocco include Essaouira for wind sports and medina culture, Taghazout for world-class surfing, Agadir for resort-style beach holidays, Asilah for art and history, Dakhla for kitesurfing, Oualidia for a calm lagoon, Sidi Ifni for dramatic coastline, Mirleft for secluded coves, Saïdia for Mediterranean warmth, and El Jadida for Portuguese heritage and family beaches.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Which Moroccan beach town is best for surfing?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Taghazout is the undisputed surf capital of Morocco. Located 20 km north of Agadir, it offers world-class breaks including Anchor Point, Panoramas, and Hash Point. Surf camps start from 800 MAD per day with lessons, accommodation, and yoga. The best swells arrive between September and April, though beginners can find rideable waves year-round.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is Essaouira good for a beach holiday?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Essaouira is excellent for a beach holiday that combines coastal activities with cultural richness. The town offers a sweeping Atlantic beach ideal for kitesurfing and windsurfing, a UNESCO-listed medina, vibrant art galleries, and outstanding seafood dining. Water temperatures are cool due to the Canary Current, so a wetsuit is advisable. The best months for swimming are July and August.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is the warmest beach town in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Saïdia on the Mediterranean coast has the warmest waters in Morocco, reaching 25 degrees Celsius in summer. Agadir also enjoys warm temperatures with over 300 sunny days per year. Dakhla in the south has warm waters year-round due to its Saharan latitude. For Atlantic towns, Agadir and Sidi Ifni offer the mildest winter temperatures.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does accommodation cost in Moroccan beach towns?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Accommodation varies widely. Budget hostels in Taghazout and Mirleft start from 120 MAD per night. Mid-range riads in Essaouira and Asilah range from 400 to 800 MAD per night. Resort hotels in Agadir start from 800 MAD per night. Luxury eco-camps in Dakhla begin at 1,500 MAD per night. Prices are seasonal and can increase 30 to 50 percent during July and August.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can you visit Moroccan beach towns year-round?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes, Morocco\'s beach towns are accessible year-round. Summer (June to September) is best for swimming and sunbathing. Autumn and winter (October to March) are ideal for surfing with bigger Atlantic swells. Agadir and Dakhla enjoy warm weather even in winter. Spring (April to May) offers pleasant temperatures with fewer crowds. Each season has its own appeal depending on your preferred activities.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is the best beach town for families in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Oualidia is the best beach town for families, with its sheltered lagoon providing calm, warm waters safe for children. Agadir is another excellent choice with lifeguards, gentle waves, and full resort infrastructure. Saïdia on the Mediterranean has warm, calm waters and waterpark facilities. El Jadida offers a protected beach near a fascinating Portuguese-era old town.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How do you get to Moroccan beach towns?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Agadir and Essaouira both have airports with domestic and some international flights. Most beach towns are accessible by CTM or Supratours bus services from major cities. Grand taxis connect smaller towns. Renting a car gives the most flexibility for exploring the coast. Taghazout is a 30-minute drive from Agadir airport. Asilah is easily reached by train from Tangier. Dakhla requires a domestic flight from Casablanca (about 2.5 hours).',
-      },
-    },
-  ],
+  mainEntity: faqItems.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
 };
 
-/* ═══════════════════════════════════════════════════════════════
-   DATA: TOP 10 BEACH TOWNS
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   DATA: BEACH TOWNS
+   ================================================================ */
 
 const beachTowns = [
   {
     name: 'Essaouira',
-    tagline: 'The Windy City of Culture and Coast',
-    location: 'Central Atlantic Coast, 175 km west of Marrakech',
+    slug: '/morocco-essaouira',
+    vibe: 'Wind City — artists, surfers, backpackers',
+    icon: Wind,
     image: '/images/hero-essaouira.webp',
-    knownFor: 'UNESCO medina, wind sports, Gnaoua music festival, art galleries, and fresh seafood at the port.',
-    bestBeaches: ['Main Beach (Plage d\'Essaouira)', 'Sidi Kaouki (25 km south)', 'Moulay Bouzerktoun (25 km north)'],
-    waterSports: 'Kitesurfing, windsurfing, surfing, stand-up paddleboarding',
-    accommodation: 'Riads in the medina from 300 MAD per night, beachfront hotels from 700 MAD, surf camps from 600 MAD',
-    dining: 'Grilled sardines at the port from 30 MAD, seafood platters from 80 MAD, rooftop restaurants with ocean views',
-    bestSeason: 'June to September for beach, April to November for wind sports',
-    gettingThere: 'Essaouira Mogador Airport (domestic flights), 2.5 hours by bus from Marrakech via Supratours',
-  },
-  {
-    name: 'Agadir',
-    tagline: 'Morocco\'s Premier Beach Resort City',
-    location: 'Central Atlantic Coast, 10 km crescent beach',
-    image: '/images/hero-essaouira-port.webp',
-    knownFor: 'Over 300 sunny days per year, 10 km golden sand beach, modern promenade, marina, and winter sun holidays.',
-    bestBeaches: ['Agadir Main Beach', 'Taghazout Beach (20 km north)', 'Aourir Beach (12 km north)'],
-    waterSports: 'Jet skiing, parasailing, surfing lessons, stand-up paddleboarding, banana boat rides',
-    accommodation: 'All-inclusive resorts from 800 MAD per night, boutique hotels from 500 MAD, apartments from 350 MAD',
-    dining: 'Promenade restaurants from 60 MAD, marina fine dining from 200 MAD, Souk El Had for local cuisine from 25 MAD',
-    bestSeason: 'Year-round, peak June to September for beach, October to March for day trips to surf spots',
-    gettingThere: 'Agadir Al Massira Airport with international flights, 3.5 hours by bus from Marrakech',
+    bestSeason: 'April-June & September-October (less wind). Wind sports: year-round.',
+    gettingThere: 'Direct buses from Marrakech (2.5h, from 70 MAD). Shared grand taxis available. Small airport with limited domestic flights.',
+    beaches: [
+      'Main Beach — wide, sandy, constant wind. Camel rides, football, kite flyers. Strong currents make swimming tricky.',
+      'Sidi Kaouki — 25 km south. Quieter, great for surfing and horseback riding along the shore.',
+      'Moulay Bouzerktoun — 20 km north. One of Morocco\'s top windsurfing and kitesurfing spots.',
+    ],
+    activities: 'Windsurfing, kitesurfing, surfing at Sidi Kaouki, camel rides, fishing trips, medina exploring, Gnaoua music scene, argan oil cooperative visits.',
+    accommodation: 'Riads in the medina from 250 MAD, hostels from 100 MAD, beachfront hotels from 600 MAD. The medina has the most character; beachside spots like Ocean Vagabond offer direct sand access.',
+    description:
+      'Essaouira is the beach town that does not need sunshine to impress. The Atlantic wind hammers this fortified port city almost every day, which is exactly why windsurfers and kitesurfers keep coming back. Behind the ramparts, the medina is a UNESCO World Heritage Site — a compact grid of blue-shuttered streets, art galleries, thuya wood workshops, and seafood grills. The pace is slower than Marrakech, the touts are fewer, and the Gnaoua World Music Festival each June draws crowds from across the globe. The fishing port is worth a morning visit: watch boats unload sardines and sea bream, then eat grilled fish at the harbor stalls for from 40 MAD a plate.',
   },
   {
     name: 'Taghazout',
-    tagline: 'The Surf Capital of Africa',
-    location: '20 km north of Agadir, Atlantic Coast',
-    image: '/images/hero-essaouira-ramparts.webp',
-    knownFor: 'World-class surf breaks including Anchor Point, laid-back village atmosphere, surf camps, yoga retreats, and Paradise Valley.',
-    bestBeaches: ['Taghazout Main Beach', 'Anchor Point', 'Panoramas', 'Hash Point', 'Imourane Beach'],
-    waterSports: 'Surfing (all levels), bodyboarding, stand-up paddleboarding, kayaking',
-    accommodation: 'Surf hostels from 120 MAD per night, surf camps from 800 MAD per day all-inclusive, boutique hotels from 600 MAD',
-    dining: 'Beach cafes with tagines from 40 MAD, fresh fish from 50 MAD, smoothie bars from 25 MAD',
-    bestSeason: 'September to April for surf swells, June to August for swimming and sunbathing',
-    gettingThere: '30 minutes by grand taxi from Agadir, bus from Agadir central station',
+    slug: '/taghazout',
+    vibe: 'Surf capital — backpackers, wave riders, yoga retreats',
+    icon: Waves,
+    image: '/images/hero-taghazout.webp',
+    bestSeason: 'Surfing: October-March (biggest swells). Sunshine: year-round.',
+    gettingThere: 'Fly into Agadir Al Massira airport. Grand taxi from Agadir center (from 100 MAD, 20 min). Bus from Marrakech to Agadir (3.5h, from 80 MAD), then taxi north.',
+    beaches: [
+      'Taghazout Beach — the main village beach. Mellow wave for longboarding, right in front of the cafes.',
+      'Anchor Point — world-class right-hand point break. Experienced surfers only. Best December-February.',
+      'Panoramas — gentle beach break south of the village. Perfect for beginners and surf lessons.',
+      'Killer Point — heavy, hollow wave over rocks. Advanced surfers, big swell days only.',
+    ],
+    activities: 'Surfing (lessons from 300 MAD), yoga retreats, cliff jumping at Paradise Valley, day trips to Agadir and Tiznit, skateparking at Taghazout Bay resort.',
+    accommodation: 'Surf hostels from 80 MAD/night, surf camp packages (7 nights + lessons) from 3,500 MAD, boutique guesthouses from 400 MAD, Taghazout Bay luxury resort from 1,500 MAD.',
+    description:
+      'Taghazout was a fishing village until surfers discovered its point breaks in the 1960s. Today it is Morocco\'s surf headquarters — a single street of cafes, board rental shops, and rooftop terraces looking out at the Atlantic. The vibe is laid-back to the point of horizontal. Mornings start with yoga on a rooftop, afternoons are spent chasing waves, and evenings end with tagine and mint tea. The coastline north and south of town holds over a dozen breaks, from beginner-friendly Panoramas to the powerful Anchor Point, considered one of the best right-hand point breaks in North Africa. A massive luxury development (Taghazout Bay) has added upscale hotels without erasing the scruffy charm of the old village.',
   },
   {
     name: 'Asilah',
-    tagline: 'Where Art Meets the Atlantic',
-    location: 'Northern Atlantic Coast, 45 km south of Tangier',
-    image: '/images/hero-essaouira-ramparts.webp',
-    knownFor: 'Whitewashed medina with colorful murals, annual arts festival (August), Portuguese ramparts, and a creative, bohemian atmosphere.',
-    bestBeaches: ['Asilah Town Beach', 'Paradise Beach (Plage Rmilate, 5 km south)', 'Briech Beach (15 km north)'],
-    waterSports: 'Swimming, stand-up paddleboarding, bodyboarding, fishing',
-    accommodation: 'Medina guesthouses from 250 MAD per night, seaside hotels from 500 MAD, holiday apartments from 400 MAD',
-    dining: 'Harbor-front grilled fish from 40 MAD, medina restaurants from 50 MAD, seafood paella from 80 MAD',
-    bestSeason: 'June to September for beach, August for the annual arts festival',
-    gettingThere: '45-minute train ride from Tangier, direct CTM buses from Casablanca and Rabat',
-  },
-  {
-    name: 'Dakhla',
-    tagline: 'Where the Sahara Meets the Atlantic',
-    location: 'Southern Saharan Coast, remote peninsula',
-    image: '/images/hero-essaouira-port.webp',
-    knownFor: 'World-class kitesurfing lagoon, Sahara-meets-ocean landscape, flamingos, eco-lodges, and remote adventure travel.',
-    bestBeaches: ['Dakhla Lagoon (flat water)', 'PK25 Beach', 'White Dune Beach', 'Lassarga Beach'],
-    waterSports: 'Kitesurfing, windsurfing, surfing, stand-up paddleboarding, kayaking, fishing',
-    accommodation: 'Eco-camps on the lagoon from 1,500 MAD per night, town hotels from 400 MAD, kite camps from 1,200 MAD all-inclusive',
-    dining: 'Fresh fish restaurants from 50 MAD, seafood at eco-lodges, lobster dinners from 150 MAD',
-    bestSeason: 'March to November for kitesurfing, year-round for mild weather and beach',
-    gettingThere: 'Dakhla Airport with domestic flights from Casablanca (2.5 hours), long-distance bus (18+ hours from Agadir)',
-  },
-  {
-    name: 'Oualidia',
-    tagline: 'Morocco\'s Hidden Lagoon Paradise',
-    location: 'Between El Jadida and Safi, Atlantic Coast',
-    image: '/images/hero-essaouira.webp',
-    knownFor: 'Sheltered crescent lagoon, famous oyster farms, safe swimming for families, and a royal palace overlooking the water.',
-    bestBeaches: ['Oualidia Lagoon Beach', 'Open Ocean Beach (beyond the sandbar)', 'Lalla Fatna Beach (nearby)'],
-    waterSports: 'Swimming, kayaking, stand-up paddleboarding, boat tours of the lagoon',
-    accommodation: 'Boutique hotels from 500 MAD per night, La Sultana luxury from 2,500 MAD, guesthouses from 300 MAD',
-    dining: 'Oyster shacks from 60 MAD per dozen, lagoon-side restaurants from 80 MAD, seafood tagines from 60 MAD',
-    bestSeason: 'June to September for swimming, May to October for pleasant weather',
-    gettingThere: '3 hours by car from Casablanca, grand taxi from El Jadida or Safi, limited bus service',
-  },
-  {
-    name: 'Sidi Ifni',
-    tagline: 'Art Deco Charm on a Dramatic Coast',
-    location: 'Southern Atlantic Coast, 160 km south of Agadir',
-    image: '/images/hero-essaouira-port.webp',
-    knownFor: 'Spanish Art Deco architecture, Legzira Beach with sandstone arches, dramatic cliff scenery, and an authentic off-the-beaten-path atmosphere.',
-    bestBeaches: ['Legzira Beach (10 km south)', 'Sidi Ifni Town Beach', 'Plage Blanche (remote, further south)'],
-    waterSports: 'Surfing, bodyboarding, fishing, coastal walks',
-    accommodation: 'Budget guesthouses from 150 MAD per night, Art Deco hotels from 350 MAD, surf lodges from 250 MAD',
-    dining: 'Local fish restaurants from 35 MAD, rooftop cafes with ocean views, Sunday market for local produce',
-    bestSeason: 'May to October for beach, year-round for mild temperatures and coastal exploration',
-    gettingThere: '2.5 hours by grand taxi from Agadir, CTM bus from Agadir, winding coastal road',
+    slug: '/asilah',
+    vibe: 'Art town — culture, murals, family-friendly',
+    icon: Camera,
+    image: '/images/hero-asilah.webp',
+    bestSeason: 'June-September (warm water, outdoor murals festival in August).',
+    gettingThere: 'Train from Tangier (45 min, from 25 MAD). Train from Casablanca (4.5h). Grand taxis from Tangier. Easy day trip from Tangier.',
+    beaches: [
+      'Paradise Beach (Rmilat) — calm, clean, sandy. Popular with Moroccan families in summer.',
+      'Town Beach — right below the medina walls. Small but scenic with views of the Portuguese ramparts.',
+    ],
+    activities: 'Mural walking tours, Portuguese ramparts exploration, Asilah Arts Festival (August), horseback riding, fresh seafood dining, day trips to Larache and Lixus ruins.',
+    accommodation: 'Riads inside the medina from 300 MAD, budget pensions from 150 MAD, beach apartments for rent from 400 MAD/night in summer. Seasonal pricing can change — August rates double.',
+    description:
+      'Asilah is the quietest, most refined beach town on Morocco\'s Atlantic coast. The medina is tiny, immaculate, and covered in murals — repainted each summer during the annual Asilah Arts Festival, which has run since 1978. Portuguese fortifications ring the old town, and from the ramparts you can watch the sun drop into the Atlantic. The beaches north of town are calm and family-friendly, a contrast to the rough Atlantic surf further south. Asilah draws Moroccan and Spanish weekenders rather than backpackers, so the restaurants tend to be a step above the average coastal town. Fresh fish, Spanish-influenced tapas, and strong coffee dominate the dining scene. The train connection to Tangier makes this an easy day trip or a peaceful base for exploring the north.',
   },
   {
     name: 'Mirleft',
-    tagline: 'Secret Coves and Clifftop Views',
-    location: 'Between Tiznit and Sidi Ifni, Southern Atlantic',
-    image: '/images/hero-essaouira-ramparts.webp',
-    knownFor: 'Multiple secluded cove beaches, dramatic volcanic cliffs, a ruined French fort, and a growing community of artists and surfers.',
-    bestBeaches: ['Plage Marabout', 'Plage Imin Tourga', 'Plage Aftass', 'Plage Sidi Mohamed Ben Abdellah'],
-    waterSports: 'Surfing, bodyboarding, swimming, cliff jumping at select spots',
-    accommodation: 'Surf houses from 150 MAD per night, cliffside guesthouses from 300 MAD, boutique hotels from 500 MAD',
-    dining: 'Village restaurants with tagines from 35 MAD, beachside fish grills from 40 MAD, rooftop cafes',
-    bestSeason: 'May to October for beach and swimming, September to April for surfing',
-    gettingThere: '2 hours by grand taxi from Agadir, transit via Tiznit, rental car recommended for beach access',
+    slug: '/mirleft',
+    vibe: 'Off-the-radar — independent travelers, empty beaches',
+    icon: Compass,
+    image: '/images/hero-mirleft.webp',
+    bestSeason: 'March-June & September-November. Summer is hot but quiet.',
+    gettingThere: 'Grand taxi from Tiznit (30 min, from 20 MAD). Bus from Agadir to Tiznit (2h), then taxi. No direct transport from Marrakech — route through Agadir and Tiznit.',
+    beaches: [
+      'Plage Marabout — dramatic cliff-backed beach with a white marabout (shrine) on the headland. Swimmable in calm conditions.',
+      'Aftas Beach — sheltered cove with calmer water than the open beaches.',
+      'Sidi Mohammed Ben Abdellah — long, empty stretch south of town. Almost always deserted.',
+    ],
+    activities: 'Beach walking, cliff hiking, surfing (uncrowded breaks), birdwatching, day trips to Legzira and Sidi Ifni, visiting the weekly souk.',
+    accommodation: 'Guesthouses from 150 MAD, small hotels from 200 MAD, a handful of boutique stays from 500 MAD. No large hotels or resorts — that is the point.',
+    description:
+      'Mirleft is what Taghazout looked like 20 years ago. This small town sits above a series of cliff-backed coves on the Anti-Atlas coast, two hours south of Agadir. There are no resorts, no chain restaurants, and no crowds. The beaches are reached by scrambling down rocky paths, and on most days you will have an entire cove to yourself. A growing number of guesthouses and a few cafes have appeared, but the infrastructure is deliberately minimal. Travelers come here specifically to disconnect. The weekly souk brings the surrounding Berber countryside into town, and the sunsets from the cliff paths are some of the finest on the Moroccan coast.',
   },
   {
-    name: 'Saïdia',
-    tagline: 'The Blue Pearl of the Mediterranean',
-    location: 'Eastern Mediterranean Coast, near the Algerian border',
-    image: '/images/hero-essaouira.webp',
-    knownFor: '14 km of golden sand, warmest waters in Morocco (up to 25 C), purpose-built resort marina, waterparks, and golf courses.',
-    bestBeaches: ['Saïdia Main Beach', 'Ras El Ma Beach', 'Cap de l\'Eau (nearby fishing village)'],
-    waterSports: 'Swimming, jet skiing, sailing, windsurfing, paddleboarding, parasailing',
-    accommodation: 'Resort hotels from 700 MAD per night, vacation apartments from 400 MAD, budget pensions from 200 MAD',
-    dining: 'Seafood restaurants from 60 MAD, marina dining from 120 MAD, beachfront cafes, traditional Moroccan cuisine in the old town',
-    bestSeason: 'June to September for warm swimming, July and August peak season',
-    gettingThere: 'Oujda Airport (60 km) with domestic and international flights, train to Oujda then grand taxi',
+    name: 'Sidi Ifni',
+    slug: '/sidi-ifni',
+    vibe: 'Retro colonial — Art Deco, fishing town, melancholy charm',
+    icon: Building,
+    image: '/images/hero-sidi-ifni.webp',
+    bestSeason: 'March-November. Fog rolls in during winter mornings but burns off by midday.',
+    gettingThere: 'Grand taxi from Tiznit (1.5h, from 40 MAD) or from Mirleft (30 min). No train station. Bus service from Agadir via Tiznit.',
+    beaches: [
+      'Town Beach — long, wide, often foggy in the morning. Fishing boats pulled up on the sand.',
+      'Legzira Beach — 10 km south (technically its own area). Famous for its monumental red stone arches carved by the Atlantic.',
+    ],
+    activities: 'Art Deco architecture walks, seafood at the port, day trip to Legzira arches, surfing, exploring abandoned Spanish colonial buildings.',
+    accommodation: 'Basic hotels from 120 MAD, guesthouses from 200 MAD, a few renovated riads from 400 MAD. Very limited luxury options.',
+    description:
+      'Sidi Ifni was the last Spanish territory in Morocco, handed back only in 1969. The Art Deco cinema, the old Spanish consulate, and the crumbling airstrip are reminders of that colonial chapter. The town sits on a cliff above a wide beach, wrapped in Atlantic fog more mornings than not. There is a faded, end-of-the-road atmosphere that appeals to a specific kind of traveler — the type who finds beauty in peeling paint and empty plazas. The fishing port produces some of the freshest and cheapest seafood on the coast. Grilled sole and chips at a port-side stall costs from 30 MAD. Legzira Beach, with its famous red stone arches, is a 15-minute drive south and is the primary reason many visitors pass through.',
   },
   {
-    name: 'El Jadida',
-    tagline: 'Portuguese Heritage Meets Atlantic Waves',
-    location: 'Atlantic Coast, 100 km south of Casablanca',
-    image: '/images/hero-essaouira-port.webp',
-    knownFor: 'UNESCO-listed Portuguese Cistern, Cité Portugaise fortifications, family-friendly beach, and the annual Moussem horse festival.',
-    bestBeaches: ['El Jadida Main Beach', 'Sidi Bouzid Beach (5 km south)', 'Haouzia Beach (further south)'],
-    waterSports: 'Swimming, bodyboarding, stand-up paddleboarding, fishing',
-    accommodation: 'Hotels from 400 MAD per night, riads in the medina from 350 MAD, beach apartments from 300 MAD',
-    dining: 'Portuguese-influenced seafood from 50 MAD, medina restaurants from 40 MAD, beachfront fish grills from 35 MAD',
-    bestSeason: 'June to September for beach, October for the Moussem festival',
-    gettingThere: '1.5 hours by train or bus from Casablanca, easy day trip or weekend getaway',
-  },
-] as const;
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: SEASONAL GUIDE
-   ═══════════════════════════════════════════════════════════════ */
-
-const seasonalGuide = [
-  {
-    season: 'Spring (March - May)',
-    icon: Leaf,
-    airTemp: '18-26 C',
-    waterTemp: '16-19 C',
-    description: 'Pleasant temperatures with fewer crowds. Wildflowers line coastal paths and towns are relaxed before summer peaks. A wetsuit is still needed for swimming on the Atlantic coast. Ideal for exploring towns on foot and combining beach trips with cultural visits.',
-    bestTowns: 'Essaouira, Asilah, El Jadida, Mirleft',
-    rating: 'Good',
-  },
-  {
-    season: 'Summer (June - August)',
-    icon: Sun,
-    airTemp: '25-35 C',
-    waterTemp: '19-25 C',
-    description: 'Peak beach season with the warmest water and air temperatures. Mediterranean towns like Saïdia reach their best. Atlantic towns are cooled by trade winds. Moroccan families flock to the coast, creating a lively atmosphere. Book accommodation well in advance for July and August.',
-    bestTowns: 'Saïdia, Agadir, Oualidia, Asilah, El Jadida',
-    rating: 'Excellent',
-  },
-  {
-    season: 'Autumn (September - November)',
-    icon: CloudSun,
-    airTemp: '20-28 C',
-    waterTemp: '19-22 C',
-    description: 'The sweet spot for coastal travel. Water remains warm from summer, crowds thin after September, and the first surf swells arrive. September is arguably the single best month for visiting Moroccan beach towns, with pleasant conditions and lower prices.',
-    bestTowns: 'Taghazout, Essaouira, Dakhla, Mirleft, Sidi Ifni',
-    rating: 'Excellent',
-  },
-  {
-    season: 'Winter (December - February)',
+    name: 'Dakhla',
+    slug: '/dakhla',
+    vibe: 'Extreme sports — kitesurfing, remote Saharan peninsula',
     icon: Wind,
-    airTemp: '14-21 C',
-    waterTemp: '15-18 C',
-    description: 'Off-season for swimming but prime time for surfing. Taghazout comes alive with international surfers chasing Atlantic swells. Agadir and Dakhla remain warm enough for outdoor life. Southern towns like Sidi Ifni and Mirleft are pleasantly mild. Accommodation prices drop significantly.',
-    bestTowns: 'Taghazout, Agadir, Dakhla, Sidi Ifni',
-    rating: 'Surf season',
+    image: '/images/hero-dakhla.webp',
+    bestSeason: 'March-November for kiting (wind 80%+ of days). Fishing: year-round.',
+    gettingThere: 'Flights from Casablanca (2h, from 800 MAD one-way on Royal Air Maroc). Driving from Marrakech takes 18+ hours. Most visitors fly.',
+    beaches: [
+      'Dakhla Lagoon — 40 km long, flat water, consistent wind. The main kite and windsurf playground.',
+      'Foum El Bouir — white sand on the lagoon, shallow for miles. Speed kiting and freestyle.',
+      'PK25 — a kite camp zone on the lagoon. Flat water, no obstacles, ideal for learning.',
+      'Atlantic Side — open ocean beaches with waves. Less developed, good for surfing and fishing.',
+    ],
+    activities: 'Kitesurfing (camps from 5,000 MAD/week all-inclusive), windsurfing, stand-up paddle, fishing trips, flamingo watching, desert excursions, oyster farm visits.',
+    accommodation: 'Kite camps from 800 MAD/night (all-inclusive with gear), town hotels from 300 MAD, eco-lodges on the lagoon from 600 MAD. Most visitors book all-inclusive kite packages.',
+    description:
+      'Dakhla is not a beach town in the traditional sense — it is a wind-sports mecca at the edge of the Sahara. The town sits on a narrow peninsula jutting into the Atlantic, creating a 40 km lagoon with flat, warm water and near-constant trade winds. Professional kitesurfers rank it among the top five spots on Earth. The surrounding landscape is pure desert: sand, sky, and ocean merging at the horizon. Getting here requires either a flight from Casablanca or a multi-day drive through Western Sahara. The remoteness is part of the draw. Oyster farms dot the lagoon, flamingos wade in the shallows, and at night the star visibility is extraordinary. Several well-run kite camps offer all-inclusive packages that handle logistics in a region where independent travel takes effort.',
   },
-] as const;
+  {
+    name: 'Legzira',
+    slug: '/legzira',
+    vibe: 'Natural wonder — dramatic arches, photography, sunsets',
+    icon: Camera,
+    image: '/images/hero-legzira.webp',
+    bestSeason: 'March-November. Low tide is essential for walking under the arches.',
+    gettingThere: 'Grand taxi from Sidi Ifni (15 min, from 20 MAD). From Tiznit, grand taxi to Sidi Ifni then onward. No public bus to the beach itself.',
+    beaches: [
+      'Legzira Beach — the main attraction. Red and orange stone arches sculpted by millennia of wave erosion. One major arch collapsed in 2016; remaining formations are still spectacular.',
+    ],
+    activities: 'Photography, beach walking at low tide, swimming (careful of currents), surfing, sunset watching, paragliding from the cliffs above.',
+    accommodation: 'A handful of cliffside guesthouses from 200 MAD with direct beach views. Basic auberges from 150 MAD. Most visitors stay in Sidi Ifni or Mirleft and day-trip to Legzira.',
+    description:
+      'Legzira is a beach, not a town, but it deserves a place on this list for its geological drama alone. Massive red sandstone arches rise from the sand, carved into shape by Atlantic waves over millions of years. One of the two largest arches collapsed in September 2016, but the remaining formations are still among the most photographed natural features in Morocco. Visiting requires timing: at high tide, the beach disappears and the arches are inaccessible. Check the tide tables and arrive two hours before low tide for the best light and the most walking room. The cliffs above offer paragliding launches, and a few guesthouses perched on the edge serve meals with a view that would cost ten times as much anywhere in southern Europe.',
+  },
+  {
+    name: 'Oualidia',
+    slug: '/oualidia',
+    vibe: 'Lagoon town — families, oysters, calm water',
+    icon: Shell,
+    image: '/images/hero-oualidia.webp',
+    bestSeason: 'May-October. Water is warmest July-September.',
+    gettingThere: 'Grand taxi from El Jadida (1h, from 30 MAD). Bus from Casablanca to El Jadida (1.5h), then taxi. Driving from Marrakech takes about 3.5 hours.',
+    beaches: [
+      'Oualidia Lagoon — calm, shallow, sheltered from Atlantic waves by a sandbar. Safe swimming for children.',
+      'Outer Beach — beyond the sandbar, open Atlantic. Stronger waves, surfable on good days.',
+    ],
+    activities: 'Lagoon swimming, kayaking, oyster tasting (from 50 MAD per dozen), birdwatching (flamingos, herons), surfing on the outer beach, boat rides.',
+    accommodation: 'Small hotels from 250 MAD, La Sultana Oualidia (luxury) from 2,500 MAD, guesthouses from 200 MAD. Limited options overall — book ahead in summer. Seasonal pricing can change in July-August.',
+    description:
+      'Oualidia is where Moroccans go when they want a beach that is actually safe to swim in. The town wraps around a crescent-shaped lagoon protected from the Atlantic by a natural sandbar, creating a pool of calm, warm water that is perfect for families and non-swimmers. Oualidia is also Morocco\'s oyster capital — the lagoon\'s clean, nutrient-rich water supports several oyster farms, and you can eat a dozen freshly shucked oysters with lemon for from 50 MAD at waterside shacks. The town itself is small and unhurried. Birdwatchers come for the flamingos and herons that feed in the lagoon at dawn. La Sultana, one of Morocco\'s finest boutique hotels, sits on the lagoon shore and offers a rare taste of luxury in an otherwise low-key destination.',
+  },
+];
 
-/* ═══════════════════════════════════════════════════════════════
-   DATA: FAQ
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   DATA: ATLANTIC vs MEDITERRANEAN COMPARISON
+   ================================================================ */
 
-const faqs = [
-  {
-    question: 'What are the best beach towns in Morocco?',
-    answer: 'The best beach towns in Morocco include Essaouira for wind sports and medina culture, Taghazout for world-class surfing, Agadir for resort-style beach holidays, Asilah for art and history, Dakhla for kitesurfing, Oualidia for a calm lagoon, Sidi Ifni for dramatic coastline, Mirleft for secluded coves, Saïdia for Mediterranean warmth, and El Jadida for Portuguese heritage and family beaches.',
-  },
-  {
-    question: 'Which Moroccan beach town is best for surfing?',
-    answer: 'Taghazout is the undisputed surf capital of Morocco. Located 20 km north of Agadir, it offers world-class breaks including Anchor Point, Panoramas, and Hash Point. Surf camps start from 800 MAD per day with lessons, accommodation, and yoga. The best swells arrive between September and April, though beginners can find rideable waves year-round.',
-  },
-  {
-    question: 'Is Essaouira good for a beach holiday?',
-    answer: 'Essaouira is excellent for a beach holiday that combines coastal activities with cultural richness. The town offers a sweeping Atlantic beach ideal for kitesurfing and windsurfing, a UNESCO-listed medina, vibrant art galleries, and outstanding seafood dining. Water temperatures are cool due to the Canary Current, so a wetsuit is advisable. The best months for swimming are July and August.',
-  },
-  {
-    question: 'What is the warmest beach town in Morocco?',
-    answer: 'Saïdia on the Mediterranean coast has the warmest waters in Morocco, reaching 25 degrees Celsius in summer. Agadir also enjoys warm temperatures with over 300 sunny days per year. Dakhla in the south has warm waters year-round due to its Saharan latitude. For Atlantic towns, Agadir and Sidi Ifni offer the mildest winter temperatures.',
-  },
-  {
-    question: 'How much does accommodation cost in Moroccan beach towns?',
-    answer: 'Accommodation varies widely. Budget hostels in Taghazout and Mirleft start from 120 MAD per night. Mid-range riads in Essaouira and Asilah range from 400 to 800 MAD per night. Resort hotels in Agadir start from 800 MAD per night. Luxury eco-camps in Dakhla begin at 1,500 MAD per night. Prices are seasonal and can increase 30 to 50 percent during July and August.',
-  },
-  {
-    question: 'Can you visit Moroccan beach towns year-round?',
-    answer: 'Yes, Morocco\'s beach towns are accessible year-round. Summer (June to September) is best for swimming and sunbathing. Autumn and winter (October to March) are ideal for surfing with bigger Atlantic swells. Agadir and Dakhla enjoy warm weather even in winter. Spring (April to May) offers pleasant temperatures with fewer crowds. Each season has its own appeal depending on your preferred activities.',
-  },
-  {
-    question: 'What is the best beach town for families in Morocco?',
-    answer: 'Oualidia is the best beach town for families, with its sheltered lagoon providing calm, warm waters safe for children. Agadir is another excellent choice with lifeguards, gentle waves, and full resort infrastructure. Saïdia on the Mediterranean has warm, calm waters and waterpark facilities. El Jadida offers a protected beach near a fascinating Portuguese-era old town.',
-  },
-  {
-    question: 'How do you get to Moroccan beach towns?',
-    answer: 'Agadir and Essaouira both have airports with domestic and some international flights. Most beach towns are accessible by CTM or Supratours bus services from major cities. Grand taxis connect smaller towns. Renting a car gives the most flexibility for exploring the coast. Taghazout is a 30-minute drive from Agadir airport. Asilah is easily reached by train from Tangier. Dakhla requires a domestic flight from Casablanca (about 2.5 hours).',
-  },
-] as const;
+const coastComparison = [
+  { feature: 'Water Temperature (Summer)', atlantic: '19-22 degrees C', mediterranean: '23-26 degrees C' },
+  { feature: 'Water Temperature (Winter)', atlantic: '16-18 degrees C', mediterranean: '15-17 degrees C' },
+  { feature: 'Wave Conditions', atlantic: 'Large swells, strong currents', mediterranean: 'Calm, small waves' },
+  { feature: 'Wind', atlantic: 'Strong and constant (especially Essaouira)', mediterranean: 'Light to moderate' },
+  { feature: 'Best For', atlantic: 'Surfing, kitesurfing, dramatic scenery', mediterranean: 'Swimming, family holidays, resort stays' },
+  { feature: 'Coast Length', atlantic: 'Approx. 2,800 km', mediterranean: 'Approx. 500 km' },
+  { feature: 'Key Towns', atlantic: 'Essaouira, Taghazout, Asilah, Mirleft', mediterranean: 'Al Hoceima, Saidia, M\'diq, Fnideq' },
+  { feature: 'Tourism Style', atlantic: 'Independent, surf culture, bohemian', mediterranean: 'Resort, beach clubs, European influence' },
+  { feature: 'Sand Color', atlantic: 'Golden to red (Legzira)', mediterranean: 'White to golden' },
+  { feature: 'Seafood Speciality', atlantic: 'Sardines, sea bream, oysters (Oualidia)', mediterranean: 'Prawns, squid, anchovies' },
+];
 
-/* ═══════════════════════════════════════════════════════════════
-   DATA: RELATED PAGES
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   DATA: PACKING ESSENTIALS
+   ================================================================ */
 
-const relatedPages = [
+const packingItems = [
+  { item: 'Reef-safe sunscreen', reason: 'UV is intense on the Moroccan coast year-round. Reef-safe formulas protect marine life in shallow reef areas.' },
+  { item: 'Rash guard or UV shirt', reason: 'Doubles as sun protection and wetsuit for warmer months. Essential for surfing and snorkeling.' },
+  { item: 'Water shoes or reef sandals', reason: 'Rocky entries at Mirleft, Legzira, and many surf breaks. Protects against sea urchins.' },
+  { item: 'Windbreaker or light jacket', reason: 'Essaouira and Taghazout get cold wind even in summer. Evenings on the coast cool down fast.' },
+  { item: 'Tide chart app', reason: 'Critical for Legzira (arches accessible at low tide only) and reef-break surfing at Taghazout.' },
+  { item: 'Modest swimwear cover-up', reason: 'Morocco is conservative. A sarong or cover-up is appreciated when walking from beach to town.' },
+];
+
+/* ================================================================
+   DATA: WATER ACTIVITIES OVERVIEW
+   ================================================================ */
+
+const waterActivities = [
   {
-    href: '/beaches',
+    activity: 'Surfing',
     icon: Waves,
-    title: 'Morocco Beaches Guide',
-    description: 'Complete overview of every beach region in Morocco, from the Mediterranean to the deep south.',
+    bestSpot: 'Taghazout & Sidi Kaouki',
+    season: 'October-March (biggest swells)',
+    price: 'From 200 MAD/day (board rental), from 300 MAD (lesson)',
+    level: 'All levels — beginner spots and expert-only point breaks',
   },
   {
-    href: '/best-beaches-morocco',
-    icon: Star,
-    title: 'Best Beaches in Morocco',
-    description: 'Top 15 individual beaches ranked by beauty, water quality, accessibility, and activities.',
+    activity: 'Kitesurfing',
+    icon: Wind,
+    bestSpot: 'Dakhla Lagoon & Moulay Bouzerktoun',
+    season: 'March-November (Dakhla), June-September (Essaouira)',
+    price: 'From 500 MAD/session, from 5,000 MAD/week camp',
+    level: 'Intermediate to advanced (Dakhla has beginner areas)',
   },
   {
-    href: '/surfing',
+    activity: 'Windsurfing',
+    icon: Wind,
+    bestSpot: 'Essaouira & Dakhla',
+    season: 'Year-round (Essaouira), March-November (Dakhla)',
+    price: 'From 400 MAD/half-day rental',
+    level: 'Intermediate to advanced',
+  },
+  {
+    activity: 'Kayaking & SUP',
     icon: Anchor,
-    title: 'Surfing in Morocco',
-    description: 'Detailed surf guide covering breaks, surf camps, equipment rental, and the best swells of the year.',
+    bestSpot: 'Oualidia Lagoon & Dakhla',
+    season: 'May-October',
+    price: 'From 100 MAD/hour',
+    level: 'All levels — lagoon conditions are flat and calm',
   },
   {
-    href: '/water-sports',
-    icon: Navigation,
-    title: 'Water Sports Guide',
-    description: 'Kitesurfing, windsurfing, diving, and paddleboarding across all Moroccan coastal destinations.',
+    activity: 'Fishing Trips',
+    icon: Fish,
+    bestSpot: 'Essaouira, Sidi Ifni, Dakhla',
+    season: 'Year-round',
+    price: 'From 300 MAD/half-day on a local boat',
+    level: 'No experience needed',
   },
   {
-    href: '/agadir',
-    icon: Sun,
-    title: 'Agadir City Guide',
-    description: 'Morocco\'s premier beach resort city with over 300 days of sunshine and 10 km of golden sand.',
+    activity: 'Snorkeling & Diving',
+    icon: Waves,
+    bestSpot: 'Al Hoceima (Mediterranean), Cap Spartel',
+    season: 'June-September (clearest water)',
+    price: 'From 400 MAD/dive, from 100 MAD/snorkel rental',
+    level: 'All levels (snorkeling), certified divers (scuba)',
   },
-] as const;
+];
 
-/* ═══════════════════════════════════════════════════════════════
-   PAGE COMPONENT
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   COMPONENT
+   ================================================================ */
 
 export default function MoroccoBeachTownsPage() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdTravel) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
       />
 
-      {/* ── Hero Section ── */}
+      {/* ── Hero ── */}
       <section className="relative py-20 md:py-28 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(/images/hero-essaouira.webp)',
-          }}
+          style={{ backgroundImage: 'url(/images/hero-essaouira.webp)' }}
         />
         <div className="absolute inset-0 hero-overlay" />
         <div className="container-morocco relative z-10">
@@ -503,17 +425,16 @@ export default function MoroccoBeachTownsPage() {
             <span className="text-white">Morocco Beach Towns</span>
           </nav>
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm text-white/90 text-sm mb-6">
-            <Compass className="w-4 h-4" />
+            <Waves className="w-4 h-4" />
             Coastal Travel Guide
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-display)] font-bold text-white mb-4">
-            Top 10 Morocco Beach Towns:
-            <br className="hidden md:block" /> Best Coastal Destinations for 2026
+            Morocco&apos;s Best
+            <br className="hidden md:block" /> Beach Towns
           </h1>
           <p className="text-xl text-white/80 max-w-2xl">
-            From Essaouira&apos;s windswept medina to Dakhla&apos;s Saharan lagoons.
-            Discover Morocco&apos;s finest seaside towns with beaches, accommodation,
-            dining, and water sports for every traveler.
+            From the wind-hammered surf breaks of Taghazout to the calm lagoon at Oualidia and the
+            Saharan kitesurfing paradise of Dakhla — a complete guide to Morocco&apos;s 3,500 km coastline.
           </p>
         </div>
       </section>
@@ -523,309 +444,126 @@ export default function MoroccoBeachTownsPage() {
       {/* ── Introduction ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
-          <div className="prose-moroccan">
-            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
-              Why Morocco&apos;s Beach Towns Are Unlike Anywhere Else
-            </h2>
-            <div className="space-y-4 text-lg text-[var(--text-secondary)] leading-relaxed">
-              <p>
-                Morocco&apos;s 3,500 kilometers of coastline are punctuated by beach towns
-                that blend ancient medina culture with the raw beauty of the Atlantic and
-                Mediterranean. These are not generic resort strips. Each Moroccan coastal
-                town has its own distinct personality, shaped by centuries of trade, art,
-                and ocean life that make every stop along the coast feel like a different world.
-              </p>
-              <p>
-                In Essaouira, Gnaoua musicians play at sunset on ramparts built by the Portuguese.
-                In Taghazout, surfers share waves with local fishermen casting lines from the rocks.
-                In Dakhla, the Sahara Desert cascades into turquoise lagoons where flamingos wade.
-                In Asilah, whitewashed walls are canvases for international artists who gather
-                every summer. This is coastal Morocco: a place where every beach town tells a story.
-              </p>
-              <p>
-                Whether you are seeking world-class surf, a family-friendly lagoon, romantic
-                clifftop coves, or a full-service beach resort, Morocco&apos;s coastal towns
-                deliver experiences that are rich, affordable, and authentically North African.
-                This guide covers the ten best beach towns in Morocco, with everything you need
-                to plan your seaside adventure.
-              </p>
-            </div>
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
+            Two Coasts, Dozens of Beach Towns, One Country
+          </h2>
+          <div className="space-y-4 text-lg text-[var(--text-secondary)] leading-relaxed">
+            <p>
+              Morocco has over 3,500 km of coastline split between the Atlantic Ocean and the Mediterranean
+              Sea. The Atlantic side is wild, windswept, and home to some of the best surf breaks in
+              Africa. The Mediterranean side is calmer, warmer, and draws Moroccan families and European
+              holidaymakers looking for blue water and soft sand.
+            </p>
+            <p>
+              Between these two coasts, Morocco offers beach towns that range from fishing villages
+              barely touched by tourism to fully equipped surf towns with yoga studios on every corner.
+              You can eat freshly shucked oysters at a lagoon in Oualidia, watch the sun set through
+              red stone arches at Legzira, ride world-class waves at Taghazout, or kitesurf across a
+              Saharan lagoon in Dakhla where the nearest city is a full day&apos;s drive away.
+            </p>
+            <p>
+              This guide covers eight of the best beach towns and coastal destinations in Morocco,
+              with practical information on how to get there, where to stay, what to do, and when to
+              go. Each town has a distinct personality, and choosing the right one depends on what
+              you want from a coastal trip.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* ── Quick Comparison ── */}
+      {/* ── Beach Towns ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Lightbulb className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Quick Guide: Which Beach Town Is Right for You?
+            <MapPin className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            The 8 Best Beach Towns in Morocco
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Each Moroccan beach town offers a different vibe and experience. Use this
-            quick guide to find your perfect match.
+            Each town serves a different type of traveler. Surfers, artists, families, kite addicts,
+            and solitude-seekers all have a place on Morocco&apos;s coast.
           </p>
 
-          <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="card-moroccan p-6">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center">
-                  <Waves className="w-5 h-5 text-[var(--color-accent)]" />
-                </div>
-                <h3 className="text-lg font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
-                  For Surfers
-                </h3>
-              </div>
-              <div className="space-y-2 text-sm text-[var(--text-secondary)]">
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
-                  <span><strong>Taghazout</strong> - World-class breaks, vibrant surf culture</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
-                  <span><strong>Mirleft</strong> - Uncrowded breaks, affordable village life</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
-                  <span><strong>Sidi Ifni</strong> - Powerful swells, dramatic scenery</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center">
-                  <Users className="w-5 h-5 text-[var(--color-accent)]" />
-                </div>
-                <h3 className="text-lg font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
-                  For Families
-                </h3>
-              </div>
-              <div className="space-y-2 text-sm text-[var(--text-secondary)]">
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
-                  <span><strong>Oualidia</strong> - Safe lagoon, calm waters, oyster farms</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
-                  <span><strong>Agadir</strong> - Lifeguards, resorts, gentle waves</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
-                  <span><strong>Sa&iuml;dia</strong> - Warm Mediterranean, waterparks</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center">
-                  <Camera className="w-5 h-5 text-[var(--color-accent)]" />
-                </div>
-                <h3 className="text-lg font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
-                  For Culture and Photography
-                </h3>
-              </div>
-              <div className="space-y-2 text-sm text-[var(--text-secondary)]">
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
-                  <span><strong>Essaouira</strong> - UNESCO medina, Gnaoua music, art</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
-                  <span><strong>Asilah</strong> - Street murals, arts festival, ramparts</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
-                  <span><strong>El Jadida</strong> - Portuguese Cistern, historic citadel</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center">
-                  <Wind className="w-5 h-5 text-[var(--color-accent)]" />
-                </div>
-                <h3 className="text-lg font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
-                  For Adventure and Remote Escapes
-                </h3>
-              </div>
-              <div className="space-y-2 text-sm text-[var(--text-secondary)]">
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
-                  <span><strong>Dakhla</strong> - Saharan lagoon, kitesurfing, flamingos</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
-                  <span><strong>Sidi Ifni</strong> - Legzira arches, remote Art Deco town</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
-                  <span><strong>Mirleft</strong> - Hidden coves, cliff scrambles, solitude</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Top 10 Beach Towns ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Star className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Top 10 Beach Towns in Morocco
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-4">
-            Our definitive guide to Morocco&apos;s finest coastal towns, covering beaches,
-            accommodation, dining, water sports, and how to get there.
-          </p>
-          <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
-            <Info className="w-3.5 h-3.5 inline mr-1" />
-            Prices listed are approximate starting rates. Seasonal pricing can change, especially during July, August, and holiday periods.
-          </p>
-
-          <div className="space-y-12">
-            {beachTowns.map((town, index) => (
-              <div key={town.name} className="card-moroccan overflow-hidden">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-                  {/* Image side */}
-                  <div className={`relative h-64 lg:h-auto min-h-[320px] ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
+          <div className="space-y-10">
+            {beachTowns.map((town) => {
+              const TownIcon = town.icon;
+              return (
+                <div key={town.name} className="card-moroccan overflow-hidden">
+                  <div className="relative h-56 md:h-64">
                     <img
                       src={town.image}
-                      alt={`${town.name} beach town on Morocco's coastline, ${town.location}`}
+                      alt={`${town.name} beach town on the Moroccan coast`}
                       className="w-full h-full object-cover"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-black/10" />
-                    <div className="absolute top-4 left-4 inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/90 backdrop-blur-sm text-sm font-semibold text-[var(--color-accent)]">
-                      <Gem className="w-3.5 h-3.5" />
-                      #{index + 1}
-                    </div>
-                  </div>
-
-                  {/* Content side */}
-                  <div className={`p-6 lg:p-8 ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                    <div className="mb-3">
-                      <h3 className="text-2xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    <div className="absolute bottom-4 left-4 flex items-center gap-2">
+                      <TownIcon className="w-5 h-5 text-white" />
+                      <h3 className="text-2xl font-[family-name:var(--font-display)] font-bold text-white">
                         {town.name}
                       </h3>
-                      <p className="text-sm text-[var(--color-gold)] font-semibold mt-0.5">
-                        {town.tagline}
-                      </p>
-                      <div className="flex items-center gap-2 text-sm text-[var(--text-muted)] mt-1">
-                        <MapPin className="w-3.5 h-3.5" />
-                        {town.location}
-                      </div>
                     </div>
-
-                    <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4">
-                      <span className="font-semibold text-[var(--text-primary)]">Known for:</span> {town.knownFor}
+                    <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-white/15 backdrop-blur-sm text-white text-xs">
+                      {town.vibe}
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <p className="text-sm text-[var(--text-secondary)] mb-5 leading-relaxed">
+                      {town.description}
                     </p>
 
-                    <div className="mb-4">
-                      <h4 className="text-xs font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] uppercase tracking-wider mb-2">
-                        Best Beaches
-                      </h4>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
-                        {town.bestBeaches.map((beach, i) => (
-                          <div key={i} className="flex items-start gap-1.5 text-xs text-[var(--text-muted)]">
-                            <CheckCircle className="w-3.5 h-3.5 mt-0.5 shrink-0 text-[var(--color-gold)]" />
-                            {beach}
-                          </div>
-                        ))}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
+                      <div>
+                        <h4 className="text-xs font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] uppercase tracking-wide mb-2 flex items-center gap-1.5">
+                          <Waves className="w-3.5 h-3.5 text-[var(--color-accent)]" /> Beaches
+                        </h4>
+                        <ul className="space-y-1.5">
+                          {town.beaches.map((beach) => (
+                            <li key={beach} className="text-xs text-[var(--text-secondary)] flex items-start gap-1.5">
+                              <CheckCircle className="w-3 h-3 text-[var(--color-gold)] shrink-0 mt-0.5" />
+                              <span>{beach}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="text-xs font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] uppercase tracking-wide mb-2 flex items-center gap-1.5">
+                          <Star className="w-3.5 h-3.5 text-[var(--color-accent)]" /> Activities
+                        </h4>
+                        <p className="text-xs text-[var(--text-secondary)]">{town.activities}</p>
                       </div>
                     </div>
 
-                    <div className="space-y-2 text-xs mb-4">
-                      <div className="flex items-start gap-2">
-                        <Waves className="w-3.5 h-3.5 text-[var(--color-accent)] mt-0.5 shrink-0" />
-                        <span className="text-[var(--text-muted)]">
-                          <span className="font-semibold text-[var(--text-primary)]">Water sports:</span> {town.waterSports}
-                        </span>
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+                      <div className="bg-[var(--surface-muted)] rounded-lg p-3">
+                        <div className="flex items-center gap-1.5 font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
+                          <Calendar className="w-3 h-3 text-[var(--color-accent)]" /> Best Season
+                        </div>
+                        <p className="text-[var(--text-secondary)]">{town.bestSeason}</p>
                       </div>
-                      <div className="flex items-start gap-2">
-                        <Bed className="w-3.5 h-3.5 text-[var(--color-accent)] mt-0.5 shrink-0" />
-                        <span className="text-[var(--text-muted)]">
-                          <span className="font-semibold text-[var(--text-primary)]">Stay:</span> {town.accommodation}
-                        </span>
+                      <div className="bg-[var(--surface-muted)] rounded-lg p-3">
+                        <div className="flex items-center gap-1.5 font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
+                          <Plane className="w-3 h-3 text-[var(--color-accent)]" /> Getting There
+                        </div>
+                        <p className="text-[var(--text-secondary)]">{town.gettingThere}</p>
                       </div>
-                      <div className="flex items-start gap-2">
-                        <Utensils className="w-3.5 h-3.5 text-[var(--color-accent)] mt-0.5 shrink-0" />
-                        <span className="text-[var(--text-muted)]">
-                          <span className="font-semibold text-[var(--text-primary)]">Eat:</span> {town.dining}
-                        </span>
-                      </div>
-                      <div className="flex items-start gap-2">
-                        <Calendar className="w-3.5 h-3.5 text-[var(--color-accent)] mt-0.5 shrink-0" />
-                        <span className="text-[var(--text-muted)]">
-                          <span className="font-semibold text-[var(--text-primary)]">Best season:</span> {town.bestSeason}
-                        </span>
-                      </div>
-                      <div className="flex items-start gap-2">
-                        <Plane className="w-3.5 h-3.5 text-[var(--color-accent)] mt-0.5 shrink-0" />
-                        <span className="text-[var(--text-muted)]">
-                          <span className="font-semibold text-[var(--text-primary)]">Getting there:</span> {town.gettingThere}
-                        </span>
+                      <div className="bg-[var(--surface-muted)] rounded-lg p-3">
+                        <div className="flex items-center gap-1.5 font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
+                          <Bed className="w-3 h-3 text-[var(--color-accent)]" /> Accommodation
+                        </div>
+                        <p className="text-[var(--text-secondary)]">{town.accommodation}</p>
                       </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* ── Best Seasons ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Calendar className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Best Time to Visit Morocco&apos;s Beach Towns
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-4">
-            Each season offers a different coastal experience. Here is what to expect
-            throughout the year across Morocco&apos;s beach towns.
-          </p>
-          <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
-            <Info className="w-3.5 h-3.5 inline mr-1" />
-            September is the single best month for visiting Moroccan beach towns: warm water, thin crowds, and great surf arriving.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            {seasonalGuide.map((season) => {
-              const SeasonIcon = season.icon;
-              return (
-                <div key={season.season} className="card-moroccan p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                      <SeasonIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                    </div>
-                    <div>
-                      <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                        {season.season}
-                      </h3>
-                      <span className="text-xs text-[var(--color-gold)] font-semibold">{season.rating}</span>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-4 mb-3">
-                    <div className="text-xs text-[var(--text-muted)]">
-                      <span className="font-semibold text-[var(--text-primary)]">Air:</span> {season.airTemp}
-                    </div>
-                    <div className="text-xs text-[var(--text-muted)]">
-                      <span className="font-semibold text-[var(--text-primary)]">Water:</span> {season.waterTemp}
-                    </div>
-                  </div>
-
-                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed mb-3">
-                    {season.description}
-                  </p>
-
-                  <div className="p-2 bg-[var(--surface-muted)] rounded-lg text-xs text-[var(--text-muted)]">
-                    <span className="font-semibold text-[var(--text-primary)]">Best towns:</span> {season.bestTowns}
+                    {town.slug && (
+                      <div className="mt-4 pt-4 border-t border-[var(--border)]">
+                        <Link
+                          href={town.slug}
+                          className="inline-flex items-center gap-1.5 text-sm text-[var(--color-accent)] font-medium hover:text-[var(--color-primary)] transition-colors"
+                        >
+                          Full {town.name} Guide <ArrowRight className="w-3.5 h-3.5" />
+                        </Link>
+                      </div>
+                    )}
                   </div>
                 </div>
               );
@@ -834,98 +572,37 @@ export default function MoroccoBeachTownsPage() {
         </div>
       </section>
 
-      {/* ── Getting Around the Coast ── */}
+      {/* ── Atlantic vs Mediterranean ── */}
       <section className="py-16 md:py-20">
-        <div className="container-morocco max-w-4xl">
+        <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Globe className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Getting Around Morocco&apos;s Coast
+            <Compass className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Atlantic Coast vs Mediterranean Coast
           </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Practical transport tips for hopping between Morocco&apos;s beach towns,
-            whether you are driving, busing, or flying.
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-3">
+            Morocco&apos;s two coastlines could belong to different countries. Here is how they compare.
+          </p>
+          <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
+            <Info className="w-3.5 h-3.5 inline mr-1" />
+            Water temperatures are approximate and vary by specific location and year.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="card-moroccan p-6">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4 flex items-center gap-2">
-                <Plane className="w-4 h-4 text-[var(--color-accent)]" />
-                By Air
-              </h3>
-              <div className="space-y-2">
-                {[
-                  'Agadir Al Massira Airport: direct international and domestic flights',
-                  'Essaouira Mogador Airport: domestic flights from Casablanca',
-                  'Dakhla Airport: domestic flights from Casablanca (2.5 hours)',
-                  'Oujda Airport: gateway to Saïdia (60 km by taxi)',
-                  'Tangier Ibn Battouta Airport: for northern coast towns',
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-2 text-xs text-[var(--text-muted)]">
-                    <CheckCircle className="w-3.5 h-3.5 text-[var(--color-gold)] shrink-0" />
-                    {item}
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4 flex items-center gap-2">
-                <Navigation className="w-4 h-4 text-[var(--color-accent)]" />
-                By Bus and Taxi
-              </h3>
-              <div className="space-y-2">
-                {[
-                  'CTM and Supratours buses connect major coastal cities',
-                  'Grand taxis link smaller towns (negotiate price before departure)',
-                  'Marrakech to Essaouira: 2.5 hours by Supratours bus',
-                  'Tangier to Asilah: 45 minutes by train or grand taxi',
-                  'Agadir to Taghazout: 30 minutes by grand taxi (from 15 MAD)',
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-2 text-xs text-[var(--text-muted)]">
-                    <CheckCircle className="w-3.5 h-3.5 text-[var(--color-gold)] shrink-0" />
-                    {item}
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4 flex items-center gap-2">
-                <Compass className="w-4 h-4 text-[var(--color-accent)]" />
-                By Rental Car
-              </h3>
-              <div className="space-y-2">
-                {[
-                  'Best option for coastal road trips and remote towns',
-                  'Rental from 250 MAD per day at major airports',
-                  'Atlantic coast highway (N1) connects most towns',
-                  'Essential for reaching Mirleft, Sidi Ifni, and secluded beaches',
-                  'Fuel costs approximately 14 MAD per liter (diesel cheaper)',
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-2 text-xs text-[var(--text-muted)]">
-                    <CheckCircle className="w-3.5 h-3.5 text-[var(--color-gold)] shrink-0" />
-                    {item}
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4 flex items-center gap-2">
-                <Lightbulb className="w-4 h-4 text-[var(--color-accent)]" />
-                Insider Tips
-              </h3>
-              <div className="space-y-2">
-                {[
-                  'Book CTM/Supratours online in advance during summer',
-                  'Grand taxi prices are per seat, not per vehicle (6 seats)',
-                  'Download offline maps: mobile signal drops on remote coast roads',
-                  'Carry cash: smaller towns may lack ATMs',
-                  'Road conditions vary: coastal roads south of Tiznit can be rough',
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-2 text-xs text-[var(--text-muted)]">
-                    <CheckCircle className="w-3.5 h-3.5 text-[var(--color-gold)] shrink-0" />
-                    {item}
+          <div className="max-w-5xl mx-auto">
+            <div className="card-moroccan overflow-hidden overflow-x-auto">
+              <div className="min-w-[600px]">
+                <div className="grid grid-cols-3 gap-0 bg-[var(--color-accent)] text-white text-sm font-medium">
+                  <div className="p-3 px-4">Feature</div>
+                  <div className="p-3 px-4">Atlantic Coast</div>
+                  <div className="p-3 px-4">Mediterranean Coast</div>
+                </div>
+                {coastComparison.map((row, i) => (
+                  <div
+                    key={row.feature}
+                    className={`grid grid-cols-3 gap-0 text-sm ${i % 2 === 0 ? 'bg-white' : 'bg-[var(--surface-muted)]'}`}
+                  >
+                    <div className="p-3 px-4 font-medium text-[var(--text-primary)]">{row.feature}</div>
+                    <div className="p-3 px-4 text-[var(--text-secondary)]">{row.atlantic}</div>
+                    <div className="p-3 px-4 text-[var(--text-secondary)]">{row.mediterranean}</div>
                   </div>
                 ))}
               </div>
@@ -934,51 +611,288 @@ export default function MoroccoBeachTownsPage() {
         </div>
       </section>
 
-      {/* ── Practical Tips ── */}
+      {/* ── Water Activities ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <ShieldCheck className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Essential Tips for Morocco Beach Town Visits
+            <Anchor className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Water Activities Along the Coast
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Practical advice for making the most of your coastal Morocco holiday, from
-            safety to cultural etiquette.
+            Morocco&apos;s coast supports everything from beginner surf lessons to professional kitesurfing
+            competitions. Here is what you can do and what it costs.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {waterActivities.map((act) => {
+              const ActIcon = act.icon;
+              return (
+                <div key={act.activity} className="card-moroccan p-5">
+                  <div className="w-10 h-10 rounded-full bg-[var(--surface-muted)] flex items-center justify-center mb-3">
+                    <ActIcon className="w-5 h-5 text-[var(--color-accent)]" />
+                  </div>
+                  <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                    {act.activity}
+                  </h3>
+                  <div className="space-y-2 text-xs text-[var(--text-secondary)]">
+                    <p><span className="font-medium text-[var(--text-primary)]">Best spot:</span> {act.bestSpot}</p>
+                    <p><span className="font-medium text-[var(--text-primary)]">Season:</span> {act.season}</p>
+                    <p><span className="font-medium text-[var(--text-primary)]">Level:</span> {act.level}</p>
+                    <p className="text-[var(--color-accent)] font-semibold">{act.price}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Choosing Your Beach Town ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
+            <Users className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Which Beach Town Is Right for You?
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="card-moroccan p-5">
+              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 flex items-center gap-2">
+                <Waves className="w-4 h-4 text-[var(--color-gold)] shrink-0" />
+                For Surfers
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                <strong>Taghazout</strong> is the obvious choice, with breaks for every level within walking distance.
+                Beginners should head to Panoramas or book a surf camp with daily lessons. Advanced riders should time a
+                visit for December-February when Anchor Point and Killer Point deliver serious Atlantic swell. Sidi Kaouki
+                (near Essaouira) is a quieter alternative.
+              </p>
+            </div>
+            <div className="card-moroccan p-5">
+              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 flex items-center gap-2">
+                <Wind className="w-4 h-4 text-[var(--color-gold)] shrink-0" />
+                For Kitesurfers &amp; Windsurfers
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                <strong>Dakhla</strong> for flat-water lagoon conditions and near-guaranteed wind. <strong>Essaouira</strong> and
+                Moulay Bouzerktoun for wave riding in wind. Dakhla is remote and requires a flight, but the lagoon conditions
+                are world-class. Essaouira is easier to reach and has a full medina to explore between sessions.
+              </p>
+            </div>
+            <div className="card-moroccan p-5">
+              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 flex items-center gap-2">
+                <Users className="w-4 h-4 text-[var(--color-gold)] shrink-0" />
+                For Families
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                <strong>Oualidia</strong> has the safest swimming on the Atlantic coast thanks to its protected lagoon. Children
+                can paddle in shallow, calm water while parents eat oysters. <strong>Asilah</strong> is another strong pick —
+                the Paradise Beach is calm, the medina is safe for wandering, and the train connection to Tangier makes logistics simple.
+              </p>
+            </div>
+            <div className="card-moroccan p-5">
+              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 flex items-center gap-2">
+                <Camera className="w-4 h-4 text-[var(--color-gold)] shrink-0" />
+                For Photographers &amp; Artists
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                <strong>Asilah</strong> for the mural-covered medina and rampart sunsets. <strong>Legzira</strong> for the
+                red stone arches at golden hour. <strong>Essaouira</strong> for the fishing port, blue boats, and medina light.
+                Sidi Ifni&apos;s Art Deco architecture offers a different, more melancholic visual palette.
+              </p>
+            </div>
+            <div className="card-moroccan p-5">
+              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 flex items-center gap-2">
+                <Compass className="w-4 h-4 text-[var(--color-gold)] shrink-0" />
+                For Off-the-Beaten-Path Travelers
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                <strong>Mirleft</strong> delivers empty beaches, cliff-backed coves, and minimal tourist infrastructure.
+                <strong> Sidi Ifni</strong> has a faded, end-of-the-road character that rewards slow travelers. Both are reachable
+                from Tiznit and can be combined in a southern coast road trip with Legzira.
+              </p>
+            </div>
+            <div className="card-moroccan p-5">
+              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 flex items-center gap-2">
+                <DollarSign className="w-4 h-4 text-[var(--color-gold)] shrink-0" />
+                For Budget Travelers
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                <strong>Taghazout</strong> hostels start from 80 MAD. <strong>Sidi Ifni</strong> hotels from 120 MAD.
+                <strong> Mirleft</strong> guesthouses from 150 MAD. All three towns have cheap eats under 40 MAD.
+                Essaouira has the widest range of budget options but prices jump in summer. Avoid July-August if you are
+                counting dirhams.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Packing for the Coast ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <ShieldCheck className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Coastal Packing Essentials
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Six items that make a real difference on Morocco&apos;s coast.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {packingItems.map((item) => (
+              <div key={item.item} className="card-moroccan p-5">
+                <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-[var(--color-gold)] shrink-0" />
+                  {item.item}
+                </h3>
+                <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{item.reason}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Safety Tips ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <ShieldCheck className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Beach Safety in Morocco
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            The Atlantic is powerful and unpredictable. Respect it.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
               {
-                icon: Shell,
-                title: 'Ocean Safety',
-                text: 'The Atlantic coast has powerful currents. Swim at supervised beaches with lifeguards (green flag = safe). Mediterranean beaches are calmer and better for inexperienced swimmers. Always ask locals about conditions before entering the water.',
+                title: 'Rip Currents Are Common',
+                text: 'Atlantic beaches regularly produce strong rip currents. If caught, do not swim against it. Swim parallel to shore until free, then angle back in. Many beaches lack lifeguards — ask locals about conditions before entering.',
               },
               {
+                title: 'Check Tides Before Visiting Legzira',
+                text: 'At high tide, the beach at Legzira disappears completely and the arches become inaccessible. People have been trapped by rising water. Check tide charts online and arrive at least two hours before low tide.',
+              },
+              {
+                title: 'Surf Within Your Level',
+                text: 'Anchor Point, Killer Point, and Boilers near Taghazout are expert-only breaks over shallow reef and rocks. Beginners should stick to beach breaks like Panoramas. Surf schools will direct you to appropriate spots.',
+              },
+              {
+                title: 'Sun and Wind Combine for Fast Burns',
+                text: 'The Atlantic wind cools your skin, masking UV exposure. Apply sunscreen every 90 minutes even on overcast days. Essaouira\'s wind makes cloud cover deceptive — you can burn badly without feeling hot.',
+              },
+              {
+                title: 'Jellyfish Season (August-September)',
+                text: 'Portuguese man-of-war and other jellyfish appear along the Atlantic coast in late summer. Watch for them on the sand. If stung, rinse with seawater (not fresh water) and seek a pharmacy for antihistamine cream.',
+              },
+              {
+                title: 'Valuables on the Beach',
+                text: 'Do not leave bags unattended on busy beaches in Essaouira or Asilah during peak season. Use waterproof pouches for phones and cash. At quieter spots like Mirleft or Sidi Ifni, theft is rare but basic precautions still apply.',
+              },
+            ].map((tip) => (
+              <div key={tip.title} className="card-moroccan p-5">
+                <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 flex items-center gap-2">
+                  <Info className="w-4 h-4 text-[var(--color-accent)] shrink-0" />
+                  {tip.title}
+                </h3>
+                <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{tip.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Coastal Food ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
+            <Fish className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Eating on the Coast
+          </h2>
+          <div className="space-y-4 text-[var(--text-secondary)] leading-relaxed">
+            <p>
+              Morocco&apos;s coastal cuisine revolves around seafood, and the further south you go, the cheaper
+              and fresher it gets. At Essaouira&apos;s fish market stalls, you pick your fish from the
+              display, the cook grills it over charcoal, and you eat it with bread, harissa, and a salad
+              for from 40 MAD. In Sidi Ifni, a full plate of grilled sole with fries costs from 30 MAD
+              at the port.
+            </p>
+            <p>
+              Oualidia is Morocco&apos;s oyster capital. Freshly shucked oysters with lemon cost from 50 MAD
+              per dozen at lagoon-side stands. The more formal restaurants serve them with mignonette and
+              champagne. Sardines — grilled whole, drizzled with chermoula, and served on newspaper — are
+              the coast&apos;s signature street food, available everywhere from Tangier to Dakhla for from 15 MAD.
+            </p>
+            <p>
+              Tagines and couscous remain staples even at the beach. Fish tagine with tomatoes, potatoes,
+              and preserved lemon is the coastal version of Morocco&apos;s national dish. In Asilah, the Spanish
+              influence shows up in tapas bars and seafood paella. Taghazout&apos;s surf cafes serve smoothie
+              bowls, avocado toast, and international dishes alongside traditional fare — a reflection of
+              its international surf crowd.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Seasonal Guide ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Sun className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            When to Visit: Season by Season
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Timing depends entirely on what you want to do.
+          </p>
+
+          <div className="space-y-6">
+            {[
+              {
+                season: 'Spring (March-May)',
+                icon: Thermometer,
+                conditions: 'Air: 18-24 degrees C. Water: 17-19 degrees C. Moderate wind.',
+                highlights: 'Wildflowers along the coast, uncrowded beaches, good surfing conditions. Mirleft and Legzira are at their best. Dakhla kite season begins.',
+                note: 'Water is still cool for swimming. A wetsuit is needed for surfing.',
+              },
+              {
+                season: 'Summer (June-August)',
                 icon: Sun,
-                title: 'Sun Protection',
-                text: 'Morocco\'s coastal sun is intense, especially with reflected light off water and sand. Apply SPF 50 every two hours. Bring a wide-brimmed hat and UV sunglasses. Sunburn occurs even on overcast or windy days at beach towns like Essaouira.',
+                conditions: 'Air: 25-35 degrees C. Water: 20-23 degrees C. Strong wind at Essaouira.',
+                highlights: 'Peak beach season. Warmest water temperatures. Asilah Arts Festival in August. All towns busy with Moroccan and European visitors.',
+                note: 'Accommodation prices peak in July-August. Book ahead for Essaouira and Oualidia. Essaouira stays windy — not a sunbathing beach.',
               },
               {
-                icon: Heart,
-                title: 'Cultural Respect',
-                text: 'Standard swimwear is accepted at resort beaches in Agadir and Saïdia. At smaller town beaches, modest swimwear is appreciated. Topless sunbathing is not accepted anywhere. Cover up when walking through town. Respect prayer times and local customs.',
+                season: 'Autumn (September-November)',
+                icon: Wind,
+                conditions: 'Air: 20-28 degrees C. Water: 20-22 degrees C. Wind easing.',
+                highlights: 'Still warm enough for swimming through October. Surf season building. Fewer crowds after schools restart. Excellent for Taghazout and Dakhla.',
+                note: 'September can bring jellyfish to Atlantic beaches. October is the sweet spot for most towns.',
               },
               {
-                icon: Crown,
-                title: 'Budget Tips',
-                text: 'Eat where locals eat for the best prices. Fresh fish at port restaurants costs a fraction of tourist spots. Book accommodation in advance for July and August. Visit in September or October for lower prices with great weather. Negotiate grand taxi fares before departure.',
+                season: 'Winter (December-February)',
+                icon: Waves,
+                conditions: 'Air: 12-18 degrees C. Water: 16-18 degrees C. Big Atlantic swells.',
+                highlights: 'Prime surf season at Taghazout. Whale watching possible off the south coast. Quiet towns, low prices. Dakhla wind drops — less ideal for kiting.',
+                note: 'Too cold for casual beach swimming on the Atlantic. The Mediterranean coast is equally cold. This is a surf-and-explore season, not a sunbathe-and-swim season.',
               },
-            ].map((tip) => {
-              const TipIcon = tip.icon;
+            ].map((s) => {
+              const SIcon = s.icon;
               return (
-                <div key={tip.title} className="card-moroccan p-5">
-                  <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center mb-3">
-                    <TipIcon className="w-5 h-5 text-[var(--color-accent)]" />
+                <div key={s.season} className="card-moroccan p-6">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 rounded-full bg-[var(--surface-muted)] flex items-center justify-center">
+                      <SIcon className="w-5 h-5 text-[var(--color-accent)]" />
+                    </div>
+                    <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+                      {s.season}
+                    </h3>
                   </div>
-                  <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                    {tip.title}
-                  </h3>
-                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{tip.text}</p>
+                  <p className="text-xs text-[var(--color-accent)] font-semibold mb-2">{s.conditions}</p>
+                  <p className="text-sm text-[var(--text-secondary)] mb-2">{s.highlights}</p>
+                  <p className="text-xs text-[var(--text-muted)] flex items-start gap-1.5">
+                    <Info className="w-3 h-3 shrink-0 mt-0.5" /> {s.note}
+                  </p>
                 </div>
               );
             })}
@@ -987,27 +901,23 @@ export default function MoroccoBeachTownsPage() {
       </section>
 
       {/* ── FAQ Section ── */}
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <BookOpen className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            <MessageCircleQuestion className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
             Frequently Asked Questions
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Everything you need to know about visiting Morocco&apos;s coastal towns,
-            from budget and seasons to transport and family-friendliness.
+            Answers to the most common questions about Morocco&apos;s beach towns.
           </p>
 
           <div className="space-y-6">
-            {faqs.map((faq, index) => (
-              <div key={index} className="card-moroccan p-6">
-                <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3 flex items-start gap-2">
-                  <Sparkles className="w-5 h-5 text-[var(--color-gold)] mt-0.5 shrink-0" />
-                  {faq.question}
+            {faqItems.map((faq) => (
+              <div key={faq.q} className="card-moroccan p-6">
+                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                  {faq.q}
                 </h3>
-                <p className="text-sm text-[var(--text-secondary)] leading-relaxed ml-7">
-                  {faq.answer}
-                </p>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{faq.a}</p>
               </div>
             ))}
           </div>
@@ -1015,36 +925,49 @@ export default function MoroccoBeachTownsPage() {
       </section>
 
       {/* ── Related Guides ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+      <section className="py-16 md:py-20">
         <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Award className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Related Guides
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
+            Related Travel Guides
           </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Continue exploring Morocco&apos;s coastline with these in-depth guides
-            covering beaches, surfing, water sports, and more.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {relatedPages.map((page) => {
-              const PageIcon = page.icon;
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                title: 'Morocco Surfing Guide',
+                description: 'Detailed surf spot guide covering every break from Taghazout to Sidi Kaouki, with swell charts and season tips.',
+                href: '/morocco-surfing',
+                icon: Waves,
+              },
+              {
+                title: 'Morocco Kitesurfing Guide',
+                description: 'Dakhla, Essaouira, and Moulay Bouzerktoun — the best kite spots, wind statistics, and camp recommendations.',
+                href: '/morocco-kite-surfing',
+                icon: Wind,
+              },
+              {
+                title: 'Best Beaches in Morocco',
+                description: 'Ranked list of Morocco\'s finest beaches across both coasts, with access info and crowd levels.',
+                href: '/morocco-best-beaches',
+                icon: Sun,
+              },
+              {
+                title: 'Essaouira City Guide',
+                description: 'Full guide to Essaouira: medina, riads, restaurants, Gnaoua festival, argan cooperatives, and day trips.',
+                href: '/morocco-essaouira',
+                icon: MapPin,
+              },
+            ].map((guide) => {
+              const GuideIcon = guide.icon;
               return (
-                <Link key={page.href} href={page.href} className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                      <PageIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                    </div>
-                    <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] group-hover:text-[var(--color-accent)] transition-colors">
-                      {page.title}
-                    </h3>
-                  </div>
-                  <p className="text-xs text-[var(--text-muted)] leading-relaxed mb-3">
-                    {page.description}
-                  </p>
-                  <div className="flex items-center gap-1 text-xs font-semibold text-[var(--color-accent)]">
+                <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                  <GuideIcon className="w-8 h-8 text-[var(--color-accent)] mb-3 group-hover:text-[var(--color-primary)] transition-colors" />
+                  <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                    {guide.title}
+                  </h3>
+                  <p className="text-sm text-[var(--text-secondary)]">{guide.description}</p>
+                  <span className="inline-flex items-center gap-1 mt-3 text-sm text-[var(--color-accent)] font-medium">
                     Read Guide <ArrowRight className="w-3.5 h-3.5" />
-                  </div>
+                  </span>
                 </Link>
               );
             })}
@@ -1052,32 +975,61 @@ export default function MoroccoBeachTownsPage() {
         </div>
       </section>
 
-      {/* ── Final CTA ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco max-w-3xl text-center">
-          <Compass className="w-12 h-12 text-[var(--color-accent)] mx-auto mb-4" />
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
-            Ready to Explore Morocco&apos;s Coast?
+      {/* ── More Coastal Resources ── */}
+      <section className="py-12 md:py-16 bg-[var(--surface-muted)]">
+        <div className="container-morocco">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold text-center mb-8" style={{ color: 'var(--text-primary)' }}>
+            More Coastal &amp; Outdoor Guides
           </h2>
-          <p className="text-lg text-[var(--text-secondary)] mb-8">
-            From the surf breaks of Taghazout to the oyster lagoons of Oualidia,
-            Morocco&apos;s beach towns offer some of the most rewarding coastal
-            experiences in the world. Start planning your seaside adventure today.
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { href: '/morocco-fishing-guide', title: 'Fishing in Morocco', desc: 'Sea fishing charters, river fishing in the Atlas, and lake fishing — species, seasons, and permits.' },
+              { href: '/morocco-camping-guide', title: 'Camping Guide', desc: 'Beach camping, desert bivouacs, and mountain wild camping — regulations, gear, and best sites.' },
+              { href: '/morocco-road-trips', title: 'Road Trip Routes', desc: 'Coastal road trip itineraries connecting beach towns from Tangier to Dakhla with driving times and stops.' },
+              { href: '/morocco-yoga-retreats', title: 'Yoga Retreats', desc: 'Beachside yoga retreats in Taghazout, Essaouira, and Dakhla combining surf, yoga, and Moroccan cuisine.' },
+              { href: '/morocco-family-travel', title: 'Family Travel Guide', desc: 'Kid-friendly beaches, family riads, and practical tips for traveling Morocco with children.' },
+              { href: '/morocco-budget-travel', title: 'Budget Travel', desc: 'How to travel Morocco on a tight budget: cheap eats, hostels, transport savings, and free activities.' },
+            ].map((guide) => (
+              <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-base mb-2 group-hover:text-[var(--color-accent)] transition-colors" style={{ color: 'var(--text-primary)' }}>
+                  {guide.title}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{guide.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco text-center">
+          <Waves className="w-10 h-10 text-[var(--color-primary)] mx-auto mb-4" />
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
+            Ready to Hit the Coast?
+          </h2>
+          <p className="text-lg text-[var(--text-secondary)] max-w-xl mx-auto mb-8">
+            Explore our city guides, surf reports, and transport information
+            to plan your Moroccan beach trip.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/best-beaches-morocco"
-              className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-lg bg-[var(--color-accent)] text-white font-semibold hover:opacity-90 transition-opacity"
+              href="/cities"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-xl bg-[var(--color-primary)] text-white font-semibold hover:bg-[var(--color-primary-dark)] transition-colors"
             >
-              <Star className="w-4 h-4" />
-              See Best Beaches
+              <MapPin className="w-4 h-4" /> Explore Cities
             </Link>
             <Link
-              href="/surfing"
-              className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-lg border-2 border-[var(--color-accent)] text-[var(--color-accent)] font-semibold hover:bg-[var(--color-accent)] hover:text-white transition-colors"
+              href="/morocco-surfing"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-xl border-2 border-[var(--color-primary)] text-[var(--color-primary)] font-semibold hover:bg-[var(--color-primary)] hover:text-white transition-colors"
             >
-              <Waves className="w-4 h-4" />
-              Surfing Guide
+              <Waves className="w-4 h-4" /> Surfing Guide
+            </Link>
+            <Link
+              href="/tools/planner"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-xl border-2 border-[var(--color-primary)] text-[var(--color-primary)] font-semibold hover:bg-[var(--color-primary)] hover:text-white transition-colors"
+            >
+              <Clock className="w-4 h-4" /> Plan Your Trip
             </Link>
           </div>
         </div>

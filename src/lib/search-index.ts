@@ -3305,6 +3305,15 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['morocco souks guide', 'marrakech souk shopping', 'haggling morocco', 'fes medina shopping', 'moroccan markets'],
       priority: 9,
     },
+    {
+      title: 'Morocco Desert Tours Guide 2026',
+      description: 'Complete Morocco desert tour guide — Merzouga vs Zagora, camel trekking, 4x4 excursions, overnight camps, multi-day itineraries, and packing tips.',
+      type: 'page',
+      url: '/morocco-desert-tours',
+      tags: ['desert tours', 'Sahara', 'Merzouga', 'camel trekking', 'Erg Chebbi'],
+      keywords: ['morocco desert tours', 'merzouga desert tour', 'sahara camel trek', 'zagora desert trip', 'morocco desert camping'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

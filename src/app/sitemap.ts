@@ -435,6 +435,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-honeymoon',
     '/morocco-street-food',
     '/morocco-markets-souks',
+    '/morocco-desert-tours',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
