@@ -3467,6 +3467,15 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['morocco scuba diving', 'diving morocco', 'al hoceima diving', 'padi morocco', 'morocco dive sites'],
       priority: 9,
     },
+    {
+      title: 'Morocco Autumn Travel Guide — Harvests, Perfect Weather & Shoulder Season',
+      description: 'Autumn travel guide — date harvest, olive season, Atlas colors, ideal desert weather, shoulder season deals, Erfoud festival, and surf season.',
+      type: 'page',
+      url: '/morocco-autumn-travel',
+      tags: ['autumn', 'fall', 'seasonal', 'harvest', 'shoulder season'],
+      keywords: ['morocco autumn travel', 'morocco in fall', 'morocco october', 'morocco september', 'morocco november travel'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

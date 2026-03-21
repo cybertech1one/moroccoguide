@@ -453,6 +453,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-gardens',
     '/morocco-spring-travel',
     '/morocco-scuba-diving',
+    '/morocco-autumn-travel',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
