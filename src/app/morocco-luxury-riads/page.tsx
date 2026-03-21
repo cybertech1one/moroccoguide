@@ -6,20 +6,16 @@ import {
   MapPin,
   Star,
   Heart,
-  Clock,
   Info,
   ArrowRight,
   Sparkles,
-  ShieldCheck,
   DollarSign,
   CheckCircle,
-  Users,
   Gem,
   Building,
   Award,
   BookOpen,
   Crown,
-  Wifi,
   UtensilsCrossed,
   Droplets,
   Key,
@@ -28,395 +24,407 @@ import {
   Eye,
   Bed,
   Sun,
-  Moon,
+  MessageCircleQuestion,
   Globe,
+  ConciergeBell,
 } from 'lucide-react';
 
-/* ═══════════════════════════════════════════════════════════════
-   CONSTANTS
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   CONSTANTS & BASE URL
+   ================================================================ */
 
 const BASE_URL = 'https://citytoursmorocco.com';
+const PAGE_URL = `${BASE_URL}/morocco-luxury-riads`;
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    SEO METADATA
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 export const metadata: Metadata = {
-  title: 'Best Luxury Riads in Morocco 2026 | Top Boutique Stays & Exclusive Experiences',
+  title: 'Best Luxury Riads in Morocco 2026 | 15 Exclusive Boutique Stays by City',
   description:
-    'Discover Morocco\'s finest luxury riads — from Royal Mansour and La Mamounia in Marrakech to Riad Fes and Palais Amani. Complete guide to 5-star boutique riads with private hammams, rooftop dining, price ranges from 2,000 MAD, and expert booking tips.',
+    'The definitive guide to Morocco\'s finest luxury riads. 15 top picks across Marrakech, Fes, Essaouira & Chefchaouen with room rates from 2,000 MAD, private hammams, rooftop pools, Michelin-level dining, and expert booking strategies for peak and off-season travel.',
   keywords: [
     'luxury riads Morocco',
-    'best riads Marrakech',
-    'boutique riad Morocco',
-    'luxury accommodation Morocco',
-    '5 star riad',
-    'Royal Mansour Marrakech',
-    'La Mamounia riad',
+    'best luxury riads Marrakech',
+    'boutique riads Morocco 2026',
+    'Riad Yasmine Marrakech',
+    'La Sultana Marrakech',
+    'El Fenn Marrakech',
+    'Dar Ahlam Ouarzazate',
     'Riad Fes luxury',
     'Palais Amani Fes',
-    'luxury riad Essaouira',
-    'Chefchaouen boutique riad',
-    'private hammam riad',
-    'rooftop dining riad Morocco',
-    'Morocco luxury hotel',
-    'riad booking tips',
-    'best time visit Morocco riad',
-    'Morocco boutique accommodation',
+    'Riad Laaroussa Fes',
+    'Heure Bleue Palais Essaouira',
     'luxury riad prices Morocco',
+    'riad with private pool Morocco',
     'exclusive riad experiences',
-    'traditional Moroccan riad',
+    'Morocco honeymoon riad',
+    'riad booking tips Morocco',
+    'boutique hotel Marrakech medina',
+    'luxury accommodation Morocco',
   ],
   openGraph: {
-    title: 'Best Luxury Riads in Morocco 2026 | Top Boutique Stays & Exclusive Experiences',
+    title: 'Best Luxury Riads in Morocco 2026 | 15 Exclusive Boutique Stays by City',
     description:
-      'Complete guide to Morocco\'s most exclusive luxury riads. From Royal Mansour in Marrakech to hidden gems in Fes and Essaouira. Prices, amenities, private hammams, and booking tips.',
-    url: `${BASE_URL}/morocco-luxury-riads`,
+      'Hand-picked luxury riads across Marrakech, Fes, Essaouira, and Chefchaouen. Rates, amenities, architecture, dining, hammam facilities, and booking strategies for the discerning traveler.',
+    url: PAGE_URL,
     images: [
       {
-        url: `${BASE_URL}/images/hero-riad-interior.webp`,
+        url: `${BASE_URL}/images/hero-riads.webp`,
         width: 1200,
         height: 630,
-        alt: 'Luxurious Moroccan riad interior with traditional zellige tilework, central courtyard fountain, and lush greenery',
+        alt: 'Luxury Moroccan riad courtyard with zellige fountain, plunge pool, and hand-carved stucco archways',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Luxury Riads in Morocco 2026 | Boutique Stays Guide',
+    title: 'Best Luxury Riads in Morocco 2026 | 15 Exclusive Boutique Stays',
     description:
-      'Morocco\'s finest luxury riads revealed. Royal Mansour, La Mamounia, Riad Fes & more. Private hammams, rooftop dining, prices from 2,000 MAD, and expert booking tips.',
-    images: [`${BASE_URL}/images/hero-riad-interior.webp`],
+      '15 top luxury riads in Marrakech, Fes, Essaouira & Chefchaouen. Private pools, hammams, rooftop dining, rates from 2,000 MAD, and booking tips.',
+    images: [`${BASE_URL}/images/hero-riads.webp`],
   },
-  alternates: { canonical: `${BASE_URL}/morocco-luxury-riads` },
+  alternates: { canonical: PAGE_URL },
 };
 
-/* ═══════════════════════════════════════════════════════════════
-   JSON-LD STRUCTURED DATA
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   JSON-LD: TravelGuide + FAQPage
+   ================================================================ */
 
-const jsonLd = {
+const faqItems = [
+  {
+    q: 'How much does a luxury riad cost per night in Morocco?',
+    a: 'Luxury riads start from 2,000 MAD per night for a well-appointed boutique property with pool and hammam. High-end palace riads run from 4,000 MAD to 8,000 MAD. Ultra-luxury properties like Royal Mansour in Marrakech start from 15,000 MAD. Seasonal pricing can change significantly, with December-January and Easter commanding 40-60% premiums over summer rates.',
+  },
+  {
+    q: 'What is the difference between a luxury riad and a five-star hotel in Morocco?',
+    a: 'A luxury riad is a restored traditional townhouse with 4-12 rooms, a central courtyard, and personalized service from a small staff who learn your preferences. A five-star hotel offers larger room counts, branded amenities, gyms, and conference facilities. Riads deliver intimacy and cultural immersion. Hotels deliver predictability and scale. Many experienced Morocco travelers prefer riads precisely because every stay feels unique.',
+  },
+  {
+    q: 'Do luxury riads have swimming pools?',
+    a: 'Most luxury riads have a plunge pool in the central courtyard, typically 3-5 meters long. A few larger properties like La Sultana and El Fenn have full-sized heated pools. Rooftop dipping pools are increasingly common. If a full swimming pool matters to you, confirm the dimensions before booking, because "pool" in a riad context can mean anything from a decorative basin to a proper lap pool.',
+  },
+  {
+    q: 'Should I book a luxury riad directly or through a booking platform?',
+    a: 'Booking directly with the riad typically saves 10-20% because platforms charge riads a 15-20% commission. Direct booking also gives you leverage to negotiate room upgrades, airport transfers, or complimentary hammam sessions. Contact the riad via their website or WhatsApp. For cancellation flexibility, Booking.com remains the safest option. A smart approach: research on platforms, then contact the riad directly with your dates.',
+  },
+  {
+    q: 'Are luxury riads suitable for families with children?',
+    a: 'Some luxury riads cater to families with interconnecting suites and child-friendly amenities. Others maintain an adults-only atmosphere. Open courtyards with unfenced plunge pools and steep narrow staircases are standard in traditional riads and present real safety concerns for young children. Always ask the property directly about child policies before booking. Properties like La Sultana have family suites designed with safety features.',
+  },
+  {
+    q: 'What amenities should I expect at a top-tier luxury riad?',
+    a: 'At a minimum: private hammam, plunge pool, rooftop terrace with medina views, daily breakfast included, air conditioning, premium bedding, complimentary mint tea service, and concierge assistance with restaurant reservations and excursion bookings. Top-tier properties add heated pools, in-house fine dining, spa menus, airport transfers, cooking classes, private guides, and butler-style room service.',
+  },
+  {
+    q: 'When is the best time to book a luxury riad in Morocco?',
+    a: 'Book 3-6 months ahead for peak season stays (October-April), especially over Christmas, New Year, and Easter when top properties sell out. For summer (June-August), 4-6 weeks is enough and you can often negotiate discounts of 20-30% since heat drives demand down in Marrakech and Fes. Shoulder months (May and September) offer the best balance of availability, weather, and pricing.',
+  },
+  {
+    q: 'Can I arrange a private dinner or special celebration at a luxury riad?',
+    a: 'Almost all luxury riads arrange private dinners on the rooftop terrace or in the courtyard. Multi-course Moroccan feasts with wine pairings run from 800 MAD to 2,000 MAD per person. For special occasions like anniversaries or proposals, riads can arrange rose petal decorations, musicians, private hammam sessions, and custom menus. Give at least 48 hours notice, ideally more for elaborate requests.',
+  },
+];
+
+const jsonLdTravel = {
   '@context': 'https://schema.org',
   '@type': 'TravelGuide',
-  '@id': `${BASE_URL}/morocco-luxury-riads`,
-  name: 'Best Luxury Riads in Morocco 2026 | Top Boutique Stays & Exclusive Experiences',
+  '@id': PAGE_URL,
+  name: 'Best Luxury Riads in Morocco 2026',
   description:
-    'Complete guide to Morocco\'s finest luxury riads. From Royal Mansour and La Mamounia in Marrakech to Riad Fes and Palais Amani. Private hammams, rooftop dining, prices, and booking tips.',
-  url: `${BASE_URL}/morocco-luxury-riads`,
-  image: `${BASE_URL}/images/hero-riad-interior.webp`,
-  author: {
-    '@type': 'Organization',
-    name: 'CityGuide Morocco',
-    url: BASE_URL,
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'CityGuide Morocco',
-    url: BASE_URL,
-  },
-  datePublished: '2026-03-19',
-  dateModified: '2026-03-19',
-  mainEntityOfPage: `${BASE_URL}/morocco-luxury-riads`,
-  isPartOf: {
-    '@type': 'WebSite',
-    name: 'CityGuide Morocco',
-    url: BASE_URL,
-  },
-  about: {
-    '@type': 'Country',
-    name: 'Morocco',
-  },
+    'Comprehensive guide to Morocco\'s finest luxury riads across Marrakech, Fes, Essaouira, and Chefchaouen with pricing, amenities, architecture, and booking strategies.',
+  url: PAGE_URL,
+  image: `${BASE_URL}/images/hero-riads.webp`,
+  author: { '@type': 'Organization', name: 'City Tours Morocco', url: BASE_URL },
+  publisher: { '@type': 'Organization', name: 'City Tours Morocco', url: BASE_URL },
+  datePublished: '2026-03-21',
+  dateModified: '2026-03-21',
+  mainEntityOfPage: PAGE_URL,
+  about: { '@type': 'Country', name: 'Morocco' },
   breadcrumb: {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Luxury Riads in Morocco', item: `${BASE_URL}/morocco-luxury-riads` },
+      { '@type': 'ListItem', position: 2, name: 'Luxury Riads Morocco', item: PAGE_URL },
     ],
   },
 };
 
-const faqJsonLd = {
+const jsonLdFaq = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What is a riad and how is it different from a hotel?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A riad is a traditional Moroccan house built around an interior courtyard or garden. Unlike hotels, riads are intimate properties typically with 4-12 rooms, offering personalized service, home-cooked meals, and an authentic architectural experience. The word "riad" comes from the Arabic for "garden."',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does a luxury riad cost per night in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Luxury riads in Morocco range from 2,000 MAD to 15,000+ MAD per night. Mid-luxury riads start from 2,000-4,000 MAD, premium riads run 4,000-8,000 MAD, and ultra-luxury properties like Royal Mansour can exceed 15,000 MAD. Seasonal pricing varies, with peak season (October-April) being most expensive.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Should I book a riad in the medina or outside?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A medina riad offers the most authentic experience — you are immersed in the historic quarter with easy access to souks and landmarks on foot. However, medina riads require navigating narrow streets. If you prefer easier car access and quieter surroundings, consider riads in the Palmerie or new city areas.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do luxury riads have private hammams?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Many luxury riads feature private hammams or in-house spa facilities. Properties like Royal Mansour, La Mamounia, and Riad Fes all have world-class hammam and spa services. Some riads offer in-room hammam experiences or can arrange private sessions for couples.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is the best time of year to stay in a luxury riad in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The best time to visit is spring (March-May) and autumn (September-November) when temperatures are pleasant. Peak season is October through April, which means higher prices but cooler, comfortable weather. Summer (June-August) can be extremely hot in Marrakech and Fes, but coastal riads in Essaouira remain pleasant.',
-      },
-    },
-  ],
+  mainEntity: faqItems.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
 };
 
-/* ═══════════════════════════════════════════════════════════════
-   DATA: LUXURY RIADS BY CITY
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   DATA: WHAT DEFINES A LUXURY RIAD
+   ================================================================ */
+
+const luxuryDefiningFeatures = [
+  {
+    name: 'Architecture & Restoration',
+    icon: Building,
+    description:
+      'Luxury riads occupy centuries-old townhouses restored by master craftsmen (maalems). Expect hand-cut zellige mosaic tilework, carved stucco (gebs) framing every doorway, painted cedarwood ceilings that took years to complete, and a central courtyard with fountain or mature garden. The best restorations honor the original structure while adding modern comforts invisibly.',
+  },
+  {
+    name: 'Private Hammam & Spa',
+    icon: Droplets,
+    description:
+      'A dedicated hammam with heated marble, steam room, and trained therapists offering traditional gommage scrubs with savon noir and ghassoul clay. Top properties add treatment menus: argan oil massages, rose petal wraps, and reflexology. Some have multi-room spa facilities with cold plunge pools and relaxation lounges.',
+  },
+  {
+    name: 'Rooftop Terrace & Pool',
+    icon: Sun,
+    description:
+      'The rooftop is an open-air living room with panoramic views over the medina skyline, Atlas Mountain peaks, and minarets. Furnished with daybeds, shade canopies, and herbs in terracotta pots. Most luxury riads have a courtyard plunge pool; a growing number add heated rooftop pools with sunken lounging areas.',
+  },
+  {
+    name: 'Dining & Culinary Experiences',
+    icon: UtensilsCrossed,
+    description:
+      'Breakfast is always included: fresh-squeezed orange juice, mint tea, msemen and baghrir pancakes, local honey, amlou, and seasonal fruit. Many luxury riads employ trained chefs who prepare multi-course Moroccan dinners on request. Cooking classes, market tours with the chef, and wine pairings are common add-ons.',
+  },
+  {
+    name: 'Personalized Service',
+    icon: ConciergeBell,
+    description:
+      'With only 4-12 rooms, luxury riads offer a staff-to-guest ratio that large hotels cannot match. Staff learn your name on arrival, remember your tea preference, arrange restaurant reservations, book guides and drivers, and handle the medina navigation that overwhelms first-time visitors. The best properties assign a personal butler or house manager.',
+  },
+  {
+    name: 'Art & Design Curation',
+    icon: Eye,
+    description:
+      'Owners of luxury riads often fill rooms with personally curated collections: Berber textiles, contemporary Moroccan art, antique brass lanterns, hand-loomed rugs from the Middle Atlas, and custom furniture designed specifically for the property. Each room has a distinct character, so no two stays feel the same.',
+  },
+];
+
+/* ================================================================
+   DATA: MARRAKECH LUXURY RIADS
+   ================================================================ */
 
 const marrakechRiads = [
   {
-    name: 'Royal Mansour',
+    name: 'La Sultana Marrakech',
+    area: 'Kasbah, near Saadian Tombs',
+    price: 'From 4,500 MAD per night',
+    rooms: '28 suites across 5 interconnected riads',
     icon: Crown,
-    rating: '5-Star Palace',
-    price: 'From 15,000 MAD/night',
+    highlights: ['Full-sized heated pool', 'Award-winning spa with 8 treatment rooms', 'Rooftop restaurant with Atlas views', 'Member of Small Luxury Hotels of the World'],
     description:
-      'The crown jewel of Moroccan hospitality, commissioned by King Mohammed VI himself. Each accommodation is a private three-story riad with its own plunge pool, rooftop terrace, and dedicated butler. The 2,500 sqm spa features a white marble hammam, and the three restaurants include a Michelin-starred dining experience. Every surface showcases the finest Moroccan craftsmanship — zellige, carved plaster, and hand-painted cedarwood.',
-    highlights: ['Private three-story riads', 'Personal butler service', 'Michelin-starred dining', 'White marble hammam', 'Underground tunnel network'],
+      'Five restored riads combined into a single property with museum-quality craftsmanship in every corner. The 2,000-square-meter spa includes a traditional hammam, sauna, jacuzzi, and a full menu of treatments using argan, amber, and rose products. Suites feature private terraces, hand-carved cedarwood furnishings, and marble bathrooms with underfloor heating.',
   },
   {
-    name: 'La Mamounia',
-    icon: Award,
-    rating: '5-Star Palace',
-    price: 'From 8,000 MAD/night',
+    name: 'El Fenn',
+    area: 'Bab el Ksour, Northern Medina',
+    price: 'From 3,500 MAD per night',
+    rooms: '28 rooms and suites',
+    icon: Sparkles,
+    highlights: ['Three pools including a rooftop infinity pool', 'Contemporary art collection throughout', 'Two restaurants plus cocktail bar', 'Co-founded by Vanessa Branson'],
     description:
-      'A legendary palace hotel set within 17 acres of centennial gardens. Since 1929, La Mamounia has hosted royalty, world leaders, and cultural icons. Winston Churchill called it "the most lovely spot in the whole world." The 2,500 sqm spa, multiple pools, and four restaurants make this an icon of Moroccan luxury. The Art Deco interiors blend seamlessly with traditional Moorish architecture.',
-    highlights: ['17 acres of historic gardens', 'World-renowned heritage', 'Four on-site restaurants', '2,500 sqm luxury spa', 'Art Deco meets Moorish design'],
+      'A design-forward property blending Moroccan artisanship with modern aesthetics. The contemporary art collection rotates and features established Moroccan artists alongside international names. Rooms range from intimate doubles to sprawling suites with private terraces. The rooftop bar serves craft cocktails with unobstructed sunset views over the medina.',
   },
   {
-    name: 'Riad Kniza',
+    name: 'Riad Yasmine',
+    area: 'Sidi Ben Slimane, Northern Medina',
+    price: 'From 2,000 MAD per night',
+    rooms: '7 rooms',
+    icon: Star,
+    highlights: ['Iconic turquoise courtyard pool', 'One of the most photographed riads in Morocco', 'Intimate 7-room layout', 'Rooftop with Atlas Mountain views'],
+    description:
+      'The turquoise plunge pool surrounded by zellige tilework and banana leaf plants became one of the most recognizable images of Morocco on social media. Beyond the photography appeal, Riad Yasmine delivers genuinely warm hospitality, impeccable breakfasts, and rooms decorated with custom bejmat tilework and handwoven textiles. Book well ahead; the seven rooms fill fast.',
+  },
+  {
+    name: 'Dar Ahlam',
+    area: 'Skoura Oasis (near Ouarzazate)',
+    price: 'From 6,000 MAD per night (all-inclusive)',
+    rooms: '14 suites',
     icon: Gem,
-    rating: 'Boutique Luxury',
-    price: 'From 3,500 MAD/night',
+    highlights: ['All-inclusive with meals, drinks, and excursions', 'No menus — chef cooks what inspires him daily', 'Private desert excursions and Atlas hikes', 'Named "Best Small Hotel in the World" by Travel + Leisure'],
     description:
-      'An intimate eleven-room boutique riad that represents the pinnacle of understated Moroccan elegance. Owned by a passionate collector, every room is filled with antiques, museum-quality art, and handcrafted furniture. The in-house restaurant serves some of the finest traditional Moroccan cuisine in the medina, and the small spa uses locally sourced argan oil and saffron in its treatments.',
-    highlights: ['Antique-filled interiors', 'Museum-quality art collection', 'Award-winning restaurant', 'Personalized saffron spa treatments', 'Intimate eleven-room property'],
+      'Technically a kasbah rather than a medina riad, Dar Ahlam earns its place on this list because it represents the pinnacle of intimate luxury accommodation in Morocco. There are no set mealtimes, no menus, and no check-in desk. Guests eat wherever they want — in the garden, by the pool, on a rooftop, or in the desert under stars. The chef tailors every meal to individual preferences discovered through conversation, not questionnaires.',
   },
-] as const;
+  {
+    name: 'Royal Mansour',
+    area: 'Near Jemaa el-Fna',
+    price: 'From 15,000 MAD per night',
+    rooms: '53 private riads',
+    icon: Crown,
+    highlights: ['Each guest gets an entire private three-story riad', 'Staff move through underground tunnels, unseen', 'Three restaurants including Michelin-starred dining', 'Commissioned by King Mohammed VI'],
+    description:
+      'A palace complex of 53 individual riads, each a three-story private residence with rooftop terrace, plunge pool, and living room. Over 1,500 master artisans spent three years hand-crafting the zellige, stucco, and cedarwood. Staff circulate through a network of underground tunnels to deliver food, turn down beds, and arrange amenities without ever being seen unless summoned. This is not a hotel experience; it is a parallel reality.',
+  },
+];
+
+/* ================================================================
+   DATA: FES LUXURY RIADS
+   ================================================================ */
 
 const fesRiads = [
   {
     name: 'Riad Fes',
-    icon: Crown,
-    rating: '5-Star Luxury',
-    price: 'From 4,500 MAD/night',
+    area: 'Fes el-Bali, near Bab Rcif',
+    price: 'From 3,000 MAD per night',
+    rooms: '16 suites',
+    icon: Award,
+    highlights: ['Relais & Chateaux member', 'Fine-dining restaurant with tasting menus', 'Rooftop bar overlooking the medina', 'Full spa with hammam and heated pool'],
     description:
-      'The undisputed queen of Fes luxury accommodation. This meticulously restored 16th-century palace features 21 rooms and suites adorned with original zellige mosaics, carved cedar ceilings, and silk furnishings. The rooftop bar offers panoramic views over the medina, and the spa includes a traditional hammam and an indoor pool. The restaurant specializes in refined Fassi cuisine — a cuisine tradition that rivals Marrakech.',
-    highlights: ['16th-century restored palace', 'Original zellige and cedar work', 'Rooftop bar with medina views', 'Indoor pool and hammam spa', 'Refined Fassi fine dining'],
+      'The only Relais & Chateaux property in the Fes medina. The restaurant serves refined Moroccan-French cuisine with seasonal tasting menus that draw local food critics and international guests alike. Suites feature hand-painted ceilings, deep soaking tubs, and views over the medieval rooftops. The bar terrace at sunset, with the muezzin call echoing across the city, is one of the great sensory experiences in Morocco.',
   },
   {
     name: 'Palais Amani',
+    area: 'Oued Zhoune, Fes el-Bali',
+    price: 'From 2,500 MAD per night',
+    rooms: '15 rooms and suites',
     icon: Sparkles,
-    rating: 'Boutique Luxury',
-    price: 'From 3,000 MAD/night',
+    highlights: ['Andalusian garden with 30+ plant species', 'Cooking school with market tours', 'Heated courtyard pool', 'Bar with Moroccan-inspired cocktails'],
     description:
-      'A beautifully restored 17th-century palace near Bab Guissa, one of the quieter gates of the Fes medina. The standout feature is the Andalusian garden with over 3,000 plants, from which the in-house spa sources organic ingredients for its treatments. Fifteen rooms and suites are individually decorated, and the rooftop terrace restaurant offers sweeping views of the medina skyline.',
-    highlights: ['Andalusian garden with 3,000+ plants', 'Organic in-house spa products', 'Rooftop terrace dining', 'Quiet medina neighborhood', 'Cooking classes available'],
+      'A restored 17th-century palace with a magnificent Andalusian garden that feels like stepping out of the dense medina into a private botanical sanctuary. The cooking school takes guests through the spice souk to select ingredients, then teaches traditional recipes in a professional kitchen. Rooms mix original architectural details with tasteful contemporary furnishings.',
   },
-] as const;
+  {
+    name: 'Riad Laaroussa',
+    area: 'Derb Laaroussa, Fes el-Bali',
+    price: 'From 2,200 MAD per night',
+    rooms: '8 suites',
+    icon: Key,
+    highlights: ['17th-century palace with original frescoes', 'Heated pool in the courtyard', 'Renowned in-house restaurant', 'Quiet location away from tourist routes'],
+    description:
+      'One of the oldest restored palaces in the Fes medina, with original 17th-century frescoes on the walls and carved cedarwood doors that predate many of the city\'s landmarks. The owner has maintained the building\'s historical integrity while adding heated floors, modern plumbing, and air conditioning. The in-house restaurant is considered one of the best dining experiences in Fes, with a set menu that changes daily based on market availability.',
+  },
+  {
+    name: 'Karawan Riad',
+    area: 'Derb el Miter, Fes el-Bali',
+    price: 'From 2,800 MAD per night',
+    rooms: '9 rooms and suites',
+    icon: Gem,
+    highlights: ['Museum-quality antique collection', 'Private hammam with traditional treatments', 'Rooftop dining with panoramic medina views', 'Expert-guided medina walking tours'],
+    description:
+      'A meticulously curated property where every room tells a story through antique furnishings, vintage textiles, and artifacts collected over decades. The owner is a scholar of Moroccan decorative arts and has filled the riad with pieces that would be at home in a museum. Service is deeply personal, with the team arranging private access to workshops and artisan studios that most visitors never find.',
+  },
+];
+
+/* ================================================================
+   DATA: ESSAOUIRA & CHEFCHAOUEN LUXURY RIADS
+   ================================================================ */
 
 const essaouiraRiads = [
   {
     name: 'Heure Bleue Palais',
-    icon: Award,
-    rating: 'Boutique Luxury',
-    price: 'From 3,200 MAD/night',
+    area: 'Place Moulay Hassan, Essaouira Medina',
+    price: 'From 3,200 MAD per night',
+    rooms: '33 rooms and suites',
+    icon: Crown,
+    highlights: ['Rooftop pool with Atlantic Ocean views', 'Cinema room and library', 'Full spa with heated indoor pool', 'Directly on the main square'],
     description:
-      'A stately heritage palace steps from the ramparts of Essaouira, blending traditional Moroccan architecture with French colonial elegance. Features a heated indoor pool, cinema room, rooftop terrace with Atlantic views, and a spa with hammam. The restaurant serves fresh Atlantic seafood alongside classic Moroccan dishes. Each of the 33 rooms is individually styled.',
-    highlights: ['Heated indoor pool', 'Atlantic rooftop views', 'Cinema room', 'Fresh seafood restaurant', 'Steps from the ramparts'],
+      'The grande dame of Essaouira hospitality, a Relais & Chateaux property occupying a converted French colonial mansion on the main square. The rooftop pool looks over the ramparts to the Atlantic Ocean and the Iles Purpuraires. Interiors blend French art deco with Moroccan craftsmanship. The cinema room screens classic films in the evenings. Location is unbeatable: step out the door and you are in the heart of the medina.',
   },
   {
     name: 'Villa de l\'O',
-    icon: Gem,
-    rating: 'Boutique Luxury',
-    price: 'From 2,500 MAD/night',
+    area: 'Rue Mohamed Ben Massoud, Essaouira Medina',
+    price: 'From 2,400 MAD per night',
+    rooms: '12 rooms',
+    icon: Star,
+    highlights: ['Terrace restaurant with ocean views', 'Minimalist Moroccan-contemporary design', 'In-house hammam', 'Quiet street location within walking distance of everything'],
     description:
-      'A contemporary boutique riad that balances modern minimalist design with Moroccan warmth. Located within the medina walls, it features clean lines, natural materials, and a stunning courtyard pool. The rooftop offers views over the medina to the ocean. Perfect for design-conscious travelers who want comfort without the ornate excess.',
-    highlights: ['Contemporary design aesthetic', 'Courtyard swimming pool', 'Ocean-view rooftop', 'Minimalist luxury', 'Medina location'],
+      'A design hotel disguised as a riad. The interiors use a restrained palette of white lime plaster, dark wood, and natural textiles that let the architecture speak. The terrace restaurant serves excellent seafood with views over the medina rooftops to the ocean. Rooms on the upper floors catch the Atlantic breeze that makes Essaouira comfortable even in midsummer.',
   },
-] as const;
+];
 
 const chefchaouenRiads = [
   {
     name: 'Lina Ryad & Spa',
-    icon: Sparkles,
-    rating: 'Boutique Luxury',
-    price: 'From 2,000 MAD/night',
+    area: 'Medina, Chefchaouen',
+    price: 'From 2,000 MAD per night',
+    rooms: '10 rooms',
+    icon: Droplets,
+    highlights: ['Full spa with hammam and jacuzzi', 'Panoramic Rif Mountain terrace', 'Blue-and-white Chefchaouen design', 'In-house restaurant with local cuisine'],
     description:
-      'The premier luxury accommodation in Chefchaouen\'s blue medina. This beautifully restored riad features rooms painted in the signature blue hues of the city, a courtyard with fountain, an in-house spa with hammam, and a rooftop terrace with views of the Rif Mountains. The restaurant serves traditional Riffian and Andalusian cuisine sourced from local farms.',
-    highlights: ['Signature blue-painted interiors', 'Rif Mountain rooftop views', 'In-house spa and hammam', 'Farm-to-table restaurant', 'Heart of the blue medina'],
+      'The most polished luxury option in the Blue City. The spa rivals properties twice the price in Marrakech, with a hammam, jacuzzi, and treatment rooms using locally sourced products. Rooms carry the blue-and-white palette that makes Chefchaouen famous, elevated with high-thread-count linens and rainfall showers. The rooftop terrace offers some of the best mountain views in town.',
   },
   {
     name: 'Casa Hassan',
+    area: 'Rue Targui, Chefchaouen Medina',
+    price: 'From 1,800 MAD per night',
+    rooms: '8 rooms',
     icon: Building,
-    rating: 'Heritage Boutique',
-    price: 'From 1,500 MAD/night',
+    highlights: ['One of the first guesthouses in Chefchaouen', 'Famous on-site restaurant', 'Traditional Riffian architecture', 'Rooftop terrace with mosque views'],
     description:
-      'One of the original heritage guesthouses in Chefchaouen, run by the same family for decades. Casa Hassan offers authentic charm with traditional furnishings, a rooftop terrace overlooking the blue city, and a renowned restaurant that is considered one of the best in town. The hospitality is warm, personal, and deeply rooted in Chefchaouen tradition.',
-    highlights: ['Family-run heritage property', 'Renowned on-site restaurant', 'Panoramic rooftop terrace', 'Authentic Chefchaouen character', 'Decades of hospitality experience'],
+      'A Chefchaouen institution since the 1980s, Casa Hassan was among the first riads to welcome international travelers. The on-site restaurant serves traditional Riffian and Moroccan dishes and is considered one of the best in town. Rooms are decorated with local textiles and painted woodwork. The property has been gradually upgraded over the decades without losing the character that made it a landmark.',
   },
-] as const;
+];
 
-/* ═══════════════════════════════════════════════════════════════
-   DATA: WHAT MAKES A LUXURY RIAD
-   ═══════════════════════════════════════════════════════════════ */
-
-const riadFeatures = [
-  {
-    title: 'Central Courtyard',
-    icon: Eye,
-    description: 'The heart of every riad: an open-air courtyard with a fountain, citrus trees, or plunge pool. This is where life happens — breakfast, tea, and evening relaxation.',
-  },
-  {
-    title: 'Artisan Craftsmanship',
-    icon: Gem,
-    description: 'Zellige tilework, carved stucco (gebs), painted cedar ceilings (zouak), and tadelakt walls. Each element is handcrafted by master artisans using centuries-old techniques.',
-  },
-  {
-    title: 'Private Hammam',
-    icon: Droplets,
-    description: 'Most luxury riads feature an in-house hammam with traditional scrubbing rituals, argan oil treatments, and heated marble rooms for the ultimate relaxation.',
-  },
-  {
-    title: 'Rooftop Terrace',
-    icon: Sun,
-    description: 'Expansive rooftop terraces with views over the medina, Atlas Mountains, or ocean. Often the setting for sunrise breakfast or sunset cocktails under the stars.',
-  },
-  {
-    title: 'Personalized Service',
-    icon: Users,
-    description: 'With only 4-12 rooms per property, luxury riads offer a level of personal attention that large hotels cannot match. Many provide dedicated butlers or concierges.',
-  },
-  {
-    title: 'Gourmet Dining',
-    icon: UtensilsCrossed,
-    description: 'Private chefs prepare traditional Moroccan feasts — slow-cooked tagines, pastilla, couscous — using family recipes and fresh market ingredients bought that morning.',
-  },
-] as const;
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: AMENITIES TO EXPECT
-   ═══════════════════════════════════════════════════════════════ */
-
-const luxuryAmenities = [
-  { amenity: 'Private hammam & spa', icon: Droplets, detail: 'Traditional hammam rituals with argan oil, ghassoul clay, and rose water treatments' },
-  { amenity: 'Rooftop terrace dining', icon: UtensilsCrossed, detail: 'Candlelit dinners under the stars with panoramic medina or mountain views' },
-  { amenity: 'Plunge pool or courtyard pool', icon: Sparkles, detail: 'Cool retreat from the medina heat, often surrounded by orange trees and zellige' },
-  { amenity: 'Butler or concierge service', icon: Key, detail: 'Personal assistance with restaurant reservations, tours, transport, and special requests' },
-  { amenity: 'Airport transfers', icon: Globe, detail: 'Private car transfers from the airport to the medina with luggage assistance' },
-  { amenity: 'Cooking classes', icon: BookOpen, detail: 'Learn to prepare tagine, pastilla, and Moroccan salads from the riad\'s private chef' },
-  { amenity: 'Curated excursions', icon: MapPin, detail: 'Private guided tours of the medina, souks, tanneries, and surrounding countryside' },
-  { amenity: 'High-speed Wi-Fi', icon: Wifi, detail: 'Reliable connectivity throughout the riad for remote workers and travelers alike' },
-] as const;
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: PRICE RANGES
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   DATA: PRICE RANGES BY SEASON
+   ================================================================ */
 
 const priceRanges = [
-  {
-    tier: 'Mid-Luxury Riads',
-    range: 'From 1,500 - 3,000 MAD/night',
-    description: 'Beautifully restored riads with traditional architecture, good breakfasts, and helpful staff. May not have private pools or in-house spas, but still an authentic and comfortable experience.',
-    examples: 'Casa Hassan (Chefchaouen), Riad 72 (Marrakech)',
-    icon: Star,
-  },
-  {
-    tier: 'Premium Luxury Riads',
-    range: 'From 3,000 - 6,000 MAD/night',
-    description: 'Exceptional properties with top-tier amenities — private hammams, rooftop dining, plunge pools, and personalized concierge service. The sweet spot for most luxury travelers.',
-    examples: 'Riad Kniza (Marrakech), Palais Amani (Fes), Heure Bleue Palais (Essaouira)',
-    icon: Award,
-  },
-  {
-    tier: 'Ultra-Luxury Palaces',
-    range: 'From 6,000 - 15,000+ MAD/night',
-    description: 'World-class palace hotels offering the absolute pinnacle of Moroccan hospitality. Private riads within the complex, Michelin-starred dining, and extensive spa facilities.',
-    examples: 'Royal Mansour (Marrakech), La Mamounia (Marrakech), Riad Fes',
-    icon: Crown,
-  },
-] as const;
+  { city: 'Marrakech', lowSeason: 'From 2,000 MAD', shoulder: 'From 3,000 MAD', peak: 'From 4,500 MAD', ultraLuxury: 'From 8,000-15,000 MAD' },
+  { city: 'Fes', lowSeason: 'From 1,800 MAD', shoulder: 'From 2,500 MAD', peak: 'From 3,500 MAD', ultraLuxury: 'From 5,000-8,000 MAD' },
+  { city: 'Essaouira', lowSeason: 'From 1,600 MAD', shoulder: 'From 2,200 MAD', peak: 'From 3,200 MAD', ultraLuxury: 'From 4,500-7,000 MAD' },
+  { city: 'Chefchaouen', lowSeason: 'From 1,200 MAD', shoulder: 'From 1,800 MAD', peak: 'From 2,500 MAD', ultraLuxury: 'From 3,000-4,500 MAD' },
+];
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    DATA: BOOKING TIPS
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 const bookingTips = [
-  { tip: 'Book Direct for Best Rates', icon: Phone, description: 'Many luxury riads offer a 10-15% discount when you book directly through their website rather than through OTAs like Booking.com or Expedia. Email them directly to negotiate.' },
-  { tip: 'Visit in Shoulder Season', icon: Calendar, description: 'March-April and October-November offer the best balance of pleasant weather and lower prices. Avoid Christmas and New Year when rates can double at top properties.' },
-  { tip: 'Request a Specific Room', icon: Bed, description: 'Each room in a riad is unique. Ask for photos of available rooms and request one facing the courtyard for the most atmospheric experience. Upper floors are quieter.' },
-  { tip: 'Ask About Packages', icon: DollarSign, description: 'Many riads offer multi-night packages that bundle accommodation with airport transfers, hammam sessions, cooking classes, and guided tours at a significant discount.' },
-  { tip: 'Check Accessibility', icon: Info, description: 'Medina riads are accessed through narrow streets. Ask the riad to arrange a porter or meet you at the nearest car-accessible point. Most luxury riads provide this service free.' },
-  { tip: 'Read Recent Reviews', icon: Eye, description: 'Riads can change ownership or management. Always check reviews from the last 6 months on multiple platforms (Google, TripAdvisor, Booking) for the most current picture.' },
-] as const;
+  {
+    title: 'Book Direct for the Best Rate',
+    icon: Phone,
+    tip: 'Contact the riad via their website, email, or WhatsApp. Mention that you found them on Booking.com or TripAdvisor but prefer to book directly. Most luxury riads will match or beat platform prices and throw in extras like airport transfers or a complimentary hammam session.',
+  },
+  {
+    title: 'Reserve 3-6 Months Ahead for Peak Season',
+    icon: Calendar,
+    tip: 'October through April is peak season, with Christmas, New Year, and Easter the tightest periods. Top riads like La Sultana and Riad Fes sell out months in advance for these dates. Summer bookings can be made 4-6 weeks out with room to negotiate discounts.',
+  },
+  {
+    title: 'Ask for a Specific Room',
+    icon: Bed,
+    tip: 'Luxury riads have rooms of vastly different size and character. Ask the owner which room they recommend for your trip style (romance, photography, quiet work). Request a room by name if the riad lists them. Upper-floor rooms get more light and less courtyard noise.',
+  },
+  {
+    title: 'Confirm Airport Transfer Details',
+    icon: Key,
+    tip: 'Most luxury riads include airport or station pickup. Confirm the driver\'s name and phone number before arrival. In Marrakech and Fes, vehicles cannot enter the medina, so the driver will walk you through the final stretch. Have the riad\'s WhatsApp number saved for real-time coordination.',
+  },
+  {
+    title: 'Negotiate Multi-Night Discounts',
+    icon: DollarSign,
+    tip: 'Staying 4+ nights? Ask for a reduced nightly rate. Many luxury riads offer 10-15% off for week-long stays, especially during shoulder season. Some include complimentary cooking classes, spa treatments, or private excursions for extended bookings.',
+  },
+  {
+    title: 'Read Reviews from the Last 6 Months',
+    icon: Eye,
+    tip: 'Riads change hands, renovate, or decline. Reviews from two years ago may describe a different property. Focus on the most recent feedback, paying attention to comments about service consistency, food quality, and maintenance. A pattern of recent complaints is a stronger signal than a single negative review.',
+  },
+];
 
-/* ═══════════════════════════════════════════════════════════════
-   DATA: BEST TIME TO VISIT
-   ═══════════════════════════════════════════════════════════════ */
-
-const seasons = [
-  {
-    season: 'Spring (March - May)',
-    icon: Sun,
-    verdict: 'Excellent',
-    description: 'Ideal temperatures in the 20s Celsius, gardens in full bloom, and moderate tourist crowds. The best time for Marrakech and Fes riads. Prices are moderate to high.',
-  },
-  {
-    season: 'Summer (June - August)',
-    icon: Sparkles,
-    verdict: 'Good for Coast Only',
-    description: 'Marrakech and Fes reach 40+C, making inland riads less appealing. Essaouira stays cool with Atlantic breezes, making coastal riads the smart choice. Lowest prices inland.',
-  },
-  {
-    season: 'Autumn (September - November)',
-    icon: Moon,
-    verdict: 'Excellent',
-    description: 'Temperatures drop to comfortable levels after summer. October is the start of peak season with perfect weather. Excellent value in September before the rush.',
-  },
-  {
-    season: 'Winter (December - February)',
-    icon: Globe,
-    verdict: 'Good',
-    description: 'Mild days (15-20C) but cool evenings. Peak holiday season means higher prices around Christmas and New Year. January and February offer good value with fewer crowds.',
-  },
-] as const;
-
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    PAGE COMPONENT
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 export default function MoroccoLuxuryRiadsPage() {
   return (
     <>
-      {/* ── JSON-LD ── */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      {/* -- JSON-LD -- */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdTravel) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
+      />
 
-      {/* ── Breadcrumb ── */}
-      <nav aria-label="Breadcrumb" className="bg-[var(--surface-muted)] border-b border-[var(--border-primary)]">
+      {/* -- Breadcrumbs -- */}
+      <nav className="bg-[var(--surface-muted)] border-b border-[var(--border-primary)]" aria-label="Breadcrumb">
         <div className="container-morocco py-3">
           <ol className="flex items-center gap-2 text-sm text-[var(--text-muted)]">
             <li>
@@ -425,501 +433,98 @@ export default function MoroccoLuxuryRiadsPage() {
               </Link>
             </li>
             <ChevronRight className="w-3.5 h-3.5" />
-            <li className="text-[var(--text-primary)] font-medium">Luxury Riads in Morocco</li>
+            <li className="text-[var(--text-primary)] font-medium">Luxury Riads Morocco</li>
           </ol>
         </div>
       </nav>
 
-      {/* ── Hero Section ── */}
-      <section className="relative min-h-[70vh] flex items-center justify-center hero-overlay">
+      {/* -- Hero Section -- */}
+      <section className="relative min-h-[60vh] flex items-center justify-center">
         <img
-          src="/images/hero-riad-interior.webp"
-          alt="Luxurious Moroccan riad interior with ornate zellige tilework, a central courtyard fountain surrounded by citrus trees, and traditional carved plaster archways"
+          src="/images/hero-riads.webp"
+          alt="Luxury Moroccan riad courtyard with turquoise plunge pool, zellige tilework, carved stucco arches, and potted citrus trees"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <span className="inline-block bg-[var(--color-accent)] text-white text-xs font-semibold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">
-            Luxury Accommodation Guide 2026
-          </span>
+        <div className="hero-overlay" />
+        <div className="relative z-10 container-morocco text-center py-20">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-display)] font-bold text-white mb-6 leading-tight">
-            Best Luxury Riads in Morocco
+            Morocco&apos;s Finest Luxury Riads
           </h1>
-          <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
-            From royal palace hotels to intimate boutique gems hidden in the medina — discover Morocco&apos;s finest
-            riads offering private hammams, rooftop dining, and timeless artisan craftsmanship.
+          <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-8 font-[family-name:var(--font-heading)]">
+            15 hand-picked boutique riads across Marrakech, Fes, Essaouira, and Chefchaouen — with
+            rates, amenities, architecture, and booking strategies for 2026.
           </p>
+          <div className="flex flex-wrap justify-center gap-4 text-sm text-white/80">
+            <span className="flex items-center gap-1.5"><Crown className="w-4 h-4" /> 15 Top Properties</span>
+            <span className="flex items-center gap-1.5"><MapPin className="w-4 h-4" /> 4 Cities</span>
+            <span className="flex items-center gap-1.5"><DollarSign className="w-4 h-4" /> From 1,800 MAD/night</span>
+            <span className="flex items-center gap-1.5"><Calendar className="w-4 h-4" /> Updated March 2026</span>
+          </div>
         </div>
       </section>
 
-      {/* ── Introduction ── */}
+      {/* -- Introduction -- */}
       <section className="py-16 md:py-20">
-        <div className="container-morocco max-w-4xl text-center">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
-            Why Stay in a Luxury Riad?
-          </h2>
-          <p className="text-[var(--text-secondary)] leading-relaxed mb-4">
-            A riad is not simply a place to sleep — it is the heart of the Moroccan travel experience. The word
-            &quot;riad&quot; comes from the Arabic <em>ryad</em>, meaning &quot;garden,&quot; and these traditional homes are built
-            around a central courtyard where fountains trickle, citrus trees bloom, and the outside world
-            disappears behind thick medina walls. Luxury riads take this concept to extraordinary heights, with
-            master artisans spending months hand-laying zellige mosaics, carving plaster arabesques, and painting
-            cedar ceilings using techniques unchanged for centuries.
-          </p>
-          <p className="text-[var(--text-secondary)] leading-relaxed">
-            Unlike large chain hotels, luxury riads typically have just 4 to 20 rooms, ensuring a level of
-            intimacy and personalized service that transforms a trip into an unforgettable experience. Private
-            chefs, dedicated butlers, rooftop stargazing, and in-house hammam rituals are the norm, not the exception.
-          </p>
+        <div className="container-morocco max-w-4xl">
+          <div className="prose prose-lg max-w-none">
+            <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-6">
+              A luxury riad is not just a place to sleep. It is a private world behind an unmarked door
+              in the medina — a centuries-old courtyard house where zellige tilework, carved stucco, and
+              painted cedarwood ceilings tell stories of the craftsmen who built them. From the outside,
+              the facade is deliberately plain. Step through the threshold and the contrast is immediate:
+              fountains, gardens, pools, and service so attentive that staff know your name and your
+              breakfast preferences before the second morning.
+            </p>
+            <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-6">
+              Morocco has hundreds of riads, but only a fraction qualify as genuinely luxurious. The
+              difference comes down to three things: the quality of the restoration (using master artisans,
+              not shortcuts), the caliber of the service (a staff-to-guest ratio of 3:1 or better), and the
+              small details — organic argan toiletries, hand-embroidered linens, a chef who shops the souk
+              each morning for your dinner ingredients.
+            </p>
+            <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-6">
+              This guide covers 15 properties across four cities. Every riad on this list has been selected
+              for exceptional architecture, consistent service, and the kind of experience that turns a
+              trip into a memory that stays with you for years. Prices reflect 2026 rates, and seasonal
+              pricing can change with demand.
+            </p>
+            <div className="card-moroccan p-5 border-l-4 border-[var(--color-gold)]">
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                <Info className="w-4 h-4 inline mr-1.5 text-[var(--color-gold)]" />
+                <strong className="text-[var(--text-primary)]">How we selected these riads:</strong> Each
+                property was evaluated on four criteria: architectural authenticity (original craftwork vs
+                modern reproductions), service consistency across recent guest reviews, the quality and
+                sourcing of food, and the owner&apos;s personal involvement in the guest experience. We
+                excluded properties with more than 40 rooms, since the intimate scale of a riad is
+                fundamental to what makes the experience different from a hotel.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* ── What Makes a Luxury Riad ── */}
+      {/* -- What Defines a Luxury Riad -- */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <Gem className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            What Defines a Luxury Riad
+            What Makes a Riad Truly Luxurious
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Six signature elements that elevate a traditional Moroccan riad into a world-class luxury destination.
+            Price alone does not define luxury. These six elements separate the exceptional from the merely expensive.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {riadFeatures.map((feature) => {
+            {luxuryDefiningFeatures.map((feature) => {
               const FeatureIcon = feature.icon;
               return (
-                <div key={feature.title} className="card-moroccan p-6">
-                  <div className="w-12 h-12 rounded-full bg-[var(--surface-muted)] flex items-center justify-center mb-4">
-                    <FeatureIcon className="w-6 h-6 text-[var(--color-accent)]" />
-                  </div>
+                <div key={feature.name} className="card-moroccan p-6">
+                  <FeatureIcon className="w-8 h-8 text-[var(--color-gold)] mb-3" />
                   <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                    {feature.title}
+                    {feature.name}
                   </h3>
-                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{feature.description}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Top Riads: Marrakech ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <MapPin className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Luxury Riads in Marrakech
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            The red city is home to Morocco&apos;s most celebrated luxury riads, from royal palaces to intimate boutique hideaways.
-          </p>
-
-          <div className="space-y-8">
-            {marrakechRiads.map((riad, index) => {
-              const RiadIcon = riad.icon;
-              return (
-                <div key={riad.name} className="card-moroccan p-6 md:p-8">
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="w-12 h-12 rounded-full bg-[var(--surface-muted)] flex items-center justify-center flex-shrink-0">
-                      <RiadIcon className="w-6 h-6 text-[var(--color-gold)]" />
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-3 mb-1">
-                        <h3 className="text-xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
-                          {index + 1}. {riad.name}
-                        </h3>
-                        <span className="text-xs bg-[var(--color-gold)]/10 text-[var(--color-gold)] px-2 py-0.5 rounded-full font-semibold">
-                          {riad.rating}
-                        </span>
-                      </div>
-                      <span className="text-sm text-[var(--color-accent)] font-semibold">{riad.price}</span>
-                    </div>
-                  </div>
-                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4">{riad.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {riad.highlights.map((highlight) => (
-                      <span key={highlight} className="text-xs bg-[var(--surface-muted)] text-[var(--text-secondary)] px-3 py-1 rounded-full flex items-center gap-1">
-                        <CheckCircle className="w-3 h-3 text-[var(--color-accent)]" />
-                        {highlight}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Top Riads: Fes ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <MapPin className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Luxury Riads in Fes
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            The spiritual and intellectual capital of Morocco, Fes offers riads steeped in centuries of history, with architecture that rivals anything in Marrakech.
-          </p>
-
-          <div className="space-y-8">
-            {fesRiads.map((riad, index) => {
-              const RiadIcon = riad.icon;
-              return (
-                <div key={riad.name} className="card-moroccan p-6 md:p-8">
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="w-12 h-12 rounded-full bg-[var(--surface-muted)] flex items-center justify-center flex-shrink-0">
-                      <RiadIcon className="w-6 h-6 text-[var(--color-gold)]" />
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-3 mb-1">
-                        <h3 className="text-xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
-                          {index + 1}. {riad.name}
-                        </h3>
-                        <span className="text-xs bg-[var(--color-gold)]/10 text-[var(--color-gold)] px-2 py-0.5 rounded-full font-semibold">
-                          {riad.rating}
-                        </span>
-                      </div>
-                      <span className="text-sm text-[var(--color-accent)] font-semibold">{riad.price}</span>
-                    </div>
-                  </div>
-                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4">{riad.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {riad.highlights.map((highlight) => (
-                      <span key={highlight} className="text-xs bg-[var(--surface-muted)] text-[var(--text-secondary)] px-3 py-1 rounded-full flex items-center gap-1">
-                        <CheckCircle className="w-3 h-3 text-[var(--color-accent)]" />
-                        {highlight}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Top Riads: Essaouira & Chefchaouen ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <MapPin className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Luxury Riads in Essaouira &amp; Chefchaouen
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Beyond the imperial cities, Morocco&apos;s coastal and mountain towns offer boutique luxury with a distinct character — Atlantic breezes in Essaouira and blue-painted serenity in Chefchaouen.
-          </p>
-
-          <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-6">Essaouira</h3>
-          <div className="space-y-6 mb-12">
-            {essaouiraRiads.map((riad, index) => {
-              const RiadIcon = riad.icon;
-              return (
-                <div key={riad.name} className="card-moroccan p-6">
-                  <div className="flex items-start gap-4 mb-3">
-                    <RiadIcon className="w-6 h-6 text-[var(--color-gold)] flex-shrink-0 mt-1" />
-                    <div>
-                      <div className="flex items-center gap-3 mb-1">
-                        <h4 className="text-lg font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
-                          {index + 1}. {riad.name}
-                        </h4>
-                        <span className="text-xs bg-[var(--color-gold)]/10 text-[var(--color-gold)] px-2 py-0.5 rounded-full font-semibold">{riad.rating}</span>
-                      </div>
-                      <span className="text-sm text-[var(--color-accent)] font-semibold">{riad.price}</span>
-                    </div>
-                  </div>
-                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-3">{riad.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {riad.highlights.map((h) => (
-                      <span key={h} className="text-xs bg-[var(--surface-muted)] text-[var(--text-secondary)] px-3 py-1 rounded-full flex items-center gap-1">
-                        <CheckCircle className="w-3 h-3 text-[var(--color-accent)]" />{h}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-          <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-6">Chefchaouen</h3>
-          <div className="space-y-6">
-            {chefchaouenRiads.map((riad, index) => {
-              const RiadIcon = riad.icon;
-              return (
-                <div key={riad.name} className="card-moroccan p-6">
-                  <div className="flex items-start gap-4 mb-3">
-                    <RiadIcon className="w-6 h-6 text-[var(--color-gold)] flex-shrink-0 mt-1" />
-                    <div>
-                      <div className="flex items-center gap-3 mb-1">
-                        <h4 className="text-lg font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
-                          {index + 1}. {riad.name}
-                        </h4>
-                        <span className="text-xs bg-[var(--color-gold)]/10 text-[var(--color-gold)] px-2 py-0.5 rounded-full font-semibold">{riad.rating}</span>
-                      </div>
-                      <span className="text-sm text-[var(--color-accent)] font-semibold">{riad.price}</span>
-                    </div>
-                  </div>
-                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-3">{riad.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {riad.highlights.map((h) => (
-                      <span key={h} className="text-xs bg-[var(--surface-muted)] text-[var(--text-secondary)] px-3 py-1 rounded-full flex items-center gap-1">
-                        <CheckCircle className="w-3 h-3 text-[var(--color-accent)]" />{h}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Amenities to Expect ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Star className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Amenities to Expect at a Luxury Riad
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Beyond beautiful architecture, top-tier Moroccan riads deliver a comprehensive luxury experience.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {luxuryAmenities.map((item) => {
-              const AmenityIcon = item.icon;
-              return (
-                <div key={item.amenity} className="card-moroccan p-5">
-                  <div className="w-10 h-10 rounded-full bg-[var(--surface-muted)] flex items-center justify-center mb-3">
-                    <AmenityIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                  </div>
-                  <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                    {item.amenity}
-                  </h3>
-                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{item.detail}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Private Hammam Experiences ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Droplets className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Private Hammam Experiences
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            One of the greatest privileges of a luxury riad is access to a private hammam — a world away from the communal public bathhouses.
-          </p>
-
-          <div className="space-y-6">
-            <div className="card-moroccan p-6">
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                The Royal Mansour Hammam Experience
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                The white marble hammam at Royal Mansour is one of the most opulent wellness spaces in Africa.
-                The signature Royal Hammam ritual lasts 90 minutes and uses bespoke products made exclusively for
-                the property, including gold-infused argan oil. Each private riad also has its own individual hammam
-                for the ultimate in privacy.
-              </p>
-              <div className="flex items-center gap-4 text-xs text-[var(--text-muted)]">
-                <span className="flex items-center gap-1">
-                  <DollarSign className="w-3 h-3 text-[var(--color-accent)]" />
-                  From 2,000 MAD per treatment
-                </span>
-                <span className="flex items-center gap-1">
-                  <Clock className="w-3 h-3 text-[var(--color-accent)]" />
-                  90-minute signature ritual
-                </span>
-              </div>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                La Mamounia Spa &amp; Hammam
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                The 2,500 sqm spa at La Mamounia is a temple of wellness. The hammam features heated marble
-                slabs, eucalyptus-infused steam, and expert therapists who perform the traditional gommage with
-                savon beldi. The signature treatment combines the hammam ritual with a full-body argan oil massage
-                and a ghassoul clay face mask.
-              </p>
-              <div className="flex items-center gap-4 text-xs text-[var(--text-muted)]">
-                <span className="flex items-center gap-1">
-                  <DollarSign className="w-3 h-3 text-[var(--color-accent)]" />
-                  From 1,500 MAD per treatment
-                </span>
-                <span className="flex items-center gap-1">
-                  <Clock className="w-3 h-3 text-[var(--color-accent)]" />
-                  2,500 sqm spa facility
-                </span>
-              </div>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                Riad Fes Hammam &amp; Spa
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                The traditional hammam at Riad Fes draws on centuries of Fassi bathing tradition. Treatments use
-                locally sourced ingredients including ghassoul clay from the Atlas Mountains and organic orange
-                blossom water from the Fes region. The spa also features an indoor heated pool and
-                treatment rooms decorated with original zellige tilework.
-              </p>
-              <div className="flex items-center gap-4 text-xs text-[var(--text-muted)]">
-                <span className="flex items-center gap-1">
-                  <DollarSign className="w-3 h-3 text-[var(--color-accent)]" />
-                  From 800 MAD per treatment
-                </span>
-                <span className="flex items-center gap-1">
-                  <Clock className="w-3 h-3 text-[var(--color-accent)]" />
-                  Indoor pool included
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <p className="text-xs text-[var(--text-muted)] text-center mt-6 italic">
-            Note: All prices are approximate and seasonal pricing can change. Contact properties directly for current rates.
-          </p>
-        </div>
-      </section>
-
-      {/* ── Rooftop Dining ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <UtensilsCrossed className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Rooftop Dining at Luxury Riads
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Dining under the stars on a riad rooftop is one of Morocco&apos;s most magical experiences. Here is what to expect.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <Star className="w-4 h-4 inline mr-1 text-[var(--color-gold)]" />
-                Traditional Moroccan Feasts
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Multi-course dinners featuring harira soup, pastilla, slow-cooked tagine, and seffa with cinnamon.
-                Most luxury riads prepare dinner with market-fresh ingredients purchased that morning. Expect to pay
-                from 500 MAD per person for a full traditional dinner with wine.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <Crown className="w-4 h-4 inline mr-1 text-[var(--color-gold)]" />
-                Fine Dining Experiences
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Properties like Royal Mansour offer Michelin-starred dining where Moroccan flavors meet contemporary
-                technique. La Grande Table at Royal Mansour, helmed by a world-class chef, reinterprets Moroccan
-                cuisine. From 1,200 MAD per person for a tasting menu.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <Heart className="w-4 h-4 inline mr-1 text-[var(--color-gold)]" />
-                Private Romantic Dinners
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Many luxury riads arrange private rooftop dinners for couples — candlelit tables surrounded by rose
-                petals with panoramic medina or Atlas Mountain views. A private dinner for two typically starts from
-                1,500 MAD including a full Moroccan menu, wine, and setup.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <Sun className="w-4 h-4 inline mr-1 text-[var(--color-gold)]" />
-                Breakfast on the Terrace
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Riad breakfasts are legendary. Fresh-squeezed orange juice, msemen flatbread, beghrir pancakes,
-                amlou (almond-argan-honey spread), local cheeses, pastries, and mint tea. Most luxury riads include
-                breakfast in the room rate, served on the rooftop terrace or in the courtyard.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Gallery Section ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
-            The Riad Experience in Morocco
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="relative h-72 rounded-xl overflow-hidden">
-              <img
-                src="/images/photo-riad-courtyard.webp"
-                alt="Traditional Moroccan riad courtyard with zellige fountain, orange trees, and carved plaster archways"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-              <p className="absolute bottom-4 left-4 text-white text-sm font-medium">Riad Courtyard</p>
-            </div>
-            <div className="relative h-72 rounded-xl overflow-hidden">
-              <img
-                src="/images/art-moroccan-riad-courtyard.webp"
-                alt="Ornate Moroccan riad interior with traditional zellige tilework and warm atmospheric lighting"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-              <p className="absolute bottom-4 left-4 text-white text-sm font-medium">Traditional Architecture</p>
-            </div>
-            <div className="relative h-72 rounded-xl overflow-hidden">
-              <img
-                src="/images/photo-riad-rooftop-sunset.webp"
-                alt="Luxury riad rooftop terrace at sunset with panoramic views over the Moroccan medina"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-              <p className="absolute bottom-4 left-4 text-white text-sm font-medium">Rooftop at Sunset</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Price Ranges ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <DollarSign className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Luxury Riad Price Ranges
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Understand the pricing tiers so you can find the right level of luxury for your budget. All prices are per night and seasonal pricing can change.
-          </p>
-
-          <div className="space-y-6">
-            {priceRanges.map((tier) => {
-              const TierIcon = tier.icon;
-              return (
-                <div key={tier.tier} className="card-moroccan p-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    <TierIcon className="w-6 h-6 text-[var(--color-gold)]" />
-                    <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                      {tier.tier}
-                    </h3>
-                    <span className="text-sm text-[var(--color-accent)] font-semibold ml-auto">{tier.range}</span>
-                  </div>
-                  <p className="text-sm text-[var(--text-secondary)] mb-2">{tier.description}</p>
-                  <p className="text-xs text-[var(--text-muted)]">
-                    <strong>Examples:</strong> {tier.examples}
+                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                    {feature.description}
                   </p>
                 </div>
               );
@@ -928,32 +533,50 @@ export default function MoroccoLuxuryRiadsPage() {
         </div>
       </section>
 
-      {/* ── Best Time to Visit ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+      {/* -- Marrakech Luxury Riads -- */}
+      <section className="py-16 md:py-20">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Calendar className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Best Time to Stay in a Luxury Riad
+            <MapPin className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Marrakech: 5 Top Luxury Riads
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Timing your visit correctly can mean the difference between a pleasant stay and a perfect one.
+            Marrakech has the deepest concentration of luxury riads in Morocco. These five represent the
+            best of the city, from intimate boutique stays to palatial compounds.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {seasons.map((s) => {
-              const SeasonIcon = s.icon;
+          <div className="space-y-8">
+            {marrakechRiads.map((riad) => {
+              const RiadIcon = riad.icon;
               return (
-                <div key={s.season} className="card-moroccan p-5">
-                  <div className="w-10 h-10 rounded-full bg-[var(--surface-muted)] flex items-center justify-center mb-3">
-                    <SeasonIcon className="w-5 h-5 text-[var(--color-accent)]" />
+                <div key={riad.name} className="card-moroccan p-6 md:p-8">
+                  <div className="flex flex-col md:flex-row md:items-start gap-6">
+                    <div className="flex-1">
+                      <div className="flex items-center gap-3 mb-3">
+                        <RiadIcon className="w-7 h-7 text-[var(--color-gold)]" />
+                        <h3 className="text-xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+                          {riad.name}
+                        </h3>
+                      </div>
+                      <p className="text-sm text-[var(--text-muted)] mb-1 flex items-center gap-1">
+                        <MapPin className="w-3.5 h-3.5" /> {riad.area}
+                      </p>
+                      <p className="text-sm text-[var(--text-muted)] mb-4 flex items-center gap-1">
+                        <Bed className="w-3.5 h-3.5" /> {riad.rooms}
+                      </p>
+                      <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4">
+                        {riad.description}
+                      </p>
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {riad.highlights.map((h) => (
+                          <span key={h} className="inline-flex items-center gap-1 text-xs bg-[var(--surface-muted)] text-[var(--text-secondary)] px-3 py-1.5 rounded-full">
+                            <CheckCircle className="w-3 h-3 text-[var(--color-gold)]" /> {h}
+                          </span>
+                        ))}
+                      </div>
+                      <p className="text-base font-semibold text-[var(--color-accent)]">{riad.price}</p>
+                    </div>
                   </div>
-                  <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
-                    {s.season}
-                  </h3>
-                  <span className={`text-xs font-semibold mb-2 block ${s.verdict === 'Excellent' ? 'text-green-600' : 'text-[var(--color-gold)]'}`}>
-                    {s.verdict}
-                  </span>
-                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{s.description}</p>
                 </div>
               );
             })}
@@ -961,27 +584,208 @@ export default function MoroccoLuxuryRiadsPage() {
         </div>
       </section>
 
-      {/* ── Booking Tips ── */}
+      {/* -- Fes Luxury Riads -- */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+        <div className="container-morocco">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <MapPin className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Fes: 4 Top Luxury Riads
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Fes el-Bali is the world&apos;s largest car-free urban area and home to Morocco&apos;s most
+            historically significant riads. Rates run 20-30% below comparable Marrakech properties.
+          </p>
+
+          <div className="space-y-8">
+            {fesRiads.map((riad) => {
+              const RiadIcon = riad.icon;
+              return (
+                <div key={riad.name} className="card-moroccan p-6 md:p-8">
+                  <div className="flex items-center gap-3 mb-3">
+                    <RiadIcon className="w-7 h-7 text-[var(--color-gold)]" />
+                    <h3 className="text-xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+                      {riad.name}
+                    </h3>
+                  </div>
+                  <p className="text-sm text-[var(--text-muted)] mb-1 flex items-center gap-1">
+                    <MapPin className="w-3.5 h-3.5" /> {riad.area}
+                  </p>
+                  <p className="text-sm text-[var(--text-muted)] mb-4 flex items-center gap-1">
+                    <Bed className="w-3.5 h-3.5" /> {riad.rooms}
+                  </p>
+                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4">
+                    {riad.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {riad.highlights.map((h) => (
+                      <span key={h} className="inline-flex items-center gap-1 text-xs bg-white text-[var(--text-secondary)] px-3 py-1.5 rounded-full">
+                        <CheckCircle className="w-3 h-3 text-[var(--color-gold)]" /> {h}
+                      </span>
+                    ))}
+                  </div>
+                  <p className="text-base font-semibold text-[var(--color-accent)]">{riad.price}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* -- Essaouira & Chefchaouen -- */}
       <section className="py-16 md:py-20">
+        <div className="container-morocco">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
+            Essaouira &amp; Chefchaouen Luxury Riads
+          </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Essaouira */}
+            <div>
+              <div className="flex items-center gap-2 mb-6">
+                <Globe className="w-6 h-6 text-[var(--color-accent)]" />
+                <h3 className="text-2xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+                  Essaouira
+                </h3>
+              </div>
+              <p className="text-sm text-[var(--text-secondary)] mb-6">
+                The Atlantic coast port city stays cool year-round, making it a summer alternative
+                to the interior heat of Marrakech and Fes. Luxury options are fewer but refined.
+              </p>
+              <div className="space-y-6">
+                {essaouiraRiads.map((riad) => {
+                  const RiadIcon = riad.icon;
+                  return (
+                    <div key={riad.name} className="card-moroccan p-5">
+                      <div className="flex items-center gap-2 mb-2">
+                        <RiadIcon className="w-5 h-5 text-[var(--color-gold)]" />
+                        <h4 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+                          {riad.name}
+                        </h4>
+                      </div>
+                      <p className="text-xs text-[var(--text-muted)] mb-2"><MapPin className="w-3 h-3 inline mr-1" />{riad.area}</p>
+                      <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-3">{riad.description}</p>
+                      <div className="flex flex-wrap gap-1.5 mb-3">
+                        {riad.highlights.map((h) => (
+                          <span key={h} className="text-xs bg-[var(--surface-muted)] text-[var(--text-muted)] px-2 py-1 rounded-full">{h}</span>
+                        ))}
+                      </div>
+                      <p className="text-sm font-semibold text-[var(--color-accent)]">{riad.price}</p>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Chefchaouen */}
+            <div>
+              <div className="flex items-center gap-2 mb-6">
+                <Building className="w-6 h-6 text-[var(--color-accent)]" />
+                <h3 className="text-2xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+                  Chefchaouen
+                </h3>
+              </div>
+              <p className="text-sm text-[var(--text-secondary)] mb-6">
+                The Blue City in the Rif Mountains has a smaller hospitality scene than Marrakech
+                or Fes, but a handful of properties deliver genuine luxury with mountain-village charm.
+              </p>
+              <div className="space-y-6">
+                {chefchaouenRiads.map((riad) => {
+                  const RiadIcon = riad.icon;
+                  return (
+                    <div key={riad.name} className="card-moroccan p-5">
+                      <div className="flex items-center gap-2 mb-2">
+                        <RiadIcon className="w-5 h-5 text-[var(--color-gold)]" />
+                        <h4 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+                          {riad.name}
+                        </h4>
+                      </div>
+                      <p className="text-xs text-[var(--text-muted)] mb-2"><MapPin className="w-3 h-3 inline mr-1" />{riad.area}</p>
+                      <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-3">{riad.description}</p>
+                      <div className="flex flex-wrap gap-1.5 mb-3">
+                        {riad.highlights.map((h) => (
+                          <span key={h} className="text-xs bg-[var(--surface-muted)] text-[var(--text-muted)] px-2 py-1 rounded-full">{h}</span>
+                        ))}
+                      </div>
+                      <p className="text-sm font-semibold text-[var(--color-accent)]">{riad.price}</p>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* -- Price Ranges by Season -- */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+        <div className="container-morocco">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <DollarSign className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Luxury Riad Prices by City &amp; Season
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-3">
+            Per room per night. Breakfast is included at all luxury riads listed. Seasonal pricing can change without notice.
+          </p>
+          <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
+            <Info className="w-3.5 h-3.5 inline mr-1" />
+            Low season: June-August. Shoulder: May, September. Peak: October-April.
+            Christmas/New Year and Easter carry the highest premiums.
+          </p>
+          <div className="card-moroccan overflow-hidden">
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="bg-[var(--color-accent)] text-white">
+                    <th className="text-left p-4 font-[family-name:var(--font-heading)] font-bold">City</th>
+                    <th className="text-left p-4 font-[family-name:var(--font-heading)] font-bold">Low Season</th>
+                    <th className="text-left p-4 font-[family-name:var(--font-heading)] font-bold">Shoulder</th>
+                    <th className="text-left p-4 font-[family-name:var(--font-heading)] font-bold">Peak Season</th>
+                    <th className="text-left p-4 font-[family-name:var(--font-heading)] font-bold">Ultra-Luxury</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {priceRanges.map((row, idx) => (
+                    <tr key={row.city} className={idx % 2 === 0 ? 'bg-white' : 'bg-[var(--surface-muted)]'}>
+                      <td className="p-4 font-semibold text-[var(--text-primary)]">{row.city}</td>
+                      <td className="p-4 text-[var(--text-secondary)]">{row.lowSeason}</td>
+                      <td className="p-4 text-[var(--text-secondary)]">{row.shoulder}</td>
+                      <td className="p-4 text-[var(--text-secondary)]">{row.peak}</td>
+                      <td className="p-4 text-[var(--text-secondary)]">{row.ultraLuxury}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <p className="text-xs text-[var(--text-muted)] text-center mt-4">
+            Prices reflect 2025-2026 rates. Seasonal pricing can change without notice.
+            During Ramadan and national holidays, availability may be limited.
+          </p>
+        </div>
+      </section>
+
+      {/* -- Booking Tips -- */}
+      <section className="py-16 md:py-20 moroccan-pattern">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <ShieldCheck className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            <BookOpen className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
             Expert Booking Tips
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Make the most of your luxury riad stay with these insider tips from seasoned Morocco travelers.
+            Strategies to secure the best rooms, the best rates, and the best experiences at Morocco&apos;s top riads.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {bookingTips.map((item) => {
-              const TipIcon = item.icon;
+          <div className="space-y-4">
+            {bookingTips.map((tip) => {
+              const TipIcon = tip.icon;
               return (
-                <div key={item.tip} className="card-moroccan p-5">
-                  <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                    <TipIcon className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                    {item.tip}
-                  </h3>
-                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{item.description}</p>
+                <div key={tip.title} className="card-moroccan p-5 flex gap-4">
+                  <TipIcon className="w-7 h-7 text-[var(--color-accent)] shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
+                      {tip.title}
+                    </h3>
+                    <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{tip.tip}</p>
+                  </div>
                 </div>
               );
             })}
@@ -989,115 +793,211 @@ export default function MoroccoLuxuryRiadsPage() {
         </div>
       </section>
 
-      {/* ── What to Look For ── */}
+      {/* -- What to Expect -- */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Award className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            What to Expect at a Luxury Riad
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            A typical day at a top-tier Moroccan riad, from morning to midnight.
+          </p>
+
+          <div className="space-y-6">
+            {[
+              {
+                time: 'Arrival',
+                icon: Key,
+                description:
+                  'A driver meets you at the airport or train station. At the medina gate, a riad staff member takes your bags and walks you through the narrow alleys. At the door, the manager greets you with mint tea and Moroccan pastries in the courtyard while your room is prepared. No front desk, no check-in form, no waiting.',
+              },
+              {
+                time: 'Morning',
+                icon: Sun,
+                description:
+                  'Breakfast appears on the rooftop terrace or in the courtyard at whatever time you requested the night before. Fresh-squeezed orange juice, mint tea, baghrir and msemen pancakes, local honey, amlou (argan-almond spread), olives, eggs prepared to your preference, and seasonal fruit. Riad breakfasts are generous and unhurried.',
+              },
+              {
+                time: 'Afternoon',
+                icon: Droplets,
+                description:
+                  'Return from the medina to find fresh towels, chilled water, and a turned-down courtyard lounger waiting. Book a hammam session: steam, savon noir scrub, ghassoul clay mask, and argan oil massage. Afterward, read by the plunge pool with a pot of mint tea. The riad is your sanctuary from the medina\'s intensity.',
+              },
+              {
+                time: 'Evening',
+                icon: UtensilsCrossed,
+                description:
+                  'If you ordered dinner (by midday, so the chef can shop fresh), a multi-course Moroccan feast awaits on the rooftop or in a private dining room. Typical progression: a spread of salads (zaalouk, taktouka, carrot-cumin), a signature tagine or couscous, followed by pastilla or Moroccan pastries with orange blossom cream. Wine or cocktails on the terrace as the medina lights up below.',
+              },
+            ].map((item) => {
+              const TimeIcon = item.icon;
+              return (
+                <div key={item.time} className="card-moroccan p-6 flex gap-4">
+                  <div className="w-12 h-12 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
+                    <TimeIcon className="w-6 h-6 text-[var(--color-accent)]" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                      {item.time}
+                    </h3>
+                    <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{item.description}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* -- Gallery -- */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
+            Inside Morocco&apos;s Luxury Riads
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              { src: '/images/hero-riads.webp', alt: 'Luxury Moroccan riad courtyard with central fountain, zellige mosaic tilework, and carved stucco arches', label: 'Courtyard Architecture' },
+              { src: '/images/art-moroccan-hammam.webp', alt: 'Private hammam inside a luxury riad with heated marble, brass fixtures, and atmospheric lighting', label: 'Private Hammam' },
+              { src: '/images/art-moroccan-breakfast.webp', alt: 'Moroccan breakfast spread on a rooftop terrace with fresh juice, pancakes, honey, and mint tea overlooking the medina', label: 'Rooftop Breakfast' },
+            ].map((img) => (
+              <div key={img.label} className="relative h-72 rounded-xl overflow-hidden">
+                <img src={img.src} alt={img.alt} className="w-full h-full object-cover" loading="lazy" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                <p className="absolute bottom-4 left-4 text-white text-sm font-medium">{img.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* -- FAQ Section -- */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Eye className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            What to Look for in a Luxury Riad
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Not all riads marketed as &quot;luxury&quot; deliver equally. Here is what separates the truly exceptional from the merely attractive.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {[
-              { title: 'Authentic Restoration', text: 'Look for genuine zellige tilework, carved plaster (gebs), and painted cedar ceilings — not modern reproductions. A truly luxury riad invests years in restoration using traditional artisan methods.' },
-              { title: 'Staff-to-Guest Ratio', text: 'Top luxury riads maintain at least a 2:1 staff-to-guest ratio, ensuring personalized service from the moment you arrive.' },
-              { title: 'Quality of Bedding', text: 'Premium mattresses, Egyptian cotton linens (300+ thread count), and high-quality pillows. Ask about bedding quality before booking.' },
-              { title: 'Dining Quality', text: 'The best riads employ full-time chefs who shop at the souk daily and can prepare both traditional Moroccan and international dishes.' },
-              { title: 'Noise & Location', text: 'The best luxury riads are on quiet derbs (alleyways) that offer peaceful sleep while remaining walkable to main attractions.' },
-              { title: 'Modern Comforts', text: 'Reliable Wi-Fi, air conditioning, quality bathroom fixtures, and international power outlets. Luxury should never mean compromising on convenience.' },
-            ].map((item) => (
-              <div key={item.title} className="card-moroccan p-5 flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 text-[var(--color-accent)] flex-shrink-0 mt-0.5" />
-                <div>
-                  <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">{item.title}</h3>
-                  <p className="text-xs text-[var(--text-secondary)]">{item.text}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── FAQ Section ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
+            <MessageCircleQuestion className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
             Frequently Asked Questions
           </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Real answers to the questions travelers ask most about luxury riad stays in Morocco.
+          </p>
+
           <div className="space-y-6">
-            {[
-              { q: 'What is a riad and how is it different from a hotel?', a: 'A riad is a traditional Moroccan house built around an interior courtyard or garden. Unlike hotels, riads are intimate properties typically with 4-12 rooms, offering personalized service, home-cooked meals, and an authentic architectural experience. Luxury riads combine this traditional format with five-star amenities like private hammams, butler service, and gourmet dining.' },
-              { q: 'How much does a luxury riad cost per night in Morocco?', a: 'Luxury riads range from 2,000 MAD to 15,000+ MAD per night. Mid-luxury riads start from 2,000-3,000 MAD, premium riads run from 3,000-6,000 MAD, and ultra-luxury properties like Royal Mansour can exceed 15,000 MAD. Seasonal pricing varies, with peak season (October-April) being most expensive.' },
-              { q: 'Should I book a riad in the medina or outside?', a: 'A medina riad offers the most authentic experience — immersed in the historic quarter with easy access to souks and landmarks on foot. However, medina riads require navigating narrow streets. If you prefer easier access, consider riads in the Palmerie or Ville Nouvelle areas. Most luxury medina riads arrange porters for luggage.' },
-              { q: 'Do luxury riads have private hammams?', a: 'Many luxury riads feature private hammams or in-house spa facilities. Properties like Royal Mansour, La Mamounia, and Riad Fes all have world-class hammam services. Some offer in-room hammam experiences or private couple sessions. Treatments typically start from 800 MAD.' },
-              { q: 'What is the best time of year to stay in a luxury riad?', a: 'Spring (March-May) and autumn (September-November) offer the best weather for Marrakech and Fes. Summer can reach 40+C inland, though coastal riads in Essaouira stay pleasant. Winter brings mild days but cool evenings — riads with heated courtyards and fireplaces are ideal.' },
-            ].map((faq) => (
+            {faqItems.map((faq) => (
               <div key={faq.q} className="card-moroccan p-6">
-                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">{faq.q}</h3>
-                <p className="text-sm text-[var(--text-secondary)]">{faq.a}</p>
+                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                  {faq.q}
+                </h3>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{faq.a}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── Related Guides ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+      {/* -- Related Guides -- */}
+      <section className="py-16 md:py-20">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
-            Related Guides
+            Related Travel Guides
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Link href="/morocco-riads-vs-hotels" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
-              <Building className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Riads vs Hotels
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                A detailed comparison to help you choose between a traditional riad and a modern hotel in Morocco.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
+            {[
+              {
+                title: 'Morocco Riads Guide',
+                description: 'Complete riad guide covering architecture, riad vs dar, budget to luxury pricing, booking platforms, etiquette, and seasonal rates.',
+                href: '/morocco-riads-guide',
+                icon: Building,
+              },
+              {
+                title: 'Riads vs Hotels',
+                description: 'Side-by-side comparison of riad and hotel stays in Morocco: cost, service, atmosphere, amenities, and which suits your travel style.',
+                href: '/morocco-riads-vs-hotels',
+                icon: Bed,
+              },
+              {
+                title: 'Luxury Travel Morocco',
+                description: 'The finest hotels, restaurants, experiences, and private tours for travelers seeking premium service across Morocco.',
+                href: '/morocco-luxury-travel',
+                icon: Crown,
+              },
+              {
+                title: 'Morocco Honeymoon Guide',
+                description: 'Romantic riads, private desert camps, coastal retreats, and curated itineraries for couples celebrating in Morocco.',
+                href: '/morocco-honeymoon',
+                icon: Heart,
+              },
+            ].map((guide) => {
+              const GuideIcon = guide.icon;
+              return (
+                <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                  <GuideIcon className="w-8 h-8 text-[var(--color-accent)] mb-3 group-hover:text-[var(--color-primary)] transition-colors" />
+                  <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                    {guide.title}
+                  </h3>
+                  <p className="text-sm text-[var(--text-secondary)]">{guide.description}</p>
+                  <span className="inline-flex items-center gap-1 mt-3 text-sm text-[var(--color-accent)] font-medium">
+                    Read Guide <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* -- More Accommodation Resources -- */}
+      <section className="py-12 md:py-16 bg-[var(--surface-muted)]">
+        <div className="container-morocco">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold text-center mb-8" style={{ color: 'var(--text-primary)' }}>
+            More Accommodation Resources
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { href: '/best-riads-marrakech', title: 'Best Riads in Marrakech', desc: 'Budget, mid-range, and luxury riads in the Red City ranked by location, service, and value.' },
+              { href: '/morocco-spa-guide', title: 'Hammam & Spa Guide', desc: 'Traditional hammam rituals, etiquette, best spas by city, savon noir, ghassoul clay, and pricing from 50 MAD.' },
+              { href: '/morocco-luxury-hotels', title: 'Luxury Hotels Morocco', desc: 'Five-star resorts and palace hotels for travelers who prefer larger-format luxury accommodations.' },
+              { href: '/accommodations', title: 'Accommodation Overview', desc: 'Compare riads, hotels, hostels, guesthouses, and desert camps across every region of Morocco.' },
+              { href: '/marrakech', title: 'Marrakech City Guide', desc: 'Everything you need for the Red City: souks, palaces, food, nightlife, and day trips to the Atlas Mountains.' },
+              { href: '/fes-guide', title: 'Fes City Guide', desc: 'Navigate the world\'s largest car-free urban area with our guide to the ancient medina and beyond.' },
+            ].map((guide) => (
+              <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-base mb-2 group-hover:text-[var(--color-accent)] transition-colors" style={{ color: 'var(--text-primary)' }}>
+                  {guide.title}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{guide.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* -- CTA Section -- */}
+      <section className="py-16 md:py-20 bg-[var(--color-accent)]">
+        <div className="container-morocco text-center">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-white mb-4">
+            Ready to Book Your Luxury Riad?
+          </h2>
+          <p className="text-lg text-white/80 max-w-2xl mx-auto mb-8">
+            From intimate courtyard hideaways to palatial compounds with private hammams
+            and rooftop pools, Morocco&apos;s luxury riads deliver experiences that no hotel chain
+            can replicate. Start planning your stay today.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/marrakech"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[var(--color-accent)] rounded-lg font-semibold hover:bg-white/90 transition-colors"
+            >
+              <MapPin className="w-5 h-5" />
+              Explore Marrakech
             </Link>
-            <Link href="/morocco-spa-guide" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
-              <Droplets className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Spa &amp; Hammam Guide
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Complete guide to Morocco&apos;s best spa experiences and traditional hammams, from public bathhouses to luxury retreats.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-            <Link href="/morocco-romantic-getaways" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
-              <Heart className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Romantic Getaways
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                The most romantic destinations, riads, and experiences for couples traveling in Morocco.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-            <Link href="/morocco-all-inclusive" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
-              <Crown className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                All-Inclusive Morocco
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Top all-inclusive resorts and packages in Morocco for a hassle-free luxury vacation experience.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
+            <Link
+              href="/morocco-riads-guide"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 text-white border border-white/30 rounded-lg font-semibold hover:bg-white/20 transition-colors"
+            >
+              <BookOpen className="w-5 h-5" />
+              Full Riads Guide
             </Link>
           </div>
         </div>
