@@ -340,7 +340,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-ski-resorts',
     '/morocco-wildlife-guide',
     '/ouarzazate-guide',
-    '/morocco-honeymoon-guide',
     '/morocco-driving-guide',
     '/morocco-medina-guide',
     '/volubilis-guide',
@@ -432,6 +431,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-sahara-stargazing',
     '/morocco-mint-tea',
     '/morocco-waterfall-hikes',
+    '/morocco-solo-travel',
+    '/morocco-honeymoon',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
