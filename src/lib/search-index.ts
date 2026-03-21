@@ -3269,6 +3269,15 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['morocco stargazing', 'sahara stars', 'merzouga stargazing', 'morocco dark sky', 'desert astronomy'],
       priority: 9,
     },
+    {
+      title: 'Moroccan Mint Tea Guide 2026',
+      description: 'Complete guide to Moroccan mint tea — history, preparation ritual, regional variations, best tea houses, etiquette, and where to enjoy authentic atay.',
+      type: 'page',
+      url: '/morocco-mint-tea',
+      tags: ['mint tea', 'atay', 'tea culture', 'Moroccan traditions', 'tea houses'],
+      keywords: ['moroccan mint tea', 'atay nana', 'morocco tea culture', 'mint tea recipe', 'best tea houses morocco'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
