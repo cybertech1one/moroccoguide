@@ -425,6 +425,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-jewish-quarter',
     '/morocco-kite-surfing',
     '/morocco-traditional-clothing',
+    '/morocco-quad-biking',
+    '/morocco-hot-air-balloon',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

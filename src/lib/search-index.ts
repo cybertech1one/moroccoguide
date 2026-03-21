@@ -3215,6 +3215,24 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['moroccan clothing', 'djellaba morocco', 'caftan morocco', 'moroccan fashion', 'traditional dress morocco'],
       priority: 9,
     },
+    {
+      title: 'Morocco Quad Biking & ATV Guide 2026',
+      description: 'Quad biking in Morocco — Palmeraie, Agafay desert, Merzouga dunes, Essaouira beach with operators, prices, and safety tips.',
+      type: 'page',
+      url: '/morocco-quad-biking',
+      tags: ['quad biking', 'ATV', 'adventure', 'desert', 'Marrakech'],
+      keywords: ['morocco quad biking', 'marrakech quad tour', 'agafay desert quad', 'merzouga atv', 'morocco adventure'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Hot Air Balloon Guide 2026',
+      description: 'Hot air balloon flights in Morocco — Marrakech sunrise flights, Atlas views, operators, pricing, photography tips, and booking advice.',
+      type: 'page',
+      url: '/morocco-hot-air-balloon',
+      tags: ['hot air balloon', 'Marrakech', 'Atlas Mountains', 'sunrise', 'adventure'],
+      keywords: ['morocco hot air balloon', 'marrakech balloon ride', 'atlas mountains balloon', 'morocco balloon price', 'sunrise flight morocco'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
