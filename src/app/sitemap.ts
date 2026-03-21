@@ -427,6 +427,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-traditional-clothing',
     '/morocco-quad-biking',
     '/morocco-hot-air-balloon',
+    '/morocco-leather-goods',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

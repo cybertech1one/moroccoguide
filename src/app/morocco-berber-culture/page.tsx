@@ -28,6 +28,8 @@ import {
   Calendar,
   Utensils,
   Languages,
+  Tent,
+  Compass,
 } from 'lucide-react';
 
 /* ═══════════════════════════════════════════════════════════════
@@ -41,52 +43,54 @@ const BASE_URL = 'https://citytoursmorocco.com';
    ═══════════════════════════════════════════════════════════════ */
 
 export const metadata: Metadata = {
-  title: 'Berber Culture in Morocco 2026 | Amazigh Heritage, Traditions & Village Experiences',
+  title: 'Morocco Berber Culture Guide 2026 | Amazigh Heritage, Traditions & Villages',
   description:
-    'Complete guide to Berber (Amazigh) culture in Morocco. Discover ancient traditions, Tifinagh script, Amazigh New Year, carpet weaving, kasbahs, Berber music, traditional food, village visits in Imlil and Ait Bougmez, festivals, and ethical community-based tourism.',
+    'Complete guide to Berber (Amazigh) culture in Morocco. Explore Amazigh identity, Tifinagh script, Berber languages (Tashelhit, Tamazight, Tarifit), traditional villages like Imlil and Ait Benhaddou, kasbah architecture, Berber cuisine, Ahwash music, carpet weaving, Imilchil Marriage Festival, and Yennayer celebrations.',
   keywords: [
-    'berber culture',
-    'amazigh',
-    'berber heritage',
-    'Berber villages Morocco',
-    'Amazigh culture Morocco',
-    'berber traditions',
-    'Tifinagh script',
-    'Amazigh New Year Yennayer',
+    'berber culture morocco',
+    'amazigh heritage',
+    'amazigh culture morocco',
+    'berber villages morocco',
+    'tifinagh script',
+    'tashelhit language',
+    'tamazight language',
+    'tarifit language',
+    'berber traditions morocco',
+    'amazigh new year yennayer',
+    'imilchil marriage festival',
     'berber carpet weaving',
     'moroccan kasbahs',
+    'ksour morocco',
     'berber music ahwash',
+    'ahidous dance',
     'berber food tagine',
-    'Imlil village Morocco',
-    'Ait Bougmez valley',
-    'berber museums Morocco',
-    'community based tourism Morocco',
-    'berber architecture ksour',
-    'berber silverwork jewelry',
-    'Amazigh festivals Morocco',
-    'ethical tourism Morocco berber',
-    'berber pottery Morocco',
-    'agadir granary Morocco',
+    'amlou berber nutella',
+    'imlil village morocco',
+    'ait benhaddou unesco',
+    'berber jewelry silverwork',
+    'nomadic berber traditions',
+    'berber architecture morocco',
+    'community based tourism morocco',
   ],
   openGraph: {
-    title: 'Berber Culture in Morocco 2026 | Amazigh Heritage, Traditions & Village Experiences',
+    title: 'Morocco Berber Culture Guide 2026 | Amazigh Heritage, Traditions & Villages',
     description:
-      'Discover the rich Amazigh (Berber) heritage of Morocco. From ancient Tifinagh script and carpet weaving to mountain villages and community-based tourism experiences.',
+      'Explore the living heritage of Morocco\'s Amazigh (Berber) people. From Tifinagh script and Atlas Mountain villages to carpet weaving, kasbahs, traditional cuisine, and ancient festivals.',
     url: `${BASE_URL}/morocco-berber-culture`,
     images: [
       {
         url: `${BASE_URL}/images/hero-berber-culture.webp`,
         width: 1200,
         height: 630,
-        alt: 'Berber village nestled in the Atlas Mountains of Morocco with traditional mud-brick architecture',
+        alt: 'Berber village with traditional mud-brick architecture in the Atlas Mountains of Morocco',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Berber Culture in Morocco 2026 | Amazigh Heritage & Traditions',
+    title: 'Morocco Berber Culture Guide 2026 | Amazigh Heritage & Traditions',
     description:
-      'Complete guide to Amazigh (Berber) heritage in Morocco. Ancient traditions, mountain villages, traditional crafts, music, food, and ethical tourism experiences.',
+      'Amazigh (Berber) heritage in Morocco: ancient traditions, mountain villages, crafts, music, cuisine, and ethical tourism experiences.',
     images: [`${BASE_URL}/images/hero-berber-culture.webp`],
   },
   alternates: { canonical: `${BASE_URL}/morocco-berber-culture` },
@@ -100,9 +104,9 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'TravelGuide',
   '@id': `${BASE_URL}/morocco-berber-culture`,
-  name: 'Berber Culture in Morocco 2026 | Amazigh Heritage, Traditions & Village Experiences',
+  name: 'Morocco Berber Culture Guide 2026 | Amazigh Heritage, Traditions & Villages',
   description:
-    'Complete guide to Berber (Amazigh) culture in Morocco. Discover ancient traditions, Tifinagh script, carpet weaving, kasbahs, music, village visits, festivals, and ethical community-based tourism.',
+    'Complete guide to Berber (Amazigh) culture in Morocco. Amazigh identity, Tifinagh script, Berber languages, traditional villages, kasbah architecture, cuisine, music, carpet weaving, festivals, and community-based tourism.',
   url: `${BASE_URL}/morocco-berber-culture`,
   image: `${BASE_URL}/images/hero-berber-culture.webp`,
   author: {
@@ -116,7 +120,7 @@ const jsonLd = {
     url: BASE_URL,
   },
   datePublished: '2026-03-20',
-  dateModified: '2026-03-20',
+  dateModified: '2026-03-21',
   mainEntityOfPage: `${BASE_URL}/morocco-berber-culture`,
   isPartOf: {
     '@type': 'WebSite',
@@ -131,7 +135,7 @@ const jsonLd = {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Berber Culture in Morocco', item: `${BASE_URL}/morocco-berber-culture` },
+      { '@type': 'ListItem', position: 2, name: 'Morocco Berber Culture Guide', item: `${BASE_URL}/morocco-berber-culture` },
     ],
   },
 };
@@ -145,7 +149,7 @@ const faqJsonLd = {
       name: 'What is the difference between Berber and Amazigh?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Berber and Amazigh refer to the same indigenous people of North Africa. "Amazigh" (plural: Imazighen) is the term they use for themselves, meaning "free people." "Berber" comes from the Greek/Roman word "barbaros" and is considered less accurate by many Amazigh people. Both terms are widely used in Morocco, though Amazigh is increasingly preferred in official and cultural contexts.',
+        text: 'Both terms refer to the same indigenous people of North Africa. "Amazigh" (plural: Imazighen), meaning "free people," is the self-designation. "Berber" derives from the Greek and Roman "barbaros." Both terms are widely used in Morocco, though Amazigh is increasingly preferred in official and cultural contexts since the 2011 constitutional recognition.',
       },
     },
     {
@@ -153,15 +157,15 @@ const faqJsonLd = {
       name: 'Can I visit Berber villages independently or do I need a guide?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'You can visit some villages independently, especially well-known ones like Imlil, which has guesthouses, restaurants, and well-marked trails. However, for more remote villages in the Ait Bougmez Valley or Todra Gorge, a local guide is strongly recommended. Guides provide cultural context, help with language barriers, and ensure your visit benefits the community. Expect to pay from 300 MAD per day for a local guide.',
+        text: 'You can visit well-known villages like Imlil independently, as they have guesthouses, restaurants, and marked trails. For more remote areas like the Ait Bougmez Valley, Todra Gorge, or Anti-Atlas villages, a local guide is strongly recommended. Guides provide cultural context, help with language, and ensure your visit benefits the community. Expect to pay from 300 MAD per day for a local guide.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What language do Berber people speak?',
+      name: 'What languages do Berber people speak in Morocco?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Amazigh people speak Tamazight, which has three main regional variants in Morocco: Tashelhit (south and High Atlas), Tamazight (Middle Atlas), and Tarifit (Rif Mountains). Tamazight became an official language of Morocco alongside Arabic in 2011. Most Amazigh Moroccans also speak Darija (Moroccan Arabic), and many in tourist areas speak French and some English.',
+        text: 'Amazigh people speak Tamazight, which has three main regional variants in Morocco: Tashelhit (south and High Atlas, about 8 million speakers), Tamazight (Middle Atlas, about 5 million speakers), and Tarifit (Rif Mountains, about 4 million speakers). Since 2011, Tamazight is an official language alongside Arabic. Most Amazigh Moroccans also speak Darija (Moroccan Arabic), and many in tourist areas speak French and some English.',
       },
     },
     {
@@ -169,7 +173,7 @@ const faqJsonLd = {
       name: 'When is the best time to visit Berber villages in Morocco?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Spring (April-May) and autumn (September-October) are ideal for visiting mountain villages. The weather is pleasant for hiking, wildflowers bloom in spring, and the harvest season in autumn brings cultural celebrations. Summer can be very hot in lower valleys, while winter brings snow to the High Atlas, making some villages difficult to reach. January is special for Yennayer (Amazigh New Year) celebrations.',
+        text: 'Spring (April to May) and autumn (September to October) are ideal for visiting mountain villages. The weather is good for hiking, wildflowers bloom in spring, and harvest season in autumn brings celebrations. Summer can be very hot in valleys, while winter snow makes some High Atlas villages harder to reach. January is special for Yennayer (Amazigh New Year) celebrations on the 13th.',
       },
     },
     {
@@ -185,7 +189,31 @@ const faqJsonLd = {
       name: 'Is it appropriate to take photos of Berber people?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Always ask permission before photographing people, especially women and elders. Many Berber communities are welcoming but value their privacy. Some may decline, and you should respect that. Avoid photographing people as curiosities. If someone agrees, showing them the photo on your screen is a nice gesture. In some tourist areas, people may expect a small tip (from 5-10 MAD) for photos.',
+        text: 'Always ask permission before photographing people, especially women and elders. Many Berber communities are welcoming but value their privacy. Respect anyone who declines. Showing the photo on your screen is a good gesture. In some tourist areas, people may expect a small tip (from 5 to 10 MAD) for photos.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is Yennayer and when is it celebrated?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yennayer is the Amazigh New Year, celebrated on January 13. It marks the start of the agrarian calendar and has been observed for thousands of years. Since 2018, it is an official public holiday in Morocco. Families gather for communal meals featuring couscous with seven vegetables, dried fruits, nuts, and seasonal dishes. Celebrations include music, poetry, and bonfires in rural communities.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the Imilchil Marriage Festival?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The Imilchil Marriage Festival (Moussem) takes place in September in the Middle Atlas Mountains. Traditionally, young Ait Hadiddou Berbers gathered here to choose their partners freely, sometimes completing marriages in a single day. Today it functions as a cultural festival and regional market, drawing visitors from across Morocco. The festival features traditional music, dance, horse parades, and trade.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do Berber nomads still exist in Morocco?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Semi-nomadic Amazigh communities still exist, though their numbers have decreased. In the High Atlas, some families move livestock between summer alpine pastures and winter valley camps. Saharan groups maintain seasonal migration routes between oases and pastureland. You can visit nomadic camps in the Middle Atlas and eastern High Atlas, often through guided treks. Many families now combine seasonal movement with permanent village homes.',
       },
     },
   ],
@@ -200,7 +228,7 @@ const traditionalCrafts = [
     name: 'Carpet Weaving',
     icon: Paintbrush,
     description:
-      'Berber carpets are among the most sought-after textiles in the world. Each region has distinctive patterns: Beni Ourain carpets from the Middle Atlas feature geometric black-on-white designs, while Azilal carpets burst with color. Women weave on upright looms, encoding family stories and protective symbols into every knot. A single carpet can take weeks to months to complete.',
+      'Berber carpets rank among the most sought-after textiles worldwide. Each region has distinctive patterns: Beni Ourain carpets from the Middle Atlas feature geometric black-on-white designs, while Azilal carpets burst with color. Women weave on upright looms, encoding family stories and protective symbols into every knot. A single carpet can take weeks to months to complete.',
     where: 'Tazenakht, Ait Bougmez, Azrou, Chefchaouen cooperatives',
     price: 'From 800 MAD for small rugs, from 3,000 MAD for large carpets',
   },
@@ -208,7 +236,7 @@ const traditionalCrafts = [
     name: 'Pottery & Ceramics',
     icon: Gem,
     description:
-      'Amazigh pottery predates the Arab arrival by millennia. Rif Mountain women create unglazed terracotta vessels decorated with geometric motifs using natural pigments. Each symbol carries meaning: triangles represent femininity, diamonds signify the eye for protection, and zigzag lines symbolize water and life. Tamegroute, near Zagora, is famous for its distinctive green-glazed pottery.',
+      'Amazigh pottery predates the Arab arrival by millennia. Rif Mountain women create unglazed terracotta vessels decorated with geometric motifs using natural pigments. Each symbol carries meaning: triangles represent femininity, diamonds signify the eye for protection, and zigzag lines symbolize water and life. Tamegroute near Zagora produces distinctive green-glazed pottery.',
     where: 'Rif Mountains, Tamegroute, Ourika Valley cooperatives',
     price: 'From 50 MAD for small pieces, from 200 MAD for decorative bowls',
   },
@@ -216,7 +244,7 @@ const traditionalCrafts = [
     name: 'Silverwork & Jewelry',
     icon: Crown,
     description:
-      'Amazigh silversmiths craft fibulas (tizerzai) that hold garments together, elaborate headdresses for brides, and talismanic pendants inscribed with Tifinagh characters. Unlike Arab-Moroccan goldwork, Berber jewelry favors silver, often set with amber, coral, or amazonite. The fibula cross of the south, the "Southern Cross" or Croix du Sud, is an iconic Berber design now recognized worldwide.',
+      'Amazigh silversmiths craft fibulas (tizerzai) that hold garments together, elaborate bridal headdresses, and talismanic pendants inscribed with Tifinagh characters. Unlike Arab-Moroccan goldwork, Berber jewelry favors silver, often set with amber, coral, or amazonite. The fibula cross of the south, known as the Croix du Sud, is an iconic design recognized worldwide.',
     where: 'Tiznit (silver capital), Essaouira, High Atlas villages',
     price: 'From 150 MAD for simple pendants, from 1,000 MAD for bridal pieces',
   },
@@ -224,7 +252,7 @@ const traditionalCrafts = [
     name: 'Leather & Woodwork',
     icon: HandHeart,
     description:
-      'Amazigh artisans produce intricately carved cedarwood items, from utensils to furniture, using techniques unchanged for centuries. Thuya wood from Essaouira is shaped into decorative boxes and chess sets. Leather goods, including bags, belts, and shoes, are tanned using traditional methods with natural dyes from pomegranate, saffron, and indigo.',
+      'Amazigh artisans produce intricately carved cedarwood items, from utensils to furniture, using techniques unchanged for centuries. Thuya wood from Essaouira is shaped into decorative boxes and chess sets. Leather goods including bags, belts, and shoes are tanned using traditional methods with natural dyes from pomegranate, saffron, and indigo.',
     where: 'Essaouira (thuya), Azrou (cedar), Fes medina tanneries',
     price: 'From 100 MAD for small carved items, from 300 MAD for leather bags',
   },
@@ -239,28 +267,28 @@ const architectureTypes = [
     name: 'Kasbahs (Fortified Residences)',
     icon: Landmark,
     description:
-      'Kasbahs are fortified homes of prominent Amazigh families, built from pise (rammed earth) and featuring ornate geometric decorations on towers and facades. Ait Benhaddou, a UNESCO World Heritage Site near Ouarzazate, is the most famous example. Kasbahs served as both residences and defensive structures, with thick walls, corner towers, and narrow interior passages.',
-    examples: 'Ait Benhaddou, Kasbah Telouet, Kasbah Taourirt (Ouarzazate)',
+      'Kasbahs are fortified homes of prominent Amazigh families, built from pise (rammed earth) and featuring ornate geometric decorations on towers and facades. Ait Benhaddou, a UNESCO World Heritage Site near Ouarzazate, is the most famous example. Kasbahs served as both residences and defensive structures, with thick walls, corner towers, and narrow interior passages designed to confuse intruders.',
+    examples: 'Ait Benhaddou (UNESCO), Kasbah Telouet, Kasbah Taourirt (Ouarzazate)',
   },
   {
     name: 'Ksour (Fortified Villages)',
     icon: Building,
     description:
-      'A ksar (plural: ksour) is a fortified village of connected homes surrounded by a defensive wall, reflecting the Amazigh communal ethos. The Draa and Dades valleys contain the finest examples. Built from local earth, stone, and palm wood, they stay cool in summer and warm in winter.',
+      'A ksar (plural: ksour) is a fortified village of connected homes surrounded by a defensive wall, reflecting the Amazigh communal ethos. The Draa and Dades valleys contain the finest examples. Built from local earth, stone, and palm wood, these structures stay cool in summer and warm in winter through passive thermal regulation.',
     examples: 'Ksar of Ait Benhaddou, Tamnougalt, Tinejdad, Nkob',
   },
   {
     name: 'Agadirs (Communal Granaries)',
     icon: Mountain,
     description:
-      'Fortified communal granaries perched on hilltops, where communities stored grain, oil, documents, and treasure. Each family had chambers secured with unique wooden locks. These structures reflect deep communal trust and sophisticated resource management, many dating back 500 years or more.',
+      'Fortified communal granaries perched on hilltops, where communities stored grain, oil, documents, and valuables. Each family had chambers secured with unique wooden locks. These structures reflect deep communal trust and sophisticated resource management. Many date back 500 years or more. The collective agadir system functioned as both a bank and a social contract.',
     examples: 'Agadir Id Aissa (Amtoudi), Agadir Ikounka, Agadir Inoumar',
   },
   {
     name: 'Tighremts (Tower Houses)',
     icon: Star,
     description:
-      'Tall tower-like family homes rising three to four stories in the Dades and Todra valleys. Ground floors house livestock, middle floors are living quarters, and open-sky top floors serve as terraces for drying food and socializing. Mud-brick walls feature intricate geometric reliefs.',
+      'Tall tower-like family homes rising three to four stories in the Dades and Todra valleys. Ground floors house livestock, middle floors are living quarters, and open-sky top floors serve as terraces for drying food and socializing. Mud-brick walls feature intricate geometric reliefs that distinguish each family and clan.',
     examples: 'Dades Valley, Todra Gorge area, Skoura oasis',
   },
 ];
@@ -275,28 +303,28 @@ const musicDance = [
     region: 'High Atlas & Souss',
     icon: Music,
     description:
-      'A collective performance where men and women form facing lines or a circle, clapping, chanting, and dancing in unison. Drums (bendir and tallunt) build gradually over hours, reaching ecstatic intensity. Inscribed on UNESCO\'s Intangible Cultural Heritage list.',
+      'A collective performance where men and women form facing lines or a circle, clapping, chanting, and dancing in unison. Drums (bendir and tallunt) build gradually over hours, reaching ecstatic intensity. Inscribed on UNESCO\'s Intangible Cultural Heritage list, Ahwash embodies the communal spirit of Amazigh life.',
   },
   {
     name: 'Ahidous',
     region: 'Middle Atlas',
     icon: Music,
     description:
-      'Men and women stand shoulder to shoulder, swaying and singing in call-and-response while drummers set an accelerating rhythm. Poetry covers themes of love, nature, honor, and community. Performances can last through the entire night.',
+      'Men and women stand shoulder to shoulder, swaying and singing in call-and-response while drummers set an accelerating rhythm. Poetry covers themes of love, nature, honor, and community. Performances often last through the entire night, marking weddings, harvests, and seasonal celebrations.',
   },
   {
     name: 'Guedra',
     region: 'Saharan South',
     icon: Music,
     description:
-      'A hypnotic trance dance from near Guelmim. A single woman kneels at the center while musicians play a clay pot drum. She moves only her hands, fingers, and upper body in increasingly ecstatic patterns, sometimes entering trance. Considered a blessing ritual.',
+      'A hypnotic trance dance from near Guelmim. A single woman kneels at the center while musicians play a clay pot drum (the guedra). She moves only her hands, fingers, and upper body in increasingly ecstatic patterns, sometimes entering trance. Considered a blessing ritual that channels spiritual energy.',
   },
   {
     name: 'Taskiwin',
     region: 'Western High Atlas',
     icon: Music,
     description:
-      'A martial dance from Tata and Taroudant provinces. Men hold decorated horn-shaped powder flasks, mimicking warriors preparing for battle with controlled, rhythmic movements. Inscribed on UNESCO\'s Intangible Cultural Heritage list in 2017.',
+      'A martial dance from the Tata and Taroudant provinces. Men hold decorated horn-shaped powder flasks, mimicking warriors preparing for battle with controlled, rhythmic movements. Inscribed on UNESCO\'s Intangible Cultural Heritage list in 2017, Taskiwin preserves ancient warrior traditions.',
   },
 ];
 
@@ -309,29 +337,36 @@ const berberFood = [
     name: 'Tagine',
     icon: Utensils,
     description:
-      'The conical clay tagine is quintessentially Berber. Slow-cooked over charcoal, Berber tagines differ from city versions: simpler, heartier, and deeply flavored. Village tagines use seasonal produce, preserved lemons, olives, and whatever meat is available. Chicken with preserved lemons, lamb with prunes and almonds, and vegetable tagine with argan oil are classics.',
+      'The conical clay tagine is quintessentially Berber. Slow-cooked over charcoal, Berber tagines differ from city versions: simpler, heartier, and deeply flavored. Village tagines use seasonal produce, preserved lemons, olives, and whatever meat is available. Chicken with preserved lemons, lamb with prunes and almonds, and vegetable tagine with argan oil are staple dishes.',
     price: 'From 40 MAD in villages, from 80 MAD in tourist restaurants',
   },
   {
-    name: 'Couscous',
+    name: 'Couscous Friday',
     icon: Utensils,
     description:
-      'Friday couscous is sacred across Morocco, but its origins are Amazigh. Hand-rolled from semolina flour, steamed three times in a couscoussier, and topped with a stew of seven vegetables, chickpeas, and meat. In Berber homes, it is eaten communally from a single large dish. The ritual of preparation is as important as the meal itself.',
+      'Friday couscous is sacred across Morocco, but its origins are Amazigh. Hand-rolled from semolina flour, steamed three times in a couscoussier, and topped with a stew of seven vegetables, chickpeas, and meat. In Berber homes, everyone eats communally from a single large dish using the right hand. The ritual of preparation is as important as the meal itself.',
     price: 'From 35 MAD in local restaurants, from 80 MAD in tourist spots',
   },
   {
     name: 'Amlou (Berber Nutella)',
     icon: Utensils,
     description:
-      'A delicious spread made from argan oil, roasted almonds, and honey, ground together in a stone mortar. Often called "Berber Nutella," amlou is served at breakfast with bread. It originates from the Souss region where argan trees grow. The quality depends on using pure argan oil, not the diluted versions sold in tourist areas.',
+      'A rich spread made from argan oil, roasted almonds, and honey, ground together in a stone mortar. Often called "Berber Nutella," amlou is served at breakfast with bread. It originates from the Souss region where argan trees grow. Quality depends on using pure argan oil rather than the diluted versions sold in tourist areas.',
     price: 'From 60 MAD for a jar at cooperatives',
   },
   {
     name: 'Berber Bread & Mint Tea',
     icon: Utensils,
     description:
-      'Tafernout is a thick flatbread baked in clay ovens or over embers, the foundation of every village meal. Equally essential is mint tea, affectionately called "Berber Whiskey." Gunpowder green tea, fresh spearmint, and generous sugar are poured from a height to create froth. The tea ritual involves three glasses: "the first is gentle like life, the second is strong like love, the third is bitter like death." Refusing tea in a Berber home is considered impolite.',
+      'Tafernout is a thick flatbread baked in clay ovens or over embers, the foundation of every village meal. Equally essential is mint tea, affectionately called "Berber Whiskey." Gunpowder green tea, fresh spearmint, and generous sugar are poured from height to create froth. The tea ritual involves three glasses: "the first is gentle like life, the second is strong like love, the third is bitter like death."',
     price: 'Bread from 3 MAD; tea from 10 MAD in cafes, free in homes',
+  },
+  {
+    name: 'Tafarnout & Berkoukes',
+    icon: Utensils,
+    description:
+      'Beyond the well-known dishes, Berber cuisine includes hearty mountain fare. Berkoukes is a thick, hand-rolled pasta cooked in a spiced broth with vegetables and meat, perfect for cold Atlas winters. Rfissa, layered shredded msemen bread soaked in lentil and chicken broth flavored with fenugreek, is served to new mothers and at celebrations.',
+    price: 'From 30 MAD in village homes, from 70 MAD in restaurants',
   },
 ];
 
@@ -341,12 +376,12 @@ const berberFood = [
 
 const villageExperiences = [
   {
-    name: 'Imlil & Aremd',
+    name: 'Imlil & Aroumd',
     region: 'High Atlas',
     icon: Mountain,
     image: '/images/hero-atlas-village.webp',
     description:
-      'The gateway to Jebel Toubkal, North Africa\'s highest peak. Imlil is a Berber village at 1,740m altitude, just 90 minutes from Marrakech. Stay in a traditional guesthouse, hike to the walnut-shaded village of Aremd, and experience mountain hospitality. Mule treks, guided walks to Azzaden Valley, and overnight stays in Berber homes are all possible.',
+      'The gateway to Jebel Toubkal, North Africa\'s highest peak. Imlil is a Berber village at 1,740m altitude, just 90 minutes from Marrakech. Stay in a traditional guesthouse, hike to the walnut-shaded village of Aroumd (Aremd), and experience mountain hospitality. Mule treks, guided walks to the Azzaden Valley, and overnight stays in Berber homes are all possible.',
     highlights: ['90 minutes from Marrakech', 'Gateway to Toubkal', 'Traditional guesthouses', 'Guided mule treks'],
     guide: 'From 300 MAD per day for a local guide',
   },
@@ -361,14 +396,14 @@ const villageExperiences = [
     guide: 'From 350 MAD per day for a local guide',
   },
   {
-    name: 'Todra & Dades Gorges',
-    region: 'Eastern High Atlas',
+    name: 'Ait Benhaddou',
+    region: 'Ouarzazate Province',
     icon: Landmark,
     image: '/images/hero-kasbahs.webp',
     description:
-      'Dramatic canyon landscapes carved by rivers over millennia, with Berber villages clinging to the valley walls. Todra Gorge narrows to just 10 meters wide with 300-meter-high walls. The Dades Valley is lined with kasbahs and almond orchards. Villages here maintain strong Amazigh traditions, and homestays offer genuine cultural exchange.',
-    highlights: ['Dramatic 300m canyon walls', 'Kasbah-lined valleys', 'Rock climbing at Todra', 'Traditional homestays'],
-    guide: 'From 300 MAD per day for a local guide',
+      'This UNESCO World Heritage ksar along the former caravan route between the Sahara and Marrakech is the most photographed fortified village in Morocco. Used as a film location for Gladiator, Game of Thrones, and Lawrence of Arabia, it remains a living settlement. Families still inhabit the lower sections, and local guides share stories passed down through generations of Amazigh residents.',
+    highlights: ['UNESCO World Heritage Site', 'Active film location', 'Living Berber settlement', 'Sunset views from hilltop'],
+    guide: 'From 100 MAD for a guided tour',
   },
   {
     name: 'Tafraout & Anti-Atlas',
@@ -376,8 +411,8 @@ const villageExperiences = [
     icon: Globe,
     image: '/images/art-berber-portrait.webp',
     description:
-      'The heartland of Tashelhit-speaking Amazigh culture. Tafraout sits surrounded by rose-granite boulders, known for almond blossoms in February and some of Morocco\'s finest Amazigh architecture. Off the main tourist trail, it offers a quieter, more authentic encounter with Berber life.',
-    highlights: ['February almond blossom festival', 'Painted granite boulders', 'Authentic Tashelhit culture', 'Off-the-beaten-path'],
+      'The heartland of Tashelhit-speaking Amazigh culture. Tafraout sits surrounded by rose-granite boulders, known for almond blossoms in February and some of Morocco\'s finest Amazigh architecture. Off the main tourist trail, it offers a quieter, more authentic encounter with Berber life. The surrounding villages preserve some of the oldest communal granaries in the country.',
+    highlights: ['February almond blossom festival', 'Rose granite landscapes', 'Authentic Tashelhit culture', 'Off the beaten path'],
     guide: 'From 250 MAD per day for a local guide',
   },
 ];
@@ -406,12 +441,6 @@ const museumsAndSites = [
     price: 'From 25 MAD entry',
   },
   {
-    name: 'Ait Benhaddou (UNESCO)',
-    type: 'Heritage Site',
-    description: 'The most photographed ksar in Morocco. This UNESCO-listed fortified village served as backdrop for Gladiator, Game of Thrones, and Lawrence of Arabia.',
-    price: 'Free entry (guides from 100 MAD)',
-  },
-  {
     name: 'Kasbah Telouet',
     type: 'Historic Kasbah',
     description: 'The crumbling palace of the Glaoui lords. Stunning zellige tilework and painted cedarwood ceilings inside, while the exterior slowly returns to the earth from which it was built.',
@@ -420,8 +449,14 @@ const museumsAndSites = [
   {
     name: 'Tifinagh Rock Carvings (Tata)',
     type: 'Archaeological Site',
-    description: 'Ancient rock engravings with Tifinagh script and hunting scenes dating back thousands of years, providing evidence of deep Amazigh roots in North Africa.',
+    description: 'Ancient rock engravings featuring Tifinagh script and hunting scenes dating back thousands of years, providing direct evidence of deep Amazigh roots in North Africa.',
     price: 'Free (local guide from 100 MAD recommended)',
+  },
+  {
+    name: 'IRCAM (Rabat)',
+    type: 'Cultural Institute',
+    description: 'The Royal Institute of Amazigh Culture, responsible for standardizing Tifinagh script and promoting Amazigh language and culture. Houses a research library and hosts exhibitions.',
+    price: 'Free entry to exhibitions',
   },
 ];
 
@@ -433,27 +468,54 @@ const festivals = [
   {
     name: 'Yennayer (Amazigh New Year)',
     month: 'January 13',
-    description: 'Celebrating the start of the agrarian calendar. Families gather for communal meals with couscous, dried fruits, and nuts. Since 2018, January 13 is an official public holiday in Morocco.',
+    description: 'Celebrating the start of the agrarian calendar, observed for thousands of years. Families gather for communal meals with couscous, dried fruits, and nuts. Since 2018, January 13 is an official public holiday in Morocco. Rural communities light bonfires, recite poetry, and perform music through the night.',
   },
   {
     name: 'Imilchil Marriage Festival',
     month: 'September',
-    description: 'A legendary Middle Atlas gathering where Ait Hadiddou Berbers traditionally arranged marriages. Young men and women chose partners freely. Today a cultural festival and market drawing visitors from across the region.',
+    description: 'A legendary Middle Atlas gathering where Ait Hadiddou Berbers traditionally arranged marriages. Young men and women chose partners freely, sometimes completing engagements in a single day. Today it functions as a cultural festival and regional market with traditional music, dance, and horse parades.',
   },
   {
     name: 'Timitar Festival (Agadir)',
     month: 'July',
-    description: 'One of Morocco\'s largest music festivals celebrating Amazigh music alongside international acts. Free outdoor concerts attract hundreds of thousands over four days.',
+    description: 'One of Morocco\'s largest music festivals celebrating Amazigh music alongside international acts. Free outdoor concerts attract hundreds of thousands over four days. The festival showcases the global reach of Amazigh musical traditions.',
   },
   {
     name: 'Almond Blossom Festival (Tafraout)',
     month: 'February',
-    description: 'When almond trees blanket the Anti-Atlas in pink and white blossoms, Tafraout celebrates with traditional music, dance, feasting, and fresh almond products from local cooperatives.',
+    description: 'When almond trees blanket the Anti-Atlas in pink and white blossoms, Tafraout celebrates with traditional music, dance, feasting, and fresh almond products from local cooperatives. A spectacular time to visit the region.',
   },
   {
-    name: 'Boujloud / Bilmawen (Various)',
+    name: 'Boujloud / Bilmawen',
     month: 'After Eid al-Adha',
-    description: 'A pre-Islamic Amazigh tradition where men dress in animal skins and masks, dancing through villages to ward off evil spirits. This carnivalesque celebration has survived for millennia.',
+    description: 'A pre-Islamic Amazigh tradition where men dress in animal skins and masks, dancing through villages to ward off evil spirits. This carnivalesque celebration has survived for millennia and reveals the depth of pre-Islamic cultural layers in Moroccan life.',
+  },
+];
+
+/* ═══════════════════════════════════════════════════════════════
+   DATA: NOMADIC TRADITIONS
+   ═══════════════════════════════════════════════════════════════ */
+
+const nomadicTraditions = [
+  {
+    title: 'Transhumance Routes',
+    icon: Compass,
+    text: 'Semi-nomadic Amazigh herders still follow ancient seasonal routes, moving livestock between summer alpine pastures (agdal) and winter valley camps. In the Central High Atlas, families spend May through October in high pastures above 2,500 meters, then descend to lower villages when snow arrives. These routes have been maintained for centuries.',
+  },
+  {
+    title: 'Nomadic Camp Life',
+    icon: Tent,
+    text: 'Traditional Berber tents (akhiam) are woven from goat and camel hair, providing insulation against both heat and cold. Inside, hand-woven carpets cover the ground, and families gather around a central hearth. Visitors to the Middle Atlas and eastern High Atlas can arrange overnight stays in active nomadic camps through local guides.',
+  },
+  {
+    title: 'Saharan Amazigh Groups',
+    icon: Globe,
+    text: 'The Ait Atta, one of the largest Amazigh confederations, historically controlled vast territories from the Saghro Mountains to the Saharan fringe. Their descendants maintain semi-nomadic patterns near Zagora and Merzouga. Some families now combine seasonal movement with permanent village homes, adapting ancient rhythms to modern realities.',
+  },
+  {
+    title: 'Oral Tradition & Poetry',
+    icon: BookOpen,
+    text: 'Without a widely used written language until recently, Amazigh culture preserved its history, law, and values through oral poetry. Elders (amghar) recited genealogies and tribal codes. Professional poets (imedyazen) traveled between communities, spreading news and moral lessons through verse. This tradition continues at festivals and family gatherings.',
   },
 ];
 
@@ -488,19 +550,19 @@ export default function MoroccoBerberCulturePage() {
               <Home className="w-3.5 h-3.5" />
             </Link>
             <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-white">Berber Culture in Morocco</span>
+            <span className="text-white">Morocco Berber Culture Guide</span>
           </nav>
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm text-white/90 text-sm mb-6">
             <Globe className="w-4 h-4" />
             Culture &amp; Heritage
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-display)] font-bold text-white mb-4">
-            Berber Culture in Morocco:
+            Morocco Berber Culture:
             <br className="hidden md:block" /> Amazigh Heritage &amp; Traditions
           </h1>
           <p className="text-xl text-white/80 max-w-2xl">
             Discover the living heritage of the Amazigh, North Africa&apos;s indigenous people.
-            From Tifinagh script and mountain villages to carpet weaving and communal festivals.
+            From Tifinagh script and mountain villages to carpet weaving, ancient kasbahs, and communal festivals.
           </p>
         </div>
       </section>
@@ -525,11 +587,18 @@ export default function MoroccoBerberCulturePage() {
                 Greek and Roman &quot;barbaros.&quot;
               </p>
               <p>
-                Today, an estimated 40-50% of Morocco&apos;s population identifies as Amazigh, and their
-                cultural influence permeates every aspect of Moroccan life: architecture, cuisine, music,
-                agriculture, and hospitality. In 2011, Tamazight was recognized as an official language
-                alongside Arabic in the Moroccan constitution, and the Tifinagh script is now taught in
-                schools and displayed on public buildings across the country.
+                Today, an estimated 40 to 50 percent of Morocco&apos;s population identifies as Amazigh,
+                and their cultural influence permeates every aspect of Moroccan life: architecture, cuisine,
+                music, agriculture, and hospitality. In 2011, Tamazight was recognized as an official
+                language alongside Arabic in the Moroccan constitution. The Tifinagh script is now taught
+                in schools and displayed on public buildings, road signs, and banknotes across the country.
+              </p>
+              <p>
+                The Amazigh are not a single homogeneous group. They comprise dozens of tribes and
+                confederations spread across Morocco&apos;s mountains, valleys, coasts, and desert edges.
+                The Rifians of the north, the Shluh of the south, and the Imazighen of the Middle Atlas
+                each maintain distinct dialects, customs, and artistic traditions, all united by a shared
+                sense of identity as &quot;free people.&quot;
               </p>
             </div>
           </div>
@@ -541,7 +610,7 @@ export default function MoroccoBerberCulturePage() {
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <Languages className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Tifinagh Script &amp; the Tamazight Language
+            Tifinagh Script &amp; Berber Languages
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
             One of Africa&apos;s oldest writing systems, Tifinagh has been in continuous use for over 2,000 years.
@@ -553,10 +622,11 @@ export default function MoroccoBerberCulturePage() {
               </h3>
               <p className="text-sm text-[var(--text-secondary)] mb-4">
                 Tifinagh is a consonantal alphabet rooted in ancient Libyan script. Each character
-                uses simple geometric shapes: circles, lines, and dots. The Tuareg preserved Tifinagh
-                through centuries when other Amazigh groups adopted Arabic script. In 2003, Morocco
-                adopted standardized Neo-Tifinagh for official use. Look for it on road signs, public
-                buildings, and banknotes throughout the country.
+                uses simple geometric shapes: circles, lines, and dots. The Tuareg of the Sahara
+                preserved Tifinagh through centuries when other Amazigh groups adopted Arabic script.
+                In 2003, Morocco adopted standardized Neo-Tifinagh for official use. Look for it on
+                road signs, public buildings, and banknotes throughout the country. The Royal Institute
+                of Amazigh Culture (IRCAM) in Rabat oversees its standardization and promotion.
               </p>
             </div>
             <div className="card-moroccan p-6">
@@ -565,20 +635,20 @@ export default function MoroccoBerberCulturePage() {
               </h3>
               <p className="text-sm text-[var(--text-secondary)] mb-4">
                 Tamazight has three main variants in Morocco, each tied to a geographic region.
-                Despite differences, speakers share deep cultural kinship and common origins.
+                Despite vocabulary differences, speakers share deep cultural kinship and common origins.
               </p>
               <div className="space-y-3">
                 <div className="flex items-start gap-2 text-sm text-[var(--text-secondary)]">
                   <CheckCircle className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
-                  <span><strong>Tashelhit</strong> -- Souss, High Atlas, Anti-Atlas (approx. 8M speakers)</span>
+                  <span><strong>Tashelhit</strong> -- Souss, High Atlas, Anti-Atlas (approx. 8 million speakers). The most widely spoken Berber language in Morocco.</span>
                 </div>
                 <div className="flex items-start gap-2 text-sm text-[var(--text-secondary)]">
                   <CheckCircle className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
-                  <span><strong>Tamazight</strong> -- Middle Atlas, eastern High Atlas (approx. 5M speakers)</span>
+                  <span><strong>Tamazight</strong> -- Middle Atlas, eastern High Atlas (approx. 5 million speakers). Gives its name to the broader language family.</span>
                 </div>
                 <div className="flex items-start gap-2 text-sm text-[var(--text-secondary)]">
                   <CheckCircle className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
-                  <span><strong>Tarifit</strong> -- Rif Mountains, northern Morocco (approx. 4M speakers)</span>
+                  <span><strong>Tarifit</strong> -- Rif Mountains, northern Morocco (approx. 4 million speakers). Closest to the Kabyle dialect spoken in Algeria.</span>
                 </div>
               </div>
             </div>
@@ -640,7 +710,8 @@ export default function MoroccoBerberCulturePage() {
             Amazigh Architecture: Built from the Earth
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Kasbahs, ksour, agadirs, and tighremts: Morocco&apos;s most iconic structures are Amazigh creations.
+            Kasbahs, ksour, agadirs, and tighremts: Morocco&apos;s most iconic structures are Amazigh creations
+            built from rammed earth, stone, and palm wood.
           </p>
 
           <div className="max-w-5xl mx-auto space-y-6">
@@ -713,7 +784,7 @@ export default function MoroccoBerberCulturePage() {
             Amazigh Cuisine: Food of the Mountains
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-4">
-            Simple, hearty, and deeply flavorful, Berber food is the soul of Moroccan cuisine.
+            Simple, hearty, and deeply flavorful. Berber food forms the backbone of Moroccan cuisine.
           </p>
           <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
             <Info className="w-3.5 h-3.5 inline mr-1" />
@@ -804,8 +875,41 @@ export default function MoroccoBerberCulturePage() {
         </div>
       </section>
 
-      {/* ── Museums & Cultural Sites ── */}
+      {/* ── Nomadic Traditions ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+        <div className="container-morocco">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Tent className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Nomadic &amp; Semi-Nomadic Traditions
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Amazigh nomadic life has adapted over millennia, but seasonal migration and oral traditions persist
+            in the mountains and desert margins.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {nomadicTraditions.map((item) => {
+              const ItemIcon = item.icon;
+              return (
+                <div key={item.title} className="card-moroccan p-6">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
+                      <ItemIcon className="w-5 h-5 text-[var(--color-accent)]" />
+                    </div>
+                    <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+                      {item.title}
+                    </h3>
+                  </div>
+                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{item.text}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Museums & Cultural Sites ── */}
+      <section className="py-16 md:py-20">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <BookOpen className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
@@ -836,7 +940,7 @@ export default function MoroccoBerberCulturePage() {
       </section>
 
       {/* ── Festivals & Celebrations ── */}
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <Calendar className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
@@ -865,8 +969,8 @@ export default function MoroccoBerberCulturePage() {
         </div>
       </section>
 
-      {/* ── Ethical Tourism & Community-Based Tourism ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+      {/* ── Ethical Tourism ── */}
+      <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <HandHeart className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
@@ -876,13 +980,14 @@ export default function MoroccoBerberCulturePage() {
             How to visit Berber communities respectfully and ensure your tourism benefits the people who call these places home.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: Users, title: 'Hire Local Guides', text: 'Always hire guides from the local community rather than city-based agencies. Local guides provide deeper cultural insight, and your payment goes directly to village economies. Expect to pay from 300 MAD per day.' },
-              { icon: ShieldCheck, title: 'Respect Cultural Boundaries', text: 'Ask before entering homes, mosques (non-Muslims cannot enter), or photographing people. Dress modestly in rural areas. Remove shoes when entering homes. Accept hospitality gracefully.' },
-              { icon: Award, title: 'Buy from Cooperatives', text: 'Women\'s cooperatives for carpets, argan oil, and pottery ensure fair wages. Cooperatives in Ait Bougmez, Tazenakht, and Ourika Valley offer authentic crafts at fair prices.' },
-              { icon: Heart, title: 'Stay in Community Guesthouses', text: 'Community-run gites keep revenue in the village. Simple, comfortable accommodation with home-cooked meals from 200 MAD per night including dinner and breakfast.' },
-              { icon: Sparkles, title: 'Learn a Few Words & Leave No Trace', text: 'Basic Tamazight phrases earn goodwill: "Azul" (hello), "tanmirt" (thank you). Carry out all trash, use reusable bottles, and respect shared water sources (seguias).' },
+              { icon: Users, title: 'Hire Local Guides', text: 'Hire guides from the local community rather than city agencies. Local guides provide deeper cultural insight, and your payment goes directly to village economies. From 300 MAD per day.' },
+              { icon: ShieldCheck, title: 'Respect Boundaries', text: 'Ask before entering homes or photographing people. Dress modestly in rural areas. Remove shoes when entering homes. Non-Muslims cannot enter mosques.' },
+              { icon: Award, title: 'Buy from Cooperatives', text: 'Women\'s cooperatives for carpets, argan oil, and pottery ensure fair wages. Cooperatives in Ait Bougmez, Tazenakht, and the Ourika Valley offer authentic crafts at fair prices.' },
+              { icon: Heart, title: 'Community Guesthouses', text: 'Community-run gites keep revenue local. Simple, comfortable accommodation with home-cooked meals from 200 MAD per night including dinner and breakfast.' },
+              { icon: Sparkles, title: 'Learn Basic Tamazight', text: '"Azul" (hello), "Tanmirt" (thank you), "Manzakin?" (how are you?). Small efforts show respect and open doors to deeper connections.' },
+              { icon: Globe, title: 'Leave No Trace', text: 'Carry out all trash, use reusable bottles, and respect shared water sources (seguias). Water is precious in mountain and desert communities.' },
             ].map((item) => {
               const ItemIcon = item.icon;
               return (
@@ -902,7 +1007,7 @@ export default function MoroccoBerberCulturePage() {
       </section>
 
       {/* ── Gallery Section ── */}
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
             Amazigh Heritage in Morocco
@@ -924,103 +1029,41 @@ export default function MoroccoBerberCulturePage() {
       </section>
 
       {/* ── FAQ Section ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+      <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
             Frequently Asked Questions
           </h2>
-
           <div className="space-y-6">
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                What is the difference between Berber and Amazigh?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                Both terms refer to the same indigenous people of North Africa. &quot;Amazigh&quot; (plural: Imazighen),
-                meaning &quot;free people,&quot; is the self-designation. &quot;Berber&quot; derives from the Greek/Roman
-                &quot;barbaros.&quot; Both are widely used in Morocco, though Amazigh is increasingly preferred in
-                official and cultural contexts.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                Can I visit Berber villages independently or do I need a guide?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                Well-known villages like Imlil are accessible independently, with guesthouses and marked trails.
-                For remote areas like Ait Bougmez or Todra, a local guide (from 300 MAD per day) is recommended
-                for cultural context, language help, and ensuring your visit benefits the community.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                What language do Berber people speak?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                Amazigh people speak Tamazight, with three main variants: Tashelhit (south/High Atlas),
-                Tamazight (Middle Atlas), and Tarifit (Rif Mountains). Since 2011, Tamazight is an official
-                language alongside Arabic. Most Amazigh also speak Darija, and many speak French and English.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                When is the best time to visit Berber villages?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                Spring (April-May) and autumn (September-October) are ideal. Pleasant hiking weather,
-                wildflowers in spring, and harvest celebrations in autumn. Winter brings snow to the High Atlas,
-                limiting access. January is special for Yennayer (Amazigh New Year) celebrations.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                How can I buy authentic Berber carpets?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                Buy directly from weaving cooperatives in Ait Bougmez or Tazenakht for fair prices. Look for
-                hand-knotted construction, natural wool, and slight irregularities. Cooperatives charge from 800 MAD
-                for small rugs and from 3,000 MAD for larger pieces. Avoid tourist-area middlemen who charge
-                three to five times the fair price.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                Is it appropriate to photograph Berber people?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                Always ask permission first, especially with women and elders. Most communities are welcoming
-                but value privacy. Respect anyone who declines. Showing the photo on your screen is appreciated.
-                In tourist areas, a small tip (from 5-10 MAD) may be expected for photos.
-              </p>
-            </div>
+            {[
+              { q: 'What is the difference between Berber and Amazigh?', a: 'Both terms refer to the same indigenous people of North Africa. "Amazigh" (plural: Imazighen), meaning "free people," is the self-designation. "Berber" derives from the Greek and Roman "barbaros." Both terms are widely used in Morocco, though Amazigh is increasingly preferred in official and cultural contexts since the 2011 constitutional recognition.' },
+              { q: 'Can I visit Berber villages independently or do I need a guide?', a: 'Well-known villages like Imlil are accessible independently, with guesthouses and marked trails. For remote areas like Ait Bougmez, the Todra Gorge, or Anti-Atlas villages, a local guide (from 300 MAD per day) is recommended for cultural context, language help, and ensuring your visit benefits the community.' },
+              { q: 'What languages do Berber people speak in Morocco?', a: 'Amazigh people speak Tamazight, with three main variants: Tashelhit (south and High Atlas), Tamazight (Middle Atlas), and Tarifit (Rif Mountains). Since 2011, Tamazight is an official language alongside Arabic. Most Amazigh also speak Darija (Moroccan Arabic), and many in tourist areas speak French and English.' },
+              { q: 'When is the best time to visit Berber villages?', a: 'Spring (April to May) and autumn (September to October) are ideal. Pleasant hiking weather, wildflowers in spring, and harvest celebrations in autumn. Winter brings snow to the High Atlas, limiting access. January is special for Yennayer (Amazigh New Year) celebrations on the 13th.' },
+              { q: 'How can I buy authentic Berber carpets?', a: 'Buy directly from weaving cooperatives in Ait Bougmez or Tazenakht for fair prices. Look for hand-knotted construction, natural wool, and slight irregularities that signal handmade work. Cooperatives charge from 800 MAD for small rugs and from 3,000 MAD for larger pieces. Avoid tourist-area middlemen who charge three to five times the fair price.' },
+              { q: 'Is it appropriate to photograph Berber people?', a: 'Always ask permission first, especially with women and elders. Most communities are welcoming but value privacy. Respect anyone who declines. Showing the photo on your screen is appreciated. In tourist areas, a small tip (from 5 to 10 MAD) may be expected for photos.' },
+              { q: 'What is Yennayer and when is it celebrated?', a: 'Yennayer is the Amazigh New Year, celebrated on January 13. It marks the start of the agrarian calendar and has been observed for thousands of years. Since 2018, it is an official public holiday in Morocco. Families gather for communal meals of couscous with seven vegetables, dried fruits, and nuts. Rural celebrations include bonfires, poetry recitals, and music.' },
+              { q: 'What is the Imilchil Marriage Festival?', a: 'The Imilchil Marriage Festival takes place in September in the Middle Atlas. Traditionally, young Ait Hadiddou Berbers gathered here to choose partners freely, sometimes completing engagements in a single day. Today it functions as a cultural festival and regional market with traditional music, dance, horse parades, and trade.' },
+              { q: 'Do Berber nomads still exist in Morocco?', a: 'Semi-nomadic Amazigh communities persist, though their numbers have decreased. In the High Atlas, some families move livestock between summer alpine pastures and winter valley camps. Saharan groups maintain seasonal migration routes. You can visit nomadic camps in the Middle Atlas through guided treks. Many families now combine seasonal movement with permanent village homes.' },
+            ].map((faq) => (
+              <div key={faq.q} className="card-moroccan p-6">
+                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                  {faq.q}
+                </h3>
+                <p className="text-sm text-[var(--text-secondary)]">{faq.a}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* ── Related Guides ── */}
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
             Continue Exploring Morocco
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Link href="/morocco-culture-guide" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
-              <Globe className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Morocco Culture Guide
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                A broader look at Moroccan culture, customs, etiquette, and social norms for travelers.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
             <Link href="/morocco-atlas-mountains" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
               <Mountain className="w-8 h-8 text-[var(--color-accent)] mb-3" />
               <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
@@ -1040,6 +1083,18 @@ export default function MoroccoBerberCulturePage() {
               </h3>
               <p className="text-sm text-[var(--text-secondary)] mb-3">
                 Everything you need to know about buying authentic Moroccan carpets and avoiding scams.
+              </p>
+              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
+                Read more <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
+            <Link href="/morocco-food-guide" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
+              <Utensils className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
+                Moroccan Food Guide
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] mb-3">
+                From street food to fine dining, a complete guide to Moroccan cuisine and regional dishes.
               </p>
               <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
                 Read more <ArrowRight className="w-3.5 h-3.5" />
@@ -1068,8 +1123,9 @@ export default function MoroccoBerberCulturePage() {
             Ready to Experience Amazigh Culture?
           </h2>
           <p className="text-lg text-white/80 max-w-2xl mx-auto mb-8">
-            From Atlas Mountain villages to Saharan oases, the Amazigh heritage of Morocco is waiting
-            to be discovered. Plan your cultural journey through one of the world&apos;s oldest living civilizations.
+            From Atlas Mountain villages to Saharan oases, the Amazigh heritage of Morocco spans
+            millennia of living tradition. Plan your cultural journey through one of the world&apos;s
+            oldest civilizations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -1080,11 +1136,11 @@ export default function MoroccoBerberCulturePage() {
               Explore the Atlas Mountains
             </Link>
             <Link
-              href="/morocco-culture-guide"
+              href="/morocco-cooking-classes"
               className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 text-white border border-white/30 rounded-lg font-semibold hover:bg-white/20 transition-colors"
             >
-              <BookOpen className="w-5 h-5" />
-              Read the Culture Guide
+              <Utensils className="w-5 h-5" />
+              Try Berber Cooking Classes
             </Link>
           </div>
         </div>

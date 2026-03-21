@@ -3233,6 +3233,15 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['morocco hot air balloon', 'marrakech balloon ride', 'atlas mountains balloon', 'morocco balloon price', 'sunrise flight morocco'],
       priority: 9,
     },
+    {
+      title: 'Morocco Leather Goods Guide 2026',
+      description: 'Morocco leather goods — Fes tanneries, babouche, poufs, bags, buying tips, quality tests, bargaining, and shipping leather home.',
+      type: 'page',
+      url: '/morocco-leather-goods',
+      tags: ['leather', 'tanneries', 'Fes', 'babouche', 'shopping'],
+      keywords: ['morocco leather goods', 'fes tannery', 'moroccan leather bags', 'babouche slippers', 'chouara tannery'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
