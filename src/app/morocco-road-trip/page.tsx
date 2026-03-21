@@ -4,744 +4,607 @@ import {
   ChevronRight,
   Home,
   MapPin,
-  Star,
-  Car,
-  Fuel,
   Clock,
   Info,
   ArrowRight,
   ShieldCheck,
-  Mountain,
   DollarSign,
   CheckCircle,
   AlertTriangle,
-  Navigation,
+  Fuel,
+  Car,
   Route,
-  Eye,
-  Sun,
-  Moon,
-  Shield,
-  FileText,
+  Mountain,
+  Navigation,
+  Calendar,
   Compass,
+  Sun,
+  Tent,
+  Camera,
+  BookOpen,
+  MessageCircleQuestion,
   CircleDot,
   Map,
-  Milestone,
-  Phone,
   Gauge,
-  Wrench,
+  Milestone,
+  Building,
+  Bed,
 } from 'lucide-react';
 
-/* ═══════════════════════════════════════════════════════════════
-   CONSTANTS
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   CONSTANTS & BASE URL
+   ================================================================ */
 
 const BASE_URL = 'https://citytoursmorocco.com';
+const PAGE_URL = `${BASE_URL}/morocco-road-trip`;
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    SEO METADATA
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 export const metadata: Metadata = {
   title: 'Morocco Road Trip Guide 2026 | Best Routes, Car Rental & Driving Tips',
   description:
-    'Plan the perfect Morocco road trip with our complete guide. Top routes from Marrakech to Sahara, Atlantic coast drives, Tizi n\'Tichka pass, car rental tips from 250 MAD/day, driving rules, fuel stations, road safety, GPS navigation, and overnight stops across Morocco.',
+    'Plan the ultimate Morocco road trip. Best driving routes from Marrakech to Sahara, Atlantic Coast loop, Imperial Cities circuit, and High Atlas passes. Car rental tips, fuel costs from 14 MAD/liter, toll roads, GPS navigation, road conditions, safety advice, and 3-14 day itineraries.',
   keywords: [
     'Morocco road trip',
-    'Morocco driving guide',
-    'Marrakech to Sahara road trip',
+    'driving in Morocco',
+    'Morocco road trip itinerary',
+    'Marrakech to Sahara drive',
     'Morocco car rental',
-    'Tizi n Tichka pass',
-    'Tizi n Test pass',
+    'Morocco driving tips',
+    'best road trip routes Morocco',
+    'Morocco toll roads',
+    'Morocco fuel costs 2026',
+    'Atlas Mountains driving',
     'Morocco road conditions',
-    'Atlantic coast Morocco drive',
-    'Morocco scenic drives',
-    'Rif Mountains road trip',
-    'Imperial Cities circuit Morocco',
-    'Morocco fuel stations',
-    'Morocco police checkpoints',
-    'Morocco road safety',
-    'driving in Morocco tips',
+    'Morocco self-drive holiday',
+    'Imperial Cities road trip',
+    'Atlantic Coast Morocco drive',
+    'Tizi n Tichka pass',
     'Morocco GPS navigation',
-    'Morocco car insurance',
-    'Morocco road trip routes 2026',
-    'self drive Morocco',
-    'Morocco highway tolls',
+    'Morocco driving rules',
+    'Morocco road trip budget',
   ],
   openGraph: {
     title: 'Morocco Road Trip Guide 2026 | Best Routes, Car Rental & Driving Tips',
     description:
-      'Complete Morocco road trip planning guide. Best routes, car rental from 250 MAD/day, mountain passes, driving rules, fuel stops, and overnight recommendations for self-drive adventures.',
-    url: `${BASE_URL}/morocco-road-trip`,
+      'Complete guide to driving across Morocco. Best routes, car rental advice, fuel costs, toll roads, road conditions, mountain passes, and itineraries from 3 to 14 days covering Sahara, coast, Imperial Cities, and Atlas Mountains.',
+    url: PAGE_URL,
     images: [
       {
-        url: `${BASE_URL}/images/hero-road-trip.webp`,
+        url: `${BASE_URL}/images/hero-driving-morocco.webp`,
         width: 1200,
         height: 630,
-        alt: 'Winding road through the Atlas Mountains of Morocco with dramatic desert landscape',
+        alt: 'Scenic road winding through the Atlas Mountains of Morocco with dramatic landscape',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Morocco Road Trip Guide 2026 | Routes, Rental & Safety',
+    title: 'Morocco Road Trip Guide 2026 | Routes, Car Rental & Driving Tips',
     description:
-      'From Marrakech to the Sahara, along the Atlantic coast, and through the Rif Mountains. Complete self-drive guide for Morocco with prices, driving rules, and road conditions.',
-    images: [`${BASE_URL}/images/hero-road-trip.webp`],
+      'Best Morocco driving routes, car rental tips, fuel costs, toll roads, mountain passes, and 3-14 day itineraries from Marrakech to the Sahara and beyond.',
+    images: [`${BASE_URL}/images/hero-driving-morocco.webp`],
   },
-  alternates: { canonical: `${BASE_URL}/morocco-road-trip` },
+  alternates: { canonical: PAGE_URL },
 };
 
-/* ═══════════════════════════════════════════════════════════════
-   JSON-LD STRUCTURED DATA
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   JSON-LD: TravelGuide + FAQPage
+   ================================================================ */
 
-const jsonLd = {
+const faqItems = [
+  {
+    q: 'Do I need an International Driving Permit to drive in Morocco?',
+    a: 'If your domestic license is in French or Arabic, you can use it directly. All other licenses require an International Driving Permit (IDP) alongside your original license. Obtain an IDP in your home country before departure. Rental agencies enforce this rule strictly, and police checkpoints may request both documents.',
+  },
+  {
+    q: 'How much does car rental cost in Morocco?',
+    a: 'A basic economy car (Dacia Logan, Hyundai i10) starts from 250 MAD per day. A mid-range SUV or crossover starts from 500 MAD per day. A 4x4 suitable for desert pistes starts from 900 MAD per day. Prices drop significantly for weekly bookings. Add from 100-200 MAD per day for full insurance. Seasonal pricing can change during peak months (October-April and summer).',
+  },
+  {
+    q: 'What side of the road do they drive on in Morocco?',
+    a: 'Morocco drives on the right side of the road, same as continental Europe and the United States. Vehicles are left-hand drive. If you are from the UK, Australia, or Japan, plan extra focus for the first day. Roundabouts follow the continental European pattern: traffic already in the roundabout has priority.',
+  },
+  {
+    q: 'Are Moroccan roads safe for tourists to drive?',
+    a: 'Major highways (autoroutes) between cities are well-maintained, well-lit, and comparable to European motorways. National roads (routes nationales) are two-lane and require patience with slower traffic like trucks, donkey carts, and motorbikes. Mountain passes demand confident driving with tight switchbacks. Avoid driving at night outside cities, as unlit vehicles, pedestrians, and livestock on the road create serious hazards.',
+  },
+  {
+    q: 'Can I drive a rental car from Morocco into another country?',
+    a: 'Most rental companies prohibit cross-border travel entirely. A few agencies allow travel to Mauritania with advance written permission and extra insurance, but this is rare and expensive. No standard rental contract covers the Ceuta or Melilla Spanish enclaves. If you plan to cross borders, negotiate this before signing your rental agreement.',
+  },
+  {
+    q: 'What fuel costs should I budget for a Morocco road trip?',
+    a: 'Unleaded petrol (essence sans plomb) costs from 14 MAD per liter. Diesel (gasoil) costs from 12 MAD per liter. A typical 10-day road trip covering 2,500 km in a diesel economy car uses roughly 150 liters, costing from 1,800 MAD total. Fuel stations are common on major routes but sparse in the deep south and desert. Fill up whenever you see a station south of Ouarzazate.',
+  },
+  {
+    q: 'Do I need a 4x4 for a Morocco road trip?',
+    a: 'For the standard tourist routes (Marrakech to Merzouga via N10, Atlantic Coast, Imperial Cities), a regular car handles every road. You only need a 4x4 for unpaved desert tracks (pistes) south of Merzouga, the remote stretch to Erg Chigaga from M\'Hamid, and certain Atlas Mountain tracks that bypass main roads. If in doubt, stick to paved roads in a regular car.',
+  },
+  {
+    q: 'How do toll roads work in Morocco?',
+    a: 'Morocco has a modern toll highway (autoroute) network connecting Tangier, Rabat, Casablanca, Marrakech, Fes, Meknes, and Agadir. You take a ticket at the entry booth and pay at exit. Cash (MAD) and Jawaz electronic tags are accepted. A Tangier to Marrakech toll costs from 200 MAD one-way. A Casablanca to Marrakech toll costs from 80 MAD. Toll roads save significant time compared to national roads.',
+  },
+];
+
+const jsonLdTravel = {
   '@context': 'https://schema.org',
   '@type': 'TravelGuide',
-  '@id': `${BASE_URL}/morocco-road-trip`,
-  name: 'Morocco Road Trip Guide 2026 | Best Routes, Car Rental & Driving Tips',
+  '@id': PAGE_URL,
+  name: 'Morocco Road Trip Guide 2026',
   description:
-    'Complete guide to road tripping Morocco. Best driving routes, car rental advice, mountain passes, fuel stations, road safety tips, and overnight stops.',
-  url: `${BASE_URL}/morocco-road-trip`,
-  image: `${BASE_URL}/images/hero-road-trip.webp`,
-  author: {
-    '@type': 'Organization',
-    name: 'CityGuide Morocco',
-    url: BASE_URL,
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'CityGuide Morocco',
-    url: BASE_URL,
-  },
-  datePublished: '2026-03-20',
-  dateModified: '2026-03-20',
-  mainEntityOfPage: `${BASE_URL}/morocco-road-trip`,
-  isPartOf: {
-    '@type': 'WebSite',
-    name: 'CityGuide Morocco',
-    url: BASE_URL,
-  },
-  about: {
-    '@type': 'Country',
-    name: 'Morocco',
-  },
+    'Complete guide to self-driving across Morocco covering the best road trip routes, car rental, fuel costs, toll roads, driving rules, mountain passes, safety tips, and itineraries from 3 to 14 days.',
+  url: PAGE_URL,
+  image: `${BASE_URL}/images/hero-driving-morocco.webp`,
+  author: { '@type': 'Organization', name: 'City Tours Morocco', url: BASE_URL },
+  publisher: { '@type': 'Organization', name: 'City Tours Morocco', url: BASE_URL },
+  datePublished: '2026-03-21',
+  dateModified: '2026-03-21',
+  mainEntityOfPage: PAGE_URL,
+  about: { '@type': 'Country', name: 'Morocco' },
   breadcrumb: {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Morocco Road Trip Guide', item: `${BASE_URL}/morocco-road-trip` },
+      { '@type': 'ListItem', position: 2, name: 'Morocco Road Trip Guide', item: PAGE_URL },
     ],
   },
 };
 
-const faqJsonLd = {
+const jsonLdFaq = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'Do I need an international driving permit for Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. Morocco requires an International Driving Permit (IDP) alongside your valid home-country license. Rental agencies will ask for both at pickup. Get your IDP before you travel — it cannot be obtained in Morocco.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does car rental cost in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Budget cars (Dacia Logan, Renault Clio) start from 250 MAD per day. Mid-range SUVs suitable for mountain and desert roads cost from 500 MAD per day. 4x4 vehicles for off-road Sahara access start from 900 MAD per day. Prices increase during peak season (October-April).',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is driving in Morocco safe for tourists?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Morocco has well-maintained toll highways (autoroutes) between major cities. Mountain roads and rural routes require extra caution due to sharp bends, livestock on the road, and occasional poor signage. Avoid driving at night outside cities. Overall, with sensible precautions, self-driving is a rewarding way to explore Morocco.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is the speed limit in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Speed limits are 60 km/h in towns, 100 km/h on national roads, and 120 km/h on autoroutes (toll highways). Speed cameras and radar traps are common, especially near towns. Fines start from 300 MAD and are payable on the spot.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can I drive from Marrakech to the Sahara Desert?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. The Marrakech to Merzouga (Sahara) route takes approximately 9-10 hours via the N10 through Ouarzazate, crossing the Tizi n\'Tichka pass at 2,260m. Most travelers break this into a 2-day drive, stopping overnight in Ouarzazate or Tinghir.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do I need a 4x4 for a Morocco road trip?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A standard car handles all paved roads, autoroutes, and the main routes to the desert. A 4x4 is only necessary for off-road desert tracks, remote mountain pistes, and the last stretch from Rissani to some desert camps. For the Todra and Dades gorges, paved roads are accessible by regular car.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Are there toll roads in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. Morocco has an excellent autoroute (highway) network with tolls. Casablanca to Marrakech costs approximately 60 MAD, Casablanca to Fes around 120 MAD, and Tangier to Casablanca about 200 MAD. Payment is cash only at most toll booths, though some now accept Jawaz electronic passes.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What should I do at a police checkpoint in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Police checkpoints are routine in Morocco and not a cause for concern. Slow down, lower your window, and have your passport, driving license, IDP, and car rental documents ready. Officers may ask where you are coming from and going. Stay calm and polite. The entire process takes under two minutes.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Where can I find fuel stations on a Morocco road trip?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Fuel stations are plentiful on highways and in towns (Afriquia, Shell, Total). In rural and mountain areas, stations can be 80-100 km apart. Always fill up before entering the Atlas Mountains or heading into the desert. Diesel (gasoil) costs from 11 MAD per liter and petrol (essence) from 13 MAD per liter.',
-      },
-    },
-  ],
+  mainEntity: faqItems.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
 };
 
-/* ═══════════════════════════════════════════════════════════════
-   DATA: ROAD TRIP ROUTES
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   DATA: TOP ROAD TRIP ROUTES
+   ================================================================ */
 
-const roadTripRoutes = [
+const topRoutes = [
   {
-    name: 'Marrakech to Sahara Desert',
+    name: 'Marrakech to Sahara (Merzouga)',
     icon: Sun,
-    days: '3-4 days',
-    distance: '560 km one way',
-    difficulty: 'Moderate',
-    highlights: ['Tizi n\'Tichka Pass (2,260m)', 'Ait Benhaddou Kasbah', 'Ouarzazate film studios', 'Dades Gorge', 'Todra Gorge', 'Merzouga sand dunes'],
-    description:
-      'The most popular road trip in Morocco. Cross the High Atlas via the Tizi n\'Tichka pass, stop at the UNESCO-listed Ait Benhaddou, explore Ouarzazate, and wind through the Dades Valley before reaching the Erg Chebbi dunes at Merzouga.',
-    overnights: ['Ouarzazate or Ait Benhaddou (Night 1)', 'Tinghir or Dades Gorge (Night 2)', 'Merzouga desert camp (Night 3)'],
-    bestSeason: 'October to April (avoid summer heat in the desert)',
-    fuelStops: 'Marrakech, Ouarzazate, Tinghir, Errachidia, Merzouga',
-    roadType: 'Paved throughout (N9, N10). No 4x4 needed on main route.',
+    distance: '560 km one-way',
+    duration: '2-3 days each way',
+    highlights: 'Tizi n\'Tichka pass (2,260 m), Ait Benhaddou kasbah, Ouarzazate film studios, Dades Gorge, Todra Gorge, Erfoud fossils, Merzouga dunes',
+    road: 'Paved N9/N10 the entire way. No 4x4 required. Well-maintained switchbacks on the pass.',
+    bestSeason: 'October to April. Summer heat in the desert exceeds 45C.',
+    tip: 'Leave Marrakech by 7:00 AM to cross Tizi n\'Tichka in morning light. Stop at the pass summit for panoramic views. Do not rush this drive -- the gorges deserve at least half a day each.',
   },
   {
-    name: 'Atlantic Coast Road Trip',
+    name: 'Atlantic Coast Loop',
     icon: Compass,
-    days: '5-7 days',
-    distance: '950 km (Tangier to Agadir)',
-    difficulty: 'Easy',
-    highlights: ['Asilah art murals', 'Rabat Kasbah des Oudaias', 'El Jadida Portuguese cistern', 'Essaouira medina', 'Taghazout surf village', 'Agadir promenade'],
-    description:
-      'A relaxed coastal drive from Tangier south to Agadir. The road hugs the Atlantic, passing through whitewashed towns, ancient ports, and laid-back surf spots. Flat terrain and well-paved roads make this the easiest route for first-time drivers in Morocco.',
-    overnights: ['Asilah (Night 1)', 'Rabat (Night 2)', 'El Jadida (Night 3)', 'Essaouira (Nights 4-5)', 'Taghazout or Agadir (Night 6)'],
-    bestSeason: 'Year-round (summer for beaches, spring/autumn for mild weather)',
-    fuelStops: 'Frequent — every 30-50 km along the coast highway',
-    roadType: 'Autoroute (A1/A5) and national roads. Excellent condition throughout.',
-  },
-  {
-    name: 'Rif Mountains Loop',
-    icon: Mountain,
-    days: '3-4 days',
-    distance: '400 km loop from Fes',
-    difficulty: 'Challenging',
-    highlights: ['Chefchaouen blue city', 'Akchour waterfalls', 'Talassemtane National Park', 'Ketama cedar forests', 'Rif Mountain passes', 'Ouezzane holy town'],
-    description:
-      'A dramatic mountain circuit starting and ending in Fes. The road climbs through the Rif range to Chefchaouen, then loops through remote Berber villages, dense cedar forests, and mountain passes above 1,800m. Tight switchbacks and narrow roads demand confident driving skills.',
-    overnights: ['Chefchaouen (Nights 1-2)', 'Ketama or Al Hoceima (Night 3)', 'Return to Fes (Night 4)'],
-    bestSeason: 'April to June, September to November (snow possible in winter)',
-    fuelStops: 'Fes, Ouezzane, Chefchaouen, Ketama. Fill up before mountain sections.',
-    roadType: 'Paved but narrow with tight switchbacks. Some sections lack guardrails.',
+    distance: '900 km loop',
+    duration: '5-7 days',
+    highlights: 'Casablanca, El Jadida Portuguese cistern, Oualidia lagoon, Safi pottery, Essaouira ramparts, Agadir beaches, Taghazout surf town, Legzira arches',
+    road: 'Excellent coastal highway the entire route. Mostly autoroute or well-maintained national roads.',
+    bestSeason: 'Year-round. Best surf November to March. Summer brings crowds to Agadir.',
+    tip: 'Spend at least two nights in Essaouira. The town rewards slow exploration. Budget a seafood lunch at the port grill stalls (from 60 MAD for a mixed plate).',
   },
   {
     name: 'Imperial Cities Circuit',
-    icon: Star,
-    days: '5-7 days',
-    distance: '750 km loop',
-    difficulty: 'Easy',
-    highlights: ['Marrakech medina', 'Rabat Hassan Tower', 'Meknes Bab Mansour', 'Volubilis Roman ruins', 'Fes el-Bali medina', 'Casablanca Hassan II Mosque'],
-    description:
-      'Connect Morocco\'s four imperial capitals in one grand loop. The route follows modern autoroutes between Marrakech, Rabat, Meknes, and Fes, with a detour to Casablanca. Fast highways mean short driving days, leaving maximum time for sightseeing in each city.',
-    overnights: ['Casablanca (Night 1)', 'Rabat (Night 2)', 'Meknes or Volubilis (Night 3)', 'Fes (Nights 4-5)', 'Return to Marrakech (Night 6)'],
-    bestSeason: 'Year-round (spring and autumn are most pleasant)',
-    fuelStops: 'Autoroute service stations every 40-60 km. No fuel concerns on this route.',
-    roadType: 'Primarily autoroute (toll highway). The fastest, smoothest roads in Morocco.',
-  },
-] as const;
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: MOUNTAIN PASSES
-   ═══════════════════════════════════════════════════════════════ */
-
-const mountainPasses = [
-  {
-    name: 'Tizi n\'Tichka',
-    elevation: '2,260m',
-    route: 'Marrakech to Ouarzazate (N9)',
-    distance: '190 km',
-    driveTime: '4-5 hours',
-    description:
-      'Morocco\'s highest paved mountain pass and the main gateway to the Sahara. The road was built by the French Foreign Legion in the 1930s and features over 100 hairpin turns. Stunning views of the High Atlas peaks unfold at every switchback. The descent into the arid pre-Saharan landscape on the south side is one of Morocco\'s most dramatic transitions.',
-    tips: ['Start early morning to avoid afternoon cloud cover', 'Bring warm layers — temperatures drop sharply at the summit', 'Watch for slow-moving trucks on blind corners', 'Several roadside cafes at the top serve hot mint tea'],
+    icon: Building,
+    distance: '850 km loop',
+    duration: '5-7 days',
+    highlights: 'Rabat Hassan Tower, Meknes Roman ruins of Volubilis, Fes medina, Ifrane cedar forests, Middle Atlas lakes, Beni Mellal, return to Marrakech',
+    road: 'Autoroute connects Rabat-Meknes-Fes. National roads through the Middle Atlas are scenic two-lane highways. All paved.',
+    bestSeason: 'March to May and September to November. Fes is extremely hot in July-August.',
+    tip: 'Book your Fes medina accommodation in advance -- parking outside the medina gates is limited. Most riads can arrange nearby garage parking for from 30-50 MAD per night.',
   },
   {
-    name: 'Tizi n\'Test',
-    elevation: '2,092m',
-    route: 'Marrakech to Taroudant (N10)',
-    distance: '210 km',
-    driveTime: '5-6 hours',
-    description:
-      'A far wilder and less-traveled alternative to Tizi n\'Tichka. This narrow, twisting road carves through the western High Atlas with precipitous drops, single-lane sections, and no guardrails in places. The scenery is raw and untouched — deep valleys, Berber villages clinging to hillsides, and distant views toward the Souss plain. Only for experienced mountain drivers.',
-    tips: ['Not suitable for nervous drivers or large vehicles', 'Honk before blind corners — locals do the same', 'Allow a full day for the crossing with photo stops', 'Petrol stations are scarce — fill up in Marrakech or Taroudant'],
+    name: 'High Atlas & Mountain Passes',
+    icon: Mountain,
+    distance: '400-600 km depending on route',
+    duration: '3-5 days',
+    highlights: 'Tizi n\'Tichka (2,260 m), Tizi n\'Test (2,100 m), Dades Gorge road, Tichka Plateau, Imilchil, Zawyat Ahansal',
+    road: 'Main passes (Tichka, Test) are paved but narrow with hairpin turns. Side roads to remote valleys may be unpaved. 4x4 recommended for off-main-road exploration.',
+    bestSeason: 'May to October. Passes can close temporarily due to snow December through February.',
+    tip: 'Tizi n\'Test is far less trafficked than Tizi n\'Tichka and offers more dramatic scenery, but the road is narrower and requires confident mountain driving. Check locally for road conditions before attempting.',
+  },
+];
+
+/* ================================================================
+   DATA: CAR RENTAL TIERS
+   ================================================================ */
+
+const rentalTiers = [
+  {
+    category: 'Economy',
+    examples: 'Dacia Logan, Hyundai i10, Renault Clio',
+    price: 'From 250 MAD/day',
+    fuel: 'Petrol, 5-6 L/100 km',
+    suitedFor: 'City driving, coastal roads, well-paved routes. Fine for Marrakech-Sahara via main roads.',
+    note: 'Most popular choice. Low running cost. Book manual transmission for the cheapest rate.',
   },
   {
-    name: 'Tizi n\'Talrhemt',
-    elevation: '1,907m',
-    route: 'Errachidia to Midelt (N13)',
-    distance: '160 km',
-    driveTime: '2.5-3 hours',
-    description:
-      'A high plateau crossing between the Middle Atlas and the pre-Saharan zone. Less dramatic than the other passes but offers vast, open panoramas of steppe grasslands and distant snow-capped peaks. The road is wide and well-maintained, making it an enjoyable drive for all skill levels.',
-    tips: ['Strong crosswinds common on the plateau — grip the steering firmly', 'Midelt is an excellent lunch stop (known for apple orchards and trout)', 'Few facilities between towns — carry water and snacks', 'The landscape transitions from green to arid within a single hour'],
+    category: 'Mid-Range SUV / Crossover',
+    examples: 'Dacia Duster, Hyundai Tucson, Renault Kadjar',
+    price: 'From 500 MAD/day',
+    fuel: 'Diesel, 6-7 L/100 km',
+    suitedFor: 'Mountain passes, gravel side roads, families needing luggage space. Higher driving position for confidence on switchbacks.',
+    note: 'Best balance of comfort, cost, and capability for a full Morocco circuit.',
   },
-] as const;
+  {
+    category: '4x4 / Off-Road',
+    examples: 'Toyota Land Cruiser, Suzuki Jimny, Mitsubishi Pajero',
+    price: 'From 900 MAD/day',
+    fuel: 'Diesel, 10-12 L/100 km',
+    suitedFor: 'Desert pistes, Erg Chigaga access, remote Atlas tracks, off-road adventure.',
+    note: 'Only necessary for unpaved desert tracks. Overkill for standard routes. Requires larger fuel budget.',
+  },
+];
 
-/* ═══════════════════════════════════════════════════════════════
-   DATA: CAR RENTAL PRICE GUIDE
-   ═══════════════════════════════════════════════════════════════ */
-
-const rentalPrices = [
-  { category: 'Economy (Dacia Logan, Renault Clio)', daily: 'From 250 MAD/day', weekly: 'From 1,400 MAD/week', deposit: 'From 3,000 MAD', note: 'Best for city-to-city highway driving' },
-  { category: 'Mid-Range (Dacia Duster, Hyundai Tucson)', daily: 'From 500 MAD/day', weekly: 'From 3,000 MAD/week', deposit: 'From 5,000 MAD', note: 'Ideal for mountain passes and mixed terrain' },
-  { category: '4x4 (Toyota Land Cruiser, Mitsubishi Pajero)', daily: 'From 900 MAD/day', weekly: 'From 5,500 MAD/week', deposit: 'From 10,000 MAD', note: 'Required for off-road desert tracks only' },
-  { category: 'Minivan (Renault Scenic, Dacia Lodgy)', daily: 'From 400 MAD/day', weekly: 'From 2,400 MAD/week', deposit: 'From 4,000 MAD', note: 'Good for families, luggage space' },
-] as const;
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: DRIVING RULES
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   DATA: DRIVING RULES & ESSENTIALS
+   ================================================================ */
 
 const drivingRules = [
-  { rule: 'Drive on the Right', icon: Navigation, description: 'Morocco drives on the right side of the road. Overtake on the left. Roundabouts follow the continental European convention — give way to traffic already in the roundabout.' },
-  { rule: 'Speed Limits', icon: Gauge, description: '60 km/h in urban areas, 100 km/h on national roads (routes nationales), and 120 km/h on autoroutes. Speed cameras are widespread, especially at city entrances.' },
-  { rule: 'Seatbelts Mandatory', icon: ShieldCheck, description: 'Front and rear seatbelts must be worn at all times. Children under 10 must sit in the back seat. Fines for non-compliance start from 300 MAD.' },
-  { rule: 'Zero Tolerance on Alcohol', icon: AlertTriangle, description: 'The legal blood alcohol limit is effectively zero (0.02%). Penalties include immediate license suspension, heavy fines, and potential imprisonment. Do not drink and drive.' },
-  { rule: 'Mobile Phones Prohibited', icon: Phone, description: 'Using a handheld phone while driving is illegal. Hands-free devices are permitted. Fines start from 300 MAD. Pull over completely if you need to take a call or check maps.' },
-  { rule: 'Documents Required', icon: FileText, description: 'Always carry your passport, home-country driving license, International Driving Permit (IDP), car rental contract, and insurance documents. Police can ask for all of these at checkpoints.' },
-] as const;
+  { rule: 'Speed Limits', icon: Gauge, text: 'Urban areas: 40-60 km/h. National roads: 80-100 km/h. Autoroutes: 120 km/h. Speed cameras are widespread and fines start from 300 MAD. The fine doubles if unpaid within 48 hours.' },
+  { rule: 'Roundabouts', icon: CircleDot, text: 'Traffic already inside the roundabout has priority. In practice, many drivers ignore this rule. Approach cautiously, yield to cars on your left, and drive defensively. Horn use at roundabouts is common and not aggressive.' },
+  { rule: 'Police Checkpoints', icon: ShieldCheck, text: 'Expect checkpoints at city entrances and on desert roads. Have your license, IDP, passport, and rental papers ready. Officers are typically polite and wave tourists through quickly. Always stop when flagged.' },
+  { rule: 'Seatbelts & Phones', icon: AlertTriangle, text: 'Seatbelts are mandatory for all occupants. Using a phone while driving carries a from 500 MAD fine. Hands-free is permitted. Child car seats are required for children under 10 but rarely enforced. Bring your own if traveling with small children.' },
+  { rule: 'Night Driving', icon: Clock, text: 'Avoid driving after dark outside major cities. Unlit vehicles, donkey carts, pedestrians in dark clothing, and livestock on the road are common hazards. If you must drive at night, reduce speed dramatically and use high beams on empty stretches.' },
+  { rule: 'Fuel Stations', icon: Fuel, text: 'Abundant on autoroutes and national roads. Sparse south of Ouarzazate and in the deep south. Never pass a fuel station with less than a quarter tank in remote areas. Most stations accept cash only. Some in cities accept cards.' },
+];
 
-/* ═══════════════════════════════════════════════════════════════
-   DATA: ROAD SAFETY TIPS
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   DATA: ROAD TRIP COST BREAKDOWN
+   ================================================================ */
 
-const safetyTips = [
-  { tip: 'Avoid Night Driving', icon: Moon, description: 'Livestock, unlit vehicles, pedestrians walking on highway shoulders, and poorly marked road works make night driving outside cities genuinely dangerous. Plan your arrival before sunset.' },
-  { tip: 'Watch for Livestock', icon: AlertTriangle, description: 'Sheep, goats, donkeys, and occasionally camels wander onto roads without warning, particularly in rural and mountain areas. Slow down through villages and near farmland.' },
-  { tip: 'Beware of Aggressive Overtaking', icon: Car, description: 'Local drivers often overtake on blind corners and hills. Stay alert, keep to the right, and never assume an oncoming lane is clear when rounding a bend.' },
-  { tip: 'Carry Emergency Supplies', icon: Wrench, description: 'Keep a reflective triangle, first aid kit, spare tire, jack, water (minimum 3 liters per person), and a phone charger in the car. Breakdown assistance in remote areas can take hours.' },
-  { tip: 'GPS Offline Maps', icon: Map, description: 'Download offline maps (Google Maps, Maps.me, or Waze) before departure. Mobile signal drops out in mountain passes and desert areas. A physical road map of Morocco is useful as backup.' },
-  { tip: 'Fuel Up Early', icon: Fuel, description: 'In the Atlas Mountains and desert regions, fuel stations can be 80-100 km apart. Top off your tank whenever you pass a station. Diesel (gasoil) and unleaded petrol (essence sans plomb) are both widely available.' },
-] as const;
+const costBreakdown = [
+  { item: 'Economy car rental (7 days)', cost: 'From 1,750 MAD', note: 'Dacia Logan or similar, manual' },
+  { item: 'Full insurance (CDW + theft, 7 days)', cost: 'From 700 MAD', note: 'Reduces excess to zero' },
+  { item: 'Fuel (1,500 km, diesel)', cost: 'From 1,080 MAD', note: 'At ~12 MAD/L, 6 L/100 km' },
+  { item: 'Toll roads (Marrakech-Fes round trip)', cost: 'From 300 MAD', note: 'Via autoroute both ways' },
+  { item: 'Parking (7 nights, guarded lots)', cost: 'From 210 MAD', note: '~30 MAD per night average' },
+  { item: 'Accommodation (7 nights, mid-range riad)', cost: 'From 3,500 MAD', note: '~500 MAD per night for double room' },
+  { item: 'Food (7 days, local restaurants)', cost: 'From 1,400 MAD', note: '~200 MAD per day per person' },
+  { item: 'Estimated 7-day total (one person)', cost: 'From 8,940 MAD', note: 'Roughly 820 EUR / 890 USD' },
+];
 
-/* ═══════════════════════════════════════════════════════════════
-   DATA: TOLL HIGHWAY COSTS
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   DATA: ITINERARIES
+   ================================================================ */
 
-const tollCosts = [
-  { route: 'Casablanca to Marrakech', distance: '240 km', toll: 'From 60 MAD', time: '2.5 hours' },
-  { route: 'Casablanca to Rabat', distance: '90 km', toll: 'From 20 MAD', time: '1 hour' },
-  { route: 'Casablanca to Fes', distance: '290 km', toll: 'From 120 MAD', time: '3 hours' },
-  { route: 'Tangier to Casablanca', distance: '340 km', toll: 'From 200 MAD', time: '3.5 hours' },
-  { route: 'Rabat to Meknes', distance: '140 km', toll: 'From 50 MAD', time: '1.5 hours' },
-  { route: 'Marrakech to Agadir', distance: '260 km', toll: 'From 80 MAD', time: '3 hours' },
-] as const;
+const itineraries = [
+  {
+    title: '3-Day Express: Marrakech to Desert & Back',
+    days: '3 days',
+    distance: '1,120 km',
+    icon: Route,
+    schedule: [
+      'Day 1: Marrakech to Dades Gorge via Tizi n\'Tichka pass and Ait Benhaddou (330 km, 7 hours with stops)',
+      'Day 2: Dades Gorge to Merzouga via Todra Gorge and Erfoud (230 km, 5 hours with stops). Sunset camel ride into Erg Chebbi dunes.',
+      'Day 3: Merzouga to Marrakech via N10 and Ouarzazate (560 km, 8 hours). Long day -- leave by 6:00 AM.',
+    ],
+    tip: 'This itinerary is tight but doable. Consider flying back from Errachidia to save 8 hours of driving on Day 3.',
+  },
+  {
+    title: '7-Day Classic: Sahara & Imperial Cities',
+    days: '7 days',
+    distance: '1,800 km',
+    icon: Map,
+    schedule: [
+      'Day 1: Marrakech to Ait Benhaddou (190 km). Afternoon at the kasbah.',
+      'Day 2: Ait Benhaddou to Dades Gorge via Rose Valley (150 km). Hike the gorge.',
+      'Day 3: Dades to Merzouga via Todra Gorge (280 km). Night in desert camp.',
+      'Day 4: Merzouga to Midelt via Errachidia and Ziz Gorge (300 km).',
+      'Day 5: Midelt to Fes via Ifrane and cedar forests (240 km). Explore Fes medina.',
+      'Day 6: Full day in Fes. No driving.',
+      'Day 7: Fes to Marrakech via autoroute (530 km, 5 hours on highway).',
+    ],
+    tip: 'The Fes day with no driving is essential. After several days on mountain roads, a walking day in the medina recharges you.',
+  },
+  {
+    title: '10-Day Grand Tour: Coast, Desert & Mountains',
+    days: '10 days',
+    distance: '2,500 km',
+    icon: Compass,
+    schedule: [
+      'Day 1: Casablanca to El Jadida to Essaouira (350 km). Portuguese cistern, Oualidia oysters.',
+      'Day 2: Full day in Essaouira. No driving. Ramparts, port, medina, beach.',
+      'Day 3: Essaouira to Marrakech (190 km). Afternoon in Jemaa el-Fnaa.',
+      'Day 4: Marrakech to Ait Benhaddou via Tizi n\'Tichka (190 km).',
+      'Day 5: Ait Benhaddou to Merzouga via gorges (460 km).',
+      'Day 6: Full day in Merzouga. Camel trek, desert camp, sunrise dune hike.',
+      'Day 7: Merzouga to Midelt via Ziz Gorge (300 km).',
+      'Day 8: Midelt to Fes (200 km). Afternoon in Fes.',
+      'Day 9: Fes to Chefchaouen (210 km). Blue city exploration.',
+      'Day 10: Chefchaouen to Casablanca or Tangier (300 km to Casa, 120 km to Tangier).',
+    ],
+    tip: 'This is the ideal duration for a first Morocco road trip. Two full rest days keep fatigue manageable.',
+  },
+  {
+    title: '14-Day Ultimate Morocco Circuit',
+    days: '14 days',
+    distance: '3,200 km',
+    icon: Navigation,
+    schedule: [
+      'Days 1-2: Tangier, explore city, Cap Spartel, Hercules Caves.',
+      'Day 3: Tangier to Chefchaouen (120 km).',
+      'Day 4: Chefchaouen to Fes (210 km).',
+      'Day 5: Full day in Fes. Medina, tanneries, Bou Inania.',
+      'Day 6: Fes to Merzouga via Midelt and Ziz Gorge (480 km).',
+      'Day 7: Full day in Merzouga. Desert camp overnight.',
+      'Day 8: Merzouga to Dades Gorge (230 km).',
+      'Day 9: Dades to Ouarzazate to Ait Benhaddou (160 km).',
+      'Day 10: Ait Benhaddou to Marrakech via Tizi n\'Tichka (190 km).',
+      'Day 11: Full day in Marrakech.',
+      'Day 12: Marrakech to Essaouira (190 km).',
+      'Day 13: Essaouira to El Jadida (300 km) via Safi.',
+      'Day 14: El Jadida to Casablanca (100 km). End of trip.',
+    ],
+    tip: 'Two full weeks lets you breathe. Add Meknes and Volubilis between Fes and Marrakech if you want to see every Imperial City.',
+  },
+];
 
-/* ═══════════════════════════════════════════════════════════════
-   DATA: FAQ ITEMS
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   DATA: SCENIC STOPS
+   ================================================================ */
 
-const faqItems = [
-  {
-    question: 'Do I need an international driving permit for Morocco?',
-    answer: 'Yes. Morocco requires an International Driving Permit (IDP) alongside your valid home-country license. Rental agencies will ask for both at pickup. Get your IDP before you travel — it cannot be obtained in Morocco. The IDP must be obtained from your home country\'s automobile association (AAA in the US, AA in the UK, CAA in Canada).',
-  },
-  {
-    question: 'How much does car rental cost in Morocco?',
-    answer: 'Budget cars (Dacia Logan, Renault Clio) start from 250 MAD per day. Mid-range SUVs suitable for mountain and desert roads cost from 500 MAD per day. 4x4 vehicles for off-road Sahara access start from 900 MAD per day. Prices increase during peak season (October-April). Book at least 2-3 weeks in advance for the best rates.',
-  },
-  {
-    question: 'Is driving in Morocco safe for tourists?',
-    answer: 'Morocco has well-maintained toll highways (autoroutes) between major cities. Mountain roads and rural routes require extra caution due to sharp bends, livestock on the road, and occasional poor signage. Avoid driving at night outside cities. With sensible precautions and defensive driving habits, self-driving is a rewarding way to explore Morocco.',
-  },
-  {
-    question: 'What is the speed limit in Morocco?',
-    answer: 'Speed limits are 60 km/h in towns, 100 km/h on national roads, and 120 km/h on autoroutes (toll highways). Speed cameras and radar traps are common, especially near towns. Fines start from 300 MAD and are payable on the spot. Always carry cash for potential fines.',
-  },
-  {
-    question: 'Can I drive from Marrakech to the Sahara Desert?',
-    answer: 'Yes. The Marrakech to Merzouga (Sahara) route takes approximately 9-10 hours via the N10 through Ouarzazate, crossing the Tizi n\'Tichka pass at 2,260m. Most travelers break this into a 2-day drive, stopping overnight in Ouarzazate or Tinghir. The entire route is paved, and a regular car handles it without problems.',
-  },
-  {
-    question: 'Do I need a 4x4 for a Morocco road trip?',
-    answer: 'A standard car handles all paved roads, autoroutes, and the main routes to the desert. A 4x4 is only necessary for off-road desert tracks, remote mountain pistes (unpaved tracks), and the final stretch from Rissani to some desert camps. For the Todra and Dades gorges, paved roads are accessible by regular car.',
-  },
-  {
-    question: 'Are there toll roads in Morocco?',
-    answer: 'Yes. Morocco has an excellent autoroute (highway) network with tolls. Casablanca to Marrakech costs approximately 60 MAD, Casablanca to Fes around 120 MAD, and Tangier to Casablanca about 200 MAD. Payment is cash only at most toll booths, though some now accept the Jawaz electronic pass. Keep dirham coins and small notes handy.',
-  },
-  {
-    question: 'What should I do at a police checkpoint in Morocco?',
-    answer: 'Police checkpoints are routine in Morocco and not a cause for concern. Slow down, lower your window, and have your passport, driving license, IDP, and car rental documents ready. Officers may ask where you are coming from and going to. Stay calm, be polite, and answer briefly. The entire process takes under two minutes in most cases.',
-  },
-  {
-    question: 'Where can I find fuel stations on a Morocco road trip?',
-    answer: 'Fuel stations (Afriquia, Shell, Total, Winxo) are plentiful on highways and in towns. In rural and mountain areas, stations can be 80-100 km apart. Always fill up before entering the Atlas Mountains or heading into the desert. Diesel (gasoil) costs from 11 MAD per liter and petrol (essence) from 13 MAD per liter. Seasonal pricing can change.',
-  },
-] as const;
+const scenicStops = [
+  { name: 'Tizi n\'Tichka Summit (2,260 m)', location: 'Between Marrakech & Ouarzazate', desc: 'The highest major road pass in Morocco. Pull over at the summit for panoramic views of the High Atlas. Souvenir stalls sell fossils and minerals. The descent toward Ouarzazate reveals red-earth valleys.' },
+  { name: 'Ait Benhaddou', location: 'Ouarzazate Province', desc: 'UNESCO World Heritage ksar (fortified village) made of red pise clay. Film location for Gladiator, Game of Thrones, and Lawrence of Arabia. Cross the riverbed on foot to explore the kasbah. Entry is free; tip your guide.' },
+  { name: 'Todra Gorge', location: 'Tinghir', desc: '300-meter limestone canyon walls towering above a narrow road. The final 600 meters of the gorge are the most dramatic. Rock climbers scale the walls year-round. Cafes at the gorge mouth serve tagine with a view.' },
+  { name: 'Dades Gorge Road of a Thousand Kasbahs', location: 'Boumalne Dades', desc: 'The most photographed hairpin turns in Morocco. The road climbs from the valley floor through a series of tight switchbacks carved into red rock. Drive slowly and stop at the viewpoint above the switchbacks.' },
+  { name: 'Ziz Gorge & Valley', location: 'Errachidia to Erfoud', desc: 'A deep river canyon lined with date palms and Berber villages. The viewpoint above the Tunnel du Legionnaire offers one of the most striking vistas on the Sahara route. Stop at Erfoud for fossil workshops.' },
+  { name: 'Legzira Beach', location: 'Sidi Ifni coast', desc: 'Dramatic natural stone arches carved by Atlantic waves into red sandstone cliffs. Best visited at low tide when you can walk beneath the arches. Sunset here is spectacular. A short detour from the Agadir-Tiznit road.' },
+];
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
+   DATA: ACCOMMODATION TYPES ALONG ROUTES
+   ================================================================ */
+
+const accommodationTypes = [
+  { type: 'Riads (Medina Guesthouses)', icon: Bed, price: 'From 400 MAD/night', desc: 'Traditional courtyard houses converted to guesthouses. Found in Marrakech, Fes, Essaouira, and Chefchaouen. Breakfast included. Parking arranged nearby (from 30 MAD/night extra).' },
+  { type: 'Kasbahs & Auberges', icon: Building, price: 'From 300 MAD/night', desc: 'Fortified guesthouses along the Sahara route, especially between Ouarzazate and Merzouga. Often family-run with home-cooked dinners. On-site parking. Half-board packages common.' },
+  { type: 'Desert Camps', icon: Tent, price: 'From 500 MAD/night', desc: 'Tented camps in the Sahara dunes (Erg Chebbi at Merzouga or Erg Chigaga near M\'Hamid). Includes camel ride, dinner, breakfast, and sunrise viewing. Luxury camps with private bathrooms from 1,500 MAD.' },
+  { type: 'Roadside Hotels & Motels', icon: Car, price: 'From 200 MAD/night', desc: 'Basic hotels in towns like Midelt, Beni Mellal, and Errachidia. Clean, functional, with parking. Good for overnight stops on long driving days when you just need sleep and a shower.' },
+];
+
+/* ================================================================
    PAGE COMPONENT
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 export default function MoroccoRoadTripPage() {
   return (
     <>
-      {/* JSON-LD */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdTravel) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
       />
 
-      {/* ── Breadcrumb ── */}
-      <nav aria-label="Breadcrumb" className="bg-[var(--surface-muted)] border-b border-[var(--border-primary)]">
-        <div className="container-morocco py-3">
-          <ol className="flex items-center gap-1.5 text-sm text-[var(--text-muted)]">
-            <li>
-              <Link href="/" className="flex items-center gap-1 hover:text-[var(--color-accent)] transition-colors">
-                <Home className="w-3.5 h-3.5" />
-                Home
-              </Link>
-            </li>
-            <ChevronRight className="w-3.5 h-3.5" />
-            <li className="text-[var(--text-primary)] font-medium">Morocco Road Trip Guide</li>
-          </ol>
-        </div>
-      </nav>
-
-      {/* ── Hero Section ── */}
-      <section className="relative h-[60vh] min-h-[450px] flex items-center justify-center">
-        <img
-          src="/images/hero-road-trip.webp"
-          alt="Winding mountain road through the High Atlas Mountains of Morocco with dramatic cliffs and valleys"
-          className="absolute inset-0 w-full h-full object-cover"
+      {/* ── Hero ── */}
+      <section className="relative py-20 md:py-28 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: 'url(/images/hero-driving-morocco.webp)' }}
         />
-        <div className="hero-overlay" />
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-display)] font-bold text-white mb-4 drop-shadow-lg">
-            Morocco Road Trip Guide 2026
+        <div className="absolute inset-0 hero-overlay" />
+        <div className="container-morocco relative z-10">
+          <nav className="flex items-center gap-2 text-sm text-white/60 mb-8" aria-label="Breadcrumb">
+            <Link href="/" className="hover:text-white transition-colors">
+              <Home className="w-3.5 h-3.5" />
+            </Link>
+            <ChevronRight className="w-3.5 h-3.5" />
+            <span className="text-white">Morocco Road Trip Guide</span>
+          </nav>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm text-white/90 text-sm mb-6">
+            <Car className="w-4 h-4" />
+            Self-Drive Travel
+          </div>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-display)] font-bold text-white mb-4">
+            Morocco Road Trip
+            <br className="hidden md:block" /> Guide 2026
           </h1>
-          <p className="text-lg md:text-xl text-white/90 font-[family-name:var(--font-heading)] max-w-2xl mx-auto drop-shadow">
-            The open road awaits. From Saharan dunes to Atlantic cliffs, here is everything you need to know about driving across Morocco.
+          <p className="text-xl text-white/80 max-w-2xl">
+            From the Atlantic coast to the Sahara dunes, through mountain passes and ancient cities.
+            Everything you need to plan a self-drive adventure across Morocco.
           </p>
         </div>
       </section>
+
+      <div className="zellige-border" />
 
       {/* ── Introduction ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
-              <Car className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-              Why Road Trip Morocco?
-            </h2>
-            <p className="text-[var(--text-secondary)] max-w-2xl mx-auto leading-relaxed">
-              Morocco packs an extraordinary range of landscapes into a relatively compact country. A road trip lets you
-              experience the full spectrum — from the green plains around Meknes to the snow-capped High Atlas, from the
-              Atlantic surf breaks of Taghazout to the towering Erg Chebbi sand dunes at Merzouga. Public transport
-              connects major cities well, but for the gorges, mountain passes, and hidden kasbahs, having your own wheels
-              opens up an entirely different Morocco.
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
+            Why Drive Morocco Yourself
+          </h2>
+          <div className="space-y-4 text-lg text-[var(--text-secondary)] leading-relaxed">
+            <p>
+              A road trip is the single best way to experience Morocco beyond the medinas. The country
+              packs an absurd amount of geographic variety into a territory the size of California:
+              Atlantic surf beaches, snow-capped mountains over 4,000 meters, river gorges cut through
+              red limestone, and the vast sand seas of the Sahara. Public transport connects the major
+              cities but misses the spaces between them -- and those spaces are where Morocco is most
+              striking.
             </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="card-moroccan p-5 text-center">
-              <Route className="w-8 h-8 text-[var(--color-accent)] mx-auto mb-3" />
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
-                57,000+ km of Roads
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)]">
-                Morocco has invested heavily in its road network. The autoroute system connects every major city, while mountain routes offer unforgettable scenery.
-              </p>
-            </div>
-            <div className="card-moroccan p-5 text-center">
-              <DollarSign className="w-8 h-8 text-[var(--color-accent)] mx-auto mb-3" />
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
-                From 250 MAD/Day
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)]">
-                Car rental is affordable by international standards. Split between 2-4 travelers, it is often cheaper than trains and far more flexible.
-              </p>
-            </div>
-            <div className="card-moroccan p-5 text-center">
-              <Eye className="w-8 h-8 text-[var(--color-accent)] mx-auto mb-3" />
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
-                Hidden Gems Access
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)]">
-                Dozens of kasbahs, gorges, oases, and Berber villages sit well off the bus routes. A car unlocks the Morocco most tourists never see.
-              </p>
-            </div>
+            <p>
+              Morocco&apos;s road infrastructure has improved dramatically in the past decade. A modern
+              autoroute (toll highway) network now links Tangier, Rabat, Casablanca, Marrakech, Fes,
+              and Agadir. National roads across the Atlas are paved and well-maintained. Fuel stations
+              are plentiful on major routes. GPS navigation works reliably. The biggest adjustment for
+              most foreign drivers is the driving culture itself: assertive overtaking, creative lane
+              discipline, and the occasional donkey cart occupying half the road.
+            </p>
+            <p>
+              This guide covers the practical details -- car rental, fuel costs, toll roads, driving
+              rules, insurance -- alongside the four best road trip routes and itineraries from 3 to
+              14 days. Prices are current for 2026. Seasonal pricing can change during peak tourist
+              months.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* ── Road Trip Routes ── */}
+      {/* ── Top Road Trip Routes ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <Route className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Best Road Trip Routes in Morocco
+            Best Road Trip Routes
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Four classic itineraries covering desert, coast, mountains, and imperial history. Each route is fully drivable in a standard rental car unless noted otherwise.
+            Four classic driving routes that cover Morocco&apos;s most spectacular landscapes. Each can be
+            driven independently or combined into a longer circuit.
           </p>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {roadTripRoutes.map((route) => {
+          <div className="space-y-8">
+            {topRoutes.map((route) => {
               const RouteIcon = route.icon;
               return (
-                <div key={route.name} className="card-moroccan overflow-hidden">
-                  <div className="bg-[var(--color-accent)] px-6 py-4 flex items-center gap-3">
-                    <RouteIcon className="w-6 h-6 text-white" />
-                    <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-white">
-                      {route.name}
-                    </h3>
+                <div key={route.name} className="card-moroccan p-6">
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-[var(--surface-muted)] flex items-center justify-center shrink-0">
+                      <RouteIcon className="w-6 h-6 text-[var(--color-accent)]" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+                        {route.name}
+                      </h3>
+                      <div className="flex flex-wrap gap-4 mt-1 text-sm text-[var(--text-muted)]">
+                        <span className="flex items-center gap-1">
+                          <Milestone className="w-3.5 h-3.5" /> {route.distance}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Calendar className="w-3.5 h-3.5" /> {route.duration}
+                        </span>
+                      </div>
+                    </div>
                   </div>
-                  <div className="p-6">
-                    <div className="flex flex-wrap gap-3 mb-4">
-                      <span className="inline-flex items-center gap-1 text-xs bg-[var(--surface-muted)] px-2 py-1 rounded text-[var(--text-muted)]">
-                        <Clock className="w-3 h-3" /> {route.days}
-                      </span>
-                      <span className="inline-flex items-center gap-1 text-xs bg-[var(--surface-muted)] px-2 py-1 rounded text-[var(--text-muted)]">
-                        <Milestone className="w-3 h-3" /> {route.distance}
-                      </span>
-                      <span className="inline-flex items-center gap-1 text-xs bg-[var(--surface-muted)] px-2 py-1 rounded text-[var(--text-muted)]">
-                        <Gauge className="w-3 h-3" /> {route.difficulty}
-                      </span>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                    <div>
+                      <span className="font-semibold text-[var(--color-accent)]">Highlights:</span>{' '}
+                      <span className="text-[var(--text-secondary)]">{route.highlights}</span>
                     </div>
-
-                    <p className="text-sm text-[var(--text-secondary)] mb-4">{route.description}</p>
-
-                    <div className="mb-4">
-                      <h4 className="text-xs font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] uppercase tracking-wider mb-2">
-                        Key Stops
-                      </h4>
-                      <div className="grid grid-cols-2 gap-1.5">
-                        {route.highlights.map((highlight, i) => (
-                          <div key={i} className="flex items-start gap-1.5 text-xs text-[var(--text-muted)]">
-                            <CheckCircle className="w-3 h-3 mt-0.5 shrink-0 text-[var(--color-gold)]" />
-                            {highlight}
-                          </div>
-                        ))}
-                      </div>
+                    <div>
+                      <span className="font-semibold text-[var(--color-accent)]">Road quality:</span>{' '}
+                      <span className="text-[var(--text-secondary)]">{route.road}</span>
                     </div>
-
-                    <div className="space-y-2 text-xs text-[var(--text-secondary)]">
-                      <div className="flex items-start gap-2">
-                        <Moon className="w-3.5 h-3.5 text-[var(--color-accent)] mt-0.5 shrink-0" />
-                        <div><span className="font-semibold text-[var(--text-primary)]">Overnight stops:</span> {route.overnights.join(' → ')}</div>
-                      </div>
-                      <div className="flex items-start gap-2">
-                        <Sun className="w-3.5 h-3.5 text-[var(--color-accent)] mt-0.5 shrink-0" />
-                        <div><span className="font-semibold text-[var(--text-primary)]">Best season:</span> {route.bestSeason}</div>
-                      </div>
-                      <div className="flex items-start gap-2">
-                        <Fuel className="w-3.5 h-3.5 text-[var(--color-accent)] mt-0.5 shrink-0" />
-                        <div><span className="font-semibold text-[var(--text-primary)]">Fuel stops:</span> {route.fuelStops}</div>
-                      </div>
-                      <div className="flex items-start gap-2">
-                        <Car className="w-3.5 h-3.5 text-[var(--color-accent)] mt-0.5 shrink-0" />
-                        <div><span className="font-semibold text-[var(--text-primary)]">Road type:</span> {route.roadType}</div>
-                      </div>
+                    <div>
+                      <span className="font-semibold text-[var(--color-accent)]">Best season:</span>{' '}
+                      <span className="text-[var(--text-secondary)]">{route.bestSeason}</span>
                     </div>
+                  </div>
+                  <div className="flex items-start gap-2 p-3 bg-[var(--surface-muted)] rounded-lg mt-4">
+                    <Info className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
+                    <p className="text-xs text-[var(--text-muted)]">
+                      <span className="font-semibold text-[var(--text-primary)]">Tip:</span> {route.tip}
+                    </p>
                   </div>
                 </div>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Mountain Passes ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Mountain className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Iconic Mountain Passes
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Morocco&apos;s High Atlas and Middle Atlas crossings rank among the most spectacular drives in North Africa. Here are the three you should know about.
-          </p>
-
-          <div className="space-y-8">
-            {mountainPasses.map((pass) => (
-              <div key={pass.name} className="card-moroccan p-6">
-                <div className="flex items-start justify-between mb-4 flex-wrap gap-2">
-                  <div>
-                    <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                      {pass.name}
-                    </h3>
-                    <p className="text-sm text-[var(--text-muted)]">{pass.route}</p>
-                  </div>
-                  <div className="flex gap-3 text-xs text-[var(--text-muted)]">
-                    <span className="inline-flex items-center gap-1 bg-[var(--color-accent)]/10 text-[var(--color-accent)] px-2 py-1 rounded font-semibold">
-                      <Mountain className="w-3 h-3" /> {pass.elevation}
-                    </span>
-                    <span className="inline-flex items-center gap-1 bg-[var(--surface-muted)] px-2 py-1 rounded">
-                      <Milestone className="w-3 h-3" /> {pass.distance}
-                    </span>
-                    <span className="inline-flex items-center gap-1 bg-[var(--surface-muted)] px-2 py-1 rounded">
-                      <Clock className="w-3 h-3" /> {pass.driveTime}
-                    </span>
-                  </div>
-                </div>
-
-                <p className="text-sm text-[var(--text-secondary)] mb-4 leading-relaxed">{pass.description}</p>
-
-                <div className="bg-[var(--surface-muted)] rounded-lg p-4">
-                  <h4 className="text-xs font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] uppercase tracking-wider mb-2">
-                    Driving Tips
-                  </h4>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                    {pass.tips.map((tip, i) => (
-                      <div key={i} className="flex items-start gap-1.5 text-xs text-[var(--text-muted)]">
-                        <Info className="w-3 h-3 mt-0.5 shrink-0 text-[var(--color-gold)]" />
-                        {tip}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
 
       {/* ── Car Rental Guide ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+      <section className="py-16 md:py-20">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <Car className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Car Rental in Morocco
+            Car Rental Guide
           </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-4">
-            What to expect when renting a car for your Morocco road trip.
-          </p>
-          <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
-            <Info className="w-3.5 h-3.5 inline mr-1" />
-            All prices are starting prices. Seasonal pricing applies during peak months (October-April) and holiday periods, when rental costs may increase by 30-50%.
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Three rental tiers to match your route, budget, and comfort level.
           </p>
 
-          {/* Price Table */}
-          <div className="max-w-5xl mx-auto mb-12">
-            <div className="card-moroccan overflow-hidden">
-              <div className="grid grid-cols-4 gap-0 bg-[var(--color-accent)] text-white text-sm font-medium">
-                <div className="p-3 px-4">Category</div>
-                <div className="p-3 px-4">Daily Rate</div>
-                <div className="p-3 px-4">Weekly Rate</div>
-                <div className="p-3 px-4">Best For</div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {rentalTiers.map((tier) => (
+              <div key={tier.category} className="card-moroccan p-6">
+                <div className="w-12 h-12 rounded-full bg-[var(--surface-muted)] flex items-center justify-center mb-4">
+                  <Car className="w-6 h-6 text-[var(--color-accent)]" />
+                </div>
+                <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
+                  {tier.category}
+                </h3>
+                <p className="text-sm text-[var(--text-muted)] italic mb-4">{tier.examples}</p>
+                <div className="space-y-3 text-sm">
+                  <div>
+                    <span className="font-semibold text-[var(--color-accent)]">Price:</span>{' '}
+                    <span className="text-[var(--text-secondary)]">{tier.price}</span>
+                  </div>
+                  <div>
+                    <span className="font-semibold text-[var(--color-accent)]">Fuel:</span>{' '}
+                    <span className="text-[var(--text-secondary)]">{tier.fuel}</span>
+                  </div>
+                  <div>
+                    <span className="font-semibold text-[var(--color-accent)]">Best for:</span>{' '}
+                    <span className="text-[var(--text-secondary)]">{tier.suitedFor}</span>
+                  </div>
+                </div>
+                <div className="flex items-start gap-2 p-3 bg-[var(--surface-muted)] rounded-lg mt-4">
+                  <Info className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
+                  <p className="text-xs text-[var(--text-muted)]">{tier.note}</p>
+                </div>
               </div>
-              {rentalPrices.map((item, i) => (
-                <div
-                  key={item.category}
-                  className={`grid grid-cols-4 gap-0 text-sm ${i % 2 === 0 ? 'bg-white' : 'bg-[var(--surface-muted)]'}`}
-                >
-                  <div className="p-3 px-4 font-medium text-[var(--text-primary)]">{item.category}</div>
-                  <div className="p-3 px-4 text-[var(--color-accent)] font-semibold">{item.daily}</div>
-                  <div className="p-3 px-4 text-[var(--text-secondary)]">{item.weekly}</div>
-                  <div className="p-3 px-4 text-[var(--text-muted)]">{item.note}</div>
+            ))}
+          </div>
+
+          {/* Rental tips */}
+          <div className="max-w-4xl mx-auto mt-12">
+            <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-6">
+              Essential Car Rental Tips
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {[
+                { title: 'Book online in advance', text: 'Prices at airport desks are 30-50% higher than online pre-bookings. International aggregators (Discover Cars, Rentalcars) compare local agencies. Always read the insurance fine print.' },
+                { title: 'Document existing damage', text: 'Walk around the car with the agent before leaving. Photograph every scratch, dent, and chip with your phone. Email the photos to yourself with a timestamp. This prevents false damage claims on return.' },
+                { title: 'Choose diesel when possible', text: 'Diesel (gasoil) costs from 12 MAD per liter versus from 14 MAD for petrol. Diesel engines also deliver better range on long drives. Most SUVs and crossovers are diesel in Morocco.' },
+                { title: 'Get full insurance coverage', text: 'The basic CDW (Collision Damage Waiver) included in most rentals still leaves a from 5,000-15,000 MAD excess. Pay the extra from 100-200 MAD/day for zero-excess coverage. One pothole or stray rock can cost more than the insurance.' },
+                { title: 'Manual vs automatic', text: 'Manual transmission cars are cheaper and more available. Automatic cars carry a from 100-150 MAD/day surcharge and must be booked well in advance. If you can only drive automatic, book early.' },
+                { title: 'One-way drop-off fees', text: 'Picking up in Marrakech and dropping off in Fes (or vice versa) typically costs from 500-1,500 MAD extra. Some agencies waive this for rentals over 7 days. Confirm the fee before booking.' },
+              ].map((tip) => (
+                <div key={tip.title} className="card-moroccan p-4">
+                  <h4 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-[var(--color-gold)] shrink-0" />
+                    {tip.title}
+                  </h4>
+                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{tip.text}</p>
                 </div>
               ))}
             </div>
           </div>
-
-          {/* Rental Tips */}
-          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <FileText className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Insurance Options
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Basic CDW (Collision Damage Waiver) is typically included but carries a high excess (from 5,000 MAD). Upgrade to full coverage (Super CDW) for from 80 MAD/day to reduce the excess to zero. Third-party liability insurance is mandatory and always included. Check if your credit card provides rental car coverage.
-              </p>
-            </div>
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <ShieldCheck className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Pre-Trip Inspection
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Photograph every scratch, dent, and mark on the car before leaving the lot. Check the spare tire, jack, and reflective triangle are present. Ensure the fuel tank matches the contract. Record any pre-existing damage on the rental agreement and get the agent to initial it. This protects you from false damage claims.
-              </p>
-            </div>
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <MapPin className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Where to Rent
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                International agencies (Hertz, Europcar, Sixt) have airport desks in Marrakech, Casablanca, Fes, and Agadir. Local agencies often offer lower rates but vary in quality. Book through comparison sites (Discover Cars, Rentalcars) for the best deals. Airport pickup is most convenient; medina offices can be hard to find.
-              </p>
-            </div>
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <Navigation className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                GPS and Navigation
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Rental GPS units cost from 50 MAD/day. Your smartphone with offline Google Maps or Maps.me works just as well and costs nothing. Buy a local SIM card (Maroc Telecom, Inwi, or Orange) for from 30 MAD with data for real-time navigation. A phone mount is essential — bring one from home.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
-      {/* ── Driving Rules ── */}
-      <section className="py-16 md:py-20">
+      {/* ── Driving Rules & Safety ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <ShieldCheck className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Morocco Driving Rules
+            Driving Rules &amp; Safety
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Essential regulations every driver must know before hitting Moroccan roads. Violations carry on-the-spot fines starting from 300 MAD.
+            Six rules of the road that every foreign driver in Morocco must know.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {drivingRules.map((rule) => {
-              const RuleIcon = rule.icon;
+            {drivingRules.map((item) => {
+              const RuleIcon = item.icon;
               return (
-                <div key={rule.rule} className="card-moroccan p-5">
+                <div key={item.rule} className="card-moroccan p-5">
                   <div className="w-10 h-10 rounded-full bg-[var(--surface-muted)] flex items-center justify-center mb-3">
                     <RuleIcon className="w-5 h-5 text-[var(--color-accent)]" />
                   </div>
                   <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                    {rule.rule}
+                    {item.rule}
                   </h3>
-                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{rule.description}</p>
+                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{item.text}</p>
                 </div>
               );
             })}
@@ -749,382 +612,462 @@ export default function MoroccoRoadTripPage() {
         </div>
       </section>
 
-      {/* ── Road Safety Tips ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <AlertTriangle className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Road Safety in Morocco
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Morocco&apos;s roads are generally good, but local driving habits and rural conditions demand extra awareness. These tips will keep you safe.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {safetyTips.map((item) => {
-              const TipIcon = item.icon;
-              return (
-                <div key={item.tip} className="card-moroccan p-5">
-                  <div className="flex items-center gap-2 mb-2">
-                    <TipIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                    <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                      {item.tip}
-                    </h3>
-                  </div>
-                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{item.description}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Toll Highway Costs ── */}
+      {/* ── GPS & Navigation ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <DollarSign className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Autoroute Toll Costs
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
+            <Navigation className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            GPS &amp; Navigation
           </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-4">
-            Morocco&apos;s toll highways (autoroutes) are fast, safe, and well-maintained. Here are the approximate costs for the main routes.
-          </p>
-          <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
-            <Info className="w-3.5 h-3.5 inline mr-1" />
-            Tolls are paid in cash (MAD) at each toll booth. Keep small bills and coins ready. Seasonal pricing can change.
-          </p>
-
-          <div className="card-moroccan overflow-hidden">
-            <div className="grid grid-cols-4 gap-0 bg-[var(--color-accent)] text-white text-sm font-medium">
-              <div className="p-3 px-4">Route</div>
-              <div className="p-3 px-4">Distance</div>
-              <div className="p-3 px-4">Toll</div>
-              <div className="p-3 px-4">Drive Time</div>
-            </div>
-            {tollCosts.map((item, i) => (
-              <div
-                key={item.route}
-                className={`grid grid-cols-4 gap-0 text-sm ${i % 2 === 0 ? 'bg-white' : 'bg-[var(--surface-muted)]'}`}
-              >
-                <div className="p-3 px-4 font-medium text-[var(--text-primary)]">{item.route}</div>
-                <div className="p-3 px-4 text-[var(--text-secondary)]">{item.distance}</div>
-                <div className="p-3 px-4 text-[var(--color-accent)] font-semibold">{item.toll}</div>
-                <div className="p-3 px-4 text-[var(--text-muted)]">{item.time}</div>
+          <div className="space-y-4 text-lg text-[var(--text-secondary)] leading-relaxed">
+            <p>
+              Google Maps works well across Morocco and has been the most reliable navigation tool for
+              several years. It handles toll roads correctly, shows fuel stations, and provides
+              reasonably accurate drive times. Download offline maps for your entire route before
+              departure -- cellular coverage is patchy in the Atlas Mountains and desert.
+            </p>
+            <p>
+              Maps.me and Organic Maps are strong alternatives for offline use, with better trail and
+              piste coverage than Google Maps. Waze has a smaller user base in Morocco but is useful
+              for speed camera alerts on autoroutes. Apple Maps has improved but remains less detailed
+              than Google Maps for rural Moroccan roads.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+            {[
+              { title: 'Download offline maps', text: 'Cellular data drops in mountain passes and desert stretches. Download the entire Morocco map pack in Google Maps before you leave your accommodation. This uses roughly 1-2 GB of storage.' },
+              { title: 'Buy a local SIM card', text: 'Maroc Telecom, Inwi, or Orange SIM cards cost from 30 MAD with from 20 GB of data for from 100 MAD. Available at airports and city shops. Data lets you use real-time navigation and check road conditions.' },
+              { title: 'Trust road signs over GPS', text: 'On mountain passes, GPS occasionally suggests unpaved shortcuts that are impassable in a regular car. When the GPS route diverges from signed road numbers (N9, N10, R703), follow the signs.' },
+              { title: 'Carry a paper map as backup', text: 'A Michelin Morocco map (742) costs from 100 MAD at Moroccan bookshops. Invaluable when electronics fail. Paper maps also show elevation contours and pass heights that digital maps may omit.' },
+            ].map((tip) => (
+              <div key={tip.title} className="card-moroccan p-4">
+                <h4 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-[var(--color-gold)] shrink-0" />
+                  {tip.title}
+                </h4>
+                <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{tip.text}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── Police Checkpoints ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+      {/* ── Toll Roads & Road Conditions ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Shield className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Police Checkpoints
+            <Milestone className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Toll Roads &amp; Road Conditions
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Police and gendarmerie checkpoints are a normal part of driving in Morocco. Knowing what to expect removes any anxiety.
-          </p>
-
-          <div className="card-moroccan p-6 mb-8">
-            <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4">
-              What Happens at a Checkpoint
-            </h3>
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <div className="w-8 h-8 rounded-full bg-[var(--color-accent)] flex items-center justify-center shrink-0">
-                  <span className="text-white text-xs font-bold">1</span>
-                </div>
-                <p className="text-sm text-[var(--text-secondary)]">
-                  <span className="font-semibold text-[var(--text-primary)]">Slow down and stop.</span> You will see cones, barriers, or officers waving you to pull over. Sometimes they wave you through without stopping.
-                </p>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-8 h-8 rounded-full bg-[var(--color-accent)] flex items-center justify-center shrink-0">
-                  <span className="text-white text-xs font-bold">2</span>
-                </div>
-                <p className="text-sm text-[var(--text-secondary)]">
-                  <span className="font-semibold text-[var(--text-primary)]">Lower your window.</span> Have your passport, driving license, IDP, and rental contract accessible. Officers may glance at these or study them briefly.
-                </p>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-8 h-8 rounded-full bg-[var(--color-accent)] flex items-center justify-center shrink-0">
-                  <span className="text-white text-xs font-bold">3</span>
-                </div>
-                <p className="text-sm text-[var(--text-secondary)]">
-                  <span className="font-semibold text-[var(--text-primary)]">Answer basic questions.</span> &quot;Where are you coming from?&quot; and &quot;Where are you going?&quot; are the standard questions. A brief, friendly response is all that is needed.
-                </p>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-8 h-8 rounded-full bg-[var(--color-accent)] flex items-center justify-center shrink-0">
-                  <span className="text-white text-xs font-bold">4</span>
-                </div>
-                <p className="text-sm text-[var(--text-secondary)]">
-                  <span className="font-semibold text-[var(--text-primary)]">Drive on.</span> The entire interaction usually takes under two minutes. Officers are professional and accustomed to tourists. Never offer money or act nervous.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <MapPin className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Where to Expect Checkpoints
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                City entrances and exits, near major intersections, highway on-ramps, and near the Sahara/southern regions. The area around Ketama in the Rif Mountains has frequent checkpoints. Expect 3-6 checkpoints on a Marrakech to Merzouga drive.
-              </p>
-            </div>
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <Info className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Important Notes
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Never try to avoid or drive through a checkpoint. Fines for traffic violations are payable on the spot in cash — always ask for a receipt. If you are fined, the officer should issue a numbered receipt. Keep all your documents together in an accessible pouch on the dashboard.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Fuel & Practical Info ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Fuel className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Fuel, Parking &amp; Practical Details
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            The small details that make a big difference to your road trip experience.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <Fuel className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Fuel Prices &amp; Stations
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Diesel (gasoil) costs from 11 MAD per liter. Unleaded petrol (essence sans plomb) costs from 13 MAD per liter. Major brands include Afriquia, Shell, Total, and Winxo. Most stations are full-service — an attendant fills your tank. Tipping the attendant 2-5 MAD is customary. Credit cards accepted at chain stations in cities; carry cash for rural stops. Seasonal pricing can change.
-              </p>
-            </div>
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <MapPin className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Parking in Cities
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Street parking is managed by unofficial gardiens (attendants wearing hi-vis vests). Pay from 5-10 MAD for short stays, from 20 MAD for overnight. Secure car parks exist near major medinas: Marrakech (Place de Foucauld), Fes (Place R&apos;cif), Essaouira (Bab Doukkala). Hotel parking is from 30-50 MAD per night. Never leave valuables visible in the car.
-              </p>
-            </div>
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <Wrench className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Breakdowns &amp; Mechanics
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Roadside mechanics (vulcanisateurs for tires) exist in almost every town. Flat tire repair costs from 30-50 MAD. Your rental company should provide 24/7 breakdown assistance — save the number in your phone. In remote areas, passing drivers will often stop to help. The Royal Gendarmerie can assist on highways — dial 177.
-              </p>
-            </div>
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <CircleDot className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Road Conditions
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Autoroutes are excellent. National roads (N-roads) are generally good but can have potholes. Mountain roads are paved but narrow with tight switchbacks. Desert pistes (unpaved tracks) require a 4x4. After heavy rain, wadis (dry riverbeds) can flood and temporarily cut off roads — check conditions locally before mountain crossings in winter.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Scenic Drives ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Eye className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Top 6 Scenic Drives
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            These are the stretches where you will want the camera ready and the windows down.
+            What to expect from Morocco&apos;s road network and how to budget for tolls.
           </p>
 
           <div className="space-y-6">
             <div className="card-moroccan p-6">
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                1. Dades Gorge Road (R704)
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                Autoroutes (Toll Highways)
               </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-2">
-                A 25 km road climbing through the Dades Gorge with tight hairpin bends carved into red rock walls. The famous &quot;Road of a Thousand Kasbahs&quot; runs along the valley floor below. Best in late afternoon when the low sun turns the canyon walls copper and gold.
+              <p className="text-sm text-[var(--text-secondary)] mb-3">
+                Morocco&apos;s autoroute network is modern, well-maintained, and fast. Dual carriageway
+                with a 120 km/h speed limit, rest stops with fuel and food every 40-60 km, and clear
+                signage in Arabic and French. The network connects Tangier-Rabat-Casablanca-Marrakech
+                and Rabat-Meknes-Fes, with an extension to Agadir. You collect a ticket at the entry
+                gate and pay cash (MAD) at exit. A Jawaz electronic tag (from 50 MAD deposit) lets you
+                skip queues at toll plazas.
               </p>
-              <div className="text-xs text-[var(--text-muted)] flex items-center gap-3">
-                <span className="flex items-center gap-1"><Milestone className="w-3 h-3" /> 25 km</span>
-                <span className="flex items-center gap-1"><Clock className="w-3 h-3" /> 1-2 hours with stops</span>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-xs">
+                <div className="p-2 bg-[var(--surface-muted)] rounded-lg">
+                  <span className="font-semibold text-[var(--text-primary)]">Casablanca-Marrakech:</span>{' '}
+                  <span className="text-[var(--color-accent)]">From 80 MAD</span>
+                </div>
+                <div className="p-2 bg-[var(--surface-muted)] rounded-lg">
+                  <span className="font-semibold text-[var(--text-primary)]">Casablanca-Fes:</span>{' '}
+                  <span className="text-[var(--color-accent)]">From 120 MAD</span>
+                </div>
+                <div className="p-2 bg-[var(--surface-muted)] rounded-lg">
+                  <span className="font-semibold text-[var(--text-primary)]">Tangier-Marrakech:</span>{' '}
+                  <span className="text-[var(--color-accent)]">From 200 MAD</span>
+                </div>
+                <div className="p-2 bg-[var(--surface-muted)] rounded-lg">
+                  <span className="font-semibold text-[var(--text-primary)]">Rabat-Fes:</span>{' '}
+                  <span className="text-[var(--color-accent)]">From 90 MAD</span>
+                </div>
+                <div className="p-2 bg-[var(--surface-muted)] rounded-lg">
+                  <span className="font-semibold text-[var(--text-primary)]">Marrakech-Agadir:</span>{' '}
+                  <span className="text-[var(--color-accent)]">From 100 MAD</span>
+                </div>
+                <div className="p-2 bg-[var(--surface-muted)] rounded-lg">
+                  <span className="font-semibold text-[var(--text-primary)]">Casablanca-Rabat:</span>{' '}
+                  <span className="text-[var(--color-accent)]">From 30 MAD</span>
+                </div>
               </div>
             </div>
 
             <div className="card-moroccan p-6">
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                2. Tizi n&apos;Tichka (N9)
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                National Roads (Routes Nationales)
               </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-2">
-                The highest paved pass in Morocco at 2,260m. Over 100 hairpin turns take you from the lush Haouz plain to the arid pre-Saharan landscape. The transition is extraordinary — green orchards give way to barren rock in a single drive. Stop at the summit for mint tea and panoramic Atlas views.
+              <p className="text-sm text-[var(--text-secondary)]">
+                Two-lane paved roads connecting cities and towns. Speed limit 80-100 km/h. Road
+                quality is generally good but deteriorates in remote mountain and southern desert
+                areas. Expect slow trucks on uphill sections, roadside vendors, and occasional
+                livestock crossings. Overtaking requires patience and clear sightlines. These roads
+                are where the most interesting scenery is found -- the N10 from Ouarzazate to Merzouga
+                crosses through palm oases, rocky hamada, and the pre-Saharan steppe.
               </p>
-              <div className="text-xs text-[var(--text-muted)] flex items-center gap-3">
-                <span className="flex items-center gap-1"><Milestone className="w-3 h-3" /> 190 km</span>
-                <span className="flex items-center gap-1"><Clock className="w-3 h-3" /> 4-5 hours</span>
-              </div>
             </div>
 
             <div className="card-moroccan p-6">
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                3. Todra Gorge Approach (R703)
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                Mountain Roads &amp; Passes
               </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-2">
-                The road narrows as 300-meter limestone walls close in on both sides. At the gorge&apos;s narrowest point, the gap between the cliffs is just 10 meters wide with a river running through. Rock climbers scale the walls above as you drive through one of Morocco&apos;s most dramatic natural formations.
+              <p className="text-sm text-[var(--text-secondary)]">
+                Paved but narrow, with tight hairpin turns and no guardrails in many sections. The
+                Tizi n&apos;Tichka (N9) is the most heavily traveled pass and is well-maintained
+                year-round except during rare heavy snowfall. The Tizi n&apos;Test (R203) is narrower
+                and less trafficked. Mountain roads demand concentration, low gear on descents, and
+                frequent horn use on blind curves. Trucks and buses have priority on narrow sections.
+                Check road conditions through your accommodation before driving any pass between
+                December and February.
               </p>
-              <div className="text-xs text-[var(--text-muted)] flex items-center gap-3">
-                <span className="flex items-center gap-1"><Milestone className="w-3 h-3" /> 15 km from Tinghir</span>
-                <span className="flex items-center gap-1"><Clock className="w-3 h-3" /> 30 min + exploring time</span>
-              </div>
             </div>
 
             <div className="card-moroccan p-6">
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                4. Essaouira to Agadir Coastal Road (N1)
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                Desert Pistes (Unpaved Tracks)
               </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-2">
-                A stunning 170 km coastal run past rugged Atlantic cliffs, argan tree forests (where goats climb the branches), and quiet fishing villages. The surf town of Taghazout sits midway, surrounded by point breaks and sandy coves. Early morning mist rolls off the ocean and burns away by noon.
+              <p className="text-sm text-[var(--text-secondary)]">
+                Unpaved tracks in the south and deep desert. Ranges from well-graded gravel (passable
+                in a careful sedan) to deep sand requiring 4x4 and deflated tires. The piste from
+                M&apos;Hamid to Erg Chigaga (50 km) absolutely requires a 4x4 or organized tour.
+                Pistes south of Merzouga toward the Algerian border also demand off-road capability.
+                Never drive a piste alone without informing someone of your route and expected return.
+                Carry extra water (at least 5 liters per person) on any desert track.
               </p>
-              <div className="text-xs text-[var(--text-muted)] flex items-center gap-3">
-                <span className="flex items-center gap-1"><Milestone className="w-3 h-3" /> 170 km</span>
-                <span className="flex items-center gap-1"><Clock className="w-3 h-3" /> 2.5-3 hours</span>
-              </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <div className="card-moroccan p-6">
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                5. Chefchaouen to Al Hoceima (N2/N39)
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-2">
-                A remote and challenging mountain road through the heart of the Rif range. Dense cedar forests, deep valleys, and switchbacks above 1,500m. Traffic is sparse and the sense of isolation is profound. The descent to the Mediterranean coast at Al Hoceima reveals turquoise water and rocky coves.
-              </p>
-              <div className="text-xs text-[var(--text-muted)] flex items-center gap-3">
-                <span className="flex items-center gap-1"><Milestone className="w-3 h-3" /> 220 km</span>
-                <span className="flex items-center gap-1"><Clock className="w-3 h-3" /> 5-6 hours</span>
+      {/* ── Itineraries ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+        <div className="container-morocco">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Calendar className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Road Trip Itineraries
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Four tested itineraries from a quick desert dash to the ultimate two-week circuit.
+          </p>
+
+          <div className="space-y-8">
+            {itineraries.map((itin) => {
+              const ItinIcon = itin.icon;
+              return (
+                <div key={itin.title} className="card-moroccan p-6">
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-[var(--color-accent)] flex items-center justify-center shrink-0">
+                      <ItinIcon className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+                        {itin.title}
+                      </h3>
+                      <div className="flex gap-4 mt-1 text-sm text-[var(--text-muted)]">
+                        <span className="flex items-center gap-1">
+                          <Clock className="w-3.5 h-3.5" /> {itin.days}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Milestone className="w-3.5 h-3.5" /> {itin.distance}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <ol className="space-y-2 mb-4">
+                    {itin.schedule.map((day, i) => (
+                      <li key={i} className="flex items-start gap-3 text-sm text-[var(--text-secondary)]">
+                        <span className="w-5 h-5 rounded-full bg-[var(--surface-muted)] flex items-center justify-center shrink-0 text-xs font-bold text-[var(--color-accent)]">
+                          {i + 1}
+                        </span>
+                        {day}
+                      </li>
+                    ))}
+                  </ol>
+                  <div className="flex items-start gap-2 p-3 bg-[var(--surface-muted)] rounded-lg">
+                    <Info className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
+                    <p className="text-xs text-[var(--text-muted)]">
+                      <span className="font-semibold text-[var(--text-primary)]">Tip:</span> {itin.tip}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Scenic Stops ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Camera className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Must-Stop Scenic Points
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Six places where you must pull over, get out of the car, and take it in.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {scenicStops.map((stop) => (
+              <div key={stop.name} className="card-moroccan p-5">
+                <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
+                  {stop.name}
+                </h3>
+                <p className="text-xs text-[var(--color-accent)] mb-3 flex items-center gap-1">
+                  <MapPin className="w-3 h-3" /> {stop.location}
+                </p>
+                <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{stop.desc}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Accommodation Along Routes ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+        <div className="container-morocco">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Bed className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Where to Stay Along the Route
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Four accommodation types you will encounter on a Morocco road trip, with typical pricing.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {accommodationTypes.map((acc) => {
+              const AccIcon = acc.icon;
+              return (
+                <div key={acc.type} className="card-moroccan p-5">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 rounded-full bg-[var(--surface-muted)] flex items-center justify-center shrink-0">
+                      <AccIcon className="w-5 h-5 text-[var(--color-accent)]" />
+                    </div>
+                    <div>
+                      <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+                        {acc.type}
+                      </h3>
+                      <p className="text-xs text-[var(--color-accent)] font-semibold">{acc.price}</p>
+                    </div>
+                  </div>
+                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{acc.desc}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Cost Breakdown ── */}
+      <section className="py-16 md:py-20 moroccan-pattern">
+        <div className="container-morocco">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <DollarSign className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Road Trip Cost Breakdown
+          </h2>
+          <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
+            <Info className="w-3.5 h-3.5 inline mr-1" />
+            Sample budget for a 7-day road trip for one person. All prices are starting prices in Moroccan Dirhams. Seasonal pricing can change.
+          </p>
+          <div className="max-w-4xl mx-auto">
+            <div className="card-moroccan overflow-hidden">
+              <div className="grid grid-cols-3 gap-0 bg-[var(--color-accent)] text-white text-sm font-medium">
+                <div className="p-3 px-4">Item</div>
+                <div className="p-3 px-4">Cost (MAD)</div>
+                <div className="p-3 px-4">Details</div>
+              </div>
+              {costBreakdown.map((item, i) => (
+                <div
+                  key={item.item}
+                  className={`grid grid-cols-3 gap-0 text-sm ${i % 2 === 0 ? 'bg-white' : 'bg-[var(--surface-muted)]'} ${i === costBreakdown.length - 1 ? 'font-bold' : ''}`}
+                >
+                  <div className="p-3 px-4 text-[var(--text-primary)]">{item.item}</div>
+                  <div className="p-3 px-4 text-[var(--color-accent)] font-semibold">{item.cost}</div>
+                  <div className="p-3 px-4 text-[var(--text-muted)]">{item.note}</div>
+                </div>
+              ))}
             </div>
+          </div>
+        </div>
+      </section>
 
-            <div className="card-moroccan p-6">
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                6. Ouarzazate to Merzouga (N10)
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-2">
-                The landscape shifts from kasbah-dotted valleys to flat hamada (rocky desert) and finally to the towering dunes of Erg Chebbi. The color palette changes hour by hour — ochre, rust, pink, amber. Errachidia marks the halfway point. The final approach to Merzouga, with the 150-meter dunes rising from flat ground, is unforgettable.
-              </p>
-              <div className="text-xs text-[var(--text-muted)] flex items-center gap-3">
-                <span className="flex items-center gap-1"><Milestone className="w-3 h-3" /> 370 km</span>
-                <span className="flex items-center gap-1"><Clock className="w-3 h-3" /> 5-6 hours</span>
-              </div>
+      {/* ── Gallery ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
+            On the Road in Morocco
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="relative h-72 rounded-xl overflow-hidden">
+              <img
+                src="/images/hero-dades-valley-road.webp"
+                alt="Winding road through the Dades Valley with dramatic red rock formations and hairpin turns"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+              <p className="absolute bottom-4 left-4 text-white text-sm font-medium">Dades Valley Switchbacks</p>
+            </div>
+            <div className="relative h-72 rounded-xl overflow-hidden">
+              <img
+                src="/images/hero-ait-benhaddou.webp"
+                alt="Ait Benhaddou kasbah UNESCO World Heritage site with red clay buildings against blue sky"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+              <p className="absolute bottom-4 left-4 text-white text-sm font-medium">Ait Benhaddou Kasbah</p>
+            </div>
+            <div className="relative h-72 rounded-xl overflow-hidden">
+              <img
+                src="/images/hero-merzouga.webp"
+                alt="Golden sand dunes of Erg Chebbi at Merzouga in the Moroccan Sahara desert"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+              <p className="absolute bottom-4 left-4 text-white text-sm font-medium">Erg Chebbi, Merzouga</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* ── FAQ Section ── */}
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <MessageCircleQuestion className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
             Frequently Asked Questions
           </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Answers to the most common questions about driving and road-tripping in Morocco.
+          </p>
 
           <div className="space-y-6">
             {faqItems.map((faq) => (
-              <div key={faq.question} className="card-moroccan p-6">
+              <div key={faq.q} className="card-moroccan p-6">
                 <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                  {faq.question}
+                  {faq.q}
                 </h3>
-                <p className="text-sm text-[var(--text-secondary)]">
-                  {faq.answer}
-                </p>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{faq.a}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── Related Pages ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+      {/* ── Related Guides ── */}
+      <section className="py-16 md:py-20">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
-            Continue Exploring Morocco
+            Related Travel Guides
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Link href="/morocco-transport-guide" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
-              <Car className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Morocco Transport Guide
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Trains, buses, taxis, and domestic flights. All the ways to get around Morocco without a car.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-            <Link href="/sahara-desert" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
-              <Sun className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Sahara Desert Guide
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Camel treks, desert camps, stargazing, and sandboarding at Erg Chebbi and Erg Chigaga.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-            <Link href="/atlas-mountains" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
-              <Mountain className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Atlas Mountains Guide
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Trekking, Berber villages, Toubkal summit, and valley hikes across the High, Middle, and Anti-Atlas.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                title: 'Sahara Desert Guide',
+                description: 'Camel treks, desert camps, Erg Chebbi and Erg Chigaga dunes, stargazing, and practical tips for the Moroccan Sahara.',
+                href: '/sahara-desert',
+                icon: Sun,
+              },
+              {
+                title: 'Atlas Mountains Guide',
+                description: 'Trekking routes, Berber villages, Toubkal ascent, and seasonal conditions for the High, Middle, and Anti-Atlas ranges.',
+                href: '/atlas-mountains',
+                icon: Mountain,
+              },
+              {
+                title: 'Budget Travel Morocco',
+                description: 'How to travel Morocco on a backpacker budget. Transport, food, accommodation, and activities for under 400 MAD per day.',
+                href: '/budget-travel',
+                icon: DollarSign,
+              },
+              {
+                title: 'Morocco Safety Guide',
+                description: 'Practical safety advice covering scams, solo female travel, health, road safety, and emergency contacts.',
+                href: '/safety',
+                icon: ShieldCheck,
+              },
+            ].map((guide) => {
+              const GuideIcon = guide.icon;
+              return (
+                <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                  <GuideIcon className="w-8 h-8 text-[var(--color-accent)] mb-3 group-hover:text-[var(--color-primary)] transition-colors" />
+                  <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                    {guide.title}
+                  </h3>
+                  <p className="text-sm text-[var(--text-secondary)]">{guide.description}</p>
+                  <span className="inline-flex items-center gap-1 mt-3 text-sm text-[var(--color-accent)] font-medium">
+                    Read Guide <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* ── Final CTA ── */}
-      <section className="py-16 md:py-20 bg-[var(--color-accent)] text-white">
+      {/* ── More Transport & Travel Resources ── */}
+      <section className="py-12 md:py-16 bg-[var(--surface-muted)]">
+        <div className="container-morocco">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold text-center mb-8" style={{ color: 'var(--text-primary)' }}>
+            More Transport &amp; Travel Resources
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { href: '/transport', title: 'Morocco Transport Guide', desc: 'Complete overview of trains, buses, taxis, and domestic flights across Morocco.' },
+              { href: '/camping', title: 'Morocco Camping Guide', desc: 'Wild camping, organized campsites, and overlanding tips for self-drive travelers.' },
+              { href: '/best-time-visit-morocco', title: 'Best Time to Visit', desc: 'Month-by-month weather, crowds, and pricing to help you pick the ideal travel window.' },
+              { href: '/first-time', title: 'First Time in Morocco', desc: 'Everything a first-time visitor needs to know about culture, customs, and logistics.' },
+              { href: '/packing', title: 'Morocco Packing Guide', desc: 'What to pack for desert, coast, and mountains -- season by season.' },
+              { href: '/morocco-itineraries', title: 'Morocco Itineraries', desc: 'Curated 3-day to 14-day itineraries for every travel style and budget.' },
+            ].map((guide) => (
+              <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-base mb-2 group-hover:text-[var(--color-accent)] transition-colors" style={{ color: 'var(--text-primary)' }}>
+                  {guide.title}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{guide.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA Section ── */}
+      <section className="py-16 md:py-20 bg-[var(--color-accent)]">
         <div className="container-morocco text-center">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-white mb-4">
             Ready to Hit the Road?
           </h2>
-          <p className="text-white/90 max-w-2xl mx-auto mb-8 font-[family-name:var(--font-heading)]">
-            Explore our city guides for detailed information on every stop along your route. From Marrakech to Merzouga, Tangier to Agadir, every destination has its own complete guide.
+          <p className="text-lg text-white/80 max-w-2xl mx-auto mb-8">
+            Start planning your Morocco road trip today. Browse our city guides for
+            detailed information on every destination along your route.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
-              href="/destinations"
-              className="bg-white text-[var(--color-accent)] px-6 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors"
+              href="/cities"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[var(--color-accent)] font-semibold rounded-lg hover:bg-white/90 transition-colors"
             >
-              Browse All Destinations
+              <MapPin className="w-5 h-5" />
+              Explore Cities
             </Link>
             <Link
-              href="/morocco-budget-guide"
-              className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+              href="/morocco-itineraries"
+              className="inline-flex items-center gap-2 px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors"
             >
-              Morocco Budget Guide
+              <BookOpen className="w-5 h-5" />
+              Browse Itineraries
             </Link>
           </div>
         </div>

@@ -3386,6 +3386,15 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['morocco rug buying', 'moroccan carpet guide', 'beni ourain rug', 'morocco rug prices', 'buy rugs morocco'],
       priority: 9,
     },
+    {
+      title: 'Morocco Road Trip Guide — Routes, Car Rental, Driving Tips & Itineraries',
+      description: 'Complete road trip guide — best routes, car rental tips, driving rules, fuel costs, toll roads, scenic stops, and day-by-day itineraries.',
+      type: 'page',
+      url: '/morocco-road-trip',
+      tags: ['road trip', 'driving', 'car rental', 'routes', 'itinerary'],
+      keywords: ['morocco road trip', 'driving in morocco', 'morocco car rental', 'morocco road trip route', 'morocco self drive'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
