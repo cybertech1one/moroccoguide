@@ -437,6 +437,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-markets-souks',
     '/morocco-desert-tours',
     '/morocco-festivals-events',
+    '/morocco-rental-cars',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

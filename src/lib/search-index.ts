@@ -3323,6 +3323,15 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['morocco festivals', 'gnaoua festival essaouira', 'fes sacred music', 'morocco events calendar', 'moroccan festivals 2026'],
       priority: 9,
     },
+    {
+      title: 'Morocco Rental Cars Guide 2026',
+      description: 'Complete car rental guide for Morocco — companies, insurance, driving rules, road conditions, toll roads, fuel costs, and best road trip routes.',
+      type: 'page',
+      url: '/morocco-rental-cars',
+      tags: ['rental cars', 'driving', 'road trip', 'car hire', 'transport'],
+      keywords: ['morocco car rental', 'rent a car morocco', 'driving in morocco', 'morocco road trip car', 'morocco car hire prices'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
