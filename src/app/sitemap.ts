@@ -361,7 +361,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-solo-female-travel',
     '/morocco-fishing-guide',
     '/morocco-berber-culture',
-    '/morocco-hammam-guide',
     '/morocco-regions-guide',
     '/morocco-budget-travel',
     '/al-hoceima-guide',
@@ -443,6 +442,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-group-tours',
     '/morocco-traditional-music',
     '/morocco-10-day-itinerary',
+    '/morocco-hammam-etiquette',
+    '/morocco-rug-buying',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
