@@ -25,618 +25,416 @@ import {
   BookOpen,
   Crown,
   Waves,
+  MessageCircleQuestion,
+  HandCoins,
+  Layers,
 } from 'lucide-react';
 
-/* ═══════════════════════════════════════════════════════════════
-   CONSTANTS
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   CONSTANTS & BASE URL
+   ================================================================ */
 
 const BASE_URL = 'https://citytoursmorocco.com';
+const PAGE_URL = `${BASE_URL}/morocco-spa-guide`;
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    SEO METADATA
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 export const metadata: Metadata = {
-  title: 'Morocco Spa & Hammam Guide 2026 | Top 20 Luxury Spas & Traditional Hammams',
+  title: 'Morocco Traditional Hammam & Spa Guide 2026 | Step-by-Step First-Timer Tips',
   description:
-    'Complete guide to Morocco\'s best spa experiences and traditional hammams. From 50 MAD public hammams to luxury resort spas. Step-by-step hammam guide, etiquette, prices, and the top 20 spa experiences across Marrakech, Fes, Essaouira, and Casablanca.',
+    'Complete guide to Moroccan hammam and spa experiences. Step-by-step hammam ritual, what to bring, etiquette rules, best hammams in Marrakech, Fes & Casablanca, public vs private vs hotel hammams, savon noir, ghassoul clay, argan oil treatments, and pricing from 50 MAD.',
   keywords: [
-    'Morocco spa guide',
-    'Moroccan hammam',
+    'Morocco hammam guide',
     'traditional hammam Morocco',
-    'luxury spa Marrakech',
-    'hammam etiquette',
-    'best hammams Morocco',
-    'Morocco wellness tourism',
-    'hammam prices Morocco',
-    'spa Fes Morocco',
-    'spa Essaouira',
-    'spa Casablanca',
-    'Moroccan bath experience',
-    'hammam ritual steps',
-    'gommage Morocco',
-    'savon beldi Morocco',
-    'Morocco spa resorts',
-    'argan oil treatment Morocco',
-    'rhassoul clay treatment',
-    'Morocco spa prices 2026',
+    'Moroccan spa experience',
+    'hammam etiquette Morocco',
+    'best hammams Marrakech',
     'public hammam Morocco',
-    'couple spa Morocco',
-    'Morocco relaxation guide',
+    'hammam Fes Morocco',
+    'savon noir black soap',
+    'ghassoul clay treatment',
+    'kessa glove scrub',
+    'argan oil spa Morocco',
+    'hammam prices Morocco 2026',
+    'Morocco spa guide',
+    'first time hammam tips',
+    'hotel hammam Casablanca',
+    'Moroccan body scrub gommage',
+    'hammam ritual steps',
+    'Morocco wellness tourism',
   ],
   openGraph: {
-    title: 'Morocco Spa & Hammam Guide 2026 | Top 20 Luxury Spas & Traditional Hammams',
+    title: 'Morocco Traditional Hammam & Spa Guide 2026 | Step-by-Step First-Timer Tips',
     description:
-      'Discover Morocco\'s finest spa experiences. From authentic public hammams at 50 MAD to world-class luxury spas. Complete guide with prices, etiquette, and the top 20 experiences.',
-    url: `${BASE_URL}/morocco-spa-guide`,
+      'Everything you need to know about the Moroccan hammam: step-by-step ritual, what to bring, etiquette, best hammams by city, pricing from 50 MAD public baths to luxury spas, and traditional products like savon noir and ghassoul clay.',
+    url: PAGE_URL,
     images: [
       {
         url: `${BASE_URL}/images/hero-spa.webp`,
         width: 1200,
         height: 630,
-        alt: 'Luxurious Moroccan spa interior with traditional zellige tilework, warm lighting, and relaxation area',
+        alt: 'Traditional Moroccan hammam interior with zellige tilework, steam, and warm lighting',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Morocco Spa & Hammam Guide 2026 | Top 20 Experiences',
+    title: 'Morocco Hammam & Spa Guide 2026 | Complete First-Timer Guide',
     description:
-      'From traditional public hammams at 50 MAD to world-class luxury spas. Complete guide to Morocco\'s best wellness experiences with prices, etiquette, and insider tips.',
+      'Step-by-step hammam ritual, etiquette, best hammams in Marrakech/Fes/Casablanca, public vs luxury pricing, savon noir, ghassoul clay, and argan oil treatments.',
     images: [`${BASE_URL}/images/hero-spa.webp`],
   },
-  alternates: { canonical: `${BASE_URL}/morocco-spa-guide` },
+  alternates: { canonical: PAGE_URL },
 };
 
-/* ═══════════════════════════════════════════════════════════════
-   JSON-LD STRUCTURED DATA
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   JSON-LD: TravelGuide + FAQPage
+   ================================================================ */
 
-const jsonLd = {
+const faqItems = [
+  {
+    q: 'What should I bring to a public hammam in Morocco?',
+    a: 'Bring a towel, flip-flops, underwear to wear inside, savon beldi (black soap), a kessa exfoliating glove, ghassoul clay, shampoo, and a change of underwear for after. You can buy soap, gloves, and clay at the hammam entrance for from 20 MAD each. Luxury spas provide everything.',
+  },
+  {
+    q: 'Is a Moroccan hammam suitable for first-time visitors?',
+    a: 'Yes. If you feel nervous about the public hammam, start with a mid-range spa (from 300 MAD) where staff are accustomed to international guests and will guide you through each step. After that first experience, many travelers feel confident enough to try a public neighborhood hammam.',
+  },
+  {
+    q: 'What do you wear inside a Moroccan hammam?',
+    a: 'In a public hammam, women typically wear underwear bottoms and many go topless. Men wear underwear or swim shorts. Full nudity is not the norm in Moroccan hammams, unlike Finnish or Japanese baths. In luxury spas, you receive disposable underwear, a robe, and slippers.',
+  },
+  {
+    q: 'Can couples visit a hammam together in Morocco?',
+    a: 'Not in public hammams, which are strictly gender-separated. Some have separate wings; others alternate hours for men and women. Couples who want to be together must book a private session at a luxury or boutique spa. Couples packages start from 1,200 MAD.',
+  },
+  {
+    q: 'How much does a hammam cost in Morocco?',
+    a: 'A public hammam costs from 50 MAD for entry plus from 50 MAD for a gommage (scrub) by the kessala. Budget spa packages start from 300 MAD. Mid-range spa packages run from 500 MAD. Luxury hotel spas charge from 800 MAD to 2,500 MAD for a full multi-hour ritual. Seasonal pricing can change during peak tourist months.',
+  },
+  {
+    q: 'How often should I visit the hammam during my Morocco trip?',
+    a: 'Moroccans typically visit once a week. For a week-long trip, one or two visits is ideal: one public hammam for cultural immersion and one luxury spa for indulgence. Space visits at least two days apart since the deep scrubbing leaves skin sensitive.',
+  },
+  {
+    q: 'Is the kessa scrub painful? Can I ask for a gentler treatment?',
+    a: 'The kessa scrub is firm and thorough. You will see rolls of dead skin peeling off, which looks dramatic but is normal. If the pressure is too strong, say "shwiya" (gently) or "bezzaf" (enough). At luxury spas, therapists check your comfort level throughout. You can always request a gommage doux (gentle scrub).',
+  },
+  {
+    q: 'Are traditional hammam products safe for sensitive skin?',
+    a: 'Savon beldi, ghassoul clay, and argan oil are all natural and generally well-tolerated. The kessa scrub is the most likely source of irritation for sensitive skin. Request a softer glove or lighter pressure. Do a patch test with savon beldi on your inner arm before a full application if you have reactive skin.',
+  },
+  {
+    q: 'What is the difference between a public, private, and hotel hammam?',
+    a: 'A public hammam is a neighborhood bathhouse used by locals, costing from 50 MAD. A private or boutique hammam is a small spa catering to tourists, from 300 MAD. A hotel hammam is inside a luxury hotel or resort, from 800 MAD. The ritual is similar but the setting, products, and level of personal service differ significantly.',
+  },
+  {
+    q: 'When is the best time to visit a public hammam?',
+    a: 'Weekday mornings offer the quietest experience. Avoid Thursday evenings and Friday mornings, which are the busiest times as Moroccans prepare for Friday prayer. During Ramadan, hammams are busiest just before iftar. Luxury spas are quietest on weekday afternoons.',
+  },
+];
+
+const jsonLdTravel = {
   '@context': 'https://schema.org',
   '@type': 'TravelGuide',
-  '@id': `${BASE_URL}/morocco-spa-guide`,
-  name: 'Morocco Spa & Hammam Guide 2026 | Top 20 Luxury Spas & Traditional Hammams',
+  '@id': PAGE_URL,
+  name: 'Morocco Traditional Hammam & Spa Guide 2026',
   description:
-    'Complete guide to Morocco\'s best spa experiences and traditional hammams. From 50 MAD public hammams to luxury resort spas across Marrakech, Fes, Essaouira, and Casablanca.',
-  url: `${BASE_URL}/morocco-spa-guide`,
+    'Complete guide to Moroccan hammam and spa experiences covering the step-by-step hammam ritual, etiquette, best hammams in Marrakech, Fes, and Casablanca, traditional products, and pricing.',
+  url: PAGE_URL,
   image: `${BASE_URL}/images/hero-spa.webp`,
-  author: {
-    '@type': 'Organization',
-    name: 'CityGuide Morocco',
-    url: BASE_URL,
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'CityGuide Morocco',
-    url: BASE_URL,
-  },
-  datePublished: '2026-03-17',
-  dateModified: '2026-03-17',
-  mainEntityOfPage: `${BASE_URL}/morocco-spa-guide`,
-  isPartOf: {
-    '@type': 'WebSite',
-    name: 'CityGuide Morocco',
-    url: BASE_URL,
-  },
-  about: {
-    '@type': 'Country',
-    name: 'Morocco',
-  },
+  author: { '@type': 'Organization', name: 'City Tours Morocco', url: BASE_URL },
+  publisher: { '@type': 'Organization', name: 'City Tours Morocco', url: BASE_URL },
+  datePublished: '2026-03-21',
+  dateModified: '2026-03-21',
+  mainEntityOfPage: PAGE_URL,
+  about: { '@type': 'Country', name: 'Morocco' },
   breadcrumb: {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Morocco Spa & Hammam Guide', item: `${BASE_URL}/morocco-spa-guide` },
+      { '@type': 'ListItem', position: 2, name: 'Morocco Spa & Hammam Guide', item: PAGE_URL },
     ],
   },
 };
 
-/* ═══════════════════════════════════════════════════════════════
-   DATA: TOP 20 SPA EXPERIENCES
-   ═══════════════════════════════════════════════════════════════ */
+const jsonLdFaq = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
 
-const topSpaExperiences = [
-  {
-    rank: 1,
-    name: 'La Mamounia Spa',
-    city: 'Marrakech',
-    type: 'Luxury Resort Spa',
-    icon: Crown,
-    price: 'From 1,500 MAD per treatment',
-    description:
-      'The crown jewel of Moroccan luxury wellness. This 2,500 sqm spa features an indoor pool, hammam, beauty salon, and fitness center within one of the world\'s most iconic hotels. The signature Royal Hammam ritual uses gold-infused argan oil and takes 90 minutes.',
-    highlights: ['Indoor heated pool', 'Royal Hammam ritual', 'Gold-infused argan oil treatments', 'Private couple suites'],
-  },
-  {
-    rank: 2,
-    name: 'Heritage Spa',
-    city: 'Marrakech',
-    type: 'Boutique Spa',
-    icon: Sparkles,
-    price: 'From 400 MAD per treatment',
-    description:
-      'A beautifully restored riad in the medina offering authentic hammam experiences with a luxury twist. Their signature black soap and eucalyptus hammam followed by an argan oil massage is the perfect balance of traditional and modern.',
-    highlights: ['Restored riad setting', 'Traditional hammam techniques', 'Argan oil massage', 'Intimate atmosphere'],
-  },
-  {
-    rank: 3,
-    name: 'Les Bains de Marrakech',
-    city: 'Marrakech',
-    type: 'Day Spa',
-    icon: Droplets,
-    price: 'From 500 MAD per treatment',
-    description:
-      'One of the most popular spa destinations in Marrakech. Set in a converted palace, it offers traditional hammam, massages, and beauty treatments. The hammam with gommage and ghassoul clay mask is their bestseller.',
-    highlights: ['Palace setting', 'Ghassoul clay treatments', 'Couples\' packages', 'Rooftop relaxation terrace'],
-  },
-  {
-    rank: 4,
-    name: 'Royal Mansour Spa',
-    city: 'Marrakech',
-    type: 'Luxury Resort Spa',
-    icon: Crown,
-    price: 'From 2,000 MAD per treatment',
-    description:
-      'A spa experience that borders on the transcendent. The white marble hammam, the indoor pool, and the sheer scale of the facility (2,500 sqm) make this one of Africa\'s finest wellness destinations. Treatments use bespoke products made exclusively for the Royal Mansour.',
-    highlights: ['White marble hammam', 'Bespoke product line', 'Indoor pool and jacuzzi', 'Meditation garden'],
-  },
-  {
-    rank: 5,
-    name: 'Hammam de la Rose',
-    city: 'Marrakech',
-    type: 'Boutique Hammam',
-    icon: Flower2,
-    price: 'From 350 MAD per treatment',
-    description:
-      'Named after the damask roses of the Dades Valley. This intimate boutique hammam uses rose water, rose oil, and rose petals throughout its treatments. The signature Rose Ritual includes hammam, gommage, rose clay mask, and rose oil massage.',
-    highlights: ['Rose-themed treatments', 'Damask rose products', 'Intimate setting', 'Signature Rose Ritual'],
-  },
-  {
-    rank: 6,
-    name: 'Riad Kniza Spa',
-    city: 'Marrakech',
-    type: 'Riad Spa',
-    icon: Gem,
-    price: 'From 450 MAD per treatment',
-    description:
-      'Tucked within one of Marrakech\'s finest riads, this spa offers personalized treatments in a serene courtyard setting. Known for using locally sourced ingredients including argan oil, orange blossom water, and saffron.',
-    highlights: ['Personalized service', 'Locally sourced ingredients', 'Saffron body wraps', 'Courtyard setting'],
-  },
-  {
-    rank: 7,
-    name: 'Riad Laaroussa Spa',
-    city: 'Fes',
-    type: 'Riad Spa',
-    icon: Sparkles,
-    price: 'From 400 MAD per treatment',
-    description:
-      'One of the finest spa experiences in the Fes medina. This 17th-century palace-riad features a traditional hammam and treatment rooms decorated with original zellige tilework. Their signature Fassi treatment uses local herbs and traditional techniques passed down through generations.',
-    highlights: ['17th-century palace', 'Original zellige tilework', 'Traditional Fassi techniques', 'Herb-based treatments'],
-  },
-  {
-    rank: 8,
-    name: 'Palais Amani Spa',
-    city: 'Fes',
-    type: 'Boutique Spa',
-    icon: Flower2,
-    price: 'From 350 MAD per treatment',
-    description:
-      'Located in a beautifully restored palace near Bab Guissa. The spa uses an organic product line made in-house with herbs from the riad\'s own Andalusian garden. The hammam overlooks the medina rooftops.',
-    highlights: ['In-house organic products', 'Andalusian garden herbs', 'Medina rooftop views', 'Quiet neighborhood'],
-  },
-  {
-    rank: 9,
-    name: 'Spa Lalla Mira',
-    city: 'Essaouira',
-    type: 'Eco Spa',
-    icon: Flower2,
-    price: 'From 300 MAD per treatment',
-    description:
-      'An eco-friendly spa in the heart of Essaouira\'s medina. Built from natural materials with a commitment to sustainability. Their argan oil and seaweed wraps draw on the coastal location, and the rooftop relaxation terrace overlooks the Atlantic.',
-    highlights: ['Eco-friendly approach', 'Seaweed body wraps', 'Rooftop ocean views', 'Argan oil specialty'],
-  },
-  {
-    rank: 10,
-    name: 'Sofitel Essaouira Mogador Spa',
-    city: 'Essaouira',
-    type: 'Luxury Resort Spa',
-    icon: Crown,
-    price: 'From 800 MAD per treatment',
-    description:
-      'A world-class spa within the Sofitel resort overlooking the ocean. Features an indoor pool, hammam, sauna, and extensive treatment menu. The Thalasso therapy using Atlantic seawater is unique to this location.',
-    highlights: ['Thalasso therapy', 'Indoor heated pool', 'Ocean views', 'Extensive treatment menu'],
-  },
-  {
-    rank: 11,
-    name: 'Heure Bleue Palais Spa',
-    city: 'Essaouira',
-    type: 'Boutique Spa',
-    icon: Sparkles,
-    price: 'From 400 MAD per treatment',
-    description:
-      'An elegant spa within a heritage palace near the ramparts. Features a heated indoor pool, hammam, and treatment rooms with ocean views. Their signature treatment combines argan oil, orange blossom, and Atlantic sea salt.',
-    highlights: ['Heritage palace setting', 'Heated indoor pool', 'Sea salt scrubs', 'Ocean-view treatment rooms'],
-  },
-  {
-    rank: 12,
-    name: 'Mazagan Beach Resort Spa',
-    city: 'El Jadida',
-    type: 'Luxury Resort Spa',
-    icon: Crown,
-    price: 'From 700 MAD per treatment',
-    description:
-      'One of Morocco\'s largest resort spas at over 2,000 sqm. Features multiple hammams, treatment rooms, a hydrotherapy circuit, and a stunning indoor pool. The Moroccan Ritual package is a 3-hour journey through traditional wellness.',
-    highlights: ['Over 2,000 sqm', 'Hydrotherapy circuit', '3-hour Moroccan Ritual', 'Multiple hammam rooms'],
-  },
-  {
-    rank: 13,
-    name: 'Four Seasons Casablanca Spa',
-    city: 'Casablanca',
-    type: 'Luxury Resort Spa',
-    icon: Crown,
-    price: 'From 1,200 MAD per treatment',
-    description:
-      'Casablanca\'s premier luxury spa experience overlooking the Atlantic. A serene retreat from the city with an indoor pool, hammam, and treatment rooms using exclusive product lines. The Ocean View Massage is their signature offering.',
-    highlights: ['Atlantic Ocean views', 'Indoor pool', 'Exclusive product line', 'Ocean View Massage'],
-  },
-  {
-    rank: 14,
-    name: 'Hammam Dar el-Bacha',
-    city: 'Marrakech',
-    type: 'Historic Public Hammam',
-    icon: Building,
-    price: 'From 50 MAD entry',
-    description:
-      'One of the most famous public hammams in Morocco. Built in the 16th century next to the Dar el-Bacha palace, it offers an authentic local experience. The architecture alone is worth the visit, with vaulted ceilings and star-shaped skylights.',
-    highlights: ['16th-century architecture', 'Authentic local experience', 'Star-shaped skylights', 'Most affordable option'],
-  },
-  {
-    rank: 15,
-    name: 'Hammam Mouassine',
-    city: 'Marrakech',
-    type: 'Public Hammam',
-    icon: Building,
-    price: 'From 50 MAD entry',
-    description:
-      'A well-maintained public hammam in the heart of the medina. Popular with both locals and adventurous tourists. The kessala (scrubber) here is known for being particularly thorough. Separate hours for men and women.',
-    highlights: ['Medina location', 'Expert kessalas', 'Well-maintained', 'Separate men/women hours'],
-  },
-  {
-    rank: 16,
-    name: 'Hammam Sidi Ali Ben Harazem',
-    city: 'Fes',
-    type: 'Traditional Public Hammam',
-    icon: Building,
-    price: 'From 50 MAD entry',
-    description:
-      'A traditional neighborhood hammam in Fes that has served the community for centuries. This is hammam as the Moroccans experience it: simple, social, and deeply restorative. Bring your own soap and towels or buy them at the entrance.',
-    highlights: ['Centuries-old tradition', 'Neighborhood atmosphere', 'Authentic experience', 'Budget-friendly'],
-  },
-  {
-    rank: 17,
-    name: 'Spa My Blend by Clarins',
-    city: 'Casablanca',
-    type: 'Luxury Hotel Spa',
-    icon: Gem,
-    price: 'From 900 MAD per treatment',
-    description:
-      'Located inside the Ritz-Carlton-managed hotel in Casablanca. Features personalized skincare using the My Blend diagnostic system by Clarins. A thoroughly modern spa experience in contrast to traditional hammam culture.',
-    highlights: ['Clarins products', 'Personalized diagnostics', 'Modern approach', 'Premium service'],
-  },
-  {
-    rank: 18,
-    name: 'Mythic Oriental Spa',
-    city: 'Casablanca',
-    type: 'Day Spa',
-    icon: Sparkles,
-    price: 'From 350 MAD per treatment',
-    description:
-      'A popular day spa in Casablanca blending Moroccan and Asian wellness traditions. Features hammam, massage, and facial treatments. Their Moroccan-Thai fusion massage is a unique offering not found elsewhere in the country.',
-    highlights: ['Moroccan-Asian fusion', 'Day spa accessibility', 'Fusion massage', 'Central Casablanca location'],
-  },
-  {
-    rank: 19,
-    name: 'Kasbah Tamadot Spa',
-    city: 'Atlas Mountains',
-    type: 'Mountain Resort Spa',
-    icon: Award,
-    price: 'From 600 MAD per treatment',
-    description:
-      'Sir Richard Branson\'s mountain retreat in the High Atlas offers spa treatments with panoramic mountain views. The Berber-inspired treatments use locally foraged herbs and oils. The heated outdoor pool overlooking the Atlas is unforgettable.',
-    highlights: ['Mountain panorama', 'Berber-inspired treatments', 'Heated outdoor pool', 'Locally foraged ingredients'],
-  },
-  {
-    rank: 20,
-    name: 'Amanjena Spa',
-    city: 'Marrakech',
-    type: 'Ultra-Luxury Spa',
-    icon: Crown,
-    price: 'From 2,500 MAD per treatment',
-    description:
-      'The Aman resort\'s spa is among the most exclusive in Morocco. Set in rose-colored pavilions surrounded by olive groves, it offers hammam, Thai massage, Ayurvedic treatments, and a heated outdoor pool. Privacy and serenity are the hallmarks here.',
-    highlights: ['Ultra-luxury setting', 'Multi-tradition treatments', 'Olive grove gardens', 'Ultimate privacy'],
-  },
-];
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: TRADITIONAL VS MODERN COMPARISON
-   ═══════════════════════════════════════════════════════════════ */
-
-const hammamComparison = [
-  {
-    aspect: 'Setting',
-    traditional: 'Neighborhood bathhouse, tiled rooms with domed ceilings and star-shaped skylights. Often centuries old.',
-    modern: 'Boutique or hotel spa with designer interiors, mood lighting, ambient music, and plush relaxation lounges.',
-  },
-  {
-    aspect: 'Price Range',
-    traditional: 'From 50 MAD entry. Gommage from 50 MAD extra. Bring your own products or buy at entrance from 20 MAD.',
-    modern: 'From 300 MAD for basic hammam package. Luxury options from 800 MAD to 2,500 MAD with full treatment.',
-  },
-  {
-    aspect: 'Products Used',
-    traditional: 'Savon beldi (black olive soap), ghassoul clay, kessa glove, orange blossom water. Simple, effective, time-tested.',
-    modern: 'Premium branded products, argan oil blends, rose water, essential oils, gold-infused treatments, imported products.',
-  },
-  {
-    aspect: 'Experience',
-    traditional: 'Communal, social, no-frills. You sit on the floor, get scrubbed vigorously, and leave feeling reborn. Locals chat and socialize.',
-    modern: 'Private or semi-private. Massage tables, heated beds, gentle scrubbing, followed by massage. Calm and quiet.',
-  },
-  {
-    aspect: 'Duration',
-    traditional: 'Typically 1-2 hours depending on how long you want to soak and steam. No fixed schedule.',
-    modern: 'Structured packages from 60 to 180 minutes. Often combined with massage, facial, or body wrap.',
-  },
-  {
-    aspect: 'Who It Suits',
-    traditional: 'Adventurous travelers, budget travelers, those seeking authentic cultural experiences. Locals go weekly.',
-    modern: 'Those seeking relaxation without culture shock, couples, luxury travelers, those with limited time.',
-  },
-  {
-    aspect: 'Privacy',
-    traditional: 'Men and women separate (different hours or different sections). You wear underwear. Bodies of all shapes welcome.',
-    modern: 'Private rooms for individuals or couples. Robes and slippers provided. Complete privacy guaranteed.',
-  },
-  {
-    aspect: 'Booking',
-    traditional: 'No booking needed. Walk in during operating hours. Check men/women schedules in advance.',
-    modern: 'Advance booking recommended, especially for couples and weekends. Many accept online reservations.',
-  },
-];
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: STEP-BY-STEP HAMMAM GUIDE
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   DATA: STEP-BY-STEP HAMMAM RITUAL
+   ================================================================ */
 
 const hammamSteps = [
   {
     step: 1,
     title: 'Arrive & Change',
     icon: Users,
-    duration: '10 minutes',
+    duration: '10 min',
     description:
-      'At a public hammam, you will enter a changing room where you leave your clothes and valuables in a locker or with an attendant. You keep your underwear on (for women, many go topless). At luxury spas, you will receive a robe and slippers and be guided to a changing area.',
-    tip: 'Bring your own lock for the locker at public hammams. Bring flip-flops for the wet floors.',
+      'At a public hammam, enter the changing room and leave your clothes in a locker or with an attendant. Keep your underwear on. At luxury spas, staff hand you a robe and slippers and walk you to a private changing area.',
+    tip: 'Bring a padlock for the locker. Leave valuables at your accommodation when possible.',
   },
   {
     step: 2,
     title: 'Warm Up in the Cool Room',
     icon: Thermometer,
-    duration: '10-15 minutes',
+    duration: '10-15 min',
     description:
-      'The hammam has three rooms of increasing temperature. Start in the cool room (skhoun shwiya) to let your body adjust. Pour warm water over yourself using a bucket (satel). In luxury spas, you may start in a steam room or sauna.',
-    tip: 'Drink water before entering. The heat will make you sweat heavily and you need to stay hydrated.',
+      'The hammam has three rooms of increasing temperature. Start in the cool room (bard) to let your body adjust. Pour warm water over yourself using a plastic bucket (satel). Breathe slowly and relax.',
+    tip: 'Drink at least half a liter of water before entering. The steam causes heavy sweating.',
   },
   {
     step: 3,
     title: 'Move to the Hot Room',
     icon: Thermometer,
-    duration: '15-20 minutes',
+    duration: '15-20 min',
     description:
-      'The hottest room (harr) is where the deep steaming happens. The heat and humidity open your pores completely. Sit or lie on the warm marble or tile floor and let the steam work. Pour hot water over yourself periodically.',
-    tip: 'If you feel dizzy or too hot, move back to a cooler room. There is no shame in taking it slow.',
+      'The hottest room (harr) is where deep steaming happens. The humidity opens every pore. Sit or lie on the heated marble floor. Pour hot water over yourself periodically. This phase prepares the skin for scrubbing.',
+    tip: 'If you feel dizzy, move back to a cooler room immediately. There is no shame in pacing yourself.',
   },
   {
     step: 4,
-    title: 'Apply Savon Beldi (Black Soap)',
+    title: 'Apply Savon Noir (Black Soap)',
     icon: Droplets,
-    duration: '10 minutes',
+    duration: '10 min',
     description:
-      'A thick, dark olive-based soap (savon beldi) is applied all over your body. Let it sit for 5-10 minutes while the steam continues to work. The soap softens your skin and prepares it for the scrubbing. In public hammams, you can do this yourself or a kessala (scrubber) will do it.',
+      'Savon beldi (savon noir), a thick olive-based paste, is applied over your entire body. Let it sit for 5-10 minutes while steam keeps working. The soap softens dead skin cells and primes them for removal.',
     tip: 'Buy quality savon beldi from a herbalist (attar) rather than tourist shops. It should be dark and thick like molasses.',
   },
   {
     step: 5,
-    title: 'The Gommage (Scrubbing)',
+    title: 'The Gommage (Body Scrub with Kessa)',
     icon: Sparkles,
-    duration: '15-20 minutes',
+    duration: '15-20 min',
     description:
-      'This is the main event. Using a rough exfoliating glove (kessa), the kessala scrubs your entire body in firm, circular motions. You will see rolls of dead skin peeling off. It can feel intense, but the result is incredibly smooth skin. Every part of your body gets scrubbed.',
-    tip: 'Say "bezzaf" (enough) or "shwiya" (gently) if the scrubbing is too hard. Communication is welcomed.',
+      'This is the main event. The kessala (scrubber) uses a rough kessa glove to scrub your entire body in firm circular motions. You will see rolls of gray dead skin peeling away. The sensation is intense, but the result is the smoothest skin you have ever felt.',
+    tip: 'Say "bezzaf" (enough) or "shwiya" (gently) to adjust pressure. Communication is expected and welcomed.',
   },
   {
     step: 6,
     title: 'Ghassoul Clay Mask',
     icon: Flower2,
-    duration: '10-15 minutes',
+    duration: '10-15 min',
     description:
-      'A natural clay from the Atlas Mountains (ghassoul) is mixed with rose water and applied to your body and hair. It draws out impurities, conditions the skin, and leaves hair silky. Let it dry slightly before rinsing. Luxury spas may add essential oils or other ingredients.',
-    tip: 'Ghassoul clay is available at any Moroccan herbalist for from 20 MAD. You can continue using it at home.',
+      'Natural clay from the Atlas Mountains is mixed with rose water and applied to your body and hair. Ghassoul draws out impurities and conditions the skin with minerals like silica and magnesium. Let it dry slightly, then rinse.',
+    tip: 'You can buy ghassoul at any Moroccan herbalist for from 15 MAD per packet to continue the ritual at home.',
   },
   {
     step: 7,
     title: 'Rinse & Cool Down',
     icon: Waves,
-    duration: '10-15 minutes',
+    duration: '10-15 min',
     description:
-      'Rinse thoroughly with warm water, then gradually switch to cooler water. Move back through the rooms in reverse order. The cooling down is as important as the heating up. In luxury spas, you may be offered a cold plunge pool or a refreshing mist.',
-    tip: 'Alternate warm and cool water during rinsing for better circulation.',
+      'Rinse thoroughly with warm water, then gradually switch to cooler water. Move back through the rooms in reverse order. Luxury spas may offer a cold plunge pool. Alternating warm and cool water improves circulation.',
+    tip: 'Pour a final splash of orange blossom water (ma zhar) over your hair for a fragrant finish.',
   },
   {
     step: 8,
-    title: 'Rest & Recover',
+    title: 'Rest & Rehydrate',
     icon: Heart,
-    duration: '20-30 minutes',
+    duration: '20-30 min',
     description:
-      'After drying off, rest in the changing room or relaxation lounge. This is when the effects really sink in. Your skin will feel softer than it has in months. At public hammams, locals often drink mint tea and chat. At luxury spas, you will be served tea and dried fruits in a relaxation room.',
-    tip: 'Do not rush out. The resting period is part of the experience. Your body needs time to cool down and rehydrate.',
+      'After drying off, sit in the changing room or relaxation lounge. Your skin will feel impossibly soft. At public hammams, locals drink mint tea and chat. At luxury spas, expect to be served tea, dried fruits, and pastries in a quiet lounge.',
+    tip: 'Do not rush. The resting period is part of the ritual. Your body needs time to cool down and reabsorb moisture.',
   },
 ];
 
-/* ═══════════════════════════════════════════════════════════════
-   DATA: ETIQUETTE GUIDE
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   DATA: HAMMAM TYPE COMPARISON
+   ================================================================ */
 
-const etiquetteRules = [
+const hammamTypes = [
   {
-    rule: 'Respect Gender Separation',
-    icon: Users,
-    description:
-      'Public hammams have strict gender separation. Some have separate sections; others alternate hours. Always check the schedule before going. Women can go topless; men keep underwear on.',
+    type: 'Public Neighborhood Hammam',
+    icon: Building,
+    price: 'From 50 MAD entry',
+    scrub: 'From 50 MAD for gommage',
+    products: 'Bring your own or buy at entrance from 20 MAD',
+    setting: 'Tiled rooms with domed ceilings, star-shaped skylights. Often centuries old. Communal, no-frills.',
+    privacy: 'Gender-separated (different hours or sections). You wear underwear.',
+    bestFor: 'Budget travelers, culture seekers, those wanting the authentic Moroccan experience. This is how locals bathe weekly.',
+    booking: 'Walk in. No reservation needed. Check the men/women schedule in advance.',
   },
   {
-    rule: 'Bring Your Own Supplies (Public Hammam)',
-    icon: BookOpen,
-    description:
-      'For public hammams, bring: towel, underwear, flip-flops, savon beldi, kessa glove, ghassoul clay, shampoo, and a bucket (or buy one there from 20 MAD). Luxury spas provide everything.',
+    type: 'Private Boutique Spa',
+    icon: Sparkles,
+    price: 'From 300 MAD per package',
+    scrub: 'Included in package',
+    products: 'All provided (premium natural products)',
+    setting: 'Restored riad or dedicated spa with designer interiors, mood lighting, ambient music.',
+    privacy: 'Private or semi-private rooms. Robes and slippers provided. Couples welcome.',
+    bestFor: 'First-timers nervous about public hammams, couples, travelers wanting comfort with authenticity.',
+    booking: 'Book 1-2 days ahead. Walk-ins sometimes possible on weekdays.',
   },
   {
-    rule: 'Tip the Kessala',
-    icon: DollarSign,
-    description:
-      'If someone scrubs you at a public hammam, tip from 20-50 MAD depending on the service. At luxury spas, tipping from 50-100 MAD is appreciated but not mandatory.',
+    type: 'Luxury Hotel Spa',
+    icon: Crown,
+    price: 'From 800 MAD per treatment',
+    scrub: 'Included in ritual packages',
+    products: 'Premium or bespoke product lines, sometimes imported',
+    setting: 'Marble interiors, indoor pools, saunas, jacuzzis, fitness centers, relaxation lounges with tea service.',
+    privacy: 'Fully private treatment rooms. Couples suites available. Complete discretion.',
+    bestFor: 'Luxury travelers, honeymooners, those wanting a world-class spa experience.',
+    booking: 'Book at least 3-7 days ahead, especially during peak season (October-April). Online reservations common.',
   },
+];
+
+/* ================================================================
+   DATA: TRADITIONAL PRODUCTS
+   ================================================================ */
+
+const traditionalProducts = [
   {
-    rule: 'Do Not Stare',
-    icon: ShieldCheck,
-    description:
-      'The hammam is a place of body neutrality. People of all shapes and sizes come here. Do not stare at others. Keep your eyes on your own space and focus on your experience.',
-  },
-  {
-    rule: 'Be Quiet & Respectful',
-    icon: Heart,
-    description:
-      'While public hammams can be social, luxury spas expect quiet. In either setting, respect other people\'s space. Avoid loud phone calls. The hammam is a sanctuary.',
-  },
-  {
-    rule: 'Hydrate Before and After',
+    name: 'Savon Noir / Savon Beldi (Black Soap)',
     icon: Droplets,
+    price: 'From 20 MAD per jar',
+    origin: 'Made from crushed olives, olive oil, and potash',
     description:
-      'Drink at least half a liter of water before entering the hammam. The intense heat causes significant sweating. Dehydration can lead to dizziness and headaches.',
+      'The foundation of every hammam ritual. This thick, dark paste softens dead skin cells when left on for 5-10 minutes, preparing the body for the kessa scrub. Centuries of use across North Africa. The best savon beldi has a rich olive scent and dark brown color.',
+    buyAt: 'Herbalists (attarine), souks, and some pharmacies',
   },
   {
-    rule: 'Avoid After Heavy Meals',
-    icon: AlertTriangle,
+    name: 'Kessa Glove',
+    icon: Layers,
+    price: 'From 15 MAD',
+    origin: 'Woven from plant fibers, available in medium to coarse textures',
     description:
-      'Wait at least 2 hours after eating before visiting a hammam. The heat and steam on a full stomach can cause nausea. A light snack is fine.',
+      'The rough exfoliating glove used for the gommage. The kessala at a public hammam uses a professional-grade glove that strips dead skin efficiently. For personal use, start with a medium-grade glove. Replace every 3-4 months.',
+    buyAt: 'Souks, pharmacies, and hammam entrances',
   },
   {
-    rule: 'Time Your Visit Right',
-    icon: Clock,
+    name: 'Ghassoul (Rhassoul) Clay',
+    icon: Gem,
+    price: 'From 15 MAD per packet',
+    origin: 'Mined exclusively from the Atlas Mountains of Morocco',
     description:
-      'Public hammams are busiest on Thursday evenings and Friday mornings (before Friday prayer). For a quieter experience, go on weekday mornings. Luxury spas are quietest on weekday afternoons.',
+      'A natural mineral clay rich in silica, magnesium, and potassium. Mixed with rose water to form a paste, it is applied as a body and hair mask after the gommage. Ghassoul absorbs impurities, conditions the skin, and leaves hair silky without stripping natural oils.',
+    buyAt: 'Herbalists, beauty shops, and cooperatives',
+  },
+  {
+    name: 'Argan Oil',
+    icon: Award,
+    price: 'From 80 MAD for cosmetic grade',
+    origin: 'Cold-pressed from nuts of the argan tree, unique to southwestern Morocco',
+    description:
+      'Morocco\'s liquid gold. Applied to damp skin after the hammam, it locks in moisture and delivers vitamin E, fatty acids, and antioxidants. Cosmetic-grade argan oil has a light, nutty scent. Culinary argan oil (darker, roasted) is different and not used on skin.',
+    buyAt: 'Women\'s cooperatives (best quality), trusted herbalists, and certified shops',
+  },
+  {
+    name: 'Orange Blossom Water (Ma Zhar)',
+    icon: Flower2,
+    price: 'From 15 MAD per bottle',
+    origin: 'Distilled from blossoms of bitter orange trees',
+    description:
+      'Used as a final rinse for hair and face, it has a delicate floral scent and mild astringent properties. Also used in Moroccan pastries and mint tea. A bottle lasts for weeks of daily use.',
+    buyAt: 'Herbalists, souks, and supermarkets',
   },
 ];
 
-/* ═══════════════════════════════════════════════════════════════
-   DATA: BEST SPAS BY CITY
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   DATA: BEST HAMMAMS BY CITY
+   ================================================================ */
 
-const spasByCity = [
+const bestByCity = [
   {
     city: 'Marrakech',
     icon: Star,
     image: '/images/art-moroccan-hammam-ritual.webp',
-    description:
-      'The undisputed capital of Moroccan wellness. Marrakech has the highest concentration of both traditional hammams and luxury spas in the country. From 50 MAD public baths to 2,500 MAD ultra-luxury rituals.',
-    topPicks: [
-      { name: 'La Mamounia Spa', type: 'Ultra-Luxury', price: 'From 1,500 MAD' },
-      { name: 'Heritage Spa', type: 'Boutique', price: 'From 400 MAD' },
-      { name: 'Les Bains de Marrakech', type: 'Day Spa', price: 'From 500 MAD' },
-      { name: 'Hammam de la Rose', type: 'Boutique', price: 'From 350 MAD' },
-      { name: 'Hammam Dar el-Bacha', type: 'Public Hammam', price: 'From 50 MAD' },
+    intro: 'The capital of Moroccan wellness. Marrakech has the widest range of hammam and spa options in the country, from 50 MAD public baths in the medina to multi-hour rituals at palace resorts.',
+    picks: [
+      { name: 'Hammam Dar el-Bacha', type: 'Historic Public', price: 'From 50 MAD', note: '16th-century, star-shaped skylights, authentic local crowd' },
+      { name: 'Hammam Mouassine', type: 'Public', price: 'From 50 MAD', note: 'Medina heart, expert kessalas, separate men/women hours' },
+      { name: 'Heritage Spa', type: 'Boutique', price: 'From 400 MAD', note: 'Restored riad, black soap hammam + argan oil massage' },
+      { name: 'Les Bains de Marrakech', type: 'Day Spa', price: 'From 500 MAD', note: 'Palace setting, ghassoul clay mask, couples packages' },
+      { name: 'La Mamounia Spa', type: 'Ultra-Luxury', price: 'From 1,500 MAD', note: '2,500 sqm, Royal Hammam ritual, gold-infused argan oil' },
     ],
   },
   {
     city: 'Fes',
     icon: Building,
     image: '/images/art-moroccan-pattern-zellige.webp',
-    description:
-      'Fes offers a more authentic, less touristy spa experience. The medina\'s hammams are among the oldest in Morocco, and the riad-based spas use traditional Fassi techniques with herbs grown in the city\'s ancient gardens.',
-    topPicks: [
-      { name: 'Riad Laaroussa Spa', type: 'Riad Spa', price: 'From 400 MAD' },
-      { name: 'Palais Amani Spa', type: 'Boutique', price: 'From 350 MAD' },
-      { name: 'Hammam Sidi Ali Ben Harazem', type: 'Public Hammam', price: 'From 50 MAD' },
-      { name: 'Riad Fes Spa', type: 'Luxury Riad', price: 'From 500 MAD' },
-    ],
-  },
-  {
-    city: 'Essaouira',
-    icon: Waves,
-    image: '/images/hero-essaouira-ramparts.webp',
-    description:
-      'Essaouira brings a coastal twist to spa culture. Thalassotherapy (seawater treatments), sea salt scrubs, and ocean-view relaxation rooms set it apart. The laid-back coastal atmosphere adds to the sense of total relaxation.',
-    topPicks: [
-      { name: 'Sofitel Mogador Spa', type: 'Resort Spa', price: 'From 800 MAD' },
-      { name: 'Spa Lalla Mira', type: 'Eco Spa', price: 'From 300 MAD' },
-      { name: 'Heure Bleue Palais Spa', type: 'Boutique', price: 'From 400 MAD' },
+    intro: 'Fes hammams are among the oldest in Morocco. The spa scene here is less touristy than Marrakech, and the riad-based spas use traditional Fassi techniques with herbs grown in the city\'s ancient gardens.',
+    picks: [
+      { name: 'Hammam Sidi Ali Ben Harazem', type: 'Traditional Public', price: 'From 50 MAD', note: 'Centuries-old neighborhood hammam, bring your own supplies' },
+      { name: 'Riad Laaroussa Spa', type: 'Riad Spa', price: 'From 400 MAD', note: '17th-century palace, original zellige, Fassi herb treatments' },
+      { name: 'Palais Amani Spa', type: 'Boutique', price: 'From 350 MAD', note: 'Organic in-house products, Andalusian garden herbs, medina rooftop views' },
+      { name: 'Riad Fes Spa', type: 'Luxury Riad', price: 'From 500 MAD', note: 'Full hammam circuit, refined atmosphere, excellent therapists' },
     ],
   },
   {
     city: 'Casablanca',
     icon: Building,
     image: '/images/hero-casablanca-skyline.webp',
-    description:
-      'Casablanca\'s spa scene is more modern and international than other Moroccan cities. Expect contemporary designs, international product lines, and a mix of Moroccan and global wellness traditions.',
-    topPicks: [
-      { name: 'Four Seasons Spa', type: 'Luxury Hotel', price: 'From 1,200 MAD' },
-      { name: 'My Blend by Clarins', type: 'Luxury Hotel', price: 'From 900 MAD' },
-      { name: 'Mythic Oriental Spa', type: 'Day Spa', price: 'From 350 MAD' },
+    intro: 'Casablanca\'s spa scene is more modern and international. Expect contemporary design, international product lines, and a blend of Moroccan and global wellness traditions. Public hammams exist in older neighborhoods.',
+    picks: [
+      { name: 'Four Seasons Casablanca Spa', type: 'Luxury Hotel', price: 'From 1,200 MAD', note: 'Atlantic views, indoor pool, exclusive product line' },
+      { name: 'Spa My Blend by Clarins', type: 'Luxury Hotel', price: 'From 900 MAD', note: 'Personalized Clarins diagnostics, modern approach' },
+      { name: 'Mythic Oriental Spa', type: 'Day Spa', price: 'From 350 MAD', note: 'Moroccan-Asian fusion, unique Thai-Moroccan massage' },
     ],
   },
 ];
 
-/* ═══════════════════════════════════════════════════════════════
-   DATA: PRICE GUIDE
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   DATA: PRICE TIERS
+   ================================================================ */
 
-const priceGuide = [
-  { service: 'Public hammam entry', price: 'From 50 MAD', note: 'Just the bath, bring your own supplies' },
-  { service: 'Public hammam gommage (scrub)', price: 'From 50 MAD', note: 'Paid to the kessala on top of entry' },
-  { service: 'Savon beldi + kessa glove', price: 'From 20 MAD', note: 'Buy at entrance or from a herbalist' },
-  { service: 'Ghassoul clay', price: 'From 15 MAD', note: 'Sold by weight at herbalists' },
-  { service: 'Budget spa hammam package', price: 'From 300 MAD', note: 'Includes hammam, gommage, and short massage' },
-  { service: 'Mid-range spa package', price: 'From 500 MAD', note: 'Hammam, gommage, clay mask, and 30-min massage' },
-  { service: 'Luxury spa package', price: 'From 800 MAD', note: 'Full ritual: hammam, scrub, mask, massage, facial' },
-  { service: 'Ultra-luxury spa experience', price: 'From 1,500 MAD', note: 'Multi-hour experience with premium products' },
-  { service: 'Couples\' spa package', price: 'From 1,200 MAD', note: 'For two, private room, full treatment' },
-  { service: 'Argan oil massage (60 min)', price: 'From 300 MAD', note: 'Available at most spas' },
-  { service: 'Thalassotherapy session', price: 'From 600 MAD', note: 'Essaouira coastal spas speciality' },
-  { service: 'Rhassoul clay body wrap', price: 'From 250 MAD', note: 'Available at mid-range and luxury spas' },
+const priceTiers = [
+  { service: 'Public hammam entry', price: 'From 50 MAD', note: 'Bath only, bring your own supplies' },
+  { service: 'Gommage by kessala (public)', price: 'From 50 MAD', note: 'Tip on top of entry fee' },
+  { service: 'Savon beldi + kessa glove', price: 'From 20 MAD each', note: 'At entrance or herbalist' },
+  { service: 'Ghassoul clay packet', price: 'From 15 MAD', note: 'Sold by weight at herbalists' },
+  { service: 'Boutique spa hammam package', price: 'From 300 MAD', note: 'Hammam + gommage + short massage' },
+  { service: 'Mid-range full package', price: 'From 500 MAD', note: 'Hammam + scrub + clay mask + 30-min massage' },
+  { service: 'Luxury spa ritual', price: 'From 800 MAD', note: 'Full hammam, scrub, mask, massage, facial' },
+  { service: 'Ultra-luxury experience', price: 'From 1,500 MAD', note: 'Multi-hour ritual with premium products' },
+  { service: 'Couples spa package', price: 'From 1,200 MAD', note: 'Private room, full treatment for two' },
+  { service: 'Argan oil massage (60 min)', price: 'From 300 MAD', note: 'Standalone treatment at most spas' },
 ];
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
+   DATA: FIRST-TIMER TIPS
+   ================================================================ */
+
+const firstTimerTips = [
+  { title: 'Start at a Boutique Spa', icon: Sparkles, text: 'If the public hammam feels intimidating, book a boutique spa first (from 300 MAD). Staff speak English or French and guide you through everything. Once you know the flow, you can try a public hammam with confidence.' },
+  { title: 'Hydrate Before & After', icon: Droplets, text: 'Drink at least 500 ml of water before entering. The intense steam causes heavy sweating. After the hammam, continue drinking water and avoid alcohol for a few hours.' },
+  { title: 'Avoid Full Stomachs', icon: AlertTriangle, text: 'Wait at least 2 hours after eating. Steam and heat on a full stomach cause nausea. A light snack is fine.' },
+  { title: 'Protect Sensitive Skin', icon: ShieldCheck, text: 'The kessa scrub is vigorous. If you have sensitive skin, ask for a gommage doux (gentle scrub). Avoid the hammam if you have sunburn, open cuts, or skin infections.' },
+  { title: 'Time It Right', icon: Clock, text: 'Public hammams are busiest on Thursday evenings and Friday mornings. Go on a weekday morning for a quieter experience. Luxury spas are quietest on weekday afternoons.' },
+  { title: 'Skip Sun Exposure After', icon: Heart, text: 'Your skin will be sensitive for 24 hours after a deep scrub. Avoid direct sunlight. Apply argan oil or a gentle moisturizer. Many Moroccans follow their hammam with mint tea and a nap.' },
+];
+
+/* ================================================================
    PAGE COMPONENT
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 export default function MoroccoSpaGuidePage() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdTravel) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
       />
 
-      {/* ── Hero Section ── */}
+      {/* ── Hero ── */}
       <section className="relative py-20 md:py-28 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(/images/hero-spa.webp)',
-          }}
+          style={{ backgroundImage: 'url(/images/hero-spa.webp)' }}
         />
         <div className="absolute inset-0 hero-overlay" />
         <div className="container-morocco relative z-10">
@@ -645,155 +443,135 @@ export default function MoroccoSpaGuidePage() {
               <Home className="w-3.5 h-3.5" />
             </Link>
             <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-white">Morocco Spa &amp; Hammam Guide</span>
+            <span className="text-white">Morocco Hammam &amp; Spa Guide</span>
           </nav>
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm text-white/90 text-sm mb-6">
             <Droplets className="w-4 h-4" />
-            Wellness &amp; Relaxation
+            Wellness &amp; Traditional Bathing
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-display)] font-bold text-white mb-4">
-            Morocco Spa &amp; Hammam Guide:
-            <br className="hidden md:block" /> Top 20 Wellness Experiences
+            Morocco Traditional Hammam
+            <br className="hidden md:block" /> &amp; Spa Guide
           </h1>
           <p className="text-xl text-white/80 max-w-2xl">
-            From 50 MAD public hammams where locals have bathed for centuries to 2,500 MAD
-            luxury rituals in world-class resorts. Your complete guide to wellness in Morocco.
+            The step-by-step guide to Morocco&apos;s oldest wellness ritual. From 50 MAD
+            neighborhood bathhouses to world-class luxury spas -- everything a first-timer needs to know.
           </p>
         </div>
       </section>
 
       <div className="zellige-border" />
 
-      {/* ── Introduction ── */}
+      {/* ── Introduction: Cultural Significance ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
-          <div className="prose-moroccan">
-            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
-              The Hammam: Morocco&apos;s Greatest Wellness Tradition
-            </h2>
-            <div className="space-y-4 text-lg text-[var(--text-secondary)] leading-relaxed">
-              <p>
-                The hammam is not just a bath. It is a cornerstone of Moroccan social life, a weekly
-                ritual that has endured for over a thousand years. Every neighborhood in Morocco has its
-                hammam, and for most Moroccans, the weekly visit is as essential as the Friday couscous.
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
+            More Than a Bath: The Cultural Heart of Moroccan Life
+          </h2>
+          <div className="space-y-4 text-lg text-[var(--text-secondary)] leading-relaxed">
+            <p>
+              Every neighborhood in Morocco has a hammam. For over a thousand years, the weekly visit
+              has been as central to Moroccan life as the Friday couscous or the evening call to prayer.
+              The hammam is where mothers bring daughters before their weddings, where friends trade
+              gossip over buckets of hot water, and where the accumulated grime and stress of the week
+              is literally scraped away with a rough glove and a generous handful of black soap.
+            </p>
+            <p>
+              For travelers, the hammam offers something rare: genuine participation in everyday Moroccan
+              culture, not a performance staged for tourists. At a public hammam, you sit beside a
+              grandmother scrubbing her grandchildren, a young woman conditioning her hair with ghassoul
+              clay before her engagement party, a laborer rinsing off a week of dust. It is unselfconscious,
+              practical, and deeply human.
+            </p>
+            <p>
+              Morocco has also developed a modern spa industry that ranks among the finest on the continent.
+              Luxury resorts in Marrakech and Casablanca have elevated the hammam ritual into multi-hour
+              experiences using premium argan oil, rose water, and bespoke product lines. The ritual remains
+              the same at its core -- steam, scrub, clay, rinse, rest -- but the setting and price range
+              from 50 MAD to 2,500 MAD.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Cultural Significance Deep Dive ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
+            <Award className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            The Hammam in Moroccan Culture
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="card-moroccan p-5">
+              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                Wedding Traditions
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                The bridal hammam (hammam al-aaroussa) is one of the most important pre-wedding rituals. The
+                bride visits the hammam with her female relatives and friends the day before her wedding. She
+                is scrubbed, masked, oiled, and perfumed in a celebration that can last several hours. The
+                kessala decorates her skin with henna afterward.
               </p>
-              <p>
-                For visitors, the hammam offers something no other experience in Morocco can: a glimpse
-                into the real, everyday life of Moroccans. It is where mothers bring their daughters,
-                where friends catch up, where brides are prepared for their wedding day, and where the
-                stresses of the week are literally scrubbed away.
+            </div>
+            <div className="card-moroccan p-5">
+              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                Social Gathering Place
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                Before modern plumbing, the hammam was the only place most Moroccans could take a hot bath.
+                It became a social hub where news was shared, matches were made, and community bonds were
+                strengthened. This social function persists today, especially among older women who treat the
+                weekly hammam as their primary social outing.
               </p>
-              <p>
-                Morocco has also embraced modern wellness culture. From Marrakech to Casablanca, luxury
-                spas blend traditional hammam rituals with contemporary treatments, creating experiences
-                that rank among the finest in the world. Whether you spend 50 MAD or 2,500 MAD, you
-                will leave feeling renewed.
+            </div>
+            <div className="card-moroccan p-5">
+              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                Islamic Purification
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                The hammam has roots in Islamic bathing culture. Ritual cleanliness (tahara) is fundamental
+                to daily prayer. The hammam provided a thorough weekly cleansing beyond the daily ablutions
+                (wudu). Many historic hammams were built adjacent to mosques, and the busiest day remains
+                Friday, when Moroccans prepare for the most important prayer of the week.
+              </p>
+            </div>
+            <div className="card-moroccan p-5">
+              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                Architectural Heritage
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                Historic hammams are feats of engineering. Domed ceilings with star-shaped skylights allow
+                light in while trapping steam. Underfloor heating systems (similar to Roman hypocausts) warm
+                the marble floors. Some hammams in Fes and Marrakech date to the 14th century and remain in
+                daily use, making them among the oldest functioning public buildings in North Africa.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Price Quick Reference ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <DollarSign className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Spa &amp; Hammam Price Guide
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-4">
-            What to expect to pay across different tiers of spa and hammam experiences in Morocco.
-          </p>
-          <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
-            <Info className="w-3.5 h-3.5 inline mr-1" />
-            All prices are starting prices. Seasonal pricing applies during peak tourist months (October-April) and holiday periods, when luxury spa prices may increase by 20-30%.
-          </p>
-          <div className="max-w-4xl mx-auto">
-            <div className="card-moroccan overflow-hidden">
-              <div className="grid grid-cols-3 gap-0 bg-[var(--color-accent)] text-white text-sm font-medium">
-                <div className="p-3 px-4">Service</div>
-                <div className="p-3 px-4">Price</div>
-                <div className="p-3 px-4">Note</div>
-              </div>
-              {priceGuide.map((item, i) => (
-                <div
-                  key={item.service}
-                  className={`grid grid-cols-3 gap-0 text-sm ${i % 2 === 0 ? 'bg-white' : 'bg-[var(--surface-muted)]'}`}
-                >
-                  <div className="p-3 px-4 font-medium text-[var(--text-primary)]">{item.service}</div>
-                  <div className="p-3 px-4 text-[var(--color-accent)] font-semibold">{item.price}</div>
-                  <div className="p-3 px-4 text-[var(--text-muted)]">{item.note}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Traditional vs Modern Comparison ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <CircleDot className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Traditional Hammam vs. Modern Luxury Spa
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Both experiences have their place. Here is how they compare across every dimension so you can choose what suits you.
-          </p>
-          <div className="max-w-5xl mx-auto space-y-6">
-            {hammamComparison.map((item) => (
-              <div key={item.aspect} className="card-moroccan p-6">
-                <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4">
-                  {item.aspect}
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="bg-[var(--surface-muted)] p-4 rounded-lg">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Building className="w-4 h-4 text-[var(--color-accent)]" />
-                      <span className="text-sm font-semibold text-[var(--color-accent)]">Traditional Hammam</span>
-                    </div>
-                    <p className="text-sm text-[var(--text-secondary)]">{item.traditional}</p>
-                  </div>
-                  <div className="bg-[var(--surface-muted)] p-4 rounded-lg">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Gem className="w-4 h-4 text-[var(--color-gold)]" />
-                      <span className="text-sm font-semibold text-[var(--color-gold)]">Modern Luxury Spa</span>
-                    </div>
-                    <p className="text-sm text-[var(--text-secondary)]">{item.modern}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Step-by-Step Hammam Guide ── */}
+      {/* ── Step-by-Step Hammam Ritual ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <BookOpen className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Step-by-Step: What to Expect at a Hammam
+            The Hammam Ritual: Step by Step
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            A first-time hammam visit can feel daunting. Here is exactly what happens, step by step, so you know what to expect.
+            Here is exactly what happens during a hammam visit, from arrival to the final cup of mint tea.
           </p>
 
           <div className="max-w-4xl mx-auto">
             <div className="relative">
-              {/* Timeline line */}
               <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-[var(--color-accent)]/20 hidden md:block" />
-
               <div className="space-y-8">
                 {hammamSteps.map((step) => {
                   const StepIcon = step.icon;
                   return (
                     <div key={step.step} className="relative flex gap-6">
-                      {/* Step number circle */}
                       <div className="w-12 h-12 rounded-full bg-[var(--color-accent)] flex items-center justify-center shrink-0 z-10">
                         <span className="text-white font-bold text-sm">{step.step}</span>
                       </div>
-
                       <div className="card-moroccan p-6 flex-1">
                         <div className="flex items-start justify-between mb-3">
                           <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
@@ -821,57 +599,57 @@ export default function MoroccoSpaGuidePage() {
         </div>
       </section>
 
-      {/* ── Top 20 Spa Experiences ── */}
+      {/* ── Public vs Private vs Hotel ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Award className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Top 20 Spa Experiences in Morocco
+            <CircleDot className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Public vs. Boutique vs. Hotel Hammam
           </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-4">
-            From historic public hammams to ultra-luxury resort spas, these are the finest wellness experiences Morocco has to offer.
-          </p>
-          <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
-            <Info className="w-3.5 h-3.5 inline mr-1" />
-            Prices shown are starting prices and may vary by season, treatment, and availability.
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Three tiers of hammam experience exist in Morocco. Each serves a different purpose and budget.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {topSpaExperiences.map((spa) => {
-              const SpaIcon = spa.icon;
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {hammamTypes.map((h) => {
+              const TypeIcon = h.icon;
               return (
-                <div key={spa.rank} className="card-moroccan p-6">
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                      <span className="text-sm font-bold text-[var(--color-accent)]">#{spa.rank}</span>
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                        {spa.name}
-                      </h3>
-                      <div className="flex items-center gap-3 text-sm text-[var(--text-muted)]">
-                        <span className="flex items-center gap-1">
-                          <MapPin className="w-3.5 h-3.5" />
-                          {spa.city}
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <SpaIcon className="w-3.5 h-3.5" />
-                          {spa.type}
-                        </span>
-                      </div>
-                    </div>
+                <div key={h.type} className="card-moroccan p-6">
+                  <div className="w-12 h-12 rounded-full bg-[var(--surface-muted)] flex items-center justify-center mb-4">
+                    <TypeIcon className="w-6 h-6 text-[var(--color-accent)]" />
                   </div>
-                  <div className="inline-block px-2 py-0.5 text-xs font-medium rounded bg-[var(--color-accent)]/10 text-[var(--color-accent)] mb-3">
-                    {spa.price}
-                  </div>
-                  <p className="text-sm text-[var(--text-secondary)] mb-4">{spa.description}</p>
-                  <div className="grid grid-cols-2 gap-2">
-                    {spa.highlights.map((highlight, i) => (
-                      <div key={i} className="flex items-start gap-1.5 text-xs text-[var(--text-muted)]">
-                        <CheckCircle className="w-3 h-3 mt-0.5 shrink-0 text-[var(--color-gold)]" />
-                        {highlight}
-                      </div>
-                    ))}
+                  <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4">
+                    {h.type}
+                  </h3>
+                  <div className="space-y-3 text-sm">
+                    <div>
+                      <span className="font-semibold text-[var(--color-accent)]">Entry:</span>{' '}
+                      <span className="text-[var(--text-secondary)]">{h.price}</span>
+                    </div>
+                    <div>
+                      <span className="font-semibold text-[var(--color-accent)]">Scrub:</span>{' '}
+                      <span className="text-[var(--text-secondary)]">{h.scrub}</span>
+                    </div>
+                    <div>
+                      <span className="font-semibold text-[var(--color-accent)]">Products:</span>{' '}
+                      <span className="text-[var(--text-secondary)]">{h.products}</span>
+                    </div>
+                    <div>
+                      <span className="font-semibold text-[var(--color-accent)]">Setting:</span>{' '}
+                      <span className="text-[var(--text-secondary)]">{h.setting}</span>
+                    </div>
+                    <div>
+                      <span className="font-semibold text-[var(--color-accent)]">Privacy:</span>{' '}
+                      <span className="text-[var(--text-secondary)]">{h.privacy}</span>
+                    </div>
+                    <div>
+                      <span className="font-semibold text-[var(--color-accent)]">Best for:</span>{' '}
+                      <span className="text-[var(--text-secondary)]">{h.bestFor}</span>
+                    </div>
+                    <div>
+                      <span className="font-semibold text-[var(--color-accent)]">Booking:</span>{' '}
+                      <span className="text-[var(--text-secondary)]">{h.booking}</span>
+                    </div>
                   </div>
                 </div>
               );
@@ -880,49 +658,163 @@ export default function MoroccoSpaGuidePage() {
         </div>
       </section>
 
-      {/* ── Best Spas by City ── */}
+      {/* ── Traditional Products ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Flower2 className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Traditional Hammam Products
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Five natural products refined over centuries form the backbone of the hammam ritual. All can be purchased in Morocco and taken home.
+          </p>
+
+          <div className="space-y-6">
+            {traditionalProducts.map((product) => {
+              const ProdIcon = product.icon;
+              return (
+                <div key={product.name} className="card-moroccan p-6">
+                  <div className="flex items-start gap-4 mb-3">
+                    <div className="w-10 h-10 rounded-full bg-[var(--surface-muted)] flex items-center justify-center shrink-0">
+                      <ProdIcon className="w-5 h-5 text-[var(--color-accent)]" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+                        {product.name}
+                      </h3>
+                      <p className="text-xs text-[var(--text-muted)] italic">{product.origin}</p>
+                    </div>
+                  </div>
+                  <p className="text-sm text-[var(--text-secondary)] mb-3">{product.description}</p>
+                  <div className="flex flex-wrap items-center gap-4 text-xs text-[var(--text-muted)]">
+                    <span className="flex items-center gap-1">
+                      <DollarSign className="w-3 h-3 text-[var(--color-accent)]" />
+                      {product.price}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <MapPin className="w-3 h-3 text-[var(--color-accent)]" />
+                      {product.buyAt}
+                    </span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Argan Oil & Specialty Treatments ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Gem className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Argan Oil &amp; Specialty Treatments
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Beyond the standard hammam ritual, Moroccan spas offer treatments built around the country&apos;s
+            most prized natural ingredients.
+          </p>
+
+          <div className="space-y-6">
+            <div className="card-moroccan p-6">
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                Argan Oil Full-Body Massage
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] mb-2">
+                The signature massage treatment of Moroccan spas. Pure cosmetic-grade argan oil is warmed
+                and worked into the skin using long, flowing strokes. The oil penetrates quickly, delivering
+                vitamin E and essential fatty acids deep into the skin. A 60-minute session leaves the skin
+                luminous and deeply hydrated for days.
+              </p>
+              <p className="text-xs text-[var(--color-accent)] font-semibold">From 300 MAD (60 min) at most mid-range and luxury spas</p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                Rose Water &amp; Rose Petal Ritual
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] mb-2">
+                Damask roses from the Dades Valley (harvested each May) provide the foundation for this
+                luxury treatment. Rose water is used as a toner, rose oil is blended into the massage,
+                and rose petals float in the rinse water. The scent is extraordinary. Hammam de la Rose
+                in Marrakech specializes exclusively in rose-based treatments.
+              </p>
+              <p className="text-xs text-[var(--color-accent)] font-semibold">From 350 MAD at boutique spas. Seasonal pricing can change during rose harvest season.</p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                Thalassotherapy (Seawater Treatments)
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] mb-2">
+                Available at coastal spas in Essaouira and El Jadida, thalassotherapy uses heated Atlantic
+                seawater, seaweed wraps, and sea salt scrubs. The mineral-rich seawater is believed to
+                improve circulation and reduce joint stiffness. The Sofitel Essaouira Mogador and Mazagan
+                Beach Resort are the two leading thalassotherapy destinations in Morocco.
+              </p>
+              <p className="text-xs text-[var(--color-accent)] font-semibold">From 600 MAD per session at resort spas</p>
+            </div>
+
+            <div className="card-moroccan p-6">
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                Saffron &amp; Honey Body Wrap
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] mb-2">
+                A premium treatment using Taliouine saffron (Morocco produces some of the world&apos;s finest)
+                and local wildflower honey. The warm honey-saffron mixture is applied after the gommage,
+                wrapped, and left to absorb for 20 minutes. Saffron has anti-inflammatory properties, and
+                honey is a natural humectant. The skin glows for days afterward.
+              </p>
+              <p className="text-xs text-[var(--color-accent)] font-semibold">From 450 MAD at select boutique and luxury spas</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Best Hammams by City ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <MapPin className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Best Spas by City
+            Best Hammams &amp; Spas by City
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Each Moroccan city has its own spa character. Here is where to go depending on where you are.
+            Each Moroccan city has a distinct spa character. Here are the top recommendations by location.
           </p>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {spasByCity.map((city) => {
+          <div className="space-y-10">
+            {bestByCity.map((city) => {
               const CityIcon = city.icon;
               return (
                 <div key={city.city} className="card-moroccan overflow-hidden">
-                  <div className="relative h-48">
+                  <div className="relative h-52">
                     <img
                       src={city.image}
-                      alt={`Spa and wellness scene in ${city.city}, Morocco`}
+                      alt={`Hammam and spa atmosphere in ${city.city}, Morocco`}
                       className="w-full h-full object-cover"
                       loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                     <div className="absolute bottom-4 left-4 flex items-center gap-2">
                       <CityIcon className="w-5 h-5 text-white" />
-                      <h3 className="text-xl font-[family-name:var(--font-display)] font-bold text-white">
+                      <h3 className="text-2xl font-[family-name:var(--font-display)] font-bold text-white">
                         {city.city}
                       </h3>
                     </div>
                   </div>
                   <div className="p-6">
-                    <p className="text-sm text-[var(--text-secondary)] mb-4">{city.description}</p>
+                    <p className="text-sm text-[var(--text-secondary)] mb-5">{city.intro}</p>
                     <div className="space-y-3">
-                      {city.topPicks.map((pick, i) => (
-                        <div key={i} className="flex items-center justify-between text-sm">
+                      {city.picks.map((pick) => (
+                        <div key={pick.name} className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-sm border-b border-[var(--border)] pb-3 last:border-0 last:pb-0">
                           <div className="flex items-center gap-2">
-                            <Star className="w-3.5 h-3.5 text-[var(--color-gold)]" />
+                            <Star className="w-3.5 h-3.5 text-[var(--color-gold)] shrink-0" />
                             <span className="font-medium text-[var(--text-primary)]">{pick.name}</span>
+                            <span className="text-xs text-[var(--text-muted)]">({pick.type})</span>
                           </div>
-                          <div className="flex items-center gap-3 text-xs text-[var(--text-muted)]">
-                            <span>{pick.type}</span>
+                          <div className="flex items-center gap-3 text-xs">
                             <span className="text-[var(--color-accent)] font-semibold">{pick.price}</span>
+                            <span className="text-[var(--text-muted)] hidden md:inline">{pick.note}</span>
                           </div>
                         </div>
                       ))}
@@ -935,29 +827,65 @@ export default function MoroccoSpaGuidePage() {
         </div>
       </section>
 
-      {/* ── Etiquette Guide ── */}
+      {/* ── Price Guide ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+        <div className="container-morocco">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <HandCoins className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Hammam &amp; Spa Pricing
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-3">
+            What to expect across every tier, from a neighborhood bathhouse to an ultra-luxury resort spa.
+          </p>
+          <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
+            <Info className="w-3.5 h-3.5 inline mr-1" />
+            All prices are starting prices in Moroccan Dirhams. Seasonal pricing can change during peak months (October-April) when luxury spa rates may increase 20-30%.
+          </p>
+          <div className="max-w-4xl mx-auto">
+            <div className="card-moroccan overflow-hidden">
+              <div className="grid grid-cols-3 gap-0 bg-[var(--color-accent)] text-white text-sm font-medium">
+                <div className="p-3 px-4">Service</div>
+                <div className="p-3 px-4">Price (MAD)</div>
+                <div className="p-3 px-4">Details</div>
+              </div>
+              {priceTiers.map((item, i) => (
+                <div
+                  key={item.service}
+                  className={`grid grid-cols-3 gap-0 text-sm ${i % 2 === 0 ? 'bg-white' : 'bg-[var(--surface-muted)]'}`}
+                >
+                  <div className="p-3 px-4 font-medium text-[var(--text-primary)]">{item.service}</div>
+                  <div className="p-3 px-4 text-[var(--color-accent)] font-semibold">{item.price}</div>
+                  <div className="p-3 px-4 text-[var(--text-muted)]">{item.note}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── First-Timer Tips ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <ShieldCheck className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Hammam &amp; Spa Etiquette
+            <CheckCircle className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Tips for First-Time Hammam Visitors
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Follow these guidelines to ensure a respectful and enjoyable experience for yourself and others.
+            Six practical pointers to make your first hammam experience smooth and enjoyable.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {etiquetteRules.map((rule) => {
-              const RuleIcon = rule.icon;
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {firstTimerTips.map((tip) => {
+              const TipIcon = tip.icon;
               return (
-                <div key={rule.rule} className="card-moroccan p-5">
+                <div key={tip.title} className="card-moroccan p-5">
                   <div className="w-10 h-10 rounded-full bg-[var(--surface-muted)] flex items-center justify-center mb-3">
-                    <RuleIcon className="w-5 h-5 text-[var(--color-accent)]" />
+                    <TipIcon className="w-5 h-5 text-[var(--color-accent)]" />
                   </div>
                   <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                    {rule.rule}
+                    {tip.title}
                   </h3>
-                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{rule.description}</p>
+                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{tip.text}</p>
                 </div>
               );
             })}
@@ -965,138 +893,49 @@ export default function MoroccoSpaGuidePage() {
         </div>
       </section>
 
-      {/* ── Product Guide ── */}
+      {/* ── Etiquette ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Flower2 className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Traditional Hammam Products
+            <ShieldCheck className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Hammam Etiquette
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            The products used in a Moroccan hammam are natural, effective, and have been refined over centuries.
+            Respect these unwritten rules and you will be welcomed warmly.
           </p>
 
-          <div className="space-y-6">
-            <div className="card-moroccan p-6">
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                Savon Beldi (Black Soap)
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                A thick, dark paste made from crushed olives, olive oil, and potash. It is the foundation of the hammam
-                ritual and has been used in Morocco for centuries. Applied to the skin before scrubbing, it softens dead
-                skin cells and prepares the body for exfoliation.
-              </p>
-              <div className="flex items-center gap-4 text-xs text-[var(--text-muted)]">
-                <span className="flex items-center gap-1">
-                  <DollarSign className="w-3 h-3 text-[var(--color-accent)]" />
-                  From 20 MAD for a jar
-                </span>
-                <span className="flex items-center gap-1">
-                  <MapPin className="w-3 h-3 text-[var(--color-accent)]" />
-                  Buy from herbalists (attarine) or souks
-                </span>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              { rule: 'Respect Gender Separation', text: 'Public hammams are strictly divided. Some have separate sections; others alternate hours. Always check the schedule before showing up.' },
+              { rule: 'Tip the Kessala', text: 'The person who scrubs you at a public hammam earns most of their income from tips. From 20-50 MAD is standard. At luxury spas, from 50-100 MAD is appreciated.' },
+              { rule: 'Do Not Stare', text: 'The hammam is a space of body neutrality. People of all shapes attend. Keep your eyes on your own space and focus on your experience.' },
+              { rule: 'Keep It Quiet (in Luxury Spas)', text: 'Public hammams can be lively and social. Luxury spas expect quiet. In either setting, avoid loud phone calls. Leave your phone in the locker.' },
+              { rule: 'Bring Your Own Supplies to Public Hammams', text: 'Towel, underwear, flip-flops, savon beldi, kessa glove, ghassoul clay, shampoo. You can buy supplies at the entrance if you forget.' },
+              { rule: 'Clean Up After Yourself', text: 'In a public hammam, rinse your area when you are done. Leave your spot cleaner than you found it. This is basic Moroccan hammam courtesy.' },
+            ].map((item) => (
+              <div key={item.rule} className="card-moroccan p-5">
+                <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-[var(--color-gold)] shrink-0" />
+                  {item.rule}
+                </h3>
+                <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{item.text}</p>
               </div>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                Kessa Glove
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                A rough exfoliating glove, traditionally made from woven plant fibers, used for the gommage (scrubbing).
-                The texture ranges from medium to very coarse. For first-timers, a medium-grade glove is recommended. The
-                kessala (scrubber) in a public hammam will use a professional-grade glove that removes dead skin efficiently.
-              </p>
-              <div className="flex items-center gap-4 text-xs text-[var(--text-muted)]">
-                <span className="flex items-center gap-1">
-                  <DollarSign className="w-3 h-3 text-[var(--color-accent)]" />
-                  From 15 MAD
-                </span>
-                <span className="flex items-center gap-1">
-                  <MapPin className="w-3 h-3 text-[var(--color-accent)]" />
-                  Available at souks and pharmacies
-                </span>
-              </div>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                Ghassoul (Rhassoul) Clay
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                A natural mineral clay mined exclusively from the Atlas Mountains. Rich in silica, magnesium, and
-                potassium, it cleanses and conditions both skin and hair. Mixed with rose water to form a paste, it is
-                applied as a mask after the gommage. Ghassoul absorbs impurities and leaves the skin incredibly soft.
-              </p>
-              <div className="flex items-center gap-4 text-xs text-[var(--text-muted)]">
-                <span className="flex items-center gap-1">
-                  <DollarSign className="w-3 h-3 text-[var(--color-accent)]" />
-                  From 15 MAD for a packet
-                </span>
-                <span className="flex items-center gap-1">
-                  <MapPin className="w-3 h-3 text-[var(--color-accent)]" />
-                  Herbalists and beauty shops
-                </span>
-              </div>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                Argan Oil
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Morocco&apos;s liquid gold. Cold-pressed from the nuts of the argan tree, which grows only in southwestern
-                Morocco. Cosmetic-grade argan oil is used after the hammam as a full-body moisturizer. It is rich in
-                vitamin E, fatty acids, and antioxidants. Applied to damp skin after the bath, it locks in moisture
-                and gives the skin a healthy glow.
-              </p>
-              <div className="flex items-center gap-4 text-xs text-[var(--text-muted)]">
-                <span className="flex items-center gap-1">
-                  <DollarSign className="w-3 h-3 text-[var(--color-accent)]" />
-                  From 80 MAD for cosmetic grade
-                </span>
-                <span className="flex items-center gap-1">
-                  <MapPin className="w-3 h-3 text-[var(--color-accent)]" />
-                  Cooperatives or trusted herbalists
-                </span>
-              </div>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                Orange Blossom Water (Ma Zhar)
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Distilled from the blossoms of bitter orange trees. Used in the hammam as a final rinse for the hair
-                and face, it has a delicate floral scent and mild astringent properties. Also widely used in Moroccan
-                cooking and as a natural perfume. A bottle lasts for weeks.
-              </p>
-              <div className="flex items-center gap-4 text-xs text-[var(--text-muted)]">
-                <span className="flex items-center gap-1">
-                  <DollarSign className="w-3 h-3 text-[var(--color-accent)]" />
-                  From 15 MAD for a bottle
-                </span>
-                <span className="flex items-center gap-1">
-                  <MapPin className="w-3 h-3 text-[var(--color-accent)]" />
-                  Herbalists, souks, and supermarkets
-                </span>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ── Gallery Section ── */}
+      {/* ── Gallery ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
-            Moroccan Spa &amp; Hammam Atmosphere
+            Inside the Moroccan Hammam
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="relative h-72 rounded-xl overflow-hidden">
               <img
                 src="/images/hero-hammam-interior.webp"
-                alt="Traditional Moroccan hammam interior with vaulted ceilings and warm stone floors"
+                alt="Traditional Moroccan hammam interior with vaulted stone ceilings and warm tiled floors"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
@@ -1106,7 +945,7 @@ export default function MoroccoSpaGuidePage() {
             <div className="relative h-72 rounded-xl overflow-hidden">
               <img
                 src="/images/photo-hammam-interior.webp"
-                alt="Steam-filled hammam with zellige tilework and warm atmospheric lighting"
+                alt="Steam-filled hammam room with zellige tilework and atmospheric lighting"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
@@ -1116,7 +955,7 @@ export default function MoroccoSpaGuidePage() {
             <div className="relative h-72 rounded-xl overflow-hidden">
               <img
                 src="/images/hero-wellness-spa.webp"
-                alt="Luxury wellness spa in Morocco with modern treatment area and relaxation space"
+                alt="Modern luxury spa treatment room in a Moroccan resort with relaxation area"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
@@ -1127,199 +966,103 @@ export default function MoroccoSpaGuidePage() {
         </div>
       </section>
 
-      {/* ── Practical Tips ── */}
+      {/* ── FAQ Section ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
-            <Info className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Practical Tips for Spa Visitors
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <Clock className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Best Time to Visit
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Public hammams: weekday mornings for a quiet experience. Luxury spas: weekday afternoons.
-                Avoid Thursdays and Fridays at public hammams (peak days). During Ramadan, hammams are busiest
-                just before iftar.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <ShieldCheck className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Health Considerations
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Avoid hammams if you have heart conditions, are pregnant (consult your doctor first), or have skin
-                infections. The intense heat can lower blood pressure. If you feel dizzy, leave the hot room immediately
-                and drink water.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <Users className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Couples Visiting Together
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Public hammams are strictly gender-separated. Couples who want to be together must visit a luxury
-                spa with private couple rooms. Prices for couples start from 1,200 MAD for a shared treatment
-                experience.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <DollarSign className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Saving Money
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                For the authentic experience at the best price, visit a public hammam. Buy your supplies from an
-                herbalist (attar) before going. The total cost for a full public hammam visit with gommage is from
-                100 MAD including tips.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <BookOpen className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Booking Luxury Spas
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Book at least 2-3 days in advance for luxury spas, and a week or more during peak season
-                (October-April). Many spas offer online booking. Ask about package deals that combine multiple
-                treatments at a discounted rate.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <Sparkles className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                After Your Hammam
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                After a hammam, your skin will be sensitive. Avoid direct sun exposure for 24 hours. Apply
-                argan oil or a gentle moisturizer. Drink plenty of water and eat lightly. Many Moroccans
-                follow their hammam with a glass of mint tea and a nap.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── FAQ Section ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <MessageCircleQuestion className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
             Frequently Asked Questions
           </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Answers to the most common questions from first-time hammam visitors.
+          </p>
 
           <div className="space-y-6">
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                Is the hammam suitable for first-time visitors to Morocco?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                Absolutely. If you are nervous about the public hammam, start with a mid-range spa (from 300 MAD)
-                where the staff are accustomed to international visitors and will guide you through the process. Once
-                you have experienced it once, you may want to try the more authentic public hammam.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                What should I wear in a Moroccan hammam?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                In a public hammam, women typically wear underwear bottoms (many go topless). Men wear underwear or
-                swim shorts. In luxury spas, you will be given disposable underwear, a robe, and slippers. Nudity
-                is not the norm in Moroccan hammams, unlike Turkish or Finnish baths.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                Can men and women visit the hammam together?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                Not in public hammams, which are strictly gender-separated. Some public hammams have separate
-                sections; others alternate hours for men and women. If you want to visit as a couple, book a
-                private session at a luxury spa (from 1,200 MAD for couples).
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                How often should I visit the hammam during my trip?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                Moroccans typically visit once a week. For travelers, once or twice during a week-long trip is ideal.
-                One visit to a public hammam for the cultural experience, and perhaps one visit to a luxury spa for
-                the indulgence. Your skin will thank you.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                Are Moroccan spa products safe for sensitive skin?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                Traditional products like savon beldi, ghassoul clay, and argan oil are natural and generally well-tolerated.
-                However, the kessa scrub is vigorous and may irritate very sensitive skin. Ask for a gentler scrub
-                (gommage doux) if you have sensitive skin. Always do a patch test with any new product.
-              </p>
-            </div>
+            {faqItems.map((faq) => (
+              <div key={faq.q} className="card-moroccan p-6">
+                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                  {faq.q}
+                </h3>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{faq.a}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ── Related Pages ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+      {/* ── Related Guides ── */}
+      <section className="py-16 md:py-20">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
-            Continue Exploring Morocco
+            Related Travel Guides
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Link href="/hammam" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
-              <Droplets className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Moroccan Hammam Guide
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Deep dive into the traditional Moroccan hammam experience with neighborhood recommendations.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-            <Link href="/wellness" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
-              <Heart className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Wellness &amp; Yoga Retreats
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Explore Morocco&apos;s yoga retreats, meditation centers, and holistic wellness escapes.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-            <Link href="/luxury" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
-              <Crown className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Luxury Morocco
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                The finest hotels, riads, restaurants, and experiences for luxury travelers in Morocco.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                title: 'Moroccan Hammam Guide',
+                description: 'Deep dive into neighborhood hammam culture with additional city-by-city recommendations.',
+                href: '/hammam',
+                icon: Droplets,
+              },
+              {
+                title: 'Wellness & Yoga Retreats',
+                description: 'Yoga retreats, meditation centers, and holistic wellness escapes across Morocco.',
+                href: '/wellness',
+                icon: Heart,
+              },
+              {
+                title: 'Argan Oil Guide',
+                description: 'How argan oil is made, where to buy authentic cosmetic and culinary grades, and cooperative visits.',
+                href: '/argan-oil',
+                icon: Award,
+              },
+              {
+                title: 'Morocco Etiquette Guide',
+                description: 'Dress code, tipping customs, greetings, and social norms for respectful travel in Morocco.',
+                href: '/etiquette',
+                icon: ShieldCheck,
+              },
+            ].map((guide) => {
+              const GuideIcon = guide.icon;
+              return (
+                <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                  <GuideIcon className="w-8 h-8 text-[var(--color-accent)] mb-3 group-hover:text-[var(--color-primary)] transition-colors" />
+                  <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                    {guide.title}
+                  </h3>
+                  <p className="text-sm text-[var(--text-secondary)]">{guide.description}</p>
+                  <span className="inline-flex items-center gap-1 mt-3 text-sm text-[var(--color-accent)] font-medium">
+                    Read Guide <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── More Spa & Wellness Resources ── */}
+      <section className="py-12 md:py-16 bg-[var(--surface-muted)]">
+        <div className="container-morocco">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold text-center mb-8" style={{ color: 'var(--text-primary)' }}>
+            More Spa &amp; Wellness Resources
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { href: '/morocco-wellness-retreats', title: 'Morocco Wellness Retreats', desc: 'Multi-day retreats combining hammam, yoga, meditation, and healthy cuisine in stunning settings.' },
+              { href: '/morocco-thermal-spas', title: 'Thermal Springs & Spas', desc: 'Natural hot springs across Morocco, from Moulay Yacoub near Fes to Sidi Harazem and mountain springs.' },
+              { href: '/morocco-spa-wellness', title: 'Spa & Wellness Overview', desc: 'Broad overview of Morocco\'s wellness tourism industry, trends, and planning resources.' },
+              { href: '/spa-resorts', title: 'Spa Resort Guide', desc: 'The best resort spas in Morocco rated by facilities, treatments, and value for money.' },
+              { href: '/moroccan-hammam', title: 'Hammam Deep Dive', desc: 'Extended guide to the history, architecture, and regional variations of the Moroccan hammam.' },
+              { href: '/luxury', title: 'Luxury Morocco', desc: 'The finest hotels, riads, restaurants, and premium experiences for luxury travelers.' },
+            ].map((guide) => (
+              <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-base mb-2 group-hover:text-[var(--color-accent)] transition-colors" style={{ color: 'var(--text-primary)' }}>
+                  {guide.title}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{guide.desc}</p>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

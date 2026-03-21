@@ -22,6 +22,9 @@ import {
   ChefHat,
   Leaf,
   Calendar,
+  Package,
+  Sprout,
+  Gift,
 } from 'lucide-react';
 
 /* ═══════════════════════════════════════════════════════════════
@@ -35,9 +38,9 @@ const BASE_URL = 'https://citytoursmorocco.com';
    ═══════════════════════════════════════════════════════════════ */
 
 export const metadata: Metadata = {
-  title: 'Morocco Cooking Classes 2026 | Best Marrakech, Fez & Essaouira Workshops',
+  title: 'Morocco Cooking Classes 2026 | Best Workshops in Marrakech, Fez, Essaouira & Chefchaouen',
   description:
-    'Book the best cooking classes in Morocco. Hands-on tagine, couscous, pastilla, and bread workshops in Marrakech, Fez, and Essaouira. Market tours, vegetarian options, private and group classes with real prices.',
+    'Complete guide to Morocco\'s best cooking classes. Hands-on tagine, couscous, pastilla, msemen, and harira workshops in Marrakech, Fez, Essaouira, and Chefchaouen. Market tours, spice education, vegetarian options, farm-to-table experiences, and real 2026 prices.',
   keywords: [
     'morocco cooking class',
     'marrakech cooking class',
@@ -55,17 +58,25 @@ export const metadata: Metadata = {
     'palais amani fez',
     'cafe clock fez cooking',
     'essaouira cooking class',
+    'chefchaouen cooking class',
     'vegetarian moroccan cooking',
     'tagine cooking class',
     'couscous cooking class',
     'pastilla cooking workshop',
     'morocco culinary tour',
     'family cooking class morocco',
+    'ras el hanout spice class',
+    'moroccan spice guide',
+    'farm to table morocco',
+    'cooking riad morocco',
+    'private cooking class morocco',
+    'moroccan bread baking class',
+    'harira soup recipe class',
   ],
   openGraph: {
-    title: 'Morocco Cooking Classes 2026 | Best Marrakech, Fez & Essaouira Workshops',
+    title: 'Morocco Cooking Classes 2026 | Best Workshops in Marrakech, Fez, Essaouira & Chefchaouen',
     description:
-      'Hands-on Moroccan cooking classes with market tours, real chef instruction, and authentic recipes. Tagine, couscous, pastilla, and more in Marrakech, Fez, and Essaouira.',
+      'Hands-on Moroccan cooking classes with market tours, spice education, and authentic recipes. Tagine, couscous, pastilla, and more across four cities with real 2026 prices.',
     url: `${BASE_URL}/morocco-cooking-classes`,
     images: [
       {
@@ -78,9 +89,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Morocco Cooking Classes 2026 | Marrakech, Fez & Essaouira',
+    title: 'Morocco Cooking Classes 2026 | Marrakech, Fez, Essaouira & Chefchaouen',
     description:
-      'Best Moroccan cooking workshops with real prices. Learn tagine, couscous, pastilla from local chefs. Market tours included.',
+      'Best Moroccan cooking workshops with real prices. Learn tagine, couscous, pastilla from local chefs. Market tours, spice basics, and farm-to-table experiences included.',
     images: [`${BASE_URL}/images/hero-moroccan-cuisine.webp`],
   },
   alternates: { canonical: `${BASE_URL}/morocco-cooking-classes` },
@@ -94,9 +105,9 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'TravelGuide',
   '@id': `${BASE_URL}/morocco-cooking-classes`,
-  name: 'Morocco Cooking Classes 2026 | Best Marrakech, Fez & Essaouira Workshops',
+  name: 'Morocco Cooking Classes 2026 | Best Workshops in Marrakech, Fez, Essaouira & Chefchaouen',
   description:
-    'Complete guide to the best cooking classes in Morocco. Hands-on workshops in Marrakech, Fez, and Essaouira with market tours, vegetarian options, and real prices for 2026.',
+    'Complete guide to the best cooking classes in Morocco. Hands-on workshops in Marrakech, Fez, Essaouira, and Chefchaouen with market tours, spice education, vegetarian options, farm-to-table experiences, and real prices for 2026.',
   url: `${BASE_URL}/morocco-cooking-classes`,
   image: `${BASE_URL}/images/hero-moroccan-cuisine.webp`,
   author: {
@@ -110,7 +121,7 @@ const jsonLd = {
     url: BASE_URL,
   },
   datePublished: '2026-03-20',
-  dateModified: '2026-03-20',
+  dateModified: '2026-03-21',
   mainEntityOfPage: `${BASE_URL}/morocco-cooking-classes`,
   isPartOf: {
     '@type': 'WebSite',
@@ -147,7 +158,7 @@ const faqJsonLd = {
       name: 'Do Moroccan cooking classes include a market tour?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Most cooking classes in Morocco start with a guided tour of a local souk or market. You will shop for spices, vegetables, meat, and bread alongside your instructor. The market tour typically lasts 30-60 minutes and is included in the class price. A few classes, like those at La Maison Arabe, skip the market tour and source ingredients in advance.',
+        text: 'Most cooking classes in Morocco start with a guided tour of a local souk or market. You shop for spices, vegetables, meat, and bread alongside your instructor. The market tour typically lasts 30-60 minutes and is included in the class price. A few classes skip the market tour and source ingredients in advance for quality control.',
       },
     },
     {
@@ -163,7 +174,7 @@ const faqJsonLd = {
       name: 'What dishes will I learn to cook in a Moroccan cooking class?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'A standard half-day class covers 3-4 dishes. Common menus include chicken or lamb tagine with preserved lemons, hand-rolled couscous, Moroccan salads (zaalouk, taktouka), and mint tea. Full-day classes add pastilla, harira soup, msemen flatbread, or Moroccan pastries like gazelle horns. Some classes focus on bread-making or street food like msemen and baghrir.',
+        text: 'A standard half-day class covers 3-4 dishes. Common menus include chicken or lamb tagine with preserved lemons, hand-rolled couscous, Moroccan salads (zaalouk, taktouka), and mint tea. Full-day classes add pastilla, harira soup, msemen flatbread, or Moroccan pastries like gazelle horns. Some classes focus on bread-making or street food.',
       },
     },
     {
@@ -171,31 +182,31 @@ const faqJsonLd = {
       name: 'Can children join cooking classes in Morocco?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Many schools welcome children aged 6 and up. Souk Cuisine, La Maison Arabe, and Palais Amani all accept families. Children enjoy kneading bread dough, rolling couscous, and assembling pastilla layers. Private family sessions work best because instructors adjust pace and tasks to younger hands. Book a private class and mention ages when reserving.',
+        text: 'Many schools welcome children aged 6 and up. Souk Cuisine, La Maison Arabe, and Palais Amani all accept families. Children enjoy kneading bread dough, rolling couscous, and assembling pastilla layers. Private family sessions work best because instructors adjust pace and tasks to younger hands.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Should I book a cooking class in Marrakech or Fez?',
+      name: 'What spices will I learn about in a Moroccan cooking class?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Marrakech has more options and wider price ranges, making it easier to fit into any budget. Fez offers a more intimate, less touristy experience and its cuisine is considered Morocco\'s most refined. If you visit both cities, take a class in each. Fez is known for pastilla and slow-cooked tangia; Marrakech excels at tagines and street food.',
+        text: 'Every class covers ras el hanout (Morocco\'s signature blend of 15-30 spices), cumin, saffron, paprika, turmeric, ginger, and cinnamon. You learn how to identify quality saffron, the difference between pre-ground and freshly ground cumin, and how Moroccan spice layering differs from other cuisines. Most classes include a spice-tasting session during the market tour.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How far in advance should I book a cooking class?',
+      name: 'What is a cooking riad and should I stay in one?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Book at least 3-5 days ahead during peak season (March-May, September-November). Popular schools like Amal Center and Souk Cuisine fill up a week or more in advance. Off-season (June-August, December-February), 1-2 days notice is usually enough. Private classes need more lead time. Book through the school\'s website or email for the best rate.',
+        text: 'A cooking riad is a traditional Moroccan guesthouse that offers daily cooking classes as part of your stay. Examples include Riad Monceau and Dar Moha in Marrakech. Staying in a cooking riad means you can join a class every day without traveling across the city. Prices start from 1,200 MAD per night including accommodation and a daily workshop.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What is included in a typical Moroccan cooking class?',
+      name: 'Are there farm-to-table cooking experiences outside the cities?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'A standard class includes a market tour (30-60 minutes), hands-on cooking session (2-3 hours), all ingredients, an apron to wear, printed or emailed recipes, mint tea, and the full meal you cooked. Some schools provide a spice kit or cookbook to take home. Transport to and from your riad is included by several operators, including Souk Cuisine and L\'Atelier Madada.',
+        text: 'Yes. Several operators run farm-to-table cooking experiences in the Ourika Valley, Toubkal region, and Oualidia coast. You visit a working farm, pick herbs and vegetables, then cook with what you harvested. These day trips typically cost from 800 MAD to 1,500 MAD per person including transport, farm visit, class, and lunch. They offer a rural contrast to city-based classes.',
       },
     },
   ],
@@ -242,7 +253,7 @@ const marrakechClasses = [
     rating: '4.9 on TripAdvisor (3,200+ reviews)',
     icon: Star,
   },
-];
+] as const;
 
 const fezClasses = [
   {
@@ -269,7 +280,7 @@ const fezClasses = [
     rating: '4.6 on TripAdvisor (700+ reviews)',
     icon: Flame,
   },
-];
+] as const;
 
 const essaouiraClasses = [
   {
@@ -284,7 +295,71 @@ const essaouiraClasses = [
     rating: '4.9 on TripAdvisor (600+ reviews)',
     icon: Award,
   },
-];
+] as const;
+
+const chefchaouenClasses = [
+  {
+    name: 'Lala Mesouda Cooking Class',
+    instructor: 'Lala Mesouda & family members',
+    description:
+      'A family-run class in the heart of the blue medina. Lala Mesouda, a Riffian grandmother, teaches recipes from the mountainous north that you rarely find in Marrakech or Fez. The menu leans on goat cheese, fresh herbs from her rooftop garden, and seasonal mountain vegetables. No market tour here; ingredients come from her own suppliers in the souk. The kitchen is her actual home kitchen, and the meal is served on her family terrace overlooking the valley. Group sizes stay intimate, rarely exceeding four guests.',
+    dishes: ['Rfissa (shredded msemen with chicken)', 'Mountain herb tagine with goat cheese', 'Riffian mint tea with wormwood'],
+    price: 'From 400 MAD per person (group), from 1,000 MAD private',
+    duration: '3.5 hours',
+    groupSize: '2-4 guests',
+    rating: '4.7 on Google Reviews (200+ reviews)',
+    icon: Heart,
+  },
+] as const;
+
+/* ═══════════════════════════════════════════════════════════════
+   DATA: MOROCCAN SPICE ESSENTIALS
+   ═══════════════════════════════════════════════════════════════ */
+
+const spiceEssentials = [
+  {
+    name: 'Ras el Hanout',
+    arabic: 'Head of the Shop',
+    description:
+      'Morocco\'s signature blend of 15-30 spices: cardamom, clove, cinnamon, black pepper, nutmeg, turmeric, dried rose petals, and long pepper. Every merchant guards their own recipe. Buy from a specialist attarine, not a tourist stall. From 30 MAD for 100 grams.',
+    icon: Sparkles,
+  },
+  {
+    name: 'Cumin (Kamoun)',
+    arabic: 'The backbone spice',
+    description:
+      'Appears in almost every savory Moroccan dish -- tagines, kefta, and harira. Moroccan cumin is earthier than Indian cumin due to drier growing conditions. Whole seeds are toasted and ground fresh by market vendors. From 10 MAD per jar. Buy small quantities; ground cumin loses potency within a month.',
+    icon: Flame,
+  },
+  {
+    name: 'Saffron (Za\'fran)',
+    arabic: 'Red gold of Taliouine',
+    description:
+      'Nearly all Moroccan saffron comes from Taliouine in the Anti-Atlas. Genuine threads are deep crimson with no yellow tips and release color slowly in warm water. From 40 MAD per gram. Cheap saffron (under 20 MAD/gram) is almost certainly dyed safflower. In class, you learn to spot fakes.',
+    icon: Star,
+  },
+  {
+    name: 'Paprika & Cayenne',
+    arabic: 'Felfel hlow & felfel har',
+    description:
+      'Sweet paprika gives tagines and chermoula their red color; cayenne adds heat. Moroccan cooks combine both in a single dish, adjusting the ratio to taste. Souk paprika is brighter than supermarket versions because it is freshly ground from locally dried peppers. From 8 MAD for 100 grams.',
+    icon: Flame,
+  },
+  {
+    name: 'Ginger & Turmeric',
+    arabic: 'Skinjbir & kharkoum',
+    description:
+      'Dried ginger is used in nearly every tagine recipe. Turmeric adds golden color to rice, soups, and rubs. Together with cumin, these two form the base trio of Moroccan dry spice mixes. From 5 MAD for 50 grams at any souk stall.',
+    icon: Leaf,
+  },
+  {
+    name: 'Cinnamon (Qarfa)',
+    arabic: 'The sweet spice',
+    description:
+      'Bridges savory and sweet: dusts pastilla, flavors lamb-prune tagines, and appears in tea blends. Moroccan cinnamon is mostly cassia, stronger than Ceylon. Whole sticks from 5 MAD each; ground from 15 MAD for 100 grams.',
+    icon: Sparkles,
+  },
+] as const;
 
 /* ═══════════════════════════════════════════════════════════════
    DATA: DISHES YOU'LL LEARN
@@ -316,7 +391,7 @@ const dishesYoullLearn = [
     name: 'Msemen & Baghrir',
     icon: BookOpen,
     description:
-      'Msemen is a square, pan-fried flatbread folded in layers like a laminated dough. Baghrir (Moroccan crepes, called "thousand-hole pancakes") use a fermented batter that creates tiny bubbles on one side. Both are breakfast staples served with honey and butter. Bread classes at Cafe Clock focus entirely on these two breads plus khobz (round oven bread). The technique is tactile and satisfying.',
+      'Msemen is a square, pan-fried flatbread folded in layers like a laminated dough. Baghrir (thousand-hole pancakes) use a fermented batter that creates tiny bubbles on one side. Both are breakfast staples served with honey and butter. Bread classes at Cafe Clock focus entirely on these two breads plus khobz (round oven bread). The technique is tactile and satisfying.',
     difficulty: 'Beginner-friendly',
   },
   {
@@ -326,7 +401,38 @@ const dishesYoullLearn = [
       'The thick tomato-lentil-chickpea soup served every evening during Ramadan and year-round in homes and cafes. Each family guards its recipe. The base is tomato puree, onion, celery, and herbs. Lentils and chickpeas add body. A flour-and-water slurry called tadouira gives harira its distinctive silky texture. Most classes teach you to finish it with fresh lemon and chopped coriander.',
     difficulty: 'Beginner-friendly',
   },
-];
+] as const;
+
+/* ═══════════════════════════════════════════════════════════════
+   DATA: FARM-TO-TABLE EXPERIENCES
+   ═══════════════════════════════════════════════════════════════ */
+
+const farmToTable = [
+  {
+    name: 'Ourika Valley Organic Farm',
+    location: 'Ourika Valley, 45 min from Marrakech',
+    description:
+      'A family-run organic farm where you pick herbs, tomatoes, and peppers from the garden before cooking lunch in an outdoor kitchen with Atlas Mountain views. Spring brings fava beans and artichokes; autumn yields figs and pomegranates. A Berber grandmother leads the cooking.',
+    price: 'From 900 MAD per person (including transport)',
+    highlights: ['Herb garden harvesting', 'Atlas Mountain kitchen', 'Berber family-hosted', 'Seasonal menus'],
+  },
+  {
+    name: 'Toubkal Herb & Tagine Day',
+    location: 'Imlil village, High Atlas',
+    description:
+      'Walk with a local guide to terraced gardens at the foot of Jebel Toubkal, where families grow mint, thyme, and rosemary at altitude. Cook on a traditional wood-fired tagine brazier outside. Lunch on a rooftop terrace above the walnut groves.',
+    price: 'From 800 MAD per person (including transport)',
+    highlights: ['High Atlas setting', 'Wood-fired tagine', 'Herb education', 'Guided village walk'],
+  },
+  {
+    name: 'Oualidia Oyster & Seafood Class',
+    location: 'Oualidia lagoon, Atlantic coast',
+    description:
+      'Morocco\'s oyster capital. Visit the oyster beds, stop at the lagoon fish market, then cook chermoula-spiced fish, grilled oysters, and a seafood tagine at a guesthouse overlooking the Atlantic. About 3 hours from Marrakech.',
+    price: 'From 1,500 MAD per person (including transport)',
+    highlights: ['Oyster bed visit', 'Lagoon-fresh seafood', 'Atlantic coast setting', 'Full-day experience'],
+  },
+] as const;
 
 /* ═══════════════════════════════════════════════════════════════
    DATA: PRACTICAL TIPS
@@ -336,34 +442,120 @@ const practicalTips = [
   {
     icon: Calendar,
     title: 'Book 3-5 Days Ahead in Peak Season',
-    text: 'March through May and September through November are busiest. Popular schools fill up fast. Off-season, 1-2 days is usually enough. Email the school directly for the best rate rather than booking through aggregator sites.',
+    text: 'March-May and September-November are busiest. Off-season, 1-2 days notice is usually enough. Email the school directly for the best rate rather than booking through aggregator sites.',
   },
   {
     icon: Clock,
     title: 'Morning Classes Are Best',
-    text: 'Markets are freshest and most active between 9am and 11am. Most schools schedule their market tour for first thing in the morning. Afternoon classes skip the market or visit quieter stalls. If the market experience matters to you, choose a morning session.',
+    text: 'Markets are freshest between 9am and 11am. Most schools schedule their market tour for morning. Afternoon classes skip the market or visit quieter stalls.',
   },
   {
     icon: Users,
     title: 'Private vs. Group Classes',
-    text: 'Group classes cost 300-850 MAD per person and mix travelers from different countries. Private classes cost 1,200-2,500 MAD total and let you customize the menu, pace, and dietary needs. For couples and families, private sessions offer better value per person once your group hits 3-4 people.',
+    text: 'Group classes: from 300 MAD to 850 MAD per person, mixed nationalities. Private classes: from 1,000 MAD to 2,500 MAD total, customizable menu and pace. Families of 3-4+ get better value with private sessions.',
   },
   {
     icon: Leaf,
     title: 'Vegetarian & Vegan Options',
-    text: 'Moroccan cuisine has deep vegetable roots. Request a plant-based menu when booking. Souk Cuisine runs dedicated vegetarian sessions. Most other schools will swap meat tagine for vegetable tagine, add zaalouk, bessara, or stuffed peppers. Vegan requests require advance notice to avoid butter and honey.',
+    text: 'Souk Cuisine runs dedicated vegetarian sessions. Most schools swap meat tagine for vegetable tagine, add zaalouk, bessara, or stuffed peppers on request. Vegan requests require advance notice to avoid butter and honey.',
   },
   {
     icon: DollarSign,
-    title: 'What Is Included',
-    text: 'Standard inclusions: market tour, all ingredients, apron, recipes (printed or emailed), mint tea, and the meal. Some schools add a spice kit, cookbook, or riad transfer. Tips for the instructor are appreciated but not mandatory. Budget 50-100 MAD per person if the class was excellent.',
+    title: 'What Is Included in the Price',
+    text: 'Market tour, all ingredients, apron, recipes (printed or emailed), mint tea, and the meal. Some schools add a spice kit or riad transfer. Tip from 50 MAD to 100 MAD if the class was excellent.',
   },
   {
     icon: ShieldCheck,
     title: 'Allergies & Dietary Needs',
-    text: 'Nuts appear in many Moroccan dishes: almonds in pastilla, walnuts in salads, argan oil in amlou. Gluten is present in bread, couscous, and pastry. Inform the school at booking. Most adjust recipes willingly. Severe allergies should opt for a private session where the instructor controls every ingredient.',
+    text: 'Nuts appear widely: almonds in pastilla, argan oil in amlou. Gluten is present in bread, couscous, and pastry. Inform the school at booking. Severe allergies should opt for a private session.',
   },
-];
+] as const;
+
+/* ═══════════════════════════════════════════════════════════════
+   DATA: TAKING RECIPES HOME
+   ═══════════════════════════════════════════════════════════════ */
+
+const takingRecipesHome = [
+  {
+    title: 'Spices to Buy Before You Leave',
+    icon: Package,
+    text: 'Ras el hanout, cumin, saffron, dried ginger, and paprika travel well in sealed bags. Buy from a reputable attarine, not a tourist shop. Budget from 100 MAD to 200 MAD for a full set that lasts months.',
+  },
+  {
+    title: 'Essential Equipment',
+    icon: Utensils,
+    text: 'A clay tagine pot is the most useful piece of equipment. Small tagines cost from 80 MAD; large ones from 150 MAD. Wrap in clothing for your suitcase. A gsaa bowl (from 50 MAD) and a couscoussier are also worth packing.',
+  },
+  {
+    title: 'Recipe Sources',
+    icon: BookOpen,
+    text: 'Most schools email recipe PDFs after class. For deeper study: "Mourad: New Moroccan" by Mourad Lahlou, "Taste of Marrakesh" by Nargisse Benkabbou, or "Couscous and Other Good Food from Morocco" by Paula Wolfert.',
+  },
+  {
+    title: 'Sourcing Ingredients at Home',
+    icon: Globe,
+    text: 'Preserved lemons: pack unwaxed lemons in salt in a jar and wait 30 days. Harissa, ras el hanout, and orange blossom water are available at Middle Eastern grocery stores. For saffron, order from Taliouine cooperatives online.',
+  },
+] as const;
+
+/* ═══════════════════════════════════════════════════════════════
+   RENDER HELPER: CLASS CARDS
+   ═══════════════════════════════════════════════════════════════ */
+
+function ClassCard({ cls, city }: { cls: { name: string; instructor: string; description: string; dishes: readonly string[]; price: string; duration: string; groupSize: string; rating: string; icon: React.ComponentType<{ className?: string }> }; city: string }) {
+  const ClsIcon = cls.icon;
+  return (
+    <div className="card-moroccan p-6">
+      <div className="flex items-start gap-4">
+        <div className="w-12 h-12 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
+          <ClsIcon className="w-6 h-6 text-[var(--color-accent)]" />
+        </div>
+        <div className="flex-1">
+          <div className="flex items-start justify-between gap-4 mb-1">
+            <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+              {cls.name}
+            </h3>
+            <span className="text-xs font-semibold text-[var(--color-accent)] bg-[var(--color-accent)]/10 px-2 py-0.5 rounded shrink-0">
+              {cls.rating}
+            </span>
+          </div>
+          <p className="text-xs text-[var(--text-muted)] mb-3">
+            <strong>Instructor:</strong> {cls.instructor}
+          </p>
+          <p className="text-sm text-[var(--text-secondary)] mb-4">{cls.description}</p>
+          <div className="mb-4">
+            <p className="text-xs font-semibold text-[var(--text-primary)] mb-1.5">Sample menu:</p>
+            <div className="flex flex-wrap gap-2">
+              {cls.dishes.map((dish) => (
+                <span key={dish} className="text-xs bg-[var(--surface-muted)] text-[var(--text-muted)] px-2 py-0.5 rounded">
+                  {dish}
+                </span>
+              ))}
+            </div>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-xs text-[var(--text-muted)]">
+            <div className="flex items-center gap-1.5">
+              <DollarSign className="w-3 h-3 text-[var(--color-accent)]" />
+              {cls.price}
+            </div>
+            <div className="flex items-center gap-1.5">
+              <Clock className="w-3 h-3 text-[var(--color-accent)]" />
+              {cls.duration}
+            </div>
+            <div className="flex items-center gap-1.5">
+              <Users className="w-3 h-3 text-[var(--color-accent)]" />
+              {cls.groupSize}
+            </div>
+            <div className="flex items-center gap-1.5">
+              <MapPin className="w-3 h-3 text-[var(--color-accent)]" />
+              {city}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 /* ═══════════════════════════════════════════════════════════════
    PAGE COMPONENT
@@ -399,16 +591,16 @@ export default function MoroccoCookingClassesPage() {
             <span className="text-white">Morocco Cooking Classes</span>
           </nav>
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm text-white/90 text-sm mb-6">
-            <Utensils className="w-4 h-4" />
+            <ChefHat className="w-4 h-4" />
             Culinary Experiences
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-display)] font-bold text-white mb-4">
             Morocco Cooking Classes:
-            <br className="hidden md:block" /> Learn Tagine, Couscous &amp; More
+            <br className="hidden md:block" /> Tagine, Couscous, Pastilla &amp; More
           </h1>
           <p className="text-xl text-white/80 max-w-2xl">
-            Hands-on workshops in Marrakech, Fez, and Essaouira. Shop the souks with local chefs,
-            master traditional recipes, and eat everything you cook.
+            Hands-on workshops in Marrakech, Fez, Essaouira, and Chefchaouen. Shop the souks with local chefs,
+            master traditional spice techniques, and eat everything you cook.
           </p>
         </div>
       </section>
@@ -434,7 +626,7 @@ export default function MoroccoCookingClassesPage() {
                 cumin, saffron, ras el hanout, preserved lemons, and seasonal produce. That market tour alone
                 teaches more about Moroccan food culture than a week of eating out. Back in the kitchen, you
                 prepare three to five dishes from scratch, then sit down and eat the results. Recipes go home
-                with you, so the learning continues after you leave Morocco.
+                with you, so the learning continues long after you leave Morocco.
               </p>
               <p>
                 Prices start from 300 MAD for a group session at Cafe Clock in Fez and go up to 2,500 MAD for
@@ -464,60 +656,9 @@ export default function MoroccoCookingClassesPage() {
           </p>
 
           <div className="max-w-4xl mx-auto space-y-8">
-            {marrakechClasses.map((cls) => {
-              const ClsIcon = cls.icon;
-              return (
-                <div key={cls.name} className="card-moroccan p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                      <ClsIcon className="w-6 h-6 text-[var(--color-accent)]" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-start justify-between gap-4 mb-1">
-                        <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                          {cls.name}
-                        </h3>
-                        <span className="text-xs font-semibold text-[var(--color-accent)] bg-[var(--color-accent)]/10 px-2 py-0.5 rounded shrink-0">
-                          {cls.rating}
-                        </span>
-                      </div>
-                      <p className="text-xs text-[var(--text-muted)] mb-3">
-                        <strong>Instructor:</strong> {cls.instructor}
-                      </p>
-                      <p className="text-sm text-[var(--text-secondary)] mb-4">{cls.description}</p>
-                      <div className="mb-4">
-                        <p className="text-xs font-semibold text-[var(--text-primary)] mb-1.5">Sample menu:</p>
-                        <div className="flex flex-wrap gap-2">
-                          {cls.dishes.map((dish) => (
-                            <span key={dish} className="text-xs bg-[var(--surface-muted)] text-[var(--text-muted)] px-2 py-0.5 rounded">
-                              {dish}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-xs text-[var(--text-muted)]">
-                        <div className="flex items-center gap-1.5">
-                          <DollarSign className="w-3 h-3 text-[var(--color-accent)]" />
-                          {cls.price}
-                        </div>
-                        <div className="flex items-center gap-1.5">
-                          <Clock className="w-3 h-3 text-[var(--color-accent)]" />
-                          {cls.duration}
-                        </div>
-                        <div className="flex items-center gap-1.5">
-                          <Users className="w-3 h-3 text-[var(--color-accent)]" />
-                          {cls.groupSize}
-                        </div>
-                        <div className="flex items-center gap-1.5">
-                          <MapPin className="w-3 h-3 text-[var(--color-accent)]" />
-                          Marrakech
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
+            {marrakechClasses.map((cls) => (
+              <ClassCard key={cls.name} cls={cls} city="Marrakech" />
+            ))}
           </div>
         </div>
       </section>
@@ -535,60 +676,9 @@ export default function MoroccoCookingClassesPage() {
           </p>
 
           <div className="max-w-4xl mx-auto space-y-8">
-            {fezClasses.map((cls) => {
-              const ClsIcon = cls.icon;
-              return (
-                <div key={cls.name} className="card-moroccan p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                      <ClsIcon className="w-6 h-6 text-[var(--color-accent)]" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-start justify-between gap-4 mb-1">
-                        <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                          {cls.name}
-                        </h3>
-                        <span className="text-xs font-semibold text-[var(--color-accent)] bg-[var(--color-accent)]/10 px-2 py-0.5 rounded shrink-0">
-                          {cls.rating}
-                        </span>
-                      </div>
-                      <p className="text-xs text-[var(--text-muted)] mb-3">
-                        <strong>Instructor:</strong> {cls.instructor}
-                      </p>
-                      <p className="text-sm text-[var(--text-secondary)] mb-4">{cls.description}</p>
-                      <div className="mb-4">
-                        <p className="text-xs font-semibold text-[var(--text-primary)] mb-1.5">Sample menu:</p>
-                        <div className="flex flex-wrap gap-2">
-                          {cls.dishes.map((dish) => (
-                            <span key={dish} className="text-xs bg-[var(--surface-muted)] text-[var(--text-muted)] px-2 py-0.5 rounded">
-                              {dish}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-xs text-[var(--text-muted)]">
-                        <div className="flex items-center gap-1.5">
-                          <DollarSign className="w-3 h-3 text-[var(--color-accent)]" />
-                          {cls.price}
-                        </div>
-                        <div className="flex items-center gap-1.5">
-                          <Clock className="w-3 h-3 text-[var(--color-accent)]" />
-                          {cls.duration}
-                        </div>
-                        <div className="flex items-center gap-1.5">
-                          <Users className="w-3 h-3 text-[var(--color-accent)]" />
-                          {cls.groupSize}
-                        </div>
-                        <div className="flex items-center gap-1.5">
-                          <MapPin className="w-3 h-3 text-[var(--color-accent)]" />
-                          Fez
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
+            {fezClasses.map((cls) => (
+              <ClassCard key={cls.name} cls={cls} city="Fez" />
+            ))}
           </div>
         </div>
       </section>
@@ -601,62 +691,64 @@ export default function MoroccoCookingClassesPage() {
             Essaouira Cooking Classes
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Atlantic seafood meets Moroccan spice. Essaouira&apos;s cooking scene revolves around the
-            daily fish auction at the port.
+            Atlantic seafood meets Moroccan spice. Essaouira&apos;s cooking scene revolves around the daily fish auction at the port.
           </p>
 
           <div className="max-w-4xl mx-auto">
-            {essaouiraClasses.map((cls) => {
-              const ClsIcon = cls.icon;
+            {essaouiraClasses.map((cls) => (
+              <ClassCard key={cls.name} cls={cls} city="Essaouira" />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Chefchaouen Classes ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <MapPin className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Chefchaouen Cooking Classes
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            The blue city offers intimate, home-style cooking with Riffian recipes you rarely encounter in southern Morocco.
+          </p>
+
+          <div className="max-w-4xl mx-auto">
+            {chefchaouenClasses.map((cls) => (
+              <ClassCard key={cls.name} cls={cls} city="Chefchaouen" />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Moroccan Spice Essentials ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+        <div className="container-morocco">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Sparkles className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Moroccan Spice Essentials
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Every cooking class begins with spice education. These six spices define Moroccan cuisine.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {spiceEssentials.map((spice) => {
+              const SpiceIcon = spice.icon;
               return (
-                <div key={cls.name} className="card-moroccan p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                      <ClsIcon className="w-6 h-6 text-[var(--color-accent)]" />
+                <div key={spice.name} className="card-moroccan p-5">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 rounded-full bg-[var(--color-gold)]/10 flex items-center justify-center shrink-0">
+                      <SpiceIcon className="w-5 h-5 text-[var(--color-gold)]" />
                     </div>
-                    <div className="flex-1">
-                      <div className="flex items-start justify-between gap-4 mb-1">
-                        <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                          {cls.name}
-                        </h3>
-                        <span className="text-xs font-semibold text-[var(--color-accent)] bg-[var(--color-accent)]/10 px-2 py-0.5 rounded shrink-0">
-                          {cls.rating}
-                        </span>
-                      </div>
-                      <p className="text-xs text-[var(--text-muted)] mb-3">
-                        <strong>Instructor:</strong> {cls.instructor}
-                      </p>
-                      <p className="text-sm text-[var(--text-secondary)] mb-4">{cls.description}</p>
-                      <div className="mb-4">
-                        <p className="text-xs font-semibold text-[var(--text-primary)] mb-1.5">Sample menu:</p>
-                        <div className="flex flex-wrap gap-2">
-                          {cls.dishes.map((dish) => (
-                            <span key={dish} className="text-xs bg-[var(--surface-muted)] text-[var(--text-muted)] px-2 py-0.5 rounded">
-                              {dish}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-xs text-[var(--text-muted)]">
-                        <div className="flex items-center gap-1.5">
-                          <DollarSign className="w-3 h-3 text-[var(--color-accent)]" />
-                          {cls.price}
-                        </div>
-                        <div className="flex items-center gap-1.5">
-                          <Clock className="w-3 h-3 text-[var(--color-accent)]" />
-                          {cls.duration}
-                        </div>
-                        <div className="flex items-center gap-1.5">
-                          <Users className="w-3 h-3 text-[var(--color-accent)]" />
-                          {cls.groupSize}
-                        </div>
-                        <div className="flex items-center gap-1.5">
-                          <MapPin className="w-3 h-3 text-[var(--color-accent)]" />
-                          Essaouira
-                        </div>
-                      </div>
+                    <div>
+                      <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+                        {spice.name}
+                      </h3>
+                      <p className="text-xs text-[var(--text-muted)] italic">{spice.arabic}</p>
                     </div>
                   </div>
+                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{spice.description}</p>
                 </div>
               );
             })}
@@ -672,8 +764,7 @@ export default function MoroccoCookingClassesPage() {
             Dishes You&apos;ll Learn to Cook
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            From slow-simmered tagines to hand-rolled couscous, these are the core dishes taught across
-            Morocco&apos;s cooking schools.
+            From slow-simmered tagines to hand-rolled couscous, these are the core dishes taught across Morocco&apos;s cooking schools.
           </p>
 
           <div className="max-w-4xl mx-auto space-y-6">
@@ -719,23 +810,23 @@ export default function MoroccoCookingClassesPage() {
             {[
               {
                 step: '1',
-                title: 'Market Tour (30-60 minutes)',
-                text: 'Your instructor meets you at a souk entrance or picks you up from your riad. You walk through spice stalls, vegetable sellers, and butcher shops. The chef explains which spices go into ras el hanout, how to spot quality saffron (deep red threads, no yellow), and what produce is in season. You buy everything you need for the class. Some schools give you a basket to carry.',
+                title: 'Market Tour (30-60 min)',
+                text: 'Your instructor meets you at a souk entrance or picks you up from your riad. You walk through spice stalls, vegetable sellers, and butcher shops. The chef explains ras el hanout ingredients, how to spot quality saffron, and what is in season. You buy everything for the class.',
               },
               {
                 step: '2',
-                title: 'Preparation & Mise en Place (30-45 minutes)',
-                text: 'Back in the kitchen, you wash and chop vegetables, measure spices, and prepare marinades. The instructor demonstrates knife skills and explains the logic behind each spice combination. Moroccan cooking depends on building a spice base: cumin and paprika for tagines, cinnamon and ginger for pastilla, anise and sesame for bread. You set up your station with everything measured and ready.',
+                title: 'Prep & Mise en Place (30-45 min)',
+                text: 'Wash and chop vegetables, measure spices, and prepare marinades. The instructor demonstrates knife skills and the logic behind each spice combination: cumin and paprika for tagines, cinnamon and ginger for pastilla, anise and sesame for bread.',
               },
               {
                 step: '3',
                 title: 'Cooking (1.5-2 hours)',
-                text: 'Hands-on cooking begins. Each participant works on their own dish or part of the menu. Tagines go on low heat and need patience. While they simmer, you prepare salads, bread, or pastry. The instructor circulates, corrects technique, and shares stories about family food traditions. The kitchen fills with steam and the smell of cumin, coriander, and saffron.',
+                text: 'Each participant works on their own dish. Tagines go on low heat; while they simmer, you prepare salads, bread, or pastry. The instructor circulates, corrects technique, and shares family food stories. The kitchen fills with cumin, coriander, and saffron.',
               },
               {
                 step: '4',
-                title: 'The Meal (45-60 minutes)',
-                text: 'You sit down together and eat everything you cooked. Mint tea is prepared ceremonially, poured from a height to create froth. The instructor often joins the table, answering questions about Moroccan food culture, restaurant recommendations, and how to source ingredients back home. Recipes are handed out or emailed. Some schools give you a small bag of spices to take with you.',
+                title: 'The Meal (45-60 min)',
+                text: 'Sit down and eat everything you cooked. Mint tea is prepared ceremonially. The instructor joins the table, answering questions about food culture and sourcing ingredients at home. Recipes are emailed. Some schools give you spices to take with you.',
               },
             ].map((stage) => (
               <div key={stage.step} className="card-moroccan p-6">
@@ -756,6 +847,107 @@ export default function MoroccoCookingClassesPage() {
         </div>
       </section>
 
+      {/* ── Cooking Riads ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Home className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Cooking Riads: Stay &amp; Cook
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Some riads build cooking into the accommodation itself, with daily classes throughout your stay.
+          </p>
+
+          <div className="space-y-6">
+            {[
+              {
+                name: 'La Maison Arabe (Marrakech)',
+                text: 'Morocco\'s original cooking riad. Guests book daily dada-led workshops without leaving the property. Overnight guests get priority booking and a discounted rate. Weekend pastry workshops also available.',
+                price: 'From 2,800 MAD/night (room + daily class)',
+                loc: 'Medina, Marrakech',
+              },
+              {
+                name: 'Riad Monceau (Marrakech)',
+                text: 'A boutique guesthouse near the Bahia Palace offering afternoon cooking sessions to overnight guests. Chef Khadija tailors each session to what you want to learn. Rooftop kitchen with medina views. Maximum 8 guests.',
+                price: 'From 1,200 MAD/night (room + class)',
+                loc: 'Kasbah, Marrakech',
+              },
+              {
+                name: 'Palais Amani (Fez)',
+                text: 'This restored palace doubles as one of Fez\'s best cooking schools. Overnight guests join the morning class at a reduced rate. Chef Ouafae picks fresh herbs from the Andalusian garden minutes before class.',
+                price: 'From 1,800 MAD/night (room + class)',
+                loc: 'Medina, Fez',
+              },
+            ].map((riad) => (
+              <div key={riad.name} className="card-moroccan p-6">
+                <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                  {riad.name}
+                </h3>
+                <p className="text-sm text-[var(--text-secondary)] mb-3">{riad.text}</p>
+                <div className="flex items-center gap-4 text-xs text-[var(--text-muted)]">
+                  <span className="flex items-center gap-1">
+                    <DollarSign className="w-3 h-3 text-[var(--color-accent)]" />
+                    {riad.price}
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <MapPin className="w-3 h-3 text-[var(--color-accent)]" />
+                    {riad.loc}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Farm-to-Table Experiences ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+        <div className="container-morocco">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Sprout className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Farm-to-Table Cooking Experiences
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Step outside the cities and cook with ingredients you harvest yourself.
+          </p>
+
+          <div className="max-w-4xl mx-auto space-y-6">
+            {farmToTable.map((exp) => (
+              <div key={exp.name} className="card-moroccan p-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
+                    <Sprout className="w-5 h-5 text-[var(--color-accent)]" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
+                      {exp.name}
+                    </h3>
+                    <p className="text-xs text-[var(--text-muted)] mb-3 flex items-center gap-1">
+                      <MapPin className="w-3 h-3" />
+                      {exp.location}
+                    </p>
+                    <p className="text-sm text-[var(--text-secondary)] mb-4">{exp.description}</p>
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="text-xs font-semibold text-[var(--color-accent)] bg-[var(--color-accent)]/10 px-2 py-0.5 rounded">
+                        {exp.price}
+                      </span>
+                    </div>
+                    <div className="grid grid-cols-2 gap-2">
+                      {exp.highlights.map((h) => (
+                        <div key={h} className="flex items-start gap-1.5 text-xs text-[var(--text-muted)]">
+                          <CheckCircle className="w-3 h-3 mt-0.5 shrink-0 text-[var(--color-gold)]" />
+                          {h}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── Practical Tips & Booking Advice ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco">
@@ -763,9 +955,7 @@ export default function MoroccoCookingClassesPage() {
             <Info className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
             Booking Tips &amp; Practical Advice
           </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Get the most out of your Moroccan cooking experience with these planning pointers.
-          </p>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">Get the most out of your Moroccan cooking experience with these planning pointers.</p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {practicalTips.map((tip) => {
@@ -813,6 +1003,7 @@ export default function MoroccoCookingClassesPage() {
                   {[
                     { school: 'Cafe Clock', city: 'Fez', price: 'From 300 MAD', duration: '2.5-3 hrs' },
                     { school: 'Amal Center', city: 'Marrakech', price: 'From 350 MAD', duration: '4 hrs' },
+                    { school: 'Lala Mesouda', city: 'Chefchaouen', price: 'From 400 MAD', duration: '3.5 hrs' },
                     { school: 'Souk Cuisine', city: 'Marrakech', price: 'From 500 MAD', duration: '5 hrs' },
                     { school: 'Palais Amani', city: 'Fez', price: 'From 650 MAD', duration: '4.5 hrs' },
                     { school: 'L\'Atelier Madada', city: 'Essaouira', price: 'From 700 MAD', duration: '4 hrs' },
@@ -832,112 +1023,92 @@ export default function MoroccoCookingClassesPage() {
         </div>
       </section>
 
-      {/* ── FAQ Section ── */}
+      {/* ── Taking Recipes Home ── */}
       <section className="py-16 md:py-20">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Gift className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Taking Recipes &amp; Skills Home
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            The class ends, but the cooking continues. Here is how to recreate Moroccan dishes at home.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {takingRecipesHome.map((item) => {
+              const ItemIcon = item.icon;
+              return (
+                <div key={item.title} className="card-moroccan p-5">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
+                      <ItemIcon className="w-5 h-5 text-[var(--color-accent)]" />
+                    </div>
+                    <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+                      {item.title}
+                    </h3>
+                  </div>
+                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{item.text}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── FAQ Section ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
             Frequently Asked Questions
           </h2>
-
           <div className="space-y-6">
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                How much does a cooking class in Marrakech cost?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                Group classes range from 350 MAD to 850 MAD per person. The Amal Women&apos;s Training
-                Center starts from 350 MAD, while La Maison Arabe charges from 850 MAD. Private classes
-                run from 1,200 MAD to 2,500 MAD. All prices typically include a market tour, ingredients,
-                recipes, and the meal you prepare.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                Do Moroccan cooking classes include a market tour?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                Most classes start with a 30-60 minute guided walk through a local souk. You shop for
-                spices, vegetables, and meat alongside your instructor. La Maison Arabe is one exception;
-                they pre-source ingredients for quality control and skip the market visit.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                Are there vegetarian or vegan Moroccan cooking classes?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                Nearly every school accommodates vegetarian requests. Souk Cuisine runs dedicated
-                vegetarian sessions twice a week. Moroccan cuisine has many naturally plant-based dishes:
-                vegetable tagine, zaalouk, bessara (fava bean soup), harira, and couscous with seven
-                vegetables. Notify the school at booking for vegan needs.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                What dishes will I learn to cook?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                A half-day class covers 3-4 dishes. Typical menus include chicken or lamb tagine, Moroccan
-                salads (zaalouk, taktouka), and mint tea. Full-day classes add pastilla, harira, msemen
-                flatbread, or gazelle horn pastries. Some schools offer bread-only or street food sessions.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                Can children join cooking classes in Morocco?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                Many schools welcome children aged 6 and up. Souk Cuisine, La Maison Arabe, and Palais
-                Amani all accept families. Kids enjoy kneading bread dough, rolling couscous, and
-                assembling pastilla layers. Book a private family session for the best experience and
-                mention children&apos;s ages when reserving.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                Should I book a cooking class in Marrakech or Fez?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                Marrakech has more options and wider price ranges. Fez offers a more intimate setting and
-                its cuisine is considered Morocco&apos;s most refined. If you visit both cities, take a class
-                in each. Fez excels at pastilla and tangia; Marrakech leads on tagines and street food.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                How far in advance should I book?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                Book 3-5 days ahead during peak season (March-May, September-November). Schools like Amal
-                Center and Souk Cuisine fill up a week or more out. Off-season, 1-2 days notice works.
-                Private classes need more lead time. Book through the school&apos;s own website for the
-                best rate.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                What is included in a typical cooking class?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                Standard inclusions: market tour, all ingredients, apron, printed or emailed recipes, mint
-                tea, and the full meal. Some schools add a spice kit, cookbook, or riad transfer. Tipping
-                the instructor is appreciated but not mandatory -- budget 50-100 MAD per person for
-                excellent service.
-              </p>
-            </div>
+            {[
+              {
+                q: 'How much does a cooking class in Marrakech cost?',
+                a: 'Group classes range from 350 MAD to 850 MAD per person. The Amal Center starts from 350 MAD; La Maison Arabe from 850 MAD. Private classes run from 1,200 MAD to 2,500 MAD. Prices include a market tour, ingredients, recipes, and the meal.',
+              },
+              {
+                q: 'Do Moroccan cooking classes include a market tour?',
+                a: 'Most classes start with a 30-60 minute guided walk through a local souk. You shop for spices, vegetables, and meat alongside your instructor. La Maison Arabe is one exception; they pre-source ingredients and skip the market visit.',
+              },
+              {
+                q: 'Are there vegetarian or vegan cooking classes?',
+                a: 'Nearly every school accommodates vegetarian requests. Souk Cuisine runs dedicated vegetarian sessions twice a week. Moroccan cuisine has many plant-based dishes: vegetable tagine, zaalouk, bessara, harira, and couscous with seven vegetables. Notify at booking for vegan needs.',
+              },
+              {
+                q: 'What dishes will I learn to cook?',
+                a: 'A half-day class covers 3-4 dishes: tagine, Moroccan salads, and mint tea. Full-day classes add pastilla, harira, msemen, or gazelle horn pastries. Some schools offer bread-only or street food sessions.',
+              },
+              {
+                q: 'Can children join cooking classes in Morocco?',
+                a: 'Many schools welcome children aged 6 and up. Souk Cuisine, La Maison Arabe, and Palais Amani all accept families. Kids enjoy kneading bread, rolling couscous, and assembling pastilla. Book a private family session and mention ages when reserving.',
+              },
+              {
+                q: 'What spices will I learn about in class?',
+                a: 'Every class covers ras el hanout, cumin, saffron, paprika, turmeric, ginger, and cinnamon. You learn to identify quality saffron, the difference between pre-ground and fresh cumin, and how Moroccan spice layering works. Most classes include spice tasting during the market tour.',
+              },
+              {
+                q: 'What is a cooking riad?',
+                a: 'A traditional guesthouse offering daily cooking classes as part of your stay. La Maison Arabe and Riad Monceau in Marrakech, and Palais Amani in Fez are prime examples. You join a class every day without crossing the city. Prices start from 1,200 MAD per night including accommodation and workshop.',
+              },
+              {
+                q: 'Are there farm-to-table experiences outside the cities?',
+                a: 'Yes. Operators run farm-to-table cooking days in the Ourika Valley, Imlil (High Atlas), and Oualidia coast. You visit a farm, pick produce, then cook with what you harvested. Day trips cost from 800 MAD to 1,500 MAD per person including transport, farm visit, class, and lunch.',
+              },
+            ].map((faq) => (
+              <div key={faq.q} className="card-moroccan p-6">
+                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                  {faq.q}
+                </h3>
+                <p className="text-sm text-[var(--text-secondary)]">{faq.a}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* ── Related Guides ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+      <section className="py-16 md:py-20">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
             Continue Exploring Morocco
@@ -955,6 +1126,18 @@ export default function MoroccoCookingClassesPage() {
                 Read more <ArrowRight className="w-3.5 h-3.5" />
               </span>
             </Link>
+            <Link href="/morocco-spice-guide" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
+              <Sparkles className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
+                Moroccan Spice Guide
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] mb-3">
+                Deep dive into ras el hanout, saffron, cumin, and the spice blends that define Moroccan cuisine.
+              </p>
+              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
+                Read more <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
             <Link href="/marrakech" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
               <MapPin className="w-8 h-8 text-[var(--color-accent)] mb-3" />
               <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
@@ -962,18 +1145,6 @@ export default function MoroccoCookingClassesPage() {
               </h3>
               <p className="text-sm text-[var(--text-secondary)] mb-3">
                 Everything to see, do, and eat in Morocco&apos;s most popular city.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-            <Link href="/fez" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
-              <Globe className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Fez City Guide
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Navigate the world&apos;s largest car-free medina, from tanneries to palaces.
               </p>
               <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
                 Read more <ArrowRight className="w-3.5 h-3.5" />
