@@ -3314,6 +3314,15 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['morocco desert tours', 'merzouga desert tour', 'sahara camel trek', 'zagora desert trip', 'morocco desert camping'],
       priority: 9,
     },
+    {
+      title: 'Morocco Festivals & Events Guide 2026',
+      description: 'Complete guide to festivals in Morocco — Gnaoua, Fes Sacred Music, Mawazine, harvest festivals, religious holidays, and month-by-month event calendar.',
+      type: 'page',
+      url: '/morocco-festivals-events',
+      tags: ['festivals', 'events', 'Gnaoua', 'music festivals', 'cultural events'],
+      keywords: ['morocco festivals', 'gnaoua festival essaouira', 'fes sacred music', 'morocco events calendar', 'moroccan festivals 2026'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
