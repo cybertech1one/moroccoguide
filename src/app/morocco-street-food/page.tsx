@@ -37,17 +37,19 @@ import {
   CircleDot,
   HandPlatter,
   Droplets,
+  MessageCircleQuestion,
 } from 'lucide-react';
 
-/* ═══════════════════════════════════════════════════════════════
-   CONSTANTS
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   CONSTANTS & BASE URL
+   ================================================================ */
 
 const BASE_URL = 'https://citytoursmorocco.com';
+const PAGE_URL = `${BASE_URL}/morocco-street-food`;
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    SEO METADATA
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 export const metadata: Metadata = {
   title: 'Morocco Street Food Guide 2026 | 30+ Must-Try Dishes & Where to Find Them',
@@ -83,7 +85,7 @@ export const metadata: Metadata = {
     title: 'Morocco Street Food Guide 2026 | 30+ Must-Try Dishes & Where to Find Them',
     description:
       'Eat your way through Morocco. 30+ street food dishes with real prices, specific stall locations, city-by-city guide, and food safety tips from years of eating at Moroccan food stalls.',
-    url: `${BASE_URL}/morocco-street-food`,
+    url: PAGE_URL,
     images: [
       {
         url: `${BASE_URL}/images/hero-street-food-grill.webp`,
@@ -100,108 +102,85 @@ export const metadata: Metadata = {
       'The complete guide to eating on the streets of Morocco. 30+ dishes, real prices in MAD, safety tips, and the best food stalls in every major city.',
     images: [`${BASE_URL}/images/hero-street-food-grill.webp`],
   },
-  alternates: { canonical: `${BASE_URL}/morocco-street-food` },
+  alternates: { canonical: PAGE_URL },
 };
 
-/* ═══════════════════════════════════════════════════════════════
-   JSON-LD STRUCTURED DATA — TravelGuide
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   JSON-LD: TravelGuide
+   ================================================================ */
+
+const faqItems = [
+  {
+    q: 'Is street food safe to eat in Morocco?',
+    a: 'Moroccan street food is generally safe when you follow basic rules. Eat at stalls with high customer turnover, choose food cooked fresh in front of you, avoid raw salads at street carts, and stick to bottled water. Most travelers eat street food daily without issues. Locals eat at the same stalls, which is the best indicator of safety.',
+  },
+  {
+    q: 'How much does street food cost in Morocco?',
+    a: 'Morocco has some of the cheapest street food in North Africa. Fresh orange juice costs from 5 MAD, sfenj donuts from 1 MAD each, harira soup from 5 MAD, a merguez sandwich from 15 MAD, and a full grilled meat plate with bread and salad from 30 MAD. You can eat three full meals of street food for under 80 MAD per day.',
+  },
+  {
+    q: 'What is the best street food in Jemaa el-Fnaa?',
+    a: 'The famous Jemaa el-Fnaa night market in Marrakech serves grilled meats (kefta, merguez, lamb chops), sheep head (tete), snail soup (babbouche), harira, fried fish, and khobz bread sandwiches. Stalls 1, 14, and 31 are consistently recommended. Arrive around 7 PM for the freshest food and skip stalls where touts aggressively pull you in.',
+  },
+  {
+    q: 'Can vegetarians find street food in Morocco?',
+    a: 'Yes. Vegetarian street food options include msemen and baghrir flatbreads with honey, maakouda potato fritters, bissara fava bean soup, zaalouk eggplant dip with bread, harira without meat, boiled corn, roasted nuts, fresh fruit juices, and avocado smoothies. Many stalls also sell vegetable-stuffed briwat pastries.',
+  },
+  {
+    q: 'What time do street food stalls open in Morocco?',
+    a: 'Street food operates on a schedule. Breakfast stalls selling msemen, sfenj, and harira open from 6 AM. Midday stalls serving sandwiches, kefta, and bocadillos operate from 11 AM to 3 PM. Evening food markets like Jemaa el-Fnaa start setting up around 5 PM and peak from 7 PM to 11 PM. Some stalls near bus stations and souks stay open late.',
+  },
+  {
+    q: 'Should I tip at street food stalls in Morocco?',
+    a: 'Tipping at street food stalls is not expected but appreciated. Rounding up to the nearest 5 MAD is common. If you sit at a stall with a table and receive attentive service, leaving 5-10 MAD is generous. For orange juice vendors and quick snack purchases, no tip is necessary.',
+  },
+  {
+    q: 'What is the best city for street food in Morocco?',
+    a: 'Marrakech leads for sheer variety and spectacle, especially the Jemaa el-Fnaa night market. Fes has the most refined street food with unique specialties like camel meat and pigeon pastilla. Essaouira dominates for seafood grills at the port. Meknes offers the best value with lower prices than tourist cities. Casablanca has the most diverse international-influenced street food.',
+  },
+  {
+    q: 'How do I order street food if I do not speak Arabic or French?',
+    a: 'Pointing works at most stalls. Vendors display their food openly, so gesture at what you want and hold up fingers for quantity. Learn a few words: "wahd" (one), "jouj" (two), "beshhal" (how much), "safi" (enough). Most vendors in tourist areas speak basic English. Watching what locals order and saying "bhal hadak" (like that one) also works well.',
+  },
+];
 
 const jsonLdGuide = {
   '@context': 'https://schema.org',
   '@type': 'TravelGuide',
-  '@id': `${BASE_URL}/morocco-street-food`,
+  '@id': PAGE_URL,
   name: 'Morocco Street Food Guide 2026 | 30+ Must-Try Dishes & Where to Find Them',
   description:
     'Comprehensive Morocco street food guide covering 30+ must-try dishes, prices in MAD, city-by-city food stall locations, food safety tips, vegetarian options, and guided street food tour recommendations.',
-  url: `${BASE_URL}/morocco-street-food`,
+  url: PAGE_URL,
   image: `${BASE_URL}/images/hero-street-food-grill.webp`,
-  author: { '@type': 'Organization', name: 'CityGuide Morocco', url: BASE_URL },
-  publisher: { '@type': 'Organization', name: 'CityGuide Morocco', url: BASE_URL },
-  datePublished: '2026-03-20',
-  dateModified: '2026-03-20',
-  mainEntityOfPage: `${BASE_URL}/morocco-street-food`,
-  isPartOf: { '@type': 'WebSite', name: 'CityGuide Morocco', url: BASE_URL },
+  author: { '@type': 'Organization', name: 'City Tours Morocco', url: BASE_URL },
+  publisher: { '@type': 'Organization', name: 'City Tours Morocco', url: BASE_URL },
+  datePublished: '2026-03-21',
+  dateModified: '2026-03-21',
+  mainEntityOfPage: PAGE_URL,
   about: { '@type': 'Country', name: 'Morocco' },
   breadcrumb: {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Morocco Street Food Guide', item: `${BASE_URL}/morocco-street-food` },
+      { '@type': 'ListItem', position: 2, name: 'Morocco Street Food Guide', item: PAGE_URL },
     ],
   },
 };
 
-/* ═══════════════════════════════════════════════════════════════
-   JSON-LD STRUCTURED DATA — FAQPage
-   ═══════════════════════════════════════════════════════════════ */
-
 const jsonLdFaq = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'Is street food safe to eat in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Moroccan street food is generally safe when you follow basic rules. Eat at stalls with high customer turnover, choose food cooked fresh in front of you, avoid raw salads at street carts, and stick to bottled water. Most travelers eat street food daily without issues. Locals eat at the same stalls, which is the best indicator of safety.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does street food cost in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Morocco has some of the cheapest street food in North Africa. Fresh orange juice costs from 5 MAD, sfenj donuts from 1 MAD each, harira soup from 5 MAD, a merguez sandwich from 15 MAD, and a full grilled meat plate with bread and salad from 30 MAD. You can eat three full meals of street food for under 80 MAD per day.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is the best street food in Jemaa el-Fnaa?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The famous Jemaa el-Fnaa night market in Marrakech serves grilled meats (kefta, merguez, lamb chops), sheep head (tete), snail soup (babbouche), harira, fried fish, and khobz bread sandwiches. Stalls 1, 14, and 31 are consistently recommended. Arrive around 7 PM for the freshest food and skip stalls where touts aggressively pull you in.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can vegetarians find street food in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. Vegetarian street food options include msemen and baghrir flatbreads with honey, maakouda potato fritters, bissara fava bean soup, zaalouk eggplant dip with bread, harira without meat, boiled corn, roasted nuts, fresh fruit juices, and avocado smoothies. Many stalls also sell vegetable-stuffed briwat pastries.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What time do street food stalls open in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Street food operates on a schedule. Breakfast stalls selling msemen, sfenj, and harira open from 6 AM. Midday stalls serving sandwiches, kefta, and bocadillos operate from 11 AM to 3 PM. Evening food markets like Jemaa el-Fnaa start setting up around 5 PM and peak from 7 PM to 11 PM. Some stalls near bus stations and souks stay open late.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Should I tip at street food stalls in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Tipping at street food stalls is not expected but appreciated. Rounding up to the nearest 5 MAD is common. If you sit at a stall with a table and receive attentive service, leaving 5-10 MAD is generous. For orange juice vendors and quick snack purchases, no tip is necessary.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is the best city for street food in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Marrakech leads for sheer variety and spectacle, especially the Jemaa el-Fnaa night market. Fes has the most refined street food with unique specialties like camel meat and pigeon pastilla. Essaouira dominates for seafood grills at the port. Meknes offers the best value with lower prices than tourist cities. Casablanca has the most diverse international-influenced street food.',
-      },
-    },
-  ],
+  mainEntity: faqItems.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
 };
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    DATA: STREET FOOD SNACKS
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 const snackFoods = [
   {
@@ -255,9 +234,9 @@ const snackFoods = [
   },
 ] as const;
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    DATA: STREET FOOD MAINS
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 const mainFoods = [
   {
@@ -332,9 +311,9 @@ const mainFoods = [
   },
 ] as const;
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    DATA: SWEETS & PASTRIES
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 const sweetFoods = [
   {
@@ -381,9 +360,9 @@ const sweetFoods = [
   },
 ] as const;
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    DATA: DRINKS
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 const drinks = [
   {
@@ -423,9 +402,9 @@ const drinks = [
   },
 ] as const;
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    DATA: CITY FOOD GUIDES
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 const cityGuides = [
   {
@@ -434,7 +413,7 @@ const cityGuides = [
     highlight: 'Jemaa el-Fnaa Night Market',
     description: 'The undisputed capital of Moroccan street food. Jemaa el-Fnaa transforms nightly into Africa\'s largest open-air food market with 100+ stalls. Beyond the square, Rue Bani Marine has bocadillos, Mechoui Alley has slow-roasted lamb, and the souk food courts serve cheap tagines.',
     topDishes: ['Snail soup at Jemaa stalls', 'Mechoui at Mechoui Alley', 'Tanjia (unique to Marrakech)', 'Orange juice at the square', 'Kefta sandwiches on Rue Bani Marine'],
-    priceLevel: 'Moderate — tourist markup on Jemaa stalls. Walk 5 minutes into the medina for lower prices.',
+    priceLevel: 'Moderate -- tourist markup on Jemaa stalls. Walk 5 minutes into the medina for lower prices.',
   },
   {
     city: 'Fes',
@@ -442,7 +421,7 @@ const cityGuides = [
     highlight: 'Rcif Square & Talaa Kebira',
     description: 'The culinary capital of Morocco. Rcif Square has the densest concentration of food vendors. Walking up Talaa Kebira, you pass pastry shops, olive vendors, spice stalls, and brochette grills. Less touristy than Marrakech, lower prices.',
     topDishes: ['Camel meat (unique to Fes)', 'Almond milk from medina carts', 'Cornes de gazelle from Rcif bakeries', 'Pigeon pastilla by the slice', 'Briwat from hole-in-the-wall shops'],
-    priceLevel: 'Low — Fes medina food is a bargain. A full lunch from 20 MAD.',
+    priceLevel: 'Low -- Fes medina food is a bargain. A full lunch from 20 MAD.',
   },
   {
     city: 'Casablanca',
@@ -450,7 +429,7 @@ const cityGuides = [
     highlight: 'Central Market & Derb Ghallef',
     description: 'Morocco\'s biggest city has the most cosmopolitan street food scene. The Central Market near the port grills seafood on the spot. Derb Ghallef flea market is flanked by merguez stalls feeding thousands of shoppers. Ain Diab corniche has beachfront snack bars with bocadillos and grilled corn.',
     topDishes: ['Grilled seafood at the Central Market', 'Merguez at Derb Ghallef', 'Bocadillos near the Habous Quarter', 'Shawarma in the ville nouvelle', 'Fresh sardines at port-side stalls'],
-    priceLevel: 'Moderate — prices vary by neighborhood. Habous and old medina are cheapest.',
+    priceLevel: 'Moderate -- prices vary by neighborhood. Habous and old medina are cheapest.',
   },
   {
     city: 'Essaouira',
@@ -458,7 +437,7 @@ const cityGuides = [
     highlight: 'Port Fish Grills',
     description: 'Essaouira\'s identity is built on fish. The port has open-air grill stalls where you choose your catch from ice displays: sardines, prawns, squid, sea bream, lobster. Grilled over charcoal with bread, salad, and chermoula. Prices are posted. Best-value seafood in Morocco.',
     topDishes: ['Grilled sardines at the port', 'Mixed seafood platter', 'Squid and prawn skewers', 'Fish chermoula sandwich', 'Sardine briwat (local specialty)'],
-    priceLevel: 'Low to moderate — port grill meals from 40 MAD.',
+    priceLevel: 'Low to moderate -- port grill meals from 40 MAD.',
   },
   {
     city: 'Meknes',
@@ -466,13 +445,13 @@ const cityGuides = [
     highlight: 'Place el-Hedim & Medina Souks',
     description: 'The most underrated street food city. Fewer tourists means lower prices and more authentic stalls. Place el-Hedim has harira vendors, snail soup, and juice carts. The olive market near Bab Mansour offers Morocco\'s best cured olives.',
     topDishes: ['Olive tasting at the olive souk', 'Harira from Place el-Hedim', 'Maakouda sandwiches in the medina', 'Local wine from the Meknes region', 'Brochettes near Bou Inania medersa'],
-    priceLevel: 'Low — cheapest of the imperial cities. Street food meals from 15 MAD.',
+    priceLevel: 'Low -- cheapest of the imperial cities. Street food meals from 15 MAD.',
   },
 ] as const;
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    DATA: PRICE GUIDE
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 const priceGuide = [
   { item: 'Sfenj (1 donut)', price: 'From 1 MAD', category: 'Snack' },
@@ -493,14 +472,14 @@ const priceGuide = [
   { item: 'Grilled fish (Essaouira)', price: 'From 40 MAD', category: 'Main' },
 ] as const;
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    COMPONENT
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 export default function MoroccoStreetFoodPage() {
   return (
     <>
-      {/* ── JSON-LD ── */}
+      {/* -- JSON-LD -- */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGuide) }}
@@ -510,7 +489,7 @@ export default function MoroccoStreetFoodPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
       />
 
-      {/* ── Hero ── */}
+      {/* -- Hero -- */}
       <section className="relative min-h-[60vh] flex items-center justify-center">
         <img
           src="/images/hero-street-food-grill.webp"
@@ -539,7 +518,7 @@ export default function MoroccoStreetFoodPage() {
         </div>
       </section>
 
-      {/* ── Intro: Street Food Culture ── */}
+      {/* -- Intro: Street Food Culture -- */}
       <section className="py-16 md:py-20 bg-[#FAF8F5]">
         <div className="container-morocco">
           <div className="max-w-4xl mx-auto">
@@ -606,7 +585,7 @@ export default function MoroccoStreetFoodPage() {
         </div>
       </section>
 
-      {/* ── Snacks Section ── */}
+      {/* -- Snacks Section -- */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
         <div className="container-morocco">
           <div className="max-w-4xl mx-auto">
@@ -648,7 +627,7 @@ export default function MoroccoStreetFoodPage() {
         </div>
       </section>
 
-      {/* ── Main Dishes Section ── */}
+      {/* -- Main Dishes Section -- */}
       <section className="py-16 md:py-20 bg-[#FAF8F5]">
         <div className="container-morocco">
           <div className="max-w-4xl mx-auto">
@@ -690,7 +669,7 @@ export default function MoroccoStreetFoodPage() {
         </div>
       </section>
 
-      {/* ── Sweets Section ── */}
+      {/* -- Sweets Section -- */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
         <div className="container-morocco">
           <div className="max-w-4xl mx-auto">
@@ -732,7 +711,7 @@ export default function MoroccoStreetFoodPage() {
         </div>
       </section>
 
-      {/* ── Drinks Section ── */}
+      {/* -- Drinks Section -- */}
       <section className="py-16 md:py-20 bg-[#FAF8F5]">
         <div className="container-morocco">
           <div className="max-w-4xl mx-auto">
@@ -774,7 +753,7 @@ export default function MoroccoStreetFoodPage() {
         </div>
       </section>
 
-      {/* ── Best Street Food by City ── */}
+      {/* -- Best Street Food by City -- */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
         <div className="container-morocco">
           <div className="max-w-4xl mx-auto">
@@ -825,7 +804,7 @@ export default function MoroccoStreetFoodPage() {
         </div>
       </section>
 
-      {/* ── Price Guide ── */}
+      {/* -- Price Guide -- */}
       <section className="py-16 md:py-20 bg-[#FAF8F5]">
         <div className="container-morocco">
           <div className="max-w-4xl mx-auto">
@@ -877,7 +856,7 @@ export default function MoroccoStreetFoodPage() {
         </div>
       </section>
 
-      {/* ── Food Safety Tips ── */}
+      {/* -- Food Safety Tips -- */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
         <div className="container-morocco">
           <div className="max-w-4xl mx-auto">
@@ -954,7 +933,7 @@ export default function MoroccoStreetFoodPage() {
         </div>
       </section>
 
-      {/* ── Street Food Tours ── */}
+      {/* -- Street Food Tours -- */}
       <section className="py-16 md:py-20 bg-[#FAF8F5]">
         <div className="container-morocco">
           <div className="max-w-4xl mx-auto">
@@ -1030,7 +1009,7 @@ export default function MoroccoStreetFoodPage() {
         </div>
       </section>
 
-      {/* ── Vegetarian & Vegan Street Food ── */}
+      {/* -- Vegetarian & Vegan Street Food -- */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
         <div className="container-morocco">
           <div className="max-w-4xl mx-auto">
@@ -1092,12 +1071,12 @@ export default function MoroccoStreetFoodPage() {
         </div>
       </section>
 
-      {/* ── FAQ Section ── */}
+      {/* -- FAQ Section -- */}
       <section className="py-16 md:py-20 bg-[#FAF8F5]">
         <div className="container-morocco">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-3 mb-3">
-              <BookOpen className="w-8 h-8 text-[var(--color-accent)]" />
+              <MessageCircleQuestion className="w-8 h-8 text-[var(--color-accent)]" />
               <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
                 Frequently Asked Questions
               </h2>
@@ -1105,13 +1084,13 @@ export default function MoroccoStreetFoodPage() {
             <p className="text-[var(--text-secondary)] mb-10">Answers to common questions about eating street food in Morocco.</p>
 
             <div className="space-y-4">
-              {jsonLdFaq.mainEntity.map((faq) => (
-                <div key={faq.name} className="card-moroccan p-6">
+              {faqItems.map((faq) => (
+                <div key={faq.q} className="card-moroccan p-6">
                   <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                    {faq.name}
+                    {faq.q}
                   </h3>
                   <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                    {faq.acceptedAnswer.text}
+                    {faq.a}
                   </p>
                 </div>
               ))}
@@ -1120,44 +1099,56 @@ export default function MoroccoStreetFoodPage() {
         </div>
       </section>
 
-      {/* ── Related Guides ── */}
+      {/* -- Related Guides -- */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
-            Continue Exploring Morocco
+            Continue Exploring Moroccan Cuisine
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Link href="/morocco-food-guide" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Link href="/morocco-restaurants" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
+              <Building className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
+                Restaurant Guide
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] mb-3">
+                Top restaurants in Marrakech, Fes, Casablanca, and beyond. From rooftop dining to hidden medina gems.
+              </p>
+              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
+                Read more <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
+            <Link href="/morocco-cooking-classes" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
+              <CookingPot className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
+                Cooking Classes
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] mb-3">
+                Learn to make tagine, couscous, and pastilla. Half-day and full-day classes with local chefs.
+              </p>
+              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
+                Read more <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
+            <Link href="/morocco-spice-guide" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
+              <Sparkles className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
+                Spice Guide
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] mb-3">
+                Ras el hanout, cumin, saffron, and more. What to buy, how to use them, and where to find the best.
+              </p>
+              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
+                Read more <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
+            <Link href="/morocco-food-guide" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
               <Utensils className="w-8 h-8 text-[var(--color-accent)] mb-3" />
               <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Moroccan Food Guide
+                Full Food Guide
               </h3>
               <p className="text-sm text-[var(--text-secondary)] mb-3">
-                The complete guide to Moroccan cuisine. 50+ dishes, restaurant dining, regional specialties, and dining etiquette.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-            <Link href="/morocco-budget-travel" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
-              <DollarSign className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Budget Travel Guide
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                How to travel Morocco on a budget. Cheap eats, affordable riads, transport savings, and daily cost breakdowns.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-            <Link href="/marrakech" className="card-moroccan p-6 group hover:shadow-lg transition-shadow">
-              <Star className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Marrakech City Guide
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Everything about Marrakech: Jemaa el-Fnaa, the souks, riads, day trips, and the best food stalls in the medina.
+                50+ Moroccan dishes, dining etiquette, regional specialties, and restaurant price breakdowns.
               </p>
               <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
                 Read more <ArrowRight className="w-3.5 h-3.5" />
@@ -1167,7 +1158,7 @@ export default function MoroccoStreetFoodPage() {
         </div>
       </section>
 
-      {/* ── CTA ── */}
+      {/* -- CTA -- */}
       <section className="py-16 md:py-20 moroccan-pattern">
         <div className="container-morocco text-center">
           <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
@@ -1175,6 +1166,7 @@ export default function MoroccoStreetFoodPage() {
           </h2>
           <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto mb-8">
             From sfenj at dawn to grilled meats at midnight, Moroccan street food runs all day.
+            Start planning your culinary adventure across the country&apos;s food stalls and night markets.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/morocco-food-guide" className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--color-accent)] text-white rounded-lg font-[family-name:var(--font-heading)] font-semibold hover:bg-[var(--color-accent)]/90 transition-colors">

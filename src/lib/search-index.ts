@@ -3287,6 +3287,24 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['morocco honeymoon', 'romantic morocco trip', 'honeymoon riads', 'desert glamping couples', 'morocco couple itinerary'],
       priority: 9,
     },
+    {
+      title: 'Morocco Street Food Guide 2026',
+      description: 'Best street food in Morocco — msemen, sfenj, harira, snail soup, merguez, fresh juices, prices, food safety tips, and top street food spots by city.',
+      type: 'page',
+      url: '/morocco-street-food',
+      tags: ['street food', 'Moroccan food', 'Jemaa el-Fnaa', 'food stalls', 'cheap eats'],
+      keywords: ['morocco street food', 'moroccan street food guide', 'jemaa el fnaa food', 'marrakech street food', 'morocco cheap eats'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Markets & Souks Guide 2026',
+      description: 'Navigate Morocco souks like a local — haggling tips, best buys, artisan workshops, souk etiquette, and top markets in Marrakech, Fes, and beyond.',
+      type: 'page',
+      url: '/morocco-markets-souks',
+      tags: ['souks', 'markets', 'haggling', 'shopping', 'medina'],
+      keywords: ['morocco souks guide', 'marrakech souk shopping', 'haggling morocco', 'fes medina shopping', 'moroccan markets'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

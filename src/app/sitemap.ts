@@ -433,6 +433,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-waterfall-hikes',
     '/morocco-solo-travel',
     '/morocco-honeymoon',
+    '/morocco-street-food',
+    '/morocco-markets-souks',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
