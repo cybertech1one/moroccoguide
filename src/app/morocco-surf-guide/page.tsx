@@ -13,6 +13,7 @@ import {
   ShieldCheck,
   DollarSign,
   CheckCircle,
+  AlertTriangle,
   Users,
   Award,
   Globe,
@@ -24,396 +25,366 @@ import {
   Calendar,
   Thermometer,
   Anchor,
+  MessageCircleQuestion,
+  BookOpen,
+  Bed,
 } from 'lucide-react';
 
-/* ═══════════════════════════════════════════════════════════════
-   CONSTANTS
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   CONSTANTS & BASE URL
+   ================================================================ */
 
 const BASE_URL = 'https://citytoursmorocco.com';
+const PAGE_URL = `${BASE_URL}/morocco-surf-guide`;
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    SEO METADATA
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 export const metadata: Metadata = {
-  title: 'Surfing Morocco 2026 | Best Surf Spots, Camps & Beginner Guide',
+  title: 'Morocco Surf Guide 2026 | Best Spots, Camps, Seasons & Beginner Tips',
   description:
-    'Complete guide to surfing in Morocco. Best surf spots in Taghazout, Imsouane, Essaouira, Sidi Kaouki, Anchor Point, and Dakhla. Surf camp prices, wetsuit advice, beginner tips, equipment rental, and kitesurfing info.',
+    'Complete Morocco surf guide covering Taghazout, Imsouane, Essaouira, Anchor Point, Killer Point, Sidi Kaouki, and Tamri. Surf season calendar, wave types, beginner vs advanced spots, surf camp prices from 3,500 MAD/week, board rental, wetsuit advice, yoga-surf combos, and budget trip planning.',
   keywords: [
-    'surfing morocco',
-    'best surf spots morocco',
-    'taghazout surf',
-    'morocco surf camp',
-    'surf morocco beginners',
-    'imsouane surf',
-    'anchor point morocco',
-    'killer point morocco',
-    'dakhla kitesurfing',
-    'essaouira surf',
-    'sidi kaouki surf',
-    'morocco surf season',
-    'surf school morocco',
-    'surf equipment rental morocco',
-    'taghazout surf camp',
-    'morocco wave guide',
-    'beginner surf morocco',
-    'morocco surf accommodation',
-    'kitesurfing dakhla',
-    'morocco water temperature',
+    'Morocco surf guide 2026',
+    'best surf spots Morocco',
+    'Taghazout surf',
+    'Imsouane surfing',
+    'Anchor Point Morocco',
+    'Killer Point Morocco',
+    'Essaouira surf',
+    'Sidi Kaouki surf',
+    'Tamri surf Morocco',
+    'Morocco surf season',
+    'surf camp Morocco',
+    'surf school Morocco',
+    'beginner surf Morocco',
+    'Morocco wave guide',
+    'surfboard rental Morocco',
+    'wetsuit Morocco',
+    'yoga surf Morocco',
+    'budget surf trip Morocco',
+    'surf accommodation Taghazout',
   ],
   openGraph: {
-    title: 'Surfing Morocco 2026 | Best Surf Spots, Camps & Beginner Guide',
+    title: 'Morocco Surf Guide 2026 | Best Spots, Camps, Seasons & Beginner Tips',
     description:
-      'Find the best waves in Morocco. Taghazout, Imsouane, Anchor Point, Dakhla, and more. Surf camps from 3,500 MAD/week, equipment rental, and seasonal wave forecasts.',
-    url: `${BASE_URL}/morocco-surf-guide`,
+      'From the endless rollers of Imsouane to the barrels of Anchor Point. Surf spots, camp pricing from 3,500 MAD/week, gear rental, wetsuit guide, yoga-surf combos, and budget planning for Morocco surf trips.',
+    url: PAGE_URL,
     images: [
       {
         url: `${BASE_URL}/images/hero-surfing.webp`,
         width: 1200,
         height: 630,
-        alt: 'Surfer riding a wave at Taghazout with the Moroccan coastline in the background',
+        alt: 'Surfer riding a wave at Anchor Point near Taghazout on the Atlantic coast of Morocco',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Surfing Morocco 2026 | Best Surf Spots & Camps',
+    title: 'Morocco Surf Guide 2026 | Spots, Camps & Beginner Tips',
     description:
-      'Complete surf guide to Morocco. Top breaks from Taghazout to Dakhla, camp prices, wetsuit advice, and beginner-friendly spots.',
+      'Taghazout, Imsouane, Anchor Point, Killer Point, Essaouira, Sidi Kaouki, Tamri. Surf season, camps, board rental, wetsuit guide, yoga combos, and budget surf trips.',
     images: [`${BASE_URL}/images/hero-surfing.webp`],
   },
-  alternates: { canonical: `${BASE_URL}/morocco-surf-guide` },
+  alternates: { canonical: PAGE_URL },
 };
 
-/* ═══════════════════════════════════════════════════════════════
-   JSON-LD STRUCTURED DATA
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   JSON-LD: TravelGuide + FAQPage
+   ================================================================ */
 
-const jsonLd = {
+const faqItems = [
+  {
+    q: 'When is the best time to surf in Morocco?',
+    a: 'September through April delivers consistent Atlantic swells. December to February brings the biggest waves at 2-4 meters, ideal for advanced surfers. Shoulder months (September-November, March-April) produce clean 1-2 meter swells with warmer water and lighter crowds, making them the best window for intermediates and beginners.',
+  },
+  {
+    q: 'Is Morocco a good destination for beginner surfers?',
+    a: 'Morocco is one of the best places in the world to learn. Imsouane Bay rolls slow, forgiving waves over sand with rides up to 600 meters. Taghazout Beach, Sidi Kaouki, and Essaouira all have gentle beach breaks with dozens of surf schools. Group lessons start from 350 MAD for two hours with board and wetsuit included.',
+  },
+  {
+    q: 'How much does a surf camp cost in Morocco?',
+    a: 'Budget hostel-style camps with shared rooms and daily guiding start from 3,500 MAD per week. Mid-range camps with private rooms, daily lessons, meals, and yoga run from 5,500 MAD to 8,000 MAD per week. Premium camps with coaching, video analysis, pool access, and full board charge from 10,000 MAD per week. Seasonal pricing can change.',
+  },
+  {
+    q: 'Do I need a wetsuit for surfing in Morocco?',
+    a: 'Yes, for most of the year. Water temperatures range from 16 degrees Celsius in January to 22 degrees in September. A 3/2mm fullsuit handles October through May. A 4/3mm is worth packing for January and February if you run cold. A 2mm shorty or spring suit works from June through September. Rental costs from 50 MAD per day.',
+  },
+  {
+    q: 'What is the best surf spot for experienced surfers in Morocco?',
+    a: 'Anchor Point near Taghazout is the benchmark: a long, hollow right-hand point break offering 200 to 300 meter rides on solid northwest swells. Killer Point holds bigger swells up to 5 meters with fast, powerful rights below a cliff. Boilers is a short, intense barrel. Tamri has an exposed beach break with heavy peaks.',
+  },
+  {
+    q: 'Can I rent surf equipment in Taghazout and Imsouane?',
+    a: 'Rental shops line the main strips of both towns. Softboards cost from 100 MAD per day, hardboards from 150 MAD, and wetsuits from 50 MAD per day. Weekly rates save 30 to 40 percent. Board repair services are available from 50 MAD for a ding fix. Bringing your own board is easy as Royal Air Maroc and budget carriers from Europe carry surfboards free or cheap.',
+  },
+  {
+    q: 'Are there yoga and surf combo retreats in Morocco?',
+    a: 'Dozens of camps along the Taghazout-Imsouane corridor combine daily sunrise yoga with morning and afternoon surf sessions. Week-long yoga-surf packages start from 5,500 MAD including accommodation, meals, yoga classes, and surf guiding. Some retreats add meditation, breathwork, and sound healing sessions.',
+  },
+  {
+    q: 'How do I get to Taghazout from Agadir airport?',
+    a: 'Taghazout sits 19 km north of Agadir Al Massira Airport. A grand taxi from the airport costs from 200 to 300 MAD. Many surf camps offer transfers for from 150 to 250 MAD. The local bus from Agadir city center costs 7 MAD but does not go to the airport directly. Ride-hailing apps like inDrive charge from 150 to 200 MAD.',
+  },
+];
+
+const jsonLdTravel = {
   '@context': 'https://schema.org',
   '@type': 'TravelGuide',
-  '@id': `${BASE_URL}/morocco-surf-guide`,
-  name: 'Surfing Morocco 2026 | Best Surf Spots, Camps & Beginner Guide',
+  '@id': PAGE_URL,
+  name: 'Morocco Surf Guide 2026',
   description:
-    'Complete guide to surfing in Morocco. Best surf spots, surf camps with prices, wetsuit advice, beginner tips, equipment rental, and kitesurfing info for Taghazout, Imsouane, Essaouira, and Dakhla.',
-  url: `${BASE_URL}/morocco-surf-guide`,
+    'Complete guide to surfing in Morocco covering the best surf spots, surf season calendar, beginner and advanced breaks, surf camps, board rental, wetsuit requirements, yoga-surf retreats, and budget planning.',
+  url: PAGE_URL,
   image: `${BASE_URL}/images/hero-surfing.webp`,
-  author: {
-    '@type': 'Organization',
-    name: 'CityGuide Morocco',
-    url: BASE_URL,
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'CityGuide Morocco',
-    url: BASE_URL,
-  },
-  datePublished: '2026-03-20',
-  dateModified: '2026-03-20',
-  mainEntityOfPage: `${BASE_URL}/morocco-surf-guide`,
-  isPartOf: {
-    '@type': 'WebSite',
-    name: 'CityGuide Morocco',
-    url: BASE_URL,
-  },
-  about: {
-    '@type': 'Country',
-    name: 'Morocco',
-  },
+  author: { '@type': 'Organization', name: 'City Tours Morocco', url: BASE_URL },
+  publisher: { '@type': 'Organization', name: 'City Tours Morocco', url: BASE_URL },
+  datePublished: '2026-03-21',
+  dateModified: '2026-03-21',
+  mainEntityOfPage: PAGE_URL,
+  about: { '@type': 'Country', name: 'Morocco' },
   breadcrumb: {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Surfing Morocco', item: `${BASE_URL}/morocco-surf-guide` },
+      { '@type': 'ListItem', position: 2, name: 'Morocco Surf Guide', item: PAGE_URL },
     ],
   },
 };
 
-const faqJsonLd = {
+const jsonLdFaq = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'When is the best time to surf in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The prime surf season runs from September through April. Winter months (December-February) deliver the biggest swells, with waves reaching 2-4 meters at exposed breaks like Anchor Point and Killer Point. September-November and March-April offer cleaner conditions with smaller 1-2 meter swells, ideal for intermediate surfers and beginners. Summer (June-August) is flat on the Atlantic coast but good for kitesurfing in Dakhla and Essaouira.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is Morocco good for beginner surfers?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Morocco is excellent for beginners. Spots like Taghazout Beach, Imsouane Bay, Sidi Kaouki, and Essaouira Moulay Bouzerktoune offer gentle, forgiving waves that break over sand. Dozens of surf schools operate in these areas with lessons starting from 350 MAD for a two-hour group session including board and wetsuit. The long, slow-rolling wave at Imsouane Bay is often called the longest wave in Africa and is perfect for learning longboarding.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does a surf camp cost in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Surf camp packages in Morocco start from 3,500 MAD per week (around 350 USD) for basic shared accommodation with daily surf guiding. Mid-range camps with private rooms, daily lessons, yoga, and meals run from 5,500 MAD to 8,000 MAD per week. Premium camps with ocean-view rooms, video analysis, and airport transfers cost from 10,000 MAD per week. Most camps include board rental, wetsuit, and transport to surf spots.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do I need a wetsuit to surf in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes, a wetsuit is recommended year-round. Water temperature ranges from 16°C in January to 22°C in September. A 3/2mm fullsuit covers October through May. In summer (June-September), a 2mm shorty or spring suit works for most people. Many surf camps include wetsuit rental, or you can rent one locally from 50-80 MAD per day.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is the best surf spot for experienced surfers in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Anchor Point near Taghazout is Morocco\'s most famous expert wave: a long, hollow right-hand point break that barrels over a shallow reef. On a solid northwest swell, rides of 200-300 meters are possible. Killer Point, just north, produces powerful, fast rights that break over rock. Boilers, at the base of a cliff, delivers heavy barrels. The Dakhla peninsula offers world-class point breaks for experienced surfers who want uncrowded lineups.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can I rent surf equipment in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Surf equipment is widely available for rent in Taghazout, Essaouira, Imsouane, and Sidi Kaouki. Softboard rental starts from 100 MAD per day, hardboards from 150 MAD per day, and wetsuits from 50 MAD per day. Most surf shops also sell wax, leashes, and fins. Board repair services are available in Taghazout and Essaouira. For multi-week rentals, negotiate a weekly rate and expect 30-40% off the daily price.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is kitesurfing good in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Morocco is a world-class kitesurfing destination. Dakhla, in the southern Sahara region, has 300+ wind days per year with consistent 18-25 knot trade winds and a massive flat-water lagoon. Essaouira is known as the "Wind City of Africa" with strong afternoon thermals from April to September. Moulay Bouzerktoune near Essaouira combines wave kitesurfing with flat-water spots. Kite equipment rental starts from 500 MAD per day in Dakhla.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How do I get to Taghazout from Agadir airport?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Taghazout is 19 km north of Agadir. A grand taxi from Agadir airport costs from 200-300 MAD (negotiate before boarding). Many surf camps offer airport transfers for from 150-250 MAD. The local bus from Agadir Souk El Had station costs 7 MAD but does not go directly to the airport. Alternatively, ride-hailing apps like inDrive operate in Agadir and charge from 150-200 MAD for the airport-to-Taghazout trip.',
-      },
-    },
-  ],
+  mainEntity: faqItems.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
 };
 
-/* ═══════════════════════════════════════════════════════════════
-   DATA: TOP SURF SPOTS
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   DATA: SURF SPOTS
+   ================================================================ */
 
 const surfSpots = [
   {
     name: 'Anchor Point',
-    location: 'Taghazout',
+    location: 'Taghazout, 19 km north of Agadir',
     icon: Anchor,
     level: 'Advanced',
-    waveType: 'Right-hand point break over reef',
-    waveSize: '1.5 - 4m',
-    bestSeason: 'October - March',
+    waveType: 'Right-hand point break',
+    waveSize: '1.5 - 3.5m',
+    bottom: 'Rocky reef',
+    bestSeason: 'Oct - Mar',
     description:
-      'Morocco\'s crown jewel. A long, hollow right-hand point break that peels for 200-300 meters on a solid northwest swell. The takeoff is steep and fast, and the inside section can barrel over shallow rock. Needs a 1.5m+ swell to start working. Gets crowded when it\'s on, so paddle out early. Located just north of Taghazout village, accessible by a 15-minute walk from the main road.',
-    bottom: 'Rock / Reef',
+      'The crown jewel of Moroccan surfing. A long, hollow right that peels over flat reef for 200 to 300 meters on solid northwest swells. Needs a minimum 1.5 meter swell to break properly. The takeoff zone is tight and local surfers charge hard. Paddle out through the channel on the south side of the point.',
   },
   {
     name: 'Killer Point',
-    location: 'North of Taghazout',
+    location: 'North of Taghazout, cliff access',
     icon: Mountain,
     level: 'Advanced',
-    waveType: 'Right-hand point break over rock',
-    waveSize: '1.5 - 5m',
-    bestSeason: 'November - February',
+    waveType: 'Right-hand reef break',
+    waveSize: '2 - 5m',
+    bottom: 'Rock / reef',
+    bestSeason: 'Nov - Feb',
     description:
-      'A powerful, fast right that breaks along a cliff face. Named after the orcas once spotted offshore. Handles big swells better than Anchor Point and stays cleaner in strong winds. The paddle out goes through a channel next to the cliff. Not for the faint-hearted: heavy wipeouts push surfers toward rocks. Best on a solid 2m+ northwest swell with light east winds.',
-    bottom: 'Rock / Boulder',
+      'A heavy, fast right that breaks below a cliff face. Holds swells up to 5 meters. Entry and exit through a rocky channel require confidence and timing. Named after the falcons (not the wave), though the power earns the reputation. The hike down takes 10 minutes over loose ground.',
   },
   {
     name: 'Imsouane Bay',
-    location: 'Imsouane',
+    location: 'Imsouane, 90 km north of Agadir',
     icon: Waves,
-    level: 'Beginner / Longboard',
-    waveType: 'Slow right-hand point break',
+    level: 'Beginner - Intermediate',
+    waveType: 'Right-hand point / bay break',
     waveSize: '0.5 - 2m',
-    bestSeason: 'September - April',
+    bottom: 'Sand',
+    bestSeason: 'Sep - Apr',
     description:
-      'A crescent-shaped bay that produces what many call the longest rideable wave in Africa. On a good day, rides extend 600+ meters on a gentle, peeling right-hander perfect for longboarding and learning. The wave breaks slow and forgiving over sand and rock. The bay also protects from wind, making it surfable when other spots are blown out. The fishing village has a laid-back atmosphere with cheap tagines and fresh seafood.',
-    bottom: 'Sand / Rock',
+      'Home to what many call the longest wave in Africa. Gentle, rolling rights break across the bay on any northwest swell, offering rides of 300 to 600 meters on good days. Perfect for longboarding, learning, and mellow sessions. The fishing village vibe and cheap tagines add to the draw.',
   },
   {
-    name: 'Imsouane Cathedral',
-    location: 'Imsouane',
-    icon: Sparkles,
-    level: 'Intermediate / Advanced',
-    waveType: 'Hollow right-hand reef break',
-    waveSize: '1 - 3m',
-    bestSeason: 'October - March',
-    description:
-      'On the opposite side of the Imsouane headland from the bay, Cathedral delivers faster, more powerful waves. A hollow right breaks over a rocky shelf with barrel sections on bigger swells. The cliff backdrop creates a natural amphitheater. Handles up to 3m before closing out. Much less crowded than the bay side.',
-    bottom: 'Rock / Reef',
-  },
-  {
-    name: 'Taghazout Beach (Panoramas)',
-    location: 'Taghazout',
+    name: 'Taghazout Beach',
+    location: 'Taghazout village center',
     icon: Sun,
-    level: 'Beginner / Intermediate',
+    level: 'Beginner',
     waveType: 'Beach break',
     waveSize: '0.5 - 1.5m',
-    bestSeason: 'September - May',
-    description:
-      'The main beach in front of Taghazout village. Multiple peaks break over sand, making it forgiving for beginners and fun for intermediate surfers on smaller days. All the surf schools operate here. Walk-in access from the village, with cafes and board rental shops right on the sand. Can get crowded mid-morning when schools arrive.',
     bottom: 'Sand',
+    bestSeason: 'Year-round (best Sep - Apr)',
+    description:
+      'The sandy beach right in front of Taghazout village. Multiple peaks shift with the sandbars. Dozens of surf schools set up here daily. Manageable whitewater for first-timers and fun, punchy waves for intermediates on bigger days. Walking distance to cafes, shops, and rental outlets.',
+  },
+  {
+    name: 'Essaouira Beach',
+    location: 'Essaouira, Atlantic coast',
+    icon: Wind,
+    level: 'Beginner',
+    waveType: 'Beach break',
+    waveSize: '0.5 - 1.5m',
+    bottom: 'Sand',
+    bestSeason: 'Sep - Apr (windy May - Aug)',
+    description:
+      'A wide, exposed beach south of the UNESCO medina. Small waves and a sandy bottom make it forgiving for absolute beginners. Mornings are glassy before the famous afternoon trade winds arrive. Double-duty destination: surf in the morning, kitesurf or windsurf in the afternoon.',
   },
   {
     name: 'Sidi Kaouki',
     location: '25 km south of Essaouira',
-    icon: Wind,
-    level: 'Beginner / Intermediate',
+    icon: Compass,
+    level: 'Beginner - Intermediate',
     waveType: 'Beach break',
     waveSize: '0.5 - 2m',
-    bestSeason: 'October - April',
-    description:
-      'A long, open beach with consistent waves and fewer crowds than Taghazout. The exposed position picks up every swell, but afternoons get windy. Mornings offer glassy conditions from 7-11am. A handful of guesthouses and surf camps line the beach. Also popular for horse and camel rides. The village has a mellow, off-grid vibe that draws long-stay surfers and yoga retreaters.',
     bottom: 'Sand',
+    bestSeason: 'Sep - Apr',
+    description:
+      'A long, open beach with far fewer people than Taghazout. Consistent whitewater for learners and clean peaks for intermediates. Glassy mornings before the wind picks up around noon. A handful of eco-lodges and guesthouses face the break. No ATMs; bring cash from Essaouira.',
   },
   {
-    name: 'Essaouira (Moulay Bouzerktoune)',
-    location: 'Essaouira region',
-    icon: Wind,
-    level: 'Intermediate / Kitesurfing',
-    waveType: 'Beach and reef breaks',
-    waveSize: '0.5 - 2.5m',
-    bestSeason: 'Surf: Oct-Apr / Kite: Apr-Sep',
+    name: 'Tamri',
+    location: '60 km north of Agadir',
+    icon: Globe,
+    level: 'Intermediate - Advanced',
+    waveType: 'Beach break / river mouth',
+    waveSize: '1 - 3m',
+    bottom: 'Sand',
+    bestSeason: 'Oct - Mar',
     description:
-      'Moulay Bouzerktoune, 20 km north of Essaouira, has a right-hand point break and a beach break. The point works on north swells and can hold up to 2.5m. Essaouira\'s main beach is too windy for surfing most days but ranks among the world\'s best kitesurfing spots. Consistent 20-30 knot winds blow from April through September. Multiple kite schools charge from 500 MAD per two-hour lesson.',
-    bottom: 'Sand / Reef',
+      'A raw, exposed beach break near the mouth of the Tamri River. Heavy peaks shift with sand movement and river flow. Less crowded than the Taghazout corridor because access is rougher and there are no nearby surf camps. Strong currents after rain. Suited to surfers comfortable in powerful, unpredictable beach break.',
   },
   {
-    name: 'Dakhla',
-    location: 'Western Sahara region',
-    icon: Compass,
-    level: 'Intermediate / Kitesurfing',
-    waveType: 'Point breaks + flat-water lagoon',
-    waveSize: 'Surf: 1-3m / Lagoon: flat',
-    bestSeason: 'Year-round (wind); Surf: Oct-Mar',
+    name: 'Boilers',
+    location: 'Between Killer Point and Anchor Point',
+    icon: Star,
+    level: 'Expert',
+    waveType: 'Short barrel / reef break',
+    waveSize: '1.5 - 3m',
+    bottom: 'Rock / reef',
+    bestSeason: 'Nov - Feb',
     description:
-      'A remote peninsula 1,200 km south of Agadir surrounded by desert and Atlantic Ocean. The 40 km Dakhla lagoon has butter-flat water with 300+ wind days per year at 18-25 knots, making it a global top-three kitesurfing destination. Outside the lagoon, uncrowded point breaks fire on northwest swells. The speed sailing record for Morocco was set here. Flights from Casablanca take 2.5 hours.',
-    bottom: 'Sand / Rock',
+      'Named for the shipwreck boiler visible at low tide. A short, intense wave that barrels over shallow reef at the base of a cliff. Takeoff is critical. Wipeouts put you on rock. Only for experienced surfers with reef-break confidence. The reward is a clean, punchy tube on the right day.',
   },
 ];
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    DATA: SURF CAMPS
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 const surfCamps = [
   {
-    tier: 'Budget',
-    icon: DollarSign,
+    tier: 'Budget Camp',
+    icon: Users,
     price: 'From 3,500 MAD / week',
-    includes: 'Shared dorm, daily surf guiding, board & wetsuit',
-    locations: 'Taghazout, Imsouane, Sidi Kaouki',
     description:
-      'Shared rooms with 4-6 beds, communal kitchen, rooftop terrace. Daily transport to the best break of the day. Board and wetsuit included. Breakfast usually provided; lunch and dinner on your own. Good for solo travelers and social surfers who want to keep costs down.',
+      'Shared dorm rooms (4 to 8 beds), daily surf guiding to the best breaks, basic breakfast. You cook dinner or eat at local restaurants (tagine from 40 MAD). Social atmosphere with communal areas, rooftop hangouts, and nightly bonfires.',
+    includes: 'Shared dorm, surf guiding, breakfast, board storage',
+    locations: 'Tamraght (Banana Village), Taghazout outskirts, Imsouane',
   },
   {
-    tier: 'Mid-Range',
-    icon: Star,
-    price: 'From 5,500 MAD / week',
-    includes: 'Private/twin room, daily lessons, yoga, half-board meals',
-    locations: 'Taghazout, Tamraght, Imsouane',
-    description:
-      'Private or shared twin rooms. Daily two-hour surf lessons with certified ISA instructors, morning yoga sessions, and half-board meals (breakfast + dinner). Video analysis at most camps. Some include sunset excursions to Paradise Valley or Agadir souk trips.',
-  },
-  {
-    tier: 'Premium',
+    tier: 'Mid-Range Camp',
     icon: Award,
-    price: 'From 10,000 MAD / week',
-    includes: 'Ocean-view suite, private coaching, full board, airport transfer',
-    locations: 'Taghazout, Banana Point area',
+    price: 'From 5,500 MAD / week',
     description:
-      'Boutique riad-style accommodation with pool, ocean views, and private terraces. One-on-one coaching, video feedback, and customized surf plans. Full-board meals with locally sourced organic food. Airport pickup from Agadir included. Some premium camps limit groups to 8-10 guests for an uncrowded experience.',
+      'Private or twin rooms with en-suite bathrooms. Daily surf lessons or guiding, breakfast and dinner included. Many add morning yoga sessions and transport to breaks further afield. Boards and wetsuits provided. Pool or ocean-view terrace.',
+    includes: 'Private room, lessons/guiding, 2 meals, yoga, board + wetsuit',
+    locations: 'Taghazout, Tamraght, Imsouane, Sidi Kaouki',
+  },
+  {
+    tier: 'Premium Camp',
+    icon: Star,
+    price: 'From 10,000 MAD / week',
+    description:
+      'Boutique-level accommodation with full board (three meals plus snacks). Professional coaching with video analysis, small group ratios (max 4 per coach). Pool, spa access, airport transfers. Some offer surf-safari day trips to remote breaks south of Imsouane.',
+    includes: 'Private room, coaching, video, full board, pool, transfers',
+    locations: 'Taghazout, Tamraght, select Agadir beachfront',
   },
 ];
 
-/* ═══════════════════════════════════════════════════════════════
-   DATA: WATER TEMPERATURE
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   DATA: WATER TEMPERATURE & WETSUIT
+   ================================================================ */
 
 const waterTemp = [
-  { month: 'Jan', temp: '16°C', wetsuit: '4/3mm fullsuit' },
-  { month: 'Feb', temp: '16°C', wetsuit: '4/3mm fullsuit' },
-  { month: 'Mar', temp: '17°C', wetsuit: '3/2mm fullsuit' },
-  { month: 'Apr', temp: '17°C', wetsuit: '3/2mm fullsuit' },
-  { month: 'May', temp: '18°C', wetsuit: '3/2mm fullsuit' },
-  { month: 'Jun', temp: '19°C', wetsuit: '3/2mm or spring suit' },
-  { month: 'Jul', temp: '20°C', wetsuit: '2mm shorty' },
-  { month: 'Aug', temp: '21°C', wetsuit: '2mm shorty' },
-  { month: 'Sep', temp: '22°C', wetsuit: '2mm shorty' },
-  { month: 'Oct', temp: '21°C', wetsuit: '3/2mm fullsuit' },
-  { month: 'Nov', temp: '19°C', wetsuit: '3/2mm fullsuit' },
-  { month: 'Dec', temp: '17°C', wetsuit: '3/2mm fullsuit' },
+  { month: 'Jan', temp: '16°C', wetsuit: '4/3mm' },
+  { month: 'Feb', temp: '16°C', wetsuit: '4/3mm' },
+  { month: 'Mar', temp: '17°C', wetsuit: '3/2mm' },
+  { month: 'Apr', temp: '17°C', wetsuit: '3/2mm' },
+  { month: 'May', temp: '18°C', wetsuit: '3/2mm' },
+  { month: 'Jun', temp: '19°C', wetsuit: '2mm' },
+  { month: 'Jul', temp: '20°C', wetsuit: '2mm' },
+  { month: 'Aug', temp: '21°C', wetsuit: 'Shorty' },
+  { month: 'Sep', temp: '22°C', wetsuit: 'Shorty' },
+  { month: 'Oct', temp: '20°C', wetsuit: '3/2mm' },
+  { month: 'Nov', temp: '18°C', wetsuit: '3/2mm' },
+  { month: 'Dec', temp: '17°C', wetsuit: '3/2mm' },
 ];
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    DATA: EQUIPMENT RENTAL PRICES
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 const rentalPrices = [
   { item: 'Softboard (foam)', daily: 'From 100 MAD', weekly: 'From 500 MAD' },
-  { item: 'Hardboard (shortboard)', daily: 'From 150 MAD', weekly: 'From 700 MAD' },
+  { item: 'Hardboard (fibreglass)', daily: 'From 150 MAD', weekly: 'From 700 MAD' },
   { item: 'Longboard (9ft+)', daily: 'From 200 MAD', weekly: 'From 900 MAD' },
-  { item: 'Wetsuit (3/2mm)', daily: 'From 50 MAD', weekly: 'From 250 MAD' },
-  { item: 'Kite equipment (full)', daily: 'From 500 MAD', weekly: 'From 2,500 MAD' },
+  { item: 'Wetsuit (3/2mm full)', daily: 'From 50 MAD', weekly: 'From 250 MAD' },
+  { item: 'Wetsuit (4/3mm full)', daily: 'From 70 MAD', weekly: 'From 350 MAD' },
+  { item: 'Booties (reef shoes)', daily: 'From 30 MAD', weekly: 'From 150 MAD' },
+  { item: 'Board + wetsuit combo', daily: 'From 130 MAD', weekly: 'From 650 MAD' },
   { item: 'Bodyboard', daily: 'From 60 MAD', weekly: 'From 300 MAD' },
 ];
 
-/* ═══════════════════════════════════════════════════════════════
-   PAGE COMPONENT
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   DATA: BUDGET BREAKDOWN
+   ================================================================ */
 
-export default function MoroccoSurfGuidePage() {
+const budgetItems = [
+  { category: 'Accommodation (hostel / shared room)', cost: 'From 100 MAD / night', note: 'Tamraght and Imsouane cheapest' },
+  { category: 'Board + wetsuit rental', cost: 'From 130 MAD / day', note: 'Weekly rate saves 30-40%' },
+  { category: 'Tagine lunch or dinner', cost: 'From 40 MAD', note: 'Local restaurants in the village' },
+  { category: 'Breakfast (cafe)', cost: 'From 30 MAD', note: 'Pancakes, coffee, juice' },
+  { category: 'Grand taxi (Agadir to Taghazout)', cost: 'From 15 MAD', note: 'Shared seat, one way' },
+  { category: 'Surf lesson (2 hr group)', cost: 'From 350 MAD', note: 'Board + wetsuit included' },
+  { category: 'Total budget week estimate', cost: 'From 3,000 MAD', note: 'Self-catering, own gear or weekly rental' },
+];
+
+/* ================================================================
+   PAGE COMPONENT
+   ================================================================ */
+
+export default function MoroccoSurfGuide() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
+      {/* JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdTravel) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }} />
 
       {/* ── Hero Section ── */}
-      <section className="relative py-20 md:py-28 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(/images/hero-surfing.webp)',
-          }}
+      <section className="relative min-h-[60vh] flex items-end pb-16">
+        <img
+          src="/images/hero-surfing.webp"
+          alt="Surfer riding a clean right-hand wave at Anchor Point near Taghazout Morocco"
+          className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 hero-overlay" />
+        <div className="hero-overlay" />
         <div className="container-morocco relative z-10">
-          <nav className="flex items-center gap-2 text-sm text-white/60 mb-8" aria-label="Breadcrumb">
+          <nav className="flex items-center gap-2 text-sm text-white/70 mb-6" aria-label="Breadcrumb">
             <Link href="/" className="hover:text-white transition-colors">
               <Home className="w-3.5 h-3.5" />
             </Link>
             <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-white">Surfing Morocco</span>
+            <span className="text-white">Morocco Surf Guide</span>
           </nav>
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm text-white/90 text-sm mb-6">
             <Waves className="w-4 h-4" />
             Surf &amp; Ocean Sports
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-display)] font-bold text-white mb-4">
-            Surfing Morocco:
-            <br className="hidden md:block" /> Best Waves, Camps &amp; Spots
+            Morocco Surf Guide 2026
           </h1>
           <p className="text-xl text-white/80 max-w-2xl">
-            1,835 km of Atlantic coastline. World-class point breaks. Year-round surf.
-            From the long rollers of Imsouane to the barrels of Anchor Point, Morocco delivers.
+            1,835 km of Atlantic coastline. World-class point breaks. Year-round waves.
+            From the endless rollers of Imsouane to the barrels of Anchor Point, here is everything you need to plan a Morocco surf trip.
           </p>
         </div>
       </section>
@@ -429,19 +400,19 @@ export default function MoroccoSurfGuidePage() {
             </h2>
             <div className="space-y-4 text-lg text-[var(--text-secondary)] leading-relaxed">
               <p>
-                Morocco sits in the path of every North Atlantic swell that rolls south from Iceland and the British Isles.
-                The coastline faces west-northwest, catching energy from storms thousands of kilometers away and
-                channeling it into reef breaks, point breaks, and sandy beach breaks that work at every tide.
-                Add 300+ days of sunshine, water warm enough for a 3/2mm wetsuit, tagine dinners for 40 MAD,
-                and surf camps starting from 3,500 MAD per week, and you start to understand why the
-                Taghazout-to-Imsouane corridor has become one of the most popular surf destinations on the planet.
+                Morocco sits directly in the path of North Atlantic swells that roll south from Iceland, the British Isles,
+                and the mid-ocean storm track. The coastline faces west-northwest, catching that energy and channeling it into
+                reef breaks, point breaks, and sandy beach breaks that work across all tides. Add 300-plus days of sunshine,
+                water warm enough for a 3/2mm wetsuit for most of the year, tagine dinners for 40 MAD, and surf camps starting
+                from 3,500 MAD per week, and you begin to understand why the Taghazout-to-Imsouane corridor ranks among the
+                most sought-after surf destinations on the planet.
               </p>
               <p>
-                The surf scene here took off in the 1970s when traveling Australian and European surfers discovered
-                Anchor Point. By the 2000s, Taghazout had exploded with camps, schools, and cafes. Today, the coast
-                from Safi south to Sidi Ifni holds over 50 named breaks. Further south, the Dakhla peninsula sits
-                at the edge of the Sahara with uncrowded waves and some of the most consistent kite winds on Earth.
-                This guide covers every spot, season, camp tier, and piece of gear you need to plan a Morocco surf trip.
+                The surf scene here took off in the 1970s when traveling Australian and European surfers discovered Anchor Point.
+                By the 2000s, Taghazout had grown into a full surf town with camps, schools, and rooftop cafes. Today, the
+                stretch from Safi south to Sidi Ifni holds over 50 named breaks. This guide covers every major spot,
+                the surf season month by month, camp tiers and pricing, gear rental, wetsuit requirements, yoga-surf retreats,
+                and how to do it all on a budget.
               </p>
             </div>
           </div>
@@ -456,7 +427,7 @@ export default function MoroccoSurfGuidePage() {
             Surf Seasons in Morocco
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Morocco has waves year-round, but swell size and consistency shift with the seasons.
+            Morocco has rideable waves year-round, but swell size, consistency, and water temperature shift with the seasons.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="card-moroccan p-6">
@@ -465,9 +436,9 @@ export default function MoroccoSurfGuidePage() {
                 Peak Season: December - February
               </h3>
               <p className="text-sm text-[var(--text-secondary)] mb-3">
-                North Atlantic storms send consistent 2-4 meter swells down the coast. Anchor Point, Killer Point,
-                and Boilers fire regularly. Water drops to 16°C (pack a 4/3mm). Taghazout gets busy with European surfers
-                escaping winter. Book camps at least a month ahead. Expect 15-20 surfable days per month.
+                North Atlantic storms send consistent 2 to 4 meter swells down the coast. Anchor Point, Killer Point,
+                and Boilers fire regularly. Water drops to 16 degrees Celsius. Pack a 4/3mm fullsuit. Taghazout fills up with
+                European surfers escaping winter. Book camps at least a month ahead. Expect 15 to 20 surfable days per month.
               </p>
               <div className="flex items-center gap-2 text-xs text-[var(--color-accent)]">
                 <Waves className="w-3.5 h-3.5" />
@@ -480,14 +451,14 @@ export default function MoroccoSurfGuidePage() {
                 Shoulder Season: Sep-Nov &amp; Mar-Apr
               </h3>
               <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Cleaner swells in the 1-2 meter range. Lighter winds mean glassy mornings. Water temperature sits
-                between 17-22°C. Fewer crowds, lower camp prices. Imsouane Bay, Taghazout Beach, and Sidi Kaouki
-                produce fun, manageable waves for intermediates and beginners. September and October are the sweet spot
-                for warm water and consistent surf.
+                Cleaner swells in the 1 to 2 meter range. Lighter offshore winds mean glassy mornings. Water temperature
+                sits between 17 and 22 degrees. Fewer crowds, lower camp prices. Imsouane Bay, Taghazout Beach, and
+                Sidi Kaouki produce fun, manageable waves. September and October are the sweet spot for warm water and
+                consistent surf at the best value.
               </p>
               <div className="flex items-center gap-2 text-xs text-[var(--color-accent)]">
                 <Waves className="w-3.5 h-3.5" />
-                <span>Best for: Intermediates & beginners, best value for money</span>
+                <span>Best for: Intermediates, beginners, best value</span>
               </div>
             </div>
             <div className="card-moroccan p-6">
@@ -496,10 +467,10 @@ export default function MoroccoSurfGuidePage() {
                 Summer: June - August
               </h3>
               <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Flat on the Atlantic coast. Swells drop below 0.5 meters most days. Not worth visiting for surfing
-                unless you combine it with kitesurfing in Essaouira or Dakhla, where 20-30 knot winds blow daily.
-                Water warms to 20-22°C. If you must surf in summer, Imsouane Bay occasionally picks up small
-                south swells that other spots miss.
+                Largely flat on the Atlantic surf coast. Swells drop below 0.5 meters most days. Not worth visiting for
+                surfing alone unless you combine it with kitesurfing in Essaouira or Dakhla, where 20 to 30 knot trade winds
+                blow daily. Water warms to 20 to 22 degrees. If you must surf in summer, Imsouane Bay occasionally picks up
+                small south swells that other spots miss.
               </p>
               <div className="flex items-center gap-2 text-xs text-[var(--color-accent)]">
                 <Wind className="w-3.5 h-3.5" />
@@ -509,17 +480,17 @@ export default function MoroccoSurfGuidePage() {
             <div className="card-moroccan p-6">
               <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3 flex items-center gap-2">
                 <Compass className="w-5 h-5 text-[var(--color-gold)]" />
-                Dakhla: Year-Round
+                Year-Round Wild Card: Imsouane
               </h3>
               <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Dakhla operates on different rules. The trade winds blow 300+ days per year at 18-25 knots, making
-                it Africa&apos;s best kitesurfing spot. The lagoon stays flat regardless of ocean swell. For wave surfers,
-                the outer peninsula breaks from October through March on northwest swells. Air temperature stays
-                between 20-30°C year-round.
+                Imsouane Bay picks up swell from a wider window than most Moroccan spots thanks to the shape of the bay and
+                its northwest-facing point. Even in the smaller summer months, it catches enough energy for mellow longboard
+                sessions. Combine with the fishing village atmosphere and you have a viable 12-month surf destination for
+                anyone who does not need overhead waves to be happy.
               </p>
               <div className="flex items-center gap-2 text-xs text-[var(--color-accent)]">
                 <Compass className="w-3.5 h-3.5" />
-                <span>Best for: Kitesurfers, intermediate wave surfers</span>
+                <span>Best for: Longboarders, mellow surfers</span>
               </div>
             </div>
           </div>
@@ -534,7 +505,7 @@ export default function MoroccoSurfGuidePage() {
             Best Surf Spots in Morocco
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            From heavy reef breaks to mellow longboard waves, Morocco has a spot for every level.
+            From heavy reef breaks to mellow longboard waves, Morocco has a spot for every skill level.
           </p>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {surfSpots.map((spot) => (
@@ -551,11 +522,13 @@ export default function MoroccoSurfGuidePage() {
                     </p>
                   </div>
                   <span className={`ml-auto text-xs font-medium px-2.5 py-1 rounded-full ${
-                    spot.level.includes('Advanced')
-                      ? 'bg-red-100 text-red-700'
-                      : spot.level.includes('Intermediate')
-                        ? 'bg-amber-100 text-amber-700'
-                        : 'bg-green-100 text-green-700'
+                    spot.level.includes('Expert')
+                      ? 'bg-purple-100 text-purple-700'
+                      : spot.level.includes('Advanced')
+                        ? 'bg-red-100 text-red-700'
+                        : spot.level.includes('Intermediate')
+                          ? 'bg-amber-100 text-amber-700'
+                          : 'bg-green-100 text-green-700'
                   }`}>
                     {spot.level}
                   </span>
@@ -585,15 +558,79 @@ export default function MoroccoSurfGuidePage() {
         </div>
       </section>
 
-      {/* ── Surf Camps ── */}
+      {/* ── Beginner vs Advanced ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
+            <Users className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Beginner vs Advanced: Where to Surf
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="card-moroccan p-6">
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4 flex items-center gap-2">
+                <CheckCircle className="w-5 h-5 text-green-600" />
+                Beginner Spots
+              </h3>
+              <div className="space-y-3">
+                {[
+                  { spot: 'Imsouane Bay', detail: 'The longest wave in Africa. Gentle, rolling rights over sand. Rides up to 600 meters on good days. The go-to for first-time longboarders.' },
+                  { spot: 'Taghazout Beach', detail: 'Sandy beach break in front of the village. Dozens of surf schools. Waves 0.5 to 1.5 meters. Walk to cafes between sessions.' },
+                  { spot: 'Sidi Kaouki', detail: 'Open beach, fewer people, consistent whitewater. Glassy mornings before wind arrives around noon. Off-grid atmosphere.' },
+                  { spot: 'Essaouira Beach', detail: 'Small waves, sandy bottom. Good for absolute first-timers. Combine morning surf with afternoon kitesurfing or medina exploration.' },
+                ].map((b) => (
+                  <div key={b.spot} className="flex items-start gap-2">
+                    <Waves className="w-4 h-4 mt-0.5 shrink-0 text-green-600" />
+                    <div>
+                      <p className="text-sm font-semibold text-[var(--text-primary)]">{b.spot}</p>
+                      <p className="text-xs text-[var(--text-muted)]">{b.detail}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 p-3 rounded-lg bg-green-50 text-xs text-green-800">
+                <strong>Lesson price:</strong> From 350 MAD for a 2-hour group session (board + wetsuit included).
+                Private lessons from 600 MAD per hour.
+              </div>
+            </div>
+            <div className="card-moroccan p-6">
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4 flex items-center gap-2">
+                <Star className="w-5 h-5 text-red-600" />
+                Advanced Spots
+              </h3>
+              <div className="space-y-3">
+                {[
+                  { spot: 'Anchor Point', detail: 'Long, hollow right over reef. 200-300m rides. Needs 1.5m+ swell. The benchmark Moroccan wave for good reason.' },
+                  { spot: 'Killer Point', detail: 'Heavy, fast rights next to a cliff. Holds big swells up to 5m. Paddle out through a rock channel. Bring reef booties.' },
+                  { spot: 'Boilers', detail: 'Short, intense barrel at the base of a cliff. Named for the shipwreck boiler visible at low tide. Shallow and sharp.' },
+                  { spot: 'Tamri', detail: 'Exposed beach break with heavy, shifting peaks at the river mouth. No crowds, no camps. Bring your own supplies and confidence.' },
+                ].map((a) => (
+                  <div key={a.spot} className="flex items-start gap-2">
+                    <Waves className="w-4 h-4 mt-0.5 shrink-0 text-red-600" />
+                    <div>
+                      <p className="text-sm font-semibold text-[var(--text-primary)]">{a.spot}</p>
+                      <p className="text-xs text-[var(--text-muted)]">{a.detail}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 p-3 rounded-lg bg-red-50 text-xs text-red-800">
+                <strong>Safety:</strong> Reef breaks are sharp. Carry a first-aid kit. Know the paddle-out channels. Never surf
+                Anchor Point or Killer Point alone, and check conditions with locals before going out.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Surf Camps ── */}
+      <section className="py-16 md:py-20 moroccan-pattern">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <Heart className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Surf Camps in Morocco
+            Surf Camps &amp; Schools
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Dozens of camps operate between Taghazout and Imsouane. Here is what each tier gets you. Seasonal pricing can change.
+            Dozens of camps operate between Taghazout and Imsouane. Here is what each tier offers. Seasonal pricing can change.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {surfCamps.map((camp) => (
@@ -617,11 +654,51 @@ export default function MoroccoSurfGuidePage() {
               </div>
             ))}
           </div>
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="card-moroccan p-5">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                Group Lessons
+              </h3>
+              <div className="space-y-2 text-sm text-[var(--text-secondary)]">
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
+                  <span>2-hour session: from 350 MAD (board + wetsuit included)</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
+                  <span>Max 6-8 students per ISA-certified instructor</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
+                  <span>3-day package: from 900 MAD (most popular option)</span>
+                </div>
+              </div>
+            </div>
+            <div className="card-moroccan p-5">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
+                Private Coaching
+              </h3>
+              <div className="space-y-2 text-sm text-[var(--text-secondary)]">
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
+                  <span>1-hour one-on-one: from 600 MAD</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
+                  <span>Video analysis session: from 800 MAD (film + review)</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
+                  <span>5-day intensive: from 3,500 MAD (fast progression)</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* ── Water Temperature & Wetsuit Guide ── */}
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <Thermometer className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
@@ -648,9 +725,9 @@ export default function MoroccoSurfGuidePage() {
                 Winter Kit (Oct - May)
               </h3>
               <p className="text-sm text-[var(--text-secondary)]">
-                A 3/2mm fullsuit handles most of the season. For January and February, bring a 4/3mm if you run cold.
-                Boots (2mm) are worth packing for rocky entries at Anchor Point and Killer Point. Reef booties also
-                protect against sea urchins in the shallows.
+                A 3/2mm fullsuit handles most of the season. For January and February, a 4/3mm is worth packing if you run cold.
+                Reef booties (2mm) protect against sea urchins in the shallows and make rocky entries at Anchor Point and
+                Killer Point far more comfortable. A hood is overkill for Morocco.
               </p>
             </div>
             <div className="card-moroccan p-5">
@@ -659,9 +736,9 @@ export default function MoroccoSurfGuidePage() {
                 Summer Kit (Jun - Sep)
               </h3>
               <p className="text-sm text-[var(--text-secondary)]">
-                A 2mm shorty or spring suit works from June through September. Some surfers trunk it in August
-                and September when water reaches 21-22°C. Rashguard recommended for sun protection
-                during long sessions. SPF 50 reef-safe sunscreen is essential.
+                A 2mm shorty or spring suit works from June through September. Some surfers go with just boardshorts
+                in August and September when water reaches 21 to 22 degrees. A rashguard is recommended for sun protection
+                during long sessions. SPF 50 reef-safe sunscreen is not optional.
               </p>
             </div>
           </div>
@@ -669,14 +746,14 @@ export default function MoroccoSurfGuidePage() {
       </section>
 
       {/* ── Equipment Rental ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+      <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <DollarSign className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Equipment Rental Prices
+            Board Rental &amp; Equipment Prices
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Rental shops line the main strips of Taghazout, Imsouane, and Essaouira. Seasonal pricing can change.
+            Rental shops line the main strips of Taghazout, Imsouane, Essaouira, and Sidi Kaouki. Seasonal pricing can change.
           </p>
           <div className="card-moroccan overflow-hidden">
             <table className="w-full text-sm">
@@ -701,80 +778,16 @@ export default function MoroccoSurfGuidePage() {
           <div className="mt-6 flex items-start gap-2 text-sm text-[var(--text-muted)]">
             <Info className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-accent)]" />
             <p>
-              Multi-week rentals typically get 30-40% off the daily rate. Board repair services are available in
-              Taghazout (from 50 MAD for ding repair) and Essaouira. Bringing your own board? Surfboard bags fly
-              free or cheap on Royal Air Maroc and Ryanair from Europe.
+              Multi-week rentals typically get 30 to 40 percent off the daily rate. Board repair services cost from 50 MAD
+              for a ding fix in Taghazout and Essaouira. Bringing your own board? Surfboard bags fly free or cheap on
+              Royal Air Maroc and Ryanair from Europe.
             </p>
           </div>
         </div>
       </section>
 
-      {/* ── Beginner vs Advanced Guide ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
-            <Users className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Beginner vs Advanced: Where to Surf
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="card-moroccan p-6">
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4 flex items-center gap-2">
-                <CheckCircle className="w-5 h-5 text-green-600" />
-                Beginner Spots
-              </h3>
-              <div className="space-y-3">
-                {[
-                  { spot: 'Imsouane Bay', detail: 'Africa\'s longest wave. Gentle, rolling rights over sand. Rides up to 600m on good days.' },
-                  { spot: 'Taghazout Beach', detail: 'Sandy beach break right in front of the village. Dozens of surf schools. Waves 0.5-1.5m.' },
-                  { spot: 'Sidi Kaouki', detail: 'Open beach, fewer people, consistent whitewater. Glassy mornings before the wind arrives at noon.' },
-                  { spot: 'Essaouira Beach', detail: 'Small waves, sandy bottom, warm-up spot before heading to Moulay Bouz. Good for absolute first-timers.' },
-                ].map((b) => (
-                  <div key={b.spot} className="flex items-start gap-2">
-                    <Waves className="w-4 h-4 mt-0.5 shrink-0 text-green-600" />
-                    <div>
-                      <p className="text-sm font-semibold text-[var(--text-primary)]">{b.spot}</p>
-                      <p className="text-xs text-[var(--text-muted)]">{b.detail}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-4 p-3 rounded-lg bg-green-50 text-xs text-green-800">
-                <strong>Lesson price:</strong> From 350 MAD for a 2-hour group session (board + wetsuit included).
-                Private lessons from 600 MAD per hour.
-              </div>
-            </div>
-            <div className="card-moroccan p-6">
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4 flex items-center gap-2">
-                <Star className="w-5 h-5 text-red-600" />
-                Advanced Spots
-              </h3>
-              <div className="space-y-3">
-                {[
-                  { spot: 'Anchor Point', detail: 'Long, hollow right over reef. 200-300m rides. Needs 1.5m+ swell. The benchmark Moroccan wave.' },
-                  { spot: 'Killer Point', detail: 'Heavy, fast rights next to a cliff. Holds big swells up to 5m. Paddle out through a rock channel.' },
-                  { spot: 'Boilers', detail: 'Short, intense barrel at the base of a cliff. Named for the shipwreck boiler visible at low tide.' },
-                  { spot: 'Dakhla Points', detail: 'Remote reef and point breaks south of the lagoon. Uncrowded, powerful, and raw. Bring your own supplies.' },
-                ].map((a) => (
-                  <div key={a.spot} className="flex items-start gap-2">
-                    <Waves className="w-4 h-4 mt-0.5 shrink-0 text-red-600" />
-                    <div>
-                      <p className="text-sm font-semibold text-[var(--text-primary)]">{a.spot}</p>
-                      <p className="text-xs text-[var(--text-muted)]">{a.detail}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-4 p-3 rounded-lg bg-red-50 text-xs text-red-800">
-                <strong>Safety:</strong> Reef breaks are sharp. Carry a first-aid kit. Know the channels. Never surf
-                Anchor Point or Killer Point alone, and check conditions with locals before paddling out.
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ── Surf Culture & Etiquette ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
             <Globe className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
@@ -785,17 +798,17 @@ export default function MoroccoSurfGuidePage() {
               {
                 title: 'Respect the Locals',
                 icon: Heart,
-                text: 'Moroccan surfers have priority at their home breaks. Taghazout locals charge Anchor Point and Killer Point daily. Don\'t paddle straight to the peak on your first session. Sit wide, watch the lineup, take the wider sets, and earn your spot.',
+                text: 'Moroccan surfers have priority at their home breaks. Taghazout locals charge Anchor Point and Killer Point daily. Do not paddle straight to the peak on your first session. Sit wide, watch the lineup, take the wider sets, and earn your position gradually.',
               },
               {
-                title: 'Don\'t Drop In',
+                title: 'Priority Rules',
                 icon: ShieldCheck,
-                text: 'The person closest to the breaking part of the wave has right of way. At point breaks like Anchor Point, the priority system is strict. Dropping in (taking off on someone else\'s wave) will get you called out fast.',
+                text: 'The surfer closest to the breaking part of the wave has right of way. At point breaks like Anchor Point, the priority system is strict. Dropping in on someone else will get you called out quickly. If in doubt, pull back.',
               },
               {
                 title: 'Keep Beaches Clean',
                 icon: Sparkles,
-                text: 'Morocco\'s surf communities are fighting a plastic waste problem. Pick up trash after your session. Several Taghazout organizations run weekly beach cleanups. Join one and meet locals.',
+                text: 'Morocco\'s surf communities are fighting a plastic waste problem. Pick up trash after your session. Several Taghazout organizations run weekly beach cleanups you can join and meet locals through.',
               },
               {
                 title: 'Respect Ramadan',
@@ -805,12 +818,12 @@ export default function MoroccoSurfGuidePage() {
               {
                 title: 'Dress Modestly Onshore',
                 icon: Users,
-                text: 'Morocco is a Muslim country. Cover up when walking through town. No shirtless walks through the Taghazout medina or Imsouane village. Bikinis on the beach are fine; bikinis in the souk are not.',
+                text: 'Morocco is a Muslim country. Cover up when walking through town. No shirtless walks through the Taghazout medina or Imsouane village. Beachwear at the beach is fine; beachwear in the souk is not.',
               },
               {
                 title: 'Support the Community',
                 icon: DollarSign,
-                text: 'Eat at local restaurants (tagine from 40 MAD), buy from village shops, tip generously. Many surf schools hire local instructors. Choose camps that reinvest in their communities.',
+                text: 'Eat at local restaurants (tagine from 40 MAD), buy from village shops, tip generously. Many surf schools hire local instructors. Choose camps that reinvest in their communities rather than foreign-owned operations that send profits abroad.',
               },
             ].map((item) => (
               <div key={item.title} className="card-moroccan p-5">
@@ -825,104 +838,175 @@ export default function MoroccoSurfGuidePage() {
         </div>
       </section>
 
-      {/* ── Kitesurfing Section ── */}
+      {/* ── Yoga & Surf Combos ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Wind className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Kitesurfing in Morocco
+            <Sparkles className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Yoga &amp; Surf Retreats
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Two world-class kite destinations: Dakhla for flat-water perfection, Essaouira for wave riding.
+            The Taghazout-Imsouane corridor has become a global hub for surf-and-yoga retreats. Sunrise yoga, morning surf,
+            afternoon session, sunset stretch. The daily rhythm suits both body and mind.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="card-moroccan p-6">
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                Dakhla Lagoon
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3 flex items-center gap-2">
+                <Heart className="w-5 h-5 text-[var(--color-accent)]" />
+                What a Typical Week Looks Like
               </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-4">
-                The 40 km lagoon between the Dakhla peninsula and the mainland is knee-to-waist deep for hundreds of
-                meters, with a sandy bottom and zero chop. Wind blows side-onshore at 18-25 knots 300+ days per year.
-                Beginners can stand up if they fall. Advanced riders practice kite loops and strapless freestyle in
-                perfect conditions. A growing number of camps line the lagoon with direct beach access.
-              </p>
-              <div className="space-y-2 text-xs text-[var(--text-muted)]">
-                <div className="flex items-center gap-1.5">
-                  <Wind className="w-3.5 h-3.5 text-[var(--color-accent)]" />
-                  <span>Wind: 18-25 knots, 300+ days/year</span>
+              <div className="space-y-2 text-sm text-[var(--text-secondary)]">
+                <div className="flex items-start gap-2">
+                  <Clock className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
+                  <span><strong>07:00</strong> Sunrise yoga on the rooftop terrace (vinyasa or hatha)</span>
                 </div>
-                <div className="flex items-center gap-1.5">
-                  <DollarSign className="w-3.5 h-3.5 text-[var(--color-accent)]" />
-                  <span>Kite lesson: from 500 MAD / 2 hours. Full course (10 hrs): from 4,000 MAD</span>
+                <div className="flex items-start gap-2">
+                  <Clock className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
+                  <span><strong>08:30</strong> Breakfast (fresh juice, msemmen, eggs, coffee)</span>
                 </div>
-                <div className="flex items-center gap-1.5">
-                  <Clock className="w-3.5 h-3.5 text-[var(--color-accent)]" />
-                  <span>Best months: April - October (strongest, most consistent)</span>
+                <div className="flex items-start gap-2">
+                  <Clock className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
+                  <span><strong>09:30</strong> Morning surf session (2-3 hours, guided or coached)</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Clock className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
+                  <span><strong>13:00</strong> Lunch, free time, explore town</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Clock className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
+                  <span><strong>15:30</strong> Afternoon surf session (optional)</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Clock className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
+                  <span><strong>18:00</strong> Sunset yoga / yin session, then dinner</span>
                 </div>
               </div>
             </div>
             <div className="card-moroccan p-6">
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                Essaouira &amp; Moulay Bouzerktoune
+              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3 flex items-center gap-2">
+                <DollarSign className="w-5 h-5 text-[var(--color-accent)]" />
+                Yoga-Surf Pricing
               </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-4">
-                Essaouira earns its nickname &quot;Wind City of Africa&quot; with powerful thermal winds from April to
-                September. The main beach hosts dozens of kite schools and flat sections behind the breakwater.
-                For wave kiting, Moulay Bouzerktoune (20 km north) has clean swells and side-offshore wind, attracting
-                sponsored riders for photo shoots. The town itself is a UNESCO medina with excellent restaurants and riads.
-              </p>
-              <div className="space-y-2 text-xs text-[var(--text-muted)]">
-                <div className="flex items-center gap-1.5">
-                  <Wind className="w-3.5 h-3.5 text-[var(--color-accent)]" />
-                  <span>Wind: 20-30 knots, Apr-Sep (afternoon thermals)</span>
+              <div className="space-y-3 text-sm text-[var(--text-secondary)]">
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
+                  <span>Budget yoga-surf week (shared room, 1 yoga/day, guiding): from 5,500 MAD</span>
                 </div>
-                <div className="flex items-center gap-1.5">
-                  <DollarSign className="w-3.5 h-3.5 text-[var(--color-accent)]" />
-                  <span>Kite lesson: from 500 MAD / 2 hours</span>
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
+                  <span>Mid-range (private room, 2 yoga/day, lessons, meals): from 8,000 MAD</span>
                 </div>
-                <div className="flex items-center gap-1.5">
-                  <Clock className="w-3.5 h-3.5 text-[var(--color-accent)]" />
-                  <span>Best months: May - August (strongest winds)</span>
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
+                  <span>Premium (boutique villa, full board, coaching, spa): from 14,000 MAD</span>
                 </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
+                  <span>Drop-in yoga class (non-guests): from 100 MAD per session</span>
+                </div>
+              </div>
+              <div className="mt-4 p-3 rounded-lg bg-amber-50 text-xs text-amber-800">
+                <strong>Styles offered:</strong> Most retreats teach vinyasa flow and yin yoga. Some add breathwork,
+                sound healing, and meditation. A few run teacher-training programs (200hr YTT) alongside surf guiding.
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Accommodation Near Surf Spots ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+      {/* ── Budget Surf Trip ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <DollarSign className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Budget Surf Trip Planning
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Morocco remains one of the cheapest surf destinations accessible from Europe. Here is what a week costs if you keep it lean.
+          </p>
+          <div className="card-moroccan overflow-hidden">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-[var(--surface-muted)]">
+                  <th className="text-left p-3 font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Category</th>
+                  <th className="text-left p-3 font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Cost</th>
+                  <th className="text-left p-3 font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Note</th>
+                </tr>
+              </thead>
+              <tbody>
+                {budgetItems.map((b) => (
+                  <tr key={b.category} className="border-t border-[var(--border-primary)]">
+                    <td className="p-3 text-[var(--text-secondary)]">{b.category}</td>
+                    <td className="p-3 text-[var(--text-primary)] font-medium">{b.cost}</td>
+                    <td className="p-3 text-[var(--text-muted)] text-xs">{b.note}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="card-moroccan p-5">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 flex items-center gap-2">
+                <AlertTriangle className="w-5 h-5 text-[var(--color-accent)]" />
+                Save on Flights
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                Ryanair, Transavia, and EasyJet fly to Agadir and Marrakech from dozens of European cities. Booking 6 to 8
+                weeks ahead gets the best fares. Surfboard carriage is free or cheap on most carriers out of Europe.
+              </p>
+            </div>
+            <div className="card-moroccan p-5">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 flex items-center gap-2">
+                <Bed className="w-5 h-5 text-[var(--color-accent)]" />
+                Long-Stay Deals
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                Many Taghazout and Tamraght apartments offer monthly rates from 4,000 MAD for long-stay surfers. Imsouane
+                guesthouses drop prices for stays beyond two weeks. Negotiate directly with hosts rather than booking platforms.
+              </p>
+            </div>
+            <div className="card-moroccan p-5">
+              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 flex items-center gap-2">
+                <BookOpen className="w-5 h-5 text-[var(--color-accent)]" />
+                Self-Catering
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)]">
+                Taghazout has a small Marjane and several grocery shops. Buy vegetables, bread, eggs, and sardines at the local
+                market. Cooking your own meals cuts food costs to from 50 MAD per day. Most guesthouses and camps have shared kitchens.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Accommodation Near Breaks ── */}
+      <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
             <Home className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Where to Stay
+            Where to Stay Near the Breaks
           </h2>
           <div className="space-y-6">
             {[
               {
                 area: 'Taghazout Village',
-                description: 'The epicenter of Moroccan surf. Walk to Panoramas and Hash Point. Dozens of guesthouses, hostels, and apartments line the clifftop. Budget rooms from 150 MAD/night; mid-range apartments from 400 MAD/night. Rooftop cafes, yoga shalas, and a growing restaurant scene.',
-                tip: 'Book early for December-February. Some apartments rent month-to-month from 4,000 MAD for long-stay surfers.',
+                description: 'The epicenter of Moroccan surf. Walk to Panoramas and Hash Point. Dozens of guesthouses, hostels, and apartments line the clifftop. Budget rooms from 150 MAD per night; mid-range apartments from 400 MAD per night. Rooftop cafes, yoga shalas, and a growing restaurant scene.',
+                tip: 'Book early for December through February. Some apartments rent month-to-month from 4,000 MAD for long-stay surfers.',
               },
               {
                 area: 'Tamraght (Banana Village)',
-                description: '3 km south of Taghazout with a quieter, more residential feel. Close to Banana Beach and Devil\'s Rock. Most surf camps are based here because rents are lower. Shared apartments from 100 MAD/night; private rooms from 250 MAD/night.',
-                tip: 'Good for a social atmosphere. Many camps cluster here, so you\'ll meet surfers from around the world.',
+                description: '3 km south of Taghazout with a quieter, more residential feel. Close to Banana Beach and Devil\'s Rock. Most surf camps are based here because rents are lower. Shared apartments from 100 MAD per night; private rooms from 250 MAD per night.',
+                tip: 'Good for a social atmosphere. Many camps cluster here, so you will meet surfers from around the world.',
               },
               {
                 area: 'Imsouane',
-                description: 'A fishing village with a backpacker vibe. Guesthouses perch above the bay with direct wave views. Cheap fresh fish tagines from 40 MAD. Rooms from 120 MAD/night. Limited nightlife; perfect for early-to-bed, early-to-surf types.',
-                tip: 'The bay walk to the point takes 5 minutes. Bring cash; ATMs are unreliable.',
+                description: 'A fishing village with a backpacker vibe. Guesthouses perch above the bay with direct wave views. Cheap fresh fish tagines from 40 MAD. Rooms from 120 MAD per night. Limited nightlife; built for early-to-bed, early-to-surf routines.',
+                tip: 'The walk from the bay to the point takes 5 minutes. Bring cash; ATMs are unreliable here.',
               },
               {
                 area: 'Sidi Kaouki',
-                description: 'A handful of guesthouses and eco-lodges face the beach. No ATMs, one shop, total disconnect. Budget rooms from 100 MAD/night. Some lodges offer yoga and horse rides.',
-                tip: 'Best for surfers who want to unplug. Stock up on supplies in Essaouira before arriving.',
-              },
-              {
-                area: 'Dakhla',
-                description: 'Kite camps on the lagoon offer all-inclusive packages from 7,000 MAD/week with accommodation, meals, equipment, and boat shuttles. In Dakhla city, budget hotels from 200 MAD/night. The airport has direct flights from Casablanca.',
-                tip: 'Lagoon camps fill up fast in peak wind season (June-August). Book two months ahead.',
+                description: 'A handful of guesthouses and eco-lodges face the beach. No ATMs, one shop, total disconnection from the world. Budget rooms from 100 MAD per night. Some lodges offer yoga and horseback riding along the sand.',
+                tip: 'Stock up on supplies in Essaouira (25 km north) before arriving. This is off-grid living.',
               },
             ].map((acc) => (
               <div key={acc.area} className="card-moroccan p-5">
@@ -940,68 +1024,7 @@ export default function MoroccoSurfGuidePage() {
         </div>
       </section>
 
-      {/* ── Surf Schools ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Award className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Surf Schools &amp; Lessons
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            ISA-certified and local instructors operate across the coast. Most schools use soft-top boards for safety.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="card-moroccan p-5">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                Group Lessons
-              </h3>
-              <div className="space-y-2 text-sm text-[var(--text-secondary)]">
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
-                  <span>2-hour session: from 350 MAD (board + wetsuit included)</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
-                  <span>Max 6-8 students per instructor</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
-                  <span>3-day package: from 900 MAD (most popular option)</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
-                  <span>Available in Taghazout, Imsouane, Sidi Kaouki, Essaouira</span>
-                </div>
-              </div>
-            </div>
-            <div className="card-moroccan p-5">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                Private Coaching
-              </h3>
-              <div className="space-y-2 text-sm text-[var(--text-secondary)]">
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
-                  <span>1-hour session: from 600 MAD (one-on-one)</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
-                  <span>Video analysis: from 800 MAD per session (film + review)</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
-                  <span>5-day intensive: from 3,500 MAD (advance your level fast)</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
-                  <span>ISA-certified instructors available at major surf towns</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Gallery Section ── */}
+      {/* ── Gallery ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
@@ -1009,9 +1032,9 @@ export default function MoroccoSurfGuidePage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { src: '/images/hero-surfing.webp', alt: 'Surfer catching a wave at Anchor Point near Taghazout Morocco', label: 'Anchor Point, Taghazout' },
-              { src: '/images/hero-essaouira.webp', alt: 'Windy coastline at Essaouira Morocco with kitesurfers on the water', label: 'Essaouira Wind City' },
-              { src: '/images/hero-beaches.webp', alt: 'Long sandy beach in Sidi Kaouki Morocco with waves breaking in the background', label: 'Sidi Kaouki Beach' },
+              { src: '/images/hero-surfing.webp', alt: 'Surfer catching a wave at Anchor Point near Taghazout Morocco with rocky coastline in the background', label: 'Anchor Point, Taghazout' },
+              { src: '/images/hero-essaouira.webp', alt: 'Windy coastline at Essaouira Morocco with kitesurfers riding on choppy Atlantic waters', label: 'Essaouira Wind City' },
+              { src: '/images/hero-beaches.webp', alt: 'Long sandy beach at Sidi Kaouki Morocco with clean waves breaking under clear skies', label: 'Sidi Kaouki Beach' },
             ].map((img) => (
               <div key={img.label} className="relative h-72 rounded-xl overflow-hidden">
                 <img src={img.src} alt={img.alt} className="w-full h-full object-cover" loading="lazy" />
@@ -1026,21 +1049,15 @@ export default function MoroccoSurfGuidePage() {
       {/* ── FAQ Section ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <MessageCircleQuestion className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
             Frequently Asked Questions
           </h2>
-
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Answers to the most common questions about surfing in Morocco.
+          </p>
           <div className="space-y-6">
-            {[
-              { q: 'When is the best time to surf in Morocco?', a: 'September through April. Winter (December-February) brings the biggest swells at 2-4 meters. Shoulder months (September-November, March-April) offer 1-2 meter waves with lighter crowds and warmer water. Summer is flat on the Atlantic coast but prime for kitesurfing.' },
-              { q: 'Is Morocco good for beginner surfers?', a: 'Excellent. Imsouane Bay, Taghazout Beach, Sidi Kaouki, and Essaouira all have gentle, forgiving waves over sand. Surf schools charge from 350 MAD for a two-hour group lesson with board and wetsuit. Imsouane Bay\'s slow-rolling wave is ideal for learning to longboard.' },
-              { q: 'How much does a surf camp cost in Morocco?', a: 'Budget camps start from 3,500 MAD per week (shared dorm, guiding, board). Mid-range with private rooms, lessons, and meals: from 5,500-8,000 MAD per week. Premium with coaching, pool, and full board: from 10,000 MAD per week. Seasonal pricing can change.' },
-              { q: 'Do I need a wetsuit to surf in Morocco?', a: 'Yes. Water ranges from 16\u00B0C in January to 22\u00B0C in September. A 3/2mm fullsuit covers October through May. A 2mm shorty works in summer. Wetsuit rental costs from 50 MAD per day.' },
-              { q: 'What is the best surf spot for experienced surfers?', a: 'Anchor Point near Taghazout: a long, hollow right-hand point break with 200-300 meter rides on solid northwest swells. Killer Point handles bigger swells up to 5 meters. Dakhla\'s outer peninsula has uncrowded, powerful breaks for surfers willing to travel.' },
-              { q: 'Can I rent surf equipment in Morocco?', a: 'Widely available in Taghazout, Imsouane, Essaouira, and Sidi Kaouki. Softboards from 100 MAD/day, hardboards from 150 MAD/day, wetsuits from 50 MAD/day. Weekly rates save 30-40%.' },
-              { q: 'Is kitesurfing good in Morocco?', a: 'World-class. Dakhla has 300+ wind days at 18-25 knots with a massive flat-water lagoon. Essaouira blows 20-30 knots from April through September. Kite gear rental starts from 500 MAD/day. Lessons from 500 MAD for a two-hour session.' },
-              { q: 'How do I get to Taghazout from Agadir airport?', a: 'Taghazout is 19 km north of Agadir. Grand taxi from the airport: from 200-300 MAD. Many surf camps offer transfers for from 150-250 MAD. The local bus from Agadir costs 7 MAD but does not serve the airport directly. Ride-hailing apps like inDrive charge from 150-200 MAD.' },
-            ].map((faq) => (
+            {faqItems.map((faq) => (
               <div key={faq.q} className="card-moroccan p-6">
                 <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
                   {faq.q}
@@ -1089,7 +1106,7 @@ export default function MoroccoSurfGuidePage() {
                 Budget Travel Guide
               </h3>
               <p className="text-sm text-[var(--text-secondary)] mb-3">
-                How to travel Morocco on a budget. Transport, food, accommodation, and money-saving tips.
+                How to travel Morocco on a budget. Transport, food, accommodation, and money-saving strategies.
               </p>
               <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
                 Read more <ArrowRight className="w-3.5 h-3.5" />
@@ -1101,7 +1118,7 @@ export default function MoroccoSurfGuidePage() {
                 Yoga Retreats
               </h3>
               <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Many surf camps combine daily yoga with surfing. Find the best surf-and-yoga retreats in Morocco.
+                Find the best surf-and-yoga retreats across the Moroccan coast. Daily yoga, morning surf, sunset stretch.
               </p>
               <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
                 Read more <ArrowRight className="w-3.5 h-3.5" />
@@ -1119,7 +1136,7 @@ export default function MoroccoSurfGuidePage() {
           </h2>
           <p className="text-lg text-white/80 max-w-2xl mx-auto mb-8">
             From beginner beach breaks to world-class barrels, Morocco&apos;s 1,835 km of Atlantic
-            coastline has a wave with your name on it. Grab a board and go.
+            coastline has a wave for every surfer. Grab a board and go.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
