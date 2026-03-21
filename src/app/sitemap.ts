@@ -406,6 +406,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-senior-travel',
     '/morocco-market-souks',
     '/morocco-coastal-towns',
+    '/morocco-hostel-guide',
+    '/morocco-sim-card-internet',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

@@ -3044,6 +3044,24 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['morocco coastal towns', 'morocco seaside destinations', 'best beach towns morocco', 'morocco atlantic coast'],
       priority: 9,
     },
+    {
+      title: 'Best Hostels in Morocco 2026',
+      description: 'Top 20 hostels across Morocco — Marrakech, Fes, Essaouira, Chefchaouen, budget dorms, private rooms, booking tips, and backpacker etiquette.',
+      type: 'page',
+      url: '/morocco-hostel-guide',
+      tags: ['hostels', 'budget', 'backpacking', 'accommodation', 'dorms'],
+      keywords: ['morocco hostels', 'best hostels morocco', 'budget accommodation morocco', 'morocco backpacker hostels'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco SIM Cards & Internet Guide 2026',
+      description: 'Stay connected in Morocco — SIM card plans compared, eSIM options, WiFi availability, carrier coverage, VPN info, and topping up guide.',
+      type: 'page',
+      url: '/morocco-sim-card-internet',
+      tags: ['SIM card', 'internet', 'mobile data', 'WiFi', 'connectivity'],
+      keywords: ['morocco sim card', 'morocco internet', 'morocco mobile data', 'wifi morocco', 'maroc telecom tourist'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
