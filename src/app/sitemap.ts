@@ -451,6 +451,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-winter-travel',
     '/morocco-summer-travel',
     '/morocco-gardens',
+    '/morocco-spring-travel',
+    '/morocco-scuba-diving',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

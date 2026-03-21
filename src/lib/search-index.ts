@@ -3449,6 +3449,24 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['morocco gardens', 'jardin majorelle', 'menara gardens', 'marrakech gardens', 'morocco parks'],
       priority: 9,
     },
+    {
+      title: 'Morocco Spring Travel Guide — Blossoms, Rose Festival & Ideal Weather',
+      description: 'Spring travel guide — almond blossoms, Dades rose harvest, spring hiking, wildflowers, festivals, Ramadan tips, and perfect desert weather.',
+      type: 'page',
+      url: '/morocco-spring-travel',
+      tags: ['spring', 'seasonal', 'blossoms', 'festivals', 'hiking'],
+      keywords: ['morocco spring travel', 'morocco in spring', 'morocco march april', 'rose festival morocco', 'morocco spring weather'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Scuba Diving Guide — Dive Sites, Courses & Marine Life',
+      description: 'Scuba diving guide — Al Hoceima, Cabo Negro, Dakhla, PADI courses, Mediterranean vs Atlantic diving, marine life, and equipment rental.',
+      type: 'page',
+      url: '/morocco-scuba-diving',
+      tags: ['scuba', 'diving', 'marine', 'underwater', 'water sports'],
+      keywords: ['morocco scuba diving', 'diving morocco', 'al hoceima diving', 'padi morocco', 'morocco dive sites'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
