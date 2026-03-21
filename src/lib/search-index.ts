@@ -3260,6 +3260,15 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['morocco sunset spots', 'best sunset morocco', 'erg chebbi sunset', 'djemaa el fna sunset', 'morocco photography'],
       priority: 9,
     },
+    {
+      title: 'Morocco Sahara Stargazing Guide 2026',
+      description: 'Stargazing in Morocco\'s Sahara — dark sky sites, Milky Way viewing, constellation guide, astrophotography tips, and desert astronomy camps.',
+      type: 'page',
+      url: '/morocco-sahara-stargazing',
+      tags: ['stargazing', 'Sahara', 'astronomy', 'dark sky', 'astrophotography'],
+      keywords: ['morocco stargazing', 'sahara stars', 'merzouga stargazing', 'morocco dark sky', 'desert astronomy'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

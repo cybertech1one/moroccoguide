@@ -430,6 +430,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-leather-goods',
     '/morocco-canyoning',
     '/morocco-sunset-spots',
+    '/morocco-sahara-stargazing',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
