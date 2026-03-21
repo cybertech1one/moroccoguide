@@ -15,248 +15,339 @@ import {
   CheckCircle,
   AlertTriangle,
   Users,
+  Utensils,
   Flame,
-  UtensilsCrossed,
-  BookOpen,
-  Crown,
-  Award,
-  ShoppingBag,
   Leaf,
+  Store,
   Globe,
   ThumbsUp,
+  BookOpen,
+  Award,
+  Crown,
+  ChefHat,
+  Package,
+  CookingPot,
+  MessageCircleQuestion,
+  CircleDot,
+  HandPlatter,
 } from 'lucide-react';
 
 /* ═══════════════════════════════════════════════════════════════
-   CONSTANTS
+   CONSTANTS & BASE URL
    ═══════════════════════════════════════════════════════════════ */
 
 const BASE_URL = 'https://citytoursmorocco.com';
+const PAGE_URL = `${BASE_URL}/morocco-tagine-guide`;
 
 /* ═══════════════════════════════════════════════════════════════
    SEO METADATA
    ═══════════════════════════════════════════════════════════════ */
 
 export const metadata: Metadata = {
-  title: 'Morocco Tagine Guide 2026 | Recipes, Types, History & Best Restaurants',
+  title: 'Morocco Tagine Guide 2026 | 12 Classic Varieties, Best Restaurants & Cooking Classes',
   description:
-    'Complete guide to Moroccan tagine: history, types (chicken, lamb, kefta, vegetable, fish), best restaurants, cooking classes, recipe tips, and how to buy an authentic tagine pot. From 30 MAD street stalls to fine dining.',
+    'The complete guide to Moroccan tagine. 12 classic tagine varieties from chicken with preserved lemon to kefta with egg, best tagine restaurants in Marrakech, Fes & Essaouira, cooking class recommendations, buying a tagine pot, vegetarian options, and regional specialties.',
   keywords: [
-    'Moroccan tagine guide',
+    'Morocco tagine guide',
+    'Moroccan tagine varieties',
     'best tagine Morocco',
-    'tagine recipes',
-    'types of tagine',
-    'where to eat tagine Morocco',
-    'Moroccan tagine history',
-    'chicken tagine recipe',
-    'lamb tagine Morocco',
-    'kefta tagine',
-    'vegetable tagine recipe',
-    'fish tagine Morocco',
+    'chicken tagine preserved lemon',
+    'lamb tagine prunes',
+    'kefta tagine egg',
+    'fish tagine chermoula',
+    'vegetarian tagine Morocco',
     'tagine cooking class Morocco',
     'buy tagine pot Morocco',
-    'Moroccan food guide',
-    'tagine spices Morocco',
-    'Marrakech tagine restaurants',
-    'Fes tagine restaurants',
-    'traditional Moroccan cooking',
-    'tagine prices Morocco 2026',
-    'best Moroccan food experiences',
+    'tagine recipe Morocco',
+    'tagine restaurants Marrakech',
+    'tagine restaurants Fes',
+    'Moroccan tagine history',
+    'tagine cooking vessel',
+    'lamb tagine apricot almond',
+    'tanjia Marrakech',
+    'tagine vs couscous',
+    'tagine pot types',
+    'Morocco food guide tagine',
+    'Moroccan slow cooking',
+    'best tagine Marrakech 2026',
+    'tagine etiquette Morocco',
+    'tagine spices ras el hanout',
   ],
   openGraph: {
-    title: 'Morocco Tagine Guide 2026 | Recipes, Types, History & Best Restaurants',
+    title: 'Morocco Tagine Guide 2026 | 12 Classic Varieties, Best Restaurants & Cooking Classes',
     description:
-      'Discover everything about Moroccan tagine. From the ancient Berber origins to the best restaurants in every city. Recipes, cooking classes, spice guides, and tips for buying an authentic tagine pot.',
-    url: `${BASE_URL}/morocco-tagine-guide`,
+      'Everything about Moroccan tagine: 12 classic varieties, regional specialties, where to eat the best tagine in every city, cooking class recommendations, buying a tagine pot, and eating etiquette.',
+    url: PAGE_URL,
     images: [
       {
-        url: `${BASE_URL}/images/hero-tagine.webp`,
+        url: `${BASE_URL}/images/photo-tagine-chicken.webp`,
         width: 1200,
         height: 630,
-        alt: 'Traditional Moroccan tagine dish with tender meat, vegetables, and aromatic spices served in a clay pot',
+        alt: 'Traditional Moroccan chicken tagine with preserved lemons and olives served in a clay tagine pot',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Morocco Tagine Guide 2026 | Complete Culinary Guide',
+    title: 'Morocco Tagine Guide 2026 | Complete Guide to Morocco\'s Signature Dish',
     description:
-      'From 30 MAD street-stall tagines to fine-dining creations. Complete guide to Morocco\'s most iconic dish: history, recipes, types, restaurants, and cooking classes.',
-    images: [`${BASE_URL}/images/hero-tagine.webp`],
+      '12 tagine varieties, best restaurants by city, cooking classes, buying a tagine pot, vegetarian options, regional specialties, and dining etiquette.',
+    images: [`${BASE_URL}/images/photo-tagine-chicken.webp`],
   },
-  alternates: { canonical: `${BASE_URL}/morocco-tagine-guide` },
+  alternates: { canonical: PAGE_URL },
 };
 
 /* ═══════════════════════════════════════════════════════════════
-   JSON-LD STRUCTURED DATA
+   JSON-LD: TravelGuide + FAQPage
    ═══════════════════════════════════════════════════════════════ */
 
-const jsonLd = {
+const faqItems = [
+  {
+    q: 'What is the difference between the tagine dish and the tagine pot?',
+    a: 'The word "tagine" refers to both the cone-shaped clay cooking vessel and the slow-cooked stew prepared inside it. The pot has a flat circular base and a tall conical lid that traps steam, circulating moisture back into the food. Over time, the name transferred to any dish cooked this way, even when prepared in a regular pot.',
+  },
+  {
+    q: 'What is the most popular tagine in Morocco?',
+    a: 'Chicken tagine with preserved lemons and green olives (djaj m\'qalli) is the most widely eaten tagine across Morocco. You will find it on virtually every restaurant menu, from street stalls at from 35 MAD to upscale restaurants at from 120 MAD. It is considered the essential Moroccan tagine that every visitor should try first.',
+  },
+  {
+    q: 'Can I bring a tagine pot home in my luggage?',
+    a: 'Yes. Wrap it in clothing and place it in the center of your checked bag. Many shops in Marrakech and Fes sell unglazed cooking tagines designed for actual use. Decorative glazed tagines are lighter and less fragile. Expect to pay from 80 MAD for a plain cooking tagine and from 150 MAD for a decorated serving tagine. Some vendors will pack it in a box with straw padding for an extra from 20 MAD.',
+  },
+  {
+    q: 'Is tagine safe for vegetarians and vegans?',
+    a: 'Absolutely. Vegetable tagines are a traditional part of Moroccan cooking, not an afterthought. Common versions include seven-vegetable tagine, artichoke and pea tagine, and pumpkin with caramelized onion tagine. Vegan travelers should confirm that no butter (smen) is used. Most restaurants will happily prepare a butter-free vegetable tagine on request.',
+  },
+  {
+    q: 'How long does a tagine take to cook?',
+    a: 'A proper tagine cooks low and slow for 1.5 to 3 hours depending on the protein. Chicken tagines take about 1.5 hours, lamb tagines closer to 2.5-3 hours. Vegetable tagines cook faster, around 45-60 minutes. The low heat and trapped steam are what create the concentrated, tender result. In tourist restaurants, tagines are often pre-cooked and kept warm, which is standard practice.',
+  },
+  {
+    q: 'What spices are used in Moroccan tagine?',
+    a: 'The core spice blend varies by tagine type but commonly includes cumin, turmeric, ginger, paprika, cinnamon, saffron, and black pepper. Ras el hanout, a complex blend of 12-30 spices, is used in many lamb and vegetable tagines. Preserved lemons and fresh cilantro and parsley add brightness. Each family has its own proportions, which is why the same dish tastes different everywhere.',
+  },
+  {
+    q: 'Should I eat tagine with bread or utensils?',
+    a: 'Traditionally, tagine is eaten with Moroccan bread (khobz), which acts as your utensil. Tear off a piece with your right hand and use it to scoop meat, sauce, and vegetables. Forks and spoons are always available in restaurants, especially those serving tourists. Using bread is not required, but it is how most Moroccans eat tagine and it does taste better that way.',
+  },
+  {
+    q: 'Where can I take a tagine cooking class in Morocco?',
+    a: 'Marrakech has the most options, including La Maison Arabe (from 600 MAD), Amal Center (from 300 MAD, supports women\'s employment), and Souk Cuisine (from 450 MAD with market tour). Fes offers classes at Palais Amani and Cafe Clock. Essaouira has smaller workshops focused on fish tagine. Most classes last 3-4 hours including a guided souk visit to buy ingredients. Seasonal pricing can change.',
+  },
+];
+
+const jsonLdTravel = {
   '@context': 'https://schema.org',
   '@type': 'TravelGuide',
-  '@id': `${BASE_URL}/morocco-tagine-guide`,
-  name: 'Morocco Tagine Guide 2026 | Recipes, Types, History & Best Restaurants',
+  '@id': PAGE_URL,
+  name: 'Morocco Tagine Guide 2026',
   description:
-    'Complete guide to Moroccan tagine: history, types, best restaurants, cooking classes, recipe tips, and how to buy an authentic tagine pot.',
-  url: `${BASE_URL}/morocco-tagine-guide`,
-  image: `${BASE_URL}/images/hero-tagine.webp`,
-  author: {
-    '@type': 'Organization',
-    name: 'CityGuide Morocco',
-    url: BASE_URL,
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'CityGuide Morocco',
-    url: BASE_URL,
-  },
-  datePublished: '2026-03-19',
-  dateModified: '2026-03-19',
-  mainEntityOfPage: `${BASE_URL}/morocco-tagine-guide`,
-  isPartOf: {
-    '@type': 'WebSite',
-    name: 'CityGuide Morocco',
-    url: BASE_URL,
-  },
-  about: {
-    '@type': 'Country',
-    name: 'Morocco',
-  },
+    'Complete guide to Moroccan tagine covering the history of the dish, 12 classic varieties, regional specialties, best restaurants by city, cooking classes, buying a tagine pot, and dining etiquette.',
+  url: PAGE_URL,
+  image: `${BASE_URL}/images/photo-tagine-chicken.webp`,
+  author: { '@type': 'Organization', name: 'City Tours Morocco', url: BASE_URL },
+  publisher: { '@type': 'Organization', name: 'City Tours Morocco', url: BASE_URL },
+  datePublished: '2026-03-21',
+  dateModified: '2026-03-21',
+  mainEntityOfPage: PAGE_URL,
+  about: { '@type': 'Country', name: 'Morocco' },
   breadcrumb: {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Morocco Tagine Guide', item: `${BASE_URL}/morocco-tagine-guide` },
+      { '@type': 'ListItem', position: 2, name: 'Morocco Tagine Guide', item: PAGE_URL },
     ],
   },
 };
 
-const faqJsonLd = {
+const jsonLdFaq = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What is a Moroccan tagine?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A tagine is both a slow-cooked Moroccan stew and the conical clay pot it is cooked in. The cone-shaped lid traps steam and returns condensation to the dish, creating incredibly tender meat and deeply concentrated flavors without added water. It is Morocco\'s most iconic dish, dating back to the Berber civilizations of the 9th century.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What are the most popular types of tagine in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The most popular types are: chicken tagine with preserved lemons and olives (the national favorite), lamb tagine with prunes and almonds, kefta (meatball) tagine with eggs and tomato, vegetable tagine with seasonal produce, and fish tagine popular in coastal cities like Essaouira. Each region has its own signature variations.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does a tagine cost in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Street-stall and local eatery tagines start from 30 MAD. Mid-range restaurant tagines range from 60 to 120 MAD. Fine dining tagines at upscale restaurants cost from 150 to 350 MAD. Prices may vary seasonally and by location, with tourist areas generally charging more.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Where can I take a tagine cooking class in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Cooking classes are widely available in Marrakech, Fes, and Essaouira. They typically start from 350 MAD per person and include a market tour, hands-on cooking instruction, and a shared meal. Popular options include La Maison Arabe and Amal Center in Marrakech, and Palais Amani in Fes.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can I bring a tagine pot home from Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes, tagine pots are one of the most popular souvenirs. Decorative tagines start from 50 MAD while functional cooking tagines start from 80 MAD. When buying, ensure you get an unglazed or food-safe glazed pot. Potters in Safi and Fes produce the finest cooking tagines. Pack carefully for travel or ship via a local service.',
-      },
-    },
-  ],
+  mainEntity: faqItems.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
 };
 
 /* ═══════════════════════════════════════════════════════════════
-   DATA: TYPES OF TAGINE
+   DATA: CLASSIC TAGINE VARIETIES
    ═══════════════════════════════════════════════════════════════ */
 
-const tagineTypes = [
+const tagineVarieties = [
   {
-    name: 'Chicken Tagine with Preserved Lemons & Olives',
-    arabic: 'Djaj M\'chermel',
+    name: 'Chicken with Preserved Lemon & Olives',
+    arabicName: 'Djaj M\'qalli',
     icon: Star,
-    region: 'Nationwide (national favorite)',
-    price: 'From 50 MAD',
+    region: 'All Morocco',
     description:
-      'The quintessential Moroccan tagine. Bone-in chicken is slow-cooked with saffron, ginger, and turmeric, then topped with briny preserved lemons and cracked green olives. The sauce is golden, tangy, and deeply savory. Every Moroccan home has its own version, and it is the dish most visitors fall in love with first.',
-    keyIngredients: ['Preserved lemons', 'Green olives', 'Saffron', 'Ginger', 'Fresh coriander'],
+      'The most iconic Moroccan tagine. Chicken pieces braised with saffron, turmeric, and ginger, then topped with salty preserved lemons and cracked green olives. The sauce is golden, tangy, and deeply savory. Found on every menu in the country.',
+    price: 'From 40 MAD (street) to 150 MAD (restaurant)',
+    mustTry: true,
   },
   {
-    name: 'Lamb Tagine with Prunes & Almonds',
-    arabic: 'Lham B\'barkok',
+    name: 'Lamb with Prunes & Almonds',
+    arabicName: 'Lham Blbarkouk',
     icon: Crown,
-    region: 'Fes, Meknes, Middle Atlas',
-    price: 'From 70 MAD',
+    region: 'Fes, Meknes',
     description:
-      'A masterpiece of Moroccan sweet-savory cooking. Shoulder or shank of lamb is braised for hours with cinnamon, honey, and ras el hanout until it falls off the bone. Soaked prunes and toasted almonds are added near the end, and the dish is finished with a drizzle of honey and a dusting of sesame seeds.',
-    keyIngredients: ['Prunes', 'Toasted almonds', 'Cinnamon', 'Honey', 'Ras el hanout'],
+      'Sweet meets savory in this Fassi classic. Slow-cooked lamb shoulder falls apart into a cinnamon-scented sauce studded with soft prunes and toasted almonds. A dusting of powdered sugar and sesame seeds on top marks the festive version served at weddings and holidays.',
+    price: 'From 60 MAD to 180 MAD',
+    mustTry: true,
   },
   {
-    name: 'Kefta Tagine with Eggs & Tomato',
-    arabic: 'Kefta Mkaouara',
+    name: 'Kefta with Egg & Tomato',
+    arabicName: 'Kefta Mkawra',
     icon: Flame,
-    region: 'Nationwide (especially street food)',
-    price: 'From 35 MAD',
+    region: 'All Morocco',
     description:
-      'Hand-rolled spiced meatballs (beef or lamb) are simmered in a rich, cumin-laced tomato sauce until the flavors meld. Just before serving, eggs are cracked into the bubbling sauce and poached. Eaten with crusty Moroccan bread for scooping. This is Morocco\'s ultimate comfort food and a staple of everyday cooking.',
-    keyIngredients: ['Ground beef or lamb', 'Cumin', 'Paprika', 'Tomatoes', 'Eggs'],
+      'Seasoned ground beef or lamb meatballs (kefta) simmered in a spiced tomato sauce with cumin and paprika. Eggs are cracked directly into the bubbling sauce and poached until just set. Eaten with bread for breakfast, lunch, or dinner. A staple that Moroccans never tire of.',
+    price: 'From 30 MAD to 100 MAD',
+    mustTry: true,
   },
   {
-    name: 'Vegetable Tagine',
-    arabic: 'Tagine B\'khodra',
-    icon: Leaf,
-    region: 'Nationwide',
-    price: 'From 40 MAD',
-    description:
-      'A celebration of seasonal produce. Root vegetables like carrots, turnips, and potatoes are layered with zucchini, bell peppers, and tomatoes, then slow-cooked with preserved lemons, olives, and aromatic spices. During spring, fava beans and artichoke hearts feature prominently. A naturally vegan dish that proves tagine does not need meat to shine.',
-    keyIngredients: ['Seasonal vegetables', 'Preserved lemons', 'Chickpeas', 'Ras el hanout', 'Fresh herbs'],
-  },
-  {
-    name: 'Fish Tagine (Hout)',
-    arabic: 'Tagine Hout',
+    name: 'Fish Chermoula',
+    arabicName: 'Hout Chermoula',
     icon: Globe,
-    region: 'Essaouira, Agadir, coastal cities',
-    price: 'From 60 MAD',
+    region: 'Essaouira, Agadir, Tangier',
     description:
-      'A coastal specialty where firm white fish (sea bass, monkfish, or sea bream) is baked atop a bed of sliced potatoes, tomatoes, and bell peppers with a chermoula marinade of cilantro, garlic, cumin, and paprika. Preserved lemons and olives crown the top. The fish stays moist under the tagine lid, absorbing all the aromatic flavors.',
-    keyIngredients: ['White fish', 'Chermoula paste', 'Potatoes', 'Bell peppers', 'Preserved lemons'],
+      'Coastal tagine featuring white fish (sea bass, sole, or monkfish) marinated in chermoula -- a paste of cilantro, parsley, garlic, cumin, paprika, and lemon juice. Arranged over a bed of potatoes, tomatoes, and bell peppers. The fish steams gently under the conical lid.',
+    price: 'From 50 MAD to 200 MAD',
+    mustTry: false,
   },
   {
-    name: 'Lamb Tagine with Artichokes & Peas',
-    arabic: 'Lham B\'qoq wal Jelbana',
-    icon: Sparkles,
-    region: 'Fes, Meknes (spring specialty)',
-    price: 'From 80 MAD',
+    name: 'Seven-Vegetable Tagine',
+    arabicName: 'Tagine Khodra',
+    icon: Leaf,
+    region: 'All Morocco',
     description:
-      'A springtime delicacy. Tender lamb braised with fresh artichoke hearts, green peas, and broad beans in a light lemon-saffron sauce. A lighter departure from the rich sweet preparations, highlighting fresh garden flavors of the Moroccan countryside.',
-    keyIngredients: ['Artichoke hearts', 'Green peas', 'Broad beans', 'Saffron', 'Lemon juice'],
+      'A generous mix of seasonal vegetables -- typically carrots, zucchini, turnips, potatoes, tomatoes, onions, and pumpkin -- slow-cooked with ras el hanout, saffron, and olive oil. The number seven is considered lucky in Moroccan culture. Each vegetable retains its shape while absorbing the spiced broth.',
+    price: 'From 30 MAD to 90 MAD',
+    mustTry: false,
+  },
+  {
+    name: 'Lamb with Apricots & Almonds',
+    arabicName: 'Lham Bel Mishmish',
+    icon: Sparkles,
+    region: 'Marrakech, High Atlas',
+    description:
+      'Tender lamb braised with dried apricots, honey, cinnamon, and toasted almonds. The sauce reduces to a thick, amber glaze. This is a Marrakchi specialty that balances the richness of lamb with the bright acidity of fruit. Popular at riad restaurants.',
+    price: 'From 65 MAD to 200 MAD',
+    mustTry: false,
+  },
+  {
+    name: 'Beef with Peas & Artichokes',
+    arabicName: 'Lham Bel Jelbana wal Qoq',
+    icon: CircleDot,
+    region: 'Fes, Meknes, Rabat',
+    description:
+      'A springtime favorite. Chunks of beef slow-cooked with fresh artichoke hearts, green peas, and preserved lemon. The sauce is lighter than most tagines -- bright green from parsley and cilantro, with a lemony edge. Best during artichoke season (March-May).',
+    price: 'From 55 MAD to 160 MAD',
+    mustTry: false,
+  },
+  {
+    name: 'Chicken with Caramelized Onion & Raisins',
+    arabicName: 'Djaj Tfaya',
+    icon: Heart,
+    region: 'Fes, Rabat',
+    description:
+      'Chicken simmered with saffron and ginger, then crowned with a mountain of caramelized onions cooked down with raisins, honey, and cinnamon until they become jammy and dark. The onion mixture (tfaya) is prepared separately and spooned on top just before serving.',
+    price: 'From 45 MAD to 140 MAD',
+    mustTry: false,
+  },
+  {
+    name: 'Lamb with Quince',
+    arabicName: 'Lham Bel Sfarjel',
+    icon: Award,
+    region: 'Fes, Middle Atlas',
+    description:
+      'An autumn specialty when quince is in season (October-December). Lamb pieces cooked with quince wedges, honey, cinnamon, and saffron. The quince softens into a perfumed, slightly granular texture that pairs remarkably well with the rich lamb jus.',
+    price: 'From 70 MAD to 190 MAD',
+    mustTry: false,
+  },
+  {
+    name: 'Pumpkin & Chickpea Tagine',
+    arabicName: 'Tagine Garaa wal Hommos',
+    icon: Leaf,
+    region: 'All Morocco',
+    description:
+      'A hearty vegetarian tagine of roasted pumpkin, chickpeas, caramelized onions, and warming spices. The pumpkin breaks down into the sauce, creating a naturally thick, sweet base. Often garnished with toasted sesame seeds and a drizzle of argan oil.',
+    price: 'From 30 MAD to 80 MAD',
+    mustTry: false,
+  },
+  {
+    name: 'Sardine Balls in Tomato Sauce',
+    arabicName: 'Kefta Sardine',
+    icon: Globe,
+    region: 'Essaouira, Safi, Agadir',
+    description:
+      'Fresh sardines are deboned, mixed with spices and herbs, formed into balls, and braised in a spiced tomato and pepper sauce. A coastal working-class tagine that has become a signature dish in Essaouira. The sardine flavor is mild and blends into the rich sauce.',
+    price: 'From 35 MAD to 100 MAD',
+    mustTry: false,
+  },
+  {
+    name: 'Lamb Brain & Liver Tagine',
+    arabicName: 'Mokh wal Kibda',
+    icon: Flame,
+    region: 'Fes, Meknes',
+    description:
+      'An acquired taste and a true Fassi delicacy. Lamb brain and liver cooked in a cumin-heavy tomato sauce with preserved lemon. Ordered at old-school restaurants in the Fes medina. Not for every palate, but respected by Moroccans as a traditional dish with deep roots.',
+    price: 'From 40 MAD to 120 MAD',
+    mustTry: false,
   },
 ];
 
 /* ═══════════════════════════════════════════════════════════════
-   DATA: BEST RESTAURANTS FOR TAGINE
+   DATA: BEST TAGINE RESTAURANTS BY CITY
    ═══════════════════════════════════════════════════════════════ */
 
-const bestRestaurants = [
-  { name: 'Al Fassia', city: 'Marrakech', specialty: 'Lamb tagine with caramelized pears', price: 'From 120 MAD', description: 'Run entirely by women, Al Fassia serves refined traditional cuisine. Their lamb tagine with caramelized pears is legendary. Reservations essential.' },
-  { name: 'Dar Hatim', city: 'Fes', specialty: 'Lamb tagine with prunes & almonds', price: 'From 150 MAD', description: 'A family-run riad restaurant in the Fes medina. Recipes passed down five generations. The lamb tagine here is among the finest in Morocco.' },
-  { name: 'Chez Lamine Hadj Mustapha', city: 'Marrakech', specialty: 'Lamb tangia (Marrakech cousin of tagine)', price: 'From 60 MAD', description: 'A Jemaa el-Fnaa institution since the 1960s. The tangia — lamb slow-cooked in an urn in the hammam ashes — is Marrakech\'s slow-cooked perfection.' },
-  { name: 'Le Jardin', city: 'Marrakech', specialty: 'Chicken tagine with preserved lemons', price: 'From 90 MAD', description: 'Set in a lush garden courtyard, this elegant restaurant serves beautifully presented tagines. The chicken with preserved lemons is silky and aromatic.' },
-  { name: 'Nur', city: 'Fes', specialty: 'Modern Moroccan tagine interpretations', price: 'From 180 MAD', description: 'A rooftop fine-dining restaurant offering contemporary takes on traditional tagine with ancestral Fassi recipes and modern plating technique.' },
-  { name: 'Restaurant Sam', city: 'Essaouira', specialty: 'Fish tagine with chermoula', price: 'From 80 MAD', description: 'Overlooking the harbor, Sam\'s serves the freshest fish tagine in Essaouira. The catch arrives daily, and the chermoula is made from scratch each morning.' },
-  { name: 'Cafe Clock', city: 'Fes & Marrakech', specialty: 'Camel tagine', price: 'From 90 MAD', description: 'Famous for their camel burger, but the camel tagine is the hidden gem. Slow-cooked camel meat with dates and cinnamon — tender, rich, and unique.' },
-  { name: 'Amal Center', city: 'Marrakech', specialty: 'Daily rotating tagine', price: 'From 60 MAD', description: 'A social enterprise training underprivileged women in hospitality. The daily tagine changes with the season, always homestyle and outstanding.' },
+const tagineRestaurants = [
+  {
+    city: 'Marrakech',
+    icon: MapPin,
+    spots: [
+      { name: 'Cafe Clock Marrakech', style: 'Casual Creative', price: 'From 70 MAD', note: 'Known for camel tagine and cultural programming' },
+      { name: 'Al Fassia', style: 'Upscale Traditional', price: 'From 120 MAD', note: 'Run entirely by women; lamb with prunes is exceptional' },
+      { name: 'Nomad', style: 'Modern Moroccan', price: 'From 100 MAD', note: 'Rooftop terrace; updated tagine recipes with local ingredients' },
+      { name: 'Chez Lamine Hadj Mustapha', style: 'Hole-in-the-Wall', price: 'From 40 MAD', note: 'Tanjia specialist in the medina; slow-cooked in the hammam furnace' },
+      { name: 'Dar Zellij', style: 'Fine Dining', price: 'From 150 MAD', note: 'Palace setting; seasonal tagines with refined presentation' },
+    ],
+  },
+  {
+    city: 'Fes',
+    icon: MapPin,
+    spots: [
+      { name: 'Cafe Clock Fes', style: 'Casual Cultural', price: 'From 65 MAD', note: 'Camel burger and traditional tagines in a restored building' },
+      { name: 'The Ruined Garden', style: 'Garden Dining', price: 'From 90 MAD', note: 'Tagines served in a literal ruined garden; seasonal menu changes weekly' },
+      { name: 'Dar Roumana', style: 'Fine Dining', price: 'From 200 MAD', note: 'Chef-driven tagines with French technique and Fassi flavors' },
+      { name: 'Restaurant Bouayad', style: 'Local Favorite', price: 'From 35 MAD', note: 'Packed with Fassi families; enormous portions of kefta tagine' },
+    ],
+  },
+  {
+    city: 'Essaouira',
+    icon: MapPin,
+    spots: [
+      { name: 'Restaurant Taros', style: 'Upscale Casual', price: 'From 90 MAD', note: 'Rooftop views of the port; excellent fish tagine chermoula' },
+      { name: 'Triskala Cafe', style: 'Bohemian Cafe', price: 'From 65 MAD', note: 'Cozy interiors; standout vegetable tagine with argan oil drizzle' },
+      { name: 'Chez Sam', style: 'Seafood Specialist', price: 'From 80 MAD', note: 'In the fishing port; tagine of the catch changes daily' },
+    ],
+  },
+  {
+    city: 'Chefchaouen',
+    icon: MapPin,
+    spots: [
+      { name: 'Bab Ssour', style: 'Traditional', price: 'From 50 MAD', note: 'Mountain lamb tagine with herbs from the Rif valleys' },
+      { name: 'Lala Mesouda', style: 'Home-Style', price: 'From 45 MAD', note: 'Tiny restaurant with just a few tables; grandmother-style cooking' },
+    ],
+  },
+  {
+    city: 'Casablanca',
+    icon: MapPin,
+    spots: [
+      { name: 'La Sqala', style: 'Garden Restaurant', price: 'From 80 MAD', note: 'Inside a historic bastion; refined traditional tagines and fresh juices' },
+      { name: 'Rick\'s Cafe', style: 'Upscale', price: 'From 140 MAD', note: 'Film-inspired decor; solid lamb tagine with prunes and almonds' },
+    ],
+  },
 ];
 
 /* ═══════════════════════════════════════════════════════════════
@@ -264,25 +355,114 @@ const bestRestaurants = [
    ═══════════════════════════════════════════════════════════════ */
 
 const cookingClasses = [
-  { name: 'La Maison Arabe', city: 'Marrakech', price: 'From 600 MAD per person', duration: '4 hours', includes: 'Market tour, hands-on cooking, full meal, recipe booklet', description: 'The original Marrakech cooking school, established in 1946. Learn from dadas (traditional cooks) in a stunning riad kitchen.' },
-  { name: 'Amal Center', city: 'Marrakech', price: 'From 350 MAD per person', duration: '3 hours', includes: 'Cooking lesson, shared meal, supporting women\'s empowerment', description: 'Learn tagine alongside Moroccan women training for careers in hospitality. Authentic recipes, authentic heart.' },
-  { name: 'Palais Amani Cooking School', city: 'Fes', price: 'From 500 MAD per person', duration: '4 hours', includes: 'Market visit, tagine masterclass, full lunch, organic ingredients', description: 'Cook with ingredients from the riad\'s own organic garden. The Fassi tagine techniques taught here go back centuries.' },
-  { name: 'Atelier de Cuisine Madada', city: 'Essaouira', price: 'From 450 MAD per person', duration: '3.5 hours', includes: 'Fish market visit, seafood tagine lesson, meal with wine', description: 'Specializing in coastal cuisine, this class teaches fish tagine with a visit to the legendary Essaouira fish market.' },
+  {
+    name: 'La Maison Arabe',
+    city: 'Marrakech',
+    price: 'From 600 MAD',
+    duration: '4 hours',
+    includes: 'Market tour, hands-on cooking (tagine + 2 dishes), recipe booklet, meal',
+    highlight: 'The original Marrakech cooking school, established in a historic riad. Professional kitchen with individual workstations.',
+  },
+  {
+    name: 'Amal Women\'s Training Center',
+    city: 'Marrakech',
+    price: 'From 300 MAD',
+    duration: '3 hours',
+    includes: 'Cooking class, meal, certificate. No market tour.',
+    highlight: 'Non-profit supporting disadvantaged women. Your fee funds job training. The tagine recipes come from the staff\'s own families.',
+  },
+  {
+    name: 'Souk Cuisine',
+    city: 'Marrakech',
+    price: 'From 450 MAD',
+    duration: '4 hours',
+    includes: 'Guided souk tour, ingredient shopping, hands-on cooking, meal on the rooftop terrace',
+    highlight: 'Starts with a deep dive into the Marrakech souk to buy ingredients. Small groups of 6-10.',
+  },
+  {
+    name: 'Palais Amani',
+    city: 'Fes',
+    price: 'From 500 MAD',
+    duration: '3.5 hours',
+    includes: 'Cooking class with a Fassi chef, meal, rooftop terrace dining',
+    highlight: 'Focuses on Fassi specialties like lamb with prunes and the tfaya tradition. Beautiful riad setting inside the medina.',
+  },
+  {
+    name: 'Cafe Clock Cookery School',
+    city: 'Fes',
+    price: 'From 350 MAD',
+    duration: '3 hours',
+    includes: 'Hands-on cooking, meal, drinks',
+    highlight: 'Learn to make traditional tagines alongside local and international recipes. Relaxed atmosphere.',
+  },
+  {
+    name: 'L\'Atelier de Madada',
+    city: 'Essaouira',
+    price: 'From 500 MAD',
+    duration: '3 hours',
+    includes: 'Fish market visit, tagine cooking, full meal with wine',
+    highlight: 'Focuses on fish and seafood tagines using the morning\'s catch from the Essaouira port.',
+  },
 ];
 
 /* ═══════════════════════════════════════════════════════════════
-   DATA: ESSENTIAL SPICES
+   DATA: TAGINE POT BUYING GUIDE
    ═══════════════════════════════════════════════════════════════ */
 
-const essentialSpices = [
-  { name: 'Ras el Hanout', use: 'The king of Moroccan spice blends. Up to 30+ spices including rose petals, cardamom, and cinnamon. Essential for lamb and chicken tagines.', price: 'From 30 MAD / 100g' },
-  { name: 'Saffron (Zaafrane)', use: 'Premium saffron from Taliouine. Essential for chicken tagine. Adds golden color and earthy sweetness.', price: 'From 15 MAD / gram' },
-  { name: 'Cumin (Kamoun)', use: 'The backbone of Moroccan cooking. Used in virtually every tagine, especially kefta. Adds warmth and depth.', price: 'From 10 MAD / 100g' },
-  { name: 'Ginger (Skinjbir)', use: 'Ground ginger appears in most tagines for warm, slightly sweet flavor. Fresh ginger used in modern recipes.', price: 'From 15 MAD / 100g' },
-  { name: 'Turmeric (Kherkoum)', use: 'Provides golden-yellow color. Mild, earthy flavor. Always paired with saffron for depth.', price: 'From 10 MAD / 100g' },
-  { name: 'Cinnamon (Karfa)', use: 'Critical in sweet-savory tagines, especially lamb with prunes. Used as ground powder and whole sticks.', price: 'From 15 MAD / 100g' },
-  { name: 'Paprika (Felfla Hamra)', use: 'Sweet paprika colors the sauce and adds mild, fruity warmth. Smoked varieties appear in some regional tagines.', price: 'From 10 MAD / 100g' },
-  { name: 'Preserved Lemons (Hamad M\'rakad)', use: 'Whole lemons preserved in salt and lemon juice 30+ days. Intense citrus-salt depth, indispensable in chicken tagine.', price: 'From 5 MAD each' },
+const taginePotTypes = [
+  {
+    type: 'Unglazed Cooking Tagine',
+    icon: CookingPot,
+    price: 'From 80 MAD',
+    material: 'Raw terracotta clay',
+    use: 'Actual stovetop or charcoal cooking',
+    description:
+      'The real deal. Porous clay absorbs flavors over time, building a natural seasoning. Must be cured before first use by soaking in water overnight. Used on low heat only -- direct high flame can crack it. This is what Moroccan families cook with daily.',
+    bestBuy: 'Pottery souks in Safi, Fes, or Marrakech',
+  },
+  {
+    type: 'Glazed Cooking Tagine',
+    icon: CookingPot,
+    price: 'From 120 MAD',
+    material: 'Glazed terracotta',
+    use: 'Cooking and serving',
+    description:
+      'A glazed interior makes cleaning easier and prevents staining. Holds up well for acidic dishes with tomatoes or preserved lemons. Less porous than unglazed, so it does not develop the same seasoning over time. A good compromise between function and convenience.',
+    bestBuy: 'Artisan cooperatives in Safi (Morocco\'s pottery capital)',
+  },
+  {
+    type: 'Decorative Serving Tagine',
+    icon: HandPlatter,
+    price: 'From 150 MAD',
+    material: 'Painted and glazed ceramic',
+    use: 'Table presentation and serving only',
+    description:
+      'Beautifully hand-painted with geometric or floral Moroccan motifs. Not safe for cooking -- the paints and glazes may not be food-safe at high temperatures. Perfect for serving a tagine you cooked in a regular pot. The most popular souvenir tagine.',
+    bestBuy: 'Souks in Marrakech, Fes, Essaouira',
+  },
+  {
+    type: 'Cast Iron Tagine',
+    icon: Flame,
+    price: 'From 400 MAD',
+    material: 'Enameled cast iron with ceramic lid',
+    use: 'Heavy-duty cooking at home',
+    description:
+      'Modern hybrid: a cast iron base for even heat distribution and a traditional ceramic cone lid for steam circulation. Works on any stovetop including induction. Heavier and more expensive, but nearly indestructible. Brands like Le Creuset and Emile Henry sell versions internationally.',
+    bestBuy: 'Kitchen shops in Gueliz (Marrakech nouvelle ville) or bring home from a European brand',
+  },
+];
+
+/* ═══════════════════════════════════════════════════════════════
+   DATA: TAGINE ETIQUETTE
+   ═══════════════════════════════════════════════════════════════ */
+
+const etiquetteTips = [
+  { title: 'Eat from Your Side', icon: Users, text: 'A tagine is a communal dish. Eat from the section directly in front of you, working inward toward the center. Do not reach across to the other side. The host or server will place choice pieces of meat near each guest.' },
+  { title: 'Use Your Right Hand', icon: ThumbsUp, text: 'Tear bread with your right hand and use it to scoop food. The left hand is traditionally considered unclean. If using utensils, this rule does not apply -- pick up your fork with whichever hand is comfortable.' },
+  { title: 'Bread Is Your Spoon', icon: Utensils, text: 'Moroccan bread (khobz) is the traditional utensil for tagine. Tear off a small piece and fold it to scoop up meat, vegetables, and sauce. Fresh bread is served warm and restocked throughout the meal.' },
+  { title: 'Pace Yourself', icon: Clock, text: 'Tagine is typically one course in a larger meal that may include salads, bread, a main dish, and fruit or pastries. Do not fill up on the tagine alone. Moroccan meals are a slow, social affair.' },
+  { title: 'Accept Seconds Graciously', icon: Heart, text: 'If your host places extra meat on your section of the plate, it is a sign of generosity and respect. Accept it. Refusing food repeatedly can be seen as impolite, though a gentle "shukran, baraka" (thank you, enough) is understood.' },
+  { title: 'Compliment the Cook', icon: Star, text: 'Saying "bsaha" (to your health) or "lla yatik saha" (God give you health) after a meal is the traditional Moroccan compliment to the cook. It carries more weight than a generic "delicious" and will always bring a smile.' },
 ];
 
 /* ═══════════════════════════════════════════════════════════════
@@ -290,47 +470,16 @@ const essentialSpices = [
    ═══════════════════════════════════════════════════════════════ */
 
 const priceGuide = [
-  { item: 'Street-stall kefta tagine', price: 'From 30 MAD', note: 'Local eateries in medina back streets' },
-  { item: 'Local restaurant chicken tagine', price: 'From 50 MAD', note: 'Where Moroccans eat daily' },
-  { item: 'Mid-range restaurant tagine', price: 'From 80 MAD', note: 'Tourist-friendly with full menu' },
-  { item: 'Fine dining tagine', price: 'From 150 MAD', note: 'Upscale riads and restaurants' },
-  { item: 'Cooking class (per person)', price: 'From 350 MAD', note: 'Includes market tour and meal' },
-  { item: 'Decorative tagine pot (souvenir)', price: 'From 50 MAD', note: 'Painted ceramic, not for cooking' },
-  { item: 'Cooking tagine pot (unglazed)', price: 'From 80 MAD', note: 'Functional clay pot for home use' },
-  { item: 'Premium artisan tagine pot', price: 'From 200 MAD', note: 'Handmade by master potters in Safi' },
-  { item: 'Ras el hanout blend (100g)', price: 'From 30 MAD', note: 'Quality varies enormously by source' },
-  { item: 'Saffron (1 gram)', price: 'From 15 MAD', note: 'Taliouine saffron is the finest' },
-];
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: REGIONAL VARIATIONS
-   ═══════════════════════════════════════════════════════════════ */
-
-const regionalVariations = [
-  {
-    region: 'Marrakech & the South',
-    icon: Flame,
-    style: 'Bold, sweet-savory, generous with spice. Lamb with prunes, chicken with preserved lemons. The tangia (a cousin of tagine cooked in hammam ashes) is unique to Marrakech.',
-    signature: 'Tangia Marrakchia',
-  },
-  {
-    region: 'Fes & Meknes',
-    icon: Crown,
-    style: 'Refined, complex, and considered the pinnacle of Moroccan gastronomy. More subtle spicing, use of artichokes, quinces, and pears. Fassi tagines are works of culinary art.',
-    signature: 'Lamb with quince (sfargel)',
-  },
-  {
-    region: 'Essaouira & the Coast',
-    icon: Globe,
-    style: 'Seafood-driven. Fish tagine with chermoula, shrimp tagine with tomatoes. Lighter spicing lets the freshness of the catch shine. Atlantic herbs and seaweed sometimes appear.',
-    signature: 'Fish tagine with chermoula',
-  },
-  {
-    region: 'Atlas Mountains & Berber Country',
-    icon: Sparkles,
-    style: 'Hearty, rustic, and mountain-simple. Root vegetables, lamb or goat, minimal spicing. Cooked over wood fire. These are the original tagines, predating the Arab influence.',
-    signature: 'Berber tagine (mountain vegetable)',
-  },
+  { item: 'Street stall chicken tagine', price: 'From 35 MAD', note: 'Basic but honest; plastic tables on the sidewalk' },
+  { item: 'Local restaurant tagine (meat)', price: 'From 50 MAD', note: 'Neighborhood spot with cloth napkins' },
+  { item: 'Local restaurant tagine (vegetable)', price: 'From 30 MAD', note: 'Often the cheapest main dish on the menu' },
+  { item: 'Tourist restaurant tagine', price: 'From 80 MAD', note: 'Medina restaurants near main squares' },
+  { item: 'Upscale riad tagine', price: 'From 120 MAD', note: 'Set menu with salads, tagine, dessert, tea' },
+  { item: 'Fine dining tagine', price: 'From 180 MAD', note: 'Chef-prepared, premium ingredients, refined setting' },
+  { item: 'Cooking class (learn to make tagine)', price: 'From 300 MAD', note: 'Includes meal and instruction; seasonal pricing can change' },
+  { item: 'Tagine pot (cooking, unglazed)', price: 'From 80 MAD', note: 'Souk or pottery cooperative' },
+  { item: 'Tagine pot (decorative)', price: 'From 150 MAD', note: 'Painted ceramic, serving only' },
+  { item: 'Ras el hanout spice blend (100g)', price: 'From 20 MAD', note: 'Herbalist or spice souk; quality varies widely' },
 ];
 
 /* ═══════════════════════════════════════════════════════════════
@@ -342,20 +491,18 @@ export default function MoroccoTagineGuidePage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdTravel) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
       />
 
-      {/* ── Hero Section ── */}
+      {/* ── Hero ── */}
       <section className="relative py-20 md:py-28 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(/images/hero-tagine.webp)',
-          }}
+          style={{ backgroundImage: 'url(/images/photo-tagine-chicken.webp)' }}
         />
         <div className="absolute inset-0 hero-overlay" />
         <div className="container-morocco relative z-10">
@@ -367,156 +514,314 @@ export default function MoroccoTagineGuidePage() {
             <span className="text-white">Morocco Tagine Guide</span>
           </nav>
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm text-white/90 text-sm mb-6">
-            <UtensilsCrossed className="w-4 h-4" />
-            Food &amp; Culinary Culture
+            <CookingPot className="w-4 h-4" />
+            Moroccan Cuisine &amp; Food Culture
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-display)] font-bold text-white mb-4">
-            Complete Guide to Moroccan Tagine:
-            <br className="hidden md:block" /> Recipes, Types &amp; Where to Eat
+            The Complete Guide
+            <br className="hidden md:block" /> to Moroccan Tagine
           </h1>
           <p className="text-xl text-white/80 max-w-2xl">
-            From 30 MAD street-stall kefta to refined Fassi lamb with quince. Your complete
-            guide to Morocco&apos;s most iconic dish: history, recipes, restaurants, and cooking classes.
+            Morocco&apos;s defining dish: 12 classic varieties, the best restaurants in every city,
+            cooking classes, buying the perfect tagine pot, and the etiquette of eating from a shared plate.
           </p>
         </div>
       </section>
 
       <div className="zellige-border" />
 
-      {/* ── Introduction ── */}
+      {/* ── Introduction: What Is a Tagine ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
-          <div className="prose-moroccan">
-            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
-              The Tagine: Morocco&apos;s Culinary Soul
-            </h2>
-            <div className="space-y-4 text-lg text-[var(--text-secondary)] leading-relaxed">
-              <p>
-                If Morocco had a single dish to represent its entire culinary identity, it would be the tagine.
-                Named after the conical clay pot it is cooked in, the tagine is not merely a meal. It is a
-                ritual, a social act, and a connection to centuries of Berber, Arab, Andalusian, and French
-                culinary influence layered upon one another like the ingredients in the pot itself.
-              </p>
-              <p>
-                The genius of the tagine lies in its simplicity. The cone-shaped lid captures rising steam and
-                returns it as condensation, basting the food continuously. No added water is needed. The result
-                is meat so tender it falls from the bone, vegetables that melt into the sauce, and flavors so
-                concentrated they linger for hours. Every family, every region, every cook has their own version,
-                and every version tells a story.
-              </p>
-              <p>
-                Whether you eat a 30 MAD kefta tagine at a roadside stall in the Atlas or a 350 MAD lamb
-                masterpiece at a Fes palace restaurant, you are tasting something that has been perfected over
-                a thousand years. This guide covers everything you need to know about this extraordinary dish.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── History of Tagine ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <BookOpen className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            The History of Tagine
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
+            What Is a Tagine? The Dish and the Vessel
           </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            A dish shaped by geography, trade, and the genius of Morocco&apos;s cooks across centuries.
-          </p>
+          <div className="space-y-4 text-lg text-[var(--text-secondary)] leading-relaxed">
+            <p>
+              A tagine is two things at once. It is a conical clay pot -- a flat round base topped with
+              a tall, chimney-shaped lid -- and it is the slow-cooked stew that emerges from it after
+              hours of gentle heat. The name comes from the Berber word for &quot;shallow earthen pot,&quot;
+              and the design has not changed in over a thousand years because it does not need to.
+            </p>
+            <p>
+              The cone works like a self-basting engine. Steam rises from the simmering food, hits
+              the cool walls of the lid, condenses, and drips back down into the dish. Meat falls off
+              the bone. Vegetables absorb every layer of spice. The sauce thickens without evaporating.
+              No oven required -- just a charcoal brazier (majmar) or a low gas flame, patience, and
+              a recipe passed down through generations.
+            </p>
+            <p>
+              Tagine is the daily food of Morocco. Families cook it for lunch, the main meal of the day.
+              Restaurants serve it as their signature offering. Street vendors set rows of tagine pots
+              on charcoal grills outside their stalls, each lid hiding a different combination of meat,
+              vegetables, and fruit. Ordering a tagine in Morocco is not choosing a single dish; it is
+              choosing from a galaxy of regional variations, each one tied to a city, a season, or a
+              family tradition.
+            </p>
+          </div>
 
-          <div className="space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
             <div className="card-moroccan p-6">
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                Berber Origins (9th Century)
+              <CookingPot className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+              <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                The Cooking Vessel
               </h3>
               <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                The tagine pot was invented by the Berbers (Amazigh) of North Africa. Nomadic communities needed
-                a portable cooking vessel that could produce tender meals with minimal water, a precious resource
-                in the arid landscape. The clay pot with its distinctive cone trapped steam and recycled moisture,
-                making it perfect for slow-cooking tough cuts of meat and root vegetables over a low charcoal fire.
-                The earliest tagines were simple affairs: lamb or goat with onions, whatever herbs grew wild, and
-                a handful of spices traded across the Sahara.
+                Made from unglazed terracotta clay, the tagine pot conducts heat slowly and evenly.
+                The conical lid traps and recirculates moisture, eliminating the need for added water
+                or stock in most recipes. Traditional pots are seasoned over months of use, building
+                a patina that adds depth to every subsequent meal. A good cooking tagine costs from 80 MAD.
               </p>
             </div>
-
             <div className="card-moroccan p-6">
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                Arab & Andalusian Influence (11th-15th Century)
+              <Utensils className="w-8 h-8 text-[var(--color-accent)] mb-3" />
+              <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                The Stew
               </h3>
               <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                The Arab conquest brought saffron, ginger, cinnamon, and the concept of sweet-savory cooking
-                from Persian cuisine. The Andalusian Moors, expelled from Spain between the 11th and 15th
-                centuries, settled in Fes and brought almonds, dried fruits, and refined cooking techniques. This
-                fusion created the complex, layered tagines we know today: lamb with prunes and almonds, chicken
-                with preserved lemons, and the elaborate palace cuisine of Fes. The use of preserved lemons, now
-                synonymous with Moroccan cooking, likely originated in this period.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                French Colonial Period & Modern Era
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                The French Protectorate (1912-1956) introduced restaurant culture and plated presentation to
-                Moroccan cuisine. After independence, tagine became a symbol of national identity. Today, tagine
-                occupies a dual role: it is both an everyday home-cooked meal and a showcase dish at the finest
-                restaurants. Modern chefs experiment with new ingredients while respecting the fundamental
-                technique. The tagine pot itself has changed little in a thousand years, which speaks to the
-                perfection of its design.
+                Any slow-cooked Moroccan stew served in the pot qualifies as a tagine dish, though
+                the word now extends to versions cooked in regular pots and pressure cookers. Chicken,
+                lamb, beef, fish, and vegetables all have dedicated tagine recipes. Spicing varies by
+                region but cumin, ginger, turmeric, saffron, and cinnamon form the backbone.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Types of Tagine ── */}
+      {/* ── History & Origins ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
+            A Thousand Years of Slow Cooking
+          </h2>
+          <div className="space-y-4 text-lg text-[var(--text-secondary)] leading-relaxed">
+            <p>
+              The tagine pot likely originated with the Berber (Amazigh) peoples of North Africa,
+              who needed a portable, fuel-efficient cooking method for semi-nomadic life in the
+              Atlas Mountains and Saharan edges. Clay was abundant. Water was not. The conical lid
+              solved the water problem by recycling every drop of moisture back into the food.
+            </p>
+            <p>
+              Arab traders arriving from the 7th century onward brought saffron, cinnamon, and
+              dried fruits that transformed the tagine from simple stew to the aromatic, layered
+              dish we know today. The sweet-savory combinations -- lamb with prunes, chicken with
+              preserved lemons -- are direct descendants of medieval Arabic court cooking documented
+              in 13th-century Andalusian and Moroccan manuscripts.
+            </p>
+            <p>
+              By the time the Marinid dynasty ruled Fes in the 14th century, tagine had become
+              high cuisine. Palace cooks competed to create more elaborate versions, layering
+              flavors with rose water, orange blossom, and saffron threads worth more than gold.
+              Those recipes trickled down to middle-class families and eventually became the everyday
+              lunch that Morocco still eats today.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 12 Classic Tagine Varieties ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <UtensilsCrossed className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Types of Moroccan Tagine
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-4">
-            From the beloved chicken with preserved lemons to coastal fish tagines, each variety tells a story of its region.
-          </p>
-          <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
-            <Info className="w-3.5 h-3.5 inline mr-1" />
-            Prices shown are starting prices at local restaurants. Seasonal pricing applies, and tourist-area restaurants may charge more.
-          </p>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
+              12 Classic Tagine Varieties You Must Know
+            </h2>
+            <p className="text-lg text-[var(--text-secondary)] max-w-3xl mx-auto">
+              From the universally beloved chicken with preserved lemon to the adventurous lamb brain
+              tagine of Fes, each variety tells a story about its region, its season, and the family
+              that perfected it.
+            </p>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {tagineTypes.map((tagine) => {
-              const TagineIcon = tagine.icon;
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {tagineVarieties.map((tagine) => {
+              const TagIcon = tagine.icon;
               return (
-                <div key={tagine.name} className="card-moroccan p-6">
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                      <TagineIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                        {tagine.name}
+                <div key={tagine.name} className="card-moroccan p-6 relative">
+                  {tagine.mustTry && (
+                    <span className="absolute top-4 right-4 px-2.5 py-0.5 rounded-full bg-[var(--color-accent)]/10 text-[var(--color-accent)] text-xs font-bold uppercase tracking-wide">
+                      Must Try
+                    </span>
+                  )}
+                  <TagIcon className="w-7 h-7 text-[var(--color-accent)] mb-3" />
+                  <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
+                    {tagine.name}
+                  </h3>
+                  <p className="text-xs text-[var(--color-accent)] font-medium mb-1 italic">{tagine.arabicName}</p>
+                  <div className="flex items-center gap-2 text-xs text-[var(--text-secondary)] mb-3">
+                    <MapPin className="w-3 h-3" />
+                    {tagine.region}
+                  </div>
+                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-3">
+                    {tagine.description}
+                  </p>
+                  <p className="text-xs font-[family-name:var(--font-heading)] font-semibold text-[var(--color-gold)]">
+                    <DollarSign className="w-3 h-3 inline -mt-0.5" /> {tagine.price}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Regional Specialties ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
+            Regional Tagine Traditions
+          </h2>
+          <div className="space-y-4 text-lg text-[var(--text-secondary)] leading-relaxed mb-10">
+            <p>
+              Morocco is not a single cuisine -- it is a country of micro-cuisines shaped by geography,
+              climate, and the produce available within a day&apos;s travel. The tagine you eat in coastal
+              Essaouira bears little resemblance to the one served in mountainous Chefchaouen or
+              imperial Fes.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {[
+              {
+                region: 'Fes & Meknes (Imperial Cities)',
+                icon: Crown,
+                text: 'The refined, sweet-savory tagines. Lamb with prunes and almonds, chicken tfaya with caramelized onions, and lamb with quince all trace their lineage to medieval court cooking. Fassi tagines use more sugar, honey, and cinnamon than anywhere else in Morocco. The flavors are complex and layered.',
+              },
+              {
+                region: 'Marrakech & the South',
+                icon: Flame,
+                text: 'Bolder, spicier, and more direct. Tanjia -- Marrakech\'s bachelor dish of slow-cooked meat sealed in an urn and left in the hammam furnace -- is the city\'s proudest contribution. Tagines here lean toward lamb with apricots, kefta with egg, and generous use of ras el hanout. The heat of the south shows up on the plate.',
+              },
+              {
+                region: 'Essaouira & the Atlantic Coast',
+                icon: Globe,
+                text: 'Fish and seafood dominate. Tagines of monkfish, sea bass, shrimp, and sardine balls replace the lamb and chicken of the interior. Chermoula (a cilantro-garlic-lemon marinade) is the defining flavor. Argan oil drizzled on a finished fish tagine is an Essaouira signature.',
+              },
+              {
+                region: 'Chefchaouen & the Rif Mountains',
+                icon: Leaf,
+                text: 'Simpler, herb-forward tagines that reflect mountain cooking. Goat meat is more common here than elsewhere. Fresh herbs from the Rif valleys -- thyme, oregano, wild mint -- give these tagines a green, aromatic quality that sets them apart from the spice-heavy dishes of the south.',
+              },
+              {
+                region: 'High Atlas & Berber Villages',
+                icon: Star,
+                text: 'Hearty, warming tagines built for cold mountain nights. Lamb or goat with root vegetables, potatoes, and turnips. Spicing is minimal -- cumin, salt, pepper, saffron. The ingredients speak for themselves. Often cooked over wood fires that add a subtle smokiness.',
+              },
+            ].map((region) => {
+              const RegIcon = region.icon;
+              return (
+                <div key={region.region} className="card-moroccan p-6">
+                  <div className="flex items-start gap-4">
+                    <RegIcon className="w-7 h-7 text-[var(--color-accent)] mt-1 shrink-0" />
+                    <div>
+                      <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                        {region.region}
                       </h3>
-                      <p className="text-xs text-[var(--text-muted)] italic">{tagine.arabic}</p>
+                      <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{region.text}</p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-3 text-xs text-[var(--text-muted)] mb-3">
-                    <span className="flex items-center gap-1">
-                      <MapPin className="w-3.5 h-3.5" />
-                      {tagine.region}
-                    </span>
-                    <span className="inline-block px-2 py-0.5 font-medium rounded bg-[var(--color-accent)]/10 text-[var(--color-accent)]">
-                      {tagine.price}
-                    </span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Vegetarian & Vegan Tagines ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
+            Vegetarian &amp; Vegan Tagines
+          </h2>
+          <div className="space-y-4 text-lg text-[var(--text-secondary)] leading-relaxed mb-8">
+            <p>
+              Vegetable tagines are a genuine part of Moroccan cooking, not a concession to foreign
+              tourists. Moroccan families regularly cook meatless tagines, especially during the
+              expensive days before payday or during religious periods of fasting. The spice blends
+              and slow-cooking method make vegetables the star rather than a side act.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              { name: 'Seven-Vegetable Tagine', desc: 'The classic mix of carrots, zucchini, turnips, potatoes, tomatoes, onions, and pumpkin with ras el hanout and saffron. Served everywhere.' },
+              { name: 'Pumpkin & Chickpea Tagine', desc: 'Roasted pumpkin with chickpeas, caramelized onions, cinnamon, and a drizzle of argan oil. Naturally sweet and filling.' },
+              { name: 'Artichoke & Green Pea Tagine', desc: 'A spring specialty with fresh artichoke hearts, peas, preserved lemon, and loads of cilantro. Light and bright.' },
+              { name: 'Potato, Olive & Preserved Lemon Tagine', desc: 'The humblest tagine and one of the tastiest. Potatoes slow-cooked with olives, preserved lemon, and turmeric until soft and golden.' },
+              { name: 'Cauliflower & Potato with Charmoula', desc: 'Cauliflower florets and potato chunks in a spiced cilantro-garlic chermoula sauce. Popular in home cooking.' },
+              { name: 'Eggplant & Tomato Tagine', desc: 'Smoky roasted eggplant with tomato, garlic, cumin, and paprika. Sometimes called zaalouk tagine after the popular Moroccan eggplant salad.' },
+            ].map((veg) => (
+              <div key={veg.name} className="card-moroccan p-5">
+                <div className="flex items-start gap-3">
+                  <Leaf className="w-5 h-5 text-green-600 mt-0.5 shrink-0" />
+                  <div>
+                    <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
+                      {veg.name}
+                    </h3>
+                    <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{veg.desc}</p>
                   </div>
-                  <p className="text-sm text-[var(--text-secondary)] mb-4">{tagine.description}</p>
-                  <div className="grid grid-cols-2 gap-2">
-                    {tagine.keyIngredients.map((ingredient, i) => (
-                      <div key={i} className="flex items-start gap-1.5 text-xs text-[var(--text-muted)]">
-                        <CheckCircle className="w-3 h-3 mt-0.5 shrink-0 text-[var(--color-gold)]" />
-                        {ingredient}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="card-moroccan p-5 mt-6 bg-amber-50/50">
+            <div className="flex items-start gap-3">
+              <AlertTriangle className="w-5 h-5 text-amber-600 mt-0.5 shrink-0" />
+              <div>
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
+                  Vegan Note
+                </h3>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                  Most Moroccan vegetable tagines are cooked with butter (smen, a fermented clarified
+                  butter) or regular butter. Ask for &quot;bla zebda&quot; (without butter) and request
+                  olive oil or argan oil instead. Honey is used in some sweet tagines -- confirm with
+                  the server if this matters to you. Bread served alongside is always vegan.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Best Tagine Restaurants by City ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
+              Best Tagine Restaurants by City
+            </h2>
+            <p className="text-lg text-[var(--text-secondary)] max-w-3xl mx-auto">
+              From hole-in-the-wall joints serving kefta tagine for from 35 MAD to palace restaurants
+              with tablecloths and tasting menus. Seasonal pricing can change during peak tourist months.
+            </p>
+          </div>
+
+          <div className="space-y-10">
+            {tagineRestaurants.map((city) => {
+              const CityIcon = city.icon;
+              return (
+                <div key={city.city}>
+                  <div className="flex items-center gap-3 mb-4">
+                    <CityIcon className="w-6 h-6 text-[var(--color-accent)]" />
+                    <h3 className="text-2xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
+                      {city.city}
+                    </h3>
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {city.spots.map((spot) => (
+                      <div key={spot.name} className="card-moroccan p-5">
+                        <h4 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
+                          {spot.name}
+                        </h4>
+                        <div className="flex items-center gap-3 text-xs text-[var(--text-secondary)] mb-2">
+                          <span className="px-2 py-0.5 rounded-full bg-[var(--color-accent)]/10 text-[var(--color-accent)] font-medium">
+                            {spot.style}
+                          </span>
+                          <span className="font-semibold text-[var(--color-gold)]">{spot.price}</span>
+                        </div>
+                        <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{spot.note}</p>
                       </div>
                     ))}
                   </div>
@@ -527,37 +832,172 @@ export default function MoroccoTagineGuidePage() {
         </div>
       </section>
 
-      {/* ── Regional Variations ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+      {/* ── Cooking Classes ── */}
+      <section className="py-16 md:py-20">
         <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <MapPin className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Regional Tagine Variations
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
+              Learn to Cook Tagine: Best Cooking Classes
+            </h2>
+            <p className="text-lg text-[var(--text-secondary)] max-w-3xl mx-auto">
+              Hands-on workshops where you shop for ingredients in the souk, learn the spice
+              ratios from a Moroccan chef, and eat what you made. Prices listed are per person
+              and seasonal pricing can change.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {cookingClasses.map((cls) => (
+              <div key={cls.name} className="card-moroccan p-6">
+                <ChefHat className="w-7 h-7 text-[var(--color-accent)] mb-3" />
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
+                  {cls.name}
+                </h3>
+                <div className="flex items-center gap-3 text-xs text-[var(--text-secondary)] mb-3">
+                  <span className="flex items-center gap-1">
+                    <MapPin className="w-3 h-3" /> {cls.city}
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <Clock className="w-3 h-3" /> {cls.duration}
+                  </span>
+                  <span className="font-semibold text-[var(--color-gold)]">{cls.price}</span>
+                </div>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-2">
+                  {cls.highlight}
+                </p>
+                <p className="text-xs text-[var(--text-secondary)]">
+                  <span className="font-semibold">Includes:</span> {cls.includes}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Buying a Tagine Pot ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
+              Buying a Tagine Pot in Morocco
+            </h2>
+            <p className="text-lg text-[var(--text-secondary)] max-w-3xl mx-auto">
+              Four types of tagine pots, what each one is for, and what to pay. The pottery souks of
+              Safi, Fes, and Marrakech have the widest selection. Always negotiate -- asking prices
+              in tourist areas start at 2-3 times the fair price.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {taginePotTypes.map((pot) => {
+              const PotIcon = pot.icon;
+              return (
+                <div key={pot.type} className="card-moroccan p-6">
+                  <PotIcon className="w-7 h-7 text-[var(--color-accent)] mb-3" />
+                  <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
+                    {pot.type}
+                  </h3>
+                  <div className="flex items-center gap-3 text-xs text-[var(--text-secondary)] mb-3">
+                    <span className="font-semibold text-[var(--color-gold)]">{pot.price}</span>
+                    <span>{pot.material}</span>
+                  </div>
+                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-2">
+                    {pot.description}
+                  </p>
+                  <p className="text-xs text-[var(--text-secondary)]">
+                    <Store className="w-3 h-3 inline -mt-0.5 mr-1" />
+                    <span className="font-semibold">Where to buy:</span> {pot.bestBuy}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="card-moroccan p-6 mt-8 max-w-4xl mx-auto">
+            <div className="flex items-start gap-4">
+              <Package className="w-7 h-7 text-[var(--color-accent)] mt-1 shrink-0" />
+              <div>
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                  Shipping a Tagine Home
+                </h3>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                  If you buy a tagine in the souk and want it shipped, most pottery shops offer
+                  international shipping for from 200-400 MAD depending on weight and destination.
+                  They pack it with straw and cardboard. Alternatively, wrap it yourself in clothing
+                  and towels inside your checked luggage. Place it dead center surrounded by soft
+                  items. Unglazed pots are sturdier than they look -- the thick clay handles bumps
+                  well. Decorative glazed tagines are more fragile. If flying budget airlines with
+                  strict weight limits, consider buying a lightweight decorative tagine (under 1 kg)
+                  rather than a heavy cooking tagine (2-3 kg).
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── How to Season a New Tagine ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
+            How to Season a New Tagine Pot
           </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Every region of Morocco puts its own stamp on the tagine. Geography, local produce, and cultural heritage shape distinct styles.
+          <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-8">
+            A new unglazed tagine must be cured before its first use to prevent cracking and to
+            develop the clay&apos;s natural non-stick properties. This process takes about 24 hours
+            but requires only 20 minutes of active work.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            {regionalVariations.map((region) => {
-              const RegionIcon = region.icon;
-              return (
-                <div key={region.region} className="card-moroccan p-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-[var(--surface-muted)] flex items-center justify-center">
-                      <RegionIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                    </div>
-                    <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                      {region.region}
+          <div className="space-y-4">
+            {[
+              { step: 1, title: 'Soak Overnight', text: 'Submerge the entire tagine (base and lid) in cold water for 12-24 hours. The porous clay absorbs water, which prevents it from cracking when exposed to heat.' },
+              { step: 2, title: 'Rub with Olive Oil', text: 'Remove from water, dry thoroughly, and rub the interior of both the base and lid with olive oil. Use a generous amount -- the clay will absorb much of it.' },
+              { step: 3, title: 'Slow Oven Cure', text: 'Place the oiled tagine in a cold oven. Set to 150C (300F) and let it heat gradually for 2 hours. Never put a tagine in a pre-heated oven -- thermal shock cracks clay.' },
+              { step: 4, title: 'Cool Completely', text: 'Turn off the oven and leave the tagine inside until fully cool. Do not remove it while hot. The slow cooling bonds the oil into the clay.' },
+              { step: 5, title: 'First Cook', text: 'For the first meal, cook something with plenty of liquid and fat -- a vegetable tagine with olive oil is ideal. The pot will continue to season with each use, improving over months and years.' },
+            ].map((s) => (
+              <div key={s.step} className="card-moroccan p-5">
+                <div className="flex items-start gap-4">
+                  <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[var(--color-accent)]/10 text-[var(--color-accent)] font-bold text-sm shrink-0">
+                    {s.step}
+                  </span>
+                  <div>
+                    <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
+                      {s.title}
                     </h3>
+                    <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{s.text}</p>
                   </div>
-                  <p className="text-sm text-[var(--text-secondary)] mb-3">{region.style}</p>
-                  <div className="flex items-center gap-2 p-3 bg-[var(--surface-muted)] rounded-lg">
-                    <Star className="w-4 h-4 text-[var(--color-gold)] shrink-0" />
-                    <p className="text-xs text-[var(--text-primary)]">
-                      <span className="font-semibold">Signature dish:</span> {region.signature}
-                    </p>
-                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Eating Etiquette ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
+              Tagine Etiquette: How Moroccans Eat
+            </h2>
+            <p className="text-lg text-[var(--text-secondary)] max-w-3xl mx-auto">
+              A tagine is a communal dish shared from the center of the table. These customs are
+              not rigid rules for tourists, but knowing them shows respect and will earn genuine
+              appreciation from your hosts.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {etiquetteTips.map((tip) => {
+              const TipIcon = tip.icon;
+              return (
+                <div key={tip.title} className="card-moroccan p-5">
+                  <TipIcon className="w-7 h-7 text-[var(--color-accent)] mb-3" />
+                  <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                    {tip.title}
+                  </h3>
+                  <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{tip.text}</p>
                 </div>
               );
             })}
@@ -567,531 +1007,261 @@ export default function MoroccoTagineGuidePage() {
 
       {/* ── Price Guide ── */}
       <section className="py-16 md:py-20">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <DollarSign className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Tagine Price Guide
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
+            Tagine Price Guide 2026
           </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-4">
-            What to expect to pay for tagine meals, cooking classes, and tagine pots across Morocco.
+          <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-8">
+            What to expect to pay for tagine across Morocco, from sidewalk stalls to fine dining.
+            Seasonal pricing can change during peak tourist months (October-April). Prices at
+            tourist-facing restaurants in Jemaa el-Fna and Fes medina tend to run 20-30% higher.
           </p>
-          <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
-            <Info className="w-3.5 h-3.5 inline mr-1" />
-            All prices are starting prices. Seasonal pricing applies during peak tourist months (October-April) and holiday periods. Prices in tourist areas like Jemaa el-Fnaa may be higher.
-          </p>
-          <div className="max-w-4xl mx-auto">
-            <div className="card-moroccan overflow-hidden">
-              <div className="grid grid-cols-3 gap-0 bg-[var(--color-accent)] text-white text-sm font-medium">
-                <div className="p-3 px-4">Item</div>
-                <div className="p-3 px-4">Price</div>
-                <div className="p-3 px-4">Note</div>
-              </div>
-              {priceGuide.map((item, i) => (
-                <div
-                  key={item.item}
-                  className={`grid grid-cols-3 gap-0 text-sm ${i % 2 === 0 ? 'bg-white' : 'bg-[var(--surface-muted)]'}`}
-                >
-                  <div className="p-3 px-4 font-medium text-[var(--text-primary)]">{item.item}</div>
-                  <div className="p-3 px-4 text-[var(--color-accent)] font-semibold">{item.price}</div>
-                  <div className="p-3 px-4 text-[var(--text-muted)]">{item.note}</div>
-                </div>
-              ))}
+
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b-2 border-[var(--color-accent)]/20">
+                  <th className="text-left py-3 px-4 font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+                    Item
+                  </th>
+                  <th className="text-left py-3 px-4 font-[family-name:var(--font-heading)] font-bold text-[var(--color-gold)]">
+                    Price
+                  </th>
+                  <th className="text-left py-3 px-4 font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+                    Notes
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {priceGuide.map((row) => (
+                  <tr key={row.item} className="border-b border-[var(--surface-muted)]">
+                    <td className="py-3 px-4 text-[var(--text-primary)] font-medium">{row.item}</td>
+                    <td className="py-3 px-4 text-[var(--color-gold)] font-semibold whitespace-nowrap">{row.price}</td>
+                    <td className="py-3 px-4 text-[var(--text-secondary)]">{row.note}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Tagine vs Tanjia vs Couscous ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
+            Tagine vs. Tanjia vs. Couscous: Know the Difference
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="card-moroccan p-6">
+              <CookingPot className="w-7 h-7 text-[var(--color-accent)] mb-3" />
+              <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                Tagine
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                Slow-cooked in a conical clay pot over low charcoal or gas flame. Meat, vegetables,
+                and sauce cook together. The daily lunch dish served across all of Morocco. Available
+                everywhere, all year, in dozens of varieties.
+              </p>
+            </div>
+            <div className="card-moroccan p-6">
+              <Flame className="w-7 h-7 text-[var(--color-accent)] mb-3" />
+              <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                Tanjia
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                A Marrakech-only specialty. Meat (usually beef or lamb) is placed in an amphora-shaped
+                clay urn with spices, sealed with parchment, and slow-cooked for 6-8 hours in the
+                ashes of a public hammam furnace. The result is fall-apart tender meat with no added
+                liquid. A bachelor&apos;s dish traditionally prepared by men.
+              </p>
+            </div>
+            <div className="card-moroccan p-6">
+              <HandPlatter className="w-7 h-7 text-[var(--color-accent)] mb-3" />
+              <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                Couscous
+              </h3>
+              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                Hand-rolled semolina steamed in a couscoussier over a simmering broth of meat and
+                vegetables. Served on Fridays after mosque (the traditional family meal) and at
+                celebrations. The couscous is mounded on a platter with the stew ladled on top.
+                A very different texture and cooking method from tagine.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Best Restaurants ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Award className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Best Restaurants for Tagine in Morocco
+      {/* ── Spices & Key Ingredients ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
+            Essential Tagine Spices &amp; Ingredients
           </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            From legendary street stalls to palace restaurants, these are the places where tagine reaches its peak.
+          <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-8">
+            The flavor of a Moroccan tagine comes from a layered combination of dried spices, fresh
+            herbs, and preserved ingredients. Buy from a reputable herbalist (attar) in the souk
+            rather than pre-packaged tourist blends, which are often stale.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {bestRestaurants.map((restaurant) => (
-              <div key={restaurant.name} className="card-moroccan p-6">
-                <div className="flex items-start justify-between mb-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {[
+              { name: 'Ras el Hanout', desc: 'A complex blend of 12-30 spices including cardamom, nutmeg, cinnamon, cloves, and dried rosebuds. Every vendor has a proprietary mix. From 20 MAD per 100g.' },
+              { name: 'Preserved Lemons', desc: 'Lemons salt-cured for 30+ days until the rind becomes soft and intensely flavored. Used in chicken and fish tagines. From 5 MAD each at the souk.' },
+              { name: 'Saffron', desc: 'Grown in the Taliouine region. Real saffron costs from 30 MAD per gram but a few threads transform a tagine. Beware dyed safflower sold as saffron.' },
+              { name: 'Cumin', desc: 'The most-used spice in Moroccan cooking. Added to nearly every tagine. Buy whole seeds and grind fresh. From 10 MAD per 100g.' },
+              { name: 'Ginger & Turmeric', desc: 'Often used together. Ginger adds warmth; turmeric adds color and an earthy note. Both are used in ground form.' },
+              { name: 'Smen (Aged Butter)', desc: 'Fermented, salted butter aged for months or years. Adds a pungent, cheese-like depth. A small amount goes a long way.' },
+              { name: 'Olives', desc: 'Green cracked olives for chicken tagines; purple and red olives in others. Moroccan olives are smaller and more intense than European varieties.' },
+              { name: 'Fresh Herbs', desc: 'Flat-leaf parsley and cilantro are added in generous handfuls, not pinches. They form a green base flavor in most tagines.' },
+            ].map((spice) => (
+              <div key={spice.name} className="card-moroccan p-5">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-[var(--color-accent)] mt-0.5 shrink-0" />
                   <div>
-                    <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                      {restaurant.name}
+                    <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
+                      {spice.name}
                     </h3>
-                    <div className="flex items-center gap-2 text-sm text-[var(--text-muted)]">
-                      <MapPin className="w-3.5 h-3.5" />
-                      {restaurant.city}
+                    <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{spice.desc}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Insider Tips ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
+            Insider Tips for Eating Tagine in Morocco
+          </h2>
+
+          <div className="space-y-4">
+            {[
+              { icon: Info, title: 'Order Early', text: 'The best tagines are cooked for the lunch rush (12:30-14:00). By evening, many spots have sold out. Arrive by noon for the freshest options.' },
+              { icon: ShieldCheck, title: 'Look Where Locals Eat', text: 'Tourist restaurants on Jemaa el-Fna often serve tagines that sat for hours. Walk two streets away and follow the Moroccans to places with higher turnover and better food.' },
+              { icon: DollarSign, title: 'Negotiate at Street Stalls', text: 'Some stalls quote tourists double the local price. Ask "bshhal?" (how much?) before sitting down. If it sounds high, walk to the next stall.' },
+              { icon: Sparkles, title: 'Ask for the Day\'s Special', text: 'Many restaurants prepare a daily special based on market availability. Ask "ash kayn lyoum?" (what do you have today?). The special is often fresher than the menu regulars.' },
+              { icon: BookOpen, title: 'Try a Home-Cooked Tagine', text: 'The best tagine you eat in Morocco will be in someone\'s home. If invited for a meal, accept without hesitation. Home-cooked tagine is on another level.' },
+              { icon: AlertTriangle, title: 'Beware the Tourist Trap', text: 'Any restaurant with a hawker outside aggressively pulling tourists in is best avoided. The quieter places with no need to hustle are almost always better.' },
+            ].map((tip) => {
+              const TIcon = tip.icon;
+              return (
+                <div key={tip.title} className="card-moroccan p-5">
+                  <div className="flex items-start gap-4">
+                    <TIcon className="w-6 h-6 text-[var(--color-accent)] mt-0.5 shrink-0" />
+                    <div>
+                      <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
+                        {tip.title}
+                      </h3>
+                      <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{tip.text}</p>
                     </div>
                   </div>
-                  <span className="inline-block px-2 py-0.5 text-xs font-medium rounded bg-[var(--color-accent)]/10 text-[var(--color-accent)]">
-                    {restaurant.price}
-                  </span>
                 </div>
-                <p className="text-sm text-[var(--text-secondary)] mb-3">{restaurant.description}</p>
-                <div className="flex items-center gap-2 p-3 bg-[var(--surface-muted)] rounded-lg">
-                  <Star className="w-4 h-4 text-[var(--color-gold)] shrink-0" />
-                  <p className="text-xs text-[var(--text-primary)]">
-                    <span className="font-semibold">Must-try:</span> {restaurant.specialty}
-                  </p>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* ── Cooking Classes ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Users className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Tagine Cooking Classes
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Learn to make tagine yourself. These hands-on classes include market tours, cooking instruction, and a shared meal.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {cookingClasses.map((cls) => (
-              <div key={cls.name} className="card-moroccan p-6">
-                <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                  {cls.name}
-                </h3>
-                <div className="flex items-center gap-4 text-xs text-[var(--text-muted)] mb-3">
-                  <span className="flex items-center gap-1">
-                    <MapPin className="w-3.5 h-3.5" />
-                    {cls.city}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Clock className="w-3.5 h-3.5" />
-                    {cls.duration}
-                  </span>
-                  <span className="text-[var(--color-accent)] font-semibold">{cls.price}</span>
-                </div>
-                <p className="text-sm text-[var(--text-secondary)] mb-3">{cls.description}</p>
-                <div className="flex items-start gap-2 p-3 bg-[var(--surface-muted)] rounded-lg">
-                  <CheckCircle className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
-                  <p className="text-xs text-[var(--text-muted)]">
-                    <span className="font-semibold text-[var(--text-primary)]">Includes:</span> {cls.includes}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Essential Spices ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Sparkles className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Essential Tagine Spices
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            The spices are the soul of any tagine. Here are the essential ones to know, taste, and bring home.
-          </p>
-
-          <div className="space-y-4">
-            {essentialSpices.map((spice) => (
-              <div key={spice.name} className="card-moroccan p-5">
-                <div className="flex items-start justify-between mb-2">
-                  <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                    {spice.name}
-                  </h3>
-                  <span className="flex items-center gap-1 text-xs text-[var(--color-accent)] font-semibold shrink-0 ml-4">
-                    <DollarSign className="w-3 h-3" />
-                    {spice.price}
-                  </span>
-                </div>
-                <p className="text-sm text-[var(--text-secondary)]">{spice.use}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Buying a Tagine Pot ── */}
+      {/* ── FAQ ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <ShoppingBag className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Buying a Tagine Pot in Morocco
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            A tagine pot is the perfect souvenir. Here is what to look for, where to buy, and how to use it at home.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <ShieldCheck className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Cooking vs. Decorative
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Decorative tagines (from 50 MAD) are painted and glazed for display only. Cooking tagines (from 80 MAD)
-                are made from unglazed or food-safe glazed clay. Ask the vendor explicitly whether the pot is safe for
-                cooking. If in doubt, buy unglazed. Avoid brightly painted pots for cooking, as the paint may contain lead.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <MapPin className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Where to Buy
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                The finest cooking tagines come from Safi (Morocco&apos;s pottery capital) and Fes. In Marrakech, head to
-                the potters&apos; souk near Bab Ghmat. In Fes, visit the Ain Nokbi pottery quarter. For fair prices without
-                haggling, try Ensemble Artisanal (government-fixed prices) in any major city.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <Flame className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Seasoning Your Tagine
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Before first use, soak the entire tagine in cold water for 24 hours. Then rub the interior with olive
-                oil and place it in a cold oven. Heat to 150 C (300 F) for 2 hours. Let it cool completely inside the oven.
-                This seals the clay, prevents cracking, and creates a natural non-stick surface. Repeat every few months.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <AlertTriangle className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Cooking at Home Tips
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Always use a diffuser plate between the tagine and a gas or electric burner. Never place a clay tagine
-                on direct high heat or it will crack. Start on low heat and increase gradually. The beauty of tagine
-                cooking is patience: low and slow is the rule. A typical tagine needs 1.5 to 2.5 hours of gentle simmering.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <ThumbsUp className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Packing for Travel
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Wrap the tagine in clothing inside your checked luggage with the cone nested inside the base. Some
-                vendors will pack and ship internationally for you (from 200 MAD shipping). Alternatively, buy a
-                cast-iron tagine from Le Creuset when you get home for an indestructible option that works on any stovetop.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <DollarSign className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Price Negotiation
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                In souks, the first price quoted is always negotiable. Start at 40-50% of the asking price and work
-                toward a middle ground. Quality handmade cooking tagines are worth from 150-300 MAD. Ensemble Artisanal
-                shops have fixed prices and offer a good benchmark before you negotiate elsewhere.
-              </p>
-            </div>
+          <div className="text-center mb-12">
+            <MessageCircleQuestion className="w-10 h-10 text-[var(--color-accent)] mx-auto mb-4" />
+            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
+              Frequently Asked Questions About Moroccan Tagine
+            </h2>
           </div>
-        </div>
-      </section>
-
-      {/* ── Recipe Tips ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Heart className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Recipe Tips from Moroccan Cooks
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Wisdom passed down through generations. These tips will elevate your home tagine from good to extraordinary.
-          </p>
-
-          <div className="space-y-4">
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                1. Layer Your Onions on the Bottom
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                Always start with a thick layer of sliced onions at the base of the tagine. They release moisture as
-                they cook, creating the foundation of the sauce. Moroccan cooks use far more onions than most Western
-                recipes suggest. For a tagine serving four, use at least three large onions.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                2. Toast Your Spices
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                Bloom your spices in oil for 30 seconds before adding other ingredients. This releases the essential
-                oils and intensifies the flavor. Never add ground spices to cold oil. The sizzle is the signal that
-                the aromatics are activating. This single step separates a forgettable tagine from a memorable one.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                3. Resist the Urge to Add Water
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                The tagine pot is designed to cook without added water. The conical lid captures steam and returns it
-                to the pot. If you add water, you dilute the concentrated flavors that make tagine special. The onions,
-                tomatoes, and meat release enough liquid. Only add a splash of water if the pot is truly dry after an
-                hour of cooking.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                4. Add Dried Fruits at the Right Time
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                Prunes, apricots, and dates should be added in the last 30-45 minutes of cooking. Add them too early
-                and they disintegrate into the sauce. Add them too late and they stay dry and chewy. Soak dried fruits
-                in warm water for 15 minutes before adding to plump them slightly and ensure even cooking.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                5. Never Stir a Tagine
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                Unlike a stew, a tagine should not be stirred. The ingredients are layered deliberately: onions on the
-                bottom, then meat, then vegetables, then garnishes on top. Let the steam do the work. Lifting the lid
-                releases precious moisture. If you must check, do so briefly and no more than once or twice during cooking.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Practical Tips ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
-            <Info className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Practical Tips for Eating Tagine in Morocco
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <UtensilsCrossed className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                How to Eat a Tagine
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Tagine is traditionally eaten communally from the pot using Moroccan bread (khobz) as your utensil.
-                Tear off a piece of bread, fold it to create a scoop, and eat from the section of the pot directly
-                in front of you. It is considered polite to eat from your own &quot;zone&quot; rather than reaching across.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <Clock className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                When to Order Tagine
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                In local restaurants, tagine is prepared fresh and takes 60-90 minutes. Many tourist restaurants
-                pre-cook tagines for quick service, which sacrifices quality. For the best experience, order in
-                advance or choose a restaurant that cooks to order. Lunch is the traditional tagine meal in Morocco.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <AlertTriangle className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Avoiding Tourist Traps
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Skip restaurants on main tourist squares where touts stand outside. Look for restaurants where locals eat.
-                A good sign: a small menu (2-3 tagine options) and no English-language photos. The best tagines in any
-                city are rarely in the most visible locations. Ask your riad host for their personal recommendation.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <Leaf className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Vegetarian &amp; Vegan Options
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Vegetable tagines are widely available and genuinely delicious, not an afterthought. They are naturally
-                vegan when made with olive oil (most are). Ask for &quot;tagine dial khodra&quot; (vegetable tagine). During
-                spring, the artichoke and fava bean tagines are exceptional. Chickpea tagine is available year-round.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <ShieldCheck className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Food Safety
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                Tagine is one of the safest street foods in Morocco because it is slow-cooked at high temperature.
-                The extended cooking kills bacteria effectively. At street stalls, ensure the tagine is served bubbling
-                hot. Avoid tagines that have been sitting at room temperature for an extended period.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-5">
-              <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                <DollarSign className="w-4 h-4 inline mr-1 text-[var(--color-accent)]" />
-                Tipping on Tagine Meals
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                In local restaurants, rounding up or leaving 5-10 MAD is customary. In mid-range and upscale
-                restaurants, 10-15% is appreciated. Some tourist restaurants include service in the bill, so check
-                before adding extra. At street stalls, tipping is not expected but always welcomed.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── FAQ Section ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
-            Frequently Asked Questions
-          </h2>
-
           <div className="space-y-6">
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                What is a Moroccan tagine?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                A tagine is both a slow-cooked Moroccan stew and the conical clay pot it is cooked in. The cone-shaped
-                lid traps steam and returns condensation to the dish, creating incredibly tender meat and deeply
-                concentrated flavors without added water. It is Morocco&apos;s most iconic dish, dating back to the
-                Berber civilizations of the 9th century.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                What are the most popular types of tagine in Morocco?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                The most popular types are chicken tagine with preserved lemons and olives (the national favorite),
-                lamb tagine with prunes and almonds, kefta (meatball) tagine with eggs and tomato, vegetable tagine
-                with seasonal produce, and fish tagine popular in coastal cities like Essaouira. Each region has
-                its own signature variations influenced by local ingredients and traditions.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                How much does a tagine cost in Morocco?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                Street-stall and local eatery tagines start from 30 MAD. Mid-range restaurant tagines range from
-                60 to 120 MAD. Fine dining tagines at upscale restaurants cost from 150 to 350 MAD. Prices may vary
-                seasonally and by location, with tourist areas generally charging more. Coastal fish tagines tend to
-                be slightly pricier than chicken or vegetable options.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                Where can I take a tagine cooking class in Morocco?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                Cooking classes are widely available in Marrakech, Fes, and Essaouira. They typically start from
-                350 MAD per person and include a market tour, hands-on cooking instruction, and a shared meal.
-                Popular options include La Maison Arabe and Amal Center in Marrakech, and Palais Amani in Fes.
-                Book at least a day in advance, especially during peak season.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                Can I bring a tagine pot home from Morocco?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                Yes, tagine pots are one of the most popular souvenirs. Decorative tagines start from 50 MAD while
-                functional cooking tagines start from 80 MAD. When buying, ensure you get an unglazed or food-safe
-                glazed pot. Potters in Safi and Fes produce the finest cooking tagines. Pack carefully for travel,
-                wrapping in clothing inside checked luggage, or ask the vendor about international shipping.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                Is tagine gluten-free?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                The tagine itself is naturally gluten-free, as it contains no flour or wheat-based ingredients.
-                However, it is traditionally eaten with Moroccan bread (khobz), which contains wheat. Simply
-                skip the bread and enjoy the tagine on its own or with rice for a gluten-free meal. Inform
-                your server about any allergies, as some restaurant preparations may differ.
-              </p>
-            </div>
+            {faqItems.map((faq) => (
+              <div key={faq.q} className="card-moroccan p-6">
+                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                  {faq.q}
+                </h3>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{faq.a}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* ── Related Guides ── */}
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
-            Continue Exploring Morocco
+            Related Travel Guides
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Link href="/morocco-food-etiquette" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
-              <ShieldCheck className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Moroccan Food Etiquette
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Essential dining customs, table manners, and cultural tips for eating in Morocco.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
+            {[
+              {
+                title: 'Moroccan Food Guide',
+                description: 'The full guide to 50+ Moroccan dishes beyond tagine -- street food, desserts, beverages, and regional specialties.',
+                href: '/morocco-food-guide',
+                icon: Utensils,
+              },
+              {
+                title: 'Cooking Classes in Morocco',
+                description: 'Hands-on workshops across Marrakech, Fes, Essaouira, and Chefchaouen with market tours and spice education.',
+                href: '/morocco-cooking-classes',
+                icon: ChefHat,
+              },
+              {
+                title: 'Morocco Couscous Guide',
+                description: 'Morocco\'s other iconic dish: Friday couscous traditions, regional variations, and the best places to eat it.',
+                href: '/morocco-couscous-guide',
+                icon: HandPlatter,
+              },
+              {
+                title: 'Best Restaurants in Morocco',
+                description: 'City-by-city restaurant recommendations from local favorites to fine dining across Marrakech, Fes, and beyond.',
+                href: '/morocco-restaurants',
+                icon: Store,
+              },
+            ].map((guide) => {
+              const GuideIcon = guide.icon;
+              return (
+                <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                  <GuideIcon className="w-8 h-8 text-[var(--color-accent)] mb-3 group-hover:text-[var(--color-primary)] transition-colors" />
+                  <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                    {guide.title}
+                  </h3>
+                  <p className="text-sm text-[var(--text-secondary)]">{guide.description}</p>
+                  <span className="inline-flex items-center gap-1 mt-3 text-sm text-[var(--color-accent)] font-medium">
+                    Read Guide <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA ── */}
+      <section className="py-16 md:py-20 moroccan-pattern">
+        <div className="container-morocco text-center">
+          <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-4">
+            Taste Morocco&apos;s Soul, One Tagine at a Time
+          </h2>
+          <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto mb-8">
+            From a 35 MAD kefta tagine at a roadside stall to a lamb-and-prune masterpiece at a
+            Fassi palace restaurant, tagine is the dish that defines Morocco. Plan your culinary
+            journey with our expert guides and local recommendations.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/morocco-food-guide"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-[var(--color-accent)] text-white font-[family-name:var(--font-heading)] font-bold hover:bg-[var(--color-accent)]/90 transition-colors"
+            >
+              Explore the Food Guide <ArrowRight className="w-4 h-4" />
             </Link>
-            <Link href="/morocco-cooking-experience" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
-              <UtensilsCrossed className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Cooking Experiences
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Hands-on cooking classes, market tours, and culinary workshops across Morocco.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-            <Link href="/morocco-spice-guide" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
-              <Sparkles className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Morocco Spice Guide
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Complete guide to Moroccan spices: ras el hanout, saffron, cumin, and where to buy them.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-            <Link href="/fes-food-guide" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
-              <Award className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Fes Food Guide
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Explore the culinary capital of Morocco: street food, palace cuisine, and hidden gems in Fes.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
+            <Link
+              href="/morocco-cooking-classes"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg border-2 border-[var(--color-accent)] text-[var(--color-accent)] font-[family-name:var(--font-heading)] font-bold hover:bg-[var(--color-accent)] hover:text-white transition-colors"
+            >
+              Book a Cooking Class <ChefHat className="w-4 h-4" />
             </Link>
           </div>
         </div>

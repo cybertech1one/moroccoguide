@@ -395,12 +395,10 @@ const vetClinics = [
    ═══════════════════════════════════════════════════════════════ */
 
 const relatedGuides = [
-  { title: 'Health & Safety in Morocco', href: '/health-safety', icon: ShieldCheck },
-  { title: 'Morocco Packing List', href: '/packing-list', icon: ClipboardList },
-  { title: 'Morocco Transportation Guide', href: '/transport', icon: Navigation },
-  { title: 'Budget Travel Morocco', href: '/budget-travel', icon: DollarSign },
-  { title: 'First-Time Visitor Guide', href: '/first-time', icon: BookOpen },
-  { title: 'Morocco Accommodation Guide', href: '/accommodations', icon: Bed },
+  { title: 'Morocco Visa Guide', href: '/morocco-visa-guide', icon: FileText },
+  { title: 'First-Time Visitor Guide', href: '/morocco-first-time', icon: BookOpen },
+  { title: 'Health & Safety in Morocco', href: '/morocco-health-safety', icon: ShieldCheck },
+  { title: 'Morocco Transportation Guide', href: '/morocco-transport', icon: Navigation },
 ] as const;
 
 /* ═══════════════════════════════════════════════════════════════
@@ -1105,22 +1103,25 @@ export default function MoroccoPetTravelPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            {relatedGuides.map((guide, idx) => (
-              <Link
-                key={idx}
-                href={guide.href}
-                className="card-moroccan p-5 group hover:border-[#A0522D]/30 transition-all duration-200"
-              >
-                <div className="flex items-center gap-3">
-                  <guide.icon className="w-5 h-5 text-[#A0522D] group-hover:scale-110 transition-transform" />
-                  <span className="font-semibold text-gray-900 font-[family-name:var(--font-heading)] text-sm group-hover:text-[#A0522D] transition-colors">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {relatedGuides.map((guide, idx) => {
+              const GuideIcon = guide.icon;
+              return (
+                <Link
+                  key={idx}
+                  href={guide.href}
+                  className="card-moroccan p-5 group hover:shadow-lg transition-shadow"
+                >
+                  <GuideIcon className="w-8 h-8 text-[var(--color-accent)] mb-3 group-hover:text-[var(--color-primary)] transition-colors" />
+                  <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
                     {guide.title}
+                  </h3>
+                  <span className="inline-flex items-center gap-1 mt-2 text-sm text-[var(--color-accent)] font-medium">
+                    Read Guide <ArrowRight className="w-3.5 h-3.5" />
                   </span>
-                  <ArrowRight className="w-4 h-4 text-gray-400 ml-auto group-hover:text-[#A0522D] group-hover:translate-x-1 transition-all" />
-                </div>
-              </Link>
-            ))}
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -1138,14 +1139,14 @@ export default function MoroccoPetTravelPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/health-safety"
+                href="/morocco-health-safety"
                 className="inline-flex items-center justify-center gap-2 bg-[#A0522D] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#8B4726] transition-colors font-[family-name:var(--font-heading)]"
               >
                 <ShieldCheck className="w-5 h-5" />
                 Health & Safety Guide
               </Link>
               <Link
-                href="/first-time"
+                href="/morocco-first-time"
                 className="inline-flex items-center justify-center gap-2 border-2 border-[#A0522D] text-[#A0522D] px-6 py-3 rounded-lg font-semibold hover:bg-[#A0522D]/5 transition-colors font-[family-name:var(--font-heading)]"
               >
                 <BookOpen className="w-5 h-5" />
