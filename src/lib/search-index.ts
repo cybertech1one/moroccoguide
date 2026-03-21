@@ -3062,6 +3062,24 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['morocco sim card', 'morocco internet', 'morocco mobile data', 'wifi morocco', 'maroc telecom tourist'],
       priority: 9,
     },
+    {
+      title: 'Ouarzazate Travel Guide 2026',
+      description: 'Ouarzazate guide — Ait Benhaddou UNESCO site, Atlas Film Studios, Taourirt Kasbah, day trips to Dades and Todra Gorge, where to stay and eat.',
+      type: 'page',
+      url: '/morocco-ouarzazate-guide',
+      tags: ['Ouarzazate', 'Ait Benhaddou', 'film studios', 'kasbah', 'desert gateway'],
+      keywords: ['ouarzazate morocco', 'ouarzazate travel guide', 'ait benhaddou', 'atlas film studios ouarzazate'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Henna Guide 2026',
+      description: 'Henna in Morocco — traditional designs, Berber vs Arabic styles, where to get henna, safety tips, black henna warning, prices, and workshops.',
+      type: 'page',
+      url: '/morocco-henna-tattoo',
+      tags: ['henna', 'tattoo', 'body art', 'culture', 'traditions'],
+      keywords: ['morocco henna', 'henna tattoo morocco', 'moroccan henna designs', 'henna marrakech'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

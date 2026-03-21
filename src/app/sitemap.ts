@@ -408,6 +408,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-coastal-towns',
     '/morocco-hostel-guide',
     '/morocco-sim-card-internet',
+    '/morocco-ouarzazate-guide',
+    '/morocco-henna-tattoo',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

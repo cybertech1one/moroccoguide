@@ -13,25 +13,21 @@ import {
   CheckCircle,
   AlertTriangle,
   Users,
-  Mountain,
   Sun,
   Moon,
   Compass,
   Camera,
-  Tent,
-  Route,
-  Calendar,
-  Backpack,
+  Thermometer,
   Heart,
-  Sunrise,
-  Sparkles,
-  Wind,
-  Globe,
-  Phone,
-  Mail,
-  BookOpen,
-  Eye,
+  HelpCircle,
+  Tent,
+  Mountain,
   Footprints,
+  Luggage,
+  Calendar,
+  Eye,
+  Sunrise,
+  Shield,
 } from 'lucide-react';
 
 /* ═══════════════════════════════════════════════════════════════
@@ -45,52 +41,51 @@ const BASE_URL = 'https://citytoursmorocco.com';
    ═══════════════════════════════════════════════════════════════ */
 
 export const metadata: Metadata = {
-  title: 'Morocco Camel Trekking 2026 | Sahara Camel Ride Guide, Prices & Tips',
+  title: 'Camel Trekking Morocco 2026 | Sahara Desert Rides & Multi-Day Treks',
   description:
-    'Complete guide to camel trekking in Morocco. Sunset rides, overnight treks & multi-day Sahara expeditions in Merzouga, Zagora & M\'Hamid. Prices from 250 MAD, what to wear, camel welfare, photography tips, packing list & booking advice.',
+    'Complete guide to camel trekking in Morocco. Compare Merzouga vs Zagora, sunset rides from 250 MAD, overnight desert camps, and multi-day Sahara treks. Includes packing lists, ethical operators, best seasons, and honest pricing.',
   keywords: [
-    'Morocco camel trek',
-    'camel ride Sahara Morocco',
-    'desert camel experience',
-    'Merzouga camel tour',
-    'camel trekking Morocco',
-    'Sahara camel ride',
-    'Morocco camel ride price',
-    'Erg Chebbi camel trek',
-    'Zagora camel tour',
-    'overnight camel trek Morocco',
-    'sunset camel ride Morocco',
-    'multi-day camel trek Sahara',
-    'camel ride Merzouga',
-    'Erg Chigaga camel trek',
-    'camel safari Morocco',
-    'Morocco dromedary trek',
-    'desert camel camping Morocco',
-    'best camel trek Morocco',
-    'camel ride Morocco 2026',
-    'ethical camel tour Morocco',
-    'camel trekking tips Morocco',
+    'camel trekking morocco',
+    'sahara camel ride',
+    'morocco desert camel tour',
+    'merzouga camel trek',
+    'zagora camel trek',
+    'sahara desert tour morocco',
+    'overnight camel trek morocco',
+    'morocco camel ride price',
+    'erg chebbi camel trek',
+    'erg chigaga camel trek',
+    'sunset camel ride morocco',
+    'multi-day camel trek sahara',
+    'morocco desert camp',
+    'luxury desert camp morocco',
+    'camel trekking merzouga',
+    'sahara desert experience',
+    'morocco camel tour cost',
+    'best camel trek morocco 2026',
+    'ethical camel trekking morocco',
+    'what to wear camel trek morocco',
   ],
   openGraph: {
-    title: 'Morocco Camel Trekking 2026 | Sahara Camel Ride Guide, Prices & Tips',
+    title: 'Camel Trekking Morocco 2026 | Sahara Desert Rides & Multi-Day Treks',
     description:
-      'Plan your Sahara camel trek. Compare sunset rides, overnight treks & multi-day expeditions in Merzouga, Zagora & M\'Hamid. Prices from 250 MAD with expert tips.',
+      'Plan your Sahara camel trek with real prices, route comparisons, and ethical operator tips. From 1-hour sunset rides to 5-day expeditions across Erg Chebbi and Erg Chigaga.',
     url: `${BASE_URL}/morocco-camel-trekking`,
     images: [
       {
-        url: `${BASE_URL}/images/hero-camel-caravan-sahara.webp`,
+        url: `${BASE_URL}/images/hero-camel-trekking.webp`,
         width: 1200,
         height: 630,
-        alt: 'Camel caravan crossing golden Sahara Desert dunes at sunset in Morocco',
+        alt: 'Camel caravan crossing golden sand dunes of Erg Chebbi at sunset near Merzouga, Morocco',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Morocco Camel Trekking 2026 | Sahara Camel Rides & Tours',
+    title: 'Camel Trekking Morocco 2026 | Sahara Rides & Treks Guide',
     description:
-      'Everything you need for a Morocco camel trek: sunset rides, overnight treks, Merzouga vs Zagora, prices from 250 MAD, what to wear, camel welfare & expert tips.',
-    images: [`${BASE_URL}/images/hero-camel-caravan-sahara.webp`],
+      'Sunset rides from 250 MAD, overnight camps from 600 MAD, multi-day treks from 2,500 MAD. Everything you need to plan a camel trek in Morocco.',
+    images: [`${BASE_URL}/images/hero-camel-trekking.webp`],
   },
   alternates: { canonical: `${BASE_URL}/morocco-camel-trekking` },
 };
@@ -99,15 +94,15 @@ export const metadata: Metadata = {
    JSON-LD STRUCTURED DATA
    ═══════════════════════════════════════════════════════════════ */
 
-const jsonLd = {
+const jsonLdTravelGuide = {
   '@context': 'https://schema.org',
   '@type': 'TravelGuide',
   '@id': `${BASE_URL}/morocco-camel-trekking`,
-  name: 'Morocco Camel Trekking 2026 | Sahara Camel Ride Guide, Prices & Tips',
+  name: 'Camel Trekking Morocco 2026 | Sahara Desert Rides & Multi-Day Treks',
   description:
-    'The ultimate guide to camel trekking in Morocco. Compare trek types, best locations, prices, what to wear, camel welfare, photography tips, and booking advice for the Sahara.',
+    'Complete guide to camel trekking in Morocco. Compare Merzouga vs Zagora, sunset rides, overnight camps, multi-day Sahara expeditions. Includes pricing, packing lists, and ethical considerations.',
   url: `${BASE_URL}/morocco-camel-trekking`,
-  image: `${BASE_URL}/images/hero-camel-caravan-sahara.webp`,
+  image: `${BASE_URL}/images/hero-camel-trekking.webp`,
   author: {
     '@type': 'Organization',
     name: 'CityGuide Morocco',
@@ -118,44 +113,76 @@ const jsonLd = {
     name: 'CityGuide Morocco',
     url: BASE_URL,
   },
-  datePublished: '2026-03-19',
-  dateModified: '2026-03-19',
+  datePublished: '2026-03-20',
+  dateModified: '2026-03-20',
   mainEntityOfPage: `${BASE_URL}/morocco-camel-trekking`,
   isPartOf: {
     '@type': 'WebSite',
     name: 'CityGuide Morocco',
     url: BASE_URL,
   },
-  about: [
-    { '@type': 'Place', name: 'Sahara Desert' },
-    { '@type': 'Place', name: 'Erg Chebbi' },
-    { '@type': 'Place', name: 'Merzouga' },
-    { '@type': 'Place', name: 'Zagora' },
-    { '@type': 'Place', name: 'M\'Hamid El Ghizlane' },
-    { '@type': 'Place', name: 'Erg Chigaga' },
-  ],
+  about: {
+    '@type': 'Country',
+    name: 'Morocco',
+  },
   breadcrumb: {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Morocco Camel Trekking', item: `${BASE_URL}/morocco-camel-trekking` },
+      { '@type': 'ListItem', position: 2, name: 'Camel Trekking Morocco', item: `${BASE_URL}/morocco-camel-trekking` },
     ],
   },
 };
 
-const faqJsonLd = {
+const faqItems = [
+  {
+    question: 'How much does a camel trek cost in Morocco?',
+    answer:
+      'Prices vary by trek type and season. A 1-hour sunset ride costs from 250 MAD per person. Overnight treks with desert camp stays run from 600 MAD to 2,500 MAD depending on camp quality (basic bivouac vs luxury). Multi-day treks (3-5 days) start from 2,500 MAD and reach 8,000+ MAD for premium guided expeditions. Seasonal pricing can change — peak season (October-April) commands higher rates.',
+  },
+  {
+    question: 'Is Merzouga or Zagora better for camel trekking?',
+    answer:
+      'Merzouga (Erg Chebbi) offers taller dunes reaching 150 meters, more dramatic scenery, and better-established luxury camps. Zagora (Erg Chigaga) has fewer tourists, a more remote atmosphere, and requires a longer journey to reach the big dunes. Choose Merzouga for accessibility and infrastructure, Zagora for solitude and an off-grid experience.',
+  },
+  {
+    question: 'What should I wear on a camel trek in Morocco?',
+    answer:
+      'Wear loose-fitting, breathable layers in light colors. Long pants protect your legs from chafing against the saddle. Closed-toe shoes or boots with ankle support work best. Bring a headscarf or shemagh to shield against sand and sun. Avoid shorts, flip-flops, and dark-colored clothing that absorbs heat. Temperatures drop sharply after sunset, so pack a warm fleece or jacket for overnight treks.',
+  },
+  {
+    question: 'Are camel treks in Morocco ethical?',
+    answer:
+      'Reputable operators follow strict animal welfare practices — camels carry reasonable loads, receive regular veterinary checkups, rest during the hottest hours, and graze freely when not working. Look for operators who limit riding time to 2-3 hours per session, rotate their camels, and keep animals in good body condition. Avoid any operator who whips camels, overloads them, or uses visibly malnourished animals.',
+  },
+  {
+    question: 'When is the best time to do a camel trek in Morocco?',
+    answer:
+      'October through April offers the most comfortable temperatures, with daytime highs of 20-28\u00B0C. March and October strike the best balance — warm days, cool nights, and clear skies. Avoid June through August when daytime temperatures exceed 45\u00B0C in the Sahara. December and January bring cold desert nights (sometimes below 5\u00B0C), so pack extra layers for winter treks.',
+  },
+  {
+    question: 'Can children do a camel trek in Morocco?',
+    answer:
+      'Yes. Most operators accept children aged 4 and older for short sunset rides. Children under 8 typically ride with an adult or a guide walks alongside holding the camel. Overnight treks work well for kids aged 8 and above. Multi-day treks are best suited for teens and adults due to the physical demands. Always confirm age policies with your specific operator before booking.',
+  },
+  {
+    question: 'Do I need to book a camel trek in advance?',
+    answer:
+      'During peak season (October-April), book at least 2-3 weeks ahead for overnight and multi-day treks, especially at luxury camps that fill quickly. Short sunset rides can often be arranged same-day through your hotel or riad in Merzouga. For budget and mid-range overnight camps, 3-5 days advance booking is usually sufficient outside of Christmas/New Year and Easter periods.',
+  },
+];
+
+const jsonLdFaq = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: [
-    { '@type': 'Question', name: 'How much does a camel trek cost in Morocco?', acceptedAnswer: { '@type': 'Answer', text: 'A sunset camel ride costs from 250 MAD per person. Overnight treks with desert camping start from 800 MAD. Multi-day expeditions cost from 2,000 MAD per person. Prices vary by season, location, group size, and camp quality.' } },
-    { '@type': 'Question', name: 'Is camel riding in Morocco ethical?', acceptedAnswer: { '@type': 'Answer', text: 'Reputable operators take camel welfare seriously. Dromedary camels are well-adapted to desert conditions. Ethical operators limit riding time, provide rest and water, maintain proper saddles, and enforce weight limits. Look for positive reviews mentioning animal care.' } },
-    { '@type': 'Question', name: 'What should I wear for a camel trek in Morocco?', acceptedAnswer: { '@type': 'Answer', text: 'Wear long lightweight trousers to prevent chafing. Closed-toe shoes or boots are recommended. Bring a headscarf or cheche for sun and sand protection. Layer clothing for temperature changes between hot days and cold desert nights.' } },
-    { '@type': 'Question', name: 'Where is the best place for a camel trek in Morocco?', acceptedAnswer: { '@type': 'Answer', text: 'Merzouga and Erg Chebbi offer the most popular trekking with 150-meter dunes and excellent infrastructure. M\'Hamid and Erg Chigaga provide a more remote experience. Zagora offers shorter treks ideal for families.' } },
-    { '@type': 'Question', name: 'How long is a typical camel ride in the Sahara?', acceptedAnswer: { '@type': 'Answer', text: 'A sunset ride lasts 1 to 1.5 hours. Overnight treks involve a 1 to 2-hour ride each way. Multi-day treks involve 3 to 5 hours of riding per day with rest stops. The pace is roughly 4 to 5 km per hour.' } },
-    { '@type': 'Question', name: 'Can beginners do a camel trek in Morocco?', acceptedAnswer: { '@type': 'Answer', text: 'Absolutely. No prior experience is needed. Camels are led by experienced handlers. You sit in the saddle and hold the handle. Guides help you mount and dismount safely. Children as young as 5 can ride with supervision.' } },
-    { '@type': 'Question', name: 'What is the best time of year for a camel trek in Morocco?', acceptedAnswer: { '@type': 'Answer', text: 'October to April offers the best conditions with warm days and cool nights. Avoid June to September when desert temperatures exceed 45 degrees Celsius.' } },
-    { '@type': 'Question', name: 'Do I need to tip my camel guide in Morocco?', acceptedAnswer: { '@type': 'Answer', text: 'Tipping is customary. For a sunset ride, from 50 to 100 MAD per group. For overnight treks, from 100 to 200 MAD per person. For multi-day treks, from 200 to 300 MAD per person per day. Tips go directly to your handler and guide.' } },
-  ],
+  mainEntity: faqItems.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
 };
 
 /* ═══════════════════════════════════════════════════════════════
@@ -164,646 +191,355 @@ const faqJsonLd = {
 
 const trekTypes = [
   {
-    title: 'Sunset Camel Ride',
-    subtitle: '1-2 hours through the dunes at golden hour',
+    name: 'Sunset / Sunrise Ride',
+    duration: '1-2 hours',
     icon: Sunrise,
-    bestFor: 'First-timers, families with children, travelers short on time',
-    overview:
-      'The most popular and accessible camel experience in Morocco. You mount your camel at the dune edge in late afternoon, ride through golden sand as the sun sinks toward the horizon, and watch the dunes transform from gold to orange to deep crimson. Includes a stop at the top of a high dune for panoramic photographs.',
-    duration: '1-1.5 hours',
-    priceRange: { group: 'From 250 MAD per person (group)', private: 'From 500 MAD per person (private)' },
-    highlights: ['Spectacular sunset over the Sahara dunes', 'Perfect introduction to camel riding', 'Great for photography with golden hour light', 'Suitable for all ages including young children'],
-    considerations: ['Shorter experience with less desert immersion', 'Popular time slot can feel crowded at peak season', 'No stargazing or sunrise included'],
-  },
-  {
-    title: 'Overnight Camel Trek',
-    subtitle: '1 night in a desert camp with camel ride to and from',
-    icon: Moon,
-    bestFor: 'Most travelers seeking the classic Sahara experience with camp, stargazing, and sunrise',
-    overview:
-      'The quintessential Morocco camel trek. Ride a camel for 1-2 hours through towering dunes to a desert camp, arriving in time for sunset. After a traditional Berber dinner with music around the campfire, sleep under the stars. Before dawn, climb a dune for the unforgettable Sahara sunrise, then ride back.',
-    duration: '18-20 hours (late afternoon to mid-morning)',
-    priceRange: { group: 'From 800 MAD per person (group, standard camp)', private: 'From 1,500 MAD per person (private, upgraded camp)' },
-    highlights: ['Full desert experience: sunset, stargazing, and sunrise', 'Night in a traditional Berber desert camp', 'Campfire dinner with traditional music', 'Milky Way stargazing with zero light pollution'],
-    considerations: ['Basic facilities at standard camps (shared toilets, limited electricity)', 'Desert nights can be very cold (0-8 degrees in winter)', 'Early wake-up for sunrise (around 5:30-6:00 AM)'],
-  },
-  {
-    title: 'Multi-Day Camel Expedition',
-    subtitle: '2-4 days of deep Sahara immersion by camelback',
-    icon: Route,
-    bestFor: 'Adventurers wanting an authentic nomadic experience far from tourist routes',
-    overview:
-      'The ultimate camel trekking experience. Spend multiple days traveling through the Sahara by camelback, following ancient caravan routes, sleeping in remote bivouac camps or under the open sky, and visiting nomadic Berber families. Each day involves 3-5 hours of riding with rest stops.',
-    duration: '2-4 days depending on route',
-    priceRange: { group: 'From 2,000 MAD per person (2-day trek)', private: 'From 4,500 MAD per person (3-day private trek)' },
-    highlights: ['Authentic nomadic desert experience', 'Multiple nights under the Sahara stars', 'Visit remote nomad families and hidden oases', 'Traditional meals cooked over open fire in the desert'],
-    considerations: ['Physically demanding: long hours in the saddle daily', 'Very basic facilities or none at all (wild camping)', 'Requires good fitness and comfort with rough conditions'],
-  },
-];
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: BEST LOCATIONS
-   ═══════════════════════════════════════════════════════════════ */
-
-const trekLocations = [
-  {
-    name: 'Merzouga & Erg Chebbi',
-    icon: Sun,
-    image: '/images/hero-camel-caravan-sahara.webp',
-    region: 'Southeastern Morocco',
-    duneHeight: 'Up to 150 meters',
-    accessFrom: 'Marrakech (560 km) or Fes (480 km)',
-    trekOptions: 'Sunset rides, overnight treks, multi-day expeditions',
-    bestFor: 'First-time riders, families, photographers',
+    price: 'From 250 MAD per person',
+    difficulty: 'Easy',
+    bestFor: 'First-timers, families, short trips',
     description:
-      'The most popular camel trekking destination in Morocco. Towering golden dunes of Erg Chebbi create a dramatic landscape. Dozens of operators offer everything from sunset rides to multi-day treks, with camps ranging from basic to ultra-luxury.',
-    highlights: ['Tallest dunes in Morocco reaching 150 meters', 'Widest range of trek options and camps', 'Paved road access to Merzouga village', 'Combine with Khamlia village and Gnawa music'],
+      'The most popular option. You ride a camel across the dunes for 45-90 minutes, stop at a viewpoint for sunset or sunrise photos, and return. Some operators include mint tea at a dune crest. No camping involved — you return to your hotel or riad the same evening.',
+    includes: ['Guided camel ride', 'Tea at dune viewpoint', 'Photo stops', 'Hotel pickup (Merzouga)'],
   },
   {
-    name: 'M\'Hamid & Erg Chigaga',
-    icon: Wind,
-    image: '/images/hero-desert.webp',
-    region: 'South-central Morocco, beyond the Draa Valley',
-    duneHeight: 'Up to 300 meters',
-    accessFrom: 'Marrakech (560 km via Zagora, then 4x4)',
-    trekOptions: 'Overnight treks, multi-day expeditions, deep desert circuits',
-    bestFor: 'Adventure seekers, couples wanting solitude',
-    description:
-      'The wilder, more remote alternative to Merzouga. Erg Chigaga stretches over 40 kilometers, reached only by 4x4 across open desert. The camel treks here feel truly exploratory, with far fewer tourists and genuine wilderness.',
-    highlights: ['Widest dune field in Morocco covering 40 km', 'Far fewer tourists for a private experience', 'Off-road 4x4 adventure to reach the start', 'Dramatic Draa Valley scenery en route'],
-  },
-  {
-    name: 'Zagora',
-    icon: Compass,
-    image: '/images/photo-camel-sunset.webp',
-    region: 'Draa-Tafilalet region, gateway to the desert',
-    duneHeight: 'Low dunes and rocky desert (hamada)',
-    accessFrom: 'Marrakech (360 km) or Ouarzazate (170 km)',
-    trekOptions: 'Sunset rides, overnight treks, 2-day circuits',
-    bestFor: 'Families, budget travelers, first-timers',
-    description:
-      'Famous for its "Timbuktu: 52 days by camel" sign, Zagora offers a more accessible desert experience. Lower dunes, rocky hamada landscape, and shorter, more affordable treks make it ideal for families.',
-    highlights: ['Closest desert to Marrakech (6-7 hours)', 'More affordable treks than Merzouga', 'Beautiful Draa Valley palm groves', 'Iconic "Timbuktu 52 days" sign'],
-  },
-];
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: WHAT TO EXPECT
-   ═══════════════════════════════════════════════════════════════ */
-
-const whatToExpect = [
-  {
-    title: 'Mounting & Dismounting',
-    icon: Footprints,
-    description: 'The camel kneels for you to mount. Swing your leg over and grip the front handle. When the camel stands, it lurches forward then backward: lean back as it rises on front legs, then forward as it straightens rear legs. Your guide holds the camel steady throughout.',
-  },
-  {
-    title: 'The Riding Experience',
-    icon: Route,
-    description: 'Camels walk at roughly 4-5 km/h with a distinctive swaying gait. Most people find the rhythm relaxing after 10-15 minutes. Your camel is led by a handler, so you do not steer. Hold the saddle handle loosely. Lean back going downhill, forward going uphill.',
-  },
-  {
-    title: 'Desert Camping',
+    name: 'Overnight Desert Camp Trek',
+    duration: '1 night / 2 days',
     icon: Tent,
-    description: 'Standard camps have Berber-style tents with mattresses, shared bathrooms, and communal dining. Upgraded camps offer private tents with beds. Luxury camps provide suites with en-suite bathrooms. All serve traditional Berber dinner and breakfast.',
+    price: 'From 600 MAD per person',
+    difficulty: 'Easy to Moderate',
+    bestFor: 'Couples, small groups, first desert camp experience',
+    description:
+      'Ride camels to a desert camp (1.5-2 hours), spend the night under the stars, and ride back after sunrise. Camps range from basic bivouacs with shared toilets to luxury tented suites with private bathrooms, hot showers, and king-size beds. Dinner and breakfast included at all levels.',
+    includes: ['Camel ride (both ways)', 'Desert camp stay', 'Dinner & breakfast', 'Berber drumming & music', 'Sandboarding (most camps)'],
   },
   {
-    title: 'Sunset & Sunrise',
-    icon: Sunrise,
-    description: 'Sunset is typically experienced during the camel ride to camp, with dunes glowing gold to crimson. For sunrise, your host wakes you before dawn to climb a dune and watch the sun illuminate the sand sea. Both are among the most photographed scenes in Morocco.',
+    name: 'Multi-Day Sahara Trek',
+    duration: '3-7 days',
+    icon: Compass,
+    price: 'From 2,500 MAD per person',
+    difficulty: 'Moderate to Challenging',
+    bestFor: 'Adventure seekers, photographers, experienced travelers',
+    description:
+      'A genuine desert expedition. You ride 4-6 hours daily across varied terrain — dune fields, rocky hammada, dried riverbeds, and oasis settlements. Nights rotate between wild bivouacs and established camps. A support vehicle carries heavy gear and water. Guides share Berber navigation techniques, desert ecology, and nomadic traditions.',
+    includes: ['All meals', 'Experienced Berber guide', 'Support vehicle', 'Camping equipment', 'Water supply', 'First aid kit'],
   },
   {
-    title: 'Stargazing',
-    icon: Moon,
-    description: 'The Sahara is one of the darkest places on earth. On a clear night, the Milky Way stretches overhead in vivid detail and shooting stars appear every few minutes. New moon nights offer the best stargazing, so check the moon phase before booking.',
+    name: 'Luxury Private Trek',
+    duration: '2-4 days',
+    icon: Star,
+    price: 'From 5,000 MAD per person',
+    difficulty: 'Easy to Moderate',
+    bestFor: 'Special occasions, honeymooners, luxury travelers',
+    description:
+      'A private camel trek with a dedicated guide, cook, and camp crew. You ride at your own pace with rest stops whenever needed. Nights are spent in exclusive private camps with carpeted tents, real beds, gourmet meals, and sometimes even solar-powered electricity. Routes are customized to your interests and fitness level.',
+    includes: ['Private guide & cook', 'Luxury camp setup', 'Gourmet meals & wine', 'Photography assistance', 'Custom route', '4x4 backup vehicle'],
   },
-  {
-    title: 'Photography Opportunities',
-    icon: Camera,
-    description: 'Camel treks offer extraordinary photographic moments: caravan silhouettes against sunset skies, golden dune ridgelines, star trails over camp, and portraits of Berber guides. Bring a wide-angle lens for landscapes and a fast lens for low-light camp scenes.',
-  },
-];
+] as const;
 
 /* ═══════════════════════════════════════════════════════════════
-   DATA: WHAT TO WEAR
+   DATA: MERZOUGA vs ZAGORA COMPARISON
    ═══════════════════════════════════════════════════════════════ */
 
-const whatToWear = [
-  {
-    item: 'Long lightweight trousers',
-    icon: CheckCircle,
-    reason: 'Essential to prevent thigh and leg chafing from the saddle. Cotton or linen works best. Never wear shorts for a camel ride.',
-  },
-  {
-    item: 'Headscarf or cheche turban',
-    icon: CheckCircle,
-    reason: 'Protects your head, neck, and face from sun and blowing sand. Available in Merzouga from 30 MAD. Your guide can show you how to tie it.',
-  },
-  {
-    item: 'Closed-toe shoes or boots',
-    icon: CheckCircle,
-    reason: 'For walking on sand and rocky terrain. Ankle boots provide the best support. Avoid sandals or flip-flops during the ride itself.',
-  },
-  {
-    item: 'Warm fleece or jacket',
-    icon: CheckCircle,
-    reason: 'Desert nights drop dramatically. Even in spring or autumn, temperatures can fall to 5-10 degrees. In winter, expect near-freezing.',
-  },
-  {
-    item: 'UV-protection sunglasses',
-    icon: CheckCircle,
-    reason: 'Sand reflects intense sunlight. Quality sunglasses with UV protection prevent eye strain and damage. Bring a strap to keep them secure.',
-  },
-  {
-    item: 'Light breathable layers',
-    icon: CheckCircle,
-    reason: 'Daytime temperatures range from 22-40 degrees depending on season. Layers let you adjust as temperatures shift rapidly at dusk and dawn.',
-  },
-];
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: CAMEL WELFARE
-   ═══════════════════════════════════════════════════════════════ */
-
-const camelWelfare = [
-  { title: 'Natural Desert Adaptation', icon: Heart, detail: 'Dromedary camels are superbly adapted to desert life. They go days without water, regulate body temperature, and walk easily on soft sand. Carrying riders is well within their capacity when managed responsibly.' },
-  { title: 'Ethical Operator Standards', icon: ShieldCheck, detail: 'Responsible operators limit riding to 1-2 hours maximum, provide rest stops on longer treks, ensure camels have adequate food and water, and maintain properly fitted saddles with padding.' },
-  { title: 'Weight Limits & Rest', icon: Users, detail: 'Ethical operators enforce weight limits (typically under 100 kg per rider) and rotate camels to prevent overwork. Camels rest during the hottest part of the day.' },
-  { title: 'Signs of a Good Operator', icon: Eye, detail: 'Healthy camels have clear eyes, smooth coats, no visible sores, and walk steadily. Good operators name their camels. Avoid any operator whose camels appear thin or have saddle sores.' },
-];
+const comparisonData = [
+  { feature: 'Dune Field', merzouga: 'Erg Chebbi — up to 150m tall', zagora: 'Erg Chigaga — up to 300m tall' },
+  { feature: 'Distance from Marrakech', merzouga: '9-10 hours by road', zagora: '6-7 hours (Zagora town), 9+ hours to Erg Chigaga' },
+  { feature: 'Tourist Volume', merzouga: 'Higher — well-established tourism hub', zagora: 'Lower — more remote, fewer visitors' },
+  { feature: 'Camp Quality Range', merzouga: 'Budget to ultra-luxury (100+ camps)', zagora: 'Budget to luxury (30+ camps)' },
+  { feature: 'Dune Accessibility', merzouga: '15-90 min camel ride to dunes', zagora: '2-3 hour drive from Zagora town to Erg Chigaga' },
+  { feature: 'Best For', merzouga: 'Short trips, first-timers, luxury seekers', zagora: 'Off-grid adventure, solitude, multi-day treks' },
+  { feature: 'Sunset Ride Price', merzouga: 'From 250 MAD', zagora: 'From 300 MAD' },
+  { feature: 'Overnight Camp Price', merzouga: 'From 600 MAD', zagora: 'From 800 MAD' },
+  { feature: 'Star Visibility', merzouga: 'Excellent (some light pollution from town)', zagora: 'Exceptional (zero light pollution at Erg Chigaga)' },
+  { feature: 'Nearby Attractions', merzouga: 'Khamlia village, fossil sites, Rissani souk', zagora: 'Draa Valley, Tamegroute pottery, Ait Isfoul oasis' },
+] as const;
 
 /* ═══════════════════════════════════════════════════════════════
    DATA: PACKING LIST
    ═══════════════════════════════════════════════════════════════ */
 
 const packingList = [
-  {
-    category: 'Riding Essentials',
-    icon: Route,
-    items: [
-      { item: 'Cheche or headscarf', why: 'Sand and sun protection. Available locally from 30 MAD if you forget' },
-      { item: 'Long lightweight trousers', why: 'Prevents saddle chafing. Cotton or linen, not jeans (too stiff)' },
-      { item: 'Closed-toe shoes', why: 'For walking on sand and rocky terrain near camp' },
-      { item: 'Small daypack', why: 'Carry water, camera, and sunscreen on the ride. Leave main bags in the vehicle' },
-      { item: 'Sunscreen SPF 50+', why: 'Desert sun is intense. Reapply every 2 hours even on cloudy days' },
-    ],
-  },
-  {
-    category: 'Overnight Essentials',
-    icon: Moon,
-    items: [
-      { item: 'Warm fleece or down jacket', why: 'Desert nights drop to 0-8 degrees in winter, 10-15 in shoulder season' },
-      { item: 'Warm socks and sleepwear', why: 'Camps provide blankets but extra layers ensure comfort' },
-      { item: 'Headlamp or flashlight', why: 'Budget camps have minimal lighting after dark' },
-      { item: 'Portable power bank', why: 'Limited or no electricity at most desert camps' },
-      { item: 'Wet wipes and toilet paper', why: 'Basic camp facilities may have limited supplies' },
-    ],
-  },
-  {
-    category: 'Photography & Extras',
-    icon: Camera,
-    items: [
-      { item: 'Camera with spare batteries', why: 'Cold pre-dawn temperatures drain batteries rapidly' },
-      { item: 'Ziplock bags', why: 'Protect phone, camera lenses, and electronics from pervasive fine sand' },
-      { item: 'Water bottle (1L minimum)', why: 'Stay hydrated: aim for 2-3 liters per day in the desert' },
-      { item: 'Lip balm with SPF', why: 'Extremely dry air cracks lips within hours without protection' },
-      { item: 'Earplugs and eye mask', why: 'Wind noise and early wake-up calls for sunrise can disrupt sleep' },
-    ],
-  },
-];
+  { category: 'Clothing', items: ['Loose long pants (avoid jeans — chafing)', 'Light long-sleeve shirts', 'Warm fleece or jacket (overnight)', 'Headscarf / shemagh / buff', 'Closed-toe shoes with ankle support', 'Warm socks for cold nights', 'Swimwear (some luxury camps have pools)'] },
+  { category: 'Protection', items: ['Sunscreen SPF 50+', 'UV-rated sunglasses with strap', 'Lip balm with SPF', 'Wide-brim hat or cap', 'Insect repellent (seasonal)'] },
+  { category: 'Gear', items: ['Headlamp or flashlight', 'Refillable water bottle (2L minimum)', 'Small daypack for essentials', 'Camera with dust-proof bag or cover', 'Power bank (no outlets in basic camps)', 'Zip-lock bags for electronics & documents'] },
+  { category: 'Health & Comfort', items: ['Personal medications', 'Hand sanitizer & wet wipes', 'Toilet paper (basic camps may lack it)', 'Eye drops (sand and dry air)', 'Blister plasters', 'Ear plugs (camp generators, donkeys)'] },
+] as const;
 
 /* ═══════════════════════════════════════════════════════════════
-   DATA: PHOTOGRAPHY TIPS
+   DATA: SEASONAL GUIDE
    ═══════════════════════════════════════════════════════════════ */
 
-const photoTips = [
-  { title: 'Golden Hour Magic', tip: 'The 30 minutes before sunset and after sunrise produce the best dune photography. Low-angle light creates deep shadows on dune ridges. Position yourself so the caravan is silhouetted against the sky.' },
-  { title: 'Protect Your Gear', tip: 'Sand is the enemy of camera equipment. Keep lenses capped when not shooting. Use a UV filter as a sacrificial front element. Store cameras in ziplock bags. Avoid changing lenses in the desert.' },
-  { title: 'Camel Caravan Shots', tip: 'Ask your guide to arrange the caravan in a line for the classic silhouette shot. Shoot from a high dune looking down, or from ground level for dramatic angles. Camel shadows on sand make stunning compositions.' },
-  { title: 'Night Sky Photography', tip: 'Bring a mini tripod or prop your camera on sand. Use a wide-angle lens at f/2.8 or wider, ISO 3200-6400, and 15-25 second exposures. The best Milky Way shots happen between midnight and 3 AM.' },
-  { title: 'Portrait Etiquette', tip: 'Always ask permission before photographing guides or camp staff. Most are happy to pose. A small tip of 20-50 MAD is appreciated. Candid moments around the campfire often produce more powerful portraits.' },
-];
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: BOOKING ADVICE
-   ═══════════════════════════════════════════════════════════════ */
-
-const bookingAdvice = [
+const seasons = [
   {
-    step: 1,
-    title: 'Choose Your Trek Type',
-    icon: Compass,
-    description:
-      'Decide between a sunset ride (1-2 hours), overnight trek (with camp), or multi-day expedition. First-timers and families should start with sunset or overnight. Experienced trekkers can tackle multi-day routes.',
-  },
-  {
-    step: 2,
-    title: 'Pick Your Location',
-    icon: MapPin,
-    description:
-      'Merzouga/Erg Chebbi is the most popular with the best infrastructure. Zagora is closer to Marrakech and more budget-friendly. M\'Hamid/Erg Chigaga offers the most remote and authentic experience.',
-  },
-  {
-    step: 3,
-    title: 'Check the Season',
-    icon: Calendar,
-    description:
-      'October to April is ideal. March-April and October-November offer the best balance of warmth and comfort. Avoid June-September when extreme heat makes riding unpleasant and potentially dangerous.',
-  },
-  {
-    step: 4,
-    title: 'Verify the Operator',
-    icon: ShieldCheck,
-    description:
-      'Book with operators who have verifiable reviews on Google, TripAdvisor, or GetYourGuide. Ask about camel welfare practices. Get written confirmation of what is included: meals, camp type, and equipment.',
-  },
-  {
-    step: 5,
-    title: 'Book in Advance',
-    icon: Globe,
-    description:
-      'During peak season (October-April), book at least 1-2 weeks ahead. Luxury camp treks can sell out a month in advance. Off-season, you can sometimes book 2-3 days ahead, but advance booking gets better rates.',
-  },
-];
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: FAQs
-   ═══════════════════════════════════════════════════════════════ */
-
-const faqs = [
-  {
-    question: 'How much does a camel trek cost in Morocco?',
-    answer:
-      'A short sunset camel ride costs from 250 MAD per person. Overnight camel treks with desert camping start from 800 MAD per person for a group tour with a standard camp, or from 1,500 MAD for a private trek with an upgraded camp. Multi-day camel expeditions of 2-3 days cost from 2,000 MAD per person. Prices vary by season, location, group size, and camp quality. Seasonal pricing can change, especially during peak months from October to April.',
-  },
-  {
-    question: 'Is camel riding in Morocco ethical?',
-    answer:
-      'Reputable operators in Morocco take camel welfare seriously. Dromedary camels are naturally adapted to desert conditions and have been used for Sahara transport for centuries. Ethical operators limit riding sessions to 1-2 hours, provide adequate rest and water, use properly padded saddles, enforce weight limits, and rotate animals to prevent overwork. Check reviews for mentions of animal care and avoid operators whose camels appear thin or have visible sores.',
-  },
-  {
-    question: 'What should I wear for a camel trek?',
-    answer:
-      'Wear long, lightweight trousers (cotton or linen, not tight jeans) to prevent saddle chafing. Closed-toe shoes or ankle boots provide the best comfort. Bring a headscarf or cheche turban for sun and sand protection. Layer your clothing for the dramatic temperature swings between hot days and cold desert nights. Avoid shorts, skirts, and sandals for the actual ride.',
-  },
-  {
-    question: 'Where is the best place for a camel trek in Morocco?',
-    answer:
-      'Merzouga and Erg Chebbi offer the most popular camel trekking with towering 150-meter dunes, extensive infrastructure, and options from budget to ultra-luxury. M\'Hamid and Erg Chigaga provide a more remote, authentic experience with 300-meter dunes and far fewer tourists. Zagora offers shorter, more affordable treks ideal for families and first-time visitors. Each location delivers a distinct Sahara experience.',
-  },
-  {
-    question: 'How long is a typical camel ride in the Sahara?',
-    answer:
-      'A sunset camel ride lasts 1 to 1.5 hours. Overnight treks involve a 1 to 2-hour ride to camp in the evening and a similar ride back after sunrise. Multi-day treks involve 3 to 5 hours of riding per day with rest stops. The pace is slow and rhythmic at roughly 4-5 kilometers per hour. Most people find the rhythm comfortable after 10-15 minutes of adjustment.',
-  },
-  {
-    question: 'Can beginners do a camel trek in Morocco?',
-    answer:
-      'Absolutely. No prior experience is needed. Camels are led by experienced handlers who control the pace. You sit in the saddle and hold the front handle. Guides help you mount and dismount safely. The trickiest moments are when the camel stands up and sits down, so grip firmly during those transitions. Children as young as 5 can ride with adult supervision. If you have back or mobility issues, most camps offer a 4x4 transfer alternative.',
-  },
-  {
-    question: 'What is the best time of year for a camel trek in Morocco?',
-    answer:
-      'October to April is the best window. March-April and October-November offer warm days (22-30 degrees Celsius) and cool nights perfect for camping. Winter treks (December-February) are comfortable by day but nights can drop near freezing, so bring extra warm layers. Avoid June to September when desert temperatures regularly exceed 45 degrees Celsius, making extended riding uncomfortable and potentially dangerous.',
-  },
-  {
-    question: 'Do I need to tip my camel guide in Morocco?',
-    answer:
-      'Tipping is customary and appreciated in Morocco. For a sunset ride, from 50 to 100 MAD per group is typical. For overnight treks, from 100 to 200 MAD per person for the camel handler is standard. For multi-day treks with a full support team, from 200 to 300 MAD per person per day is appropriate. Tips should go directly to your handler and guide rather than to the booking agency.',
-  },
-];
-
-/* ═══════════════════════════════════════════════════════════════
-   DATA: RELATED GUIDES
-   ═══════════════════════════════════════════════════════════════ */
-
-const relatedGuides = [
-  {
-    href: '/sahara',
+    name: 'Peak Season',
+    months: 'October - November',
     icon: Sun,
-    title: 'Complete Sahara Guide',
-    description: 'Everything about the Moroccan Sahara: geography, culture, Berber traditions, and how to experience this vast desert.',
+    temp: '22-30\u00B0C days / 10-15\u00B0C nights',
+    rating: 5,
+    notes: 'Ideal conditions. Warm days, cool nights, clear skies. Book 3-4 weeks ahead. Prices at their highest.',
   },
   {
-    href: '/morocco-desert-tour',
-    icon: Compass,
-    title: 'Morocco Desert Tour Guide',
-    description: 'Compare 1-night, 2-night, and 3-night Sahara tours with prices, itineraries, and camp options from budget to luxury.',
+    name: 'High Season',
+    months: 'March - April',
+    icon: Sun,
+    temp: '24-32\u00B0C days / 12-18\u00B0C nights',
+    rating: 5,
+    notes: 'Spring brings wildflowers to the desert edges. Occasional sandstorms in March. Easter is extremely busy.',
   },
   {
-    href: '/desert',
-    icon: Mountain,
-    title: 'Desert Destinations',
-    description: 'All of Morocco\'s desert regions explored: from the Sahara dunes to the rocky hamada and dramatic gorges.',
+    name: 'Shoulder Season',
+    months: 'December - February',
+    icon: Moon,
+    temp: '16-22\u00B0C days / 2-8\u00B0C nights',
+    rating: 4,
+    notes: 'Cold nights require serious layers. Daytime riding is pleasant. Fewer crowds. Christmas/New Year books out fast.',
   },
   {
-    href: '/desert-adventures',
-    icon: Sparkles,
-    title: 'Desert Adventures',
-    description: 'Beyond the camel trek: quad biking, sandboarding, 4x4 safaris, and adrenaline activities in the Sahara.',
+    name: 'Shoulder Season',
+    months: 'May & September',
+    icon: Thermometer,
+    temp: '32-40\u00B0C days / 18-24\u00B0C nights',
+    rating: 3,
+    notes: 'Getting hot. Early morning and sunset rides only. Some operators reduce schedules. Lower prices and fewer tourists.',
   },
   {
-    href: '/camping',
-    icon: Tent,
-    title: 'Camping in Morocco',
-    description: 'From Sahara desert camps to Atlas Mountain bivouacs: your complete guide to camping across Morocco.',
+    name: 'Off Season',
+    months: 'June - August',
+    icon: AlertTriangle,
+    temp: '40-50\u00B0C days / 25-32\u00B0C nights',
+    rating: 1,
+    notes: 'Dangerously hot. Most reputable operators suspend multi-day treks. Only ultra-short sunrise rides at dawn. Not recommended.',
   },
-];
+] as const;
 
 /* ═══════════════════════════════════════════════════════════════
-   PAGE COMPONENT
+   DATA: ETHICAL CHECKLIST
+   ═══════════════════════════════════════════════════════════════ */
+
+const ethicalChecklist = [
+  'Camels appear well-fed with good body condition — no visible ribs or hip bones',
+  'Saddle pads are thick and clean with no sores or raw patches on the animal',
+  'Camels rest in shade during midday heat and have constant access to water',
+  'Maximum 2-3 hours of riding per session with breaks',
+  'Operator rotates camels so no single animal works every day',
+  'Guide handles camels gently — no whipping, kicking, or yanking the lead rope',
+  'Camels graze freely when not working (not kept permanently tied or hobbled)',
+  'Operator can tell you each camel\'s name, age, and history',
+  'Group sizes stay small (6-8 riders maximum per guide)',
+  'Veterinary records available on request',
+] as const;
+
+/* ═══════════════════════════════════════════════════════════════
+   DATA: PRICE BREAKDOWN
+   ═══════════════════════════════════════════════════════════════ */
+
+const priceBreakdown = [
+  { trek: 'Sunset / Sunrise Ride (1-2 hrs)', budget: 'From 250 MAD', mid: 'From 400 MAD', luxury: 'From 700 MAD' },
+  { trek: 'Overnight — Basic Bivouac', budget: 'From 600 MAD', mid: '\u2014', luxury: '\u2014' },
+  { trek: 'Overnight — Standard Camp', budget: '\u2014', mid: 'From 1,200 MAD', luxury: '\u2014' },
+  { trek: 'Overnight — Luxury Camp', budget: '\u2014', mid: '\u2014', luxury: 'From 2,500 MAD' },
+  { trek: '3-Day Trek', budget: 'From 2,500 MAD', mid: 'From 4,000 MAD', luxury: 'From 7,000 MAD' },
+  { trek: '5-Day Expedition', budget: 'From 4,000 MAD', mid: 'From 6,500 MAD', luxury: 'From 12,000 MAD' },
+  { trek: 'Private Sunset Ride (couple)', budget: '\u2014', mid: 'From 800 MAD', luxury: 'From 1,500 MAD' },
+] as const;
+
+/* ═══════════════════════════════════════════════════════════════
+   COMPONENT
    ═══════════════════════════════════════════════════════════════ */
 
 export default function MoroccoCamelTrekkingPage() {
   return (
     <>
+      {/* JSON-LD */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdTravelGuide) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
       />
 
       {/* ── Hero Section ── */}
-      <section className="relative py-20 md:py-28 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(/images/hero-camel-caravan-sahara.webp)',
-          }}
-        />
-        <div className="absolute inset-0 hero-overlay" />
-        <div className="container-morocco relative z-10">
-          <nav className="flex items-center gap-2 text-sm text-white/60 mb-8" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-white transition-colors">
-              <Home className="w-3.5 h-3.5" />
-            </Link>
-            <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-white">Morocco Camel Trekking</span>
-          </nav>
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm text-white/90 text-sm mb-6">
-            <Route className="w-4 h-4" />
-            Sahara Camel Rides &amp; Desert Treks
-          </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-display)] font-bold text-white mb-4">
-            Morocco Camel Trekking:
-            <br className="hidden md:block" /> The Complete Sahara Guide 2026
+      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="/images/hero-camel-trekking.webp"
+            alt="Camel caravan crossing golden Erg Chebbi dunes at sunset near Merzouga, Morocco"
+            className="w-full h-full object-cover"
+            loading="eager"
+          />
+          <div className="hero-overlay" />
+        </div>
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 font-[family-name:var(--font-display)]">
+            Camel Trekking in Morocco
           </h1>
-          <p className="text-xl text-white/80 max-w-2xl">
-            From sunset rides at 250 MAD to multi-day Sahara expeditions. Compare Merzouga, Zagora,
-            and M&apos;Hamid, choose your trek type, and plan the camel adventure of a lifetime.
+          <p className="text-lg md:text-xl text-white/90 mb-8 font-[family-name:var(--font-heading)] max-w-3xl mx-auto">
+            Sahara Desert Rides &amp; Multi-Day Treks &mdash; From 1-Hour Sunset Rides to 5-Day Expeditions Across Erg Chebbi and Erg Chigaga
           </p>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <a href="#trek-types" className="bg-[var(--color-accent)] hover:bg-[#8B4526] text-white px-6 py-3 rounded-lg font-semibold transition-all">
+              Explore Trek Types
+            </a>
+            <a href="#prices" className="border-2 border-white text-white hover:bg-white/10 px-6 py-3 rounded-lg font-semibold transition-all">
+              View Prices
+            </a>
+          </div>
         </div>
       </section>
 
-      <div className="zellige-border" />
+      {/* ── Breadcrumbs ── */}
+      <nav className="bg-[#FAF8F5] border-b border-gray-200" aria-label="Breadcrumb">
+        <div className="container-morocco py-3">
+          <ol className="flex items-center gap-2 text-sm text-gray-600">
+            <li className="flex items-center gap-1">
+              <Home className="w-4 h-4" />
+              <Link href="/" className="hover:text-[var(--color-accent)]">Home</Link>
+            </li>
+            <ChevronRight className="w-4 h-4 text-gray-400" />
+            <li className="text-[var(--color-accent)] font-medium">Camel Trekking Morocco</li>
+          </ol>
+        </div>
+      </nav>
 
       {/* ── Introduction ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco max-w-4xl">
-          <div className="prose-moroccan">
-            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
-              Why a Camel Trek in Morocco Is Unforgettable
+      <section className="bg-[#FAF8F5] py-16">
+        <div className="container-morocco">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 font-[family-name:var(--font-display)]">
+              Why Morocco&apos;s Sahara Camel Treks Draw 300,000+ Riders Each Year
             </h2>
-            <div className="space-y-4 text-lg text-[var(--text-secondary)] leading-relaxed">
+            <div className="prose prose-lg text-gray-700 space-y-4 font-[family-name:var(--font-heading)]">
               <p>
-                A camel trek through the Sahara Desert is one of the most iconic travel experiences
-                on earth. The rhythmic swaying of the dromedary, the vast silence broken only by the
-                soft crunch of sand underfoot, and the ever-changing play of light across towering
-                dunes create a journey that transcends ordinary travel. For centuries, camel caravans
-                crossed this very landscape carrying salt, gold, and spices between sub-Saharan
-                Africa and the Mediterranean. Today, you can follow in those ancient footsteps and
-                experience a way of life that has endured for millennia.
+                Riding a camel across the Sahara ranks among Morocco&apos;s most sought-after experiences.
+                The country&apos;s two major dune fields &mdash; Erg Chebbi near Merzouga and Erg Chigaga beyond Zagora &mdash;
+                offer distinctly different landscapes, from towering 150-meter sand mountains to vast, flat
+                desert plains stretching to the Algerian border.
               </p>
               <p>
-                Morocco offers the most accessible camel trekking in the Sahara. Whether you want a
-                short sunset ride through the golden dunes of Erg Chebbi, an overnight trek to a
-                desert camp under a sky full of stars, or a multi-day expedition into the remote
-                wilderness of Erg Chigaga, there is a camel experience for every traveler, budget,
-                and fitness level.
+                The camel trek industry has matured significantly since the early 2000s. Today, you can choose
+                between a quick sunset ride lasting under two hours, an overnight stay at a desert camp (ranging
+                from basic Berber bivouacs to air-conditioned luxury tents), or a multi-day expedition that
+                traces ancient trans-Saharan trade routes.
               </p>
               <p>
-                This guide covers every aspect of planning a Morocco camel trek: trek types and
-                durations, the three best locations, what to expect in the saddle, what to wear, camel
-                welfare and ethics, desert camping, photography tips, a complete packing list, booking
-                advice, and answers to the most common questions. Whether your budget starts at 250 MAD
-                for a sunset ride or stretches to a multi-day private expedition, the Sahara is waiting.
+                This guide breaks down every option with real prices, honest comparisons between Merzouga and
+                Zagora, practical packing lists, and a framework for identifying ethical operators who treat
+                their animals well. All prices reflect 2026 rates, though seasonal pricing can change.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Quick Stats ── */}
-      <section className="py-12 bg-[var(--surface-muted)]">
+      {/* ── Trek Types ── */}
+      <section id="trek-types" className="bg-white py-16">
         <div className="container-morocco">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="text-center">
-              <DollarSign className="w-8 h-8 text-[var(--color-accent)] mx-auto mb-2" />
-              <div className="text-2xl font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)]">250 MAD</div>
-              <div className="text-sm text-[var(--text-muted)]">Starting price (sunset ride)</div>
-            </div>
-            <div className="text-center">
-              <Clock className="w-8 h-8 text-[var(--color-accent)] mx-auto mb-2" />
-              <div className="text-2xl font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)]">1-4 Days</div>
-              <div className="text-sm text-[var(--text-muted)]">Trek duration options</div>
-            </div>
-            <div className="text-center">
-              <Mountain className="w-8 h-8 text-[var(--color-accent)] mx-auto mb-2" />
-              <div className="text-2xl font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)]">150 m</div>
-              <div className="text-sm text-[var(--text-muted)]">Tallest dunes (Erg Chebbi)</div>
-            </div>
-            <div className="text-center">
-              <Star className="w-8 h-8 text-[var(--color-accent)] mx-auto mb-2" />
-              <div className="text-2xl font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)]">Oct-Apr</div>
-              <div className="text-sm text-[var(--text-muted)]">Best months for trekking</div>
-            </div>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-[family-name:var(--font-display)]">
+              Types of Camel Treks in Morocco
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto font-[family-name:var(--font-heading)]">
+              Four main formats exist, each suited to different budgets, time constraints, and adventure levels.
+            </p>
           </div>
-        </div>
-      </section>
 
-      {/* ── Types of Camel Treks ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Route className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Types of Camel Treks in Morocco
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-4">
-            From a quick sunset ride to a multi-day Sahara expedition, choose the camel experience that matches your time, budget, and sense of adventure.
-          </p>
-          <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
-            <Info className="w-3.5 h-3.5 inline mr-1" />
-            All prices are starting prices per person. Seasonal pricing applies during peak months (October-April).
-          </p>
-
-          <div className="space-y-12">
-            {trekTypes.map((trek) => {
-              const TrekIcon = trek.icon;
-              return (
-                <div key={trek.title} className="card-moroccan overflow-hidden">
-                  <div className="bg-[var(--color-accent)] p-6 text-white">
-                    <div className="flex items-center gap-3 mb-2">
-                      <TrekIcon className="w-6 h-6" />
-                      <h3 className="text-2xl font-[family-name:var(--font-display)] font-bold">{trek.title}</h3>
-                    </div>
-                    <p className="text-white/80 text-sm">{trek.subtitle}</p>
-                    <p className="text-white/90 mt-1 font-medium">{trek.bestFor}</p>
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {trekTypes.map((trek) => (
+              <div key={trek.name} className="card-moroccan p-6 hover:shadow-lg transition-shadow">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="p-3 rounded-xl bg-[var(--color-accent)]/10">
+                    <trek.icon className="w-7 h-7 text-[var(--color-accent)]" />
                   </div>
-
-                  <div className="p-6">
-                    <p className="text-[var(--text-secondary)] mb-6">{trek.overview}</p>
-
-                    <div className="flex items-center gap-2 text-sm text-[var(--text-muted)] mb-6">
-                      <Clock className="w-4 h-4 text-[var(--color-accent)]" />
-                      <strong>Duration:</strong> {trek.duration}
-                    </div>
-
-                    {/* Pricing */}
-                    <h4 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4">
-                      <DollarSign className="w-5 h-5 inline text-[var(--color-accent)] mr-1" />
-                      Pricing
-                    </h4>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                      <div className="bg-[var(--surface-muted)] p-4 rounded-lg text-center">
-                        <Users className="w-5 h-5 text-[var(--color-accent)] mx-auto mb-2" />
-                        <div className="text-xs text-[var(--text-muted)] mb-1">Group</div>
-                        <div className="text-sm font-bold text-[var(--color-accent)]">{trek.priceRange.group}</div>
-                      </div>
-                      <div className="bg-[var(--surface-muted)] p-4 rounded-lg text-center">
-                        <Sparkles className="w-5 h-5 text-[var(--color-gold)] mx-auto mb-2" />
-                        <div className="text-xs text-[var(--text-muted)] mb-1">Private</div>
-                        <div className="text-sm font-bold text-[var(--color-gold)]">{trek.priceRange.private}</div>
-                      </div>
-                    </div>
-
-                    {/* Highlights & Considerations */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
-                        <h4 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">Highlights</h4>
-                        <div className="space-y-2">
-                          {trek.highlights.map((item, i) => (
-                            <div key={i} className="flex items-start gap-2 text-sm text-[var(--text-secondary)]">
-                              <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 shrink-0" />
-                              {item}
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                      <div>
-                        <h4 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">Things to Consider</h4>
-                        <div className="space-y-2">
-                          {trek.considerations.map((item, i) => (
-                            <div key={i} className="flex items-start gap-2 text-sm text-[var(--text-secondary)]">
-                              <AlertTriangle className="w-4 h-4 text-amber-500 mt-0.5 shrink-0" />
-                              {item}
-                            </div>
-                          ))}
-                        </div>
-                      </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 font-[family-name:var(--font-display)]">
+                      {trek.name}
+                    </h3>
+                    <div className="flex flex-wrap gap-3 mt-1 text-sm text-gray-600">
+                      <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> {trek.duration}</span>
+                      <span className="flex items-center gap-1"><DollarSign className="w-4 h-4" /> {trek.price}</span>
                     </div>
                   </div>
                 </div>
-              );
-            })}
+                <p className="text-gray-700 mb-4 font-[family-name:var(--font-heading)]">{trek.description}</p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="text-xs px-3 py-1 bg-amber-50 text-amber-800 rounded-full font-medium">
+                    {trek.difficulty}
+                  </span>
+                  <span className="text-xs px-3 py-1 bg-blue-50 text-blue-800 rounded-full font-medium">
+                    {trek.bestFor}
+                  </span>
+                </div>
+                <div className="border-t border-gray-100 pt-4">
+                  <p className="text-sm font-semibold text-gray-800 mb-2">Typically Includes:</p>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1">
+                    {trek.includes.map((item) => (
+                      <li key={item} className="flex items-center gap-2 text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ── Best Locations for Camel Trekking ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+      {/* ── What to Expect ── */}
+      <section className="bg-[#FAF8F5] py-16">
         <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <MapPin className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Best Locations for Camel Trekking
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Morocco has three outstanding camel trekking destinations. Each offers a distinct landscape, atmosphere, and level of adventure.
-          </p>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {trekLocations.map((location) => {
-              const LocationIcon = location.icon;
-              return (
-                <div key={location.name} className="card-moroccan overflow-hidden">
-                  <div className="relative h-52">
-                    <img
-                      src={location.image}
-                      alt={`Camel trekking at ${location.name} in the Sahara Desert, Morocco`}
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-                    <div className="absolute bottom-4 left-4">
-                      <h3 className="text-xl font-[family-name:var(--font-display)] font-bold text-white flex items-center gap-2">
-                        <LocationIcon className="w-5 h-5" />
-                        {location.name}
-                      </h3>
-                      <p className="text-xs text-white/70 mt-1">{location.region}</p>
-                    </div>
-                  </div>
-
-                  <div className="p-6">
-                    <div className="grid grid-cols-2 gap-3 mb-4">
-                      <div className="bg-[var(--surface-muted)] p-2 rounded-lg">
-                        <div className="text-xs text-[var(--text-muted)]">Dune Height</div>
-                        <div className="text-xs font-bold text-[var(--text-primary)]">{location.duneHeight}</div>
-                      </div>
-                      <div className="bg-[var(--surface-muted)] p-2 rounded-lg">
-                        <div className="text-xs text-[var(--text-muted)]">Best For</div>
-                        <div className="text-xs font-bold text-[var(--text-primary)]">{location.bestFor}</div>
-                      </div>
-                    </div>
-
-                    <p className="text-sm text-[var(--text-secondary)] mb-4">{location.description}</p>
-
-                    <div className="space-y-2 mb-4">
-                      <div className="flex items-start gap-2 text-xs text-[var(--text-secondary)]">
-                        <Route className="w-3 h-3 text-[var(--color-accent)] mt-0.5 shrink-0" />
-                        <span><strong>Access:</strong> {location.accessFrom}</span>
-                      </div>
-                      <div className="flex items-start gap-2 text-xs text-[var(--text-secondary)]">
-                        <Compass className="w-3 h-3 text-[var(--color-accent)] mt-0.5 shrink-0" />
-                        <span><strong>Trek options:</strong> {location.trekOptions}</span>
-                      </div>
-                    </div>
-
-                    <h4 className="text-xs font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                      <CheckCircle className="w-3 h-3 inline text-green-600 mr-1" />
-                      Highlights
-                    </h4>
-                    <div className="space-y-1.5">
-                      {location.highlights.map((item, i) => (
-                        <div key={i} className="flex items-start gap-2 text-xs text-[var(--text-secondary)]">
-                          <CheckCircle className="w-3 h-3 text-green-600 mt-0.5 shrink-0" />
-                          {item}
-                        </div>
-                      ))}
-                    </div>
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 font-[family-name:var(--font-display)]">
+              What to Expect on a Sahara Camel Trek
+            </h2>
+            <div className="space-y-6">
+              <div className="card-moroccan p-6">
+                <div className="flex items-start gap-4">
+                  <Footprints className="w-6 h-6 text-[var(--color-accent)] flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-2 font-[family-name:var(--font-display)]">The Mount &amp; Dismount</h3>
+                    <p className="text-gray-700 font-[family-name:var(--font-heading)]">
+                      Camels kneel for you to climb on. When they stand, they lurch forward then backward &mdash; hold the front handle firmly and lean back. Dismounting reverses the process. Your guide will coach you through the first time. It feels unstable for about 30 seconds, then your body adjusts.
+                    </p>
                   </div>
                 </div>
-              );
-            })}
-          </div>
+              </div>
 
-          {/* Recommendation box */}
-          <div className="max-w-3xl mx-auto mt-10">
-            <div className="card-moroccan p-6">
-              <div className="flex items-start gap-3">
-                <Info className="w-6 h-6 text-[var(--color-gold)] mt-0.5 shrink-0" />
-                <div>
-                  <h4 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                    Which Location Should You Choose?
-                  </h4>
-                  <p className="text-sm text-[var(--text-secondary)]">
-                    For your first camel trek, choose <strong>Merzouga and Erg Chebbi</strong>. The towering dunes
-                    are spectacular, the range of operators ensures good value, and the infrastructure means reliable
-                    quality. If you want a shorter, more budget-friendly option closer to Marrakech, <strong>Zagora</strong> delivers
-                    a wonderful introduction. Save <strong>Erg Chigaga</strong> for when you want a wilder, more remote
-                    experience with complete solitude among the dunes.
-                  </p>
+              <div className="card-moroccan p-6">
+                <div className="flex items-start gap-4">
+                  <Eye className="w-6 h-6 text-[var(--color-accent)] flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-2 font-[family-name:var(--font-display)]">The Ride Itself</h3>
+                    <p className="text-gray-700 font-[family-name:var(--font-heading)]">
+                      Camel riding uses a side-to-side swaying motion, different from horseback riding. After 20-30 minutes, most people find a rhythm. Inner thigh muscles do the most work. If you feel sore, ask the guide to stop &mdash; walking alongside the camel on flat stretches is common and welcomed.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card-moroccan p-6">
+                <div className="flex items-start gap-4">
+                  <Moon className="w-6 h-6 text-[var(--color-accent)] flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-2 font-[family-name:var(--font-display)]">Desert Camp Nights</h3>
+                    <p className="text-gray-700 font-[family-name:var(--font-heading)]">
+                      Evening camps follow a pattern: arrive, settle into your tent, watch sunset from the dunes, eat a tagine dinner around a fire, listen to Berber drumming and Gnawa music. After the fire dies, the Saharan night sky reveals itself &mdash; on moonless nights, you can see the Milky Way band stretching horizon to horizon. Most people sleep on mattresses outside their tent.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card-moroccan p-6">
+                <div className="flex items-start gap-4">
+                  <Camera className="w-6 h-6 text-[var(--color-accent)] flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-2 font-[family-name:var(--font-display)]">Photography Conditions</h3>
+                    <p className="text-gray-700 font-[family-name:var(--font-heading)]">
+                      Golden hour at Erg Chebbi lasts 40-50 minutes. The dunes shift from orange to deep red to purple. Sand gets everywhere &mdash; bring a dust-proof bag or use zip-lock bags for camera gear. Phone cameras work fine for most shots, but a wide-angle lens captures the dune scale that phone cameras compress. Your guide will know the best dune crests for caravan silhouette shots.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -811,245 +547,353 @@ export default function MoroccoCamelTrekkingPage() {
         </div>
       </section>
 
-      {/* ── What to Expect on a Camel Trek ── */}
-      <section className="py-16 md:py-20">
+      {/* ── Merzouga vs Zagora ── */}
+      <section id="comparison" className="bg-white py-16">
         <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Sunrise className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            What to Expect on a Camel Trek
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            From mounting your camel for the first time to sleeping under the stars, here is everything you will experience on a Sahara camel trek.
-          </p>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-[family-name:var(--font-display)]">
+              Merzouga vs Zagora: Which Sahara Trek?
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto font-[family-name:var(--font-heading)]">
+              Morocco has two primary desert trekking regions. Here is a side-by-side breakdown.
+            </p>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {whatToExpect.map((item) => {
-              const ItemIcon = item.icon;
-              return (
-                <div key={item.title} className="card-moroccan p-6">
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="w-12 h-12 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                      <ItemIcon className="w-6 h-6 text-[var(--color-accent)]" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                        {item.title}
-                      </h3>
-                    </div>
-                  </div>
-                  <p className="text-sm text-[var(--text-secondary)]">{item.description}</p>
-                </div>
-              );
-            })}
+          <div className="max-w-5xl mx-auto overflow-x-auto">
+            <table className="w-full border-collapse">
+              <thead>
+                <tr className="bg-[var(--color-accent)] text-white">
+                  <th className="p-4 text-left font-semibold font-[family-name:var(--font-heading)]">Feature</th>
+                  <th className="p-4 text-left font-semibold font-[family-name:var(--font-heading)]">Merzouga (Erg Chebbi)</th>
+                  <th className="p-4 text-left font-semibold font-[family-name:var(--font-heading)]">Zagora (Erg Chigaga)</th>
+                </tr>
+              </thead>
+              <tbody>
+                {comparisonData.map((row, idx) => (
+                  <tr key={row.feature} className={idx % 2 === 0 ? 'bg-[#FAF8F5]' : 'bg-white'}>
+                    <td className="p-4 font-semibold text-gray-900 text-sm">{row.feature}</td>
+                    <td className="p-4 text-gray-700 text-sm">{row.merzouga}</td>
+                    <td className="p-4 text-gray-700 text-sm">{row.zagora}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 mt-12 max-w-5xl mx-auto">
+            <div className="card-moroccan p-6 border-t-4 border-[var(--color-accent)]">
+              <h3 className="text-xl font-bold text-gray-900 mb-3 font-[family-name:var(--font-display)]">
+                <MapPin className="w-5 h-5 inline mr-2 text-[var(--color-accent)]" />
+                Choose Merzouga If...
+              </h3>
+              <ul className="space-y-2 text-gray-700 font-[family-name:var(--font-heading)]">
+                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" /> You have limited time (2-3 days for the desert portion)</li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" /> You want a luxury desert camp with real amenities</li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" /> You prefer well-maintained roads and easy access</li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" /> You want tall, photogenic dunes close to accommodation</li>
+              </ul>
+            </div>
+            <div className="card-moroccan p-6 border-t-4 border-[var(--color-gold)]">
+              <h3 className="text-xl font-bold text-gray-900 mb-3 font-[family-name:var(--font-display)]">
+                <Compass className="w-5 h-5 inline mr-2 text-[var(--color-gold)]" />
+                Choose Zagora If...
+              </h3>
+              <ul className="space-y-2 text-gray-700 font-[family-name:var(--font-heading)]">
+                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" /> You want a remote, crowd-free desert experience</li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" /> Stargazing is a priority (zero light pollution at Chigaga)</li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" /> You have 4+ days to dedicate to the desert</li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" /> You enjoy rugged, off-road adventure over comfort</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
       {/* ── What to Wear ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+      <section className="bg-[#FAF8F5] py-16">
         <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Backpack className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            What to Wear for a Camel Trek
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            The right clothing makes the difference between comfort and misery on a camel trek. Here is what experienced riders recommend.
-          </p>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-[family-name:var(--font-display)]">
+              What to Wear on a Camel Trek
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto font-[family-name:var(--font-heading)]">
+              Desert conditions shift dramatically between day and night. Dress in layers you can peel off or add back quickly.
+            </p>
+          </div>
 
-          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-            {whatToWear.map((entry) => (
-              <div key={entry.item} className="card-moroccan p-5">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[var(--color-gold)] mt-0.5 shrink-0" />
-                  <div>
-                    <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
-                      {entry.item}
-                    </h3>
-                    <p className="text-xs text-[var(--text-secondary)]">{entry.reason}</p>
-                  </div>
-                </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div className="card-moroccan p-5">
+              <div className="flex items-center gap-3 mb-3">
+                <Sun className="w-6 h-6 text-amber-500" />
+                <h3 className="font-bold text-gray-900 font-[family-name:var(--font-display)]">Daytime (Hot)</h3>
               </div>
-            ))}
+              <ul className="space-y-2 text-sm text-gray-700 font-[family-name:var(--font-heading)]">
+                <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" /> Light-colored, loose cotton or linen pants</li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" /> Long-sleeve breathable shirt (sun protection)</li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" /> Headscarf wrapped as turban (guides will help)</li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" /> Closed-toe shoes &mdash; not sandals</li>
+              </ul>
+            </div>
+            <div className="card-moroccan p-5">
+              <div className="flex items-center gap-3 mb-3">
+                <Moon className="w-6 h-6 text-indigo-500" />
+                <h3 className="font-bold text-gray-900 font-[family-name:var(--font-display)]">Nighttime (Cold)</h3>
+              </div>
+              <ul className="space-y-2 text-sm text-gray-700 font-[family-name:var(--font-heading)]">
+                <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" /> Warm fleece mid-layer or down jacket</li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" /> Thick wool or thermal socks</li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" /> Beanie or warm hat (Dec-Feb especially)</li>
+                <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" /> Thermal base layer for winter treks</li>
+              </ul>
+            </div>
+            <div className="card-moroccan p-5">
+              <div className="flex items-center gap-3 mb-3">
+                <AlertTriangle className="w-6 h-6 text-red-500" />
+                <h3 className="font-bold text-gray-900 font-[family-name:var(--font-display)]">Avoid Wearing</h3>
+              </div>
+              <ul className="space-y-2 text-sm text-gray-700 font-[family-name:var(--font-heading)]">
+                <li className="flex items-start gap-2"><Info className="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" /> Jeans &mdash; stiff fabric causes saddle chafing</li>
+                <li className="flex items-start gap-2"><Info className="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" /> Flip-flops or open-toe sandals &mdash; hot sand burns</li>
+                <li className="flex items-start gap-2"><Info className="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" /> Dark or black clothing &mdash; absorbs desert heat</li>
+                <li className="flex items-start gap-2"><Info className="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" /> Shorts &mdash; inner thigh rubs raw against saddle leather</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ── Camel Welfare & Ethics ── */}
-      <section className="py-16 md:py-20">
+      {/* ── Ethical Considerations ── */}
+      <section className="bg-white py-16">
         <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Heart className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Camel Welfare &amp; Ethical Trekking
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Responsible tourism means caring about the animals that make the experience possible. Here is what you should know about camel welfare in Morocco.
-          </p>
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-[family-name:var(--font-display)]">
+                Ethical Camel Trekking: What to Look For
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto font-[family-name:var(--font-heading)]">
+                Animal welfare varies between operators. Use this checklist to evaluate any trek company before booking.
+              </p>
+            </div>
 
-          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-            {camelWelfare.map((item) => {
-              const WelfareIcon = item.icon;
-              return (
-                <div key={item.title} className="card-moroccan p-6">
-                  <div className="flex items-start gap-4 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                      <WelfareIcon className="w-5 h-5 text-[var(--color-accent)]" />
+            <div className="card-moroccan p-8 border-l-4 border-green-600">
+              <div className="flex items-center gap-3 mb-6">
+                <Heart className="w-7 h-7 text-green-600" />
+                <h3 className="text-xl font-bold text-gray-900 font-[family-name:var(--font-display)]">Green Flags &mdash; Signs of a Responsible Operator</h3>
+              </div>
+              <ul className="space-y-3">
+                {ethicalChecklist.map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3 text-gray-700 font-[family-name:var(--font-heading)]">
+                    <ShieldCheck className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="card-moroccan p-6 mt-6 border-l-4 border-red-500 bg-red-50/50">
+              <div className="flex items-center gap-3 mb-4">
+                <AlertTriangle className="w-6 h-6 text-red-600" />
+                <h3 className="text-lg font-bold text-gray-900 font-[family-name:var(--font-display)]">Red Flags &mdash; Walk Away</h3>
+              </div>
+              <ul className="space-y-2 text-gray-700 font-[family-name:var(--font-heading)]">
+                <li className="flex items-start gap-2"><Info className="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" /> Camels have visible wounds, sores, or exposed bones</li>
+                <li className="flex items-start gap-2"><Info className="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" /> Guide uses a stick, whip, or metal rod on the animals</li>
+                <li className="flex items-start gap-2"><Info className="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" /> Camels carry more than one adult rider at a time</li>
+                <li className="flex items-start gap-2"><Info className="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" /> No shade, water, or rest breaks provided during hot hours</li>
+                <li className="flex items-start gap-2"><Info className="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" /> Operator refuses to answer welfare questions or gets defensive</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Best Season ── */}
+      <section id="seasons" className="bg-[#FAF8F5] py-16">
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-[family-name:var(--font-display)]">
+              Best Time for Camel Trekking in Morocco
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto font-[family-name:var(--font-heading)]">
+              The Sahara&apos;s extreme temperatures make timing critical. Here is a month-by-month breakdown.
+            </p>
+          </div>
+
+          <div className="grid gap-6 max-w-4xl mx-auto">
+            {seasons.map((season, idx) => (
+              <div key={idx} className="card-moroccan p-6">
+                <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+                  <div className="flex items-center gap-3 min-w-[200px]">
+                    <season.icon className="w-6 h-6 text-[var(--color-accent)]" />
+                    <div>
+                      <h3 className="font-bold text-gray-900 font-[family-name:var(--font-display)]">{season.name}</h3>
+                      <p className="text-sm text-gray-500">{season.months}</p>
                     </div>
-                    <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mt-2">
-                      {item.title}
-                    </h3>
                   </div>
-                  <p className="text-sm text-[var(--text-secondary)]">{item.detail}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Photography Tips ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Camera className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Camel Trek Photography Tips
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            A camel caravan crossing the Sahara dunes is one of the most photographed scenes in the world. Here is how to capture it perfectly.
-          </p>
-
-          <div className="max-w-4xl mx-auto space-y-6">
-            {photoTips.map((tip, index) => (
-              <div key={tip.title} className="card-moroccan p-6">
-                <div className="flex items-start gap-4">
-                  <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[var(--color-accent)] text-white text-sm font-bold shrink-0">
-                    {index + 1}
-                  </span>
-                  <div>
-                    <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                      {tip.title}
-                    </h3>
-                    <p className="text-sm text-[var(--text-secondary)]">{tip.tip}</p>
+                  <div className="flex items-center gap-1 min-w-[120px]">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <Star key={i} className={`w-4 h-4 ${i < season.rating ? 'text-[var(--color-gold)] fill-[var(--color-gold)]' : 'text-gray-300'}`} />
+                    ))}
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-sm text-gray-500 mb-1"><Thermometer className="w-4 h-4 inline mr-1" />{season.temp}</p>
+                    <p className="text-gray-700 text-sm font-[family-name:var(--font-heading)]">{season.notes}</p>
                   </div>
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Prices ── */}
+      <section id="prices" className="bg-white py-16">
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-[family-name:var(--font-display)]">
+              Camel Trek Prices in Morocco (2026)
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto font-[family-name:var(--font-heading)]">
+              Per-person rates across budget, mid-range, and luxury tiers. Seasonal pricing can change &mdash; book direct with operators for the best rates.
+            </p>
+          </div>
+
+          <div className="max-w-5xl mx-auto overflow-x-auto">
+            <table className="w-full border-collapse">
+              <thead>
+                <tr className="bg-[var(--color-accent)] text-white">
+                  <th className="p-4 text-left font-semibold font-[family-name:var(--font-heading)]">Trek Type</th>
+                  <th className="p-4 text-center font-semibold font-[family-name:var(--font-heading)]">Budget</th>
+                  <th className="p-4 text-center font-semibold font-[family-name:var(--font-heading)]">Mid-Range</th>
+                  <th className="p-4 text-center font-semibold font-[family-name:var(--font-heading)]">Luxury</th>
+                </tr>
+              </thead>
+              <tbody>
+                {priceBreakdown.map((row, idx) => (
+                  <tr key={row.trek} className={idx % 2 === 0 ? 'bg-[#FAF8F5]' : 'bg-white'}>
+                    <td className="p-4 font-semibold text-gray-900 text-sm">{row.trek}</td>
+                    <td className="p-4 text-center text-gray-700 text-sm">{row.budget}</td>
+                    <td className="p-4 text-center text-gray-700 text-sm">{row.mid}</td>
+                    <td className="p-4 text-center text-gray-700 text-sm">{row.luxury}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div className="mt-8 max-w-4xl mx-auto">
+            <div className="card-moroccan p-6 bg-amber-50/50 border-l-4 border-[var(--color-gold)]">
+              <div className="flex items-start gap-3">
+                <Info className="w-6 h-6 text-[var(--color-gold)] flex-shrink-0 mt-0.5" />
+                <div className="font-[family-name:var(--font-heading)]">
+                  <h3 className="font-bold text-gray-900 mb-2">Pricing Notes</h3>
+                  <ul className="space-y-1 text-sm text-gray-700">
+                    <li>All prices are per person and based on double occupancy for camps.</li>
+                    <li>Solo travelers pay 20-40% more at most operators (no sharing cost).</li>
+                    <li>Groups of 4+ often negotiate 10-15% discounts on multi-day treks.</li>
+                    <li>Christmas, New Year, and Easter carry 25-50% peak surcharges at luxury camps.</li>
+                    <li>Prices at the Merzouga dune parking lot start lower but quality varies wildly.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* ── Packing List ── */}
-      <section className="py-16 md:py-20">
+      <section id="packing" className="bg-[#FAF8F5] py-16">
         <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Backpack className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Camel Trek Packing List
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Pack light and pack smart. Here is everything you need for a comfortable camel trek, whether it is a sunset ride or a multi-day expedition.
-          </p>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-[family-name:var(--font-display)]">
+              Packing List for Sahara Camel Treks
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto font-[family-name:var(--font-heading)]">
+              What to bring depends on trek length. This list covers overnight and multi-day treks. For sunset rides, just bring sunscreen, water, and a camera.
+            </p>
+          </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {packingList.map((category) => {
-              const CatIcon = category.icon;
-              return (
-                <div key={category.category} className="card-moroccan p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <CatIcon className="w-6 h-6 text-[var(--color-accent)]" />
-                    <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                      {category.category}
-                    </h3>
-                  </div>
-                  <div className="space-y-3">
-                    {category.items.map((entry, i) => (
-                      <div key={i} className="border-b border-[var(--border-default)] pb-3 last:border-0 last:pb-0">
-                        <div className="flex items-start gap-2">
-                          <CheckCircle className="w-3.5 h-3.5 text-[var(--color-gold)] mt-0.5 shrink-0" />
-                          <div>
-                            <span className="text-sm font-medium text-[var(--text-primary)]">{entry.item}</span>
-                            <p className="text-xs text-[var(--text-muted)] mt-0.5">{entry.why}</p>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              );
-            })}
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {packingList.map((cat) => (
+              <div key={cat.category} className="card-moroccan p-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-4 font-[family-name:var(--font-display)] flex items-center gap-2">
+                  <Luggage className="w-5 h-5 text-[var(--color-accent)]" />
+                  {cat.category}
+                </h3>
+                <ul className="space-y-2">
+                  {cat.items.map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-gray-700 text-sm font-[family-name:var(--font-heading)]">
+                      <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ── Booking Advice ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+      {/* ── Pro Tips ── */}
+      <section className="bg-white py-16">
         <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <BookOpen className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            How to Book Your Camel Trek
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Follow these five steps to plan and book the perfect camel trekking experience in Morocco.
-          </p>
-
           <div className="max-w-4xl mx-auto">
-            <div className="relative">
-              <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-[var(--color-accent)]/20 hidden md:block" />
-
-              <div className="space-y-8">
-                {bookingAdvice.map((step) => {
-                  const StepIcon = step.icon;
-                  return (
-                    <div key={step.step} className="relative flex gap-6">
-                      <div className="w-12 h-12 rounded-full bg-[var(--color-accent)] flex items-center justify-center shrink-0 z-10">
-                        <span className="text-white font-bold text-sm">{step.step}</span>
-                      </div>
-
-                      <div className="card-moroccan p-6 flex-1">
-                        <div className="flex items-center gap-2 mb-2">
-                          <StepIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                          <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                            {step.title}
-                          </h3>
-                        </div>
-                        <p className="text-sm text-[var(--text-secondary)]">{step.description}</p>
-                      </div>
-                    </div>
-                  );
-                })}
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 font-[family-name:var(--font-display)]">
+              Insider Tips From Desert Guides
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="card-moroccan p-5">
+                <div className="flex items-start gap-3">
+                  <Shield className="w-5 h-5 text-[var(--color-accent)] flex-shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="font-bold text-gray-900 mb-1 font-[family-name:var(--font-display)]">Book Direct, Not Through Hotels</h3>
+                    <p className="text-sm text-gray-700 font-[family-name:var(--font-heading)]">Hotels in Merzouga take 20-30% commission. Contact camp operators directly via WhatsApp or their website. You pay less and more money reaches the guides.</p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-
-          {/* Booking tips */}
-          <div className="max-w-4xl mx-auto mt-12">
-            <div className="card-moroccan p-6">
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4">
-                <ShieldCheck className="w-5 h-5 inline text-[var(--color-accent)] mr-2" />
-                Tips for Choosing a Reputable Operator
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="flex items-start gap-2 text-sm text-[var(--text-secondary)]">
-                  <CheckCircle className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
-                  Check reviews on Google, TripAdvisor, or GetYourGuide before booking
+              <div className="card-moroccan p-5">
+                <div className="flex items-start gap-3">
+                  <Calendar className="w-5 h-5 text-[var(--color-accent)] flex-shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="font-bold text-gray-900 mb-1 font-[family-name:var(--font-display)]">Full Moon vs New Moon</h3>
+                    <p className="text-sm text-gray-700 font-[family-name:var(--font-heading)]">Full moon nights illuminate the dunes beautifully but wash out the stars. New moon nights deliver the Milky Way in full force. Check the lunar calendar before booking if stargazing matters to you.</p>
+                  </div>
                 </div>
-                <div className="flex items-start gap-2 text-sm text-[var(--text-secondary)]">
-                  <CheckCircle className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
-                  Ask specifically about camel welfare practices and weight limits
+              </div>
+              <div className="card-moroccan p-5">
+                <div className="flex items-start gap-3">
+                  <Users className="w-5 h-5 text-[var(--color-accent)] flex-shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="font-bold text-gray-900 mb-1 font-[family-name:var(--font-display)]">Ask About Group Size</h3>
+                    <p className="text-sm text-gray-700 font-[family-name:var(--font-heading)]">Some budget operators pack 15-20 riders on a single caravan. The experience suffers &mdash; long waits, rushed stops, impersonal service. Ask the exact group size before paying. Six to eight riders per guide is the sweet spot.</p>
+                  </div>
                 </div>
-                <div className="flex items-start gap-2 text-sm text-[var(--text-secondary)]">
-                  <CheckCircle className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
-                  Get written confirmation of included meals, camp type, and equipment
+              </div>
+              <div className="card-moroccan p-5">
+                <div className="flex items-start gap-3">
+                  <DollarSign className="w-5 h-5 text-[var(--color-accent)] flex-shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="font-bold text-gray-900 mb-1 font-[family-name:var(--font-display)]">Tipping Your Guide</h3>
+                    <p className="text-sm text-gray-700 font-[family-name:var(--font-heading)]">Standard tipping: 50-100 MAD for sunset rides, 100-200 MAD per day for overnight/multi-day treks. Tip the camel handler separately &mdash; they often receive the lowest wages. Give tips directly in cash at the end of the trek.</p>
+                  </div>
                 </div>
-                <div className="flex items-start gap-2 text-sm text-[var(--text-secondary)]">
-                  <CheckCircle className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
-                  Ask for the specific camp name so you can verify its reviews independently
+              </div>
+              <div className="card-moroccan p-5">
+                <div className="flex items-start gap-3">
+                  <Mountain className="w-5 h-5 text-[var(--color-accent)] flex-shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="font-bold text-gray-900 mb-1 font-[family-name:var(--font-display)]">Combine with Other Experiences</h3>
+                    <p className="text-sm text-gray-700 font-[family-name:var(--font-heading)]">Most Merzouga operators also offer sandboarding, quad biking, and visits to Khamlia village for Gnawa music. Multi-day treks from Zagora can include stops at Draa Valley kasbahs and Tamegroute&apos;s green-glazed pottery workshops.</p>
+                  </div>
                 </div>
-                <div className="flex items-start gap-2 text-sm text-[var(--text-secondary)]">
-                  <CheckCircle className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
-                  Never pay full amount upfront to a street tout: use established agencies
-                </div>
-                <div className="flex items-start gap-2 text-sm text-[var(--text-secondary)]">
-                  <CheckCircle className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
-                  Confirm cancellation policy: reputable operators offer 48-72 hour free cancellation
+              </div>
+              <div className="card-moroccan p-5">
+                <div className="flex items-start gap-3">
+                  <Thermometer className="w-5 h-5 text-[var(--color-accent)] flex-shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="font-bold text-gray-900 mb-1 font-[family-name:var(--font-display)]">Hydration Strategy</h3>
+                    <p className="text-sm text-gray-700 font-[family-name:var(--font-heading)]">Drink 3-4 liters of water per day in the desert, starting the day before your trek. Dehydration hits fast in dry heat because sweat evaporates instantly &mdash; you don&apos;t feel how much water you&apos;re losing. Carry electrolyte tablets or oral rehydration salts.</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1057,62 +901,78 @@ export default function MoroccoCamelTrekkingPage() {
         </div>
       </section>
 
-      {/* ── Gallery Section ── */}
-      <section className="py-16 md:py-20">
+      {/* ── Getting There: Logistics ── */}
+      <section className="bg-[#FAF8F5] py-16">
         <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
-            <Camera className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            The Camel Trekking Experience
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="relative h-72 rounded-xl overflow-hidden">
-              <img
-                src="/images/hero-camel-caravan.webp"
-                alt="Camel caravan crossing golden sand dunes in the Sahara Desert, Morocco"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-              <p className="absolute bottom-4 left-4 text-white text-sm font-medium">Camel Caravan in the Dunes</p>
-            </div>
-            <div className="relative h-72 rounded-xl overflow-hidden">
-              <img
-                src="/images/hero-sahara-camp.webp"
-                alt="Traditional Berber desert camp in the Sahara with tents under a starry sky"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-              <p className="absolute bottom-4 left-4 text-white text-sm font-medium">Desert Camp at Night</p>
-            </div>
-            <div className="relative h-72 rounded-xl overflow-hidden">
-              <img
-                src="/images/hero-sahara-sunrise.webp"
-                alt="Sahara Desert sunrise over the sand dunes with warm golden light in Morocco"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-              <p className="absolute bottom-4 left-4 text-white text-sm font-medium">Sahara Sunrise</p>
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 font-[family-name:var(--font-display)]">
+              Getting to the Desert: Transport &amp; Logistics
+            </h2>
+
+            <div className="space-y-6">
+              <div className="card-moroccan p-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-3 font-[family-name:var(--font-display)] flex items-center gap-2">
+                  <MapPin className="w-5 h-5 text-[var(--color-accent)]" />
+                  From Marrakech to Merzouga
+                </h3>
+                <p className="text-gray-700 font-[family-name:var(--font-heading)] mb-3">
+                  The drive takes 9-10 hours on the N10 through the Tizi n&apos;Tichka pass, Ouarzazate, and the Dades/Todra Gorges. Most travelers split this into a 2-day road trip with an overnight in Ouarzazate or Tinghir. Direct shared minibuses (CTM or Supratours) run daily and cost from 250 MAD one-way. Private transfers run from 2,500-3,500 MAD for the car.
+                </p>
+                <p className="text-gray-700 font-[family-name:var(--font-heading)]">
+                  Flights from Casablanca to Errachidia (the nearest airport, 1.5 hours from Merzouga) operate 3-4 times weekly on Royal Air Maroc. From Errachidia, arrange a transfer through your camp or hire a grand taxi for from 350 MAD.
+                </p>
+              </div>
+
+              <div className="card-moroccan p-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-3 font-[family-name:var(--font-display)] flex items-center gap-2">
+                  <Compass className="w-5 h-5 text-[var(--color-accent)]" />
+                  From Marrakech to Zagora &amp; Erg Chigaga
+                </h3>
+                <p className="text-gray-700 font-[family-name:var(--font-heading)] mb-3">
+                  Zagora town sits 6-7 hours from Marrakech via the Tizi n&apos;Tichka and Draa Valley &mdash; a scenic route passing through Ouarzazate and Agdz. CTM buses run this route daily for from 180 MAD.
+                </p>
+                <p className="text-gray-700 font-[family-name:var(--font-heading)]">
+                  Reaching Erg Chigaga from Zagora requires another 2-3 hours by 4x4 across rough piste tracks. No public transport covers this leg &mdash; your trek operator handles it. This remoteness is exactly what makes Chigaga special.
+                </p>
+              </div>
+
+              <div className="card-moroccan p-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-3 font-[family-name:var(--font-display)] flex items-center gap-2">
+                  <Star className="w-5 h-5 text-[var(--color-accent)]" />
+                  Where to Stay Before &amp; After Your Trek
+                </h3>
+                <p className="text-gray-700 font-[family-name:var(--font-heading)]">
+                  In Merzouga, dozens of riads and auberges line the road facing Erg Chebbi. Budget rooms start from 200 MAD/night; mid-range riads with pool and breakfast from 500 MAD. Most trek operators will pick you up directly from your accommodation. In Zagora, hotels cluster along Avenue Mohammed V &mdash; book one with air conditioning and a pool if arriving in the warmer months.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* ── FAQ Section ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
-            Frequently Asked Questions
-          </h2>
+      <section id="faq" className="bg-white py-16">
+        <div className="container-morocco">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-[family-name:var(--font-display)]">
+              Frequently Asked Questions: Camel Trekking Morocco
+            </h2>
+          </div>
 
-          <div className="space-y-6">
-            {faqs.map((faq) => (
-              <div key={faq.question} className="card-moroccan p-6">
-                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                  {faq.question}
-                </h3>
-                <p className="text-sm text-[var(--text-secondary)]">{faq.answer}</p>
+          <div className="max-w-4xl mx-auto space-y-6">
+            {faqItems.map((faq, idx) => (
+              <div key={idx} className="card-moroccan p-6">
+                <div className="flex items-start gap-3">
+                  <HelpCircle className="w-6 h-6 text-[var(--color-accent)] flex-shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-3 font-[family-name:var(--font-display)]">
+                      {faq.question}
+                    </h3>
+                    <p className="text-gray-700 font-[family-name:var(--font-heading)] leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
@@ -1120,76 +980,58 @@ export default function MoroccoCamelTrekkingPage() {
       </section>
 
       {/* ── Related Guides ── */}
-      <section className="py-16 md:py-20">
+      <section className="bg-[#FAF8F5] py-16">
         <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
-            Related Desert &amp; Adventure Guides
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {relatedGuides.map((guide) => {
-              const GuideIcon = guide.icon;
-              return (
-                <Link key={guide.href} href={guide.href} className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
-                  <GuideIcon className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-                  <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                    {guide.title}
-                  </h3>
-                  <p className="text-xs text-[var(--text-secondary)] mb-3">
-                    {guide.description}
-                  </p>
-                  <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                    Read more <ArrowRight className="w-3.5 h-3.5" />
-                  </span>
-                </Link>
-              );
-            })}
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-[family-name:var(--font-display)]">
+              Related Morocco Guides
+            </h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto">
+            {[
+              { title: 'Camping in Morocco', href: '/camping', desc: 'Desert camps, Atlas bivouacs, and coastal camping spots across Morocco.' },
+              { title: 'Stargazing Guide', href: '/stargazing', desc: 'Best dark-sky locations, Sahara astronomy, and stargazing tour operators.' },
+              { title: 'Budget Travel Morocco', href: '/budget-travel', desc: 'Travel Morocco on 300-500 MAD/day with real cost breakdowns.' },
+              { title: 'What to Pack for Morocco', href: '/packing', desc: 'Season-by-season packing lists for every type of Moroccan trip.' },
+              { title: 'Adventure Activities', href: '/adventure', desc: 'Trekking, surfing, sandboarding, quad biking, and more active experiences.' },
+              { title: 'Morocco for First-Timers', href: '/first-time', desc: 'Essential tips, cultural etiquette, and planning advice for your first visit.' },
+              { title: 'Best Time to Visit', href: '/best-time-visit-morocco', desc: 'Month-by-month climate guide for every region of Morocco.' },
+              { title: 'Sahara Desert Guide', href: '/sahara-desert', desc: 'Complete guide to reaching, exploring, and experiencing the Moroccan Sahara.' },
+            ].map((guide) => (
+              <Link key={guide.href} href={guide.href} className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
+                <h3 className="font-bold text-gray-900 mb-2 font-[family-name:var(--font-display)] group-hover:text-[var(--color-accent)] transition-colors flex items-center gap-2">
+                  {guide.title}
+                  <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </h3>
+                <p className="text-sm text-gray-600 font-[family-name:var(--font-heading)]">{guide.desc}</p>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
 
       {/* ── CTA Section ── */}
-      <section className="py-20 md:py-28 relative overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(/images/photo-camel-sunset.webp)',
-          }}
-        />
-        <div className="absolute inset-0 hero-overlay" />
-        <div className="container-morocco relative z-10 text-center">
-          <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold text-white mb-4">
-            Ready for Your Sahara Camel Trek?
+      <section className="moroccan-pattern py-16">
+        <div className="container-morocco text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-[family-name:var(--font-display)]">
+            Ready to Ride Through the Sahara?
           </h2>
-          <p className="text-lg text-white/80 max-w-2xl mx-auto mb-8">
-            The golden dunes of the Sahara are waiting. Whether you choose a sunset ride from 250 MAD
-            or a multi-day expedition deep into the desert, the rhythm of the camel and the silence of
-            the sand will stay with you forever. Start planning your Morocco camel trek today.
+          <p className="text-white/90 mb-8 max-w-2xl mx-auto font-[family-name:var(--font-heading)]">
+            Explore our city guides for Merzouga, Ouarzazate, and Zagora to plan the full desert leg of your Morocco trip.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-wrap gap-4 justify-center">
             <Link
-              href="/morocco-desert-tour"
-              className="inline-flex items-center gap-2 px-8 py-3 bg-white text-[var(--color-accent)] font-bold rounded-lg hover:bg-white/90 transition-colors"
+              href="/merzouga"
+              className="bg-white text-[var(--color-accent)] hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-all inline-flex items-center gap-2"
             >
-              <Compass className="w-5 h-5" />
-              View Desert Tour Guide
+              Explore Merzouga <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
-              href="/desert-adventures"
-              className="inline-flex items-center gap-2 px-8 py-3 bg-white/10 backdrop-blur-sm text-white border border-white/30 font-bold rounded-lg hover:bg-white/20 transition-colors"
+              href="/ouarzazate"
+              className="border-2 border-white text-white hover:bg-white/10 px-8 py-3 rounded-lg font-semibold transition-all inline-flex items-center gap-2"
             >
-              <Sparkles className="w-5 h-5" />
-              Explore Desert Adventures
+              Explore Ouarzazate <ArrowRight className="w-5 h-5" />
             </Link>
-          </div>
-          <div className="mt-8 flex items-center justify-center gap-6 text-white/60 text-sm">
-            <span className="flex items-center gap-1">
-              <Phone className="w-4 h-4" />
-              Contact us for custom treks
-            </span>
-            <span className="flex items-center gap-1">
-              <Mail className="w-4 h-4" />
-              info@citytoursmorocco.com
-            </span>
           </div>
         </div>
       </section>
