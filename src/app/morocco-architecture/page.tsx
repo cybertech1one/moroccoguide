@@ -1194,6 +1194,36 @@ export default function MoroccoArchitecturePage() {
           </div>
         </div>
       </section>
+
+      {/* ── CTA Section ── */}
+      <section className="py-16 md:py-20 bg-gradient-to-br from-[#A0522D] to-[#7a3e22] moroccan-pattern">
+        <div className="container-morocco text-center">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-white mb-4">
+            Ready to Explore Morocco&apos;s Architectural Wonders?
+          </h2>
+          <p className="text-lg text-white/80 max-w-2xl mx-auto mb-8">
+            From the zellige-clad medersas of Fes to the rammed-earth kasbahs of the Draa Valley,
+            Morocco rewards travelers who look up, look closely, and step through every open doorway.
+            Start planning your architecture-focused itinerary today.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/morocco-itinerary-10-days"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#A0522D] font-[family-name:var(--font-heading)] font-bold rounded-lg hover:bg-white/90 transition-colors"
+            >
+              Plan Your 10-Day Itinerary
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-6 py-3 border-2 border-white text-white font-[family-name:var(--font-heading)] font-bold rounded-lg hover:bg-white/10 transition-colors"
+            >
+              Get Expert Help
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

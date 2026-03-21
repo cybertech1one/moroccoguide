@@ -3413,6 +3413,24 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['morocco pottery', 'moroccan ceramics', 'fes blue pottery', 'zellige tiles morocco', 'safi pottery'],
       priority: 9,
     },
+    {
+      title: 'Morocco 5-Day Itinerary — Marrakech to Sahara Desert Loop',
+      description: 'Day-by-day 5-day Morocco itinerary — Marrakech, Ait Benhaddou, Todra Gorge, Merzouga desert camp, and return via Dades with costs and tips.',
+      type: 'page',
+      url: '/morocco-5-day-itinerary',
+      tags: ['itinerary', '5 days', 'travel plan', 'route', 'desert'],
+      keywords: ['5 day morocco itinerary', 'morocco 5 days', 'marrakech to sahara', 'morocco short trip', 'morocco itinerary 5 days'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Winter Travel Guide — Weather, Skiing, Festivals & Tips',
+      description: 'Complete winter travel guide — weather by region, skiing at Oukaimeden, winter festivals, desert experiences, packing tips, and hotel deals.',
+      type: 'page',
+      url: '/morocco-winter-travel',
+      tags: ['winter', 'seasonal', 'skiing', 'weather', 'festivals'],
+      keywords: ['morocco winter travel', 'morocco in winter', 'morocco december', 'morocco january', 'skiing morocco'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
