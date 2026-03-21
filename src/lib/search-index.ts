@@ -3350,6 +3350,15 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['morocco medical tourism', 'morocco dental tourism', 'morocco cosmetic surgery', 'morocco hair transplant', 'morocco fertility treatment'],
       priority: 9,
     },
+    {
+      title: 'Morocco Group Tours Guide 2026',
+      description: 'Complete group tour guide for Morocco — small group, large group, best operators, popular routes, pricing, and tips for solo travelers joining groups.',
+      type: 'page',
+      url: '/morocco-group-tours',
+      tags: ['group tours', 'tour operators', 'guided tours', 'Intrepid', 'G Adventures'],
+      keywords: ['morocco group tours', 'small group tours morocco', 'morocco tour operators', 'guided tours morocco', 'morocco tours for solo travelers'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

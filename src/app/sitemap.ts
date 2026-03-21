@@ -440,6 +440,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-rental-cars',
     '/morocco-atlas-day-trips',
     '/morocco-medical-tourism',
+    '/morocco-group-tours',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
