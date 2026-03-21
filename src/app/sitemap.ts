@@ -416,6 +416,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-hot-springs',
     '/morocco-gardens-parks',
     '/morocco-day-hiking',
+    '/morocco-thermal-spas',
+    '/morocco-architecture',
+    '/morocco-rock-climbing',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

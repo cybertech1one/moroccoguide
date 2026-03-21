@@ -3134,6 +3134,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['morocco day hikes', 'atlas mountains day hike', 'morocco hiking trails', 'morocco trekking', 'toubkal day hike'],
       priority: 9,
     },
+    {
+      title: 'Morocco Spa & Wellness Retreats Guide 2026',
+      description: 'Luxury spa resorts, hammam experiences, yoga retreats, and thalassotherapy centers across Morocco with pricing and booking tips.',
+      type: 'page',
+      url: '/morocco-thermal-spas',
+      tags: ['spa', 'wellness', 'hammam', 'yoga', 'thalassotherapy'],
+      keywords: ['morocco spa', 'morocco wellness retreat', 'luxury hammam morocco', 'morocco yoga retreat', 'thalassotherapy morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Architecture Guide 2026',
+      description: 'Islamic, Moorish, Berber, and colonial architecture in Morocco — riads, kasbahs, medersas, mosques, zellige, and carved plaster.',
+      type: 'page',
+      url: '/morocco-architecture',
+      tags: ['architecture', 'Islamic', 'Moorish', 'riads', 'kasbahs'],
+      keywords: ['morocco architecture', 'moroccan riad design', 'islamic architecture morocco', 'zellige tilework', 'morocco kasbahs'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Rock Climbing Guide 2026',
+      description: 'Rock climbing in Morocco — Todra Gorge, Taghia Canyon, Anti-Atlas bouldering with route grades, guide companies, and gear rental.',
+      type: 'page',
+      url: '/morocco-rock-climbing',
+      tags: ['rock climbing', 'Todra Gorge', 'Taghia', 'bouldering', 'adventure'],
+      keywords: ['morocco rock climbing', 'todra gorge climbing', 'taghia canyon', 'morocco bouldering', 'climbing morocco'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
