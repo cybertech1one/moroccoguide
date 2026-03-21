@@ -8,7 +8,6 @@ import {
   Heart,
   Info,
   ArrowRight,
-  Sparkles,
   ShieldCheck,
   DollarSign,
   CheckCircle,
@@ -493,11 +492,10 @@ export default function MoroccoRiadsVsHotelsPage() {
 
       {/* ── Hero Section ── */}
       <section className="relative py-20 md:py-28 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(/images/art-moroccan-riad-courtyard.webp)',
-          }}
+        <img
+          src="/images/art-moroccan-riad-courtyard.webp"
+          alt="Traditional Moroccan riad courtyard with zellige tilework and lush greenery"
+          className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 hero-overlay" />
         <div className="container-morocco relative z-10">
@@ -998,92 +996,60 @@ export default function MoroccoRiadsVsHotelsPage() {
       <section className="py-16 md:py-20">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
-            Related Guides
+            Related Travel Guides
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            <Link href="/riads" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
-              <Gem className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Riads Overview
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Browse all riads across Morocco with city-by-city listings.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-            <Link href="/riad-guide" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
-              <BookOpen className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Riad Guide
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                In-depth guide to architecture, etiquette, and choosing the right riad.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-            <Link href="/morocco-riad-experience" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
-              <Sparkles className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Riad Experience
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                What staying in a riad is really like, from arrival to checkout.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-            <Link href="/morocco-best-riads" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
-              <Crown className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Best Riads 2026
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Top 20 hand-picked riads across Marrakech, Fes, and more.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-            <Link href="/accommodations" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
-              <Building className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Accommodations
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Complete guide to every type of accommodation in Morocco.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-            <Link href="/morocco-luxury-hotels" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
-              <Star className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Luxury Hotels
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Morocco&apos;s finest five-star hotels and luxury resorts.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                title: 'Morocco Riads Guide',
+                description: 'Deep dive into riad architecture, history, etiquette, and city-by-city recommendations for the best traditional guesthouses.',
+                href: '/morocco-riads-guide',
+                icon: Gem,
+              },
+              {
+                title: 'Luxury Hotels in Morocco',
+                description: 'The finest 5-star hotels and palace properties across Morocco with spa, dining, and experience reviews.',
+                href: '/morocco-luxury-hotels',
+                icon: Crown,
+              },
+              {
+                title: 'Morocco Budget Calculator',
+                description: 'Plan your daily spending with real costs for accommodation, food, transport, and activities across all budget levels.',
+                href: '/morocco-budget-calculator',
+                icon: DollarSign,
+              },
+              {
+                title: 'First Time in Morocco',
+                description: 'Everything a first-time visitor needs to know: visas, money, safety, cultural norms, and day-by-day itinerary suggestions.',
+                href: '/morocco-first-time',
+                icon: Award,
+              },
+            ].map((guide) => {
+              const GuideIcon = guide.icon;
+              return (
+                <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                  <GuideIcon className="w-8 h-8 text-[var(--color-accent)] mb-3 group-hover:text-[var(--color-primary)] transition-colors" />
+                  <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                    {guide.title}
+                  </h3>
+                  <p className="text-sm text-[var(--text-secondary)]">{guide.description}</p>
+                  <span className="inline-flex items-center gap-1 mt-3 text-sm text-[var(--color-accent)] font-medium">
+                    Read Guide <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* ── CTA Section ── */}
       <section className="relative py-20 md:py-28 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(/images/photo-riad-rooftop-sunset.webp)',
-          }}
+        <img
+          src="/images/photo-riad-rooftop-sunset.webp"
+          alt="Rooftop terrace of a Moroccan riad at sunset with panoramic medina views"
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
         />
         <div className="absolute inset-0 hero-overlay" />
         <div className="container-morocco relative z-10 text-center">

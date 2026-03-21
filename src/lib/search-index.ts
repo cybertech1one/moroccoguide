@@ -3359,6 +3359,24 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['morocco group tours', 'small group tours morocco', 'morocco tour operators', 'guided tours morocco', 'morocco tours for solo travelers'],
       priority: 9,
     },
+    {
+      title: 'Moroccan Traditional Music Guide 2026',
+      description: 'Explore Moroccan music — Gnaoua, Andalusian classical, Chaabi, Rai, Amazigh songs, traditional instruments, live venues, and music festivals.',
+      type: 'page',
+      url: '/morocco-traditional-music',
+      tags: ['music', 'Gnaoua', 'Andalusian', 'instruments', 'live music'],
+      keywords: ['moroccan music', 'gnaoua music', 'moroccan traditional music', 'guembri instrument', 'morocco music festivals'],
+      priority: 9,
+    },
+    {
+      title: '10-Day Morocco Itinerary 2026',
+      description: 'Perfect 10-day Morocco itinerary — Marrakech, Atlas Mountains, Sahara Desert, Fes, Chefchaouen with daily plans, budget breakdowns, and transport tips.',
+      type: 'page',
+      url: '/morocco-10-day-itinerary',
+      tags: ['itinerary', '10 days', 'travel plan', 'route', 'budget'],
+      keywords: ['10 day morocco itinerary', 'morocco travel itinerary', 'morocco 10 days', 'best morocco route', 'morocco trip plan'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

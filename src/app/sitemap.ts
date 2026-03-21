@@ -441,6 +441,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-atlas-day-trips',
     '/morocco-medical-tourism',
     '/morocco-group-tours',
+    '/morocco-traditional-music',
+    '/morocco-10-day-itinerary',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
