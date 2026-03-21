@@ -3080,6 +3080,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['morocco henna', 'henna tattoo morocco', 'moroccan henna designs', 'henna marrakech'],
       priority: 9,
     },
+    {
+      title: 'LGBTQ+ Travel in Morocco Guide 2026',
+      description: 'LGBTQ+ travel guide to Morocco — legal context, safety tips, recommended cities, accommodation advice, and practical strategies for queer travelers.',
+      type: 'page',
+      url: '/morocco-lgbtq-travel',
+      tags: ['LGBTQ+', 'safety', 'travel tips', 'legal', 'inclusive travel'],
+      keywords: ['lgbtq travel morocco', 'gay travel morocco', 'is morocco safe lgbtq', 'morocco lgbtq guide'],
+      priority: 9,
+    },
+    {
+      title: 'Best Waterfalls in Morocco 2026',
+      description: 'Top 10 waterfalls in Morocco — Ouzoud Falls, Akchour, Paradise Valley, Setti Fatma, hiking difficulty, swimming spots, and seasonal guide.',
+      type: 'page',
+      url: '/morocco-waterfalls-guide',
+      tags: ['waterfalls', 'hiking', 'nature', 'swimming', 'outdoor'],
+      keywords: ['morocco waterfalls', 'ouzoud falls morocco', 'akchour waterfalls', 'best waterfalls morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Moroccan Music Guide 2026',
+      description: 'Morocco music guide — Gnaoua, Andalusian, Amazigh, Chaabi, Rai genres, traditional instruments, live music venues, festivals, and buying instruments.',
+      type: 'page',
+      url: '/morocco-music-guide',
+      tags: ['music', 'Gnaoua', 'instruments', 'festivals', 'culture'],
+      keywords: ['moroccan music', 'gnaoua music', 'morocco live music', 'moroccan music genres', 'guembri instrument'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

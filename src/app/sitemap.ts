@@ -410,6 +410,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-sim-card-internet',
     '/morocco-ouarzazate-guide',
     '/morocco-henna-tattoo',
+    '/morocco-lgbtq-travel',
+    '/morocco-waterfalls-guide',
+    '/morocco-music-guide',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
