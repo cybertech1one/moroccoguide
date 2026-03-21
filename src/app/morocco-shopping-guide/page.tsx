@@ -5,7 +5,7 @@ import {
   Home,
   MapPin,
   Star,
-  Heart,
+  ShoppingBag,
   Clock,
   Info,
   ArrowRight,
@@ -13,553 +13,559 @@ import {
   ShieldCheck,
   DollarSign,
   CheckCircle,
-  Users,
+  AlertTriangle,
   Gem,
   Building,
   Award,
   BookOpen,
-  Globe,
-  Landmark,
-  ShoppingBag,
   Package,
+  MessageCircleQuestion,
+  HandCoins,
+  Layers,
+  Scissors,
+  Scale,
   Tag,
-  Gift,
-  Crown,
+  Eye,
+  Truck,
+  CircleDot,
+  Lightbulb,
 } from 'lucide-react';
 
-/* ═══════════════════════════════════════════════════════════════
-   CONSTANTS
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   CONSTANTS & BASE URL
+   ================================================================ */
 
 const BASE_URL = 'https://citytoursmorocco.com';
+const PAGE_URL = `${BASE_URL}/morocco-shopping-guide`;
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    SEO METADATA
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 export const metadata: Metadata = {
-  title: 'Shopping in Morocco 2026 | Best Souvenirs, Souks, Haggling Tips & Price Guide',
+  title: 'Morocco Shopping Guide 2026 | What to Buy, Best Souks & Haggling Tips',
   description:
-    'Complete guide to shopping in Morocco. Discover the best souvenirs to buy, top souks in Marrakech, Fez, and Essaouira, haggling tips, price guide in MAD, authentic Moroccan crafts, cooperatives, and how to ship purchases home.',
+    'Complete Morocco shopping guide covering the best souks in Marrakech, Fes & Essaouira, what to buy (leather, rugs, spices, argan oil, ceramics, lanterns), haggling strategies, quality indicators, Ensemble Artisanal fixed-price shops, customs allowances, and how to avoid tourist traps.',
   keywords: [
-    'shopping in morocco',
-    'morocco souvenirs',
-    'what to buy in morocco',
-    'best souvenirs from morocco',
-    'moroccan crafts',
-    'morocco souk shopping',
-    'marrakech souk guide',
-    'fez medina shopping',
-    'morocco haggling tips',
-    'moroccan leather goods',
-    'argan oil morocco',
-    'moroccan ceramics',
-    'moroccan rugs buying guide',
-    'moroccan lanterns',
-    'babouche slippers morocco',
-    'moroccan silver jewelry',
-    'morocco price guide',
-    'moroccan cooperatives',
-    'morocco shipping customs',
-    'best markets morocco',
+    'Morocco shopping guide',
+    'Morocco souk guide',
+    'what to buy in Morocco',
+    'haggling in Morocco',
+    'Marrakech souks',
+    'Fes medina shopping',
+    'Essaouira shopping',
+    'Moroccan leather goods',
+    'Moroccan rugs buying guide',
+    'Morocco spices market',
+    'argan oil Morocco buy',
+    'Moroccan ceramics pottery',
+    'Morocco lanterns buy',
+    'babouche slippers Morocco',
+    'Ensemble Artisanal Morocco',
+    'Morocco customs duty free',
+    'Morocco shopping tips 2026',
+    'best souks Morocco',
   ],
   openGraph: {
-    title: 'Shopping in Morocco 2026 | Best Souvenirs, Souks, Haggling Tips & Price Guide',
+    title: 'Morocco Shopping Guide 2026 | What to Buy, Best Souks & Haggling Tips',
     description:
-      'Your complete guide to shopping in Morocco. Top 10 souvenirs, best souks by city, haggling strategies, price guide, cooperatives, and shipping tips.',
-    url: `${BASE_URL}/morocco-shopping-guide`,
+      'Everything you need to know about shopping in Morocco: top souks by city, what to buy (leather, rugs, spices, argan oil, ceramics), haggling step-by-step, fixed-price alternatives, quality checks, and customs rules.',
+    url: PAGE_URL,
     images: [
       {
         url: `${BASE_URL}/images/hero-souk-lamps.webp`,
         width: 1200,
         height: 630,
-        alt: 'Colorful handcrafted Moroccan lanterns hanging in a traditional souk in Marrakech',
+        alt: 'Colorful Moroccan lanterns hanging in a traditional souk with warm golden light',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shopping in Morocco 2026 | Souvenirs, Souks & Haggling Guide',
+    title: 'Morocco Shopping Guide 2026 | Souks, Haggling & What to Buy',
     description:
-      'Complete guide to shopping in Morocco. Best souvenirs, top souks, haggling tips, price guide, and how to find authentic Moroccan crafts.',
+      'Top souks in Marrakech, Fes & Essaouira. What to buy, how to haggle, quality indicators, fixed-price shops, and customs allowances for bringing treasures home.',
     images: [`${BASE_URL}/images/hero-souk-lamps.webp`],
   },
-  alternates: { canonical: `${BASE_URL}/morocco-shopping-guide` },
+  alternates: { canonical: PAGE_URL },
 };
 
-/* ═══════════════════════════════════════════════════════════════
-   JSON-LD STRUCTURED DATA
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   JSON-LD: TravelGuide + FAQPage
+   ================================================================ */
 
-const jsonLd = {
+const faqItems = [
+  {
+    q: 'How much should I haggle in Moroccan souks?',
+    a: 'Start at 40-50% of the asking price and aim to settle around 60-70%. In tourist-heavy areas like Jemaa el-Fnaa, first prices can be inflated 3-4 times. In less-visited souks, markups are smaller. Always stay friendly and treat it as a conversation, not a confrontation.',
+  },
+  {
+    q: 'Where can I buy authentic Moroccan goods at fixed prices?',
+    a: 'Every major city has an Ensemble Artisanal, a government-backed cooperative where artisans sell at fixed prices with quality guarantees. Marrakech, Fes, Essaouira, Meknes, and Rabat all have one. Prices are slightly higher than a good souk deal, but you avoid the stress of haggling and know you are getting fair quality.',
+  },
+  {
+    q: 'How do I tell if argan oil is authentic?',
+    a: 'Genuine cosmetic argan oil has a light golden color, a faint nutty smell, and absorbs quickly without leaving a greasy film. It should come in a dark glass bottle (light degrades it). Avoid any argan oil with a strong smell or sold in plastic. Buy from women\'s cooperatives or certified shops. Expect to pay from 150 MAD for a 100ml bottle.',
+  },
+  {
+    q: 'Can I bring Moroccan spices through customs?',
+    a: 'Most dried spices are allowed into the EU, UK, US, Canada, and Australia. Pack them in sealed bags inside checked luggage. Fresh herbs, raw seeds, and saffron in large quantities may be questioned. Keep receipts. Ras el hanout, cumin, paprika, turmeric, and cinnamon all pass through customs without issues in normal travel quantities.',
+  },
+  {
+    q: 'How do I ship large items like rugs or furniture from Morocco?',
+    a: 'Most rug shops in Fes and Marrakech offer international shipping via DHL, FedEx, or freight forwarding. Expect to pay from 500 MAD for a small rug and from 2,000 MAD for large carpets. Get a written receipt with item description and your address. Insure anything valuable. Shipping typically takes 2-4 weeks to Europe and 3-6 weeks to North America.',
+  },
+  {
+    q: 'What are the best souvenirs under 100 MAD?',
+    a: 'Spice mixes like ras el hanout (from 20 MAD), small ceramic tagine pots (from 30 MAD), orange blossom water (from 15 MAD), leather coin purses (from 40 MAD), hand-painted tea glasses (from 15 MAD each), woven baskets (from 50 MAD), and henna art kits (from 30 MAD) all make great affordable gifts.',
+  },
+  {
+    q: 'Is the leather from Fes tanneries good quality?',
+    a: 'Fes produces excellent goat and camel leather, but quality varies widely between shops. Check for suppleness, even color, and a smooth interior finish. High-quality leather bends without cracking. Avoid stiff or overly shiny leather, which often has a cheap synthetic coating. The best shops near the tanneries let you watch the crafting process.',
+  },
+  {
+    q: 'When is the best time to shop in Moroccan souks?',
+    a: 'Weekday mornings between 9:00 and 11:00 offer the best conditions: fewer tourists, cooler temperatures, and shopkeepers in good spirits. The first sale of the day is considered lucky (called "ftour"), so sellers may give a better price. Avoid midday heat and Friday afternoons when many shops close for prayer.',
+  },
+];
+
+const jsonLdTravel = {
   '@context': 'https://schema.org',
   '@type': 'TravelGuide',
-  '@id': `${BASE_URL}/morocco-shopping-guide`,
-  name: 'Shopping in Morocco 2026 | Best Souvenirs, Souks, Haggling Tips & Price Guide',
+  '@id': PAGE_URL,
+  name: 'Morocco Shopping Guide 2026',
   description:
-    'Complete guide to shopping in Morocco. Discover the best souvenirs, top souks, haggling tips, price guide, authentic crafts, cooperatives, and shipping advice.',
-  url: `${BASE_URL}/morocco-shopping-guide`,
+    'Complete guide to shopping in Morocco covering the best souks, what to buy, haggling strategies, quality indicators, Ensemble Artisanal fixed-price shops, and customs allowances.',
+  url: PAGE_URL,
   image: `${BASE_URL}/images/hero-souk-lamps.webp`,
-  author: { '@type': 'Organization', name: 'CityGuide Morocco', url: BASE_URL },
-  publisher: { '@type': 'Organization', name: 'CityGuide Morocco', url: BASE_URL },
-  datePublished: '2026-03-20',
-  dateModified: '2026-03-20',
-  mainEntityOfPage: `${BASE_URL}/morocco-shopping-guide`,
-  isPartOf: { '@type': 'WebSite', name: 'CityGuide Morocco', url: BASE_URL },
+  author: { '@type': 'Organization', name: 'City Tours Morocco', url: BASE_URL },
+  publisher: { '@type': 'Organization', name: 'City Tours Morocco', url: BASE_URL },
+  datePublished: '2026-03-21',
+  dateModified: '2026-03-21',
+  mainEntityOfPage: PAGE_URL,
   about: { '@type': 'Country', name: 'Morocco' },
   breadcrumb: {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Morocco Shopping Guide', item: `${BASE_URL}/morocco-shopping-guide` },
+      { '@type': 'ListItem', position: 2, name: 'Morocco Shopping Guide', item: PAGE_URL },
     ],
   },
 };
 
-const faqJsonLd = {
+const jsonLdFaq = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What are the best souvenirs to buy in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The most popular and authentic Moroccan souvenirs include leather goods from Fez, argan oil products, spice blends like Ras el Hanout, hand-painted ceramics from Fez and Safi, Berber rugs and carpets, brass and copper lanterns, babouche leather slippers, traditional Moroccan tea sets, zellige mosaic tiles, and Amazigh silver jewelry from Tiznit.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much should I haggle in Moroccan souks?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'In Moroccan souks, vendors typically start at two to four times the price they expect to receive. A good target is 40-60% of the initial asking price. Start by offering about one-third and negotiate from there. Fixed-price shops and cooperatives do not require haggling.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Which Moroccan souk is best for shopping?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Marrakech has the largest and most famous souks with the widest variety. Fez offers the most authentic artisan workshops for leather, ceramics, and metalwork. Essaouira is best for thuya woodwork and relaxed shopping. Meknes offers genuine crafts at lower prices due to fewer tourists.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can I ship purchases home from Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes, many shops offer international shipping via DHL, FedEx, or La Poste Maroc. Expect to pay from 200 MAD for small parcels and from 800 MAD for larger shipments. Delivery takes one to three weeks for express and four to eight weeks for surface mail.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How do I spot fake or low-quality goods in Morocco?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'For leather, check for a genuine smell and supple texture. For argan oil, authentic oil has a nutty scent and golden color. For carpets, check the back for hand-knotted construction. For ceramics, hand-painted pieces have minor brush-stroke variations. Buy from cooperatives when possible.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What are the best times to shop in Moroccan souks?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Early morning (9-11 AM) is ideal for fewer crowds. The first sale of the day is considered lucky, so vendors may offer better prices. Late afternoon (4-6 PM) is also good. Souks are typically closed on Fridays until after midday prayers.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do I need to pay customs duty on Moroccan souvenirs?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Most countries allow a duty-free personal allowance. In the EU, the limit is typically 430 EUR for air travelers. In the US, the duty-free exemption is $800 per person. Keep all receipts as proof of purchase. Genuine antiques over 100 years old require an export permit.',
-      },
-    },
-  ],
+  mainEntity: faqItems.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
 };
 
-/* ═══════════════════════════════════════════════════════════════
-   DATA: TOP 10 SOUVENIRS
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   DATA: WHAT TO BUY
+   ================================================================ */
 
-const topSouvenirs = [
+const whatToBuy = [
   {
     name: 'Leather Goods',
     icon: ShoppingBag,
+    price: 'From 200 MAD (bag), from 80 MAD (wallet)',
+    where: 'Fes tanneries, Marrakech medina',
+    description:
+      'Morocco has been producing leather for over a millennium. Fes tanneries use traditional methods with vegetable dyes. Look for goat leather (soft, supple) for bags and jackets, and camel leather (thicker, more durable) for belts and sandals. Bags, wallets, belts, journal covers, and poufs are the most popular items.',
+    qualityTip: 'Bend the leather. Good quality folds without cracking. Smell it: genuine vegetable-tanned leather has a natural earthy scent, not a chemical one. Check stitching is even and thread is waxed.',
     image: '/images/photo-moroccan-leather.webp',
-    description:
-      'Morocco is world-renowned for its leather, particularly from the ancient tanneries of Fez. Bags, belts, wallets, journal covers, and poufs are crafted from goat, sheep, and camel leather, tanned using centuries-old methods with natural dyes from pomegranate, saffron, and mint. The Chouara Tannery in Fez, dating to the 11th century, remains the most famous leather-working site in North Africa.',
-    where: 'Fez tanneries, Marrakech souks, Essaouira',
-    priceRange: 'From 80 MAD for wallets, from 200 MAD for bags, from 400 MAD for poufs',
-    tip: 'Look for deep, even color and supple texture of vegetable-tanned leather.',
-  },
-  {
-    name: 'Argan Oil',
-    icon: Sparkles,
-    image: '/images/photo-argan-oil-stilllife.webp',
-    description:
-      "Produced exclusively in southwestern Morocco from argan tree nuts, this liquid gold comes in two forms: culinary (roasted, nutty flavor) and cosmetic (cold-pressed, for skin and hair). Women's cooperatives around Essaouira and the Souss Valley produce the highest quality. UNESCO recognized the argan forest as a Biosphere Reserve.",
-    where: 'Essaouira cooperatives, Souss Valley, Agadir region',
-    priceRange: 'From 100 MAD for 100ml cosmetic, from 80 MAD for 250ml culinary',
-    tip: 'Authentic argan oil has a nutty aroma; avoid clear, odorless bottles in tourist shops.',
-  },
-  {
-    name: 'Spices & Ras el Hanout',
-    icon: Star,
-    image: '/images/photo-moroccan-spices.webp',
-    description:
-      "Morocco's spice markets are a sensory explosion. Ras el Hanout (\"head of the shop\") is the signature blend with up to 30 spices including cardamom, cinnamon, turmeric, ginger, and rose petals. Each merchant has a secret family recipe. Saffron from Taliouine, cumin, paprika, and dried herbs are also popular.",
-    where: 'Every medina, especially Marrakech Rahba Kedima, Fez spice souk',
-    priceRange: 'From 20 MAD for spice packets, from 30 MAD for Ras el Hanout, from 15 MAD/gram saffron',
-    tip: 'Buy whole spices for longer freshness. Real saffron is deep red with a bitter-honey aroma.',
-  },
-  {
-    name: 'Hand-Painted Ceramics',
-    icon: Gem,
-    image: '/images/photo-ceramics-pottery.webp',
-    description:
-      'Fez is the capital of Moroccan ceramics, producing iconic blue-and-white pottery since the 10th century. Safi specializes in polychrome glazed pieces. Each piece is hand-thrown, hand-painted with geometric and floral motifs, and fired in traditional wood-burning kilns. Tagine pots, bowls, tiles, and plates make stunning souvenirs.',
-    where: 'Fez (blue-and-white), Safi (colorful), Tamegroute (green glaze)',
-    priceRange: 'From 30 MAD for small bowls, from 100 MAD for plates, from 200 MAD for tagines',
-    tip: 'Hand-painted pieces have slight brush-stroke variations; machine-printed ones are uniform.',
   },
   {
     name: 'Berber Rugs & Carpets',
+    icon: Layers,
+    price: 'From 800 MAD (small), from 3,000 MAD (large)',
+    where: 'Fes, Marrakech, Ouarzazate, Middle Atlas towns',
+    description:
+      'Handwoven Berber rugs take weeks to months to produce. Each region has distinct patterns: Beni Ourain (cream with dark geometric lines), Azilal (colorful abstract), Boucherouite (recycled fabric, bold colors), and Kilim (flat-woven, lighter). Machine-made imitations flood the market, so knowing what to look for is essential.',
+    qualityTip: 'Flip the rug over. Handmade rugs show slightly irregular knots on the back. Machine-made rugs are perfectly uniform. Pull a fiber: wool should stretch before breaking. Ask about knot count per square inch.',
+    image: '/images/art-berber-carpet-weaving.webp',
+  },
+  {
+    name: 'Spices & Ras el Hanout',
+    icon: Sparkles,
+    price: 'From 20 MAD per 100g bag',
+    where: 'Spice souks in every medina',
+    description:
+      'Morocco\'s spice markets sell cumin, paprika, turmeric, saffron, ginger, cinnamon, and the signature ras el hanout blend (up to 30+ spices). Saffron is the most expensive and most commonly faked. Whole spices retain flavor longer than pre-ground. Buy from shops that grind fresh in front of you.',
+    qualityTip: 'Real saffron has a deep red color, releases color slowly in warm water, and costs from 30 MAD per gram. If it is cheap and bright orange, it is dyed safflower. Smell spices before buying: they should be pungent and fresh, not dusty.',
+    image: '/images/photo-moroccan-spices.webp',
+  },
+  {
+    name: 'Argan Oil',
     icon: Award,
-    image: '/images/art-moroccan-carpet.webp',
+    price: 'From 150 MAD (cosmetic, 100ml)',
+    where: 'Women\'s cooperatives, Essaouira, Agadir region',
     description:
-      "Moroccan rugs are among the world's most collectible textiles. Beni Ourain carpets feature minimalist black-on-cream geometric patterns. Azilal and Boujaad rugs burst with color. Kilims (flat-weave) are lighter and easier to transport. Each region has patterns encoding tribal identity and family stories.",
-    where: 'Tazenakht, Marrakech, Ouarzazate, Chefchaouen, Azrou cooperatives',
-    priceRange: 'From 500 MAD for small kilims, from 2,000 MAD for medium, from 5,000 MAD for large Beni Ourain',
-    tip: 'Check the back for hand-knotted construction. Genuine pieces have slight irregularities.',
+      'Argan oil comes in two types: cosmetic (cold-pressed, light color, used on skin and hair) and culinary (roasted, darker, nutty flavor for cooking). The best place to buy is directly from women\'s cooperatives between Marrakech and Essaouira. Cooperative prices are fair and the money goes directly to local women.',
+    qualityTip: 'Cosmetic argan oil should be light golden, absorb into skin within minutes, and have a faint nutty smell. If it smells strong or feels greasy, it is likely diluted with cheaper oils. Always buy in dark glass bottles.',
+    image: '/images/photo-argan-oil-stilllife.webp',
   },
   {
-    name: 'Brass & Copper Lanterns',
-    icon: Crown,
+    name: 'Ceramics & Pottery',
+    icon: CircleDot,
+    price: 'From 30 MAD (small tagine), from 150 MAD (serving plate)',
+    where: 'Fes (Fassi blue-white), Safi (colorful), Tamegroute (green)',
+    description:
+      'Fes is the ceramics capital of Morocco. The two main styles are hand-painted Fassi pottery (blue and white geometric patterns on white glaze) and Safi pottery (colorful, earth-toned). Decorative tagine pots, plates, bowls, and tile mosaics are the most common purchases. Functional tagines for cooking are heavier and unglazed inside.',
+    qualityTip: 'Tap the piece. A clear ring means properly fired. A dull thud can mean cracks or underfiring. For food-safe ceramics, ask if the glaze is lead-free. Hand-painted pieces have slight brush variations; machine-stamped designs are perfectly uniform.',
+    image: '/images/photo-ceramics-pottery.webp',
+  },
+  {
+    name: 'Lanterns & Metalwork',
+    icon: Lightbulb,
+    price: 'From 100 MAD (small), from 500 MAD (large)',
+    where: 'Marrakech metalwork souks, Fes',
+    description:
+      'Pierced brass and iron lanterns cast intricate shadow patterns that transform any room. The metalwork souk in Marrakech concentrates dozens of workshops where artisans hammer, cut, and solder by hand. Candleholders, tea trays, mirror frames, and decorative tables are also popular. Shipping is available for oversized pieces.',
+    qualityTip: 'Check for even pattern work and smooth solder joints. Hold the lantern up to light to test the shadow pattern. Brass pieces should feel heavy; lightweight ones are thin and dent easily. Ask if it is wired for electricity or candle-only.',
     image: '/images/art-moroccan-lanterns.webp',
-    description:
-      "Moroccan lanterns (fanous) cast mesmerizing geometric shadow patterns when lit. Artisans hand-punch intricate star and arabesque designs into brass, copper, or iron sheets. From small table lanterns to grand ceiling fixtures. Marrakech's metalwork souks offer the widest selection.",
-    where: 'Marrakech Place des Ferblantiers, Fez metalwork souk',
-    priceRange: 'From 80 MAD for tea-light lanterns, from 300 MAD for medium, from 1,500 MAD for large fixtures',
-    tip: 'Ask sellers to light the lantern so you can see the shadow pattern before purchasing.',
   },
   {
-    name: 'Babouche Leather Slippers',
+    name: 'Babouche Slippers',
     icon: Tag,
+    price: 'From 60 MAD (basic), from 200 MAD (embroidered)',
+    where: 'Every medina, best in Fes and Marrakech',
+    description:
+      'Babouches are the iconic Moroccan pointed-toe leather slippers. Traditional styles come in solid colors for men (usually yellow or brown) and embroidered or sequined versions for women. They are soft, flat, and meant to be slipped on and off easily. Break them in gradually over a few days to mold to your feet.',
+    qualityTip: 'Check that the sole is stitched, not glued. Genuine leather babouches will have a natural smell. The inner lining should be smooth leather, not rough. Higher-quality pairs have thicker soles and reinforced heels.',
     image: '/images/card-leather.webp',
-    description:
-      "Pointed-toe leather slippers are quintessential Moroccan footwear. Simple monochrome babouches are everyday wear, while embroidered or sequined versions are for celebrations. Men's are typically plain; women's feature colorful embroidery and beading. The best ones are hand-stitched with no visible glue.",
-    where: 'Every souk, best quality in Fez and Marrakech',
-    priceRange: 'From 50 MAD for simple, from 150 MAD for embroidered, from 300 MAD for premium',
-    tip: 'Good babouches soften and mold to your feet within a day. Avoid stiff, glue-heavy pairs.',
   },
   {
-    name: 'Moroccan Tea Sets',
-    icon: Heart,
-    image: '/images/art-fes-souk-painting.webp',
+    name: 'Kaftans & Djellabas',
+    icon: Scissors,
+    price: 'From 300 MAD (ready-made), from 1,000 MAD (tailored)',
+    where: 'Textile souks, Fes, Marrakech',
     description:
-      "The Moroccan tea ceremony is central to social life. Traditional silver-plated sets include an ornate teapot (berrad), small colored glasses with gold or silver trim, and a decorative tray (siniya). The teapot's long curved spout is designed for pouring from a height to create froth.",
-    where: 'Marrakech, Fez, Meknes metalwork souks',
-    priceRange: 'From 100 MAD for basic, from 300 MAD for silver-plated, from 1,000 MAD for antique',
-    tip: 'Test the lid fit and pour mechanism. Quality teapots have hinged lids and smooth pouring.',
+      'Kaftans are Morocco\'s formal garments, worn at weddings and celebrations. Ready-made versions in cotton or synthetic fabrics make lightweight souvenirs. For a serious purchase, commission a custom kaftan from a master tailor using silk or fine cotton with hand-embroidered trim. Djellabas (hooded robes) are the everyday equivalent.',
+    qualityTip: 'For ready-made, check seam allowances and hem finishing. Custom tailoring takes 3-7 days, so order early in your trip. Silk kaftans command higher prices but drape beautifully. Ask for a fitting before final payment.',
+    image: '/images/card-souk.webp',
   },
   {
-    name: 'Zellige Mosaic Tiles',
-    icon: Landmark,
-    image: '/images/hero-ceramics.webp',
-    description:
-      'Zellige is hand-cut geometric mosaic tilework adorning mosques, palaces, and riads. Each tiny piece is individually chiseled from glazed terracotta and assembled into intricate patterns. Small panels, coasters, or individual decorated tiles make beautiful wall art. Fez remains the center of zellige craftsmanship.',
-    where: 'Fez workshops, Meknes, Marrakech',
-    priceRange: 'From 20 MAD per tile, from 200 MAD for small panels, from 500 MAD/sqm for custom',
-    tip: 'Small framed panels are the most practical souvenir for travelers.',
-  },
-  {
-    name: 'Amazigh Silver Jewelry',
+    name: 'Silver Jewelry',
     icon: Gem,
-    image: '/images/photo-moroccan-jewelry.webp',
+    price: 'From 100 MAD (ring), from 500 MAD (necklace)',
+    where: 'Tiznit, Essaouira, Marrakech jewelers\' souk',
     description:
-      'Berber silver jewelry carries deep cultural significance. Fibulas (tizerzai) are ornamental brooches for fastening garments. The "Southern Cross" pendant is an iconic Tuareg design. Hand of Fatima (khamsa) pendants ward off the evil eye. Tiznit is the traditional capital of Amazigh silverwork.',
-    where: 'Tiznit (silver capital), Essaouira, Marrakech, Rissani',
-    priceRange: 'From 50 MAD for rings, from 200 MAD for pendants, from 500 MAD for elaborate fibulas',
-    tip: 'Genuine silver is heavier with a cooler touch than aluminum imitations.',
+      'Tiznit in southern Morocco is the silver capital, producing Berber-style pieces with coral, amber, and semi-precious stones. Common designs include Khamsa (Hand of Fatima) pendants, Berber fibula brooches, chunky cuff bracelets, and ring sets. Tuareg-style silver from the Sahara region uses ebony and niello inlay.',
+    qualityTip: 'Real silver tarnishes over time. Bring a small magnet: silver is not magnetic. Look for a 925 stamp (sterling silver) on higher-end pieces. Costume jewelry is fine as a souvenir but should be priced accordingly.',
+    image: '/images/photo-moroccan-jewelry.webp',
   },
-];
+  {
+    name: 'Thuya Wood',
+    icon: Package,
+    price: 'From 50 MAD (small box), from 300 MAD (chess set)',
+    where: 'Essaouira (primary), Marrakech',
+    description:
+      'Thuya is a slow-growing tree found only in Morocco\'s coastal regions. Its burl wood has a swirling grain pattern prized for decorative boxes, chess sets, picture frames, and inlaid furniture. Essaouira is the center of thuya woodcraft, with workshops along the ramparts where you can watch artisans at work.',
+    qualityTip: 'Genuine thuya has a distinctive cedar-like fragrance. Rub the surface: it should release a woody scent. Check that inlay work (lemon wood or mother of pearl) is flush, not raised or loose. Heavier pieces indicate denser, more mature wood.',
+    image: '/images/art-moroccan-woodwork.webp',
+  },
+] as const;
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    DATA: BEST SOUKS BY CITY
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 const bestSouks = [
   {
     city: 'Marrakech',
+    icon: Star,
     image: '/images/poster-marrakech-souk.webp',
-    description:
-      "The largest souk complex in Morocco, radiating from Jemaa el-Fnaa into a labyrinth of covered alleyways. Souk Semmarine for textiles, Souk Haddadine for metalwork, Souk Chouari for woodwork, and Place des Ferblantiers for lanterns. Over 3,000 stalls make this Africa's largest traditional market.",
-    bestFor: 'Lanterns, leather goods, textiles, spices, carpets',
-    haggling: 'Expect to pay 40-50% of asking price. Vendors are experienced with tourists.',
-    tip: 'Start early (9 AM) for fewer crowds. Deeper in the souk means better prices.',
+    intro: 'The largest and most famous souk network in Morocco. Branching out from Jemaa el-Fnaa, the souks are organized by trade: leather workers in one alley, metalworkers in the next, spice merchants around the corner. Overwhelming on first visit, but a clear system once you learn the layout.',
+    souks: [
+      { name: 'Souk Semmarine', specialty: 'Main covered market, textiles, souvenirs, ceramics', tip: 'The central artery. Prices highest here. Walk deeper for better deals.' },
+      { name: 'Souk des Teinturiers', specialty: 'Dyers\' souk, colorful hanging skeins of wool and silk', tip: 'Great for photos and buying raw yarn or woven textiles.' },
+      { name: 'Souk Haddadine', specialty: 'Blacksmiths and metalworkers, lanterns, iron furniture', tip: 'Watch artisans work. Commission custom pieces with 3-5 day lead time.' },
+      { name: 'Souk Cherratine', specialty: 'Leather goods, bags, belts, wallets, babouches', tip: 'Compare multiple shops before buying. Quality varies widely.' },
+      { name: 'Rahba Kedima', specialty: 'Spices, traditional cosmetics, dried herbs, apothecary items', tip: 'Buy whole spices here. Avoid pre-mixed "magic" remedies at inflated prices.' },
+    ],
   },
   {
-    city: 'Fez',
-    image: '/images/photo-moroccan-souks.webp',
-    description:
-      "Fez el-Bali is a UNESCO World Heritage Site and the world's largest car-free urban area. Less tourist-oriented than Marrakech, with genuine artisan workshops. The Chouara tannery produces the finest leather. Ain Nokbi is the ceramics quarter. Metalwork and weaving quarters maintain centuries-old guild traditions.",
-    bestFor: 'Ceramics, leather, zellige tiles, brasswork, traditional clothing',
-    haggling: 'Slightly less aggressive than Marrakech. Aim for 50-60% of asking price.',
-    tip: 'Hire a licensed guide for your first visit. The medina has 9,400 alleyways.',
+    city: 'Fes',
+    icon: Building,
+    image: '/images/hero-fes-medina.webp',
+    intro: 'The world\'s largest car-free urban zone. Fes el-Bali has over 9,000 alleys and the souks feel more authentic and less tourist-oriented than Marrakech. Prices tend to be 15-30% lower for comparable items. The tanneries, pottery workshops, and textile looms are all within walking distance.',
+    souks: [
+      { name: 'Chouara Tannery Area', specialty: 'Leather goods, bags, jackets, poufs', tip: 'Buy from ground-level shops, not the terrace viewing areas (terrace shops charge a premium).' },
+      { name: 'Souk Attarine', specialty: 'Spices, perfumes, dried flowers, cosmetics', tip: 'Named after the attarines (perfumers). Excellent ras el hanout blends.' },
+      { name: 'Ain Nokbi Pottery Quarter', specialty: 'Ceramics, zellige tiles, mosaic fountains', tip: 'Visit workshops to see the production process. Buy direct from potters for best prices.' },
+      { name: 'Souk el-Henna', specialty: 'Henna, kohl, natural cosmetics, ceremonial items', tip: 'Smallest of the main souks but packed with unique finds.' },
+    ],
   },
   {
     city: 'Essaouira',
-    image: '/images/card-souk.webp',
-    description:
-      'A relaxed coastal town with a compact, navigable medina. Famous for thuya woodwork (boxes, chess sets, furniture), argan oil cooperatives, and a growing arts scene. The laid-back atmosphere means less aggressive haggling. The Skala de la Ville ramparts area has galleries and craft shops.',
-    bestFor: 'Thuya wood, argan oil, art, silver jewelry, relaxed shopping',
-    haggling: 'More relaxed than Marrakech or Fez. Prices are generally fairer from the start.',
-    tip: 'Visit thuya woodworking cooperatives near the port to see artisans at work.',
+    icon: MapPin,
+    image: '/images/hero-essaouira.webp',
+    intro: 'A compact, walkable medina with a relaxed Atlantic vibe. Essaouira is the best city for thuya woodwork, silver jewelry from nearby Tiznit, and argan oil cooperatives on the road from Marrakech. The haggling style is mellower and prices are generally fair from the start.',
+    souks: [
+      { name: 'Skala de la Ville Workshops', specialty: 'Thuya wood marquetry, boxes, furniture, inlaid items', tip: 'Artisans work in the old rampart workshops. Watch before buying to appreciate the craft.' },
+      { name: 'Avenue de l\'Istiqlal', specialty: 'Silver jewelry, Berber artifacts, vintage Tuareg pieces', tip: 'Tiznit silversmiths sell here. Compare weight and craftsmanship across shops.' },
+      { name: 'Medina Market Streets', specialty: 'Textiles, paintings, argan oil, spices, local art', tip: 'Essaouira has a strong local art scene. Original paintings from 300 MAD.' },
+    ],
   },
   {
     city: 'Meknes',
-    image: '/images/photo-spice-souk-display.webp',
-    description:
-      'Often overlooked by tourists, Meknes offers authentic shopping at significantly lower prices. The medina around Place el-Hedim has excellent crafts without tourist markup. The Berdaine souk is one of the best food markets in Morocco, with olive oil, preserved lemons, and spices at local prices.',
-    bestFor: 'Metalwork, embroidery, food products, olives, local crafts at low prices',
-    haggling: 'Less inflation in starting prices. Fair deals at 60-70% of asking price.',
-    tip: 'Best place for food products: olive oil and preserved goods at a fraction of Marrakech prices.',
+    icon: Building,
+    image: '/images/art-moroccan-doorway.webp',
+    intro: 'Often overlooked by tourists, Meknes has authentic souks with some of the lowest prices in Morocco. The medina sees fewer foreign visitors, so shopkeepers are less practiced at hard sells. Excellent for pottery, textiles, and everyday Moroccan goods at local prices.',
+    souks: [
+      { name: 'Souk Nejjarine', specialty: 'Woodworkers, carved furniture, ornamental doors', tip: 'Meknes woodwork is less famous than Essaouira but comparable quality at lower prices.' },
+      { name: 'Souk Bezzazine', specialty: 'Textiles, fabrics, traditional clothing, djellabas', tip: 'Great for djellabas and everyday Moroccan clothing at genuine local prices.' },
+      { name: 'Kissaria Market', specialty: 'Covered market, general goods, spices, leather', tip: 'The heart of the Meknes medina. Similar quality to Fes but 20-30% cheaper.' },
+    ],
   },
-];
+] as const;
 
-/* ═══════════════════════════════════════════════════════════════
-   DATA: HAGGLING PHRASES
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   DATA: HAGGLING STEPS
+   ================================================================ */
 
-const hagglingPhrases = [
-  { darija: 'Bshhal?', english: 'How much?', note: 'The essential opening question' },
-  { darija: 'Ghali bezaf!', english: 'Too expensive!', note: 'Express surprise at the initial price' },
-  { darija: 'Nqess shwiya', english: 'Reduce a little', note: 'Ask for a lower price politely' },
-  { darija: 'Akher taman?', english: 'Last price?', note: 'Signal you are serious about buying' },
-  { darija: 'La shukran', english: 'No thank you', note: 'Decline politely and walk away if needed' },
-  { darija: 'Wakha', english: 'Okay / agreed', note: 'Seal the deal when you reach a fair price' },
-];
+const hagglingSteps = [
+  {
+    step: 1,
+    title: 'Browse Without Showing Interest',
+    icon: Eye,
+    description:
+      'Walk through the souk and scan shops casually. If a vendor calls you over, smile but do not commit. The moment you show strong interest in a specific item, the dynamic shifts. Touch things lightly, compare across shops, and note where you see items you like.',
+  },
+  {
+    step: 2,
+    title: 'Ask the Price (Without Reacting)',
+    icon: HandCoins,
+    description:
+      'When you find something you want, ask "B\'shhal?" (How much?). The vendor will give a high opening price. Do not react, do not wince, do not say "too much" immediately. A neutral face gives you leverage. If you gasp, the seller knows you are emotionally invested.',
+  },
+  {
+    step: 3,
+    title: 'Counter at 40-50% of the Asking Price',
+    icon: Scale,
+    description:
+      'Offer roughly 40-50% of the stated price. This is your opening position. The vendor will act shocked and counter with something between their opening price and yours. This is normal and expected. Neither side expects the first numbers to hold.',
+  },
+  {
+    step: 4,
+    title: 'Trade Numbers 2-3 More Rounds',
+    icon: DollarSign,
+    description:
+      'Raise your offer in small increments (20-30 MAD at a time). The seller drops their price in similar increments. Three to four rounds is typical. Each round brings you closer to a fair middle ground, usually 60-70% of the original asking price.',
+  },
+  {
+    step: 5,
+    title: 'Use the Walk-Away',
+    icon: ArrowRight,
+    description:
+      'If you are stuck, politely say "shukran" (thank you) and start walking toward the door. If the seller has room to go lower, they will call you back with a new price. If they let you leave, the price was already near their bottom. You can always come back later without losing face.',
+  },
+  {
+    step: 6,
+    title: 'Seal the Deal with Goodwill',
+    icon: CheckCircle,
+    description:
+      'When you agree on a price, shake hands and pay the agreed amount. Ask for a bag or wrapping. Many sellers will offer tea at this point. Accept if you have time; it seals the transaction with mutual respect. A good deal is one where both sides feel satisfied.',
+  },
+] as const;
 
-/* ═══════════════════════════════════════════════════════════════
-   DATA: PRICE GUIDE
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   DATA: ENSEMBLE ARTISANAL
+   ================================================================ */
+
+const ensembleArtisanals = [
+  { city: 'Marrakech', location: 'Avenue Mohammed V, near Koutoubia Mosque', specialty: 'Full range: leather, ceramics, textiles, woodwork, metalwork', hours: '9:00-19:00 daily' },
+  { city: 'Fes', location: 'Boulevard Allal el-Fassi, Ville Nouvelle', specialty: 'Ceramics, zellige tiles, leather, embroidery, brass', hours: '9:00-18:00 (closed Sunday)' },
+  { city: 'Essaouira', location: 'Near Bab Sbaa gate', specialty: 'Thuya wood, silver jewelry, argan oil products', hours: '9:00-18:00 daily' },
+  { city: 'Meknes', location: 'Near Place el-Hedim', specialty: 'Woodwork, damascene metalwork, embroidery', hours: '9:00-18:00 (closed Sunday)' },
+  { city: 'Rabat', location: 'Tarik Al Marsa, near Kasbah des Oudayas', specialty: 'Carpets, pottery, leather, national craft showcase', hours: '9:00-18:30 daily' },
+] as const;
+
+/* ================================================================
+   DATA: TOURIST TRAPS
+   ================================================================ */
+
+const touristTraps = [
+  { trap: 'The Friendly Guide Who Leads You to "His Uncle\'s Shop"', reality: 'The guide earns a 20-40% commission on anything you buy. The shop marks up prices to cover the commission. Politely decline unsolicited guides and navigate on your own or with a licensed guide.' },
+  { trap: 'Saffron at Unbelievably Low Prices', reality: 'Real Moroccan saffron costs from 30 MAD per gram. If someone offers a big bag for 50 MAD, it is dyed safflower or turmeric threads. Buy from reputable spice shops and check the threads under light: real saffron is deep crimson, not bright orange.' },
+  { trap: 'The "Closing Down" or "Special Price Today Only" Sale', reality: 'No souk shop is closing down. This is a pressure tactic. Walk away. The same "special price" will be available tomorrow, next week, and next year.' },
+  { trap: 'Argan Oil in Plastic Bottles on the Roadside', reality: 'Authentic argan oil degrades in plastic and sunlight. Roadside stands often sell diluted or adulterated oil. Buy from cooperatives or certified shops that store oil in dark glass bottles.' },
+  { trap: '"Antique" Berber Jewelry and Rugs', reality: 'Genuinely old pieces exist but are rare and expensive. Most "antique" items are artificially aged with chemicals or tea staining. If you want a real antique, buy from a reputable dealer who provides provenance documentation.' },
+  { trap: 'The Carpet Shop Mint Tea Trap', reality: 'Rug sellers offer tea, unroll 40+ carpets, and create a sense of obligation. You are never obligated to buy. Accept the tea, enjoy the experience, and say "la shukran" (no thank you) if nothing catches your eye.' },
+] as const;
+
+/* ================================================================
+   DATA: PACKING TIPS
+   ================================================================ */
+
+const packingTips = [
+  { item: 'Ceramics & Pottery', tip: 'Wrap each piece in clothing or bubble wrap. Place in the center of your suitcase surrounded by soft items. Ask the shop for extra wrapping. Carry delicate pieces in hand luggage if allowed by size.' },
+  { item: 'Spices', tip: 'Double-bag in zip-lock bags to prevent scent transfer. Place inside a hard container or wrap tightly. Turmeric and paprika stain everything they touch, so triple-bag those.' },
+  { item: 'Leather Goods', tip: 'Stuff bags and poufs with clothing to maintain shape. Leather bags can serve as extra luggage. New leather may have a strong tannery smell; air it out for a few days before packing.' },
+  { item: 'Rugs & Textiles', tip: 'Roll tightly (do not fold) to prevent crease marks. Vacuum-seal bags compress volume by 60%. For large rugs, ship separately through the shop or a freight forwarder.' },
+  { item: 'Argan Oil & Liquids', tip: 'Wrap bottles in plastic bags, then in clothing. Place in checked luggage. Carry-on limits (100ml per container) apply for hand luggage.' },
+  { item: 'Lanterns & Metalwork', tip: 'Large lanterns must be shipped or checked as oversized luggage. Small lanterns pack well wrapped in a sweater inside your suitcase. Remove candles before flying.' },
+] as const;
+
+/* ================================================================
+   DATA: CUSTOMS INFO
+   ================================================================ */
+
+const customsInfo = [
+  { region: 'European Union', allowance: 'Up to 430 EUR in goods duty-free (air travel). Dried spices, leather goods, and handicrafts pass easily. Live plants, seeds, and raw animal products may be restricted.', note: 'Keep receipts for items over 100 EUR. VAT may apply above the duty-free limit.' },
+  { region: 'United Kingdom', allowance: 'Up to 390 GBP duty-free. Standard customs declarations for amounts above. No restrictions on dried spices, leather, or handicrafts.', note: 'Declare goods over the limit on the red channel. Duty rates vary by category.' },
+  { region: 'United States', allowance: 'Up to 800 USD duty-free per person. Most Moroccan handicrafts qualify. Certain leather goods from specific animals may require CITES documentation.', note: 'Declare all food items on the customs form. Dried spices are generally fine.' },
+  { region: 'Canada', allowance: 'Up to 800 CAD if away 7+ days. Handicrafts, spices, and textiles pass without issue. Alcohol and tobacco have separate limits.', note: 'Fresh food products may be confiscated. Stick to dried goods and packaged items.' },
+  { region: 'Australia', allowance: 'Up to 900 AUD duty-free. Strict biosecurity on food items, seeds, and raw plant material. Processed spices in sealed packaging are allowed.', note: 'Declare all food on the incoming passenger card. Heavy fines for undeclared items.' },
+] as const;
+
+/* ================================================================
+   DATA: PRICE COMPARISON TABLE
+   ================================================================ */
 
 const priceGuide = [
-  { item: 'Leather bag (medium)', localPrice: 'From 200 MAD', touristPrice: 'From 500 MAD', fairPrice: 'From 250-350 MAD' },
-  { item: 'Argan oil (100ml cosmetic)', localPrice: 'From 80 MAD', touristPrice: 'From 200 MAD', fairPrice: 'From 100-130 MAD' },
-  { item: 'Ras el Hanout (100g)', localPrice: 'From 15 MAD', touristPrice: 'From 50 MAD', fairPrice: 'From 20-30 MAD' },
-  { item: 'Ceramic serving plate', localPrice: 'From 60 MAD', touristPrice: 'From 200 MAD', fairPrice: 'From 80-120 MAD' },
-  { item: 'Small Berber rug', localPrice: 'From 400 MAD', touristPrice: 'From 1,500 MAD', fairPrice: 'From 500-800 MAD' },
-  { item: 'Brass lantern (medium)', localPrice: 'From 200 MAD', touristPrice: 'From 600 MAD', fairPrice: 'From 250-400 MAD' },
-  { item: 'Babouche slippers', localPrice: 'From 40 MAD', touristPrice: 'From 150 MAD', fairPrice: 'From 50-80 MAD' },
-  { item: 'Silver pendant', localPrice: 'From 100 MAD', touristPrice: 'From 350 MAD', fairPrice: 'From 150-250 MAD' },
-  { item: 'Tea set (teapot + 6 glasses)', localPrice: 'From 80 MAD', touristPrice: 'From 300 MAD', fairPrice: 'From 120-200 MAD' },
-  { item: 'Thuya wood box', localPrice: 'From 50 MAD', touristPrice: 'From 200 MAD', fairPrice: 'From 80-120 MAD' },
-];
+  { item: 'Leather bag (medium)', touristPrice: 'From 500 MAD', fairPrice: 'From 250-350 MAD' },
+  { item: 'Argan oil (100ml cosmetic)', touristPrice: 'From 250 MAD', fairPrice: 'From 120-160 MAD' },
+  { item: 'Ras el Hanout (100g)', touristPrice: 'From 60 MAD', fairPrice: 'From 20-35 MAD' },
+  { item: 'Ceramic serving plate', touristPrice: 'From 200 MAD', fairPrice: 'From 80-130 MAD' },
+  { item: 'Small Berber rug', touristPrice: 'From 1,500 MAD', fairPrice: 'From 600-900 MAD' },
+  { item: 'Brass lantern (medium)', touristPrice: 'From 600 MAD', fairPrice: 'From 250-400 MAD' },
+  { item: 'Babouche slippers', touristPrice: 'From 150 MAD', fairPrice: 'From 60-90 MAD' },
+  { item: 'Silver pendant', touristPrice: 'From 350 MAD', fairPrice: 'From 150-250 MAD' },
+  { item: 'Thuya wood box (small)', touristPrice: 'From 200 MAD', fairPrice: 'From 60-100 MAD' },
+  { item: 'Kaftan (ready-made)', touristPrice: 'From 600 MAD', fairPrice: 'From 300-450 MAD' },
+] as const;
 
-/* ═══════════════════════════════════════════════════════════════
-   DATA: COOPERATIVES
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   DATA: USEFUL DARIJA PHRASES
+   ================================================================ */
 
-const cooperatives = [
-  {
-    name: "Argan Oil Women's Cooperatives",
-    location: 'Essaouira, Agadir, Taroudant region',
-    icon: Users,
-    description:
-      "Over 100 women's cooperatives produce argan oil across southwestern Morocco, providing fair wages, education, and healthcare for rural women. You can watch the labor-intensive cracking and cold-pressing process. Cooperative prices are fair and fixed.",
-    products: 'Argan oil (cosmetic and culinary), amlou spread, argan soap',
-  },
-  {
-    name: 'Carpet Weaving Cooperatives',
-    location: 'Tazenakht, Ait Bougmez, Chefchaouen',
-    icon: Award,
-    description:
-      "Women's weaving cooperatives in the Atlas Mountains produce carpets using techniques passed down for generations. Each cooperative sells directly, cutting out middlemen. Meet the artisans and learn about the symbolic meaning of patterns.",
-    products: 'Beni Ourain rugs, Azilal carpets, kilims, handbags',
-  },
-  {
-    name: 'Pottery & Ceramics Workshops',
-    location: 'Fez, Safi, Tamegroute',
-    icon: Gem,
-    description:
-      "Community workshops allow visitors to see the process from clay to finished product. The potters' cooperative in Fez near Ain Nokbi is particularly noteworthy. Fair trade pricing means pieces cost less than medina shops while artisans earn more.",
-    products: 'Tagines, bowls, plates, decorative tiles, vases',
-  },
-  {
-    name: 'Thuya Woodworking Cooperatives',
-    location: 'Essaouira',
-    icon: Gift,
-    description:
-      "Essaouira's thuya wood artisans have organized into cooperatives near the port. Thuya (citrus wood) has a distinctive burl grain and sweet cedar scent. Artisans demonstrate marquetry inlay with lemon wood and ebony.",
-    products: 'Boxes, chess sets, picture frames, furniture, sculptures',
-  },
-];
+const hagglingPhrases = [
+  { darija: 'B\'shhal?', english: 'How much?', note: 'The essential opening question in any shop' },
+  { darija: 'Ghali bezzaf!', english: 'Too expensive!', note: 'Express surprise at the initial asking price' },
+  { darija: 'Nqess shwiya', english: 'Reduce a little', note: 'Ask politely for a lower price' },
+  { darija: 'Akher taman?', english: 'Last price?', note: 'Signal you are serious and ready to close the deal' },
+  { darija: 'La shukran', english: 'No thank you', note: 'Decline politely and prepare to walk away' },
+  { darija: 'Wakha', english: 'Okay / agreed', note: 'Seal the deal when both sides are satisfied' },
+] as const;
 
-/* ═══════════════════════════════════════════════════════════════
-   DATA: MODERN SHOPPING
-   ═══════════════════════════════════════════════════════════════ */
-
-const modernShopping = [
-  {
-    name: 'Morocco Mall (Casablanca)',
-    type: 'Shopping Mall',
-    description: "Africa's second-largest shopping mall with over 600 stores, international brands, a massive aquarium, and an IMAX cinema. Fixed prices and modern amenities.",
-    products: 'International brands, Moroccan designer fashion, food court',
-  },
-  {
-    name: 'Menara Mall (Marrakech)',
-    type: 'Shopping Mall',
-    description: "Marrakech's premier modern shopping center near the train station. Air-conditioned retail with a mix of Moroccan and international brands.",
-    products: 'Fashion, electronics, Moroccan cosmetics, restaurants',
-  },
-  {
-    name: '33 Rue Majorelle (Marrakech)',
-    type: 'Concept Store',
-    description: 'A curated design boutique near Jardin Majorelle showcasing contemporary Moroccan design. Beautiful ceramics, textiles, fashion, and home decor at fixed prices.',
-    products: 'Contemporary Moroccan design, home decor, fashion',
-  },
-  {
-    name: 'Ensemble Artisanal (Multiple Cities)',
-    type: 'Government Craft Center',
-    description: 'Government-run fixed-price artisan centers in Marrakech, Fez, Rabat, and other cities. Useful price benchmarks before entering the souks. Quality is guaranteed.',
-    products: 'All traditional crafts at fixed prices',
-  },
-];
-
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    PAGE COMPONENT
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
-export default function MoroccoShoppingGuidePage() {
+export default function MoroccoShoppingGuide() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
+      {/* ── JSON-LD ── */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdTravel) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }} />
 
-      {/* ── Hero Section ── */}
-      <section className="relative py-20 md:py-28 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url(/images/hero-souk-lamps.webp)' }}
+      {/* ── Hero ── */}
+      <section className="relative h-[60vh] min-h-[420px]">
+        <img
+          src="/images/hero-souk-lamps.webp"
+          alt="Colorful Moroccan lanterns and lamps hanging in a traditional souk market"
+          className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 hero-overlay" />
-        <div className="container-morocco relative z-10">
-          <nav className="flex items-center gap-2 text-sm text-white/60 mb-8" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-white transition-colors">
-              <Home className="w-3.5 h-3.5" />
-            </Link>
-            <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-white">Morocco Shopping Guide</span>
-          </nav>
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm text-white/90 text-sm mb-6">
-            <ShoppingBag className="w-4 h-4" />
-            Shopping &amp; Souvenirs
-          </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-display)] font-bold text-white mb-4">
-            Shopping in Morocco:
-            <br className="hidden md:block" /> Souvenirs, Souks &amp; Haggling Guide
+        <div className="hero-overlay" />
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-display)] font-bold text-white mb-4 drop-shadow-lg max-w-4xl">
+            Morocco Shopping Guide 2026
           </h1>
-          <p className="text-xl text-white/80 max-w-2xl">
-            From labyrinthine souks overflowing with handcrafted treasures to women&apos;s cooperatives
-            preserving ancient traditions. Everything you need to know about what to buy, where to find it,
-            and how to get the best price.
+          <p className="text-lg md:text-xl text-white/90 max-w-2xl drop-shadow">
+            What to buy, where to find it, and how to get a fair price in Morocco&apos;s legendary souks
           </p>
         </div>
       </section>
 
-      <div className="zellige-border" />
+      {/* ── Breadcrumbs ── */}
+      <nav className="bg-[var(--surface-muted)] border-b border-[var(--border-primary)]" aria-label="Breadcrumb">
+        <div className="container-morocco py-3">
+          <ol className="flex items-center gap-2 text-sm text-[var(--text-secondary)]">
+            <li>
+              <Link href="/" className="hover:text-[var(--color-accent)] transition-colors flex items-center gap-1">
+                <Home className="w-3.5 h-3.5" /> Home
+              </Link>
+            </li>
+            <ChevronRight className="w-3.5 h-3.5" />
+            <li className="text-[var(--text-primary)] font-medium">Morocco Shopping Guide</li>
+          </ol>
+        </div>
+      </nav>
 
-      {/* ── Introduction ── */}
+      {/* ── Intro ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
-          <div className="prose-moroccan">
-            <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
-              The Art of Shopping in Morocco
-            </h2>
-            <div className="space-y-4 text-lg text-[var(--text-secondary)] leading-relaxed">
-              <p>
-                Shopping in Morocco is not merely a transaction -- it is a cultural experience woven into the
-                fabric of daily life. The souks (traditional markets) have operated for centuries as the commercial
-                and social heart of every Moroccan city. Narrow alleyways open into dazzling displays of handcrafted
-                goods: pyramids of saffron-gold spices, towers of copper lanterns casting geometric shadows, rainbows
-                of leather babouche slippers, and intricate ceramics painted with motifs unchanged since the medieval era.
-              </p>
-              <p>
-                Morocco&apos;s craft traditions are among the oldest and most sophisticated in the world. UNESCO has
-                recognized several Moroccan artisanal practices as Intangible Cultural Heritage, and the country&apos;s
-                medinas serve as living workshops where skills pass from master to apprentice across generations.
-                Whether you seek a small spice packet or a hand-knotted Beni Ourain rug, understanding the culture of
-                Moroccan commerce will enhance your experience and help you bring home meaningful, authentic souvenirs.
-              </p>
-            </div>
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-6">
+            <ShoppingBag className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Shopping in Morocco: A Complete Guide
+          </h2>
+          <div className="space-y-4 text-[var(--text-secondary)] leading-relaxed">
+            <p>
+              Morocco&apos;s souks rank among the most rewarding shopping experiences on the planet. The medinas of Marrakech, Fes, Essaouira, and Meknes hold thousands of workshops and stalls selling handcrafted goods that have been produced the same way for centuries: leather bags from Fes tanneries, hand-knotted Berber rugs from the Atlas Mountains, zellige ceramics from Safi, thuya wood boxes from Essaouira, and the unmistakable scent of ras el hanout from the spice souks.
+            </p>
+            <p>
+              The challenge for visitors is separating quality from tourist-grade merchandise, knowing a fair price from an inflated one, and navigating the souk without getting overwhelmed. This guide breaks down the ten best things to buy, the top souks city by city, a step-by-step haggling strategy, fixed-price alternatives at Ensemble Artisanal shops, quality checks for every product category, customs rules for bringing purchases home, and the most common tourist traps to sidestep.
+            </p>
+            <p>
+              All prices are in Moroccan Dirhams (MAD) based on 2026 market rates. Seasonal pricing can change, especially during peak tourist months (October-April) and around major holidays.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* ── Top 10 Souvenirs ── */}
+      {/* ── What to Buy ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Gift className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Top 10 Souvenirs to Buy in Morocco
+            <Star className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Top 10 Things to Buy in Morocco
           </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-4">
-            The most authentic and memorable items to bring home, from ancient artisan workshops to women&apos;s cooperatives.
-          </p>
-          <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
-            <Info className="w-3.5 h-3.5 inline mr-1" />
-            Prices shown are starting prices and may vary by location, quality, and season.
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            From leather to lanterns, these are the purchases travelers rate highest for quality, authenticity, and value.
           </p>
 
           <div className="space-y-8">
-            {topSouvenirs.map((item, index) => {
+            {whatToBuy.map((item) => {
               const ItemIcon = item.icon;
               return (
                 <div key={item.name} className="card-moroccan overflow-hidden">
-                  <div className="flex flex-col md:flex-row">
-                    <div className="relative w-full md:w-64 h-48 md:h-auto shrink-0">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
+                    <div className="relative h-56 md:h-auto">
                       <img
                         src={item.image}
-                        alt={`${item.name} - popular Moroccan souvenir for sale in a traditional souk`}
+                        alt={`${item.name} for sale in a Moroccan souk market`}
                         className="w-full h-full object-cover"
                         loading="lazy"
                       />
-                      <div className="absolute top-3 left-3 w-8 h-8 rounded-full bg-[var(--color-accent)] flex items-center justify-center text-white text-sm font-bold">
-                        {index + 1}
-                      </div>
                     </div>
-                    <div className="p-6 flex-1">
-                      <div className="flex items-center gap-3 mb-3">
-                        <div className="w-9 h-9 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                          <ItemIcon className="w-5 h-5 text-[var(--color-accent)]" />
+                    <div className="md:col-span-2 p-6">
+                      <div className="flex items-start gap-3 mb-3">
+                        <ItemIcon className="w-6 h-6 text-[var(--color-accent)] shrink-0 mt-1" />
+                        <div>
+                          <h3 className="text-xl font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
+                            {item.name}
+                          </h3>
+                          <div className="flex flex-wrap gap-4 mt-1 text-sm text-[var(--text-secondary)]">
+                            <span className="flex items-center gap-1">
+                              <DollarSign className="w-3.5 h-3.5 text-[var(--color-gold)]" /> {item.price}
+                            </span>
+                            <span className="flex items-center gap-1">
+                              <MapPin className="w-3.5 h-3.5 text-[var(--color-gold)]" /> {item.where}
+                            </span>
+                          </div>
                         </div>
-                        <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                          {item.name}
-                        </h3>
                       </div>
-                      <p className="text-sm text-[var(--text-secondary)] mb-4">{item.description}</p>
-                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
-                        <div className="flex items-start gap-2 text-[var(--text-muted)]">
-                          <MapPin className="w-3 h-3 mt-0.5 shrink-0 text-[var(--color-accent)]" />
-                          <span>{item.where}</span>
-                        </div>
-                        <div className="flex items-start gap-2 text-[var(--text-muted)]">
-                          <DollarSign className="w-3 h-3 mt-0.5 shrink-0 text-[var(--color-accent)]" />
-                          <span>{item.priceRange}</span>
-                        </div>
-                        <div className="flex items-start gap-2 text-[var(--text-muted)]">
-                          <CheckCircle className="w-3 h-3 mt-0.5 shrink-0 text-[var(--color-gold)]" />
-                          <span>{item.tip}</span>
-                        </div>
+                      <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-3">{item.description}</p>
+                      <div className="bg-[var(--surface-muted)] rounded-lg p-3 flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-green-600 shrink-0 mt-0.5" />
+                        <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                          <span className="font-semibold text-[var(--text-primary)]">Quality check:</span> {item.qualityTip}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -574,50 +580,53 @@ export default function MoroccoShoppingGuidePage() {
       <section className="py-16 md:py-20">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Building className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            <MapPin className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
             Best Souks by City
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Each Moroccan city offers a distinct shopping personality. Choose based on what you want and the experience you seek.
+            Each city offers a distinct shopping character. Here is where to head depending on what you want to buy.
           </p>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {bestSouks.map((souk) => (
-              <div key={souk.city} className="card-moroccan overflow-hidden">
-                <div className="relative h-48">
-                  <img
-                    src={souk.image}
-                    alt={`Traditional souk market in ${souk.city}, Morocco with artisan goods on display`}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  <div className="absolute bottom-4 left-4 flex items-center gap-2">
-                    <MapPin className="w-5 h-5 text-white" />
-                    <h3 className="text-xl font-[family-name:var(--font-display)] font-bold text-white">
-                      {souk.city}
-                    </h3>
+          <div className="space-y-10">
+            {bestSouks.map((city) => {
+              const CityIcon = city.icon;
+              return (
+                <div key={city.city} className="card-moroccan overflow-hidden">
+                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
+                    <div className="relative h-64 lg:h-auto">
+                      <img
+                        src={city.image}
+                        alt={`${city.city} souk and medina market scene`}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                      <h3 className="absolute bottom-4 left-4 text-2xl font-[family-name:var(--font-display)] font-bold text-white flex items-center gap-2">
+                        <CityIcon className="w-6 h-6" /> {city.city}
+                      </h3>
+                    </div>
+                    <div className="lg:col-span-2 p-6">
+                      <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4">{city.intro}</p>
+                      <div className="space-y-3">
+                        {city.souks.map((souk) => (
+                          <div key={souk.name} className="bg-[var(--surface-muted)] rounded-lg p-4">
+                            <h4 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-1">
+                              {souk.name}
+                            </h4>
+                            <p className="text-xs text-[var(--text-secondary)] mb-1">
+                              <span className="font-medium">Specialty:</span> {souk.specialty}
+                            </p>
+                            <p className="text-xs text-[var(--color-accent)] flex items-start gap-1">
+                              <Info className="w-3 h-3 shrink-0 mt-0.5" /> {souk.tip}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div className="p-6">
-                  <p className="text-sm text-[var(--text-secondary)] mb-4">{souk.description}</p>
-                  <div className="space-y-2 text-xs">
-                    <div className="flex items-start gap-2 text-[var(--text-muted)]">
-                      <Star className="w-3 h-3 mt-0.5 shrink-0 text-[var(--color-gold)]" />
-                      <span><strong>Best for:</strong> {souk.bestFor}</span>
-                    </div>
-                    <div className="flex items-start gap-2 text-[var(--text-muted)]">
-                      <Tag className="w-3 h-3 mt-0.5 shrink-0 text-[var(--color-accent)]" />
-                      <span><strong>Haggling:</strong> {souk.haggling}</span>
-                    </div>
-                    <div className="flex items-start gap-2 text-[var(--text-muted)]">
-                      <CheckCircle className="w-3 h-3 mt-0.5 shrink-0 text-[var(--color-gold)]" />
-                      <span><strong>Tip:</strong> {souk.tip}</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -626,69 +635,77 @@ export default function MoroccoShoppingGuidePage() {
       <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Tag className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            The Art of Haggling in Morocco
+            <HandCoins className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            How to Haggle: Step-by-Step
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Haggling is a cultural tradition, not a confrontation. Done right, it is an enjoyable exchange where both sides leave satisfied.
+            Bargaining is a social ritual in Morocco, not a hostile act. Both buyer and seller expect it. Here is how to do it well.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-            {[
-              { icon: ShieldCheck, title: 'Start at One-Third', text: 'Begin by offering roughly one-third of the asking price. This gives both parties room to negotiate. Never insult the vendor with an absurdly low amount.' },
-              { icon: Clock, title: 'Take Your Time', text: 'Moroccan haggling is leisurely. Accept tea if offered, chat about the craft, and show genuine interest. Rushing signals desperation.' },
-              { icon: ShoppingBag, title: 'Walk Away if Needed', text: 'Walking away is the most powerful tool. If the vendor calls you back, you are close to the real price. If not, your offer was too low.' },
-              { icon: Heart, title: 'Stay Friendly', text: 'Haggling should be fun. Smile, joke, and keep the tone light. A friendly buyer often gets a better price than an aggressive one.' },
-              { icon: DollarSign, title: 'Know Fair Prices', text: 'Visit the Ensemble Artisanal (government fixed-price shop) first to learn baseline prices before entering the souks.' },
-              { icon: Info, title: 'When NOT to Haggle', text: 'Fixed-price shops, cooperatives, supermarkets, restaurants, and pharmacies have set prices. Haggling here is inappropriate.' },
-            ].map((item) => {
-              const ItemIcon = item.icon;
+          <div className="space-y-6">
+            {hagglingSteps.map((s) => {
+              const StepIcon = s.icon;
               return (
-                <div key={item.title} className="card-moroccan p-5">
-                  <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center mb-3">
-                    <ItemIcon className="w-5 h-5 text-[var(--color-accent)]" />
+                <div key={s.step} className="card-moroccan p-6 flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[var(--color-accent)] text-white flex items-center justify-center font-bold text-lg">
+                    {s.step}
                   </div>
-                  <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{item.text}</p>
+                  <div>
+                    <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 flex items-center gap-2">
+                      <StepIcon className="w-5 h-5 text-[var(--color-gold)]" />
+                      {s.title}
+                    </h3>
+                    <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{s.description}</p>
+                  </div>
                 </div>
               );
             })}
           </div>
 
-          <div className="card-moroccan p-6">
-            <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4">
-              Useful Darija Phrases for Haggling
+          <div className="mt-8 card-moroccan p-6 zellige-border">
+            <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3 flex items-center gap-2">
+              <Lightbulb className="w-5 h-5 text-[var(--color-gold)]" />
+              Pro Haggling Tips
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {hagglingPhrases.map((phrase) => (
-                <div key={phrase.darija} className="flex items-start gap-3 p-3 bg-[var(--surface-muted)] rounded-lg">
-                  <div className="text-sm font-bold text-[var(--color-accent)] shrink-0 w-28">{phrase.darija}</div>
-                  <div>
-                    <p className="text-sm font-medium text-[var(--text-primary)]">{phrase.english}</p>
-                    <p className="text-xs text-[var(--text-muted)]">{phrase.note}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <ul className="space-y-2 text-sm text-[var(--text-secondary)]">
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-green-600 shrink-0 mt-0.5" />
+                <span>Shop in the morning. The first sale (called &quot;ftour&quot;) is considered lucky, and sellers often give a better opening price.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-green-600 shrink-0 mt-0.5" />
+                <span>Learn a few words of Darija. &quot;B&apos;shhal?&quot; (how much?), &quot;Ghali bezzaf&quot; (too expensive), and &quot;Shukran&quot; (thank you) go a long way.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-green-600 shrink-0 mt-0.5" />
+                <span>Carry small bills. Paying with a 200 MAD note when you agreed on 180 MAD means you may not get change. Keep 20s and 50s ready.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-green-600 shrink-0 mt-0.5" />
+                <span>Bundle purchases. Buying 3-4 items from one shop gives you more leverage for a group discount than buying single pieces.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-green-600 shrink-0 mt-0.5" />
+                <span>Do not haggle if you have no intention of buying. Starting a negotiation and walking away at a fair price is considered rude.</span>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
 
-      {/* ── Price Guide ── */}
+      {/* ── Price Comparison Table ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <DollarSign className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Morocco Shopping Price Guide
+            Price Guide: Tourist Price vs. Fair Price
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-4">
-            What to expect to pay for common items. Use these as benchmarks during haggling.
+            Use these benchmarks during haggling. The &quot;fair price&quot; column represents what experienced shoppers pay.
           </p>
-          <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
+          <p className="text-center text-sm text-[var(--text-secondary)] max-w-xl mx-auto mb-12">
             <Info className="w-3.5 h-3.5 inline mr-1" />
-            All prices in Moroccan Dirham (MAD). Seasonal pricing and quality variations may apply.
+            All prices in MAD. Seasonal pricing can change during peak months.
           </p>
 
           <div className="card-moroccan overflow-hidden">
@@ -697,8 +714,7 @@ export default function MoroccoShoppingGuidePage() {
                 <thead>
                   <tr className="bg-[var(--color-accent)]/10">
                     <th className="text-left p-4 font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Item</th>
-                    <th className="text-left p-4 font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Local Price</th>
-                    <th className="text-left p-4 font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">Tourist Price</th>
+                    <th className="text-left p-4 font-[family-name:var(--font-heading)] font-bold text-[var(--text-secondary)]">Tourist Price</th>
                     <th className="text-left p-4 font-[family-name:var(--font-heading)] font-bold text-[var(--color-accent)]">Fair Price</th>
                   </tr>
                 </thead>
@@ -706,8 +722,7 @@ export default function MoroccoShoppingGuidePage() {
                   {priceGuide.map((row, i) => (
                     <tr key={row.item} className={i % 2 === 0 ? 'bg-white' : 'bg-[var(--surface-muted)]'}>
                       <td className="p-4 text-[var(--text-primary)] font-medium">{row.item}</td>
-                      <td className="p-4 text-[var(--text-secondary)]">{row.localPrice}</td>
-                      <td className="p-4 text-[var(--text-muted)]">{row.touristPrice}</td>
+                      <td className="p-4 text-[var(--text-secondary)]">{row.touristPrice}</td>
                       <td className="p-4 text-[var(--color-accent)] font-semibold">{row.fairPrice}</td>
                     </tr>
                   ))}
@@ -715,217 +730,203 @@ export default function MoroccoShoppingGuidePage() {
               </table>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* ── Authentic vs Tourist Traps ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <ShieldCheck className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Authentic Goods vs. Tourist Traps
-          </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Learn how to spot genuine Moroccan craftsmanship and avoid mass-produced imitations.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="card-moroccan p-6">
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-green-700 mb-4 flex items-center gap-2">
-                <CheckCircle className="w-5 h-5" />
-                Signs of Authenticity
-              </h3>
-              <div className="space-y-3">
-                {[
-                  'Slight irregularities in hand-painted patterns',
-                  'Natural materials with genuine textures and scents',
-                  'Artisan can demonstrate the craft process',
-                  'Cooperative or workshop with visible production',
-                  'Heavier weight in genuine metal and leather goods',
-                  'Unique variations between pieces in the same style',
-                ].map((item) => (
-                  <div key={item} className="flex items-start gap-2 text-sm text-[var(--text-secondary)]">
-                    <CheckCircle className="w-4 h-4 mt-0.5 shrink-0 text-green-600" />
-                    <span>{item}</span>
+          {/* Darija Phrases */}
+          <div className="mt-10 card-moroccan p-6">
+            <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-4 flex items-center gap-2">
+              <BookOpen className="w-5 h-5 text-[var(--color-gold)]" />
+              Useful Darija Phrases for Shopping
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {hagglingPhrases.map((phrase) => (
+                <div key={phrase.darija} className="flex items-start gap-3 p-3 bg-[var(--surface-muted)] rounded-lg">
+                  <div className="text-sm font-bold text-[var(--color-accent)] shrink-0 w-28">{phrase.darija}</div>
+                  <div>
+                    <p className="text-sm font-medium text-[var(--text-primary)]">{phrase.english}</p>
+                    <p className="text-xs text-[var(--text-secondary)]">{phrase.note}</p>
                   </div>
-                ))}
-              </div>
-            </div>
-            <div className="card-moroccan p-6">
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-red-700 mb-4 flex items-center gap-2">
-                <Info className="w-5 h-5" />
-                Red Flags to Watch For
-              </h3>
-              <div className="space-y-3">
-                {[
-                  'Perfectly uniform patterns (machine production)',
-                  'Suspiciously low prices for handmade items',
-                  'Vendor refuses to let you examine the item closely',
-                  'Hidden Made in China labels on Moroccan goods',
-                  'Guides insisting on specific shops (commission)',
-                  'Argan oil that is clear, odorless, or in plastic bottles',
-                ].map((item) => (
-                  <div key={item} className="flex items-start gap-2 text-sm text-[var(--text-secondary)]">
-                    <Info className="w-4 h-4 mt-0.5 shrink-0 text-red-500" />
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Cooperatives ── */}
-      <section className="py-16 md:py-20">
+      {/* ── Ensemble Artisanal ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Users className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Cooperative &amp; Fair Trade Shopping
+            <Building className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Ensemble Artisanal: Fixed-Price Alternative
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Support local communities and ensure your purchases benefit artisans directly.
+            Government-backed cooperatives where artisans sell directly at fixed, fair prices. No haggling required. Quality is guaranteed and you can watch craftsmen at work.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {cooperatives.map((coop) => {
-              const CoopIcon = coop.icon;
-              return (
-                <div key={coop.name} className="card-moroccan p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                      <CoopIcon className="w-5 h-5 text-[var(--color-accent)]" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                        {coop.name}
-                      </h3>
-                      <p className="text-xs text-[var(--text-muted)]">{coop.location}</p>
-                    </div>
-                  </div>
-                  <p className="text-sm text-[var(--text-secondary)] mb-3">{coop.description}</p>
-                  <div className="flex items-center gap-2 text-xs text-[var(--color-accent)] font-semibold">
-                    <Package className="w-3 h-3" />
-                    <span>{coop.products}</span>
-                  </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {ensembleArtisanals.map((ea) => (
+              <div key={ea.city} className="card-moroccan p-5">
+                <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3 flex items-center gap-2">
+                  <Award className="w-5 h-5 text-[var(--color-gold)]" />
+                  {ea.city}
+                </h3>
+                <div className="space-y-2 text-sm text-[var(--text-secondary)]">
+                  <p className="flex items-start gap-2">
+                    <MapPin className="w-3.5 h-3.5 shrink-0 mt-0.5 text-[var(--color-accent)]" />
+                    {ea.location}
+                  </p>
+                  <p className="flex items-start gap-2">
+                    <ShoppingBag className="w-3.5 h-3.5 shrink-0 mt-0.5 text-[var(--color-accent)]" />
+                    {ea.specialty}
+                  </p>
+                  <p className="flex items-start gap-2">
+                    <Clock className="w-3.5 h-3.5 shrink-0 mt-0.5 text-[var(--color-accent)]" />
+                    {ea.hours}
+                  </p>
                 </div>
-              );
-            })}
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 card-moroccan p-6 bg-amber-50">
+            <p className="text-sm text-[var(--text-secondary)] leading-relaxed flex items-start gap-2">
+              <Info className="w-5 h-5 text-[var(--color-gold)] shrink-0 mt-0.5" />
+              <span>
+                <span className="font-semibold text-[var(--text-primary)]">Why visit an Ensemble Artisanal first?</span> Even if you plan to buy in the souks, visiting the Ensemble Artisanal gives you a benchmark for quality and fair pricing. You will know what a well-made tagine, a properly tanned leather bag, or a hand-knotted rug looks and costs before entering the negotiation arena of the medina.
+              </span>
+            </p>
           </div>
         </div>
       </section>
 
-      {/* ── Modern Shopping ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
+      {/* ── Tourist Traps ── */}
+      <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Building className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Modern Shopping: Malls, Boutiques &amp; Concept Stores
+            <AlertTriangle className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Tourist Traps to Avoid
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Beyond the souks, Morocco offers contemporary shopping with fixed prices and modern amenities.
+            These scams target first-time visitors. Knowing them in advance saves money and frustration.
           </p>
 
-          <div className="space-y-6">
-            {modernShopping.map((shop) => (
-              <div key={shop.name} className="card-moroccan p-6">
-                <div className="flex items-start justify-between mb-3">
-                  <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)]">
-                    {shop.name}
-                  </h3>
-                  <div className="inline-block px-2 py-0.5 text-xs font-medium rounded bg-[var(--color-accent)]/10 text-[var(--color-accent)] shrink-0 ml-4">
-                    {shop.type}
-                  </div>
-                </div>
-                <p className="text-sm text-[var(--text-secondary)] mb-3">{shop.description}</p>
-                <div className="flex items-center gap-2 text-xs text-[var(--text-muted)]">
-                  <ShoppingBag className="w-3 h-3 text-[var(--color-accent)]" />
-                  <span>{shop.products}</span>
-                </div>
+          <div className="space-y-4">
+            {touristTraps.map((item) => (
+              <div key={item.trap} className="card-moroccan p-5">
+                <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 flex items-center gap-2">
+                  <ShieldCheck className="w-4 h-4 text-red-500 shrink-0" />
+                  {item.trap}
+                </h3>
+                <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                  <span className="font-semibold">Reality:</span> {item.reality}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── Shipping & Customs ── */}
-      <section className="py-16 md:py-20">
-        <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Package className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Shipping Purchases &amp; Customs
+      {/* ── Gallery ── */}
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+        <div className="container-morocco">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
+            Inside Morocco&apos;s Souks
           </h2>
-          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            How to get your treasures home safely, from packing tips to customs regulations.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="card-moroccan p-6">
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                Shipping Options
-              </h3>
-              <div className="space-y-3 text-sm text-[var(--text-secondary)]">
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
-                  <span><strong>La Poste Maroc:</strong> Surface mail from 150 MAD for small parcels. Delivery in 4-8 weeks.</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
-                  <span><strong>DHL / FedEx:</strong> Express from 400 MAD. Delivery in 3-7 days. Best for valuables.</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
-                  <span><strong>Shop Shipping:</strong> Many carpet shops offer door-to-door shipping from 800 MAD.</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-gold)]" />
-                  <span><strong>Carry-On:</strong> Small items and spices in checked luggage. Wrap ceramics carefully.</span>
-                </div>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="relative h-72 rounded-xl overflow-hidden">
+              <img
+                src="/images/photo-moroccan-souks.webp"
+                alt="Busy Moroccan souk alley with vendors displaying colorful goods"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+              <p className="absolute bottom-4 left-4 text-white text-sm font-medium">Medina Souk Life</p>
             </div>
-            <div className="card-moroccan p-6">
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3">
-                Customs &amp; Duty Tips
-              </h3>
-              <div className="space-y-3 text-sm text-[var(--text-secondary)]">
-                <div className="flex items-start gap-2">
-                  <ShieldCheck className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-accent)]" />
-                  <span><strong>Keep receipts:</strong> Save all purchase receipts for customs declarations at home.</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <ShieldCheck className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-accent)]" />
-                  <span><strong>Duty-free limits:</strong> EU allows 430 EUR; US allows $800 per person duty-free.</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <ShieldCheck className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-accent)]" />
-                  <span><strong>Restricted items:</strong> Genuine antiques (100+ years) require an export permit.</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <ShieldCheck className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-accent)]" />
-                  <span><strong>Food products:</strong> Sealed spices and argan oil pass most customs smoothly.</span>
-                </div>
-              </div>
+            <div className="relative h-72 rounded-xl overflow-hidden">
+              <img
+                src="/images/photo-spice-souk-display.webp"
+                alt="Pyramids of colorful spices displayed at a Moroccan spice merchant stall"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+              <p className="absolute bottom-4 left-4 text-white text-sm font-medium">Spice Market Display</p>
+            </div>
+            <div className="relative h-72 rounded-xl overflow-hidden">
+              <img
+                src="/images/photo-carpet-weaving-artisan.webp"
+                alt="Moroccan artisan hand-weaving a Berber carpet on a traditional loom"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+              <p className="absolute bottom-4 left-4 text-white text-sm font-medium">Carpet Weaving Artisan</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Gallery Section ── */}
+      {/* ── Packing Your Purchases ── */}
       <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
-        <div className="container-morocco">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
-            Shopping Scenes Across Morocco
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Package className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Packing Your Purchases
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              { src: '/images/art-moroccan-market-spices.webp', alt: 'Colorful piles of spices and herbs displayed at a traditional Moroccan market stall', label: 'Spice Market' },
-              { src: '/images/art-moroccan-lanterns.webp', alt: 'Handcrafted brass and copper Moroccan lanterns hanging in a souk', label: 'Lantern Artisans' },
-              { src: '/images/photo-argan-cooperative.webp', alt: 'Women working at an argan oil cooperative in southwestern Morocco', label: 'Argan Cooperative' },
-            ].map((img) => (
-              <div key={img.label} className="relative h-72 rounded-xl overflow-hidden">
-                <img src={img.src} alt={img.alt} className="w-full h-full object-cover" loading="lazy" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                <p className="absolute bottom-4 left-4 text-white text-sm font-medium">{img.label}</p>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Getting your treasures home safely requires planning. Here is how to pack each type of item.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {packingTips.map((item) => (
+              <div key={item.item} className="card-moroccan p-5">
+                <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 flex items-center gap-2">
+                  <Truck className="w-4 h-4 text-[var(--color-gold)] shrink-0" />
+                  {item.item}
+                </h3>
+                <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{item.tip}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 card-moroccan p-6 zellige-border">
+            <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-3 flex items-center gap-2">
+              <Lightbulb className="w-5 h-5 text-[var(--color-gold)]" />
+              Shipping from Morocco
+            </h3>
+            <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-3">
+              For large or fragile items, most established souk shops can arrange international shipping. DHL and FedEx have offices in Marrakech, Fes, Casablanca, and Rabat. Costs start from 300 MAD for small parcels to Europe and from 500 MAD to North America. For rugs and furniture, freight forwarding services handle customs paperwork and door-to-door delivery.
+            </p>
+            <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+              Always get a detailed written receipt with the shop&apos;s name, your address, item description, and tracking number. Take photos of your items before they are packed. Insure shipments valued above 2,000 MAD. Seasonal pricing can change for shipping rates during holidays.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Customs & Duty-Free ── */}
+      <section className="py-16 md:py-20">
+        <div className="container-morocco max-w-4xl">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <Scale className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            Customs &amp; Duty-Free Allowances
+          </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Know your home country&apos;s duty-free limits before you shop. Keeping receipts makes border crossings smoother.
+          </p>
+
+          <div className="space-y-4">
+            {customsInfo.map((item) => (
+              <div key={item.region} className="card-moroccan p-5">
+                <h3 className="text-sm font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 flex items-center gap-2">
+                  <BookOpen className="w-4 h-4 text-[var(--color-gold)] shrink-0" />
+                  {item.region}
+                </h3>
+                <p className="text-xs text-[var(--text-secondary)] leading-relaxed mb-1">{item.allowance}</p>
+                <p className="text-xs text-[var(--color-accent)] flex items-start gap-1">
+                  <Info className="w-3 h-3 shrink-0 mt-0.5" /> {item.note}
+                </p>
               </div>
             ))}
           </div>
@@ -933,176 +934,127 @@ export default function MoroccoShoppingGuidePage() {
       </section>
 
       {/* ── FAQ Section ── */}
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-20 bg-[var(--surface-muted)] moroccan-pattern">
         <div className="container-morocco max-w-4xl">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
+          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
+            <MessageCircleQuestion className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
             Frequently Asked Questions
           </h2>
+          <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
+            Answers to the most common questions about shopping in Morocco.
+          </p>
 
           <div className="space-y-6">
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                What are the best souvenirs to buy in Morocco?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                The most popular souvenirs include leather goods from Fez, argan oil, spice blends like Ras el Hanout,
-                hand-painted ceramics, Berber rugs, brass lanterns, babouche slippers, traditional tea sets, zellige tiles,
-                and Amazigh silver jewelry. Buy from cooperatives and artisan workshops for the best quality.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                How much should I haggle in Moroccan souks?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                Vendors typically start at two to four times the expected price. Aim for 40-60% of the asking price.
-                Start at one-third and negotiate upward. Fixed-price shops and cooperatives do not require haggling.
-                Walking away is your strongest negotiating tool.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                Which Moroccan souk is best for shopping?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                Marrakech has the largest souks with the widest variety. Fez offers the most authentic workshops for
-                leather, ceramics, and metalwork. Essaouira is best for thuya woodwork and relaxed shopping. Meknes
-                offers genuine crafts at lower prices due to fewer tourists.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                Can I ship purchases home from Morocco?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                Yes, many shops offer international shipping via DHL, FedEx, or La Poste Maroc. Express takes 3-7 days
-                from 400 MAD; surface mail takes 4-8 weeks from 150 MAD. For rugs and large items, shops arrange
-                container shipping from 800 MAD. Always get receipts and tracking numbers.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                How do I spot fake or low-quality goods?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                For leather, check for genuine smell and supple texture. Authentic argan oil has a nutty scent and
-                golden color. Hand-knotted carpets show slight irregularities on the back. Hand-painted ceramics have
-                minor brush-stroke variations. Buy from cooperatives and ask artisans to demonstrate their work.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                What are the best times to shop in Moroccan souks?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                Early morning (9-11 AM) is ideal for fewer crowds and better prices, as vendors consider the first
-                sale (&quot;ftour&quot;) lucky. Late afternoon (4-6 PM) is also good. Souks close on Fridays until
-                after midday prayers, and some workshops close on Sundays.
-              </p>
-            </div>
-
-            <div className="card-moroccan p-6">
-              <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
-                Do I need to pay customs duty on Moroccan souvenirs?
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)]">
-                Most countries allow duty-free personal allowances. The EU limit is typically 430 EUR for air travelers;
-                the US exemption is $800 per person. Keep all receipts. Genuine antiques may require export permits.
-                Check your home country&apos;s customs regulations before large purchases.
-              </p>
-            </div>
+            {faqItems.map((faq) => (
+              <div key={faq.q} className="card-moroccan p-6">
+                <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2">
+                  {faq.q}
+                </h3>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{faq.a}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* ── Related Guides ── */}
-      <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
+      <section className="py-16 md:py-20">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-12">
-            Continue Exploring Morocco
+            Related Travel Guides
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Link href="/morocco-berber-culture" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
-              <Globe className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Berber Culture Guide
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Discover Amazigh heritage, traditional crafts, mountain villages, and cultural experiences.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-            <Link href="/morocco-carpet-guide" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
-              <Award className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Carpet Buying Guide
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Everything about buying authentic Moroccan rugs, from Beni Ourain to Azilal styles.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-            <Link href="/morocco-budget-travel" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
-              <DollarSign className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Budget Travel Guide
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Save money across Morocco with tips on accommodation, food, transport, and shopping.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-            <Link href="/morocco-culture-guide" className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
-              <BookOpen className="w-8 h-8 text-[var(--color-accent)] mb-3" />
-              <h3 className="text-lg font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-accent)] transition-colors">
-                Culture &amp; Etiquette
-              </h3>
-              <p className="text-sm text-[var(--text-secondary)] mb-3">
-                Understand Moroccan customs, social norms, and etiquette to enrich your travel experience.
-              </p>
-              <span className="text-sm text-[var(--color-accent)] flex items-center gap-1">
-                Read more <ArrowRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
+            {[
+              {
+                title: 'Moroccan Cuisine Guide',
+                description: 'Tagines, couscous, street food, and regional dishes across Morocco with prices and recommendations.',
+                href: '/cuisine',
+                icon: Sparkles,
+              },
+              {
+                title: 'Morocco Budget Guide',
+                description: 'How to travel Morocco on a budget. Daily costs, money-saving tips, and affordable accommodation.',
+                href: '/budget',
+                icon: DollarSign,
+              },
+              {
+                title: 'Morocco Etiquette Guide',
+                description: 'Dress codes, tipping customs, greetings, and social norms for respectful travel in Morocco.',
+                href: '/etiquette',
+                icon: ShieldCheck,
+              },
+              {
+                title: 'Fes Travel Guide',
+                description: 'The ancient medina, tanneries, riads, and cultural heritage of Morocco\'s spiritual capital.',
+                href: '/fes',
+                icon: Building,
+              },
+            ].map((guide) => {
+              const GuideIcon = guide.icon;
+              return (
+                <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                  <GuideIcon className="w-8 h-8 text-[var(--color-accent)] mb-3 group-hover:text-[var(--color-primary)] transition-colors" />
+                  <h3 className="font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                    {guide.title}
+                  </h3>
+                  <p className="text-sm text-[var(--text-secondary)]">{guide.description}</p>
+                  <span className="inline-flex items-center gap-1 mt-3 text-sm text-[var(--color-accent)] font-medium">
+                    Read Guide <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── More Shopping & Culture Resources ── */}
+      <section className="py-12 md:py-16 bg-[var(--surface-muted)]">
+        <div className="container-morocco">
+          <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-bold text-center mb-8" style={{ color: 'var(--text-primary)' }}>
+            More Shopping &amp; Culture Resources
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { href: '/morocco-food-guide', title: 'Morocco Food Guide', desc: 'Spice blends, cooking classes, food markets, and the flavors that define Moroccan cooking.' },
+              { href: '/marrakech', title: 'Marrakech City Guide', desc: 'Jemaa el-Fnaa, the medina souks, riads, gardens, and day trips from Morocco\'s most popular city.' },
+              { href: '/essaouira', title: 'Essaouira Guide', desc: 'The coastal gem known for thuya wood artisans, fresh seafood, and a laid-back Atlantic atmosphere.' },
+              { href: '/morocco-money-guide', title: 'Money & Currency Guide', desc: 'ATMs, exchange rates, tipping, card acceptance, and how to manage money across Morocco.' },
+              { href: '/first-time', title: 'First Time in Morocco', desc: 'Everything first-time visitors need to know: planning, safety, culture, and must-see highlights.' },
+              { href: '/morocco-packing-guide', title: 'Packing Guide', desc: 'What to pack for Morocco by season, including clothing, gear, and items you can buy locally.' },
+            ].map((guide) => (
+              <Link key={guide.href} href={guide.href} className="card-moroccan p-5 hover:shadow-lg transition-shadow group">
+                <h3 className="font-[family-name:var(--font-heading)] font-bold text-base mb-2 group-hover:text-[var(--color-accent)] transition-colors" style={{ color: 'var(--text-primary)' }}>
+                  {guide.title}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{guide.desc}</p>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
 
       {/* ── CTA Section ── */}
-      <section className="py-16 md:py-20 bg-[var(--color-accent)]">
+      <section className="py-16 md:py-20 bg-[var(--color-accent)] text-white">
         <div className="container-morocco text-center">
-          <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-[family-name:var(--font-display)] font-bold mb-4">
             Ready to Explore Morocco&apos;s Souks?
           </h2>
-          <p className="text-lg text-white/80 max-w-2xl mx-auto mb-8">
-            From the vibrant medinas of Marrakech and Fez to quiet coastal workshops in Essaouira,
-            Morocco&apos;s shopping culture is a treasure hunt where every purchase tells a story.
+          <p className="text-lg text-white/90 max-w-2xl mx-auto mb-8">
+            Book a guided souk tour with a local expert who knows the best artisans, fair prices, and hidden workshops that most visitors miss.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/marrakech"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[var(--color-accent)] rounded-lg font-semibold hover:bg-white/90 transition-colors"
+              href="/tours"
+              className="inline-flex items-center justify-center gap-2 bg-white text-[var(--color-accent)] px-8 py-3 rounded-lg font-[family-name:var(--font-heading)] font-bold hover:bg-white/90 transition-colors"
             >
-              <MapPin className="w-5 h-5" />
-              Explore Marrakech
+              Browse Tours <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
-              href="/fez"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 text-white border border-white/30 rounded-lg font-semibold hover:bg-white/20 transition-colors"
+              href="/contact"
+              className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-3 rounded-lg font-[family-name:var(--font-heading)] font-bold hover:bg-white/10 transition-colors"
             >
-              <Landmark className="w-5 h-5" />
-              Discover Fez
+              Contact Us
             </Link>
           </div>
         </div>

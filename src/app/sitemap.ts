@@ -370,7 +370,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-photography-guide',
     '/morocco-7-day-itinerary',
     '/morocco-spa-wellness',
-    '/morocco-shopping-guide',
     '/morocco-2-week-itinerary',
     '/morocco-riads-guide',
     '/morocco-adventure-tours',
@@ -447,6 +446,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-road-trip',
     '/morocco-camel-riding',
     '/morocco-hiking-trails',
+    '/morocco-pottery-ceramics',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

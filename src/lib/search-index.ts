@@ -2721,15 +2721,6 @@ export function buildSearchIndex(): SearchItem[] {
       priority: 9,
     },
     {
-      title: 'Morocco Shopping Guide 2026',
-      description: 'Complete shopping guide for Morocco — top 10 souvenirs, best souks, haggling tips, price guide, cooperatives, and shipping advice.',
-      type: 'page',
-      url: '/morocco-shopping-guide',
-      tags: ['shopping', 'souvenirs', 'souks', 'crafts', 'haggling'],
-      keywords: ['shopping in morocco', 'morocco souvenirs', 'what to buy in morocco', 'morocco souk shopping', 'moroccan crafts'],
-      priority: 9,
-    },
-    {
       title: 'Morocco 2-Week Itinerary 2026',
       description: 'Ultimate 14-day Morocco itinerary — Casablanca, Chefchaouen, Fez, Sahara Desert, gorges, Marrakech, and Essaouira with daily plans and budgets.',
       type: 'page',
@@ -3411,6 +3402,15 @@ export function buildSearchIndex(): SearchItem[] {
       url: '/morocco-hiking-trails',
       tags: ['hiking', 'trekking', 'trails', 'mountains', 'outdoors'],
       keywords: ['morocco hiking trails', 'best hikes morocco', 'toubkal trek', 'morocco trekking', 'atlas mountains hike'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Pottery & Ceramics Guide — Zellige, Fes Blue, Safi & Tamegroute',
+      description: 'Complete guide to Moroccan pottery — zellige tilework, Fes blue ceramics, Safi pottery capital, Tamegroute green glaze, workshops, buying tips, and shipping.',
+      type: 'page',
+      url: '/morocco-pottery-ceramics',
+      tags: ['pottery', 'ceramics', 'zellige', 'crafts', 'artisan'],
+      keywords: ['morocco pottery', 'moroccan ceramics', 'fes blue pottery', 'zellige tiles morocco', 'safi pottery'],
       priority: 9,
     },
   ];
