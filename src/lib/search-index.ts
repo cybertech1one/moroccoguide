@@ -3107,6 +3107,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['moroccan music', 'gnaoua music', 'morocco live music', 'moroccan music genres', 'guembri instrument'],
       priority: 9,
     },
+    {
+      title: 'Morocco Hot Springs & Thermal Baths Guide 2026',
+      description: 'Discover Morocco\'s best hot springs and thermal baths including Moulay Yacoub, Sidi Harazem, and Abaynou with practical tips.',
+      type: 'page',
+      url: '/morocco-hot-springs',
+      tags: ['hot springs', 'thermal baths', 'wellness', 'spa', 'Moulay Yacoub'],
+      keywords: ['morocco hot springs', 'thermal baths morocco', 'moulay yacoub', 'sidi harazem', 'abaynou hot springs'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Gardens & Parks Guide 2026',
+      description: 'Explore Morocco\'s most beautiful gardens and parks including Jardin Majorelle, Menara Gardens, and Andalusian Gardens.',
+      type: 'page',
+      url: '/morocco-gardens-parks',
+      tags: ['gardens', 'parks', 'Majorelle', 'Menara', 'nature'],
+      keywords: ['morocco gardens', 'jardin majorelle', 'menara gardens', 'morocco parks', 'botanical gardens morocco'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Day Hiking Guide 2026',
+      description: 'Top day hikes in Morocco from Atlas Mountains trails to coastal walks with difficulty ratings and practical tips.',
+      type: 'page',
+      url: '/morocco-day-hiking',
+      tags: ['hiking', 'day hikes', 'Atlas Mountains', 'trekking', 'outdoors'],
+      keywords: ['morocco day hikes', 'atlas mountains day hike', 'morocco hiking trails', 'morocco trekking', 'toubkal day hike'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

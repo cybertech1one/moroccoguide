@@ -413,6 +413,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-lgbtq-travel',
     '/morocco-waterfalls-guide',
     '/morocco-music-guide',
+    '/morocco-hot-springs',
+    '/morocco-gardens-parks',
+    '/morocco-day-hiking',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
