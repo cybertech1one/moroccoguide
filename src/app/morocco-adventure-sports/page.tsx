@@ -31,80 +31,85 @@ import {
   Bike,
   Flame,
   Zap,
+  MessageCircleQuestion,
 } from 'lucide-react';
 
-/* ═══════════════════════════════════════════════════════════════
-   CONSTANTS
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   CONSTANTS & BASE URL
+   ================================================================ */
 
 const BASE_URL = 'https://citytoursmorocco.com';
+const PAGE_URL = `${BASE_URL}/morocco-adventure-sports`;
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    SEO METADATA
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 export const metadata: Metadata = {
-  title: 'Morocco Adventure Sports 2026 | Surfing, Sandboarding, Paragliding & More',
+  title:
+    'Morocco Adventure Sports Guide 2026 | Surfing, Climbing, Paragliding & 8 More Activities',
   description:
-    'The ultimate guide to adventure sports in Morocco. Surfing, kitesurfing, sandboarding, quad biking, paragliding, rock climbing, canyoning, mountain biking, zip-lining & camel trekking. Best locations, seasons, safety tips & prices from 200 MAD.',
+    'Plan adventure sports in Morocco for 2026. Surfing in Taghazout and Imsouane, kitesurfing in Dakhla, rock climbing at Todra Gorge, paragliding in Agadir, sandboarding at Erg Chebbi, canyoning at Akchour, white water rafting, horse riding, mountain biking, quad biking, and zip-lining. Locations, seasons, safety tips, and prices from 200 MAD.',
   keywords: [
     'Morocco adventure sports',
     'adventure activities Morocco',
-    'extreme sports Morocco',
-    'outdoor activities Morocco',
-    'surfing Morocco',
-    'kitesurfing Morocco',
-    'sandboarding Morocco',
+    'surfing Taghazout Morocco',
+    'kitesurfing Dakhla Morocco',
+    'rock climbing Todra Gorge',
+    'paragliding Agadir Morocco',
+    'sandboarding Merzouga Erg Chebbi',
+    'canyoning Akchour Morocco',
+    'white water rafting Morocco',
+    'horse riding Morocco',
+    'mountain biking Atlas Mountains',
     'quad biking Morocco',
-    'paragliding Morocco',
-    'rock climbing Morocco',
-    'canyoning Morocco',
-    'mountain biking Morocco',
     'zip-lining Morocco',
-    'camel trekking Morocco',
-    'Morocco outdoor sports',
-    'Morocco extreme adventures',
-    'adventure tours Morocco',
-    'Morocco action sports',
-    'Morocco adrenaline activities',
+    'extreme sports Morocco',
+    'outdoor activities Morocco 2026',
+    'Imsouane surfing',
+    'Tafraoute climbing',
+    'Ifrane paragliding',
     'Morocco adventure guide 2026',
+    'Morocco adrenaline activities',
   ],
   openGraph: {
-    title: 'Morocco Adventure Sports 2026 | Surfing, Sandboarding, Paragliding & More',
+    title:
+      'Morocco Adventure Sports Guide 2026 | Surfing, Climbing, Paragliding & More',
     description:
-      'Plan your Morocco adventure sports trip. Top activities from surfing Atlantic waves to sandboarding Sahara dunes. Best locations, safety tips, and prices from 200 MAD.',
-    url: `${BASE_URL}/morocco-adventure-sports`,
+      'The definitive guide to 11 adventure sports in Morocco. Surfing, kitesurfing, rock climbing, paragliding, sandboarding, canyoning, white water rafting, horse riding, mountain biking, quad biking, and zip-lining with prices from 200 MAD.',
+    url: PAGE_URL,
     images: [
       {
         url: `${BASE_URL}/images/hero-adventure.webp`,
         width: 1200,
         height: 630,
-        alt: 'Adventure sports in Morocco featuring surfing, sandboarding, and paragliding across diverse landscapes',
+        alt: 'Adventure sports in Morocco showing surfers at Taghazout, climbers at Todra Gorge, and sandboarding at Erg Chebbi',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Morocco Adventure Sports 2026 | Surfing, Sandboarding & More',
+    title:
+      'Morocco Adventure Sports Guide 2026 | 11 Activities, Prices & Safety Tips',
     description:
-      'Everything you need for adventure sports in Morocco: surfing, kitesurfing, sandboarding, paragliding, rock climbing, canyoning & more. Prices from 200 MAD.',
+      'Surfing, kitesurfing, climbing, paragliding, sandboarding, canyoning, rafting, horse riding, mountain biking, quad biking, zip-lining. Prices from 200 MAD.',
     images: [`${BASE_URL}/images/hero-adventure.webp`],
   },
-  alternates: { canonical: `${BASE_URL}/morocco-adventure-sports` },
+  alternates: { canonical: PAGE_URL },
 };
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    JSON-LD STRUCTURED DATA
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'TravelGuide',
-  '@id': `${BASE_URL}/morocco-adventure-sports`,
-  name: 'Morocco Adventure Sports 2026 | Surfing, Sandboarding, Paragliding & More',
+  '@id': PAGE_URL,
+  name: 'Morocco Adventure Sports Guide 2026',
   description:
-    'The ultimate guide to adventure sports in Morocco. Best activities, locations, safety tips, operators, seasons, and costs.',
-  url: `${BASE_URL}/morocco-adventure-sports`,
+    'Comprehensive guide to 11 adventure sports across Morocco, covering surfing, kitesurfing, rock climbing, paragliding, sandboarding, canyoning, white water rafting, horse riding, mountain biking, quad biking, and zip-lining.',
+  url: PAGE_URL,
   image: `${BASE_URL}/images/hero-adventure.webp`,
   author: {
     '@type': 'Organization',
@@ -117,26 +122,33 @@ const jsonLd = {
     url: BASE_URL,
   },
   datePublished: '2026-03-19',
-  dateModified: '2026-03-19',
-  mainEntityOfPage: `${BASE_URL}/morocco-adventure-sports`,
+  dateModified: '2026-03-21',
+  mainEntityOfPage: PAGE_URL,
   isPartOf: {
     '@type': 'WebSite',
     name: 'CityGuide Morocco',
     url: BASE_URL,
   },
   about: [
-    { '@type': 'Place', name: 'Essaouira' },
+    { '@type': 'Place', name: 'Taghazout' },
     { '@type': 'Place', name: 'Dakhla' },
-    { '@type': 'Place', name: 'Erg Chebbi' },
     { '@type': 'Place', name: 'Todra Gorge' },
+    { '@type': 'Place', name: 'Erg Chebbi' },
+    { '@type': 'Place', name: 'Akchour' },
     { '@type': 'Place', name: 'High Atlas Mountains' },
     { '@type': 'Place', name: 'Agadir' },
+    { '@type': 'Place', name: 'Ifrane' },
   ],
   breadcrumb: {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
-      { '@type': 'ListItem', position: 2, name: 'Morocco Adventure Sports', item: `${BASE_URL}/morocco-adventure-sports` },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Morocco Adventure Sports',
+        item: PAGE_URL,
+      },
     ],
   },
 };
@@ -147,10 +159,10 @@ const faqJsonLd = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What are the best adventure sports in Morocco?',
+      name: 'What are the top adventure sports in Morocco for 2026?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Morocco offers world-class surfing in Taghazout and Essaouira, kitesurfing in Dakhla and Essaouira, sandboarding on the Erg Chebbi dunes near Merzouga, paragliding over the Atlas Mountains and Agadir, rock climbing in Todra Gorge with 150+ routes, canyoning in the Ourika Valley and Akchour, mountain biking on Atlas trails, quad biking in the Agafay Desert, zip-lining near Marrakech, and camel trekking across the Sahara.',
+        text: 'The top adventure sports in Morocco include surfing at Taghazout, Essaouira, and Imsouane; kitesurfing in Dakhla and Essaouira; rock climbing at Todra Gorge and Tafraoute; paragliding over Agadir and Ifrane; sandboarding at Erg Chebbi near Merzouga; canyoning at Akchour near Chefchaouen; white water rafting on the Ourika and Ahansal rivers; horse riding on Atlantic beaches and through the Atlas foothills; mountain biking on Atlas singletrack; quad biking in the Agafay Desert; and zip-lining at Terres d\'Amanar near Marrakech.',
       },
     },
     {
@@ -158,68 +170,68 @@ const faqJsonLd = {
       name: 'How much do adventure sports cost in Morocco?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Adventure sports in Morocco are very affordable compared to Europe. Surfing lessons cost from 300-500 MAD per session, kitesurfing lessons from 800-1,500 MAD, sandboarding from 200-400 MAD, quad biking from 400-800 MAD per hour, paragliding tandem flights from 800-1,500 MAD, rock climbing guided sessions from 500-1,000 MAD, canyoning from 600-1,200 MAD, and camel trekking from 300-600 MAD per day. Prices vary by season and operator.',
+        text: 'Adventure sports in Morocco are affordable compared to Europe. Surfing lessons cost from 300-500 MAD per session, kitesurfing lessons from 800-1,500 MAD, sandboarding from 200-400 MAD, quad biking from 400-800 MAD per hour, paragliding tandem flights from 800-1,500 MAD, rock climbing from 500-1,000 MAD per guided session, canyoning from 600-1,200 MAD, white water rafting from 500-900 MAD, horse riding from 350-700 MAD, and zip-lining from 300-600 MAD. Prices vary by season and operator.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is Morocco safe for adventure sports?',
+      name: 'Is Morocco safe for adventure sports and extreme activities?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Morocco is generally safe for adventure sports when you use reputable operators. Always verify that guides are licensed and insured, check equipment condition before use, and ask about safety records. For water sports, ensure operators provide life jackets and have rescue procedures. For climbing and canyoning, use operators with certified guides. Travel insurance covering adventure sports is strongly recommended.',
+        text: 'Morocco is safe for adventure sports when you choose reputable operators with certified guides. Verify certifications, check equipment condition, and read recent reviews before booking. For water sports, confirm that life jackets and rescue procedures are in place. For climbing and canyoning, use operators with certified mountain guides. Travel insurance that explicitly covers adventure activities is strongly recommended.',
       },
     },
     {
       '@type': 'Question',
-      name: 'When is the best time for adventure sports in Morocco?',
+      name: 'When is the best time to visit Morocco for adventure sports?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The best season depends on the activity. Surfing is best from September to April when Atlantic swells peak. Kitesurfing is best from April to October when winds are strong and consistent. Sandboarding and desert activities are best from October to April when temperatures are comfortable. Rock climbing and canyoning are ideal from March to May and September to November. Mountain biking is year-round at lower elevations but best in spring and autumn in the mountains.',
+        text: 'The best overall periods are spring (March-May) and autumn (September-November). Surfing peaks from September to April when Atlantic swells are strongest. Kitesurfing is best April to October when trade winds blow consistently. Desert activities like sandboarding are ideal October to April. Rock climbing and canyoning are best in spring and autumn. October stands out as the single best month for the widest range of activities.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Do I need experience for adventure sports in Morocco?',
+      name: 'Can beginners do adventure sports in Morocco?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Most adventure sports in Morocco are accessible to complete beginners. Surfing schools offer beginner lessons on gentle beach breaks, tandem paragliding requires zero experience, sandboarding is easy to pick up, quad biking needs no prior experience, and camel trekking is suitable for all ages. For more technical activities like rock climbing multi-pitch routes, kitesurfing, or advanced canyoning, previous experience is recommended.',
+        text: 'Most adventure sports in Morocco welcome beginners. Surf schools at Taghazout and Essaouira teach first-timers on gentle beach breaks. Tandem paragliding requires zero experience. Sandboarding, quad biking, zip-lining, and horse riding are all accessible with no prior skill. Beginner rock climbing routes at Todra Gorge start at French grade 5a. Advanced activities like multi-pitch trad climbing at Taghia or independent kitesurfing do require prior experience.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Where are the best surfing spots in Morocco?',
+      name: 'Where is the best surfing in Morocco?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Taghazout near Agadir is Morocco\'s surfing capital, with famous breaks like Anchor Point, Killer Point, and Hash Point. Essaouira offers consistent wind-driven waves and is also Morocco\'s top kitesurfing destination. Sidi Kaouki has uncrowded beaches with good beginner waves. Imsouane has the longest right-hand wave in Africa. Mirleft and Sidi Ifni in the south offer quiet beach breaks away from the crowds.',
+        text: 'Taghazout near Agadir is Morocco\'s surfing capital, home to Anchor Point and Killer Point. Imsouane has the longest right-hand wave in Africa. Essaouira offers consistent wind-driven surf. Sidi Kaouki is ideal for beginners with uncrowded breaks. The southern coast near Mirleft and Sidi Ifni provides quiet reef breaks away from crowds. Water temperature ranges from 17 to 22 degrees Celsius year-round.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can I go sandboarding in the Sahara Desert?',
+      name: 'What should I pack for adventure sports in Morocco?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes, sandboarding is one of the most popular adventure activities in the Moroccan Sahara. The best location is Erg Chebbi near Merzouga, where dunes reach up to 150 meters high. Erg Chigaga near M\'Hamid is another excellent option with fewer tourists. Most desert camps and tour operators provide sandboards. No experience is needed, and it can be combined with a camel trek and overnight desert camp.',
+        text: 'Pack SPF 50+ sunscreen, a wide-brim hat, UV-protective sunglasses, a refillable water bottle, quick-dry clothing, sturdy closed-toe shoes for land activities, reef shoes for water sports, and a GoPro or waterproof camera. Most operators supply activity-specific gear such as wetsuits, helmets, harnesses, and boards. Carry your travel insurance documents and confirm that adventure activities are covered by your policy.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What should I bring for adventure sports in Morocco?',
+      name: 'Is there white water rafting in Morocco?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Pack sun protection (SPF 50+ sunscreen, hat, sunglasses), a refillable water bottle, quick-dry clothing, sturdy closed-toe shoes for land activities, reef shoes for water sports, and a GoPro or waterproof camera. For surfing, most schools provide wetsuits and boards. For climbing, operators supply all technical gear. Always bring travel insurance documents that specifically cover adventure activities.',
+        text: 'Yes. White water rafting operates on the Ahansal River in the Central High Atlas (Class III-IV rapids) and the Ourika River near Marrakech (Class II-III, seasonal). The Ahansal season runs from March to May when snowmelt raises water levels. Guided trips include all equipment, transport from Marrakech or Beni Mellal, and lunch. Half-day sessions cost from 500-900 MAD per person.',
       },
     },
   ],
 };
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    DATA: ADVENTURE SPORTS
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 const adventureSports = [
   {
     name: 'Surfing',
-    subtitle: 'World-class Atlantic breaks from Taghazout to Essaouira',
+    subtitle: 'World-class Atlantic breaks from Taghazout to Imsouane',
     icon: Waves,
     image: '/images/hero-surfing.webp',
     location: 'Taghazout, Essaouira, Imsouane, Sidi Kaouki',
@@ -228,24 +240,24 @@ const adventureSports = [
     bestSeason: 'September-April (biggest swells)',
     price: 'From 300 MAD per lesson',
     description:
-      'Morocco is one of the top surfing destinations in Africa, with consistent Atlantic swells, warm water, and an incredible variety of breaks. Taghazout is the epicenter, home to legendary spots like Anchor Point and Killer Point that attract surfers from across the globe. Beginners will find gentle beach breaks at Sidi Kaouki and Tamraght, while Imsouane offers the longest right-hand wave on the African continent. The surf culture here is vibrant, with dozens of surf camps, yoga retreats, and beachside cafes serving freshly caught fish.',
+      'Morocco ranks among the finest surfing destinations in Africa. Consistent North Atlantic swells, water temperatures that rarely drop below 17 degrees, and a coastline packed with point breaks, reef breaks, and beach breaks make this country a magnet for wave riders at every level. Taghazout, 20 kilometers north of Agadir, is the epicenter. Anchor Point delivers long, powerful right-handers that draw professionals from around the world; Killer Point produces fast, hollow barrels on bigger swells; and the gentle beach break at Tamraght welcomes first-timers. Farther north, Imsouane shelters the longest right-hand wave on the African continent, a mellow point break that peels for hundreds of meters on a good day. Essaouira offers wind-driven surf paired with kitesurfing and a thriving arts scene, while Sidi Kaouki provides uncrowded peaks for those willing to venture slightly off the beaten path.',
     highlights: [
-      'Anchor Point: one of the best right-hand point breaks in the world',
-      'Year-round surfing with water temperatures from 17-22 degrees Celsius',
-      'Surf camps from 500 MAD per night including lessons and accommodation',
-      'Imsouane: Africa\'s longest right-hand wave, perfect for longboarding',
-      'Essaouira: wind-driven waves ideal for intermediate surfers',
+      'Anchor Point in Taghazout: one of the world\'s top right-hand point breaks',
+      'Imsouane: Africa\'s longest right-hand wave, ideal for longboarding',
+      'Water temperatures 17-22 degrees Celsius year-round',
+      'Surf camps from 500 MAD per night with lessons and accommodation included',
+      'Essaouira: wind-driven waves and vibrant surf culture',
     ],
     safetyTips: [
-      'Check tide tables and swell forecasts before entering the water',
-      'Beginners should always take lessons with a certified instructor',
-      'Wear a wetsuit from November to March when water drops to 17 degrees',
-      'Respect local surfers and follow lineup etiquette at crowded breaks',
+      'Check tide tables and swell forecasts before paddling out',
+      'Beginners should always surf with a certified instructor',
+      'Wear a 3/2mm wetsuit November through March when water drops to 17 degrees',
+      'Respect lineup etiquette and give priority to local surfers at crowded breaks',
     ],
   },
   {
     name: 'Kitesurfing',
-    subtitle: 'Consistent trade winds make Morocco a global kitesurfing hub',
+    subtitle: 'Consistent trade winds at Dakhla and Essaouira',
     icon: Wind,
     image: '/images/hero-essaouira-coast.webp',
     location: 'Dakhla, Essaouira, Moulay Bousselham',
@@ -254,24 +266,76 @@ const adventureSports = [
     bestSeason: 'April-October (strongest winds)',
     price: 'From 800 MAD per lesson',
     description:
-      'Morocco is a world-class kitesurfing destination, blessed with powerful and consistent trade winds that funnel along the Atlantic coast. Dakhla, in the far south, is the jewel of Moroccan kitesurfing: a stunning lagoon with flat water, thermal winds blowing 300+ days per year, and water temperatures that stay warm through winter. Essaouira is the more accessible option, with the "wind city of Africa" living up to its nickname from April to September. Professional schools with IKO-certified instructors operate in both locations.',
+      'Morocco is a global kitesurfing hub thanks to powerful, consistent trade winds that funnel along its Atlantic coast. Dakhla, in the far south, is the crown jewel: a vast turquoise lagoon with butter-flat water, side-onshore thermals blowing 300+ days per year, and water so warm you can ride in boardshorts well into December. The Dakhla lagoon stretches 40 kilometers, giving riders endless downwind space and multiple kite spots depending on wind direction. Essaouira earns its nickname "Wind City of Africa" from April to September, when Alizee winds reach 25-35 knots daily. The beach break here suits experienced freeriders and wave-kiting enthusiasts. IKO-certified schools operate at both locations with multilingual instructors and modern gear. Equipment rental for experienced riders starts from 400 MAD per day.',
     highlights: [
       'Dakhla lagoon: flat water and 300+ wind days per year',
-      'Essaouira beach: accessible from Marrakech with daily bus connections',
-      'IKO-certified schools with multilingual instructors',
+      'Essaouira: accessible from Marrakech with daily bus service',
+      'IKO-certified schools with modern equipment at both locations',
       'Equipment rental from 400 MAD per day for experienced riders',
-      'Growing freestyle and wave riding scene at both locations',
+      'Dakhla hosts international kitesurfing competitions annually',
     ],
     safetyTips: [
-      'Take a certified course before riding independently; kites are powerful',
-      'Never kite alone; always have a buddy or ride at supervised spots',
+      'Complete a certified IKO course before riding independently',
+      'Never kite alone; always ride at supervised spots or with a buddy',
+      'Wear a helmet and impact vest while learning',
       'Check wind forecasts and respect offshore wind warnings',
-      'Wear a helmet and impact vest, especially while learning',
+    ],
+  },
+  {
+    name: 'Rock Climbing',
+    subtitle: 'Limestone walls at Todra Gorge and granite in Tafraoute',
+    icon: Mountain,
+    image: '/images/hero-atlas-village.webp',
+    location: 'Todra Gorge, Tafraoute, Taghia Canyon, Chefchaouen',
+    duration: 'Half-day to full-day sessions',
+    difficulty: 'Beginner to Expert',
+    bestSeason: 'March-May, September-November',
+    price: 'From 500 MAD per guided session',
+    description:
+      'Morocco has emerged as one of North Africa\'s premier climbing destinations. Todra Gorge, carved through the eastern High Atlas, is the flagship venue: 300-meter vertical limestone walls flank a narrow canyon, hosting over 150 bolted sport routes from French grade 5a to 8b+. The classic Pilier du Couchant multi-pitch route climbs the full height of the gorge and ranks among the finest moderate multi-pitch lines in Africa. Tafraoute in the Anti-Atlas provides a completely different experience: pink granite domes and boulders set amid almond orchards and painted rocks, with bouldering problems and short sport routes. For the truly adventurous, Taghia Canyon is Morocco\'s answer to Yosemite: big-wall limestone routes up to 800 meters accessible only by mule or a long approach on foot. Chefchaouen in the Rif Mountains has newly developed crags with short, steep sport routes and views of the blue-washed medina.',
+    highlights: [
+      'Todra Gorge: 150+ bolted sport routes from 5a to 8b+ on limestone',
+      'Tafraoute: granite bouldering amid painted rocks and almond orchards',
+      'Taghia Canyon: remote big-wall routes up to 800 meters high',
+      'Chefchaouen: new crags with Rif Mountain views',
+      'Winter climbing weather rivaling southern Spain at a fraction of the cost',
+    ],
+    safetyTips: [
+      'Bring your own gear or rent from shops in Tinghir near Todra Gorge',
+      'Hire a local guide for Taghia: access is remote and most routes are trad',
+      'Inspect bolt conditions on older routes, particularly at Todra',
+      'Climb early morning or late afternoon in warmer months to avoid heat',
+    ],
+  },
+  {
+    name: 'Paragliding',
+    subtitle: 'Thermal flights above the Atlas, Agadir coast, and Ifrane forests',
+    icon: Compass,
+    image: '/images/hero-atlas.webp',
+    location: 'Aguergour (Atlas), Agadir, Ifrane, Dades Valley',
+    duration: '15-45 minutes per flight',
+    difficulty: 'No Experience Required (tandem)',
+    bestSeason: 'March-November',
+    price: 'From 800 MAD per tandem flight',
+    description:
+      'Paragliding in Morocco opens up aerial perspectives that no other activity can match. The launch site at Aguergour, roughly 45 minutes south of Marrakech in the High Atlas foothills, sends tandem pilots and passengers soaring over terraced Berber villages, walnut groves, and the winding river valleys below. On strong thermal days, flights can last 30-45 minutes and gain over 1,000 meters of altitude. Agadir offers coastal flights with views down the golden beach and out over the Atlantic horizon. Ifrane, the "Switzerland of Morocco" in the Middle Atlas, provides a forest-and-lake landscape that feels completely different from the rest of the country. Tandem flights require zero experience: you run a few steps at the launch ramp, your certified pilot handles takeoff, steering, and landing, and you enjoy the view.',
+    highlights: [
+      'Aguergour: soar over Atlas valleys with panoramic mountain views',
+      'Agadir: coastal flights over the Atlantic and golden beaches',
+      'Ifrane: fly above cedar forests and Middle Atlas lakes',
+      'Tandem flights need zero experience; the pilot does everything',
+      'GoPro footage and photos included with most operators',
+    ],
+    safetyTips: [
+      'Fly only with certified tandem pilots from insured operators',
+      'Wear sturdy shoes and avoid loose clothing or dangling scarves',
+      'Flights depend on weather; be prepared for same-day cancellation',
+      'Disclose any medical conditions or fear of heights before takeoff',
     ],
   },
   {
     name: 'Sandboarding',
-    subtitle: 'Ride the towering dunes of the Sahara Desert',
+    subtitle: 'Ride the 150-meter dunes of Erg Chebbi at Merzouga',
     icon: TrendingUp,
     image: '/images/hero-merzouga.webp',
     location: 'Erg Chebbi (Merzouga), Erg Chigaga (M\'Hamid)',
@@ -280,24 +344,24 @@ const adventureSports = [
     bestSeason: 'October-April (cool desert temperatures)',
     price: 'From 200 MAD per session',
     description:
-      'Sandboarding down the towering dunes of Morocco\'s Sahara is an exhilarating and unforgettable experience. The Erg Chebbi dunes near Merzouga reach up to 150 meters in height, offering long, thrilling descents over soft golden sand. Unlike snowboarding, sandboarding requires no experience and anyone can enjoy it within minutes. Most desert camps include sandboarding as part of their overnight excursion packages. The climb back up the dune is the real workout, but the views from the summit at sunset make every step worthwhile.',
+      'Sandboarding the Erg Chebbi dunes near Merzouga is one of Morocco\'s most photogenic adrenaline rushes. These dunes tower up to 150 meters above the desert floor, their ridgelines curving against a sky that shifts from deep blue at midday to orange and crimson at sunset. You strap a waxed board to your feet at the top, point downhill, and slide. The speed builds quickly on steeper faces, and wipeouts send up dramatic plumes of fine golden sand. The climb back up is a genuine workout but the views from the summit reward every step. Most desert camps at Merzouga include sandboarding in their overnight packages at no extra charge. Erg Chigaga, accessible from M\'Hamid in the Draa Valley, offers larger dunes with far fewer tourists for those who want solitude with their thrills.',
     highlights: [
-      'Erg Chebbi dunes: up to 150 meters high for long thrilling rides',
-      'No experience needed: anyone can sandboard within minutes',
-      'Often included free with desert camp overnight packages',
-      'Combine with sunset camel trek and overnight Sahara camping',
-      'Erg Chigaga offers larger dunes with far fewer tourists',
+      'Erg Chebbi: dunes up to 150 meters for long, fast descents',
+      'No experience needed; anyone can sandboard within minutes',
+      'Often included free with desert camp overnight bookings',
+      'Combine with sunset camel trek and Sahara stargazing',
+      'Erg Chigaga: remote dunes with fewer tourists',
     ],
     safetyTips: [
-      'Wear closed shoes and long sleeves to protect from sand burn',
-      'Apply sunscreen liberally, even on cloudy desert days',
-      'Stay hydrated: carry at least 2 liters of water per person',
+      'Wear closed shoes and long sleeves to prevent sand burn',
+      'Apply sunscreen generously, including under the chin (sand reflects UV)',
+      'Carry at least 2 liters of water per person',
       'Avoid sandboarding in midday heat from June to September',
     ],
   },
   {
     name: 'Quad Biking',
-    subtitle: 'Tear across desert landscapes and palm-lined valleys',
+    subtitle: 'Agafay Desert, Merzouga, and palm-grove trails',
     icon: Gauge,
     image: '/images/hero-agafay.webp',
     location: 'Agafay Desert, Merzouga, Ouarzazate, Marrakech outskirts',
@@ -306,102 +370,50 @@ const adventureSports = [
     bestSeason: 'Year-round (best October-May)',
     price: 'From 400 MAD per hour',
     description:
-      'Quad biking is one of the most accessible and thrilling adventure activities in Morocco. The Agafay Desert, just 30 minutes from Marrakech, offers a moon-like landscape of rocky plains and dry riverbeds perfect for quad excursions. Merzouga provides the opportunity to ride alongside the Sahara dunes through hamada (rocky desert) and past oases. No license is needed for guided tours, and operators provide full instruction, helmets, goggles, and protective gear before you hit the trail.',
+      'Quad biking is one of Morocco\'s most accessible adventure activities. The Agafay Desert, a moon-like landscape of rocky plains and dry riverbeds just 30 minutes from Marrakech, is the most popular venue. Morning and sunset sessions let you tear across open terrain with the snow-capped Atlas range as a backdrop. Merzouga offers a different experience: riding alongside the Sahara dunes through hamada (stony desert) and past date-palm oases where you stop for mint tea with local families. No driving license is required for guided tours. Operators provide comprehensive instruction, helmets, goggles, and dust masks before you ride. Sunset sessions followed by a traditional Berber dinner under the stars have become one of Marrakech\'s most popular excursions.',
     highlights: [
-      'Agafay Desert: just 30 minutes from Marrakech with Atlas Mountain views',
-      'Merzouga: ride alongside the Sahara dunes through rocky desert',
-      'No driving license required for guided quad tours',
-      'Sunset quad tours are a popular Marrakech excursion from 600 MAD',
-      'Combine with a traditional Berber dinner under the stars',
+      'Agafay Desert: 30 minutes from Marrakech with Atlas Mountain views',
+      'Merzouga: ride alongside Sahara dunes through oases',
+      'No driving license required for guided tours',
+      'Sunset quad tours from 600 MAD including Berber dinner',
+      'Palm-grove trails near Marrakech for a gentler ride',
     ],
     safetyTips: [
-      'Wear long trousers, closed shoes, and provided safety gear at all times',
-      'Follow your guide and stay on designated routes',
-      'Maintain safe following distance from other riders',
+      'Wear long trousers, closed shoes, and all provided safety gear',
+      'Follow your guide and stay on designated routes at all times',
+      'Maintain a safe following distance from other riders',
       'Choose operators with well-maintained, newer quad bikes',
     ],
   },
   {
-    name: 'Paragliding',
-    subtitle: 'Soar above the Atlas Mountains and Morocco\'s dramatic coastline',
-    icon: Compass,
-    image: '/images/hero-atlas.webp',
-    location: 'Aguergour (Atlas), Agadir, Dades Valley, Ifrane',
-    duration: '15-45 minutes per flight',
-    difficulty: 'No Experience Required (tandem)',
-    bestSeason: 'March-November',
-    price: 'From 800 MAD per tandem flight',
-    description:
-      'Paragliding in Morocco offers some of the most spectacular aerial views in North Africa. The launch site at Aguergour in the High Atlas, roughly 45 minutes south of Marrakech, sends you soaring over Berber villages, terraced hillsides, and the winding river valleys of the Atlas foothills. Agadir offers coastal flights with views over the Atlantic and golden beaches below. Tandem flights require zero experience: you simply run a few steps at launch and enjoy the ride while your certified pilot handles everything.',
-    highlights: [
-      'Aguergour: soar over Atlas Mountain valleys with panoramic views',
-      'Agadir: coastal flights over the Atlantic and golden beaches',
-      'Tandem flights require zero experience; pilot handles everything',
-      'Flights last 15-45 minutes depending on thermal conditions',
-      'GoPro footage and photos included with most operators',
-    ],
-    safetyTips: [
-      'Fly only with certified tandem pilots from reputable operators',
-      'Wear sturdy shoes and comfortable clothing; avoid loose scarves',
-      'Flights are weather-dependent and may be cancelled for safety',
-      'Inform your pilot of any medical conditions before takeoff',
-    ],
-  },
-  {
-    name: 'Rock Climbing',
-    subtitle: 'World-class crags in Todra Gorge and beyond',
-    icon: Mountain,
-    image: '/images/hero-atlas-village.webp',
-    location: 'Todra Gorge, Taghia Canyon, Anti-Atlas, Chefchaouen',
-    duration: 'Half-day to full-day sessions',
-    difficulty: 'Beginner to Expert',
-    bestSeason: 'March-May, September-November',
-    price: 'From 500 MAD per guided session',
-    description:
-      'Morocco is an emerging rock climbing hotspot with world-class limestone crags that rival anything in southern Europe. Todra Gorge is the crown jewel: 300-meter canyon walls offer over 150 bolted sport routes from 5a to 8b+, with the iconic Pilier du Couchant providing one of the finest multi-pitch climbs in North Africa. Taghia Canyon, accessible only by mule or a long hike, is Morocco\'s biggest wall climbing destination with routes up to 800 meters. The Anti-Atlas near Tafraout offers unique granite bouldering amid painted rocks and almond orchards.',
-    highlights: [
-      'Todra Gorge: 150+ bolted sport routes from 5a to 8b+ on limestone',
-      'Taghia Canyon: remote big-wall climbing with routes up to 800 meters',
-      'Anti-Atlas: granite bouldering near Tafraout amid almond orchards',
-      'Chefchaouen: newly developed crags with stunning Rif Mountain views',
-      'Perfect winter climbing weather when European crags are too cold',
-    ],
-    safetyTips: [
-      'Bring your own gear or rent from climbing shops in Todra Gorge',
-      'Hire a local guide for Taghia: access is remote and routes are trad',
-      'Check bolt conditions on older routes; some may need replacement',
-      'Climb early morning or late afternoon in warmer months to avoid heat',
-    ],
-  },
-  {
     name: 'Canyoning',
-    subtitle: 'Rappel waterfalls and swim through hidden gorges',
+    subtitle: 'Rappel waterfalls and swim through gorges at Akchour',
     icon: Droplets,
     image: '/images/hero-ouzoud.webp',
-    location: 'Ourika Valley, Akchour, Paradise Valley, Ouzoud',
+    location: 'Akchour, Ourika Valley, Paradise Valley, Ouzoud',
     duration: '4-7 hours',
     difficulty: 'Moderate',
     bestSeason: 'April-October (water levels permitting)',
     price: 'From 600 MAD per person',
     description:
-      'Canyoning is one of Morocco\'s most underrated adventure sports. The country\'s diverse geology of limestone gorges, basalt canyons, and Atlas Mountain valleys creates perfect conditions for rappelling waterfalls, swimming through pools, jumping from natural platforms, and scrambling through narrow slot canyons. The Ourika Valley near Marrakech offers accessible half-day canyoning trips with waterfalls up to 20 meters high. Paradise Valley near Agadir features emerald pools and smooth rock slides. For the most adventurous, Akchour near Chefchaouen delivers remote canyon descents through pristine wilderness.',
+      'Morocco\'s limestone gorges, basalt canyons, and Atlas Mountain valleys create conditions that are tailor-made for canyoning. Akchour, near Chefchaouen in the Rif Mountains, is the standout destination: a series of waterfalls and deep pools set in pristine wilderness, where you rappel down rock faces, leap from natural platforms into turquoise pools, and scramble through narrow slot sections. The Ourika Valley, 45 minutes south of Marrakech, offers accessible half-day trips with waterfalls up to 20 meters high. Paradise Valley near Agadir features smooth rock slides and emerald swimming pools in a palm-lined gorge. Operators provide all technical equipment including wetsuits, helmets, harnesses, and ropes. Guided groups are typically limited to 8-10 people for safety.',
     highlights: [
-      'Ourika Valley: half-day trips with waterfall rappelling near Marrakech',
-      'Paradise Valley: natural rock slides and emerald swimming pools',
-      'Akchour: remote canyon descents through pristine Rif wilderness',
-      'Technical equipment provided by all reputable operators',
+      'Akchour: remote canyon descents through Rif Mountain wilderness',
+      'Ourika Valley: half-day waterfall rappelling near Marrakech',
+      'Paradise Valley: natural rock slides and emerald pools',
+      'All technical equipment provided by operators',
       'Combine with hiking for a full-day Atlas Mountain adventure',
     ],
     safetyTips: [
-      'Never canyon independently; always use certified guides with equipment',
-      'Wear provided wetsuits and helmets at all times in the canyon',
-      'Check water levels: flash floods are a real danger after rain',
-      'Ensure your operator carries a first aid kit and communication device',
+      'Never canyon without a certified guide and proper equipment',
+      'Wear the provided wetsuit and helmet at all times in the canyon',
+      'Check water levels before departure; flash floods follow rain',
+      'Ensure your operator carries a first aid kit and satellite phone',
     ],
   },
   {
     name: 'Mountain Biking',
-    subtitle: 'Singletrack trails from the Atlas to the desert',
+    subtitle: 'Singletrack across the High Atlas and down to the desert',
     icon: Bike,
     image: '/images/hero-trekking.webp',
     location: 'High Atlas, Ourika Valley, Agafay, Dades Valley, Amizmiz',
@@ -410,24 +422,24 @@ const adventureSports = [
     bestSeason: 'March-May, September-November',
     price: 'From 500 MAD per half-day guided',
     description:
-      'Morocco\'s diverse terrain makes it a mountain biking paradise. From rocky singletrack descents through the High Atlas to flowing desert trails in the Agafay and smooth gravel paths along the Dades Valley, there is terrain for every skill level. The area around Amizmiz, south of Marrakech, has become a hub for guided mountain biking with networks of Berber village trails and purpose-built singletrack. Multi-day bikepacking routes crossing the Atlas from Marrakech to the desert are growing in popularity, combining technical riding with cultural immersion.',
+      'The diversity of terrain in Morocco makes it a mountain biking destination with few equals. The High Atlas offers technical singletrack descents through Berber villages and juniper forests, with views that stretch to the Sahara on clear days. Amizmiz, 55 kilometers south of Marrakech, has become a hub for guided riding with networks of village trails and purpose-built singletrack connecting hamlets, irrigation channels, and hilltop granaries. The Agafay Desert delivers flowing trails across rocky moon-like landscapes. The Dades Valley combines gravel roads with singletrack linking oasis villages beneath towering red-rock cliffs. Multi-day bikepacking routes crossing the Atlas from Marrakech to the Sahara have grown rapidly in popularity, blending technical riding with overnight stays in mountain gites and desert camps. E-bike options are now available at most operators for riders who want the views without the full cardiovascular effort.',
     highlights: [
-      'Amizmiz: growing hub with Berber village trails and guided networks',
-      'High Atlas descents: technical singletrack with stunning views',
-      'Agafay Desert: flowing trails through moon-like rocky landscapes',
-      'Multi-day bikepacking from Marrakech to the Sahara desert',
-      'E-bike options available for less experienced riders',
+      'Amizmiz: growing hub with village trails and guided networks',
+      'High Atlas: technical singletrack with snow-capped mountain views',
+      'Dades Valley: gravel and singletrack through red-rock oasis villages',
+      'Multi-day bikepacking from Marrakech across the Atlas to the Sahara',
+      'E-bike options available at most operators',
     ],
     safetyTips: [
-      'Wear a helmet at all times; carry a basic repair kit and pump',
+      'Always wear a helmet; carry a basic repair kit and hand pump',
       'Check brake pads and tire pressure before every ride',
       'Carry at least 2 liters of water on any ride in Morocco',
-      'Ride with a guide on unfamiliar trails to avoid getting lost',
+      'Ride with a guide on unfamiliar trails to prevent getting lost',
     ],
   },
   {
     name: 'Zip-Lining',
-    subtitle: 'Fly across Atlas valleys and desert landscapes',
+    subtitle: 'Fly across Atlas valleys and forest canopies',
     icon: Zap,
     image: '/images/hero-hiking-atlas.webp',
     location: 'Terres d\'Amanar (Atlas), Agafay, Ourika Valley',
@@ -436,52 +448,78 @@ const adventureSports = [
     bestSeason: 'Year-round',
     price: 'From 300 MAD per person',
     description:
-      'Zip-lining in Morocco has grown rapidly, with several well-equipped adventure parks now operating in the Atlas Mountains and beyond. Terres d\'Amanar, about 30 minutes from Marrakech in the Atlas foothills, is the most established, offering multiple zip-lines up to 300 meters long over forested valleys, plus rope courses and climbing walls. The experience is family-friendly and accessible to anyone over the minimum age and weight requirements. Some operators in the Ourika Valley offer zip-lines crossing above river gorges.',
+      'Zip-lining in Morocco has grown steadily, with several well-equipped adventure parks now operating in the Atlas Mountains. Terres d\'Amanar, about 30 minutes from Marrakech in the Atlas foothills, is the most established. It offers multiple zip-lines stretching up to 300 meters over forested valleys, plus aerial rope courses, climbing walls, and archery. The experience is family-friendly and accessible to anyone who meets the minimum age and weight requirements. Some operators in the Ourika Valley have installed zip-lines that cross above river gorges, adding a water element to the thrill. The Agafay Desert has newer installations that combine zip-lining with quad biking and camel rides for a full adventure day.',
     highlights: [
       'Terres d\'Amanar: multiple zip-lines up to 300 meters over Atlas forests',
-      'Family-friendly with no experience required',
+      'Family-friendly with no prior experience needed',
+      'Ourika Valley: zip-line over river gorges and waterfalls',
       'Combine with rope courses, climbing walls, and Berber lunch',
-      'Ourika Valley: zip-line over river gorges with waterfall views',
-      'Only 30 minutes from Marrakech for easy half-day excursions',
+      'Only 30 minutes from Marrakech for easy half-day trips',
     ],
     safetyTips: [
-      'Verify operator has modern equipment with redundant safety systems',
-      'Follow all weight and age restrictions provided by the operator',
-      'Wear closed-toe shoes and remove any loose jewelry or accessories',
-      'Listen carefully to the safety briefing before your first run',
+      'Verify the operator uses modern equipment with redundant safety systems',
+      'Follow all weight and age restrictions listed by the operator',
+      'Wear closed-toe shoes and remove loose jewelry before riding',
+      'Listen to the full safety briefing before your first run',
     ],
   },
   {
-    name: 'Camel Trekking',
-    subtitle: 'Cross the Sahara dunes on the back of a dromedary',
-    icon: Sun,
-    image: '/images/hero-camel-sunset.webp',
-    location: 'Merzouga, M\'Hamid, Zagora, Agafay Desert',
-    duration: '1-3 hours to multi-day',
-    difficulty: 'Beginner Friendly',
-    bestSeason: 'October-April (cool desert temperatures)',
-    price: 'From 300 MAD per sunset trek',
+    name: 'White Water Rafting',
+    subtitle: 'Class III-IV rapids on Atlas Mountain rivers',
+    icon: Waves,
+    image: '/images/hero-ouzoud.webp',
+    location: 'Ahansal River, Ourika River, Oum Er-Rbia',
+    duration: 'Half-day to full-day',
+    difficulty: 'Moderate to Challenging',
+    bestSeason: 'March-May (snowmelt season)',
+    price: 'From 500 MAD per half-day',
     description:
-      'Camel trekking is the quintessential Moroccan adventure experience. Riding a dromedary across the golden dunes of Erg Chebbi at sunset, with the vast Sahara stretching to the horizon, is a moment that stays with you forever. Merzouga is the most popular base, offering everything from 90-minute sunset treks to multi-day expeditions deep into the desert with overnight stays in luxury or traditional Berber camps. M\'Hamid provides access to the remote Erg Chigaga dunes, far from crowds, where the silence of the Sahara is absolute.',
+      'White water rafting in Morocco is a lesser-known activity that rewards those willing to seek it out. The Ahansal River, cutting through the Central High Atlas between Beni Mellal and Azilal, delivers the strongest rapids: Class III-IV sections that surge during spring snowmelt from March to May. The gorge scenery is stunning, with red and ochre cliffs rising above the water and Berber villages perched on terraced hillsides. The Ourika River, closer to Marrakech, offers gentler Class II-III rapids during the wet season, making it a solid choice for beginners and families. Guided trips include all equipment (rafts, paddles, helmets, life vests), safety briefings, and typically lunch at a riverside Berber home. Transport from Marrakech or Beni Mellal is arranged by most operators.',
     highlights: [
-      'Merzouga: sunset treks to Erg Chebbi dunes with desert camp stays',
-      'M\'Hamid: access to remote Erg Chigaga dunes with total desert silence',
-      'Overnight camps range from traditional bivouacs to luxury glamping',
-      'Sunrise and sunset light turns the dunes orange, gold, and pink',
-      'Combine with sandboarding, stargazing, and traditional Berber music',
+      'Ahansal River: Class III-IV rapids through dramatic Atlas gorges',
+      'Ourika River: gentler Class II-III rapids accessible from Marrakech',
+      'All equipment and safety gear provided by operators',
+      'Lunch at a riverside Berber home included with most trips',
+      'Spring snowmelt creates reliable water levels March through May',
     ],
     safetyTips: [
-      'Wear comfortable trousers; saddle soreness is common for first-timers',
-      'Carry sunscreen, a hat, and at least 1.5 liters of water',
-      'Follow your guide\'s instructions for mounting and dismounting',
-      'Choose operators with well-cared-for camels and responsible practices',
+      'Wear the provided life vest and helmet at all times on the river',
+      'Listen to the guide\'s paddle commands and safety instructions',
+      'Water is cold in spring; wetsuits are provided but dress warmly underneath',
+      'Confirm that your travel insurance covers white water rafting',
+    ],
+  },
+  {
+    name: 'Horse Riding',
+    subtitle: 'Beach gallops, Atlas trails, and desert rides',
+    icon: Heart,
+    image: '/images/hero-beach.webp',
+    location: 'Essaouira, Agadir, Ouirgane (Atlas), Merzouga',
+    duration: '1 hour to multi-day',
+    difficulty: 'Beginner to Advanced',
+    bestSeason: 'Year-round (best October-May)',
+    price: 'From 350 MAD per hour',
+    description:
+      'Morocco has a deep equestrian tradition, and horse riding is one of the most rewarding ways to explore the country\'s landscapes. Essaouira offers sunset beach gallops along kilometers of firm, flat sand backed by dunes and argan groves. Ouirgane in the High Atlas is the base for multi-day trail rides through walnut-forested valleys, past Berber villages, and up to mountain passes with panoramic views. Agadir provides beachfront rides along the Souss-Massa coast, where you may spot flamingos and other birdlife in the nearby national park. Near Merzouga, horse rides through the palm groves and along the edges of the Erg Chebbi dunes at sunrise or sunset offer a quieter alternative to camel trekking. Stables use well-trained Barb and Arab-Barb horses accustomed to varied terrain and riders of all levels.',
+    highlights: [
+      'Essaouira: sunset beach gallops along Atlantic sands',
+      'Ouirgane: multi-day Atlas trail rides through Berber villages',
+      'Agadir: coastal rides near Souss-Massa National Park',
+      'Merzouga: sunrise rides alongside Sahara dunes',
+      'Barb and Arab-Barb horses suited to all experience levels',
+    ],
+    safetyTips: [
+      'Wear sturdy boots with a small heel and a riding helmet',
+      'Be honest about your riding experience when booking',
+      'Apply sunscreen and carry water on longer rides',
+      'Choose stables that demonstrate proper horse care and welfare standards',
     ],
   },
 ] as const;
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    DATA: SEASONAL GUIDE
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 const seasonGuide = [
   {
@@ -490,8 +528,8 @@ const seasonGuide = [
     tempDay: '20-30 C (coast), 15-25 C (mountains)',
     rating: 'Excellent',
     description:
-      'The best all-round season for adventure sports in Morocco. Surf swells are still strong, winds are building for kitesurfing, desert temperatures are comfortable for sandboarding and camel trekking, and the mountains are ideal for climbing, canyoning, and mountain biking. Wildflowers add color to the Atlas trails.',
-    recommended: 'All activities: surfing, climbing, canyoning, mountain biking, paragliding',
+      'The finest all-round season. Surf swells remain strong through March and April. Trade winds build for kitesurfing. Desert temperatures are comfortable for sandboarding. Snowmelt feeds Atlas rivers for white water rafting. Rock climbing, canyoning, mountain biking, and horse riding conditions are all at their peak.',
+    recommended: 'All activities: surfing, rafting, climbing, canyoning, biking, horse riding',
   },
   {
     season: 'Summer (June-August)',
@@ -499,8 +537,8 @@ const seasonGuide = [
     tempDay: '30-40 C (coast), 35-45 C (desert)',
     rating: 'Good (water sports)',
     description:
-      'Too hot for desert activities but perfect for water sports. Kitesurfing conditions peak with strong trade winds along the coast. Surfing is smaller but still fun at many breaks. Canyoning in mountain valleys offers a refreshing escape from the heat. Avoid quad biking and camel trekking in the desert during midday.',
-    recommended: 'Kitesurfing, surfing, canyoning, zip-lining, coastal paragliding',
+      'Too hot for desert and mountain activities at midday. Kitesurfing peaks with strong daily trade winds along the coast. Surfing is smaller but fun at many breaks. Canyoning in mountain valleys offers a refreshing escape. Horse riding on the coast is pleasant in the morning and evening. Avoid quad biking and sandboarding in the desert.',
+    recommended: 'Kitesurfing, surfing, canyoning, zip-lining, coastal horse riding',
   },
   {
     season: 'Autumn (September-November)',
@@ -508,8 +546,8 @@ const seasonGuide = [
     tempDay: '22-32 C (coast), 20-30 C (desert)',
     rating: 'Excellent',
     description:
-      'Another superb season for adventure sports. Atlantic surf swells return in force, desert temperatures cool to comfortable levels for sandboarding and camel trekking, rock climbing conditions are ideal at Todra Gorge, and mountain biking trails are dry and fast. October is arguably the single best month for adventure activities in Morocco.',
-    recommended: 'All activities: surfing, sandboarding, climbing, paragliding, camel trekking',
+      'Another outstanding season for adventure sports. Atlantic surf swells return strongly. Desert temperatures cool for sandboarding and quad biking. Rock climbing at Todra Gorge is ideal. Mountain biking trails are dry and fast. Horse riding conditions are comfortable across all regions. October is the single best month overall.',
+    recommended: 'All activities: surfing, sandboarding, climbing, paragliding, horse riding',
   },
   {
     season: 'Winter (December-February)',
@@ -517,152 +555,164 @@ const seasonGuide = [
     tempDay: '15-20 C (coast), 10-20 C (desert by day)',
     rating: 'Good (surf & desert)',
     description:
-      'Winter brings the biggest Atlantic swells, making this prime surfing season in Taghazout and Essaouira. Desert temperatures are pleasant during the day but cold at night. Rock climbing at Todra Gorge is excellent with cool, dry conditions. Kitesurfing slows as winds become inconsistent. Canyoning is limited due to cold water and rain.',
-    recommended: 'Surfing, rock climbing, camel trekking, sandboarding, quad biking',
+      'Biggest Atlantic swells make this prime surfing season. Desert days are pleasant but nights are cold. Rock climbing at Todra Gorge is excellent with cool, dry weather. Kitesurfing slows with inconsistent wind. Canyoning is limited by cold water. Horse riding on the coast remains comfortable during the day.',
+    recommended: 'Surfing, rock climbing, sandboarding, quad biking, horse riding',
   },
 ];
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    DATA: SAFETY ESSENTIALS
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 const safetyEssentials = [
   {
-    title: 'Choose Reputable Operators',
+    title: 'Choose Certified Operators',
     icon: ShieldCheck,
-    description: 'Look for operators with online reviews, proper insurance, and certified guides. Ask to see certifications before booking. Word of mouth from hotel staff is often reliable.',
+    description:
+      'Look for operators with verified online reviews, proper liability insurance, and internationally certified guides (IKO for kitesurfing, IFMGA for climbing). Ask to see credentials before booking.',
   },
   {
-    title: 'Get Travel Insurance',
+    title: 'Get Adventure Travel Insurance',
     icon: Award,
-    description: 'Ensure your travel insurance specifically covers adventure sports. Standard policies often exclude activities like paragliding, climbing, and kitesurfing. Check your policy wording carefully.',
+    description:
+      'Standard travel insurance often excludes adventure activities. Confirm your policy covers each specific sport you plan to do: paragliding, climbing, kitesurfing, and rafting are commonly excluded.',
   },
   {
-    title: 'Inspect Equipment',
+    title: 'Inspect All Equipment',
     icon: CheckCircle,
-    description: 'Before any activity, check that helmets, harnesses, ropes, and other equipment are in good condition. Do not hesitate to refuse equipment that looks worn or damaged. Your safety comes first.',
+    description:
+      'Check helmets, harnesses, ropes, and life vests before every activity. Refuse any equipment that looks frayed, cracked, or damaged. Your safety is more important than politeness.',
   },
   {
     title: 'Know Your Limits',
     icon: AlertTriangle,
-    description: 'Be honest about your fitness and experience level. Morocco offers activities for beginners through experts, but choosing the wrong difficulty can be dangerous. Start easy and work up.',
+    description:
+      'Morocco offers activities for every skill level, but choosing the wrong difficulty is dangerous. Start easy and work up. Be honest about your fitness and experience when booking.',
   },
   {
-    title: 'Stay Hydrated',
+    title: 'Stay Hydrated and Sun-Protected',
     icon: Droplets,
-    description: 'Morocco\'s heat and dry air can cause dehydration quickly, especially during physical activities. Carry at least 2 liters of water per person and drink before you feel thirsty.',
+    description:
+      'Morocco\'s heat and dry air cause dehydration quickly during physical activity. Carry 2+ liters of water per person. Wear SPF 50+ sunscreen and reapply every two hours.',
   },
   {
     title: 'Respect Local Conditions',
     icon: Globe,
-    description: 'Weather, tides, wind, and water levels change quickly in Morocco. Always check conditions before heading out and be prepared to cancel if safety dictates. Flexibility saves lives.',
+    description:
+      'Weather, tides, wind, and water levels change quickly. Check conditions before heading out and be prepared to cancel or postpone if safety requires it.',
   },
 ];
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    DATA: COSTS
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 const costBreakdown = [
-  { item: 'Surfing lesson (2 hours)', cost: 'From 300-500 MAD', notes: 'Board and wetsuit included at most schools' },
-  { item: 'Kitesurfing lesson (3 hours)', cost: 'From 800-1,500 MAD', notes: 'IKO-certified instruction with all equipment' },
-  { item: 'Sandboarding session', cost: 'From 200-400 MAD', notes: 'Often included free with desert camp bookings' },
-  { item: 'Quad biking (1-2 hours)', cost: 'From 400-800 MAD', notes: 'Helmet, goggles, and guide included' },
+  { item: 'Surfing lesson (2 hours)', cost: 'From 300-500 MAD', notes: 'Board and wetsuit included' },
+  { item: 'Kitesurfing lesson (3 hours)', cost: 'From 800-1,500 MAD', notes: 'IKO-certified with equipment' },
+  { item: 'Rock climbing (full day guided)', cost: 'From 500-1,000 MAD', notes: 'Gear rental and guide included' },
   { item: 'Paragliding tandem flight', cost: 'From 800-1,500 MAD', notes: 'GoPro footage usually included' },
-  { item: 'Rock climbing guided session', cost: 'From 500-1,000 MAD', notes: 'Full day with gear rental and local guide' },
-  { item: 'Canyoning half-day', cost: 'From 600-1,200 MAD', notes: 'Wetsuit, helmet, harness, and guide included' },
-  { item: 'Mountain biking half-day', cost: 'From 500-1,000 MAD', notes: 'Bike rental, helmet, guide, and transport to trails' },
-  { item: 'Zip-lining (adventure park)', cost: 'From 300-600 MAD', notes: 'Multiple lines and activities in one ticket' },
-  { item: 'Camel trek (sunset, 1.5 hours)', cost: 'From 300-600 MAD', notes: 'Longer multi-day treks from 1,500 MAD' },
+  { item: 'Sandboarding session', cost: 'From 200-400 MAD', notes: 'Often free with desert camp' },
+  { item: 'Quad biking (1-2 hours)', cost: 'From 400-800 MAD', notes: 'Helmet, goggles, guide included' },
+  { item: 'Canyoning half-day', cost: 'From 600-1,200 MAD', notes: 'Wetsuit, helmet, harness, guide' },
+  { item: 'Mountain biking half-day', cost: 'From 500-1,000 MAD', notes: 'Bike, helmet, guide, transport' },
+  { item: 'Zip-lining (adventure park)', cost: 'From 300-600 MAD', notes: 'Multiple lines and activities' },
+  { item: 'White water rafting half-day', cost: 'From 500-900 MAD', notes: 'All gear, transport, lunch' },
+  { item: 'Horse riding (1-2 hours)', cost: 'From 350-700 MAD', notes: 'Helmet and horse provided' },
 ];
 
-/* ═══════════════════════════════════════════════════════════════
-   DATA: FAQ
-   ═══════════════════════════════════════════════════════════════ */
+/* ================================================================
+   DATA: FAQ (displayed in component)
+   ================================================================ */
 
 const faqs = [
   {
-    question: 'What are the best adventure sports in Morocco?',
+    question: 'What are the top adventure sports in Morocco for 2026?',
     answer:
-      'Morocco offers world-class surfing in Taghazout, kitesurfing in Dakhla and Essaouira, sandboarding on the Erg Chebbi dunes, paragliding over the Atlas Mountains, rock climbing in Todra Gorge with 150+ routes, canyoning in the Ourika Valley, mountain biking on Atlas trails, quad biking in the Agafay Desert, zip-lining near Marrakech, and camel trekking across the Sahara. The diversity of landscapes means there is an adventure sport for every interest and skill level.',
+      'Morocco offers 11 world-class adventure sports: surfing at Taghazout, Essaouira, and Imsouane; kitesurfing in Dakhla and Essaouira; rock climbing at Todra Gorge and Tafraoute; paragliding over Agadir, the Atlas, and Ifrane; sandboarding at Erg Chebbi; quad biking in the Agafay Desert; canyoning at Akchour; mountain biking on Atlas trails; zip-lining at Terres d\'Amanar; white water rafting on the Ahansal River; and horse riding on Atlantic beaches and Atlas trails.',
   },
   {
     question: 'How much do adventure sports cost in Morocco?',
     answer:
-      'Morocco is very affordable for adventure sports. Surfing lessons cost from 300-500 MAD per session, kitesurfing from 800-1,500 MAD, sandboarding from 200-400 MAD, quad biking from 400-800 MAD per hour, paragliding tandem flights from 800-1,500 MAD, rock climbing from 500-1,000 MAD, canyoning from 600-1,200 MAD, and camel trekking from 300-600 MAD. Prices vary by season, operator, and group size. Seasonal pricing applies.',
+      'Morocco is very affordable for adventure sports. Sandboarding starts from 200 MAD, surfing lessons from 300 MAD, zip-lining from 300 MAD, horse riding from 350 MAD, quad biking from 400 MAD, mountain biking from 500 MAD, rock climbing from 500 MAD, rafting from 500 MAD, canyoning from 600 MAD, kitesurfing from 800 MAD, and paragliding from 800 MAD. Prices vary by season, operator, and group size. Seasonal pricing applies.',
   },
   {
-    question: 'Is Morocco safe for adventure sports?',
+    question: 'Is Morocco safe for extreme sports?',
     answer:
-      'Morocco is generally safe for adventure sports when you use reputable operators. Always verify certifications, check equipment condition, and read recent reviews. For water sports, ensure life jackets are provided. For climbing and canyoning, use operators with certified guides. Travel insurance covering adventure sports is strongly recommended. The biggest risks are heat-related illness and dehydration, which are easily managed with preparation.',
+      'Morocco is safe for adventure sports when you use reputable operators with certified guides. Verify credentials (IKO for kitesurfing, certified mountain guides for climbing and canyoning), inspect equipment before use, and read recent reviews. Ensure your travel insurance covers each specific activity. The biggest preventable risks are dehydration and sun exposure, both easily managed with preparation.',
   },
   {
     question: 'When is the best time for adventure sports in Morocco?',
     answer:
-      'Spring (March-May) and autumn (September-November) are the best all-round seasons. Surfing peaks from September to April. Kitesurfing is best April to October. Desert activities (sandboarding, camel trekking) are ideal from October to April. Rock climbing and canyoning are best in spring and autumn. Mountain biking is year-round at lower elevations. October is the single best month for the widest variety of activities.',
+      'Spring (March-May) and autumn (September-November) are the best all-round seasons. Surfing peaks September to April. Kitesurfing is best April to October. Desert activities suit October to April. White water rafting runs March to May during snowmelt. Rock climbing and mountain biking are ideal in spring and autumn. October is the single best month for the widest range of activities.',
   },
   {
-    question: 'Do I need experience for adventure sports in Morocco?',
+    question: 'Can beginners do adventure sports in Morocco?',
     answer:
-      'Most activities are accessible to complete beginners. Surfing schools cater to first-timers, tandem paragliding requires zero experience, sandboarding is easy to pick up, quad biking needs no prior skill, and camel trekking suits all ages. For more technical activities like lead rock climbing, independent kitesurfing, or advanced canyoning, previous experience is needed. Always be honest about your level when booking.',
+      'Most activities welcome beginners. Surf schools teach first-timers on gentle beach breaks. Tandem paragliding requires zero experience. Sandboarding, quad biking, zip-lining, and horse riding are accessible with no prior skill. Beginner climbing routes at Todra Gorge start at grade 5a. White water rafting on the Ourika River suits families and newcomers. Only advanced climbing, independent kitesurfing, and Class IV rafting need prior experience.',
   },
   {
-    question: 'Where are the best surfing spots in Morocco?',
+    question: 'Where is the best surfing in Morocco?',
     answer:
-      'Taghazout near Agadir is Morocco\'s surfing capital with Anchor Point, Killer Point, and Hash Point. Essaouira has wind-driven waves for intermediates. Sidi Kaouki offers uncrowded beginner waves. Imsouane has Africa\'s longest right-hand wave. Mirleft and Sidi Ifni in the south have quiet beach breaks. Water temperature ranges from 17 degrees in winter to 22 degrees in summer.',
+      'Taghazout near Agadir is Morocco\'s surfing capital with Anchor Point and Killer Point. Imsouane has Africa\'s longest right-hand wave. Essaouira offers wind-driven surf and arts-scene culture. Sidi Kaouki is ideal for beginners with uncrowded breaks. Mirleft and Sidi Ifni offer quiet southern reef breaks. Water temperature ranges from 17 to 22 degrees year-round.',
   },
   {
-    question: 'Can I go sandboarding in the Sahara Desert?',
+    question: 'Is there white water rafting in Morocco?',
     answer:
-      'Yes, sandboarding is hugely popular in the Moroccan Sahara. Erg Chebbi near Merzouga has dunes up to 150 meters high. Erg Chigaga near M\'Hamid offers larger dunes with fewer tourists. Most desert camps provide sandboards at no extra charge. No experience is needed. It combines perfectly with a camel trek and overnight desert camp experience.',
+      'Yes. The Ahansal River in the Central High Atlas has Class III-IV rapids during spring snowmelt (March-May). The Ourika River near Marrakech offers gentler Class II-III rapids during the wet season. Guided trips include all equipment, safety briefings, transport, and lunch. Half-day sessions cost from 500-900 MAD per person.',
   },
   {
-    question: 'What should I bring for adventure sports in Morocco?',
+    question: 'What should I pack for adventure sports in Morocco?',
     answer:
-      'Essential items include sunscreen SPF 50+, a hat, sunglasses, a refillable water bottle, quick-dry clothing, sturdy closed-toe shoes, reef shoes for water sports, and a waterproof camera or GoPro. Most operators provide activity-specific gear like wetsuits, helmets, and harnesses. Always bring your travel insurance documents and ensure adventure activities are covered.',
+      'Pack SPF 50+ sunscreen, a wide-brim hat, UV sunglasses, a refillable water bottle, quick-dry clothing, sturdy closed-toe shoes, reef shoes for water sports, and a waterproof camera. Most operators provide activity-specific gear like wetsuits, helmets, and harnesses. Carry your travel insurance documents and confirm adventure coverage.',
   },
 ];
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    DATA: RELATED GUIDES
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 const relatedGuides = [
   {
-    href: '/adventure',
-    icon: Flame,
-    title: 'Morocco Adventure Guide',
-    description: 'A comprehensive overview of all adventure experiences available across Morocco, from desert to mountains to coast.',
-  },
-  {
-    href: '/trekking',
-    icon: Route,
-    title: 'Trekking in Morocco',
-    description: 'Multi-day trekking routes through the Atlas Mountains, Jebel Saghro, and beyond with trail details and costs.',
-  },
-  {
-    href: '/surfing',
+    href: '/morocco-surfing-guide',
     icon: Waves,
     title: 'Morocco Surfing Guide',
-    description: 'In-depth guide to every surf spot in Morocco from Taghazout to Dakhla with swell forecasts and camp reviews.',
+    description:
+      'In-depth look at every surf spot from Taghazout to Dakhla, with swell forecasts, camp reviews, and gear rental prices.',
   },
   {
-    href: '/climbing',
+    href: '/morocco-rock-climbing',
     icon: Mountain,
     title: 'Rock Climbing Morocco',
-    description: 'Todra Gorge, Taghia Canyon, and Anti-Atlas bouldering: route guides, grades, and logistical information.',
+    description:
+      'Route-by-route coverage of Todra Gorge, Taghia Canyon, and Anti-Atlas bouldering with grades and logistics.',
   },
   {
-    href: '/water-sports',
-    icon: Waves,
-    title: 'Morocco Water Sports',
-    description: 'Kitesurfing, kayaking, stand-up paddleboarding, and more: the best water activities along Morocco\'s coast.',
+    href: '/morocco-horse-riding',
+    icon: Heart,
+    title: 'Horse Riding in Morocco',
+    description:
+      'Beach gallops in Essaouira, Atlas trail rides, and desert excursions with stable recommendations and prices.',
+  },
+  {
+    href: '/morocco-trekking-guide',
+    icon: Route,
+    title: 'Trekking in Morocco',
+    description:
+      'Multi-day trekking routes through the Atlas Mountains, Jebel Saghro, and the Rif with trail details and costs.',
+  },
+  {
+    href: '/morocco-outdoor-activities',
+    icon: Compass,
+    title: 'Outdoor Activities Morocco',
+    description:
+      'Complete overview of outdoor experiences from hiking and cycling to kayaking and birdwatching.',
   },
 ];
 
-/* ═══════════════════════════════════════════════════════════════
+/* ================================================================
    PAGE COMPONENT
-   ═══════════════════════════════════════════════════════════════ */
+   ================================================================ */
 
 export default function MoroccoAdventureSportsPage() {
   return (
@@ -684,7 +734,10 @@ export default function MoroccoAdventureSportsPage() {
         />
         <div className="absolute inset-0 hero-overlay" />
         <div className="container-morocco relative z-10">
-          <nav className="flex items-center gap-2 text-sm text-white/60 mb-8" aria-label="Breadcrumb">
+          <nav
+            className="flex items-center gap-2 text-sm text-white/60 mb-8"
+            aria-label="Breadcrumb"
+          >
             <Link href="/" className="hover:text-white transition-colors">
               <Home className="w-3.5 h-3.5" />
             </Link>
@@ -696,12 +749,14 @@ export default function MoroccoAdventureSportsPage() {
             Adventure Sports &amp; Outdoor Activities
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-display)] font-bold text-white mb-4">
-            Morocco Adventure Sports:
-            <br className="hidden md:block" /> Your 2026 Action Guide
+            Morocco Adventure Sports
+            <br className="hidden md:block" /> Guide 2026
           </h1>
           <p className="text-xl text-white/80 max-w-2xl">
-            From surfing Atlantic waves to sandboarding Sahara dunes, paragliding over the Atlas, and climbing
-            Todra Gorge. 10 incredible adventure activities with locations, prices from 200 MAD, and expert tips.
+            11 adrenaline-fueled activities across coast, desert, and mountains.
+            Surfing, kitesurfing, rock climbing, paragliding, sandboarding,
+            canyoning, rafting, horse riding, mountain biking, quad biking, and
+            zip-lining with prices from 200 MAD.
           </p>
         </div>
       </section>
@@ -713,30 +768,39 @@ export default function MoroccoAdventureSportsPage() {
         <div className="container-morocco max-w-4xl">
           <div className="prose-moroccan">
             <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] mb-6">
-              Why Morocco Is an Adventure Sports Paradise
+              Why Morocco Is Built for Adventure Sports
             </h2>
             <div className="space-y-4 text-lg text-[var(--text-secondary)] leading-relaxed">
               <p>
-                Morocco packs an extraordinary diversity of adventure sports into a single country. Within a few
-                hours you can move from riding Atlantic swells on a surfboard to sandboarding down 150-meter Sahara
-                dunes, from paragliding over snow-capped Atlas peaks to rock climbing 300-meter limestone walls in
-                Todra Gorge. Very few countries on earth offer this range of adrenaline-fueled experiences across
-                such varied landscapes: coastline, desert, mountains, gorges, and forests.
+                Morocco compresses an extraordinary range of adventure terrain
+                into a single country. Within a few hours of driving you can
+                transition from riding Atlantic swells at Taghazout to
+                sandboarding 150-meter Sahara dunes at Erg Chebbi, from
+                paragliding above the snow-capped Atlas to rock climbing
+                300-meter limestone walls at Todra Gorge. Coastline, desert,
+                mountains, gorges, forests, and rivers: the raw ingredients for
+                world-class adventure sport are all here.
               </p>
               <p>
-                What sets Morocco apart is the combination of world-class conditions and remarkable affordability.
-                A surf lesson costs a fraction of what you would pay in Portugal or Australia. A tandem paragliding
-                flight over the Atlas is a fraction of the price of one in the Swiss Alps. The infrastructure for
-                adventure tourism has grown rapidly, with professional operators, certified guides, and modern
-                equipment now available for every activity. Yet Morocco retains its authenticity: you will still
-                share the waves with local fishermen, cross paths with Berber shepherds on mountain bike trails,
-                and camp in the Sahara far from any other soul.
+                What makes Morocco stand out from competitors like Portugal or
+                Turkey is the combination of excellent conditions and
+                affordability. A surf lesson costs a fraction of what you would
+                pay in Peniche. A tandem paragliding flight over the Atlas costs
+                less than half the price of a comparable flight in the Alps. The
+                adventure tourism infrastructure has matured rapidly, with
+                certified guides, modern equipment, and professional operators
+                now available for every activity covered in this guide. Yet the
+                country retains its raw character: you will share the waves with
+                local fishermen, cross paths with Berber shepherds on mountain
+                bike trails, and raft through gorges where the only other
+                presence is birdsong and rushing water.
               </p>
               <p>
-                This guide covers the 10 best adventure sports in Morocco, with detailed information on the top
-                locations for each activity, the best season to visit, realistic prices, safety tips, and
-                recommended operators. Whether you are a first-time thrill-seeker or a seasoned adrenaline
-                junkie, Morocco has an adventure waiting for you.
+                This guide covers 11 adventure sports, each with detailed
+                information on the best locations, optimal season, realistic
+                costs, safety guidelines, and practical tips. Whether you are a
+                first-timer looking for a gentle introduction or an experienced
+                athlete chasing serious thrills, Morocco has something for you.
               </p>
             </div>
           </div>
@@ -749,42 +813,59 @@ export default function MoroccoAdventureSportsPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="text-center">
               <Flame className="w-8 h-8 text-[var(--color-accent)] mx-auto mb-2" />
-              <div className="text-2xl font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)]">10+</div>
-              <div className="text-sm text-[var(--text-muted)]">Adventure activities</div>
+              <div className="text-2xl font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)]">
+                11
+              </div>
+              <div className="text-sm text-[var(--text-muted)]">
+                Adventure activities
+              </div>
             </div>
             <div className="text-center">
               <MapPin className="w-8 h-8 text-[var(--color-accent)] mx-auto mb-2" />
-              <div className="text-2xl font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)]">15+ Spots</div>
-              <div className="text-sm text-[var(--text-muted)]">World-class locations</div>
+              <div className="text-2xl font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)]">
+                20+ Spots
+              </div>
+              <div className="text-sm text-[var(--text-muted)]">
+                World-class locations
+              </div>
             </div>
             <div className="text-center">
               <DollarSign className="w-8 h-8 text-[var(--color-accent)] mx-auto mb-2" />
-              <div className="text-2xl font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)]">200 MAD</div>
-              <div className="text-sm text-[var(--text-muted)]">Starting price</div>
+              <div className="text-2xl font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)]">
+                200 MAD
+              </div>
+              <div className="text-sm text-[var(--text-muted)]">
+                Starting price
+              </div>
             </div>
             <div className="text-center">
               <Calendar className="w-8 h-8 text-[var(--color-accent)] mx-auto mb-2" />
-              <div className="text-2xl font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)]">Year-round</div>
-              <div className="text-sm text-[var(--text-muted)]">Adventure season</div>
+              <div className="text-2xl font-bold text-[var(--text-primary)] font-[family-name:var(--font-display)]">
+                Year-round
+              </div>
+              <div className="text-sm text-[var(--text-muted)]">
+                Adventure season
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Adventure Sports ── */}
+      {/* ── Adventure Sports Grid ── */}
       <section className="py-16 md:py-20">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <Flame className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            10 Best Adventure Sports in Morocco
+            11 Best Adventure Sports in Morocco
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-4">
-            From the Atlantic coast to the Sahara Desert and the Atlas Mountains, these are the top adrenaline
-            experiences Morocco has to offer.
+            From Atlantic surf breaks to Sahara dunes, Atlas gorges to desert
+            trails, these are the top adrenaline experiences Morocco offers.
           </p>
           <p className="text-center text-sm text-[var(--text-muted)] max-w-xl mx-auto mb-12">
             <Info className="w-3.5 h-3.5 inline mr-1" />
-            All prices are starting prices per person. Seasonal pricing applies and costs may vary by operator and group size.
+            All prices are starting prices per person. Seasonal pricing applies
+            and costs vary by operator and group size.
           </p>
 
           <div className="space-y-12">
@@ -805,7 +886,9 @@ export default function MoroccoAdventureSportsPage() {
                         <SportIcon className="w-6 h-6" />
                         {sport.name}
                       </h3>
-                      <p className="text-sm text-white/80 mt-1">{sport.subtitle}</p>
+                      <p className="text-sm text-white/80 mt-1">
+                        {sport.subtitle}
+                      </p>
                     </div>
                     <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-white/20 backdrop-blur-sm text-white text-xs font-bold">
                       {sport.difficulty}
@@ -816,27 +899,45 @@ export default function MoroccoAdventureSportsPage() {
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
                       <div className="bg-[var(--surface-muted)] p-3 rounded-lg text-center">
                         <MapPin className="w-4 h-4 text-[var(--color-accent)] mx-auto mb-1" />
-                        <div className="text-xs text-[var(--text-muted)]">Location</div>
-                        <div className="text-sm font-bold text-[var(--text-primary)]">{sport.location.split(',')[0]}</div>
+                        <div className="text-xs text-[var(--text-muted)]">
+                          Location
+                        </div>
+                        <div className="text-sm font-bold text-[var(--text-primary)]">
+                          {sport.location.split(',')[0]}
+                        </div>
                       </div>
                       <div className="bg-[var(--surface-muted)] p-3 rounded-lg text-center">
                         <Clock className="w-4 h-4 text-[var(--color-accent)] mx-auto mb-1" />
-                        <div className="text-xs text-[var(--text-muted)]">Duration</div>
-                        <div className="text-sm font-bold text-[var(--text-primary)]">{sport.duration}</div>
+                        <div className="text-xs text-[var(--text-muted)]">
+                          Duration
+                        </div>
+                        <div className="text-sm font-bold text-[var(--text-primary)]">
+                          {sport.duration}
+                        </div>
                       </div>
                       <div className="bg-[var(--surface-muted)] p-3 rounded-lg text-center">
                         <Calendar className="w-4 h-4 text-[var(--color-accent)] mx-auto mb-1" />
-                        <div className="text-xs text-[var(--text-muted)]">Best Season</div>
-                        <div className="text-sm font-bold text-[var(--text-primary)]">{sport.bestSeason.split('(')[0].trim()}</div>
+                        <div className="text-xs text-[var(--text-muted)]">
+                          Best Season
+                        </div>
+                        <div className="text-sm font-bold text-[var(--text-primary)]">
+                          {sport.bestSeason.split('(')[0].trim()}
+                        </div>
                       </div>
                       <div className="bg-[var(--surface-muted)] p-3 rounded-lg text-center">
                         <DollarSign className="w-4 h-4 text-[var(--color-accent)] mx-auto mb-1" />
-                        <div className="text-xs text-[var(--text-muted)]">Price</div>
-                        <div className="text-sm font-bold text-[var(--color-accent)]">{sport.price}</div>
+                        <div className="text-xs text-[var(--text-muted)]">
+                          Price
+                        </div>
+                        <div className="text-sm font-bold text-[var(--color-accent)]">
+                          {sport.price}
+                        </div>
                       </div>
                     </div>
 
-                    <p className="text-[var(--text-secondary)] mb-6">{sport.description}</p>
+                    <p className="text-[var(--text-secondary)] mb-6">
+                      {sport.description}
+                    </p>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
@@ -846,7 +947,10 @@ export default function MoroccoAdventureSportsPage() {
                         </h4>
                         <div className="space-y-2">
                           {sport.highlights.map((item, i) => (
-                            <div key={i} className="flex items-start gap-2 text-sm text-[var(--text-secondary)]">
+                            <div
+                              key={i}
+                              className="flex items-start gap-2 text-sm text-[var(--text-secondary)]"
+                            >
                               <CheckCircle className="w-3.5 h-3.5 text-green-600 mt-0.5 shrink-0" />
                               {item}
                             </div>
@@ -860,7 +964,10 @@ export default function MoroccoAdventureSportsPage() {
                         </h4>
                         <div className="space-y-2">
                           {sport.safetyTips.map((tip, i) => (
-                            <div key={i} className="flex items-start gap-2 text-sm text-[var(--text-secondary)]">
+                            <div
+                              key={i}
+                              className="flex items-start gap-2 text-sm text-[var(--text-secondary)]"
+                            >
                               <ArrowRight className="w-3.5 h-3.5 text-[var(--color-accent)] mt-0.5 shrink-0" />
                               {tip}
                             </div>
@@ -870,9 +977,15 @@ export default function MoroccoAdventureSportsPage() {
                     </div>
 
                     <div className="mt-4 pt-4 border-t border-[var(--border-primary)] flex flex-wrap gap-4 text-xs text-[var(--text-muted)]">
-                      <span className="flex items-center gap-1"><MapPin className="w-3 h-3" /> {sport.location}</span>
-                      <span className="flex items-center gap-1"><Calendar className="w-3 h-3" /> {sport.bestSeason}</span>
-                      <span className="flex items-center gap-1"><Gauge className="w-3 h-3" /> {sport.difficulty}</span>
+                      <span className="flex items-center gap-1">
+                        <MapPin className="w-3 h-3" /> {sport.location}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Calendar className="w-3 h-3" /> {sport.bestSeason}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Gauge className="w-3 h-3" /> {sport.difficulty}
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -890,8 +1003,8 @@ export default function MoroccoAdventureSportsPage() {
             Safety Essentials for Adventure Sports
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Adventure sports carry inherent risks. Follow these guidelines to stay safe and get the most out of
-            your Morocco adventure.
+            Adventure sports carry inherent risks. Follow these guidelines to
+            stay safe and get the most from your Morocco trip.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -905,7 +1018,9 @@ export default function MoroccoAdventureSportsPage() {
                       {item.title}
                     </h3>
                   </div>
-                  <p className="text-sm text-[var(--text-secondary)]">{item.description}</p>
+                  <p className="text-sm text-[var(--text-secondary)]">
+                    {item.description}
+                  </p>
                 </div>
               );
             })}
@@ -918,10 +1033,11 @@ export default function MoroccoAdventureSportsPage() {
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
             <Calendar className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
-            Best Season for Adventure Sports in Morocco
+            Best Season for Each Adventure Sport
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Morocco offers adventure year-round, but the best activity for you depends on when you visit.
+            Morocco offers adventure year-round, but the ideal activity depends
+            on when you visit.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -934,11 +1050,15 @@ export default function MoroccoAdventureSportsPage() {
                     <h3 className="text-xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)]">
                       {season.season}
                     </h3>
-                    <span className={`ml-auto px-2 py-0.5 rounded-full text-xs font-bold ${
-                      season.rating === 'Excellent' ? 'bg-green-100 text-green-700' :
-                      season.rating.includes('Good') ? 'bg-amber-100 text-amber-700' :
-                      'bg-red-100 text-red-700'
-                    }`}>
+                    <span
+                      className={`ml-auto px-2 py-0.5 rounded-full text-xs font-bold ${
+                        season.rating === 'Excellent'
+                          ? 'bg-green-100 text-green-700'
+                          : season.rating.includes('Good')
+                            ? 'bg-amber-100 text-amber-700'
+                            : 'bg-red-100 text-red-700'
+                      }`}
+                    >
                       {season.rating}
                     </span>
                   </div>
@@ -946,10 +1066,15 @@ export default function MoroccoAdventureSportsPage() {
                     <Thermometer className="w-3.5 h-3.5 inline mr-1" />
                     {season.tempDay}
                   </div>
-                  <p className="text-sm text-[var(--text-secondary)] mb-3">{season.description}</p>
+                  <p className="text-sm text-[var(--text-secondary)] mb-3">
+                    {season.description}
+                  </p>
                   <div className="pt-3 border-t border-[var(--border-primary)]">
                     <div className="text-xs text-[var(--text-muted)]">
-                      <strong className="text-[var(--color-accent)]">Best activities:</strong> {season.recommended}
+                      <strong className="text-[var(--color-accent)]">
+                        Best activities:
+                      </strong>{' '}
+                      {season.recommended}
                     </div>
                   </div>
                 </div>
@@ -967,8 +1092,8 @@ export default function MoroccoAdventureSportsPage() {
             Adventure Sports Costs Breakdown
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            A complete breakdown of what adventure activities cost in Morocco. Prices are starting figures and
-            may vary by season, operator, and group size.
+            What adventure activities cost in Morocco. Prices are starting
+            figures and may vary by season, operator, and group size.
           </p>
 
           <div className="card-moroccan overflow-hidden">
@@ -982,9 +1107,15 @@ export default function MoroccoAdventureSportsPage() {
             <div className="divide-y divide-[var(--border-primary)]">
               {costBreakdown.map((row, i) => (
                 <div key={i} className="grid grid-cols-3 gap-4 p-4 text-sm">
-                  <span className="font-medium text-[var(--text-primary)]">{row.item}</span>
-                  <span className="text-[var(--color-accent)] font-bold">{row.cost}</span>
-                  <span className="text-[var(--text-muted)] text-xs">{row.notes}</span>
+                  <span className="font-medium text-[var(--text-primary)]">
+                    {row.item}
+                  </span>
+                  <span className="text-[var(--color-accent)] font-bold">
+                    {row.cost}
+                  </span>
+                  <span className="text-[var(--text-muted)] text-xs">
+                    {row.notes}
+                  </span>
                 </div>
               ))}
             </div>
@@ -993,21 +1124,39 @@ export default function MoroccoAdventureSportsPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
             <div className="card-moroccan p-5 text-center">
               <Heart className="w-6 h-6 text-[var(--color-accent)] mx-auto mb-2" />
-              <div className="text-xs text-[var(--text-muted)] mb-1">Budget Adventures</div>
-              <div className="text-lg font-bold text-[var(--color-accent)] font-[family-name:var(--font-display)]">From 200-500 MAD</div>
-              <div className="text-xs text-[var(--text-muted)] mt-1">Sandboarding, camel trek, zip-line</div>
+              <div className="text-xs text-[var(--text-muted)] mb-1">
+                Budget Adventures
+              </div>
+              <div className="text-lg font-bold text-[var(--color-accent)] font-[family-name:var(--font-display)]">
+                From 200-500 MAD
+              </div>
+              <div className="text-xs text-[var(--text-muted)] mt-1">
+                Sandboarding, zip-line, horse riding
+              </div>
             </div>
             <div className="card-moroccan p-5 text-center">
               <Users className="w-6 h-6 text-[var(--color-gold)] mx-auto mb-2" />
-              <div className="text-xs text-[var(--text-muted)] mb-1">Mid-Range Activities</div>
-              <div className="text-lg font-bold text-[var(--color-gold)] font-[family-name:var(--font-display)]">From 500-1,000 MAD</div>
-              <div className="text-xs text-[var(--text-muted)] mt-1">Surfing, climbing, biking, canyoning</div>
+              <div className="text-xs text-[var(--text-muted)] mb-1">
+                Mid-Range Activities
+              </div>
+              <div className="text-lg font-bold text-[var(--color-gold)] font-[family-name:var(--font-display)]">
+                From 500-1,000 MAD
+              </div>
+              <div className="text-xs text-[var(--text-muted)] mt-1">
+                Surfing, climbing, biking, rafting
+              </div>
             </div>
             <div className="card-moroccan p-5 text-center">
               <Award className="w-6 h-6 text-[var(--color-gold)] mx-auto mb-2" />
-              <div className="text-xs text-[var(--text-muted)] mb-1">Premium Experiences</div>
-              <div className="text-lg font-bold text-[var(--color-gold)] font-[family-name:var(--font-display)]">From 800-1,500 MAD</div>
-              <div className="text-xs text-[var(--text-muted)] mt-1">Paragliding, kitesurfing lessons</div>
+              <div className="text-xs text-[var(--text-muted)] mb-1">
+                Premium Experiences
+              </div>
+              <div className="text-lg font-bold text-[var(--color-gold)] font-[family-name:var(--font-display)]">
+                From 800-1,500 MAD
+              </div>
+              <div className="text-xs text-[var(--text-muted)] mt-1">
+                Paragliding, kitesurfing, canyoning
+              </div>
             </div>
           </div>
         </div>
@@ -1017,11 +1166,12 @@ export default function MoroccoAdventureSportsPage() {
       <section className="py-16 md:py-20">
         <div className="container-morocco max-w-4xl">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <BookOpen className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            <MessageCircleQuestion className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
             Frequently Asked Questions
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
-            Everything you need to know about adventure sports in Morocco, answered by experienced travelers.
+            Answers to the most common questions about adventure sports in
+            Morocco.
           </p>
 
           <div className="space-y-4">
@@ -1031,7 +1181,9 @@ export default function MoroccoAdventureSportsPage() {
                   <Star className="w-4 h-4 text-[var(--color-gold)] mt-0.5 shrink-0" />
                   {faq.question}
                 </h3>
-                <p className="text-sm text-[var(--text-secondary)] ml-6">{faq.answer}</p>
+                <p className="text-sm text-[var(--text-secondary)] ml-6">
+                  {faq.answer}
+                </p>
               </div>
             ))}
           </div>
@@ -1042,7 +1194,7 @@ export default function MoroccoAdventureSportsPage() {
       <section className="py-16 md:py-20 bg-[var(--surface-muted)]">
         <div className="container-morocco">
           <h2 className="text-3xl font-[family-name:var(--font-display)] font-bold text-[var(--text-primary)] text-center mb-4">
-            <Compass className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
+            <BookOpen className="w-8 h-8 inline-block text-[var(--color-accent)] mr-2" />
             Related Guides
           </h2>
           <p className="text-center text-[var(--text-secondary)] max-w-2xl mx-auto mb-12">
@@ -1053,14 +1205,20 @@ export default function MoroccoAdventureSportsPage() {
             {relatedGuides.map((guide) => {
               const GuideIcon = guide.icon;
               return (
-                <Link key={guide.href} href={guide.href} className="card-moroccan p-5 group hover:shadow-lg transition-shadow">
+                <Link
+                  key={guide.href}
+                  href={guide.href}
+                  className="card-moroccan p-5 group hover:shadow-lg transition-shadow"
+                >
                   <div className="flex items-center gap-3 mb-3">
                     <GuideIcon className="w-6 h-6 text-[var(--color-accent)]" />
                     <h3 className="text-base font-[family-name:var(--font-heading)] font-bold text-[var(--text-primary)] group-hover:text-[var(--color-accent)] transition-colors">
                       {guide.title}
                     </h3>
                   </div>
-                  <p className="text-sm text-[var(--text-secondary)]">{guide.description}</p>
+                  <p className="text-sm text-[var(--text-secondary)]">
+                    {guide.description}
+                  </p>
                   <div className="mt-3 flex items-center gap-1 text-sm text-[var(--color-accent)] font-medium">
                     Read guide <ArrowRight className="w-4 h-4" />
                   </div>
@@ -1079,24 +1237,25 @@ export default function MoroccoAdventureSportsPage() {
             Ready for Adventure in Morocco?
           </h2>
           <p className="text-lg text-[var(--text-secondary)] mb-8">
-            From Atlantic surf breaks to Sahara sand dunes, Morocco&apos;s adventure sports are calling. Start
-            planning your adrenaline-fueled trip with our detailed guides, or explore everything else this
-            extraordinary country has to offer.
+            From Atlantic surf breaks to Sahara sand dunes, Atlas gorges to
+            mountain trails, Morocco&apos;s adventure sports deliver year-round
+            thrills at prices that make other destinations look expensive. Start
+            planning your trip today.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link
-              href="/adventure"
+              href="/morocco-surfing-guide"
               className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--color-accent)] text-white rounded-lg hover:opacity-90 transition-opacity font-medium"
-            >
-              <Flame className="w-5 h-5" />
-              Explore All Adventures
-            </Link>
-            <Link
-              href="/surfing"
-              className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[var(--color-accent)] text-[var(--color-accent)] rounded-lg hover:bg-[var(--color-accent)] hover:text-white transition-colors font-medium"
             >
               <Waves className="w-5 h-5" />
               Morocco Surfing Guide
+            </Link>
+            <Link
+              href="/morocco-trekking-guide"
+              className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[var(--color-accent)] text-[var(--color-accent)] rounded-lg hover:bg-[var(--color-accent)] hover:text-white transition-colors font-medium"
+            >
+              <Mountain className="w-5 h-5" />
+              Trekking Guide
             </Link>
           </div>
         </div>
