@@ -3242,6 +3242,24 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['morocco leather goods', 'fes tannery', 'moroccan leather bags', 'babouche slippers', 'chouara tannery'],
       priority: 9,
     },
+    {
+      title: 'Morocco Canyoning & Gorge Adventures 2026',
+      description: 'Canyoning in Morocco — Todra Gorge, Akchour waterfalls, Paradise Valley, cliff jumping, rappelling, and guided adventures.',
+      type: 'page',
+      url: '/morocco-canyoning',
+      tags: ['canyoning', 'gorge', 'waterfalls', 'adventure', 'Todra'],
+      keywords: ['morocco canyoning', 'todra gorge adventure', 'akchour waterfalls', 'paradise valley agadir', 'morocco gorge trekking'],
+      priority: 9,
+    },
+    {
+      title: 'Best Sunset Spots in Morocco 2026',
+      description: 'Top sunset locations in Morocco — Erg Chebbi dunes, Djemaa el-Fna, Essaouira ramparts, photography tips, and romantic sunset experiences.',
+      type: 'page',
+      url: '/morocco-sunset-spots',
+      tags: ['sunset', 'photography', 'romantic', 'views', 'nature'],
+      keywords: ['morocco sunset spots', 'best sunset morocco', 'erg chebbi sunset', 'djemaa el fna sunset', 'morocco photography'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {

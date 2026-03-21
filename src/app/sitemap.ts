@@ -428,6 +428,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-quad-biking',
     '/morocco-hot-air-balloon',
     '/morocco-leather-goods',
+    '/morocco-canyoning',
+    '/morocco-sunset-spots',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
