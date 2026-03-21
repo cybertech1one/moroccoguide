@@ -422,6 +422,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-mountain-biking',
     '/morocco-paragliding',
     '/morocco-horse-riding',
+    '/morocco-jewish-quarter',
+    '/morocco-kite-surfing',
+    '/morocco-traditional-clothing',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({

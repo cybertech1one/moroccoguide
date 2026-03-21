@@ -3188,6 +3188,33 @@ export function buildSearchIndex(): SearchItem[] {
       keywords: ['morocco horse riding', 'horseback riding morocco', 'barb horse morocco', 'tbourida fantasia', 'essaouira beach ride'],
       priority: 9,
     },
+    {
+      title: 'Morocco Jewish Quarter (Mellah) Guide 2026',
+      description: 'Explore Morocco\'s historic mellahs — Fes, Marrakech, Essaouira synagogues, Jewish cemeteries, Museum of Moroccan Judaism, and heritage tours.',
+      type: 'page',
+      url: '/morocco-jewish-quarter',
+      tags: ['Jewish heritage', 'mellah', 'synagogues', 'history', 'culture'],
+      keywords: ['morocco jewish quarter', 'mellah morocco', 'ibn danan synagogue', 'jewish morocco', 'morocco jewish heritage'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Kitesurfing Guide 2026',
+      description: 'Kitesurfing in Morocco — Dakhla lagoon, Essaouira, kite schools, wind conditions, equipment rental, IKO certification, and seasonal charts.',
+      type: 'page',
+      url: '/morocco-kite-surfing',
+      tags: ['kitesurfing', 'Dakhla', 'Essaouira', 'wind sports', 'water sports'],
+      keywords: ['morocco kitesurfing', 'dakhla kite', 'essaouira kitesurfing', 'kite school morocco', 'morocco wind sports'],
+      priority: 9,
+    },
+    {
+      title: 'Morocco Traditional Clothing Guide 2026',
+      description: 'Traditional Moroccan clothing — djellaba, caftan, takchita, babouche slippers, where to buy, custom tailoring, and clothing etiquette.',
+      type: 'page',
+      url: '/morocco-traditional-clothing',
+      tags: ['clothing', 'djellaba', 'caftan', 'fashion', 'culture'],
+      keywords: ['moroccan clothing', 'djellaba morocco', 'caftan morocco', 'moroccan fashion', 'traditional dress morocco'],
+      priority: 9,
+    },
   ];
 
   pages.forEach((p, i) => {
