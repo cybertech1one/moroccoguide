@@ -454,6 +454,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/morocco-spring-travel',
     '/morocco-scuba-diving',
     '/morocco-autumn-travel',
+    // Batch 109-114: New city guides & things-to-do pages (Mar 22)
+    '/asilah-guide',
+    '/taroudant-guide',
+    '/moulay-idriss-guide',
+    '/sefrou-guide',
+    '/azrou-guide',
+    '/midelt-guide',
+    '/tiznit-guide',
+    '/sidi-ifni-guide',
+    '/merzouga-guide',
+    '/el-jadida-guide',
+    '/safi-guide',
+    '/larache-guide',
+    '/things-to-do-rabat',
+    '/things-to-do-meknes',
+    '/things-to-do-ouarzazate',
+    '/taza-guide',
+    '/oujda-guide',
+    '/nador-guide',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
