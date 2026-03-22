@@ -492,6 +492,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/rabat-local-guide',
     '/morocco-best-restaurants',
     '/morocco-best-cafes',
+    // Batch 121-125: Monthly guides, transport routes, practical guides (Mar 22)
+    '/morocco-in-may',
+    '/morocco-in-june',
+    '/morocco-in-july',
+    '/morocco-in-august',
+    '/casablanca-to-marrakech',
+    '/fes-to-chefchaouen',
+    '/tangier-to-chefchaouen',
+    '/marrakech-to-essaouira',
+    '/how-many-days-in-morocco',
+    '/how-many-days-in-marrakech',
+    '/is-morocco-expensive',
+    '/spain-to-morocco-ferry',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
