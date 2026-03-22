@@ -505,6 +505,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/how-many-days-in-marrakech',
     '/is-morocco-expensive',
     '/spain-to-morocco-ferry',
+    // Batch 121/123: Remaining monthly guides (Mar 22)
+    '/morocco-in-january',
+    '/morocco-in-february',
+    '/morocco-in-march',
+    '/morocco-in-april',
+    '/morocco-in-september',
+    '/morocco-in-october',
+    '/morocco-in-november',
+    '/morocco-in-december',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
