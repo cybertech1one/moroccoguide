@@ -473,6 +473,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/taza-guide',
     '/oujda-guide',
     '/nador-guide',
+    // Batch 115-120: City guides, local guides, restaurants & cafes (Mar 22)
+    '/errachidia-guide',
+    '/zagora-guide',
+    '/tinghir-guide',
+    '/kenitra-guide',
+    '/beni-mellal-guide',
+    '/tafraout-guide',
+    '/oualidia-guide',
+    '/mhamid-guide',
+    '/chefchaouen-local-guide',
+    '/marrakech-local-guide',
+    '/fes-local-guide',
+    '/essaouira-local-guide',
+    '/tangier-local-guide',
+    '/casablanca-local-guide',
+    '/agadir-local-guide',
+    '/rabat-local-guide',
+    '/morocco-best-restaurants',
+    '/morocco-best-cafes',
   ];
 
   const contentPages: MetadataRoute.Sitemap = contentRoutes.map((route) => ({
